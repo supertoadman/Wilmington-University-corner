@@ -10,23 +10,42 @@
       "title": "Evidence Rule Chart (with class slides)",
       "type": "rule-chart",
       "description": "The master rule chart for Weeks 1–5. Each rule is explained in plain English with a note on what to watch out for. Rows tagged by class come from the Class 1–10 lecture slides, and there are notes on what the midterm covers.",
-      "tags": ["FRE", "rule chart", "midterm", "class slides"],
+      "tags": [
+        "FRE",
+        "rule chart",
+        "midterm",
+        "class slides"
+      ],
       "order": 1
     },
     "Evidence_Rule_Flowcharts.html": {
       "slug": "evidence-rule-flowcharts",
       "title": "Evidence Rule Flowcharts",
       "type": "flowcharts",
-      "description": "Step-by-step decision charts for Weeks 1–5: relevance (401–403), the policy rules (407–411), character evidence, 404(b), impeachment, 609 convictions, the 412 rape shield, and 606(b) jury secrecy.",
-      "tags": ["FRE", "401", "403", "404(b)", "609", "412", "606(b)"],
+      "description": "Interactive decision charts for Weeks 1–5. Zoom and pan around each chart, walk through a rule one step at a time, and search all nine charts. Covers relevance (401–403), the policy rules (407–411), character evidence, 404(b), impeachment, 609 convictions, the 412 rape shield, and 606(b) jury secrecy.",
+      "tags": [
+        "FRE",
+        "interactive",
+        "401",
+        "403",
+        "404(b)",
+        "609",
+        "412",
+        "606(b)"
+      ],
       "order": 2
     },
     "FRE_Rule_Cards.html": {
       "slug": "fre-rule-cards",
       "title": "FRE Rule Cards",
       "type": "flashcards",
-      "description": "Flashcards for the Federal Rules of Evidence covered in Weeks 1–5. Filter by topic, shuffle, or study your weakest cards first. Your mastery progress is saved in your browser.",
-      "tags": ["FRE", "flashcards", "spaced review"],
+      "description": "Flashcards for the Federal Rules of Evidence in Weeks 1–5. Pick your topics, flip each card, and rate yourself with a tap or a swipe. Missed cards come back sooner, and your mastery is saved in your browser.",
+      "tags": [
+        "FRE",
+        "flashcards",
+        "spaced review",
+        "swipe"
+      ],
       "order": 3
     },
     "Evidence_MCQ_Conceptual.html": {
@@ -34,7 +53,11 @@
       "title": "Evidence Rules Drill",
       "type": "practice",
       "description": "Conceptual multiple-choice questions for Weeks 1–5, weighted toward the Federal Rules. The answer order reshuffles every time you load the page, so you can't memorize the letters.",
-      "tags": ["MCQ", "conceptual", "FRE"],
+      "tags": [
+        "MCQ",
+        "conceptual",
+        "FRE"
+      ],
       "order": 4
     },
     "Evidence_MCQ_Application (strict).html": {
@@ -42,7 +65,12 @@
       "title": "Evidence Case Files",
       "type": "practice",
       "description": "Bar-level application questions for Weeks 1–5. Each question sets two or three rules against each other and turns on a single fact. Every answer choice has its own explanation, and the set includes one-fact variations and a coverage map.",
-      "tags": ["MCQ", "application", "bar prep", "variations"],
+      "tags": [
+        "MCQ",
+        "application",
+        "bar prep",
+        "variations"
+      ],
       "order": 5
     },
     "Evidence_MCQ_Application (Classes 1-10).html": {
@@ -50,7 +78,12 @@
       "title": "Evidence Case Files II",
       "type": "practice",
       "description": "A second, all-new set of bar-style application questions covering Classes 1–10. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 157 outline items.",
-      "tags": ["MCQ", "application", "bar prep", "Classes 1–10"],
+      "tags": [
+        "MCQ",
+        "application",
+        "bar prep",
+        "Classes 1–10"
+      ],
       "order": 6
     }
   }

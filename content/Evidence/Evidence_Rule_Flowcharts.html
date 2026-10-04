@@ -1,24 +1,383 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Evidence Rule Flowcharts</title><style>
-:root{--bg:#F7F6F2;--card:#fff;--ink:#26344A;--muted:#5d6470;--line:#e2e0d8}
-*{box-sizing:border-box} body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.55 "Segoe UI",system-ui,sans-serif}
-header{padding:40px 16px 18px;max-width:1200px;margin:auto} h1{margin:0 0 6px;font-size:2rem} header p{margin:0;color:var(--muted)}
-nav{position:sticky;top:0;z-index:5;background:rgba(247,246,242,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--line);
- display:flex;gap:6px;overflow-x:auto;padding:10px 16px}
-nav a{white-space:nowrap;text-decoration:none;color:var(--ink);background:#fff;border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:.88rem}
-nav a:hover{border-color:#2F5D9E;color:#2F5D9E}
-.keybar{max-width:1200px;margin:14px auto 0;padding:0 16px;display:flex;flex-wrap:wrap;gap:14px;font-size:.88rem;color:var(--muted)}
-.k i{display:inline-block;width:16px;height:12px;border:1.5px solid;border-radius:3px;margin-right:6px;vertical-align:-1px}
-main{max-width:1200px;margin:auto;padding:8px 16px 60px}
-section{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px;margin:22px 0;scroll-margin-top:60px}
-h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
-.fig{overflow:auto} .fig svg{display:block;width:100%;height:auto;max-width:100%}
-.dl{text-align:right;font-size:.85rem} .dl a{color:#2F5D9E}
-@media print{nav,.dl{display:none} section{break-inside:avoid;break-after:page;border:none}}
-</style></head><body>
-<header><h1>Evidence Rule Flowcharts</h1><p>Weeks 1-5 · built from the course readings and rule chart · click a tab to jump to that chart</p></header>
-<nav><a href="#00-master-map">Big picture</a><a href="#01-jury-secrecy-606b">606(b) Jury secrecy</a><a href="#02-relevance-401-403">401-403 Relevance</a><a href="#03-specialized-relevance-407-411">407-411 Policy rules</a><a href="#04a-character-propensity-box">Character: the box</a><a href="#04b-other-acts-404b">404(b) Other acts</a><a href="#05-impeachment-607-608">Impeachment</a><a href="#06-prior-convictions-609">609 Convictions</a><a href="#07-rape-shield-412">412 Rape shield</a></nav><div class="keybar"><b>Key:</b><span class="k"><i style="background:#E4EDFA;border-color:#2F5D9E"></i>Rule / main test</span><span class="k"><i style="background:#EFE9FA;border-color:#6A4FA3"></i>Question to ask</span><span class="k"><i style="background:#E2F3E6;border-color:#2E7D45"></i>Comes in / allowed</span><span class="k"><i style="background:#FCE5E2;border-color:#B3362C"></i>Kept out / forbidden</span><span class="k"><i style="background:#FFF1D6;border-color:#B7791F"></i>Exception or route around</span><span class="k"><i style="background:#F6F5F1;border-color:#A19F97"></i>Cases, cautions, why</span></div>
-<main><section id="00-master-map"><h2>Big picture</h2><p>Start here. Evidence must be relevant (401), then survive any rule that excludes it (402), then the 403 balance. The four exclusionary families are the rest of the course; blue dashed arrows show where one rule hands off to another.</p>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Evidence Rule Flowcharts</title>
+<meta name="description" content="Interactive flowcharts for the Federal Rules of Evidence, Weeks 1–5: zoom in, walk through each decision step by step, and search every chart.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+<style>
+/* ==========================================================================
+   Flowchart explorer: chart list (left) · zoomable canvas (center) · details (right)
+   The original Graphviz charts live untouched in #sources (used for print and no-JS).
+   ========================================================================== */
+:root{
+  --bg:#f3f0e8; --canvas:#f6f3ec; --dot:rgba(38,52,74,.13); --surface:#fff; --surface-2:#f4f1ea; --surface-3:#ebe6da;
+  --text:#18202d; --text-2:#3d4554; --muted:#6b7180; --border:#e3ddd0; --border-strong:#d2cab9;
+  --ink:#14233b; --ink-fg:#fff; --gold:#a87b22; --focus:#2f6fdd; --trail:#d08a1e;
+  --shadow:0 2px 6px rgba(20,30,50,.06),0 14px 34px -14px rgba(20,30,50,.25);
+  --k-start:#26344a; --k-rule:#2f5d9e; --k-question:#6a4fa3; --k-allowed:#2e7d45; --k-barred:#b3362c; --k-exception:#b7791f; --k-note:#8a877e;
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --serif:"Fraunces",Georgia,serif;
+  --rail:276px; --panel:380px;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b0f15; --canvas:#0e131b; --dot:rgba(170,190,220,.10); --surface:#151b25; --surface-2:#1b2230; --surface-3:#242d3c;
+  --text:#ebe8e1; --text-2:#c4c8d0; --muted:#8f96a3; --border:#252e3b; --border-strong:#344052;
+  --ink:#ece6d6; --ink-fg:#0e131b; --gold:#e0b862; --focus:#79a8ff; --trail:#f0b44c;
+  --shadow:0 2px 6px rgba(0,0,0,.4),0 18px 40px -16px rgba(0,0,0,.8);
+  --k-start:#9fb6d9; --k-rule:#82a8e2; --k-question:#ad97e4; --k-allowed:#6cc08a; --k-barred:#ec8a80; --k-exception:#e6b45c; --k-note:#9d9a92;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b0f15; --canvas:#0e131b; --dot:rgba(170,190,220,.10); --surface:#151b25; --surface-2:#1b2230; --surface-3:#242d3c;
+  --text:#ebe8e1; --text-2:#c4c8d0; --muted:#8f96a3; --border:#252e3b; --border-strong:#344052;
+  --ink:#ece6d6; --ink-fg:#0e131b; --gold:#e0b862; --focus:#79a8ff; --trail:#f0b44c;
+  --shadow:0 2px 6px rgba(0,0,0,.4),0 18px 40px -16px rgba(0,0,0,.8);
+  --k-start:#9fb6d9; --k-rule:#82a8e2; --k-question:#ad97e4; --k-allowed:#6cc08a; --k-barred:#ec8a80; --k-exception:#e6b45c; --k-note:#9d9a92;
+  color-scheme:dark}
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0;height:100%}
+body{background:var(--bg);color:var(--text);font:15px/1.55 var(--font);-webkit-font-smoothing:antialiased;overflow:hidden}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:8px}
+.ico{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+/* No-JS / print: show the original charts as a plain document */
+html:not(.js) body{overflow:auto}
+html:not(.js) .app{display:none}
+.sources{max-width:1200px;margin:0 auto;padding:24px 16px}
+.sources section{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:20px;margin:0 0 20px}
+.sources h2{margin:0 0 4px} .sources svg{width:100%;height:auto}
+html.js .sources{display:none}
+
+/* ---------- App frame ---------- */
+.app{height:100vh;height:100dvh;display:grid;grid-template-columns:var(--rail) minmax(0,1fr) var(--panel);background:var(--bg)}
+.app.rail-collapsed{grid-template-columns:0 minmax(0,1fr) var(--panel)}
+
+/* ---------- Left rail: chart list + search ---------- */
+.rail{display:flex;flex-direction:column;min-height:0;background:var(--surface);border-right:1px solid var(--border);overflow:hidden}
+.rail-head{padding:20px 20px 12px}
+.eyebrow{margin:0 0 4px;font-size:11px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+.rail-head h1{margin:0;font:600 23px/1.15 var(--serif);letter-spacing:-.015em}
+.search{display:flex;align-items:center;gap:8px;margin:4px 14px 10px;padding:0 12px;height:42px;border:1px solid var(--border);border-radius:12px;background:var(--surface-2);color:var(--muted)}
+.search:focus-within{border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 18%,transparent)}
+.search input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--text);font:inherit;font-size:15px}
+.chart-list{flex:1;overflow-y:auto;padding:4px 10px 16px;display:flex;flex-direction:column;gap:2px}
+.chart-item{display:flex;align-items:center;gap:12px;width:100%;padding:10px 12px;border:0;border-radius:12px;background:transparent;text-align:left;transition:background .15s}
+.chart-item:hover{background:var(--surface-2)}
+.chart-item[aria-current="true"]{background:var(--surface-3)}
+.chart-item .no{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;flex:none;font-size:12px;font-weight:700;background:var(--surface-2);color:var(--muted);border:1px solid var(--border)}
+.chart-item[aria-current="true"] .no{background:var(--ink);color:var(--ink-fg);border-color:var(--ink)}
+.chart-item .t{display:flex;flex-direction:column;min-width:0}
+.chart-item strong{font-size:14px;font-weight:600;line-height:1.3}
+.chart-item small{font-size:12px;color:var(--muted)}
+.results{flex:1;overflow-y:auto;padding:0 10px 16px}
+.results-head{padding:4px 10px 8px;font-size:12px;color:var(--muted)}
+.result{display:block;width:100%;text-align:left;padding:10px 12px;border:0;border-radius:12px;background:transparent}
+.result:hover,.result:focus-visible{background:var(--surface-2)}
+.result small{display:block;font-size:11.5px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.result span{display:block;font-size:14px;line-height:1.4;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.result mark{background:color-mix(in srgb,var(--gold) 30%,transparent);color:inherit;border-radius:3px}
+
+/* ---------- Stage + canvas ---------- */
+.stage{position:relative;min-width:0;min-height:0;overflow:hidden}
+.canvas{position:absolute;inset:0;overflow:hidden;cursor:grab;touch-action:none;background-color:var(--canvas);
+  background-image:radial-gradient(var(--dot) 1.2px,transparent 1.4px);background-size:24px 24px;user-select:none;-webkit-user-select:none}
+.canvas::after{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(ellipse at 50% 40%,transparent 55%,color-mix(in srgb,var(--bg) 55%,transparent))}
+.canvas.dragging{cursor:grabbing}
+.world{position:absolute;left:0;top:0;transform-origin:0 0}
+.world.flying{will-change:transform}
+.chart-svg{display:block;overflow:visible}
+.chart-svg text{pointer-events:none}
+
+.topbar{display:none}
+.hud{position:absolute;right:16px;bottom:16px;display:flex;flex-direction:column;align-items:flex-end;gap:10px;z-index:5;pointer-events:none}
+.hud > *{pointer-events:auto}
+.zoom{display:flex;align-items:center;background:var(--surface);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden}
+.zoom button{width:42px;height:42px;border:0;background:transparent;display:grid;place-items:center;color:var(--text-2)}
+.zoom button:hover{background:var(--surface-2);color:var(--text)}
+.zoom .pct{min-width:54px;text-align:center;font-size:12.5px;font-weight:600;color:var(--muted);font-variant-numeric:tabular-nums;border-inline:1px solid var(--border);height:42px;line-height:42px}
+.minimap{position:relative;width:184px;height:136px;background:color-mix(in srgb,var(--surface) 92%,transparent);border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow);overflow:hidden;cursor:pointer;backdrop-filter:blur(8px)}
+.minimap svg{position:absolute;opacity:.85;pointer-events:none}
+.minimap .vp{position:absolute;border:2px solid var(--focus);border-radius:4px;background:color-mix(in srgb,var(--focus) 10%,transparent);pointer-events:none}
+.rail-toggle{position:absolute;left:14px;top:14px;z-index:5;width:40px;height:40px;border-radius:12px;border:1px solid var(--border);background:var(--surface);box-shadow:var(--shadow);display:grid;place-items:center;color:var(--text-2)}
+.walk-fab{display:none;position:absolute;left:16px;bottom:16px;z-index:5;align-items:center;gap:8px;height:46px;padding:0 18px;border-radius:999px;border:0;background:var(--ink);color:var(--ink-fg);font-weight:600;font-size:14.5px;box-shadow:var(--shadow)}
+.walk-fab .ico{width:15px;height:15px;fill:currentColor;stroke:none}
+.toast-tip{position:absolute;left:50%;top:18px;transform:translateX(-50%);z-index:6;padding:9px 16px;border-radius:999px;background:var(--ink);color:var(--ink-fg);font-size:13px;font-weight:600;box-shadow:var(--shadow);white-space:nowrap;transition:opacity .4s,transform .4s}
+.toast-tip.gone{opacity:0;transform:translate(-50%,-8px);pointer-events:none}
+
+/* ---------- Chart styling (Graphviz SVG) ---------- */
+.chart-svg .node{cursor:pointer;transition:opacity .35s ease}
+.chart-svg .edge{transition:opacity .35s ease}
+.chart-svg .node .shape{transition:stroke-width .2s,filter .25s}
+.chart-svg .node:hover .shape,.chart-svg .node.is-hover .shape{filter:drop-shadow(0 6px 12px rgba(20,30,50,.22));stroke-width:2.4}
+.chart-svg .node:focus{outline:none}
+.chart-svg .node:focus-visible .shape{stroke:var(--focus);stroke-width:3}
+.chart-svg .edge.is-hover path{stroke-width:2.2}
+.has-focus .chart-svg .node:not(.is-current):not(.is-near):not(.on-trail){opacity:.2}
+.has-focus .chart-svg .edge:not(.is-near):not(.on-trail){opacity:.12}
+.has-filter .chart-svg .node:not(.is-match){opacity:.18}
+.has-filter .chart-svg .edge{opacity:.12}
+.chart-svg .node.is-current .shape{stroke:var(--trail);stroke-width:3.6;animation:glow 2.4s ease-in-out infinite}
+.chart-svg .node.on-trail:not(.is-current) .shape{stroke:var(--trail);stroke-width:2.6}
+.chart-svg .edge.on-trail path{stroke:var(--trail)!important;stroke-width:3;stroke-dasharray:7 6;animation:march .9s linear infinite}
+.chart-svg .edge.on-trail polygon{fill:var(--trail);stroke:var(--trail)}
+.chart-svg .edge.is-near:not(.on-trail) path{stroke-width:2.2}
+@keyframes glow{0%,100%{filter:drop-shadow(0 0 0 transparent)}50%{filter:drop-shadow(0 0 9px color-mix(in srgb,var(--trail) 70%,transparent))}}
+@keyframes march{to{stroke-dashoffset:-13}}
+/* Entrance */
+.entering .chart-svg .node{animation:nodeIn .55s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--d,0) * 1ms)}
+.entering .chart-svg .edge{animation:edgeIn .5s ease both;animation-delay:calc(var(--d,0) * 1ms + 120ms)}
+.entering .chart-svg .edge.drawable path{stroke-dasharray:var(--len);animation:draw .7s cubic-bezier(.4,0,.2,1) both;animation-delay:calc(var(--d,0) * 1ms + 80ms)}
+.entering .chart-svg .cluster,.entering .chart-svg .graph > text{animation:edgeIn .6s ease both}
+@keyframes nodeIn{from{opacity:0;transform:translateY(10px)}}
+@keyframes edgeIn{from{opacity:0}}
+@keyframes draw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+.chart-svg .node{transform-box:fill-box;transform-origin:center}
+
+/* Dark mode: re-ink the Graphviz palette */
+:root[data-theme="dark"] .chart-svg{--dk:1}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chart-svg{--dk:1}}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#f6f5f1"]{fill:#1e232d}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#a19f97"]{stroke:#5f636e}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#fce5e2"]{fill:#3a1e1d}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#b3362c"]{stroke:#e0786e}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#b3362c"]{fill:#ef9a91}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#e4edfa"]{fill:#1a2940}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#2f5d9e"]{stroke:#7ea5df}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#2f5d9e"]{fill:#9dbbe8}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#fff1d6"]{fill:#372b14}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#b7791f"]{stroke:#dfae58}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#b7791f"]{fill:#dfae58}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#efe9fa"]{fill:#271f3f}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#6a4fa3"]{stroke:#a790e0}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#e2f3e6"]{fill:#15302a}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#2e7d45"]{stroke:#68bd86}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#2e7d45"]{fill:#85d0a0}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#26344a"]{fill:#2c4266}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#26344a"]{stroke:#4d6a99}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#3b3a36"]{fill:#c9cbd1}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#5c3b07"]{fill:#f1d59b}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#14305a"]{fill:#c0d4f2}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#6b1a14"]{fill:#f4b8b1}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#123d20"]{fill:#b7e4c6}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#35235e"]{fill:#d8ccf6}
+:is(:root[data-theme="dark"]) .chart-svg text[fill="#26344a"]{fill:#e6e9ef}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#666666"],:is(:root[data-theme="dark"]) .chart-svg [fill="#6b6b6b"],:is(:root[data-theme="dark"]) .chart-svg [fill="#444444"]{fill:#9aa1ad}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#707070"],:is(:root[data-theme="dark"]) .chart-svg [stroke="#8c8c8c"]{stroke:#8792a4}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#707070"],:is(:root[data-theme="dark"]) .chart-svg [fill="#8c8c8c"]{fill:#8792a4}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#b5b3ab"]{stroke:#565d6a}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#9aa7ba"],:is(:root[data-theme="dark"]) .chart-svg [stroke="#bbbbbb"]{stroke:#3d4757}
+:is(:root[data-theme="dark"]) .chart-svg [fill="white"],:is(:root[data-theme="dark"]) .chart-svg [fill="#ffffff"]:not(text){fill:transparent}
+:is(:root[data-theme="dark"]) .chart-svg [fill="#a19f97"]{fill:#6b6f7a}
+/* same rules for system dark mode */
+@media (prefers-color-scheme:dark){
+:root:not([data-theme="light"]) .chart-svg [fill="#f6f5f1"]{fill:#1e232d}
+:root:not([data-theme="light"]) .chart-svg [stroke="#a19f97"]{stroke:#5f636e}
+:root:not([data-theme="light"]) .chart-svg [fill="#fce5e2"]{fill:#3a1e1d}
+:root:not([data-theme="light"]) .chart-svg [stroke="#b3362c"]{stroke:#e0786e}
+:root:not([data-theme="light"]) .chart-svg [fill="#b3362c"]{fill:#ef9a91}
+:root:not([data-theme="light"]) .chart-svg [fill="#e4edfa"]{fill:#1a2940}
+:root:not([data-theme="light"]) .chart-svg [stroke="#2f5d9e"]{stroke:#7ea5df}
+:root:not([data-theme="light"]) .chart-svg [fill="#2f5d9e"]{fill:#9dbbe8}
+:root:not([data-theme="light"]) .chart-svg [fill="#fff1d6"]{fill:#372b14}
+:root:not([data-theme="light"]) .chart-svg [stroke="#b7791f"]{stroke:#dfae58}
+:root:not([data-theme="light"]) .chart-svg [fill="#b7791f"]{fill:#dfae58}
+:root:not([data-theme="light"]) .chart-svg [fill="#efe9fa"]{fill:#271f3f}
+:root:not([data-theme="light"]) .chart-svg [stroke="#6a4fa3"]{stroke:#a790e0}
+:root:not([data-theme="light"]) .chart-svg [fill="#e2f3e6"]{fill:#15302a}
+:root:not([data-theme="light"]) .chart-svg [stroke="#2e7d45"]{stroke:#68bd86}
+:root:not([data-theme="light"]) .chart-svg [fill="#2e7d45"]{fill:#85d0a0}
+:root:not([data-theme="light"]) .chart-svg [fill="#26344a"]{fill:#2c4266}
+:root:not([data-theme="light"]) .chart-svg [stroke="#26344a"]{stroke:#4d6a99}
+:root:not([data-theme="light"]) .chart-svg [fill="#3b3a36"]{fill:#c9cbd1}
+:root:not([data-theme="light"]) .chart-svg [fill="#5c3b07"]{fill:#f1d59b}
+:root:not([data-theme="light"]) .chart-svg [fill="#14305a"]{fill:#c0d4f2}
+:root:not([data-theme="light"]) .chart-svg [fill="#6b1a14"]{fill:#f4b8b1}
+:root:not([data-theme="light"]) .chart-svg [fill="#123d20"]{fill:#b7e4c6}
+:root:not([data-theme="light"]) .chart-svg [fill="#35235e"]{fill:#d8ccf6}
+:root:not([data-theme="light"]) .chart-svg text[fill="#26344a"]{fill:#e6e9ef}
+:root:not([data-theme="light"]) .chart-svg [fill="#666666"],:root:not([data-theme="light"]) .chart-svg [fill="#6b6b6b"],:root:not([data-theme="light"]) .chart-svg [fill="#444444"]{fill:#9aa1ad}
+:root:not([data-theme="light"]) .chart-svg [stroke="#707070"],:root:not([data-theme="light"]) .chart-svg [stroke="#8c8c8c"]{stroke:#8792a4}
+:root:not([data-theme="light"]) .chart-svg [fill="#707070"],:root:not([data-theme="light"]) .chart-svg [fill="#8c8c8c"]{fill:#8792a4}
+:root:not([data-theme="light"]) .chart-svg [stroke="#b5b3ab"]{stroke:#565d6a}
+:root:not([data-theme="light"]) .chart-svg [stroke="#9aa7ba"],:root:not([data-theme="light"]) .chart-svg [stroke="#bbbbbb"]{stroke:#3d4757}
+:root:not([data-theme="light"]) .chart-svg [fill="white"],:root:not([data-theme="light"]) .chart-svg [fill="#ffffff"]:not(text){fill:transparent}
+:root:not([data-theme="light"]) .chart-svg [fill="#a19f97"]{fill:#6b6f7a}
+}
+
+/* ---------- Right panel ---------- */
+.panel{position:relative;display:flex;flex-direction:column;min-height:0;background:var(--surface);border-left:1px solid var(--border);overflow:hidden}
+.panel-grab{display:none}
+.panel-scroll{flex:1;overflow-y:auto;padding:22px 22px 28px;overscroll-behavior:contain}
+.panel-close{display:none}
+.pn{animation:pnIn .35s cubic-bezier(.2,.8,.2,1)}
+@keyframes pnIn{from{opacity:0;transform:translateY(8px)}}
+.pn h2{margin:0 0 8px;font:600 24px/1.2 var(--serif);letter-spacing:-.015em}
+.pn .desc{margin:0;color:var(--text-2)}
+.pn h3{margin:24px 0 10px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;border-radius:12px;border:1px solid var(--border);background:var(--surface);font-weight:600;font-size:14.5px;text-decoration:none;color:var(--text);transition:background .15s,border-color .15s,transform .1s}
+.btn:hover{background:var(--surface-2);border-color:var(--border-strong)}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--ink);color:var(--ink-fg);border-color:var(--ink)}
+.btn-primary:hover{background:color-mix(in srgb,var(--ink) 86%,var(--gold));border-color:transparent}
+.btn-block{width:100%}
+.btn-sm{min-height:34px;padding:0 12px;font-size:13px;border-radius:10px}
+.starts{display:grid;gap:8px;margin-top:18px}
+.legend{display:grid;gap:4px}
+.legend button{display:flex;align-items:center;gap:10px;width:100%;padding:8px 10px;border:1px solid transparent;border-radius:10px;background:transparent;text-align:left;font-size:13.5px}
+.legend button:hover{background:var(--surface-2)}
+.legend button[aria-pressed="true"]{background:var(--surface-2);border-color:var(--border-strong)}
+.legend .sw{width:22px;height:16px;border-radius:5px;border:2px solid var(--c);background:color-mix(in srgb,var(--c) 16%,var(--surface));flex:none}
+.legend .n{margin-left:auto;font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tips{margin-top:22px;padding:12px 14px;border-radius:12px;background:var(--surface-2);font-size:13px;color:var(--text-2);display:grid;gap:4px}
+.tips b{font-weight:600}
+.dl-row{display:flex;gap:8px;flex-wrap:wrap}
+.chart-steps{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:22px}
+.chart-steps .btn{justify-content:flex-start;text-align:left;min-height:58px;padding:8px 12px;flex-direction:column;align-items:flex-start;gap:0}
+.chart-steps .btn small{font-size:11px;font-weight:600;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.chart-steps .btn span{font-size:13.5px;line-height:1.3}
+.chart-steps .next{text-align:right;align-items:flex-end}
+
+.walk-bar{display:flex;align-items:center;gap:8px;margin:-4px 0 16px;flex-wrap:wrap}
+.crumbs{display:flex;gap:4px;align-items:center;flex:1;min-width:0;overflow:hidden}
+.crumbs i{width:8px;height:8px;border-radius:50%;background:var(--border-strong);flex:none}
+.crumbs i.on{background:var(--trail)}
+.crumbs span{font-size:12px;font-weight:600;color:var(--muted);margin-right:6px;white-space:nowrap}
+.kind{display:inline-flex;align-items:center;gap:7px;padding:4px 10px;border-radius:999px;font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--c);background:color-mix(in srgb,var(--c) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 28%,transparent)}
+.kind::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--c)}
+.node-title{margin:12px 0 6px;font:600 22px/1.25 var(--serif);letter-spacing:-.01em}
+.node-body{margin:0;color:var(--text-2);font-size:15px}
+.outcome{display:flex;align-items:center;gap:12px;margin-top:16px;padding:14px 16px;border-radius:14px;background:color-mix(in srgb,var(--c) 12%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 35%,transparent)}
+.outcome .ico{width:26px;height:26px;color:var(--c)}
+.outcome strong{display:block;font-size:15px}
+.outcome small{color:var(--text-2);font-size:13px}
+.choices{display:grid;gap:8px}
+.choice{display:flex;align-items:center;gap:12px;width:100%;padding:12px 14px;border-radius:14px;border:1px solid var(--border);background:var(--surface);text-align:left;transition:border-color .15s,background .15s,transform .15s}
+.choice:hover{border-color:color-mix(in srgb,var(--c) 50%,var(--border));background:color-mix(in srgb,var(--c) 6%,var(--surface));transform:translateX(2px)}
+.choice .lab{flex:none;min-width:42px;padding:3px 9px;border-radius:8px;font-size:12px;font-weight:700;text-align:center;background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c)}
+.choice .txt{flex:1;min-width:0;font-size:14px;line-height:1.4}
+.choice .txt small{display:block;font-size:11.5px;color:var(--muted);font-weight:600;letter-spacing:.04em;text-transform:uppercase;margin-bottom:2px}
+.choice kbd{flex:none;font:600 11px var(--font);padding:3px 7px;border-radius:6px;border:1px solid var(--border-strong);color:var(--muted)}
+.notes{display:grid;gap:8px}
+.note{width:100%;text-align:left;padding:12px 14px;border-radius:12px;border:1px dashed var(--border-strong);background:var(--surface-2);font-size:13.5px;line-height:1.5;color:var(--text-2)}
+.note:hover{border-style:solid}
+.note b{display:block;color:var(--text);font-weight:600;margin-bottom:2px}
+.from{display:flex;flex-wrap:wrap;gap:6px}
+.from button{max-width:100%;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.from button:hover{background:var(--surface-2)}
+
+/* ---------- Tablet: rail and panel become drawers ---------- */
+@media (max-width:1180px){
+  .app,.app.rail-collapsed{grid-template-columns:minmax(0,1fr)}
+  .rail{position:fixed;z-index:30;left:0;top:0;bottom:0;width:min(320px,88vw);transform:translateX(-102%);transition:transform .3s cubic-bezier(.2,.9,.3,1);box-shadow:var(--shadow)}
+  .app.rail-open .rail{transform:none}
+  .panel{position:fixed;z-index:20;right:0;top:0;bottom:0;width:min(400px,92vw);transform:translateX(102%);transition:transform .3s cubic-bezier(.2,.9,.3,1);box-shadow:var(--shadow)}
+  .app.panel-open .panel{transform:none}
+  .pn > :first-child{padding-right:46px}
+  .panel-close{display:grid;position:absolute;right:10px;top:10px;z-index:2;width:38px;height:38px;border-radius:10px;border:0;background:var(--surface-2);place-items:center}
+  .rail-toggle{display:none}
+  .topbar{display:flex;align-items:center;gap:8px;position:absolute;left:12px;right:12px;top:12px;z-index:6}
+  .picker{flex:1;min-width:0;display:flex;align-items:center;gap:10px;height:46px;padding:0 14px;border-radius:14px;border:1px solid var(--border);background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(10px);box-shadow:var(--shadow);text-align:left}
+  .picker .no{width:26px;height:26px;border-radius:8px;display:grid;place-items:center;background:var(--ink);color:var(--ink-fg);font-size:11.5px;font-weight:700;flex:none}
+  .picker strong{flex:1;min-width:0;font-size:14.5px;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .tb-btn{width:46px;height:46px;flex:none;border-radius:14px;border:1px solid var(--border);background:color-mix(in srgb,var(--surface) 94%,transparent);backdrop-filter:blur(10px);box-shadow:var(--shadow);display:grid;place-items:center;color:var(--text-2)}
+  .scrim{position:fixed;inset:0;z-index:15;background:rgba(8,12,20,.38);opacity:0;pointer-events:none;transition:opacity .25s}
+  .app.rail-open .scrim{opacity:1;pointer-events:auto;z-index:25}
+  .minimap{display:none}
+  .toast-tip{top:70px}
+  .walk-fab{display:inline-flex}
+  .app.panel-open .walk-fab,.has-focus .walk-fab{display:none}
+}
+/* ---------- Phone: panel becomes a bottom sheet ---------- */
+@media (max-width:720px){
+  .panel{top:auto;left:0;right:0;bottom:0;width:100%;max-height:58dvh;border-left:0;border-top:1px solid var(--border);border-radius:22px 22px 0 0;transform:translateY(102%);padding-bottom:env(safe-area-inset-bottom)}
+  .app.panel-open .panel{transform:none}
+  .app.panel-full .panel{max-height:90dvh}
+  .panel-grab{display:block;width:100%;height:22px;border:0;background:transparent;flex:none;position:relative}
+  .panel-grab::before{content:"";position:absolute;left:50%;top:9px;width:42px;height:5px;margin-left:-21px;border-radius:9px;background:var(--border-strong)}
+  .panel-close{top:12px}
+  .panel-scroll{padding:2px 18px 20px}
+  .pn h2{font-size:21px;padding-right:40px}
+  .node-title{font-size:19px;padding-right:36px}
+  .hud{bottom:calc(16px + env(safe-area-inset-bottom))}
+  .app.panel-open .hud{opacity:0;pointer-events:none}
+  .zoom button{width:44px;height:44px}
+  .chart-steps .btn{min-height:52px}
+  .rail{width:100%;top:auto;height:86dvh;border-radius:22px 22px 0 0;transform:translateY(102%)}
+  .app.rail-open .rail{transform:none}
+}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+
+@media print{
+  html.js body{overflow:visible;height:auto} html.js .app{display:none} html.js .sources{display:block}
+  .sources section{break-inside:avoid;break-after:page;border:0}
+}
+</style>
+<script>document.documentElement.classList.add('js');try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14M12 5v14"/></symbol>
+  <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+  <symbol id="i-fit" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+  <symbol id="i-chev" viewBox="0 0 24 24"><path d="m6 9 6 6 6-6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></symbol>
+  <symbol id="i-back" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-check" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+  <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 22V4a1 1 0 0 1 1-1h11l-2 4 2 4H5"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 15V3M7 10l5 5 5-5M5 21h14"/></symbol>
+  <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></symbol>
+</svg>
+
+<div class="app" id="app">
+  <aside class="rail" id="rail" aria-label="Charts">
+    <div class="rail-head"><p class="eyebrow">Evidence · Weeks 1–5</p><h1>Rule Flowcharts</h1></div>
+    <label class="search"><svg class="ico"><use href="#i-search"/></svg><input id="search" type="search" placeholder="Search every chart…" autocomplete="off" aria-label="Search every chart"></label>
+    <div class="results" id="results" hidden></div>
+    <nav class="chart-list" id="chartList"></nav>
+  </aside>
+
+  <main class="stage" id="stage">
+    <div class="canvas" id="canvas" tabindex="0" aria-label="Flowchart canvas. Drag to move, scroll or pinch to zoom."><div class="world" id="world"></div></div>
+    <button class="rail-toggle" id="railToggle" title="Show or hide the chart list" aria-label="Toggle chart list"><svg class="ico"><use href="#i-panel"/></svg></button>
+    <div class="topbar">
+      <button class="picker" id="picker" aria-label="Choose a chart"><span class="no" id="pickerNo">1</span><strong id="pickerTitle"></strong><svg class="ico"><use href="#i-chev"/></svg></button>
+      <button class="tb-btn" id="infoBtn" aria-label="About this chart"><svg class="ico"><use href="#i-info"/></svg></button>
+    </div>
+    <button class="walk-fab" id="walkFab"><svg class="ico"><use href="#i-play"/></svg> Walk through</button>
+    <div class="toast-tip gone" id="tip">Tap any box to dive in</div>
+    <div class="hud">
+      <div class="minimap" id="minimap" aria-hidden="true"><div class="vp" id="vp"></div></div>
+      <div class="zoom">
+        <button id="zoomOut" aria-label="Zoom out"><svg class="ico"><use href="#i-minus"/></svg></button>
+        <span class="pct" id="pct">100%</span>
+        <button id="zoomIn" aria-label="Zoom in"><svg class="ico"><use href="#i-plus"/></svg></button>
+        <button id="fitBtn" aria-label="Fit chart to screen" style="border-left:1px solid var(--border)"><svg class="ico"><use href="#i-fit"/></svg></button>
+      </div>
+    </div>
+  </main>
+
+  <aside class="panel" id="panel" aria-label="Details">
+    <button class="panel-grab" id="grab" aria-label="Expand or collapse"></button>
+    <button class="panel-close" id="panelClose" aria-label="Close"><svg class="ico"><use href="#i-x"/></svg></button>
+    <div class="panel-scroll" id="panelBody"></div>
+  </aside>
+  <div class="scrim" id="scrim"></div>
+</div>
+
+<div class="sources" id="sources">
+<section id="00-master-map"><h2>Big picture</h2><p>Start here. Evidence must be relevant (401), then survive any rule that excludes it (402), then the 403 balance. The four exclusionary families are the rest of the course; blue dashed arrows show where one rule hands off to another.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 717.00 1568.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 1535.79)">
@@ -398,7 +757,8 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 </g>
 </g>
 </svg>
-</div><div class="dl"><a href="00-master-map.png" download>PNG</a> · <a href="00-master-map.svg" download>SVG</a></div></section><section id="01-jury-secrecy-606b"><h2>606(b) Jury secrecy</h2><p>Why we screen evidence at all: once the jury has deliberated, its verdict is almost never reopened. Walk down the exceptions in order.</p>
+</div></section>
+<section id="01-jury-secrecy-606b"><h2>606(b) Jury secrecy</h2><p>Why we screen evidence at all: once the jury has deliberated, its verdict is almost never reopened. Walk down the exceptions in order.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 1286.00 1142.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 1109.83)">
@@ -695,7 +1055,8 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 </g>
 </g>
 </svg>
-</div><div class="dl"><a href="01-jury-secrecy-606b.png" download>PNG</a> · <a href="01-jury-secrecy-606b.svg" download>SVG</a></div></section><section id="02-relevance-401-403"><h2>401-403 Relevance</h2><p>The gate every item passes through: probative + material, conditional relevance, then the 403 safety valve and limiting instructions.</p>
+</div></section>
+<section id="02-relevance-401-403"><h2>401-403 Relevance</h2><p>The gate every item passes through: probative + material, conditional relevance, then the 403 safety valve and limiting instructions.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 946.00 1504.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 1472.08)">
@@ -1033,7 +1394,8 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 <!-- cases&#45;&gt;n403 -->
 </g>
 </svg>
-</div><div class="dl"><a href="02-relevance-401-403.png" download>PNG</a> · <a href="02-relevance-401-403.svg" download>SVG</a></div></section><section id="03-specialized-relevance-407-411"><h2>407-411 Policy rules</h2><p>Five rules that bar socially useful conduct for one specific use. Read each column down. 410 is the outlier.</p>
+</div></section>
+<section id="03-specialized-relevance-407-411"><h2>407-411 Policy rules</h2><p>Five rules that bar socially useful conduct for one specific use. Read each column down. 410 is the outlier.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 1081.00 906.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 873.91)">
@@ -1472,7 +1834,8 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 </g>
 </g>
 </svg>
-</div><div class="dl"><a href="03-specialized-relevance-407-411.png" download>PNG</a> · <a href="03-specialized-relevance-407-411.svg" download>SVG</a></div></section><section id="04a-character-propensity-box"><h2>Character: the box</h2><p>The forbidden inference (trait -&gt; conduct on this occasion) and the genuine exceptions that pass THROUGH it, plus how character may be proved.</p>
+</div></section>
+<section id="04a-character-propensity-box"><h2>Character: the box</h2><p>The forbidden inference (trait -&gt; conduct on this occasion) and the genuine exceptions that pass THROUGH it, plus how character may be proved.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 1409.00 1147.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 1115.08)">
@@ -1845,7 +2208,8 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 </g>
 </g>
 </svg>
-</div><div class="dl"><a href="04a-character-propensity-box.png" download>PNG</a> · <a href="04a-character-propensity-box.svg" download>SVG</a></div></section><section id="04b-other-acts-404b"><h2>404(b) Other acts</h2><p>Routes AROUND the box: other acts offered for a non-character purpose, and the three steps they must still clear.</p>
+</div></section>
+<section id="04b-other-acts-404b"><h2>404(b) Other acts</h2><p>Routes AROUND the box: other acts offered for a non-character purpose, and the three steps they must still clear.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 974.00 1289.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 1256.91)">
@@ -2120,7 +2484,8 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 </g>
 </g>
 </svg>
-</div><div class="dl"><a href="04b-other-acts-404b.png" download>PNG</a> · <a href="04b-other-acts-404b.svg" download>SVG</a></div></section><section id="05-impeachment-607-608"><h2>Impeachment</h2><p>Name the attack first: error, lying, or liar. That decides which rules apply, whether extrinsic evidence is allowed, and whether rehabilitation is allowed.</p>
+</div></section>
+<section id="05-impeachment-607-608"><h2>Impeachment</h2><p>Name the attack first: error, lying, or liar. That decides which rules apply, whether extrinsic evidence is allowed, and whether rehabilitation is allowed.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 1102.00 1047.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 1014.79)">
@@ -2465,7 +2830,8 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 </g>
 </g>
 </svg>
-</div><div class="dl"><a href="05-impeachment-607-608.png" download>PNG</a> · <a href="05-impeachment-607-608.svg" download>SVG</a></div></section><section id="06-prior-convictions-609"><h2>609 Convictions</h2><p>Ask the questions in order. The ranking table (top left) runs from most to least permissive.</p>
+</div></section>
+<section id="06-prior-convictions-609"><h2>609 Convictions</h2><p>Ask the questions in order. The ranking table (top left) runs from most to least permissive.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 934.00 1361.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 1328.16)">
@@ -2817,7 +3183,8 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 <!-- rank&#45;&gt;s -->
 </g>
 </svg>
-</div><div class="dl"><a href="06-prior-convictions-609.png" download>PNG</a> · <a href="06-prior-convictions-609.svg" download>SVG</a></div></section><section id="07-rape-shield-412"><h2>412 Rape shield</h2><p>The shield, its three criminal exceptions, the civil balancing test, and the mandatory procedure.</p>
+</div></section>
+<section id="07-rape-shield-412"><h2>412 Rape shield</h2><p>The shield, its three criminal exceptions, the civil balancing test, and the mandatory procedure.</p>
 <div class="fig"><svg
  viewBox="0.00 0.00 1239.00 1195.00" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 <g id="graph0" class="graph" transform="scale(1 1) rotate(0) translate(32.4 1162.12)">
@@ -3129,4 +3496,599 @@ h2{margin:0 0 4px} section>p{margin:0 0 14px;color:var(--muted);max-width:75ch}
 </g>
 </g>
 </svg>
-</div><div class="dl"><a href="07-rape-shield-412.png" download>PNG</a> · <a href="07-rape-shield-412.svg" download>SVG</a></div></section></main></body></html>
+</div></section>
+</div>
+
+<script>
+/* ==========================================================================
+   Flowchart explorer. Reads the Graphviz charts in #sources, so adding a chart
+   is just adding another <section id><h2/><p/><svg/></section> there.
+   ========================================================================== */
+(() => {
+const $ = (s, el = document) => el.querySelector(s);
+const $$ = (s, el = document) => [...el.querySelectorAll(s)];
+const app = $('#app'), canvas = $('#canvas'), world = $('#world'), panel = $('#panel'), panelBody = $('#panelBody');
+const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const isPhone = () => matchMedia('(max-width: 720px)').matches;
+const isDrawer = () => matchMedia('(max-width: 1180px)').matches;
+
+const KINDS = {
+  start:     { label: 'Start',                    fill: '#26344a' },
+  rule:      { label: 'Rule / main test',         fill: '#e4edfa' },
+  question:  { label: 'Question to ask',          fill: '#efe9fa' },
+  allowed:   { label: 'Comes in / allowed',       fill: '#e2f3e6' },
+  barred:    { label: 'Kept out / forbidden',     fill: '#fce5e2' },
+  exception: { label: 'Exception or route around', fill: '#fff1d6' },
+  note:      { label: 'Cases, cautions, why',     fill: '#f6f5f1' },
+};
+const KIND_BY_FILL = Object.fromEntries(Object.entries(KINDS).map(([k, v]) => [v.fill, k]));
+const kindColor = (k) => `var(--k-${k in KINDS ? k : 'note'})`;
+const ico = (id, cls = 'ico') => `<svg class="${cls}"><use href="#i-${id}"/></svg>`;
+
+/* ---------- Read the source charts ---------- */
+const charts = $$('#sources section').map((sec, i) => {
+  sec.querySelectorAll('.dl').forEach((d) => d.remove());
+  const svg = sec.querySelector('svg');
+  const vb = svg.getAttribute('viewBox').trim().split(/[\s,]+/).map(Number);
+  return { i, id: sec.id, title: sec.querySelector('h2')?.textContent.trim() || `Chart ${i + 1}`, desc: sec.querySelector('p')?.innerHTML || '', src: svg, w: vb[2], h: vb[3], built: null };
+});
+
+function textLines(g) {
+  return $$('text', g).map((t) => ({ text: t.textContent.replace(/\s+/g, ' ').trim(), bold: t.getAttribute('font-weight') === 'bold' })).filter((l) => l.text);
+}
+function nodeKind(g) {
+  const shape = g.querySelector('path[fill],polygon[fill],ellipse[fill],rect[fill]');
+  return (shape && KIND_BY_FILL[shape.getAttribute('fill').toLowerCase()]) || 'other';
+}
+function splitText(lines) {
+  const bold = lines.filter((l) => l.bold).map((l) => l.text);
+  const rest = lines.filter((l) => !l.bold).map((l) => l.text);
+  const join = (a) => a.join(' ').replace(/\s+([,.;:)])/g, '$1').replace(/- (\w)/g, '-$1');
+  if (bold.length) return { title: join(bold), body: join(rest) };
+  return { title: join(rest.slice(0, 1)), body: join(rest.slice(1)) };
+}
+
+/* Search index straight from the sources (cheap; no layout needed). */
+const index = [];
+charts.forEach((c) => $$('g.node', c.src).forEach((g) => {
+  const lines = textLines(g);
+  if (!lines.length) return;
+  const { title, body } = splitText(lines);
+  index.push({ chart: c.i, key: g.querySelector('title')?.textContent || '', title, body, hay: (title + ' ' + body).toLowerCase(), kind: nodeKind(g) });
+}));
+
+/* ---------- Build an interactive chart (once, lazily) ---------- */
+function build(c) {
+  const svg = c.src.cloneNode(true);
+  svg.removeAttribute('style');
+  svg.setAttribute('width', c.w); svg.setAttribute('height', c.h);
+  svg.classList.add('chart-svg');
+  svg.setAttribute('role', 'group'); svg.setAttribute('aria-label', c.title);
+  const graph = svg.querySelector('g.graph');
+  const bg = graph.querySelector(':scope > polygon'); if (bg) bg.setAttribute('fill', 'transparent');
+  graph.querySelector(':scope > title')?.remove();
+  const m = (graph.getAttribute('transform') || '').match(/translate\(\s*([-\d.]+)[\s,]+([-\d.]+)\s*\)/);
+  const off = m ? { x: +m[1], y: +m[2] } : { x: 0, y: 0 };
+
+  const nodes = new Map();
+  $$('g.node', svg).forEach((g) => {
+    const key = g.querySelector('title')?.textContent || g.id;
+    g.querySelector('title')?.remove();
+    const lines = textLines(g);
+    const kind = nodeKind(g);
+    const shape = g.querySelector('path,polygon,ellipse,rect'); shape?.classList.add('shape');
+    const { title, body } = splitText(lines);
+    g.dataset.key = key; g.classList.add('k-' + kind);
+    g.setAttribute('tabindex', '0'); g.setAttribute('role', 'button');
+    g.setAttribute('aria-label', `${KINDS[kind]?.label || 'Box'}: ${title} ${body}`);
+    nodes.set(key, { key, g, kind, title, body, out: [], inn: [], notes: [] });
+  });
+  const edges = [];
+  $$('g.edge', svg).forEach((g) => {
+    const t = g.querySelector('title')?.textContent || '';
+    g.querySelector('title')?.remove();
+    const [a, b] = t.split('->');
+    const from = nodes.get(a), to = nodes.get(b);
+    if (!from || !to) return;
+    const path = g.querySelector('path');
+    const dotted = !!path?.getAttribute('stroke-dasharray');
+    const label = textLines(g).map((l) => l.text).join(' ');
+    const e = { g, from, to, label, note: dotted || from.kind === 'note' || to.kind === 'note' };
+    if (!dotted && path) g.classList.add('drawable');
+    edges.push(e);
+    if (e.note) { from.notes.push({ node: to, e }); to.notes.push({ node: from, e }); }
+    else { from.out.push({ node: to, e }); to.inn.push({ node: from, e }); }
+  });
+
+  world.appendChild(svg);
+  // Geometry in world pixels (1 viewBox unit = 1px at zoom 100%).
+  nodes.forEach((n) => {
+    const b = n.g.getBBox();
+    n.x = b.x + off.x; n.y = b.y + off.y; n.w = b.width; n.h = b.height;
+    n.cx = n.x + n.w / 2; n.cy = n.y + n.h / 2;
+  });
+  edges.forEach((e) => {
+    const p = e.g.querySelector('path');
+    if (p && e.g.classList.contains('drawable')) { try { e.g.style.setProperty('--len', Math.ceil(p.getTotalLength())); } catch { /* ignore */ } }
+  });
+  // Stagger entrance top-to-bottom.
+  const maxY = Math.max(1, ...[...nodes.values()].map((n) => n.cy));
+  nodes.forEach((n) => n.g.style.setProperty('--d', Math.round((n.cy / maxY) * 520)));
+  edges.forEach((e) => e.g.style.setProperty('--d', Math.round((Math.min(e.from.cy, e.to.cy) / maxY) * 520)));
+
+  const list = [...nodes.values()];
+  const starts = list.filter((n) => n.kind === 'start').sort((a, b) => a.cy - b.cy || a.cx - b.cx);
+  const roots = starts.length ? starts : list.filter((n) => n.kind !== 'note' && !n.inn.length && n.out.length).sort((a, b) => a.cy - b.cy);
+  c.built = { svg, nodes, edges, roots };
+  return c.built;
+}
+
+/* ---------- Camera: pan, zoom, fly ---------- */
+const cam = { x: 0, y: 0, k: 1 };
+let current = null; // chart
+let fly = null;
+const MIN_K = 0.12, MAX_K = 3;
+
+function apply() {
+  world.style.transform = `translate(${cam.x}px, ${cam.y}px) scale(${cam.k})`;
+  const s = 24 * cam.k;
+  canvas.style.backgroundSize = `${s}px ${s}px`;
+  canvas.style.backgroundPosition = `${cam.x}px ${cam.y}px`;
+  $('#pct').textContent = Math.round(cam.k * 100) + '%';
+  drawMinimap();
+}
+/** The part of the canvas not covered by floating UI (sheets, drawers, top bar). */
+function view() {
+  const r = canvas.getBoundingClientRect();
+  let top = 0, bottom = r.height, left = 0, right = r.width;
+  if (isDrawer()) top = 70;
+  if (app.classList.contains('panel-open')) {
+    if (isPhone()) bottom = Math.min(bottom, r.height - panel.offsetHeight);
+    else if (isDrawer()) right = Math.min(right, r.width - panel.offsetWidth);
+  }
+  return { left, top, w: right - left, h: Math.max(120, bottom - top), cw: r.width, ch: r.height };
+}
+function stopFly() { if (fly) { cancelAnimationFrame(fly.raf); fly = null; world.classList.remove('flying'); } }
+function flyTo(t, ms = 650) {
+  stopFly();
+  if (reduce || ms === 0 || document.hidden) { Object.assign(cam, t); apply(); return; }
+  const s = { ...cam }, t0 = performance.now();
+  const ease = (u) => (u < 0.5 ? 4 * u * u * u : 1 - Math.pow(-2 * u + 2, 3) / 2);
+  world.classList.add('flying');
+  const step = (now) => {
+    const u = Math.min(1, (now - t0) / ms), e = ease(u);
+    // zoom out a little mid-flight on long moves, for a sense of travel
+    const dist = Math.hypot(t.x - s.x, t.y - s.y);
+    const dip = Math.min(0.25, dist / 4000) * Math.sin(Math.PI * u);
+    cam.k = (s.k + (t.k - s.k) * e) * (1 - dip);
+    cam.x = s.x + (t.x - s.x) * e; cam.y = s.y + (t.y - s.y) * e;
+    apply();
+    if (u < 1) fly.raf = requestAnimationFrame(step); else { Object.assign(cam, t); apply(); stopFly(); }
+  };
+  fly = { raf: requestAnimationFrame(step) };
+}
+function fitTarget() {
+  const v = view(), pad = isPhone() ? 16 : 40;
+  const k = Math.max(MIN_K, Math.min(1.2, (v.w - pad * 2) / current.w, (v.h - pad * 2) / current.h));
+  return { k, x: v.left + (v.w - current.w * k) / 2, y: v.top + (v.h - current.h * k) / 2 };
+}
+const fit = (ms) => { userMoved = false; flyTo(fitTarget(), ms); };
+function centerOn(n, ms = 700) {
+  const v = view();
+  let k = Math.min((v.w * 0.82) / n.w, (v.h * 0.55) / n.h, isPhone() ? 1.5 : 1.6);
+  k = Math.max(k, isPhone() ? 0.7 : 0.9);
+  flyTo({ k, x: v.left + v.w / 2 - n.cx * k, y: v.top + v.h / 2 - n.cy * k }, ms);
+}
+function zoomAt(px, py, f, animate = false) {
+  const k = Math.min(MAX_K, Math.max(MIN_K, cam.k * f));
+  const t = { k, x: px - (px - cam.x) * (k / cam.k), y: py - (py - cam.y) * (k / cam.k) };
+  animate ? flyTo(t, 260) : (stopFly(), Object.assign(cam, t), apply());
+}
+function zoomCenter(f) { const v = view(); zoomAt(v.left + v.w / 2, v.top + v.h / 2, f, true); }
+
+/* Pointer input: one finger pans, two pinch; a tap selects. */
+const pts = new Map();
+let gesture = null, lastTap = { t: 0, x: 0, y: 0 };
+canvas.addEventListener('pointerdown', (e) => {
+  if (e.pointerType === 'mouse' && e.button !== 0) return;
+  stopFly();
+  canvas.setPointerCapture(e.pointerId);
+  pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  if (pts.size === 1) gesture = { type: 'pan', sx: e.clientX, sy: e.clientY, cx: cam.x, cy: cam.y, moved: false, target: e.target.closest('.node') };
+  else if (pts.size === 2) {
+    const [a, b] = [...pts.values()];
+    gesture = { type: 'pinch', d: Math.hypot(a.x - b.x, a.y - b.y), k: cam.k, mx: (a.x + b.x) / 2, my: (a.y + b.y) / 2, cx: cam.x, cy: cam.y, moved: true };
+  }
+});
+canvas.addEventListener('pointermove', (e) => {
+  if (!pts.has(e.pointerId)) {
+    const n = e.target.closest?.('.node');
+    hover(n);
+    return;
+  }
+  pts.set(e.pointerId, { x: e.clientX, y: e.clientY });
+  const r = canvas.getBoundingClientRect();
+  if (gesture?.type === 'pan' && pts.size === 1) {
+    const dx = e.clientX - gesture.sx, dy = e.clientY - gesture.sy;
+    if (!gesture.moved && Math.hypot(dx, dy) > 5) { gesture.moved = true; canvas.classList.add('dragging'); }
+    if (gesture.moved) { cam.x = gesture.cx + dx; cam.y = gesture.cy + dy; apply(); }
+  } else if (gesture?.type === 'pinch' && pts.size === 2) {
+    const [a, b] = [...pts.values()];
+    const d = Math.hypot(a.x - b.x, a.y - b.y), mx = (a.x + b.x) / 2, my = (a.y + b.y) / 2;
+    const k = Math.min(MAX_K, Math.max(MIN_K, gesture.k * (d / gesture.d)));
+    const px = gesture.mx - r.left, py = gesture.my - r.top;
+    cam.k = k;
+    cam.x = px - (px - gesture.cx) * (k / gesture.k) + (mx - gesture.mx);
+    cam.y = py - (py - gesture.cy) * (k / gesture.k) + (my - gesture.my);
+    apply();
+  }
+});
+function endPointer(e) {
+  if (!pts.has(e.pointerId)) return;
+  pts.delete(e.pointerId);
+  canvas.classList.remove('dragging');
+  if (pts.size === 0 && gesture) {
+    if (gesture.type === 'pan' && !gesture.moved) {
+      const now = performance.now(), r = canvas.getBoundingClientRect();
+      if (gesture.target) select(current.built.nodes.get(gesture.target.dataset.key), { from: 'tap' });
+      else if (now - lastTap.t < 320 && Math.hypot(e.clientX - lastTap.x, e.clientY - lastTap.y) < 24) zoomAt(e.clientX - r.left, e.clientY - r.top, 1.8, true);
+      else if (state.node) clearSelection();
+      lastTap = { t: now, x: e.clientX, y: e.clientY };
+    }
+    gesture = null;
+  } else if (pts.size === 1) {
+    const [p] = [...pts.values()];
+    gesture = { type: 'pan', sx: p.x, sy: p.y, cx: cam.x, cy: cam.y, moved: true };
+  }
+}
+canvas.addEventListener('pointerup', endPointer);
+canvas.addEventListener('pointercancel', endPointer);
+canvas.addEventListener('pointerleave', () => hover(null));
+canvas.addEventListener('wheel', (e) => {
+  e.preventDefault();
+  const r = canvas.getBoundingClientRect();
+  const f = Math.exp(-e.deltaY * (e.ctrlKey ? 0.012 : 0.0018));
+  zoomAt(e.clientX - r.left, e.clientY - r.top, f);
+}, { passive: false });
+canvas.addEventListener('keydown', (e) => {
+  const n = e.target.closest?.('.node');
+  if (n && (e.key === 'Enter' || e.key === ' ')) { e.preventDefault(); select(current.built.nodes.get(n.dataset.key)); return; }
+  const step = 80;
+  if (e.key === 'ArrowLeft') { cam.x += step; apply(); }
+  else if (e.key === 'ArrowRight') { cam.x -= step; apply(); }
+  else if (e.key === 'ArrowUp') { cam.y += step; apply(); }
+  else if (e.key === 'ArrowDown') { cam.y -= step; apply(); }
+  else return;
+  e.preventDefault();
+});
+$('#zoomIn').onclick = () => zoomCenter(1.35);
+$('#zoomOut').onclick = () => zoomCenter(1 / 1.35);
+$('#fitBtn').onclick = () => fit();
+let userMoved = false;
+addEventListener('resize', () => {
+  if (!current) return;
+  if (!userMoved && !state.node) fit(0);
+  else apply();
+});
+['pointerdown', 'wheel'].forEach((ev) => canvas.addEventListener(ev, () => { userMoved = true; }, { passive: true }));
+new ResizeObserver(() => { if (current && !userMoved && !state.node) fit(0); }).observe(canvas);
+
+let hovered = null;
+function hover(g) {
+  if (g === hovered) return;
+  const nodes = current?.built?.nodes;
+  if (hovered && nodes) { const n = nodes.get(hovered.dataset.key); hovered.classList.remove('is-hover'); n?.out.concat(n.inn).forEach((x) => x.e.g.classList.remove('is-hover')); }
+  hovered = g;
+  if (g && nodes) { const n = nodes.get(g.dataset.key); g.classList.add('is-hover'); n?.out.concat(n.inn).forEach((x) => x.e.g.classList.add('is-hover')); }
+}
+
+/* ---------- Minimap (desktop) ---------- */
+const mini = $('#minimap'), vp = $('#vp');
+let miniScale = 1, miniOff = { x: 0, y: 0 };
+function buildMinimap() {
+  $$('svg', mini).forEach((s) => s.remove());
+  const s = current.src.cloneNode(true);
+  const W = mini.clientWidth || 184, H = mini.clientHeight || 136, pad = 8;
+  miniScale = Math.min((W - pad * 2) / current.w, (H - pad * 2) / current.h);
+  miniOff = { x: (W - current.w * miniScale) / 2, y: (H - current.h * miniScale) / 2 };
+  s.setAttribute('width', current.w * miniScale); s.setAttribute('height', current.h * miniScale);
+  s.style.left = miniOff.x + 'px'; s.style.top = miniOff.y + 'px';
+  s.classList.add('chart-svg');
+  mini.insertBefore(s, vp);
+}
+function drawMinimap() {
+  if (!current || mini.offsetParent === null) return;
+  const r = canvas.getBoundingClientRect();
+  const x = (-cam.x / cam.k) * miniScale + miniOff.x, y = (-cam.y / cam.k) * miniScale + miniOff.y;
+  vp.style.left = x + 'px'; vp.style.top = y + 'px';
+  vp.style.width = (r.width / cam.k) * miniScale + 'px'; vp.style.height = (r.height / cam.k) * miniScale + 'px';
+}
+function miniJump(e) {
+  const m = mini.getBoundingClientRect(), r = canvas.getBoundingClientRect();
+  const wx = (e.clientX - m.left - miniOff.x) / miniScale, wy = (e.clientY - m.top - miniOff.y) / miniScale;
+  return { k: cam.k, x: r.width / 2 - wx * cam.k, y: r.height / 2 - wy * cam.k };
+}
+mini.addEventListener('pointerdown', (e) => {
+  mini.setPointerCapture(e.pointerId); flyTo(miniJump(e), 300);
+  const move = (ev) => { stopFly(); Object.assign(cam, miniJump(ev)); apply(); };
+  mini.addEventListener('pointermove', move);
+  mini.addEventListener('pointerup', () => mini.removeEventListener('pointermove', move), { once: true });
+});
+
+/* ---------- State, selection, walkthrough ---------- */
+const state = { node: null, trail: [], filter: null };
+
+function marks() {
+  const b = current.built;
+  b.nodes.forEach((n) => n.g.classList.remove('is-current', 'is-near', 'on-trail', 'is-match'));
+  b.edges.forEach((e) => e.g.classList.remove('is-near', 'on-trail'));
+  world.classList.toggle('has-focus', !!state.node);
+  stage().classList.toggle('has-focus', !!state.node);
+  stage().classList.toggle('has-filter', !!state.filter && !state.node);
+  if (state.filter && !state.node) b.nodes.forEach((n) => n.kind === state.filter && n.g.classList.add('is-match'));
+  if (!state.node) return;
+  const n = state.node;
+  n.g.classList.add('is-current');
+  [...n.out, ...n.inn, ...n.notes].forEach((x) => { x.node.g.classList.add('is-near'); x.e.g.classList.add('is-near'); });
+  state.trail.forEach((t, i) => {
+    t.g.classList.add('on-trail');
+    const prev = state.trail[i - 1];
+    if (prev) b.edges.forEach((e) => { if (e.from === prev && e.to === t) e.g.classList.add('on-trail'); });
+  });
+}
+const stage = () => $('#stage');
+
+function select(n, { from } = {}) {
+  if (!n) return;
+  const last = state.trail[state.trail.length - 1];
+  if (state.trail.includes(n)) state.trail = state.trail.slice(0, state.trail.indexOf(n) + 1);
+  else if (last && last.out.some((x) => x.node === n)) state.trail.push(n);
+  else state.trail = [n];
+  state.node = n;
+  marks();
+  renderNode(n);
+  openPanel();
+  // wait a frame so the sheet height is known before centering
+  setTimeout(() => centerOn(n), 0);
+  setHash();
+  hideTip();
+}
+function clearSelection() {
+  state.node = null; state.trail = [];
+  marks(); renderIntro();
+  if (isDrawer()) closePanel();
+  setHash();
+}
+function back() {
+  if (state.trail.length < 2) return;
+  state.trail.pop();
+  const n = state.trail[state.trail.length - 1];
+  state.node = n; marks(); renderNode(n); centerOn(n); setHash();
+}
+function startWalk(root) {
+  if (!current?.built) return;
+  const b = current.built;
+  const r = root || b.roots[0];
+  if (!r) return;
+  state.trail = [];
+  select(r);
+}
+
+/* ---------- Panel rendering ---------- */
+function short(s, n = 120) { return s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s; }
+
+function renderIntro() {
+  const c = current, b = c.built;
+  const counts = {};
+  b.nodes.forEach((n) => { counts[n.kind] = (counts[n.kind] || 0) + 1; });
+  const prev = charts[c.i - 1], next = charts[c.i + 1];
+  panelBody.innerHTML = `<div class="pn">
+    <p class="eyebrow">Chart ${c.i + 1} of ${charts.length}</p>
+    <h2>${esc(c.title)}</h2>
+    <p class="desc">${c.desc}</p>
+    <div class="starts">
+      ${b.roots.length ? `<button class="btn btn-primary btn-block" data-walk="0">${ico('play')} Walk through it</button>` : ''}
+      ${b.roots.length > 1 ? `<h3>Or start from</h3>${b.roots.slice(1, 8).map((r, i) => `<button class="choice" data-walk="${i + 1}" style="--c:${kindColor(r.kind)}"><span class="txt">${esc(short(r.title || r.body, 90))}</span></button>`).join('')}` : ''}
+    </div>
+    <h3>Key · tap to highlight</h3>
+    <div class="legend">${Object.entries(KINDS).filter(([k]) => counts[k]).map(([k, v]) => `<button data-filter="${k}" aria-pressed="${state.filter === k}" style="--c:${kindColor(k)}"><span class="sw"></span>${esc(v.label)}<span class="n">${counts[k]}</span></button>`).join('')}</div>
+    <div class="tips"><span><b>Move:</b> drag, or use the arrow keys</span><span><b>Zoom:</b> scroll, pinch, or double-tap</span><span><b>Dive in:</b> tap any box to see where it leads</span></div>
+    <h3>Download this chart</h3>
+    <div class="dl-row"><button class="btn btn-sm" data-dl="svg">${ico('dl')} SVG</button><button class="btn btn-sm" data-dl="png">${ico('dl')} PNG</button></div>
+    <div class="chart-steps">
+      ${prev ? `<button class="btn" data-go="${prev.i}"><small>← Previous</small><span>${esc(prev.title)}</span></button>` : '<span></span>'}
+      ${next ? `<button class="btn next" data-go="${next.i}"><small>Next →</small><span>${esc(next.title)}</span></button>` : ''}
+    </div>
+  </div>`;
+  panelBody.scrollTop = 0;
+}
+
+function renderNode(n) {
+  const k = KINDS[n.kind];
+  const terminal = !n.out.length && (n.kind === 'allowed' || n.kind === 'barred');
+  const steps = state.trail.length;
+  const next = charts[current.i + 1];
+  const outcome = terminal ? `<div class="outcome" style="--c:${kindColor(n.kind)}">${ico(n.kind === 'allowed' ? 'check' : 'ban')}<div><strong>${n.kind === 'allowed' ? 'Comes in' : 'Kept out'}</strong><small>End of this path${steps > 1 ? ` · ${steps} steps` : ''}.</small></div></div>` : '';
+  panelBody.innerHTML = `<div class="pn">
+    <div class="walk-bar">
+      <div class="crumbs"><span>${steps > 1 ? `Step ${steps}` : 'Exploring'}</span>${state.trail.slice(-12).map(() => '<i class="on"></i>').join('')}</div>
+      ${steps > 1 ? `<button class="btn btn-sm" data-act="back">${ico('back')} Back</button>` : ''}
+      <button class="btn btn-sm" data-act="overview">${ico('fit')} Overview</button>
+    </div>
+    <span class="kind" style="--c:${kindColor(n.kind)}">${esc(k?.label || 'Box')}</span>
+    <h2 class="node-title">${esc(n.title || n.body)}</h2>
+    ${n.title && n.body ? `<p class="node-body">${esc(n.body)}</p>` : ''}
+    ${outcome}
+    ${n.out.length ? `<h3>${n.out.length > 1 ? 'Choose the next step' : 'Next step'}</h3><div class="choices">${n.out.map((x, i) => `
+      <button class="choice" data-to="${esc(x.node.key)}" style="--c:${kindColor(x.node.kind)}">
+        ${x.e.label ? `<span class="lab">${esc(short(x.e.label, 28))}</span>` : ''}
+        <span class="txt"><small>${esc(KINDS[x.node.kind]?.label || '')}</small>${esc(short(x.node.title || x.node.body, 110))}</span>
+        ${n.out.length > 1 && i < 9 ? `<kbd>${i + 1}</kbd>` : ''}
+      </button>`).join('')}</div>` : ''}
+    ${terminal ? `<div class="chart-steps" style="grid-template-columns:1fr 1fr">
+      <button class="btn" data-act="restart"><small>Again</small><span>${ico('redo')} Start over</span></button>
+      ${next ? `<button class="btn next" data-go="${next.i}"><small>Next chart →</small><span>${esc(next.title)}</span></button>` : '<span></span>'}
+    </div>` : ''}
+    ${n.notes.length ? `<h3>Cases, cautions &amp; notes</h3><div class="notes">${n.notes.map((x) => `<button class="note" data-to="${esc(x.node.key)}"><b>${esc(x.node.title)}</b>${esc(x.node.body)}</button>`).join('')}</div>` : ''}
+    ${n.inn.length ? `<h3>Comes from</h3><div class="from">${n.inn.map((x) => `<button data-to="${esc(x.node.key)}" title="${esc(x.node.title)}">← ${esc(short(x.node.title || x.node.body, 48))}</button>`).join('')}</div>` : ''}
+  </div>`;
+  panelBody.scrollTop = 0;
+}
+
+panelBody.addEventListener('click', (e) => {
+  const t = e.target.closest('button');
+  if (!t) return;
+  const nodes = current.built.nodes;
+  if (t.dataset.to) select(nodes.get(t.dataset.to));
+  else if (t.dataset.walk) startWalk(current.built.roots[+t.dataset.walk]);
+  else if (t.dataset.go) openChart(+t.dataset.go);
+  else if (t.dataset.filter) { state.filter = state.filter === t.dataset.filter ? null : t.dataset.filter; marks(); renderIntro(); }
+  else if (t.dataset.dl) download(t.dataset.dl);
+  else if (t.dataset.act === 'back') back();
+  else if (t.dataset.act === 'restart') startWalk(state.trail[0]);
+  else if (t.dataset.act === 'overview') { state.node = null; state.trail = []; marks(); renderIntro(); fit(); setHash(); if (isPhone()) closePanel(); }
+});
+
+/* ---------- Drawers & sheet ---------- */
+function openPanel() { app.classList.add('panel-open'); }
+function closePanel() { app.classList.remove('panel-open', 'panel-full'); }
+$('#panelClose').onclick = () => { if (state.node) clearSelection(); closePanel(); };
+$('#grab').onclick = () => app.classList.toggle('panel-full');
+$('#infoBtn').onclick = () => { if (app.classList.contains('panel-open') && !state.node) closePanel(); else { if (state.node) { state.node = null; state.trail = []; marks(); } renderIntro(); openPanel(); } };
+$('#walkFab').onclick = () => startWalk();
+$('#picker').onclick = () => app.classList.add('rail-open');
+$('#scrim').onclick = () => app.classList.remove('rail-open');
+$('#railToggle').onclick = () => { app.classList.toggle('rail-collapsed'); setTimeout(() => current && apply(), 320); };
+// Swipe the sheet down to close it.
+(() => {
+  let y0 = null;
+  panel.addEventListener('touchstart', (e) => { y0 = panelBody.scrollTop > 0 ? null : e.touches[0].clientY; }, { passive: true });
+  panel.addEventListener('touchend', (e) => {
+    if (y0 === null || !isPhone()) return;
+    const dy = e.changedTouches[0].clientY - y0;
+    if (dy > 70) { if (app.classList.contains('panel-full')) app.classList.remove('panel-full'); else closePanel(); }
+    else if (dy < -60) app.classList.add('panel-full');
+    y0 = null;
+  }, { passive: true });
+})();
+
+/* ---------- Chart list + search ---------- */
+const listEl = $('#chartList');
+listEl.innerHTML = charts.map((c) => `<button class="chart-item" data-go="${c.i}"><span class="no">${c.i + 1}</span><span class="t"><strong>${esc(c.title)}</strong><small>${$$('g.node', c.src).length} boxes</small></span></button>`).join('');
+listEl.addEventListener('click', (e) => { const b = e.target.closest('[data-go]'); if (b) { openChart(+b.dataset.go); app.classList.remove('rail-open'); } });
+
+const searchEl = $('#search'), resultsEl = $('#results');
+function hl(text, terms) {
+  let out = esc(text);
+  terms.forEach((t) => { if (t.length > 1) out = out.replace(new RegExp(`(${t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')})`, 'gi'), '<mark>$1</mark>'); });
+  return out;
+}
+searchEl.addEventListener('input', () => {
+  const q = searchEl.value.trim().toLowerCase();
+  if (!q) { resultsEl.hidden = true; listEl.hidden = false; return; }
+  const terms = q.split(/\s+/);
+  const hits = index.filter((x) => terms.every((t) => x.hay.includes(t))).slice(0, 40);
+  resultsEl.innerHTML = `<div class="results-head">${hits.length ? `${hits.length}${hits.length === 40 ? '+' : ''} match${hits.length === 1 ? '' : 'es'}` : 'No matches'}</div>` +
+    hits.map((h) => `<button class="result" data-chart="${h.chart}" data-key="${esc(h.key)}"><small>${esc(charts[h.chart].title)}</small><span>${hl(short(h.title + (h.body ? ' — ' + h.body : ''), 160), terms)}</span></button>`).join('');
+  resultsEl.hidden = false; listEl.hidden = true;
+});
+resultsEl.addEventListener('click', (e) => {
+  const b = e.target.closest('.result'); if (!b) return;
+  app.classList.remove('rail-open');
+  openChart(+b.dataset.chart, b.dataset.key);
+});
+
+/* ---------- Opening a chart ---------- */
+function openChart(i, focusKey, { instant = false } = {}) {
+  const c = charts[i];
+  if (!c) return;
+  const same = current === c;
+  if (!same) {
+    if (current?.built) current.built.svg.style.display = 'none';
+    current = c;
+    state.node = null; state.trail = []; state.filter = null;
+    if (isDrawer() && !focusKey) closePanel(); // before measuring, so the fit uses the full canvas
+    if (!c.built) build(c); else c.built.svg.style.display = '';
+    $$('.chart-item', listEl).forEach((b) => b.setAttribute('aria-current', String(+b.dataset.go === i)));
+    $('#pickerNo').textContent = i + 1; $('#pickerTitle').textContent = c.title;
+    buildMinimap();
+    marks();
+    // entrance: fit instantly, then let the boxes rise in
+    if (!reduce) { world.classList.remove('entering'); void world.offsetWidth; world.classList.add('entering'); setTimeout(() => world.classList.remove('entering'), 1500); }
+    const t = fitTarget();
+    if (instant || reduce) { Object.assign(cam, t); apply(); }
+    else { Object.assign(cam, { ...t, k: t.k * 0.94, x: t.x + current.w * t.k * 0.03, y: t.y + current.h * t.k * 0.03 }); apply(); flyTo(t, 700); }
+  }
+  if (focusKey && c.built.nodes.get(focusKey)) { state.trail = []; setTimeout(() => select(c.built.nodes.get(focusKey)), same ? 0 : 450); }
+  else { renderIntro(); if (!isDrawer()) openPanel(); else if (!same) closePanel(); setHash(); }
+}
+
+/* Keys: [ ] switch chart · 1-9 choose · Backspace back · Esc overview · + − 0 zoom */
+addEventListener('keydown', (e) => {
+  if (e.target.closest?.('input, textarea')) { if (e.key === 'Escape') { searchEl.value = ''; searchEl.dispatchEvent(new Event('input')); searchEl.blur(); } return; }
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (e.key === ']' && charts[current.i + 1]) openChart(current.i + 1);
+  else if (e.key === '[' && charts[current.i - 1]) openChart(current.i - 1);
+  else if (e.key === '+' || e.key === '=') zoomCenter(1.35);
+  else if (e.key === '-') zoomCenter(1 / 1.35);
+  else if (e.key === '0') fit();
+  else if (e.key === 'Escape') { app.classList.remove('rail-open'); if (state.node) { state.node = null; state.trail = []; marks(); renderIntro(); fit(); setHash(); if (isDrawer()) closePanel(); } }
+  else if (e.key === 'Backspace' && state.node) { e.preventDefault(); back(); }
+  else if (/^[1-9]$/.test(e.key) && state.node && state.node.out[+e.key - 1]) select(state.node.out[+e.key - 1].node);
+  else if (e.key === '/') { e.preventDefault(); if (isDrawer()) app.classList.add('rail-open'); searchEl.focus(); }
+});
+
+/* ---------- Downloads (generated in the browser, so they work offline) ---------- */
+function download(type) {
+  const s = current.src.cloneNode(true);
+  s.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
+  s.setAttribute('width', current.w); s.setAttribute('height', current.h);
+  const xml = new XMLSerializer().serializeToString(s);
+  const name = current.id;
+  const save = (blob, ext) => { const a = document.createElement('a'); a.href = URL.createObjectURL(blob); a.download = `${name}.${ext}`; document.body.appendChild(a); a.click(); setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1000); };
+  const svgBlob = new Blob([xml], { type: 'image/svg+xml' });
+  if (type === 'svg') return save(svgBlob, 'svg');
+  const img = new Image();
+  img.onload = () => {
+    const scale = 2, cv = document.createElement('canvas');
+    cv.width = current.w * scale; cv.height = current.h * scale;
+    const ctx = cv.getContext('2d'); ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height); ctx.drawImage(img, 0, 0, cv.width, cv.height);
+    cv.toBlob((b) => save(b, 'png'), 'image/png');
+  };
+  img.src = URL.createObjectURL(svgBlob);
+}
+
+/* ---------- Deep links: #chart-id or #chart-id/node-key ---------- */
+let hashLock = false;
+function setHash() {
+  if (!current) return;
+  hashLock = true;
+  history.replaceState(null, '', '#' + current.id + (state.node ? '/' + encodeURIComponent(state.node.key) : ''));
+  setTimeout(() => { hashLock = false; });
+}
+function fromHash() {
+  const [id, key] = decodeURIComponent(location.hash.slice(1)).split('/');
+  const c = charts.find((x) => x.id === id);
+  return c ? { i: c.i, key } : null;
+}
+addEventListener('hashchange', () => { if (hashLock) return; const h = fromHash(); if (h) openChart(h.i, h.key); });
+
+/* ---------- First-run tip ---------- */
+const tip = $('#tip');
+let tipTimer;
+function hideTip() { tip.classList.add('gone'); clearTimeout(tipTimer); }
+function showTip() {
+  try { if (localStorage.getItem('flow-tip-seen')) return; localStorage.setItem('flow-tip-seen', '1'); } catch { /* ignore */ }
+  tip.textContent = matchMedia('(pointer: coarse)').matches ? 'Tap any box to dive in' : 'Click any box to dive in · scroll to zoom';
+  tip.classList.remove('gone');
+  tipTimer = setTimeout(hideTip, 4500);
+}
+
+const h = fromHash();
+// Draw right away (not on an animation frame, which never fires in a background tab).
+openChart(h ? h.i : 0, h?.key, { instant: true }); showTip(); canvas.focus({ preventScroll: true });
+})();
+</script>
+</body>
+</html>

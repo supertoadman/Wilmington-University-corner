@@ -326,6 +326,17 @@ if (viewer) {
   const frame = $('.vframe');
   if (frame) {
     const done = () => $('.vframe-wrap')?.classList.add('is-loaded');
+    // Keep the embedded document's light/dark theme in step with the site's toggle.
+    const syncTheme = () => {
+      try {
+        const d = frame.contentDocument?.documentElement;
+        if (!d) return;
+        const t = document.documentElement.dataset.theme;
+        if (t) d.dataset.theme = t; else delete d.dataset.theme;
+      } catch { /* cross-origin document */ }
+    };
+    frame.addEventListener('load', syncTheme);
+    new MutationObserver(syncTheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     frame.addEventListener('load', done);
     setTimeout(done, 6000);
   }
