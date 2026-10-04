@@ -84,6 +84,3 @@ src/assets/              CSS, client JS, favicon, social image
 site.config.json         site title, URL, repository, disclaimer
 ```
 
-## Not published
-
-`content/Professional Responsibility/PR_MPRE_500_Course_Subset.html` is excluded through `.gitignore` and `"publish": false`. It reproduces questions from a copyrighted commercial MPRE book. To publish it anyway, remove it from `.gitignore` and delete `"publish": false` from that subject's `subject.json`.

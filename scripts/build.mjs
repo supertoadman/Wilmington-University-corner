@@ -214,8 +214,9 @@ const subjects = await loadSubjects();
 const docs = subjects.flatMap((s) => s.documents);
 const generatedAt = new Date().toISOString();
 
-fs.rmSync(DIST, { recursive: true, force: true });
+// Empty dist/ rather than deleting it, so an open shell or preview server inside it doesn't block the build.
 fs.mkdirSync(DIST, { recursive: true });
+for (const entry of fs.readdirSync(DIST)) fs.rmSync(path.join(DIST, entry), { recursive: true, force: true });
 
 // URL helpers (paths relative to site root, no leading slash)
 const P = {

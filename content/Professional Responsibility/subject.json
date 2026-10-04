@@ -26,8 +26,8 @@
       "slug": "mpre-500-course-subset",
       "title": "MPRE 500: Course Subset",
       "type": "practice",
-      "publish": false,
-      "description": "298 questions from a published MPRE practice book, limited to the Weeks 1–5 coverage. Not published: the questions come from a copyrighted book.",
+      "description": "298 of the 500 questions in Stevenson, 500 MPRE Practice Questions (2019), limited to what Weeks 1–5 cover. Uses the book's answer key, with study and exam modes, topic filters, and answer shuffling.",
+      "tags": ["MPRE", "MCQ", "exam mode", "book questions"],
       "questions": 298,
       "order": 3
     }
