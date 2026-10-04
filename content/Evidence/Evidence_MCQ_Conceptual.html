@@ -1,0 +1,545 @@
+<title>Evidence Rules Drill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: a single reading column of question "cards" under a sticky docket bar holding score + controls. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --ink:#18212b; --muted:#5a6673; --line:#d6dce3;
+  --accent:#2c5a4f; --accent-soft:#e3eeea;
+  --good:#1f7a4a; --good-soft:#e2f3e9; --bad:#b03a2e; --bad-soft:#f8e4e1;
+  --display:"Libre Caslon Display","Georgia","Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12171d; --surface:#1a2129; --ink:#e4e9ee; --muted:#9aa6b2; --line:#2e3843;
+  --accent:#7fc1ad; --accent-soft:#1f3330;
+  --good:#6fcf97; --good-soft:#173326; --bad:#f08a7e; --bad-soft:#3a1f1c; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12171d; --surface:#1a2129; --ink:#e4e9ee; --muted:#9aa6b2; --line:#2e3843;
+  --accent:#7fc1ad; --accent-soft:#1f3330;
+  --good:#6fcf97; --good-soft:#173326; --bad:#f08a7e; --bad-soft:#3a1f1c; color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:760px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+header h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,42px);line-height:1.1;margin:0;text-wrap:balance}
+header p{color:var(--muted);margin:8px 0 0;max-width:62ch}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-top:20px;padding-block:12px;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.score{font-variant-numeric:tabular-nums;font-weight:600;margin-right:auto}
+.score span{color:var(--muted);font-weight:400}
+button{font:inherit;cursor:pointer}
+.btn{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:6px 12px;font-size:14px;font-weight:500}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--surface);border-color:var(--accent)}
+.chip{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:3px 11px;font-size:13px}
+.chip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.meter{height:4px;background:var(--line);border-radius:2px;overflow:hidden}
+.meter i{display:block;height:100%;background:var(--accent);width:0;transition:width .25s}
+ol.qs{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:column;gap:18px}
+.q{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:18px 18px 16px}
+.meta{display:flex;gap:10px;align-items:baseline;flex-wrap:wrap;font-size:13px;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums;font-weight:600;color:var(--ink)}
+.tag{font-family:var(--mono);font-size:12px;color:var(--accent);letter-spacing:.02em}
+.stem{margin:8px 0 12px;font-size:16.5px}
+.opts{display:flex;flex-direction:column;gap:8px}
+.opt{display:flex;gap:10px;text-align:left;width:100%;background:transparent;color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:9px 12px;line-height:1.45}
+.opt:hover:not(:disabled){border-color:var(--accent);background:var(--accent-soft)}
+.opt:disabled{cursor:default}
+.opt b{font-family:var(--mono);font-weight:500;color:var(--muted);flex:none}
+.opt.right{border-color:var(--good);background:var(--good-soft)}
+.opt.right b{color:var(--good)}
+.opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
+.opt.wrong b{color:var(--bad)}
+.why{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:14.5px;color:var(--ink)}
+.why strong{color:var(--good)}
+.why.miss strong{color:var(--bad)}
+.empty{color:var(--muted);text-align:center;padding:40px 0}
+@media (prefers-reduced-motion:reduce){.meter i{transition:none}}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Evidence Rules Drill</h1>
+    <p>Conceptual multiple choice for Weeks 1–5, weighted toward the Federal Rules. Answers are shuffled every time you load or press <em>Shuffle answers</em>, so the letter never gives it away.</p>
+  </header>
+
+  <div class="bar">
+    <div class="row">
+      <div class="score" id="score">0 / 0 <span>answered</span></div>
+      <button class="btn primary" id="shufA">Shuffle answers</button>
+      <button class="btn" id="shufQ">Shuffle questions</button>
+      <button class="btn" id="missed">Retry missed</button>
+      <button class="btn" id="reset">Reset</button>
+    </div>
+    <div class="row" id="chips" role="group" aria-label="Filter by topic"></div>
+    <div class="meter" aria-hidden="true"><i id="meter"></i></div>
+  </div>
+
+  <ol class="qs" id="list"></ol>
+</div>
+
+<script>
+// Each item: topic, rule tag, stem, answers (first = correct), explanation.
+const BANK = [
+// ---- Jury secrecy
+["Jury","FRE 606(b)","After a guilty verdict, a juror signs an affidavit saying several jurors drank heavily and used drugs during the trial. Can the defense use the affidavit to impeach the verdict?",
+ ["No. Juror intoxication is an internal matter, so Rule 606(b) bars the testimony.",
+  "Yes. Drugs and alcohol are an outside influence because they came from outside the courthouse.",
+  "Yes. Intoxication is extraneous prejudicial information that reached the jury.",
+  "Yes, if the judge finds under Rule 403 that the affidavit's probative value is high."],
+ "Tanner treats juror intoxication as internal. Whether something counts as extraneous or outside turns on the nature of the allegation, not on where it physically came from."],
+["Jury","FRE 606(b)","What decides whether a matter falls within Rule 606(b)'s 'extraneous information' or 'outside influence' exceptions?",
+ ["The nature of the allegation, such as a newspaper account or a bribe, as opposed to the jurors' own conduct or experiences.",
+  "Whether the event took place inside or outside the jury room.",
+  "Whether the matter actually changed the outcome of the verdict.",
+  "Whether the juror learned of it before or after being sworn."],
+ "The exceptions are kept narrow by looking at what kind of thing is alleged. A juror's own past experiences (Warger) and drug use (Tanner) are internal, even if they originated elsewhere."],
+["Jury","Peña-Rodriguez","Under Peña-Rodriguez v. Colorado, when does the Sixth Amendment override the no-impeachment rule?",
+ ["When a juror clearly relied on racial stereotypes or animus, and that was a significant motivating factor in the vote to convict.",
+  "Whenever any juror made an offhand racial comment during deliberations.",
+  "Whenever a juror is shown to have given a dishonest answer during voir dire.",
+  "Whenever bias of any kind, in any civil or criminal case, may have affected the verdict."],
+ "The exception is narrow. The animus must be a significant motivating factor, offhand remarks don't qualify, and its reach in civil cases is debated (Problem I.1)."],
+["Jury","FRE 606(b)","Which is NOT one of the policies behind Rule 606(b)?",
+ ["Making sure jurors follow the court's limiting instructions.",
+  "Protecting frank debate during deliberations.",
+  "Preserving the finality of verdicts.",
+  "Shielding jurors from harassment by the losing party."],
+ "606(b) protects candor, finality, and jurors. Because the jury room is rarely examined afterward, the rules screen what goes in instead."],
+// ---- Relevance
+["Relevance","FRE 401","Rule 401 relevance has two components. What are they?",
+ ["Probativeness (any tendency to make a fact more or less probable) and materiality (the fact is of consequence).",
+  "Probativeness and the absence of unfair prejudice.",
+  "Materiality and proof by a preponderance of the evidence.",
+  "Authenticity and probativeness."],
+ "401(a) is probativeness and 401(b) is materiality. Unfair prejudice is a Rule 403 question, not part of the relevance definition."],
+["Relevance","FRE 401","What does the phrase 'a brick is not a wall' convey about Rule 401?",
+ ["An item of evidence is relevant if it moves the probability at all. It need not prove the point by itself.",
+  "Evidence must be strong enough to support a verdict standing alone.",
+  "Weak evidence should be excluded because it wastes the jury's time.",
+  "Circumstantial evidence is less reliable than direct evidence."],
+ "The bar is very low. Each piece only needs to contribute to the case, the way a brick contributes to a wall."],
+["Relevance","FRE 401","Where does a fact's materiality, meaning whether it is 'of consequence', come from?",
+ ["The substantive law governing the claim or charge, as Montana v. Egelhoff illustrates.",
+  "The Federal Rules of Evidence themselves.",
+  "The judge's view of which witnesses are credible.",
+  "Whatever facts the jury thinks are important."],
+ "Materiality comes from the elements and defenses in the substantive law. In Egelhoff, Montana could make voluntary intoxication immaterial to mental state."],
+["Relevance","FRE 104(b)","Evidence of a motive matters only if the defendant knew about the motive. What standard does Rule 104(b) apply to that preliminary fact?",
+ ["Evidence sufficient for a jury to reasonably find the fact by a preponderance. The judge does not decide it herself.",
+  "The judge must personally find the fact by a preponderance under Rule 104(a).",
+  "The fact must be proved by clear and convincing evidence.",
+  "The fact must be proved beyond a reasonable doubt because it is a criminal case."],
+ "Conditional relevance uses a lenient sufficiency standard (Huddleston). The jury, not the judge, makes the final call."],
+["Relevance","FRE 104(b)","The connecting fact isn't proved yet when the evidence is offered. What can the court do?",
+ ["Admit the evidence on the condition that proof of the connecting fact is introduced later.",
+  "It must exclude the evidence until the connecting fact is proved first.",
+  "It must declare a mistrial if the connection is never made.",
+  "It may admit the evidence only if the opponent consents."],
+ "Rule 104(b) expressly allows conditional admission, as in Cox. If the proof never comes, the court can strike the evidence or instruct the jury."],
+["Relevance","FRE 402","What is the default rule for relevant evidence?",
+ ["It is admissible unless the Constitution, a statute, or another rule excludes it.",
+  "It is admissible only if the proponent shows that its probative value outweighs its prejudice.",
+  "It is inadmissible unless a specific rule authorizes it.",
+  "It is admissible only if it is material and direct."],
+ "Rule 402 is the starting point. Most of the course is about the exceptions that carve evidence out of that default."],
+// ---- 403 / 105
+["Rule 403","FRE 403","Which best describes how Rule 403 balancing is tilted?",
+ ["Toward admission. Exclusion requires that probative value be substantially outweighed by the listed dangers.",
+  "Toward exclusion. The proponent must show probative value outweighs prejudice.",
+  "Neutral. The judge admits whichever side of the scale is heavier.",
+  "Toward exclusion in criminal cases and toward admission in civil cases."],
+ "The word 'substantially' tilts the scale toward admission. Compare 609(a)(1)(B) and 609(b), which tilt it the other way."],
+["Rule 403","FRE 403","What counts as 'unfair prejudice' under Rule 403?",
+ ["An undue tendency to suggest decision on an improper basis, commonly an emotional one.",
+  "Any evidence that substantially damages the opponent's case.",
+  "Evidence the opponent did not disclose before trial.",
+  "Evidence that is highly persuasive to the jury."],
+ "All good evidence hurts the other side. Only unfair prejudice counts. Serge makes the point that being persuasive isn't the same as being unfair."],
+["Rule 403","Old Chief","In Old Chief, the defendant offered to stipulate that he had a prior felony conviction. Why couldn't the government name the prior crime?",
+ ["An available alternative, the stipulation, lowered the discounted probative value of naming an offense that carried a high risk of propensity reasoning.",
+  "A defendant's stipulation always obligates the prosecution to accept it for any element.",
+  "Prior convictions are never admissible in a criminal case.",
+  "The name of the offense was irrelevant under Rule 401."],
+ "Old Chief lets courts consider evidentiary alternatives when weighing probative value. It is narrow: the government generally may still prove its case its own way, and it applies mainly to legal status like felon status."],
+["Rule 403","Collins","What was the core flaw in the probability testimony in People v. Collins?",
+ ["The odds were built on invented figures and assumed independence, producing 'trial by mathematics'.",
+  "Mathematical evidence is inherently inadmissible in criminal trials.",
+  "The expert lacked a degree in statistics.",
+  "The prosecutor did not give advance notice of the statistical evidence."],
+ "Collins does not ban mathematics. Sound probability evidence such as DNA statistics is fine. The problem was unsupported inputs dressed up as precision."],
+["Rule 403","Bocharski","Why are gruesome photographs most vulnerable to exclusion under Rule 403?",
+ ["When they prove nothing that is actually disputed, so their main effect is to inflame the jury.",
+  "Whenever they are in color rather than black and white.",
+  "Whenever the defendant offers to stipulate to the cause of death.",
+  "Because photographs are hearsay."],
+ "Bocharski asks what the photo actually proves. Low probative value on a disputed point, combined with strong emotional impact, is the classic 403 exclusion."],
+["Rule 403","Serge","How did Commonwealth v. Serge treat a computer-generated animation of a shooting?",
+ ["As demonstrative evidence judged like other evidence. Its persuasiveness alone is not unfair prejudice.",
+  "As inherently unfairly prejudicial because jurors overvalue technology.",
+  "As inadmissible unless the defendant also prepared an animation.",
+  "As substantive evidence that needed no foundation."],
+ "The animation had to fairly and accurately depict the expert's theory. Once it did, its power to persuade was not a ground to exclude it."],
+["Rule 403","FRE 105","Evidence is admissible against one party or for one purpose only. What does Rule 105 provide?",
+ ["On timely request, the court must restrict the evidence to its proper scope and instruct the jury accordingly.",
+  "The court must exclude the evidence entirely.",
+  "The court must give a limiting instruction even if no one asks.",
+  "The jury may use the evidence for any purpose once admitted."],
+ "Rule 105 is the alternative to exclusion. Research such as Wissler & Saks suggests jurors often can't follow these instructions, which feeds back into the 403 analysis."],
+// ---- Specialized relevance
+["407–411","FRE 407","After a customer slips on a wet floor, the store installs non-slip mats. What can the mats evidence NOT be used to prove?",
+ ["That the store was negligent.",
+  "That the store controlled the premises, if control is disputed.",
+  "That mats were feasible, if feasibility is disputed.",
+  "That the store manager's testimony about safety is not credible."],
+ "407 bars use of subsequent remedial measures to prove negligence, culpable conduct, or a defect. Ownership, control, feasibility (if disputed), and impeachment remain open."],
+["407–411","FRE 407","What are the two main rationales for Rule 407?",
+ ["Being wiser after an accident doesn't mean you were foolish before it, and the rule encourages safety repairs.",
+  "Repairs are usually hearsay, and they waste trial time.",
+  "Repairs are privileged communications, and they invade privacy.",
+  "Juries always overvalue physical evidence, and repairs are hard to authenticate."],
+ "Low probative value on fault plus a policy of encouraging remedial measures. That is why 407 bars specified uses rather than all uses."],
+["407–411","FRE 407","A truck manufacturer redesigns a hitch after an accident, but the repair was made by an independent third party, not the defendant. Does Rule 407 bar it?",
+ ["Generally no, because the policy of encouraging the defendant's repairs isn't at stake, though Rule 403 may still apply.",
+  "Yes. Rule 407 bars any repair by anyone.",
+  "Yes, but only in strict liability cases.",
+  "No, and the evidence is automatically admissible on fault."],
+ "Courts generally don't apply 407 to non-party repairs. Admission still has to survive 403."],
+["407–411","FRE 407","Does Rule 407 apply in product liability cases?",
+ ["Yes. Since the 1997 amendment it expressly covers proof of a defect in a product or its design.",
+  "No. It applies only to negligence claims.",
+  "Only if the measure was required by a regulation.",
+  "Only in state court."],
+ "The 1997 amendment added 'a defect in a product or its design' and resolved a circuit split."],
+["407–411","FRE 408","A debtor writes: 'I know I owe you the full $10,000, but I can only pay $6,000. Take it or leave it.' Is the letter protected by Rule 408?",
+ ["No. There's no claim disputed as to validity or amount, so Rule 408 does not apply.",
+  "Yes. Any offer of payment is protected.",
+  "Yes, but only the dollar figure is protected, not the admission.",
+  "No, because Rule 408 applies only after a lawsuit is filed."],
+ "408 requires a disputed claim. An admitted debt with a request for a discount isn't a compromise of a dispute."],
+["407–411","FRE 408","Compromise evidence MAY be offered for which purpose?",
+ ["To prove a witness's bias or prejudice.",
+  "To prove the claim's validity.",
+  "To impeach by prior inconsistent statement.",
+  "To prove the amount of damages owed."],
+ "408(b) permits other purposes such as bias, negating undue delay, or obstruction. Impeachment by prior inconsistent statement or contradiction is expressly barred."],
+["407–411","FRE 409","At the scene, a driver says: 'I'll pay your hospital bills. I was texting and ran the light.' Under Rule 409, what is excluded?",
+ ["Only the offer to pay medical expenses. The admission of fault is admissible.",
+  "The entire statement, because it was made in a spirit of compromise.",
+  "Nothing, because Rule 409 applies only to written offers.",
+  "The entire statement, but only in criminal cases."],
+ "Unlike 408, Rule 409 doesn't protect accompanying statements. It protects the humane impulse to pay, not admissions made alongside it."],
+["407–411","FRE 410","How does Rule 410 differ structurally from Rules 407, 408, 409 and 411?",
+ ["It bars covered evidence against the defendant for essentially all purposes, with only narrow exceptions. The others bar only specified uses.",
+  "It bars covered evidence only for proving guilt, and it allows other purposes freely.",
+  "It applies only in civil cases.",
+  "It cannot be waived."],
+ "410 is the outlier. Its exceptions are narrow: completeness, and perjury prosecutions for statements under oath."],
+["407–411","FRE 410","A suspect makes incriminating statements to a detective, hoping for leniency. The detective had no authority from the prosecutor to negotiate. Under Rule 410 and cases like Greene, are the statements protected?",
+ ["No. Rule 410 covers plea discussions with an attorney for the prosecuting authority, not police acting without that authority.",
+  "Yes. Any statement made in hope of a deal is protected.",
+  "Yes, because the suspect subjectively believed he was negotiating.",
+  "No, because Rule 410 never applies before charges are filed."],
+ "Only discussions with the prosecutor, or an agent the prosecutor designated, are covered. Mezzanatto adds that the protection can also be waived by agreement."],
+["407–411","FRE 410","Under United States v. Mezzanatto, what is the status of Rule 410's protections?",
+ ["They can be waived by the defendant's agreement, for example as a condition of plea talks.",
+  "They are constitutional rights that can never be waived.",
+  "They apply only if the plea is eventually accepted.",
+  "They protect the prosecutor's statements as well as the defendant's."],
+ "Prosecutors now routinely ask for such waivers. The reading notes the tension with 410's goal of candid negotiation."],
+["407–411","FRE 411","A defense witness is a claims adjuster employed by the defendant's liability insurer. May the plaintiff reveal that employment?",
+ ["Yes. Rule 411 allows insurance evidence for another purpose, such as a witness's bias.",
+  "No. Any mention of insurance is barred.",
+  "Only if the defendant consents.",
+  "Only to prove the defendant's negligence."],
+ "411 bars insurance only to prove negligence or wrongful conduct. Bias, agency, ownership, and control remain open. See Problem 2.5 (Lacher)."],
+// ---- Character
+["Character","FRE 404(a)(1)","What is the forbidden 'propensity' inference?",
+ ["From a person's character trait to the conclusion that the person acted in accordance with that trait on a particular occasion.",
+  "From a person's past conviction to the conclusion that the person is not credible.",
+  "From a person's habit to the conclusion that the person acted in conformity with it.",
+  "From a victim's character to the defendant's guilt."],
+ "That's the propensity box: 'he's that type, so he did it.' Habit (406) and conviction impeachment (609) are separately authorized routes."],
+["Character","FRE 404(a)(1)","Why does the law ban propensity evidence, according to Zackowitz and the reading?",
+ ["Juries give it excessive weight and may convict to punish the person regardless of guilt in this case.",
+  "Character evidence is always irrelevant under Rule 401.",
+  "Character evidence is a form of hearsay.",
+  "It is too time-consuming to prove."],
+ "Propensity evidence is relevant. It is excluded for policy reasons: overvaluation, and the temptation to punish bad people."],
+["Character","FRE 404(b)","Rule 404(b)(2) lists purposes such as motive, intent, and identity. How should those purposes be understood?",
+ ["As non-propensity routes. If the chain of reasoning still runs through character, the evidence is barred even if labeled 'intent' or 'identity'.",
+  "As exceptions that let in propensity evidence whenever one of the labels applies.",
+  "As an exclusive list. No other non-character purpose is allowed.",
+  "As purposes available only to criminal defendants."],
+ "The list is illustrative, not exceptions. The question is always whether the inference avoids the propensity box. Rule 403 and the notice requirement still apply."],
+["Character","Huddleston","Under Huddleston, what must the proponent show before other-act evidence goes to the jury?",
+ ["Evidence sufficient for a jury to reasonably find, by a preponderance, that the act occurred and that the defendant committed it.",
+  "The judge must find by clear and convincing evidence that the act occurred.",
+  "The defendant must have been convicted of the other act.",
+  "The judge must find by a preponderance under Rule 104(a)."],
+ "Huddleston applies the 104(b) conditional relevance standard. Under Dowling, even an acquittal doesn't bar the evidence, because acquittal reflects only reasonable doubt."],
+["Character","Identity / M.O.","When may other crimes be used to prove identity by modus operandi?",
+ ["When the similarities are so distinctive they act as a signature, so the crime 'could not be anyone else's'.",
+  "Whenever both crimes were the same type, such as two robberies.",
+  "Whenever a single shared feature exists, like use of a knife.",
+  "Only when the defendant was convicted of the earlier crime."],
+ "Trenkler (bomb design) met the standard. Pisari, where the only common feature was a knife in a robbery, did not."],
+["Character","Doctrine of chances","Rex v. Smith (brides in the bath) is the classic example of which theory?",
+ ["The doctrine of chances: repeated unusual 'accidents' are objectively improbable.",
+  "Narrative integrity (res gestae).",
+  "Reverse 404(b).",
+  "Habit under Rule 406."],
+ "The reasoning is supposed to run through objective improbability rather than character. Scholars disagree whether it truly escapes the propensity box."],
+["Character","Reverse 404(b)","A defendant offers evidence that a third person committed similar crimes. How do courts like Stevens treat this 'reverse 404(b)' evidence?",
+ ["With a lower similarity threshold, since there's less risk of prejudice to the defendant, but it is still not a license for pure propensity reasoning.",
+  "As always admissible because the defendant has a right to present a defense.",
+  "As always barred because Rule 404(b) protects all persons equally.",
+  "As admissible only if the third person was convicted."],
+ "Stevens relaxed the similarity requirement. Williams warns that the defendant still can't simply argue 'the other guy is the criminal type'."],
+["Character","FRE 404(a)(2)(A)","Who may first introduce evidence of a criminal defendant's pertinent character trait to prove conduct?",
+ ["Only the defendant. The prosecution may then rebut.",
+  "Only the prosecution.",
+  "Either party, in civil or criminal cases.",
+  "Only the judge, on her own motion."],
+ "The 'mercy rule' lets the accused open the door. It never applies in civil cases. Once the door is open, the prosecution can rebut, including with Michelson-style 'Have you heard...?' cross."],
+["Character","Michelson","What is the function of 'Have you heard...?' questions asked of a defendant's reputation witness?",
+ ["To test the witness's knowledge of the reputation and the standard they used, not to prove the defendant committed the act.",
+  "To prove that the defendant committed the specific act asked about.",
+  "To impeach the defendant under Rule 609.",
+  "To introduce extrinsic evidence of the defendant's past crimes."],
+ "Michelson allows the questions on cross, subject to a good-faith basis and a limiting instruction. The jury may not treat them as proof of the acts."],
+["Character","FRE 404(a)(2)(B)","In a self-defense case, the defendant offers evidence of the victim's violent character. What may the prosecution now do?",
+ ["Rebut it with the victim's peacefulness, and offer evidence of the same trait (violence) in the defendant.",
+  "Nothing. The defendant's evidence closes the issue.",
+  "Offer any of the defendant's character traits.",
+  "Offer the defendant's prior convictions as substantive evidence."],
+ "Attacking the victim's trait opens the door to the same trait in the accused under 404(a)(2)(B)(ii)."],
+["Character","FRE 404(a)(2)(C)","In a homicide case, when may the prosecutor offer evidence of the victim's peacefulness without the defendant first offering character evidence?",
+ ["When the defendant offers any evidence that the victim was the first aggressor.",
+  "In every homicide case, as part of the government's case in chief.",
+  "Only when the defendant testifies.",
+  "Never. The prosecution may only rebut character evidence."],
+ "This is the one prosecution-triggered route outside Rules 413–415. Any first-aggressor evidence opens it, including the defendant's own testimony."],
+["Character","FRE 405","In an ordinary self-defense case, can the defendant prove the victim's violent character through specific instances of violence?",
+ ["No. The victim's character isn't an essential element of self-defense, so Rule 405(a) limits proof to reputation or opinion.",
+  "Yes. Specific instances are always allowed for a victim's character.",
+  "Yes, because self-defense makes character an essential element.",
+  "Only if the specific instances resulted in convictions."],
+ "405(b) applies only when character is an essential element, as in entrapment, a truth defense in defamation, or negligent entrustment. (Specific acts the defendant knew of may still come in for state of mind, a non-character use.)"],
+["Character","FRE 406","What distinguishes admissible habit evidence from barred character evidence?",
+ ["Habit is a specific, regular, semi-automatic response to a recurring situation, not a general disposition.",
+  "Habit evidence is proved only by reputation.",
+  "Habit applies only to organizations, never to individuals.",
+  "Habit requires at least three prior instances."],
+ "'He always signals before turning onto Main Street' is habit. 'He's a careful driver' is character. See Problem 3.20 on whether a doctor's pattern of prescriptions qualifies."],
+["Character","FRE 413–415","What do Rules 413–415 permit in sexual assault and child molestation cases?",
+ ["Evidence of the defendant's other such offenses for any relevant purpose, including propensity, still subject to Rule 403.",
+  "Evidence of the victim's past sexual behavior.",
+  "Other-act evidence only for the 404(b) purposes.",
+  "Propensity evidence that is exempt from Rule 403 balancing."],
+ "These rules reach directly into the propensity box. Guardia confirms ordinary 403 still applies, and Mound rejected a due process challenge."],
+// ---- Impeachment
+["Impeachment","Modes","Which mode of impeachment brings the character rules (608, 609) into play?",
+ ["'You're a liar': attacking the witness's general character for truthfulness.",
+  "'That's an error': attacking perception or memory.",
+  "Bias: showing the witness has a reason to shade testimony in this case.",
+  "Contradiction by a prior inconsistent statement."],
+ "Error, bias, and contradiction are noncharacter impeachment governed by 401 and 403. Only character-for-truthfulness attacks run through 404(a)(3), 607, 608 and 609."],
+["Impeachment","FRE 607","May a party impeach a witness that party itself called?",
+ ["Yes. Rule 607 lets any party attack any witness's credibility.",
+  "No. A party vouches for its own witnesses.",
+  "Only if the court declares the witness hostile.",
+  "Only with prior convictions."],
+ "607 abolished the old voucher rule."],
+["Impeachment","FRE 608(a)","Before any attack on a witness's truthfulness, a party offers a character witness to say the witness is very honest. Admissible?",
+ ["No. Supporting evidence under 608(a) is allowed only after the witness's character for truthfulness has been attacked.",
+  "Yes. Truthfulness is always pertinent for a witness.",
+  "Yes, if limited to reputation rather than opinion.",
+  "Yes, but only in criminal cases."],
+ "That would be impermissible bolstering (Bonner). Rehabilitation comes only after an attack."],
+["Impeachment","FRE 608(b)","On cross, counsel asks a witness about falsifying a loan application years ago. The witness denies it. What may counsel do?",
+ ["Take the answer. Rule 608(b) bars extrinsic evidence of the act to attack character for truthfulness.",
+  "Call the bank officer to prove the falsification.",
+  "Introduce the loan file as an exhibit.",
+  "Ask the court to hold the witness in contempt."],
+ "Counsel needs a good-faith basis to ask, as in Whitmore where a driving record supplied it. Then the answer stands. 608(b) also can't be used as a back door around 609 for convictions."],
+["Impeachment","Abel","Why may a party use extrinsic evidence to prove a witness's bias, even though extrinsic evidence of 608(b) acts is barred?",
+ ["Bias is never collateral. It bears directly on credibility in this case, so Rule 608(b)'s bar doesn't apply (Abel).",
+  "Bias is a character trait, so Rule 405(b) allows specific instances.",
+  "Extrinsic evidence is always admissible on cross-examination.",
+  "It may not. Bias must be proved only through the witness's own answers."],
+ "In Abel, membership in a secret organization whose members were sworn to lie for one another showed bias. That was a proper non-character use, even though it also reflected on character."],
+["Impeachment","FRE 609(a)(2)","A witness was convicted of perjury eight years ago. Must it be admitted to impeach?",
+ ["Yes. Crimen falsi convictions must be admitted, with no balancing, regardless of punishment.",
+  "Only if its probative value outweighs its prejudicial effect.",
+  "Only if it was a felony.",
+  "Only with the court's Rule 403 approval."],
+ "609(a)(2) is the most permissive provision. But theft and robbery are not crimen falsi."],
+["Impeachment","FRE 609","Rank these 609 standards from most to least permissive of admission.",
+ ["(a)(2) automatic → (a)(1)(A) Rule 403 → (a)(1)(B) probative outweighs prejudice to the accused → (b) probative substantially outweighs prejudice.",
+  "(a)(1)(B) → (a)(2) → (b) → (a)(1)(A).",
+  "(b) → (a)(1)(A) → (a)(1)(B) → (a)(2).",
+  "(a)(1)(A) → (a)(2) → (a)(1)(B) → (b)."],
+ "Know the ladder. The accused gets more protection than other witnesses, and stale convictions get a reverse-403 test with notice required."],
+["Impeachment","FRE 609(a)(1)(B)","The accused testifies and has a prior armed robbery conviction. The charge is armed robbery. Under the Gordon factors applied in Brewer, how does the similarity of crimes cut?",
+ ["Against admission. Similarity increases the risk the jury will use the conviction as propensity evidence.",
+  "In favor of admission, because similar crimes are more probative of truthfulness.",
+  "It is irrelevant to the analysis.",
+  "It requires automatic exclusion."],
+ "The five factors are the nature of the crime, timing and later history, similarity, the importance of the defendant's testimony, and the centrality of credibility. Similarity weighs against admission."],
+["Impeachment","Luce / Ohler","To appeal a ruling admitting a prior conviction for impeachment, what must the defendant do?",
+ ["Actually testify (Luce), and not introduce the conviction on direct to 'draw the sting' (Ohler).",
+  "Simply object in a motion in limine. Nothing more is needed.",
+  "Refuse to testify, so the record shows the ruling's chilling effect.",
+  "Introduce the conviction first, to show the jury candor."],
+ "Luce requires testimony so the harm can be assessed. Ohler holds that preemptively disclosing the conviction waives the objection."],
+["Impeachment","Rehabilitation","A witness is impeached only by evidence of bias. May the proponent rehabilitate by offering 608(a) evidence of good character for truthfulness?",
+ ["Generally no. Bias is not an attack on character for truthfulness, so the door isn't opened.",
+  "Yes. Any impeachment opens the door.",
+  "Yes, but only with reputation evidence.",
+  "Only if the bias evidence was extrinsic."],
+ "Attacks under 608(a), 608(b), and 609 open the door. Contradiction counts only if it amounts to a pervasive attack on truthfulness."],
+["Impeachment","FRE 609(d)","Can a juvenile adjudication be used to impeach the accused in a criminal case?",
+ ["No. Juvenile adjudications are never admissible against the accused, or in civil cases.",
+  "Yes, under the same standard as adult convictions.",
+  "Yes, if it involved crimen falsi.",
+  "Yes, if less than ten years old."],
+ "609(d) permits juvenile adjudications only against a non-accused witness in a criminal case, and only if necessary to fairly determine guilt or innocence."],
+// ---- 412
+["Rape shield","FRE 412(a)","Which best describes Rule 412's scope?",
+ ["In civil and criminal cases involving alleged sexual misconduct, it bars evidence of a victim's other sexual behavior or sexual predisposition, subject to listed exceptions.",
+  "It applies only in criminal rape prosecutions.",
+  "It bars only reputation evidence of a victim's chastity.",
+  "It bars evidence of the defendant's prior sexual offenses."],
+ "412 reaches civil cases too. It reversed the older view (People v. Abbot, Wigmore) that a complainant's sexual history bore on consent and credibility."],
+["Rape shield","FRE 412(b)(1)","Which is a recognized exception in a criminal case?",
+ ["Specific instances of the victim's sexual behavior with the accused, offered by the defendant to prove consent.",
+  "Evidence of the victim's reputation for promiscuity, offered to prove consent.",
+  "Evidence of the victim's sexual behavior with anyone, offered to impeach credibility.",
+  "Opinion testimony about the victim's sexual predisposition."],
+ "The criminal exceptions are: source of semen, injury or other physical evidence; past behavior with the accused; and evidence whose exclusion would violate the Constitution. All use specific instances."],
+["Rape shield","Olden","In Olden v. Kentucky, why did exclusion of the complainant's relationship with another man violate the Constitution?",
+ ["The relationship gave her a motive to fabricate, and cross-examination showing bias is protected by the Confrontation Clause.",
+  "Any evidence of sexual history is constitutionally required in rape cases.",
+  "The relationship proved her sexual predisposition.",
+  "The evidence was needed to explain the source of semen."],
+ "Bias is the strongest route through 412(b)(1)(C). Narrative integrity (Stephens v. Miller) and the defendant's belief in consent (Knox) usually fail."],
+["Rape shield","State v. Smith","Is evidence that the complainant previously made false accusations of rape barred by Rule 412?",
+ ["Generally no. False accusations are not 'sexual behavior', though they remain subject to Rules 403, 404, and 608.",
+  "Yes. Any evidence touching on sexual matters is barred.",
+  "No, and it is automatically admissible.",
+  "Yes, unless the prior accusation led to a conviction."],
+ "The key question is whether the prior accusation was actually false. Circuits split on whether exclusion can violate the Constitution."],
+["Rape shield","FRE 412(b)(2)","What standard governs admission of a victim's sexual behavior in a civil case?",
+ ["Probative value must substantially outweigh harm to the victim and unfair prejudice to any party. Reputation evidence is allowed only if the victim placed it in controversy.",
+  "Ordinary Rule 403 balancing.",
+  "It is never admissible in civil cases.",
+  "It is admissible whenever relevant to damages."],
+ "This is a reverse-403 test favoring exclusion. Jones v. Clinton (Problem 5.9) applied it."],
+["Rape shield","Galvin","What is Harriett Galvin's critique of Rule 412?",
+ ["It should bar only the propensity inferences (consent and unworthiness of belief) and allow other uses, like Rule 404(b).",
+  "It should be repealed entirely in favor of Rule 403.",
+  "It should extend to all witnesses, not just victims.",
+  "It should apply only in civil cases."],
+ "Galvin would model 412 on 404(b). Her rule would likely have reached different results in the bias, res gestae, and state-of-mind cases."],
+["Rape shield","FRE 412(c)","What procedure must a party follow to offer evidence under a Rule 412 exception?",
+ ["File a written motion, generally at least 14 days before trial, give notice, and obtain an in camera hearing with the record sealed.",
+  "Simply raise it at trial, outside the jury's hearing.",
+  "Obtain the victim's written consent.",
+  "Offer it only on rebuttal."],
+ "The procedure protects the victim's privacy while the court rules on admissibility."],
+// ---- Purpose of evidence law
+["Foundations","Nesson","Charles Nesson argued that the goal of evidence rules is less about truthful verdicts than about what?",
+ ["Verdicts that seem truthful and therefore gain public legitimacy and stability.",
+  "Verdicts reached as quickly as possible.",
+  "Verdicts that maximize deterrence.",
+  "Verdicts that reflect the jury's moral judgment."],
+ "The reading uses Nesson to ask why limiting the jury's information would serve either truth or acceptability."]
+];
+
+const TOPICS = ["All", ...new Set(BANK.map(b => b[0]))];
+let state = { topic: "All", order: [], opts: {}, picked: {}, onlyMissed: false };
+
+const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+const shuffleAnswers = () => { state.opts = {}; BANK.forEach((b, i) => state.opts[i] = shuffle(b[3].map((_, k) => k))); };
+
+function visible() {
+  return state.order.filter(i =>
+    (state.topic === "All" || BANK[i][0] === state.topic) &&
+    (!state.onlyMissed || state.missedSet.has(i)));
+}
+
+function render() {
+  const list = document.getElementById("list");
+  const ids = visible();
+  list.innerHTML = "";
+  if (!ids.length) { list.innerHTML = '<li class="empty">No questions here. Pick another topic or press Reset.</li>'; }
+  ids.forEach((i, n) => {
+    const [topic, tag, stem, ans, why] = BANK[i];
+    const li = document.createElement("li");
+    li.className = "q";
+    const picked = state.picked[i];
+    const L = "ABCD";
+    li.innerHTML = `<div class="meta"><span class="num">${n + 1}.</span><span>${topic}</span><span class="tag">${tag}</span></div><p class="stem"></p><div class="opts"></div>`;
+    li.querySelector(".stem").textContent = stem;
+    const box = li.querySelector(".opts");
+    state.opts[i].forEach((k, pos) => {
+      const b = document.createElement("button");
+      b.className = "opt"; b.type = "button";
+      b.innerHTML = `<b>${L[pos]}</b><span></span>`;
+      b.querySelector("span").textContent = ans[k];
+      if (picked !== undefined) {
+        b.disabled = true;
+        if (k === 0) b.classList.add("right");
+        else if (k === picked) b.classList.add("wrong");
+      }
+      b.addEventListener("click", () => { state.picked[i] = k; render(); });
+      box.appendChild(b);
+    });
+    if (picked !== undefined) {
+      const w = document.createElement("div");
+      const ok = picked === 0;
+      w.className = "why" + (ok ? "" : " miss");
+      const correctLetter = L[state.opts[i].indexOf(0)];
+      w.innerHTML = `<strong>${ok ? "Correct." : "Not quite. Answer: " + correctLetter + "."}</strong> <span></span>`;
+      w.querySelector("span").textContent = why;
+      li.appendChild(w);
+    }
+    list.appendChild(li);
+  });
+  const answered = ids.filter(i => state.picked[i] !== undefined);
+  const right = answered.filter(i => state.picked[i] === 0).length;
+  document.getElementById("score").innerHTML = `${right} / ${answered.length} correct <span>· ${answered.length} of ${ids.length} answered</span>`;
+  document.getElementById("meter").style.width = ids.length ? (answered.length / ids.length * 100) + "%" : "0";
+  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.t === state.topic));
+  document.getElementById("missed").textContent = state.onlyMissed ? "Show all" : "Retry missed";
+}
+
+const chips = document.getElementById("chips");
+TOPICS.forEach(t => {
+  const c = document.createElement("button");
+  c.className = "chip"; c.type = "button"; c.dataset.t = t;
+  c.textContent = t === "All" ? `All (${BANK.length})` : `${t} (${BANK.filter(b => b[0] === t).length})`;
+  c.addEventListener("click", () => { state.topic = t; render(); });
+  chips.appendChild(c);
+});
+
+document.getElementById("shufA").onclick = () => { shuffleAnswers(); state.picked = {}; render(); };
+document.getElementById("shufQ").onclick = () => { state.order = shuffle(state.order); render(); window.scrollTo({ top: 0 }); };
+document.getElementById("reset").onclick = () => { state.picked = {}; state.onlyMissed = false; state.order = BANK.map((_, i) => i); shuffleAnswers(); render(); };
+document.getElementById("missed").onclick = () => {
+  if (state.onlyMissed) { state.onlyMissed = false; render(); return; }
+  state.missedSet = new Set(Object.keys(state.picked).map(Number).filter(i => state.picked[i] !== 0));
+  if (!state.missedSet.size) return;
+  state.missedSet.forEach(i => delete state.picked[i]);
+  state.missedSet.forEach(i => state.opts[i] = shuffle(state.opts[i]));
+  state.onlyMissed = true; render(); window.scrollTo({ top: 0 });
+};
+
+state.order = BANK.map((_, i) => i);
+state.missedSet = new Set();
+shuffleAnswers();
+render();
+</script>

@@ -1,0 +1,23 @@
+{
+  "name": "wilmington-university-corner",
+  "version": "1.0.0",
+  "description": "Static study library site with a machine-readable API for agents.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "devDependencies": {
+    "fflate": "^0.8.3",
+    "fuse.js": "^7.5.0",
+    "lucide-static": "^1.52.0",
+    "mammoth": "^1.13.0"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

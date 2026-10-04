@@ -1,0 +1,35 @@
+{
+  "title": "Professional Responsibility",
+  "description": "Model Rules of Professional Conduct and MPRE prep, Weeks 1–5 (Chs. 1–9, 20, 21): forming the client-lawyer relationship, competence, confidentiality, conflicts, and the duties that follow a representation from start to finish.",
+  "icon": "landmark",
+  "accent": "#8a2e3b",
+  "order": 2,
+  "documents": {
+    "outline_v3.html": {
+      "slug": "pr-outline",
+      "title": "Professional Responsibility Outline",
+      "type": "outline",
+      "description": "Exam-prep outline for Weeks 1–5 (Chs. 1–9, 20, 21), organized around the life of a representation. Pinpoint cites point to the readings and class slides, and every rule tested in the practice bank is covered.",
+      "tags": ["Model Rules", "outline", "exam prep"],
+      "order": 1
+    },
+    "PR_MPRE_Question_Bank v3.html": {
+      "slug": "mpre-drill-v3",
+      "title": "MPRE Drill v3",
+      "type": "practice",
+      "description": "355 original MPRE-style application questions on Chs. 1–9, 20, 21 and the class slides. Use study mode for instant feedback or exam mode to be graded at the end. Filter by topic and shuffle the answer order.",
+      "tags": ["MPRE", "MCQ", "exam mode"],
+      "questions": 355,
+      "order": 2
+    },
+    "PR_MPRE_500_Course_Subset.html": {
+      "slug": "mpre-500-course-subset",
+      "title": "MPRE 500: Course Subset",
+      "type": "practice",
+      "publish": false,
+      "description": "298 questions from a published MPRE practice book, limited to the Weeks 1–5 coverage. Not published: the questions come from a copyrighted book.",
+      "questions": 298,
+      "order": 3
+    }
+  }
+}
