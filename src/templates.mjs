@@ -105,6 +105,7 @@ ${head(ctx, { root, title, description, canonical, extraHead, jsonld })}
       <button class="search-trigger" type="button" data-open-search aria-label="Search all documents">
         ${icon('search')}<span class="search-trigger-label">Search documents</span><kbd>Ctrl K</kbd>
       </button>
+      <a class="btn btn-share" href="${root}contribute/"${active === 'contribute' ? ' aria-current="page"' : ''}>${icon('upload')}<span>Share your work</span></a>
       ${themeButton()}
     </div>
   </div>
@@ -121,6 +122,7 @@ ${body}
     <nav class="footer-links" aria-label="Footer">
       <a href="${root}library/">All documents</a>
       ${subjects.map((s) => `<a href="${root}subjects/${s.slug}/">${esc(s.title)}</a>`).join('')}
+      <a href="${root}contribute/">Share your work</a>
       <a href="${root}files/all-study-materials.zip" download>Download everything</a>
     </nav>
   </div>
@@ -132,6 +134,7 @@ ${body}
   <button type="button" data-sheet-open="subjects-sheet"${subjects.some((s) => s.slug === active) ? ' aria-current="page"' : ''}>${icon('layout-grid')}<span>Subjects</span></button>
   <button type="button" data-open-search>${icon('search')}<span>Search</span></button>
   <a href="${root}library/"${active === 'library' ? ' aria-current="page"' : ''}>${icon('library')}<span>Library</span></a>
+  <a href="${root}contribute/"${active === 'contribute' ? ' aria-current="page"' : ''}>${icon('upload')}<span>Share</span></a>
 </nav>
 
 <div class="sheet" id="subjects-sheet" hidden>
@@ -170,7 +173,7 @@ const palette = () => `<div class="palette" id="palette" hidden>
 function docCard(ctx, root, d, { showSubject = false } = {}) {
   const { TYPES, P } = ctx;
   const t = TYPES[d.type];
-  const meta = [d.format.label, fmtSize(d.size), d.questions ? `${d.questions} questions` : null, `Updated ${fmtShortDate(d.updated)}`].filter(Boolean);
+  const meta = [d.format.label, fmtSize(d.size), d.questions ? `${d.questions} questions` : null, d.contributor ? `Shared by ${d.contributor}` : null, `Updated ${fmtShortDate(d.updated)}`].filter(Boolean);
   return `<article class="doc-card" style="--accent:${d.subject.accent}" data-doc data-id="${esc(d.id)}" data-subject="${esc(d.subject.slug)}" data-type="${esc(d.type)}" data-updated="${esc(d.updated)}" data-title="${esc(d.title)}">
   <div class="doc-card-art" aria-hidden="true">${icon(t.icon)}</div>
   <div class="doc-card-body">
@@ -304,6 +307,17 @@ export function home(ctx) {
     <a class="link-arrow" href="${root}library/?sort=updated">See all ${icon('arrow-right')}</a>
   </div>
   <div class="doc-grid">${recent.map((d) => docCard(ctx, root, d, { showSubject: true })).join('')}</div>
+</section>
+
+<section class="section container">
+  <div class="share-band">
+    <div class="share-band-text">
+      <p class="kicker">Built by students, for students</p>
+      <h2>Made something that helped you study?</h2>
+      <p>Share your outline, flowchart, or practice set with everyone. Upload it in a minute, no account needed. Every submission is reviewed before it goes live.</p>
+    </div>
+    <a class="btn btn-gold" href="${root}contribute/">${icon('upload')} Share your work</a>
+  </div>
 </section>
 
 <section class="section container">
@@ -449,6 +463,7 @@ ${head(ctx, {
         <div><dt>Type</dt><dd>${esc(t.label)}</dd></div>
         <div><dt>Format</dt><dd>${esc(d.format.label)} · ${fmtSize(d.size)}</dd></div>
         ${d.questions ? `<div><dt>Questions</dt><dd>${d.questions}</dd></div>` : ''}
+        ${d.contributor ? `<div><dt>Shared by</dt><dd>${esc(d.contributor)}</dd></div>` : ''}
         <div><dt>Updated</dt><dd>${fmtDate(d.updated)}</dd></div>
       </dl>
       ${d.tags.length ? `<ul class="tag-list">${d.tags.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
@@ -465,6 +480,152 @@ ${head(ctx, {
 <script type="module" src="${root}assets/app.js"></script>
 </body>
 </html>`;
+}
+
+/** "Share your work": the public submission form. Posts to config.submissions.endpoint. */
+export function contribute(ctx) {
+  const root = '../';
+  const { config, subjects, TYPES } = ctx;
+  const sub = config.submissions || {};
+  const maxMB = sub.maxMB || 20;
+  const body = `
+<section class="page-head container contribute-head">
+  ${breadcrumbs(root, [['contribute/', 'Share your work']])}
+  <h1 class="page-title">Share your work</h1>
+  <p class="page-lede">Made an outline, rule chart, flowchart, or practice set that helped you? Share it so everyone can study with it. You don't need an account.</p>
+  <ol class="steps">
+    <li><span class="step-icon">${icon('upload')}</span><strong>1. Upload</strong><span>Add your file and a few details. It takes about a minute.</span></li>
+    <li><span class="step-icon">${icon('shield-check')}</span><strong>2. Review</strong><span>Every submission is checked by a person and by automated safety checks.</span></li>
+    <li><span class="step-icon">${icon('sparkles')}</span><strong>3. Published</strong><span>Once approved, it shows up in the library for everyone, with credit to you if you like.</span></li>
+  </ol>
+</section>
+
+<section class="container contribute-grid">
+  <div class="contribute-main">
+    <div class="notice" data-submit-closed hidden>${icon('clock')}<div><strong>Submissions aren't open yet.</strong><p>Check back soon. The form below shows what you'll be asked for.</p></div></div>
+
+    <form class="submit-form" id="submit-form" data-endpoint="${esc(sub.endpoint || '')}" data-max-bytes="${maxMB * 1048576}" novalidate>
+      <fieldset class="form-card">
+        <legend><span class="num">1</span> Your file</legend>
+        <label class="dropzone" data-dropzone>
+          <input type="file" name="file" accept=".docx,.pdf,.html,.htm,.md,.txt" required data-file-input>
+          <span class="dropzone-empty">
+            <span class="dropzone-icon">${icon('cloud-upload')}</span>
+            <strong>Drop your file here, or <u>choose a file</u></strong>
+            <small>Word, PDF, HTML, Markdown, or text, up to ${maxMB} MB</small>
+          </span>
+          <span class="dropzone-file" hidden>
+            <span class="tile">${icon('file-check')}</span>
+            <span class="dropzone-file-text"><strong data-file-name></strong><small data-file-size></small></span>
+            <button type="button" class="icon-btn" data-file-clear aria-label="Remove file">${icon('x')}</button>
+          </span>
+        </label>
+      </fieldset>
+
+      <fieldset class="form-card">
+        <legend><span class="num">2</span> About it</legend>
+        <div class="field-grid">
+          <label class="field">
+            <span class="field-label">Subject</span>
+            <select name="subject" required data-subject>
+              <option value="" disabled selected>Choose a subject…</option>
+              ${subjects.map((s) => `<option value="${esc(s.folder)}">${esc(s.title)}</option>`).join('')}
+              <option value="__new__">Something else (new subject)…</option>
+            </select>
+          </label>
+          <label class="field" data-new-subject hidden>
+            <span class="field-label">New subject name</span>
+            <input type="text" name="newSubject" maxlength="60" placeholder="e.g. Civil Procedure" autocomplete="off">
+          </label>
+          <label class="field">
+            <span class="field-label">What kind of material is it?</span>
+            <select name="type">
+              ${Object.entries(TYPES).map(([k, t]) => `<option value="${k}"${k === 'outline' ? ' selected' : ''}>${esc(k === 'document' ? 'Other' : t.label)}</option>`).join('')}
+            </select>
+          </label>
+          <label class="field field-wide">
+            <span class="field-label">Title</span>
+            <input type="text" name="title" required maxlength="120" placeholder="e.g. Civ Pro Outline: Personal Jurisdiction" autocomplete="off" data-title>
+          </label>
+          <label class="field field-wide">
+            <span class="field-label">Short description <em>optional</em></span>
+            <textarea name="description" rows="3" maxlength="600" placeholder="What does it cover? Which weeks or chapters? Anything people should know?" data-count></textarea>
+            <small class="field-hint"><span data-count-out>0</span>/600</small>
+          </label>
+        </div>
+      </fieldset>
+
+      <fieldset class="form-card">
+        <legend><span class="num">3</span> Credit <em>optional</em></legend>
+        <label class="field">
+          <span class="field-label">Name or initials to show</span>
+          <input type="text" name="contributor" maxlength="60" placeholder="e.g. Jordan K." autocomplete="nickname">
+          <small class="field-hint">Shown publicly as “Shared by …”. Leave blank to stay anonymous. Please don't enter an email address.</small>
+        </label>
+      </fieldset>
+
+      <fieldset class="form-card">
+        <legend><span class="num">4</span> Please confirm</legend>
+        <label class="check"><input type="checkbox" name="confirmOwn" value="yes" required><span>I made this, or I have permission from the person who did.</span></label>
+        <label class="check"><input type="checkbox" name="confirmPrivacy" value="yes" required><span>It doesn't contain personal information about other students, like names, grades, or contact details.</span></label>
+        <label class="check"><input type="checkbox" name="confirmCopyright" value="yes" required><span>It isn't copied from paid or copyrighted materials, such as commercial outlines or question banks.</span></label>
+      </fieldset>
+
+      <div class="hp" aria-hidden="true"><label>Website <input type="text" name="website" tabindex="-1" autocomplete="off"></label></div>
+      ${sub.turnstileSiteKey ? `<div class="cf-turnstile" data-sitekey="${esc(sub.turnstileSiteKey)}"></div><script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>` : ''}
+
+      <div class="form-error" role="alert" data-form-error hidden></div>
+      <div class="submit-row">
+        <button class="btn btn-primary btn-lg" type="submit" data-submit>${icon('send')} <span>Submit for review</span></button>
+        <p class="submit-note">${icon('lock')} Nothing is published until it's been reviewed.</p>
+      </div>
+    </form>
+
+    <div class="submit-success" data-submit-success hidden tabindex="-1">
+      <span class="success-icon">${icon('circle-check')}</span>
+      <h2>Thank you! Your submission is in.</h2>
+      <p>Your reference number is <code data-reference></code>. It will be reviewed soon, and once it's approved it will show up in the library.</p>
+      <div class="head-actions">
+        <button class="btn btn-primary" type="button" data-submit-another>${icon('plus')} Share another</button>
+        <a class="btn btn-ghost" href="${root}library/">${icon('library')} Browse the library</a>
+      </div>
+    </div>
+  </div>
+
+  <aside class="contribute-aside">
+    <div class="aside-card">
+      <h2>${icon('thumbs-up')} Great to share</h2>
+      <ul class="tick-list">
+        <li>Outlines, attack sheets, and rule charts you wrote</li>
+        <li>Flowcharts and diagrams</li>
+        <li>Practice questions you wrote yourself</li>
+        <li>Flashcards and study tools</li>
+      </ul>
+    </div>
+    <div class="aside-card">
+      <h2>${icon('ban')} Please don't share</h2>
+      <ul class="cross-list">
+        <li>Commercial outlines or paid question banks</li>
+        <li>Graded exams or anything with a grade on it</li>
+        <li>Other students' work without their OK</li>
+        <li>Names, emails, or details about classmates</li>
+      </ul>
+    </div>
+    <details class="aside-card faq">
+      <summary>What happens after I submit?</summary>
+      <p>Your file goes into a private review queue. A reviewer opens it, checks it against the guidelines, and either publishes it or declines it. Automated checks also look for personal information and unsafe content.</p>
+    </details>
+    <details class="aside-card faq">
+      <summary>Can I update or remove something later?</summary>
+      <p>Yes. To update a document, submit the new version with the same title and say in the description that it replaces the old one. To have something removed, contact the site owner.</p>
+    </details>
+    <details class="aside-card faq">
+      <summary>Which file type is best?</summary>
+      <p>Word (.docx) works best for outlines and charts. It becomes a readable web page and stays downloadable. PDF and interactive HTML study tools work too.</p>
+    </details>
+  </aside>
+</section>`;
+  return layout(ctx, { root, title: 'Share your work', description: 'Share your outlines, rule charts, flowcharts, and practice questions with the study library. Every submission is reviewed before publishing.', body, active: 'contribute', canonical: 'contribute/' });
 }
 
 export function notFound(ctx) {

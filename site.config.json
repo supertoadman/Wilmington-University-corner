@@ -5,5 +5,10 @@
   "url": "https://supertoadman.github.io/Wilmington-University-corner/",
   "repo": "https://github.com/supertoadman/Wilmington-University-corner",
   "author": "supertoadman",
-  "disclaimer": "An independent student study resource. Not affiliated with or endorsed by Wilmington University. Materials are study aids, not legal advice."
+  "disclaimer": "An independent student study resource. Not affiliated with or endorsed by Wilmington University. Materials are study aids, not legal advice.",
+  "submissions": {
+    "endpoint": "",
+    "turnstileSiteKey": "",
+    "maxMB": 20
+  }
 }

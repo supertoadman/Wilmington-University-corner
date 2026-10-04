@@ -24,7 +24,7 @@ content/
 
 - **New document:** drop a file into a subject folder and push. Supported formats are `.html`, `.docx`, `.pdf`, `.md`, and `.txt`. Word documents are converted into a readable web page with a table of contents, and the original stays available to download.
 - **New subject:** create a new folder in `content/`. That's all you need. Add a `subject.json` to set the description, icon, and color.
-- **Metadata (optional):** in `subject.json`, use `documents` keyed by file name to set `title`, `description`, `type`, `tags`, `questions`, `order`, `slug`, or `"publish": false`. Anything you leave out is inferred: the title comes from the file's `<title>`, and the type from the file name.
+- **Metadata (optional):** in `subject.json`, use `documents` keyed by file name (or a `<file>.meta.json` sidecar next to the file) to set `title`, `description`, `type`, `tags`, `questions`, `order`, `slug`, `contributor`, or `"publish": false`. Anything you leave out is inferred: the title comes from the file's `<title>`, and the type from the file name.
 
 ```json
 {
@@ -40,6 +40,12 @@ content/
 ```
 
 The document types are `outline`, `rule-chart`, `flowcharts`, `flashcards`, `practice`, and `document`. To add a new type, add one line to `TYPES` in `scripts/build.mjs`. Icon names can be any [Lucide](https://lucide.dev/icons) icon.
+
+## Contributions from other people
+
+Anyone can share their work through the site's **Share your work** page, without an account. Each submission becomes a pull request that you approve (merge) or reject (close). Automated safety checks run on every submission. Try it locally with `npm run dev` and the review queue at `/__review/`.
+
+Setup, review steps, and how to change the rules: [docs/contributions-setup.md](docs/contributions-setup.md).
 
 ## Local development
 
@@ -68,5 +74,7 @@ src/templates.mjs        HTML templates for every page type
 src/assets/              CSS, client JS, favicon, social image
 site.config.json         site title, URL, repository, disclaimer
 docs/agents-api.md       internal API reference for agents and integrations
+docs/contributions-setup.md  how submissions work and how to turn them on
+submissions/             submission relay (Cloudflare Worker), safety checks, local test inbox
 ```
 

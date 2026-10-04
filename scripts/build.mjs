@@ -14,6 +14,7 @@ import { fileURLToPath } from 'node:url';
 import mammoth from 'mammoth';
 import { zipSync } from 'fflate';
 import * as T from '../src/templates.mjs';
+import { slugify, decodeEntities, htmlToText } from './lib/text.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'content');
@@ -49,44 +50,11 @@ const IGNORED = new Set(['subject.json', '.DS_Store', 'Thumbs.db', 'desktop.ini'
 // ---------------------------------------------------------------------------
 // Helpers
 // ---------------------------------------------------------------------------
-const slugify = (s) =>
-  s.normalize('NFKD').replace(/[̀-ͯ]/g, '').toLowerCase()
-    .replace(/&/g, ' and ').replace(/[^a-z0-9]+/g, '-').replace(/^-+|-+$/g, '');
-
 const write = (rel, data) => {
   const file = path.join(DIST, rel);
   fs.mkdirSync(path.dirname(file), { recursive: true });
   fs.writeFileSync(file, data);
 };
-
-const ENTITIES = {
-  amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', mdash: '—', ndash: '–',
-  hellip: '…', rsquo: '’', lsquo: '‘', ldquo: '“', rdquo: '”', sect: '§', para: '¶',
-  middot: '·', rarr: '→', larr: '←', bull: '•', times: '×', copy: '©', reg: '®', trade: '™',
-  laquo: '«', raquo: '»', deg: '°', frac12: '½', check: '✓', le: '≤', ge: '≥', ne: '≠',
-};
-const decodeEntities = (s) =>
-  s.replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
-    .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(+d))
-    .replace(/&([a-z0-9]+);/gi, (m, n) => ENTITIES[n.toLowerCase()] ?? m);
-
-/** Visible text of an HTML document, keeping headings and list structure. */
-function htmlToText(html) {
-  let s = html.replace(/<!--[\s\S]*?-->/g, '')
-    .replace(/<(script|style|noscript|template|svg|head)\b[\s\S]*?<\/\1>/gi, '');
-  // Flatten each table cell onto one line so rows read as "a | b | c".
-  s = s.replace(/<(td|th)\b[^>]*>([\s\S]*?)<\/\1>/gi, (_, tag, inner) =>
-    inner.replace(/<\/(p|div|li)>|<br\b[^>]*>/gi, ' ').replace(/<li\b[^>]*>/gi, '') + ' | ');
-  s = s.replace(/<h([1-6])\b[^>]*>/gi, (_, n) => '\n\n' + '#'.repeat(+n) + ' ')
-    .replace(/<li\b[^>]*>/gi, '\n- ')
-    .replace(/<(br|hr)\b[^>]*>/gi, '\n')
-    .replace(/<\/(p|div|h[1-6]|li|tr|section|article|header|footer|table|ul|ol|blockquote|pre|dt|dd|figure|figcaption|summary|details|nav|aside|main)>/gi, '\n')
-    .replace(/<[^>]+>/g, '');
-  s = decodeEntities(s);
-  return s.split('\n')
-    .map((l) => l.replace(/[ \t ]+/g, ' ').replace(/(\s*\|\s*)+$/, '').trim())
-    .join('\n').replace(/\n{3,}/g, '\n\n').trim();
-}
 
 const headingsFrom = (text) =>
   text.split('\n').filter((l) => /^#{1,3} /.test(l)).map((l) => l.replace(/^#+ /, ''));
@@ -156,11 +124,15 @@ async function loadSubjects() {
     const usedSlugs = new Set();
     for (const name of fs.readdirSync(dir)) {
       const file = path.join(dir, name);
-      if (IGNORED.has(name) || name.startsWith('.') || name.startsWith('~$') || !fs.statSync(file).isFile()) continue;
+      if (IGNORED.has(name) || name.endsWith('.meta.json') || name.startsWith('.') || name.startsWith('~$') || !fs.statSync(file).isFile()) continue;
       const ext = path.extname(name).toLowerCase();
       const format = FORMATS[ext];
       if (!format) { console.warn(`  skip (unsupported format): ${dirent.name}/${name}`); continue; }
-      const dm = meta.documents?.[name] || {};
+      // Per-document metadata: subject.json entry, overridden by an optional "<file>.meta.json" sidecar
+      // (submissions use sidecars so they never have to edit a shared file).
+      const sidecarFile = `${file}.meta.json`;
+      const sidecar = fs.existsSync(sidecarFile) ? JSON.parse(fs.readFileSync(sidecarFile, 'utf8')) : {};
+      const dm = { ...(meta.documents?.[name] || {}), ...sidecar };
       if (dm.publish === false) { console.log(`  skip (publish: false): ${dirent.name}/${name}`); continue; }
 
       const base = path.basename(name, ext);
@@ -183,6 +155,7 @@ async function loadSubjects() {
         description: dm.description || '',
         tags: dm.tags || [],
         questions: dm.questions ?? null,
+        contributor: dm.contributor || null,
         order: dm.order ?? 999,
         size: raw.length,
         updated: lastUpdated(file),
@@ -296,6 +269,7 @@ const docRecord = (d) => ({
   originalFilename: d.filename,
   tags: d.tags,
   questions: d.questions,
+  contributor: d.contributor,
   sizeBytes: d.size,
   updated: d.updated,
   headings: d.headings.slice(0, 60),
@@ -388,11 +362,12 @@ const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipB
 
 write('index.html', T.home(ctx));
 write('library/index.html', T.library(ctx));
+write('contribute/index.html', T.contribute(ctx));
 write('404.html', T.notFound(ctx));
 for (const s of subjects) write(P.subject(s) + 'index.html', T.subjectPage(ctx, s));
 for (const d of docs) write(P.doc(d) + 'index.html', T.docPage(ctx, d));
 
-const pageUrls = ['', 'library/', ...subjects.map(P.subject), ...docs.map(P.doc)];
+const pageUrls = ['', 'library/', 'contribute/', ...subjects.map(P.subject), ...docs.map(P.doc)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pageUrls
   .map((u) => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('sitemap.xml')}\n`);

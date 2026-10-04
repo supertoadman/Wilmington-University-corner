@@ -363,3 +363,152 @@ if (viewer) {
     map.forEach((_, id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
   }
 }
+
+// ---------- Share your work (submission form) ----------
+const submitForm = $('#submit-form');
+if (submitForm) {
+  const isLocal = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname);
+  // Locally, the preview server provides a test endpoint that saves to .submissions/.
+  const endpoint = submitForm.dataset.endpoint || (isLocal ? ROOT + '__local/submit' : '');
+  const maxBytes = Number(submitForm.dataset.maxBytes) || 20 * 1048576;
+  const allowed = ['.docx', '.pdf', '.html', '.htm', '.md', '.txt'];
+  const openedAt = performance.now();
+
+  const fileInput = $('[data-file-input]', submitForm);
+  const dropzone = $('[data-dropzone]', submitForm);
+  const titleInput = $('[data-title]', submitForm);
+  const subjectSel = $('[data-subject]', submitForm);
+  const newSubject = $('[data-new-subject]', submitForm);
+  const errorBox = $('[data-form-error]', submitForm);
+  const submitBtn = $('[data-submit]', submitForm);
+  const success = $('[data-submit-success]');
+  let titleTouched = false;
+
+  if (!endpoint) {
+    $('[data-submit-closed]').hidden = false;
+    submitBtn.disabled = true;
+  }
+
+  const fmt = (b) => (b < 1048576 ? `${Math.max(1, Math.round(b / 1024))} KB` : `${(b / 1048576).toFixed(1)} MB`);
+  const showError = (msg, el) => {
+    errorBox.textContent = msg;
+    errorBox.hidden = false;
+    (el || errorBox).scrollIntoView({ behavior: 'smooth', block: 'center' });
+    el?.focus?.({ preventScroll: true });
+  };
+  const clearErrors = () => {
+    errorBox.hidden = true;
+    $$('.is-invalid', submitForm).forEach((e) => e.classList.remove('is-invalid'));
+  };
+
+  // Turn "civ_pro-outline_v2.docx" into "Civ pro outline v2" as a starting title.
+  const titleFrom = (name) => {
+    const t = name.replace(/\.[^.]+$/, '').replace(/[_-]+/g, ' ').replace(/\s+/g, ' ').trim();
+    return t.charAt(0).toUpperCase() + t.slice(1);
+  };
+
+  function setFile(file) {
+    clearErrors();
+    if (!file) {
+      fileInput.value = '';
+      dropzone.classList.remove('has-file');
+      $('.dropzone-empty', dropzone).hidden = false;
+      $('.dropzone-file', dropzone).hidden = true;
+      return;
+    }
+    const ext = (file.name.match(/\.[^.]+$/)?.[0] || '').toLowerCase();
+    if (!allowed.includes(ext)) { setFile(null); showError(`That file type isn't supported. Please choose a Word, PDF, HTML, Markdown, or text file.`); return; }
+    if (file.size > maxBytes) { setFile(null); showError(`That file is ${fmt(file.size)}. The limit is ${fmt(maxBytes)}.`); return; }
+    dropzone.classList.add('has-file');
+    $('.dropzone-empty', dropzone).hidden = true;
+    $('.dropzone-file', dropzone).hidden = false;
+    $('[data-file-name]', dropzone).textContent = file.name;
+    $('[data-file-size]', dropzone).textContent = `${fmt(file.size)} · ready to upload`;
+    if (!titleTouched || !titleInput.value) titleInput.value = titleFrom(file.name);
+  }
+
+  fileInput.addEventListener('change', () => setFile(fileInput.files[0]));
+  $('[data-file-clear]', dropzone).addEventListener('click', (e) => { e.preventDefault(); setFile(null); });
+  ['dragenter', 'dragover'].forEach((ev) => dropzone.addEventListener(ev, (e) => { e.preventDefault(); dropzone.classList.add('is-over'); }));
+  ['dragleave', 'drop'].forEach((ev) => dropzone.addEventListener(ev, () => dropzone.classList.remove('is-over')));
+  dropzone.addEventListener('drop', (e) => {
+    e.preventDefault();
+    const file = e.dataTransfer.files[0];
+    if (!file) return;
+    const dt = new DataTransfer();
+    dt.items.add(file);
+    fileInput.files = dt.files;
+    setFile(file);
+  });
+  titleInput.addEventListener('input', () => { titleTouched = true; });
+  subjectSel.addEventListener('change', () => {
+    newSubject.hidden = subjectSel.value !== '__new__';
+    if (!newSubject.hidden) $('input', newSubject).focus();
+  });
+  $$('[data-count]', submitForm).forEach((ta) => {
+    const out = $('[data-count-out]', ta.closest('.field'));
+    ta.addEventListener('input', () => { out.textContent = ta.value.length; });
+  });
+
+  function validateForm() {
+    clearErrors();
+    const file = fileInput.files[0];
+    if (!file) { dropzone.classList.add('is-invalid'); return showError('Please choose a file to upload.', dropzone), false; }
+    if (!subjectSel.value) { subjectSel.classList.add('is-invalid'); return showError('Please choose a subject.', subjectSel), false; }
+    const ns = $('input', newSubject);
+    if (subjectSel.value === '__new__' && ns.value.trim().length < 2) { ns.classList.add('is-invalid'); return showError('Please enter a name for the new subject.', ns), false; }
+    if (titleInput.value.trim().length < 3) { titleInput.classList.add('is-invalid'); return showError('Please give your document a title.', titleInput), false; }
+    const contributor = submitForm.elements.contributor;
+    if (/@/.test(contributor.value)) { contributor.classList.add('is-invalid'); return showError("Please use a name or initials, not an email address.", contributor), false; }
+    const unchecked = $$('.check input', submitForm).filter((c) => !c.checked);
+    if (unchecked.length) { unchecked.forEach((c) => c.closest('.check').classList.add('is-invalid')); return showError('Please tick all three confirmations.', unchecked[0]), false; }
+    return true;
+  }
+
+  function setBusy(busy, label) {
+    submitBtn.disabled = busy;
+    submitBtn.innerHTML = busy ? `<span class="spinner"></span> <span>${label}</span>` : submitBtn.dataset.idle;
+  }
+  submitBtn.dataset.idle = submitBtn.innerHTML;
+
+  submitForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if (!endpoint || !validateForm()) return;
+    const data = new FormData(submitForm);
+    data.set('elapsedMs', String(Math.round(performance.now() - openedAt)));
+
+    // XHR rather than fetch so we can show upload progress for big files.
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', endpoint);
+    xhr.responseType = 'json';
+    xhr.upload.onprogress = (ev) => { if (ev.lengthComputable) setBusy(true, `Uploading… ${Math.round((ev.loaded / ev.total) * 100)}%`); };
+    xhr.upload.onload = () => setBusy(true, 'Finishing up…');
+    xhr.onload = () => {
+      const res = xhr.response || {};
+      if (xhr.status >= 200 && xhr.status < 300 && res.ok) {
+        submitForm.hidden = true;
+        $('[data-reference]', success).textContent = res.reference;
+        success.hidden = false;
+        success.focus();
+        success.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      } else {
+        setBusy(false);
+        showError(res.error || 'Something went wrong. Please try again in a few minutes.');
+      }
+    };
+    xhr.onerror = () => { setBusy(false); showError("We couldn't reach the server. Check your connection and try again."); };
+    setBusy(true, 'Uploading…');
+    xhr.send(data);
+  });
+
+  $('[data-submit-another]')?.addEventListener('click', () => {
+    submitForm.reset();
+    setFile(null);
+    titleTouched = false;
+    newSubject.hidden = true;
+    setBusy(false);
+    success.hidden = true;
+    submitForm.hidden = false;
+    submitForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  });
+}

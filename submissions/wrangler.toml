@@ -1,0 +1,11 @@
+# Cloudflare Worker that relays website submissions to GitHub pull requests.
+# Deploy from this folder:  npx wrangler deploy
+# Secrets (never commit these):  npx wrangler secret put GITHUB_TOKEN
+name = "study-library-submissions"
+main = "worker.mjs"
+compatibility_date = "2026-10-01"
+
+[vars]
+GITHUB_REPO = "supertoadman/Wilmington-University-corner"
+GITHUB_BRANCH = "main"
+ALLOWED_ORIGIN = "https://supertoadman.github.io"
