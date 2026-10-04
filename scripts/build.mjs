@@ -114,6 +114,22 @@ function addHeadingIds(html) {
   return { html: out, toc };
 }
 
+/** Tag each table cell with its column heading (data-label) so phones can show rows as labelled cards. */
+function labelTableCells(html) {
+  return html.replace(/<table>([\s\S]*?)<\/table>/g, (table, inner) => {
+    const rows = inner.match(/<tr>[\s\S]*?<\/tr>/g);
+    if (!rows || rows.length < 2) return table;
+    const cellRe = /<(td|th)\b([^>]*)>([\s\S]*?)<\/\1>/g;
+    const labels = [...rows[0].matchAll(cellRe)].map((m) => decodeEntities(m[3].replace(/<[^>]+>/g, '')).trim().replace(/"/g, '&quot;'));
+    let first = true;
+    return table.replace(/<tr>[\s\S]*?<\/tr>/g, (row) => {
+      if (first) { first = false; return row; }
+      let i = 0;
+      return row.replace(/<(td|th)\b([^>]*)>/g, (m, tag, attrs) => (labels[i] ? `<${tag}${attrs} data-label="${labels[i++]}">` : (i++, m)));
+    });
+  });
+}
+
 // ---------------------------------------------------------------------------
 // Load content
 // ---------------------------------------------------------------------------
@@ -179,12 +195,19 @@ async function loadSubjects() {
       if (ext === '.docx') {
         const styleMap = ["p[style-name='Title'] => h1.doc-title:fresh", "p[style-name='Subtitle'] => p.doc-subtitle:fresh"];
         const { value } = await mammoth.convertToHtml({ buffer: raw }, { styleMap });
-        const withIds = addHeadingIds(value.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>'));
+        const withIds = addHeadingIds(labelTableCells(value).replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>'));
         doc.html = withIds.html;
         doc.toc = withIds.toc;
         doc.text = htmlToText(value);
       } else if (format.mime === 'text/html') {
-        const html = raw.toString('utf8');
+        let html = raw.toString('utf8');
+        // Without a viewport tag, phones render the page zoomed out at desktop width when it is opened directly.
+        if (!/<meta[^>]+name=["']viewport["']/i.test(html) && /<head[^>]*>/i.test(html)) {
+          html = html.replace(/<head[^>]*>/i, (m) => `${m}
+<meta name="viewport" content="width=device-width, initial-scale=1">`);
+          doc.raw = Buffer.from(html, 'utf8');
+          doc.size = doc.raw.length;
+        }
         doc.text = htmlToText(html);
         if (!dm.title) {
           const t = html.match(/<title>([^<]*)<\/title>/i);
@@ -361,12 +384,11 @@ const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipB
 
 write('index.html', T.home(ctx));
 write('library/index.html', T.library(ctx));
-write('agents/index.html', T.agents(ctx));
 write('404.html', T.notFound(ctx));
 for (const s of subjects) write(P.subject(s) + 'index.html', T.subjectPage(ctx, s));
 for (const d of docs) write(P.doc(d) + 'index.html', T.docPage(ctx, d));
 
-const pageUrls = ['', 'library/', 'agents/', ...subjects.map(P.subject), ...docs.map(P.doc)];
+const pageUrls = ['', 'library/', ...subjects.map(P.subject), ...docs.map(P.doc)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pageUrls
   .map((u) => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('sitemap.xml')}\n`);

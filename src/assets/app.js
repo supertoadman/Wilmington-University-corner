@@ -1,18 +1,29 @@
-// Client-side behaviour: theme, mobile menu, command-palette search, library
-// filters, copy/print/fullscreen buttons, and reader table-of-contents tracking.
-// Everything degrades gracefully: pages are fully usable without JavaScript.
+// Client-side behaviour: theme, sheets, command-palette search, library filters,
+// the immersive document viewer (panels, share, fullscreen, contents), and the
+// "Jump back in" list of recently opened documents.
+// Pages stay fully usable without JavaScript.
 
 const ROOT = document.documentElement.dataset.root || './';
 const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
+const body = document.body;
 
 let fusePromise;
 const loadFuse = () => (fusePromise ||= import('./vendor-fuse.min.mjs').then((m) => m.default));
+let indexPromise;
+const loadIndex = () => (indexPromise ||= fetch(ROOT + 'api/search-index.json').then((r) => {
+  if (!r.ok) throw new Error(r.status);
+  return r.json();
+}));
 
 // Keep rule cites like 404(b) or §1.7 together as one search token.
 const TOKENS = /[\p{L}\p{M}\p{N}_()§.]+/gu;
 
 const escapeHtml = (s) => String(s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' })[c]);
+const store = {
+  get(k, fallback) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : fallback; } catch { return fallback; } },
+  set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* storage unavailable */ } },
+};
 
 // ---------- Theme ----------
 function currentTheme() {
@@ -26,38 +37,51 @@ $$('[data-theme-toggle]').forEach((btn) => btn.addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch { /* storage unavailable */ }
 }));
 
-// ---------- Mobile menu ----------
-const menuBtn = $('[data-menu-toggle]');
-menuBtn?.addEventListener('click', () => {
-  const open = document.body.classList.toggle('menu-open');
-  menuBtn.setAttribute('aria-expanded', String(open));
-});
+// ---------- Home: light header once the dark hero scrolls away ----------
+const hero = $('.hero');
+if (hero && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([en]) => body.classList.toggle('past-hero', !en.isIntersecting), { rootMargin: '-70px 0px 0px 0px' }).observe(hero);
+}
 
-// ---------- Copy / print / fullscreen ----------
-async function copyText(text, btn) {
+// ---------- Toast ----------
+const toastEl = $('.toast');
+let toastTimer;
+function toast(msg) {
+  if (!toastEl) return;
+  toastEl.textContent = msg;
+  toastEl.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => { toastEl.hidden = true; }, 1800);
+}
+
+async function copyText(text) {
   try {
     await navigator.clipboard.writeText(text);
   } catch {
     const ta = Object.assign(document.createElement('textarea'), { value: text });
     document.body.append(ta); ta.select(); document.execCommand('copy'); ta.remove();
   }
-  const label = btn.querySelector('span');
-  if (label) {
-    const prev = label.textContent;
-    label.textContent = 'Copied!';
-    btn.classList.add('is-done');
-    setTimeout(() => { label.textContent = prev; btn.classList.remove('is-done'); }, 1600);
-  }
 }
-$$('[data-copy-link]').forEach((b) => b.addEventListener('click', () => copyText(location.href.split('#')[0], b)));
-$$('[data-copy-code]').forEach((b) => b.addEventListener('click', () => copyText(b.closest('.code-block').querySelector('code').innerText, b)));
-$$('[data-print]').forEach((b) => b.addEventListener('click', () => print()));
-$$('[data-fullscreen]').forEach((b) => b.addEventListener('click', () => {
-  const v = b.closest('[data-viewer]');
-  if (document.fullscreenElement) document.exitFullscreen();
-  else if (v.requestFullscreen) v.requestFullscreen();
-  else window.open(v.querySelector('iframe').src, '_blank');
-}));
+
+// ---------- Sheets (mobile subject picker) ----------
+let lastFocus = null;
+function openSheet(id) {
+  const sheet = document.getElementById(id);
+  if (!sheet) return;
+  lastFocus = document.activeElement;
+  sheet.hidden = false;
+  body.style.overflow = 'hidden';
+  $('a, button', $('.sheet-list', sheet) || sheet)?.focus({ preventScroll: true });
+}
+function closeSheets() {
+  const open = $$('.sheet').filter((s) => !s.hidden);
+  if (!open.length) return;
+  open.forEach((s) => { s.hidden = true; });
+  body.style.overflow = '';
+  lastFocus?.focus?.({ preventScroll: true });
+}
+$$('[data-sheet-open]').forEach((b) => b.addEventListener('click', () => openSheet(b.dataset.sheetOpen)));
+$$('[data-sheet-close]').forEach((b) => b.addEventListener('click', closeSheets));
 
 // ---------- Command palette ----------
 const palette = $('#palette');
@@ -66,25 +90,24 @@ const pResults = $('#palette-results');
 let index = null;
 let fuse = null;
 let selected = 0;
-let lastFocus = null;
 
 async function ensureIndex() {
   if (index) return;
   try {
-    const [Fuse, data] = await Promise.all([loadFuse(), fetch(ROOT + 'api/search-index.json').then((r) => r.json())]);
+    const [Fuse, data] = await Promise.all([loadFuse(), loadIndex()]);
     index = data;
     fuse = new Fuse(index, {
       keys: [{ name: 'title', weight: 3 }, { name: 'tags', weight: 2 }, { name: 'subject', weight: 1.5 }, { name: 'type', weight: 1.5 }, { name: 'description', weight: 1 }, { name: 'headings', weight: .8 }],
       threshold: 0.38, ignoreLocation: true, useTokenSearch: true, tokenize: TOKENS,
     });
-  } catch (e) {
+  } catch {
     index = [];
-    pResults.innerHTML = '<li class="pr-empty">Search is unavailable offline. Browse the <a href="' + ROOT + 'library/">library</a> instead.</li>';
+    pResults.innerHTML = '<li class="pr-empty">Search is unavailable right now. Browse the <a href="' + ROOT + 'library/">library</a> instead.</li>';
   }
 }
 
 function renderResults() {
-  if (!index) return;
+  if (!index || !fuse) return;
   const q = pInput.value.trim();
   const items = q ? fuse.search(q, { limit: 12 }).map((r) => r.item) : index.slice(0, 12);
   selected = 0;
@@ -93,10 +116,10 @@ function renderResults() {
     return;
   }
   pResults.innerHTML = (q ? '' : '<li class="pr-group" role="presentation">All documents</li>') + items.map((it, i) => `
-    <li role="option" aria-selected="${i === 0}" data-i="${i}">
+    <li role="option" aria-selected="${i === 0}">
       <a href="${ROOT}${it.url}">
-        <span class="doc-icon" style="--accent:${it.accent}">${it.svg || ''}</span>
-        <span class="pr-text"><span class="pr-title">${escapeHtml(it.title)}</span><span class="pr-sub">${escapeHtml(it.subject)} · ${escapeHtml(it.type)} · ${escapeHtml(it.description)}</span></span>
+        <span class="tile" style="--accent:${it.accent}">${it.svg || ''}</span>
+        <span class="pr-text"><span class="pr-title">${escapeHtml(it.title)}</span><span class="pr-sub">${escapeHtml(it.subject)} · ${escapeHtml(it.type)}</span></span>
       </a>
     </li>`).join('');
 }
@@ -110,18 +133,21 @@ function moveSelection(delta) {
 }
 
 async function openPalette() {
+  if (!palette) return;
+  closeSheets();
   lastFocus = document.activeElement;
   palette.hidden = false;
-  document.body.style.overflow = 'hidden';
+  body.style.overflow = 'hidden';
   pInput.value = '';
   pInput.focus();
   await ensureIndex();
   renderResults();
 }
 function closePalette() {
+  if (!palette || palette.hidden) return;
   palette.hidden = true;
-  document.body.style.overflow = '';
-  lastFocus?.focus?.();
+  body.style.overflow = '';
+  lastFocus?.focus?.({ preventScroll: true });
 }
 
 $$('[data-open-search]').forEach((b) => b.addEventListener('click', openPalette));
@@ -131,24 +157,25 @@ pInput?.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowDown') { e.preventDefault(); moveSelection(1); }
   else if (e.key === 'ArrowUp') { e.preventDefault(); moveSelection(-1); }
   else if (e.key === 'Enter') {
-    const a = $(`[role="option"][aria-selected="true"] a`, pResults);
+    const a = $('[role="option"][aria-selected="true"] a', pResults);
     if (a) { e.preventDefault(); location.href = a.href; }
   }
 });
+$$('.search-trigger kbd, .hero-search kbd').forEach((k) => { if (/Mac|iPhone|iPad/.test(navigator.platform)) k.textContent = '⌘ K'; });
+
+// ---------- Global keys ----------
 document.addEventListener('keydown', (e) => {
   const typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement?.tagName) || document.activeElement?.isContentEditable;
-  if ((e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) { e.preventDefault(); palette.hidden ? openPalette() : closePalette(); }
-  else if (e.key === '/' && !typing && palette.hidden) { e.preventDefault(); openPalette(); }
-  else if (e.key === 'Escape' && !palette.hidden) closePalette();
+  if (palette && (e.key === 'k' || e.key === 'K') && (e.ctrlKey || e.metaKey)) { e.preventDefault(); palette.hidden ? openPalette() : closePalette(); }
+  else if (palette && e.key === '/' && !typing && palette.hidden) { e.preventDefault(); openPalette(); }
+  else if (e.key === 'Escape') { closePalette(); closeSheets(); closePanels(); }
 });
-$$('.search-trigger kbd, .hero-search kbd').forEach((k) => { if (/Mac|iPhone|iPad/.test(navigator.platform)) k.textContent = '⌘ K'; });
 
 // ---------- Library / subject filters ----------
 const filterRoot = $('[data-filter-root]');
 if (filterRoot) {
   const list = $('[data-filter-list]');
-  const cards = $$('[data-doc]', list);
-  const original = [...cards];
+  const original = $$('[data-doc]', list);
   const qInput = $('[data-filter-q]', filterRoot);
   const sortSel = $('[data-filter-sort]', filterRoot);
   const status = $('[data-filter-status]');
@@ -158,31 +185,25 @@ if (filterRoot) {
   let localFuse = null;
 
   const params = new URLSearchParams(location.search);
-  for (const k of ['q', 'subject', 'type', 'sort']) if (params.get(k)) state[k] = params.get(k);
-
-  const records = cards.map((c) => ({
-    id: c.dataset.id,
-    title: c.dataset.title,
-    text: c.querySelector('.doc-desc')?.textContent || '',
-    badges: c.querySelector('.doc-badges')?.textContent || '',
-  }));
+  for (const k of Object.keys(state)) if (params.get(k)) state[k] = params.get(k);
 
   async function search() {
     if (!state.q) { matchIds = null; return; }
     if (!localFuse) {
       const Fuse = await loadFuse();
-      let idx = records;
+      let idx;
       try {
-        const remote = await fetch(ROOT + 'api/search-index.json').then((r) => r.json());
-        idx = remote.map((r) => ({ id: r.id, title: r.title, text: r.description + ' ' + r.headings, badges: r.tags + ' ' + r.type + ' ' + r.subject }));
-      } catch { /* fall back to card text */ }
+        idx = (await loadIndex()).map((r) => ({ id: r.id, title: r.title, text: r.description + ' ' + r.headings, badges: r.tags + ' ' + r.type + ' ' + r.subject }));
+      } catch {
+        idx = original.map((c) => ({ id: c.dataset.id, title: c.dataset.title, text: c.querySelector('.doc-desc')?.textContent || '', badges: c.querySelector('.doc-kicker')?.textContent || '' }));
+      }
       localFuse = new Fuse(idx, { keys: [{ name: 'title', weight: 3 }, { name: 'badges', weight: 1.5 }, { name: 'text', weight: 1 }], threshold: 0.38, ignoreLocation: true, useTokenSearch: true, tokenize: TOKENS, tokenMatch: 'all' });
     }
     matchIds = localFuse.search(state.q).map((r) => r.item.id);
   }
 
   function apply() {
-    let shown = original.filter((c) =>
+    const shown = original.filter((c) =>
       (!state.subject || c.dataset.subject === state.subject) &&
       (!state.type || c.dataset.type === state.type) &&
       (!matchIds || matchIds.includes(c.dataset.id)));
@@ -192,10 +213,14 @@ if (filterRoot) {
     const visible = new Set(shown);
     original.forEach((c) => { c.hidden = !visible.has(c); });
     shown.forEach((c) => list.append(c));
-    original.filter((c) => !visible.has(c)).forEach((c) => list.append(c));
 
     $$('[data-filter-subject]', filterRoot).forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filterSubject === state.subject)));
     $$('[data-filter-type]', filterRoot).forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.filterType === state.type)));
+    // Keep the active chip visible inside its horizontally scrolling row.
+    $$('.chip[aria-pressed="true"]', filterRoot).forEach((c) => {
+      const row = c.parentElement;
+      row.scrollTo({ left: c.offsetLeft - (row.clientWidth - c.offsetWidth) / 2, behavior: 'smooth' });
+    });
     const filtered = state.q || state.subject || state.type;
     status.textContent = filtered ? `Showing ${shown.length} of ${original.length} documents` : `${original.length} documents`;
     empty.hidden = shown.length > 0;
@@ -210,6 +235,7 @@ if (filterRoot) {
   qInput.value = state.q;
   sortSel.value = state.sort;
   qInput.addEventListener('input', () => { clearTimeout(t); t = setTimeout(() => { state.q = qInput.value.trim(); update(); }, 120); });
+  qInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') qInput.blur(); });
   sortSel.addEventListener('change', () => { state.sort = sortSel.value; apply(); });
   filterRoot.addEventListener('click', (e) => {
     const b = e.target.closest('[data-filter-subject],[data-filter-type]');
@@ -226,17 +252,114 @@ if (filterRoot) {
   update();
 }
 
-// ---------- Reader TOC: highlight current section ----------
-const tocLinks = $$('.reader-toc a');
-if (tocLinks.length && 'IntersectionObserver' in window) {
-  const map = new Map(tocLinks.map((a) => [decodeURIComponent(a.hash.slice(1)), a]));
-  const obs = new IntersectionObserver((entries) => {
-    for (const en of entries) {
-      if (en.isIntersecting) {
-        tocLinks.forEach((a) => a.classList.remove('is-active'));
-        map.get(en.target.id)?.classList.add('is-active');
-      }
+// ---------- Recently opened ("Jump back in") ----------
+const RECENT_KEY = 'recent-docs';
+if (body.dataset.recent) {
+  try {
+    const rec = JSON.parse(body.dataset.recent);
+    const list = store.get(RECENT_KEY, []).filter((r) => r.id !== rec.id);
+    store.set(RECENT_KEY, [{ ...rec, at: Date.now() }, ...list].slice(0, 8));
+  } catch { /* ignore malformed data */ }
+}
+const recentSection = $('#recently-opened');
+if (recentSection) {
+  const items = store.get(RECENT_KEY, []);
+  if (items.length) {
+    $('[data-recent-list]', recentSection).innerHTML = items.map((r) => `
+      <li><a href="${ROOT}${escapeHtml(r.url)}" style="--accent:${escapeHtml(r.accent)}">
+        <span class="tile">${r.svg || ''}</span>
+        <span class="t"><strong>${escapeHtml(r.title)}</strong><small>${escapeHtml(r.subject)} · ${escapeHtml(r.type)}</small></span>
+      </a></li>`).join('');
+    recentSection.hidden = false;
+  }
+}
+
+// ---------- Document viewer ----------
+const viewer = $('.viewer-app');
+const wide = () => matchMedia('(min-width: 1101px)').matches;
+function syncPanelButtons() {
+  $$('[data-panel-toggle]').forEach((b) => b.setAttribute('aria-expanded', String(body.classList.contains(`${b.dataset.panelToggle}-open`))));
+  $('#info-panel')?.setAttribute('aria-hidden', String(!body.classList.contains('info-open')));
+}
+function closePanels() {
+  if (!viewer) return;
+  body.classList.remove('info-open');
+  if (!wide()) body.classList.remove('toc-open');
+  syncPanelButtons();
+}
+
+if (viewer) {
+  // Contents open by default on wide screens.
+  if ($('#toc-panel') && wide()) body.classList.add('toc-open');
+  syncPanelButtons();
+
+  $$('[data-panel-toggle]').forEach((b) => b.addEventListener('click', () => {
+    const name = b.dataset.panelToggle;
+    const cls = `${name}-open`;
+    const opening = !body.classList.contains(cls);
+    if (name === 'info' && !wide()) body.classList.remove('toc-open');
+    if (name === 'toc') body.classList.remove('info-open');
+    body.classList.toggle(cls, opening);
+    syncPanelButtons();
+    if (opening && name === 'info') $('#info-panel .icon-btn')?.focus({ preventScroll: true });
+  }));
+  $$('[data-panel-close]').forEach((b) => b.addEventListener('click', closePanels));
+
+  // Close the contents sheet after jumping to a section on small screens.
+  $$('.toc a').forEach((a) => a.addEventListener('click', () => {
+    if (!wide()) { body.classList.remove('toc-open'); syncPanelButtons(); }
+  }));
+
+  // Swipe down to dismiss bottom sheets on phones.
+  for (const panel of $$('.vpanel, .vtoc')) {
+    let startY = null;
+    panel.addEventListener('touchstart', (e) => {
+      const scroller = $('.vpanel-body, .toc', panel);
+      startY = scroller && scroller.scrollTop > 0 ? null : e.touches[0].clientY;
+    }, { passive: true });
+    panel.addEventListener('touchend', (e) => {
+      if (startY !== null && e.changedTouches[0].clientY - startY > 80) closePanels();
+      startY = null;
+    }, { passive: true });
+  }
+
+  const frame = $('.vframe');
+  if (frame) {
+    const done = () => $('.vframe-wrap')?.classList.add('is-loaded');
+    frame.addEventListener('load', done);
+    setTimeout(done, 6000);
+  }
+
+  $$('[data-share]').forEach((b) => b.addEventListener('click', async () => {
+    const url = location.href.split('#')[0];
+    const title = $('.vbar-title h1')?.textContent || document.title;
+    if (navigator.share && matchMedia('(pointer: coarse)').matches) {
+      try { await navigator.share({ title, url }); return; } catch (e) { if (e.name === 'AbortError') return; }
     }
-  }, { rootMargin: '-80px 0px -70% 0px' });
-  map.forEach((_, id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+    await copyText(url);
+    toast('Link copied');
+  }));
+
+  $$('[data-fullscreen]').forEach((b) => b.addEventListener('click', () => {
+    if (document.fullscreenElement) document.exitFullscreen();
+    else if (viewer.requestFullscreen) viewer.requestFullscreen().catch(() => window.open(frame.src, '_blank'));
+    else window.open(frame.src, '_blank');
+  }));
+  $$('[data-print]').forEach((b) => b.addEventListener('click', () => print()));
+
+  // Highlight the current section in the contents list.
+  const scrollRoot = $('[data-scroll-root]');
+  const tocLinks = $$('.toc a');
+  if (scrollRoot && tocLinks.length && 'IntersectionObserver' in window) {
+    const map = new Map(tocLinks.map((a) => [decodeURIComponent(a.hash.slice(1)), a]));
+    const obs = new IntersectionObserver((entries) => {
+      for (const en of entries) {
+        if (!en.isIntersecting) continue;
+        tocLinks.forEach((a) => a.classList.remove('is-active'));
+        const link = map.get(en.target.id);
+        if (link) { link.classList.add('is-active'); link.scrollIntoView({ block: 'nearest' }); }
+      }
+    }, { root: scrollRoot, rootMargin: '0px 0px -75% 0px' });
+    map.forEach((_, id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
+  }
 }

@@ -56,22 +56,7 @@ Every push to `main` triggers `.github/workflows/deploy.yml`, which builds the s
 
 ## For agents and integrations
 
-The build generates a static, read-only API alongside the pages:
-
-| Path | What it is |
-| --- | --- |
-| `/llms.txt` | Index in the [llms.txt](https://llmstxt.org) format |
-| `/llms-full.txt` | Plain text of every document in one file |
-| `/api/catalog.json` | All subjects and documents with metadata and absolute URLs |
-| `/api/subjects/{subject}.json` | One subject and its documents |
-| `/api/documents/{subject}/{doc}.json` | One document's metadata plus extracted text |
-| `/api/documents/{subject}/{doc}.txt` | One document as plain text |
-| `/api/search-index.json` | Compact search index |
-| `/api/openapi.json` | OpenAPI 3.1 description (for GPT actions or tool-calling agents) |
-
-Every page also includes schema.org JSON-LD and `<link rel="alternate">` tags that point to its JSON and text versions.
-
-**MCP server idea:** a small [Model Context Protocol](https://modelcontextprotocol.io) server can wrap `catalog.json` to expose `list_documents`, `get_document(id)`, and `search(query)` tools, so Claude or another assistant can quiz you directly from the library.
+Each build also generates a read-only API: `catalog.json`, per-document JSON and plain text, `llms.txt`, and an OpenAPI spec. It isn't linked from the public site. See [docs/agents-api.md](docs/agents-api.md) for the endpoints and examples.
 
 ## Project layout
 
@@ -82,5 +67,6 @@ scripts/serve.mjs        local preview server (mirrors the GitHub Pages base pat
 src/templates.mjs        HTML templates for every page type
 src/assets/              CSS, client JS, favicon, social image
 site.config.json         site title, URL, repository, disclaimer
+docs/agents-api.md       internal API reference for agents and integrations
 ```
 

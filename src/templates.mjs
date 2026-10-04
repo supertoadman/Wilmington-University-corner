@@ -12,10 +12,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 // Icons (Lucide, inlined at build time)
 // ---------------------------------------------------------------------------
 const iconCache = new Map();
-const GITHUB = '<svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .5C5.73.5.5 5.73.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.03 1.76 2.69 1.25 3.35.96.1-.74.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.18 1.84 1.18 3.1 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.68.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.73 18.27.5 12 .5z"/></svg>';
 
 export function icon(name, cls = '') {
-  if (name === 'github') return GITHUB;
   if (!iconCache.has(name)) {
     let file = path.join(ROOT, 'node_modules', 'lucide-static', 'icons', `${name}.svg`);
     if (!fs.existsSync(file)) file = path.join(ROOT, 'node_modules', 'lucide-static', 'icons', 'file.svg');
@@ -40,26 +38,21 @@ export const esc = (s = '') =>
 
 const fmtSize = (b) => (b < 1024 ? `${b} B` : b < 1048576 ? `${Math.round(b / 1024)} KB` : `${(b / 1048576).toFixed(1)} MB`);
 const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
+const fmtShortDate = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 const plural = (n, one, many = one + 's') => `${n} ${n === 1 ? one : many}`;
+
+const FONTS = 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap';
 
 // ---------------------------------------------------------------------------
 // Layout
 // ---------------------------------------------------------------------------
-function layout(ctx, { root, title, description, body, active = '', canonical = '', head = '', jsonld = null, bodyClass = '' }) {
-  const { config, subjects } = ctx;
+function head(ctx, { root, title, description, canonical = '', extraHead = '', jsonld = null }) {
+  const { config } = ctx;
   const fullTitle = title ? `${title} · ${config.shortTitle}` : config.title;
   const desc = description || config.tagline;
   const url = config.url + canonical;
-  const nav = [
-    ['library/', 'Library', 'library'],
-    ...subjects.map((s) => [`subjects/${s.slug}/`, s.title, s.slug]),
-    ['agents/', 'For Agents', 'agents'],
-  ];
-  return `<!doctype html>
-<html lang="en" data-root="${root}">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  return `<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>${esc(fullTitle)}</title>
 <meta name="description" content="${esc(desc)}">
 <link rel="canonical" href="${esc(url)}">
@@ -70,16 +63,31 @@ function layout(ctx, { root, title, description, body, active = '', canonical = 
 <meta property="og:url" content="${esc(url)}">
 <meta property="og:image" content="${esc(config.url)}assets/og-image.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#14243b">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="${esc(config.shortTitle)}">
 <link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="${root}assets/og-image.png">
 <link rel="alternate" type="application/json" title="Catalog (JSON)" href="${root}api/catalog.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="${root}assets/styles.css">
 <script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
-${head}
+${extraHead}`;
+}
+
+const themeButton = (cls = 'icon-btn') =>
+  `<button class="${cls}" type="button" data-theme-toggle aria-label="Toggle dark mode">${icon('moon', 'theme-moon')}${icon('sun', 'theme-sun')}</button>`;
+
+function layout(ctx, { root, title, description, body, active = '', canonical = '', extraHead = '', jsonld = null, bodyClass = '' }) {
+  const { config, subjects, docs } = ctx;
+  return `<!doctype html>
+<html lang="en" data-root="${root}">
+<head>
+${head(ctx, { root, title, description, canonical, extraHead, jsonld })}
 </head>
 <body class="${bodyClass}">
 <a class="skip-link" href="#main">Skip to content</a>
@@ -89,16 +97,15 @@ ${head}
       <span class="brand-mark" aria-hidden="true">§</span>
       <span class="brand-text"><span class="brand-name">${esc(config.shortTitle)}</span><span class="brand-sub">Study Library</span></span>
     </a>
-    <nav class="main-nav" id="main-nav" aria-label="Main">
-      ${nav.map(([href, label, key]) => `<a href="${root}${href}"${active === key ? ' aria-current="page"' : ''}>${esc(label)}</a>`).join('\n      ')}
+    <nav class="main-nav" aria-label="Main">
+      <a href="${root}library/"${active === 'library' ? ' aria-current="page"' : ''}>Library</a>
+      ${subjects.map((s) => `<a href="${root}subjects/${s.slug}/"${active === s.slug ? ' aria-current="page"' : ''}>${esc(s.title)}</a>`).join('\n      ')}
     </nav>
     <div class="header-actions">
       <button class="search-trigger" type="button" data-open-search aria-label="Search all documents">
-        ${icon('search')}<span class="search-trigger-label">Search</span><kbd>Ctrl K</kbd>
+        ${icon('search')}<span class="search-trigger-label">Search documents</span><kbd>Ctrl K</kbd>
       </button>
-      <button class="icon-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">${icon('moon', 'theme-moon')}${icon('sun', 'theme-sun')}</button>
-      <a class="icon-btn hide-sm" href="${esc(config.repo)}" aria-label="Source on GitHub" rel="noopener">${icon('github')}</a>
-      <button class="icon-btn menu-btn" type="button" data-menu-toggle aria-controls="main-nav" aria-expanded="false" aria-label="Open menu">${icon('menu', 'menu-open')}${icon('x', 'menu-close')}</button>
+      ${themeButton()}
     </div>
   </div>
 </header>
@@ -106,45 +113,56 @@ ${head}
 ${body}
 </main>
 <footer class="site-footer">
-  <div class="container footer-grid">
-    <div>
-      <a class="brand brand-footer" href="${root}"><span class="brand-mark" aria-hidden="true">§</span><span class="brand-name">${esc(config.title)}</span></a>
+  <div class="container footer-inner">
+    <div class="footer-brand">
+      <a class="brand" href="${root}"><span class="brand-mark" aria-hidden="true">§</span><span class="brand-name">${esc(config.title)}</span></a>
       <p class="footer-note">${esc(config.disclaimer)}</p>
     </div>
-    <div>
-      <h2 class="footer-heading">Subjects</h2>
-      <ul class="footer-links">${subjects.map((s) => `<li><a href="${root}subjects/${s.slug}/">${esc(s.title)}</a></li>`).join('')}<li><a href="${root}library/">All documents</a></li></ul>
-    </div>
-    <div>
-      <h2 class="footer-heading">For developers &amp; agents</h2>
-      <ul class="footer-links">
-        <li><a href="${root}agents/">API overview</a></li>
-        <li><a href="${root}api/catalog.json">catalog.json</a></li>
-        <li><a href="${root}llms.txt">llms.txt</a></li>
-        <li><a href="${esc(config.repo)}" rel="noopener">GitHub repository</a></li>
-      </ul>
-    </div>
+    <nav class="footer-links" aria-label="Footer">
+      <a href="${root}library/">All documents</a>
+      ${subjects.map((s) => `<a href="${root}subjects/${s.slug}/">${esc(s.title)}</a>`).join('')}
+      <a href="${root}files/all-study-materials.zip" download>Download everything</a>
+    </nav>
   </div>
-  <div class="container footer-bottom">
-    <span>Last updated ${fmtDate(ctx.generatedAt)}</span>
-  </div>
+  <div class="container footer-bottom">${plural(docs.length, 'document')} · Updated ${fmtDate(ctx.generatedAt)}</div>
 </footer>
-<div class="palette" id="palette" hidden>
-  <div class="palette-backdrop" data-close-search></div>
-  <div class="palette-panel" role="dialog" aria-modal="true" aria-label="Search documents">
-    <div class="palette-input-row">
-      ${icon('search')}
-      <input id="palette-input" type="search" placeholder="Search outlines, rules, practice sets…" autocomplete="off" spellcheck="false" aria-controls="palette-results">
-      <kbd data-close-search>Esc</kbd>
-    </div>
-    <ul class="palette-results" id="palette-results" role="listbox"></ul>
-    <div class="palette-footer"><span><kbd>↑</kbd><kbd>↓</kbd> to move</span><span><kbd>Enter</kbd> to open</span></div>
+
+<nav class="tabbar" aria-label="Quick navigation">
+  <a href="${root}"${active === 'home' ? ' aria-current="page"' : ''}>${icon('house')}<span>Home</span></a>
+  <button type="button" data-sheet-open="subjects-sheet"${subjects.some((s) => s.slug === active) ? ' aria-current="page"' : ''}>${icon('layout-grid')}<span>Subjects</span></button>
+  <button type="button" data-open-search>${icon('search')}<span>Search</span></button>
+  <a href="${root}library/"${active === 'library' ? ' aria-current="page"' : ''}>${icon('library')}<span>Library</span></a>
+</nav>
+
+<div class="sheet" id="subjects-sheet" hidden>
+  <div class="sheet-scrim" data-sheet-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="subjects-sheet-title">
+    <div class="sheet-grab" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="subjects-sheet-title">Subjects</h2><button class="icon-btn" type="button" data-sheet-close aria-label="Close">${icon('x')}</button></div>
+    <ul class="sheet-list">
+      ${subjects.map((s) => `<li><a class="sheet-item" href="${root}subjects/${s.slug}/" style="--accent:${s.accent}"><span class="tile">${icon(s.icon)}</span><span class="sheet-item-text"><strong>${esc(s.title)}</strong><small>${plural(s.documents.length, 'document')}</small></span>${icon('chevron-right', 'chev')}</a></li>`).join('')}
+      <li><a class="sheet-item" href="${root}library/"><span class="tile">${icon('library')}</span><span class="sheet-item-text"><strong>All documents</strong><small>Search and filter everything</small></span>${icon('chevron-right', 'chev')}</a></li>
+    </ul>
   </div>
 </div>
+${palette()}
 <script type="module" src="${root}assets/app.js"></script>
 </body>
 </html>`;
 }
+
+const palette = () => `<div class="palette" id="palette" hidden>
+  <div class="palette-backdrop" data-close-search></div>
+  <div class="palette-panel" role="dialog" aria-modal="true" aria-label="Search documents">
+    <div class="palette-input-row">
+      ${icon('search')}
+      <input id="palette-input" type="search" placeholder="Search outlines, rules, practice sets…" autocomplete="off" spellcheck="false" aria-controls="palette-results" enterkeyhint="go">
+      <button type="button" class="palette-close" data-close-search>Cancel</button>
+    </div>
+    <ul class="palette-results" id="palette-results" role="listbox"></ul>
+    <div class="palette-footer"><span><kbd>↑</kbd><kbd>↓</kbd> to move</span><span><kbd>Enter</kbd> to open</span><span><kbd>Esc</kbd> to close</span></div>
+  </div>
+</div>`;
 
 // ---------------------------------------------------------------------------
 // Components
@@ -152,39 +170,49 @@ ${body}
 function docCard(ctx, root, d, { showSubject = false } = {}) {
   const { TYPES, P } = ctx;
   const t = TYPES[d.type];
+  const meta = [d.format.label, fmtSize(d.size), d.questions ? `${d.questions} questions` : null, `Updated ${fmtShortDate(d.updated)}`].filter(Boolean);
   return `<article class="doc-card" style="--accent:${d.subject.accent}" data-doc data-id="${esc(d.id)}" data-subject="${esc(d.subject.slug)}" data-type="${esc(d.type)}" data-updated="${esc(d.updated)}" data-title="${esc(d.title)}">
-  <div class="doc-card-top">
-    <span class="doc-icon">${icon(t.icon)}</span>
-    <div class="doc-badges">
-      ${showSubject ? `<span class="badge badge-subject">${esc(d.subject.title)}</span>` : ''}
-      <span class="badge">${esc(t.label)}</span>
-    </div>
+  <div class="doc-card-art" aria-hidden="true">${icon(t.icon)}</div>
+  <div class="doc-card-body">
+    <p class="doc-kicker"><span>${esc(t.label)}</span>${showSubject ? `<span class="doc-kicker-subject">${esc(d.subject.title)}</span>` : ''}</p>
+    <h3 class="doc-title"><a class="stretched" href="${root}${P.doc(d)}">${esc(d.title)}</a></h3>
+    <p class="doc-desc">${esc(d.description)}</p>
+    <p class="doc-meta">${meta.map((m) => `<span>${esc(m)}</span>`).join('')}</p>
   </div>
-  <h3 class="doc-title"><a class="stretched" href="${root}${P.doc(d)}">${esc(d.title)}</a></h3>
-  <p class="doc-desc">${esc(d.description)}</p>
-  <div class="doc-meta">
-    <span>${esc(d.format.label)}</span><span>${fmtSize(d.size)}</span>${d.questions ? `<span>${d.questions} questions</span>` : ''}<span>Updated ${fmtDate(d.updated)}</span>
-  </div>
-  <div class="doc-actions">
-    <a class="btn btn-sm btn-primary" href="${root}${P.doc(d)}">${icon(d.format.viewer === 'docx' ? 'book-open' : 'external-link')} Open</a>
-    <a class="btn btn-sm btn-ghost" href="${root}${P.file(d)}" download="${esc(d.filename)}" aria-label="Download ${esc(d.title)}">${icon('download')} Download</a>
+  <div class="doc-card-actions">
+    <span class="doc-open" aria-hidden="true">Open ${icon('arrow-right')}</span>
+    <a class="dl-btn" href="${root}${P.file(d)}" download="${esc(d.filename)}" aria-label="Download ${esc(d.title)} (${esc(d.format.label)}, ${fmtSize(d.size)})" title="Download">${icon('download')}</a>
   </div>
 </article>`;
 }
 
-function subjectCard(ctx, root, s) {
+function docRow(ctx, root, d, extra = '') {
+  const t = ctx.TYPES[d.type];
+  return `<li><a class="doc-row" href="${root}${ctx.P.doc(d)}" style="--accent:${d.subject.accent}"${extra}>
+    <span class="tile">${icon(t.icon)}</span>
+    <span class="doc-row-text"><strong>${esc(d.title)}</strong><small>${esc(t.label)}${d.questions ? ` · ${d.questions} questions` : ''}</small></span>
+    ${icon('chevron-right', 'chev')}
+  </a></li>`;
+}
+
+function subjectPanel(ctx, root, s) {
   const { TYPES } = ctx;
-  const counts = {};
-  for (const d of s.documents) counts[d.type] = (counts[d.type] || 0) + 1;
-  return `<article class="subject-card" style="--accent:${s.accent}">
-  <div class="subject-card-head">
-    <span class="subject-icon">${icon(s.icon)}</span>
-    <span class="subject-count">${plural(s.documents.length, 'document')}</span>
-  </div>
-  <h3 class="subject-title"><a class="stretched" href="${root}subjects/${s.slug}/">${esc(s.title)}</a></h3>
-  <p class="subject-desc">${esc(s.description)}</p>
-  <ul class="type-pills">${Object.entries(counts).map(([k, n]) => `<li>${icon(TYPES[k].icon)} ${n} ${esc(n === 1 ? TYPES[k].label : TYPES[k].plural)}</li>`).join('')}</ul>
-  <span class="subject-link">Browse ${esc(s.title)} ${icon('arrow-right')}</span>
+  const shown = s.documents.slice(0, 6);
+  const practice = s.documents.filter((d) => d.type === 'practice').length;
+  const q = s.documents.reduce((n, d) => n + (d.questions || 0), 0);
+  const stats = [plural(s.documents.length, 'document'), practice ? plural(practice, 'practice set') : null, q ? `${q}+ questions` : null].filter(Boolean);
+  return `<article class="subject-panel" style="--accent:${s.accent}">
+  <a class="subject-panel-head" href="${root}subjects/${s.slug}/">
+    <span class="subject-panel-icon">${icon(s.icon)}</span>
+    <span class="subject-panel-title">
+      <span class="h">${esc(s.title)}</span>
+      <span class="s">${stats.map(esc).join(' · ')}</span>
+    </span>
+    <span class="round-arrow" aria-hidden="true">${icon('arrow-up-right')}</span>
+  </a>
+  <p class="subject-panel-desc">${esc(s.description)}</p>
+  <ul class="doc-rows">${shown.map((d) => docRow(ctx, root, d)).join('')}</ul>
+  ${s.documents.length > shown.length ? `<a class="subject-panel-more" href="${root}subjects/${s.slug}/">See all ${s.documents.length} documents ${icon('arrow-right')}</a>` : ''}
 </article>`;
 }
 
@@ -197,31 +225,36 @@ const breadcrumbs = (root, items) => `<nav class="breadcrumbs" aria-label="Bread
 
 function filterBar(ctx, docs, { subjectFilter }) {
   const { TYPES, subjects } = ctx;
-  const types = [...new Set(docs.map((d) => d.type))];
+  const types = Object.keys(TYPES).filter((t) => docs.some((d) => d.type === t));
   return `<div class="filter-bar" data-filter-root>
-  <label class="filter-search">
-    ${icon('search')}
-    <input type="search" data-filter-q placeholder="Filter by title, rule, or topic…" aria-label="Filter documents">
-  </label>
-  ${subjectFilter ? `<div class="chip-group" role="group" aria-label="Subject">
+  <div class="filter-row">
+    <label class="filter-search">
+      ${icon('search')}
+      <input type="search" data-filter-q placeholder="Filter by title, rule, or topic…" aria-label="Filter documents" enterkeyhint="search">
+    </label>
+    <label class="filter-sort">
+      <span class="sr-only">Sort</span>
+      ${icon('arrow-up-down')}
+      <select data-filter-sort aria-label="Sort documents">
+        <option value="default">Recommended</option>
+        <option value="updated">Recently updated</option>
+        <option value="title">Title A–Z</option>
+      </select>
+    </label>
+  </div>
+  ${subjectFilter ? `<div class="chip-scroll" role="group" aria-label="Subject">
     <button type="button" class="chip" data-filter-subject="" aria-pressed="true">All subjects</button>
-    ${subjects.filter((s) => s.documents.length).map((s) => `<button type="button" class="chip" data-filter-subject="${esc(s.slug)}" aria-pressed="false" style="--accent:${s.accent}">${esc(s.title)}</button>`).join('')}
+    ${subjects.filter((s) => s.documents.length).map((s) => `<button type="button" class="chip" data-filter-subject="${esc(s.slug)}" aria-pressed="false" style="--accent:${s.accent}"><span class="dot"></span>${esc(s.title)}</button>`).join('')}
   </div>` : ''}
-  <div class="chip-group" role="group" aria-label="Type">
+  <div class="chip-scroll" role="group" aria-label="Type">
     <button type="button" class="chip" data-filter-type="" aria-pressed="true">All types</button>
     ${types.map((t) => `<button type="button" class="chip" data-filter-type="${t}" aria-pressed="false">${icon(TYPES[t].icon)} ${esc(TYPES[t].plural)}</button>`).join('')}
-  </div>
-  <div class="filter-sort">
-    <label for="sort-select">Sort</label>
-    <select id="sort-select" data-filter-sort>
-      <option value="default">Recommended</option>
-      <option value="updated">Recently updated</option>
-      <option value="title">Title A–Z</option>
-    </select>
   </div>
 </div>
 <p class="filter-status" data-filter-status aria-live="polite"></p>`;
 }
+
+const emptyState = () => `<div class="empty-state" data-filter-empty hidden>${icon('search-x')}<p>No documents match those filters.</p><button class="btn btn-ghost" type="button" data-filter-reset>Clear filters</button></div>`;
 
 // ---------------------------------------------------------------------------
 // Pages
@@ -230,55 +263,61 @@ export function home(ctx) {
   const root = './';
   const { config, subjects, docs } = ctx;
   const totalQ = docs.reduce((n, d) => n + (d.questions || 0), 0);
-  const practiceSets = docs.filter((d) => d.type === 'practice').length;
   const recent = [...docs].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 6);
   const body = `
 <section class="hero">
-  <div class="hero-bg" aria-hidden="true"></div>
+  <div class="hero-glow" aria-hidden="true"></div>
+  <span class="hero-mark" aria-hidden="true">§</span>
   <div class="container hero-inner">
-    <p class="eyebrow">${icon('graduation-cap')} Law school study library</p>
-    <h1 class="hero-title">Outlines, rule charts &amp; practice banks <em>in one place.</em></h1>
+    <p class="hero-eyebrow">${icon('graduation-cap')} Law school study library</p>
+    <h1 class="hero-title">Outlines, rule charts &amp; practice banks, <em>in one place.</em></h1>
     <p class="hero-lede">${esc(config.tagline)}</p>
     <button class="hero-search" type="button" data-open-search>
-      ${icon('search')}<span>Search ${plural(docs.length, 'document')}: try “404(b)” or “conflicts”</span><kbd>Ctrl K</kbd>
+      ${icon('search')}<span>Search: try “404(b)” or “conflicts”</span><kbd>Ctrl K</kbd>
     </button>
-    <dl class="stats">
-      <div><dt>Subjects</dt><dd>${subjects.length}</dd></div>
-      <div><dt>Documents</dt><dd>${docs.length}</dd></div>
-      <div><dt>Practice sets</dt><dd>${practiceSets}</dd></div>
-      ${totalQ ? `<div><dt>Questions</dt><dd>${totalQ}+</dd></div>` : ''}
-    </dl>
+    <ul class="hero-stats">
+      <li><strong>${subjects.length}</strong> ${subjects.length === 1 ? 'subject' : 'subjects'}</li>
+      <li><strong>${docs.length}</strong> documents</li>
+      ${totalQ ? `<li><strong>${totalQ}+</strong> practice questions</li>` : ''}
+    </ul>
   </div>
+</section>
+
+<section class="section container" id="recently-opened" hidden aria-labelledby="ro-h">
+  <div class="section-head">
+    <div><p class="kicker">Pick up where you left off</p><h2 id="ro-h" class="section-title">Jump back in</h2></div>
+  </div>
+  <ul class="recent-strip" data-recent-list></ul>
 </section>
 
 <section class="section container" aria-labelledby="subjects-h">
   <div class="section-head">
     <div><p class="kicker">Browse by course</p><h2 id="subjects-h" class="section-title">Subjects</h2></div>
-    <a class="link-arrow" href="${root}library/">View all documents ${icon('arrow-right')}</a>
+    <a class="link-arrow" href="${root}library/">All documents ${icon('arrow-right')}</a>
   </div>
-  <div class="subject-grid">${subjects.map((s) => subjectCard(ctx, root, s)).join('')}</div>
+  <div class="subject-grid">${subjects.map((s) => subjectPanel(ctx, root, s)).join('')}</div>
 </section>
 
 <section class="section container" aria-labelledby="recent-h">
   <div class="section-head">
     <div><p class="kicker">Fresh</p><h2 id="recent-h" class="section-title">Recently updated</h2></div>
-    <a class="btn btn-ghost" href="${root}files/all-study-materials.zip" download>${icon('file-archive')} Download everything (${fmtSize(ctx.allZipSize)})</a>
+    <a class="link-arrow" href="${root}library/?sort=updated">See all ${icon('arrow-right')}</a>
   </div>
   <div class="doc-grid">${recent.map((d) => docCard(ctx, root, d, { showSubject: true })).join('')}</div>
 </section>
 
 <section class="section container">
-  <div class="callout">
-    <div class="callout-icon">${icon('bot')}</div>
-    <div>
-      <h2 class="callout-title">Built for people and for AI agents</h2>
-      <p>Every document is also published as structured JSON and plain text, with a <code>llms.txt</code> index and an OpenAPI description. Point an assistant at the catalog and it can find, cite, and quiz you on the material.</p>
+  <div class="download-band">
+    <div class="download-band-icon">${icon('package')}</div>
+    <div class="download-band-text">
+      <h2>Take it all offline</h2>
+      <p>Every document in one ZIP: ${plural(docs.length, 'file')}, ${fmtSize(ctx.allZipSize)}. The HTML practice tools work offline in any browser.</p>
     </div>
-    <a class="btn btn-primary" href="${root}agents/">See the API ${icon('arrow-right')}</a>
+    <a class="btn btn-primary" href="${root}files/all-study-materials.zip" download>${icon('download')} Download everything</a>
   </div>
 </section>`;
   return layout(ctx, {
-    root, title: '', body, active: 'home',
+    root, title: '', body, active: 'home', bodyClass: 'page-home',
     jsonld: { '@context': 'https://schema.org', '@type': 'WebSite', name: config.title, url: config.url, description: config.tagline },
   });
 }
@@ -295,33 +334,35 @@ export function library(ctx) {
 <section class="container section-tight">
   ${filterBar(ctx, docs, { subjectFilter: true })}
   <div class="doc-grid" data-filter-list>${docs.map((d) => docCard(ctx, root, d, { showSubject: true })).join('')}</div>
-  <div class="empty-state" data-filter-empty hidden>${icon('search')}<p>No documents match those filters.</p><button class="btn btn-ghost" type="button" data-filter-reset>Clear filters</button></div>
+  ${emptyState()}
 </section>`;
   return layout(ctx, { root, title: 'Library', description: 'Browse every study document: outlines, rule charts, flowcharts, flashcards, and practice questions.', body, active: 'library', canonical: 'library/' });
 }
 
 export function subjectPage(ctx, s) {
   const root = '../../';
-  const { P } = ctx;
+  const { P, TYPES } = ctx;
+  const counts = {};
+  for (const d of s.documents) counts[d.type] = (counts[d.type] || 0) + 1;
   const body = `
-<section class="page-head subject-head container" style="--accent:${s.accent}">
-  ${breadcrumbs(root, [[P.subject(s), s.title]])}
-  <div class="subject-head-row">
-    <span class="subject-icon subject-icon-lg">${icon(s.icon)}</span>
-    <div>
-      <h1 class="page-title">${esc(s.title)}</h1>
-      <p class="page-lede">${esc(s.description)}</p>
+<section class="subject-hero" style="--accent:${s.accent}">
+  <div class="container">
+    ${breadcrumbs(root, [[P.subject(s), s.title]])}
+    <div class="subject-hero-row">
+      <span class="subject-hero-icon">${icon(s.icon)}</span>
+      <div class="subject-hero-text">
+        <h1 class="page-title">${esc(s.title)}</h1>
+        <p class="page-lede">${esc(s.description)}</p>
+        <ul class="type-pills">${Object.keys(TYPES).filter((k) => counts[k]).map((k) => `<li>${icon(TYPES[k].icon)} ${esc(counts[k] === 1 ? TYPES[k].label : TYPES[k].plural)} <span class="count">${counts[k]}</span></li>`).join('')}</ul>
+      </div>
+      ${s.documents.length ? `<a class="btn btn-primary subject-hero-dl" href="${root}${P.zip(s)}" download>${icon('download')} Download all <span class="btn-sub">${fmtSize(s.zipSize)}</span></a>` : ''}
     </div>
-  </div>
-  <div class="head-actions">
-    ${s.documents.length ? `<a class="btn btn-primary" href="${root}${P.zip(s)}" download>${icon('file-archive')} Download all ${s.documents.length} files (${fmtSize(s.zipSize)})</a>` : ''}
-    <a class="btn btn-ghost" href="${root}${P.subjectJson(s)}">${icon('braces')} JSON</a>
   </div>
 </section>
 <section class="container section-tight">
   ${s.documents.length > 3 ? filterBar(ctx, s.documents, { subjectFilter: false }) : ''}
   <div class="doc-grid" data-filter-list>${s.documents.map((d) => docCard(ctx, root, d)).join('')}</div>
-  <div class="empty-state" data-filter-empty hidden>${icon('search')}<p>No documents match those filters.</p><button class="btn btn-ghost" type="button" data-filter-reset>Clear filters</button></div>
+  ${emptyState()}
 </section>`;
   return layout(ctx, {
     root, title: s.title, description: s.description, body, active: s.slug, canonical: P.subject(s),
@@ -329,134 +370,101 @@ export function subjectPage(ctx, s) {
   });
 }
 
+/** Immersive document viewer: slim app bar + the document filling the screen. */
 export function docPage(ctx, d) {
   const root = '../../../';
   const { P, TYPES, config } = ctx;
   const t = TYPES[d.type];
   const s = d.subject;
-  const related = s.documents.filter((x) => x !== d).slice(0, 3);
   const fileUrl = root + P.file(d);
+  const isDocx = d.format.viewer === 'docx';
+  const isFrame = d.format.viewer === 'frame';
+  const related = s.documents.filter((x) => x !== d);
+  const tocList = d.toc.length
+    ? `<ol class="toc">${d.toc.map((h) => `<li class="toc-l${h.level}"><a href="#${h.id}">${esc(h.text)}</a></li>`).join('')}</ol>`
+    : '';
 
-  let viewer;
-  if (d.format.viewer === 'docx') {
-    viewer = `<div class="reader-layout">
-  ${d.toc.length ? `<aside class="reader-toc" aria-label="Contents"><p class="toc-title">Contents</p><ol>${d.toc.map((h) => `<li class="toc-l${h.level}"><a href="#${h.id}">${esc(h.text)}</a></li>`).join('')}</ol></aside>` : ''}
-  <article class="prose reader">${d.html}</article>
-</div>`;
-  } else if (d.format.viewer === 'frame') {
-    viewer = `<div class="viewer" data-viewer>
-  <div class="viewer-bar">
-    <span class="viewer-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-    <span class="viewer-name">${esc(d.filename)}</span>
-    <button class="viewer-btn" type="button" data-fullscreen aria-label="Full screen">${icon('maximize-2')}<span>Full screen</span></button>
-  </div>
-  <iframe class="viewer-frame" src="${fileUrl}" title="${esc(d.title)}" loading="lazy"></iframe>
-</div>`;
+  let stage;
+  if (isDocx) {
+    stage = `${tocList ? `<aside class="vtoc" id="toc-panel" aria-label="Contents">
+      <div class="vtoc-head"><span>Contents</span><button class="icon-btn" type="button" data-panel-close aria-label="Close contents">${icon('x')}</button></div>
+      ${tocList}
+    </aside>` : ''}
+    <div class="vscroll" data-scroll-root><article class="prose reader">${d.html}</article></div>`;
+  } else if (isFrame) {
+    stage = `<div class="vframe-wrap"><div class="vloading" aria-hidden="true"><span class="spinner"></span>Loading ${esc(d.title)}…</div><iframe class="vframe" src="${fileUrl}" title="${esc(d.title)}" allow="fullscreen; clipboard-write"></iframe></div>`;
   } else {
-    viewer = `<pre class="prose reader text-reader">${esc(d.text)}</pre>`;
+    stage = `<div class="vscroll"><pre class="prose reader text-reader">${esc(d.text)}</pre></div>`;
   }
 
-  const body = `
-<section class="page-head doc-head container" style="--accent:${s.accent}">
-  ${breadcrumbs(root, [[P.subject(s), s.title], [P.doc(d), d.title]])}
-  <div class="doc-head-grid">
-    <div>
-      <p class="eyebrow eyebrow-accent">${icon(t.icon)} ${esc(t.label)} · ${esc(s.title)}</p>
-      <h1 class="page-title">${esc(d.title)}</h1>
-      <p class="page-lede">${esc(d.description)}</p>
-      <ul class="meta-list">
-        <li>${icon('file-code')} ${esc(d.format.label)} · ${fmtSize(d.size)}</li>
-        ${d.questions ? `<li>${icon('list-checks')} ${d.questions} questions</li>` : ''}
-        <li>${icon('clock')} Updated ${fmtDate(d.updated)}</li>
-      </ul>
-      ${d.tags.length ? `<ul class="tag-list">${d.tags.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
-    </div>
-    <div class="doc-head-actions">
-      <a class="btn btn-primary btn-lg" href="${fileUrl}" download="${esc(d.filename)}">${icon('download')} Download ${esc(d.format.label)}</a>
-      ${d.format.viewer === 'frame' ? `<a class="btn btn-ghost" href="${fileUrl}" target="_blank" rel="noopener">${icon('external-link')} Open in new tab</a>` : `<button class="btn btn-ghost" type="button" data-print>${icon('printer')} Print</button>`}
-      <button class="btn btn-ghost" type="button" data-copy-link>${icon('link')} <span>Copy link</span></button>
-    </div>
-  </div>
-</section>
-<section class="container-wide section-tight">
-  ${viewer}
-</section>
-${related.length ? `<section class="section container" aria-labelledby="related-h">
-  <div class="section-head"><div><p class="kicker">Keep going</p><h2 id="related-h" class="section-title">More in ${esc(s.title)}</h2></div>
-  <a class="link-arrow" href="${root}${P.subject(s)}">All ${esc(s.title)} documents ${icon('arrow-right')}</a></div>
-  <div class="doc-grid">${related.map((x) => docCard(ctx, root, x)).join('')}</div>
-</section>` : ''}`;
+  const recent = { id: d.id, title: d.title, url: P.doc(d), subject: s.title, type: t.label, accent: s.accent, svg: icon(t.icon) };
 
-  return layout(ctx, {
-    root, title: d.title, description: d.description, body, active: s.slug, canonical: P.doc(d),
-    bodyClass: d.format.viewer === 'docx' ? 'is-reader' : '',
-    head: `<link rel="alternate" type="application/json" title="Document (JSON)" href="${root}${P.json(d)}">\n<link rel="alternate" type="text/plain" title="Document (plain text)" href="${root}${P.text(d)}">`,
+  return `<!doctype html>
+<html lang="en" data-root="${root}">
+<head>
+${head(ctx, {
+    root, title: d.title, description: d.description, canonical: P.doc(d),
+    extraHead: `<link rel="alternate" type="application/json" title="Document (JSON)" href="${root}${P.json(d)}">\n<link rel="alternate" type="text/plain" title="Document (plain text)" href="${root}${P.text(d)}">`,
     jsonld: {
       '@context': 'https://schema.org', '@type': 'LearningResource', name: d.title, description: d.description,
       learningResourceType: t.label, about: s.title, url: config.url + P.doc(d), dateModified: d.updated,
       encodingFormat: d.format.mime, keywords: d.tags.join(', '),
       isPartOf: { '@type': 'CollectionPage', name: s.title, url: config.url + P.subject(s) },
     },
-  });
-}
-
-export function agents(ctx) {
-  const root = '../';
-  const { config, docs } = ctx;
-  const sample = docs[0];
-  const u = config.url;
-  const endpoints = [
-    ['GET', 'llms.txt', 'Plain-text index in the llms.txt format. Start here for LLMs.'],
-    ['GET', 'llms-full.txt', 'Full plain text of every document in one file.'],
-    ['GET', 'api/catalog.json', 'All subjects and documents with metadata and absolute URLs.'],
-    ['GET', 'api/subjects/{subject}.json', 'One subject and its documents.'],
-    ['GET', 'api/documents/{subject}/{doc}.json', 'One document: metadata plus extracted text.'],
-    ['GET', 'api/documents/{subject}/{doc}.txt', 'One document as plain text, good for retrieval.'],
-    ['GET', 'api/search-index.json', 'Compact index for client-side keyword search.'],
-    ['GET', 'api/openapi.json', 'OpenAPI 3.1 description of these endpoints, for tool or plugin setup.'],
-  ];
-  const body = `
-<section class="page-head container">
-  ${breadcrumbs(root, [['agents/', 'For Agents']])}
-  <p class="eyebrow">${icon('bot')} Integrations</p>
-  <h1 class="page-title">For agents &amp; developers</h1>
-  <p class="page-lede">The whole library is available as static, versioned JSON and plain text. No keys, no rate limits. These are plain files on GitHub Pages that update whenever new material is pushed.</p>
-</section>
-<section class="container section-tight prose-page">
-  <h2>Endpoints</h2>
-  <div class="table-wrap"><table class="endpoint-table">
-    <thead><tr><th>Method</th><th>Path</th><th>Description</th></tr></thead>
-    <tbody>${endpoints.map(([m, p, desc]) => `<tr><td><span class="method">${m}</span></td><td><a href="${root}${p.includes('{') ? 'api/catalog.json' : p}"><code>/${p}</code></a></td><td>${desc}</td></tr>`).join('')}</tbody>
-  </table></div>
-
-  <h2>Quick start</h2>
-  <div class="code-block"><div class="code-head"><span>curl</span><button type="button" class="viewer-btn" data-copy-code>${icon('copy')}<span>Copy</span></button></div><pre><code>curl -s ${u}api/catalog.json | jq '.documents[] | {title, type, url: .urls.page}'</code></pre></div>
-  <div class="code-block"><div class="code-head"><span>JavaScript</span><button type="button" class="viewer-btn" data-copy-code>${icon('copy')}<span>Copy</span></button></div><pre><code>const catalog = await fetch('${u}api/catalog.json').then(r =&gt; r.json());
-const doc = catalog.documents.find(d =&gt; d.type === 'practice');
-const { text } = await fetch(doc.urls.json).then(r =&gt; r.json());</code></pre></div>
-  <div class="code-block"><div class="code-head"><span>Python</span><button type="button" class="viewer-btn" data-copy-code>${icon('copy')}<span>Copy</span></button></div><pre><code>import requests
-catalog = requests.get("${u}api/catalog.json").json()
-for d in catalog["documents"]:
-    print(d["subjectTitle"], "|", d["title"], "|", d["urls"]["text"])</code></pre></div>
-
-  <h2>Document record</h2>
-  <p>Each entry in <code>catalog.documents</code> looks like this. The schema is versioned with <code>schemaVersion</code>; new fields may be added, but existing ones will not change meaning within a major version.</p>
-  <div class="code-block"><div class="code-head"><span>JSON</span></div><pre><code>${esc(JSON.stringify({
-    id: sample.id, subject: sample.subject.slug, title: sample.title, type: sample.type,
-    format: sample.format.label, originalFilename: sample.filename, sizeBytes: sample.size, updated: sample.updated,
-    urls: { page: u + ctx.P.doc(sample), download: u + ctx.P.file(sample), text: u + ctx.P.text(sample), json: u + ctx.P.json(sample) },
-  }, null, 2))}</code></pre></div>
-
-  <h2>Using it with an assistant</h2>
-  <ul>
-    <li><strong>Chat assistants:</strong> paste <code>${u}llms.txt</code> and ask the assistant to read the documents it links.</li>
-    <li><strong>Custom GPTs and tool-calling agents:</strong> import <code>${u}api/openapi.json</code> as an action or tool schema.</li>
-    <li><strong>RAG pipelines:</strong> index each <code>urls.text</code> file. Use <code>updated</code> to re-index only what changed.</li>
-    <li><strong>MCP:</strong> a small MCP server can wrap <code>catalog.json</code> to expose <code>list_documents</code> and <code>get_document</code> tools. See the repository README.</li>
-  </ul>
-  <p class="muted">Interactive practice banks keep their questions inside the page's script, so their <code>.txt</code> files hold only the visible text. Download the HTML file for the full question set.</p>
-</section>`;
-  return layout(ctx, { root, title: 'For Agents', description: 'Machine-readable JSON, plain-text and llms.txt endpoints for the study library.', body, active: 'agents', canonical: 'agents/' });
+  })}
+</head>
+<body class="is-viewer${isDocx ? ' is-docx' : ''}" style="--accent:${s.accent}" data-recent='${esc(JSON.stringify(recent))}'>
+<div class="viewer-app">
+  <header class="vbar">
+    <a class="vbar-back" href="${root}${P.subject(s)}" aria-label="Back to ${esc(s.title)}">${icon('arrow-left')}</a>
+    <a class="brand-mark vbar-home" href="${root}" aria-label="Home">§</a>
+    <div class="vbar-title">
+      <span class="vbar-kicker">${icon(t.icon)}<span>${esc(s.title)} · ${esc(t.label)}</span></span>
+      <h1>${esc(d.title)}</h1>
+    </div>
+    <div class="vbar-actions">
+      ${tocList ? `<button class="vbtn" type="button" data-panel-toggle="toc" aria-controls="toc-panel" aria-expanded="false" title="Contents">${icon('list')}<span>Contents</span></button>` : ''}
+      <button class="vbtn" type="button" data-panel-toggle="info" aria-controls="info-panel" aria-expanded="false" title="Details">${icon('info')}<span>Details</span></button>
+      ${isFrame ? `<button class="vbtn hide-touch" type="button" data-fullscreen title="Full screen">${icon('maximize')}<span>Full screen</span></button>` : ''}
+      <button class="vbtn" type="button" data-share title="Share">${icon('share')}<span>Share</span></button>
+      <a class="vbtn vbtn-primary" href="${fileUrl}" download="${esc(d.filename)}" title="Download">${icon('download')}<span>Download</span></a>
+      ${themeButton('vbtn vbtn-icon hide-mobile')}
+    </div>
+  </header>
+  <main id="main" class="vstage">
+    ${stage}
+  </main>
+  <aside class="vpanel" id="info-panel" aria-label="Document details" aria-hidden="true">
+    <div class="sheet-grab" aria-hidden="true"></div>
+    <div class="vpanel-head">
+      <span class="vpanel-label">Details</span>
+      <button class="icon-btn" type="button" data-panel-close aria-label="Close details">${icon('x')}</button>
+    </div>
+    <div class="vpanel-body">
+      <span class="vpanel-tile">${icon(t.icon)}</span>
+      <h2 class="vpanel-title">${esc(d.title)}</h2>
+      <p class="vpanel-desc">${esc(d.description)}</p>
+      <dl class="facts">
+        <div><dt>Subject</dt><dd><a href="${root}${P.subject(s)}">${esc(s.title)}</a></dd></div>
+        <div><dt>Type</dt><dd>${esc(t.label)}</dd></div>
+        <div><dt>Format</dt><dd>${esc(d.format.label)} · ${fmtSize(d.size)}</dd></div>
+        ${d.questions ? `<div><dt>Questions</dt><dd>${d.questions}</dd></div>` : ''}
+        <div><dt>Updated</dt><dd>${fmtDate(d.updated)}</dd></div>
+      </dl>
+      ${d.tags.length ? `<ul class="tag-list">${d.tags.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+      <div class="vpanel-actions">
+        <a class="btn btn-primary" href="${fileUrl}" download="${esc(d.filename)}">${icon('download')} Download ${esc(d.format.label)}</a>
+        ${isFrame ? `<a class="btn btn-ghost" href="${fileUrl}" target="_blank" rel="noopener">${icon('external-link')} Open in new tab</a>` : `<button class="btn btn-ghost" type="button" data-print>${icon('printer')} Print</button>`}
+      </div>
+      ${related.length ? `<h3 class="vpanel-sub">More in ${esc(s.title)}</h3><ul class="doc-rows">${related.map((x) => docRow(ctx, root, x)).join('')}</ul>` : ''}
+    </div>
+  </aside>
+  <div class="vscrim" data-panel-close></div>
+</div>
+<div class="toast" role="status" aria-live="polite" hidden></div>
+<script type="module" src="${root}assets/app.js"></script>
+</body>
+</html>`;
 }
 
 export function notFound(ctx) {
@@ -465,8 +473,8 @@ export function notFound(ctx) {
   <p class="nf-code">404</p>
   <h1 class="page-title">That page has been overruled.</h1>
   <p class="page-lede">The page you're looking for doesn't exist or has moved. Try searching the library instead.</p>
-  <div class="head-actions center">
-    <a class="btn btn-primary" href="${root}">Go home</a>
+  <div class="head-actions">
+    <a class="btn btn-primary" href="${root}">${icon('house')} Go home</a>
     <button class="btn btn-ghost" type="button" data-open-search>${icon('search')} Search</button>
   </div>
 </section>`;
