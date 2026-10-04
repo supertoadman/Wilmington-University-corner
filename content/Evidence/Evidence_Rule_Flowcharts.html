@@ -295,9 +295,13 @@ html.js .sources{display:none}
 }
 /* ---------- Phone: panel becomes a bottom sheet ---------- */
 @media (max-width:720px){
-  .panel{top:auto;left:0;right:0;bottom:0;width:100%;max-height:58dvh;border-left:0;border-top:1px solid var(--border);border-radius:22px 22px 0 0;transform:translateY(102%);padding-bottom:env(safe-area-inset-bottom)}
+  .panel{top:auto;left:0;right:0;bottom:0;width:100%;max-height:46dvh;border-left:0;border-top:1px solid var(--border);border-radius:22px 22px 0 0;transform:translateY(102%);padding-bottom:env(safe-area-inset-bottom);transition:transform .3s cubic-bezier(.2,.9,.3,1),max-height .3s cubic-bezier(.2,.9,.3,1)}
   .app.panel-open .panel{transform:none}
-  .app.panel-full .panel{max-height:90dvh}
+  /* Collapsed: just the handle and the top of the panel, so the chart is almost fully visible */
+  .app.panel-peek .panel{max-height:calc(112px + env(safe-area-inset-bottom))}
+  .app.panel-peek .panel-scroll{overflow:hidden}
+  .app.panel-peek .panel-grab::after{content:"Tap to expand";position:absolute;left:0;right:0;top:15px;text-align:center;font-size:10.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+  .app.panel-peek .panel-grab{height:30px}
   .panel-grab{display:block;width:100%;height:22px;border:0;background:transparent;flex:none;position:relative}
   .panel-grab::before{content:"";position:absolute;left:50%;top:9px;width:42px;height:5px;margin-left:-21px;border-radius:9px;background:var(--border-strong)}
   .panel-close{top:12px}
@@ -305,7 +309,8 @@ html.js .sources{display:none}
   .pn h2{font-size:21px;padding-right:40px}
   .node-title{font-size:19px;padding-right:36px}
   .hud{bottom:calc(16px + env(safe-area-inset-bottom))}
-  .app.panel-open .hud{opacity:0;pointer-events:none}
+  .app.panel-open:not(.panel-peek) .hud{opacity:0;pointer-events:none}
+  .app.panel-peek .hud{bottom:calc(124px + env(safe-area-inset-bottom))}
   .zoom button{width:44px;height:44px}
   .chart-steps .btn{min-height:52px}
   .rail{width:100%;top:auto;height:86dvh;border-radius:22px 22px 0 0;transform:translateY(102%)}
@@ -3644,10 +3649,15 @@ function view() {
   let top = 0, bottom = r.height, left = 0, right = r.width;
   if (isDrawer()) top = 70;
   if (app.classList.contains('panel-open')) {
-    if (isPhone()) bottom = Math.min(bottom, r.height - panel.offsetHeight);
+    if (isPhone()) bottom = Math.min(bottom, r.height - sheetHeight());
     else if (isDrawer()) right = Math.min(right, r.width - panel.offsetWidth);
   }
   return { left, top, w: right - left, h: Math.max(120, bottom - top), cw: r.width, ch: r.height };
+}
+function sheetHeight() {
+  if (app.classList.contains('panel-peek')) return 112;
+  const grab = $('#grab').offsetHeight || 22;
+  return Math.min(grab + panelBody.scrollHeight, innerHeight * 0.46);
 }
 function stopFly() { if (fly) { cancelAnimationFrame(fly.raf); fly = null; world.classList.remove('flying'); } }
 function flyTo(t, ms = 650) {
@@ -3951,27 +3961,40 @@ panelBody.addEventListener('click', (e) => {
 });
 
 /* ---------- Drawers & sheet ---------- */
-function openPanel() { app.classList.add('panel-open'); }
-function closePanel() { app.classList.remove('panel-open', 'panel-full'); }
+function openPanel() { app.classList.add('panel-open'); app.classList.remove('panel-peek'); }
+function closePanel() { app.classList.remove('panel-open', 'panel-peek'); }
+function setPeek(on) {
+  app.classList.toggle('panel-peek', on);
+  if (on) panelBody.scrollTop = 0;
+  if (state.node) setTimeout(() => centerOn(state.node, 400), 60);
+}
 $('#panelClose').onclick = () => { if (state.node) clearSelection(); closePanel(); };
-$('#grab').onclick = () => app.classList.toggle('panel-full');
+$('#grab').onclick = () => setPeek(!app.classList.contains('panel-peek'));
 $('#infoBtn').onclick = () => { if (app.classList.contains('panel-open') && !state.node) closePanel(); else { if (state.node) { state.node = null; state.trail = []; marks(); } renderIntro(); openPanel(); } };
 $('#walkFab').onclick = () => startWalk();
 $('#picker').onclick = () => app.classList.add('rail-open');
 $('#scrim').onclick = () => app.classList.remove('rail-open');
 $('#railToggle').onclick = () => { app.classList.toggle('rail-collapsed'); setTimeout(() => current && apply(), 320); };
 // Swipe the sheet down to close it.
+// Swipe on the handle area: down collapses (then closes), up expands back to normal height.
+// Swipes that start in the text just scroll it; they never resize the sheet.
 (() => {
   let y0 = null;
-  panel.addEventListener('touchstart', (e) => { y0 = panelBody.scrollTop > 0 ? null : e.touches[0].clientY; }, { passive: true });
+  panel.addEventListener('touchstart', (e) => {
+    const y = e.touches[0].clientY;
+    const inHandle = e.target.closest('.panel-grab') || y - panel.getBoundingClientRect().top < 30 || app.classList.contains('panel-peek');
+    y0 = isPhone() && inHandle ? y : null;
+  }, { passive: true });
   panel.addEventListener('touchend', (e) => {
-    if (y0 === null || !isPhone()) return;
+    if (y0 === null) return;
     const dy = e.changedTouches[0].clientY - y0;
-    if (dy > 70) { if (app.classList.contains('panel-full')) app.classList.remove('panel-full'); else closePanel(); }
-    else if (dy < -60) app.classList.add('panel-full');
     y0 = null;
+    if (dy > 45) { if (app.classList.contains('panel-peek')) { if (state.node) clearSelection(); closePanel(); } else setPeek(true); }
+    else if (dy < -35 && app.classList.contains('panel-peek')) setPeek(false);
   }, { passive: true });
 })();
+// Tapping the collapsed strip expands it again.
+panel.addEventListener('click', (e) => { if (app.classList.contains('panel-peek') && !e.target.closest('#panelClose, .walk-bar button')) { e.preventDefault(); e.stopPropagation(); setPeek(false); } }, true);
 
 /* ---------- Chart list + search ---------- */
 const listEl = $('#chartList');
