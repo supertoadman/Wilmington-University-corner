@@ -202,9 +202,13 @@ async function loadSubjects() {
       } else if (format.mime === 'text/html') {
         let html = raw.toString('utf8');
         // Without a viewport tag, phones render the page zoomed out at desktop width when it is opened directly.
-        if (!/<meta[^>]+name=["']viewport["']/i.test(html) && /<head[^>]*>/i.test(html)) {
-          html = html.replace(/<head[^>]*>/i, (m) => `${m}
-<meta name="viewport" content="width=device-width, initial-scale=1">`);
+        if (!/<meta[^>]+name=["']viewport["']/i.test(html)) {
+          const tag = '<meta name="viewport" content="width=device-width, initial-scale=1">';
+          // Insert after <head>, <html> or the doctype, whichever exists; some files are bare fragments.
+          const anchor = [/<head[^>]*>/i, /<html[^>]*>/i, /<!doctype[^>]*>/i].find((re) => re.test(html));
+          html = anchor ? html.replace(anchor, (m) => `${m}
+${tag}`) : `${tag}
+${html}`;
           doc.raw = Buffer.from(html, 'utf8');
           doc.size = doc.raw.length;
         }
