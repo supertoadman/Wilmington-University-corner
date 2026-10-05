@@ -238,7 +238,7 @@ h1{margin:0;font:600 clamp(32px,5vw,48px)/1.05 var(--serif);letter-spacing:-.025
   .reveal{flex:1}
   .flipback,.nextcard{min-height:58px;width:46px;padding:0;flex:none}
   .flipback span,.nextcard span{display:none}
-  .s-actions .skip,.s-actions .undo-desk{display:none}
+  .s-actions .undo-desk{display:none}
   .s-hint{font-size:11.5px}
   .s-hint .desk{display:none}
 }
@@ -1198,7 +1198,7 @@ function renderSession(fresh = false, enter = "rise") {
           <div class="stamp knew">KNEW IT</div><div class="stamp miss">MISSED</div><div class="stamp shaky">SHAKY</div></div>
       </div></div>
       <div class="s-actions" id="actions"></div>
-      <p class="s-hint"><span class="desk">Space or click to flip · 1 missed · 2 shaky · 3 knew it · → next card · ← undo · or drag the answer left/right</span><span class="mob">Tap the card to flip it · swipe the answer right if you knew it, left if you missed it</span></p>
+      <p class="s-hint"><span class="desk">Space or click to flip · 1 missed · 2 shaky · 3 knew it · → next card · ← undo · or drag the answer left/right</span><span class="mob">Tap the card to flip it · › for the next card · swipe the answer right if you knew it, left if you missed it</span></p>
     </section>`;
     bindCard();
   }
@@ -1240,7 +1240,7 @@ function renderActions() {
   a.innerHTML = !s.flipped
     ? `<button class="btn undo-desk" data-k="undo" ${s.history.length ? "" : "disabled"}>${ico("undo")} Undo</button>
        <button class="btn btn-primary reveal" data-k="flip">Show answer <kbd>Space</kbd></button>
-       <button class="btn skip" data-k="skip">Skip ${ico("skip")}</button>`
+       <button class="btn nextcard" data-k="skip" title="Next card (→)" aria-label="Next card"><span>Next</span>${ico("skip")}</button>`
     : `<button class="btn flipback" data-k="flip" title="Flip back (Space)" aria-label="Flip the card back">${ico("undo")}<span>Flip</span></button>
        <button class="btn rate miss" data-k="1">Missed<span class="xl"> it</span><small>1 · back soon</small></button>
        <button class="btn rate shaky" data-k="2">Shaky<small>2 · see again</small></button>
