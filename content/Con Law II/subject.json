@@ -1,0 +1,26 @@
+{
+  "title": "Con Law II",
+  "description": "Constitutional Law II: the First Amendment, Chapters 1–6. Covers the Religion Clauses, the speech framework, incitement and national security, true threats and speech integral to crime, and immoral speech, including obscenity, child pornography, and indecency.",
+  "icon": "scroll-text",
+  "accent": "#5b4b8a",
+  "order": 3,
+  "documents": {
+    "First_Amendment_Outline_Ch1-6_Revised.pdf": {
+      "slug": "first-amendment-outline",
+      "title": "First Amendment Outline",
+      "type": "outline",
+      "description": "Case-by-case outline of Chapters 1–6, from Barnette and Kennedy v. Bremerton through Counterman, Ferber, and Free Speech Coalition v. Paxton. Each case has its rule, facts, holding, and dissent. Includes the Free Exercise, speech, prior restraint, and immoral speech checklists, along with synthesis tables.",
+      "tags": ["First Amendment", "outline", "Religion Clauses", "free speech"],
+      "order": 1
+    },
+    "First_Amendment_Drill.html": {
+      "slug": "first-amendment-drill",
+      "title": "First Amendment Drill",
+      "type": "practice",
+      "description": "264 multiple-choice questions on every case and concept in the outline. They test what each case held, hypotheticals built on its facts, and how the doctrine applies. Filter by chapter or question type, shuffle the answers, and review only the ones you missed.",
+      "tags": ["First Amendment", "MCQ", "Chapters 1–6"],
+      "questions": 264,
+      "order": 2
+    }
+  }
+}

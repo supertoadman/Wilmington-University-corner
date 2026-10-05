@@ -1,0 +1,1881 @@
+<title>First Amendment Drill</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Layout: one reading column of question cards under a sticky score-and-controls bar, like a bar-prep answer sheet. */
+:root {
+  --bg: #EDF0F4; --surface: #FFFFFF; --ink: #17202B; --muted: #586474; --line: #D3DAE3;
+  --accent: #22466F; --accent-soft: #E1E9F3; --on-accent: #FFFFFF;
+  --ok: #1D7549; --ok-soft: #E0F1E7; --bad: #AD2A20; --bad-soft: #F8E2DF;
+  --f-display: "Libre Caslon Display", "Georgia", serif;
+  --f-body: "Source Serif 4", "Georgia", "Times New Roman", serif;
+  --f-ui: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono: "IBM Plex Mono", "Consolas", monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #0F141B; --surface: #171F29; --ink: #E4E9F0; --muted: #98A4B3; --line: #2A3542;
+  --accent: #93B6E4; --accent-soft: #1D2B3D; --on-accent: #0F141B;
+  --ok: #62C391; --ok-soft: #16301F; --bad: #F18D83; --bad-soft: #3A1D1A; color-scheme: dark } }
+:root[data-theme="dark"] {
+  --bg: #0F141B; --surface: #171F29; --ink: #E4E9F0; --muted: #98A4B3; --line: #2A3542;
+  --accent: #93B6E4; --accent-soft: #1D2B3D; --on-accent: #0F141B;
+  --ok: #62C391; --ok-soft: #16301F; --bad: #F18D83; --bad-soft: #3A1D1A; color-scheme: dark }
+
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-ui); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 760px; margin: 0 auto; padding-inline: 16px; }
+
+header.top { padding-block: 32px 16px; }
+.eyebrow { font-family: var(--f-mono); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.05; margin: 6px 0 10px; text-wrap: balance; }
+.lede { color: var(--muted); max-width: 60ch; margin: 0; }
+
+.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+.bar .wrap { display: flex; flex-direction: column; gap: 10px; padding-block: 12px; }
+.score { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; font-variant-numeric: tabular-nums; }
+.score b { font-family: var(--f-mono); font-weight: 500; font-size: 18px; }
+.score span { color: var(--muted); font-size: 13px; }
+.meter { flex: 1 1 140px; height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; align-self: center; min-width: 100px; }
+.meter i { display: block; height: 100%; width: 0; background: var(--accent); transition: width .25s; }
+
+.row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.row .lbl { font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin-right: 4px; }
+.chip { font: 500 13px var(--f-ui); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.chip[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn { font: 600 13px var(--f-ui); color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 6px; padding: 6px 12px; cursor: pointer; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
+.btn:hover, .chip:hover { border-color: var(--accent); }
+button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.toast { font-size: 13px; color: var(--ok); min-height: 1em; }
+
+main { padding-block: 20px 60px; display: flex; flex-direction: column; gap: 14px; }
+.chhead { font-family: var(--f-display); font-size: 1.5rem; margin: 18px 0 0; padding-bottom: 6px; border-bottom: 1px solid var(--line); text-wrap: balance; }
+.chhead small { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+
+.q { background: var(--surface); border: 1px solid var(--line); border-radius: 8px; padding: 16px 18px; min-width: 0; }
+.q .meta { display: flex; flex-wrap: wrap; gap: 4px 10px; font-family: var(--f-mono); font-size: 11.5px; letter-spacing: .04em; color: var(--muted); margin-bottom: 8px; }
+.q .meta .kind { color: var(--accent); }
+.q .stem { font-family: var(--f-body); font-size: 17px; line-height: 1.5; white-space: pre-line; margin: 0 0 12px; }
+.opts { display: flex; flex-direction: column; gap: 8px; }
+.opt { display: grid; grid-template-columns: 28px 1fr; gap: 10px; align-items: start; text-align: left; width: 100%; font: 400 15px/1.45 var(--f-ui); color: var(--ink); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 9px 12px; cursor: pointer; }
+.opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+.opt .ltr { font-family: var(--f-mono); font-weight: 500; width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line); display: grid; place-items: center; font-size: 12px; }
+.opt:disabled { cursor: default; }
+.opt.correct { border-color: var(--ok); background: var(--ok-soft); }
+.opt.correct .ltr { background: var(--ok); border-color: var(--ok); color: var(--surface); }
+.opt.wrong { border-color: var(--bad); background: var(--bad-soft); }
+.opt.wrong .ltr { background: var(--bad); border-color: var(--bad); color: var(--surface); }
+.explain { margin-top: 12px; padding: 10px 12px; border-left: 3px solid var(--ok); background: var(--bg); border-radius: 0 6px 6px 0; font-size: 14px; }
+.explain.miss { border-left-color: var(--bad); }
+.explain strong { font-weight: 600; }
+.empty { color: var(--muted); text-align: center; padding: 40px 0; }
+@media (prefers-reduced-motion: reduce) { .meter i { transition: none; } }
+</style>
+
+<header class="top wrap">
+  <div class="eyebrow">Con Law II · First Amendment · Chapters 1–6</div>
+  <h1>First Amendment Drill</h1>
+  <p class="lede" id="lede">Multiple-choice questions covering every case and concept in the outline: what the cases held, hypotheticals built on their facts, and applications of the doctrine. Click an answer to see the explanation.</p>
+</header>
+
+<div class="bar">
+  <div class="wrap">
+    <div class="score">
+      <span><b id="s-done">0</b> / <b id="s-total">0</b> answered</span>
+      <span><b id="s-right">0</b> correct</span>
+      <span><b id="s-pct">–</b> accuracy</span>
+      <div class="meter" aria-hidden="true"><i id="s-meter"></i></div>
+    </div>
+    <div class="row" id="f-ch"><span class="lbl">Chapter</span></div>
+    <div class="row" id="f-kind"><span class="lbl">Type</span></div>
+    <div class="row">
+      <button class="btn primary" id="b-shuf-ans" type="button">Shuffle answer order</button>
+      <button class="btn" id="b-shuf-q" type="button">Shuffle questions</button>
+      <button class="btn" id="b-missed" type="button" aria-pressed="false">Show missed only</button>
+      <button class="btn" id="b-reset" type="button">Reset answers</button>
+      <span class="toast" id="toast" role="status"></span>
+    </div>
+  </div>
+</div>
+
+<main class="wrap" id="list"></main>
+
+<script>
+// Question bank. Each entry: c = chapter, k = kind (K case knowledge, H hypothetical, A application),
+// t = topic tag, q = stem, o = options (the FIRST option is always the correct one; order is shuffled at runtime), e = explanation.
+const QB = [];
+function Q(c, k, t, q, o, e) { QB.push({ c, k, t, q, o, e }); }
+
+/* ============================ CHAPTER 1 ============================ */
+Q(1,`K`,`Big picture`,`Which statement about who is bound by the First Amendment is true?`,
+[`Through the Fourteenth Amendment it binds states and localities, but not private actors.`,
+`It binds only Congress, because its text begins "Congress shall make no law," so states are free to regulate speech.`,
+`It binds private universities too, which is why most of them have adopted free-speech policies of their own.`,
+`It binds state governments directly through the Supremacy Clause, so no incorporation doctrine is needed.`],
+`The Fourteenth Amendment incorporates the First Amendment against states and localities (Cantwell for Free Exercise). Private actors aren't bound; private universities that protect speech do so voluntarily.`);
+
+Q(1,`H`,`Big picture`,`A private university expels a student for a campus speech criticizing the university president. The student sues under the First Amendment. What is the strongest response?`,
+[`The university isn't a state actor; any protection comes from its own speech policy.`,
+`The speech is core political criticism, so the university must satisfy strict scrutiny before expelling him.`,
+`The university may punish the speech only if it meets the Brandenburg test of intent, imminence, and likelihood.`,
+`The Fourteenth Amendment treats every accredited educational institution as a state actor for speech purposes.`],
+`Private actors are not bound by the First Amendment. Many private universities adopt free-speech policies voluntarily, but that is a policy or contract question, not a constitutional one.`);
+
+Q(1,`K`,`Big picture`,`Which case incorporated the Free Exercise Clause against the states?`,
+[`Cantwell`,`Gobitis`,`Whitney`,`Reynolds`],
+`The outline identifies Cantwell as the incorporation case for Free Exercise.`);
+
+Q(1,`K`,`Big picture`,`Which of the following is TRUE about the limits of the First Amendment, according to the overview?\n\nI. Falsely shouting "Fire" in a crowded theater can be punished.\nII. Fraud can be punished.\nIII. Religious belief, like religious practice, can be regulated when it collides with law.`,
+[`I and II only`,`I, II, and III`,`I only`,`II and III only`],
+`Speech isn't absolute: false "Fire" and fraud can be punished. Religious practice (peyote, homeschooling) can collide with law, but belief is absolutely protected.`);
+
+Q(1,`K`,`Big picture`,`Which list correctly identifies the First Amendment's clauses as summarized in the overview?`,
+[`Establishment, Free Exercise, Speech, Press, Assembly and Petition`,
+`Establishment, Free Speech, Due Process, and Assembly`,
+`Free Exercise, Free Speech, Equal Protection, and Petition`,
+`Establishment, Free Exercise, Speech, and a Press Clause granting journalists special privileges`],
+`The clauses are the two Religion Clauses, Speech, Press (treated as giving the press the same rights as everyone), and Assembly/Petition (which overlap with speech).`);
+
+Q(1,`K`,`Big picture`,`How does the outline describe the Free Press Clause?`,
+[`It gives the press the same rights as everyone else.`,
+`It gives institutional journalists a privilege to refuse subpoenas.`,
+`It protects printed newspapers but not broadcast or online media.`,
+`It is treated as a subset of the Petition Clause.`],
+`The overview notes that the Press Clause is treated as giving the press the same rights as everyone.`);
+
+Q(1,`K`,`Whitney (Brandeis)`,`Why does the outline tell you to read Justice Brandeis's Whitney concurrence?`,
+[`For its values; Brandenburg later overruled the Whitney majority.`,
+`For its doctrine, because it states the incitement test courts apply today.`,
+`Because it is the controlling opinion on compelled speech and flag salutes.`,
+`Because it adopted the clear-and-present-danger test that still governs.`],
+`Read Whitney for values, not doctrine. Brandenburg (1969) overruled the Whitney majority.`);
+
+Q(1,`K`,`Whitney (Brandeis)`,`Which of these is one of the values Brandeis expressed in Whitney?`,
+[`The remedy for evil counsels is good ones: counterspeech rather than enforced silence.`,
+`Speech that tends to produce unrest may be suppressed by a legislature acting reasonably.`,
+`Public discussion is a privilege that the majority may grant or withhold as it sees fit.`,
+`Stable government depends on suppressing speech that breeds hatred of the state.`],
+`Brandeis: counterspeech is the remedy; fear breeds repression, repression breeds hate, and hate menaces stable government.`);
+
+Q(1,`K`,`Whitney (Brandeis)`,`Which of the following are TRUE statements of Brandeis's Whitney concurrence?\n\nI. An inert people is the greatest menace to freedom.\nII. Liberty is both an end and a means to discovering political truth.\nIII. Speech and assembly are guaranteed against the occasional tyranny of majorities.`,
+[`I, II, and III`,`I and II only`,`II and III only`,`III only`],
+`All three are Brandeis themes: public discussion is a political duty, liberty is both end and means, and the rights guard against majority tyranny.`);
+
+Q(1,`A`,`Whitney (Brandeis)`,`A student is asked which Brandeis idea from Whitney later shows up in the Alvarez plurality's reasoning. Best answer?`,
+[`The remedy for bad speech is more speech.`,
+`Fear breeds repression, and repression breeds hate.`,
+`Symbolic conduct like a salute is a form of utterance.`,
+`The press serves the governed, not the governors.`],
+`Alvarez said the ordinary remedy for false speech is true speech, echoing Brandeis's "the remedy for evil counsels is good ones."`);
+
+Q(1,`K`,`Freedom to think`,`According to the casebook's gloss, what unites all of the First Amendment's clauses?`,
+[`The "freedom to think as you will and to speak as you think"`,
+`A commitment to majority rule on contested questions of religion and politics`,
+`The protection of property rights in expression, publication, and assembly`,
+`A requirement that government remain neutral between speech and conduct`],
+`The gloss: no official church dictating belief, protection of belief, and peaceful tools (speech, assembly, petition) for changing policy.`);
+
+Q(1,`K`,`Barnette`,`Which is true of West Virginia State Board of Education v. Barnette (1943)?`,
+[`Jackson wrote for a 6-3 Court, overruling Gobitis.`,
+`It was a unanimous decision resting on the Establishment Clause.`,
+`It upheld the flag salute but ordered a religious exemption.`,
+`Frankfurter wrote for the Court, reaffirming Gobitis.`],
+`Barnette: 6-3, Jackson, J., overruling Minersville School District v. Gobitis (1940).`);
+
+Q(1,`K`,`Barnette`,`What rule does Barnette establish?`,
+[`Government may not compel anyone to affirm a belief.`,
+`Government may compel a pledge if it offers a religious exemption.`,
+`Schools may require the pledge only for students under age 13.`,
+`Government may compel patriotic rituals if it has a rational basis.`],
+`"No official, high or petty, can prescribe what shall be orthodox in politics, nationalism, religion, or other matters of opinion or force citizens to confess by word or act their faith therein."`);
+
+Q(1,`K`,`Barnette`,`Which of the following are TRUE about Barnette?\n\nI. The result depends on the students' religious views and their sincerity.\nII. The state may teach history and civics, including the salute and its meaning.\nIII. Speech and worship may be restricted only to prevent "grave and immediate danger," not on a rational basis.`,
+[`II and III only`,`I, II, and III`,`I and III only`,`II only`],
+`Barnette is a speech case: the result doesn't depend on religious views or sincerity. Teaching is fine; compelling isn't. The standard is grave and immediate danger.`);
+
+Q(1,`H`,`Barnette`,`A public high school student, an atheist with no religious objection, refuses to recite the Pledge because she opposes current foreign policy. The school suspends her. Under Barnette:`,
+[`The suspension is unconstitutional; her secular objection is protected.`,
+`The suspension is valid because Barnette protects only students with religious objections to the Pledge.`,
+`The suspension is valid unless she proves her political belief is sincere, long-held, and deeply rooted.`,
+`The school may suspend her so long as it offers a silent moment of reflection as an alternative.`],
+`Barnette rests on speech, not religion. The result doesn't depend on religious views or sincerity; secular objectors are equally protected.`);
+
+Q(1,`H`,`Barnette`,`A civics teacher requires students to write a report on the history of the Pledge and explain what the salute is meant to signify. Students are graded on accuracy. Is this permissible under Barnette?`,
+[`Yes; teaching what the salute means isn't compelling belief in it.`,
+`No; any required engagement with patriotic material is compelled speech under Barnette.`,
+`No, unless the school provides an opt-out for students with religious objections.`,
+`Yes, but only because the report is written rather than recited aloud in class.`],
+`Barnette distinguishes teaching from compelling. The state may acquaint students with the salute and its meaning; it may not compel them to declare a belief.`);
+
+Q(1,`K`,`Barnette`,`When Barnette said fundamental rights "depend on the outcome of no elections," what was it doing?`,
+[`Rejecting Gobitis's deference to legislatures on fundamental rights`,
+`Holding that the salute rule was invalid because the legislature never voted on it`,
+`Explaining that appointed school boards get less deference than elected ones`,
+`Suggesting that contested rights questions should be settled by referendum`],
+`Barnette was expressly counter-majoritarian and rejected Gobitis's deference to legislatures.`);
+
+Q(1,`K`,`Barnette`,`In Barnette, what did the Court say coerced national unity "achieves"?`,
+[`"only the unanimity of the graveyard"`,`"a more perfect union"`,`"the orthodoxy of the majority"`,`"a clear and present danger"`],
+`National unity may be pursued by persuasion and example, not compulsion; coerced unity "achieves only the unanimity of the graveyard."`);
+
+Q(1,`K`,`Barnette`,`Which of the following are TRUE about the facts and reasoning of Barnette?\n\nI. Jehovah's Witness children viewed the flag as a "graven image."\nII. Attendance was voluntary, so expulsion was a light penalty.\nIII. The salute, as symbolic conduct, was treated as a form of utterance.\nIV. The case involved competing private rights, not just government authority versus the individual.`,
+[`I and III only`,`I, III, and IV`,`I, II, and III`,`III and IV only`],
+`Attendance was compulsory, and expelled children were threatened with reformatories. No competing private rights were involved.`);
+
+Q(1,`K`,`Kennedy v. Bremerton`,`Which is true of Kennedy v. Bremerton School District (2022)?`,
+[`Gorsuch wrote for a 6-3 Court finding a Free Exercise violation.`,
+`It was a 5-4 decision holding the coach's prayer violated the Establishment Clause.`,
+`It applied the Lemon test and concluded the prayer created no endorsement.`,
+`It was decided on Free Speech grounds alone, without reaching Free Exercise.`],
+`6-3, Gorsuch, J. Held: the district violated the coach's Free Exercise rights.`);
+
+Q(1,`K`,`Kennedy v. Bremerton`,`After Kennedy, how is the Establishment Clause interpreted?`,
+[`By history and tradition; it bars coercion, which requires more than visible religious exercise`,
+`Through the Lemon test's purpose, effect, and entanglement prongs, as refined over fifty years`,
+`Through the endorsement test: whether a reasonable observer would perceive government endorsement`,
+`Through strict separation: any visible religious expression by an on-duty public employee is forbidden`],
+`Kennedy read the Establishment Clause through history and tradition, abandoned Lemon and the endorsement test, and held coercion requires more than visible religious exercise.`);
+
+Q(1,`K`,`Kennedy v. Bremerton`,`Why was the district's policy in Kennedy not neutral?`,
+[`The district admitted it acted partly because the conduct was religious.`,
+`The district allowed other coaches to pray but singled out Kennedy for discipline.`,
+`The district's policy contained a system of discretionary, individualized exemptions.`,
+`The district excluded religious employees from a generally available public benefit.`],
+`The district's own admission that it acted partly because the conduct was religious defeated neutrality.`);
+
+Q(1,`K`,`Kennedy v. Bremerton`,`Which of the following did the Kennedy majority rely on in finding no coercion?\n\nI. The prayer was brief, quiet, and personal.\nII. No students joined.\nIII. High schoolers can tell permission from endorsement.\nIV. The coach had a long history of leading students in prayer.`,
+[`I, II, and III only`,`I, II, III, and IV`,`I and II only`,`II, III, and IV only`],
+`IV comes from the dissent's reading of the record. The majority stressed the brief, quiet prayer, no students joining, no evidence of pressure, and older students.`);
+
+Q(1,`K`,`Kennedy v. Bremerton`,`What was the core criticism in the Kennedy dissent (Sotomayor, Breyer, Kagan)?`,
+[`The majority misread the record and applied a "nearly toothless" coercion test.`,
+`The majority should have resolved the case under Free Speech rather than Free Exercise, avoiding the Religion Clauses.`,
+`The prayer was private speech, but the district was entitled to act on parents' complaints as a heckler's veto.`,
+`The majority should have overruled Lemon more explicitly instead of quietly abandoning it without saying so.`],
+`The dissent stressed the coach's long practice of demonstrative 50-yard-line prayers, invitations to others, and leading students, and objected to overruling Lemon.`);
+
+Q(1,`K`,`Kennedy v. Bremerton`,`What did Kennedy say about the relationship between the Religion Clauses?`,
+[`They are complementary; neither automatically trumps the other.`,
+`The Establishment Clause always prevails when a public employee's religious exercise is visible to students.`,
+`The Free Exercise Clause always prevails over Establishment Clause concerns raised by a government employer.`,
+`They must be balanced against each other under the Lemon test's three prongs.`],
+`The clauses share one sentence; the Establishment Clause doesn't automatically trump free exercise and speech.`);
+
+Q(1,`H`,`Kennedy v. Bremerton`,`A third-grade teacher begins each class period by leading her students in a spoken prayer, inviting them to join. The district disciplines her and she sues, citing Kennedy. Which is the best prediction?`,
+[`The district likely wins; this is teacher-led prayer during instruction.`,
+`The teacher likely wins; Kennedy held that any prayer by a teacher is protected private religious exercise.`,
+`The teacher likely wins, because Kennedy abandoned the Lemon test and the endorsement test entirely.`,
+`The district likely wins, but only because the prayer is spoken aloud rather than silent and private.`],
+`Kennedy's majority stressed private, quiet prayer, older students, and no pressure. Leading young children during class is the classic school-prayer coercion the Court still forbids (Engel).`);
+
+Q(1,`H`,`Kennedy v. Bremerton`,`A high school principal quietly bows her head and prays alone in the bleachers during lunch, where students can see her. The district disciplines her, explaining that visible religious conduct by staff must be stopped. Under Kennedy:`,
+[`The discipline likely violates Free Exercise, because visible prayer alone isn't coercion.`,
+`The discipline is required by the Establishment Clause because students can see her praying on duty.`,
+`The discipline is valid under Smith because the district's rule against staff prayer is neutral.`,
+`The discipline is valid because public employees surrender their Free Exercise rights while on duty.`],
+`Kennedy said coercion requires more than visible religious exercise, and treating such conduct as coercive would be hostility to religion. The district's religious motive defeats neutrality.`);
+
+Q(1,`K`,`Mahmoud v. Taylor`,`What rule did Mahmoud v. Taylor (2025) announce?`,
+[`A Yoder-type burden on a child's religious development triggers strict scrutiny, even under a neutral law.`,
+`Parents have an absolute right to remove their children from any public-school lesson they find objectionable.`,
+`Neutral, generally applicable school curricula receive only rational-basis review under Employment Division v. Smith.`,
+`Public schools may not include LGBTQ-inclusive materials in the curriculum for children below middle school.`],
+`Mahmoud (6-3, Alito, J.): if a policy substantially interferes with the religious development of a child, strict scrutiny applies even if it is neutral and generally applicable.`);
+
+Q(1,`K`,`Mahmoud v. Taylor`,`Which of the following are TRUE about the facts and posture of Mahmoud?\n\nI. It arose on a preliminary injunction.\nII. Montgomery County added five LGBTQ-inclusive storybooks to K-5 English.\nIII. The board rescinded notice and opt-outs for the storybooks while keeping other opt-outs, including sex-ed.\nIV. Only Catholic parents sued.`,
+[`I, II, and III only`,`I, II, III, and IV`,`II and III only`,`I and IV only`],
+`Muslim, Catholic, and Orthodox parents sued. The posture was a preliminary injunction, and the parents were held likely to succeed.`);
+
+Q(1,`K`,`Mahmoud v. Taylor`,`Mahmoud describes the burden inquiry as fact-intensive. Which of these is NOT one of the factors the Court identified?`,
+[`Whether the family can afford private school`,
+`The specific religious beliefs at stake`,
+`The nature of the curriculum`,
+`The children's age and the context`],
+`The factors are specific beliefs, nature of the curriculum, age, and context. The Court rejected private school or homeschooling as an answer because it is costly and parents already fund public schools.`);
+
+Q(1,`K`,`Mahmoud v. Taylor`,`How did the Mahmoud majority recast Barnette?`,
+[`As an "especially egregious" example of direct coercion`,
+`As a case whose protection is limited to compelled declarations of belief`,
+`As an Establishment Clause case that doesn't bear on parental rights`,
+`As overruled to the extent it rested on the Speech Clause`],
+`The majority treated Barnette as the extreme case, so protection isn't limited to compelled affirmation. The dissent argued Barnette protects only against compelled declaration.`);
+
+Q(1,`K`,`Mahmoud v. Taylor`,`Which features led the Mahmoud majority to find the same "objective danger" as Yoder?\n\nI. The books were "unmistakably normative."\nII. They were taught by trusted teachers to young children.\nIII. Teachers were guided to correct dissent (e.g., calling an objection "hurtful").\nIV. The books were available in the school library for optional reading.`,
+[`I, II, and III only`,`I and II only`,`I, II, III, and IV`,`II, III, and IV only`],
+`The burden rested on normative content, young children, trusted teachers, and correction of dissent. Optional library access would look more like mere exposure.`);
+
+Q(1,`K`,`Mahmoud v. Taylor`,`Why did the school board's policy fail strict scrutiny in Mahmoud?`,
+[`Its other opt-outs undercut its claim that opt-outs were infeasible.`,
+`An undisrupted classroom is not a legitimate government interest at all.`,
+`The board failed to prove the books were age-appropriate for kindergarten.`,
+`The policy was motivated by open hostility to religion, as in Masterpiece.`],
+`The Court accepted that an undisrupted classroom is compelling in general, but the board's many other opt-outs undercut infeasibility, its administrability problems were of its own design, and it couldn't cure stigma by stigmatizing religious students.`);
+
+Q(1,`K`,`Mahmoud v. Taylor`,`Which argument was made by the Mahmoud dissent (Sotomayor, Kagan, Jackson)?`,
+[`Mere exposure to contrary ideas is not a burden, and the rule has no limiting principle.`,
+`The books were too explicit for young children and should have been removed from the curriculum entirely.`,
+`Parents' rights end at the home, so Pierce v. Society of Sisters has nothing to say about public schools.`,
+`Strict scrutiny should apply, but the board satisfied it because classroom order is a compelling interest.`],
+`The dissent also argued Barnette covers only compelled declaration, Kennedy held exposure isn't coercion, Yoder involved a community's survival, and the rule has no limiting principle.`);
+
+Q(1,`K`,`Mahmoud v. Taylor`,`Mahmoud said parents' right to direct their children's religious education would be an "empty promise" if what?`,
+[`It stopped at the public school door.`,
+`It applied only to children over 13.`,
+`It required parents to pay for private school.`,
+`It extended to curricular choices.`],
+`Relying on Pierce, the Court said the right extends outside the home and would be empty if it ended at the schoolhouse door.`);
+
+Q(1,`A`,`Mahmoud v. Taylor`,`The casebook asks whether you would also grant opt-outs from a curriculum that denigrates LGBTQ people. What principle is the question testing?`,
+[`Rules must apply neutrally to similar facts, whichever side wins.`,
+`Opt-outs are available only to religious parents, never to secular ones.`,
+`Curricular content is government speech and can never be challenged.`,
+`Only LGBTQ-inclusive curricula can trigger strict scrutiny under Yoder.`],
+`The challenge tests neutrality: a sound rule has to reach the mirror-image case, whichever side wins.`);
+
+Q(1,`A`,`Coercion synthesis`,`In the Kennedy/Mahmoud synthesis, which distinctions did the MAJORITIES rely on to find coercion in Mahmoud but not in Kennedy?`,
+[`Age; government instruction vs. private expression; normative content vs. passive observation`,
+`Whether the claim arose under the Free Speech Clause or the Free Exercise Clause`,
+`Whether the plaintiff was a teacher or a parent, since parents hold stronger constitutional rights`,
+`Whether the religious conduct happened on school property or at an off-campus school event`],
+`The majorities stressed age, government instruction vs. permitted private expression, and normative content vs. passive observation.`);
+
+Q(1,`A`,`Coercion synthesis`,`According to the dissents' view in the synthesis, what distinguishes the two cases?`,
+[`Kennedy was official religious exercise at a school event; Mahmoud was mere exposure.`,
+`Kennedy involved young children, while Mahmoud involved high school students old enough to object.`,
+`Kennedy involved compelled affirmation of belief, while Mahmoud involved no speech of any kind.`,
+`Nothing; the dissents saw coercion in both cases and would have ruled for the plaintiffs in each.`],
+`The dissents saw coercion in Kennedy (a government actor's demonstrative prayer at an official event) and none in Mahmoud (a secular curriculum that only exposes).`);
+
+Q(1,`A`,`Coercion synthesis`,`On the coercion spectrum described in the outline, which case represents the clearest coercion?`,
+[`Barnette, compelled affirmation`,`Kennedy, visible private prayer`,`Mahmoud, normative curriculum`,`Smith, a generally applicable drug law`],
+`Barnette is the clearest coercion. Kennedy and Mahmoud fight over how far below that line coercion reaches.`);
+
+Q(1,`H`,`Anthem stretch`,`A state university requires graduates to stand for the anthem at an optional ceremony (the diploma doesn't depend on attending). A student wants to sit in protest. Which facts make the case UNLIKE Barnette?\n\nI. Attendance is optional.\nII. The participants are adults.\nIII. Standing is less than reciting a pledge.\nIV. A state actor imposes a patriotic ritual.`,
+[`I, II, and III only`,`I, II, III, and IV`,`IV only`,`II and IV only`],
+`IV is a similarity to Barnette. Optional attendance, adults, and a lesser gesture are the distinctions.`);
+
+Q(1,`H`,`Anthem stretch`,`In the graduation-anthem problem, what is the outline's likely answer?`,
+[`Close, but forcing a choice between a major life event and a compelled gesture still looks coercive.`,
+`Clearly constitutional, because attendance is optional and graduates are adults who can simply stay home.`,
+`Clearly unconstitutional, because any patriotic ritual at a state university is forbidden by Barnette.`,
+`Constitutional, because standing is conduct rather than speech and so raises no First Amendment issue.`],
+`Forcing a choice between a major life event and a compelled gesture still looks coercive (Mahmoud rejected "just go elsewhere"), and the policy gives no passive option inside the ceremony.`);
+
+/* ============================ CHAPTER 2 ============================ */
+Q(2,`A`,`Free Exercise checklist`,`Under the Free Exercise checklist, what is the FIRST question?`,
+[`Is a sincere religious practice burdened?`,
+`Is the law neutral and generally applicable?`,
+`Does the government have an interest of the highest order?`,
+`Does the Establishment Clause require the government to act?`],
+`Step 1 is a sincere religious practice that is burdened. Then neutrality and general applicability, then Smith or strict scrutiny, then the wrinkles.`);
+
+Q(2,`A`,`Free Exercise checklist`,`Under the checklist, a law is NOT neutral and generally applicable if it does which of the following?\n\nI. Has a discretionary exemption system\nII. Treats any comparable secular activity better, judged by risk\nIII. Excludes religious entities from a public benefit\nIV. Incidentally burdens a religious practice through an across-the-board ban`,
+[`I, II, and III only`,`I, II, III, and IV`,`IV only`,`I and II only`],
+`IV is Smith: an incidental burden from an across-the-board law triggers no exemption. I (Fulton), II (Tandon), and III (Carson) defeat neutrality or general applicability.`);
+
+Q(2,`A`,`Free Exercise checklist`,`When strict scrutiny applies to a Free Exercise claim, which statement is accurate?`,
+[`The interest is judged as to this exemption, and the government almost always loses.`,
+`The government must show only a legitimate interest that is rationally related to the law as a whole.`,
+`The claimant must prove the law was enacted with hostile intent toward a particular faith.`,
+`The court weighs how central the practice is to the religion against the state's interest.`],
+`Strict scrutiny: an interest of the highest order, narrowly tailored, judged as to this exemption. The government almost always loses.`);
+
+Q(2,`K`,`Smith`,`What rule did Employment Division v. Smith (1990) announce?`,
+[`No exemptions are required from neutral, generally applicable laws.`,
+`Any substantial burden on religious exercise triggers strict scrutiny, even from a neutral law.`,
+`Religious conduct is absolutely protected, but religious belief may be regulated for good cause.`,
+`Native American religious practices receive special constitutional protection from drug laws.`],
+`Smith (6-3, Scalia, J.): belief is absolutely protected; conduct is protected only from laws that target it because it is religious.`);
+
+Q(2,`K`,`Smith`,`According to Smith, which of the following may the government NOT do?\n\nI. Punish doctrines it thinks are false\nII. Impose special disabilities based on religious status\nIII. Take sides in religious disputes\nIV. Enforce an across-the-board controlled-substance ban against religious users`,
+[`I, II, and III only`,`I, II, III, and IV`,`IV only`,`I and III only`],
+`Smith lists what government can't do (regulate belief, compel affirmation, punish false doctrine, impose status disabilities, take sides). Enforcing a neutral drug ban is permitted.`);
+
+Q(2,`K`,`Smith`,`Smith cited several earlier cases as support. Which pairing is correct?`,
+[`Reynolds: polygamy; Prince: child labor; Braunfeld: Sunday closing; Gillette: the draft`,
+`Reynolds: the draft; Prince: polygamy; Braunfeld: child labor; Gillette: Sunday closing`,
+`Reynolds: Sunday closing; Prince: the draft; Braunfeld: polygamy; Gillette: child labor`,
+`Reynolds: child labor; Prince: Sunday closing; Braunfeld: the draft; Gillette: polygamy`],
+`Reynolds (polygamy), Prince (child labor), Braunfeld (Sunday closing), and Gillette (draft) all denied religious exemptions from general laws.`);
+
+Q(2,`K`,`Smith`,`How did Smith explain earlier cases that did grant religious exemptions, like Yoder?`,
+[`As "hybrid rights" cases pairing free exercise with another right`,
+`As cases decided under the Establishment Clause rather than Free Exercise`,
+`As cases that Smith itself expressly overruled`,
+`As cases involving laws that targeted religion on their face`],
+`Smith said past exemptions paired free exercise with another right, such as speech, press, or parents' right to direct education (Yoder). Barnette is a speech case.`);
+
+Q(2,`K`,`Smith`,`Why did Smith refuse to apply strict scrutiny to every incidental burden on religion?`,
+[`It would create "a private right to ignore generally applicable laws."`,
+`Courts are not competent to assess whether a claimant's religious belief is sincerely held.`,
+`The Establishment Clause forbids granting religious exemptions from any criminal law.`,
+`Peyote use is not a central practice of the Native American Church's worship.`],
+`Scalia called such a private right a "constitutional anomaly."`);
+
+Q(2,`H`,`Smith`,`A state bans all open fires within city limits during drought season, with no exceptions. A religious group seeks a constitutional exemption for a ceremonial fire. What result under Smith?`,
+[`No exemption is required, because the ban is neutral and generally applicable.`,
+`An exemption is required because the burden on a central religious ceremony is substantial.`,
+`The ban is subject to strict scrutiny because it prevents a religious ceremony from occurring.`,
+`An exemption is required under the federal Religious Freedom Restoration Act.`],
+`A neutral, generally applicable law needs no religious exemption under Smith. RFRA doesn't bind states after City of Boerne.`);
+
+Q(2,`K`,`Lukumi`,`Which is true of Church of the Lukumi Babalu Aye v. City of Hialeah (1993)?`,
+[`A 9-0 Court struck the ordinances as neither neutral nor generally applicable.`,
+`A 5-4 Court upheld the ordinances as neutral, generally applicable laws under Smith.`,
+`The Court held that Santeria animal sacrifice isn't a sincere religious practice.`,
+`The Court struck down the ordinances under the Establishment Clause, not Free Exercise.`],
+`Lukumi: 9-0, Kennedy, J. Emergency ordinances passed after the church leased land were gerrymandered to reach only Santeria sacrifice, and they failed strict scrutiny.`);
+
+Q(2,`K`,`Lukumi`,`In Lukumi, which of these animal killings were allowed while Santeria sacrifice was banned?\n\nI. Fishing\nII. Home pest extermination\nIII. Euthanasia\nIV. Hunting`,
+[`I, II, III, and IV`,`I and IV only`,`II and III only`,`I, II, and IV only`],
+`Fishing, pest extermination, euthanasia, medical research, poisoning, and hunting were all allowed, which made the law underinclusive for animal cruelty.`);
+
+Q(2,`K`,`Lukumi`,`How was the Hialeah ordinance underinclusive with respect to PUBLIC HEALTH?`,
+[`Hunters' carcasses and restaurant garbage went unregulated.`,
+`It didn't ban the sale of live animals in the city's pet stores.`,
+`It exempted kosher slaughter but not Santeria sacrifice.`,
+`It regulated killings in private homes but not in public parks.`],
+`Carcasses from hunting and restaurant garbage posed the same disposal risks and went untouched.`);
+
+Q(2,`K`,`Lukumi`,`What did Lukumi say about religious beliefs?`,
+[`They need not be logical or comprehensible to others.`,
+`They must be part of an established religion's official doctrine.`,
+`They must match the practices of most members of the faith.`,
+`Courts may first ask whether a belief is reasonable.`],
+`Beliefs need not be acceptable, logical, consistent, or comprehensible to others.`);
+
+Q(2,`K`,`Lukumi`,`The city claimed secular animal killings were "obviously justified." How did the Court treat that claim?`,
+[`As ipse dixit: a bare, unsupported assertion`,
+`As a legislative judgment entitled to deference`,
+`As enough to satisfy rational-basis review`,
+`As proof of a compelling public-health interest`],
+`The Court rejected the claims as bare assertions; society imposed on Santeria worshippers what it would not impose on itself.`);
+
+Q(2,`H`,`Lukumi`,`A town passes an ordinance banning "ritual drumming" after 10 p.m. but exempts concerts, parties, and sporting events. Only a local Afro-Caribbean congregation engages in ritual drumming. What is the likely result?`,
+[`Strict scrutiny applies, and the ordinance likely fails because its exemptions spare comparable secular noise.`,
+`The ordinance is valid under Smith as a neutral noise regulation that applies to everyone.`,
+`The ordinance is valid because its text never mentions religion or any particular faith.`,
+`The congregation must first show that the ordinance's sponsors expressed hostility to religion.`],
+`Like Lukumi, the exemptions gerrymander the law so it burdens only religious conduct while comparable secular noise is untouched. Facial neutrality isn't enough.`);
+
+Q(2,`K`,`Masterpiece`,`What rule did Masterpiece Cakeshop (2018) announce?`,
+[`Even a neutral law must be applied neutrally, without hostility or worse treatment of religion.`,
+`Wedding-cake bakers have a Free Speech right to refuse to serve same-sex weddings.`,
+`Public-accommodations laws are not neutral and generally applicable as to religion.`,
+`States may not protect gay persons' access to goods when doing so burdens religion.`],
+`Masterpiece (7-2, Kennedy, J.): official hostility to religion, or treating a religious objection worse than comparable objections, violates Free Exercise.`);
+
+Q(2,`K`,`Masterpiece`,`Which of the following are TRUE about Masterpiece Cakeshop?\n\nI. Commissioners compared the baker's religious justification to defenses of slavery and the Holocaust, and no one objected.\nII. Three bakers who refused cakes with messages disapproving of same-sex marriage were found to have acted lawfully.\nIII. The Court resolved the tension between antidiscrimination law and the First Amendment in favor of religious objectors.`,
+[`I and II only`,`I, II, and III`,`I only`,`II and III only`],
+`The decision was narrow; the Court didn't resolve the broader tension, and states can generally protect equal access.`);
+
+Q(2,`K`,`Masterpiece`,`In Masterpiece, the Court said government can't decide what is "offensive," citing which case?`,
+[`Barnette`,`Smith`,`Cohen`,`Lukumi`],
+`The Court cited Barnette for the principle that government can't prescribe orthodoxy about what is offensive.`);
+
+Q(2,`K`,`Masterpiece`,`Who dissented in Masterpiece Cakeshop?`,
+[`Ginsburg and Sotomayor`,`Kagan and Breyer`,`Thomas and Gorsuch`,`Sotomayor, Kagan, and Breyer`],
+`The vote was 7-2, with Ginsburg and Sotomayor dissenting.`);
+
+Q(2,`H`,`Masterpiece`,`A state civil rights commission, with no disparaging remarks, evenly applies its public-accommodations law to every baker who refuses service based on a protected characteristic, religious or not. A religious baker is sanctioned. Does Masterpiece's holding control?`,
+[`No; Masterpiece turned on hostility and disparate treatment, which are absent here.`,
+`Yes; Masterpiece held that religious bakers are always exempt from public-accommodations laws.`,
+`Yes; any sanction imposed on a religious objector is itself evidence of hostility to religion.`,
+`No, because Fulton overruled Masterpiece and restored the Smith framework for these cases.`],
+`Masterpiece is narrow. Without hostility and disparate treatment its rationale doesn't apply, and the Court left the broader tension unresolved.`);
+
+Q(2,`K`,`Fulton`,`What rule did Fulton v. City of Philadelphia (2021) announce?`,
+[`A discretionary exemption system defeats general applicability, even if never used.`,
+`Smith is overruled, so every burden on religious exercise now receives strict scrutiny.`,
+`Cities may exclude religious agencies from foster-care contracts to ensure equal treatment.`,
+`A policy stays generally applicable until an exemption is actually granted to a secular actor.`],
+`Fulton (9-0, Roberts, C.J.) declined to overrule Smith. The Commissioner's "sole discretion" to grant exceptions was enough.`);
+
+Q(2,`K`,`Fulton`,`In Fulton, which asserted interests FAILED as to Catholic Social Services?\n\nI. Maximizing the number of foster parents\nII. Avoiding liability\nIII. Equal treatment of prospective foster parents`,
+[`I, II, and III`,`I and II only`,`III only`,`II and III only`],
+`More foster parents (CSS adds them), liability (speculative), and equal treatment (weighty, but undermined by the city's own exemption system) all failed.`);
+
+Q(2,`A`,`Fulton`,`Under Fulton, how is strict scrutiny framed?`,
+[`Is there a compelling interest in denying THIS claimant an exemption?`,
+`Does the policy as a whole serve a compelling government interest?`,
+`Is the claimant's religious practice central to the claimant's faith?`,
+`Has the government ever actually granted a secular exemption?`],
+`The question is the interest in denying this particular claimant an exemption, not the interest in the policy generally.`);
+
+Q(2,`H`,`Fulton`,`A state daycare licensing rule requires all providers to accept every child regardless of religion, but the Director "may waive any requirement for good cause, in the Director's sole discretion." No waiver has ever been granted. A religious daycare is denied a license. What result?`,
+[`Strict scrutiny applies, even though no waiver was ever granted.`,
+`The rule is generally applicable, because no waiver has ever actually been granted to anyone.`,
+`The rule is neutral under Smith, so the daycare is not entitled to any religious exemption.`,
+`The daycare must first request and be denied a waiver before any constitutional claim is ripe.`],
+`Under Fulton, unused discretionary power still counts. Discretion invites the government to decide which reasons are worthy.`);
+
+Q(2,`K`,`Tandon`,`What rule did Tandon v. Newsom (2021) announce?`,
+[`Favoring ANY comparable secular activity over religious exercise, judged by risk, triggers strict scrutiny.`,
+`Religious gatherings must be treated as well as the most similar secular gathering, and no better.`,
+`COVID-era public-health restrictions receive only rational-basis review, even when they burden worship.`,
+`Limits on home gatherings are neutral if religious and secular home gatherings are treated alike.`],
+`Tandon (5-4 per curiam, emergency application): comparability is judged by risk to the government's interest, and the government must show the religious activity is riskier even with the same precautions.`);
+
+Q(2,`K`,`Tandon`,`Which of the following are TRUE about Tandon?\n\nI. It doesn't matter that some secular activities are treated as badly as religious ones.\nII. The government must show the religious activity is riskier even with the same precautions.\nIII. The dissent argued the right comparator was at-home secular gatherings, which were treated identically.`,
+[`I, II, and III`,`I and II only`,`II only`,`I and III only`],
+`All three are accurate. The dissent (Kagan, Breyer, Sotomayor; Roberts separately) called the majority's comparison "apples and watermelons."`);
+
+Q(2,`K`,`Tandon`,`Which quotation captures Tandon's reasoning?`,
+[`The state "cannot assume the worst when people go to worship but assume the best when people go to work."`,
+`"No official, high or petty, can prescribe what shall be orthodox in politics, nationalism, religion."`,
+`"The remedy for evil counsels is good ones," not enforced silence imposed by the state.`,
+`Coerced unity of opinion "achieves only the unanimity of the graveyard."`],
+`That line is Tandon's core rationale about risk comparisons.`);
+
+Q(2,`H`,`Tandon`,`A county limits houses of worship to 25% capacity and retail stores to 50%. The county argues worship is riskier because congregants sing, but offers no evidence that services with masks and distancing are riskier than shopping with masks and distancing. Under Tandon:`,
+[`Strict scrutiny applies, and the county likely fails for lack of proof that worship is riskier.`,
+`The rule is valid because some secular venues, like movie theaters, are also limited to 25%.`,
+`The rule is valid because congregational singing is inherently riskier than shopping.`,
+`The rule gets rational-basis review because it is a generally applicable public-health measure.`],
+`Retail is a comparable secular activity treated better. The government must show greater risk even with the same precautions, and it doesn't matter that theaters are treated as badly.`);
+
+Q(2,`A`,`Neutrality synthesis`,`Match the WAY a law fails neutrality or general applicability to the correct case: "Discipline was imposed partly because the conduct was religious."`,
+[`Kennedy`,`Fulton`,`Tandon`,`Lukumi`],
+`Admitted religious motive is Kennedy. Fulton is discretionary exemptions, Tandon is comparable secular activity, and Lukumi is gerrymandered exemptions.`);
+
+Q(2,`A`,`Neutrality synthesis`,`Which case pairing correctly matches the ground of failure?`,
+[`Masterpiece: hostility in application; Fulton: discretionary exemption system`,
+`Masterpiece: gerrymandered exemptions; Fulton: comparable secular activity favored`,
+`Lukumi: discretionary exemption system; Tandon: hostility in application`,
+`Carson: admitted religious motive; Kennedy: exclusion from a public benefit`],
+`Lukumi: gerrymandered exemptions. Masterpiece: hostility. Fulton: discretion. Tandon: comparable secular activity. Kennedy: admitted motive. Trinity Lutheran/Espinoza/Carson: exclusion from benefits.`);
+
+Q(2,`A`,`Neutrality synthesis`,`Which case is the synthesis's example of a law that IS neutral and generally applicable?`,
+[`Smith: an across-the-board drug ban`,`Lukumi: an animal-killing ban`,`Tandon: a home-gathering limit`,`Fulton: a foster-care policy`],
+`Smith is the contrast case: an across-the-board drug ban needing no exemption.`);
+
+Q(2,`K`,`Two wrinkles`,`What is "Wrinkle 1" in Free Exercise doctrine?`,
+[`Parental religious upbringing triggers strict scrutiny even under general laws.`,
+`Government may disfavor religion when necessary to avoid an Establishment Clause violation.`,
+`Hybrid claims combining speech and religion always receive strict scrutiny under Smith.`,
+`RFRA supplies strict scrutiny against state and local governments as well as federal ones.`],
+`Wrinkle 1 is the parental-religious-education exception (Yoder; Mahmoud). Wrinkle 2 is Establishment Clause avoidance.`);
+
+Q(2,`K`,`Two wrinkles`,`Which of these is TRUE about the doctrinal basis for Wrinkle 1?`,
+[`Mahmoud said little about it, wary of unenumerated rights after Dobbs.`,
+`Mahmoud expressly grounded the parental rule in the Establishment Clause's history.`,
+`Mahmoud overruled Smith in order to create the parental-education wrinkle.`,
+`The wrinkle rests on the Equal Protection Clause's protection of religious minorities.`],
+`Smith had treated Yoder as resting on an unenumerated parental right; after Dobbs, the Court in Mahmoud said little about the doctrinal basis.`);
+
+Q(2,`K`,`Two wrinkles`,`In Mahmoud, what ALSO undercut the policy's general applicability?`,
+[`The board kept its opt-out for the sex-ed unit.`,
+`Board members made hostile comments about religion.`,
+`Principals had sole discretion to grant exemptions.`,
+`The board excluded religious schools from funding.`],
+`The retained sex-ed opt-out showed opt-outs were feasible and undercut general applicability.`);
+
+Q(2,`K`,`Two wrinkles`,`What does "Wrinkle 2" (Establishment Clause avoidance) permit?`,
+[`Disfavoring religion only where needed to avoid an actual Establishment Clause violation`,
+`Excluding religious entities from any program to avoid the appearance of government endorsement`,
+`Enforcing state-constitutional "no-aid" provisions that go beyond what federal law requires`,
+`Disfavoring religion whenever the government can articulate a rational basis for doing so`],
+`Government may not separate church and state more strictly than the Constitution requires (Carson).`);
+
+Q(2,`H`,`Two wrinkles`,`A state university funds all registered student groups' activities but denies funding to a Christian group's weekly worship meeting, citing a state constitutional provision requiring strict church-state separation beyond federal law. The group sues. Best analysis?`,
+[`Stricter-than-required separation isn't compelling, so the exclusion likely fails.`,
+`The exclusion is valid because a state may always enforce its own constitution's separation clause.`,
+`The exclusion is required by the Establishment Clause because student fees would pay for worship.`,
+`The exclusion is valid under Smith because the funding rule applies to all worship meetings equally.`],
+`Wrinkle 2 permits disfavoring religion only when necessary to avoid a federal Establishment Clause violation. Carson held that funding religious use through a generally available program wasn't one.`);
+
+Q(2,`K`,`Establishment basics`,`Which of the following is broadly agreed to be forbidden by the Establishment Clause?\n\nI. Establishing an official religion\nII. Giving tax exemptions only to religious entities\nIII. Favoring one sect over another\nIV. Allowing a teacher to pray quietly and privately at school`,
+[`I, II, and III only`,`I, II, III, and IV`,`I and III only`,`II, III, and IV only`],
+`Private, quiet religious expression at school is still protected (Kennedy). The rest are broadly agreed prohibitions, along with coercing belief and school indoctrination.`);
+
+Q(2,`K`,`Establishment basics`,`Which pairing of public-school Establishment Clause cases is correct?`,
+[`Engel v. Vitale: nonmandatory prayer; Abington v. Schempp: Bible reading; Wallace v. Jaffree: moment of silence for prayer`,
+`Engel v. Vitale: Bible reading; Abington v. Schempp: moment of silence; Wallace v. Jaffree: religious instruction`,
+`McCollum: nonmandatory prayer; Edwards v. Aguillard: Bible reading; Engel v. Vitale: moment of silence`,
+`Wallace v. Jaffree: religious instruction; McCollum: Bible reading; Schempp: special vigilance in K-12`],
+`Engel (nonmandatory prayer), Schempp (Bible reading), Wallace (moment of silence for prayer), McCollum (religious instruction), and Edwards (special vigilance in K-12).`);
+
+Q(2,`A`,`Establishment basics`,`Why are public schools policed most strictly under the Establishment Clause?`,
+[`Schools are coercive and children impressionable.`,
+`Public schools receive federal education funding.`,
+`Teachers have no individual religious rights on duty.`,
+`The Lemon test still applies inside public schools.`],
+`Individual religious expression is still protected at school (Kennedy), but school sponsorship is policed closely.`);
+
+Q(2,`H`,`Establishment basics`,`A public elementary school starts each day with a short, nondenominational prayer read over the intercom. Students who wish may step into the hallway. Is this constitutional?`,
+[`No; even nonmandatory school prayer violates Engel v. Vitale.`,
+`Yes, because students may leave the room, so there is no coercion.`,
+`Yes, because Kennedy abandoned the Lemon test for school cases.`,
+`Yes, because the prayer is nondenominational and favors no sect.`],
+`Engel struck down even nonmandatory school prayer. Government-sponsored prayer in K-12 remains forbidden.`);
+
+Q(2,`K`,`Funding stages`,`What did Zelman (2002) hold about aid reaching religious schools?`,
+[`Aid through parents' genuine, independent choice is permissible.`,
+`States must include religious schools in every voucher program.`,
+`Aid to religious schools always violates the Establishment Clause.`,
+`Aid is allowed only for secular textbooks and bus transportation.`],
+`Zelman is the "permitted inclusion" stage: private choice breaks the link to government.`);
+
+Q(2,`K`,`Funding stages`,`What is the rule of the Trinity Lutheran / Espinoza / Carson trilogy?`,
+[`A state that subsidizes private entities can't exclude religious ones, but may end the program.`,
+`States may exclude religious entities from subsidies to avoid the appearance of supporting religion.`,
+`States must create new funding programs for religious schools on equal terms with public schools.`,
+`States may exclude religious entities from subsidies only if their own constitution requires it.`],
+`This is the "required inclusion" stage. The Lemon-era rule allowing exclusion to avoid the appearance of support is repudiated.`);
+
+Q(2,`K`,`Play in the joints`,`Which statement about the two "play in the joints" concepts is correct?`,
+[`Accommodation beyond Free Exercise is alive; declining to fund religion is in retreat.`,
+`Both concepts are alive and well, and Carson reaffirmed each of them in turn.`,
+`Accommodation was rejected in Cutter, while declining to fund was reaffirmed in Carson.`,
+`Both concepts were rejected in the Trinity Lutheran, Espinoza, and Carson trilogy.`],
+`Concept 1 lives through RFRA, RLUIPA, and Cutter. Concept 2 (declining to fund religious entities even when funding would be lawful) was rejected in the funding trilogy.`);
+
+Q(2,`H`,`Funding stages`,`A state offers grants to nonprofits to resurface playgrounds with recycled tires but excludes any applicant owned by a church. A church preschool is rejected. What are the state's constitutional options?`,
+[`Include the church preschool, or end the program for everyone.`,
+`Keep the exclusion to avoid the appearance of supporting religion.`,
+`Fund the church but require it to remove its religious symbols first.`,
+`Keep the exclusion if the church is the only religious applicant.`],
+`The trilogy requires inclusion if the state subsidizes private entities, but the state may end the program instead.`);
+
+Q(2,`K`,`Carson v. Makin`,`What rule did Carson v. Makin (2022) announce?`,
+[`A state subsidizing private schools can't exclude religious ones, even for religious instruction.`,
+`States may exclude schools that use funds for religious instruction, but not schools with religious status.`,
+`States must fund religious education in public schools on the same terms as secular subjects.`,
+`Maine's program was a public-education benefit that could lawfully be limited to secular schools.`],
+`Carson (6-3, Roberts, C.J.) rejected the status/use distinction. An interest in separating church and state more strictly than the federal Constitution requires is not compelling.`);
+
+Q(2,`K`,`Carson v. Makin`,`Which of these is TRUE about the facts of Carson?\n\nI. Maine paid tuition for families in districts without a public secondary school.\nII. Since 1981, only "nonsectarian" private schools were eligible.\nIII. The families chose unaccredited religious schools.`,
+[`I and II only`,`I, II, and III`,`I only`,`II and III only`],
+`The families chose accredited religious schools.`);
+
+Q(2,`K`,`Carson v. Makin`,`Why did Carson reject Maine's argument that its program was a "public education" benefit?\n\nI. Participating private schools could be selective and often weren't free.\nII. They didn't follow the state curriculum or need certified teachers.\nIII. They could be single-sex.\nIV. They were required to use the state's standardized tests.`,
+[`I, II, and III only`,`I, II, III, and IV`,`II and IV only`,`I and IV only`],
+`The private schools differed from public schools in admissions, cost, curriculum, teachers, and sex composition.`);
+
+Q(2,`K`,`Carson v. Makin`,`What LIMITS did Carson acknowledge?`,
+[`States may keep public schools secular and needn't fund private schools.`,
+`States may exclude religious schools that discriminate in their admissions.`,
+`States may exclude religious schools if the state funds only secular instruction.`,
+`States may exclude religious schools when families live near a public school.`],
+`Carson didn't require religious public schools or any private-school funding at all.`);
+
+Q(2,`K`,`Carson v. Makin`,`Which is a point made by the Carson dissent (the excerpt is Sotomayor's)?`,
+[`The Court moved from permitting states to decline to fund religion to requiring it.`,
+`Maine's tuition program violated the Establishment Clause from the moment it began.`,
+`Zelman was wrongly decided and should be overruled along with the funding trilogy.`,
+`The families lacked standing because they could simply move to another school district.`],
+`The dissent also said play in the joints is nearly gone, Maine must now fund schools with discriminatory admissions, and its "choice" was forced by geography.`);
+
+Q(2,`K`,`Religious charter schools`,`What happened in Oklahoma Statewide Charter School Board v. Drummond (2025)?`,
+[`A 4-4 split left the state ruling barring St. Isidore in place.`,
+`A 6-3 Court held religious charter schools are private and must be allowed.`,
+`The Court held charters are public, so religious charters violate the Establishment Clause.`,
+`The Court dismissed the case as moot after the state withdrew the charter.`],
+`Barrett recused. A 4-4 split sets no precedent, and the outline says to expect the issue to return.`);
+
+Q(2,`A`,`Religious charter schools`,`Why do religious charter schools present a dilemma?`,
+[`Public means an Establishment problem; private means exclusion violates Free Exercise.`,
+`Charter schools are neither public nor private, so neither Religion Clause applies to them.`,
+`RFRA and RLUIPA conflict on how charter schools must be treated by state authorizers.`,
+`Charter schools are funded federally, so only RFRA governs their religious character.`],
+`If charters are public, a religious charter violates the Establishment Clause; if private, excluding religious schools violates Free Exercise. Oklahoma argued its charters are public (state-created, funded, supervised, open to all).`);
+
+Q(2,`K`,`RFRA`,`Which is TRUE about the Religious Freedom Restoration Act (1993)?`,
+[`It is a statutory response to Smith that restores strict scrutiny, even for neutral laws.`,
+`It amended the First Amendment's text to overrule Employment Division v. Smith.`,
+`It applies only to laws that target religious practice on their face or by design.`,
+`It was struck down in all of its applications in City of Boerne v. Flores.`],
+`RFRA requires an exemption from a substantial burden unless the government satisfies strict scrutiny. It is a statute, not constitutional law.`);
+
+Q(2,`K`,`City of Boerne`,`What did City of Boerne v. Flores (1997) hold?`,
+[`RFRA exceeds Congress's power over states but still binds the federal government.`,
+`RFRA is unconstitutional in every application, federal and state alike.`,
+`RFRA violates the Establishment Clause by favoring religious claimants.`,
+`RFRA binds state governments but not the federal government itself.`],
+`After Boerne, RFRA governs only federal action.`);
+
+Q(2,`H`,`RFRA`,`A federal agency enforces a neutral workplace-safety regulation that substantially burdens a worker's religious practice. Separately, a city enforces a neutral zoning rule that burdens a mosque's expansion. Which statement is correct?`,
+[`The worker can use RFRA; the mosque would look to RLUIPA.`,
+`Both may invoke RFRA, which applies to every level of government.`,
+`Neither has any claim, because both rules are neutral under Smith.`,
+`The mosque may invoke RFRA, but the federal worker may not.`],
+`RFRA binds the federal government after Boerne. RLUIPA covers land use and institutionalized persons and binds states.`);
+
+Q(2,`K`,`RLUIPA / Cutter`,`What did Cutter v. Wilkinson (2005) hold about RLUIPA?`,
+[`Upheld unanimously, but courts must weigh burdens on nonbeneficiaries.`,
+`Struck down as an establishment of religion favoring religious prisoners.`,
+`Held to apply only to the federal government and its prisons.`,
+`Held that prisoners have no enforceable religious rights under it.`],
+`Cutter validated "play in the joints" Concept 1: accommodation beyond Free Exercise is permissible.`);
+
+Q(2,`K`,`Hobby Lobby`,`What did Burwell v. Hobby Lobby (2014) hold, and what does the outline say it shows?`,
+[`5-4: closely held for-profits got a RFRA exemption, showing accommodation's third-party costs.`,
+`9-0: for-profit corporations cannot exercise religion, so RFRA offers them no protection at all.`,
+`5-4: the ACA contraceptive mandate violated the Free Exercise Clause even under Smith's rule.`,
+`6-3: nonprofits, but not for-profit corporations, may claim RFRA exemptions from the mandate.`],
+`Hobby Lobby was a RFRA statutory case exempting closely held corporations with religious owners from the ACA contraceptive mandate.`);
+
+Q(2,`K`,`Monuments and money`,`Which is TRUE about religious displays under the outline?`,
+[`Longstanding displays and short legislative prayers are generally allowed.`,
+`All religious monuments on public property violate the Establishment Clause.`,
+`The Texas Capitol Ten Commandments monument was struck down 5-4 in 2005.`,
+`The circuits have struck down "In God We Trust" on currency as coercive.`],
+`Such displays are allowed on historical grounds; public schools are stricter. Van Orden v. Perry (2005) upheld the Texas monument 5-4, and circuits uphold "In God We Trust" (Newdow v. Peterson).`);
+
+Q(2,`H`,`World religions stretch`,`A tenth-grade unit includes short readings from the Bible, the Quran, Buddhist texts, and secular humanist writings; students compare traditions and write a reflection on meaning and morality. What is the outline's likely answer to parents' opt-out demands?`,
+[`The district has the better case, absent compelled views or other opt-outs.`,
+`The parents win automatically under Mahmoud because religion is being discussed in class.`,
+`The district wins automatically because Smith forecloses all parental religious claims.`,
+`The unit violates the Establishment Clause because it assigns readings from the Bible.`],
+`Mahmoud stressed age and normative content. Here the students are older and the material is descriptive, but requiring students to adopt views or granting other opt-outs could change the result.`);
+
+Q(2,`H`,`World religions stretch`,`Same world-religions unit, but the teacher grades each reflection on whether the student concludes that secular humanism offers the best account of morality. How does this change the analysis?`,
+[`It strengthens the parents' case, since grading adoption of a view nears a compelled declaration.`,
+`It doesn't matter, because tenth graders are older than the children in Mahmoud.`,
+`It helps the district, because secular humanism isn't itself a religion.`,
+`It matters only if the district also grants opt-outs for other units.`],
+`Grading students on adopting a view nears a Barnette-style compelled declaration and makes the unit normative, with correction of dissent.`);
+
+Q(2,`A`,`World religions stretch`,`In the world-religions problem, which argument belongs to the DISTRICT rather than the parents?`,
+[`The unit is descriptive, not normative.`,
+`Presenting rival moral answers pressures children.`,
+`Other opt-outs defeat general applicability.`,
+`The reflection nears a Barnette-style declaration.`],
+`The district also stresses older students, no correction or "hurtful" labels, and mere exposure. The other three are the parents' arguments.`);
+
+/* ============================ CHAPTER 3 ============================ */
+Q(3,`K`,`Speech overview`,`Which of these counts as "speech" under the First Amendment according to the overview?\n\nI. Armbands\nII. Parades and picketing\nIII. Films and websites\nIV. Burning crosses and flags`,
+[`I, II, III, and IV`,`III only`,`I, II, and III only`,`II and III only`],
+`"Speech" is broad: words, images (books, film, websites, social media), and symbolic acts (armbands, flags, crosses, parades, picketing).`);
+
+Q(3,`K`,`Speech overview`,`Why is false, heinous, and harmful speech often protected?`,
+[`Distrust of officials to sort truth from falsity`,
+`Such speech has unusually high social value`,
+`The Framers specifically chose to protect lies`,
+`Courts lack jurisdiction over speech disputes`],
+`Officials and courts can't be trusted to separate truth from falsity or heinous ideas from unpopular ones. The same distrust explains the preference for bright lines.`);
+
+Q(3,`K`,`Speech overview`,`Which of these principles are listed in the speech overview?\n\nI. The Court prefers bright lines over standards.\nII. Content-neutral rules are treated more leniently than content-based ones.\nIII. Overbreadth doctrine and mens rea requirements counter chilling.\nIV. The Court readily adds new unprotected categories when speech is harmful.`,
+[`I, II, and III only`,`I, II, III, and IV`,`II and III only`,`I and IV only`],
+`The Court refuses to expand the historical unprotected categories (Stevens, Alvarez, Brown).`);
+
+Q(3,`A`,`Speech checklist`,`Under the speech checklist, which question comes FIRST?`,
+[`Is there government action?`,`Is the law content-based?`,`Is the speech in an unprotected category?`,`Is the law overbroad or vague?`],
+`The order is government action, speech?, compelled?, content-based/viewpoint/neutral, unprotected category, strict scrutiny, then facial attacks.`);
+
+Q(3,`A`,`Speech checklist`,`A content-based law restricts protected speech. What does strict scrutiny require, per the checklist?`,
+[`A compelling interest, actual necessity, and the least restrictive means`,
+`A substantial government interest and a reasonable fit between means and ends`,
+`A legitimate government interest that is rationally related to the law`,
+`Proof by the government that the targeted speech is false or harmful`],
+`Strict scrutiny also asks whether counterspeech would work as a less restrictive alternative.`);
+
+Q(3,`K`,`Wooley v. Maynard`,`What rule did Wooley v. Maynard (1977) announce?`,
+[`The state can't make people display its ideological message on their property.`,
+`States may require mottos on plates because license plates are government property.`,
+`Compelled display is permissible whenever the state's message is widely supported.`,
+`Only religious objectors may refuse to display a state's official motto in public.`],
+`Wooley (6-3, Burger, C.J.): the right to speak and the right not to speak are complementary parts of freedom of mind.`);
+
+Q(3,`K`,`Wooley v. Maynard`,`Which of the following are TRUE about Wooley?\n\nI. The Court said the difference between carrying a motto and saluting a flag is "one of degree."\nII. The car becomes a "mobile billboard," and driving is a virtual necessity.\nIII. Majority approval of "Live Free or Die" made the requirement valid.`,
+[`I and II only`,`I, II, and III`,`II only`,`I and III only`],
+`Majority approval of the message is irrelevant.`);
+
+Q(3,`K`,`Wooley v. Maynard`,`Why did New Hampshire's interests fail in Wooley?`,
+[`Plate numbers already identify cars, and state pride is an ideological interest.`,
+`The state offered no interest at all to justify the motto requirement.`,
+`The plates were issued by a private contractor rather than by the state.`,
+`The motto was religious, so the Establishment Clause forbade the requirement.`],
+`Identification wasn't narrowly tailored, and promoting state pride and history can't outweigh the right not to be the message's courier.`);
+
+Q(3,`K`,`Wooley v. Maynard`,`How did Wooley's footnote 15 distinguish "In God We Trust" on currency?`,
+[`Currency is carried privately and not associated with the bearer.`,
+`Currency is federal, while license plates are issued by states.`,
+`The motto on currency is religious rather than ideological.`,
+`Currency is used only in commercial transactions between parties.`],
+`Unlike a plate on a publicly visible car, currency isn't displayed or associated with its holder.`);
+
+Q(3,`K`,`Wooley v. Maynard`,`On what did the Wooley dissenters (White, Blackmun, Rehnquist) disagree with the majority?`,
+[`Only whether the plate is government speech`,
+`Whether the Maynards were sincere Jehovah's Witnesses`,
+`Whether compelled-speech doctrine exists at all`,
+`Whether Barnette should be overruled entirely`],
+`The dissent disagreed only on whether the plate is the government's own speech, a later topic.`);
+
+Q(3,`H`,`Wooley v. Maynard`,`A city requires all bicycle-delivery couriers to display a city-issued banner reading "Proud to Keep Our City Green" on their bags while working. A courier who opposes the city's environmental policies refuses. Best analysis?`,
+[`Under Wooley, the city likely can't make him carry its message.`,
+`The requirement is valid because the courier isn't asked to say anything aloud.`,
+`The requirement is valid because most residents support the environmental message.`,
+`Only a religious objection would entitle the courier to refuse the banner.`],
+`Passive display on private property counts, majority approval is irrelevant, and the speech rationale protects any objector.`);
+
+Q(3,`H`,`Compelled speech`,`A federal regulation requires food manufacturers to print standardized nutrition facts on packaging. A company claims compelled speech. Most likely result?`,
+[`Upheld, because compelled commercial disclosures are generally allowed.`,
+`Struck down, because Wooley bars requiring any message on private property.`,
+`Struck down, because Barnette forbids compelling anyone to affirm a fact.`,
+`Upheld, but only for companies that consent to print the label.`],
+`Compelled speech is "almost never OK," with commercial disclosures like nutrition labels and drug side effects being the main exception (Ch. 8).`);
+
+Q(3,`K`,`Collin v. Smith`,`What rule did Collin v. Smith (7th Cir. 1978) announce?`,
+[`A peaceful demonstration can't be banned because its message offends.`,
+`Nazi symbols such as swastikas are fighting words per se in any community.`,
+`A village may bar a march that would cause psychic trauma to Holocaust survivors.`,
+`Marches may be banned whenever they are planned near a village's government buildings.`],
+`Listener protection is allowed only for intrusions into the home or on a truly captive audience. Cert. was denied.`);
+
+Q(3,`K`,`Collin v. Smith`,`Which of the following are TRUE about Collin v. Smith?\n\nI. The planned march was 30 minutes on a sidewalk.\nII. The village objected to the time, place, and manner of the march.\nIII. Residents could avoid Village Hall for half an hour, so there was no captive audience.\nIV. Uniforms, flags, and placards were treated as symbolic speech and assembly.`,
+[`I, III, and IV only`,`I, II, III, and IV`,`II and III only`,`I and II only`],
+`The ordinances were content-based: the village objected to who was marching, not time, place, or manner.`);
+
+Q(3,`K`,`Collin v. Smith`,`How did Collin treat the claim that the march would inflict psychic trauma on Holocaust survivors?`,
+[`As indistinguishable from speech that stirs anger`,
+`As a compelling interest that a narrower ordinance could serve`,
+`As a secondary effect that the village could zone under Renton`,
+`As proof that the march amounted to unprotected fighting words`],
+`Stirring anger is a high purpose of speech (Terminiello), and the shock flows from the ideas themselves (Street).`);
+
+Q(3,`H`,`Collin v. Smith`,`A town passes an ordinance banning any public demonstration "whose message is likely to cause severe emotional distress to residents." A group plans a peaceful march with offensive signs. What result?`,
+[`Invalid as a content-based restriction on listeners' reactions.`,
+`Valid as a time, place, and manner restriction on marches.`,
+`Valid because preventing emotional distress is compelling.`,
+`Valid if the town's residents include Holocaust survivors.`],
+`The ordinance targets the message's effect on listeners, which Collin forbids.`);
+
+Q(3,`A`,`Collin v. Smith`,`According to Collin, when may government protect listeners from offensive speech?`,
+[`Intrusions into the home, or a truly captive audience`,
+`Whenever the speech causes measurable psychological harm`,
+`When the speech targets a historically persecuted minority`,
+`When a majority of local residents formally object`],
+`The captive-audience and home-intrusion exceptions are narrow.`);
+
+Q(3,`K`,`Collin v. Smith`,`Collin quoted which case for the idea that debate must be "uninhibited, robust, and wide-open"?`,
+[`NYT v. Sullivan`,`Mosley`,`Edwards v. South Carolina`,`Terminiello`],
+`Mosley was cited for the rule against content restriction, Edwards for demonstrations near government, and Terminiello for speech that stirs anger.`);
+
+Q(3,`K`,`Hudnut`,`What rule did American Booksellers Ass'n v. Hudnut (7th Cir. 1985) announce?`,
+[`Government may not favor one viewpoint, even if the other causes real harm.`,
+`Sexually explicit material depicting women as subordinate is obscene under Miller.`,
+`Antipornography ordinances are valid when they are designed to protect women from harm.`,
+`Viewpoint discrimination is permitted when it targets sex discrimination specifically.`],
+`Judge Easterbrook struck down the Indianapolis ordinance as viewpoint discrimination.`);
+
+Q(3,`K`,`Hudnut`,`Which of the following are TRUE about Hudnut?\n\nI. Explicit material treating women as equals was lawful while material treating them as subordinate was banned.\nII. The ban applied regardless of literary, artistic, or political value.\nIII. The court rejected the premise that such depictions perpetuate subordination.`,
+[`I and II only`,`I, II, and III`,`II and III only`,`I only`],
+`The court accepted that such depictions perpetuate subordination, but said that only shows the power of speech.`);
+
+Q(3,`K`,`Hudnut`,`What did Hudnut warn would happen if the ordinance were upheld?`,
+[`Government would become "the great censor and director of which thoughts are good for us."`,
+`Pornography would be treated as obscene per se, without any inquiry into community standards.`,
+`Courts would be forced to apply the Miller test to all speech touching on sexual topics.`,
+`The ordinance would be preempted by federal obscenity law and never enforced in practice.`],
+`The court added that the rationale couldn't be limited to sex discrimination and that free speech has been an ally of those seeking change.`);
+
+Q(3,`K`,`Stevens`,`What rule did United States v. Stevens (2010) announce?`,
+[`No new unprotected categories may be created by balancing value against costs.`,
+`Depictions of animal cruelty are a historically unprotected category of speech.`,
+`Crush videos are protected speech, but dogfighting videos are not protected.`,
+`The government may create new categories if the speech has very low value.`],
+`Stevens (8-1, Roberts, C.J.): content-based restrictions are presumptively invalid unless the speech falls within a historically recognized category. "Categorical balancing" is "startling and dangerous."`);
+
+Q(3,`K`,`Stevens`,`Why was 18 U.S.C. § 48 held substantially overbroad in Stevens?`,
+[`It reached hunting videos sold where hunting is restricted.`,
+`It applied only to crush videos and nothing else.`,
+`It contained no exception for works of serious value.`,
+`It punished private possession rather than sale.`],
+`Read by its text, the law required no cruelty, and the exceptions clause didn't cover hunting videos. Lawful applications dwarfed the crush and dogfight market.`);
+
+Q(3,`K`,`Stevens`,`The government in Stevens promised to prosecute only "extreme" cruelty. How did the Court respond?`,
+[`The First Amendment doesn't leave us "at the mercy of noblesse oblige."`,
+`The promise narrowed the statute enough to save it from overbreadth.`,
+`Prosecutorial discretion is not reviewable in a facial challenge.`,
+`The promise meant Stevens lacked standing to challenge the law.`],
+`A government promise of restraint doesn't cure an overbroad statute.`);
+
+Q(3,`K`,`Stevens`,`Which of these is TRUE about Stevens?\n\nI. The Court left open whether a statute limited to crush videos or extreme cruelty would be valid.\nII. Justice Alito dissented and would have read the statute narrowly.\nIII. There was a long tradition of banning depictions of animal cruelty.`,
+[`I and II only`,`I, II, and III`,`I only`,`II and III only`],
+`There's no tradition of banning depictions of animal cruelty.`);
+
+Q(3,`H`,`Stevens`,`A state legislature finds that videos depicting extreme violence against humans have negligible value and cause social harm, so it declares them a new unprotected category. Under Stevens:`,
+[`The law fails; categories can't be created by balancing.`,
+`The law is valid because the legislature made findings of negligible value.`,
+`The law is valid because depictions of violence are closely related to obscenity.`,
+`The law is valid so long as it has an exception for works of serious value.`],
+`Stevens said the First Amendment already reflects the people's cost-benefit judgment. Brown applied the same rule to violence for minors.`);
+
+Q(3,`K`,`Alvarez`,`What rule emerges from United States v. Alvarez (2012)?`,
+[`There is no general exception for false statements.`,
+`False statements of fact are categorically unprotected.`,
+`Lies about military honors are unprotected speech.`,
+`All false statements made in public may be punished.`],
+`A content-based ban on lies must be "actually necessary"; the ordinary remedy for false speech is true speech. Alvarez struck down the Stolen Valor Act.`);
+
+Q(3,`K`,`Alvarez`,`Which is TRUE about the lineup in Alvarez?`,
+[`Kennedy wrote for a four-Justice plurality; Breyer and Kagan concurred in the judgment.`,
+`Kennedy wrote a five-Justice majority opinion applying strict scrutiny to the Act.`,
+`Breyer wrote the plurality opinion, applying strict scrutiny, joined by three others.`,
+`The Court was unanimous in striking down the Stolen Valor Act on its face.`],
+`The plurality was Kennedy, Roberts, Ginsburg, and Sotomayor. Breyer and Kagan applied intermediate scrutiny. Alito, Scalia, and Thomas dissented.`);
+
+Q(3,`K`,`Alvarez`,`How did the Alvarez plurality distinguish cases saying false statements have no value?`,
+[`Those involved legally cognizable harm; this Act targeted "falsity and nothing more."`,
+`Those cases involved false statements made under oath in judicial proceedings.`,
+`Those cases involved commercial advertising rather than political speech.`,
+`Those cases were decided before the First Amendment was incorporated.`],
+`Defamation and fraud involve cognizable harm and can be punished. Falsity alone can't.`);
+
+Q(3,`K`,`Alvarez`,`Which of these supported the Alvarez plurality's conclusion that the Act wasn't "actually necessary"?\n\nI. There was no evidence that lies diluted the Medal's value.\nII. Counterspeech worked: Alvarez was publicly exposed and ridiculed.\nIII. The government's interest in the Medal's integrity wasn't compelling.`,
+[`I and II only`,`I, II, and III`,`III only`,`II and III only`],
+`The plurality accepted that the interest was compelling; the problem was necessity.`);
+
+Q(3,`A`,`Alvarez`,`What does it mean that Alvarez was a "plurality" and some Justices "concurred in the judgment"?`,
+[`Fewer than five joined the reasoning; concurring in the judgment means agreeing only with the result.`,
+`The Court split 4-4, so the lower-court judgment was affirmed without any opinion.`,
+`The plurality opinion is binding precedent, but the concurrence in the judgment is not.`,
+`Concurring in the judgment means joining both the plurality's reasoning and its result.`],
+`Plurality reasoning usually isn't binding precedent.`);
+
+Q(3,`H`,`Alvarez`,`A man falsely claims to have received the Medal of Honor in order to qualify for a veterans' housing grant and receives the money. He is prosecuted. How does Alvarez apply?`,
+[`He may be punished, because this lie is fraud for material gain.`,
+`He can't be punished, because Alvarez protects all lies about military honors.`,
+`He can't be punished unless counterspeech has first been tried and failed.`,
+`He may be punished, but only if the law survives intermediate scrutiny.`],
+`This lie caused legally cognizable harm (material gain). Alvarez sought no material gain, and fraud is a recognized unprotected category.`);
+
+Q(3,`H`,`Alvarez`,`A state law makes it a crime to falsely claim a college degree anywhere, including in private conversation at home. Under the Alvarez plurality:`,
+[`Likely invalid; it targets falsity alone.`,
+`Valid, because false statements are unprotected.`,
+`Valid, because employers rely on credentials.`,
+`Valid if applied only to lies told at home.`],
+`Like the Stolen Valor Act, it reaches lies anywhere, "even whispered at home," and would let government compile a list of subjects about which lies are crimes.`);
+
+Q(3,`A`,`Unprotected categories`,`Match the category to its key case. Which pairing is correct?`,
+[`True threats: Watts; speech integral to crime: Giboney`,
+`True threats: Chaplinsky; speech integral to crime: Ferber`,
+`Fighting words: Brandenburg; incitement: Chaplinsky`,
+`Obscenity: Ferber; child pornography: Miller`],
+`Incitement: Brandenburg. Fighting words: Chaplinsky. True threats: Watts. Speech integral: Giboney. Child porn: Ferber. Obscenity: Miller. Fraud: Virginia Bd. of Pharmacy.`);
+
+Q(3,`A`,`Unprotected categories`,`Which of the following is listed as a historically unprotected category?\n\nI. Fraud\nII. Grave and imminent threats the government may prevent (Near; NYT Co. v. United States)\nIII. Depictions of animal cruelty\nIV. Defamation, in certain circumstances`,
+[`I, II, and IV only`,`I, II, III, and IV`,`I and IV only`,`II and III only`],
+`The Court refused to recognize depictions of animal cruelty (Stevens) and false statements as such (Alvarez).`);
+
+Q(3,`A`,`Unprotected categories`,`Which two proposed categories did the Court REFUSE to recognize?`,
+[`Animal-cruelty depictions and false statements as such`,
+`Fraud and true threats of violence`,
+`Child pornography and obscenity`,
+`Incitement and fighting words`],
+`Stevens refused the first and Alvarez the second, both on the principle against creating categories by balancing.`);
+
+Q(3,`K`,`Hansen`,`What rule did United States v. Hansen (2023) announce?`,
+[`Overbreadth requires a lopsided ratio of protected to legitimate applications.`,
+`Any statute that could conceivably reach protected advocacy is facially invalid.`,
+`Only litigants whose own speech is protected may bring an overbreadth challenge.`,
+`Federal immigration statutes are categorically exempt from overbreadth review.`],
+`Hansen (7-2, Barrett, J.): the unconstitutional applications must be realistic and substantial relative to the plainly legitimate sweep, and courts first adopt any fairly possible constitutional reading.`);
+
+Q(3,`K`,`Hansen`,`Which of the following are TRUE about Hansen?\n\nI. Hansen defrauded noncitizens with a fake "adult adoption" path to citizenship.\nII. The Court read "encourage or induce" as criminal-law terms of art covering intentional solicitation and facilitation.\nIII. The Court held the statute overbroad because it reached advocacy.`,
+[`I and II only`,`I, II, and III`,`II and III only`,`I only`],
+`The Court held the statute not overbroad: construed as terms of art, it excluded advocacy.`);
+
+Q(3,`K`,`Hansen`,`Why is overbreadth described as "unusual" and "strong medicine"?`,
+[`It lets a litigant assert others' rights and voids laws with lawful uses.`,
+`It requires proof that the law has no valid application whatsoever.`,
+`It is available only against criminal statutes, never civil ones.`,
+`It authorizes courts to rewrite statutes to cure their defects.`],
+`A litigant whose own speech is unprotected may raise others' rights, and a law with lawful applications is invalidated. It is justified by chilling concerns.`);
+
+Q(3,`K`,`Hansen`,`What is the constitutional-avoidance (Ashwander) principle as applied in Hansen?`,
+[`Choose a fair constitutional reading, but never against clear text.`,
+`Avoid constitutional questions by dismissing the case on standing.`,
+`Always adopt the narrowest reading, even against the statute's text.`,
+`Invalidate any statute that has at least one unconstitutional reading.`],
+`Courts seek harmony, not "constitutional collision."`);
+
+Q(3,`A`,`Hansen`,`How does an ordinary facial challenge differ from an overbreadth challenge?`,
+[`Ordinary: no valid applications (Salerno). Overbreadth: substantial protected speech.`,
+`Ordinary facial challenges require a smaller showing than overbreadth challenges do.`,
+`Only overbreadth challenges may be raised as a defense in criminal prosecutions.`,
+`They apply the same test, but overbreadth is limited to speech-restricting laws.`],
+`Overbreadth is the First Amendment's relaxed facial-challenge rule: substantial protected speech relative to the plainly legitimate sweep.`);
+
+Q(3,`A`,`Stevens vs. Hansen`,`Why did Stevens strike down its statute while Hansen upheld its statute?`,
+[`Construction: Stevens's text reached many real protected uses; Hansen's terms of art didn't.`,
+`Stevens involved criminal penalties, while Hansen involved only civil immigration penalties.`,
+`Hansen's own speech was protected advocacy, while Stevens's own videos were unprotected.`,
+`Stevens applied rational-basis review, while Hansen applied strict scrutiny to the statute.`],
+`Stevens read § 48 by ordinary meaning, so hunting videos were realistic, numerous protected applications. Hansen read "encourage or induce" as solicitation and facilitation, leaving only fanciful concerns.`);
+
+Q(3,`H`,`Dogfight-video stretch`,`A new federal law bans selling videos of actual dogfights that were illegal where filmed. What is the government's strongest defense?`,
+[`It is narrow and fits speech integral to crime.`,
+`Depictions of animal cruelty became an unprotected category after Stevens.`,
+`The law is content-neutral, so only intermediate scrutiny applies to it.`,
+`Videos of real events aren't speech under the First Amendment at all.`],
+`The law answers the question Stevens left open, and like Ferber, the market drives the underlying crime. Alternatively, it may survive strict scrutiny by targeting the commercial incentive.`);
+
+Q(3,`H`,`Dogfight-video stretch`,`In the dogfight-video problem, which is a strong argument AGAINST the law?`,
+[`Prosecuting the fights themselves is less restrictive.`,
+`Videos of dogfights are not speech at all.`,
+`The law is content-neutral and therefore invalid.`,
+`Stevens abolished speech integral to crime.`],
+`Challengers also argue that Ferber rests on harm to children, "illegal" where is unclear, and the ban sweeps in journalism and exposés.`);
+
+Q(3,`H`,`Dogfight-video stretch`,`What is the outline's likely answer on the narrow dogfight-video ban?`,
+[`Defensible if narrowly drafted and tied to the crime`,
+`Clearly unconstitutional under Stevens's reasoning`,
+`Clearly valid as a new animal-cruelty category`,
+`Valid only if it exempts all journalism about dogfights`],
+`Beyond the casebook, Congress's 2010 crush-video law was limited to obscene videos, tying it to an existing category.`);
+
+/* ============================ CHAPTER 4 ============================ */
+Q(4,`A`,`Types of rules`,`A city ordinance says: "Speeches about sports teams are prohibited in the public square." What type of rule is this, and what scrutiny applies?`,
+[`Content-based; strict scrutiny`,`Viewpoint-based; intermediate scrutiny`,`Content-neutral; intermediate scrutiny`,`Content-neutral; rational basis`],
+`A subject-matter restriction is content-based and gets strict scrutiny.`);
+
+Q(4,`A`,`Types of rules`,`A state allows vanity license plates but rejects "FCANCER" while accepting other expressive plates. What type of rule is this?`,
+[`Viewpoint-based, the worst form; strict scrutiny`,
+`Content-neutral time, place, and manner rule; intermediate scrutiny`,
+`Government speech that is exempt from First Amendment review`,
+`Obscenity regulation reviewed under the three-part Miller test`],
+`The outline lists the FCANCER plate as viewpoint-based, the worst form. A cancer survivor won in 2024.`);
+
+Q(4,`A`,`Types of rules`,`An ordinance says: "No blasting speeches through amplifiers between 10 p.m. and 6 a.m." What type of rule is this?`,
+[`Content-neutral; intermediate scrutiny`,`Content-based; strict scrutiny`,`Viewpoint-based; strict scrutiny`,`A prior restraint; heavy presumption against it`],
+`It regulates time and manner without regard to message (Ch. 9).`);
+
+Q(4,`A`,`Types of rules`,`A state bans publications that advocate legalizing marijuana while allowing publications that oppose legalization. What is the proper classification?`,
+[`Viewpoint-based; strict scrutiny`,`Content-neutral; intermediate scrutiny`,`Unprotected incitement to crime`,`Speech integral to criminal conduct`],
+`Favoring one side of a debate is viewpoint discrimination. Advocacy of legalization is protected abstract advocacy.`);
+
+Q(4,`K`,`Chapter 4 overview`,`What do all the cases in Chapter 4 have in common regarding unprotected-category arguments?`,
+[`Every case rejected the unprotected-category argument.`,
+`Every case held the speech was in an unprotected category.`,
+`They all applied rational-basis review to the challenged law.`,
+`They all expanded an existing category to reach new speech.`],
+`Know why each argument failed (see the synthesis table). The categories are defined very narrowly by Justices across the spectrum.`);
+
+Q(4,`K`,`Terminiello`,`What rule did Terminiello v. City of Chicago (1949) announce?`,
+[`Speech can't be punished for stirring anger or unrest.`,
+`Hate speech to a packed auditorium is incitement.`,
+`Breach-of-the-peace laws are invalid on their face.`,
+`Speech that risks clashes with protesters is fighting words.`],
+`Terminiello (5-4, Douglas, J.): speech must pose a clear and present danger of a serious evil far above public inconvenience or annoyance.`);
+
+Q(4,`K`,`Terminiello`,`Why was Terminiello's conviction reversed even though the facts sounded like incitement?`,
+[`The jury instruction swept in protected speech.`,
+`The priest's speech was protected religious exercise.`,
+`The protesters outside caused the real disturbance.`,
+`The city lacked statutory authority to prosecute him.`],
+`Breach of the peace was defined to include speech that "stirs the public to anger, invites dispute, brings about a condition of unrest." The reading tip is to start with the law as construed.`);
+
+Q(4,`K`,`Terminiello`,`What did the Terminiello dissent (Vinson, Frankfurter, Jackson, Burton) argue?`,
+[`That counsel failed to object to the instruction`,
+`That the priest's speech was fighting words`,
+`That clear and present danger should be abandoned`,
+`That hate speech is an unprotected category`],
+`The dissent rested on the lack of an objection, not on a different First Amendment rule.`);
+
+Q(4,`K`,`Terminiello`,`According to Terminiello, why may speech serve its purpose best when it induces unrest?`,
+[`The alternative is standardized ideas.`,
+`Unrest proves that the speech is true.`,
+`Unrest makes the speech newsworthy.`,
+`Unrest lets the government regulate it.`],
+`Speech may best serve its high purpose when it stirs people to anger. Collin later relied on this passage.`);
+
+Q(4,`K`,`Brandenburg`,`Under Brandenburg v. Ohio (1969), advocacy of force or law violation may be punished only if it is:`,
+[`Directed to inciting imminent lawless action and likely to produce it`,
+`Likely to cause serious harm at some point in the foreseeable future`,
+`Advocacy of the moral propriety or necessity of violence against the state`,
+`Delivered at an assembly organized for the purpose of advocating violence`],
+`Four elements: intent (directed to), imminence, lawless action, and likelihood.`);
+
+Q(4,`K`,`Brandenburg`,`Which of the following are TRUE about Brandenburg?\n\nI. It was a 9-0 per curiam decision that overruled Whitney v. California.\nII. Only Klan members and journalists were present at the rally.\nIII. Ohio's criminal syndicalism law required intent, imminence, and likelihood.\nIV. The KKK leader warned of possible "revengeance" and announced a march on Congress.`,
+[`I, II, and IV only`,`I, II, III, and IV`,`II and III only`,`I and III only`],
+`Ohio's law punished mere advocacy with no intent, imminence, or likelihood requirement. That's why it fell.`);
+
+Q(4,`K`,`Brandenburg`,`Brandenburg distinguished abstract teaching of the necessity of force from what?`,
+[`"Preparing a group for violent action and steeling it to such action"`,
+`Advocacy delivered in a traditional public forum such as a park`,
+`Speech by organized groups rather than by individual speakers`,
+`Speech that criticizes the national government during wartime`],
+`Abstract teaching is protected; preparing and steeling a group is not.`);
+
+Q(4,`K`,`Brandenburg`,`What did the Black and Douglas concurrences in Brandenburg argue?`,
+[`The clear-and-present-danger test should be expressly rejected.`,
+`Clear and present danger should be kept, with an imminence element added.`,
+`The Klan leader's conviction should have been upheld on the facts.`,
+`The case should have been decided under the Religion Clauses instead.`],
+`That test had been used to affirm WWI dissidents' convictions (Abrams, Schaefer, Pierce). Douglas quoted Holmes in Gitlow: "Every idea is an incitement."`);
+
+Q(4,`K`,`Incitement eras`,`Match the era to its standard. Which is correct?`,
+[`1919-27: bad tendency used against dissidents; 1969-now: intent, imminence, likelihood`,
+`1919-27: intent, imminence, likelihood; 1969-now: bad tendency used against dissidents`,
+`1949-51 (Terminiello, Dennis): bad tendency; 1969-now: clear and present danger`,
+`1919-27: fighting words doctrine; 1949-51: true threats doctrine`],
+`1919-27 (Abrams, Schaefer, Pierce, Whitney) used clear and present danger or bad tendency. The middle era (Terminiello, Dennis) used clear and present danger of serious evil.`);
+
+Q(4,`H`,`Brandenburg`,`A philosophy professor lectures to a class that violent revolution is sometimes morally necessary to overthrow unjust governments. She is prosecuted for advocating violence. Result?`,
+[`Protected as abstract teaching about the morality of force.`,
+`Unprotected, because students are impressionable.`,
+`Unprotected under the bad-tendency test.`,
+`Protected only if she disclaims violence.`],
+`Brandenburg protects abstract teaching of the moral propriety of force absent intent, imminence, and likelihood.`);
+
+Q(4,`H`,`Brandenburg`,`At a rally outside a jail, a speaker points at the doors and shouts to an angry, armed crowd: "Break in now and drag him out!" The crowd surges forward. Result?`,
+[`Unprotected incitement to imminent lawless action.`,
+`Protected, because it criticizes the justice system and its jailers.`,
+`Protected, because each member of the crowd made his own choice.`,
+`Protected unless and until the crowd actually breaks into the jail.`],
+`Intent, imminence, lawless action, and likelihood are all present.`);
+
+Q(4,`H`,`Brandenburg`,`At a rally, a speaker says: "We'll take the streets again next month if the council doesn't listen." A state convicts him of incitement. Which Brandenburg element is weakest for the state?`,
+[`Imminence of the lawless action`,`That the speech is advocacy`,`That the speaker is identifiable`,`That the rally was public`],
+`A threat of action "next month" lacks imminence. (Beyond casebook, Hess v. Indiana made a similar point.)`);
+
+Q(4,`K`,`Fighting words`,`What are "fighting words" under Chaplinsky?`,
+[`Personal insults likely to provoke an immediate attack`,
+`Any speech that openly advocates fighting or violence`,
+`Speech offending a group based on race or religion`,
+`Profanity spoken aloud in a public place`],
+`Insults so offensive they're likely to provoke the listener to attack the speaker immediately. The Court hasn't upheld a restriction on this theory since 1942.`);
+
+Q(4,`K`,`Fighting words`,`Why was Cohen's "Fuck the Draft" jacket NOT fighting words?`,
+[`No direct personal insult and no realistic prospect of violence`,
+`Profanity can never qualify as fighting words under Chaplinsky`,
+`The jacket was worn inside a courthouse rather than on a street`,
+`Cohen removed the jacket and apologized when asked by officers`],
+`Fighting words require a direct personal insult likely to provoke immediate violence. No one present could reasonably see one.`);
+
+Q(4,`K`,`Hostile audience`,`What does the "no heckler's veto" principle (Cox v. Louisiana; Edwards v. South Carolina) hold?`,
+[`Speakers can't be convicted over a hostile crowd police could control.`,
+`Hecklers may be arrested whenever they disrupt a lawful speaker.`,
+`Speakers must stop talking once the crowd becomes visibly hostile.`,
+`Government may ban speech that is likely to attract hostile crowds.`],
+`Peaceful civil rights protesters can't be convicted because a hostile crowd might become violent when police can control it.`);
+
+Q(4,`H`,`Hostile audience`,`A peaceful group protests at a statehouse. Counter-protesters gather and threaten to attack. Police, who have enough officers on hand to maintain order, instead arrest the original protesters for breach of the peace. Result?`,
+[`The convictions are unconstitutional as a heckler's veto.`,
+`The convictions are valid because the protesters provoked the hostility.`,
+`The convictions are valid under Chaplinsky's fighting-words doctrine.`,
+`The convictions are valid because the protest was at a government building.`],
+`This is a heckler's veto when police could control the crowd (Edwards; Cox).`);
+
+Q(4,`K`,`Hate speech`,`Why did Collin v. Smith fall outside both Brandenburg and Chaplinsky?`,
+[`The village conceded it expected no violence.`,
+`The marchers had obtained a permit.`,
+`A swastika isn't a symbol.`,
+`The march was on private property.`],
+`Without expected violence, neither incitement nor fighting words applies. Hate speech is generally protected.`);
+
+Q(4,`H`,`Fighting words`,`During an argument on a sidewalk, a man steps inches from another man's face and hurls a string of personal slurs at him, clearly trying to goad him into swinging. Which category is the closest fit, and what's the catch?`,
+[`Fighting words, but the doctrine hasn't been used since 1942.`,
+`Incitement under Brandenburg, because the words provoke violence by the listener.`,
+`A true threat under Counterman, because the speaker was at least reckless.`,
+`Obscenity under Miller, because slurs are patently offensive to the listener.`],
+`A direct, face-to-face personal insult likely to provoke immediate attack is the core of Chaplinsky, but the Court hasn't upheld a restriction on that theory since 1942.`);
+
+Q(4,`K`,`R.A.V.`,`What rule did R.A.V. v. City of St. Paul (1992) announce?`,
+[`A whole unprotected category may be banned, but not a topic or viewpoint subset.`,
+`Cross burning is protected speech in all circumstances, even as a threat.`,
+`Fighting words are no longer recognized as an unprotected category.`,
+`Hate-speech ordinances are valid so long as they are limited to fighting words.`],
+`R.A.V. (9-0 on the judgment, Scalia, J.): unprotected categories aren't "invisible to the Constitution."`);
+
+Q(4,`K`,`R.A.V.`,`Which of the following are TRUE about R.A.V.?\n\nI. The ordinance was construed to reach only fighting words.\nII. It covered symbols arousing anger based on race, color, creed, religion, or gender.\nIII. It was underinclusive because it didn't reach fighting words based on political affiliation, union membership, or sexual orientation.\nIV. The Court held the ordinance valid as applied to cross burning.`,
+[`I, II, and III only`,`I, II, III, and IV`,`II and IV only`,`I and III only`],
+`The ordinance was held facially unconstitutional.`);
+
+Q(4,`H`,`R.A.V.`,`A state makes it a crime to publish libel, but only libel that criticizes government officials. Libel against private persons remains subject only to civil suit. Under R.A.V.:`,
+[`Unconstitutional subset discrimination.`,
+`Valid, because libel is unprotected speech.`,
+`Valid, because protecting officials is compelling.`,
+`Valid under intermediate scrutiny.`],
+`Government may ban libel, but not only libel critical of the government. This is R.A.V.'s own example.`);
+
+Q(4,`H`,`R.A.V.`,`A city bans ALL fighting words, regardless of topic, in public places. Under R.A.V., which is correct?`,
+[`R.A.V. permits banning the whole category, though Chaplinsky's narrow definition still applies.`,
+`R.A.V. forbids any regulation of fighting words, whether of the whole category or a subset.`,
+`The ban must satisfy strict scrutiny because banning fighting words is content-based.`,
+`The ban is viewpoint-based, because it silences only speakers who choose to insult.`],
+`R.A.V. objects to topic or viewpoint subsets, not to regulating the whole category for the reason it is proscribable.`);
+
+Q(4,`K`,`R.A.V.`,`What did the 1993 Harvard note (by coauthor Klein) argue about Chaplinsky?`,
+[`It should be overruled, not expanded.`,
+`It should be expanded to reach all hate speech.`,
+`It should be merged into the incitement test.`,
+`It should apply only in public schools.`],
+`It rewards the undesirable response of fighting (unlike fleeing a false "Fire!") and gives police discretion to punish minorities and critics.`);
+
+Q(4,`A`,`Prior restraint`,`Under the prior-restraint checklist, what defines a prior restraint and what follows?`,
+[`Stopping speech before it occurs; a heavy presumption of invalidity`,
+`Punishing speech after it occurs; strict scrutiny of the penalty`,
+`Any content-neutral rule; intermediate scrutiny of its fit`,
+`Any rule aimed at the press; rational-basis review`],
+`Injunctions and licensing are prior restraints. The government bears a heavy burden, and the only recognized exception is Near's wartime dictum, never actually applied.`);
+
+Q(4,`K`,`Near v. Minnesota`,`What happened in Near v. Minnesota (1931)?`,
+[`The Court reversed an injunction against articles alleging police corruption.`,
+`The Court upheld an injunction against a paper publishing troop movements.`,
+`The Court held newspapers liable for defaming public officials.`,
+`The Court upheld a state licensing scheme for local newspapers.`],
+`The Framers especially opposed prior restraints. Dictum: in wartime, the government might prevent publication of troop numbers and locations or transport sailing dates.`);
+
+Q(4,`H`,`Near v. Minnesota`,`A county judge enjoins a local blog from publishing further posts accusing the sheriff of taking bribes. Result?`,
+[`An invalid prior restraint under Near.`,
+`Valid, because the posts may be defamatory.`,
+`Valid if the sheriff shows likely harm.`,
+`Valid, because blogs aren't the press.`],
+`Near struck down an injunction against publishing accusations of official corruption. Any remedy for defamation comes after publication.`);
+
+Q(4,`H`,`Near v. Minnesota`,`During an ongoing war, a newspaper plans to publish the sailing dates and routes of troop transports. The government seeks an injunction. Which is the best answer?`,
+[`This fits Near's dictum, though the Court has never applied it.`,
+`The injunction is clearly invalid, because prior restraints are never permitted.`,
+`The injunction is valid as incitement under Brandenburg.`,
+`The injunction is valid under R.A.V.'s whole-category rule.`],
+`Near's dictum names troop numbers, locations, and transport sailing dates.`);
+
+Q(4,`K`,`Pentagon Papers`,`Which is TRUE about New York Times Co. v. United States (1971)?`,
+[`A 6-3 per curiam denied injunctions against publishing a classified study.`,
+`It is the defamation case that set the actual-malice standard for officials.`,
+`It upheld a 15-day injunction as a permissible wartime prior restraint.`,
+`It held that the press has no right to publish leaked classified documents.`],
+`A general claim of national-security harm didn't meet the heavy burden. Don't confuse it with NYT v. Sullivan. Publication was restrained for 15 days before the ruling.`);
+
+Q(4,`K`,`Pentagon Papers`,`What was Justice Black's position (with Douglas) in the Pentagon Papers case?`,
+[`Every moment of restraint was a flagrant violation.`,
+`A real likelihood of grave danger should be enough.`,
+`The decision was too rushed to be made responsibly.`,
+`Restraints should cover only tactical military plans.`],
+`Black added that the press serves the governed, not the governors, and "security" is a vague generality. The dissent (Burger, Harlan, Blackmun) complained of haste.`);
+
+Q(4,`K`,`Pentagon Papers`,`In the Pentagon Papers briefs, what did the ACLU argue?`,
+[`Restraints should be limited to military operations, weapons designs, and codes.`,
+`A "real likelihood" of grave danger to national security should suffice.`,
+`The President is best placed to judge national-security harm from publication.`,
+`Prior restraints are always permissible while the nation is at war.`],
+`The ACLU said restraints should never be allowed for information bearing on public policy decisions. The government argued the "real likelihood" and presidential-judgment positions.`);
+
+Q(4,`K`,`Pentagon Papers`,`Which is TRUE about the aftermath of the Pentagon Papers case?\n\nI. The Court has never upheld such a restraint.\nII. Marchetti and Snepp rested on CIA secrecy agreements.\nIII. The Progressive H-bomb article injunction was affirmed by the Supreme Court.`,
+[`I and II only`,`I, II, and III`,`II and III only`,`I only`],
+`The Progressive was enjoined in the lower court, but the case was abandoned before appeal.`);
+
+Q(4,`A`,`Chapter 4 synthesis`,`Why did the unprotected-category argument fail in each case? Which pairing is correct?`,
+[`Terminiello: reached speech that merely angered; R.A.V.: banned a topic subset`,
+`Terminiello: police could control the crowd; R.A.V.: no direct personal insult`,
+`Brandenburg: village conceded no violence; Cohen: presumption not overcome`,
+`Collin: punished mere advocacy; Near: banned only a topic-based subset`],
+`Brandenburg: mere advocacy. Cohen: no personal insult. Cox/Edwards: police could control. Collin: no expected violence. Near/Pentagon Papers: presumption not overcome.`);
+
+Q(4,`H`,`Courthouse livestream`,`An activist livestreams outside a courthouse: "we need to shut this courthouse down today." Viewers push barricades. The activist adds: "I'm not telling anyone to hurt anybody. But history remembers people who act." Ten minutes later a group breaks through. What is the government's BEST evidence of intent?`,
+[`Urging escalation after seeing the pushing`,
+`Criticizing the government and its courts`,
+`Reaching a large online audience`,
+`Naming the courthouse as the target`],
+`The post-pushing statement is the government's best evidence. The outline calls the case close, turning on intent.`);
+
+Q(4,`H`,`Courthouse livestream`,`In the courthouse livestream problem, which is the activist's strongest argument?`,
+[`"Shut it down" is common protest rhetoric, and violence was disclaimed.`,
+`Livestreamed video isn't speech protected by the First Amendment.`,
+`Courthouse steps are nonpublic forums where no speech is protected.`,
+`Incitement requires the speaker to personally commit the violence.`],
+`The activist also stresses core criticism of government, a largely online audience, and heckler's-veto concerns. The outline calls it close; a properly instructed jury could convict. Beyond the casebook, Hess and Claiborne Hardware support the activist.`);
+
+/* ============================ CHAPTER 5 ============================ */
+Q(5,`A`,`Mens rea theme`,`Which pairing correctly states the mens rea each case requires?`,
+[`Brandenburg: intent; Counterman: recklessness; Williams: belief and intent`,
+`Brandenburg: recklessness; Counterman: intent; Williams: negligence`,
+`Brandenburg: negligence; Counterman: objective test; Williams: knowledge`,
+`Brandenburg: intent; Counterman: objective test; Williams: recklessness`],
+`Mens rea gives honest speakers "breathing room" at the cost of letting some unprotected speech go unpunished.`);
+
+Q(5,`K`,`Counterman`,`What rule did Counterman v. Colorado (2023) announce?`,
+[`True threats require proof the speaker was at least reckless.`,
+`True threats are judged by a purely objective reasonable-recipient test.`,
+`The prosecution must prove the speaker specifically intended to threaten.`,
+`Messages sent online can never qualify as true threats of violence.`],
+`Counterman (7-2 on the judgment, Kagan, J.): the threat is judged by how a reasonable recipient would understand it, plus a subjective recklessness floor.`);
+
+Q(5,`K`,`Counterman`,`Which of the following are TRUE about the facts of Counterman?\n\nI. He sent hundreds of Facebook messages over two years to a musician he'd never met.\nII. He created new accounts when blocked.\nIII. He was convicted under a stalking law applying a purely objective test.\nIV. The Court affirmed the conviction.`,
+[`I, II, and III only`,`I, II, III, and IV`,`I and II only`,`III and IV only`],
+`The Court vacated and remanded.`);
+
+Q(5,`K`,`Counterman`,`What does "true" in "true threat" exclude?`,
+[`Jests and hyperbole`,`Threats made online`,`Threats not carried out`,`Threats to public figures`],
+`For example: "I'll kill you if you leave dirty dishes in the sink."`);
+
+Q(5,`K`,`Counterman`,`Why did Counterman choose recklessness rather than purpose or knowledge?`,
+[`It balances chilling against the harm threats cause.`,
+`It is easier for prosecutors to prove than negligence.`,
+`Purpose would make threats identical to fighting words.`,
+`It is the same standard used in defamation cases.`],
+`Reckless speakers consciously accept a substantial risk of serious harm. A subjective element prevents self-censorship by speakers unsure of the line.`);
+
+Q(5,`K`,`Counterman`,`Match each Counterman opinion to its standard.`,
+[`Majority: recklessness; Sotomayor concurrence: intent; Barrett dissent: objective only`,
+`Majority: intent; Sotomayor concurrence: recklessness; Barrett dissent: negligence`,
+`Majority: objective only; Sotomayor concurrence: intent; Barrett dissent: recklessness`,
+`Majority: recklessness; Sotomayor concurrence: objective only; Barrett dissent: intent`],
+`The majority was Kagan, Roberts, Alito, Kavanaugh, and Jackson. Gorsuch joined Sotomayor in part; Thomas joined Barrett.`);
+
+Q(5,`K`,`Counterman`,`Why did Justice Sotomayor's concurrence in Counterman favor an intent standard?`,
+[`Online speech lacks context, and incitement requires intent.`,
+`Intent is required for every crime under the Due Process Clause.`,
+`The victim's fear should be irrelevant to whether speech is a threat.`,
+`Recklessness is unconstitutionally vague as applied to online speech.`],
+`She also noted that juries' norms and stereotypes vary. The dissent would let legislatures calibrate using an objective test.`);
+
+Q(5,`H`,`Counterman`,`A man repeatedly posts about his ex-partner: "Someone should put a bullet in her. Watch your back." He knows many readers would see this as threatening but posts anyway because he doesn't care. Under Counterman:`,
+[`Recklessness is satisfied because he consciously disregarded the risk.`,
+`He can't be convicted unless he intended to threaten her.`,
+`He can't be convicted because the posts were made online.`,
+`He can't be convicted because he said "someone," not "I."`],
+`Consciously disregarding a substantial and unjustifiable risk that the words would be seen as threats is recklessness.`);
+
+Q(5,`H`,`Counterman`,`A socially isolated man sends messages that a reasonable recipient would find threatening, but the evidence shows he genuinely had no awareness they could be seen that way. He is convicted under a purely objective test. Under Counterman:`,
+[`The conviction can't stand, because an objective test alone is not enough.`,
+`The conviction stands because a reasonable recipient would feel threatened.`,
+`The conviction stands under the dissent's approach, which is controlling here.`,
+`The conviction stands because the messages were sent repeatedly over time.`],
+`The First Amendment requires at least recklessness; an objective test alone is insufficient. This is Counterman itself.`);
+
+Q(5,`K`,`Speech integral to crime`,`Which of these is speech integral to criminal conduct (unprotected)?\n\nI. "Your money or your life"\nII. "I'll sell you heroin"\nIII. "I'll tell you when the coast is clear"\nIV. "Cocaine should be legal"`,
+[`I, II, and III only`,`I, II, III, and IV`,`II and IV only`,`I only`],
+`Abstract advocacy of illegality ("cocaine should be legal") stays protected.`);
+
+Q(5,`A`,`Speech integral to crime`,`Which are the categories of speech integral to crime described in the outline?`,
+[`Speech that is the crime; offers or solicitations; aiding or concealing a crime`,
+`Any speech about crime; fictional depictions of crime; news reports on crime`,
+`Advocacy of illegality; harsh criticism of police; true threats of violence`,
+`Written offers to sell contraband, but not spoken offers or requests`],
+`Examples: "Your money or your life," "I'll sell you heroin," and a conspirator's lookout. Hard cases include general-audience how-to material.`);
+
+Q(5,`K`,`Williams`,`What rule did United States v. Williams (2008) announce?`,
+[`Offers and requests for contraband are unprotected.`,
+`Pandering laws are overbroad because they reach advocacy.`,
+`Any statute that produces close cases is void for vagueness.`,
+`Offers are protected unless the material actually exists.`],
+`Williams (7-2, Scalia, J.) relied on Giboney and Pittsburgh Press. A law is vague only if it fails to give fair notice or invites seriously discriminatory enforcement.`);
+
+Q(5,`K`,`Williams`,`How did Williams construe "promotes"?`,
+[`Recommending a particular item with intent to transfer it`,
+`Any speech encouraging people to possess such material`,
+`Including abstract advocacy that the material be legalized`,
+`Limited to paid commercial advertisements for the material`],
+`"Promotes" doesn't reach "child pornography should be legal" or even "I encourage you to obtain it," distinguishing abstract advocacy (Brandenburg; Claiborne Hardware).`);
+
+Q(5,`K`,`Williams`,`What does Williams say about vagueness?`,
+[`It is a Due Process doctrine about indeterminate terms.`,
+`It is a First Amendment doctrine about overbroad laws.`,
+`Any statute that produces close cases is vague.`,
+`Belief and intent are inherently vague elements.`],
+`Vagueness concerns indeterminacy about what fact must be proved ("annoying," "indecent"), not difficulty proving it. Belief and intent are true-or-false facts, and proof problems go to reasonable doubt.`);
+
+Q(5,`K`,`Williams`,`Who dissented in Williams, and on what basis?`,
+[`Souter and Ginsburg, on statute-specific grounds`,
+`Scalia and Thomas, arguing the material is protected`,
+`Kennedy alone, arguing the statute was too vague`,
+`Breyer and Kagan, arguing for intermediate scrutiny`],
+`The dissent didn't dispute that speech integral to crime is unprotected.`);
+
+Q(5,`A`,`Vagueness vs. overbreadth`,`Which statement correctly contrasts vagueness and overbreadth?`,
+[`Vagueness is Due Process and about one's own speech; overbreadth is First Amendment and about third parties.`,
+`Vagueness comes from the First Amendment; overbreadth comes from the Due Process Clause.`,
+`Vagueness lets litigants assert third parties' rights; overbreadth covers only their own.`,
+`They serve different goals: vagueness prevents chilling, overbreadth prevents unfair notice.`],
+`Vagueness: the law is unclear (Holder v. Humanitarian Law Project). Overbreadth: the law reaches too much protected speech (Stevens, Hansen). Both aim to prevent chilling.`);
+
+Q(5,`H`,`Vagueness`,`A city ordinance makes it a crime to "engage in annoying conduct on public sidewalks." A defendant challenges it. Which doctrine is the best fit?`,
+[`Void for vagueness`,`Prior restraint`,`Fighting words`,`Speech integral to crime`],
+`"Annoying" is indeterminate about what fact must be proved. Williams used it as its example of a vague term.`);
+
+Q(5,`K`,`Rice v. Paladin`,`What rule did Rice v. Paladin Enterprises (4th Cir. 1997) announce?`,
+[`Publishing that intentionally aids a crime, and is used as intended, is unprotected.`,
+`All instructional manuals describing how to commit crimes are unprotected speech.`,
+`Publishers are immune from aiding-and-abetting liability for what readers do.`,
+`News reporting about crime can support civil liability if a reader copies it.`],
+`Paladin published Hit Man, which Perry used to murder three people. The First Amendment didn't bar the families' aiding-and-abetting suit.`);
+
+Q(5,`K`,`Rice v. Paladin`,`Which of the following are TRUE about Rice v. Paladin?\n\nI. Paladin stipulated that it intended to assist murderers.\nII. Copycat cases, where readers misuse novels and films, differ because publishers don't intend to assist crime.\nIII. News reporting is never a basis for liability.\nIV. The holding means all how-to manuals are unprotected.`,
+[`I, II, and III only`,`I, II, III, and IV`,`II and IV only`,`I and III only`],
+`The stipulations, detailed instructions, exhortation to murder, and lack of any legitimate purpose made the case unique.`);
+
+Q(5,`K`,`Rice v. Paladin`,`According to the outline, why is Paladin unlikely to be repeated often?`,
+[`Intent evidence rarely exists without stipulations.`,
+`The Supreme Court later reversed the decision.`,
+`Publishers now print disclaimers in such books.`,
+`Aiding-and-abetting liability has been abolished.`],
+`The stipulations were what made the case possible.`);
+
+Q(5,`H`,`Rice v. Paladin`,`A reader copies a murder method described in a bestselling crime novel. The victim's family sues the publisher, citing Paladin. Result?`,
+[`The publisher is likely protected, because it didn't intend to assist crime.`,
+`The publisher is liable because the method was used exactly as described.`,
+`The publisher is liable because crime novels are a form of how-to material.`,
+`The publisher is liable unless it proves it lacked knowledge of the risk.`],
+`Copycat cases differ: novels are protected because their publishers don't intend to assist crime. Paladin rested on stipulated intent.`);
+
+Q(5,`H`,`Bomb-manual stretch`,`A publisher releases a detailed bomb-making manual with no stipulations about intent. What should the government have to prove to impose liability, per the outline?`,
+[`Specific intent, extrinsic evidence, actual use, and narrow construction`,
+`Only that the manual contains dangerous technical information`,
+`That a reasonable reader would find the manual threatening`,
+`That the manual lacks serious value under the Miller test`],
+`Intent as in Brandenburg (not Counterman's recklessness), evidence beyond the text, actual use in a crime, and narrow construction (Hansen). Beyond the casebook, 18 U.S.C. § 842(p) takes this approach.`);
+
+Q(5,`H`,`Bomb-manual stretch`,`Which argument AGAINST liability in the bomb-manual problem is strongest?`,
+[`It has legitimate audiences, and there's no extrinsic intent evidence.`,
+`Publishers are categorically exempt from aiding-and-abetting liability.`,
+`Building a bomb is legal in most states, so no crime is being aided.`,
+`The manual is a work of fiction and so receives full protection.`],
+`Engineers, researchers, journalists, and novelists are legitimate audiences; general publication isn't a one-to-one offer like Williams; and Stevens bars creating categories by balancing.`);
+
+Q(5,`K`,`Garcia v. Character Technologies`,`What did Garcia v. Character Technologies (M.D. Fla. 2025) hold at the preliminary stage?`,
+[`The court wasn't ready to call chatbot output speech and denied dismissal.`,
+`Chatbot output is fully protected speech, so the suit was dismissed.`,
+`AI companies are immune from tort suits under the First Amendment.`,
+`Chatbot output is unprotected as speech integral to a crime.`],
+`A distributor may assert users' right to receive speech, but output counts only if expressive. This was the first wrongful-death suit against an AI chatbot company, involving a 14-year-old's suicide.`);
+
+Q(5,`K`,`Garcia v. Character Technologies`,`On which opinion did Garcia rely to question whether LLM output is speech?`,
+[`Barrett's Moody v. NetChoice concurrence`,
+`Kagan's Counterman majority opinion`,
+`Scalia's Brown opinion on video games`,
+`Kennedy's Free Speech Coalition opinion`],
+`An algorithm carrying out a human's expressive choice may be speech, but when owners "hand the reins" to an LLM, it's unclear anyone made an expressive choice.`);
+
+Q(5,`A`,`Garcia v. Character Technologies`,`Why did the AI company in Garcia rely on its USERS' rights rather than claim the output as its own expression?\n\nI. Claiming the output would mean owning its words and the liability for them.\nII. It would admit deliberate design, like Paladin's stipulations, helping prove intent.\nIII. It would reinforce the product-design framing.`,
+[`I, II, and III`,`I and II only`,`III only`,`II and III only`],
+`Beyond the casebook, it would also undercut Section 230 immunity for third-party content.`);
+
+/* ============================ CHAPTER 6 ============================ */
+Q(6,`K`,`Immoral speech overview`,`What unites the "immoral speech" categories in Chapter 6?`,
+[`Suppression for reasons of morality`,`All are unprotected categories`,`All involve depictions of violence`,`All involve commercial speech`],
+`The categories are obscenity, sexually explicit speech, child pornography, profanity, and violent imagery.`);
+
+Q(6,`K`,`Immoral speech overview`,`What does "indecent" mean in the outline?`,
+[`Immoral but not obscene`,`A synonym for obscene`,`Unprotected for minors`,`Profanity on the radio`],
+`Indecent speech is generally protected, with Pacifica as the narrow exception.`);
+
+Q(6,`A`,`Immoral speech checklist`,`What are the two overarching questions in the immoral-speech checklist?`,
+[`Who is protected, adults or kids? Is the harm from the content or indirect?`,
+`Is the speech political or commercial? Was it distributed for profit?`,
+`Was the speaker reckless? Was the listener part of a captive audience?`,
+`Is the medium broadcast or print? Does the speech contain profanity?`],
+`The second question asks whether the harm comes from the content itself or indirectly, such as exploitation of real children.`);
+
+Q(6,`K`,`Governing principles`,`Which of these governing principles are TRUE?\n\nI. Government almost never can restrict immoral speech to protect adults from its content, with obscenity as the exception.\nII. Government can sometimes protect kids, but it can't block adult access, and kids have their own First Amendment rights.\nIII. Local governments may zone adult businesses to reduce secondary effects.\nIV. Virtual child pornography may be banned to dry up the market for abuse.`,
+[`I, II, and III only`,`I, II, III, and IV`,`I and II only`,`II, III, and IV only`],
+`Ferber covers material made with actual children, not virtual images or adult look-alikes (Free Speech Coalition).`);
+
+Q(6,`K`,`Bolger`,`What rule did Bolger v. Youngs Drug Products (1983) announce?`,
+[`Kids may be shielded only if adults keep access.`,
+`Contraceptive advertising is unprotected speech.`,
+`Unsolicited mail may be banned to protect children.`,
+`Mail recipients are a captive audience.`],
+`Bolger (9-0 on the bottom line, Marshall, J.): government can't shield adults from immoral content (except obscenity) and "may not reduce the adult population to reading only what is fit for children."`);
+
+Q(6,`K`,`Bolger`,`Which of the following are TRUE about Bolger?\n\nI. Shielding adults from offense "carries little weight."\nII. "The short, though regular, journey from mail box to trash can is an acceptable burden."\nIII. Helping parents control children's exposure was "undoubtedly substantial," but the ban failed.\nIV. Recipients of mail are a captive audience.`,
+[`I, II, and III only`,`I, II, III, and IV`,`I and IV only`,`II and III only`],
+`Recipients aren't a captive audience. Parents already control their mail, and the ban purged material suitable for adults.`);
+
+Q(6,`K`,`Bolger`,`Bolger quoted Butler v. Michigan for which idea?`,
+[`Such a ban would "burn the house to roast the pig."`,
+`Obscenity is not within the area of protected speech.`,
+`Broadcasting is uniquely pervasive in American life.`,
+`Offensive speech may be kept out of the private home.`],
+`Mailbox discourse can't be limited to "that which would be suitable for a sandbox."`);
+
+Q(6,`K`,`Bolger`,`How did Bolger distinguish Pacifica?`,
+[`As narrow, because broadcasting is uniquely pervasive and accessible to kids`,
+`As overruled by later cases involving cable and satellite television`,
+`As an obscenity case that turned on the Miller test's three prongs`,
+`As a case that applied only to criminal prosecutions of broadcasters`],
+`Mail doesn't share broadcasting's special characteristics.`);
+
+Q(6,`H`,`Bolger`,`A state bans mailing unsolicited catalogs for adult sexual-wellness products to homes, citing the need to protect children who might open the mail. The catalogs aren't obscene. Result?`,
+[`Likely unconstitutional, because it purges material suitable for adults.`,
+`Valid, because protecting children is a compelling interest.`,
+`Valid, because the home gets special protection under Pacifica.`,
+`Valid, because the products are widely viewed as immoral.`],
+`The ban purges material suitable for adults, parents already control their mail, and recipients can throw it away.`);
+
+Q(6,`K`,`Cohen v. California`,`Which is TRUE about Cohen v. California (1971)?`,
+[`Harlan wrote for a 5-4 Court reversing the conviction.`,
+`It upheld the conviction because children were present.`,
+`It held that profanity is obscene in public places.`,
+`It held courthouses are places where profanity can be banned.`],
+`Cohen wore "Fuck the Draft" in a Los Angeles courthouse corridor and got 30 days for offensive conduct. Unwilling viewers could avert their eyes.`);
+
+Q(6,`H`,`Cohen v. California`,`A protester wears a T-shirt with a profane anti-war slogan in a public library lobby where children are present. He is convicted of offensive conduct. Under Cohen:`,
+[`The conviction likely violates the First Amendment.`,
+`The conviction is valid because children were present.`,
+`The conviction is valid under Pacifica's nuisance rationale.`,
+`The conviction is valid because libraries are quiet zones.`],
+`Unwilling viewers can avert their eyes, and the presence of unwilling viewers doesn't automatically justify suppression.`);
+
+Q(6,`K`,`Pacifica`,`What did FCC v. Pacifica Foundation (1978) hold?`,
+[`Indecent broadcasts may be regulated, on a narrow nuisance rationale.`,
+`Indecent speech is unprotected in every medium, including print.`,
+`The FCC may criminally prosecute broadcasters for any expletive.`,
+`George Carlin's monologue was obscene under the Miller test.`],
+`Broadcasting is uniquely accessible to children, and context is all-important. Pacifica was 5-4 on the bottom line, with a plurality by Justice Stevens.`);
+
+Q(6,`K`,`Pacifica`,`Which of the following are TRUE about the facts of Pacifica?\n\nI. The "Filthy Words" monologue aired at 2 p.m.\nII. A father driving with his young son complained.\nIII. The FCC imposed heavy criminal fines.\nIV. The FCC issued a declaratory order finding the broadcast indecent.`,
+[`I, II, and IV only`,`I, II, III, and IV`,`II and III only`,`I and III only`],
+`The FCC issued a declaratory order without formal sanctions.`);
+
+Q(6,`K`,`Pacifica`,`Why is broadcasting "special" under Pacifica?\n\nI. Children have access to radios, often unsupervised.\nII. Radios are in the home, where privacy gets extra deference.\nIII. Unconsenting adults may tune in without warning.\nIV. Spectrum is scarce and licensed in the public interest.`,
+[`I, II, III, and IV`,`I and II only`,`III and IV only`,`I, II, and III only`],
+`All four reasons appear in the outline.`);
+
+Q(6,`K`,`Pacifica`,`Which quotation reflects Pacifica's nuisance rationale?`,
+[`"a pig in the parlor instead of the barnyard"`,
+`"burn the house to roast the pig"`,
+`"I know it when I see it"`,
+`"Every idea is an incitement"`],
+`Time of day, program content, and medium all matter.`);
+
+Q(6,`K`,`Pacifica`,`How did Pacifica contrast Cohen?`,
+[`The broadcast "could have enlarged a child's vocabulary in an instant."`,
+`Cohen involved obscenity, while the Carlin broadcast did not.`,
+`Cohen involved a captive audience, while radio listeners were not.`,
+`Cohen was itself a broadcast case decided under the same rule.`],
+`Cohen's written message might have been incomprehensible to a first grader. The medium's accessibility to children was the difference.`);
+
+Q(6,`K`,`Pacifica`,`Which questions did Pacifica expressly leave undecided?\n\nI. Two-way radio\nII. An occasional expletive\nIII. Criminal prosecution\nIV. A 2 p.m. broadcast of a repetitive profane monologue`,
+[`I, II, and III only`,`I, II, III, and IV`,`IV only`,`II and IV only`],
+`IV is the case Pacifica decided. Pacifica returns in Ch. 9 (time, place, and manner).`);
+
+Q(6,`H`,`Pacifica`,`A radio station airs the same Carlin monologue at 2 a.m., preceded by a warning. Why might the analysis differ from Pacifica?`,
+[`Context is all-important, and time of day matters.`,
+`It wouldn't differ; indecent broadcasts are always unprotected.`,
+`The warning would make the broadcast obscene under Miller.`,
+`Late-night radio isn't speech under the First Amendment.`],
+`Pacifica stressed time, content, and medium. Children are less likely to be listening at 2 a.m., and the warning reduces surprise for adults.`);
+
+Q(6,`A`,`Cohen and Pacifica`,`What is the key takeaway from Cohen and Pacifica together?`,
+[`Profanity is protected; Pacifica is the narrow exception.`,
+`Profanity is unprotected whenever children may be present.`,
+`Profanity is protected only in written, not spoken, form.`,
+`Profanity is protected for adults but never for minors.`],
+`Calling speech "indecent" or "profane" generally doesn't mean it can be restricted (Cohen; the FCANCER plate).`);
+
+Q(6,`K`,`Miller test`,`Under Miller v. California (1973), which set of requirements must ALL be met for speech to be obscene?`,
+[`Prurient appeal under community standards; patently offensive sexual conduct defined by state law; no serious value, taken as a whole`,
+`Sexually explicit content; offensiveness to a reasonable person; a complete absence of any value whatsoever to anyone`,
+`Depiction of nudity; commercial sale or distribution; a realistic likelihood that minors could access the work`,
+`A judge's own sense that "I know it when I see it"; patent offensiveness; and prurient appeal to the judge`],
+`All three prongs must be met, and Miller is still good law. Value means serious literary, artistic, political, or scientific value.`);
+
+Q(6,`K`,`Miller test`,`What does "prurient interest" mean?`,
+[`A shameful or morbid interest in sex`,`Any interest in sex at all`,`Interest in violent imagery`,`Interest in material for minors`],
+`"A shameful or morbid interest in nudity, sex, or excretion," not a normal interest in sex (Brockett v. Spokane Arcades, 1985).`);
+
+Q(6,`K`,`Miller test`,`Which Miller prong "matters most," according to the outline, and why?`,
+[`Prong (c), serious value`,`Prong (a), community standards`,`Prong (b), state-law definitions`,`None; all count equally`],
+`Prong (c) protects works that, as a whole, have value, even if isolated scenes might seem obscene.`);
+
+Q(6,`K`,`Miller test`,`Before Miller, what did Justice Stewart famously say about obscenity, and in which case?`,
+[`"I know it when I see it," in Jacobellis (1964)`,
+`"Every idea is an incitement," in Gitlow`,
+`"A pig in the parlor," in Pacifica`,
+`"Unanimity of the graveyard," in Barnette`],
+`The Court's "movie days" gave lower courts little guidance.`);
+
+Q(6,`H`,`Miller test`,`A prize-winning literary novel contains three sexually explicit scenes that, read in isolation, a jury might find patently offensive. The state prosecutes the bookseller for obscenity. Most likely result?`,
+[`Not obscene, because the work as a whole has serious literary value.`,
+`Obscene, because any patently offensive scene suffices.`,
+`Obscene, because local community standards control.`,
+`Not obscene, because novels are always protected.`],
+`The work is judged as a whole, and serious literary value defeats an obscenity finding.`);
+
+Q(6,`A`,`Hudnut revisited`,`Why wasn't the Hudnut ordinance saved as an obscenity regulation?`,
+[`It didn't track Miller's elements.`,`It tracked Miller but was vague.`,`It regulated only violent images.`,`It applied only to broadcasting.`],
+`No prurient-interest requirement, no offensiveness, no community standards, no work-as-a-whole inquiry, and value was irrelevant. Its drafters saw those omissions as virtues; the court saw viewpoint discrimination.`);
+
+Q(6,`K`,`Renton`,`What did Renton v. Playtime Theatres (1986) hold?`,
+[`Adult-business zoning gets intermediate scrutiny as a secondary-effects rule.`,
+`Adult theaters show obscene material and may therefore be banned outright.`,
+`All zoning laws that affect speech must satisfy strict scrutiny.`,
+`Secondary effects justify regulating any speech that attracts crime.`],
+`Such zoning targets crime and property values, not the message, even though it's partly content-based. The Court has refused to extend it beyond adult entertainment.`);
+
+Q(6,`H`,`Renton`,`A city restricts bookstores selling extremist political literature to an industrial zone, citing studies that such stores attract crime. It invokes Renton. Most likely result?`,
+[`Renton doesn't help; strict scrutiny applies.`,
+`Valid under Renton's intermediate scrutiny.`,
+`Valid, because crime is a secondary effect.`,
+`Valid, because the literature is incitement.`],
+`The Court has refused to extend secondary-effects doctrine beyond adult entertainment establishments.`);
+
+Q(6,`K`,`Ferber`,`What did New York v. Ferber (1982) hold?`,
+[`Child pornography made with real children is unprotected, even if not obscene.`,
+`Child pornography is unprotected only if it is also obscene under Miller.`,
+`All sexual depictions of minors, including virtual images, are unprotected.`,
+`Possession of child pornography is protected when it occurs in the home.`],
+`Distribution is intrinsically related to the abuse of the children used to make it. Unanimous on the bottom line (White, J.), upholding a law covering children under 16.`);
+
+Q(6,`K`,`Ferber`,`Which of the following are reasons given in Ferber?\n\nI. Preventing child sexual exploitation is an objective of "surpassing importance."\nII. The materials are a permanent record, and circulation worsens the harm.\nIII. Drying up the market may be the only practical enforcement method.\nIV. The material's value is "exceedingly modest, if not de minimis."`,
+[`I, II, III, and IV`,`I and II only`,`I, III, and IV only`,`II and IV only`],
+`Production is clandestine, but marketing requires a visible apparatus.`);
+
+Q(6,`K`,`Ferber`,`What does the casebook note say Ferber's rationale resembles?`,
+[`Secondary effects`,`Incitement`,`Fighting words`,`Obscenity`],
+`The harm is indirect (abuse of real children in production), not caused by the message.`);
+
+Q(6,`K`,`Free Speech Coalition (2002)`,`What did Ashcroft v. Free Speech Coalition (2002) hold?`,
+[`Ferber doesn't reach images made without real children.`,
+`Virtual child pornography is unprotected under Ferber.`,
+`The CPPA was valid because it protected children.`,
+`Explicit images of young-looking adults are obscene.`],
+`The CPPA's ban on images that "appear to" depict minors (computer-generated images or adult look-alikes) went beyond Ferber.`);
+
+Q(6,`K`,`Free Speech Coalition (2002)`,`Which of the following reasons did Free Speech Coalition give?\n\nI. Teen sexuality and abuse are enduring themes in art; Juliet is 13.\nII. "Appear to be under 18" exceeds many states' ages for marriage and consent.\nIII. Artistic merit doesn't depend on the presence of a single explicit scene.\nIV. Ferber itself relied on virtual images as a permissible alternative.`,
+[`I, II, III, and IV`,`I and II only`,`III and IV only`,`I, II, and IV only`],
+`All four appear in the outline.`);
+
+Q(6,`K`,`Free Speech Coalition (2002)`,`Which is TRUE about the lineup in Free Speech Coalition (2002)?`,
+[`6-3 by Kennedy; Rehnquist and Scalia dissented.`,
+`9-0 by Scalia, with no separate writings.`,
+`5-4 by Rehnquist, with Kennedy dissenting.`,
+`6-3 by Thomas, with O'Connor dissenting.`],
+`Thomas concurred in the judgment; O'Connor concurred in part and dissented in part.`);
+
+Q(6,`H`,`Free Speech Coalition (2002)`,`A state bans all computer-generated sexually explicit images of fictional minors, created without any real child, regardless of value. Under the outline's cases:`,
+[`The ban likely fails, since no real child is involved.`,
+`The ban is valid under Ferber.`,
+`The ban is valid because the images appear to depict minors.`,
+`The ban is valid under Renton's secondary-effects doctrine.`],
+`Ferber's rationale depends on real children. Such images can be reached only if obscene under Miller or offered as depicting real children (Williams).`);
+
+Q(6,`H`,`Williams revisited`,`A seller advertises images he claims depict real children. The images are actually computer-generated. He is prosecuted under a pandering law like the one in Williams. Result?`,
+[`He can be punished for offering material represented as depicting real children.`,
+`He can't be punished, because virtual images are protected under Free Speech Coalition.`,
+`He can't be punished unless the images are also obscene under Miller.`,
+`He can be punished only if a real child was harmed in making the images.`],
+`Offers of material represented or believed to involve real children are speech integral to crime, even if the belief is mistaken. Technology makes it nearly impossible to prove which images involve real children.`);
+
+Q(6,`K`,`Ashcroft II`,`What did Ashcroft v. ACLU (2004) ("Ashcroft II") hold?`,
+[`COPA likely failed strict scrutiny because filters were a less restrictive alternative.`,
+`COPA was valid under intermediate scrutiny because its burden on adults was incidental.`,
+`Online speech receives less First Amendment protection than printed speech.`,
+`Age verification by credit card is always a sufficient defense to such laws.`],
+`Ashcroft II (5-4, Kennedy, J.): the government must prove less restrictive alternatives wouldn't be as effective.`);
+
+Q(6,`K`,`Ashcroft II`,`Why were filters considered a less restrictive and possibly more effective alternative in Ashcroft II?\n\nI. Filters restrict at the receiving end, not the source, and adults needn't identify themselves.\nII. No speech is criminalized, so chilling is diminished.\nIII. Filters block foreign sites, can't be evaded by minors with credit cards, and cover email.\nIV. Filters are perfect.`,
+[`I, II, and III only`,`I, II, III, and IV`,`I and II only`,`III and IV only`],
+`Filters are imperfect, but the government offered no specific evidence that COPA would work better.`);
+
+Q(6,`K`,`Paxton`,`What did Free Speech Coalition v. Paxton (2025) hold?`,
+[`Age verification for material obscene as to minors gets intermediate scrutiny.`,
+`Age-verification laws get strict scrutiny, and Texas's law fails it.`,
+`Age-verification laws get only rational-basis review.`,
+`Adults have no right to access sexual content online.`],
+`Paxton (6-3, Thomas, J.) upheld Texas H.B. 1181 because the burden on adults is incidental.`);
+
+Q(6,`K`,`Paxton`,`Which two traditional state powers did Paxton rely on?`,
+[`Banning obscenity, and shielding kids from what is obscene as to them`,
+`Zoning adult businesses, and licensing broadcasters in the public interest`,
+`Punishing fighting words, and regulating misleading commercial speech`,
+`Banning all sexually explicit material, and requiring filtering software`],
+`The second power is Ginsberg v. New York (1968), which adjusted the Miller test for minors.`);
+
+Q(6,`K`,`Paxton`,`How did Paxton distinguish Reno v. ACLU (1997)?`,
+[`The CDA in Reno effectively banned adult speech.`,
+`Reno involved broadcast rather than the internet.`,
+`Reno was expressly overruled by Ashcroft II.`,
+`Reno involved obscenity rather than indecency.`],
+`Reno applied strict scrutiny because its age-verification defense was illusory given the technology. The internet has changed dramatically since Reno and Ashcroft II.`);
+
+Q(6,`K`,`Paxton`,`Why did Paxton reject rational-basis review?`,
+[`Adults have a real, if incidentally burdened, right.`,
+`Rational basis never applies to any speech regulation.`,
+`Texas itself asked the Court to apply strict scrutiny.`,
+`Rational basis applies only to federal statutes.`],
+`Rational basis applies only when no fundamental rights are implicated. Intermediate scrutiny is "deferential but not toothless."`);
+
+Q(6,`K`,`Paxton`,`Which points did Paxton make in applying intermediate scrutiny?\n\nI. The interest in shielding children from sexual content is "important, even compelling."\nII. Age checks using ID or transactional data are used for gambling, alcohol, tobacco, and car rentals.\nIII. Less restrictive alternatives like filters defeat the law.\nIV. Stigma has never exempted the industry from regulation.`,
+[`I, II, and IV only`,`I, II, III, and IV`,`II and III only`,`I and III only`],
+`Under intermediate scrutiny, less restrictive alternatives don't defeat a legitimate legislative choice.`);
+
+Q(6,`A`,`Paxton vs. Ashcroft II`,`Did Paxton effectively overrule Ashcroft II? What is the key point?`,
+[`Filters won in 2004 but lost in 2025 because the standard of review dropped.`,
+`Yes; Paxton expressly overruled Ashcroft II and Reno v. ACLU together.`,
+`No; Paxton applied strict scrutiny, just as Ashcroft II had done.`,
+`No; filtering software was never considered as an alternative in Ashcroft II.`],
+`The Court framed the earlier cases as involving effective bans on adult access. The change in scrutiny level changes how less restrictive alternatives count.`);
+
+Q(6,`K`,`Brown v. EMA`,`What did Brown v. Entertainment Merchants Association (2011) hold?`,
+[`There is no unprotected category for violence, even for minors.`,
+`Violent video games are obscene as to minors under Ginsberg.`,
+`Video games aren't speech because players interact with them.`,
+`States may ban violent games for minors under intermediate scrutiny.`],
+`Brown (7-2, Scalia, J.): California's ban on selling violent video games to minors failed strict scrutiny. Alito and Roberts concurred; Thomas and Breyer dissented.`);
+
+Q(6,`K`,`Brown v. EMA`,`Why did Brown distinguish Ginsberg v. New York?`,
+[`Ginsberg adjusted an existing category for minors.`,
+`Ginsberg involved broadcasting, not retail sales.`,
+`Ginsberg had been overruled by Miller.`,
+`Ginsberg involved violence, not sex.`],
+`California sought a wholly new category for children only. Obscenity covers only depictions of sexual conduct, not violence.`);
+
+Q(6,`K`,`Brown v. EMA`,`Which of the following are TRUE about Brown?\n\nI. Video games are speech because they communicate through characters, dialogue, plot, music, and interaction.\nII. Grimm's fairy tales, the Odyssey, and Lord of the Flies show there's no tradition of restricting violence for kids.\nIII. Interactivity makes video games different in kind from literature.\nIV. There is no "free-floating power to restrict the ideas to which children may be exposed."`,
+[`I, II, and IV only`,`I, II, III, and IV`,`II and III only`,`I and III only`],
+`Interactivity differs in degree, not kind (choose-your-own-adventure books). Judge Posner: all literature is interactive.`);
+
+Q(6,`K`,`Brown v. EMA`,`Why did California's law fail strict scrutiny in Brown?\n\nI. The research showed correlation, not causation, with minuscule effects.\nII. It was wildly underinclusive (Bugs Bunny cartoons and E-rated games have similar effects).\nIII. The industry's rating system already helps parents, so filling a "modest gap" isn't compelling.`,
+[`I, II, and III`,`I and II only`,`III only`,`I and III only`],
+`Underinclusiveness alone was enough to defeat the law.`);
+
+Q(6,`H`,`Brown v. EMA`,`A state requires websites hosting graphic violent content to verify users' ages to keep minors out, citing Paxton. Best analysis?`,
+[`Brown controls; strict scrutiny likely applies.`,
+`The law is valid under Paxton's intermediate scrutiny.`,
+`Violence is obscene for minors under Ginsberg.`,
+`The law is valid because adults keep their access.`],
+`Paxton's framework rests on speech obscene as to minors. Brown refused to create a violence category even for children.`);
+
+Q(6,`A`,`Chapter 6 synthesis`,`Which pairing from the Chapter 6 synthesis table is correct?`,
+[`Paxton: intermediate, upheld; Ashcroft II: strict, struck`,
+`Paxton: strict, struck; Ashcroft II: intermediate, upheld`,
+`Brown: intermediate, upheld; Renton: strict, struck`,
+`Ferber: protected, struck; Free Speech Coalition: unprotected, upheld`],
+`Brown: strict, struck. Renton: intermediate, upheld. Ferber: unprotected, upheld. Free Speech Coalition: protected, struck.`);
+
+Q(6,`A`,`Chapter 6 synthesis`,`Which case in the synthesis table involved protecting ADULTS AND KIDS, with the speech held protected and the ban struck?`,
+[`Bolger (contraceptive ads)`,`Pacifica (indecent broadcast)`,`Ferber (child pornography)`,`Renton (adult business zoning)`],
+`Bolger protected both, and the interests were insufficient.`);
+
+Q(6,`H`,`Teen sexting stretch`,`A 15-year-old consensually sends her own explicit image to a 15-year-old partner. Does Ferber's rationale fit?`,
+[`Poorly, because the image is self-made and shared with a peer.`,
+`Perfectly; any explicit image of a minor is Ferber material.`,
+`Not at all, because teens have full rights to such images.`,
+`Only if the image is also obscene under Miller.`],
+`Ferber's market-and-exploitation rationale fits poorly for a self-made image shared consensually with a peer.`);
+
+Q(6,`H`,`Teen sexting stretch`,`In the teen-sexting problem, the 15-year-old partner forwards the image to classmates without consent. Which Ferber harm now fits well?`,
+[`The permanent record`,`The commercial market`,`The de minimis value`,`The prurient appeal`],
+`Nonconsensual redistribution fits Ferber's second harm: a permanent record whose circulation worsens the injury.`);
+
+Q(6,`H`,`Teen sexting stretch`,`What "sensible rule" does the outline suggest for teen sexting?`,
+[`One turning on exploitation`,`Prosecute all teen sexting`,`Never regulate teen sexting`,`Look only at the partner's age`],
+`An adult partner or nonconsensual redistribution looks like Ferber; a consensual exchange between peers doesn't. The outline also asks whether the partner's age (15, 17, 18, 25) matters.`);
+
+</script>
+<script>
+(function () {
+  const CH = { 1: "First Amendment Overview", 2: "The Religion Clauses", 3: "Speech Clause Overview", 4: "Violence and National Security", 5: "True Threats and Speech Integral to Crime", 6: "Immoral Speech" };
+  const KIND = { K: "Case knowledge", H: "Hypothetical", A: "Application" };
+  const LETTERS = "ABCDEF";
+  const KEY = "fa-drill.v1";
+
+  const N = QB.length;
+  let perms = [];          // perms[i] = display order of original option indices (0 is correct)
+  let order = [];          // question display order
+  let answers = {};        // i -> original option index chosen
+  let chFilter = "all", kindFilter = "all", missedOnly = false, qShuffled = false;
+
+  function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+  function freshPerms() { perms = QB.map(q => shuffle(q.o.map((_, j) => j))); }
+
+  function save() { try { localStorage.setItem(KEY, JSON.stringify({ perms, answers, n: N })); } catch (e) {} }
+  function load() {
+    try {
+      const s = JSON.parse(localStorage.getItem(KEY) || "null");
+      if (s && s.n === N && Array.isArray(s.perms) && s.perms.length === N) { perms = s.perms; answers = s.answers || {}; return; }
+    } catch (e) {}
+    freshPerms();
+  }
+
+  function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  function chips(host, items, get, set) {
+    items.forEach(([val, label]) => {
+      const b = el("button", "chip", label); b.type = "button";
+      b.setAttribute("aria-pressed", String(get() === val));
+      b.onclick = () => { set(val); host.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", "false")); b.setAttribute("aria-pressed", "true"); render(); };
+      host.appendChild(b);
+    });
+  }
+
+  function visible(i) {
+    const q = QB[i];
+    if (chFilter !== "all" && q.c !== chFilter) return false;
+    if (kindFilter !== "all" && q.k !== kindFilter) return false;
+    if (missedOnly && !(i in answers && answers[i] !== 0)) return false;
+    return true;
+  }
+
+  function renderCard(i, num) {
+    const q = QB[i], card = el("article", "q");
+    const meta = el("div", "meta");
+    meta.append(el("span", null, "Q" + num), el("span", null, "Ch. " + q.c), el("span", null, q.t), el("span", "kind", KIND[q.k]));
+    card.append(meta, el("p", "stem", q.q));
+    const box = el("div", "opts"); box.setAttribute("role", "group");
+    const answered = i in answers;
+    perms[i].forEach((orig, pos) => {
+      const b = el("button", "opt"); b.type = "button";
+      b.append(el("span", "ltr", LETTERS[pos]), el("span", null, q.o[orig]));
+      if (answered) {
+        b.disabled = true;
+        if (orig === 0) b.classList.add("correct");
+        else if (orig === answers[i]) b.classList.add("wrong");
+      }
+      b.onclick = () => { answers[i] = orig; save(); card.replaceWith(renderCard(i, num)); updateScore(); };
+      box.appendChild(b);
+    });
+    card.appendChild(box);
+    if (answered) {
+      const ok = answers[i] === 0, ex = el("div", "explain" + (ok ? "" : " miss"));
+      const lead = el("strong", null, ok ? "Correct. " : "Not quite. The answer is " + LETTERS[perms[i].indexOf(0)] + ". ");
+      ex.append(lead, document.createTextNode(q.e));
+      card.appendChild(ex);
+    }
+    return card;
+  }
+
+  function render() {
+    const list = document.getElementById("list"); list.innerHTML = "";
+    let n = 0, lastCh = null;
+    order.forEach(i => {
+      if (!visible(i)) return;
+      n++;
+      if (!qShuffled && QB[i].c !== lastCh) {
+        lastCh = QB[i].c;
+        const h = el("h2", "chhead"); h.append(el("small", null, "Chapter " + lastCh), document.createTextNode(CH[lastCh])); list.appendChild(h);
+      }
+      list.appendChild(renderCard(i, n));
+    });
+    if (!n) list.appendChild(el("p", "empty", missedOnly ? "No missed questions in this set. Answer a few first, or turn off Show missed only." : "No questions match these filters."));
+    updateScore();
+  }
+
+  function updateScore() {
+    const pool = QB.map((_, i) => i).filter(i => (chFilter === "all" || QB[i].c === chFilter) && (kindFilter === "all" || QB[i].k === kindFilter));
+    const done = pool.filter(i => i in answers), right = done.filter(i => answers[i] === 0);
+    document.getElementById("s-done").textContent = done.length;
+    document.getElementById("s-total").textContent = pool.length;
+    document.getElementById("s-right").textContent = right.length;
+    document.getElementById("s-pct").textContent = done.length ? Math.round(100 * right.length / done.length) + "%" : "–";
+    document.getElementById("s-meter").style.width = pool.length ? (100 * done.length / pool.length) + "%" : "0";
+  }
+
+  let toastT;
+  function toast(msg) { const t = document.getElementById("toast"); t.textContent = msg; clearTimeout(toastT); toastT = setTimeout(() => t.textContent = "", 2200); }
+
+  load();
+  order = QB.map((_, i) => i);
+  document.getElementById("lede").textContent = "The " + N + " multiple-choice questions cover every case and concept in the outline: what the cases held, hypotheticals built on their facts, and applications of the doctrine. Click an answer to see the explanation.";
+
+  chips(document.getElementById("f-ch"), [["all", "All"], ...Object.keys(CH).map(c => [Number(c), "Ch. " + c])], () => chFilter, v => chFilter = v);
+  chips(document.getElementById("f-kind"), [["all", "All"], ["K", KIND.K], ["H", KIND.H], ["A", KIND.A]], () => kindFilter, v => kindFilter = v);
+
+  document.getElementById("b-shuf-ans").onclick = () => { freshPerms(); save(); render(); toast("Answer order shuffled."); };
+  document.getElementById("b-shuf-q").onclick = e => {
+    qShuffled = !qShuffled;
+    order = qShuffled ? shuffle(QB.map((_, i) => i)) : QB.map((_, i) => i);
+    e.currentTarget.textContent = qShuffled ? "Restore chapter order" : "Shuffle questions";
+    render(); toast(qShuffled ? "Questions shuffled." : "Chapter order restored.");
+  };
+  document.getElementById("b-missed").onclick = e => { missedOnly = !missedOnly; e.currentTarget.setAttribute("aria-pressed", String(missedOnly)); e.currentTarget.classList.toggle("primary", missedOnly); render(); };
+  document.getElementById("b-reset").onclick = () => { answers = {}; save(); render(); toast("Answers cleared."); };
+
+  render();
+})();
+</script>
