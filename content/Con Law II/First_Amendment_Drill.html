@@ -3,7 +3,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-/* Layout: one reading column of question cards under a sticky score-and-controls bar, like a bar-prep answer sheet. */
+/* Layout: one reading column of question cards under a score-and-controls bar, like a bar-prep answer sheet. */
 :root {
   --bg: #EDF0F4; --surface: #FFFFFF; --ink: #17202B; --muted: #586474; --line: #D3DAE3;
   --accent: #22466F; --accent-soft: #E1E9F3; --on-accent: #FFFFFF;
@@ -31,7 +31,7 @@ header.top { padding-block: 32px 16px; }
 h1 { font-family: var(--f-display); font-weight: 400; font-size: clamp(2rem, 6vw, 2.9rem); line-height: 1.05; margin: 6px 0 10px; text-wrap: balance; }
 .lede { color: var(--muted); max-width: 60ch; margin: 0; }
 
-.bar { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(6px); border-bottom: 1px solid var(--line); }
+.bar { border-bottom: 1px solid var(--line); }
 .bar .wrap { display: flex; flex-direction: column; gap: 10px; padding-block: 12px; }
 .score { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 18px; font-variant-numeric: tabular-nums; }
 .score b { font-family: var(--f-mono); font-weight: 500; font-size: 18px; }
