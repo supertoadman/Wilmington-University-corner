@@ -52,6 +52,14 @@ ol.qs{list-style:none;padding:0;margin:24px 0 0;display:flex;flex-direction:colu
 .opt.right b{color:var(--good)}
 .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
 .opt.wrong b{color:var(--bad)}
+/* Cross-out: the toggle beside each option strikes it through while you work the question. */
+.orow{display:flex;gap:6px}
+.orow .opt{flex:1 1 0;min-width:0}
+.opt.out span{text-decoration:line-through;color:var(--muted)}
+.xo{flex:none;width:38px;display:grid;place-items:center;background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0}
+.xo:hover{border-color:var(--accent);color:var(--ink)}
+.xo[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.xo svg{width:16px;height:16px}
 .why{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:14.5px;color:var(--ink)}
 .why strong{color:var(--good)}
 .why.miss strong{color:var(--bad)}
@@ -460,10 +468,26 @@ const BANK = [
 ];
 
 const TOPICS = ["All", ...new Set(BANK.map(b => b[0]))];
-let state = { topic: "All", order: [], opts: {}, picked: {}, onlyMissed: false };
+let state = { topic: "All", order: [], opts: {}, picked: {}, out: {}, onlyMissed: false };
 
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const shuffleAnswers = () => { state.opts = {}; BANK.forEach((b, i) => state.opts[i] = shuffle(b[3].map((_, k) => k))); };
+
+// Strike-through toggle beside an option. It flips the option in place, so focus stays on the button.
+const STRIKE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><path d="M4 12h16"/></svg>';
+function crossBtn(opt, letter, out, k) {
+  const x = document.createElement("button");
+  x.type = "button"; x.className = "xo"; x.title = "Cross out";
+  x.setAttribute("aria-label", "Cross out choice " + letter);
+  x.setAttribute("aria-pressed", out.has(k));
+  x.innerHTML = STRIKE;
+  x.addEventListener("click", () => {
+    out.has(k) ? out.delete(k) : out.add(k);
+    opt.classList.toggle("out", out.has(k));
+    x.setAttribute("aria-pressed", out.has(k));
+  });
+  return x;
+}
 
 function visible() {
   return state.order.filter(i =>
@@ -485,18 +509,23 @@ function render() {
     li.innerHTML = `<div class="meta"><span class="num">${n + 1}.</span><span>${topic}</span><span class="tag">${tag}</span></div><p class="stem"></p><div class="opts"></div>`;
     li.querySelector(".stem").textContent = stem;
     const box = li.querySelector(".opts");
+    const out = state.out[i] || (state.out[i] = new Set());
     state.opts[i].forEach((k, pos) => {
       const b = document.createElement("button");
       b.className = "opt"; b.type = "button";
       b.innerHTML = `<b>${L[pos]}</b><span></span>`;
       b.querySelector("span").textContent = ans[k];
+      if (out.has(k)) b.classList.add("out");
       if (picked !== undefined) {
         b.disabled = true;
         if (k === 0) b.classList.add("right");
         else if (k === picked) b.classList.add("wrong");
       }
       b.addEventListener("click", () => { state.picked[i] = k; render(); });
-      box.appendChild(b);
+      const row = document.createElement("div");
+      row.className = "orow"; row.appendChild(b);
+      if (picked === undefined) row.appendChild(crossBtn(b, L[pos], out, k));
+      box.appendChild(row);
     });
     if (picked !== undefined) {
       const w = document.createElement("div");
@@ -526,14 +555,14 @@ TOPICS.forEach(t => {
   chips.appendChild(c);
 });
 
-document.getElementById("shufA").onclick = () => { shuffleAnswers(); state.picked = {}; render(); };
+document.getElementById("shufA").onclick = () => { shuffleAnswers(); state.picked = {}; state.out = {}; render(); };
 document.getElementById("shufQ").onclick = () => { state.order = shuffle(state.order); render(); window.scrollTo({ top: 0 }); };
-document.getElementById("reset").onclick = () => { state.picked = {}; state.onlyMissed = false; state.order = BANK.map((_, i) => i); shuffleAnswers(); render(); };
+document.getElementById("reset").onclick = () => { state.picked = {}; state.out = {}; state.onlyMissed = false; state.order = BANK.map((_, i) => i); shuffleAnswers(); render(); };
 document.getElementById("missed").onclick = () => {
   if (state.onlyMissed) { state.onlyMissed = false; render(); return; }
   state.missedSet = new Set(Object.keys(state.picked).map(Number).filter(i => state.picked[i] !== 0));
   if (!state.missedSet.size) return;
-  state.missedSet.forEach(i => delete state.picked[i]);
+  state.missedSet.forEach(i => { delete state.picked[i]; delete state.out[i]; });
   state.missedSet.forEach(i => state.opts[i] = shuffle(state.opts[i]));
   state.onlyMissed = true; render(); window.scrollTo({ top: 0 });
 };

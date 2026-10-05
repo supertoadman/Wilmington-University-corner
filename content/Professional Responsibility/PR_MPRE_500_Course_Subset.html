@@ -63,6 +63,14 @@ select{font:inherit;font-size:.875rem;padding:6px 8px;border:1px solid var(--lin
 .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
 .opt.wrong .let{background:var(--bad);border-color:var(--bad);color:var(--surface)}
 .opt:disabled{cursor:default}
+/* Cross-out: the toggle beside each option strikes it through while you work the question. */
+.opts li{display:flex;gap:6px}
+.opts li .opt{flex:1 1 0;min-width:0}
+.opt.out .txt{text-decoration:line-through;color:var(--muted)}
+.xo{flex:none;width:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--muted);padding:0;cursor:pointer}
+.xo:hover{border-color:var(--accent);color:var(--ink)}
+.xo[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.xo svg{width:16px;height:16px}
 .fb{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:6px}
 .verdict{font-weight:600;font-size:.95rem}
 .verdict.ok{color:var(--ok)} .verdict.bad{color:var(--bad)}
@@ -453,6 +461,7 @@ const QS = [
 {"t": "prop", "q": "Attorney Stevenson, from Tiny Firm, brings in a lawyer from Giant Firm to work on a complex litigation matter, and they agree to share fees. The client receives a single billing covering the fees of both lawyers, even though they work for separate firms. To comply with the Rules of Professional Conduct, the fee division between Attorney Stevenson and the other lawyer is proportionate to the services performed by each lawyer, and the client agreed in writing beforehand to the arrangement, including the share each lawyer would receive. The total fee is reasonable. At the end of the representation, Attorney Stevenson receives the earned fee from the client, including the share that he owes to the other lawyer at Giant Firm. He promptly notifies the other lawyer. Attorney Stevenson deposits the total sum in his firm bank account (its operating account, not a client trust account), and after confirming that the funds are available from the bank, he sends a check to the other lawyer with his share of the fees. Are Attorney Stevenson’s actions proper, as described here?", "a": ["No, because Attorney Stevenson should have deposited the other lawyer’s share of the fees in a trust account, separate from his own funds.", "Yes, because the fees were proportionate to the work done by each lawyer, and the client assented to the arrangement in writing beforehand.", "Yes, because the representation has ended, and the fees belong to the lawyers, not the client, and therefore Attorney Stevenson cannot place them in a separate trust account.", "No, the client should have received separate billing from each lawyer, because they work for separate firms."], "e": "1.15(a) requires holding property in which a third person has an interest separately from the lawyer's own. Once Stevenson received the combined fee, the Giant Firm lawyer's share belonged to that lawyer, so it had to go into trust, not the operating account, until paid out. The readings treat funds arriving pre-mixed with the lawyer's own money the same way: deposit in trust, then promptly move your share. Compliance with 1.5(e) doesn't excuse the deposit, and a single bill is fine. [W5:30–34; W5:17]", "r": "Stevenson, 500 MPRE Questions (2019) Q492 · Rule 1.15 Safekeeping Property"}
 ];
 const LETTERS = ["A","B","C","D"];
+const STRIKE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><path d="M4 12h16"/></svg>';
 const store = {
   get(k){ try{ return JSON.parse(localStorage.getItem("prdrill500:"+k)); }catch(e){ return null; } },
   set(k,v){ try{ localStorage.setItem("prdrill500:"+k, JSON.stringify(v)); }catch(e){} }
@@ -463,7 +472,7 @@ const S = {
   mode: saved.mode === "exam" ? "exam" : "study",
   count: saved.count || "25",
   shuffleQ: saved.shuffleQ !== false,
-  items: [],   // {qi, perm:[orig indices in display order], pick:null|origIndex}
+  items: [],   // {qi, perm:[orig indices in display order], pick:null|origIndex, out:Set of crossed-out orig indices}
   cur: 0,
   submitted: false,
   view: "quiz",
@@ -479,12 +488,12 @@ function buildSet(fromList){
     if(S.shuffleQ) pool = shuffle(pool);
     if(S.count !== "all" && !S.disputed) pool = pool.slice(0, parseInt(S.count,10));
   } else if(S.shuffleQ) pool = shuffle(pool);
-  S.items = pool.map(qi=>({qi, perm:newPerm(), pick:null}));
+  S.items = pool.map(qi=>({qi, perm:newPerm(), pick:null, out:new Set()}));
   S.cur = 0; S.submitted = false; S.view = "quiz";
   render();
 }
 function reletter(){
-  S.items.forEach(it=>{ it.perm = newPerm(); it.pick = null; });
+  S.items.forEach(it=>{ it.perm = newPerm(); it.pick = null; it.out = new Set(); });
   S.cur = 0; S.submitted = false; S.view = "quiz";
   render();
 }
@@ -528,7 +537,9 @@ function renderQuiz(){
     let c = "opt";
     if(show){ if(orig===0) c+=" right"; else if(orig===it.pick) c+=" wrong"; }
     else if(orig===it.pick) c+=" sel";
-    return `<li><button type="button" class="${c}" data-orig="${orig}" ${show?"disabled":""}><span class="let">${LETTERS[pos]}</span><span class="txt">${esc(q.a[orig])}</span></button></li>`;
+    if(it.out.has(orig)) c+=" out";
+    const x = show ? "" : `<button type="button" class="xo" data-x="${orig}" aria-pressed="${it.out.has(orig)}" aria-label="Cross out choice ${LETTERS[pos]}" title="Cross out">${STRIKE}</button>`;
+    return `<li><button type="button" class="${c}" data-orig="${orig}" ${show?"disabled":""}><span class="let">${LETTERS[pos]}</span><span class="txt">${esc(q.a[orig])}</span></button>${x}</li>`;
   }).join("");
   let fb = "";
   if(show){
@@ -589,6 +600,13 @@ function choose(orig){
   it.pick = orig; render();
 }
 function go(i){ if(i>=0 && i<S.items.length){ S.cur=i; S.view="quiz"; render(); } }
+// Toggles in place (no re-render) so focus stays on the cross-out button.
+function crossOut(x){
+  const it = S.items[S.cur], o = +x.dataset.x;
+  it.out.has(o) ? it.out.delete(o) : it.out.add(o);
+  x.setAttribute("aria-pressed", it.out.has(o));
+  x.previousElementSibling.classList.toggle("out", it.out.has(o));
+}
 
 $("chips").addEventListener("click",e=>{
   const b = e.target.closest(".chip"); if(!b) return;
@@ -605,6 +623,7 @@ $("startBtn").addEventListener("click",()=>buildSet());
 $("reletterBtn").addEventListener("click",reletter);
 $("grid").addEventListener("click",e=>{ const b=e.target.closest(".cell"); if(b) go(+b.dataset.i); });
 $("main").addEventListener("click",e=>{
+  const x = e.target.closest(".xo"); if(x){ crossOut(x); return; }
   const o = e.target.closest(".opt"); if(o){ choose(+o.dataset.orig); return; }
   const id = (e.target.closest("button")||{}).id;
   if(id==="prevBtn") go(S.cur-1);

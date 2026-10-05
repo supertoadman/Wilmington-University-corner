@@ -66,6 +66,14 @@ main { padding-block: 20px 60px; display: flex; flex-direction: column; gap: 14p
 .opt.correct .ltr { background: var(--ok); border-color: var(--ok); color: var(--surface); }
 .opt.wrong { border-color: var(--bad); background: var(--bad-soft); }
 .opt.wrong .ltr { background: var(--bad); border-color: var(--bad); color: var(--surface); }
+/* Cross-out: the toggle beside each option strikes it through while you work the question. */
+.orow { display: flex; gap: 6px; }
+.orow .opt { flex: 1 1 0; min-width: 0; }
+.opt.out > span:last-child { text-decoration: line-through; color: var(--muted); }
+.xo { flex: none; width: 38px; display: grid; place-items: center; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 6px; padding: 0; cursor: pointer; }
+.xo:hover { border-color: var(--accent); color: var(--ink); }
+.xo[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--ink); }
+.xo svg { width: 16px; height: 16px; }
 .explain { margin-top: 12px; padding: 10px 12px; border-left: 3px solid var(--ok); background: var(--bg); border-radius: 0 6px 6px 0; font-size: 14px; }
 .explain.miss { border-left-color: var(--bad); }
 .explain strong { font-weight: 600; }
@@ -1769,6 +1777,7 @@ Q(6,`H`,`Teen sexting stretch`,`What "sensible rule" does the outline suggest fo
   let perms = [];          // perms[i] = display order of original option indices (0 is correct)
   let order = [];          // question display order
   let answers = {};        // i -> original option index chosen
+  let out = {};            // i -> Set of original option indices crossed out
   let chFilter = "all", kindFilter = "all", missedOnly = false, qShuffled = false;
 
   function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
@@ -1784,6 +1793,17 @@ Q(6,`H`,`Teen sexting stretch`,`What "sensible rule" does the outline suggest fo
   }
 
   function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  // Strike-through toggle beside an option. It flips the option in place, so focus stays on the button.
+  const STRIKE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><path d="M4 12h16"/></svg>';
+  function crossBtn(opt, letter, xs, orig) {
+    const x = el("button", "xo"); x.type = "button"; x.title = "Cross out";
+    x.setAttribute("aria-label", "Cross out choice " + letter);
+    x.setAttribute("aria-pressed", String(xs.has(orig)));
+    x.innerHTML = STRIKE;
+    x.onclick = () => { xs.has(orig) ? xs.delete(orig) : xs.add(orig); opt.classList.toggle("out", xs.has(orig)); x.setAttribute("aria-pressed", String(xs.has(orig))); };
+    return x;
+  }
 
   function chips(host, items, get, set) {
     items.forEach(([val, label]) => {
@@ -1809,16 +1829,20 @@ Q(6,`H`,`Teen sexting stretch`,`What "sensible rule" does the outline suggest fo
     card.append(meta, el("p", "stem", q.q));
     const box = el("div", "opts"); box.setAttribute("role", "group");
     const answered = i in answers;
+    const xs = out[i] || (out[i] = new Set());
     perms[i].forEach((orig, pos) => {
       const b = el("button", "opt"); b.type = "button";
       b.append(el("span", "ltr", LETTERS[pos]), el("span", null, q.o[orig]));
+      if (xs.has(orig)) b.classList.add("out");
       if (answered) {
         b.disabled = true;
         if (orig === 0) b.classList.add("correct");
         else if (orig === answers[i]) b.classList.add("wrong");
       }
       b.onclick = () => { answers[i] = orig; save(); card.replaceWith(renderCard(i, num)); updateScore(); };
-      box.appendChild(b);
+      const row = el("div", "orow"); row.appendChild(b);
+      if (!answered) row.appendChild(crossBtn(b, LETTERS[pos], xs, orig));
+      box.appendChild(row);
     });
     card.appendChild(box);
     if (answered) {
@@ -1874,7 +1898,7 @@ Q(6,`H`,`Teen sexting stretch`,`What "sensible rule" does the outline suggest fo
     render(); toast(qShuffled ? "Questions shuffled." : "Chapter order restored.");
   };
   document.getElementById("b-missed").onclick = e => { missedOnly = !missedOnly; e.currentTarget.setAttribute("aria-pressed", String(missedOnly)); e.currentTarget.classList.toggle("primary", missedOnly); render(); };
-  document.getElementById("b-reset").onclick = () => { answers = {}; save(); render(); toast("Answers cleared."); };
+  document.getElementById("b-reset").onclick = () => { answers = {}; out = {}; save(); render(); toast("Answers cleared."); };
 
   render();
 })();

@@ -61,6 +61,14 @@ select{font:inherit;font-size:.875rem;padding:6px 8px;border:1px solid var(--lin
 .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}
 .opt.wrong .let{background:var(--bad);border-color:var(--bad);color:var(--surface)}
 .opt:disabled{cursor:default}
+/* Cross-out: the toggle beside each option strikes it through while you work the question. */
+.opts li{display:flex;gap:6px}
+.opts li .opt{flex:1 1 0;min-width:0}
+.opt.out .txt{text-decoration:line-through;color:var(--muted)}
+.xo{flex:none;width:40px;display:grid;place-items:center;border:1px solid var(--line);border-radius:8px;background:transparent;color:var(--muted);padding:0;cursor:pointer}
+.xo:hover{border-color:var(--accent);color:var(--ink)}
+.xo[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+.xo svg{width:16px;height:16px}
 .fb{border-top:1px solid var(--line);padding-top:14px;display:flex;flex-direction:column;gap:6px}
 .verdict{font-weight:600;font-size:.95rem}
 .verdict.ok{color:var(--ok)} .verdict.bad{color:var(--bad)}
@@ -507,6 +515,7 @@ const QS = [
 {"t": "reg", "q": "A federal bankruptcy judge's law clerk, who is also a licensed lawyer, asks which ethics rules govern her conduct at work. Which answer is most complete?", "a": ["Her state's Rules of Professional Conduct, plus the separate ethics rules for judicial employees.", "Only the ABA Model Rules, which govern every legal professional in every role and jurisdiction.", "Only the code of conduct for judicial employees, because state rules never apply to federal employees.", "No ethics rules at all, because a law clerk does not represent clients or appear before courts."], "e": "Groups such as judges, law clerks and other court staff, and bankruptcy and securities lawyers have their own ethics regimes in addition to state rules for lawyers. Federal employment doesn't exempt a licensed lawyer from state rules (compare the McDade Amendment for government attorneys).", "r": "Outline I-A; [S1:25]"}
 ];
 const LETTERS = ["A","B","C","D"];
+const STRIKE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><path d="M4 12h16"/></svg>';
 const store = {
   get(k){ try{ return JSON.parse(localStorage.getItem("prdrill3:"+k)); }catch(e){ return null; } },
   set(k,v){ try{ localStorage.setItem("prdrill3:"+k, JSON.stringify(v)); }catch(e){} }
@@ -517,7 +526,7 @@ const S = {
   mode: saved.mode === "exam" ? "exam" : "study",
   count: saved.count || "25",
   shuffleQ: saved.shuffleQ !== false,
-  items: [],   // {qi, perm:[orig indices in display order], pick:null|origIndex}
+  items: [],   // {qi, perm:[orig indices in display order], pick:null|origIndex, out:Set of crossed-out orig indices}
   cur: 0,
   submitted: false,
   view: "quiz"
@@ -532,12 +541,12 @@ function buildSet(fromList){
     if(S.shuffleQ) pool = shuffle(pool);
     if(S.count !== "all") pool = pool.slice(0, parseInt(S.count,10));
   } else if(S.shuffleQ) pool = shuffle(pool);
-  S.items = pool.map(qi=>({qi, perm:newPerm(), pick:null}));
+  S.items = pool.map(qi=>({qi, perm:newPerm(), pick:null, out:new Set()}));
   S.cur = 0; S.submitted = false; S.view = "quiz";
   render();
 }
 function reletter(){
-  S.items.forEach(it=>{ it.perm = newPerm(); it.pick = null; });
+  S.items.forEach(it=>{ it.perm = newPerm(); it.pick = null; it.out = new Set(); });
   S.cur = 0; S.submitted = false; S.view = "quiz";
   render();
 }
@@ -578,7 +587,9 @@ function renderQuiz(){
     let c = "opt";
     if(show){ if(orig===0) c+=" right"; else if(orig===it.pick) c+=" wrong"; }
     else if(orig===it.pick) c+=" sel";
-    return `<li><button type="button" class="${c}" data-orig="${orig}" ${show?"disabled":""}><span class="let">${LETTERS[pos]}</span><span class="txt">${esc(q.a[orig])}</span></button></li>`;
+    if(it.out.has(orig)) c+=" out";
+    const x = show ? "" : `<button type="button" class="xo" data-x="${orig}" aria-pressed="${it.out.has(orig)}" aria-label="Cross out choice ${LETTERS[pos]}" title="Cross out">${STRIKE}</button>`;
+    return `<li><button type="button" class="${c}" data-orig="${orig}" ${show?"disabled":""}><span class="let">${LETTERS[pos]}</span><span class="txt">${esc(q.a[orig])}</span></button>${x}</li>`;
   }).join("");
   let fb = "";
   if(show){
@@ -639,6 +650,13 @@ function choose(orig){
   it.pick = orig; render();
 }
 function go(i){ if(i>=0 && i<S.items.length){ S.cur=i; S.view="quiz"; render(); } }
+// Toggles in place (no re-render) so focus stays on the cross-out button.
+function crossOut(x){
+  const it = S.items[S.cur], o = +x.dataset.x;
+  it.out.has(o) ? it.out.delete(o) : it.out.add(o);
+  x.setAttribute("aria-pressed", it.out.has(o));
+  x.previousElementSibling.classList.toggle("out", it.out.has(o));
+}
 
 $("chips").addEventListener("click",e=>{
   const b = e.target.closest(".chip"); if(!b) return;
@@ -653,6 +671,7 @@ $("startBtn").addEventListener("click",()=>buildSet());
 $("reletterBtn").addEventListener("click",reletter);
 $("grid").addEventListener("click",e=>{ const b=e.target.closest(".cell"); if(b) go(+b.dataset.i); });
 $("main").addEventListener("click",e=>{
+  const x = e.target.closest(".xo"); if(x){ crossOut(x); return; }
   const o = e.target.closest(".opt"); if(o){ choose(+o.dataset.orig); return; }
   const id = (e.target.closest("button")||{}).id;
   if(id==="prevBtn") go(S.cur-1);

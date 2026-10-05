@@ -61,6 +61,14 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
 .opt b{font-family:var(--mono);font-weight:500;color:var(--muted);flex:none}
 .opt.right{border-color:var(--good);background:var(--good-soft)}.opt.right b{color:var(--good)}
 .opt.wrong{border-color:var(--bad);background:var(--bad-soft)}.opt.wrong b{color:var(--bad)}
+/* Cross-out: the toggle beside each option strikes it through while you work the question. */
+.orow{display:flex;gap:6px}
+.orow .opt{flex:1 1 0;min-width:0}
+.opt.out span{text-decoration:line-through;color:var(--muted)}
+.xo{flex:none;width:38px;display:grid;place-items:center;background:transparent;color:var(--muted);border:1px solid var(--line);border-radius:6px;padding:0}
+.xo:hover{border-color:var(--accent);color:var(--ink)}
+.xo[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.xo svg{width:16px;height:16px}
 .why{margin-top:12px;padding-top:10px;border-top:1px dashed var(--line);font-size:14.5px}
 .why strong{color:var(--good)}.why.miss strong{color:var(--bad)}
 .empty{color:var(--muted);text-align:center;padding:40px 0}
@@ -230,9 +238,25 @@ const QB = [{"id":"1","area":"Jury secrecy","tag":"FRE 606(b)","cov":["606-int",
 const L = "ABCD";
 const AREAS = ["Jury secrecy","Relevance","Rule 403 and 105","Specialized relevance (407–411)","Character and other acts","Impeachment","Rape shield (412)"];
 const byId = Object.fromEntries(QB.map(q => [q.id, q]));
-let st = { area:"All", kind:"all", order: QB.map(q => q.id), shuffled:false, opts:{}, picked:{}, onlyMissed:false, missed:new Set() };
+let st = { area:"All", kind:"all", order: QB.map(q => q.id), shuffled:false, opts:{}, picked:{}, out:{}, onlyMissed:false, missed:new Set() };
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const shuffleAnswers = () => QB.forEach(q => st.opts[q.id] = shuffle([0,1,2,3]));
+
+// Strike-through toggle beside an option. It flips the option in place, so focus stays on the button.
+const STRIKE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><path d="M4 12h16"/></svg>';
+function crossBtn(opt, letter, out, k) {
+  const x = document.createElement("button");
+  x.type = "button"; x.className = "xo"; x.title = "Cross out";
+  x.setAttribute("aria-label", "Cross out choice " + letter);
+  x.setAttribute("aria-pressed", out.has(k));
+  x.innerHTML = STRIKE;
+  x.addEventListener("click", () => {
+    out.has(k) ? out.delete(k) : out.add(k);
+    opt.classList.toggle("out", out.has(k));
+    x.setAttribute("aria-pressed", out.has(k));
+  });
+  return x;
+}
 
 function visible() {
   return st.order.map(id => byId[id]).filter(q =>
@@ -250,14 +274,18 @@ function card(q) {
   li.querySelector(".tag").textContent = q.tag;
   li.querySelector(".stem").textContent = q.stem;
   const box = li.querySelector(".opts");
+  const out = st.out[q.id] || (st.out[q.id] = new Set());
   st.opts[q.id].forEach((k, pos) => {
     const b = document.createElement("button");
     b.type = "button"; b.className = "opt";
     b.innerHTML = "<b>" + L[pos] + "</b><span></span>";
     b.querySelector("span").textContent = q.o[k][0];
+    if (out.has(k)) b.classList.add("out");
     if (picked !== undefined) { b.disabled = true; if (k === 0) b.classList.add("right"); else if (k === picked) b.classList.add("wrong"); }
     b.onclick = () => { st.picked[q.id] = k; li.replaceWith(card(q)); score(); };
-    box.appendChild(b);
+    const row = document.createElement("div"); row.className = "orow"; row.appendChild(b);
+    if (picked === undefined) row.appendChild(crossBtn(b, L[pos], out, k));
+    box.appendChild(row);
   });
   if (picked !== undefined) {
     const r = document.createElement("div"); r.className = "rats";
@@ -329,14 +357,14 @@ function coverage() {
   document.getElementById("chips").appendChild(c);
 });
 ["all","base","var"].forEach(k => document.getElementById("k-" + k).onclick = () => { st.kind = k; render(); });
-document.getElementById("shufA").onclick = () => { shuffleAnswers(); st.picked = {}; st.onlyMissed = false; render(); };
+document.getElementById("shufA").onclick = () => { shuffleAnswers(); st.picked = {}; st.out = {}; st.onlyMissed = false; render(); };
 document.getElementById("shufQ").onclick = () => { st.order = shuffle(st.order); st.shuffled = true; render(); window.scrollTo({ top:0 }); };
-document.getElementById("reset").onclick = () => { st.picked = {}; st.onlyMissed = false; st.area = "All"; st.kind = "all"; st.shuffled = false; st.order = QB.map(q => q.id); shuffleAnswers(); render(); };
+document.getElementById("reset").onclick = () => { st.picked = {}; st.out = {}; st.onlyMissed = false; st.area = "All"; st.kind = "all"; st.shuffled = false; st.order = QB.map(q => q.id); shuffleAnswers(); render(); };
 document.getElementById("missed").onclick = () => {
   if (st.onlyMissed) { st.onlyMissed = false; render(); return; }
   st.missed = new Set(Object.keys(st.picked).filter(id => st.picked[id] !== 0));
   if (!st.missed.size) return;
-  st.missed.forEach(id => { delete st.picked[id]; st.opts[id] = shuffle(st.opts[id]); });
+  st.missed.forEach(id => { delete st.picked[id]; delete st.out[id]; st.opts[id] = shuffle(st.opts[id]); });
   st.onlyMissed = true; render(); window.scrollTo({ top:0 });
 };
 
