@@ -83,6 +83,50 @@ function closeSheets() {
 $$('[data-sheet-open]').forEach((b) => b.addEventListener('click', () => openSheet(b.dataset.sheetOpen)));
 $$('[data-sheet-close]').forEach((b) => b.addEventListener('click', closeSheets));
 
+// ---------- Desktop subjects menu ----------
+const subnav = $('[data-subnav]');
+if (subnav) {
+  const trigger = $('.subnav-trigger', subnav);
+  const panel = $('.subnav-panel', subnav);
+  const items = $$('.subnav-item', subnav);
+  const home = items.find((a) => a.hasAttribute('aria-current')) || items[0];
+  let hoverTimer;
+  const show = (item) => {
+    if (!item || item.hasAttribute('data-active')) return;
+    items.forEach((a) => a.toggleAttribute('data-active', a === item));
+    $$('[data-subnav-pane]', subnav).forEach((p) => p.toggleAttribute('data-active', p.dataset.subnavPane === item.dataset.subnavKey));
+  };
+  const setOpen = (open, { refocus = false } = {}) => {
+    if (open === !panel.hidden) return;
+    if (open) show(home);
+    panel.hidden = !open;
+    trigger.setAttribute('aria-expanded', String(open));
+    if (!open && refocus) trigger.focus({ preventScroll: true });
+  };
+  trigger.addEventListener('click', () => setOpen(panel.hidden));
+  items.forEach((a) => {
+    // A short delay so cutting diagonally across the list to the preview doesn't switch it.
+    a.addEventListener('pointerenter', () => { clearTimeout(hoverTimer); hoverTimer = setTimeout(() => show(a), 80); });
+    a.addEventListener('pointerleave', () => clearTimeout(hoverTimer));
+    a.addEventListener('focus', () => show(a));
+  });
+  subnav.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !panel.hidden) { e.stopPropagation(); setOpen(false, { refocus: true }); return; }
+    if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+    const i = items.indexOf(document.activeElement);
+    if (e.target === trigger && e.key === 'ArrowDown') {
+      e.preventDefault();
+      setOpen(true);
+      $('.subnav-item[data-active]', subnav)?.focus();
+    } else if (i >= 0) {
+      e.preventDefault();
+      items[(i + (e.key === 'ArrowDown' ? 1 : -1) + items.length) % items.length].focus();
+    }
+  });
+  document.addEventListener('pointerdown', (e) => { if (!subnav.contains(e.target)) setOpen(false); });
+  subnav.addEventListener('focusout', (e) => { if (e.relatedTarget && !subnav.contains(e.relatedTarget)) setOpen(false); });
+}
+
 // ---------- Command palette ----------
 const palette = $('#palette');
 const pInput = $('#palette-input');

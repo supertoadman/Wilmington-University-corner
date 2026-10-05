@@ -98,8 +98,8 @@ ${head(ctx, { root, title, description, canonical, extraHead, jsonld })}
       <span class="brand-text"><span class="brand-name">${esc(config.shortTitle)}</span><span class="brand-sub">Study Library</span></span>
     </a>
     <nav class="main-nav" aria-label="Main">
+      ${subjectMenu(ctx, root, active)}
       <a href="${root}library/"${active === 'library' ? ' aria-current="page"' : ''}>Library</a>
-      ${subjects.map((s) => `<a href="${root}subjects/${s.slug}/"${active === s.slug ? ' aria-current="page"' : ''}>${esc(s.title)}</a>`).join('\n      ')}
     </nav>
     <div class="header-actions">
       <button class="search-trigger" type="button" data-open-search aria-label="Search all documents">
@@ -167,9 +167,46 @@ const palette = () => `<div class="palette" id="palette" hidden>
   </div>
 </div>`;
 
+// Desktop "Subjects" menu: the course list on the left, a preview of the highlighted
+// course (description + documents) on the right. Phones use the tab bar's sheet instead.
+function subjectMenu(ctx, root, active) {
+  const { subjects, docs, TYPES, P } = ctx;
+  const current = subjects.find((s) => s.slug === active);
+  const shown = current || subjects[0];
+  const preview = (s) => {
+    const list = s.documents.slice(0, 6);
+    return `<div class="subnav-preview" data-subnav-pane="${esc(s.slug)}" style="--accent:${s.accent}"${s === shown ? ' data-active' : ''}>
+            <p class="subnav-stats">${subjectStats(s).map(esc).join(' · ')}</p>
+            <p class="subnav-title">${esc(s.title)}</p>
+            <p class="subnav-desc">${esc(s.description)}</p>
+            ${list.length ? `<ul class="subnav-docs">${list.map((d) => `<li><a href="${root}${P.doc(d)}"><span class="tile">${icon(TYPES[d.type].icon)}</span><span class="subnav-doc-text"><strong>${esc(d.title)}</strong><small>${esc(TYPES[d.type].label)}</small></span></a></li>`).join('')}</ul>` : ''}
+            <div class="subnav-foot"><a class="link-arrow" href="${root}${P.subject(s)}">${s.documents.length > list.length ? `See all ${s.documents.length} in` : 'Go to'} ${esc(s.title)} ${icon('arrow-right')}</a></div>
+          </div>`;
+  };
+  return `<div class="subnav" data-subnav>
+        <button class="subnav-trigger" type="button" aria-expanded="false" aria-controls="subnav-panel"${current ? ' aria-current="page"' : ''}>Subjects${icon('chevron-down', 'subnav-caret')}</button>
+        <div class="subnav-panel" id="subnav-panel" hidden>
+          <div class="subnav-side">
+            <p class="subnav-label">Courses <span>${subjects.length}</span></p>
+            <ul class="subnav-list">
+              ${subjects.map((s) => `<li><a class="subnav-item" href="${root}${P.subject(s)}" data-subnav-key="${esc(s.slug)}" style="--accent:${s.accent}"${s === shown ? ' data-active' : ''}${s === current ? ' aria-current="page"' : ''}><span class="subnav-icon">${icon(s.icon)}</span><span class="subnav-item-text"><strong>${esc(s.title)}</strong><small>${plural(s.documents.length, 'document')}</small></span>${icon('chevron-right', 'chev')}</a></li>`).join('\n              ')}
+            </ul>
+            <a class="subnav-all" href="${root}library/">${icon('library')}<span>All documents</span><span class="count">${docs.length}</span></a>
+          </div>
+          <div class="subnav-previews">${subjects.map(preview).join('')}</div>
+        </div>
+      </div>`;
+}
+
 // ---------------------------------------------------------------------------
 // Components
 // ---------------------------------------------------------------------------
+const subjectStats = (s) => {
+  const practice = s.documents.filter((d) => d.type === 'practice').length;
+  const q = s.documents.reduce((n, d) => n + (d.questions || 0), 0);
+  return [plural(s.documents.length, 'document'), practice ? plural(practice, 'practice set') : null, q ? `${q}+ questions` : null].filter(Boolean);
+};
+
 function docCard(ctx, root, d, { showSubject = false } = {}) {
   const { TYPES, P } = ctx;
   const t = TYPES[d.type];
@@ -199,11 +236,8 @@ function docRow(ctx, root, d, extra = '') {
 }
 
 function subjectPanel(ctx, root, s) {
-  const { TYPES } = ctx;
   const shown = s.documents.slice(0, 6);
-  const practice = s.documents.filter((d) => d.type === 'practice').length;
-  const q = s.documents.reduce((n, d) => n + (d.questions || 0), 0);
-  const stats = [plural(s.documents.length, 'document'), practice ? plural(practice, 'practice set') : null, q ? `${q}+ questions` : null].filter(Boolean);
+  const stats = subjectStats(s);
   return `<article class="subject-panel" style="--accent:${s.accent}">
   <a class="subject-panel-head" href="${root}subjects/${s.slug}/">
     <span class="subject-panel-icon">${icon(s.icon)}</span>
