@@ -20,6 +20,14 @@
       "description": "264 multiple-choice questions on every case and concept in the outline. They test what each case held, hypotheticals built on its facts, and how the doctrine applies. Filter by chapter or question type, shuffle the answers, and review only the ones you missed.",
       "tags": ["First Amendment", "MCQ", "Chapters 1–6"],
       "questions": 264,
+      "order": 3
+    },
+    "First_Amendment_Flowcharts.html": {
+      "slug": "first-amendment-flowcharts",
+      "title": "First Amendment Flowcharts",
+      "type": "flowcharts",
+      "description": "Interactive decision charts for Chapters 1–6. A big-picture map shows how the Religion Clauses and the speech doctrines fit together, and eight charts walk through coercion, Free Exercise, the Establishment Clause and funding, the speech framework, incitement and fighting words, prior restraints, true threats and speech integral to crime, and immoral speech. Tap any box for a plain-English explanation, the cases behind it, and what to watch out for.",
+      "tags": ["First Amendment", "interactive", "Religion Clauses", "free speech", "Chapters 1–6"],
       "order": 2
     }
   }
