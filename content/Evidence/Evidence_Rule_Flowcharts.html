@@ -270,6 +270,37 @@ html.js .sources{display:none}
 .from{display:flex;flex-wrap:wrap;gap:6px}
 .from button{max-width:100%;padding:6px 10px;border-radius:999px;border:1px solid var(--border);background:var(--surface);font-size:12.5px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
 .from button:hover{background:var(--surface-2)}
+/* From class: short notes and hypos from the lecture slides */
+.tags{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.cls-tag{display:inline-flex;align-items:center;gap:6px;padding:3px 10px 3px 8px;border-radius:999px;border:1px solid color-mix(in srgb,var(--gold) 32%,transparent);background:color-mix(in srgb,var(--gold) 10%,var(--surface));color:var(--gold);font-size:11.5px;font-weight:700;letter-spacing:.04em;transition:background .15s}
+.cls-tag:hover{background:color-mix(in srgb,var(--gold) 18%,var(--surface))}
+.cls-tag .ico,.cls-top .ico{width:15px;height:15px}
+.pn h3.cls-h{display:flex;align-items:baseline;gap:10px}
+.cls-h .when,.cls-top .when{margin-left:auto;font-size:12px;font-weight:600;letter-spacing:0;text-transform:none;color:var(--gold);white-space:nowrap}
+.cls{border-radius:14px;border:1px solid color-mix(in srgb,var(--gold) 24%,var(--border));background:linear-gradient(180deg,color-mix(in srgb,var(--gold) 8%,var(--surface)),color-mix(in srgb,var(--gold) 2%,var(--surface)));overflow:hidden}
+.cls-say{margin:0;padding:13px 16px 14px;font-size:14px;line-height:1.6;color:var(--text-2)}
+.cls-say b{color:var(--text);font-weight:600}
+.try{border-top:1px solid color-mix(in srgb,var(--gold) 20%,var(--border))}
+.try:first-child{border-top:0}
+.try summary{display:flex;align-items:center;gap:12px;padding:11px 14px 11px 16px;cursor:pointer;list-style:none;transition:background .15s}
+.try summary::-webkit-details-marker{display:none}
+.try summary:hover{background:color-mix(in srgb,var(--gold) 6%,transparent)}
+.try summary > .ico{color:var(--gold)}
+.try summary span{flex:1;min-width:0;font-size:14px;font-weight:600;line-height:1.35}
+.try summary small{display:block;margin-bottom:1px;font-size:10.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.try summary .chev{color:var(--muted);transition:transform .25s}
+.try[open] summary .chev{transform:rotate(180deg)}
+.try-body{padding:2px 16px 16px 46px;animation:pnIn .3s cubic-bezier(.2,.8,.2,1)}
+.try-q{margin:0 0 12px;font-size:14px;line-height:1.6}
+.try-a{margin:0;padding:2px 0 2px 12px;border-left:3px solid var(--gold);font-size:14px;line-height:1.6;color:var(--text-2);animation:pnIn .3s cubic-bezier(.2,.8,.2,1)}
+.cls-intro{margin-top:18px}
+.cls-top{display:flex;align-items:center;gap:8px;padding:12px 16px 0;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.cls-intro .cls-say{padding-top:6px}
+.cls-find{display:flex;align-items:center;gap:10px;width:100%;padding:10px 16px;border:0;border-top:1px solid color-mix(in srgb,var(--gold) 20%,var(--border));background:transparent;text-align:left;font-size:13px;color:var(--text-2);transition:background .15s}
+.cls-find:hover{background:color-mix(in srgb,var(--gold) 6%,transparent)}
+.cls-find[aria-pressed="true"]{background:color-mix(in srgb,var(--gold) 12%,transparent);color:var(--text)}
+.cls-find .dot{width:8px;height:8px;border-radius:50%;background:var(--gold);flex:none}
+.cls-find .n{margin-left:auto;font-size:12px;font-weight:600;color:var(--gold)}
 
 /* ---------- Tablet: rail and panel become drawers ---------- */
 @media (max-width:1180px){
@@ -308,6 +339,7 @@ html.js .sources{display:none}
   .panel-scroll{padding:2px 18px 20px}
   .pn h2{font-size:21px;padding-right:40px}
   .node-title{font-size:19px;padding-right:36px}
+  .try-body{padding-left:16px}
   .hud{bottom:calc(16px + env(safe-area-inset-bottom))}
   .app.panel-open:not(.panel-peek) .hud{opacity:0;pointer-events:none}
   .app.panel-peek .hud{bottom:calc(124px + env(safe-area-inset-bottom))}
@@ -343,6 +375,8 @@ html.js .sources{display:none}
   <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
   <symbol id="i-dl" viewBox="0 0 24 24"><path d="M12 15V3M7 10l5 5 5-5M5 21h14"/></symbol>
   <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/></symbol>
+  <symbol id="i-cap" viewBox="0 0 24 24"><path d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"/><path d="M22 10v6"/><path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></symbol>
 </svg>
 
 <div class="app" id="app">
@@ -3836,7 +3870,7 @@ function marks() {
   world.classList.toggle('has-focus', !!state.node);
   stage().classList.toggle('has-focus', !!state.node);
   stage().classList.toggle('has-filter', !!state.filter && !state.node);
-  if (state.filter && !state.node) b.nodes.forEach((n) => n.kind === state.filter && n.g.classList.add('is-match'));
+  if (state.filter && !state.node) b.nodes.forEach((n) => (state.filter === 'class' ? classFor(n) : n.kind === state.filter) && n.g.classList.add('is-match'));
   if (!state.node) return;
   const n = state.node;
   n.g.classList.add('is-current');
@@ -3885,6 +3919,164 @@ function startWalk(root) {
   select(r);
 }
 
+/* ---------- From class: notes from Prof. Hornzell's slides (Classes 1–10) ----------
+   Keyed by chart id, then node key. c = class number(s); say = one short takeaway;
+   try = a class hypo with its answer hidden until asked. Keep each one short: the chart
+   is the main act, and many boxes have nothing here on purpose. */
+const CLASS_DATES = { 1: 'Aug 25', 2: 'Aug 27', 3: 'Sep 1', 4: 'Sep 3', 5: 'Sep 8', 6: 'Sep 10', 7: 'Sep 15', 8: 'Sep 17', 9: 'Sep 22', 10: 'Sep 24' };
+const TRIAL_NOTE_402 = { c: 2, say: "**Trial note:** when you object on relevance under the FRE, you don't need to say whether it's probativeness or materiality." };
+const CLASS = {
+  '00-master-map': {
+    c: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+    say: "Evidence law is the limits we place on what juries hear: the rules, the reasons for them, and how they're enforced.",
+    nodes: {
+      start: { c: 1, say: "Why have rules at all? Class 1's answer: time, constitutional protections, truthful outcomes, public policies like privileges, and relevance and reliability." },
+      b104: { c: [2, 3], say: "All relevance depends on other facts. Sharp lawyers find the missing link without which the chain of inferences breaks apart." },
+      n104a: { c: [7, 8], say: "Huddleston in class: the judge only asks whether a jury could reasonably find the conditional fact by a preponderance. A low price, a large quantity, and no bill of sale were enough to find the TVs were stolen." },
+      irr: TRIAL_NOTE_402,
+      spec: { c: 4, say: "These rules are less about truth-seeking than about conduct outside the courtroom. 407 exists so people fix dangers, not to help the jury find facts." },
+      imp: { c: 8, say: "Impeachment is any reason to doubt a witness. It only arises once someone has testified, or once their out-of-court words come in through a hearsay exception." },
+      r403: { c: [2, 3], say: "Relevant doesn't mean valuable. In Bocharski, the death and its cause weren't contested, so gruesome photos had little probative value to set against the prejudice." },
+      r105: { c: [5, 6], say: "'Blindfolding' often fails: jurors struggle to use evidence for one purpose only, an objection can spotlight what they'd have missed, and their own experiences leak in. The Arizona Jury Project suggests educating jurors instead." },
+      r606: { c: 1, say: "England swapped trial by ordeal for juries in 1220. Today it's a federal crime to record, listen to, or watch a federal jury deliberate." },
+    },
+  },
+  '01-jury-secrecy-606b': {
+    c: [1, 2],
+    say: "Tanner and Peña-Rodriguez frame this chart: the jury room stays closed, except where the Constitution forces it open.",
+    nodes: {
+      s: { c: 1, say: "Tanner: jurors drank heavily at lunch and slept through afternoon sessions, and a second juror described marijuana and cocaine. The Court held the trial judge didn't have to hear jurors on it." },
+      q0: { c: 1, say: "606(b) limits **juror** testimony only. Tanner's trial court still heard from non-jurors: defense counsel had noticed a juror in a 'giggly mood' during trial." },
+      q1: { c: 1, say: "Courts sort allegations into internal and external. Juror 'incompetence' has always been internal, even a juror who claimed her eyes and ears had been cursed." },
+      q2: { c: [1, 2], say: "At common law, jurors could impeach a verdict only for 'extraneous influence': outside information reaching the jury, or a juror who was threatened or bribed.",
+        try: { name: 'The drunk jurors', q: "A juror swears that others drank heavily at lunch and slept through afternoon testimony. Can her affidavit be used to attack the verdict?", a: "No (Tanner). Alcohol and drugs are no more an 'outside influence' than a virus or lack of sleep. The Sixth Amendment is protected in other ways: voir dire, the judge and staff watching the jury, and jurors reporting each other before the verdict." } },
+      q4: { c: [1, 2], say: "The juror was a former police officer, and two other jurors came forward after trial. Colorado's rule barred their testimony; the Supreme Court reversed, calling racial bias 'especially pernicious in the administration of justice.'" },
+      warger: { c: [1, 2], say: "Warger: in a trial over an accident, a juror hid that a close family member had been in a fatal accident. Still no new trial: a juror's own experiences aren't 'extraneous prejudicial information.'" },
+      tdis: { c: 1, say: "Class 1's shorthand for the fight: 'Bacon, eggs, and cocaine.' The majority treats all three as internal; the dissent says courts can tell a minor ailment from an intoxicant." },
+    },
+  },
+  '02-relevance-401-403': {
+    c: [2, 3, 4],
+    say: "Relevance is a low bar: one brick, not the wall. Most real fights are over what a brick is worth under 403.",
+    nodes: {
+      q1: { c: 2, try: { name: "Brother's Keeper: motive", q: "Delbert Ward is tried for killing his brother Bill. The prosecutor asks how Bill used to annoy Delbert at night. That hardly proves murder. Is it relevant?", a: "Yes. Being annoyed by someone has 'any tendency' to make a motive to harm them more likely. A brick is not a wall." } },
+      q2: { c: 2, say: "James: what's material is what Ernestine James believed when she handed over the gun, not whether Ogden really stabbed anyone. Reports she never saw can't show her belief, but the en banc court said they corroborate her testimony about it.",
+        try: { name: 'The dog bite', q: "A dog-bite negligence suit. Which are material: the dog's food brand, how often it's leashed, its bite history, its last grooming visit?", a: "Leashing and bite history bear on whether the owner was careless. Food brand and grooming don't touch any fact of consequence." } },
+      irr: TRIAL_NOTE_402,
+      q3: { c: [2, 3], try: { name: 'The weapon purchase', q: "In a murder trial, the prosecution shows the defendant bought a hunting rifle like the murder weapon the day before. Relevant? Now add: it was hunting season, and hundreds of that model sold that day.", a: "Still relevant, since it has some tendency, but far weaker. Relevance always depends on what else we know; look for the missing link that breaks the chain." } },
+      r403: { c: 2, try: { name: 'The roadside photo', q: "In an infanticide trial, the prosecutor offers a photo of the baby's body left in a roadside hole. Make the defense's 403 objection, then answer it.", a: "Defense: little probative value, since the officer can simply describe the scene, and the Advisory Committee says other means of proof count. Prosecution: unlike Bocharski's autopsy photos, nothing here is mangled or decomposed." } },
+      r105: { c: 5, say: "Picture the instruction: 'You heard his gun was at the scene. Use that only to place him there, not to conclude he did it.' Class 5 asked how well that really works." },
+      n403: { c: 3, say: "Old Chief's rule of thumb: when felon status is the only point, courts should accept the defendant's admission rather than admit the record. The dissent would have used a limiting instruction instead." },
+      cases: { c: 3, try: { name: 'Thelma & Louise', q: "Thelma and Louise are tried for robbing a convenience store, and a witness describes their flight. Where is the weak link, and how could the prosecution shore it up?", a: "The jump from a guilty mind to a guilty mind about this robbery. Show the flight came soon after it, or that they knew police wanted them for it." } },
+    },
+  },
+  '03-specialized-relevance-407-411': {
+    c: [4, 5, 6],
+    say: "Each of these rules is a 403 balance struck in advance: for the barred use, the evidence fails as a matter of law.",
+    nodes: {
+      s: { c: [4, 5], say: "Each rule protects something we want people to keep doing: fixing hazards (407), settling (408), helping the injured (409), and plea bargaining (410)." },
+      r407: { c: 4, try: { name: 'The Grotto Pizza carpet', q: "A diner trips on the entry carpet and runs up $38,000 in medical bills. The next day the restaurant pays $55.26 to re-secure it. Can the plaintiff use the repair?", a: "Not to prove negligence. 407 is about encouraging repairs, not truth-seeking. But if the restaurant claims a fix would have cost $40,000, the $55.26 receipt comes in to impeach." } },
+      r408: { c: 4, try: { name: 'The Verdict', q: "At a settlement meeting, the hospital's bishop calls a patient's coma a 'tragic accident.' At trial he testifies it was an act of God. Can the plaintiff impeach him with 'tragic accident'?", a: "No. 408(a) bars statements made during compromise negotiations, even to impeach by prior inconsistent statement." } },
+      r409: { c: 4, try: { name: 'The bandage', q: "Right after a crash you tell the other driver, 'Oh my gosh, I'm so sorry, let me give you a bandaid!' What does 409 keep out?", a: "Only the offer of help. 'I'm so sorry' is an admission 409 doesn't cover, though state apology laws might. Say the same thing at a settlement meeting and 408 bars all of it." } },
+      r410: { c: 5, try: { name: "The prosecutor's offer", q: "The prosecutor offered to reduce first-degree murder to second-degree. Can the defendant use the offer to show the government saw holes in its case?", a: "410 only bars use against the defendant, so it isn't automatically out. But courts may exclude it: it would chill plea talks, and an offer can reflect the cost of trial, not weakness." } },
+      r411: { c: 4, try: { name: 'The claims adjuster', q: "An adjuster for the homeowners' insurer took the injured guest's recorded statement, and the defense impeaches her with it. Can she show who the adjuster worked for?", a: "411 doesn't block it, since bias is another purpose. But the professor would keep it out under 403: his employer says little about whether her statement was reliable." } },
+    },
+  },
+  '04a-character-propensity-box': {
+    c: [5, 6, 7, 8, 9],
+    say: "The ban rests on policy, not logic. Propensity evidence is often relevant, but jurors give it too much weight and may convict a person for who they are.",
+    nodes: {
+      s: { c: 5, try: { name: 'Milk and eggs', q: "A man has four on-camera convictions for walking out of grocery stores with milk and eggs. Now he's tried for a fifth, with no footage. Is his record relevant?", a: "Very. That's the point: 404 doesn't exclude character evidence because it's irrelevant, but because jurors may overweight it and convict him for who he is." } },
+      q1: { c: [5, 6], say: "Class 5's diagram: Zackowitz's other guns → dangerous character → acted in character → premeditation runs **through** the box. Guns found at the scene → he was there → he was the shooter goes **around** it." },
+      box: { c: 5, say: "Zackowitz flips if he bought the extra guns after hearing of the insult. Then they show preparation, a route around the box." },
+      around: { c: [5, 6], say: "Cycling Brochures (Problem 3.9): a 'propensity' for something innocent, like bike racing, isn't what 404 worries about, even if its words reach it.",
+        try: { name: 'The war veteran', q: "In a murder trial, the prosecutor asks the defendant how many men he killed in the Korean War. What's the around-the-box theory, and does it work?", a: "Knowledge of firearms under 404(b)(2), and only if the killing was by gun. It likely still fails 403: there are far less prejudicial ways to show a veteran knows guns." } },
+      habit: { c: [8, 9], say: "Habit must be 'predictable and predictive,' close to automatic, like buckling a seatbelt. If it's hard to tell from propensity, the professor notes that some state supreme court justices agree." },
+      a: { c: 8, try: { name: 'The character witness', q: "Defending Delbert Ward on a murder charge, you call a townsman to vouch for him. What must you show, and what can he say?", a: "A foundation: he knows Ward or his reputation in the community. A pertinent trait: peacefulness. Only reputation or opinion, no specific acts (405(a)). Expect 'Have you heard...?' on cross." } },
+      na: { c: [7, 8], say: "Michelson: it's 'not the man he is, but the name that he has' that's put in issue. Character witnesses are rare at trial and far more common at sentencing." },
+      sx: { c: 7, say: "Congress passed 413–415 in 1994 so judges wouldn't have to stretch 'intent' and 'plan.' Only about 1,000 federal sex-offense cases are tried a year, and 21 states have similar rules. Carroll v. Trump admitted other accusers under 415." },
+      h1: { c: 8, say: "Why not specific acts? The Advisory Committee: they're the most convincing, but the most likely to prejudice, confuse, surprise, and waste time.",
+        try: { name: "I wouldn't shoot anybody", q: "Charged with a shooting, the defendant testifies, 'I wouldn't shoot anybody.' The prosecutor asks, 'You've shot at other people before, haven't you?' Objection?", a: "Likely overruled. She made herself a character witness, so 405(a) lets the prosecutor test her opinion with specific acts; it may also impeach by contradiction. The defense's best move is a limiting instruction." } },
+    },
+  },
+  '04b-other-acts-404b': {
+    c: [5, 6, 7],
+    say: "The 404(b)(2) list isn't a list of exceptions. Those purposes aren't character evidence at all, and the judge still weighs them under 403.",
+    nodes: {
+      q1: { c: 6, try: { name: 'The person in a rush', q: "A studio employee races down a hall and knocks over a child. The family offers witnesses who saw her racing recklessly moments later. Barred as character?", a: "Not if it's framed right. It isn't offered to show a careless character, but that she was in a rush at that moment to get a tape on air: motive." } },
+      ok: { c: 6, try: { name: 'The affair', q: "Murder trial: the prosecutor asks the victim's supervisor whether the defendant was having an affair with her. There was no forced entry. Around-the-box theories?", a: "Motive (jealousy, rejection) and opportunity (no forced entry, though as colleagues that's weak). Under 403, the judge would likely let it in." } },
+      nbar: { c: [7, 8], say: "Kirsch (N.H.) unmasked each theory: a motive to molest young girls 'is proof of propensity, not motive,' 'intent' was the same thing, and a pattern isn't a plan unless the acts are parts of one scheme." },
+      routes: { c: [6, 7], say: "Trenkler at bottom: not 'his type of crime' but 'this crime could not likely be anyone else's,' so it matters only when identity is disputed. The dissent: an artillery simulator and a dynamite bomb are a BB gun and a rifle." },
+      st1: { c: [7, 8], say: "Huddleston sold stolen videotapes; the question was whether he knew. His earlier TV sales showed knowledge only if the TVs were stolen, and a low price, a large quantity, and no bill of sale let a jury find that." },
+      st2: { c: 6, say: "Trenkler's 403 factors: the government's need, how strongly the acts match, how inflammatory the other act is, and how much it invites propensity. The Quincy bomb hurt no one, so a limiting instruction was enough." },
+    },
+  },
+  '05-impeachment-607-608': {
+    c: [8, 9],
+    say: "Impeachment says: here's a reason not to fully trust this witness. First ask whether you're claiming they're lying now, or that they're a liar.",
+    nodes: {
+      m2: { c: 8, say: "A Few Good Men: Tom Cruise attacks the doctor's bias, a reason to lie now, not a lying character. Bias and motive are close cousins, and motive is a 404(b) route." },
+      pis: { c: 8, say: "Brother's Keeper: Lyman Ward said different things at different times. Inconsistent statements usually go around the propensity box, unless contradictions on A through D become an argument that he lied about E and F too." },
+      a608: { c: 8, say: "Unlike 404(a)(2), 608 works in civil and criminal cases, and either side may start the attack.",
+        try: { name: 'Easerly v. Lettwin', q: "In a civil real-estate suit, a defense witness says the plaintiff's reputation is 'terrible.' Objection?", a: "Sustained. 608(a) allows only reputation for truthfulness, so ask about that instead. It works in civil and criminal cases, against any witness who has testified." } },
+      b608: { c: [8, 9], say: "Whitmore: the defense could ask the officer about a suspended license he hid from supervisors and unpaid child support. 608(b) needs only a good-faith basis, not admissible proof, and excluding it wasn't harmless." },
+      nb608: { c: 8, try: { name: 'The false kidnapping claim', q: "A prosecutor asks a defense witness about once falsely claiming she'd been kidnapped. Defense objects: 'no proof.' The prosecutor then offers her affidavit admitting the lie. Rulings?", a: "The question stands: only a good-faith basis is needed (test it at sidebar). The affidavit is out: 608(b) bars extrinsic evidence, so take the answer." } },
+      rehab: { c: 9, try: { name: 'The loan application', q: "On cross, Johnson admits he told a bank he had no debt while owing $82,000 in student loans. May the defense now call a witness to his good reputation for truthfulness?", a: "Yes. That's a direct attack on his character for truthfulness, so 608(a) opens the door to opinion or reputation in support." } },
+      r2: { c: 9, say: "Problem 4.6: 'Aren't you in business with the defendant's father?' is a bias attack, so no good-character witness in response. Exposing one contradiction (the deli was closed that day) isn't enough either." },
+    },
+  },
+  '06-prior-convictions-609': {
+    c: [8, 9, 10],
+    say: "609 began as the common-law rule that felons couldn't testify. Now they can, but the jury may hear about the record.",
+    nodes: {
+      s: { c: 9, say: "609 has its own balancing tests, and they can make a conviction easier to exclude than ordinary 403 would." },
+      d: { c: 9, try: { name: 'Reform school', q: "Cross-examining a jailhouse informant with plenty of adult convictions, defense counsel asks about his time 'in reform school as a kid.' Allowed?", a: "Almost certainly not. 609(d) requires that it be necessary to fairly determine guilt or innocence, and his adult convictions already do the impeaching." } },
+      q1: { c: 9, say: "When does the 10-year clock stop? The rule doesn't say. Courts suggest when the witness testifies (the jury judges credibility then) or when trial begins (Problem 4.5)." },
+      b: { c: 9, say: "The Advisory Committee expects convictions over ten years old to come in 'very rarely and only in exceptional circumstances.'" },
+      q2: { c: 9, try: { name: 'Meter fixing', q: "A witness pleaded guilty to a meter-tampering crime that has three alternative forms, only one involving deception. Can it come in under 609(a)(2)?", a: "Not from the elements alone. But the judge may look at the indictment, admitted facts, or jury instructions. His plea admitted tampering with electric meters, and meters record facts, so tampering is deceit." } },
+      a2: { c: 9, say: "Anatomy of a Murder: the informant's perjury conviction must come in, with no 403 at all, unless it's over ten years old. His petty larceny doesn't count as crimen falsi." },
+      q3: { c: 9, say: "The informant pleaded to arson and is awaiting sentence. That doesn't matter: 609(a)(1) asks what the crime was punishable by, not what he got." },
+      a1b: { c: 8, say: "Eisenberg & Hans: 45% of defendants with records testified, versus 62% without. When they did, juries learned of the record about half the time, and in weak cases that can more than double the chance of conviction." },
+      tips: { c: 9, say: "Drawing the sting: lawyers often raise their own witness's record on direct to blunt the cross. It forfeits any appeal (Ohler), so it's safer for prosecutors, who can't appeal acquittals anyway." },
+      gordon: { c: [9, 10], say: "Brewer applied the factors: the kidnapping conviction was excluded; rape, aggravated assault, and assault with a deadly weapon came in." },
+    },
+  },
+  '07-rape-shield-412': {
+    c: [9, 10],
+    say: "412 closes two old doors: 'she consented before' and 'unchaste means untruthful.' It also serves a public purpose: victims who aren't put on trial are more likely to report.",
+    nodes: {
+      s: { c: 10, say: "Before 412, Wigmore's treatise tied chastity to false accusations. The cost: victims were violated again by the system, fewer cases were prosecuted, and fewer guilty men were convicted." },
+      q0: { c: 10, say: "'Sexual behavior' is read broadly; the Advisory Committee's version reaches even fantasies and dreams. In Problem 5.2, sending images to other people almost certainly counted." },
+      bar: { c: 9, try: { name: 'Anatomy of a Murder', q: "Imagine there's no 412. Defense counsel cross-examines the victim about her nighttime outings with other men. What's the theory, and the objection?", a: "Theory: 404(a)(2)(B), she consented before so she consented now. Objection: 405(a) limits that proof to reputation or opinion, and the victim never made herself a witness to her own character." } },
+      A: { c: 10, say: "Problem 5.2: to show someone else had enticed the images, Walker wanted the minor's chats with other men. Excluded as a general fact, not 'specific instances.' A 412(c) hearing could have sorted out which chats mattered." },
+      civ: { c: 10, say: "Jones v. Clinton: Clinton's lawyer could use Paula Jones's reputation only if she put it in issue (her suit claimed reputational harm) and it passed a balance tilted heavily against him." },
+      cy: { c: 10, say: "Olden: the complainant testified she lived with her mother, not Russell, and Olden couldn't show otherwise. Acquitted of rape but convicted of sodomy, he won reversal under the Confrontation Clause." },
+    },
+  },
+};
+const classFor = (n) => CLASS[current?.id]?.nodes?.[n.key];
+const classList = (c) => [].concat(c || []);
+function classLabel(c) {
+  const l = classList(c);
+  return l.length === 1 ? `Class ${l[0]}` : l.length === 2 ? `Classes ${l[0]} & ${l[1]}` : `Classes ${l[0]}–${l[l.length - 1]}`;
+}
+function classDates(c) {
+  const l = classList(c), a = CLASS_DATES[l[0]], b = CLASS_DATES[l[l.length - 1]];
+  if (l.length === 1) return a;
+  const [am, ad] = a.split(' '), [bm, bd] = b.split(' ');
+  return am === bm ? `${am} ${ad}–${bd}` : `${a} – ${b}`;
+}
+const fmt = (s) => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+function classHtml(cn) {
+  return `<h3 class="cls-h" id="clsSec"><span>From class</span><span class="when">${classLabel(cn.c)} · ${classDates(cn.c)}</span></h3>
+    <div class="cls">
+      ${cn.say ? `<p class="cls-say">${fmt(cn.say)}</p>` : ''}
+      ${cn.try ? `<details class="try"><summary>${ico('bulb')}<span><small>Try it</small>${esc(cn.try.name)}</span>${ico('chev', 'ico chev')}</summary>
+        <div class="try-body"><p class="try-q">${fmt(cn.try.q)}</p><button class="btn btn-sm" data-act="answer">Show answer</button><p class="try-a" hidden>${fmt(cn.try.a)}</p></div>
+      </details>` : ''}
+    </div>`;
+}
+
 /* ---------- Panel rendering ---------- */
 function short(s, n = 120) { return s.length > n ? s.slice(0, n - 1).replace(/\s+\S*$/, '') + '…' : s; }
 
@@ -3893,6 +4085,8 @@ function renderIntro() {
   const counts = {};
   b.nodes.forEach((n) => { counts[n.kind] = (counts[n.kind] || 0) + 1; });
   const prev = charts[c.i - 1], next = charts[c.i + 1];
+  const cc = CLASS[c.id];
+  const noted = cc ? [...b.nodes.values()].filter(classFor).length : 0;
   panelBody.innerHTML = `<div class="pn">
     <p class="eyebrow">Chart ${c.i + 1} of ${charts.length}</p>
     <h2>${esc(c.title)}</h2>
@@ -3901,6 +4095,11 @@ function renderIntro() {
       ${b.roots.length ? `<button class="btn btn-primary btn-block" data-walk="0">${ico('play')} Walk through it</button>` : ''}
       ${b.roots.length > 1 ? `<h3>Or start from</h3>${b.roots.slice(1, 8).map((r, i) => `<button class="choice" data-walk="${i + 1}" style="--c:${kindColor(r.kind)}"><span class="txt">${esc(short(r.title || r.body, 90))}</span></button>`).join('')}` : ''}
     </div>
+    ${cc ? `<div class="cls cls-intro">
+      <div class="cls-top">${ico('cap')}<span>From class</span><span class="when">${classLabel(cc.c)} · ${classDates(cc.c)}</span></div>
+      <p class="cls-say">${fmt(cc.say)}</p>
+      ${noted ? `<button class="cls-find" data-filter="class" aria-pressed="${state.filter === 'class'}"><span class="dot"></span><span>Class notes on ${noted} boxes</span><span class="n">${state.filter === 'class' ? 'Showing' : 'Highlight'}</span></button>` : ''}
+    </div>` : ''}
     <h3>Key · tap to highlight</h3>
     <div class="legend">${Object.entries(KINDS).filter(([k]) => counts[k]).map(([k, v]) => `<button data-filter="${k}" aria-pressed="${state.filter === k}" style="--c:${kindColor(k)}"><span class="sw"></span>${esc(v.label)}<span class="n">${counts[k]}</span></button>`).join('')}</div>
     <div class="tips"><span><b>Move:</b> drag, or use the arrow keys</span><span><b>Zoom:</b> scroll, pinch, or double-tap</span><span><b>Dive in:</b> tap any box to see where it leads</span></div>
@@ -3920,13 +4119,14 @@ function renderNode(n) {
   const steps = state.trail.length;
   const next = charts[current.i + 1];
   const outcome = terminal ? `<div class="outcome" style="--c:${kindColor(n.kind)}">${ico(n.kind === 'allowed' ? 'check' : 'ban')}<div><strong>${n.kind === 'allowed' ? 'Comes in' : 'Kept out'}</strong><small>End of this path${steps > 1 ? ` · ${steps} steps` : ''}.</small></div></div>` : '';
+  const cn = classFor(n);
   panelBody.innerHTML = `<div class="pn">
     <div class="walk-bar">
       <div class="crumbs"><span>${steps > 1 ? `Step ${steps}` : 'Exploring'}</span>${state.trail.slice(-12).map(() => '<i class="on"></i>').join('')}</div>
       ${steps > 1 ? `<button class="btn btn-sm" data-act="back">${ico('back')} Back</button>` : ''}
       <button class="btn btn-sm" data-act="overview">${ico('fit')} Overview</button>
     </div>
-    <span class="kind" style="--c:${kindColor(n.kind)}">${esc(k?.label || 'Box')}</span>
+    <div class="tags"><span class="kind" style="--c:${kindColor(n.kind)}">${esc(k?.label || 'Box')}</span>${cn ? `<button class="cls-tag" data-act="class" title="Jump to the note from class">${ico('cap')}${classLabel(cn.c)}</button>` : ''}</div>
     <h2 class="node-title">${esc(n.title || n.body)}</h2>
     ${n.title && n.body ? `<p class="node-body">${esc(n.body)}</p>` : ''}
     ${outcome}
@@ -3940,6 +4140,7 @@ function renderNode(n) {
       <button class="btn" data-act="restart"><small>Again</small><span>${ico('redo')} Start over</span></button>
       ${next ? `<button class="btn next" data-go="${next.i}"><small>Next chart →</small><span>${esc(next.title)}</span></button>` : '<span></span>'}
     </div>` : ''}
+    ${cn ? classHtml(cn) : ''}
     ${n.notes.length ? `<h3>Cases, cautions &amp; notes</h3><div class="notes">${n.notes.map((x) => `<button class="note" data-to="${esc(x.node.key)}"><b>${esc(x.node.title)}</b>${esc(x.node.body)}</button>`).join('')}</div>` : ''}
     ${n.inn.length ? `<h3>Comes from</h3><div class="from">${n.inn.map((x) => `<button data-to="${esc(x.node.key)}" title="${esc(x.node.title)}">← ${esc(short(x.node.title || x.node.body, 48))}</button>`).join('')}</div>` : ''}
   </div>`;
@@ -3957,6 +4158,11 @@ panelBody.addEventListener('click', (e) => {
   else if (t.dataset.dl) download(t.dataset.dl);
   else if (t.dataset.act === 'back') back();
   else if (t.dataset.act === 'restart') startWalk(state.trail[0]);
+  else if (t.dataset.act === 'answer') { t.hidden = true; t.nextElementSibling.hidden = false; }
+  else if (t.dataset.act === 'class') {
+    const sec = $('#clsSec', panelBody);
+    if (sec) panelBody.scrollTo({ top: panelBody.scrollTop + sec.getBoundingClientRect().top - panelBody.getBoundingClientRect().top - (isDrawer() ? 36 : 6), behavior: reduce ? 'auto' : 'smooth' });
+  }
   else if (t.dataset.act === 'overview') { state.node = null; state.trail = []; marks(); renderIntro(); fit(); setHash(); if (isPhone()) closePanel(); }
 });
 
