@@ -2,7 +2,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
 <style>
-/* Layout: one reading column of question cards grouped by area; sticky control bar; per-option rationales after answering; coverage map at the foot. */
+/* Layout: one reading column of question cards grouped by area; control bar; per-option rationales after answering; coverage map at the foot. */
 :root{
   --bg:#f3f5f7; --surface:#ffffff; --sunk:#e9edf1; --ink:#18212b; --muted:#5a6673; --line:#d6dce3;
   --accent:#2c5a4f; --accent-soft:#e3eeea; --var:#7a4b12; --var-soft:#f6ecdc;
@@ -24,7 +24,7 @@ body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16p
 .wrap{max-width:800px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
 header h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,42px);line-height:1.1;margin:0;text-wrap:balance}
 header p{color:var(--muted);margin:8px 0 0;max-width:66ch}
-.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-top:20px;padding-block:12px;display:flex;flex-direction:column;gap:10px}
+.bar{position:relative;background:var(--bg);border-bottom:1px solid var(--line);margin-top:20px;padding-block:12px;display:flex;flex-direction:column;gap:10px}
 .row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
 .score{font-variant-numeric:tabular-nums;font-weight:600;margin-right:auto}
 .score span{color:var(--muted);font-weight:400}

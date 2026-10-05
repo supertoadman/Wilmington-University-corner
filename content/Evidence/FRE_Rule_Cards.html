@@ -166,7 +166,8 @@ h1{margin:0;font:600 clamp(32px,5vw,48px)/1.05 var(--serif);letter-spacing:-.025
 /* Only one face is ever rendered; the flip swings the card edge-on, swaps faces, and swings back.
    At rest the card has no 3D transform, so text stays crisp. */
 .card{position:absolute;inset:0;transform-origin:50% 50%;cursor:pointer}
-.card.flipped{cursor:default}
+.card.flipped{cursor:pointer}
+.backnote{margin:18px 0 0;text-align:center;font-size:12px;color:var(--muted)}
 .card:not(.flipped) .back,.card.flipped .front{display:none}
 .card:focus{outline:none}
 .card:focus-visible .face{box-shadow:var(--card-shadow),0 0 0 3px color-mix(in srgb,var(--focus) 45%,transparent)}
@@ -208,9 +209,9 @@ h1{margin:0;font:600 clamp(32px,5vw,48px)/1.05 var(--serif);letter-spacing:-.025
 .stamp.shaky{left:50%;margin-left:-70px;color:var(--exc);transform:rotate(-4deg)}
 
 .s-actions{display:flex;justify-content:center;align-items:center;gap:10px;padding:16px 18px 10px;flex-wrap:wrap}
-.flipback{min-height:56px;border-radius:16px;padding:0 16px}
-.flipback span{font-size:14px}
-.rate{min-width:140px;min-height:56px;border-radius:16px;font-size:15.5px;flex-direction:column;gap:0;line-height:1.2}
+.flipback,.nextcard{min-height:56px;border-radius:16px;padding:0 16px}
+.flipback span,.nextcard span{font-size:14px}
+.rate{min-width:128px;min-height:56px;border-radius:16px;font-size:15.5px;flex-direction:column;gap:0;line-height:1.2}
 .rate small{font-size:11px;font-weight:600;opacity:.65}
 .rate.miss{--c:var(--bar)} .rate.shaky{--c:var(--exc)} .rate.knew{--c:var(--ok)}
 .rate{border-color:color-mix(in srgb,var(--c) 35%,var(--border));color:color-mix(in srgb,var(--c) 85%,var(--text));background:color-mix(in srgb,var(--c) 7%,var(--surface))}
@@ -232,10 +233,11 @@ h1{margin:0;font:600 clamp(32px,5vw,48px)/1.05 var(--serif);letter-spacing:-.025
   .bhead{padding:16px 92px 10px 16px}
   .bscroll{padding:14px 16px 22px}
   .s-actions{padding:12px 12px 8px;gap:8px;flex-wrap:nowrap}
-  .rate{flex:1;min-width:0;min-height:58px;font-size:14.5px;padding:0 6px}
+  .rate{flex:1;min-width:0;min-height:58px;font-size:14.5px;padding:0 4px;white-space:nowrap}
+  .rate small,.rate .xl{display:none}
   .reveal{flex:1}
-  .flipback{min-height:58px;width:48px;padding:0;flex:none}
-  .flipback span{display:none}
+  .flipback,.nextcard{min-height:58px;width:46px;padding:0;flex:none}
+  .flipback span,.nextcard span{display:none}
   .s-actions .skip,.s-actions .undo-desk{display:none}
   .s-hint{font-size:11.5px}
   .s-hint .desk{display:none}
@@ -1103,7 +1105,7 @@ function renderLobby() {
       <button class="btn" data-act="browse">${ico("list")} Browse all cards</button>
     </div>
     <footer class="lobby-foot">
-      <span>Progress is saved in this browser. Keys in a session: <kbd>Space</kbd> flip · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> rate · <kbd>←</kbd> undo · <kbd>→</kbd> skip</span>
+      <span>Progress is saved in this browser. Keys in a session: <kbd>Space</kbd> flip · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> rate · <kbd>→</kbd> next · <kbd>←</kbd> undo</span>
       <span class="confirm" id="resetArea"><button class="link" data-act="reset">Reset my progress</button></span>
     </footer>
   </section>`;
@@ -1170,7 +1172,7 @@ function backHtml(c) {
   const t = TOPICS[c.t];
   return `<div class="bhead"><span class="tpill">${esc(t.name)}</span><span class="bcite">${esc(c.f)}${c.s ? ` <span>· ${esc(c.s)}</span>` : ""}</span></div>
     <div class="sticker">EXHIBIT<b>${String(c.no).padStart(3, "0")}</b></div>
-    <div class="bscroll"><div class="answer">${esc(c.a)}</div><div class="rows">${rowsHtml(c)}</div></div>`;
+    <div class="bscroll"><div class="answer">${esc(c.a)}</div><div class="rows">${rowsHtml(c)}</div><p class="backnote">${canHover ? "Click the card or press Space to flip it back" : "Tap the card to flip it back"}</p></div>`;
 }
 
 function renderSession(fresh = false, enter = "rise") {
@@ -1196,7 +1198,7 @@ function renderSession(fresh = false, enter = "rise") {
           <div class="stamp knew">KNEW IT</div><div class="stamp miss">MISSED</div><div class="stamp shaky">SHAKY</div></div>
       </div></div>
       <div class="s-actions" id="actions"></div>
-      <p class="s-hint"><span class="desk">Space flip · 1 missed · 2 shaky · 3 knew it · ← undo · → skip · or drag the answer card left or right</span><span class="mob">Tap the card for the answer · then swipe right if you knew it, left if you missed it</span></p>
+      <p class="s-hint"><span class="desk">Space or click to flip · 1 missed · 2 shaky · 3 knew it · → next card · ← undo · or drag the answer left/right</span><span class="mob">Tap the card to flip it · swipe the answer right if you knew it, left if you missed it</span></p>
     </section>`;
     bindCard();
   }
@@ -1239,10 +1241,11 @@ function renderActions() {
     ? `<button class="btn undo-desk" data-k="undo" ${s.history.length ? "" : "disabled"}>${ico("undo")} Undo</button>
        <button class="btn btn-primary reveal" data-k="flip">Show answer <kbd>Space</kbd></button>
        <button class="btn skip" data-k="skip">Skip ${ico("skip")}</button>`
-    : `<button class="btn flipback" data-k="flip" title="Show the question again (Space)" aria-label="Show the question again">${ico("undo")}<span>Question</span></button>
-       <button class="btn rate miss" data-k="1">Missed it<small>1 · back soon</small></button>
+    : `<button class="btn flipback" data-k="flip" title="Flip back (Space)" aria-label="Flip the card back">${ico("undo")}<span>Flip</span></button>
+       <button class="btn rate miss" data-k="1">Missed<span class="xl"> it</span><small>1 · back soon</small></button>
        <button class="btn rate shaky" data-k="2">Shaky<small>2 · see again</small></button>
-       <button class="btn rate knew" data-k="3">Knew it<small>3 · move on</small></button>`;
+       <button class="btn rate knew" data-k="3">Knew it<small>3 · move on</small></button>
+       <button class="btn nextcard" data-k="skip" title="Next card without rating (→)" aria-label="Next card without rating"><span>Next</span>${ico("skip")}</button>`;
 }
 
 let turning = false;
@@ -1332,7 +1335,9 @@ function bindCard() {
   const stampK = $(".stamp.knew"), stampM = $(".stamp.miss");
   drag.addEventListener("pointerdown", (e) => {
     if (busy || (e.pointerType === "mouse" && e.button !== 0)) return;
-    p = { x: e.clientX, y: e.clientY, dx: 0, dy: 0, moved: false, id: e.pointerId };
+    const sc = e.target.closest?.(".bscroll");
+    p = { x: e.clientX, y: e.clientY, dx: 0, dy: 0, moved: false, id: e.pointerId, t: Date.now(),
+          scrollbar: !!sc && e.target === sc && e.offsetX > sc.clientWidth };
     drag.classList.remove("settle", "rise", "from-left");
   });
   drag.addEventListener("pointermove", (e) => {
@@ -1355,9 +1360,10 @@ function bindCard() {
       if (q.dx > 110) rate(3);
       else if (q.dx < -110) rate(1);
       else { drag.classList.add("settle"); drag.style.transform = ""; stampK.style.opacity = 0; stampM.style.opacity = 0; }
-    } else if (e.type === "pointerup" && Math.hypot(q.dx, q.dy) < 8 && !session.flipped) {
-      // Tapping the front shows the answer. The back doesn't flip on tap, so it can be scrolled and read.
-      flip();
+    } else if (e.type === "pointerup" && Math.hypot(q.dx, q.dy) < 8) {
+      // A tap flips either way. Scrolling, long-press text selection, and scrollbar clicks don't.
+      const selecting = String(window.getSelection?.() || "").trim().length > 0;
+      if (!session.flipped || (!q.scrollbar && !selecting && Date.now() - q.t < 600)) flip();
     }
   };
   drag.addEventListener("pointerup", end);
