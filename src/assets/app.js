@@ -43,6 +43,90 @@ if (hero && 'IntersectionObserver' in window) {
   new IntersectionObserver(([en]) => body.classList.toggle('past-hero', !en.isIntersecting), { rootMargin: '-70px 0px 0px 0px' }).observe(hero);
 }
 
+// ---------- Home: dust motes drifting through the hero's beam of light ----------
+// Motes glow brighter inside the beam. Paused while the hero is off screen or the tab is hidden.
+const dust = $('.hero-dust');
+const beam = $('.hero-beam');
+if (dust && beam && 'ResizeObserver' in window && !matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  const ctx = dust.getContext('2d');
+  const tilt = 28 * Math.PI / 180; // matches .hero-beam's rotate(28deg)
+  const dx = -Math.sin(tilt), dy = Math.cos(tilt); // unit vector down the beam
+  // One soft speck of light, drawn once and stamped for every mote.
+  const sprite = document.createElement('canvas');
+  sprite.width = sprite.height = 32;
+  const sctx = sprite.getContext('2d');
+  const glow = sctx.createRadialGradient(16, 16, 0, 16, 16, 16);
+  glow.addColorStop(0, 'rgba(255, 247, 226, 1)');
+  glow.addColorStop(.25, 'rgba(244, 214, 150, .55)');
+  glow.addColorStop(1, 'rgba(236, 202, 134, 0)');
+  sctx.fillStyle = glow;
+  sctx.fillRect(0, 0, 32, 32);
+
+  let w = 0, h = 0, ox = 0, oy = 0, half = 1, len = 1, raf = 0, last = 0, onScreen = true;
+  const motes = [];
+  const spawn = (anywhere) => ({
+    x: Math.random() * w, y: anywhere ? Math.random() * h : h + 12,
+    r: 1.4 + Math.random() ** 2.2 * 4, // glow radius, px
+    vx: (Math.random() - .5) * 8, vy: -(5 + Math.random() * 12), // px per second: a slow rise
+    a: .25 + Math.random() * .6, ph: Math.random() * 6.28, sp: .5 + Math.random() * 1.4,
+  });
+  const resize = () => {
+    const dpr = Math.min(window.devicePixelRatio || 1, 2);
+    w = dust.clientWidth; h = dust.clientHeight;
+    dust.width = Math.round(w * dpr); dust.height = Math.round(h * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ox = beam.offsetLeft + beam.offsetWidth / 2; oy = beam.offsetTop;
+    half = beam.offsetWidth / 2; len = beam.offsetHeight * .8;
+    const n = Math.round(Math.min(80, w * h / 12000));
+    while (motes.length < n) motes.push(spawn(true));
+    motes.length = n;
+  };
+  const frame = (now) => {
+    const dt = Math.min((now - last) / 1000, .05);
+    last = now;
+    ctx.clearRect(0, 0, w, h);
+    for (const m of motes) {
+      m.ph += m.sp * dt;
+      m.x += (m.vx + Math.sin(m.ph * .7) * 6) * dt;
+      m.y += m.vy * dt;
+      if (m.y < -12 || m.x < -12 || m.x > w + 12) Object.assign(m, spawn(false));
+      const px = m.x - ox, py = m.y - oy;
+      const across = (px * dy - py * dx) / half;
+      const down = (px * dx + py * dy) / len;
+      const lit = Math.exp(-across * across * 1.6) * Math.min(1, Math.max(0, 1 - down));
+      const s = m.r * (1 + lit * .6);
+      ctx.globalAlpha = Math.min(1, m.a * (.3 + 1.1 * lit) * (.6 + .4 * Math.sin(m.ph * 2)));
+      ctx.drawImage(sprite, m.x - s, m.y - s, s * 2, s * 2);
+    }
+    raf = requestAnimationFrame(frame);
+  };
+  const run = () => {
+    const go = onScreen && !document.hidden;
+    if (go && !raf) { last = performance.now(); raf = requestAnimationFrame(frame); }
+    else if (!go && raf) { cancelAnimationFrame(raf); raf = 0; }
+  };
+  new ResizeObserver(resize).observe(dust);
+  new IntersectionObserver(([en]) => { onScreen = en.isIntersecting; run(); }).observe(hero);
+  document.addEventListener('visibilitychange', run);
+}
+
+// ---------- Home: the hero grid warms to gold around the pointer ----------
+const lamp = $('.hero-lamp');
+if (lamp && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+  let pt = null;
+  hero.addEventListener('pointermove', (e) => {
+    if (!pt) requestAnimationFrame(() => {
+      const r = hero.getBoundingClientRect();
+      lamp.style.setProperty('--mx', `${pt[0] - r.left}px`);
+      lamp.style.setProperty('--my', `${pt[1] - r.top}px`);
+      pt = null;
+    });
+    pt = [e.clientX, e.clientY];
+    hero.classList.add('is-lit');
+  });
+  hero.addEventListener('pointerleave', () => hero.classList.remove('is-lit'));
+}
+
 // ---------- Toast ----------
 const toastEl = $('.toast');
 let toastTimer;

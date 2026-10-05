@@ -40,6 +40,8 @@ const fmtSize = (b) => (b < 1024 ? `${b} B` : b < 1048576 ? `${Math.round(b / 10
 const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 const fmtShortDate = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 const plural = (n, one, many = one + 's') => `${n} ${n === 1 ? one : many}`;
+// Wrap each word so the home headline can rise in one word at a time (see .hero-title .w).
+const riseWords = (html) => html.split(' ').map((w, i) => `<span class="w" style="--i:${i}">${w}</span>`).join(' ');
 
 const FONTS = 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap';
 
@@ -304,10 +306,17 @@ export function home(ctx) {
   const body = `
 <section class="hero">
   <div class="hero-glow" aria-hidden="true"></div>
+  <div class="hero-beam" aria-hidden="true"></div>
+  <div class="hero-lamp" aria-hidden="true"></div>
+  <canvas class="hero-dust" aria-hidden="true"></canvas>
   <span class="hero-mark" aria-hidden="true">§</span>
   <div class="container hero-inner">
     <p class="hero-eyebrow">${icon('graduation-cap')} Law school study library</p>
-    <h1 class="hero-title">Outlines, rule charts &amp; practice banks, <em>in one place.</em></h1>
+    <h1 class="hero-title">${riseWords('Outlines, rule charts &amp; practice banks,')} <span class="hero-accent"><em>in one place.</em><svg class="hero-swash" viewBox="0 0 300 26" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+      <defs><linearGradient id="swash-gold" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#b8873a" stop-opacity=".35"/><stop offset=".35" stop-color="#f3d99c"/><stop offset=".8" stop-color="#e2b462"/><stop offset="1" stop-color="#b8873a" stop-opacity=".5"/></linearGradient></defs>
+      <path pathLength="1" d="M4 15 C 64 6, 148 4, 222 8 C 256 10, 282 13, 296 5"/>
+      <path pathLength="1" d="M58 22 C 118 16, 190 15, 252 18"/>
+    </svg></span></h1>
     <p class="hero-lede">${esc(config.tagline)}</p>
     <button class="hero-search" type="button" data-open-search>
       ${icon('search')}<span>Search: try “404(b)” or “conflicts”</span><kbd>Ctrl K</kbd>

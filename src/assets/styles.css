@@ -397,20 +397,95 @@ kbd {
   position: absolute; z-index: -1; right: -2%; bottom: -26%; pointer-events: none;
   font: 400 clamp(280px, 40vw, 560px)/1 var(--font-serif); color: rgba(241, 217, 160, .05);
 }
+/* A shaft of warm light falling from the top-right glow, with dust motes drifting
+   through it (canvas, drawn by app.js, which mirrors the beam's 28deg tilt). */
+.hero-beam {
+  position: absolute; z-index: -1; pointer-events: none;
+  top: -12%; left: 78%; width: clamp(180px, 26vw, 380px); height: 150%; margin-left: calc(clamp(180px, 26vw, 380px) / -2);
+  transform-origin: 50% 0; transform: rotate(28deg);
+  background:
+    linear-gradient(90deg, transparent 38%, rgba(255, 238, 200, .22) 50%, transparent 62%),
+    linear-gradient(90deg, transparent, rgba(244, 216, 156, .15) 28%, rgba(250, 230, 182, .24) 50%, rgba(244, 216, 156, .15) 72%, transparent);
+  mask-image: linear-gradient(180deg, #000 8%, rgba(0,0,0,.55) 42%, transparent 84%);
+  -webkit-mask-image: linear-gradient(180deg, #000 8%, rgba(0,0,0,.55) 42%, transparent 84%);
+  filter: blur(16px); mix-blend-mode: screen;
+  animation: hero-fade 2.4s .2s ease-out both, beam-breathe 9s 2.6s ease-in-out infinite alternate;
+}
+.hero-dust {
+  position: absolute; inset: 0; z-index: -1; width: 100%; height: 100%; pointer-events: none;
+  mask-image: linear-gradient(180deg, #000 55%, transparent 96%);
+  -webkit-mask-image: linear-gradient(180deg, #000 55%, transparent 96%);
+  animation: hero-fade 2s .5s ease-out both;
+}
+/* Desk-lamp spotlight: the grid warms to gold around the pointer (desktop only, set by app.js). */
+.hero-lamp {
+  position: absolute; inset: 0; z-index: -1; pointer-events: none; opacity: 0; transition: opacity .5s ease;
+  background:
+    radial-gradient(320px circle at var(--mx, 50%) var(--my, 50%), rgba(236, 202, 134, .10), transparent 70%),
+    linear-gradient(rgba(236, 202, 134, .32) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(236, 202, 134, .32) 1px, transparent 1px);
+  background-size: auto, 48px 48px, 48px 48px;
+  mask-image: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), #000, transparent 72%);
+  -webkit-mask-image: radial-gradient(260px circle at var(--mx, 50%) var(--my, 50%), #000, transparent 72%);
+}
+.hero.is-lit .hero-lamp { opacity: 1; }
 .hero-inner { padding: 84px 28px 88px; text-align: center; }
+@property --glint { syntax: '<angle>'; inherits: false; initial-value: 0deg; }
 .hero-eyebrow {
+  position: relative;
   display: inline-flex; align-items: center; gap: 8px; margin: 0 0 22px; padding: 7px 14px 7px 12px; border-radius: 999px;
   font-size: 12.5px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: #ecca86;
   background: rgba(214, 171, 85, .12); border: 1px solid rgba(214, 171, 85, .25);
+  box-shadow: 0 0 24px -6px rgba(214, 171, 85, .35);
+  animation: hero-drop .8s .05s cubic-bezier(.2, .7, .2, 1) both;
+}
+/* A glint of light that travels around the pill's border. */
+.hero-eyebrow::before {
+  content: ""; position: absolute; inset: -1px; padding: 1px; border-radius: inherit; pointer-events: none;
+  background: conic-gradient(from var(--glint), transparent 0deg 250deg, rgba(255, 238, 200, .95) 320deg, transparent 360deg);
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0); -webkit-mask-composite: xor;
+  mask: linear-gradient(#000 0 0) content-box exclude, linear-gradient(#000 0 0);
+  animation: glint 6s 1s linear infinite;
 }
 .hero-eyebrow .icon { width: 16px; height: 16px; }
 .hero-title {
   font: 500 clamp(38px, 6.4vw, 72px)/1.03 var(--font-serif); letter-spacing: -.03em;
   margin: 0 auto; max-width: 15ch; text-wrap: balance; color: #f7f3ea;
   font-variation-settings: 'opsz' 144, 'SOFT' 50;
+  text-shadow: 0 2px 30px rgba(8, 14, 26, .5);
 }
-.hero-title em { font-style: italic; font-weight: 400; color: #ecca86; }
-.hero-lede { margin: 22px auto 0; max-width: 58ch; color: rgba(241, 237, 228, .74); font-size: clamp(16px, 2vw, 18.5px); text-wrap: pretty; }
+/* Words rise into focus one after another. */
+.hero-title .w { display: inline-block; animation: hero-rise .95s calc(.15s + var(--i) * 80ms) cubic-bezier(.2, .7, .2, 1) both; }
+/* "in one place.": gilt lettering with a light sweep, a soft halo, and a pen-drawn swash beneath. */
+.hero-accent { position: relative; display: inline-block; white-space: nowrap; filter: drop-shadow(0 0 26px rgba(236, 202, 134, .28)); }
+.hero-title em {
+  display: inline-block; padding: .06em .1em .14em; margin: -.06em -.1em -.14em;
+  font-style: italic; font-weight: 400; color: #ecca86; text-shadow: none;
+  background-image:
+    linear-gradient(105deg, transparent 42%, rgba(255, 250, 232, .95) 50%, transparent 58%),
+    linear-gradient(180deg, #f8e3ae 15%, #e9c072 55%, #c8954a 95%);
+  background-size: 300% 100%, 100% 100%; background-repeat: no-repeat; background-position: 100% 0, 0 0;
+  -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: hero-rise 1.15s .7s cubic-bezier(.2, .7, .2, 1) both, sheen 8s 2.2s ease-in-out infinite;
+}
+.hero-swash {
+  position: absolute; left: 4%; bottom: -.24em; width: 98%; height: .36em; overflow: visible;
+  fill: none; stroke: url(#swash-gold); stroke-linecap: round;
+}
+.hero-swash path { stroke-width: 2.4; stroke-dasharray: 1; stroke-dashoffset: 0; animation: swash-draw 1s 1.35s cubic-bezier(.55, .1, .25, 1) both; }
+.hero-swash path + path { stroke-width: 1.3; opacity: .7; animation-delay: 1.75s; animation-duration: .8s; }
+.hero-lede {
+  margin: 22px auto 0; max-width: 58ch; color: rgba(241, 237, 228, .74); font-size: clamp(16px, 2vw, 18.5px); text-wrap: pretty;
+  animation: hero-fade-up 1s 1.05s cubic-bezier(.2, .7, .2, 1) both;
+}
+@keyframes hero-rise { from { opacity: 0; transform: translateY(.38em); filter: blur(10px); } }
+@keyframes hero-drop { from { opacity: 0; transform: translateY(-10px); } }
+@keyframes hero-fade-up { from { opacity: 0; transform: translateY(12px); } }
+@keyframes hero-fade { from { opacity: 0; } }
+@keyframes beam-breathe { to { opacity: .6; } }
+@keyframes glint { to { --glint: 360deg; } }
+@keyframes sheen { 0%, 72% { background-position: 100% 0, 0 0; } 100% { background-position: 0% 0, 0 0; } }
+@keyframes swash-draw { from { stroke-dashoffset: 1; opacity: 0; } 4% { opacity: 1; } }
 .hero-search {
   margin: 36px auto 0; display: flex; align-items: center; gap: 12px; width: 100%; max-width: 560px;
   height: 60px; padding: 0 14px 0 20px; border-radius: 18px; cursor: pointer; text-align: left;
