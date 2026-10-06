@@ -30,6 +30,15 @@
       "tags": ["MPRE", "MCQ", "exam mode", "book questions"],
       "questions": 298,
       "order": 3
+    },
+    "Professional-Responsibility-Quiz.html": {
+      "slug": "pr-course-quiz",
+      "title": "Course Quiz",
+      "type": "practice",
+      "description": "The 54 multiple-choice questions from the class quizzes on Chs. 5, 6, 8, 20, and 21, checked against the course answer keys. Take the quiz for a score or open the answer view, with explanations drawn from Ethical Lawyering, the class slides, and the Model Rules.",
+      "tags": ["MCQ", "class quizzes", "explanations"],
+      "questions": 54,
+      "order": 4
     }
   }
 }
