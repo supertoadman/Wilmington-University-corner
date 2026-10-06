@@ -268,6 +268,59 @@ export const GLYPHS = {
     const star = path('M19.2 1.6 Q19.5 4.2 22 4.5 Q19.5 4.8 19.2 7.4 Q18.9 4.8 16.4 4.5 Q18.9 4.2 19.2 1.6 Z');
     return unite(crescent, star);
   },
+
+  // Ambience scenes ---------------------------------------------------------------
+  snowflake() {
+    const arms = [];
+    for (let k = 0; k < 6; k++) {
+      arms.push(rot(unite(seg([12, 12], [12, 1.6], 2), seg([12, 5.9], [9.2, 3.6], 1.6), seg([12, 5.9], [14.8, 3.6], 1.6)), k * 60));
+    }
+    const hub = poly([0, 1, 2, 3, 4, 5].map((k) => [12 + 3.6 * Math.sin(k * Math.PI / 3), 12 - 3.6 * Math.cos(k * Math.PI / 3)]), 0.6);
+    return sub(unite(...arms, hub), circ(12, 12, 1.25));
+  },
+  blossom() {
+    // Cherry blossom: five notched petals around a knocked-out heart.
+    const petal = path('M12 11.4 C 9.2 10, 7.8 7.2, 8.5 4.4 C 9 2.5, 10.5 1.6, 11.2 2.5 L 12 3.8 L 12.8 2.5 C 13.5 1.6, 15 2.5, 15.5 4.4 C 16.2 7.2, 14.8 10, 12 11.4 Z');
+    const petals = [0, 1, 2, 3, 4].map((k) => rot(petal.clone(), k * 72, [12, 12.4]));
+    const seams = [0, 1, 2, 3, 4].map((k) => rot(seg([12, 12.4], [12, 3.2], 0.8), 36 + k * 72, [12, 12.4]));
+    petal.remove();
+    return inlay(sub(unite(...petals), ...seams), circ(12, 12.4, 1.6), 1.1);
+  },
+  koi() {
+    // A koi seen from above, as in a pond: fins spread, tail fanned, a patch on its back.
+    const body = unite(
+      path('M12 1.6 C 14.6 1.6, 15.7 4.8, 15.5 8 C 15.3 11.6, 13.6 14.6, 12.9 17.6 L 11.1 17.6 C 10.4 14.6, 8.7 11.6, 8.5 8 C 8.3 4.8, 9.4 1.6, 12 1.6 Z'),
+      path('M12 16.2 C 13.3 18.2, 15.5 19.6, 16.8 22.6 C 14.9 21.7, 13.3 21.6, 12 22.4 C 10.7 21.6, 9.1 21.7, 7.2 22.6 C 8.5 19.6, 10.7 18.2, 12 16.2 Z'),
+    );
+    const finL = unite(path('M9 7.2 C 6.4 7, 4 8.3, 2.8 10.8 C 5.2 10.7, 7.3 10.4, 9.3 9.9 Z'), path('M9.8 12.4 C 8.1 12.6, 6.9 13.6, 6.4 15 C 7.9 14.7, 9.2 14.4, 10.2 14 Z'));
+    const fins = unite(finL, mirrorX(finL.clone()));
+    const patch = ell(12, 10.4, 1.6, 2.7);
+    return sub(unite(inlay(body, patch, 0.8), sub(fins, grow(body, 0.9))), circ(10.3, 4.1, 0.75), circ(13.7, 4.1, 0.75));
+  },
+  firefly() {
+    // A firefly: wings spread above a lantern that throws off light.
+    const lantern = ell(12, 15.6, 3.4, 4.3);
+    const thorax = circ(12, 8.2, 2.3);
+    const head = circ(12, 4.6, 1.6);
+    const wingL = rot(ell(7.6, 9.4, 2.3, 5.2), 52, [7.6, 9.4]);
+    const wings = sub(unite(wingL, mirrorX(wingL.clone())), grow(unite(lantern, thorax), 0.9));
+    const feelers = unite(stroke('M11.2 3.4 Q 9.8 1.2 7.6 1.4', 0.9), stroke('M12.8 3.4 Q 14.2 1.2 16.4 1.4', 0.9));
+    const rays = [-62, -22, 22, 62].map((a) => rot(rr(11.35, 21.3, 1.3, 2, 0.65), a, [12, 15.6]));
+    return unite(wings, thorax, head, feelers, sub(lantern, rr(8, 11.2, 8, 0.9)), ...rays);
+  },
+  rain() {
+    const cloud = inter(unite(circ(8.2, 9.6, 4.4), circ(13.8, 7.6, 5.6), circ(18.6, 11.2, 3.4), rr(3.8, 9.6, 18.2, 5, 2.5)), rr(0, 0, 24, 14.6));
+    const drops = [[7.2, 17.2], [12.2, 17.6], [17.2, 17.2]].map(([x, y]) => seg([x, y], [x - 1.2, y + 3.6], 1.9));
+    return unite(cloud, ...drops);
+  },
+  leaf() {
+    // Maple leaf with knocked-out veins and a stem.
+    const half = [[12, 1.4], [13.7, 5.2], [15.9, 4.2], [15.4, 8.8], [19.6, 6.4], [18.8, 9.9], [22.2, 11.2], [18.5, 13.7], [19.5, 15.8], [13.6, 15.3], [12.7, 17.6]];
+    const pts = half.concat(half.slice(1).reverse().map(([x, y]) => [24 - x, y]));
+    const blade = poly(pts, 0.45);
+    const veins = unite(seg([12, 16.4], [12, 5.2], 0.8), seg([12, 13.4], [17.6, 8.6], 0.8), seg([12, 13.4], [6.4, 8.6], 0.8));
+    return unite(sub(blade, veins), seg([12, 15.6], [12, 22.6], 1.5));
+  },
 };
 
 export function build(name) {

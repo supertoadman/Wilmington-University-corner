@@ -37,6 +37,64 @@ $$('[data-theme-toggle]').forEach((btn) => btn.addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch { /* storage unavailable */ }
 }));
 
+// ---------- Scenery: an optional lo-fi scene (snow, blossoms, koi…) ----------
+// Remembered per browser. The drawing code (ambience.js) only loads once a scene is on.
+// The document viewer has no menu and skips it, so nothing drifts over a document being studied.
+const amb = $('[data-amb]');
+if (amb) {
+  const trigger = $('.amb-trigger', amb);
+  const menu = $('.amb-menu', amb);
+  const choices = $$('[data-amb-set]', amb);
+  const names = choices.map((b) => b.dataset.ambSet).filter(Boolean);
+  let scenery = null;
+
+  const apply = (name) => {
+    if (!names.includes(name)) name = '';
+    const html = document.documentElement;
+    if (name) html.dataset.ambience = name; else delete html.dataset.ambience;
+    choices.forEach((b) => b.setAttribute('aria-checked', String(b.dataset.ambSet === name)));
+    if (name) {
+      scenery ||= import('./ambience.js').then((m) => m.createAmbience());
+      // Only play it if it's still the choice once the module has loaded.
+      scenery.then((s) => { if (html.dataset.ambience === name) s.play(name); }).catch(() => {});
+    } else {
+      scenery?.then((s) => s.stop()).catch(() => {});
+    }
+  };
+  const setOpen = (open, { refocus = false } = {}) => {
+    if (open === !menu.hidden) return;
+    menu.hidden = !open;
+    trigger.setAttribute('aria-expanded', String(open));
+    if (open) (choices.find((b) => b.getAttribute('aria-checked') === 'true') || choices[0]).focus({ preventScroll: true });
+    else if (refocus) trigger.focus({ preventScroll: true });
+  };
+
+  trigger.addEventListener('click', () => setOpen(menu.hidden));
+  choices.forEach((b) => b.addEventListener('click', () => {
+    const name = b.dataset.ambSet;
+    try { if (name) localStorage.setItem('ambience', name); else localStorage.removeItem('ambience'); } catch { /* storage unavailable */ }
+    apply(name);
+  }));
+  amb.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !menu.hidden) { e.stopPropagation(); setOpen(false, { refocus: true }); return; }
+    const i = choices.indexOf(document.activeElement);
+    if (i < 0) {
+      if (e.target === trigger && e.key === 'ArrowDown') { e.preventDefault(); setOpen(true); }
+      return;
+    }
+    const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+    const to = step ? (i + step + choices.length) % choices.length : e.key === 'Home' ? 0 : e.key === 'End' ? choices.length - 1 : -1;
+    if (to >= 0) { e.preventDefault(); choices[to].focus(); }
+  });
+  document.addEventListener('pointerdown', (e) => { if (!amb.contains(e.target)) setOpen(false); });
+  amb.addEventListener('focusout', (e) => { if (e.relatedTarget && !amb.contains(e.relatedTarget)) setOpen(false); });
+  // Follow a change made in another tab.
+  window.addEventListener('storage', (e) => { if (e.key === 'ambience') apply(e.newValue || ''); });
+
+  amb.hidden = false;
+  apply(document.documentElement.dataset.ambience || '');
+}
+
 // ---------- Home: light header once the dark hero scrolls away ----------
 const hero = $('.hero');
 if (hero && 'IntersectionObserver' in window) {

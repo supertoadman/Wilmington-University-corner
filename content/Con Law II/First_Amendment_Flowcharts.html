@@ -174,6 +174,9 @@ html.js .sources{display:none}
 :is(:root[data-theme="dark"]) .chart-svg [stroke="#9aa7ba"],:is(:root[data-theme="dark"]) .chart-svg [stroke="#bbbbbb"]{stroke:#3d4757}
 :is(:root[data-theme="dark"]) .chart-svg [fill="white"],:is(:root[data-theme="dark"]) .chart-svg [fill="#ffffff"]:not(text){fill:transparent}
 :is(:root[data-theme="dark"]) .chart-svg [fill="#a19f97"]{fill:#6b6f7a}
+/* Graphviz leaves the Key's labels uncolored (black); give them the light ink */
+:is(:root[data-theme="dark"]) .chart-svg text:not([fill]){fill:#dfe3ea}
+:is(:root[data-theme="dark"]) .chart-svg [stroke="#bbbbbb"]{stroke:#4f5a6b}
 /* same rules for system dark mode */
 @media (prefers-color-scheme:dark){
 :root:not([data-theme="light"]) .chart-svg [fill="#f6f5f1"]{fill:#1e232d}
@@ -208,6 +211,8 @@ html.js .sources{display:none}
 :root:not([data-theme="light"]) .chart-svg [stroke="#9aa7ba"],:root:not([data-theme="light"]) .chart-svg [stroke="#bbbbbb"]{stroke:#3d4757}
 :root:not([data-theme="light"]) .chart-svg [fill="white"],:root:not([data-theme="light"]) .chart-svg [fill="#ffffff"]:not(text){fill:transparent}
 :root:not([data-theme="light"]) .chart-svg [fill="#a19f97"]{fill:#6b6f7a}
+:root:not([data-theme="light"]) .chart-svg text:not([fill]){fill:#dfe3ea}
+:root:not([data-theme="light"]) .chart-svg [stroke="#bbbbbb"]{stroke:#4f5a6b}
 }
 
 /* ---------- Right panel ---------- */

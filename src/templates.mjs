@@ -93,13 +93,37 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="${root}assets/styles.css">
-<script>(function(){try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}})();</script>
+<script>(function(){try{var d=document.documentElement,t=localStorage.getItem('theme'),a=localStorage.getItem('ambience');if(t)d.dataset.theme=t;if(a)d.dataset.ambience=a;}catch(e){}})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
 ${extraHead}`;
 }
 
 const themeButton = (cls = 'icon-btn') =>
   `<button class="${cls}" type="button" data-theme-toggle aria-label="Toggle dark mode">${icon('moon', 'theme-moon')}${icon('sun', 'theme-sun')}</button>`;
+
+// Optional scenery drifting across the pages (drawn by assets/ambience.js; the ids match its scenes).
+const AMBIENCE = [
+  { id: 'snow', label: 'Snowfall', icon: 'snowflake', accent: '#5f7fae' },
+  { id: 'sakura', label: 'Cherry blossoms', icon: 'blossom', accent: '#b24a6e' },
+  { id: 'koi', label: 'Koi pond', icon: 'koi', accent: '#21706b' },
+  { id: 'fireflies', label: 'Fireflies', icon: 'firefly', accent: '#55682a' },
+  { id: 'rain', label: 'Rain', icon: 'rain', accent: '#2f4b68' },
+  { id: 'leaves', label: 'Autumn leaves', icon: 'leaf', accent: '#a4561f' },
+];
+// Hidden until app.js wires it up, so it never shows as a dead button without JavaScript.
+const ambienceControl = () => `<div class="amb" data-amb hidden>
+        <button class="icon-btn amb-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="amb-menu" aria-label="Background scenery" title="Background scenery">${icon('sparkles', 'amb-ico amb-ico-off')}${AMBIENCE.map((a) => icon(a.icon, `amb-ico amb-ico-${a.id}`)).join('')}</button>
+        <div class="amb-menu" id="amb-menu" role="menu" aria-labelledby="amb-title" hidden>
+          <div class="amb-head">
+            <p class="amb-title" id="amb-title">Scenery</p>
+            <button class="amb-off" type="button" role="menuitemradio" aria-checked="true" data-amb-set="">Off</button>
+          </div>
+          <p class="amb-sub">A quiet lo-fi scene drifting across the pages.</p>
+          <div class="amb-grid">
+            ${AMBIENCE.map((a) => `<button class="amb-option" type="button" role="menuitemradio" aria-checked="false" data-amb-set="${a.id}"><span class="tile" style="--accent:${a.accent}">${icon(a.icon)}</span><span class="amb-label">${a.label}</span></button>`).join('')}
+          </div>
+        </div>
+      </div>`;
 
 function layout(ctx, { root, title, description, body, active = '', canonical = '', extraHead = '', jsonld = null, bodyClass = '' }) {
   const { config, subjects, docs } = ctx;
@@ -126,6 +150,7 @@ ${GILT_DEFS}
         ${icon('search')}<span class="search-trigger-label">Search documents</span><kbd>Ctrl K</kbd>
       </button>
       <a class="btn btn-share" href="${root}contribute/"${active === 'contribute' ? ' aria-current="page"' : ''}>${icon('upload')}<span>Share your work</span></a>
+      ${ambienceControl()}
       ${themeButton()}
     </div>
   </div>
