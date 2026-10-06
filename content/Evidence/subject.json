@@ -100,6 +100,21 @@
       ],
       "questions": 60,
       "order": 7
+    },
+    "Evidence_Mock_Midterm_II.html": {
+      "slug": "evidence-mock-midterm-ii",
+      "title": "Evidence Mock Midterm II",
+      "type": "practice",
+      "description": "A second timed practice exam: 60 more new bar-style questions on Classes 1–10, with no fact patterns repeated from the first. It has the same four 15-question parts, each covering every topic at the real exam’s 30-minute pace, and draws on textbook problems the first exam didn’t use. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "tags": [
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": 60,
+      "order": 8
     }
   }
 }
