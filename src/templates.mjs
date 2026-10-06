@@ -72,8 +72,9 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="${esc(config.shortTitle)}">
+<link rel="icon" href="${root}assets/favicon.ico" sizes="32x32">
 <link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="${root}assets/og-image.png">
+<link rel="apple-touch-icon" href="${root}assets/apple-touch-icon.png">
 <link rel="alternate" type="application/json" title="Catalog (JSON)" href="${root}api/catalog.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
