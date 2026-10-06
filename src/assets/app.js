@@ -393,9 +393,13 @@ const recentSection = $('#recently-opened');
 if (recentSection) {
   const items = store.get(RECENT_KEY, []);
   if (items.length) {
-    $('[data-recent-list]', recentSection).innerHTML = items.map((r) => `
+    const list = $('[data-recent-list]', recentSection);
+    // Stored items carry the icon from when they were opened; prefer the current one for their type.
+    let typeIcons = {};
+    try { typeIcons = JSON.parse(list.dataset.typeIcons || '{}'); } catch { /* keep stored icons */ }
+    list.innerHTML = items.map((r) => `
       <li><a href="${ROOT}${escapeHtml(r.url)}" style="--accent:${escapeHtml(r.accent)}">
-        <span class="tile">${r.svg || ''}</span>
+        <span class="tile">${typeIcons[r.type] || r.svg || ''}</span>
         <span class="t"><strong>${escapeHtml(r.title)}</strong><small>${escapeHtml(r.subject)} · ${escapeHtml(r.type)}</small></span>
       </a></li>`).join('');
     recentSection.hidden = false;

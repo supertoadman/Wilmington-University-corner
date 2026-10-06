@@ -39,7 +39,7 @@ content/
 }
 ```
 
-The document types are `outline`, `rule-chart`, `flowcharts`, `flashcards`, `practice`, and `document`. To add a new type, add one line to `TYPES` in `scripts/build.mjs`. Icon names can be any [Lucide](https://lucide.dev/icons) icon.
+The document types are `outline`, `rule-chart`, `flowcharts`, `flashcards`, `practice`, and `document`. To add a new type, add one line to `TYPES` in `scripts/build.mjs`. Icons come from the site's own set in `src/icons/` (drawn by `scripts/icons/glyphs.mjs`; run `npm run icons` after adding or changing one). Any other [Lucide](https://lucide.dev/icons) name still works and shows as an outline.
 
 ## Contributions from other people
 
@@ -70,7 +70,9 @@ Each build also generates a read-only API: `catalog.json`, per-document JSON and
 content/                 source documents (edit these)
 scripts/build.mjs        static site generator
 scripts/serve.mjs        local preview server (mirrors the GitHub Pages base path)
+scripts/icons/           draws the icon set (npm run icons)
 src/templates.mjs        HTML templates for every page type
+src/icons/               the site's icon set (generated SVGs, committed)
 src/assets/              CSS, client JS, favicon, social image
 site.config.json         site title, URL, repository, disclaimer
 docs/agents-api.md       internal API reference for agents and integrations

@@ -5,7 +5,8 @@
   "scripts": {
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
-    "dev": "node scripts/build.mjs && node scripts/serve.mjs"
+    "dev": "node scripts/build.mjs && node scripts/serve.mjs",
+    "icons": "node scripts/icons/build.mjs"
   },
   "author": "",
   "license": "UNLICENSED",
@@ -14,7 +15,9 @@
     "fflate": "^0.8.3",
     "fuse.js": "^7.5.0",
     "lucide-static": "^1.52.0",
-    "mammoth": "^1.13.0"
+    "mammoth": "^1.13.0",
+    "paper": "^0.12.18",
+    "paperjs-offset": "^2.2.1"
   },
   "private": true,
   "engines": {
