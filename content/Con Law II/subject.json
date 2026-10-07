@@ -29,6 +29,15 @@
       "description": "Interactive decision charts for Chapters 1–6. A big-picture map shows how the Religion Clauses and the speech doctrines fit together, and eight charts walk through coercion, Free Exercise, the Establishment Clause and funding, the speech framework, incitement and fighting words, prior restraints, true threats and speech integral to crime, and immoral speech. Tap any box for a plain-English explanation, the cases behind it, and what to watch out for.",
       "tags": ["First Amendment", "interactive", "Religion Clauses", "free speech", "Chapters 1–6"],
       "order": 2
+    },
+    "First_Amendment_Case_Files.html": {
+      "slug": "first-amendment-case-files",
+      "title": "First Amendment Case Files",
+      "type": "practice",
+      "description": "Bar-style application questions for Weeks 1–6 (Chapters 1–6). Each question sets out new facts, from compelled pledges and school prayer to protest livestreams, chatbot lawsuits, and age-verification laws, and asks you to apply the doctrine. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 113 outline items.",
+      "tags": ["First Amendment", "MCQ", "application", "bar prep", "Chapters 1–6"],
+      "questions": 115,
+      "order": 4
     }
   }
 }
