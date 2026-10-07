@@ -93,7 +93,7 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="${root}assets/styles.css">
-<script>(function(){try{var d=document.documentElement,t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||(matchMedia('(prefers-reduced-motion: reduce)').matches?'off':'sakura');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement;d.dataset.theme='dark';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||(matchMedia('(prefers-reduced-motion: reduce)').matches?'off':'sakura');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;}catch(e){}})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
 ${extraHead}`;
 }
