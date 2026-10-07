@@ -1,16 +1,28 @@
 // Ambience: soft, slow scenery drifting across the pages (snow, blossoms, koi, fireflies,
-// rain, autumn leaves). Opt-in from the header; app.js loads this module only when one is on.
-// Everything is drawn on one fixed canvas over the page content (clicks pass through it),
-// re-inked for light and dark themes, nudged by page scrolling for a little depth, and
-// paused while the tab is hidden.
+// rain, autumn leaves), chosen from the header menu; app.js loads this module only when one is on.
+// Each scene draws on one canvas: over a site page (clicks pass through it), or behind the
+// content of a document being studied. It is re-inked for light and dark pages, nudged by
+// scrolling for a little depth, and paused while the tab is hidden.
 
 const TAU = Math.PI * 2;
 const rand = (a, b) => a + Math.random() * (b - a);
 const pick = (list) => list[Math.floor(Math.random() * list.length)];
-const isDark = () => {
-  const t = document.documentElement.dataset.theme;
-  return t ? t === 'dark' : matchMedia('(prefers-color-scheme: dark)').matches;
-};
+
+// Whether the surface under the scene is dark. Read from the page's own background, since
+// some documents ignore the site's theme and always stay light.
+function surfaceIsDark(doc, host) {
+  const win = doc.defaultView;
+  for (const el of [host, doc.body, doc.documentElement]) {
+    if (!el) continue;
+    const bg = win.getComputedStyle(el).backgroundColor;
+    const n = (bg.match(/[\d.]+/g) || []).map(Number);
+    if (n.length < 3 || n[3] === 0) continue;
+    const k = bg.startsWith('color(') ? 255 : 1; // color(srgb …) channels run 0–1
+    return (.2126 * n[0] + .7152 * n[1] + .0722 * n[2]) * k / 255 < .45;
+  }
+  const t = doc.documentElement.dataset.theme;
+  return t ? t === 'dark' : win.matchMedia('(prefers-color-scheme: dark)').matches;
+}
 
 // Offscreen canvas helper for sprites drawn once and stamped many times.
 function sprite(size, draw) {
@@ -529,16 +541,28 @@ const SCENES = {
   },
 };
 
-/** Creates the backdrop canvas. play(name) starts or switches scenes; stop() fades it out. */
-export function createAmbience() {
-  const canvas = document.createElement('canvas');
+/**
+ * Creates the scenery canvas in `doc` (this page, or a same-origin document in a frame).
+ *   over (default): fixed over the page, under the site header, tab bar and dialogs.
+ *   behind: fixed under all of the page's content, showing only where its background shows.
+ *   host: drawn inside that element (e.g. a flowchart's chart area), under its contents.
+ * play(name) starts or switches scenes; stop() fades it out.
+ */
+export function createAmbience({ doc = document, host = null, behind = false } = {}) {
+  const win = doc.defaultView;
+  const canvas = doc.createElement('canvas');
   canvas.className = 'ambience';
   canvas.setAttribute('aria-hidden', 'true');
-  document.body.prepend(canvas);
+  canvas.style.cssText = `position:${host ? 'absolute' : 'fixed'};inset:0;width:100%;height:100%;${host ? '' : `z-index:${behind ? -1 : 40};`}`
+    + 'pointer-events:none;opacity:0;transition:opacity .7s ease';
+  // Some documents re-render their whole body; put the canvas back if it gets swept away.
+  const mount = () => (host || doc.body).prepend(canvas);
+  mount();
+  if (doc !== document) doc.head.append(Object.assign(doc.createElement('style'), { textContent: '@media print{canvas.ambience{display:none!important}}' }));
   const ctx = canvas.getContext('2d');
-  const env = { w: 0, h: 0, dark: isDark(), wind: 0 };
-  const pace = matchMedia('(prefers-reduced-motion: reduce)').matches ? .5 : 1;
-  let scene = null, current = '', raf = 0, last = 0, clock = 0, lastScroll = scrollY, swapTimer = 0;
+  const env = { w: 0, h: 0, dark: surfaceIsDark(doc, host), wind: 0 };
+  const pace = win.matchMedia('(prefers-reduced-motion: reduce)').matches ? .5 : 1;
+  let scene = null, current = '', raf = 0, last = 0, clock = 0, lastScroll = win.scrollY, swapTimer = 0;
 
   const fill = (fresh) => {
     if (!scene) return;
@@ -547,9 +571,9 @@ export function createAmbience() {
     scene.items.length = n;
   };
   const resize = () => {
-    const dpr = Math.min(window.devicePixelRatio || 1, 1.5);
-    env.w = canvas.clientWidth || innerWidth;
-    env.h = canvas.clientHeight || innerHeight;
+    const dpr = Math.min(win.devicePixelRatio || 1, 1.5);
+    env.w = canvas.clientWidth || win.innerWidth;
+    env.h = canvas.clientHeight || win.innerHeight;
     canvas.width = Math.round(env.w * dpr);
     canvas.height = Math.round(env.h * dpr);
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
@@ -561,9 +585,10 @@ export function createAmbience() {
     last = now;
     clock += dt;
     env.wind = breeze(clock);
+    if (!canvas.isConnected) mount();
     // Scrolling the page slides the scenery a little, near things more than far ones.
-    const dy = scrollY - lastScroll;
-    lastScroll = scrollY;
+    const dy = win.scrollY - lastScroll;
+    lastScroll = win.scrollY;
     if (dy && scene) {
       if (scene.shiftsItself) scene.scroll(dy);
       else { for (const p of scene.items) p.y -= dy * p.z * .35; scene.scroll?.(dy); }
@@ -572,24 +597,28 @@ export function createAmbience() {
     ctx.clearRect(0, 0, env.w, env.h);
     scene.draw(ctx);
     ctx.globalAlpha = 1;
-    raf = requestAnimationFrame(frame);
+    raf = win.requestAnimationFrame(frame);
   };
   const run = () => {
-    const go = scene && !document.hidden;
-    if (go && !raf) { last = performance.now(); lastScroll = scrollY; raf = requestAnimationFrame(frame); }
-    else if (!go && raf) { cancelAnimationFrame(raf); raf = 0; }
+    const go = scene && !doc.hidden;
+    if (go && !raf) { last = performance.now(); lastScroll = win.scrollY; raf = win.requestAnimationFrame(frame); }
+    else if (!go && raf) { win.cancelAnimationFrame(raf); raf = 0; }
   };
-  const retheme = () => {
-    const dark = isDark();
+  const recolor = () => {
+    const dark = surfaceIsDark(doc, host);
     if (dark === env.dark) return;
     env.dark = dark;
     scene?.repaint?.();
   };
+  // Check again once a background color transition has settled.
+  const retheme = () => { recolor(); setTimeout(recolor, 500); };
 
-  new ResizeObserver(resize).observe(canvas);
-  document.addEventListener('visibilitychange', run);
-  new MutationObserver(retheme).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
-  matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', retheme);
+  new win.ResizeObserver(resize).observe(canvas);
+  doc.addEventListener('visibilitychange', run);
+  const watch = new win.MutationObserver(retheme);
+  watch.observe(doc.documentElement, { attributes: true, attributeFilter: ['data-theme', 'class'] });
+  watch.observe(doc.body, { attributes: true, attributeFilter: ['data-theme', 'class'] });
+  win.matchMedia('(prefers-color-scheme: dark)').addEventListener?.('change', retheme);
 
   return {
     play(name) {
@@ -597,20 +626,20 @@ export function createAmbience() {
       const wasOn = !!current;
       current = name;
       clearTimeout(swapTimer);
-      canvas.classList.remove('is-on');
+      canvas.style.opacity = '0';
       // Fade the old scene out before the new one fades in.
       swapTimer = setTimeout(() => {
-        env.dark = isDark();
+        env.dark = surfaceIsDark(doc, host);
         scene = SCENES[name](env);
         resize();
-        canvas.classList.add('is-on');
+        canvas.style.opacity = '1';
         run();
       }, wasOn ? 450 : 0);
     },
     stop() {
       current = '';
       clearTimeout(swapTimer);
-      canvas.classList.remove('is-on');
+      canvas.style.opacity = '0';
       swapTimer = setTimeout(() => { scene = null; run(); ctx.clearRect(0, 0, env.w, env.h); }, 800);
     },
   };

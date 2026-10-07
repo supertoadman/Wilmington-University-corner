@@ -93,7 +93,7 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="${root}assets/styles.css">
-<script>(function(){try{var d=document.documentElement,t=localStorage.getItem('theme'),a=localStorage.getItem('ambience');if(t)d.dataset.theme=t;if(a)d.dataset.ambience=a;}catch(e){}})();</script>
+<script>(function(){try{var d=document.documentElement,t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||(matchMedia('(prefers-reduced-motion: reduce)').matches?'off':'sakura');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;}catch(e){}})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
 ${extraHead}`;
 }
@@ -111,8 +111,8 @@ const AMBIENCE = [
   { id: 'leaves', label: 'Autumn leaves', icon: 'leaf', accent: '#a4561f' },
 ];
 // Hidden until app.js wires it up, so it never shows as a dead button without JavaScript.
-const ambienceControl = () => `<div class="amb" data-amb hidden>
-        <button class="icon-btn amb-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="amb-menu" aria-label="Background scenery" title="Background scenery">${icon('sparkles', 'amb-ico amb-ico-off')}${AMBIENCE.map((a) => icon(a.icon, `amb-ico amb-ico-${a.id}`)).join('')}</button>
+const ambienceControl = (cls = 'icon-btn') => `<div class="amb" data-amb hidden>
+        <button class="${cls} amb-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="amb-menu" aria-label="Background scenery" title="Background scenery">${icon('sparkles', 'amb-ico amb-ico-off')}${AMBIENCE.map((a) => icon(a.icon, `amb-ico amb-ico-${a.id}`)).join('')}</button>
         <div class="amb-menu" id="amb-menu" role="menu" aria-labelledby="amb-title" hidden>
           <div class="amb-head">
             <p class="amb-title" id="amb-title">Scenery</p>
@@ -529,6 +529,7 @@ ${GILT_DEFS}
       ${isFrame ? `<button class="vbtn hide-touch" type="button" data-fullscreen title="Full screen">${icon('maximize')}<span>Full screen</span></button>` : ''}
       <button class="vbtn" type="button" data-share title="Share">${icon('share')}<span>Share</span></button>
       <a class="vbtn vbtn-primary" href="${fileUrl}" download="${esc(d.filename)}" title="Download">${icon('download')}<span>Download</span></a>
+      ${d.format.mime === 'application/pdf' ? '' : ambienceControl('vbtn vbtn-icon')}
       ${themeButton('vbtn vbtn-icon hide-mobile')}
     </div>
   </header>

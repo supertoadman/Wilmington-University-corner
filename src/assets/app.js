@@ -37,29 +37,63 @@ $$('[data-theme-toggle]').forEach((btn) => btn.addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch { /* storage unavailable */ }
 }));
 
-// ---------- Scenery: an optional lo-fi scene (snow, blossoms, koi…) ----------
-// Remembered per browser. The drawing code (ambience.js) only loads once a scene is on.
-// The document viewer has no menu and skips it, so nothing drifts over a document being studied.
+// ---------- Scenery: lo-fi scenes (cherry blossoms by default; snow, koi…) ----------
+// Chosen from the menu in the header (or the document toolbar) and remembered per browser
+// ('off' once turned off). Visitors whose system asks for less motion start with it off.
+// ambience.js only loads while a scene is on.
+const SCENERY_DEFAULT = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'off' : 'sakura';
+const sceneryChoice = (stored) => stored || SCENERY_DEFAULT;
+const readScenery = () => { try { return sceneryChoice(localStorage.getItem('ambience')); } catch { return SCENERY_DEFAULT; } };
+let sceneryModule;
+const loadScenery = () => (sceneryModule ||= import('./ambience.js'));
+
+// Where a scene is drawn. On site pages it drifts over the content. In the document viewer it
+// stays behind the document so it never covers what is being studied: around the reader for
+// Word documents, behind an HTML document's content (in a flowchart explorer, under the chart,
+// in the area marked data-scenery-host), and not at all over PDFs.
+const scenery = {
+  want: '',     // the chosen scene ('' = off)
+  player: null, // promise of the drawing surface, made on first use
+  mount: () => loadScenery().then((m) => m.createAmbience()),
+  set(name) {
+    this.want = name;
+    if (name && !this.player) this.player = this.mount();
+    // Plays whatever is chosen by the time the module has loaded.
+    this.player?.then((p) => (this.want ? p.play(this.want) : p.stop())).catch(() => {});
+  },
+};
+if ($('.viewer-app')) {
+  const frame = $('.vframe');
+  if (!frame) {
+    scenery.mount = () => loadScenery().then((m) => m.createAmbience({ behind: true }));
+  } else {
+    const players = new WeakMap();
+    scenery.mount = () => {
+      try {
+        const doc = frame.contentDocument;
+        if (!doc?.body || doc.URL === 'about:blank' || doc.readyState !== 'complete' || doc.contentType !== 'text/html') return null;
+        if (!players.has(doc)) players.set(doc, loadScenery().then((m) => m.createAmbience({ doc, host: doc.querySelector('[data-scenery-host]'), behind: true })));
+        return players.get(doc);
+      } catch { return null; } // cross-origin document
+    };
+    // Not ready until the document has loaded (and again if it navigates).
+    frame.addEventListener('load', () => { scenery.player = null; scenery.set(scenery.want); });
+  }
+}
+
 const amb = $('[data-amb]');
 if (amb) {
   const trigger = $('.amb-trigger', amb);
   const menu = $('.amb-menu', amb);
   const choices = $$('[data-amb-set]', amb);
   const names = choices.map((b) => b.dataset.ambSet).filter(Boolean);
-  let scenery = null;
 
   const apply = (name) => {
     if (!names.includes(name)) name = '';
     const html = document.documentElement;
     if (name) html.dataset.ambience = name; else delete html.dataset.ambience;
     choices.forEach((b) => b.setAttribute('aria-checked', String(b.dataset.ambSet === name)));
-    if (name) {
-      scenery ||= import('./ambience.js').then((m) => m.createAmbience());
-      // Only play it if it's still the choice once the module has loaded.
-      scenery.then((s) => { if (html.dataset.ambience === name) s.play(name); }).catch(() => {});
-    } else {
-      scenery?.then((s) => s.stop()).catch(() => {});
-    }
+    scenery.set(name);
   };
   const setOpen = (open, { refocus = false } = {}) => {
     if (open === !menu.hidden) return;
@@ -72,7 +106,7 @@ if (amb) {
   trigger.addEventListener('click', () => setOpen(menu.hidden));
   choices.forEach((b) => b.addEventListener('click', () => {
     const name = b.dataset.ambSet;
-    try { if (name) localStorage.setItem('ambience', name); else localStorage.removeItem('ambience'); } catch { /* storage unavailable */ }
+    try { localStorage.setItem('ambience', name || 'off'); } catch { /* storage unavailable */ }
     apply(name);
   }));
   amb.addEventListener('keydown', (e) => {
@@ -88,11 +122,13 @@ if (amb) {
   });
   document.addEventListener('pointerdown', (e) => { if (!amb.contains(e.target)) setOpen(false); });
   amb.addEventListener('focusout', (e) => { if (e.relatedTarget && !amb.contains(e.relatedTarget)) setOpen(false); });
+  // A click into the document's frame never reaches this page, but it does take focus from it.
+  window.addEventListener('blur', () => setOpen(false));
   // Follow a change made in another tab.
-  window.addEventListener('storage', (e) => { if (e.key === 'ambience') apply(e.newValue || ''); });
+  window.addEventListener('storage', (e) => { if (e.key === 'ambience') apply(sceneryChoice(e.newValue)); });
 
   amb.hidden = false;
-  apply(document.documentElement.dataset.ambience || '');
+  apply(readScenery());
 }
 
 // ---------- Home: light header once the dark hero scrolls away ----------
