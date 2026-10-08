@@ -39,6 +39,22 @@
       "questions": 115,
       "order": 4
     },
+    "First_Amendment_Case_Flash_Cards.html": {
+      "slug": "first-amendment-case-flash-cards",
+      "title": "First Amendment Case Flash Cards",
+      "type": "flashcards",
+      "description": "34 flashcards, one for each main case in Chapters 1–6, from Whitney and Barnette through Paxton and Brown. Each card asks what the case held, then gives the rule, the vote, and the key reasoning. Cited cases such as Gobitis, Yoder, Zelman, and Chaplinsky appear on the card for the case that cites them. Flip each card, then mark it Got it or Revisit.",
+      "tags": ["First Amendment", "flashcards", "cases", "Chapters 1–6"],
+      "order": 5
+    },
+    "First_Amendment_Concept_Flash_Cards.html": {
+      "slug": "first-amendment-concept-flash-cards",
+      "title": "First Amendment Concept Flash Cards",
+      "type": "flashcards",
+      "description": "32 flashcards on the core concepts of Chapters 1–6. Covers the Free Exercise and speech checklists, the ways a law fails neutrality, Establishment Clause funding, RFRA, the unprotected categories, overbreadth and vagueness, prior restraints, mens rea, the Miller test, and protecting kids versus adults.",
+      "tags": ["First Amendment", "flashcards", "doctrine", "Chapters 1–6"],
+      "order": 6
+    },
     "Flash_Card_Test_Demo.html": {
       "slug": "flash-card-test-demo",
       "title": "Flash Card Test Demo (not for use)",

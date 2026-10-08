@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>First Amendment Case Flash Cards · WilmU Corner</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="../../assets/styles.css">
+<style>
+.preview-header {border-bottom:1px solid var(--border);background:var(--bg-elev)}
+.preview-header .container {display:flex;align-items:center;justify-content:space-between;min-height:78px;gap:16px}
+.header-tools,.study-tools,.card-meta,.session-head,.session-stats,.rating,.under-card {display:flex;align-items:center;gap:12px}
+.preview-pill,.eyebrow {font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
+.preview-pill {border:1px solid var(--border-strong);border-radius:20px;padding:6px 12px}
+.fc-button {border:1px solid var(--border-strong);background:var(--surface);border-radius:10px;min-height:42px;padding:9px 16px;cursor:pointer;font-size:13px;font-weight:500;transition:border-color .15s,background .15s}
+.fc-button:hover {border-color:var(--gold);background:var(--surface-2)}
+.fc-button:disabled {opacity:.4;cursor:default}
+.fc-button.primary {background:linear-gradient(135deg,#ead092,#c69b48);border-color:#d2ac60;color:#182035;font-weight:700}
+.fc-shell {padding-top:24px;padding-bottom:40px}
+.breadcrumbs {font-size:12px;color:var(--muted);margin-bottom:23px;display:flex;gap:12px}
+.fc-heading {display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:30px}
+.fc-heading h1 {font:500 clamp(30px,4vw,42px)/1.15 var(--font-serif);letter-spacing:-.035em;margin:8px 0 10px}
+.fc-heading p {margin:0;color:var(--muted);font-size:14px}
+.heading-seal {width:76px;height:76px;object-fit:contain}
+.study-layout {display:grid;grid-template-columns:244px minmax(0,1fr);gap:32px;align-items:start}
+.deck-panel {background:var(--bg-elev);border:1px solid var(--border);border-radius:16px;overflow:hidden}
+.deck-intro {padding:24px 22px 20px;border-bottom:1px solid var(--border);background:radial-gradient(ellipse at top right,rgba(58,90,140,.16),transparent 75%)}
+.deck-intro h2 {font:500 23px/1.3 var(--font-serif);margin:8px 0}
+.deck-intro p {font-size:12px;color:var(--muted);margin:0}
+.deck-list {padding:10px;display:grid;gap:4px}
+.deck-item {display:flex;align-items:center;gap:10px;width:100%;text-align:left;padding:12px 10px;background:transparent;border:1px solid transparent;border-radius:9px;cursor:pointer;color:var(--text-2);font-size:12px}
+.deck-item[aria-current="true"] {background:var(--surface-2);border-color:var(--border-strong);color:var(--text)}
+.deck-number {color:var(--gold);font-size:10px;font-variant-numeric:tabular-nums}
+.deck-status {margin-left:auto;color:var(--gold)}
+.deck-note {font-size:11px;color:var(--muted);padding:4px 22px 20px;margin:0}
+.session-head {justify-content:space-between;margin-bottom:12px;font-size:12px;color:var(--muted)}
+.session-stats {gap:18px}.session-stats strong {color:var(--text);font-weight:500}
+.progress-track {height:3px;background:var(--border);border-radius:8px;margin-bottom:22px;overflow:hidden}
+.progress-fill {height:100%;background:linear-gradient(90deg,#8b682e,#e9c77f);width:0;transition:width .2s}
+.flashcard {position:relative;border:1px solid #665534;border-radius:20px;min-height:404px;padding:30px 38px 27px;background:radial-gradient(ellipse at 100% 0,rgba(54,83,127,.23),transparent 65%),linear-gradient(145deg,#192433,#101722);box-shadow:0 18px 48px -26px #000;color:#ebe8e1;overflow:hidden}
+.flashcard::before {content:"";position:absolute;inset:7px;border:1px solid rgba(204,168,92,.13);border-radius:14px;pointer-events:none}
+.flashcard::after {content:"";position:absolute;top:0;left:36px;right:36px;height:1px;background:linear-gradient(90deg,transparent,#e9c77f,transparent)}
+.card-meta {justify-content:space-between;font-size:10px;text-transform:uppercase;letter-spacing:.15em;color:#d5b978}
+.card-type {border:1px solid #645735;border-radius:20px;padding:4px 10px;font-size:9px}
+.card-content {position:relative;max-width:630px;margin:44px auto 30px;text-align:center;min-height:188px;display:flex;flex-direction:column;justify-content:center}
+.card-content h2 {font:400 clamp(25px,3vw,34px)/1.3 var(--font-serif);letter-spacing:-.025em;margin:0 auto 20px;max-width:590px;text-wrap:balance}
+.card-content p {font-size:13px;color:#aeb9c9;margin:0 auto;max-width:470px}
+.answer-copy {font:400 23px/1.45 var(--font-serif);margin-bottom:18px!important;color:#ebe8e1!important;max-width:600px!important}
+.answer-note {border-left:2px solid #b6924d;padding:8px 14px;text-align:left;background:rgba(217,184,109,.05)}
+.card-footer {display:flex;align-items:center;justify-content:space-between;border-top:1px solid #334050;padding-top:17px;color:#aeb9c9;font-size:11px;gap:12px}
+.card-footer a {color:#d7bd84;text-underline-offset:3px}
+.card-footer img {width:30px;height:30px;object-fit:contain}
+.card-signature {display:flex;align-items:center;gap:9px}
+.under-card {justify-content:space-between;margin-top:20px;min-height:48px}
+.rating {flex-wrap:wrap}.rating .fc-button {min-width:120px}
+.key-help {font-size:11px;color:var(--muted);text-align:center;margin:20px 0 0}.key-help kbd {margin:0 3px}
+.bottom-note {display:flex;gap:12px;align-items:center;margin-top:30px;padding-top:20px;border-top:1px solid var(--border);font-size:12px;color:var(--muted)}
+.bottom-note img {width:42px;height:42px;object-fit:contain}.bottom-note p {margin:0}.bottom-note strong {font-weight:500;color:var(--text-2)}
+.completion {text-align:center;padding:38px 10px}.completion img {height:100px;margin:0 auto 15px}.completion h2 {font:400 32px var(--font-serif);margin:0 0 12px}.completion p {color:#aeb9c9;font-size:14px;margin-bottom:25px}
+[data-theme="light"] .flashcard {background:radial-gradient(ellipse at 100% 0,rgba(198,174,126,.13),transparent 65%),linear-gradient(135deg,#fffdf7,#f0eadb);color:#18243a;border-color:#bca36f;box-shadow:0 20px 40px -30px #655334}
+[data-theme="light"] .card-meta {color:#795b22}[data-theme="light"] .card-content p,[data-theme="light"] .card-footer,[data-theme="light"] .completion p {color:#536075}[data-theme="light"] .answer-copy {color:#18243a!important}[data-theme="light"] .card-footer {border-color:#d9ceba}[data-theme="light"] .card-footer a {color:#795b22}
+@media(max-width:850px){.study-layout{grid-template-columns:1fr;gap:20px}.deck-panel{display:none}.fc-heading{margin-bottom:24px}.flashcard{min-height:390px}.fc-shell{max-width:760px}}
+@media(max-width:520px){.preview-pill{display:none}.preview-header .container{min-height:68px}.brand-name{font-size:16px}.heading-seal{width:60px;height:60px}.fc-heading p{font-size:12px}.flashcard{padding:24px;min-height:430px}.card-content{margin-top:34px;min-height:228px}.session-stats{gap:10px}.session-head{font-size:11px}.under-card{gap:10px;flex-wrap:wrap}.rating{flex:1}.rating .fc-button{flex:1;min-width:100px}.key-help{display:none}.card-footer{font-size:10px}.fc-button{padding:9px 12px}.answer-copy{font-size:21px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+/* Physical two-sided card. Both faces share a grid cell so long answers size it. */
+.flashcard {perspective:1600px;overflow:visible;padding:0;border:0;background:none!important;box-shadow:none!important;touch-action:pan-y;cursor:pointer;min-height:0}
+.flashcard::before,.flashcard::after {display:none}
+.card-rotor {display:grid;transform-style:preserve-3d;transition:transform 620ms cubic-bezier(.22,.72,.18,1)}
+.card-rotor.is-flipped {transform:rotateY(180deg)}
+.card-rotor.no-motion {transition:none}
+.card-plane {grid-area:1/1;min-width:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border:1px solid #665534;border-radius:20px;padding:30px 38px 27px;min-height:404px;background:radial-gradient(ellipse at 100% 0,rgba(54,83,127,.23),transparent 65%),linear-gradient(145deg,#192433,#101722);box-shadow:inset 0 0 0 7px rgba(14,24,40,.12),0 18px 48px -26px #000;display:flex;flex-direction:column}
+.card-plane.back {transform:rotateY(180deg)}
+.card-plane .card-content {width:100%;flex:1}.card-plane .card-footer {margin-top:auto}
+[data-theme="light"] .card-plane {background:radial-gradient(ellipse at 100% 0,rgba(198,174,126,.13),transparent 65%),linear-gradient(135deg,#fffdf7,#f0eadb);border-color:#bca36f;box-shadow:inset 0 0 0 7px rgba(198,174,126,.04),0 20px 40px -30px #655334}
+.under-card {flex-wrap:wrap}.rating {width:100%;justify-content:center;min-height:42px;order:1}.rating[hidden] {display:flex!important;visibility:hidden;pointer-events:none}
+.gesture-help {text-align:center;color:var(--muted);font-size:11px;margin:12px 0 0}
+.completion {cursor:default}
+@media(max-width:520px){.card-plane{padding:24px;min-height:430px}.rating{flex:auto}.rating .fc-button{flex:0 1 145px}.under-card{justify-content:center}.under-card>#reveal{flex:1}.under-card>#next{order:0}.rating{order:1}.gesture-help{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.card-rotor{transition:none}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to flashcards</a>
+<header class="preview-header"><div class="container">
+<div class="brand"><span class="brand-mark"><span class="logo" aria-hidden="true"></span></span><span class="brand-text"><span class="brand-name">WilmU Corner</span><span class="brand-sub">Study Library</span></span></div>
+<div class="header-tools"><button type="button" class="fc-button" id="theme" aria-label="Switch to light theme">Light mode</button></div>
+</div></header>
+<main id="main" class="container fc-shell">
+<div class="breadcrumbs"><span>Study library</span><span aria-hidden="true">/</span><span id="subject"></span><span aria-hidden="true">/</span><span>Flashcards</span></div>
+<div class="fc-heading"><div><span class="eyebrow">The art of recall</span><h1 id="deck-title"></h1><p>One question. A moment to think. A little more clarity.</p></div><img class="heading-seal" src="../../assets/statues/apollo.webp" alt="Apollo in ivory marble, lapis and gold"></div>
+<div class="study-layout">
+<aside class="deck-panel" aria-label="Deck contents"><div class="deck-intro"><span class="eyebrow">Your study deck</span><h2 id="topic"></h2><p id="deck-description"></p></div><nav class="deck-list" id="deck-list" aria-label="Choose a card"></nav><p class="deck-note">Recall first. Reveal when ready.<br>Keep the difficult ones for another pass.</p></aside>
+<section aria-label="Study session">
+<div class="session-head"><span id="position"></span><div class="session-stats"><span><strong id="known-count">0</strong> known</span><span><strong id="review-count">0</strong> to revisit</span></div></div>
+<div class="progress-track" role="progressbar" aria-label="Cards reviewed" aria-valuemin="0" aria-valuenow="0" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
+<article class="flashcard" id="flashcard" aria-label="Flashcard"><div id="card-face"><div class="card-meta"><span id="card-label"></span><span class="card-type" id="card-side">Question</span></div><div class="card-content" id="card-content"></div><div class="card-footer"><span class="card-signature"><img src="../../assets/statues/apollo.webp" alt=""><span id="card-id"></span></span><a href="first-amendment-outline.pdf" target="_blank" rel="noopener" id="source">Open source notes ↗</a></div></div><div id="completion" class="completion" hidden></div></article>
+<div class="under-card"><button type="button" class="fc-button" id="previous" aria-label="Previous card">← Previous</button><button type="button" class="fc-button primary" id="reveal" aria-controls="card-content" aria-expanded="false">Reveal answer <span aria-hidden="true">↗</span></button><div class="rating" id="rating" hidden><button type="button" class="fc-button" id="again">Revisit <span aria-hidden="true">↺</span></button><button type="button" class="fc-button primary" id="known">Got it <span aria-hidden="true">✓</span></button></div><button type="button" class="fc-button" id="next" aria-label="Next card">Next →</button></div>
+<p class="gesture-help">Tap the card to flip · Swipe left or right to browse</p><p class="key-help"><kbd>Space</kbd> flip <span aria-hidden="true">·</span> <kbd>←</kbd><kbd>→</kbd> browse <span aria-hidden="true">·</span> <kbd>1</kbd> revisit <span aria-hidden="true">·</span> <kbd>2</kbd> got it</p>
+<div class="bottom-note"><img src="../../assets/statues/athena.webp" alt=""><p><strong>Understanding comes before speed.</strong><br>Say your answer out loud before turning the card.</p></div>
+</section></div>
+<p class="sr-only" id="announcement" role="status" aria-live="polite"></p>
+<noscript>This interactive preview needs JavaScript enabled.</noscript>
+</main>
+<!-- AI CONTENT CONTRACT: Edit only this JSON block to change the deck. Keep IDs stable.
+     All strings are plain text; no HTML or Markdown. Escape literal < as \u003c. -->
+<script id="deck-data" type="application/json">
+{
+  "schemaVersion": "1.0",
+  "id": "con-law-ii-first-amendment-cases",
+  "title": "The cases, remembered.",
+  "subject": "Con Law II",
+  "topic": "First Amendment cases · Ch. 1–6",
+  "description": "Every main case from Barnette to Paxton. Cited cases ride along in the case they appear under.",
+  "cards": [
+    {"id":"whitney","label":"Ch. 1 · Whitney (1927)","title":"Whitney (Brandeis, J.)","question":"Why is Brandeis’s concurrence in Whitney v. California still read, and what values does it state?","answer":"For First Amendment values, not doctrine; Brandenburg later overruled the majority. Liberty is both an end and a means to political truth. The remedy for evil counsels is good ones: counterspeech, not enforced silence. Public discussion is a political duty, and repression breeds hate that menaces stable government.","note":"Casebook gloss: “freedom to think” unites all the clauses. No official church dictates belief, belief is protected, and speech, assembly, and petition are the peaceful tools for changing policy. Speech is guarded against the occasional tyranny of majorities.","source":"First Amendment Outline · Ch. 1"},
+    {"id":"barnette","label":"Ch. 1 · Barnette (1943)","title":"Barnette","question":"Barnette: May a public school compel students to salute the flag and recite the Pledge?","answer":"No. No official may “prescribe what shall be orthodox” in politics, religion, or opinion, or force citizens to confess it by word or act. The state may teach civics and explain the salute but not compel a declaration of belief. Speech and worship yield only to “grave and immediate danger.” 6-3, Jackson, J.; overruled Gobitis (1940).","note":"A speech case, not a religion case: secular objectors are equally protected, and the salute is symbolic utterance. Rights “depend on the outcome of no elections.” Coerced unity achieves “the unanimity of the graveyard.” Mahmoud later called Barnette an “especially egregious” example of coercion.","source":"First Amendment Outline · Ch. 1"},
+    {"id":"kennedy","label":"Ch. 1 · Kennedy (2022)","title":"Kennedy v. Bremerton","question":"Kennedy v. Bremerton: Could the district discipline a football coach for kneeling in prayer at midfield after games?","answer":"No. The district admitted acting partly because the conduct was religious, so the policy wasn’t neutral; strict scrutiny applied, and Free Exercise was violated. The Establishment Clause is read by history and tradition (Lemon and the endorsement test abandoned), and it bars coercion, which takes more than visible religious exercise. 6-3, Gorsuch, J.","note":"No coercion: the prayer was brief, quiet, and personal; no students joined; the record showed no pressure. The clauses are complementary. Dissent (Sotomayor): the coach had a long practice of demonstrative 50-yard-line prayer and led students, and the coercion test is “nearly toothless.”","source":"First Amendment Outline · Ch. 1"},
+    {"id":"mahmoud","label":"Ch. 1 · Mahmoud (2025)","title":"Mahmoud v. Taylor","question":"Mahmoud v. Taylor: Were parents entitled to opt their young children out of LGBTQ-inclusive storybooks?","answer":"Yes, likely (preliminary injunction, 6-3, Alito, J.). A policy that substantially interferes with a child’s religious development, a Yoder-type burden, gets strict scrutiny even if neutral and generally applicable. The inquiry is fact-intensive: the beliefs, the curriculum, the children’s age, and context. The no-opt-out policy failed.","note":"Burden: “unmistakably normative” books, trusted teachers, young children, correction of dissent. Other opt-outs, including sex ed, undercut infeasibility. Parental rights reach past the home (Pierce); private school is no answer. Dissent: mere exposure isn’t a burden, and Yoder concerned a community’s survival.","source":"First Amendment Outline · Ch. 1"},
+    {"id":"smith","label":"Ch. 2 · Smith (1990)","title":"Employment Division v. Smith","question":"Employment Division v. Smith: Must Oregon exempt Native American Church members’ ritual peyote use from its drug ban?","answer":"No. The Free Exercise Clause doesn’t require exemptions from neutral, generally applicable laws that incidentally burden religion. Belief is absolutely protected; religious conduct is protected only from laws that target it because it is religious. 6-3, Scalia, J.","note":"Strict scrutiny for every incidental burden would create “a private right to ignore generally applicable laws.” Support: Reynolds (polygamy), Prince, Braunfeld, Gillette. Past exemptions were “hybrid rights” cases pairing religion with speech or parental rights (Yoder). Fulton declined to overrule Smith.","source":"First Amendment Outline · Ch. 2"},
+    {"id":"lukumi","label":"Ch. 2 · Lukumi (1993)","title":"Church of Lukumi v. Hialeah","question":"Church of Lukumi Babalu Aye v. Hialeah: Why did the city’s animal-killing ordinances fail?","answer":"They burdened only religiously motivated conduct. Exemptions left comparable secular killings untouched, so the ordinances were neither neutral nor generally applicable, a religious gerrymander, and they failed strict scrutiny. 9-0, Kennedy, J.","note":"Underinclusive for cruelty (fishing, hunting, pest control, euthanasia, research allowed) and for public health (hunters’ carcasses and restaurant garbage unregulated). Society imposed on Santeria worshippers what it wouldn’t impose on itself. Beliefs need not be logical or comprehensible to others.","source":"First Amendment Outline · Ch. 2"},
+    {"id":"masterpiece","label":"Ch. 2 · Masterpiece (2018)","title":"Masterpiece Cakeshop","question":"Masterpiece Cakeshop: Why was Colorado’s order against baker Jack Phillips set aside?","answer":"Even a neutral law must be applied neutrally. Commissioners showed hostility to religion, and the Commission treated his religious objection worse than comparable objections. That violated the Free Exercise Clause. 7-2, Kennedy, J.","note":"A commissioner called religious justification “one of the most despicable pieces of rhetoric,” comparing it to slavery and the Holocaust; no one objected. Three bakers who refused cakes disapproving of same-sex marriage acted lawfully. Narrow: states can generally protect equal access to goods and services.","source":"First Amendment Outline · Ch. 2"},
+    {"id":"fulton","label":"Ch. 2 · Fulton (2021)","title":"Fulton v. Philadelphia","question":"Fulton v. Philadelphia: Why couldn’t the city stop referring foster children to Catholic Social Services?","answer":"A formal system of discretionary, individualized exemptions makes a policy not generally applicable, even if no exemption has ever been granted. Strict scrutiny then asks whether the city has a compelling interest in denying this claimant an exemption. It didn’t. 9-0, Roberts, C.J.; Smith not overruled.","note":"The Commissioner’s “sole discretion” to grant exceptions lets government decide which reasons are worthy. The interests failed as to CSS: more foster parents (CSS adds them), avoiding liability (speculative), and equal treatment (weighty, but undercut by the city’s own exemption system).","source":"First Amendment Outline · Ch. 2"},
+    {"id":"tandon","label":"Ch. 2 · Tandon (2021)","title":"Tandon v. Newsom","question":"Tandon v. Newsom: Why did California’s three-household limit on at-home worship trigger strict scrutiny?","answer":"A rule triggers strict scrutiny whenever it treats any comparable secular activity more favorably than religious exercise. Comparability is judged by risk to the government’s interest, and the state must show worship is riskier even with the same precautions. Salons, stores, and restaurants were favored. 5-4 per curiam, emergency relief.","note":"It doesn’t matter that some secular activities are treated equally badly. The state “cannot assume the worst when people go to worship but assume the best when people go to work.” Dissent (Kagan): the right comparator is secular at-home gatherings, treated identically.","source":"First Amendment Outline · Ch. 2"},
+    {"id":"carson","label":"Ch. 2 · Carson (2022)","title":"Carson v. Makin","question":"Carson v. Makin: May Maine’s tuition program pay only for “nonsectarian” private schools?","answer":"No. Once a state subsidizes private schooling, it can’t exclude schools because they are religious, even if the money pays for religious instruction. An interest in separating church and state more strictly than the Constitution requires isn’t compelling. 6-3, Roberts, C.J.","note":"Completes the trilogy with Trinity Lutheran (2017) and Espinoza (2020); under Zelman (2002), aid through private choice isn’t an establishment. States may keep public schools secular or fund no private schools. Open: religious charter schools (Drummond, 4-4 in 2025). Dissent: play in the joints is nearly gone.","source":"First Amendment Outline · Ch. 2"},
+    {"id":"wooley","label":"Ch. 3 · Wooley (1977)","title":"Wooley v. Maynard","question":"Wooley v. Maynard: Could New Hampshire punish drivers for covering “Live Free or Die” on their license plates?","answer":"No. The state may not require a person to display its ideological message on private property for the public to see. The right to speak and the right not to speak are complementary parts of freedom of mind. 6-3, Burger, C.J.","note":"Passive display counts: the car becomes a “mobile billboard.” Plate numbers identify cars, and state pride is an ideological interest. Footnote 15: “In God We Trust” on currency differs because money isn’t associated with its bearer. Compelled commercial disclosures are allowed (Ch. 8).","source":"First Amendment Outline · Ch. 3"},
+    {"id":"collin","label":"Ch. 3 · Collin (7th Cir. 1978)","title":"Collin v. Smith (Skokie)","question":"Collin v. Smith: Could Skokie block a Nazi march in a village home to thousands of Holocaust survivors?","answer":"No. Government may not ban a peaceful demonstration because of its message, however deeply it offends or traumatizes listeners. Listener protection is allowed only for intrusions into the home or a truly captive audience. The ordinances were content-based, not time, place, or manner rules.","note":"Psychic trauma is indistinguishable from speech that stirs anger (Terminiello). Residents could avoid Village Hall for half an hour. Debate must be “uninhibited, robust, and wide-open” (NYT v. Sullivan). The village conceded no expected violence, ruling out incitement and fighting words.","source":"First Amendment Outline · Ch. 3"},
+    {"id":"hudnut","label":"Ch. 3 · Hudnut (7th Cir. 1985)","title":"American Booksellers v. Hudnut","question":"American Booksellers v. Hudnut: Why was Indianapolis’s ban on material depicting women as subordinate struck down?","answer":"It was viewpoint discrimination. Explicit material treating women as equals was lawful; material treating them as subordinate was banned regardless of value. Government may not favor one viewpoint and silence another, even when the disfavored speech causes real harm. Easterbrook, J.","note":"The court accepted that such depictions perpetuate subordination; that only shows the power of speech. Otherwise government becomes “the great censor and director of which thoughts are good for us.” The ordinance ignored Miller: no prurient interest, community standards, work-as-a-whole, or value inquiry.","source":"First Amendment Outline · Ch. 3"},
+    {"id":"stevens","label":"Ch. 3 · Stevens (2010)","title":"United States v. Stevens","question":"United States v. Stevens: Why was the federal ban on depictions of animal cruelty invalid?","answer":"Content-based laws are presumptively invalid unless the speech falls in a historically unprotected category, and courts may not create new categories by balancing value against costs. Read by its text, the law reached hunting videos, so it was substantially overbroad and facially invalid. 8-1, Roberts, C.J.","note":"The government’s “categorical balancing” test is “startling and dangerous.” A promise to prosecute only extreme cruelty doesn’t help; we aren’t left “at the mercy of noblesse oblige.” Left open: a law limited to crush videos or extreme cruelty. Dissent (Alito) would read the statute narrowly.","source":"First Amendment Outline · Ch. 3"},
+    {"id":"alvarez","label":"Ch. 3 · Alvarez (2012)","title":"United States v. Alvarez","question":"United States v. Alvarez: Could Alvarez be punished under the Stolen Valor Act for falsely claiming the Medal of Honor?","answer":"No. There is no general First Amendment exception for false statements. A content-based ban on lies must be “actually necessary,” and the ordinary remedy for false speech is true speech. 6-3; Kennedy plurality, with Breyer and Kagan concurring in the judgment under intermediate scrutiny.","note":"Unprotected falsehoods involved legally cognizable harm, like defamation and fraud; this Act targeted “falsity and nothing more,” even lies at home. Counterspeech worked: Alvarez was exposed and ridiculed. A plurality’s reasoning usually isn’t binding.","source":"First Amendment Outline · Ch. 3"},
+    {"id":"hansen","label":"Ch. 3 · Hansen (2023)","title":"United States v. Hansen","question":"United States v. Hansen: Is the ban on “encouraging or inducing” illegal immigration facially overbroad?","answer":"No. Overbreadth requires a substantial amount of protected speech relative to the law’s plainly legitimate sweep: realistic applications and a lopsided ratio. Read as criminal-law terms of art, “encourage or induce” covers only intentional solicitation and facilitation of specific unlawful acts. 7-2, Barrett, J.","note":"Overbreadth is “strong medicine”: an unprotected speaker asserts others’ rights. Courts first adopt any fairly possible constitutional reading, but avoidance can’t override clear text. Contrast Stevens: ordinary meaning, many realistic protected applications. Ordinary facial challenges need no valid applications (Salerno).","source":"First Amendment Outline · Ch. 3"},
+    {"id":"terminiello","label":"Ch. 4 · Terminiello (1949)","title":"Terminiello v. Chicago","question":"Terminiello v. Chicago: Why was the suspended priest’s breach-of-the-peace conviction reversed?","answer":"The jury was told breach of the peace included speech that “stirs the public to anger, invites dispute, brings about a condition of unrest.” Speech can’t be punished for that. It must pose a clear and present danger of a serious evil far above public inconvenience or annoyance. 5-4, Douglas, J.","note":"Speech may best serve its purpose when it induces unrest or stirs people to anger; the alternative is standardized ideas. Reading tip: the facts sounded like incitement, but the instruction swept in protected speech. The dissent stressed that counsel never objected to it.","source":"First Amendment Outline · Ch. 4"},
+    {"id":"brandenburg","label":"Ch. 4 · Brandenburg (1969)","title":"Brandenburg v. Ohio","question":"Brandenburg v. Ohio: When may government punish advocacy of force or law violation?","answer":"Only if it is (1) directed to inciting or producing (2) imminent (3) lawless action and (4) is likely to produce it. Ohio’s criminal syndicalism law punished mere advocacy, with no intent, imminence, or likelihood requirement, so it was unconstitutional. 9-0 per curiam; overruled Whitney.","note":"Abstract teaching of the necessity of force differs from “preparing a group for violent action and steeling it to such action.” Facts: a filmed KKK rally warning of “revengeance” and a march on Congress. Black and Douglas would reject clear and present danger, used against WWI dissidents.","source":"First Amendment Outline · Ch. 4"},
+    {"id":"rav","label":"Ch. 4 · R.A.V. (1992)","title":"R.A.V. v. St. Paul","question":"R.A.V. v. St. Paul: Why was the cross-burning ordinance, construed to reach only fighting words, facially invalid?","answer":"Government may ban an entire unprotected category because of what makes it proscribable, but it may not single out a subset by topic or viewpoint. St. Paul reached only fighting words based on race, color, creed, religion, or gender. 9-0 on the judgment, Scalia, J.","note":"Unprotected categories aren’t “invisible to the Constitution”: government may ban libel, but not only libel critical of the government. The ordinance skipped fighting words based on politics, union membership, or sexual orientation. A Harvard note argues Chaplinsky should be overruled, not expanded.","source":"First Amendment Outline · Ch. 4"},
+    {"id":"near","label":"Ch. 4 · Near (1931)","title":"Near v. Minnesota","question":"Near v. Minnesota: May a court enjoin a newspaper from publishing articles accusing local law enforcement of corruption?","answer":"No. The injunction was a prior restraint, which the Framers especially opposed, so it was reversed. Dictum: protection isn’t absolute; in wartime, government might prevent publication of troop numbers and locations or transport sailing dates.","note":"That wartime dictum is the only recognized exception to the heavy presumption against prior restraints, and the Court has never actually applied it. A prior restraint stops speech before it occurs, by injunction or licensing, rather than punishing it afterward.","source":"First Amendment Outline · Ch. 4"},
+    {"id":"pentagon-papers","label":"Ch. 4 · NYT v. U.S. (1971)","title":"Pentagon Papers","question":"New York Times Co. v. United States: Could the Nixon Administration enjoin publication of the Pentagon Papers?","answer":"No. A prior restraint comes with a heavy presumption against its validity (Near; Bantam Books), and a general claim of harm to national security did not carry the government’s heavy burden. Injunctions denied, 6-3 per curiam.","note":"Don’t confuse with NYT v. Sullivan (defamation). Black: every moment of restraint was a flagrant violation, and “security” is a vague generality. Dissent: too rushed. No such restraint has ever been upheld; Marchetti and Snepp rested on CIA secrecy agreements.","source":"First Amendment Outline · Ch. 4"},
+    {"id":"counterman","label":"Ch. 5 · Counterman (2023)","title":"Counterman v. Colorado","question":"Counterman v. Colorado: What mental state must be proved to punish a true threat?","answer":"At least recklessness: the speaker consciously disregarded a substantial risk that the words would be viewed as threatening. A true threat is a serious expression of intent to commit unlawful violence, judged by a reasonable recipient. Colorado’s purely objective test fell short; vacated. 7-2, Kagan, J.","note":"“True” excludes jest and hyperbole. A subjective element prevents self-censorship; recklessness balances that against victims’ harm. Sotomayor would require intent, as incitement does; Barrett and Thomas would use an objective test. Facts: hundreds of Facebook messages to a musician he’d never met.","source":"First Amendment Outline · Ch. 5"},
+    {"id":"williams","label":"Ch. 5 · Williams (2008)","title":"United States v. Williams","question":"United States v. Williams: Is a law punishing offers and requests for child pornography constitutional?","answer":"Yes. Offers to provide and requests to obtain contraband are categorically unprotected speech integral to crime (Giboney). The law covers material the speaker believes is child pornography, even if the belief is mistaken. It isn’t vague: belief and intent are true-or-false facts. 7-2, Scalia, J.","note":"“Promotes” doesn’t reach “child pornography should be legal”; it means recommending a particular item to initiate a transfer. Vagueness concerns what fact must be proved (“annoying”), not difficulty proving it. Technology makes it nearly impossible to prove which images involve real children.","source":"First Amendment Outline · Ch. 5"},
+    {"id":"paladin","label":"Ch. 5 · Paladin (4th Cir. 1997)","title":"Rice v. Paladin Enterprises","question":"Rice v. Paladin Enterprises: Could victims’ families sue the publisher of Hit Man for aiding and abetting murder?","answer":"Yes. Speech, even publishing, that aids and abets a crime is unprotected where the publisher intended to assist criminals and the material was used exactly as intended. Paladin stipulated that it intended to help murderers and knew the book would be used for murder.","note":"Unique facts: the stipulations, detailed instructions, exhortation to murder, and no legitimate purpose. Copycat cases differ, since novel and film publishers don’t intend crime. Intent evidence will almost never exist without such stipulations. News reporting is never a basis for liability.","source":"First Amendment Outline · Ch. 5"},
+    {"id":"garcia","label":"Ch. 5 · Garcia (M.D. Fla. 2025)","title":"Garcia v. Character Technologies","question":"Garcia v. Character Technologies: Did the First Amendment require dismissal of the wrongful-death suit against an AI chatbot company?","answer":"No, at least at the preliminary stage. A distributor may assert its users’ right to receive speech, but output counts as speech only if it is expressive, and the court was not prepared to hold that chatbot output is speech.","note":"Barrett’s Moody v. NetChoice concurrence: an algorithm carrying out a human’s expressive choice may be speech, but when owners “hand the reins” to an LLM, it’s unclear anyone chose. Claiming the output as its own speech would mean owning its liability and admitting deliberate design, as in Paladin.","source":"First Amendment Outline · Ch. 5"},
+    {"id":"bolger","label":"Ch. 6 · Bolger (1983)","title":"Bolger v. Youngs Drug Products","question":"Bolger v. Youngs Drug Products: Could Congress ban mailing unsolicited contraceptive ads to homes?","answer":"No. Government can’t shield adults from offensive content (except obscenity), and it can shield kids only without stopping adults from getting the material. It “may not reduce the adult population to reading only what is fit for children.” 9-0 on the bottom line, Marshall, J.","note":"The trip “from mail box to trash can is an acceptable burden” (citing Cohen). Helping parents is substantial, but they already control their mail. Butler v. Michigan: don’t “burn the house to roast the pig.” Pacifica distinguished: broadcasting is uniquely pervasive and accessible to children.","source":"First Amendment Outline · Ch. 6"},
+    {"id":"cohen","label":"Ch. 6 · Cohen (1971)","title":"Cohen v. California","question":"Cohen v. California: Could Cohen be convicted for wearing a “Fuck the Draft” jacket in a courthouse corridor?","answer":"No. It wasn’t fighting words: no one present could reasonably see a direct personal insult, and violence wasn’t a realistic prospect. Unwilling viewers don’t automatically justify suppression; they can avert their eyes. Profanity is protected speech. 5-4, Harlan, J.","note":"Women and children were present; the jacket expressed the depth of his feeling about the Vietnam War. Chaplinsky’s fighting words are personal insults likely to provoke immediate attack, and no restriction has been upheld on that theory since 1942. Pacifica is the narrow profanity exception.","source":"First Amendment Outline · Ch. 6"},
+    {"id":"pacifica","label":"Ch. 6 · Pacifica (1978)","title":"FCC v. Pacifica","question":"FCC v. Pacifica: Why could the FCC act against an afternoon radio broadcast of Carlin’s “Filthy Words”?","answer":"Broadcasting is uniquely accessible to children, so government may regulate a broadcast that is indecent but not obscene. The holding is narrow and rests on a nuisance rationale where context (time of day, content, medium) is all-important. 5-4; Stevens, J., plurality.","note":"Radios reach unsupervised children in the home, adults tune in without warning, and spectrum is scarce. The broadcast “could have enlarged a child’s vocabulary in an instant,” unlike Cohen’s jacket. A nuisance may be “a pig in the parlor instead of the barnyard.”","source":"First Amendment Outline · Ch. 6"},
+    {"id":"renton","label":"Ch. 6 · Renton (1986)","title":"Renton v. Playtime Theatres","question":"Renton v. Playtime Theatres: What standard applies to zoning that confines adult businesses?","answer":"Intermediate scrutiny, even though the law is partly content-based, because it targets secondary effects, such as crime and lower property values, rather than the message.","note":"The doctrine is narrow: the Court has refused to extend secondary effects beyond adult entertainment establishments. The casebook compares Ferber, where the harm is likewise indirect (abuse of real children in production) rather than caused by the message.","source":"First Amendment Outline · Ch. 6"},
+    {"id":"ferber","label":"Ch. 6 · Ferber (1982)","title":"New York v. Ferber","question":"New York v. Ferber: May a state ban distributing child pornography that isn’t obscene under Miller?","answer":"Yes. Child pornography made with real children is unprotected, even if not obscene, because its distribution is intrinsically related to the sexual abuse of the children used to make it. Unanimous on the bottom line, White, J.","note":"Preventing exploitation is of “surpassing importance.” The material is a permanent record whose circulation worsens the harm, and closing the distribution network controls production; drying up the market may be the only practical enforcement. Its value is “exceedingly modest, if not de minimis.”","source":"First Amendment Outline · Ch. 6"},
+    {"id":"free-speech-coalition","label":"Ch. 6 · Free Speech Coalition (2002)","title":"Ashcroft v. Free Speech Coalition","question":"Ashcroft v. Free Speech Coalition: May Congress ban sexually explicit images that only “appear to” depict minors?","answer":"No. Ferber doesn’t extend to images made without real children, such as computer-generated images or adults who look like minors. Ferber’s rationale depended on protecting real children exploited in production. 6-3, Kennedy, J.","note":"The CPPA banned speech regardless of serious value; Juliet is 13. One explicit scene triggered punishment, but artistic merit doesn’t depend on a single scene. Ferber itself pointed to virtual images as an alternative. Contrast Williams: offers believed to involve real children may be punished.","source":"First Amendment Outline · Ch. 6"},
+    {"id":"ashcroft-ii","label":"Ch. 6 · Ashcroft II (2004)","title":"Ashcroft v. ACLU (Ashcroft II)","question":"Ashcroft v. ACLU (Ashcroft II): Why was COPA, which criminalized commercial online material “harmful to minors,” likely unconstitutional?","answer":"Under strict scrutiny, a content-based law that suppresses much speech adults may receive is invalid if less restrictive alternatives would be at least as effective, and the government must prove they aren’t. Filters were less restrictive and possibly more effective. 5-4, Kennedy, J.","note":"Filters work at the receiving end, require no adult ID, and criminalize no speech; they also block foreign sites and email. The government offered no evidence COPA would work better. Paxton (2025) later upheld age verification under intermediate scrutiny.","source":"First Amendment Outline · Ch. 6"},
+    {"id":"paxton","label":"Ch. 6 · Paxton (2025)","title":"Free Speech Coalition v. Paxton","question":"Free Speech Coalition v. Paxton: What scrutiny applies to Texas’s age-verification law for sexually explicit websites, and does the law survive?","answer":"Intermediate scrutiny, because the burden on adults is only incidental to the state’s power to keep minors from speech obscene as to them (Ginsberg v. New York). Texas’s law satisfies it. 6-3, Thomas, J.","note":"Reno v. ACLU and Ashcroft II involved effective bans on adult access, and the internet has changed. Rational basis was rejected because adults keep a real right. ID checks mirror in-person ones, and filters don’t defeat a legislative choice. Did Paxton effectively overrule Ashcroft II?","source":"First Amendment Outline · Ch. 6"},
+    {"id":"brown","label":"Ch. 6 · Brown (2011)","title":"Brown v. Entertainment Merchants","question":"Brown v. Entertainment Merchants Ass’n: May California ban selling violent video games to minors?","answer":"No. Violent imagery is protected; there is no new unprotected category for violence, even for minors. The content-based ban gets strict scrutiny and fails. Ginsberg merely adjusted obscenity for minors; California sought a wholly new category. 7-2, Scalia, J.","note":"Video games are speech. There is no “free-floating power to restrict the ideas to which children may be exposed”; Grimm’s tales and the Odyssey are gory. Strict scrutiny fails: no causation, minuscule effects, wild underinclusiveness (Bugs Bunny), and industry ratings already help parents.","source":"First Amendment Outline · Ch. 6"}
+  ]
+}
+</script>
+<script>
+(() => {
+  'use strict';
+  const $ = id => document.getElementById(id);
+  const deck = JSON.parse($('deck-data').textContent);
+  if (deck.schemaVersion !== '1.0' || !Array.isArray(deck.cards) || !deck.cards.length) throw new Error('Unsupported or empty deck');
+  const ids = new Set();
+  for (const c of deck.cards) {
+    for (const key of ['id','label','title','question','answer','note','source']) if (typeof c[key] !== 'string' || !c[key].trim()) throw new Error('Card requires ' + key);
+    if (ids.has(c.id)) throw new Error('Duplicate card ID');
+    ids.add(c.id);
+  }
+  let queue = [...deck.cards], index = 0, revealed = false, complete = false;
+  const results = new Map();
+  const put = (id, text) => $(id).textContent = text;
+  put('subject', deck.subject); put('deck-title', deck.title); put('topic', deck.topic);
+  put('deck-description', deck.description);
+  const announce = text => put('announcement', text);
+  const card = $('flashcard');
+  const front = $('card-face');
+  const rotor = document.createElement('div'); rotor.className = 'card-rotor';
+  front.classList.add('card-plane');
+  const back = front.cloneNode(true); back.removeAttribute('id'); back.classList.add('back');
+  back.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+  rotor.append(front,back); card.prepend(rotor);
+  card.tabIndex = 0;
+  card.setAttribute('aria-describedby','flip-instructions');
+  const instructions = document.createElement('span'); instructions.id = 'flip-instructions'; instructions.className = 'sr-only';
+  instructions.textContent = 'Press Enter or Space to flip. Swipe left for next card or right for previous card.'; card.after(instructions);
+  let navigating = false;
+  const reducedMotion = () => matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function syncSide() {
+    rotor.classList.toggle('is-flipped',revealed);
+    front.inert = revealed; back.inert = !revealed;
+    front.setAttribute('aria-hidden',String(revealed)); back.setAttribute('aria-hidden',String(!revealed));
+    put('reveal',revealed ? 'Show question ↶' : 'Reveal answer ↗');
+    $('reveal').setAttribute('aria-expanded',String(revealed));
+    $('rating').hidden = !revealed;
+    card.setAttribute('aria-label',revealed ? 'Flashcard answer. Activate to show question.' : 'Flashcard question. Activate to reveal answer.');
+  }
+  function counts() {
+    put('known-count', [...results.values()].filter(x => x === 'known').length);
+    put('review-count', [...results.values()].filter(x => x === 'again').length);
+    $('progress').setAttribute('aria-valuemax', deck.cards.length);
+    $('progress').setAttribute('aria-valuenow', results.size);
+    $('progress-fill').style.width = (results.size / deck.cards.length * 100) + '%';
+  }
+  function menu() {
+    $('deck-list').replaceChildren();
+    queue.forEach((card, i) => {
+      const button = document.createElement('button'); button.type = 'button'; button.className = 'deck-item';
+      button.setAttribute('aria-current', String(!complete && i === index));
+      const n = document.createElement('span'); n.className = 'deck-number'; n.textContent = String(i + 1).padStart(2,'0');
+      const title = document.createElement('span'); title.textContent = card.title;
+      const status = document.createElement('span'); status.className = 'deck-status'; status.textContent = results.get(card.id) === 'known' ? '✓' : results.has(card.id) ? '↺' : '·';
+      status.setAttribute('aria-label', results.get(card.id) === 'known' ? 'Known' : results.has(card.id) ? 'Revisit' : 'Unreviewed');
+      button.append(n,title,status); button.addEventListener('click', () => { index = i; complete = false; render(); announce(card.question); });
+      $('deck-list').append(button);
+    });
+  }
+  function render() {
+    revealed = false; complete = false;
+    const c = queue[index];
+    rotor.hidden = false; $('card-face').hidden = false; $('completion').hidden = true;
+    card.tabIndex = 0;
+    put('position', 'Card ' + (index + 1) + ' of ' + queue.length);
+    put('card-label', c.label); put('card-side', 'Question'); put('card-id', c.source);
+    const h = document.createElement('h2'); h.textContent = c.question;
+    const p = document.createElement('p'); p.textContent = 'Take a breath. Bring the answer to mind.';
+    $('card-content').replaceChildren(h,p);
+    back.querySelector('.card-meta > span').textContent = c.label;
+    back.querySelector('.card-type').textContent = 'Answer';
+    back.querySelector('.card-signature > span').textContent = c.source;
+    const answer = document.createElement('h2'); answer.className = 'answer-copy'; answer.textContent = c.answer;
+    const note = document.createElement('p'); note.className = 'answer-note'; note.textContent = c.note;
+    back.querySelector('.card-content').replaceChildren(answer,note);
+    $('reveal').hidden = false; $('reveal').setAttribute('aria-expanded','false'); $('rating').hidden = true;
+    $('previous').disabled = index === 0; $('next').disabled = index === queue.length - 1;
+    rotor.classList.add('no-motion'); syncSide(); void rotor.offsetWidth; rotor.classList.remove('no-motion');
+    counts(); menu();
+  }
+  function reveal() {
+    if (complete || navigating) return;
+    revealed = !revealed; syncSide();
+    const c = queue[index]; announce(revealed ? c.answer + ' ' + c.note : c.question);
+  }
+  function finish() {
+    complete = true; counts(); menu(); $('card-face').hidden = true; $('completion').hidden = false;
+    rotor.hidden = true; card.tabIndex = -1;
+    $('reveal').hidden = true; $('rating').hidden = true; $('previous').disabled = true; $('next').disabled = true;
+    put('position','Pass complete');
+    const remaining = deck.cards.filter(c => results.get(c.id) !== 'known');
+    const art = document.createElement('img'); art.src = '../../assets/statues/apollo.webp'; art.alt = '';
+    const h = document.createElement('h2'); h.textContent = 'A little more clarity.';
+    const p = document.createElement('p'); p.textContent = remaining.length ? remaining.length + (remaining.length === 1 ? ' card' : ' cards') + ' to revisit. Take another thoughtful pass.' : 'Every card marked known. Nicely studied.';
+    const button = document.createElement('button'); button.type = 'button'; button.className = 'fc-button primary'; button.textContent = remaining.length ? 'Study remaining cards' : 'Start a fresh session';
+    button.addEventListener('click', () => {queue = remaining.length ? remaining : [...deck.cards]; if (!remaining.length) results.clear(); index = 0; render(); $('reveal').focus({preventScroll:true});});
+    $('completion').replaceChildren(art,h,p,button); button.focus({preventScroll:true}); announce(p.textContent);
+  }
+  function rate(value) {
+    if (!revealed || complete || navigating) return;
+    results.set(queue[index].id,value);
+    const earlier = queue.findIndex(c => !results.has(c.id));
+    if (index < queue.length - 1) index++;
+    else if (earlier >= 0) index = earlier;
+    else { finish(); return; }
+    render(); $('reveal').focus({preventScroll:true}); announce(queue[index].question);
+  }
+  async function move(delta) {
+    if (complete || navigating) return;
+    const target = index + delta; if (target < 0 || target >= queue.length) return;
+    navigating = true;
+    try {
+      if (!reducedMotion()) await card.animate([{transform:'translateX(0)',opacity:1},{transform:`translateX(${-delta * 32}px)`,opacity:0}],{duration:140,easing:'ease-in',fill:'forwards'}).finished;
+      card.getAnimations().forEach(a => a.cancel()); index = target; render();
+      if (!reducedMotion()) await card.animate([{transform:`translateX(${delta * 32}px)`,opacity:0},{transform:'translateX(0)',opacity:1}],{duration:230,easing:'cubic-bezier(.2,.7,.2,1)'}).finished;
+      announce(queue[index].question);
+    } finally { navigating = false; }
+  }
+  let pointer = null, suppressClickUntil = 0;
+  card.addEventListener('pointerdown', e => {
+    if (!e.isPrimary || e.button !== 0 || complete || navigating || e.target.closest('a,button')) return;
+    pointer = {id:e.pointerId,x:e.clientX,y:e.clientY};
+  });
+  card.addEventListener('pointermove', e => {
+    if (!pointer || e.pointerId !== pointer.id) return;
+    const dx = e.clientX - pointer.x, dy = e.clientY - pointer.y;
+    if (Math.abs(dx) > 12 || Math.abs(dy) > 12) suppressClickUntil = Date.now() + 500;
+    if (Math.abs(dx) > 12 && Math.abs(dx) > Math.abs(dy) * 1.4 && !card.hasPointerCapture(e.pointerId)) card.setPointerCapture(e.pointerId);
+  });
+  card.addEventListener('pointerup', e => {
+    if (!pointer || e.pointerId !== pointer.id) return;
+    const dx = e.clientX - pointer.x, dy = e.clientY - pointer.y; pointer = null;
+    if (card.hasPointerCapture(e.pointerId)) card.releasePointerCapture(e.pointerId);
+    if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.4) {suppressClickUntil = Date.now() + 500; move(dx < 0 ? 1 : -1);}
+  });
+  card.addEventListener('pointercancel', () => {pointer = null;suppressClickUntil = Date.now() + 500;});
+  card.addEventListener('click', e => {if (!e.target.closest('a,button') && Date.now() > suppressClickUntil && !window.getSelection()?.toString()) reveal();});
+  card.addEventListener('keydown', e => {if (e.target === card && (e.code === 'Space' || e.key === 'Enter')) {e.preventDefault(); e.stopPropagation(); reveal();}});
+  $('reveal').addEventListener('click', reveal); $('again').addEventListener('click', () => rate('again')); $('known').addEventListener('click', () => rate('known'));
+  $('previous').addEventListener('click', () => move(-1)); $('next').addEventListener('click', () => move(1));
+  $('theme').addEventListener('click', () => {const light = document.documentElement.dataset.theme !== 'light'; document.documentElement.dataset.theme = light ? 'light' : 'dark'; put('theme', light ? 'Dark mode' : 'Light mode'); $('theme').setAttribute('aria-label',light ? 'Switch to dark theme' : 'Switch to light theme');});
+  document.addEventListener('keydown', e => {
+    if (e.altKey || e.ctrlKey || e.metaKey || e.target.matches('input,textarea,select,[contenteditable]')) return;
+    if (e.code === 'Space' && !complete && e.target === document.body) {e.preventDefault();reveal();}
+    else if (e.key === 'ArrowLeft') {e.preventDefault();move(-1);}
+    else if (e.key === 'ArrowRight') {e.preventDefault();move(1);}
+    else if (e.key === '1') rate('again'); else if (e.key === '2') rate('known');
+  });
+  render();
+})();
+</script>
+</body>
+</html>
