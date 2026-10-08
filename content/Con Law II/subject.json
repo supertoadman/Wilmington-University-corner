@@ -54,6 +54,15 @@
       "description": "32 flashcards on the core concepts of Chapters 1–6. Covers the Free Exercise and speech checklists, the ways a law fails neutrality, Establishment Clause funding, RFRA, the unprotected categories, overbreadth and vagueness, prior restraints, mens rea, the Miller test, and protecting kids versus adults.",
       "tags": ["First Amendment", "flashcards", "doctrine", "Chapters 1–6"],
       "order": 6
+    },
+    "First_Amendment_Mock_Exam.html": {
+      "slug": "first-amendment-mock-exam",
+      "title": "First Amendment Mock Exam",
+      "type": "practice",
+      "description": "A timed practice exam covering everything in Chapters 1–6: 60 bar-style questions with new facts, in four 15-question parts that each cover every topic at two minutes a question. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "tags": ["First Amendment", "MCQ", "mock exam", "timed", "bar prep", "Chapters 1–6"],
+      "questions": 60,
+      "order": 7
     }
   }
 }
