@@ -15,7 +15,7 @@
     },
     "First_Amendment_Drill.html": {
       "slug": "first-amendment-drill",
-      "title": "First Amendment Drill",
+      "title": "First Amendment Quick Drill",
       "type": "practice",
       "description": "264 multiple-choice questions on every case and concept in the outline. They test what each case held, hypotheticals built on its facts, and how the doctrine applies. Filter by chapter or question type, shuffle the answers, and review only the ones you missed.",
       "tags": ["First Amendment", "MCQ", "Chapters 1–6"],
@@ -32,7 +32,7 @@
     },
     "First_Amendment_Case_Files.html": {
       "slug": "first-amendment-case-files",
-      "title": "First Amendment Case Files",
+      "title": "First Amendment BAR style questions 1",
       "type": "practice",
       "description": "Bar-style application questions for Weeks 1–6 (Chapters 1–6). Each question sets out new facts, from compelled pledges and school prayer to protest livestreams, chatbot lawsuits, and age-verification laws, and asks you to apply the doctrine. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 113 outline items.",
       "tags": ["First Amendment", "MCQ", "application", "bar prep", "Chapters 1–6"],
