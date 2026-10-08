@@ -54,14 +54,6 @@
       "description": "32 flashcards on the core concepts of Chapters 1–6. Covers the Free Exercise and speech checklists, the ways a law fails neutrality, Establishment Clause funding, RFRA, the unprotected categories, overbreadth and vagueness, prior restraints, mens rea, the Miller test, and protecting kids versus adults.",
       "tags": ["First Amendment", "flashcards", "doctrine", "Chapters 1–6"],
       "order": 6
-    },
-    "Flash_Card_Test_Demo.html": {
-      "slug": "flash-card-test-demo",
-      "title": "Flash Card Test Demo (not for use)",
-      "type": "flashcards",
-      "description": "A design preview of the new flashcard player, with five sample Evidence cards. For testing only; not for studying.",
-      "tags": ["demo"],
-      "order": 99
     }
   }
 }
