@@ -145,6 +145,9 @@ kbd {
 .statue-apollo { background-image: url("statues/apollo.webp"); }
 .statue-janus { background-image: url("statues/janus.webp"); }
 .statue-philosopher { background-image: url("statues/philosopher.webp"); }
+.statue-aporia { background-image: url("statues/aporia.webp"); }
+.statue-echo { background-image: url("statues/echo.webp"); }
+.statue-triad { background-image: url("statues/triad.webp"); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 .skip-link {
