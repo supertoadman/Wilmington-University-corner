@@ -37,11 +37,11 @@ $$('[data-theme-toggle]').forEach((btn) => btn.addEventListener('click', () => {
   try { localStorage.setItem('theme', next); } catch { /* storage unavailable */ }
 }));
 
-// ---------- Scenery: lo-fi scenes (cherry blossoms by default; snow, koi…) ----------
+// ---------- Scenery: lo-fi scenes (off by default; cherry blossoms, snow, koi…) ----------
 // Chosen from the menu in the header (or the document toolbar) and remembered per browser
-// ('off' once turned off). Visitors whose system asks for less motion start with it off.
+// ('off' once turned off). Every visitor starts with it off.
 // ambience.js only loads while a scene is on.
-const SCENERY_DEFAULT = matchMedia('(prefers-reduced-motion: reduce)').matches ? 'off' : 'sakura';
+const SCENERY_DEFAULT = 'off';
 const sceneryChoice = (stored) => stored || SCENERY_DEFAULT;
 const readScenery = () => { try { return sceneryChoice(localStorage.getItem('ambience')); } catch { return SCENERY_DEFAULT; } };
 let sceneryModule;

@@ -95,7 +95,7 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="${root}assets/styles.css">
-<script>(function(){var d=document.documentElement;d.dataset.theme='dark';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||(matchMedia('(prefers-reduced-motion: reduce)').matches?'off':'sakura');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement;d.dataset.theme='dark';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off';if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;}catch(e){}})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
 ${extraHead}`;
 }
@@ -114,10 +114,10 @@ const AMBIENCE = [
 ];
 // Hidden until app.js wires it up, so it never shows as a dead button without JavaScript.
 const ambienceControl = (cls = 'icon-btn') => `<div class="amb" data-amb hidden>
-        <button class="${cls} amb-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="amb-menu" aria-label="Background scenery" title="Background scenery">${icon('sparkles', 'amb-ico amb-ico-off')}${AMBIENCE.map((a) => icon(a.icon, `amb-ico amb-ico-${a.id}`)).join('')}</button>
+        <button class="${cls} amb-trigger" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="amb-menu" aria-label="Background effects" title="Background effects">${icon('sparkles', 'amb-ico amb-ico-off')}${AMBIENCE.map((a) => icon(a.icon, `amb-ico amb-ico-${a.id}`)).join('')}<span class="amb-trigger-label">Effects</span></button>
         <div class="amb-menu" id="amb-menu" role="menu" aria-labelledby="amb-title" hidden>
           <div class="amb-head">
-            <p class="amb-title" id="amb-title">Scenery</p>
+            <p class="amb-title" id="amb-title">Effects</p>
             <button class="amb-off" type="button" role="menuitemradio" aria-checked="true" data-amb-set="">Off</button>
           </div>
           <p class="amb-sub">A quiet lo-fi scene drifting across the pages.</p>
@@ -152,7 +152,7 @@ ${GILT_DEFS}
         ${icon('search')}<span class="search-trigger-label">Search documents</span><kbd>Ctrl K</kbd>
       </button>
       <a class="btn btn-share" href="${root}contribute/"${active === 'contribute' ? ' aria-current="page"' : ''}>${icon('upload')}<span>Share your work</span></a>
-      ${ambienceControl()}
+      ${ambienceControl('icon-btn amb-labeled')}
       ${themeButton()}
     </div>
   </div>
@@ -531,7 +531,7 @@ ${GILT_DEFS}
       ${isFrame ? `<button class="vbtn hide-touch" type="button" data-fullscreen title="Full screen">${icon('maximize')}<span>Full screen</span></button>` : ''}
       <button class="vbtn" type="button" data-share title="Share">${icon('share')}<span>Share</span></button>
       <a class="vbtn vbtn-primary" href="${fileUrl}" download="${esc(d.filename)}" title="Download">${icon('download')}<span>Download</span></a>
-      ${d.format.mime === 'application/pdf' ? '' : ambienceControl('vbtn vbtn-icon')}
+      ${d.format.mime === 'application/pdf' ? '' : ambienceControl('vbtn')}
       ${themeButton('vbtn vbtn-icon hide-mobile')}
     </div>
   </header>

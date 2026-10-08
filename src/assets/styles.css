@@ -290,6 +290,12 @@ kbd {
 }
 .icon-btn:hover { background: var(--surface-2); color: var(--text); }
 .icon-btn .icon { width: 19px; height: 19px; }
+/* The effects menu's trigger carries a word, so it reads as a setting rather than a mystery icon. */
+.amb-trigger-label { display: none; }
+.icon-btn.amb-labeled { width: auto; display: inline-flex; gap: 7px; padding: 0 12px 0 10px; border-color: var(--border); font-size: 13.5px; font-weight: 600; }
+.icon-btn.amb-labeled .icon { width: 17px; height: 17px; }
+:is(.amb-labeled, .vbar .amb-trigger) .amb-trigger-label { display: inline; }
+.page-home:not(.past-hero) .site-header .amb-labeled { border-color: rgba(241, 237, 228, .2); }
 .theme-sun { display: none; }
 :root[data-theme="dark"] .theme-sun { display: block; }
 :root[data-theme="dark"] .theme-moon { display: none; }
