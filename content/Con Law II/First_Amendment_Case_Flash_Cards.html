@@ -217,8 +217,7 @@
     put('position', 'Card ' + (index + 1) + ' of ' + queue.length);
     put('card-label', c.label); put('card-side', 'Question'); put('card-id', c.source);
     const h = document.createElement('h2'); h.textContent = c.question;
-    const p = document.createElement('p'); p.textContent = 'Take a breath. Bring the answer to mind.';
-    $('card-content').replaceChildren(h,p);
+    $('card-content').replaceChildren(h);
     back.querySelector('.card-meta > span').textContent = c.label;
     back.querySelector('.card-type').textContent = 'Answer';
     back.querySelector('.card-signature > span').textContent = c.source;
