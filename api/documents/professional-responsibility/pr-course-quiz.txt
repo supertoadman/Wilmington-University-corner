@@ -1,0 +1,59 @@
+Course Quiz
+===========
+
+Subject: Professional Responsibility
+Type: Practice Questions
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/pr-course-quiz/
+
+The 54 multiple-choice questions from the class quizzes on Chs. 5, 6, 8, 20, and 21, checked against the course answer keys. Take the quiz for a score or open the answer view, with explanations drawn from Ethical Lawyering, the class slides, and the Model Rules.
+
+---
+
+PR / The course question setProfessional Responsibility · Fall 2026
+
+Practice with the questions you were given
+
+# Professional Responsibility
+Your course questions, together in one place. Test yourself, then see the answer and the reasoning from your class materials.
+
+54Questions
+6Sections
+4Quiz files
+
+Take the quizJust see answers
+ChapterAll chapters5 · Fiduciary duties6 · Agency & authority8A · Confidentiality8B–C · Disclosure exceptions20 · Fees21 · Client property
+Find a question
+
+← PreviousNext →
+
+## Your progress
+0 / 0
+correct / checked
+
+Include 2 skipped itemsShuffle question orderReview missed questionsReset all progress
+
+## Jump to a question
+
+Green = correct · Red = missed
+Amber = revealed or review-only
+Outline = current question
+Progress saves in this browser. The file works offline.
+
+Show explanations & sourcesPrint this answer view
+
+About the sources & answer checks
+Questions are transcribed from the three dedicated quiz PowerPoints and the Week 3 multiple-choice PDF in your Professional Responsibility folder. Split slides are joined, whitespace is cleaned, and missing A–D labels are restored in their original order. The wording of the questions and choices is retained, including source defects identified in the notes. General class discussion problems and the existing generated question banks are not part of this set.
+
+- Chapter 5 Multiple Choice.pptx: 8 questions.
+
+- PR Chapter 6 Multiple Choice.pptx: 10 questions.
+
+- PR Week 3 Multiple Choice.pdf: 11 Chapter 8A questions and 4 Chapter 8B–C questions.
+
+- Chapter 20 and 21 MC Questions.pptx: 11 Chapter 20 questions and 10 Chapter 21 questions.
+
+Answers were compared with Chapter5_MC_Answers.docx, Chapter6_MC_Answers.docx, Chapter_20_21_MC_Answers.docx, PR_Ch8_Answer_Key.pdf, and PR_Ch8_Confidentiality_Answer_Key.pdf. Their authorship is not assumed. Explanations draw on Ethical Lawyering (2nd ed.), the Week 3–5 class slides, and the ABA rules and comments supplied in the folder. Each explanation identifies the relevant materials. Slide and PDF page numbers count from the beginning of the source file; a printed textbook page is labeled explicitly.
+Three review-only items: Chapter 8A–5 has conflicting source answers; Chapters 20–8 and 20–9 were marked skipped in the quiz slides. These do not affect your score. The two skipped items are optional in quiz mode and always included in the answer view. Other material qualifications are displayed with the relevant answer.
+The course-key answer for 8A–8 is preserved with its compelled-disclosure qualification. Supplemental checks of the ABA's Rule 1.6 comments, Rule 1.9 comments, and 28 U.S.C. § 2678 clarify the flagged items. This is a study aid for these course questions, not a substitute for a particular jurisdiction's rules.
+
+All questions and explanations are embedded in this file. No sign-in, network connection, or external script is needed.

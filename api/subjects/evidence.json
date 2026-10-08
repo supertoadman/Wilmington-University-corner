@@ -1,0 +1,320 @@
+{
+  "id": "evidence",
+  "slug": "evidence",
+  "title": "Evidence",
+  "description": "Federal Rules of Evidence, Weeks 1–5: relevance and 403, the policy exclusions, character evidence, 404(b), impeachment, and jury secrecy. Includes the rule chart, flowcharts, flashcards, and bar-style practice questions.",
+  "accent": "#2f6f8f",
+  "documentCount": 8,
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/evidence.json",
+    "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-all-files.zip"
+  },
+  "documents": [
+    {
+      "id": "evidence/evidence-rule-chart",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rule-chart",
+      "title": "Evidence Rule Chart/outline",
+      "description": "The master rule chart for Weeks 1–5. Each rule is explained in plain English with a note on what to watch out for. Rows tagged by class come from the Class 1–10 lecture slides, and there are notes on what the midterm covers.",
+      "type": "rule-chart",
+      "typeLabel": "Rule Chart",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "2Evidence_Rule_Chart (with class slides).docx",
+      "tags": [
+        "FRE",
+        "rule chart",
+        "midterm",
+        "class slides"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 47380,
+      "updated": "2026-10-04T18:12:36.000Z",
+      "headings": [
+        "Evidence Rule Chart — Weeks 1–5",
+        "Background: The Federal Rules of Evidence (Week 1)",
+        "1. The Jury's Secrecy (Week 1)",
+        "2. General Principles of Relevance (Weeks 1–2)",
+        "Probativeness and Materiality — FRE 401 & 402",
+        "Conditional Relevance — FRE 104(b)",
+        "Probativeness versus the Risk of Unfair Prejudice — FRE 403 & 105",
+        "Rule 403 in action",
+        "3. The Specialized Relevance Rules (Weeks 2–3)",
+        "Subsequent Remedial Measures — FRE 407",
+        "Compromise Offers and Payment of Medical Expenses — FRE 408 & 409",
+        "Pleas in Criminal Cases — FRE 410; Liability Insurance — FRE 411",
+        "4. Character Evidence (Weeks 3–4)",
+        "The Character-Propensity Rule — FRE 404(a)(1) & 404(b)",
+        "Routes Around the Box",
+        "Proof of the Defendant's and the Victim's Character — FRE 404(a)(2)",
+        "Propensity Evidence in Sexual Assault Cases — FRE 413, 414 & 415",
+        "Proving Character — FRE 405(a) & 405(b); Evidence of Habit — FRE 406",
+        "5. Impeachment and Character for Truthfulness (Weeks 4–5)",
+        "Modes of Impeachment",
+        "Impeachment by Opinion, Reputation, and Cross-Examination About Past Lies — FRE 607 & 608",
+        "Impeachment with Past Convictions — FRE 609",
+        "Rehabilitation and Use of Extrinsic Evidence",
+        "Critiques and Empirical Evidence on Rule 609",
+        "6. The Rape Shield Law — FRE 412 (Week 5)",
+        "The Shield Law",
+        "The Law in Force: Constitutional Limits, Civil Cases, Procedure",
+        "7. Plain-English Glossary",
+        "Terms A–L",
+        "Terms M–Z"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rule-chart/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-chart.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-chart.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-chart.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-chart.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-rule-flowcharts",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rule-flowcharts",
+      "title": "Evidence Flowcharts",
+      "description": "Interactive decision charts for Weeks 1–5. Zoom and pan around each chart, walk through a rule one step at a time, and search all nine charts. Covers relevance (401–403), the policy rules (407–411), character evidence, 404(b), impeachment, 609 convictions, the 412 rape shield, and 606(b) jury secrecy.",
+      "type": "flowcharts",
+      "typeLabel": "Flowcharts",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Rule_Flowcharts.html",
+      "tags": [
+        "FRE",
+        "interactive",
+        "401",
+        "403",
+        "404(b)",
+        "609",
+        "412",
+        "606(b)"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 524498,
+      "updated": "2026-10-07T12:20:29.000Z",
+      "headings": [
+        "Rule Flowcharts",
+        "Big picture",
+        "606(b) Jury secrecy",
+        "401-403 Relevance",
+        "407-411 Policy rules",
+        "Character: the box",
+        "404(b) Other acts",
+        "Impeachment",
+        "609 Convictions",
+        "412 Rape shield"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rule-flowcharts/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-flowcharts.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-flowcharts.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-flowcharts.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-flowcharts.json"
+      }
+    },
+    {
+      "id": "evidence/fre-rule-cards",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "fre-rule-cards",
+      "title": "FRE Rule Cards",
+      "description": "Flashcards for the Federal Rules of Evidence in Weeks 1–5. Pick your topics, flip each card, and rate yourself with a tap or a swipe. Missed cards come back sooner, and your mastery is saved in your browser.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "FRE_Rule_Cards.html",
+      "tags": [
+        "FRE",
+        "flashcards",
+        "spaced review",
+        "swipe"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 141648,
+      "updated": "2026-10-05T00:38:43.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/fre-rule-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/fre-rule-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/fre-rule-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/fre-rule-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/fre-rule-cards.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-rules-drill",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rules-drill",
+      "title": "Evidence Rules easy Drill",
+      "description": "Conceptual multiple-choice questions for Weeks 1–5, weighted toward the Federal Rules. The answer order reshuffles every time you load the page, so you can't memorize the letters.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Conceptual.html",
+      "tags": [
+        "MCQ",
+        "conceptual",
+        "FRE"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 45730,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "Evidence Rules Drill"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rules-drill/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rules-drill.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rules-drill.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rules-drill.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rules-drill.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-case-files",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-case-files",
+      "title": "Evidence BAR style questions 1",
+      "description": "Bar-level application questions for Weeks 1–5. Each question sets two or three rules against each other and turns on a single fact. Every answer choice has its own explanation, and the set includes one-fact variations and a coverage map.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Application (strict).html",
+      "tags": [
+        "MCQ",
+        "application",
+        "bar prep",
+        "variations"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 123713,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "Evidence Case Files"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-case-files/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-case-files-ii",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-case-files-ii",
+      "title": "Evidence BAR style questions 2",
+      "description": "A second, all-new set of bar-style application questions covering Classes 1–10. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 157 outline items.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Application (Classes 1-10).html",
+      "tags": [
+        "MCQ",
+        "application",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 177139,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "Evidence Case Files II"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-case-files-ii/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files-ii.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files-ii.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files-ii.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files-ii.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-mock-midterm",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-mock-midterm",
+      "title": "Evidence Mock Midterm",
+      "description": "A timed practice exam for the night before the midterm: 60 new bar-style questions on Classes 1–10, in four 15-question parts that each cover every topic at the real exam’s 30-minute pace. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Mock_Midterm.html",
+      "tags": [
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": 60,
+      "contributor": null,
+      "sizeBytes": 156553,
+      "updated": "2026-10-05T23:54:11.000Z",
+      "headings": [
+        "Evidence Mock Midterm"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-mock-midterm/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-mock-midterm-ii",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-mock-midterm-ii",
+      "title": "Evidence Mock Midterm II",
+      "description": "A second timed practice exam: 60 more new bar-style questions on Classes 1–10, with no fact patterns repeated from the first. It has the same four 15-question parts, each covering every topic at the real exam’s 30-minute pace, and draws on textbook problems the first exam didn’t use. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Mock_Midterm_II.html",
+      "tags": [
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": 60,
+      "contributor": null,
+      "sizeBytes": 154040,
+      "updated": "2026-10-06T11:01:35.000Z",
+      "headings": [
+        "Evidence Mock Midterm II"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-mock-midterm-ii/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm-ii.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm-ii.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm-ii.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm-ii.json"
+      }
+    }
+  ]
+}

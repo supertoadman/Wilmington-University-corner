@@ -1,0 +1,33 @@
+{
+  "id": "evidence/evidence-rules-drill",
+  "subject": "evidence",
+  "subjectTitle": "Evidence",
+  "slug": "evidence-rules-drill",
+  "title": "Evidence Rules easy Drill",
+  "description": "Conceptual multiple-choice questions for Weeks 1–5, weighted toward the Federal Rules. The answer order reshuffles every time you load the page, so you can't memorize the letters.",
+  "type": "practice",
+  "typeLabel": "Practice Questions",
+  "format": "HTML",
+  "mimeType": "text/html",
+  "originalFilename": "Evidence_MCQ_Conceptual.html",
+  "tags": [
+    "MCQ",
+    "conceptual",
+    "FRE"
+  ],
+  "questions": null,
+  "contributor": null,
+  "sizeBytes": 45730,
+  "updated": "2026-10-05T16:16:42.000Z",
+  "headings": [
+    "Evidence Rules Drill"
+  ],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rules-drill/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rules-drill.html",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rules-drill.html",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rules-drill.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rules-drill.json"
+  },
+  "text": "Evidence Rules Drill\n\n# Evidence Rules Drill\n\nConceptual multiple choice for Weeks 1–5, weighted toward the Federal Rules. Answers are shuffled every time you load or press Shuffle answers, so the letter never gives it away.\n\n0 / 0 answered\n\nShuffle answers\nShuffle questions\nRetry missed\nReset"
+}

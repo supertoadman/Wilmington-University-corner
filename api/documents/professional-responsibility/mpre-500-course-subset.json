@@ -1,0 +1,34 @@
+{
+  "id": "professional-responsibility/mpre-500-course-subset",
+  "subject": "professional-responsibility",
+  "subjectTitle": "Professional Responsibility",
+  "slug": "mpre-500-course-subset",
+  "title": "MPRE 500: Course Subset",
+  "description": "298 of the 500 questions in Stevenson, 500 MPRE Practice Questions (2019), limited to what Weeks 1–5 cover. Uses the book's answer key, with study and exam modes, topic filters, and answer shuffling.",
+  "type": "practice",
+  "typeLabel": "Practice Questions",
+  "format": "HTML",
+  "mimeType": "text/html",
+  "originalFilename": "PR_MPRE_500_Course_Subset.html",
+  "tags": [
+    "MPRE",
+    "MCQ",
+    "exam mode",
+    "book questions"
+  ],
+  "questions": 298,
+  "contributor": null,
+  "sizeBytes": 682153,
+  "updated": "2026-10-05T16:16:42.000Z",
+  "headings": [
+    "MPRE 500: Course Subset"
+  ],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/mpre-500-course-subset/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-500-course-subset.html",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-500-course-subset.html",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-500-course-subset.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-500-course-subset.json"
+  },
+  "text": "MPRE 500: Course Subset\n\n# MPRE 500: Course Subset\n\n298 of the 500 questions in Stevenson, 500 MPRE Practice Questions (2019), limited to what Weeks 1–5 cover · Book answer key · Answer order is randomized on every shuffle\n\nTopics\n\nMode\n\nStudy (instant feedback)\nExam (grade at end)\n\nQuestions\n\n102560 (MPRE length)All selected\n\nShuffle question order\n\nNew shuffled set\nReshuffle answer letters\n\nAnswer sheet"
+}

@@ -1,0 +1,252 @@
+{
+  "id": "con-law-ii",
+  "slug": "con-law-ii",
+  "title": "Con Law II",
+  "description": "Constitutional Law II: the First Amendment, Chapters 1–6. Covers the Religion Clauses, the speech framework, incitement and national security, true threats and speech integral to crime, and immoral speech, including obscenity, child pornography, and indecency.",
+  "accent": "#5b4b8a",
+  "documentCount": 7,
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/con-law-ii.json",
+    "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/con-law-ii-all-files.zip"
+  },
+  "documents": [
+    {
+      "id": "con-law-ii/first-amendment-outline",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-outline",
+      "title": "First Amendment Outline",
+      "description": "Case-by-case outline of Chapters 1–6, from Barnette and Kennedy v. Bremerton through Counterman, Ferber, and Free Speech Coalition v. Paxton. Each case has its rule, facts, holding, and dissent. Includes the Free Exercise, speech, prior restraint, and immoral speech checklists, along with synthesis tables.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "PDF",
+      "mimeType": "application/pdf",
+      "originalFilename": "First_Amendment_Outline_Ch1-6_Revised.pdf",
+      "tags": [
+        "First Amendment",
+        "outline",
+        "Religion Clauses",
+        "free speech"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 93334,
+      "updated": "2026-10-05T14:37:34.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-outline.pdf",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-outline.pdf",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-outline.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-flowcharts",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-flowcharts",
+      "title": "First Amendment Flowcharts",
+      "description": "Interactive decision charts for Chapters 1–6. A big-picture map shows how the Religion Clauses and the speech doctrines fit together, and eight charts walk through coercion, Free Exercise, the Establishment Clause and funding, the speech framework, incitement and fighting words, prior restraints, true threats and speech integral to crime, and immoral speech. Tap any box for a plain-English explanation, the cases behind it, and what to watch out for.",
+      "type": "flowcharts",
+      "typeLabel": "Flowcharts",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Flowcharts.html",
+      "tags": [
+        "First Amendment",
+        "interactive",
+        "Religion Clauses",
+        "free speech",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 540797,
+      "updated": "2026-10-07T12:20:29.000Z",
+      "headings": [
+        "First Amendment Flowcharts",
+        "Big picture",
+        "Coercion: Barnette to Mahmoud",
+        "Free Exercise",
+        "Establishment & funding",
+        "Speech framework",
+        "Incitement & fighting words",
+        "Prior restraints",
+        "Threats & crime speech",
+        "Immoral speech"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-flowcharts/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-flowcharts.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-flowcharts.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-flowcharts.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-flowcharts.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-drill",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-drill",
+      "title": "First Amendment Quick Drill",
+      "description": "264 multiple-choice questions on every case and concept in the outline. They test what each case held, hypotheticals built on its facts, and how the doctrine applies. Filter by chapter or question type, shuffle the answers, and review only the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Drill.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "Chapters 1–6"
+      ],
+      "questions": 264,
+      "contributor": null,
+      "sizeBytes": 157712,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "First Amendment Drill"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-drill/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-drill.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-drill.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-drill.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-drill.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-case-files",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-case-files",
+      "title": "First Amendment BAR style questions 1",
+      "description": "Bar-style application questions for Weeks 1–6 (Chapters 1–6). Each question sets out new facts, from compelled pledges and school prayer to protest livestreams, chatbot lawsuits, and age-verification laws, and asks you to apply the doctrine. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 113 outline items.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Case_Files.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "application",
+        "bar prep",
+        "Chapters 1–6"
+      ],
+      "questions": 115,
+      "contributor": null,
+      "sizeBytes": 190887,
+      "updated": "2026-10-07T13:04:21.000Z",
+      "headings": [
+        "First Amendment Case Files"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-case-files/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-files.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-files.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-files.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-files.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-case-flash-cards",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-case-flash-cards",
+      "title": "First Amendment Case Flash Cards",
+      "description": "34 flashcards, one for each main case in Chapters 1–6, from Whitney and Barnette through Paxton and Brown. Each card asks what the case held, then gives the rule, the vote, and the key reasoning. Cited cases such as Gobitis, Yoder, Zelman, and Chaplinsky appear on the card for the case that cites them. Flip each card, then mark it Got it or Revisit.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Case_Flash_Cards.html",
+      "tags": [
+        "First Amendment",
+        "flashcards",
+        "cases",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 52840,
+      "updated": "2026-10-08T15:42:52.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-case-flash-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-flash-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-flash-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-flash-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-flash-cards.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-concept-flash-cards",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-concept-flash-cards",
+      "title": "First Amendment Concept Flash Cards",
+      "description": "32 flashcards on the core concepts of Chapters 1–6. Covers the Free Exercise and speech checklists, the ways a law fails neutrality, Establishment Clause funding, RFRA, the unprotected categories, overbreadth and vagueness, prior restraints, mens rea, the Miller test, and protecting kids versus adults.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Concept_Flash_Cards.html",
+      "tags": [
+        "First Amendment",
+        "flashcards",
+        "doctrine",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 48183,
+      "updated": "2026-10-08T15:42:52.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-concept-flash-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-concept-flash-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-concept-flash-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-concept-flash-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-concept-flash-cards.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-mock-exam",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-mock-exam",
+      "title": "First Amendment Mock Exam",
+      "description": "A timed practice exam covering everything in Chapters 1–6: 60 bar-style questions with new facts, in four 15-question parts that each cover every topic at two minutes a question. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Mock_Exam.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Chapters 1–6"
+      ],
+      "questions": 60,
+      "contributor": null,
+      "sizeBytes": 158840,
+      "updated": "2026-10-08T19:34:05.000Z",
+      "headings": [
+        "First Amendment Mock Exam"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-mock-exam/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-mock-exam.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-mock-exam.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-mock-exam.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-mock-exam.json"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1447 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FRE Rule Cards</title>
+<meta name="description" content="Flashcards for the Federal Rules of Evidence, Weeks 1–5, with spaced review and mastery tracking.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;1,9..144,400&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@600&display=swap">
+<style>
+/* ==========================================================================
+   FRE Rule Cards: lobby (choose topics) → session (3D card deck) → results.
+   Card data lives in the <script> block below; progress is saved in this browser.
+   ========================================================================== */
+:root{
+  --bg:#f3f0e8; --surface:#fff; --surface-2:#f4f1ea; --surface-3:#e9e4d8; --card:#fffdf8;
+  --text:#17202c; --text-2:#3c4452; --muted:#6b7180; --border:#e3ddd0; --border-strong:#d1c9b8;
+  --ink:#14233b; --ink-fg:#fff; --gold:#a87b22; --focus:#2f6fdd;
+  --ok:#2e7d45; --bar:#b3362c; --exc:#a86d12; --why:#5b4b8a; --watch:#c2570c; --plain:#2f5d9e;
+  --rule-line:rgba(47,93,158,.09); --sticker:#f2c94c; --sticker-ink:#3a2c05;
+  --shadow:0 2px 6px rgba(20,30,50,.06),0 16px 40px -18px rgba(20,30,50,.28);
+  --card-shadow:0 1px 2px rgba(20,30,50,.08),0 30px 60px -24px rgba(20,30,50,.35),0 12px 24px -16px rgba(20,30,50,.2);
+  --font:"Inter",system-ui,-apple-system,"Segoe UI",sans-serif; --serif:"Fraunces",Georgia,serif; --mono:"JetBrains Mono",ui-monospace,monospace;
+  --tint:12%; --ink-mix:80%;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0b0f15; --surface:#151b25; --surface-2:#1b2230; --surface-3:#252e3d; --card:#18202c;
+  --text:#ebe8e1; --text-2:#c4c8d0; --muted:#8f96a3; --border:#262f3c; --border-strong:#354153;
+  --ink:#ece6d6; --ink-fg:#0e131b; --gold:#e0b862; --focus:#79a8ff;
+  --ok:#6cc08a; --bar:#ee8c82; --exc:#e6b45c; --why:#b6a8e6; --watch:#f0a46a; --plain:#8fb0e0;
+  --rule-line:rgba(143,176,224,.06); --sticker:#e3b93e; --sticker-ink:#2b2003;
+  --shadow:0 2px 6px rgba(0,0,0,.4),0 18px 40px -18px rgba(0,0,0,.8);
+  --card-shadow:0 1px 2px rgba(0,0,0,.5),0 30px 60px -24px rgba(0,0,0,.9);
+  --tint:20%; --ink-mix:50%;
+  color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0b0f15; --surface:#151b25; --surface-2:#1b2230; --surface-3:#252e3d; --card:#18202c;
+  --text:#ebe8e1; --text-2:#c4c8d0; --muted:#8f96a3; --border:#262f3c; --border-strong:#354153;
+  --ink:#ece6d6; --ink-fg:#0e131b; --gold:#e0b862; --focus:#79a8ff;
+  --ok:#6cc08a; --bar:#ee8c82; --exc:#e6b45c; --why:#b6a8e6; --watch:#f0a46a; --plain:#8fb0e0;
+  --rule-line:rgba(143,176,224,.06); --sticker:#e3b93e; --sticker-ink:#2b2003;
+  --shadow:0 2px 6px rgba(0,0,0,.4),0 18px 40px -18px rgba(0,0,0,.8);
+  --card-shadow:0 1px 2px rgba(0,0,0,.5),0 30px 60px -24px rgba(0,0,0,.9);
+  --tint:20%; --ink-mix:50%;
+  color-scheme:dark}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html,body{margin:0}
+body{background:var(--bg);color:var(--text);font:15.5px/1.55 var(--font);-webkit-font-smoothing:antialiased;min-height:100vh;min-height:100dvh}
+button{font:inherit;color:inherit;cursor:pointer}
+:focus-visible{outline:2px solid var(--focus);outline-offset:2px;border-radius:8px}
+.ico{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+* { --t-ink: color-mix(in srgb, var(--topic, var(--ink)) var(--ink-mix), var(--text)); --t-soft: color-mix(in srgb, var(--topic, var(--ink)) var(--tint), var(--surface)); }
+kbd{font:600 11px var(--font);padding:2px 6px;border-radius:6px;border:1px solid currentColor;opacity:.6}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:46px;padding:0 18px;border-radius:13px;border:1px solid var(--border);background:var(--surface);font-weight:600;font-size:15px;transition:background .15s,border-color .15s,transform .12s,box-shadow .15s}
+.btn:hover{background:var(--surface-2);border-color:var(--border-strong)}
+.btn:active{transform:translateY(1px) scale(.99)}
+.btn[disabled]{opacity:.45;cursor:default}
+.btn-primary{background:var(--ink);color:var(--ink-fg);border-color:var(--ink);box-shadow:var(--shadow)}
+.btn-primary:hover{background:color-mix(in srgb,var(--ink) 86%,var(--gold));border-color:transparent}
+.icon-btn{width:44px;height:44px;border-radius:13px;border:1px solid var(--border);background:var(--surface);display:grid;place-items:center;color:var(--text-2)}
+.icon-btn:hover{background:var(--surface-2);color:var(--text)}
+.icon-btn[disabled]{opacity:.35;cursor:default}
+
+/* ==================== Lobby ==================== */
+.lobby{max-width:1080px;margin:0 auto;padding:32px 20px 56px;animation:fadeUp .5s cubic-bezier(.2,.8,.2,1)}
+@keyframes fadeUp{from{opacity:0;transform:translateY(12px)}}
+.lobby-head{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding:28px;border-radius:24px;position:relative;overflow:hidden;isolation:isolate;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--ink) 4%,var(--surface)),var(--surface));border:1px solid var(--border);box-shadow:var(--shadow)}
+.lobby-head::before{content:"";position:absolute;inset:0;z-index:-1;background:radial-gradient(500px 220px at 100% 0%,color-mix(in srgb,var(--gold) 16%,transparent),transparent 70%),radial-gradient(420px 220px at 0% 100%,color-mix(in srgb,#2f5d9e 12%,transparent),transparent 70%)}
+.eyebrow{margin:0 0 6px;font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
+h1{margin:0;font:600 clamp(32px,5vw,48px)/1.05 var(--serif);letter-spacing:-.025em}
+.lede{margin:12px 0 0;color:var(--text-2);max-width:52ch}
+.mastery{display:flex;align-items:center;gap:22px}
+.ring{position:relative;width:132px;height:132px;flex:none}
+.ring svg{width:100%;height:100%;transform:rotate(-90deg)}
+.ring circle{fill:none;stroke-width:12}
+.ring .track{stroke:var(--surface-3)}
+.ring .seg{transition:stroke-dasharray 1s cubic-bezier(.2,.8,.2,1),stroke-dashoffset 1s cubic-bezier(.2,.8,.2,1);stroke-linecap:butt}
+.ring-center{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+.ring-center b{font:600 32px/1 var(--serif)}
+.ring-center span{font-size:11.5px;color:var(--muted);margin-top:3px}
+.mlegend{display:grid;gap:8px;font-size:13.5px;color:var(--text-2)}
+.mlegend div{display:flex;align-items:center;gap:8px}
+.mlegend i{width:10px;height:10px;border-radius:3px}
+.mlegend b{font-variant-numeric:tabular-nums;margin-left:auto;padding-left:14px;color:var(--text)}
+@media (max-width:760px){.lobby{padding:18px 14px 40px}.lobby-head{grid-template-columns:1fr;padding:22px 18px;gap:20px}.ring{width:108px;height:108px}.ring-center b{font-size:26px}}
+
+.resume{display:flex;align-items:center;gap:14px;margin-top:18px;padding:14px 16px;border-radius:16px;background:var(--surface);border:1px solid var(--border);box-shadow:var(--shadow)}
+.resume p{margin:0;flex:1;font-size:14.5px;color:var(--text-2)} .resume b{color:var(--text)}
+
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:12px;margin:34px 0 14px}
+.sec-head h2{margin:0;font:600 22px/1.2 var(--serif);letter-spacing:-.01em}
+.link{border:0;background:none;color:var(--muted);font-size:13.5px;font-weight:600;padding:6px 4px}
+.link:hover{color:var(--text)}
+.topic-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:12px}
+.tile{position:relative;display:flex;flex-direction:column;gap:6px;padding:16px 16px 14px;border-radius:18px;border:1.5px solid var(--border);background:var(--surface);text-align:left;overflow:hidden;transition:transform .2s cubic-bezier(.2,.8,.2,1),border-color .2s,box-shadow .2s,opacity .2s}
+.tile::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--topic);opacity:.35;transition:opacity .2s}
+.tile:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+.tile[aria-pressed="true"]{border-color:color-mix(in srgb,var(--topic) 55%,var(--border));background:linear-gradient(180deg,var(--t-soft),var(--surface) 70%)}
+.tile[aria-pressed="true"]::before{opacity:1}
+.tile[aria-pressed="false"]{opacity:.62}
+.tile[aria-pressed="false"]:hover{opacity:.9}
+.tile .chk{position:absolute;top:12px;right:12px;width:24px;height:24px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--border-strong);color:transparent;transition:all .2s}
+.tile[aria-pressed="true"] .chk{background:var(--topic);border-color:var(--topic);color:#fff}
+.tile .chk .ico{width:14px;height:14px;stroke-width:3}
+.tile strong{font:600 18px/1.2 var(--serif);padding-right:30px}
+.tile small{font-family:var(--mono);font-size:11.5px;color:var(--t-ink);font-weight:600}
+.minibar{display:flex;height:6px;border-radius:9px;overflow:hidden;background:var(--surface-3);margin-top:6px}
+.minibar i{display:block;height:100%}
+.minibar .m{background:var(--ok)} .minibar .l{background:var(--exc)}
+.tile .meta{display:flex;justify-content:space-between;font-size:12px;color:var(--muted);margin-top:2px}
+
+.opts{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:22px;padding:16px 18px;border-radius:18px;background:var(--surface);border:1px solid var(--border)}
+.opts .lbl{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-right:4px}
+.seg{display:inline-flex;padding:4px;border-radius:13px;background:var(--surface-2);border:1px solid var(--border)}
+.seg button{border:0;background:transparent;padding:8px 14px;border-radius:10px;font-size:14px;font-weight:500;color:var(--text-2);transition:background .15s,color .15s,box-shadow .15s}
+.seg button[aria-pressed="true"]{background:var(--surface);color:var(--text);box-shadow:0 1px 3px rgba(20,30,50,.15)}
+.switch{display:inline-flex;align-items:center;gap:10px;font-size:14px;cursor:pointer;user-select:none}
+.switch input{appearance:none;-webkit-appearance:none;width:42px;height:24px;border-radius:99px;background:var(--surface-3);position:relative;cursor:pointer;transition:background .2s;margin:0;flex:none}
+.switch input::after{content:"";position:absolute;top:3px;left:3px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 1px 3px rgba(0,0,0,.3);transition:transform .2s cubic-bezier(.2,.8,.2,1)}
+.switch input:checked{background:var(--ok)}
+.switch input:checked::after{transform:translateX(18px)}
+.cta{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:22px}
+.start{min-height:58px;padding:0 28px;font-size:17px;border-radius:16px}
+.start .count{font-weight:500;opacity:.75}
+.lobby-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px;margin-top:40px;padding-top:18px;border-top:1px solid var(--border);font-size:13px;color:var(--muted)}
+.confirm{display:inline-flex;align-items:center;gap:8px}
+.confirm .btn{min-height:34px;padding:0 12px;font-size:13px}
+@media (max-width:560px){.topic-grid{grid-template-columns:1fr 1fr;gap:10px}.tile{padding:13px 12px 12px;border-radius:16px}.tile strong{font-size:15.5px;padding-right:24px}.tile small{font-size:10.5px}.tile .chk{top:10px;right:10px;width:20px;height:20px}.tile .meta span:first-child{display:none}.sec-head{margin-top:26px}}
+@media (max-width:760px){.opts{padding:14px}.seg{width:100%}.seg button{flex:1;padding:9px 6px;font-size:13.5px}.cta .btn{flex:1}.start{width:100%}}
+
+/* ==================== Session ==================== */
+.session{position:fixed;inset:0;display:flex;flex-direction:column;overflow:hidden;isolation:isolate;background:var(--bg);animation:fadeIn .35s ease}
+@keyframes fadeIn{from{opacity:0}}
+.ambient{position:absolute;inset:0;z-index:-1;color:var(--topic,#2f5d9e);transition:color .8s ease;pointer-events:none}
+.ambient::before{content:"";position:absolute;inset:-10%;background:radial-gradient(60% 50% at 50% 42%,color-mix(in srgb,currentColor 24%,transparent),transparent 70%),radial-gradient(40% 40% at 85% 10%,color-mix(in srgb,currentColor 12%,transparent),transparent 70%)}
+.ambient::after{content:"";position:absolute;inset:0;background-image:radial-gradient(color-mix(in srgb,var(--text) 9%,transparent) 1px,transparent 1.3px);background-size:22px 22px;mask-image:radial-gradient(ellipse at 50% 45%,#000 20%,transparent 75%);-webkit-mask-image:radial-gradient(ellipse at 50% 45%,#000 20%,transparent 75%)}
+.s-top{display:flex;align-items:center;gap:12px;padding:14px 18px;padding-top:max(14px,env(safe-area-inset-top))}
+.s-prog{flex:1;display:flex;align-items:center;gap:12px;min-width:0}
+.s-bar{flex:1;height:8px;border-radius:99px;background:color-mix(in srgb,var(--text) 10%,transparent);overflow:hidden}
+.s-bar i{display:block;height:100%;width:0;border-radius:99px;background:linear-gradient(90deg,var(--topic,#2f5d9e),color-mix(in srgb,var(--topic,#2f5d9e) 50%,var(--gold)));transition:width .5s cubic-bezier(.2,.8,.2,1),background .8s}
+.s-count{font-size:13.5px;font-weight:600;font-variant-numeric:tabular-nums;color:var(--text-2);white-space:nowrap}
+.tally{display:flex;gap:6px}
+.tally span{display:inline-flex;align-items:center;gap:5px;padding:5px 10px;border-radius:99px;font-size:12.5px;font-weight:700;font-variant-numeric:tabular-nums;background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c);border:1px solid color-mix(in srgb,var(--c) 25%,transparent);transition:transform .25s}
+.tally span.bump{animation:bump .4s ease}
+@keyframes bump{40%{transform:scale(1.25)}}
+.deck{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;padding:8px 20px 4px;position:relative}
+.stack{position:relative;width:min(760px,100%);height:min(100%,560px)}
+.ghost{position:absolute;inset:0;border-radius:24px;background:var(--card);border:1px solid var(--border);box-shadow:var(--shadow);transition:transform .4s cubic-bezier(.2,.8,.2,1),opacity .4s}
+.ghost.g1{transform:translateY(14px) scale(.955);opacity:.75}
+.ghost.g2{transform:translateY(27px) scale(.91);opacity:.45}
+.ghost::before{content:"";position:absolute;inset:0 0 auto 0;height:5px;border-radius:24px 24px 0 0;background:var(--gtopic,transparent);opacity:.7}
+.stack.thin .g2{opacity:0} .stack.last .g1,.stack.last .g2{opacity:0}
+.drag{position:absolute;inset:0;touch-action:pan-y;user-select:none;-webkit-user-select:none}
+.drag.settle{transition:transform .35s cubic-bezier(.2,.8,.2,1)}
+.drag.out{transition:transform .38s cubic-bezier(.5,0,.75,0),opacity .38s ease-in}
+.drag.rise{animation:rise .42s cubic-bezier(.2,.8,.2,1)}
+.drag.from-left{animation:fromLeft .42s cubic-bezier(.2,.8,.2,1)}
+@keyframes rise{from{transform:translateY(14px) scale(.955);opacity:.6}}
+@keyframes fromLeft{from{transform:translateX(-110%) rotate(-10deg);opacity:0}}
+.tilt{position:absolute;inset:0;perspective:1600px}
+/* Only one face is ever rendered; the flip swings the card edge-on, swaps faces, and swings back.
+   At rest the card has no 3D transform, so text stays crisp. */
+.card{position:absolute;inset:0;transform-origin:50% 50%;cursor:pointer}
+.card.flipped{cursor:pointer}
+.backnote{margin:18px 0 0;text-align:center;font-size:12px;color:var(--muted)}
+.card:not(.flipped) .back,.card.flipped .front{display:none}
+.card:focus{outline:none}
+.card:focus-visible .face{box-shadow:var(--card-shadow),0 0 0 3px color-mix(in srgb,var(--focus) 45%,transparent)}
+.face{position:absolute;inset:0;border-radius:24px;background:var(--card);box-shadow:var(--card-shadow);border:1px solid var(--border);overflow:hidden;display:flex;flex-direction:column}
+.face::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,var(--topic),color-mix(in srgb,var(--topic) 40%,var(--gold)));z-index:1}
+.front{background:var(--card) repeating-linear-gradient(180deg,transparent 0 33px,var(--rule-line) 33px 34px);background-position:0 58px}
+.front::after{content:"";position:absolute;top:0;bottom:0;left:56px;width:1.5px;background:color-mix(in srgb,var(--topic) 30%,transparent)}
+.back::after{content:"";position:absolute;z-index:3;left:0;right:0;bottom:0;height:30px;border-radius:0 0 24px 24px;background:linear-gradient(180deg,transparent,var(--card));pointer-events:none}
+.stack:hover .card:not(.flipped) .front{box-shadow:var(--card-shadow),0 0 0 1px color-mix(in srgb,var(--topic) 30%,transparent)}
+.fhead{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:10px;padding:22px 112px 0 74px;min-width:0}
+.fhead .tpill{max-width:100%;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.tpill{display:inline-flex;align-items:center;gap:8px;padding:5px 12px 5px 10px;border-radius:99px;background:var(--t-soft);color:var(--t-ink);font-size:12.5px;font-weight:700;border:1px solid color-mix(in srgb,var(--topic) 25%,transparent)}
+.tpill::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--topic)}
+.tpill small{font-family:var(--mono);font-weight:600;opacity:.8}
+.sticker{position:absolute;z-index:2;top:-2px;right:26px;padding:16px 10px 8px;background:var(--sticker);color:var(--sticker-ink);font:700 9.5px/1 var(--mono);letter-spacing:.12em;text-align:center;border-radius:0 0 8px 8px;box-shadow:0 4px 10px -4px rgba(0,0,0,.35)}
+.sticker b{display:block;font-size:17px;letter-spacing:.04em;margin-top:3px}
+.fbody{position:relative;z-index:2;flex:1;display:flex;flex-direction:column;justify-content:center;padding:10px 40px 10px 74px}
+.cite{font:600 calc(clamp(44px,8vw,76px) * var(--s,1))/1.02 var(--serif);letter-spacing:-.03em;color:var(--text);overflow-wrap:anywhere}
+.cite .fre{display:block;font:700 13px/1 var(--mono);letter-spacing:.2em;color:var(--t-ink);margin-bottom:10px}
+.sub{margin-top:14px;font:italic 400 clamp(18px,2.6vw,23px)/1.3 var(--serif);color:var(--text-2)}
+.prompt{position:relative;z-index:2;display:flex;gap:10px;align-items:flex-start;margin:0 24px 22px 74px;padding:14px 16px;border-radius:14px;background:color-mix(in srgb,var(--surface-2) 80%,transparent);color:var(--text-2);font-size:14.5px;border:1px dashed var(--border-strong)}
+.prompt .ico{color:var(--t-ink);margin-top:2px}
+.tapnote{position:absolute;z-index:2;left:0;right:0;bottom:6px;text-align:center;font-size:11.5px;color:var(--muted);opacity:.8}
+.bhead{position:relative;z-index:2;display:flex;align-items:center;gap:10px;flex-wrap:wrap;padding:20px 120px 12px 24px;border-bottom:1px solid var(--border)}
+.bcite{font:600 19px/1.2 var(--serif)}
+.bcite span{font:italic 400 15px var(--serif);color:var(--muted)}
+.bscroll{position:relative;z-index:2;flex:1;min-height:0;overflow-y:auto;padding:18px 24px 34px;overscroll-behavior:contain;-webkit-overflow-scrolling:touch}
+.answer{font:500 clamp(18px,2.2vw,21px)/1.45 var(--serif);padding:2px 0 2px 16px;border-left:4px solid var(--topic);margin-bottom:18px}
+.rows{display:grid;gap:12px}
+.row{display:grid;grid-template-columns:30px 1fr;gap:12px;padding:12px 14px;border-radius:14px;background:color-mix(in srgb,var(--c) 6%,var(--surface));border:1px solid color-mix(in srgb,var(--c) 16%,transparent)}
+.row .ri{width:30px;height:30px;border-radius:9px;display:grid;place-items:center;background:color-mix(in srgb,var(--c) 15%,var(--surface));color:var(--c)}
+.row .ri .ico{width:16px;height:16px}
+.row h4{margin:0 0 3px;font-size:11.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--c)}
+.row div{font-size:14.5px;color:var(--text-2)}
+.row ul{margin:0;padding-left:18px} .row li{margin:3px 0}
+.stamp{position:absolute;z-index:5;top:34px;pointer-events:none;padding:6px 14px;border:4px solid currentColor;border-radius:10px;font:800 26px/1 var(--font);letter-spacing:.12em;opacity:0;transform:rotate(-12deg) scale(1.1)}
+.stamp.knew{left:30px;color:var(--ok);transform:rotate(-12deg)}
+.stamp.miss{right:30px;color:var(--bar);transform:rotate(12deg)}
+.stamp.shaky{left:50%;margin-left:-70px;color:var(--exc);transform:rotate(-4deg)}
+
+.s-actions{display:flex;justify-content:center;align-items:center;gap:10px;padding:16px 18px 10px;flex-wrap:wrap}
+.flipback,.nextcard{min-height:56px;border-radius:16px;padding:0 16px}
+.flipback span,.nextcard span{font-size:14px}
+.rate{min-width:128px;min-height:56px;border-radius:16px;font-size:15.5px;flex-direction:column;gap:0;line-height:1.2}
+.rate small{font-size:11px;font-weight:600;opacity:.65}
+.rate.miss{--c:var(--bar)} .rate.shaky{--c:var(--exc)} .rate.knew{--c:var(--ok)}
+.rate{border-color:color-mix(in srgb,var(--c) 35%,var(--border));color:color-mix(in srgb,var(--c) 85%,var(--text));background:color-mix(in srgb,var(--c) 7%,var(--surface))}
+.rate:hover{background:color-mix(in srgb,var(--c) 14%,var(--surface));border-color:var(--c)}
+.reveal{min-width:220px;min-height:56px;font-size:16px;border-radius:16px}
+.s-hint{margin:0;padding:0 18px max(14px,env(safe-area-inset-bottom));text-align:center;font-size:12px;color:var(--muted)}
+@media (max-width:760px){
+  .s-top{padding:10px 12px;padding-top:max(10px,env(safe-area-inset-top));gap:8px}
+  .tally span{padding:4px 8px;font-size:12px}
+  .deck{padding:4px 12px 2px}
+  .stack{height:100%;max-height:none}
+  .fhead{padding:18px 84px 0 46px}
+  .fhead .tpill small{display:none}
+  .front::after{left:32px}
+  .fbody{padding:8px 18px 8px 46px}
+  .prompt{margin:0 14px 30px 46px;font-size:13.5px;padding:12px 13px}
+  .sticker{right:16px;padding:14px 8px 7px}
+  .sticker b{font-size:14px}
+  .bhead{padding:16px 92px 10px 16px}
+  .bscroll{padding:14px 16px 22px}
+  .s-actions{padding:12px 12px 8px;gap:8px;flex-wrap:nowrap}
+  .rate{flex:1;min-width:0;min-height:58px;font-size:14.5px;padding:0 4px;white-space:nowrap}
+  .rate small,.rate .xl{display:none}
+  .reveal{flex:1}
+  .flipback,.nextcard{min-height:58px;width:46px;padding:0;flex:none}
+  .flipback span,.nextcard span{display:none}
+  .s-actions .skip{min-height:56px;width:46px;padding:0;flex:none;border-radius:16px}
+  .s-actions .skip span{display:none}
+  .s-actions .undo-desk{display:none}
+  .s-hint{font-size:11.5px}
+  .s-hint .desk{display:none}
+}
+@media (min-width:761px){.s-hint .mob{display:none}.s-top .undo-mob{display:none}}
+
+/* ==================== Results ==================== */
+.done{max-width:640px;margin:0 auto;padding:48px 20px;text-align:center;animation:fadeUp .5s cubic-bezier(.2,.8,.2,1)}
+.done .ring{width:170px;height:170px;margin:0 auto 18px}
+.done h2{margin:0;font:600 34px/1.1 var(--serif);letter-spacing:-.02em}
+.done p.lede{margin:10px auto 0}
+.results{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:26px 0}
+.results div{padding:14px 8px;border-radius:16px;background:var(--surface);border:1px solid var(--border)}
+.results b{display:block;font:600 28px/1.1 var(--serif);color:var(--c)}
+.results span{font-size:12px;color:var(--muted)}
+.done .cta{justify-content:center}
+@media (max-width:560px){.results{grid-template-columns:repeat(2,1fr)}.done .cta .btn{width:100%}}
+
+/* ==================== Browse ==================== */
+.browse{max-width:880px;margin:0 auto;padding:24px 18px 56px;animation:fadeUp .4s cubic-bezier(.2,.8,.2,1)}
+.browse-top{display:flex;align-items:center;gap:12px;margin-bottom:16px}
+.browse-top h2{margin:0;flex:1;font:600 26px/1.15 var(--serif)}
+.bsearch{display:flex;align-items:center;gap:10px;height:48px;padding:0 14px;border-radius:14px;border:1px solid var(--border);background:var(--surface);color:var(--muted);margin-bottom:12px}
+.bsearch:focus-within{border-color:var(--focus);box-shadow:0 0 0 3px color-mix(in srgb,var(--focus) 18%,transparent)}
+.bsearch input{flex:1;min-width:0;border:0;outline:0;background:transparent;color:var(--text);font:inherit;font-size:16px}
+.chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;padding-bottom:4px;margin-bottom:12px}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;display:inline-flex;align-items:center;gap:7px;height:36px;padding:0 13px;border-radius:99px;border:1px solid var(--border);background:var(--surface);font-size:13.5px;font-weight:500;color:var(--text-2)}
+.chip::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--topic,var(--muted))}
+.chip[aria-pressed="true"]{background:var(--ink);color:var(--ink-fg);border-color:var(--ink)}
+.blist{display:grid;gap:8px}
+.bitem{border-radius:16px;border:1px solid var(--border);background:var(--surface);overflow:hidden}
+.bitem summary{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;list-style:none}
+.bitem summary::-webkit-details-marker{display:none}
+.bitem summary::before{content:"";width:4px;align-self:stretch;border-radius:4px;background:var(--topic);flex:none}
+.bitem .bt{flex:1;min-width:0}
+.bitem .bt strong{display:block;font:600 17px/1.25 var(--serif)}
+.bitem .bt span{font-size:13px;color:var(--muted)}
+.status{flex:none;font-size:11.5px;font-weight:700;padding:4px 10px;border-radius:99px;background:color-mix(in srgb,var(--c) 14%,var(--surface));color:var(--c)}
+.bitem .inner{padding:2px 16px 18px 32px}
+.empty{padding:40px 16px;text-align:center;color:var(--muted)}
+@media (prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18M6 6l12 12"/></symbol>
+  <symbol id="i-undo" viewBox="0 0 24 24"><path d="M9 14 4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></symbol>
+  <symbol id="i-skip" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="M6 4l14 8-14 8z"/></symbol>
+  <symbol id="i-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+  <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-q" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.1 9a3 3 0 0 1 5.8 1c0 2-3 3-3 3M12 17h.01"/></symbol>
+  <symbol id="i-book" viewBox="0 0 24 24"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2zM22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></symbol>
+  <symbol id="i-ban" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></symbol>
+  <symbol id="i-exc" viewBox="0 0 24 24"><path d="M15 10l5 5-5 5"/><path d="M4 4v7a4 4 0 0 0 4 4h12"/></symbol>
+  <symbol id="i-warn" viewBox="0 0 24 24"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0zM12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-bulb" viewBox="0 0 24 24"><path d="M9 18h6M10 22h4M12 2a7 7 0 0 0-4 12.7c.6.5 1 1.3 1 2.3h6c0-1 .4-1.8 1-2.3A7 7 0 0 0 12 2z"/></symbol>
+  <symbol id="i-redo" viewBox="0 0 24 24"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></symbol>
+  <symbol id="i-home" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/></symbol>
+</svg>
+
+<main id="app"></main>
+
+<script>
+/* ------------------------------------------------------------------ data */
+const TOPICS = {
+  jury:   {name:"Jury Secrecy",  rules:"606(b)",        color:"#4E5D8C"},
+  rel:    {name:"Relevance",     rules:"401–403, 104, 105", color:"#1F7A77"},
+  pol:    {name:"Policy Rules",  rules:"407–411",       color:"#6B7A1C"},
+  char:   {name:"Character",     rules:"404(a), 405, 406, 413–415", color:"#8B3F7B"},
+  acts:   {name:"Other Acts",    rules:"404(b)",        color:"#A5561B"},
+  imp:    {name:"Impeachment",   rules:"607, 608",      color:"#4453A6"},
+  conv:   {name:"Convictions",   rules:"609",           color:"#A23B4B"},
+  shield: {name:"Rape Shield",   rules:"412",           color:"#2D7A5A"},
+};
+const KINDS = {rule:"Rule", case:"Case", scen:"Scenario", concept:"Concept"};
+const DEFAULT_PROMPT = {
+  rule:"What does it govern, what does it keep out, and what are the exceptions?",
+  case:"What happened, and what rule does it stand for?",
+  scen:"Is it admissible? Which rule decides it?",
+  concept:"Explain it in your own words.",
+};
+
+/* k: kind · f: front (cite, case name, or facts) · s: subtitle · p: prompt · a: answer
+   plain / bar / ok / exc / watch / why: back rows */
+const ALL_CARDS = [
+/* ===== JURY SECRECY ===== */
+{t:"jury",k:"rule",f:"FRE 606(b)",s:"The no-impeachment rule",
+ a:"After a verdict, jurors generally can't testify about what happened in deliberations to try to overturn it.",
+ plain:"A juror's testimony or affidavit can't be used to challenge a verdict if it's about statements made during deliberations, the effect of anything on any juror's vote, or any juror's mental processes.",
+ exc:["Extraneous prejudicial information was improperly brought to the jury's attention (e.g., a newspaper account).","An outside influence was improperly brought to bear on a juror (e.g., a bribe or a threat).","A mistake was made entering the verdict on the verdict form (606(b)(2)(C), covered in Class 1).","Constitutional: a juror clearly relied on racial stereotypes or animus to convict a criminal defendant (Peña-Rodriguez)."],
+ watch:["Whether a matter is “external” or “internal” turns on the nature of the allegation, not where it happened."],
+ why:"Protects frank debate in the jury room, the finality of verdicts, and jurors from harassment by the losing side."},
+{t:"jury",k:"concept",f:"External vs. internal",s:"Sorting a juror-misconduct claim",
+ p:"How do you tell whether a matter is “extraneous” or “outside” (testimony allowed) or “internal” (barred)?",
+ a:"Look at the nature of the allegation, not where it happened.",
+ ok:["External: facts from outside the trial (news reports, outside research) and pressure from outside the jury (bribes, threats)."],
+ bar:["Internal: jurors' drug and alcohol use (Tanner); a juror's own past experiences (Warger); jurors pressuring each other; confusion about instructions."],
+ why:"Keeps the exceptions narrow."},
+{t:"jury",k:"case",f:"Tanner v. United States",s:"Rule 606(b) · 1987",
+ a:"Jurors' drinking and drug use during trial is an internal matter, so juror testimony about it is barred.",
+ plain:"After a fraud conviction, jurors reported that other jurors drank and used drugs during the trial. The Court treated intoxication like a juror being tired or ill, not an “outside influence.”",
+ watch:["Other safeguards protect the jury: voir dire, the court and counsel watching jurors during trial, jurors reporting problems before the verdict, and evidence from non-jurors."],
+ why:"The system won't look past the verdict into how the jury reasoned."},
+{t:"jury",k:"case",f:"Warger v. Shauers",s:"Rule 606(b) · civil case",
+ a:"606(b) bars juror testimony even when offered to show a juror lied during voir dire. A juror's own past experiences are internal.",
+ plain:"In a car-crash suit, a juror later said the foreperson told the jury her daughter had caused a fatal accident and a lawsuit would have “ruined her life.” The Court held 606(b) applied, so the affidavit couldn't be used.",
+ watch:["Litigants still have a right to an impartial jury; they protect it through voir dire and non-juror evidence."]},
+{t:"jury",k:"case",f:"Peña-Rodriguez v. Colorado",s:"Sixth Amendment · 2017",
+ a:"When a juror clearly relied on racial stereotypes or animus to convict, the Sixth Amendment requires 606(b) to give way.",
+ plain:"After a conviction for sexual misconduct, two jurors reported that another juror said the defendant did it because he was Mexican. The Supreme Court created a constitutional exception for racial bias.",
+ watch:["Threshold: a clear statement showing racial animus was a significant motivating factor in the juror's vote.","Offhand comments aren't enough.","Whether it reaches civil cases is debated (Problem I.1)."],
+ why:"Racial bias is “a familiar and recurring evil” that other safeguards don't reliably catch."},
+{t:"jury",k:"scen",f:"After a guilty verdict, a juror reveals that another juror looked up the defendant's criminal record online during trial and told the others.",
+ a:"The juror may testify. This is extraneous prejudicial information, an exception to 606(b).",
+ plain:"Outside facts about the case entered the jury room. The juror can testify that it happened, but not about how it affected anyone's vote."},
+{t:"jury",k:"scen",f:"A juror says she voted guilty only because the foreperson bullied her and she misunderstood the judge's instructions.",
+ a:"Barred. Pressure from fellow jurors and confusion about instructions are internal matters.",
+ plain:"Both go to deliberations and a juror's mental processes, the core of what 606(b) protects."},
+{t:"jury",k:"scen",f:"A juror reports that during trial a stranger approached him in the parking lot and offered $5,000 for a not-guilty vote.",
+ a:"The juror may testify. This is an outside influence improperly brought to bear on a juror.",
+ plain:"Bribes and threats from outside the jury are the classic outside-influence exception."},
+
+/* ===== RELEVANCE ===== */
+{t:"rel",k:"rule",f:"FRE 401",s:"Test for relevant evidence",
+ a:"Evidence is relevant if it has any tendency to make a fact of consequence more or less probable.",
+ plain:"Two parts: (a) probative, meaning any tendency to change the probability of a fact; and (b) material, meaning the fact matters to deciding the case.",
+ watch:["A very low bar: “a brick is not a wall.” One piece doesn't have to prove the point by itself.","Materiality comes from the substantive law (Egelhoff)."],
+ why:"Keeps the trial on the real issues."},
+{t:"rel",k:"rule",f:"FRE 402",s:"General admissibility",
+ a:"Relevant evidence is admissible unless something excludes it. Irrelevant evidence is never admissible.",
+ plain:"Relevant evidence can be excluded by the Constitution, a federal statute, the Rules of Evidence, or other Supreme Court rules.",
+ why:"The starting point. Most of the course is the exceptions."},
+{t:"rel",k:"case",f:"Montana v. Egelhoff",s:"Materiality",
+ a:"What counts as a “fact of consequence” comes from the substantive law, and the legislature can change it.",
+ plain:"Montana barred juries from considering voluntary intoxication when deciding whether a defendant acted knowingly or purposely. The Supreme Court upheld the law. In effect, the state redefined the mental element, so intoxication was no longer material."},
+{t:"rel",k:"rule",f:"FRE 104(b)",s:"Conditional relevance",
+ a:"When evidence is relevant only if some other fact is true, there must be proof sufficient for a jury to reasonably find that fact.",
+ plain:"Example: a threatening letter proves motive only if the defendant actually received it. The judge asks whether a reasonable jury could find the conditional fact by a preponderance. The jury makes the final call.",
+ watch:["Lenient standard (Huddleston).","The judge may admit the evidence now on condition that the missing link is proved later (Cox).","Scholars argue all relevance is conditional."],
+ why:"Stops evidence whose logic has a missing link."},
+{t:"rel",k:"concept",f:"104(a) vs. 104(b)",s:"Who decides a preliminary fact?",
+ p:"When does the judge decide a preliminary fact, and when does the jury?",
+ a:"Under 104(a) the judge decides questions of admissibility. Under 104(b) the jury decides conditional facts, and the judge only screens.",
+ plain:"Under 104(a) the judge must be persuaded by a preponderance (Bourjaily) and isn't bound by the evidence rules except privilege. Under 104(b) the judge asks only whether a reasonable jury could find the fact.",
+ watch:["Other-act evidence under 404(b) is handled under 104(b), not 104(a) (Huddleston)."]},
+{t:"rel",k:"rule",f:"FRE 403",s:"The balancing test",
+ a:"A court may exclude relevant evidence if its probative value is substantially outweighed by certain dangers.",
+ bar:["Unfair prejudice","Confusing the issues","Misleading the jury","Undue delay","Wasting time","Needlessly presenting cumulative evidence"],
+ watch:["Favors admission: the dangers must substantially outweigh probative value.","Only unfair prejudice counts. Evidence that simply hurts a party's case isn't unfair.","Available alternatives can discount probative value (Old Chief).","Discretionary, and reviewed only for abuse of discretion."],
+ why:"A safety valve against inflaming or distracting evidence."},
+{t:"rel",k:"concept",f:"Unfair prejudice",s:"The key 403 term",
+ p:"What is “unfair prejudice,” and how is it different from evidence that simply damages a party's case?",
+ a:"An undue tendency to suggest a decision on an improper basis, commonly an emotional one.",
+ plain:"All good evidence is prejudicial to the other side. It's unfair only when it pushes jurors to decide for the wrong reason, such as anger, disgust, sympathy, or a wish to punish a bad person."},
+{t:"rel",k:"rule",f:"FRE 105",s:"Limiting instruction",
+ a:"If evidence is admissible for one purpose but not another, on timely request the judge must restrict it to its proper scope and instruct the jury.",
+ watch:["Jurors often can't follow limiting instructions (Wissler & Saks).","It must be requested."],
+ why:"Lets useful evidence in while guarding against misuse."},
+{t:"rel",k:"case",f:"People v. Collins",s:"Probability evidence",
+ a:"Math built on invented numbers and false assumptions is “trial by mathematics” and unfairly prejudicial.",
+ plain:"To bolster shaky identifications of a couple, the prosecutor had a math instructor multiply made-up odds for traits (a yellow car, a beard, a ponytail) and claim a 1-in-12-million chance that a random couple would match. The California Supreme Court reversed the conviction.",
+ watch:["The numbers had no basis, and the traits weren't independent of one another.","Sound statistics, like DNA match probabilities, are fine."]},
+{t:"rel",k:"case",f:"Old Chief v. United States",s:"403 and stipulations · 1997",
+ a:"When the defendant offers to concede felon status, the government can't prove the name and nature of the old crime.",
+ plain:"Charged as a felon in possession of a gun, Old Chief offered to stipulate that he had a prior felony. That felony was assault causing serious bodily injury, much like the charged assault. Admitting the record anyway was an abuse of discretion under 403.",
+ watch:["Available alternatives can discount probative value.","Narrow: the prosecution normally may prove its case with evidence of its choice, for narrative richness. The exception covers a pure status element."]},
+{t:"rel",k:"case",f:"State v. Bocharski",s:"Gruesome photographs",
+ a:"Gruesome photos that prove nothing actually in dispute mainly inflame the jury.",
+ plain:"In a murder case the prosecution offered graphic autopsy photos. The question is what disputed fact each photo helps prove. Photos with little value on contested issues carry a high risk of unfair prejudice.",
+ watch:["A dissent warned that appellate courts are poorly placed to second-guess a trial judge's 403 weighing."]},
+{t:"rel",k:"case",f:"Commonwealth v. Serge",s:"Demonstrative evidence",
+ a:"A computer-generated animation is judged by the same rules as any other evidence. Being persuasive isn't the same as being unfair.",
+ plain:"The prosecution used an animation to illustrate its theory of how the defendant shot his wife. It came in because it was authenticated, fairly and accurately reflected the evidence, and passed 403, with a limiting instruction.",
+ watch:["Compare illustrative aids under proposed Rule 611(d): sketches and slides used only to help jurors understand. They aren't evidence and don't go to the jury room unless the parties consent or the court finds good cause."]},
+{t:"rel",k:"scen",f:"In a murder trial, the prosecution offers evidence that the victim fired the defendant a week before the killing.",
+ a:"Relevant. It gives the defendant a motive, which makes it more probable he was the killer.",
+ plain:"It doesn't have to prove guilt by itself: “a brick is not a wall.” The defense can argue about its weight; 403 is the only realistic route to exclusion."},
+{t:"rel",k:"scen",f:"To show motive, the prosecution offers a letter threatening to expose the defendant's affair unless he paid. So far there's no proof he ever received it.",
+ a:"Conditional relevance under 104(b). The letter matters only if the defendant saw it.",
+ plain:"Admit it if there is, or will be, enough evidence for a reasonable jury to find that he received it. The judge can admit it subject to that proof coming in later."},
+{t:"rel",k:"scen",f:"A defendant charged as a felon in possession offers to stipulate that he has a prior felony. The prosecutor still wants to tell the jury that the prior conviction was for murder.",
+ a:"Under Old Chief, the court should accept the stipulation and keep out the name of the crime.",
+ plain:"With the stipulation available, naming a violent prior adds little probative value and a large risk that the jury convicts on propensity."},
+
+/* ===== POLICY RULES 407–411 ===== */
+{t:"pol",k:"rule",f:"FRE 407",s:"Subsequent remedial measures",
+ a:"Repairs or safety changes made after an accident can't prove negligence, culpable conduct, a defect, or the need for a warning.",
+ plain:"Covers measures taken after an injury that would have made it less likely, such as a repair, a new warning, a policy change, or firing an employee.",
+ bar:["Negligence","Culpable conduct","A defect in a product or its design","A need for a warning or instruction"],
+ ok:["Ownership or control, if disputed","Feasibility of precautionary measures, if disputed","Impeachment"],
+ watch:["Applies in strict liability cases (1997 amendment).","Repairs by third parties generally aren't barred, but 403 may apply.","Only measures taken after the event count."],
+ why:"Being wiser after the fact isn't proof of being foolish before. And the law wants people to make repairs."},
+{t:"pol",k:"rule",f:"FRE 408",s:"Compromise offers and negotiations",
+ a:"Settlement offers, and conduct or statements in settlement talks, can't prove or disprove the validity or amount of a disputed claim.",
+ bar:["Proving or disproving the validity or amount of a disputed claim","Impeaching by prior inconsistent statement or contradiction"],
+ ok:["Proving a witness's bias or prejudice","Negating a claim of undue delay","Proving an effort to obstruct a criminal investigation or prosecution"],
+ exc:["Statements in talks with a public office (e.g., a regulator) may be used in a later criminal case."],
+ watch:["There must be a claim that is disputed as to validity or amount.","Compromises with third parties are often excluded too, to avoid a “chilling effect.”","Unlike 409, it protects the statements, not just the offer."],
+ why:"Encourages settlement and candid negotiation."},
+{t:"pol",k:"rule",f:"FRE 409",s:"Offers to pay medical expenses",
+ a:"Offering, promising, or paying medical or similar expenses can't prove liability for the injury.",
+ bar:["Liability for the injury"],
+ ok:["Statements made along with the offer (e.g., “It was my fault”)"],
+ watch:["Only the offer itself is excluded.","No dispute is required, unlike 408."],
+ why:"“Humane impulses”: don't punish people for helping."},
+{t:"pol",k:"rule",f:"FRE 410",s:"Pleas and plea discussions",
+ a:"Withdrawn guilty pleas, nolo contendere pleas, and statements in plea talks with a prosecutor are inadmissible against the defendant.",
+ plain:"Also covers statements in court about those pleas. Plea-talk statements are protected if the talks didn't produce a guilty plea, or produced one that was later withdrawn.",
+ bar:["Use against the defendant who made the plea or joined the talks, for any purpose"],
+ exc:["Completeness: another statement from the same plea or talks is already in, and fairness requires considering this one with it","A perjury or false-statement prosecution, if the statement was under oath, on the record, with counsel present"],
+ watch:["The outlier: unlike 407–409 and 411, it bars the evidence for all purposes except these narrow windows.","The protection is waivable (Mezzanatto).","Statements to police without authority to bargain aren't covered (Greene)."],
+ why:"Plea bargaining is essential, and defendants won't negotiate without protection."},
+{t:"pol",k:"rule",f:"FRE 411",s:"Liability insurance",
+ a:"Whether a person was or wasn't insured can't prove negligence or other wrongful conduct.",
+ bar:["Negligence or otherwise wrongful conduct"],
+ ok:["A witness's bias or prejudice (e.g., the witness works for the insurer)","Agency, ownership, or control"],
+ watch:["Jurors discuss insurance anyway (Diamond & Vidmar)."],
+ why:"Little probative value, and jurors might award damages to whoever can pay."},
+{t:"pol",k:"concept",f:"The 407–411 family",s:"What these rules share",
+ p:"What do 407, 408, 409, 410 and 411 have in common, and which one works differently?",
+ a:"They exclude weakly probative evidence as a matter of law, for relevance and public-policy reasons.",
+ plain:"407, 408, 409 and 411 bar only specified uses; the same evidence can come in for another purpose, subject to 403 and a 105 limiting instruction. 410 is the outlier: it bars the evidence for all purposes except narrow windows."},
+{t:"pol",k:"concept",f:"408 vs. 409",s:"Statements made with an offer",
+ p:"A driver says, “I'll pay your hospital bills. I wasn't watching the road.” Which part is protected, and when would the whole statement be protected?",
+ a:"Under 409 only the offer to pay is excluded. “I wasn't watching the road” comes in.",
+ plain:"If the same words were spoken in settlement talks over a disputed claim, 408 would protect the statement too. 408 protects the whole negotiation; 409 protects only the kind act."},
+{t:"pol",k:"case",f:"United States v. Mezzanatto",s:"Rule 410 · 1995",
+ a:"A defendant can knowingly and voluntarily waive Rule 410's protection.",
+ plain:"As a condition of plea talks, the prosecutor required the defendant to agree that his statements could be used to impeach him if he testified inconsistently at trial. The Court enforced the waiver.",
+ why:"Defendants can waive even fundamental constitutional protections, and nothing suggests Congress made 410 nonwaivable."},
+{t:"pol",k:"case",f:"United States v. Greene",s:"Rule 410 · who counts as the prosecutor",
+ a:"Statements to an agent with no authority to negotiate a plea aren't protected by 410.",
+ plain:"The Eighth Circuit upheld a finding that a DEA agent had no actual or apparent authority to bargain. Defendants speak at their peril with officers who only seem to have authority."},
+{t:"pol",k:"scen",f:"After a customer slips on a wet floor, the store puts up “Caution: Wet Floor” signs. The customer offers the new signs to prove the store was negligent.",
+ a:"Barred by 407. It's a subsequent remedial measure offered to prove negligence.",
+ plain:"It could come in for another purpose: for example, if the store denies it controlled that area (ownership or control), or argues a warning wasn't feasible."},
+{t:"pol",k:"scen",f:"Before any disagreement, a contractor emails the homeowner: “I'll knock $500 off since the job ran late.” Months later the homeowner sues. Is the email protected by 408?",
+ a:"Probably not. 408 requires a claim that is disputed as to validity or amount.",
+ plain:"An ordinary business adjustment made before any dispute isn't a compromise of a disputed claim."},
+{t:"pol",k:"scen",f:"In a car-crash suit, the defense calls an eyewitness. The plaintiff wants to show that the witness is an adjuster employed by the defendant's insurance company.",
+ a:"Admissible under 411's “other purpose”: it shows the witness's bias.",
+ plain:"Insurance can't prove the defendant was negligent, but it can show why a witness might shade testimony. The defendant may ask for a limiting instruction."},
+
+/* ===== CHARACTER ===== */
+{t:"char",k:"concept",f:"The propensity box",s:"The forbidden inference",
+ p:"What is the propensity box, and what are the two ways character-type evidence can still get in?",
+ a:"The forbidden chain: a person's character trait → acted in line with that trait on this occasion. “He's that type, so he did it.”",
+ plain:"Routes around the box: other-act evidence used for a purpose that doesn't run through character (404(b)). Exceptions through the box: a few rules allow the propensity inference itself (404(a)(2), 404(a)(3), 413–415)."},
+{t:"char",k:"rule",f:"FRE 404(a)(1)",s:"The propensity ban",
+ a:"Evidence of a person's character or character trait can't prove that on a particular occasion the person acted in line with it.",
+ watch:["Applies to anyone (parties, victims, witnesses), in civil and criminal cases.","Habit (406) isn't character."],
+ why:"Juries give character too much weight and may punish a person for who they are, regardless of guilt (Zackowitz)."},
+{t:"char",k:"case",f:"People v. Zackowitz",s:"Why propensity is banned",
+ a:"Evidence that the defendant kept a collection of weapons at home couldn't be used to paint him as a dangerous type.",
+ plain:"In a murder trial arising from a street confrontation, the prosecution showed guns he owned but didn't use in the killing, to suggest a man of murderous propensity. Judge Cardozo's opinion reversed the conviction.",
+ why:"The jury might convict him for being a bad person rather than for the crime charged."},
+{t:"char",k:"rule",f:"FRE 404(a)(2)(A)",s:"The defendant's pertinent trait",
+ a:"In a criminal case, the accused may offer evidence of their own pertinent good character trait.",
+ plain:"Examples: honesty on a fraud or bribery charge; peacefulness on an assault charge.",
+ watch:["Opens the door: the prosecution may rebut.","Character witnesses can be cross-examined with “Have you heard...?” questions about specific acts (Michelson).","Proved by reputation or opinion (405(a)).","Never available in civil cases."]},
+{t:"char",k:"rule",f:"FRE 404(a)(2)(B)",s:"The victim's pertinent trait",
+ a:"In a criminal case, the accused may offer evidence of the alleged victim's pertinent trait, typically violence in a self-defense case.",
+ watch:["The prosecution may rebut it.","The prosecution may also offer evidence of the same trait in the defendant.","Subject to Rule 412 in sexual-misconduct cases."]},
+{t:"char",k:"rule",f:"FRE 404(a)(2)(C)",s:"A homicide victim's peacefulness",
+ a:"In a homicide case, the prosecutor may offer the victim's trait of peacefulness to rebut evidence that the victim was the first aggressor.",
+ watch:["Triggered by any evidence that the victim struck first, even if the defense offered no character evidence.","The only prosecution-initiated character route outside 413–415."]},
+{t:"char",k:"rule",f:"FRE 404(a)(3)",s:"A witness's character",
+ a:"A witness's character may be used as provided in Rules 607, 608 and 609.",
+ watch:["Only character for truthfulness is pertinent.","This is how impeachment fits inside the character rules."]},
+{t:"char",k:"case",f:"Michelson v. United States",s:"Cross-examining a character witness",
+ a:"A defendant's character witness may be asked “Have you heard...?” about the defendant's past bad acts, such as a prior arrest.",
+ plain:"Michelson called witnesses to his good reputation. The prosecutor asked whether they had heard he'd been arrested for receiving stolen goods 27 years earlier. The Court allowed it to test the witnesses' knowledge of his reputation.",
+ watch:["The questioner needs a good-faith basis.","The trial judge controls it closely.","No extrinsic proof of the act: the questioner takes the answer."]},
+{t:"char",k:"rule",f:"FRE 405(a)",s:"Reputation or opinion",
+ a:"When character evidence is admissible, it is proved by testimony about reputation or opinion.",
+ ok:["On cross, the character witness may be asked about relevant specific instances of conduct, to test their knowledge."],
+ watch:["Specific instances aren't allowed on direct under 405(a)."]},
+{t:"char",k:"rule",f:"FRE 405(b)",s:"Specific instances of conduct",
+ a:"Specific acts may prove character only when the trait is an essential element of a charge, claim, or defense.",
+ ok:["Entrapment (the defendant's predisposition)","Defamation, when truth is the defense","Negligent entrustment or hiring","Child custody","Civil commitment"],
+ watch:["Rare.","Not ordinary self-defense: there the victim's violence is circumstantial evidence, not an element."]},
+{t:"char",k:"rule",f:"FRE 406",s:"Habit and routine practice",
+ a:"A person's habit or an organization's routine practice may prove conduct on a particular occasion.",
+ plain:"Habit is specific and regular: a semi-automatic response to a repeated situation (always signals before turning). A general disposition (“careful,” “honest”) is character, not habit.",
+ watch:["Admissible without corroboration or an eyewitness."]},
+{t:"char",k:"rule",f:"FRE 413",s:"Other sexual assaults",
+ a:"In a criminal sexual-assault case, the defendant's other sexual assaults may be admitted on any matter to which they're relevant, including propensity.",
+ watch:["Rule 403 applies in its ordinary form (Guardia).","Proof is by specific acts.","The prosecutor must disclose the evidence before trial."]},
+{t:"char",k:"rule",f:"FRE 414",s:"Other acts of child molestation",
+ a:"In a criminal child-molestation case, the defendant's other acts of child molestation may be admitted, including for propensity.",
+ watch:["Rules 413 and 414 have been upheld against due process challenges (Mound)."]},
+{t:"char",k:"rule",f:"FRE 415",s:"Civil sexual-misconduct cases",
+ a:"In a civil case about sexual assault or child molestation, a party's other such acts may be admitted, including for propensity.",
+ watch:["The Judicial Conference opposed Rules 413–415.","The recidivism data behind them is disputed."]},
+{t:"char",k:"case",f:"United States v. Guardia",s:"Rule 413 and Rule 403",
+ a:"Rule 403 applies to 413 evidence in its ordinary form. There is no special presumption in favor of admission.",
+ plain:"A gynecologist was charged with sexually abusing patients during exams. The trial court excluded testimony from four other women under 403 because dueling expert testimony about proper exams risked confusing the jury. The Tenth Circuit affirmed."},
+{t:"char",k:"case",f:"United States v. Mound",s:"Rule 413 and due process",
+ a:"Rule 413 doesn't violate due process.",
+ plain:"Mound argued that 413 invites juries to overvalue character and punish past acts. The Eighth Circuit rejected the challenge, relying on 403 as a safeguard. Judge Morris Arnold dissented from the denial of rehearing en banc."},
+{t:"char",k:"scen",f:"In a civil car-crash case, the defendant calls a witness who will say he's known around town as a very careful driver.",
+ a:"Barred. 404(a)(1) bans propensity, and the 404(a)(2) exceptions apply only in criminal cases.",
+ plain:"A better route: if he has a true habit (for example, he always comes to a full stop at that crossing), it can come in under 406."},
+{t:"char",k:"scen",f:"Charged with assault, the defendant claims self-defense and offers the victim's reputation for violence. What can the prosecution do in response?",
+ a:"The evidence is admissible under 404(a)(2)(B). The prosecution may rebut it and may also offer evidence of the defendant's own violent character.",
+ plain:"There's a separate route too: if the defendant knew of the victim's violent acts, they can show his fear was reasonable. That's his state of mind, not propensity."},
+{t:"char",k:"scen",f:"In a murder trial, the defense offers evidence that the victim swung first. The prosecutor then calls witnesses to the victim's reputation for peacefulness.",
+ a:"Admissible under 404(a)(2)(C).",
+ plain:"Evidence that a homicide victim was the first aggressor opens the door, even if the defense offered no character evidence."},
+{t:"char",k:"scen",f:"A defendant charged with fraud calls a neighbor who says he is honest and describes three times he returned lost wallets.",
+ a:"The trait is allowed (404(a)(2)(A)), but the method isn't. Character must be proved by reputation or opinion (405(a)).",
+ plain:"Specific instances come in only on cross, or when character is an essential element (405(b)). Honesty isn't an element of fraud."},
+
+/* ===== OTHER ACTS 404(b) ===== */
+{t:"acts",k:"rule",f:"FRE 404(b)",s:"Other crimes, wrongs, or acts",
+ a:"Other acts can't prove character to show action in line with it, but they may be admitted for another purpose.",
+ ok:["Motive","Opportunity","Intent","Preparation","Plan","Knowledge","Identity","Absence of mistake","Lack of accident"],
+ watch:["The list is illustrative, and these aren't “exceptions”: if any link in the chain runs through character, it's barred.","Rule 403 applies.","In a criminal case the prosecutor must give reasonable written notice of the evidence, its purpose, and the reasoning (404(b)(3))."],
+ why:"Other acts can prove something without the propensity inference."},
+{t:"acts",k:"concept",f:"The chain test",s:"Real purpose or propensity in disguise?",
+ p:"How do you tell a true 404(b) purpose from propensity in disguise?",
+ a:"Write out every step of the inference. If any step is “so he's the kind of person who...,” it's barred.",
+ plain:"Calling it “intent” doesn't help if the logic is “he intended it before, so he intended it now.” A true route connects the other act to the fact without passing through the person's character."},
+{t:"acts",k:"case",f:"Huddleston v. United States",s:"Proving the other act · 1988",
+ a:"Other-act evidence comes in if a jury could reasonably find the act happened and the defendant did it. The judge doesn't decide that under 104(a).",
+ plain:"Charged with selling stolen videotapes, Huddleston was shown to have sold televisions and appliances at suspiciously low prices, to prove he knew the tapes were stolen. The Court applied the lenient 104(b) standard.",
+ watch:["Safeguards: a proper purpose, relevance, 403, and a limiting instruction."]},
+{t:"acts",k:"case",f:"Dowling v. United States",s:"Acquitted acts",
+ a:"An acquittal of the other act doesn't bar using it under 404(b).",
+ plain:"An acquittal shows only reasonable doubt. Under 104(b), a jury could still reasonably find that the act happened."},
+{t:"acts",k:"case",f:"United States v. Trenkler",s:"Identity · modus operandi",
+ a:"Two bombs shared so many distinctive design features that they marked the same maker, so the earlier bomb was admissible to prove identity.",
+ plain:"Identity requires similarities so distinctive that the crime “could not be anyone else's”: a signature.",
+ watch:["Compare Pisari: a single ordinary shared feature isn't enough."]},
+{t:"acts",k:"case",f:"United States v. Pisari",s:"Not a signature",
+ a:"A prior robbery wasn't admissible to prove identity when the only similarity was that a knife was used.",
+ plain:"A common, generic feature doesn't point to one person. Without a signature, the evidence just says “he robs people,” which is propensity."},
+{t:"acts",k:"case",f:"United States v. Peltier",s:"Motive",
+ a:"The example of a motive route: Peltier knew he faced an outstanding warrant for attempted murder.",
+ plain:"Charged with murdering two FBI agents, Peltier's pending charge and arrest warrant supplied a reason to shoot officers to avoid capture. The inference runs through motive, not his character."},
+{t:"acts",k:"case",f:"United States v. Hite",s:"Narrative integrity (res gestae)",
+ a:"A witness could describe the defendant loading the revolver, spinning the cylinder, and pulling the trigger, but couldn't call it “Russian roulette.”",
+ plain:"Charged with possessing a revolver with an obliterated serial number, Hite claimed it was his cousin's. The witness's account tied him to the gun. The judge kept the story coherent but stripped out the inflammatory label."},
+{t:"acts",k:"case",f:"Rex v. Smith",s:"The doctrine of chances",
+ a:"Three of Smith's brides drowned in their baths. The repeated “accidents” were objectively improbable, so the other deaths were admissible.",
+ plain:"The point isn't that Smith is a murderous type, but that innocent coincidence is too unlikely.",
+ watch:["Scholars disagree about whether the doctrine of chances truly avoids propensity."]},
+{t:"acts",k:"concept",f:"Reverse 404(b)",s:"When the defendant offers the other acts",
+ p:"Can a defendant offer another person's similar crimes to suggest that person did it? What standard applies?",
+ a:"Yes. Courts apply a lower similarity threshold when a defendant offers someone else's other acts (Stevens).",
+ plain:"It's still not a license for propensity. In Williams, a co-arrestee's prior gun conviction, offered to show the gun was his, amounted to “he's the gun-carrying type” and was excluded."},
+{t:"acts",k:"scen",f:"Charged with possessing cocaine with intent to distribute, the defendant says he didn't know what was in the bag in his car. The prosecutor offers his cocaine sale two years earlier.",
+ a:"Likely admissible to prove knowledge or intent under 404(b), followed by 403 and a limiting instruction.",
+ plain:"Theory: someone who has dealt cocaine recognizes it. Critics say this often slides into propensity, so the judge must weigh it carefully."},
+{t:"acts",k:"scen",f:"A man's third wife dies after a “fall” down the stairs. The prosecution offers evidence that his first two wives also died in household “accidents.”",
+ a:"Admissible to show absence of accident, under the doctrine of chances.",
+ plain:"Repeated unusual accidents are objectively improbable. The prior deaths must still clear 104(b), 403, and the notice requirement."},
+{t:"acts",k:"scen",f:"A railroad is sued after a crash. The plaintiff offers evidence that the engineer had been caught drinking on duty before and that the railroad was told about it.",
+ a:"Admissible against the railroad to prove knowledge (notice), not the engineer's propensity to drink.",
+ plain:"The question is what the railroad knew when it kept him on the job."},
+
+/* ===== IMPEACHMENT ===== */
+{t:"imp",k:"concept",f:"Three modes of impeachment",s:"What are you claiming?",
+ p:"What are the three ways to attack a witness, and which one triggers the character rules?",
+ a:"“That's an error!”, “You're lying!”, and “You're a liar!” Only the last is a character attack.",
+ plain:"Error: mistaken perception, memory, or narration; only 401 and 403 apply. Lying (noncharacter): contradiction, prior inconsistent statement, bias. Liar (character): bad character for truthfulness, allowed only through 404(a)(3), 607, 608 and 609."},
+{t:"imp",k:"rule",f:"FRE 607",s:"Who may impeach",
+ a:"Any party, including the party that called the witness, may attack the witness's credibility."},
+{t:"imp",k:"rule",f:"FRE 608(a)",s:"Opinion or reputation for truthfulness",
+ a:"A witness's credibility may be attacked or supported by reputation or opinion testimony about character for truthfulness.",
+ watch:["Truthfulness only, not general bad character.","Support (good character) is allowed only after character for truthfulness has been attacked.","Needs a proper foundation: a reputation witness must know the community at roughly the time of trial (Whitmore)."]},
+{t:"imp",k:"rule",f:"FRE 608(b)",s:"Specific instances on cross",
+ a:"On cross, the court may allow questions about specific acts that are probative of truthfulness or untruthfulness.",
+ plain:"Examples: lying on a job application or loan form, using a false name.",
+ bar:["Extrinsic evidence to prove the act: the questioner must take the witness's answer","Using it to get around Rule 609 for convictions"],
+ watch:["Needs a good-faith basis.","Subject to 403 and 611(a)(3), which protects witnesses from harassment.","Also covers the acts of another witness whose character the witness has testified about."]},
+{t:"imp",k:"case",f:"United States v. Whitmore",s:"Rules 608(a) and 608(b)",
+ a:"Excluding character witnesses with weak foundations was fine, but barring good-faith 608(b) cross of the key witness was reversible error.",
+ plain:"The only witness tying Whitmore to a gun was a police officer. The defense's reputation and opinion witnesses were too remote or poorly informed. But a driving record showing the officer's license had been suspended, and that he failed to report it, was enough basis to ask him about it on cross.",
+ watch:["Counsel need only a reasonable, good-faith basis to ask, and are stuck with the answer."]},
+{t:"imp",k:"rule",f:"Bias",s:"Noncharacter impeachment",
+ a:"A reason to shade testimony in this case (friendship, money, fear, hostility) may always be shown, including by extrinsic evidence.",
+ watch:["Bias is never collateral (Abel).","Bias isn't a character attack, so it doesn't open the door to good-character rehabilitation."]},
+{t:"imp",k:"case",f:"United States v. Abel",s:"Bias · 1984",
+ a:"Evidence that a defense witness and the defendant belonged to a secret prison gang sworn to lie for each other was admissible to show bias.",
+ plain:"Membership gave the witness a reason to slant his testimony. The rules don't mention bias, but it's always relevant, and extrinsic evidence may prove it."},
+{t:"imp",k:"rule",f:"Contradiction",s:"Noncharacter impeachment",
+ a:"Showing through other evidence that the witness's testimony is wrong.",
+ watch:["Extrinsic evidence on a side (collateral) matter is governed by 403.","It becomes a character attack only when the contradiction is pervasive, a broad attack on truthfulness."]},
+{t:"imp",k:"concept",f:"Rehabilitation vs. bolstering",s:"Supporting a witness",
+ p:"When may a party offer evidence that its own witness is truthful?",
+ a:"Only after a character attack (608(a)). Bolstering before any attack is impermissible.",
+ plain:"Attacks that open the door: 608(a) opinion or reputation, 608(b) acts, 609 convictions, or pervasive contradiction. A bias attack doesn't. Corroborating the facts is always fine."},
+{t:"imp",k:"case",f:"United States v. Bonner",s:"Bolstering",
+ a:"Bolstering before an attack is impermissible, but the court allowed character witnesses for the victim's honesty after the defense attacked her credibility.",
+ plain:"The defense suggested the key witness gained benefits by cooperating with the government. The Seventh Circuit treated that as an attack and allowed rehabilitation. The casebook asks: was it really a character attack, or just bias?"},
+{t:"imp",k:"concept",f:"Extrinsic evidence",s:"Can you call another witness?",
+ p:"After a witness denies something on cross, when can you prove it with another witness or a document?",
+ a:"It depends on the attack. For 608(b) acts: never. For bias: yes. For contradiction: as 403 allows.",
+ plain:"Extrinsic evidence means proof beyond the witness's own answers. The same take-the-answer rule applies to “Have you heard...?” questions to a character witness under 405(a)."},
+{t:"imp",k:"scen",f:"On cross, the prosecutor asks the defendant's alibi witness: “Didn't you lie on a bank loan application?” He says no. May the prosecutor now call the loan officer to prove it?",
+ a:"No. 608(b) bars extrinsic evidence of specific acts, so the prosecutor must take the answer.",
+ plain:"From Problem 4.8. The question itself was proper, given a good-faith basis."},
+{t:"imp",k:"scen",f:"The same alibi witness denies on cross that he's in business with the defendant's father. May the prosecutor call a witness to prove the partnership?",
+ a:"Yes. That shows bias, and bias may be proved by extrinsic evidence.",
+ plain:"Bias is never collateral (Abel)."},
+{t:"imp",k:"scen",f:"Before anyone has attacked the victim's credibility, the prosecutor calls the victim's pastor to say she is a very honest person.",
+ a:"Impermissible bolstering. Good character for truthfulness is admissible only after an attack (608(a)).",
+ plain:"If the defense later attacks her character for truthfulness, the pastor could testify in rehabilitation."},
+
+/* ===== CONVICTIONS 609 ===== */
+{t:"conv",k:"concept",f:"FRE 609",s:"The decision tree",
+ p:"Walk through the 609 questions in order. Which provision does each answer lead to?",
+ a:"Juvenile? → 609(d). Over 10 years old? → 609(b). Crime of dishonesty? → 609(a)(2). Felony? → 609(a)(1)(A) or (B), depending on whether the witness is the accused.",
+ plain:"From most permissive to most restrictive: 609(a)(2) must admit; 609(a)(1)(A) uses 403; 609(a)(1)(B) needs probative value to outweigh prejudice; 609(b) needs it to substantially outweigh, plus notice; 609(d) juvenile adjudications are never usable against the accused."},
+{t:"conv",k:"rule",f:"FRE 609(a)(2)",s:"Crimes of dishonesty (crimen falsi)",
+ a:"Any crime whose elements required proving a dishonest act or false statement must be admitted, for any witness, with no balancing.",
+ ok:["Perjury, fraud, embezzlement, false statements","Felonies and misdemeanors alike"],
+ watch:["Theft and robbery are not crimen falsi.","The court must be able to readily tell from the elements (or the witness's admission) that dishonesty was involved.","Still subject to 609(b) if it's over 10 years old."],
+ why:"Crimes of deceit are especially probative of a willingness to lie."},
+{t:"conv",k:"rule",f:"FRE 609(a)(1)(A)",s:"Felony, witness isn't the accused",
+ a:"A crime punishable by death or more than one year in prison must be admitted, subject to Rule 403.",
+ plain:"Covers ordinary witnesses in criminal cases, and all witnesses, including the parties, in civil cases.",
+ watch:["It's the possible punishment that counts, not the sentence actually imposed.","Favors admission: excluded only if substantially outweighed."],
+ why:"More serious crimes suggest greater readiness to lie under oath."},
+{t:"conv",k:"rule",f:"FRE 609(a)(1)(B)",s:"Felony, witness is the accused",
+ a:"When the accused testifies, a felony conviction is admitted only if its probative value outweighs its prejudicial effect to the defendant.",
+ watch:["Tilted toward the defendant; the burden is on the prosecution.","Weighed using the five Gordon factors."],
+ why:"Jurors may convict because of the prior crime rather than because they doubt the testimony."},
+{t:"conv",k:"concept",f:"The Gordon factors",s:"Weighing a defendant's prior conviction",
+ p:"Name the five factors for weighing a defendant's prior conviction under 609(a)(1)(B).",
+ a:"1. Nature of the crime. 2. Time of conviction and the witness's later history. 3. Similarity to the charged crime. 4. Importance of the defendant's testimony. 5. Centrality of the credibility issue.",
+ plain:"From Gordon v. United States, applied in Brewer. Similarity cuts against admission: the more alike the crimes, the more the jury thinks “he did it before.” If the defendant's testimony is vital, courts hesitate to admit impeachment that could keep him off the stand."},
+{t:"conv",k:"rule",f:"FRE 609(b)",s:"Convictions over 10 years old",
+ a:"If more than 10 years have passed since the conviction or release from confinement (whichever is later), the conviction is admitted only if its probative value, supported by specific facts, substantially outweighs its prejudicial effect.",
+ watch:["A “reverse 403” test, with a presumption against admission.","The proponent must give reasonable written notice.","Count from release if the witness was confined."]},
+{t:"conv",k:"rule",f:"FRE 609(d)",s:"Juvenile adjudications",
+ a:"Never usable against the accused, and never in a civil case.",
+ plain:"Allowed only in a criminal case, against a witness other than the defendant, if an adult's conviction for that offense would be admissible, and only if necessary to fairly determine guilt or innocence."},
+{t:"conv",k:"case",f:"Luce v. United States",s:"Preserving the objection",
+ a:"To appeal a ruling that allows impeachment with a prior conviction, the defendant must actually testify.",
+ plain:"Without the testimony, an appellate court can't know what he would have said, how the impeachment would have played, or whether the government would even have used it."},
+{t:"conv",k:"case",f:"Ohler v. United States",s:"“Drawing the sting”",
+ a:"A defendant who brings out her own prior conviction on direct can't appeal the ruling that it was admissible.",
+ plain:"After losing a motion in limine, Ohler revealed the conviction herself to take the sting out. Doing so waived the objection."},
+{t:"conv",k:"case",f:"United States v. Estrada",s:"Naming the crime",
+ a:"Courts usually let jurors learn the name of the prior crime, not just that there was a felony conviction.",
+ plain:"The Second Circuit (then-Judge Sotomayor) rejected a district court's routine practice of stripping out the crime's identity."},
+{t:"conv",k:"scen",f:"A prosecution witness (not the defendant) was convicted of misdemeanor perjury six years ago. May the defense use it to impeach him?",
+ a:"Yes. It must be admitted under 609(a)(2), because perjury requires proof of a false statement. There's no balancing.",
+ plain:"It doesn't matter that it was only a misdemeanor."},
+{t:"conv",k:"scen",f:"The defendant testifies. He was convicted of armed robbery 13 years ago and released from prison 8 years ago. Which standard applies?",
+ a:"609(a)(1)(B). Measure from release (8 years), so 609(b) doesn't apply, and robbery isn't crimen falsi.",
+ plain:"The conviction comes in only if its probative value outweighs the prejudice to the defendant, weighed with the Gordon factors."},
+{t:"conv",k:"scen",f:"In a civil case, the defense wants to impeach the plaintiff with a three-year-old felony drug conviction.",
+ a:"609(a)(1)(A): admitted, subject to Rule 403.",
+ plain:"The (B) standard protects only the accused in a criminal case."},
+
+/* ===== RAPE SHIELD 412 ===== */
+{t:"shield",k:"rule",f:"FRE 412(a)",s:"The rape shield",
+ a:"In cases involving alleged sexual misconduct, evidence of a victim's other sexual behavior or sexual predisposition is inadmissible.",
+ exc:["Criminal cases: 412(b)(1)(A) source of physical evidence; (B) behavior with the accused; (C) constitutional rights","Civil cases: the 412(b)(2) balancing test"],
+ watch:["Applies in civil and criminal cases.","Covers both specific behavior and general predisposition."],
+ why:"Sexual history says little about consent or credibility (Colb)."},
+{t:"shield",k:"rule",f:"FRE 412(b)(1)(A)",s:"Source of physical evidence",
+ a:"Specific instances of the victim's sexual behavior, offered to prove that someone other than the defendant was the source of semen, injury, or other physical evidence.",
+ watch:["Criminal cases only.","Specific acts only, not reputation."]},
+{t:"shield",k:"rule",f:"FRE 412(b)(1)(B)",s:"Behavior with the accused",
+ a:"Specific instances of the victim's sexual behavior with the accused, offered by the defendant to prove consent, or offered by the prosecutor.",
+ watch:["Only behavior with this accused, not with anyone else."]},
+{t:"shield",k:"rule",f:"FRE 412(b)(1)(C)",s:"Constitutional rights",
+ a:"Evidence whose exclusion would violate the defendant's constitutional rights.",
+ ok:["Proof of bias or a motive to fabricate (Olden)"],
+ bar:["Usually not enough: narrative integrity (Stephens v. Miller)","Usually not enough: the defendant's belief in consent (Knox)"]},
+{t:"shield",k:"case",f:"Olden v. Kentucky",s:"Bias overrides the shield",
+ a:"The defendant had a Sixth Amendment right to cross-examine the complainant about a relationship that gave her a motive to lie.",
+ plain:"Olden claimed the sex was consensual. The complainant was living with another man, and the defense argued she invented the assault to protect that relationship. Barring that cross-examination violated the Confrontation Clause."},
+{t:"shield",k:"case",f:"Stephens v. Miller",s:"Narrative integrity",
+ a:"The shield could keep out part of the defendant's own account. His right to testify didn't guarantee telling the whole story in his own words.",
+ plain:"Stephens wanted to testify that the complainant became angry over his remarks about her sexual conduct with others. The Seventh Circuit upheld exclusion; otherwise defendants could always get around the shield by calling it part of their story."},
+{t:"shield",k:"case",f:"United States v. Knox",s:"The defendant's belief in consent",
+ a:"The defendant's knowledge of the complainant's sexual past wasn't admissible to support a reasonable-mistake defense.",
+ plain:"The two accounts conflicted completely; she said she was asleep. Either he or she was lying, so there was no believable claim of honest mistake for her history to support.",
+ watch:["At least one court (Doe v. United States) allowed similar evidence on the defendant's state of mind."]},
+{t:"shield",k:"concept",f:"Past false accusations",s:"Outside Rule 412",
+ p:"Does 412 bar evidence that the complainant has falsely accused others of sexual assault before?",
+ a:"No. False accusations aren't “sexual behavior,” so they fall outside 412.",
+ plain:"They're governed instead by 403, 404 and 608 (State v. Smith). Circuits split on whether the Constitution protects a defendant's right to offer them."},
+{t:"shield",k:"rule",f:"FRE 412(b)(2)",s:"Civil cases",
+ a:"Admissible only if probative value substantially outweighs the harm to the victim and unfair prejudice to any party.",
+ watch:["A “reverse balancing” test with a strong presumption against admission.","Reputation evidence only if the victim placed it in controversy.","Example: Jones v. Clinton (Problem 5.9)."]},
+{t:"shield",k:"rule",f:"FRE 412(c)",s:"Procedure",
+ a:"A written motion, generally at least 14 days before trial, describing the evidence and its purpose; notice to the victim; a hearing in camera; and a sealed record.",
+ watch:["The victim and the parties have a right to attend and be heard."]},
+{t:"shield",k:"concept",f:"Galvin's critique",s:"A 404(b)-style shield",
+ p:"What alternative design did Harriett Galvin propose for rape shield laws?",
+ a:"Bar a victim's sexual history only when it's offered for propensity inferences: that she consented this time, or that she's unworthy of belief.",
+ plain:"Other uses would be allowed, as under 404(b). Consider how her rule would change the results in Olden, Stephens and Knox."},
+{t:"shield",k:"concept",f:"Before shield laws",s:"The history",
+ p:"How did courts treat a complainant's sexual history before the 1970s?",
+ a:"They admitted it as bearing on consent and credibility (People v. Abbot; Wigmore).",
+ plain:"The assumption was that an “unchaste” woman was more likely to consent and less worthy of belief. The shield laws of the 1970s ended that."},
+{t:"shield",k:"scen",f:"In a rape prosecution, the defendant says he wasn't the source of the complainant's injuries and offers evidence that she had sex with another man that night.",
+ a:"Potentially admissible under 412(b)(1)(A), to explain the source of the injuries.",
+ plain:"Only specific acts may be offered, and the 412(c) procedure must be followed."},
+{t:"shield",k:"scen",f:"The defendant wants to show that the complainant had a reputation for promiscuity in her dorm, to suggest she consented.",
+ a:"Barred by 412(a). It's reputation evidence of sexual predisposition, offered for the forbidden consent inference.",
+ plain:"No criminal exception allows reputation evidence."},
+/* ===== Added from Prof. Hornzell's Class 1–10 slides and the outline update ===== */
+/* --- Jury secrecy --- */
+{t:"jury",k:"rule",src:"Class 1",f:"FRE 606(b)(2)(C)",s:"Mistake on the verdict form",
+ a:"A juror may testify that a mistake was made in entering the verdict on the verdict form.",
+ plain:"The third textual exception to the no-impeachment rule, alongside (A) extraneous prejudicial information and (B) an outside influence.",
+ why:"Fixes clerical errors without probing how the jury reasoned."},
+{t:"jury",k:"scen",src:"Class 1",f:"The jury agreed to acquit on Count 2, but the foreperson accidentally checked “guilty” on the verdict form. After the verdict, a juror wants to say so.",
+ a:"The juror may testify under 606(b)(2)(C): a mistake in entering the verdict on the form.",
+ plain:"The juror testifies to the clerical error, not to deliberations or anyone's reasoning."},
+{t:"jury",k:"concept",src:"Class 1",f:"Tanner: majority vs. dissent",s:"Rule 606(b) and a competent jury",
+ p:"What tension did Tanner resolve, and how did the majority and dissent differ?",
+ a:"606(b)'s bar on deliberation testimony vs. the Sixth Amendment right to a competent jury. The majority barred the testimony; the dissent said 606(b) didn't apply.",
+ plain:"Majority: drugs and alcohol are no more an “outside influence” than a virus, poorly prepared food, or lack of sleep, and other safeguards protect competence (voir dire, observation, juror reports, nonjuror evidence). Dissent: 606(b) doesn't reach matters unrelated to deliberations, and courts can tell “minor indispositions” from intoxicants.",
+ watch:["Legislative history: the House version allowed testimony about objective misconduct; the Senate version barred anything during deliberations, and the Senate version was enacted.","Common law flatly barred juror impeachment of verdicts except for “extraneous influence.”"],
+ why:"Finality, and protecting jurors from losing parties."},
+{t:"jury",k:"concept",src:"Class 1",f:"The Warger two-step test",s:"New trial for voir-dire dishonesty",
+ p:"How does a party get a new trial because a juror lied during voir dire?",
+ a:"(1) Show the juror failed to answer honestly a material voir dire question; (2) show a correct answer would have provided a valid basis to challenge and remove the juror.",
+ watch:["606(b) still bars using juror testimony about deliberations to make that showing (Warger v. Shauers, 574 U.S. 40 (2014)).","A juror's own past experiences aren't “extraneous prejudicial information.”"]},
+{t:"jury",k:"concept",src:"Class 1",f:"Peña-Rodriguez dissents",s:"Thomas and Alito",
+ p:"What did the two dissents in Peña-Rodriguez argue?",
+ a:"Thomas: the no-impeachment rule was entrenched in the common law when the Fourteenth Amendment was ratified. Alito: the Sixth Amendment's protection doesn't depend on the nature of the jury's bias.",
+ plain:"The majority reversed Colorado, whose rule limited “extraneous prejudicial information” to legal content and specific facts from outside the record, so ethnic bias didn't count.",
+ why:"Majority: racial discrimination is “especially pernicious in the administration of justice.”"},
+
+/* --- Relevance --- */
+{t:"rel",k:"rule",f:"FRE 102",s:"Purpose of the rules",
+ a:"The rules are construed to administer every proceeding fairly, eliminate unjustifiable expense and delay, and promote the development of evidence law, to ascertain the truth and secure a just determination.",
+ watch:["The readings pair it with Old Chief (the effect of stipulations)."]},
+{t:"rel",k:"rule",f:"FRE 104(a)",s:"Preliminary questions for the judge",
+ a:"The judge decides whether a witness is qualified, a privilege exists, or evidence is admissible, by a preponderance (Bourjaily).",
+ watch:["The judge isn't bound by the evidence rules (except privilege) in deciding.","Contrast 104(b): conditional facts go to the jury, and the judge only screens for sufficient evidence (Huddleston)."]},
+{t:"rel",k:"rule",src:"Class 2",f:"FRE 611(d) (proposed)",s:"Illustrative aids",
+ a:"Sketches, charts and slides that help jurors understand the evidence may be used but are not admitted as evidence.",
+ plain:"They don't go to the jury room unless all parties consent or the court finds good cause. Compare demonstrative evidence (like Serge's animation), which is an admitted exhibit.",
+ watch:["Demonstrative evidence must be authenticated under FRE 901, be relevant, and pass 403.","The Chauvin animation's best attack may be authentication, not 403."]},
+{t:"rel",k:"case",src:"Classes 2–3",f:"Cox v. State",s:"Conditional relevance · Ind. 1998",
+ a:"Testimony about a friend's bond hearing showed Cox's retaliation motive only if Cox knew what happened there, and evidence that he was at the friend's mother's house almost daily was enough.",
+ plain:"The prosecutor testified that new felony charges against Hammer were announced and his bond wasn't reduced. Cox wasn't there, but Hammer's mother was, and Cox spent nearly every day at her house.",
+ watch:["The court doesn't weigh credibility or make a finding; it asks if a jury could reasonably infer knowledge (Huddleston).","All relevance is conditional: e.g., buying a weapon of the kind used means little if hundreds were sold that day."]},
+{t:"rel",k:"concept",src:"Classes 2–3",f:"James: two framings",s:"State of mind vs. testimony about it",
+ p:"How did the trial court and the en banc court frame the relevance question in United States v. James, and what did the dissent add?",
+ a:"Trial court: are the records relevant to James's state of mind? (No, she never saw them.) Appeals court: are they relevant to her testimony about her state of mind? (Yes, as corroboration.)",
+ plain:"The jury had asked for police reports of Ogden's past violence.",
+ watch:["Dissent (403): Jaylene said Ogden had his hands up and she didn't fear him. Proof he really stabbed a man risks jurors thinking he deserved to die."]},
+{t:"rel",k:"concept",src:"Classes 3–4",f:"Flight evidence",s:"The four-step inference",
+ p:"What inferential steps lead from flight to guilt, and why might race affect its probative value?",
+ a:"(1) The behavior was flight; (2) flight → consciousness of guilt; (3) → consciousness of guilt about this crime; (4) → actual guilt.",
+ plain:"Each link can break. People flee for other reasons: fear of false accusation, of being made a witness, of wasted time, or of being seen cooperating with police.",
+ watch:["Commonwealth v. Warren (Mass. 2016): Black men in Boston, repeatedly targeted for police encounters, may flee to avoid profiling; a qualified community witness may testify to that.","Tighten the link: flight soon after the crime, or knowledge police were seeking them for it (Thelma & Louise clip)."]},
+{t:"rel",k:"scen",src:"Class 3",f:"The defendant fled from police after a murder. Explaining the flight would reveal that he once served prison time for an unarmed robbery 12 years earlier (Problem 1.9).",
+ a:"The flight evidence carries a risk of unfair prejudice, because explaining it exposes his record.",
+ plain:"Prosecution's answer: the robbery is old and dissimilar to murder, so jurors are unlikely to infer he committed this murder from it. (Problem 1.10 is similar: fleeing because of uncharged marijuana is trivial.)"},
+{t:"rel",k:"concept",src:"Classes 3–4",f:"Old Chief: evidentiary richness",s:"Why parties usually choose their proof",
+ p:"Why may a party usually prove its case its own way, and what's the Old Chief exception?",
+ a:"Souter's three reasons: descriptive richness; a narrative that makes the verdict feel morally reasonable; and meeting jurors' expectations (e.g., seeing the gun).",
+ plain:"Exception: when only felon status is at issue, courts should accept the defendant's admission rather than admit the record naming the crime.",
+ watch:["A concession doesn't make evidence irrelevant (ACN 401: the fact needn't be disputed); the issue is 403.","Dissent: naming the crime isn't unfair prejudice; a limiting instruction suffices."]},
+{t:"rel",k:"concept",src:"Classes 3–4",f:"Collins: the two errors",s:"Plus the Blue Bus problem",
+ p:"What two errors made the Collins probability testimony inadmissible, and is math evidence ever allowed?",
+ a:"(1) No foundation: invented probabilities and non-independent traits. (2) Distraction: the rarity of such couples says nothing about which couple did it, and it highlighted a mixed-race couple.",
+ plain:"Probabilistic evidence is admissible when sound: DNA statistics, and market-share liability in asbestos cases. Many jurisdictions require explaining its significance to jurors.",
+ watch:["Blue Bus: proof that Blue Bus runs 80% of buses feels insufficient, though people trust a weak eyewitness more; the human mind resists “just math.”"]},
+{t:"rel",k:"concept",src:"Class 4",f:"“Spark-of-life” evidence",s:"Humanizing a homicide victim",
+ p:"May a prosecutor show a photo of a murder victim in life? What are the arguments?",
+ a:"Minnesota allows it (State v. Graham: victims are “not just bones and sinews”). At Chauvin's trial, George Floyd's brother showed a photo.",
+ plain:"Prosecution: it conveys the crime's human significance and a morally reasonable verdict (Old Chief). Defense: the fact is undisputed, so 401/403 apply, and it invites unfair sympathy.",
+ watch:["Judge Cahill: the jury may learn he was a loved human being, but propensity for peacefulness or violence becomes character evidence."]},
+{t:"rel",k:"scen",src:"Class 2",f:"In a murder trial, the defense doesn't contest the victim's death, its cause, or the wounds. The prosecution offers four photos of the body showing wound angle and depth (a juror asked about this) and two autopsy photos no witness discusses.",
+ a:"Per Bocharski: the four wound photos were no abuse of discretion, but the two autopsy photos served mainly to inflame and were error.",
+ plain:"The standard of review is abuse of discretion. The error was harmless, so there was no new trial."},
+
+/* --- Policy rules --- */
+{t:"pol",k:"scen",src:"Class 4",f:"A diner trips on loose carpet at a restaurant. The next day the restaurant pays $55.26 to resecure it. At trial the restaurant's expert says a fix would have cost $40,000.",
+ a:"The repair can't prove negligence (407), but the $55.26 receipt may impeach the $40,000 claim.",
+ plain:"407 is about encouraging repairs outside the courtroom, not the jury's search for truth. Impeachment is a permitted purpose."},
+{t:"pol",k:"scen",src:"Class 4",f:"After Sophie the wolf attacks a neighbor's beagle, her owner chains her. Later she attacks a boy, Daniel. Both owners sue (Problem 2.1).",
+ a:"407 bars evidence of the chaining in the beagle owner's suit, but not in Daniel's.",
+ plain:"407 covers measures taken after the injury at issue. The chaining came before Daniel's injury, so it isn't “subsequent” as to him."},
+{t:"pol",k:"scen",src:"Class 4",f:"During settlement talks, a hotel hires a consultant whose report admits safety failures. The plaintiff offers the report at trial (Problem 2.4).",
+ a:"Likely excluded under 408(a)(2) as a statement made “during compromise negotiations.”",
+ plain:"The consultant acted as the hotel's agent in the compromise process. Admitting such reports would discourage hiring such agents."},
+{t:"pol",k:"scen",src:"Class 4",f:"In settlement talks, a bishop calls a patient's coma a “tragic accident.” At trial he testifies it was “an act of God.” Can the plaintiff impeach him with “tragic accident”?",
+ a:"No. 408(a) bars using settlement statements to impeach by prior inconsistent statement.",
+ plain:"The offer to pay is excluded too; it may reflect a desire for peace, not an admission (The Verdict clip). 408 applies “on behalf of any party.”"},
+{t:"pol",k:"scen",src:"Class 4",f:"Two weeks after a crash, at a settlement meeting with lawyers, a driver says, “I'm so sorry I caused the accident.” At the scene she had said nothing.",
+ a:"Inadmissible under 408: a statement during compromise negotiations offered to prove liability.",
+ plain:"Compare: “I'm so sorry, let me give you a bandaid” at the scene. The bandaid offer is barred by 409, but “I'm so sorry” comes in (unless a state apology law covers it)."},
+{t:"pol",k:"scen",src:"Class 4",f:"An insurance adjuster took the injured plaintiff's recorded statement, which the defense used to impeach her. The plaintiff wants to show the adjuster worked for the defendants' insurer (Problem 2.5, Lacher).",
+ a:"Exclusion was probably right. Bias is a permitted 411 purpose, but here it has little probative value, so 403 keeps it out.",
+ plain:"The adjuster didn't testify; his employment barely bears on the reliability of her own statement."},
+{t:"pol",k:"concept",src:"Classes 4–6",f:"Blindfolding juries",s:"The Arizona Jury Project",
+ p:"What are the three failures of “blindfolding” jurors, and what did the Arizona Jury Project find about insurance?",
+ a:"(1) Limiting instructions are hard to apply; (2) objecting to a prohibited mention draws attention to it; (3) jurors' prior experiences can't be erased.",
+ plain:"Videotaped deliberations showed insurance came up in 85% of trials, about 4 times each, mostly about whether the plaintiff was insured (avoiding a windfall). In 40% it was substantial enough to possibly affect the verdict.",
+ watch:["Better: instruct jurors not to speculate, and that their information may be incomplete or wrong.","411 rationale: the 1970s fear was that jurors punish insured defendants."]},
+{t:"pol",k:"case",src:"Class 5",f:"United States v. Biaggi",s:"Rule 410 · 2d Cir. 1990",
+ a:"A defendant who rejected an immunity offer could offer that rejection as evidence of consciousness of innocence.",
+ plain:"Wedtech's CEO Mariotta said he turned down immunity because he knew of no wrongdoing. Excluding that was error, especially since the government offered consciousness-of-guilt evidence (buying gold bars after cooperators pleaded).",
+ watch:["410 bars evidence only “against the defendant.”","Rejecting immunity is strongly probative; rejecting a plea for a lighter sentence is weaker."]},
+{t:"pol",k:"scen",src:"Class 5",f:"The prosecutor offered to reduce a charge from first- to second-degree murder. The defendant refused and wants to tell the jury about the offer (Problem 2.8).",
+ a:"Not automatically barred (410 protects only the defendant), but courts usually exclude it to protect plea bargaining.",
+ plain:"The offer isn't necessarily a concession of weakness (it may avoid the cost of trial). Its value as consciousness of innocence grows with the size of the sentence reduction refused."},
+
+/* --- Character --- */
+{t:"char",k:"rule",f:"FRE 404(a)(2)(B)(ii)",s:"The same trait in the defendant",
+ a:"If the accused offers evidence of the victim's trait, the prosecution may offer evidence that the accused has the same trait.",
+ watch:["Added in 2000; no common-law counterpart.","The accused needn't have put his own character in issue."]},
+{t:"char",k:"scen",src:"Classes 5–6",f:"Zackowitz bought three pistols and a tear-gas gun only after his wife told him Coppola had insulted her. The prosecution offers the purchases.",
+ a:"A different result: buying weapons after the insult shows preparation, a route around the box.",
+ plain:"In the actual case he already owned them, so they showed only a “murderous disposition” and were inadmissible (Cardozo). The dissent said the weapons showed he could carry out his threat."},
+{t:"char",k:"case",src:"Classes 7–8",f:"Lannan v. State",s:"Ind. 1992",
+ a:"Indiana abolished its “depraved sexual instinct” exception and adopted FRE 404(b).",
+ plain:"The recidivism rationale fails (drug offenders reoffend too, and data suggest sex offenders don't more often). The bolstering rationale reflects an outdated sense that abuse claims are improbable.",
+ watch:["Prior sexual misconduct can still come in for 404(b) purposes (common plan, modus operandi).","Shortly after, Congress enacted 413–415."]},
+{t:"char",k:"concept",src:"Class 7",f:"State v. Kirsch",s:"Three theories, all propensity",
+ p:"What three around-the-box theories did the New Hampshire prosecutors try in Kirsch, and why did each fail?",
+ a:"Motive (a desire for sex with young girls) is “proof of propensity, not motive.” Intent (how he selected and seduced victims) is indistinguishable from propensity. Common plan: a pattern is not a plan.",
+ plain:"For a plan, other acts must be constituent parts of an overall scheme, not just similar assaults.",
+ why:"A rare court recognizing that 404(b)(2) purposes aren't exceptions."},
+{t:"char",k:"concept",src:"Class 7",f:"413–415: legislative record",s:"Molinari vs. the Judicial Conference",
+ p:"What did the sponsor and the Judicial Conference say about Rules 413–415?",
+ a:"Rep. Molinari: the rules don't change hearsay or 403, the past offense needn't have produced a conviction, and the standard is presumably 104(b)/Huddleston. Judicial Conference (1995): overwhelmingly rejected in public comment; 404(b) suffices; no empirical support.",
+ plain:"Enacted in the Violent Crime Control and Law Enforcement Act of 1994. Molinari's rationale: sexual interest in children is an unusual disposition, and adult cases often turn on consent and credibility.",
+ watch:["Clinton signed 415, and the Paula Jones judge later cited it.","About 1,000 such federal cases a year; 21 states have similar rules."]},
+{t:"char",k:"concept",src:"Class 7",f:"Baker, “Once a Rapist?”",s:"Critique of 413–415 (1997)",
+ p:"What were Katharine Baker's main critiques of Rules 413–415?",
+ a:"Recidivism data cut against them: 7.7% of sex offenders were rearrested for a new sex offense within three years, vs. 63.5% (property) and 60.4% (drugs) rearrested.",
+ plain:"Also: jurors overweight priors and may punish past acts; police “round up the usual suspects”; those with records are disproportionately poor and minority.",
+ watch:["Baker concedes underreporting may skew the numbers."]},
+{t:"char",k:"concept",src:"Classes 7–8",f:"Guardia's three-part threshold",s:"Applying Rule 413",
+ p:"What must a court find before 413 evidence reaches 403 balancing?",
+ a:"(1) The defendant is accused of sexual assault; (2) the evidence shows another sexual assault; (3) it's relevant. Then a normal 403 balance.",
+ watch:["403 isn't tilted against 413 evidence; that would frustrate Congress.","413 originally said “is admissible”; restyled in 2011 to “may admit.”"]},
+{t:"char",k:"case",src:"Class 7",f:"Carroll v. Trump",s:"Rule 415 · S.D.N.Y. 2023",
+ a:"Testimony from two other women and the Access Hollywood tape were admitted under 415 to show propensity.",
+ plain:"Judge Kaplan: Carroll offered the evidence “to show that Mr. Trump has a propensity for such behavior.”",
+ watch:["Also: Giuffre v. Maxwell (a 415 notice invoking 413(d)(5), which counts conspiracy as sexual assault) and Doe v. Epstein (a 415(b) notice)."]},
+{t:"char",k:"concept",src:"Class 8",f:"Character-witness foundation",s:"Direct and cross under 405(a)",
+ p:"What foundation does a reputation witness need, and why are specific acts barred on direct?",
+ a:"The witness must show “such acquaintance with the defendant, the community in which he has lived and the circles in which he has moved, as to speak with authority.”",
+ plain:"The trait must be pertinent (e.g., nonviolence in an assault case). On cross, probe familiarity and ask “Have you heard…?” with a good-faith basis.",
+ why:"ACN: specific acts are the most convincing but have “the greatest capacity to arouse prejudice, to confuse, to surprise, and to consume time.”"},
+{t:"char",k:"scen",src:"Class 8",f:"The defendant testifies, “I wouldn't shoot anybody.” The prosecutor asks, “You've shot at other people before, haven't you?” (Problem 3.16).",
+ a:"Likely allowed. By vouching for her own peacefulness she made herself a character witness open to 405(a) cross, and the question also impeaches by prior inconsistent statement.",
+ plain:"The defense's best move is a limiting instruction against using it as propensity."},
+{t:"char",k:"scen",src:"Classes 8–9",f:"Claiming self-defense in an assault case, the defendant offers specific past violent acts of the victim (which he didn't know about) under 405(b).",
+ a:"Not under 405(b). The victim's character isn't an essential element of self-defense; the element is the defendant's reasonable fear at the time (James).",
+ plain:"Route instead: 404(a)(2)(B), proving the victim's violence by reputation or opinion, which opens the door to the same trait in the defendant."},
+{t:"char",k:"case",src:"Class 8",f:"Halloran v. Virginia Chemicals",s:"Habit · N.Y. 1977",
+ a:"Evidence that the plaintiff regularly heated Freon cans with an induction coil can show habit, if it's repeated and regular, not a single sighting.",
+ plain:"Halloran said he warmed the can in water when it exploded. The manufacturer said the coil, his fault, caused it.",
+ watch:["Habit must be “predictable and predictive”: a repetitive, semi-automatic pattern like buckling a seatbelt."]},
+
+/* --- Other acts --- */
+{t:"acts",k:"concept",src:"Classes 6–7",f:"Trenkler's two-part test",s:"404(b) identity",
+ p:"What test did the First Circuit apply to the earlier Quincy bomb, and what were the dissent's objections?",
+ a:"(1) Does the evidence have “special relevance” beyond propensity? (2) If so, a 403 balance.",
+ plain:"Both bombs were remote-controlled, radio-activated, and homemade from hobby-store parts, with similar circuits and wiring, built to help a friend. A database matched only 7 of 40,867 incidents. The Quincy bomb hurt no one, so a limiting instruction sufficed.",
+ watch:["Dissent: a skewed database query, and a noise-simulator vs. dynamite (“a bb gun vs. a high-powered rifle”).","Identity evidence matters only when identity is disputed."]},
+{t:"acts",k:"case",src:"Classes 6–7",f:"Bey-Cousin v. Powell",s:"Rap lyrics · E.D. Pa. 2021",
+ a:"The court presumed that “artists tell stories” and excluded the plaintiff's lyrics.",
+ plain:"First-person lyrics aren't confessions: Freddie Mercury didn't “just kill a man,” and Johnny Cash didn't shoot a man in Reno.",
+ watch:["California, Louisiana and Maryland have genre-neutral statutes making creative expression harder to admit; there's no absolute bar and no federal law."]},
+{t:"acts",k:"scen",src:"Class 6",f:"At a murder trial, the prosecutor offers the defendant's violent rap lyrics with no specific link to the shooting, to show motive and intent (Problem 3.5, State v. Skinner).",
+ a:"Likely inadmissible. Without a specific link, the lyrics invite the jury to infer a violent nature (propensity).",
+ plain:"The New Jersey Supreme Court condemned their use and affirmed reversal of the conviction. Lyrics closely matching the charged crime (e.g., a song about killing one's father) may come in to show intent."},
+{t:"acts",k:"scen",src:"Class 6",f:"A defendant charged with a February hack of a retailer's database is shown to have hacked the same system in March (Problem 3.1).",
+ a:"A close call, but admissible to show knowledge if the skill places him in a small pool of capable suspects.",
+ plain:"If admitted, give a 105 instruction limiting it to know-how, not that he is “the type” to commit the crime."},
+{t:"acts",k:"scen",src:"Class 6",f:"To show a cyclist's experience, the prosecution offers brochures he recently published for bicycle-racing equipment (Problem 3.9).",
+ a:"Technically within 404(b)(1), but racing bikes isn't a bad act, and the risk of unfair prejudice is minimal.",
+ plain:"A literal reading would exclude evidence beyond the rule's purpose; Rule 404 targets prejudicial propensity, not innocuous habits or interests."},
+{t:"acts",k:"scen",src:"Class 6",f:"A prosecutor asks a witness about an affair between the defendant and the murdered colleague, who was killed in her apartment with no sign of forced entry (Presumed Innocent).",
+ a:"Admissible around the box to show motive (jealousy, rejection) and opportunity (no forced entry). A 403 objection probably fails.",
+ plain:"The defense's better objection is unfair prejudice (punishing an affair), but the probative value is not substantially outweighed."},
+{t:"acts",k:"scen",src:"Class 6",f:"A child is struck by a rushing studio employee. The family offers witnesses who saw her racing recklessly down the hall seconds after the incident (Broadcast News).",
+ a:"Admissible: it shows she was rushing at that moment (motive: delivering a tape by airtime), not a careless character trait.",
+ plain:"The defense would object that it's 404 evidence of carelessness. The answer: it's a specific purpose in the moment, not a general trait."},
+
+/* --- Impeachment --- */
+{t:"imp",k:"rule",f:"FRE 610",s:"Religious beliefs",
+ a:"Evidence of a witness's religious beliefs or opinions is not admissible to attack or support the witness's credibility.",
+ watch:["Cited as a model for a rape-shield rule against “unworthy of belief” inferences."]},
+{t:"imp",k:"scen",src:"Class 8",f:"In a civil real-estate suit, a defense witness says the plaintiff's “reputation is terrible.” Counsel then asks about the plaintiff's “reputation for truthfulness and veracity” (Easerly v. Lettwin).",
+ a:"Sustain the first objection (608(a) allows only truthfulness); overrule the second.",
+ plain:"608(a) applies in civil and criminal cases, to any witness who testifies (not to parties who never take the stand). Specific past lies come in only on cross, and rehabilitation is by opinion or reputation."},
+{t:"imp",k:"scen",src:"Class 8",f:"On cross, defense counsel asks the plaintiff (an attorney) about visiting a pornographic theater. Alternatively, about falsely stating on his bar application that he had no unpaid parking tickets (Philadelphia).",
+ a:"The theater visit isn't probative of untruthfulness, so it's out under 608(b). Lying on the bar application is probative, so it's likely allowed.",
+ plain:"Immorality isn't untruthfulness; lying in a semi-official setting is."},
+{t:"imp",k:"scen",src:"Class 8",f:"The prosecutor asks a defense witness on cross about once falsely claiming she was kidnapped. Defense counsel objects that there's “no proof.” Then the prosecutor offers her affidavit admitting the lie.",
+ a:"The question is proper with a good-faith basis (no proof needed), but the affidavit is barred extrinsic evidence under 608(b).",
+ plain:"Defense counsel should have asked at sidebar about the good-faith basis. Technique: when objecting, don't repeat the offending words."},
+{t:"imp",k:"scen",src:"Class 9",f:"On cross, an alibi witness concedes he was wrong about one detail: the deli was closed that day, so they ate next door. The defense then calls a witness to his good reputation for truthfulness (Problem 4.6).",
+ a:"Probably inadmissible. Exposing a single contradiction isn't an attack on character for truthfulness.",
+ plain:"Likewise for bias (he's in business with the defendant's father). An admitted loan-application lie or a 609 conviction does open the door."},
+
+/* --- Convictions --- */
+{t:"conv",k:"rule",f:"FRE 609(c)",s:"Pardon, annulment, or rehabilitation",
+ a:"A conviction isn't admissible if it was the subject of a pardon, annulment, certificate of rehabilitation, or equivalent based on rehabilitation (with no later serious conviction), or based on a finding of innocence.",
+ why:"Rehabilitation lowers probativeness; a finding of innocence drops it to near zero."},
+{t:"conv",k:"case",src:"Classes 9–10",f:"United States v. Brewer",s:"Rule 609 · E.D. Tenn. 1978",
+ a:"Ten years runs from release, so 609(b) didn't apply. Applying Gordon, the court admitted rape, aggravated assault and assault with a deadly weapon but excluded kidnapping as cumulative “overkill.”",
+ plain:"Brewer, charged with transporting a stolen vehicle, had convictions from 1960 and 1968, but his releases fell within ten years of the 1978 trial.",
+ watch:["Violent crimes say little about honesty (factor 1), but his continuing crimes on parole favored admission (factor 2)."]},
+{t:"conv",k:"concept",src:"Classes 9–10",f:"Gordon factors: which way they cut",s:"Weighing a defendant's conviction",
+ p:"For each Gordon factor, which direction favors exclusion?",
+ a:"(1) More violent = less probative of honesty, more prejudicial. (2) More recent or a continuing record = favors admission. (3) More similar to the charged crime = more prejudicial. (4) More important defendant testimony = favors exclusion. (5) Credibility central to the case = favors admission.",
+ watch:["Factors 4 and 5 often counterbalance each other.","From then-Judge Burger in Gordon v. United States (D.C. Cir. 1967)."]},
+{t:"conv",k:"concept",src:"Class 9",f:"Problem 4.4 (Valencia)",s:"Two different weighing tests",
+ p:"If a prior conviction was excluded under 404(b)/403 in the case-in-chief, must it also be excluded under 609(a)(1)(B) when the defendant testifies?",
+ a:"No. The tests weigh different things: substantive guilt (404(b)/403) vs. character for truthfulness (609).",
+ plain:"The Eighth Circuit held the first result doesn't dictate the second. One could argue the probative values should be summed, but the court didn't."},
+{t:"conv",k:"scen",src:"Class 9",f:"A witness was convicted of tampering with electric meters (max six months). The statute covers three forms of conduct, only one involving deception. Can it impeach him (Problem 4.5)?",
+ a:"Only under 609(a)(2), and only if the court can readily determine the crime required a dishonest act or false statement.",
+ plain:"The judge may look to “an indictment, a statement of admitted facts, or jury instructions” (2006 ACN). Meters record facts, so tampering arguably is deceit.",
+ watch:["609(b)'s ten-year limit applies even to (a)(2) crimes.","Unsettled: does the ten years end when the witness testifies, or when trial begins?"]},
+{t:"conv",k:"scen",src:"Class 9",f:"A jailhouse informant pleaded guilty to arson (a felony) but hasn't been sentenced. He also spent time in reform school as a kid and has a five-year-old petty larceny conviction (max six months).",
+ a:"The arson comes in under 609(a)(1): “punishable by” means the possible sentence. Reform school is out (609(d): not necessary, given his adult record). Petty larceny is out (not crimen falsi, not a felony).",
+ plain:"A perjury conviction would be admitted automatically under 609(a)(2) unless over ten years old (then 609(b): “very rarely”)."},
+
+/* --- Rape shield --- */
+{t:"shield",k:"concept",src:"Classes 9–10",f:"Why Rule 412 exists",s:"Two exploited exceptions",
+ p:"Which common-law character exceptions did rape shield laws shut down?",
+ a:"The 404(a)(2)(B) analog (she consented before, so she consented now) and the 608(b) analog (her sexual activity shows untruthfulness).",
+ plain:"Wigmore (1940) even claimed a link between chastity and false rape accusations and urged examining every complainant. The real purpose was deciding who was “worthy” of protection, not accuracy.",
+ watch:["Consequences: victims were violated twice, fewer prosecuted, and fewer guilty men were convicted.","Estrich, Real Rape: corroboration requirements expressed distrust of women."]},
+{t:"shield",k:"concept",src:"Class 10",f:"Colb's argument",s:"79 N.C. L. Rev. 939 (2001)",
+ p:"Why does Sherry Colb say a complainant's sexual history is irrelevant once a rape is alleged?",
+ a:"Her sworn statement that she didn't consent overwhelms any propensity data, and because a false rape accusation is so heinous, sexually active women are no likelier to make one.",
+ plain:"Dating-frequency data might inform a bet on consent before an accusation, but not after. Irrelevant evidence is inadmissible (402)."},
+{t:"shield",k:"case",src:"Class 10",f:"State v. Smith",s:"La. 1999",
+ a:"Prior false allegations aren't “past sexual behavior,” so Louisiana's Article 412 didn't apply, and the evidence should have been admitted.",
+ plain:"The 12-year-old step-granddaughter alleged touching, with no physical evidence. The defense wanted to cross about her recanted accusation against a cousin. After a hearing, the trial judge found no false allegations.",
+ watch:["Test: could reasonable jurors find she made prior false accusations (Huddleston), not whether the judge believes it. Conviction reversed."]},
+{t:"shield",k:"scen",src:"Class 10",f:"Charged with enticing a minor to produce sexual images, the defendant wants to show the boy sent images to other men too (Problem 5.2, United States v. Walker).",
+ a:"Excluded. It's “other sexual behavior,” and the 412(b)(1)(A) source exception requires specific instances, while he offered only general conduct.",
+ plain:"Open questions: are digital images “physical evidence”? Does “specific” mean single acts? A 412(c)(2) hearing could have sorted it out."},
+{t:"shield",k:"scen",src:"Class 10",f:"In a molestation case, the judge lets the defense show the niece lied about “texting” but bars mention of “sexting” and the message contents (Problem 5.6).",
+ a:"A reasonable accommodation. Lies go to truthfulness under 608(b), and the sexual content is shielded by 412.",
+ plain:"Allegedly false prior claims aren't barred by 412 (ACN). “Sexting” may be more probative of a lie, or simply more embarrassing."},
+{t:"shield",k:"scen",src:"Class 10",f:"In Paula Jones's harassment suit, Clinton's lawyer threatens to make an issue of her sexual history: “a two-way street” (Problem 5.9).",
+ a:"Only under 412(b)(2): reputation only if she put it in controversy (arguably, by claiming reputational harm), and probative value must substantially outweigh harm and prejudice.",
+ plain:"The test is heavily weighted against admission."},
+{t:"shield",k:"concept",src:"Class 10",f:"Victim vs. defendant sexual history",s:"Why the rules differ",
+ p:"Why is a victim's prior consent inadmissible to prove consent, while a defendant's prior rapes are admissible (413) to prove rape?",
+ a:"(1) Shield laws protect victims to encourage reporting; (2) victims have privacy in non-criminal sex lives, while offenders don't; (3) a victim's history cuts both ways, but a defendant's prior rapes don't.",
+ plain:"A victim's frequent consent also shows she doesn't readily accuse partners of rape; a defendant's prior rapes simply make guilt more likely."},
+];
+const CARDS = ALL_CARDS.filter(c => c.k === "rule" && c.f.startsWith("FRE"));
+// stable ids per topic (same scheme as before, so saved progress still matches)
+(() => { const n = {}; CARDS.forEach(c => { n[c.t] = (n[c.t]||0)+1; c.id = c.t+"-"+n[c.t]; c.no = CARDS.indexOf(c)+1; }); })();
+
+/* ------------------------------------------------------------------ storage */
+const KEY = "fre-rule-cards-v1";
+let store = { box:{} };
+try { const raw = localStorage.getItem(KEY); if (raw) store = Object.assign({box:{}}, JSON.parse(raw)); } catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(store)); } catch(e) {} }
+const boxOf = id => store.box[id] || 0;
+
+/* ------------------------------------------------------------------ state */
+const sel = { topics:new Set(Object.keys(TOPICS)), kinds:new Set(Object.keys(KINDS)), order:"deck", onlyWeak:false };
+if (store.prefs) { try {
+  sel.topics = new Set(store.prefs.topics.filter(t => TOPICS[t])); sel.kinds = new Set(store.prefs.kinds.filter(k => KINDS[k]));
+  sel.order = store.prefs.order || "deck"; sel.onlyWeak = !!store.prefs.onlyWeak;
+  if (!sel.topics.size) sel.topics = new Set(Object.keys(TOPICS)); if (!sel.kinds.size) sel.kinds = new Set(Object.keys(KINDS));
+} catch(e){} }
+let session = null;
+let screen = "lobby";
+let browseState = { q:"", topic:"" };
+
+const app = document.getElementById("app");
+const $ = (s, el = document) => el.querySelector(s);
+const esc = s => String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");
+const byId = Object.fromEntries(CARDS.map(c => [c.id, c]));
+const ico = (id) => `<svg class="ico"><use href="#i-${id}"/></svg>`;
+const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const canHover = matchMedia("(hover: hover) and (pointer: fine)").matches;
+const plural = (n, w) => `${n} ${w}${n === 1 ? "" : "s"}`;
+
+function filtered(){ return CARDS.filter(c => sel.topics.has(c.t) && sel.kinds.has(c.k) && (!sel.onlyWeak || boxOf(c.id) < 3)); }
+function counts(list){ let m=0,l=0,n=0; list.forEach(c => { const b = boxOf(c.id); b>=3?m++:b>0?l++:n++; }); return [m,l,n]; }
+function savePrefs(){ store.prefs = { topics:[...sel.topics], kinds:[...sel.kinds], order:sel.order, onlyWeak:sel.onlyWeak }; save(); }
+function shuffle(a){ for (let i=a.length-1;i>0;i--){ const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]]; } return a; }
+
+/* Segmented ring chart: segments = [[value, color], ...] */
+function ring(segments, total, center, size = 132) {
+  const r = 54, C = 2 * Math.PI * r;
+  let off = 0;
+  const segs = segments.map(([v, color]) => {
+    const len = total ? (v / total) * C : 0;
+    const s = `<circle class="seg" r="${r}" cx="60" cy="60" stroke="${color}" stroke-dasharray="${len} ${C - len}" stroke-dashoffset="${-off}" data-len="${len}"/>`;
+    off += len;
+    return s;
+  }).join("");
+  return `<div class="ring" style="width:${size}px;height:${size}px"><svg viewBox="0 0 120 120"><circle class="track" r="${r}" cx="60" cy="60"/>${segs}</svg><div class="ring-center">${center}</div></div>`;
+}
+/* Animate ring segments growing in. */
+function growRings(root = app) {
+  if (reduce) return;
+  root.querySelectorAll(".ring .seg").forEach((s) => {
+    const len = s.getAttribute("stroke-dasharray"), off = s.getAttribute("stroke-dashoffset");
+    s.setAttribute("stroke-dasharray", `0 999`);
+    requestAnimationFrame(() => requestAnimationFrame(() => { s.setAttribute("stroke-dasharray", len); s.setAttribute("stroke-dashoffset", off); }));
+  });
+}
+
+/* ================================================================== lobby */
+function renderLobby() {
+  screen = "lobby";
+  const [m, l, n] = counts(CARDS);
+  const deckN = filtered().length;
+  const left = session && session.queue.length && session.queue.length < session.total;
+  app.innerHTML = `<section class="lobby">
+    <header class="lobby-head">
+      <div>
+        <p class="eyebrow">Federal Rules of Evidence · Weeks 1–5</p>
+        <h1>FRE Rule Cards</h1>
+        <p class="lede">Read the rule, recall what it does, then flip to check. Cards you miss come back sooner. Cards you know move toward mastered.</p>
+      </div>
+      <div class="mastery">
+        ${ring([[m, "var(--ok)"], [l, "var(--exc)"]], CARDS.length, `<b>${m}</b><span>of ${CARDS.length}<br>mastered</span>`)}
+        <div class="mlegend">
+          <div><i style="background:var(--ok)"></i>Mastered<b>${m}</b></div>
+          <div><i style="background:var(--exc)"></i>Learning<b>${l}</b></div>
+          <div><i style="background:var(--surface-3)"></i>New<b>${n}</b></div>
+        </div>
+      </div>
+    </header>
+    ${left ? `<div class="resume"><p><b>Session in progress.</b> ${plural(session.queue.length, "card")} to go.</p><button class="btn btn-primary" data-act="resume">${ico("play")} Resume</button></div>` : ""}
+    <div class="sec-head"><h2>Choose your topics</h2><button class="link" data-act="all">${sel.topics.size === Object.keys(TOPICS).length ? "Clear all" : "Select all"}</button></div>
+    <div class="topic-grid">${Object.entries(TOPICS).map(([k, t]) => {
+      const cs = CARDS.filter(c => c.t === k), [a, b] = counts(cs);
+      return `<button class="tile" data-topic="${k}" aria-pressed="${sel.topics.has(k)}" style="--topic:${t.color}">
+        <span class="chk">${ico("check")}</span>
+        <strong>${esc(t.name)}</strong><small>FRE ${esc(t.rules)}</small>
+        <span class="minibar"><i class="m" style="width:${cs.length ? a / cs.length * 100 : 0}%"></i><i class="l" style="width:${cs.length ? b / cs.length * 100 : 0}%"></i></span>
+        <span class="meta"><span>${plural(cs.length, "card")}</span><span>${a}/${cs.length} mastered</span></span>
+      </button>`;
+    }).join("")}</div>
+    <div class="opts">
+      <span class="lbl">Order</span>
+      <div class="seg" role="group" aria-label="Card order">
+        <button data-order="deck" aria-pressed="${sel.order === "deck"}">Course order</button>
+        <button data-order="shuffle" aria-pressed="${sel.order === "shuffle"}">Shuffle</button>
+        <button data-order="weak" aria-pressed="${sel.order === "weak"}">Weakest first</button>
+      </div>
+      <label class="switch"><input type="checkbox" data-act="onlyweak" ${sel.onlyWeak ? "checked" : ""}> Skip mastered cards</label>
+    </div>
+    <div class="cta">
+      <button class="btn btn-primary start" data-act="start" ${deckN ? "" : "disabled"}>${ico("play")} ${deckN ? `Start session <span class="count">· ${plural(deckN, "card")}</span>` : "No cards match"}</button>
+      <button class="btn" data-act="browse">${ico("list")} Browse all cards</button>
+    </div>
+    <footer class="lobby-foot">
+      <span>Progress is saved in this browser. Keys in a session: <kbd>Space</kbd> flip · <kbd>1</kbd><kbd>2</kbd><kbd>3</kbd> rate · <kbd>→</kbd> next · <kbd>←</kbd> undo</span>
+      <span class="confirm" id="resetArea"><button class="link" data-act="reset">Reset my progress</button></span>
+    </footer>
+  </section>`;
+  growRings();
+}
+
+app.addEventListener("click", (e) => {
+  const t = e.target.closest("[data-act],[data-topic],[data-order],[data-btopic]");
+  if (!t) return;
+  if (t.dataset.topic) { sel.topics.has(t.dataset.topic) ? sel.topics.delete(t.dataset.topic) : sel.topics.add(t.dataset.topic); savePrefs(); renderLobby(); return; }
+  if (t.dataset.order) { sel.order = t.dataset.order; savePrefs(); renderLobby(); return; }
+  if ("btopic" in t.dataset) { browseState.topic = browseState.topic === t.dataset.btopic ? "" : t.dataset.btopic; renderBrowse(); return; }
+  switch (t.dataset.act) {
+    case "all": sel.topics = sel.topics.size === Object.keys(TOPICS).length ? new Set() : new Set(Object.keys(TOPICS)); savePrefs(); renderLobby(); break;
+    case "start": deal(filtered()); break;
+    case "resume": renderSession(); break;
+    case "browse": renderBrowse(); break;
+    case "lobby": renderLobby(); scrollTo(0, 0); break;
+    case "reset": $("#resetArea").innerHTML = `Clear all progress? <button class="btn" data-act="reset-yes">Clear</button><button class="btn" data-act="lobby">Keep</button>`; break;
+    case "reset-yes": store.box = {}; save(); session = null; renderLobby(); break;
+    case "again": deal(session.cards.map(id => byId[id])); break;
+    case "review": deal(session.cards.filter(id => session.struggled.has(id)).map(id => byId[id])); break;
+    case "weakest": sel.order = "weak"; savePrefs(); deal(filtered()); break;
+  }
+});
+app.addEventListener("change", (e) => {
+  if (e.target.dataset.act === "onlyweak") { sel.onlyWeak = e.target.checked; savePrefs(); renderLobby(); }
+});
+
+/* ================================================================== session */
+function deal(cards) {
+  if (sel.order === "shuffle") cards = shuffle(cards.slice());
+  if (sel.order === "weak") cards = shuffle(cards.slice()).sort((a,b) => boxOf(a.id) - boxOf(b.id));
+  session = { cards: cards.map(c => c.id), queue: cards.map(c => c.id), total: cards.length, knew:0, shaky:0, missed:0, skipped:0, flipped:false, firstTry:new Set(), struggled:new Set(), history:[] };
+  renderSession(true);
+}
+
+function frontHtml(c) {
+  const t = TOPICS[c.t];
+  const m = c.f.match(/^(FRE)\s+(.*)$/);
+  const body = m ? m[2] : c.f;
+  const s = Math.max(0.5, Math.min(1, 8.5 / Math.max(8.5, body.length)));
+  const cite = (m ? `<span class="fre">${m[1]}</span>` : '') + esc(body).replace(/\)/g, ')<wbr>');
+  return `<div class="fhead"><span class="tpill">${esc(t.name)} <small>${esc(t.rules)}</small></span></div>
+    <div class="sticker">EXHIBIT<b>${String(c.no).padStart(3, "0")}</b></div>
+    <div class="fbody"><div class="cite" style="--s:${s.toFixed(2)}">${cite}</div>${c.s ? `<div class="sub">${esc(c.s)}</div>` : ""}</div>
+    <div class="prompt">${ico("q")}<span>${esc(c.p || DEFAULT_PROMPT[c.k])}</span></div>
+    <div class="tapnote">${canHover ? "Click the card or press Space to see the answer" : "Tap the card to see the answer"}</div>`;
+}
+const ROWS = [
+  ["plain", (c) => c.k === "scen" ? "Why" : "In plain English", "book", "var(--plain)"],
+  ["bar", () => "Kept out", "ban", "var(--bar)"],
+  ["ok", (c) => c.k === "concept" && c.t === "jury" ? "Allowed" : "Still comes in", "ok", "var(--ok)"],
+  ["exc", () => "Exceptions", "exc", "var(--exc)"],
+  ["watch", () => "Watch out", "warn", "var(--watch)"],
+  ["why", () => "Why it exists", "bulb", "var(--why)"],
+];
+function listHtml(v) { return Array.isArray(v) ? (v.length > 1 ? "<ul>" + v.map(x => `<li>${esc(x)}</li>`).join("") + "</ul>" : esc(v[0])) : esc(v); }
+function rowsHtml(c) {
+  return ROWS.filter(([k]) => c[k] && (!Array.isArray(c[k]) || c[k].length))
+    .map(([k, label, icon, color]) => `<div class="row" style="--c:${color}"><span class="ri">${ico(icon)}</span><div><h4>${label(c)}</h4><div>${listHtml(c[k])}</div></div></div>`).join("");
+}
+function backHtml(c) {
+  const t = TOPICS[c.t];
+  return `<div class="bhead"><span class="tpill">${esc(t.name)}</span><span class="bcite">${esc(c.f)}${c.s ? ` <span>· ${esc(c.s)}</span>` : ""}</span></div>
+    <div class="sticker">EXHIBIT<b>${String(c.no).padStart(3, "0")}</b></div>
+    <div class="bscroll"><div class="answer">${esc(c.a)}</div><div class="rows">${rowsHtml(c)}</div><p class="backnote">${canHover ? "Click the card or press Space to flip it back" : "Tap the card to flip it back"}</p></div>`;
+}
+
+function renderSession(fresh = false, enter = "rise") {
+  screen = "session";
+  const s = session;
+  if (!s.queue.length) return renderDone();
+  const c = byId[s.queue[0]], t = TOPICS[c.t];
+  const nextT = s.queue[1] ? TOPICS[byId[s.queue[1]].t].color : "transparent";
+  const nextT2 = s.queue[2] ? TOPICS[byId[s.queue[2]].t].color : "transparent";
+  const done = s.total - new Set(s.queue).size;
+  if (fresh || !$(".session")) {
+    app.innerHTML = `<section class="session" style="--topic:${t.color}">
+      <div class="ambient"></div>
+      <header class="s-top">
+        <button class="icon-btn" data-act="lobby" aria-label="End session and go back">${ico("x")}</button>
+        <button class="icon-btn undo-mob" id="undoMob" aria-label="Undo last card">${ico("undo")}</button>
+        <div class="s-prog"><div class="s-bar"><i id="bar"></i></div><span class="s-count" id="count"></span></div>
+        <div class="tally" id="tally"></div>
+      </header>
+      <div class="deck"><div class="stack" id="stack">
+        <div class="ghost g2"></div><div class="ghost g1"></div>
+        <div class="drag" id="drag"><div class="tilt" id="tilt"><div class="card" id="card" tabindex="0" role="button" aria-label="Flashcard. Press Space to flip."><div class="face front"></div><div class="face back"></div></div></div>
+          <div class="stamp knew">KNEW IT</div><div class="stamp miss">MISSED</div><div class="stamp shaky">SHAKY</div></div>
+      </div></div>
+      <div class="s-actions" id="actions"></div>
+      <p class="s-hint"><span class="desk">Space or click to flip · 1 missed · 2 shaky · 3 knew it · → next card · ← undo · or drag the answer left/right</span><span class="mob">Tap the card to flip it · swipe the answer right if you knew it, left if you missed it</span></p>
+    </section>`;
+    bindCard();
+  }
+  const sess = $(".session");
+  sess.style.setProperty("--topic", t.color);
+  $(".g1").style.setProperty("--gtopic", nextT);
+  $(".g2").style.setProperty("--gtopic", nextT2);
+  $("#stack").classList.toggle("thin", s.queue.length < 3);
+  $("#stack").classList.toggle("last", s.queue.length < 2);
+  $("#count").textContent = `${Math.min(done + 1, s.total)} / ${s.total}`;
+  $("#bar").style.width = (done / s.total * 100) + "%";
+  renderTally();
+  const card = $("#card");
+  card.style.transition = ""; card.style.transform = ""; turning = false;
+  card.classList.toggle("flipped", s.flipped);
+  card.style.setProperty("--topic", t.color);
+  card.querySelector(".front").innerHTML = frontHtml(c);
+  card.querySelector(".back").innerHTML = backHtml(c);
+  card.querySelector(".front").setAttribute("aria-hidden", s.flipped);
+  card.querySelector(".back").setAttribute("aria-hidden", !s.flipped);
+  const drag = $("#drag");
+  drag.className = "drag";
+  drag.style.transform = ""; drag.style.opacity = "";
+  document.querySelectorAll(".stamp").forEach(st => st.style.opacity = 0);
+  if (!reduce && enter) { void drag.offsetWidth; drag.classList.add(enter === "left" ? "from-left" : "rise"); }
+  $("#undoMob").disabled = !s.history.length;
+  renderActions();
+  card.focus({ preventScroll: true });
+}
+function renderTally() {
+  const s = session, el = $("#tally");
+  const prev = el.dataset.v ? JSON.parse(el.dataset.v) : null, v = [s.knew, s.shaky, s.missed];
+  el.innerHTML = `<span style="--c:var(--ok)" title="Knew it">${ico("check").replace('class="ico"', 'class="ico" style="width:13px;height:13px;stroke-width:3"')}${s.knew}</span><span style="--c:var(--exc)" title="Shaky">~ ${s.shaky}</span><span style="--c:var(--bar)" title="Missed">${ico("x").replace('class="ico"', 'class="ico" style="width:13px;height:13px;stroke-width:3"')}${s.missed}</span>`;
+  if (prev) [...el.children].forEach((sp, i) => { if (v[i] !== prev[i]) sp.classList.add("bump"); });
+  el.dataset.v = JSON.stringify(v);
+}
+function renderActions() {
+  const s = session, a = $("#actions");
+  a.innerHTML = !s.flipped
+    ? `<button class="btn undo-desk" data-k="undo" ${s.history.length ? "" : "disabled"}>${ico("undo")} Undo</button>
+       <button class="btn btn-primary reveal" data-k="flip">Show answer <kbd>Space</kbd></button>
+       <button class="btn skip" data-k="skip" title="Skip to the next card (→)" aria-label="Skip to the next card"><span>Skip</span>${ico("skip")}</button>`
+    : `<button class="btn flipback" data-k="flip" title="Flip back (Space)" aria-label="Flip the card back">${ico("undo")}<span>Flip</span></button>
+       <button class="btn rate miss" data-k="1">Missed<span class="xl"> it</span><small>1 · back soon</small></button>
+       <button class="btn rate shaky" data-k="2">Shaky<small>2 · see again</small></button>
+       <button class="btn rate knew" data-k="3">Knew it<small>3 · move on</small></button>
+       <button class="btn nextcard" data-k="skip" title="Next card without rating (→)" aria-label="Next card without rating"><span>Next</span>${ico("skip")}</button>`;
+}
+
+let turning = false;
+function flip() {
+  if (!session || !session.queue.length || turning || busy) return;
+  const card = $("#card");
+  const toBack = !session.flipped;
+  const swap = () => {
+    session.flipped = toBack;
+    card.classList.toggle("flipped", toBack);
+    card.querySelector(".front").setAttribute("aria-hidden", toBack);
+    card.querySelector(".back").setAttribute("aria-hidden", !toBack);
+    card.querySelector(".bscroll").scrollTop = 0;
+    renderActions();
+  };
+  if (reduce) { swap(); return; }
+  turning = true;
+  const dir = toBack ? 1 : -1;
+  card.style.transition = "transform .16s cubic-bezier(.5,0,1,1)";
+  card.style.transform = "rotateY(" + (90 * dir) + "deg)";
+  setTimeout(() => {
+    swap();
+    card.style.transition = "none";
+    card.style.transform = "rotateY(" + (-90 * dir) + "deg)";
+    void card.offsetWidth;
+    card.style.transition = "transform .26s cubic-bezier(0,0,.25,1)";
+    card.style.transform = "rotateY(0deg)";
+    setTimeout(() => { card.style.transition = ""; card.style.transform = ""; turning = false; }, 280);
+  }, 165);
+}
+function snap(id) {
+  const s = session;
+  return { id, had: Object.prototype.hasOwnProperty.call(store.box, id), box: store.box[id],
+           knew:s.knew, shaky:s.shaky, missed:s.missed, skipped:s.skipped, ft:s.firstTry.has(id), st:s.struggled.has(id) };
+}
+function undo() {
+  const s = session; if (!s || !s.history.length) return;
+  const h = s.history.pop();
+  s.queue = s.queue.filter(x => x !== h.id); s.queue.unshift(h.id);
+  if (h.had) store.box[h.id] = h.box; else delete store.box[h.id];
+  s.knew = h.knew; s.shaky = h.shaky; s.missed = h.missed; s.skipped = h.skipped;
+  h.ft ? s.firstTry.add(h.id) : s.firstTry.delete(h.id);
+  h.st ? s.struggled.add(h.id) : s.struggled.delete(h.id);
+  s.flipped = false; save();
+  renderSession(!$(".session"), "left");
+}
+function skip() {
+  const s = session; if (!s || !s.queue.length) return;
+  s.history.push(snap(s.queue[0]));
+  s.queue.shift(); s.skipped++; s.flipped = false;
+  flyOut("skip", () => renderSession());
+}
+/* Same spaced-review rules as before: a miss comes back in ~3 cards; shaky goes to the end. */
+function rate(r) {
+  const s = session; if (!s || !s.flipped || !s.queue.length) return;
+  s.history.push(snap(s.queue[0]));
+  const id = s.queue.shift(), b = boxOf(id), retried = s.firstTry.has(id);
+  if (r === 1) { store.box[id] = 1; s.missed++; s.queue.splice(Math.min(3, s.queue.length), 0, id); s.firstTry.add(id); s.struggled.add(id); }
+  else if (r === 2) { store.box[id] = b >= 3 ? 2 : Math.max(1, b); if (!retried) s.shaky++; s.queue.push(id); s.firstTry.add(id); s.struggled.add(id); }
+  else { store.box[id] = b === 0 && !retried ? 3 : Math.min(5, b + 1); if (!retried) s.knew++; }
+  save(); s.flipped = false;
+  flyOut(r === 3 ? "right" : r === 1 ? "left" : "down", () => renderSession());
+}
+
+/* Card leaves the table in the direction of the rating, then the next one rises. */
+let busy = false;
+function flyOut(dir, then) {
+  const drag = $("#drag");
+  if (reduce || !drag) { then(); return; }
+  busy = true;
+  const stamp = { right: ".stamp.knew", left: ".stamp.miss", down: ".stamp.shaky" }[dir];
+  if (stamp) $(stamp).style.opacity = 1;
+  const cur = drag.style.transform || "";
+  const to = { right: "translate(130%, 4%) rotate(16deg)", left: "translate(-130%, 4%) rotate(-16deg)", down: "translate(0, 70%) rotate(3deg) scale(.9)", skip: "translate(-10%, -110%) rotate(-4deg)" }[dir];
+  drag.classList.remove("rise", "from-left", "settle");
+  drag.style.transform = cur;
+  void drag.offsetWidth;
+  drag.classList.add("out");
+  drag.style.transform = to; drag.style.opacity = "0";
+  setTimeout(() => { busy = false; then(); }, 330);
+}
+
+/* Pointer: tap to flip, drag sideways (after flipping) to rate, gentle tilt on hover. */
+function bindCard() {
+  const drag = $("#drag");
+  let p = null;
+  const stampK = $(".stamp.knew"), stampM = $(".stamp.miss");
+  drag.addEventListener("pointerdown", (e) => {
+    if (busy || (e.pointerType === "mouse" && e.button !== 0)) return;
+    const sc = e.target.closest?.(".bscroll");
+    p = { x: e.clientX, y: e.clientY, dx: 0, dy: 0, moved: false, id: e.pointerId, t: Date.now(),
+          scrollbar: !!sc && e.target === sc && e.offsetX > sc.clientWidth };
+    drag.classList.remove("settle", "rise", "from-left");
+  });
+  drag.addEventListener("pointermove", (e) => {
+    if (!p || p.id !== e.pointerId) return;
+    p.dx = e.clientX - p.x; p.dy = e.clientY - p.y;
+    if (!p.moved && Math.abs(p.dx) > 8 && Math.abs(p.dx) > Math.abs(p.dy) && session.flipped) {
+      p.moved = true; try { drag.setPointerCapture(e.pointerId); } catch { /* synthetic or ended pointer */ }
+    }
+    if (p.moved) {
+      drag.style.transform = `translate(${p.dx}px, ${p.dy * 0.25}px) rotate(${p.dx * 0.05}deg)`;
+      const f = Math.min(1, Math.abs(p.dx) / 120);
+      stampK.style.opacity = p.dx > 0 ? f : 0;
+      stampM.style.opacity = p.dx < 0 ? f : 0;
+    }
+  });
+  const end = (e) => {
+    if (!p || p.id !== e.pointerId) return;
+    const q = p; p = null;
+    if (q.moved) {
+      if (q.dx > 110) rate(3);
+      else if (q.dx < -110) rate(1);
+      else { drag.classList.add("settle"); drag.style.transform = ""; stampK.style.opacity = 0; stampM.style.opacity = 0; }
+    } else if (e.type === "pointerup" && Math.hypot(q.dx, q.dy) < 8) {
+      // A tap flips either way. Scrolling, long-press text selection, and scrollbar clicks don't.
+      const selecting = String(window.getSelection?.() || "").trim().length > 0;
+      if (!session.flipped || (!q.scrollbar && !selecting && Date.now() - q.t < 600)) flip();
+    }
+  };
+  drag.addEventListener("pointerup", end);
+  drag.addEventListener("pointercancel", end);
+  $("#actions").addEventListener("click", (e) => {
+    const b = e.target.closest("[data-k]"); if (!b || busy) return;
+    const k = b.dataset.k;
+    if (k === "flip") flip(); else if (k === "skip") skip(); else if (k === "undo") undo(); else rate(+k);
+  });
+  $("#undoMob").addEventListener("click", () => !busy && undo());
+}
+
+/* ================================================================== results */
+function renderDone() {
+  screen = "done";
+  const s = session;
+  const struggled = s.struggled.size;
+  const rated = s.knew + s.shaky + s.missed;
+  app.innerHTML = `<section class="done">
+    ${ring([[s.knew, "var(--ok)"], [s.shaky, "var(--exc)"], [s.missed, "var(--bar)"]], Math.max(1, s.knew + s.shaky + s.missed + s.skipped), `<b>${s.total ? Math.round((s.knew / s.total) * 100) : 0}%</b><span>first-try<br>recall</span>`, 170)}
+    <p class="eyebrow">Deck cleared</p>
+    <h2>${s.total ? (s.knew === s.total ? "Every card, first try." : rated ? "Nice work. That's the whole deck." : "Deck finished.") : "No cards in this deck"}</h2>
+    <p class="lede">${s.total ? `You knew <b>${s.knew}</b> of ${s.total} on the first try.${struggled ? ` ${plural(struggled, "card")} gave you trouble. A quick second pass will lock them in.` : ""}` : ""}</p>
+    <div class="results">
+      <div style="--c:var(--ok)"><b>${s.knew}</b><span>knew first try</span></div>
+      <div style="--c:var(--exc)"><b>${s.shaky}</b><span>shaky</span></div>
+      <div style="--c:var(--bar)"><b>${s.missed}</b><span>misses</span></div>
+      <div style="--c:var(--muted)"><b>${s.skipped}</b><span>skipped</span></div>
+    </div>
+    <div class="cta">
+      ${struggled ? `<button class="btn btn-primary" data-act="review">${ico("redo")} Review the ${struggled} I struggled with</button>` : ""}
+      <button class="btn ${struggled ? "" : "btn-primary"}" data-act="again">${ico("redo")} Deal again</button>
+      <button class="btn" data-act="lobby">${ico("home")} Back to topics</button>
+    </div>
+  </section>`;
+  growRings();
+}
+
+/* ================================================================== browse */
+function renderBrowse() {
+  screen = "browse";
+  const terms = browseState.q.toLowerCase().split(/\s+/).filter(Boolean);
+  const list = CARDS.filter(c => (!browseState.topic || c.t === browseState.topic) &&
+    terms.every(t => [c.f, c.s, c.a, c.plain, ...(c.exc || []), ...(c.watch || []), ...(c.bar || []), ...(c.ok || []), c.why].join(" ").toLowerCase().includes(t)));
+  const keepFocus = document.activeElement?.id === "bq";
+  app.innerHTML = `<section class="browse">
+    <div class="browse-top"><button class="icon-btn" data-act="lobby" aria-label="Back to topics">${ico("x")}</button><h2>All cards</h2><span style="color:var(--muted);font-size:13.5px">${plural(list.length, "card")}</span></div>
+    <label class="bsearch">${ico("search")}<input id="bq" type="search" placeholder="Search rules, exceptions, cases…" value="${esc(browseState.q)}" aria-label="Search cards"></label>
+    <div class="chips"><button class="chip" data-btopic="" aria-pressed="${!browseState.topic}" style="--topic:var(--muted)">All topics</button>${Object.entries(TOPICS).map(([k, t]) => `<button class="chip" data-btopic="${k}" aria-pressed="${browseState.topic === k}" style="--topic:${t.color}">${esc(t.name)}</button>`).join("")}</div>
+    <div class="blist">${list.length ? list.map(c => {
+      const b = boxOf(c.id), st = b >= 3 ? ["Mastered", "var(--ok)"] : b > 0 ? ["Learning", "var(--exc)"] : ["New", "var(--muted)"];
+      return `<details class="bitem" style="--topic:${TOPICS[c.t].color}"><summary><div class="bt"><strong>${esc(c.f)}</strong><span>${esc(c.s || "")}</span></div><span class="status" style="--c:${st[1]}">${st[0]}</span></summary>
+        <div class="inner"><div class="answer">${esc(c.a)}</div><div class="rows">${rowsHtml(c)}</div></div></details>`;
+    }).join("") : `<div class="empty">No cards match. Try another search or topic.</div>`}</div>
+  </section>`;
+  const q = $("#bq");
+  q.addEventListener("input", () => { browseState.q = q.value; renderBrowse(); });
+  if (keepFocus) { q.focus(); q.setSelectionRange(q.value.length, q.value.length); }
+}
+
+/* ================================================================== keys */
+document.addEventListener("keydown", (e) => {
+  if (e.metaKey || e.ctrlKey || e.altKey) return;
+  const tag = (e.target.tagName || "").toLowerCase();
+  if (tag === "input" || tag === "textarea") return;
+  if (screen === "session") {
+    if (busy) return;
+    if ((e.key === " " || e.key === "Enter") && !(tag === "button" && e.target.id !== "card")) { e.preventDefault(); flip(); }
+    else if (e.key === "ArrowRight") { e.preventDefault(); skip(); }
+    else if (e.key === "ArrowLeft") { e.preventDefault(); undo(); }
+    else if (["1", "2", "3"].includes(e.key) && session.flipped) { e.preventDefault(); rate(+e.key); }
+    else if (e.key === "Escape") renderLobby();
+  } else if (screen === "browse" && e.key === "Escape") renderLobby();
+});
+
+renderLobby();
+</script>
+</body>
+</html>

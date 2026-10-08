@@ -1,0 +1,833 @@
+{
+  "schemaVersion": "1.0",
+  "site": {
+    "title": "Wilmington University Corner",
+    "description": "A law school study library: outlines, rule charts, flowcharts, flashcards, and practice question banks you can open in the browser or download.",
+    "url": "https://supertoadman.github.io/Wilmington-University-corner/",
+    "repository": "https://github.com/supertoadman/Wilmington-University-corner",
+    "generatedAt": "2026-10-08T19:34:26.504Z"
+  },
+  "types": {
+    "outline": {
+      "label": "Outline"
+    },
+    "rule-chart": {
+      "label": "Rule Chart"
+    },
+    "flowcharts": {
+      "label": "Flowcharts"
+    },
+    "flashcards": {
+      "label": "Flashcards"
+    },
+    "practice": {
+      "label": "Practice Questions"
+    },
+    "document": {
+      "label": "Document"
+    }
+  },
+  "subjects": [
+    {
+      "id": "evidence",
+      "slug": "evidence",
+      "title": "Evidence",
+      "description": "Federal Rules of Evidence, Weeks 1–5: relevance and 403, the policy exclusions, character evidence, 404(b), impeachment, and jury secrecy. Includes the rule chart, flowcharts, flashcards, and bar-style practice questions.",
+      "accent": "#2f6f8f",
+      "documentCount": 8,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/evidence.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-all-files.zip"
+      },
+      "documents": [
+        "evidence/evidence-rule-chart",
+        "evidence/evidence-rule-flowcharts",
+        "evidence/fre-rule-cards",
+        "evidence/evidence-rules-drill",
+        "evidence/evidence-case-files",
+        "evidence/evidence-case-files-ii",
+        "evidence/evidence-mock-midterm",
+        "evidence/evidence-mock-midterm-ii"
+      ]
+    },
+    {
+      "id": "professional-responsibility",
+      "slug": "professional-responsibility",
+      "title": "Professional Responsibility",
+      "description": "Model Rules of Professional Conduct and MPRE prep, Weeks 1–5 (Chs. 1–9, 20, 21): forming the client-lawyer relationship, competence, confidentiality, conflicts, and the duties that follow a representation from start to finish.",
+      "accent": "#8a2e3b",
+      "documentCount": 4,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/professional-responsibility.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/professional-responsibility-all-files.zip"
+      },
+      "documents": [
+        "professional-responsibility/pr-outline",
+        "professional-responsibility/mpre-drill-v3",
+        "professional-responsibility/mpre-500-course-subset",
+        "professional-responsibility/pr-course-quiz"
+      ]
+    },
+    {
+      "id": "con-law-ii",
+      "slug": "con-law-ii",
+      "title": "Con Law II",
+      "description": "Constitutional Law II: the First Amendment, Chapters 1–6. Covers the Religion Clauses, the speech framework, incitement and national security, true threats and speech integral to crime, and immoral speech, including obscenity, child pornography, and indecency.",
+      "accent": "#5b4b8a",
+      "documentCount": 7,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/con-law-ii.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/con-law-ii-all-files.zip"
+      },
+      "documents": [
+        "con-law-ii/first-amendment-outline",
+        "con-law-ii/first-amendment-flowcharts",
+        "con-law-ii/first-amendment-drill",
+        "con-law-ii/first-amendment-case-files",
+        "con-law-ii/first-amendment-case-flash-cards",
+        "con-law-ii/first-amendment-concept-flash-cards",
+        "con-law-ii/first-amendment-mock-exam"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "evidence/evidence-rule-chart",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rule-chart",
+      "title": "Evidence Rule Chart/outline",
+      "description": "The master rule chart for Weeks 1–5. Each rule is explained in plain English with a note on what to watch out for. Rows tagged by class come from the Class 1–10 lecture slides, and there are notes on what the midterm covers.",
+      "type": "rule-chart",
+      "typeLabel": "Rule Chart",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "2Evidence_Rule_Chart (with class slides).docx",
+      "tags": [
+        "FRE",
+        "rule chart",
+        "midterm",
+        "class slides"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 47380,
+      "updated": "2026-10-04T18:12:36.000Z",
+      "headings": [
+        "Evidence Rule Chart — Weeks 1–5",
+        "Background: The Federal Rules of Evidence (Week 1)",
+        "1. The Jury's Secrecy (Week 1)",
+        "2. General Principles of Relevance (Weeks 1–2)",
+        "Probativeness and Materiality — FRE 401 & 402",
+        "Conditional Relevance — FRE 104(b)",
+        "Probativeness versus the Risk of Unfair Prejudice — FRE 403 & 105",
+        "Rule 403 in action",
+        "3. The Specialized Relevance Rules (Weeks 2–3)",
+        "Subsequent Remedial Measures — FRE 407",
+        "Compromise Offers and Payment of Medical Expenses — FRE 408 & 409",
+        "Pleas in Criminal Cases — FRE 410; Liability Insurance — FRE 411",
+        "4. Character Evidence (Weeks 3–4)",
+        "The Character-Propensity Rule — FRE 404(a)(1) & 404(b)",
+        "Routes Around the Box",
+        "Proof of the Defendant's and the Victim's Character — FRE 404(a)(2)",
+        "Propensity Evidence in Sexual Assault Cases — FRE 413, 414 & 415",
+        "Proving Character — FRE 405(a) & 405(b); Evidence of Habit — FRE 406",
+        "5. Impeachment and Character for Truthfulness (Weeks 4–5)",
+        "Modes of Impeachment",
+        "Impeachment by Opinion, Reputation, and Cross-Examination About Past Lies — FRE 607 & 608",
+        "Impeachment with Past Convictions — FRE 609",
+        "Rehabilitation and Use of Extrinsic Evidence",
+        "Critiques and Empirical Evidence on Rule 609",
+        "6. The Rape Shield Law — FRE 412 (Week 5)",
+        "The Shield Law",
+        "The Law in Force: Constitutional Limits, Civil Cases, Procedure",
+        "7. Plain-English Glossary",
+        "Terms A–L",
+        "Terms M–Z"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rule-chart/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-chart.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-chart.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-chart.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-chart.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-rule-flowcharts",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rule-flowcharts",
+      "title": "Evidence Flowcharts",
+      "description": "Interactive decision charts for Weeks 1–5. Zoom and pan around each chart, walk through a rule one step at a time, and search all nine charts. Covers relevance (401–403), the policy rules (407–411), character evidence, 404(b), impeachment, 609 convictions, the 412 rape shield, and 606(b) jury secrecy.",
+      "type": "flowcharts",
+      "typeLabel": "Flowcharts",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Rule_Flowcharts.html",
+      "tags": [
+        "FRE",
+        "interactive",
+        "401",
+        "403",
+        "404(b)",
+        "609",
+        "412",
+        "606(b)"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 524498,
+      "updated": "2026-10-07T12:20:29.000Z",
+      "headings": [
+        "Rule Flowcharts",
+        "Big picture",
+        "606(b) Jury secrecy",
+        "401-403 Relevance",
+        "407-411 Policy rules",
+        "Character: the box",
+        "404(b) Other acts",
+        "Impeachment",
+        "609 Convictions",
+        "412 Rape shield"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rule-flowcharts/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-flowcharts.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-flowcharts.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-flowcharts.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-flowcharts.json"
+      }
+    },
+    {
+      "id": "evidence/fre-rule-cards",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "fre-rule-cards",
+      "title": "FRE Rule Cards",
+      "description": "Flashcards for the Federal Rules of Evidence in Weeks 1–5. Pick your topics, flip each card, and rate yourself with a tap or a swipe. Missed cards come back sooner, and your mastery is saved in your browser.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "FRE_Rule_Cards.html",
+      "tags": [
+        "FRE",
+        "flashcards",
+        "spaced review",
+        "swipe"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 141648,
+      "updated": "2026-10-05T00:38:43.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/fre-rule-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/fre-rule-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/fre-rule-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/fre-rule-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/fre-rule-cards.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-rules-drill",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rules-drill",
+      "title": "Evidence Rules easy Drill",
+      "description": "Conceptual multiple-choice questions for Weeks 1–5, weighted toward the Federal Rules. The answer order reshuffles every time you load the page, so you can't memorize the letters.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Conceptual.html",
+      "tags": [
+        "MCQ",
+        "conceptual",
+        "FRE"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 45730,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "Evidence Rules Drill"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rules-drill/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rules-drill.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rules-drill.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rules-drill.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rules-drill.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-case-files",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-case-files",
+      "title": "Evidence BAR style questions 1",
+      "description": "Bar-level application questions for Weeks 1–5. Each question sets two or three rules against each other and turns on a single fact. Every answer choice has its own explanation, and the set includes one-fact variations and a coverage map.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Application (strict).html",
+      "tags": [
+        "MCQ",
+        "application",
+        "bar prep",
+        "variations"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 123713,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "Evidence Case Files"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-case-files/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-case-files-ii",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-case-files-ii",
+      "title": "Evidence BAR style questions 2",
+      "description": "A second, all-new set of bar-style application questions covering Classes 1–10. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 157 outline items.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Application (Classes 1-10).html",
+      "tags": [
+        "MCQ",
+        "application",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 177139,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "Evidence Case Files II"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-case-files-ii/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files-ii.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files-ii.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files-ii.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files-ii.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-mock-midterm",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-mock-midterm",
+      "title": "Evidence Mock Midterm",
+      "description": "A timed practice exam for the night before the midterm: 60 new bar-style questions on Classes 1–10, in four 15-question parts that each cover every topic at the real exam’s 30-minute pace. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Mock_Midterm.html",
+      "tags": [
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": 60,
+      "contributor": null,
+      "sizeBytes": 156553,
+      "updated": "2026-10-05T23:54:11.000Z",
+      "headings": [
+        "Evidence Mock Midterm"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-mock-midterm/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-mock-midterm-ii",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-mock-midterm-ii",
+      "title": "Evidence Mock Midterm II",
+      "description": "A second timed practice exam: 60 more new bar-style questions on Classes 1–10, with no fact patterns repeated from the first. It has the same four 15-question parts, each covering every topic at the real exam’s 30-minute pace, and draws on textbook problems the first exam didn’t use. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Mock_Midterm_II.html",
+      "tags": [
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": 60,
+      "contributor": null,
+      "sizeBytes": 154040,
+      "updated": "2026-10-06T11:01:35.000Z",
+      "headings": [
+        "Evidence Mock Midterm II"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-mock-midterm-ii/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm-ii.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm-ii.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm-ii.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm-ii.json"
+      }
+    },
+    {
+      "id": "professional-responsibility/pr-outline",
+      "subject": "professional-responsibility",
+      "subjectTitle": "Professional Responsibility",
+      "slug": "pr-outline",
+      "title": "Professional Responsibility Outline",
+      "description": "Exam-prep outline for Weeks 1–5 (Chs. 1–9, 20, 21), organized around the life of a representation. Pinpoint cites point to the readings and class slides, and every rule tested in the practice bank is covered.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "outline_v3.html",
+      "tags": [
+        "Model Rules",
+        "outline",
+        "exam prep"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 140958,
+      "updated": "2026-10-04T18:12:36.000Z",
+      "headings": [
+        "Professional Responsibility: Exam Prep Outline",
+        "Issue-spotting checklist (run on every fact pattern)",
+        "| Ask | Part",
+        "I. The Regulatory Frame",
+        "A. Sources of law [W1:1–2, 19–21]",
+        "B. Admission, character & fitness [W1:21–26, 46]",
+        "C. Where you may practice: UPL, federal courts, choice of law",
+        "D. Discipline [W1:27–29]",
+        "E. Civil liability, disqualification, fees [W1:29–34]",
+        "F. Court sanctions & other law [W1:34–36]",
+        "NEW G. Taxonomy of Professional Woes [W1:36–38; S1:48]",
+        "II. Personal Responsibility, Supervision & Human Factors",
+        "A. The responsibility rules",
+        "B. Why smart people do stupid things",
+        "C. When you mess up, 'fess up [W1:59–61]",
+        "NEW D. Stress, impairment & getting help [W1:62–66; S1:58, 76–77, 122–124]",
+        "III. Forming & Defining the Relationship",
+        "A. Declining [W2:30–34, 63–64]",
+        "B. Forming the relationship [W2:34–37]",
+        "C. Prospective clients: MR 1.18 [W3:3–6; W2:36–37]",
+        "D. Scope & limiting it [W2:37–40, 54–55]",
+        "E. Duties to non-clients [W2:40–46]",
+        "F. Organizational clients & unrepresented persons",
+        "IV. The Lawyer as Fiduciary: Loyalty, Conflicts & Candor",
+        "A. Becoming a fiduciary",
+        "B. The four duties (analyze each separately, in this order) [W4:6–9]",
+        "C. Conflicts rules the banks test",
+        "D. Candor to the client: MR 1.4 [W4:9–14]",
+        "V. Competence, Diligence & Care",
+        "A. Competence: MR 1.1",
+        "B. Diligence: MR 1.3",
+        "C. The civil duty of care [W2:9–11; W4:18]",
+        "D. Sixth Amendment: effective assistance [W2:11–18]",
+        "VI. Confidentiality",
+        "A. To whom, and what's covered",
+        "B. What the duty requires [W3:10–15]",
+        "C. Confidentiality vs. privilege vs. work product [W3:16–19]",
+        "D. Exceptions: framing principles [W3:25–29]",
+        "E. The MR 1.6(b) exceptions [W3:29–36]",
+        "F. When disclosure becomes mandatory, or goes beyond 1.6",
+        "G. Hard cases [W3:36]",
+        "VII. The Lawyer as Agent: Authority",
+        "A. The four sources of authority [W4:23–30]",
+        "B. Exceeding authority: consequences [W4:30–32]",
+        "C. Objectives vs. means: MR 1.2(a) [W4:34–43]",
+        "VIII. Fees & Client Property",
+        "A. Communicating the fee: MR 1.5(b)–(c) [W5:2–8]",
+        "B. Substantive limits: MR 1.5(a), (d) [W5:9–12, 26]",
+        "C. Consequences & recovery [W5:13–14]",
+        "D. Retainers [W5:14–15]",
+        "E. Sharing fees & paying for referrals [W5:16–19]",
+        "F. Safeguarding client property: MR 1.15 [W5:27–39]",
+        "IX. Ending the Relationship",
+        "A. Must vs. may withdraw (always subject to 1.16(c))",
+        "B. Leave of the tribunal: MR 1.16(c) [W2:57–61]",
+        "C. Noisy withdrawal [W2:66–68]",
+        "D. Exit duties: MR 1.16(d) [W2:69–74]",
+        "X. Cross-Chapter Tables",
+        "Formality ladder: what each consent must look like",
+        "Disclosure map: may, must, or must not?"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/pr-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/pr-outline.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/pr-outline.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/pr-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/pr-outline.json"
+      }
+    },
+    {
+      "id": "professional-responsibility/mpre-drill-v3",
+      "subject": "professional-responsibility",
+      "subjectTitle": "Professional Responsibility",
+      "slug": "mpre-drill-v3",
+      "title": "Pro Rep Drill",
+      "description": "355 original MPRE-style application questions on Chs. 1–9, 20, 21 and the class slides. Use study mode for instant feedback or exam mode to be graded at the end. Filter by topic and shuffle the answer order.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "PR_MPRE_Question_Bank v3.html",
+      "tags": [
+        "MPRE",
+        "MCQ",
+        "exam mode"
+      ],
+      "questions": 355,
+      "contributor": null,
+      "sizeBytes": 385678,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "PR MPRE Drill v3"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/mpre-drill-v3/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-drill-v3.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-drill-v3.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-drill-v3.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-drill-v3.json"
+      }
+    },
+    {
+      "id": "professional-responsibility/mpre-500-course-subset",
+      "subject": "professional-responsibility",
+      "subjectTitle": "Professional Responsibility",
+      "slug": "mpre-500-course-subset",
+      "title": "MPRE 500: Course Subset",
+      "description": "298 of the 500 questions in Stevenson, 500 MPRE Practice Questions (2019), limited to what Weeks 1–5 cover. Uses the book's answer key, with study and exam modes, topic filters, and answer shuffling.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "PR_MPRE_500_Course_Subset.html",
+      "tags": [
+        "MPRE",
+        "MCQ",
+        "exam mode",
+        "book questions"
+      ],
+      "questions": 298,
+      "contributor": null,
+      "sizeBytes": 682153,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "MPRE 500: Course Subset"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/mpre-500-course-subset/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-500-course-subset.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-500-course-subset.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-500-course-subset.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-500-course-subset.json"
+      }
+    },
+    {
+      "id": "professional-responsibility/pr-course-quiz",
+      "subject": "professional-responsibility",
+      "subjectTitle": "Professional Responsibility",
+      "slug": "pr-course-quiz",
+      "title": "Course Quiz",
+      "description": "The 54 multiple-choice questions from the class quizzes on Chs. 5, 6, 8, 20, and 21, checked against the course answer keys. Take the quiz for a score or open the answer view, with explanations drawn from Ethical Lawyering, the class slides, and the Model Rules.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Professional-Responsibility-Quiz.html",
+      "tags": [
+        "MCQ",
+        "class quizzes",
+        "explanations"
+      ],
+      "questions": 54,
+      "contributor": null,
+      "sizeBytes": 117193,
+      "updated": "2026-10-06T02:12:01.000Z",
+      "headings": [
+        "Professional Responsibility",
+        "Your progress",
+        "Jump to a question"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/pr-course-quiz/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/pr-course-quiz.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/pr-course-quiz.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/pr-course-quiz.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/pr-course-quiz.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-outline",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-outline",
+      "title": "First Amendment Outline",
+      "description": "Case-by-case outline of Chapters 1–6, from Barnette and Kennedy v. Bremerton through Counterman, Ferber, and Free Speech Coalition v. Paxton. Each case has its rule, facts, holding, and dissent. Includes the Free Exercise, speech, prior restraint, and immoral speech checklists, along with synthesis tables.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "PDF",
+      "mimeType": "application/pdf",
+      "originalFilename": "First_Amendment_Outline_Ch1-6_Revised.pdf",
+      "tags": [
+        "First Amendment",
+        "outline",
+        "Religion Clauses",
+        "free speech"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 93334,
+      "updated": "2026-10-05T14:37:34.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-outline.pdf",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-outline.pdf",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-outline.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-flowcharts",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-flowcharts",
+      "title": "First Amendment Flowcharts",
+      "description": "Interactive decision charts for Chapters 1–6. A big-picture map shows how the Religion Clauses and the speech doctrines fit together, and eight charts walk through coercion, Free Exercise, the Establishment Clause and funding, the speech framework, incitement and fighting words, prior restraints, true threats and speech integral to crime, and immoral speech. Tap any box for a plain-English explanation, the cases behind it, and what to watch out for.",
+      "type": "flowcharts",
+      "typeLabel": "Flowcharts",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Flowcharts.html",
+      "tags": [
+        "First Amendment",
+        "interactive",
+        "Religion Clauses",
+        "free speech",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 540797,
+      "updated": "2026-10-07T12:20:29.000Z",
+      "headings": [
+        "First Amendment Flowcharts",
+        "Big picture",
+        "Coercion: Barnette to Mahmoud",
+        "Free Exercise",
+        "Establishment & funding",
+        "Speech framework",
+        "Incitement & fighting words",
+        "Prior restraints",
+        "Threats & crime speech",
+        "Immoral speech"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-flowcharts/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-flowcharts.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-flowcharts.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-flowcharts.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-flowcharts.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-drill",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-drill",
+      "title": "First Amendment Quick Drill",
+      "description": "264 multiple-choice questions on every case and concept in the outline. They test what each case held, hypotheticals built on its facts, and how the doctrine applies. Filter by chapter or question type, shuffle the answers, and review only the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Drill.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "Chapters 1–6"
+      ],
+      "questions": 264,
+      "contributor": null,
+      "sizeBytes": 157712,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "First Amendment Drill"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-drill/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-drill.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-drill.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-drill.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-drill.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-case-files",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-case-files",
+      "title": "First Amendment BAR style questions 1",
+      "description": "Bar-style application questions for Weeks 1–6 (Chapters 1–6). Each question sets out new facts, from compelled pledges and school prayer to protest livestreams, chatbot lawsuits, and age-verification laws, and asks you to apply the doctrine. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 113 outline items.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Case_Files.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "application",
+        "bar prep",
+        "Chapters 1–6"
+      ],
+      "questions": 115,
+      "contributor": null,
+      "sizeBytes": 190887,
+      "updated": "2026-10-07T13:04:21.000Z",
+      "headings": [
+        "First Amendment Case Files"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-case-files/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-files.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-files.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-files.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-files.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-case-flash-cards",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-case-flash-cards",
+      "title": "First Amendment Case Flash Cards",
+      "description": "34 flashcards, one for each main case in Chapters 1–6, from Whitney and Barnette through Paxton and Brown. Each card asks what the case held, then gives the rule, the vote, and the key reasoning. Cited cases such as Gobitis, Yoder, Zelman, and Chaplinsky appear on the card for the case that cites them. Flip each card, then mark it Got it or Revisit.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Case_Flash_Cards.html",
+      "tags": [
+        "First Amendment",
+        "flashcards",
+        "cases",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 52840,
+      "updated": "2026-10-08T15:42:52.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-case-flash-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-flash-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-flash-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-flash-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-flash-cards.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-concept-flash-cards",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-concept-flash-cards",
+      "title": "First Amendment Concept Flash Cards",
+      "description": "32 flashcards on the core concepts of Chapters 1–6. Covers the Free Exercise and speech checklists, the ways a law fails neutrality, Establishment Clause funding, RFRA, the unprotected categories, overbreadth and vagueness, prior restraints, mens rea, the Miller test, and protecting kids versus adults.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Concept_Flash_Cards.html",
+      "tags": [
+        "First Amendment",
+        "flashcards",
+        "doctrine",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "contributor": null,
+      "sizeBytes": 48183,
+      "updated": "2026-10-08T15:42:52.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-concept-flash-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-concept-flash-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-concept-flash-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-concept-flash-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-concept-flash-cards.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-mock-exam",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-mock-exam",
+      "title": "First Amendment Mock Exam",
+      "description": "A timed practice exam covering everything in Chapters 1–6: 60 bar-style questions with new facts, in four 15-question parts that each cover every topic at two minutes a question. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Mock_Exam.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Chapters 1–6"
+      ],
+      "questions": 60,
+      "contributor": null,
+      "sizeBytes": 158840,
+      "updated": "2026-10-08T19:34:05.000Z",
+      "headings": [
+        "First Amendment Mock Exam"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-mock-exam/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-mock-exam.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-mock-exam.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-mock-exam.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-mock-exam.json"
+      }
+    }
+  ],
+  "bundles": {
+    "all": "https://supertoadman.github.io/Wilmington-University-corner/files/all-study-materials.zip"
+  }
+}

@@ -1,0 +1,48 @@
+First Amendment Flowcharts
+==========================
+
+Subject: Con Law II
+Type: Flowcharts
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-flowcharts/
+
+Interactive decision charts for Chapters 1–6. A big-picture map shows how the Religion Clauses and the speech doctrines fit together, and eight charts walk through coercion, Free Exercise, the Establishment Clause and funding, the speech framework, incitement and fighting words, prior restraints, true threats and speech integral to crime, and immoral speech. Tap any box for a plain-English explanation, the cases behind it, and what to watch out for.
+
+---
+
+Con Law II · Chapters 1–6
+
+# First Amendment Flowcharts
+
+1
+
+Walk through
+Tap any box to dive in
+
+100%
+
+## Big picture
+Start here. Every problem begins with government action and a clause. Religion claims run through coercion, Free Exercise, and the Establishment Clause; speech claims run through the framework, the unprotected categories, and the levels of scrutiny. Blue dashed arrows show where one doctrine hands off to another.
+
+## Coercion: Barnette to Mahmoud
+Chapter 1. Ask what the government is doing to the person: compelling a declaration, disciplining an employee's own prayer, or teaching a child something the parents' faith rejects.
+
+## Free Exercise
+Chapter 2's checklist, top to bottom: burden, neutrality and general applicability, Wrinkle 1, strict scrutiny, then Wrinkle 2. The table shows six ways a law fails Step 2.
+
+## Establishment & funding
+Chapters 1–2. Sort the government's action first: its own religious exercise, a private person's, an accommodation, or money. On this chart, green means the practice is permitted and red means it's forbidden.
+
+## Speech framework
+Chapter 3's speech checklist in order. Most cases turn on Step 4 (what kind of restriction) and Step 5 (whether the speech fits a historical category).
+
+## Incitement & fighting words
+Chapter 4. Name the harm the government fears; each fear has its own narrow test. Every case here held the speech protected.
+
+## Prior restraints
+Chapter 4. Stopping publication in advance carries a heavy presumption of invalidity, and the government has never overcome it on national-security grounds.
+
+## Threats & crime speech
+Chapter 5. What the speech is doing decides the test, and each test requires a culpable state of mind before the speech can be punished.
+
+## Immoral speech
+Chapter 6. Check the unprotected categories first (obscenity, child pornography), then ask whom the government is protecting: adults, kids, or neighborhoods.

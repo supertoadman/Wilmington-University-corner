@@ -1,0 +1,267 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Wilmington University Corner API",
+    "version": "1.0.0",
+    "description": "Read-only static API for the study library. All endpoints are GET requests for static files."
+  },
+  "servers": [
+    {
+      "url": "https://supertoadman.github.io/Wilmington-University-corner"
+    }
+  ],
+  "paths": {
+    "/api/catalog.json": {
+      "get": {
+        "operationId": "getCatalog",
+        "summary": "List all subjects and documents",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Catalog"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/subjects/{subject}.json": {
+      "get": {
+        "operationId": "getSubject",
+        "summary": "Get one subject with its documents",
+        "parameters": [
+          {
+            "name": "subject",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            },
+            "description": "Subject slug, e.g. \"evidence\""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Subject"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/documents/{subject}/{doc}.json": {
+      "get": {
+        "operationId": "getDocument",
+        "summary": "Get one document with extracted text",
+        "parameters": [
+          {
+            "name": "subject",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "doc",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "allOf": [
+                    {
+                      "$ref": "#/components/schemas/Document"
+                    },
+                    {
+                      "type": "object",
+                      "properties": {
+                        "text": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/search-index.json": {
+      "get": {
+        "operationId": "getSearchIndex",
+        "summary": "Compact search index",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Document": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "subject": {
+            "type": "string"
+          },
+          "subjectTitle": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "typeLabel": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "mimeType": {
+            "type": "string"
+          },
+          "originalFilename": {
+            "type": "string"
+          },
+          "tags": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "questions": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "sizeBytes": {
+            "type": "integer"
+          },
+          "updated": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "headings": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "urls": {
+            "type": "object",
+            "properties": {
+              "page": {
+                "type": "string"
+              },
+              "file": {
+                "type": "string"
+              },
+              "download": {
+                "type": "string"
+              },
+              "text": {
+                "type": "string"
+              },
+              "json": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      },
+      "Subject": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "slug": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "documentCount": {
+            "type": "integer"
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            }
+          }
+        }
+      },
+      "Catalog": {
+        "type": "object",
+        "properties": {
+          "schemaVersion": {
+            "type": "string"
+          },
+          "site": {
+            "type": "object"
+          },
+          "subjects": {
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          },
+          "documents": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Document"
+            }
+          }
+        }
+      }
+    }
+  }
+}
