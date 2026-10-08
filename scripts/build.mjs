@@ -233,6 +233,11 @@ const abs = (rel) => config.url + rel;
 // Static assets
 fs.cpSync(path.join(ROOT, 'src', 'assets'), path.join(DIST, 'assets'), { recursive: true });
 fs.copyFileSync(path.join(ROOT, 'node_modules', 'fuse.js', 'dist', 'fuse.min.mjs'), path.join(DIST, 'assets', 'vendor-fuse.min.mjs'));
+// PDF.js renders PDFs on phones and tablets, whose browsers only show the first page of an embedded PDF.
+const PDFJS = path.join(ROOT, 'node_modules', 'pdfjs-dist');
+fs.mkdirSync(path.join(DIST, 'assets', 'pdfjs'), { recursive: true });
+for (const f of ['pdf.min.mjs', 'pdf.worker.min.mjs']) fs.copyFileSync(path.join(PDFJS, 'legacy', 'build', f), path.join(DIST, 'assets', 'pdfjs', f));
+fs.cpSync(path.join(PDFJS, 'standard_fonts'), path.join(DIST, 'assets', 'pdfjs', 'standard_fonts'), { recursive: true });
 write('.nojekyll', '');
 
 // Raw files + ZIP bundles

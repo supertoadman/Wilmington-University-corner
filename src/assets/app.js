@@ -549,7 +549,12 @@ if (viewer) {
     }, { passive: true });
   }
 
-  const frame = $('.vframe');
+  // Phone and tablet browsers show only the first page of a PDF in an iframe and
+  // won't scroll it, so on touch devices draw the pages ourselves with PDF.js.
+  const pdfFrame = $('.vframe[src$=".pdf" i]');
+  if (pdfFrame && matchMedia('(pointer: coarse)').matches) renderPdf(pdfFrame);
+
+  const frame = $('iframe.vframe');
   if (frame) {
     const done = () => $('.vframe-wrap')?.classList.add('is-loaded');
     // Keep the embedded document's light/dark theme in step with the site's toggle.
@@ -748,4 +753,65 @@ if (submitForm) {
     submitForm.hidden = false;
     submitForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
+}
+
+// ---------- PDF pages (touch devices) ----------
+async function renderPdf(frame) {
+  const wrap = frame.closest('.vframe-wrap');
+  const src = frame.src;
+  const scroller = document.createElement('div');
+  scroller.className = 'vframe vpdf';
+  scroller.setAttribute('role', 'document');
+  scroller.setAttribute('aria-label', frame.title);
+  frame.replaceWith(scroller);
+  try {
+    const pdfjs = await import('./pdfjs/pdf.min.mjs');
+    pdfjs.GlobalWorkerOptions.workerSrc = new URL('./pdfjs/pdf.worker.min.mjs', import.meta.url).href;
+    const pdf = await pdfjs.getDocument({ url: src, standardFontDataUrl: new URL('./pdfjs/standard_fonts/', import.meta.url).href }).promise;
+    const base = (await pdf.getPage(1)).getViewport({ scale: 1 });
+    const pages = [];
+    for (let n = 1; n <= pdf.numPages; n++) {
+      const page = document.createElement('div');
+      page.className = 'vpdf-page';
+      page.dataset.page = n;
+      page.style.aspectRatio = `${base.width} / ${base.height}`;
+      page.setAttribute('aria-label', `Page ${n} of ${pdf.numPages}`);
+      scroller.append(page);
+      pages.push(page);
+    }
+    // Draw pages as they near the screen and release far-off canvases so memory stays small.
+    const drawn = new Map();
+    const draw = async (el) => {
+      if (drawn.has(el)) return;
+      drawn.set(el, null);
+      const page = await pdf.getPage(+el.dataset.page);
+      if (!drawn.has(el)) return;
+      const vp1 = page.getViewport({ scale: 1 });
+      el.style.aspectRatio = `${vp1.width} / ${vp1.height}`;
+      // Extra resolution keeps text sharp when pinch-zoomed.
+      const scale = (el.clientWidth / vp1.width) * Math.min(3, (window.devicePixelRatio || 1) * 1.5);
+      const vp = page.getViewport({ scale });
+      const canvas = document.createElement('canvas');
+      canvas.width = Math.floor(vp.width);
+      canvas.height = Math.floor(vp.height);
+      const task = page.render({ canvasContext: canvas.getContext('2d'), viewport: vp });
+      drawn.set(el, task);
+      try { await task.promise; } catch { return; }
+      if (drawn.get(el) === task) el.replaceChildren(canvas);
+    };
+    const drop = (el) => {
+      if (!drawn.has(el)) return;
+      drawn.get(el)?.cancel();
+      drawn.delete(el);
+      const c = el.querySelector('canvas');
+      if (c) { c.width = c.height = 0; c.remove(); }
+    };
+    const near = new IntersectionObserver((entries) => {
+      for (const e of entries) (e.isIntersecting ? draw : drop)(e.target);
+    }, { root: scroller, rootMargin: '150% 0px' });
+    pages.forEach((p) => near.observe(p));
+  } catch {
+    scroller.innerHTML = `<p class="vpdf-error">This PDF couldn't be shown here. <a href="${escapeHtml(src)}" target="_blank" rel="noopener">Open it in a new tab</a>.</p>`;
+  }
+  wrap.classList.add('is-loaded');
 }
