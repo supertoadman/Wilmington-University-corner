@@ -28,12 +28,12 @@ config.basePath = new URL(config.url).pathname;
 // `match` is tested against the file name when subject.json does not set a type.
 // ---------------------------------------------------------------------------
 const TYPES = {
-  outline:      { label: 'Outline',            plural: 'Outlines',           icon: 'book-open',   match: /outline/i },
-  'rule-chart': { label: 'Rule Chart',         plural: 'Rule Charts',        icon: 'table',       match: /chart(?!s)/i },
-  flowcharts:   { label: 'Flowcharts',         plural: 'Flowcharts',         icon: 'workflow',    match: /flow/i },
-  flashcards:   { label: 'Flashcards',         plural: 'Flashcards',         icon: 'layers',      match: /card/i },
-  practice:     { label: 'Practice Questions', plural: 'Practice Questions', icon: 'list-checks', match: /mcq|question|drill|quiz|exam|mpre/i },
-  document:     { label: 'Document',           plural: 'Documents',          icon: 'file-text',   match: /.*/ },
+  outline:      { label: 'Outline',            plural: 'Outlines',           icon: 'statue-athena',        match: /outline/i },
+  'rule-chart': { label: 'Rule Chart',         plural: 'Rule Charts',        icon: 'statue-themis',        match: /chart(?!s)/i },
+  flowcharts:   { label: 'Flowcharts',         plural: 'Flowcharts',         icon: 'statue-mercury',       match: /flow/i },
+  flashcards:   { label: 'Flashcards',         plural: 'Flashcards',         icon: 'statue-apollo',        match: /card/i },
+  practice:     { label: 'Practice Questions', plural: 'Practice Questions', icon: 'statue-janus',         match: /mcq|question|drill|quiz|exam|mpre/i },
+  document:     { label: 'Document',           plural: 'Documents',          icon: 'statue-philosopher',   match: /.*/ },
 };
 
 const FORMATS = {

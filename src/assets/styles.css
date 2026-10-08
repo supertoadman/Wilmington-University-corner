@@ -137,6 +137,14 @@ kbd {
 [hidden] { display: none !important; }
 
 .icon { width: 1.15em; height: 1.15em; flex: none; }
+/* Statue heads: the document-type icons, painted from assets/statues. */
+.icon.statue { display: inline-block; background-position: center; background-size: contain; background-repeat: no-repeat; }
+.statue-athena { background-image: url("statues/athena.webp"); }
+.statue-themis { background-image: url("statues/themis.webp"); }
+.statue-mercury { background-image: url("statues/mercury.webp"); }
+.statue-apollo { background-image: url("statues/apollo.webp"); }
+.statue-janus { background-image: url("statues/janus.webp"); }
+.statue-philosopher { background-image: url("statues/philosopher.webp"); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 .skip-link {
@@ -179,7 +187,8 @@ kbd {
   color: #daaf46; font: 600 23px/1 var(--font-serif); text-decoration: none;
   box-shadow: inset 0 0 0 1px rgba(236, 200, 116, .55), inset 0 1px 0 rgba(255,255,255,.12), 0 2px 6px -2px rgba(12, 22, 40, .5);
 }
-.brand-mark .logo { display: block; height: 1.12em; width: auto; fill: url(#gilt); filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .5)); }
+.logo { display: block; background: url("statues/socrates.webp") center / contain no-repeat; }
+.brand-mark .logo { width: 86%; height: 86%; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .55)); }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name { font: 600 18px/1.15 var(--font-serif); letter-spacing: -.01em; }
 .brand-sub { font-size: 10.5px; text-transform: uppercase; letter-spacing: .16em; color: var(--muted); font-weight: 600; margin-top: 2px; }
@@ -418,6 +427,9 @@ kbd {
   filter: drop-shadow(0 1px 0 rgba(0, 0, 0, .5)) drop-shadow(0 0 5px rgba(241, 207, 116, .22));
 }
 :is(.tile, .subnav-icon, .subject-panel-icon, .subject-hero-icon, .doc-card-art .medal, .download-band-icon, .steps .step-icon, .dropzone-icon, .success-icon, .vpanel-tile) .icon.line { fill: none; stroke: url(#gilt); }
+:is(.tile, .subnav-icon, .subject-panel-icon, .subject-hero-icon, .doc-card-art .medal, .download-band-icon, .steps .step-icon, .dropzone-icon, .success-icon, .vpanel-tile) .icon.statue {
+  width: 78%; height: 78%; filter: drop-shadow(0 2px 2px rgba(0, 0, 0, .45));
+}
 :is(.tile, .brand-mark, .subnav-icon, .subject-panel-icon, .subject-hero-icon, .doc-card-art .medal, .download-band-icon, .steps .step-icon, .dropzone-icon, .success-icon, .vpanel-tile)::after {
   content: ""; position: absolute; inset: -30%; z-index: 1; pointer-events: none;
   background: linear-gradient(115deg, transparent 42%, rgba(255, 243, 210, .4) 50%, transparent 58%);
@@ -480,7 +492,7 @@ a.brand-mark:hover::after {
   position: absolute; z-index: -1; right: -2%; bottom: -26%; pointer-events: none;
   font: 400 clamp(280px, 40vw, 560px)/1 var(--font-serif); color: rgba(241, 217, 160, .05);
 }
-.hero-mark .logo { display: block; height: .8em; width: auto; }
+.hero-mark .logo { width: .8em; height: .8em; background-image: url("statues/socrates-lg.webp"); opacity: .14; }
 /* A shaft of warm light falling from the top-right glow, with dust motes drifting
    through it (canvas, drawn by app.js, which mirrors the beam's 28deg tilt). */
 .hero-beam {

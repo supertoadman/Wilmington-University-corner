@@ -15,6 +15,8 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const iconCache = new Map();
 
 export function icon(name, cls = '') {
+  // Statue heads (the document types) are painted by CSS from assets/statues/<name>.webp.
+  if (name.startsWith('statue-')) return `<span class="icon statue ${name}${cls ? ` ${cls}` : ''}" aria-hidden="true"></span>`;
   if (!iconCache.has(name)) {
     let file = path.join(ROOT, 'src', 'icons', `${name}.svg`);
     let line = false;
@@ -43,8 +45,8 @@ const GILT_DEFS = '<svg width="0" height="0" style="position:absolute" aria-hidd
   + '<linearGradient id="gilt-deep" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#d9ac4c"/><stop offset=".45" stop-color="#a87b22"/><stop offset=".62" stop-color="#c39437"/><stop offset="1" stop-color="#7a5414"/></linearGradient>'
   + '</defs></svg>';
 
-// Site logo: the gold chair (filled with currentColor, so CSS sets its color or gilt).
-const LOGO = `<svg class="logo" viewBox="-1 -1 72 102" fill="currentColor" aria-hidden="true" focusable="false"><path d="M6.2 0.1C5.6 0.4 4.2 1.9 3.1 3.3C-0.1 7.8 -0.9 13.9 1 19.8C1.9 22.7 3 24.6 6.6 29.3C11.7 36.1 13.3 39.7 13.9 46C14.1 48.2 14 52.1 13.7 53.5C13.2 55.4 12.6 56 9.2 57.7C3.7 60.4 2.5 61.7 2.1 65C2 65.9 1.9 72.4 2 82.1C2 99.2 2 98.2 3 99.2C3.8 100 4.1 100 8.9 100C15.8 100 15.6 100.3 15.6 92.4C15.6 87.4 15.6 87.3 15.2 86.7C14.7 85.8 14.1 85.6 12.1 85.6C10.1 85.6 9.9 85.5 9.9 84.3C9.9 82.5 11.1 80.5 12.7 79.7L13.5 79.2 34.9 79.2L56.3 79.2 57.1 79.7C58.7 80.5 59.9 82.5 59.9 84.3C59.9 85.5 59.7 85.6 57.7 85.6C55.7 85.6 55.1 85.8 54.6 86.7C54.2 87.3 54.2 87.4 54.2 92.4C54.2 100.3 54 100 60.9 100C65.7 100 66 100 66.8 99.2C67.8 98.2 67.8 99.2 67.8 82.1C67.8 72.4 67.8 65.9 67.7 65C67.3 61.7 66.1 60.4 60.6 57.7C57.2 56 56.6 55.4 56.1 53.5C55.8 52.1 55.7 48.2 55.9 46C56.5 39.7 58 36.1 63.2 29.3C66.8 24.6 67.9 22.7 68.8 19.8C71 13 69.7 6.4 65 1.4C63.8 0 63.1 -0.3 62.5 0.1C61.9 0.6 61.9 1.4 62.6 2.9C64.6 7.4 64.9 12 63.4 16.3C62.5 19.1 61.3 20.9 57.4 25.3C56.3 26.6 54.9 28.4 54.3 29.3C51 34.4 49.6 41.4 49.8 51.9C49.9 57.7 50.4 58.9 53.8 60.8C60.4 64.8 60.8 65.3 60.9 69.6C60.9 72.4 60.9 72.7 60 73.2C59.2 73.7 10.6 73.7 9.7 73.2C8.9 72.7 8.9 72.4 8.9 69.6C9 65.3 9.4 64.8 16 60.8C19.3 58.9 19.8 57.7 20 51.9C20.2 41.4 18.8 34.4 15.5 29.3C14.9 28.4 13.5 26.6 12.3 25.3C8.5 20.9 7.3 19.1 6.3 16.3C4.9 12 5.2 7.1 7.3 2.7C7.9 1.4 7.9 0.6 7.3 0.2C6.8 -0.2 6.8 -0.2 6.2 0.1M26.2 23.4C23.6 24.1 21.8 26.2 21.7 29C21.6 30.3 21.7 30.7 22.5 34.8C24 41.5 24.3 44.1 24.3 50.3C24.4 56 24.5 56.4 25.2 57.1L25.7 57.6 34.9 57.6L44.1 57.6 44.6 57.1C45.3 56.4 45.4 56 45.5 50.3C45.5 44.1 45.8 41.5 47.3 34.8C48.1 30.7 48.2 30.3 48.1 28.9C48 26.6 46.5 24.4 44.3 23.6C43.4 23.2 43.3 23.2 35.2 23.1C28.4 23.1 26.9 23.2 26.2 23.4M28.5 61.5C25.9 61.7 23.5 62 22.3 62.3C19.6 63 13.5 66.9 12.4 68.7C11.9 69.6 12 70.6 12.8 71C13.5 71.4 56.3 71.4 57 71C57.8 70.6 57.9 69.6 57.4 68.7C56.2 66.9 50.2 63 47.4 62.3C44.7 61.6 34.2 61.2 28.5 61.5"/></svg>`;
+// Site logo: the young Socrates head (styles.css paints it from assets/statues/socrates.webp).
+const LOGO = '<span class="logo" aria-hidden="true"></span>';
 
 // ---------------------------------------------------------------------------
 // Formatting helpers
