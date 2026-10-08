@@ -7,7 +7,7 @@
   "documents": {
     "2Evidence_Rule_Chart (with class slides).docx": {
       "slug": "evidence-rule-chart",
-      "title": "Evidence Rule Chart (with class slides)",
+      "title": "Evidence Rule Chart/outline",
       "type": "rule-chart",
       "description": "The master rule chart for Weeks 1–5. Each rule is explained in plain English with a note on what to watch out for. Rows tagged by class come from the Class 1–10 lecture slides, and there are notes on what the midterm covers.",
       "tags": [
@@ -20,7 +20,7 @@
     },
     "Evidence_Rule_Flowcharts.html": {
       "slug": "evidence-rule-flowcharts",
-      "title": "Evidence Rule Flowcharts",
+      "title": "Evidence Flowcharts",
       "type": "flowcharts",
       "description": "Interactive decision charts for Weeks 1–5. Zoom and pan around each chart, walk through a rule one step at a time, and search all nine charts. Covers relevance (401–403), the policy rules (407–411), character evidence, 404(b), impeachment, 609 convictions, the 412 rape shield, and 606(b) jury secrecy.",
       "tags": [
@@ -50,7 +50,7 @@
     },
     "Evidence_MCQ_Conceptual.html": {
       "slug": "evidence-rules-drill",
-      "title": "Evidence Rules Drill",
+      "title": "Evidence Rules easy Drill",
       "type": "practice",
       "description": "Conceptual multiple-choice questions for Weeks 1–5, weighted toward the Federal Rules. The answer order reshuffles every time you load the page, so you can't memorize the letters.",
       "tags": [
@@ -62,7 +62,7 @@
     },
     "Evidence_MCQ_Application (strict).html": {
       "slug": "evidence-case-files",
-      "title": "Evidence Case Files",
+      "title": "Evidence BAR style questions 1",
       "type": "practice",
       "description": "Bar-level application questions for Weeks 1–5. Each question sets two or three rules against each other and turns on a single fact. Every answer choice has its own explanation, and the set includes one-fact variations and a coverage map.",
       "tags": [
@@ -75,7 +75,7 @@
     },
     "Evidence_MCQ_Application (Classes 1-10).html": {
       "slug": "evidence-case-files-ii",
-      "title": "Evidence Case Files II",
+      "title": "Evidence BAR style questions 2",
       "type": "practice",
       "description": "A second, all-new set of bar-style application questions covering Classes 1–10. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 157 outline items.",
       "tags": [
