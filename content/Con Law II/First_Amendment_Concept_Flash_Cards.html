@@ -34,6 +34,8 @@
 .deck-status {margin-left:auto;color:var(--gold)}
 .deck-note {font-size:11px;color:var(--muted);padding:4px 22px 20px;margin:0}
 .session-head {justify-content:space-between;margin-bottom:12px;font-size:12px;color:var(--muted)}
+.shuffle-button {margin-left:10px;border:1px solid var(--border-strong);background:transparent;border-radius:20px;padding:4px 12px;font-size:11px;color:var(--text-2);cursor:pointer;transition:border-color .15s,color .15s}
+.shuffle-button:hover,.shuffle-button[aria-pressed="true"] {border-color:var(--gold);color:var(--gold)}
 .session-stats {gap:18px}.session-stats strong {color:var(--text);font-weight:500}
 .progress-track {height:3px;background:var(--border);border-radius:8px;margin-bottom:22px;overflow:hidden}
 .progress-fill {height:100%;background:linear-gradient(90deg,#8b682e,#e9c77f);width:0;transition:width .2s}
@@ -91,7 +93,7 @@
 <div class="study-layout">
 <aside class="deck-panel" aria-label="Deck contents"><div class="deck-intro"><span class="eyebrow">Your study deck</span><h2 id="topic"></h2><p id="deck-description"></p></div><nav class="deck-list" id="deck-list" aria-label="Choose a card"></nav><p class="deck-note">Recall first. Reveal when ready.<br>Keep the difficult ones for another pass.</p></aside>
 <section aria-label="Study session">
-<div class="session-head"><span id="position"></span><div class="session-stats"><span><strong id="known-count">0</strong> known</span><span><strong id="review-count">0</strong> to revisit</span></div></div>
+<div class="session-head"><span><span id="position"></span><button type="button" class="shuffle-button" id="shuffle" aria-pressed="false">Shuffle <span aria-hidden="true">⤮</span></button></span><div class="session-stats"><span><strong id="known-count">0</strong> known</span><span><strong id="review-count">0</strong> to revisit</span></div></div>
 <div class="progress-track" role="progressbar" aria-label="Cards reviewed" aria-valuemin="0" aria-valuenow="0" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
 <article class="flashcard" id="flashcard" aria-label="Flashcard"><div id="card-face"><div class="card-meta"><span id="card-label"></span><span class="card-type" id="card-side">Question</span></div><div class="card-content" id="card-content"></div><div class="card-footer"><span class="card-signature"><img src="../../assets/statues/apollo.webp" alt=""><span id="card-id"></span></span><a href="first-amendment-outline.pdf" target="_blank" rel="noopener" id="source">Open source notes ↗</a></div></div><div id="completion" class="completion" hidden></div></article>
 <div class="under-card"><button type="button" class="fc-button" id="previous" aria-label="Previous card">← Previous</button><button type="button" class="fc-button primary" id="reveal" aria-controls="card-content" aria-expanded="false">Reveal answer <span aria-hidden="true">↗</span></button><div class="rating" id="rating" hidden><button type="button" class="fc-button" id="again">Revisit <span aria-hidden="true">↺</span></button><button type="button" class="fc-button primary" id="known">Got it <span aria-hidden="true">✓</span></button></div><button type="button" class="fc-button" id="next" aria-label="Next card">Next →</button></div>
@@ -159,7 +161,8 @@
     if (ids.has(c.id)) throw new Error('Duplicate card ID');
     ids.add(c.id);
   }
-  let queue = [...deck.cards], index = 0, revealed = false, complete = false;
+  let queue = [...deck.cards], index = 0, revealed = false, complete = false, shuffled = false;
+  const mix = list => { for (let i = list.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [list[i], list[j]] = [list[j], list[i]]; } return list; };
   const results = new Map();
   const put = (id, text) => $(id).textContent = text;
   put('subject', deck.subject); put('deck-title', deck.title); put('topic', deck.topic);
@@ -242,7 +245,7 @@
     const h = document.createElement('h2'); h.textContent = 'A little more clarity.';
     const p = document.createElement('p'); p.textContent = remaining.length ? remaining.length + (remaining.length === 1 ? ' card' : ' cards') + ' to revisit. Take another thoughtful pass.' : 'Every card marked known. Nicely studied.';
     const button = document.createElement('button'); button.type = 'button'; button.className = 'fc-button primary'; button.textContent = remaining.length ? 'Study remaining cards' : 'Start a fresh session';
-    button.addEventListener('click', () => {queue = remaining.length ? remaining : [...deck.cards]; if (!remaining.length) results.clear(); index = 0; render(); $('reveal').focus({preventScroll:true});});
+    button.addEventListener('click', () => {queue = remaining.length ? remaining : [...deck.cards]; if (shuffled) mix(queue); if (!remaining.length) results.clear(); index = 0; render(); $('reveal').focus({preventScroll:true});});
     $('completion').replaceChildren(art,h,p,button); button.focus({preventScroll:true}); announce(p.textContent);
   }
   function rate(value) {
@@ -253,6 +256,15 @@
     else if (earlier >= 0) index = earlier;
     else { finish(); return; }
     render(); $('reveal').focus({preventScroll:true}); announce(queue[index].question);
+  }
+  function shuffle() {
+    if (navigating) return;
+    shuffled = !shuffled;
+    if (shuffled) mix(queue);
+    else { const keep = new Set(queue.map(c => c.id)); queue = deck.cards.filter(c => keep.has(c.id)); }
+    $('shuffle').setAttribute('aria-pressed', String(shuffled));
+    $('shuffle').firstChild.textContent = shuffled ? 'Shuffled ' : 'Shuffle ';
+    index = 0; render(); announce((shuffled ? 'Cards shuffled. ' : 'Cards back in order. ') + queue[0].question);
   }
   async function move(delta) {
     if (complete || navigating) return;
@@ -285,7 +297,7 @@
   card.addEventListener('pointercancel', () => {pointer = null;suppressClickUntil = Date.now() + 500;});
   card.addEventListener('click', e => {if (!e.target.closest('a,button') && Date.now() > suppressClickUntil && !window.getSelection()?.toString()) reveal();});
   card.addEventListener('keydown', e => {if (e.target === card && (e.code === 'Space' || e.key === 'Enter')) {e.preventDefault(); e.stopPropagation(); reveal();}});
-  $('reveal').addEventListener('click', reveal); $('again').addEventListener('click', () => rate('again')); $('known').addEventListener('click', () => rate('known'));
+  $('reveal').addEventListener('click', reveal); $('shuffle').addEventListener('click', shuffle); $('again').addEventListener('click', () => rate('again')); $('known').addEventListener('click', () => rate('known'));
   $('previous').addEventListener('click', () => move(-1)); $('next').addEventListener('click', () => move(1));
   $('theme').addEventListener('click', () => {const light = document.documentElement.dataset.theme !== 'light'; document.documentElement.dataset.theme = light ? 'light' : 'dark'; put('theme', light ? 'Dark mode' : 'Light mode'); $('theme').setAttribute('aria-label',light ? 'Switch to dark theme' : 'Switch to light theme');});
   document.addEventListener('keydown', e => {
