@@ -3,15 +3,13 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.dataset.theme=t;}catch(e){}</script>
 <title>First Amendment Case Flash Cards · WilmU Corner</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../../assets/styles.css">
 <style>
-.preview-header {border-bottom:1px solid var(--border);background:var(--bg-elev)}
-.preview-header .container {display:flex;align-items:center;justify-content:space-between;min-height:78px;gap:16px}
-.header-tools,.study-tools,.card-meta,.session-head,.session-stats,.rating,.under-card {display:flex;align-items:center;gap:12px}
-.preview-pill,.eyebrow {font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
-.preview-pill {border:1px solid var(--border-strong);border-radius:20px;padding:6px 12px}
+.study-tools,.card-meta,.session-head,.session-stats,.rating,.under-card {display:flex;align-items:center;gap:12px}
+.eyebrow {font-size:10px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--gold)}
 .fc-button {border:1px solid var(--border-strong);background:var(--surface);border-radius:10px;min-height:42px;padding:9px 16px;cursor:pointer;font-size:13px;font-weight:500;transition:border-color .15s,background .15s}
 .fc-button:hover {border-color:var(--gold);background:var(--surface-2)}
 .fc-button:disabled {opacity:.4;cursor:default}
@@ -62,7 +60,7 @@
 [data-theme="light"] .flashcard {background:radial-gradient(ellipse at 100% 0,rgba(198,174,126,.13),transparent 65%),linear-gradient(135deg,#fffdf7,#f0eadb);color:#18243a;border-color:#bca36f;box-shadow:0 20px 40px -30px #655334}
 [data-theme="light"] .card-meta {color:#795b22}[data-theme="light"] .card-content p,[data-theme="light"] .card-footer,[data-theme="light"] .completion p {color:#536075}[data-theme="light"] .answer-copy {color:#18243a!important}[data-theme="light"] .card-footer {border-color:#d9ceba}[data-theme="light"] .card-footer a {color:#795b22}
 @media(max-width:850px){.study-layout{grid-template-columns:1fr;gap:20px}.deck-panel{display:none}.fc-heading{margin-bottom:24px}.flashcard{min-height:390px}.fc-shell{max-width:760px}}
-@media(max-width:520px){.preview-pill{display:none}.preview-header .container{min-height:68px}.brand-name{font-size:16px}.heading-seal{width:60px;height:60px}.fc-heading p{font-size:12px}.flashcard{padding:24px;min-height:430px}.card-content{margin-top:34px;min-height:228px}.session-stats{gap:10px}.session-head{font-size:11px}.under-card{gap:10px;flex-wrap:wrap}.rating{flex:1}.rating .fc-button{flex:1;min-width:100px}.key-help{display:none}.card-footer{font-size:10px}.fc-button{padding:9px 12px}.answer-copy{font-size:21px}}
+@media(max-width:520px){.heading-seal{width:60px;height:60px}.fc-heading p{font-size:12px}.flashcard{padding:24px;min-height:430px}.card-content{margin-top:34px;min-height:228px}.session-stats{gap:10px}.session-head{font-size:11px}.under-card{gap:10px;flex-wrap:wrap}.rating{flex:1}.rating .fc-button{flex:1;min-width:100px}.key-help{display:none}.card-footer{font-size:10px}.fc-button{padding:9px 12px}.answer-copy{font-size:21px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
 /* Physical two-sided card. Both faces share a grid cell so long answers size it. */
 .flashcard {perspective:1600px;overflow:visible;padding:0;border:0;background:none!important;box-shadow:none!important;touch-action:pan-y;cursor:pointer;min-height:0}
@@ -83,10 +81,6 @@
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to flashcards</a>
-<header class="preview-header"><div class="container">
-<div class="brand"><span class="brand-mark"><span class="logo" aria-hidden="true"></span></span><span class="brand-text"><span class="brand-name">WilmU Corner</span><span class="brand-sub">Study Library</span></span></div>
-<div class="header-tools"><button type="button" class="fc-button" id="theme" aria-label="Switch to light theme">Light mode</button></div>
-</div></header>
 <main id="main" class="container fc-shell">
 <div class="breadcrumbs"><span>Study library</span><span aria-hidden="true">/</span><span id="subject"></span><span aria-hidden="true">/</span><span>Flashcards</span></div>
 <div class="fc-heading"><div><span class="eyebrow">The art of recall</span><h1 id="deck-title"></h1><p>One question. A moment to think. A little more clarity.</p></div><img class="heading-seal" src="../../assets/statues/apollo.webp" alt="Apollo in ivory marble, lapis and gold"></div>
@@ -301,7 +295,6 @@
   card.addEventListener('keydown', e => {if (e.target === card && (e.code === 'Space' || e.key === 'Enter')) {e.preventDefault(); e.stopPropagation(); reveal();}});
   $('reveal').addEventListener('click', reveal); $('shuffle').addEventListener('click', shuffle); $('again').addEventListener('click', () => rate('again')); $('known').addEventListener('click', () => rate('known'));
   $('previous').addEventListener('click', () => move(-1)); $('next').addEventListener('click', () => move(1));
-  $('theme').addEventListener('click', () => {const light = document.documentElement.dataset.theme !== 'light'; document.documentElement.dataset.theme = light ? 'light' : 'dark'; put('theme', light ? 'Dark mode' : 'Light mode'); $('theme').setAttribute('aria-label',light ? 'Switch to dark theme' : 'Switch to light theme');});
   document.addEventListener('keydown', e => {
     if (e.altKey || e.ctrlKey || e.metaKey || e.target.matches('input,textarea,select,[contenteditable]')) return;
     if (e.code === 'Space' && !complete && e.target === document.body) {e.preventDefault();reveal();}
