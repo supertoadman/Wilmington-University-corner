@@ -1216,3 +1216,34 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
   .reader { border: 0; box-shadow: none; padding: 0; max-width: none; }
   .table-wrap { overflow: visible; border: 0; }
 }
+
+/* ---------- Admin editor (/admin/, owner only) ---------- */
+.field input[type=password] {
+  width: 100%; font: inherit; font-size: 16px; color: var(--text); background: var(--bg); border: 1px solid var(--border-strong);
+  border-radius: 11px; padding: 11px 13px; min-height: 46px; transition: border-color .15s, box-shadow .15s;
+}
+.admin-head { padding-bottom: 8px; }
+.admin { max-width: 880px; padding-bottom: 40px; }
+.admin-signin { display: grid; gap: 14px; max-width: 560px; }
+.admin-signin legend { margin-bottom: 0; }
+.admin-signin .field-hint { margin: 0; font-size: 14px; line-height: 1.5; }
+.admin-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+.admin-error { margin: 0; color: #c2410c; font-size: 14px; }
+.admin-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-bottom: 16px; }
+.admin-who { flex: 1; min-width: 0; color: var(--text-2); font-size: 14px; }
+.admin-loading { display: flex; align-items: center; gap: 12px; color: var(--muted); }
+.notice.is-error { background: color-mix(in srgb, #c2410c 10%, var(--surface)); border-color: color-mix(in srgb, #c2410c 35%, transparent); }
+.admin-subject { margin-bottom: 18px; }
+.admin-doc { display: grid; gap: 12px; padding: 18px 0; border-top: 1px solid var(--border); }
+.admin-doc:first-of-type { border-top: 0; padding-top: 0; }
+.admin-doc:last-child { padding-bottom: 0; }
+.admin-file { margin: 0; font: 500 12.5px/1.4 var(--font-mono); color: var(--muted); overflow-wrap: anywhere; }
+.field .is-changed { border-color: var(--gold); box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 16%, transparent); }
+.admin-save {
+  position: sticky; bottom: 12px; z-index: 5; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 8px;
+  padding: 12px 14px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); box-shadow: var(--shadow);
+}
+.admin-count { flex: 1; min-width: 140px; color: var(--text-2); font-size: 14px; }
+.admin-save .is-busy { opacity: .7; }
+@media (max-width: 820px) { .admin-save { bottom: calc(var(--tabbar-h) + env(safe-area-inset-bottom) + 10px); } }
+@media (max-width: 640px) { .admin-save { gap: 8px; padding: 10px 12px; } .admin-count { flex-basis: 100%; } .admin-save .btn { flex: 1; } }

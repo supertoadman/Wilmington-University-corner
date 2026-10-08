@@ -730,6 +730,56 @@ export function notFound(ctx) {
   return layout(ctx, { root, title: 'Not found', body });
 }
 
+/**
+ * Owner-only editor for document titles and descriptions, at /admin/. Unlinked and noindexed.
+ * It holds no secrets: assets/admin.js signs in with the owner's GitHub token and commits
+ * edits to content/<Subject>/subject.json through the GitHub API, so GitHub decides who can edit.
+ */
+export function admin(ctx) {
+  const root = '../';
+  const repo = new URL(ctx.config.repo).pathname.replace(/^\/|\/$/g, '');
+  const body = `
+<section class="page-head container admin-head">
+  <h1 class="page-title">Edit documents</h1>
+  <p class="page-lede">Change the titles and descriptions shown on the site. Saving commits the change to GitHub, and the site updates about two minutes later.</p>
+</section>
+<section class="container admin" data-admin data-repo="${esc(repo)}">
+  <noscript><div class="notice">${icon('info')}<div><strong>JavaScript is required.</strong><p>Turn it on to use the editor.</p></div></div></noscript>
+
+  <form class="form-card admin-signin" data-signin hidden>
+    <legend>${icon('lock')} Sign in</legend>
+    <p class="field-hint">Paste a GitHub fine-grained personal access token for this repository with <strong>Contents: Read and write</strong>. It's sent only to GitHub and is forgotten when you close this tab. Your browser's password manager can save it for you.</p>
+    <input type="text" name="username" value="GitHub token" autocomplete="username" hidden>
+    <label class="field">
+      <span class="field-label">GitHub token</span>
+      <input type="password" name="token" required autocomplete="current-password" spellcheck="false" autocapitalize="off">
+    </label>
+    <p class="admin-error" role="alert" data-signin-error hidden></p>
+    <div class="admin-actions">
+      <button class="btn btn-primary" type="submit" data-signin-submit>${icon('shield-check')} Sign in</button>
+      <a class="btn btn-ghost" href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">${icon('external-link')} Create a token</a>
+    </div>
+  </form>
+
+  <div class="admin-editor" data-editor hidden>
+    <div class="admin-bar">
+      <span class="admin-who" data-who></span>
+      <button class="btn btn-ghost" type="button" data-reload>Reload</button>
+      <button class="btn btn-ghost" type="button" data-signout>Sign out</button>
+    </div>
+    <div class="notice" role="status" data-status hidden></div>
+    <div data-subjects><p class="admin-loading"><span class="spinner"></span> Loading documents…</p></div>
+    <div class="admin-save" data-savebar>
+      <span class="admin-count" data-count>No changes</span>
+      <button class="btn btn-ghost" type="button" data-discard disabled>Discard</button>
+      <button class="btn btn-primary" type="button" data-save disabled>${icon('circle-check')} Save changes</button>
+    </div>
+  </div>
+</section>
+<script type="module" src="${root}assets/admin.js"></script>`;
+  return layout(ctx, { root, title: 'Edit documents', body, canonical: 'admin/', bodyClass: 'is-admin', extraHead: '<meta name="robots" content="noindex, nofollow">' });
+}
+
 export function openapi(config) {
   const ref = (n) => ({ $ref: `#/components/schemas/${n}` });
   const json = (schema) => ({ description: 'OK', content: { 'application/json': { schema } } });

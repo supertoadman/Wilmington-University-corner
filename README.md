@@ -41,6 +41,16 @@ content/
 
 The document types are `outline`, `rule-chart`, `flowcharts`, `flashcards`, `practice`, and `document`. To add a new type, add one line to `TYPES` in `scripts/build.mjs`. Icons come from the site's own set in `src/icons/` (drawn by `scripts/icons/glyphs.mjs`; run `npm run icons` after adding or changing one). Any other [Lucide](https://lucide.dev/icons) name still works and shows as an outline.
 
+## Editing titles and descriptions online
+
+Go to `/admin` on the live site (it isn't linked anywhere) to edit any document's title and description from a browser or phone. Sign in with a GitHub [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new):
+
+1. **Repository access:** Only select repositories, then choose this repository.
+2. **Permissions:** Repository permissions, then **Contents: Read and write**.
+3. Set an expiration date. When it expires, create a new token the same way.
+
+Saving commits the change to `subject.json` (or to the document's `.meta.json` sidecar, if that sets the field) and the site redeploys automatically. The page holds no secrets; only someone with a token that can write to this repository can save. The token is kept for the current tab only. To revoke access, delete the token on GitHub.
+
 ## Contributions from other people
 
 Anyone can share their work through the site's **Share your work** page, without an account. Each submission becomes a pull request that you approve (merge) or reject (close). Automated safety checks run on every submission. Try it locally with `npm run dev` and the review queue at `/__review/`.

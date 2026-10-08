@@ -369,6 +369,7 @@ write('index.html', T.home(ctx));
 write('library/index.html', T.library(ctx));
 write('contribute/index.html', T.contribute(ctx));
 write('404.html', T.notFound(ctx));
+write('admin/index.html', T.admin(ctx)); // owner-only editor; deliberately left out of the sitemap
 for (const s of subjects) write(P.subject(s) + 'index.html', T.subjectPage(ctx, s));
 for (const d of docs) write(P.doc(d) + 'index.html', T.docPage(ctx, d));
 
