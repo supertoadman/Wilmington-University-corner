@@ -68,9 +68,9 @@
       "slug": "first-amendment-case-repetition",
       "title": "First Amendment Case Repetition",
       "type": "practice",
-      "description": "272 quick questions that drill all 34 cases in Chapters 1–6 by their full names, eight per case. Name the case from its facts, its rule, or a key line, then recall its holding, its reasoning, its vote and author, and the cases it overruled or set up. Every question carries an illustration of the case; when the picture would give the answer away, it stays blurred until you answer. Filter by chapter, question type, or a single case.",
-      "tags": ["First Amendment", "MCQ", "cases", "repetition", "Chapters 1–6"],
-      "questions": 272,
+      "description": "349 quick questions for Chapters 1–6. 236 drill all 34 cases by their full names: name the case from its facts, its rule, or a key line, then recall its holding, its reasoning, and the cases it overruled or set up. 113 more drill the core concepts and elements across 23 topics, from strict scrutiny and the ways a law fails neutrality to the Brandenburg elements, Counterman’s recklessness standard, and the Miller prongs. Every question carries an illustration; when the picture would give the answer away, it stays blurred until you answer. Filter by chapter, question type, or a single case or topic.",
+      "tags": ["First Amendment", "MCQ", "cases", "concepts", "repetition", "Chapters 1–6"],
+      "questions": 349,
       "order": 8
     }
   }
