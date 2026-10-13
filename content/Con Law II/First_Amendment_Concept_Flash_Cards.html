@@ -77,6 +77,15 @@
 .completion {cursor:default}
 @media(max-width:520px){.card-plane{padding:24px;min-height:430px}.rating{flex:auto}.rating .fc-button{flex:0 1 145px}.under-card{justify-content:center}.under-card>#reveal{flex:1}.under-card>#next{order:0}.rating{order:1}.gesture-help{font-size:10px}}
 @media(prefers-reduced-motion:reduce){.card-rotor{transition:none}}
+/* Scroll mode: every card in one scrolling list, each flips on its own. */
+.scroll-list,.scroll-help {display:none}
+.is-scrolling .scroll-list {display:grid;gap:22px}
+.is-scrolling .scroll-help {display:block;text-align:center;color:var(--muted);font-size:12px;margin:0 0 18px}
+.is-scrolling #flashcard,.is-scrolling .under-card,.is-scrolling .gesture-help,.is-scrolling .key-help,.is-scrolling .progress-track,.is-scrolling .session-stats {display:none!important}
+.scroll-list .card-plane {min-height:290px}
+.scroll-list .card-content {margin:30px auto 24px;min-height:0}
+.scroll-card:focus-visible {outline:2px solid var(--gold);outline-offset:4px;border-radius:20px}
+@media(max-width:520px){.session-head{flex-wrap:wrap;row-gap:8px}.scroll-list .card-plane{min-height:260px}}
 </style>
 </head>
 <body>
@@ -87,7 +96,7 @@
 <div class="study-layout">
 <aside class="deck-panel" aria-label="Deck contents"><div class="deck-intro"><span class="eyebrow">Your study deck</span><h2 id="topic"></h2><p id="deck-description"></p></div><nav class="deck-list" id="deck-list" aria-label="Choose a card"></nav><p class="deck-note">Recall first. Reveal when ready.<br>Keep the difficult ones for another pass.</p></aside>
 <section aria-label="Study session">
-<div class="session-head"><span><span id="position"></span><button type="button" class="shuffle-button" id="shuffle" aria-pressed="false">Shuffle <span aria-hidden="true">⤮</span></button></span><div class="session-stats"><span><strong id="known-count">0</strong> known</span><span><strong id="review-count">0</strong> to revisit</span></div></div>
+<div class="session-head"><span><span id="position"></span><button type="button" class="shuffle-button" id="shuffle" aria-pressed="false">Shuffle <span aria-hidden="true">⤮</span></button><button type="button" class="shuffle-button" id="scroll-mode" aria-pressed="false">Scroll mode <span aria-hidden="true">↕</span></button></span><div class="session-stats"><span><strong id="known-count">0</strong> known</span><span><strong id="review-count">0</strong> to revisit</span></div></div>
 <div class="progress-track" role="progressbar" aria-label="Cards reviewed" aria-valuemin="0" aria-valuenow="0" id="progress"><div class="progress-fill" id="progress-fill"></div></div>
 <article class="flashcard" id="flashcard" aria-label="Flashcard"><div id="card-face"><div class="card-meta"><span id="card-label"></span><span class="card-type" id="card-side">Question</span></div><div class="card-content" id="card-content"></div><div class="card-footer"><span class="card-signature"><img src="../../assets/statues/apollo.webp" alt=""><span id="card-id"></span></span><a href="first-amendment-outline.pdf" target="_blank" rel="noopener" id="source">Open source notes ↗</a></div></div><div id="completion" class="completion" hidden></div></article>
 <div class="under-card"><button type="button" class="fc-button" id="previous" aria-label="Previous card">← Previous</button><button type="button" class="fc-button primary" id="reveal" aria-controls="card-content" aria-expanded="false">Reveal answer <span aria-hidden="true">↗</span></button><div class="rating" id="rating" hidden><button type="button" class="fc-button" id="again">Revisit <span aria-hidden="true">↺</span></button><button type="button" class="fc-button primary" id="known">Got it <span aria-hidden="true">✓</span></button></div><button type="button" class="fc-button" id="next" aria-label="Next card">Next →</button></div>
@@ -200,7 +209,7 @@
       const title = document.createElement('span'); title.textContent = card.title;
       const status = document.createElement('span'); status.className = 'deck-status'; status.textContent = results.get(card.id) === 'known' ? '✓' : results.has(card.id) ? '↺' : '·';
       status.setAttribute('aria-label', results.get(card.id) === 'known' ? 'Known' : results.has(card.id) ? 'Revisit' : 'Unreviewed');
-      button.append(n,title,status); button.addEventListener('click', () => { index = i; complete = false; render(); announce(card.question); });
+      button.append(n,title,status); button.addEventListener('click', () => { if (scrolling) { jumpTo(card.id); return; } index = i; complete = false; render(); announce(card.question); });
       $('deck-list').append(button);
     });
   }
@@ -258,7 +267,7 @@
     else { const keep = new Set(queue.map(c => c.id)); queue = deck.cards.filter(c => keep.has(c.id)); }
     $('shuffle').setAttribute('aria-pressed', String(shuffled));
     $('shuffle').firstChild.textContent = shuffled ? 'Shuffled ' : 'Shuffle ';
-    index = 0; render(); announce((shuffled ? 'Cards shuffled. ' : 'Cards back in order. ') + queue[0].question);
+    index = 0; render(); if (scrolling) showList(); announce((shuffled ? 'Cards shuffled. ' : 'Cards back in order. ') + queue[0].question);
   }
   async function move(delta) {
     if (complete || navigating) return;
@@ -271,6 +280,64 @@
       announce(queue[index].question);
     } finally { navigating = false; }
   }
+  const section = card.closest('section');
+  const help = document.createElement('p'); help.className = 'scroll-help'; help.id = 'scroll-help';
+  help.textContent = 'Every card, in one list. Tap any card to flip it.';
+  const list = document.createElement('div'); list.className = 'scroll-list'; list.setAttribute('aria-label','All cards');
+  instructions.after(help,list);
+  let scrolling = false;
+  function fillPlane(plane, c, answerSide) {
+    plane.hidden = false; plane.removeAttribute('id'); plane.querySelectorAll('[id]').forEach(el => el.removeAttribute('id'));
+    plane.querySelector('.card-meta > span').textContent = c.label;
+    plane.querySelector('.card-type').textContent = answerSide ? 'Answer' : 'Question';
+    plane.querySelector('.card-signature > span').textContent = c.source;
+    const h = document.createElement('h2'); h.textContent = answerSide ? c.answer : c.question;
+    if (!answerSide) { plane.querySelector('.card-content').replaceChildren(h); return plane; }
+    h.className = 'answer-copy';
+    const note = document.createElement('p'); note.className = 'answer-note'; note.textContent = c.note;
+    plane.querySelector('.card-content').replaceChildren(h,note);
+    return plane;
+  }
+  function setFlip(item, flipped) {
+    const r = item.firstChild, [f, b] = r.children;
+    r.classList.toggle('is-flipped',flipped);
+    f.inert = flipped; b.inert = !flipped;
+    f.setAttribute('aria-hidden',String(flipped)); b.setAttribute('aria-hidden',String(!flipped));
+    item.setAttribute('aria-label','Card ' + item.dataset.n + ', ' + (flipped ? 'answer. Activate to show question.' : 'question. Activate to reveal answer.'));
+  }
+  function showList() {
+    const inQueue = new Set(queue.map(c => c.id));
+    const cards = [...queue, ...deck.cards.filter(c => !inQueue.has(c.id))];
+    list.replaceChildren(...cards.map((c, i) => {
+      const item = document.createElement('article'); item.className = 'flashcard scroll-card'; item.tabIndex = 0;
+      item.dataset.id = c.id; item.dataset.n = i + 1; item.setAttribute('aria-describedby','scroll-help');
+      const r = document.createElement('div'); r.className = 'card-rotor';
+      r.append(fillPlane(front.cloneNode(true),c,false), fillPlane(back.cloneNode(true),c,true));
+      item.append(r); setFlip(item,false);
+      return item;
+    }));
+    put('position','All ' + cards.length + ' cards');
+  }
+  function jumpTo(id) {
+    const item = [...list.children].find(el => el.dataset.id === id); if (!item) return;
+    item.scrollIntoView({behavior:reducedMotion() ? 'auto' : 'smooth',block:'center'}); item.focus({preventScroll:true});
+  }
+  function toggleScroll() {
+    if (navigating) return;
+    scrolling = !scrolling;
+    section.classList.toggle('is-scrolling',scrolling);
+    $('scroll-mode').setAttribute('aria-pressed',String(scrolling));
+    if (scrolling) { showList(); menu(); announce('Scroll mode. All ' + deck.cards.length + ' cards loaded. Activate any card to flip it.'); }
+    else { list.replaceChildren(); render(); announce('Single-card mode. ' + queue[index].question); }
+  }
+  list.addEventListener('click', e => {
+    const item = e.target.closest('.scroll-card');
+    if (item && !e.target.closest('a,button') && !window.getSelection()?.toString()) setFlip(item,!item.firstChild.classList.contains('is-flipped'));
+  });
+  list.addEventListener('keydown', e => {
+    if (e.target.classList.contains('scroll-card') && (e.code === 'Space' || e.key === 'Enter')) {e.preventDefault(); e.stopPropagation(); setFlip(e.target,!e.target.firstChild.classList.contains('is-flipped'));}
+  });
+  $('scroll-mode').addEventListener('click', toggleScroll);
   let pointer = null, suppressClickUntil = 0;
   card.addEventListener('pointerdown', e => {
     if (!e.isPrimary || e.button !== 0 || complete || navigating || e.target.closest('a,button')) return;
@@ -294,7 +361,7 @@
   $('reveal').addEventListener('click', reveal); $('shuffle').addEventListener('click', shuffle); $('again').addEventListener('click', () => rate('again')); $('known').addEventListener('click', () => rate('known'));
   $('previous').addEventListener('click', () => move(-1)); $('next').addEventListener('click', () => move(1));
   document.addEventListener('keydown', e => {
-    if (e.altKey || e.ctrlKey || e.metaKey || e.target.matches('input,textarea,select,[contenteditable]')) return;
+    if (scrolling || e.altKey || e.ctrlKey || e.metaKey || e.target.matches('input,textarea,select,[contenteditable]')) return;
     if (e.code === 'Space' && !complete && e.target === document.body) {e.preventDefault();reveal();}
     else if (e.key === 'ArrowLeft') {e.preventDefault();move(-1);}
     else if (e.key === 'ArrowRight') {e.preventDefault();move(1);}
