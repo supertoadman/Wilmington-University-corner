@@ -81,6 +81,15 @@
       "tags": ["First Amendment", "MCQ", "cases", "concepts", "application", "repetition", "Chapters 1–6"],
       "questions": 239,
       "order": 9
+    },
+    "First_Amendment_Essay_Questions.html": {
+      "slug": "first-amendment-essay-questions",
+      "title": "First Amendment Essay Questions",
+      "type": "practice",
+      "description": "15 bar-style essay questions covering every case and concept in Chapters 1–6, organized by topic. Each essay sets out new facts with several questions, from a compelled state creed and a noise ordinance aimed at a night ceremony to a leaked convoy memo, threatening messages, and an AI companion app. Open the model answer for a full-credit response worked issue by issue, the cases it uses and why, the key concepts explained, and a 10-point scoring guide. Includes a case index and a coverage map of all 113 outline items.",
+      "tags": ["First Amendment", "essays", "bar prep", "model answers", "Chapters 1–6"],
+      "questions": 15,
+      "order": 10
     }
   }
 }
