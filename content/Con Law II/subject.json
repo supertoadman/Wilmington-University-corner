@@ -72,6 +72,15 @@
       "tags": ["First Amendment", "MCQ", "cases", "concepts", "repetition", "Chapters 1–6"],
       "questions": 349,
       "order": 8
+    },
+    "First_Amendment_Case_Repetition_Vol_2.html": {
+      "slug": "first-amendment-case-repetition-vol-2",
+      "title": "First Amendment Case Repetition, Volume 2",
+      "type": "practice",
+      "description": "239 new questions on the same 34 cases and 23 topics as Volume 1, asked from different angles. Name each case from a new detail, then recall its holding, its reasoning, and the doctrine around it, plus 45 questions on core concepts and elements. 58 application questions put the rules to new fact patterns and explain why every wrong choice is wrong. Every question carries an illustration; when the picture would give the answer away, it stays blurred until you answer. Filter by chapter, question type, or a single case or topic.",
+      "tags": ["First Amendment", "MCQ", "cases", "concepts", "application", "repetition", "Chapters 1–6"],
+      "questions": 239,
+      "order": 9
     }
   }
 }
