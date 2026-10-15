@@ -1,0 +1,47 @@
+{
+  "id": "evidence/evidence-rule-flowcharts",
+  "subject": "evidence",
+  "subjectTitle": "Evidence",
+  "slug": "evidence-rule-flowcharts",
+  "title": "Evidence Flowcharts",
+  "description": "Interactive decision charts for Weeks 1–5. Zoom and pan around each chart, walk through a rule one step at a time, and search all nine charts. Covers relevance (401–403), the policy rules (407–411), character evidence, 404(b), impeachment, 609 convictions, the 412 rape shield, and 606(b) jury secrecy.",
+  "type": "flowcharts",
+  "typeLabel": "Flowcharts",
+  "format": "HTML",
+  "mimeType": "text/html",
+  "originalFilename": "Evidence_Rule_Flowcharts.html",
+  "tags": [
+    "FRE",
+    "interactive",
+    "401",
+    "403",
+    "404(b)",
+    "609",
+    "412",
+    "606(b)"
+  ],
+  "questions": null,
+  "contributor": null,
+  "sizeBytes": 524498,
+  "updated": "2026-10-07T12:20:29.000Z",
+  "headings": [
+    "Rule Flowcharts",
+    "Big picture",
+    "606(b) Jury secrecy",
+    "401-403 Relevance",
+    "407-411 Policy rules",
+    "Character: the box",
+    "404(b) Other acts",
+    "Impeachment",
+    "609 Convictions",
+    "412 Rape shield"
+  ],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rule-flowcharts/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-flowcharts.html",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-flowcharts.html",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-flowcharts.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-flowcharts.json"
+  },
+  "text": "Evidence · Weeks 1–5\n\n# Rule Flowcharts\n\n1\n\nWalk through\nTap any box to dive in\n\n100%\n\n## Big picture\nStart here. Evidence must be relevant (401), then survive any rule that excludes it (402), then the 403 balance. The four exclusionary families are the rest of the course; blue dashed arrows show where one rule hands off to another.\n\n## 606(b) Jury secrecy\nWhy we screen evidence at all: once the jury has deliberated, its verdict is almost never reopened. Walk down the exceptions in order.\n\n## 401-403 Relevance\nThe gate every item passes through: probative + material, conditional relevance, then the 403 safety valve and limiting instructions.\n\n## 407-411 Policy rules\nFive rules that bar socially useful conduct for one specific use. Read each column down. 410 is the outlier.\n\n## Character: the box\nThe forbidden inference (trait -> conduct on this occasion) and the genuine exceptions that pass THROUGH it, plus how character may be proved.\n\n## 404(b) Other acts\nRoutes AROUND the box: other acts offered for a non-character purpose, and the three steps they must still clear.\n\n## Impeachment\nName the attack first: error, lying, or liar. That decides which rules apply, whether extrinsic evidence is allowed, and whether rehabilitation is allowed.\n\n## 609 Convictions\nAsk the questions in order. The ranking table (top left) runs from most to least permissive.\n\n## 412 Rape shield\nThe shield, its three criminal exceptions, the civil balancing test, and the mandatory procedure."
+}

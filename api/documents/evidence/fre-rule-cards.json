@@ -1,0 +1,32 @@
+{
+  "id": "evidence/fre-rule-cards",
+  "subject": "evidence",
+  "subjectTitle": "Evidence",
+  "slug": "fre-rule-cards",
+  "title": "FRE Rule Cards",
+  "description": "Flashcards for the Federal Rules of Evidence in Weeks 1–5. Pick your topics, flip each card, and rate yourself with a tap or a swipe. Missed cards come back sooner, and your mastery is saved in your browser.",
+  "type": "flashcards",
+  "typeLabel": "Flashcards",
+  "format": "HTML",
+  "mimeType": "text/html",
+  "originalFilename": "FRE_Rule_Cards.html",
+  "tags": [
+    "FRE",
+    "flashcards",
+    "spaced review",
+    "swipe"
+  ],
+  "questions": null,
+  "contributor": null,
+  "sizeBytes": 141648,
+  "updated": "2026-10-05T00:38:43.000Z",
+  "headings": [],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/fre-rule-cards/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/fre-rule-cards.html",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/fre-rule-cards.html",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/fre-rule-cards.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/fre-rule-cards.json"
+  },
+  "text": ""
+}

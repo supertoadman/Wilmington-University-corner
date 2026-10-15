@@ -1,0 +1,35 @@
+{
+  "id": "evidence/evidence-mock-midterm",
+  "subject": "evidence",
+  "subjectTitle": "Evidence",
+  "slug": "evidence-mock-midterm",
+  "title": "Evidence Mock Midterm",
+  "description": "A timed practice exam for the night before the midterm: 60 new bar-style questions on Classes 1–10, in four 15-question parts that each cover every topic at the real exam’s 30-minute pace. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+  "type": "practice",
+  "typeLabel": "Practice Questions",
+  "format": "HTML",
+  "mimeType": "text/html",
+  "originalFilename": "Evidence_Mock_Midterm.html",
+  "tags": [
+    "MCQ",
+    "mock exam",
+    "timed",
+    "bar prep",
+    "Classes 1–10"
+  ],
+  "questions": 60,
+  "contributor": null,
+  "sizeBytes": 156553,
+  "updated": "2026-10-05T23:54:11.000Z",
+  "headings": [
+    "Evidence Mock Midterm"
+  ],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-mock-midterm/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm.html",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm.html",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm.json"
+  },
+  "text": "Evidence · Classes 1–10\n\n# Evidence Mock Midterm\n\nSixty new bar-style questions on everything tested in Classes 1–10: the readings, the rule chart, and Prof. Hornzell's slides, problems, and clips. The exam comes in four 15-question parts, each with the real midterm's 30-minute clock and a question on every major topic, so you can take one part or all four. Nothing is scored until you submit. Then you get your results by topic, a list of rules to review tonight, and an explanation for every answer choice."
+}

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://supertoadman.github.io/Wilmington-University-corner/sitemap.xml

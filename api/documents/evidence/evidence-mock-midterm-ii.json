@@ -1,0 +1,35 @@
+{
+  "id": "evidence/evidence-mock-midterm-ii",
+  "subject": "evidence",
+  "subjectTitle": "Evidence",
+  "slug": "evidence-mock-midterm-ii",
+  "title": "Evidence Mock Midterm II",
+  "description": "A second timed practice exam: 60 more new bar-style questions on Classes 1–10, with no fact patterns repeated from the first. It has the same four 15-question parts, each covering every topic at the real exam’s 30-minute pace, and draws on textbook problems the first exam didn’t use. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+  "type": "practice",
+  "typeLabel": "Practice Questions",
+  "format": "HTML",
+  "mimeType": "text/html",
+  "originalFilename": "Evidence_Mock_Midterm_II.html",
+  "tags": [
+    "MCQ",
+    "mock exam",
+    "timed",
+    "bar prep",
+    "Classes 1–10"
+  ],
+  "questions": 60,
+  "contributor": null,
+  "sizeBytes": 154040,
+  "updated": "2026-10-06T11:01:35.000Z",
+  "headings": [
+    "Evidence Mock Midterm II"
+  ],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-mock-midterm-ii/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm-ii.html",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm-ii.html",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm-ii.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm-ii.json"
+  },
+  "text": "Evidence · Classes 1–10\n\n# Evidence Mock Midterm II\n\nA second full-length practice exam: sixty new bar-style questions on everything tested in Classes 1–10, with no fact pattern repeated from the first mock midterm. They draw on the textbook problems, the rule chart, and Prof. Hornzell's slides and clips. The exam comes in four 15-question parts, each with the real midterm's 30-minute clock and a question on every major topic, so you can take one part or all four. Nothing is scored until you submit. Then you get your results by topic, a list of rules to review tonight, and an explanation for every answer choice."
+}

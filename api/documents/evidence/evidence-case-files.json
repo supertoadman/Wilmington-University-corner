@@ -1,0 +1,34 @@
+{
+  "id": "evidence/evidence-case-files",
+  "subject": "evidence",
+  "subjectTitle": "Evidence",
+  "slug": "evidence-case-files",
+  "title": "Evidence BAR style questions 1",
+  "description": "Bar-level application questions for Weeks 1–5. Each question sets two or three rules against each other and turns on a single fact. Every answer choice has its own explanation, and the set includes one-fact variations and a coverage map.",
+  "type": "practice",
+  "typeLabel": "Practice Questions",
+  "format": "HTML",
+  "mimeType": "text/html",
+  "originalFilename": "Evidence_MCQ_Application (strict).html",
+  "tags": [
+    "MCQ",
+    "application",
+    "bar prep",
+    "variations"
+  ],
+  "questions": null,
+  "contributor": null,
+  "sizeBytes": 123713,
+  "updated": "2026-10-05T16:16:42.000Z",
+  "headings": [
+    "Evidence Case Files"
+  ],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-case-files/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files.html",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files.html",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files.json"
+  },
+  "text": "Evidence Case Files\n\n# Evidence Case Files\n\nBar-depth application questions for Weeks 1–5. Each stem sets two or three rules against each other, so the answer turns on one fact: who the witness is, what is actually disputed, whose statement it was, or who opened the door. After you answer, every option shows its own rationale. Variations change one fact in an earlier question and ask whether the ruling changes.\n\n0 / 0\n\nShuffle answers\nShuffle questions\nRetry missed\nReset\n\nBothQuestionsVariations\n\nCoverage map\n\nEvery rule, exception, and case from the Weeks 1–5 chart and readings, with the questions that test it. Tap a number to jump to it."
+}

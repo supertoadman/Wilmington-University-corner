@@ -1,0 +1,36 @@
+{
+  "id": "con-law-ii/first-amendment-mock-exam",
+  "subject": "con-law-ii",
+  "subjectTitle": "Con Law II",
+  "slug": "first-amendment-mock-exam",
+  "title": "First Amendment Mock Exam",
+  "description": "A timed practice exam covering everything in Chapters 1–6: 60 bar-style questions with new facts, in four 15-question parts that each cover every topic at two minutes a question. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+  "type": "practice",
+  "typeLabel": "Practice Questions",
+  "format": "HTML",
+  "mimeType": "text/html",
+  "originalFilename": "First_Amendment_Mock_Exam.html",
+  "tags": [
+    "First Amendment",
+    "MCQ",
+    "mock exam",
+    "timed",
+    "bar prep",
+    "Chapters 1–6"
+  ],
+  "questions": 60,
+  "contributor": null,
+  "sizeBytes": 158840,
+  "updated": "2026-10-08T19:34:05.000Z",
+  "headings": [
+    "First Amendment Mock Exam"
+  ],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-mock-exam/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-mock-exam.html",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-mock-exam.html",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-mock-exam.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-mock-exam.json"
+  },
+  "text": "Con Law II · Chapters 1–6\n\n# First Amendment Mock Exam\n\nA full-length practice exam: sixty bar-style questions covering everything in the Chapters 1–6 outline, from Barnette and the Religion Clauses through incitement, prior restraints, true threats, and immoral speech, including every stretch exercise. Every question has new facts. The exam comes in four 15-question parts, each with a 30-minute clock and a question on every major topic, so you can take one part or all four. Nothing is scored until you submit. Then you get your results by topic, a list of rules to review, and an explanation for every answer choice."
+}
