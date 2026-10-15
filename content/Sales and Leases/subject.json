@@ -13,6 +13,15 @@
       "tags": ["UCC Article 2", "outline", "sales", "warranties", "Weeks 1–8"],
       "order": 1
     },
+    "Sales_and_Leases_Bar_Questions.html": {
+      "slug": "sales-and-leases-bar-questions",
+      "title": "Sales and Leases Bar Questions",
+      "type": "practice",
+      "description": "272 bar-style multiple-choice questions covering every rule, case, and assigned problem in the Weeks 1–8 outline, across 18 topics from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, repudiation, and excuse. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "tags": ["UCC Article 2", "MCQ", "bar prep", "application", "Weeks 1–8"],
+      "questions": 272,
+      "order": 2
+    },
     "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
       "publish": false,
       "description": "Full-length source outline for Weeks 1–8, kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
