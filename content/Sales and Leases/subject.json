@@ -1,0 +1,25 @@
+{
+  "title": "Sales and Leases",
+  "description": "Sales and Leases of Goods under UCC Articles 1 and 2, Weeks 1–8 (Sepinuck, Chapters 1–6). Covers which law governs, formation and the battle of the forms, the statute of frauds, warranties and disclaimers, gap fillers, delivery and risk of loss, remedies, the parol evidence rule, assignment and delegation, repudiation, and excuse.",
+  "icon": "package",
+  "accent": "#3f6b4a",
+  "order": 4,
+  "documents": {
+    "Sales_and_Leases_Week10_Condensed_Outline.docx": {
+      "slug": "sales-and-leases-outline",
+      "title": "Sales and Leases Outline",
+      "type": "outline",
+      "description": "Condensed outline of Weeks 1–8 for the Week 10 assessment. Starts with an exam game plan that runs every fact pattern from governing law through formation, enforceability, terms, modification, and performance. Then 16 sections cover the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse, with worked problems and a rapid review.",
+      "tags": ["UCC Article 2", "outline", "sales", "warranties", "Weeks 1–8"],
+      "order": 1
+    },
+    "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
+      "publish": false,
+      "description": "Full-length source outline for Weeks 1–8, kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
+    },
+    "Sales_and_Leases_Week10_Comprehensive_Outline.pdf": {
+      "publish": false,
+      "description": "PDF copy of the comprehensive outline, kept off the public site."
+    }
+  }
+}

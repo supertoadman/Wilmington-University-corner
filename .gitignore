@@ -6,3 +6,6 @@ Thumbs.db
 ~$*
 
 .submissions/
+
+# Local-only source material for AI use (not published or committed)
+content/Sales and Leases/*Comprehensive_Outline*
