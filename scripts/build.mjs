@@ -82,6 +82,43 @@ function addHeadingIds(html) {
   return { html: out, toc };
 }
 
+/**
+ * Opt-in (`"theme": "structured"` in subject.json) for Word outlines that fake their layout with
+ * one-cell tables: the title box becomes a masthead, "I. Title    WEEK 1" boxes become real <h2>
+ * sections (so the Contents panel works), "RULE / CASE / ROADMAP / EXAM TIPS   …" boxes become
+ * labelled callouts, and bold-only paragraphs between them become <h3> subheadings.
+ */
+const CALLOUT_KINDS = { RULE: 'rule', CASE: 'case', ROADMAP: 'roadmap', 'EXAM TIPS': 'tips', TIP: 'tips', TIPS: 'tips', NOTE: 'note', TRAP: 'tips' };
+function structureOutline(html) {
+  let first = true;
+  const out = html.replace(/<table><tr><td>((?:(?!<\/?t(?:able|r|d)\b)[\s\S])*)<\/td><\/tr><\/table>/g, (whole, inner, offset) => {
+    const isFirst = first && offset === 0;
+    first = false;
+    if (!inner.trim()) return '';
+    const paras = inner.match(/<p>[\s\S]*?<\/p>/g) || [];
+    if (isFirst) {
+      const [title, subtitle, ...meta] = paras.map((p) => p.replace(/^<p>(?:<strong>)?|(?:<\/strong>)?<\/p>$/g, ''));
+      return `<header class="doc-masthead"><h1 class="doc-title">${title}</h1>${subtitle ? `<p class="doc-subtitle">${subtitle}</p>` : ''}${meta.map((m) => `<p class="doc-meta">${m}</p>`).join('')}</header>`;
+    }
+    const head = inner.match(/^<p><strong>([A-Z][A-Z ]*?)\s{2,}/);
+    if (head && CALLOUT_KINDS[head[1]]) {
+      const kind = CALLOUT_KINDS[head[1]];
+      let body = inner.replace(head[0], '<p><strong>').replace(/^<p><strong><\/strong>\s*/, '<p>');
+      // A first line that is only bold text is the callout's own title.
+      body = body.replace(/^<p><strong>([^<]*)<\/strong><\/p>/, '<p class="callout-title">$1</p>');
+      return `<aside class="callout callout-${kind}"><span class="callout-tag">${head[1].toLowerCase()}</span>${body}</aside>`;
+    }
+    const section = paras.length === 1 && inner.match(/^<p><strong>((?:[IVXLC]+\.|Part\b)[^<]*?)(?:\s{2,}(WEEKS? [^<]+))?<\/strong><\/p>$/);
+    if (section) {
+      return `<div class="section-band"><h2>${section[1].trim()}</h2>${section[2] ? `<span class="section-week">${section[2].trim().toLowerCase()}</span>` : ''}</div>`;
+    }
+    return whole;
+  });
+  // Bold-only paragraphs outside tables and callouts are subheadings.
+  return out.split(/(<table>[\s\S]*?<\/table>|<aside[\s\S]*?<\/aside>|<header[\s\S]*?<\/header>)/).map((part, i) =>
+    i % 2 ? part : part.replace(/<p><strong>([^<]+)<\/strong><\/p>/g, '<h3>$1</h3>')).join('');
+}
+
 /** Tag each table cell with its column heading (data-label) so phones can show rows as labelled cards. */
 function labelTableCells(html) {
   return html.replace(/<table>([\s\S]*?)<\/table>/g, (table, inner) => {
@@ -156,6 +193,7 @@ async function loadSubjects() {
         tags: dm.tags || [],
         questions: dm.questions ?? null,
         contributor: dm.contributor || null,
+        theme: dm.theme || null,
         order: dm.order ?? 999,
         size: raw.length,
         updated: lastUpdated(file),
@@ -168,7 +206,8 @@ async function loadSubjects() {
       if (ext === '.docx') {
         const styleMap = ["p[style-name='Title'] => h1.doc-title:fresh", "p[style-name='Subtitle'] => p.doc-subtitle:fresh"];
         const { value } = await mammoth.convertToHtml({ buffer: raw }, { styleMap });
-        const withIds = addHeadingIds(labelTableCells(value).replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>'));
+        const shaped = dm.theme === 'structured' ? structureOutline(value) : value;
+        const withIds = addHeadingIds(labelTableCells(shaped).replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>'));
         doc.html = withIds.html;
         doc.toc = withIds.toc;
         doc.text = htmlToText(value);

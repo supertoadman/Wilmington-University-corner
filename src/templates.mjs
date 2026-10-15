@@ -492,7 +492,7 @@ export function docPage(ctx, d) {
       <div class="vtoc-head"><span>Contents</span><button class="icon-btn" type="button" data-panel-close aria-label="Close contents">${icon('x')}</button></div>
       ${tocList}
     </aside>` : ''}
-    <div class="vscroll" data-scroll-root><article class="prose reader">${d.html}</article></div>`;
+    <div class="vscroll" data-scroll-root><article class="prose reader${d.theme ? ` prose-${esc(d.theme)}` : ''}">${d.html}</article></div>`;
   } else if (isFrame) {
     stage = `<div class="vframe-wrap"><div class="vloading" aria-hidden="true"><span class="spinner"></span>Loading ${esc(d.title)}…</div><iframe class="vframe" src="${fileUrl}" title="${esc(d.title)}" allow="fullscreen; clipboard-write"></iframe></div>`;
   } else {
