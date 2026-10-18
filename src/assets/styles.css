@@ -10,7 +10,7 @@
   --surface-3: #e9e3d6;
   --text: #161c27;
   --text-2: #3b4352;
-  --muted: #6b7180;
+  --muted: #636978;
   --border: #e5dfd2;
   --border-strong: #d4ccbb;
   --ink: #12213a;
@@ -19,6 +19,7 @@
   --gold: #a87b22;
   --gold-2: #d6ab55;
   --gold-soft: #f4e9cf;
+  --gold-ink: #80601c;
   --link: #1e4f8a;
   --focus: #2f6fdd;
   --hero-bg: #0e1828;
@@ -57,6 +58,7 @@
     --ink-2: #a9c6ec;
     --ink-fg: #0c1016;
     --gold: #e0b862;
+    --gold-ink: #e0b862;
     --gold-2: #e9c77f;
     --gold-soft: #2f2716;
     --link: #9cc0ec;
@@ -87,6 +89,7 @@
   --ink-2: #a9c6ec;
   --ink-fg: #0c1016;
   --gold: #e0b862;
+  --gold-ink: #e0b862;
   --gold-2: #e9c77f;
   --gold-soft: #2f2716;
   --link: #9cc0ec;
@@ -148,6 +151,34 @@ kbd {
 .statue-aporia { background-image: url("statues/aporia.webp"); }
 .statue-echo { background-image: url("statues/echo.webp"); }
 .statue-triad { background-image: url("statues/triad.webp"); }
+/* Archangel busts (course emblems): the archangel by day, its fallen counterpart at night. */
+:root {
+  --bust-michael: url("archangels/busts/michael.webp"); --bust-gabriel: url("archangels/busts/gabriel.webp");
+  --bust-raphael: url("archangels/busts/raphael.webp"); --bust-uriel: url("archangels/busts/uriel.webp");
+  --bust-selaphiel: url("archangels/busts/selaphiel.webp"); --bust-jegudiel: url("archangels/busts/jegudiel.webp");
+  --bust-barachiel: url("archangels/busts/barachiel.webp");
+}
+:root[data-theme="dark"] {
+  --bust-michael: url("archangels/busts/michael-fallen.webp"); --bust-gabriel: url("archangels/busts/gabriel-fallen.webp");
+  --bust-raphael: url("archangels/busts/raphael-fallen.webp"); --bust-uriel: url("archangels/busts/uriel-fallen.webp");
+  --bust-selaphiel: url("archangels/busts/selaphiel-fallen.webp"); --bust-jegudiel: url("archangels/busts/jegudiel-fallen.webp");
+  --bust-barachiel: url("archangels/busts/barachiel-fallen.webp");
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bust-michael: url("archangels/busts/michael-fallen.webp"); --bust-gabriel: url("archangels/busts/gabriel-fallen.webp");
+    --bust-raphael: url("archangels/busts/raphael-fallen.webp"); --bust-uriel: url("archangels/busts/uriel-fallen.webp");
+    --bust-selaphiel: url("archangels/busts/selaphiel-fallen.webp"); --bust-jegudiel: url("archangels/busts/jegudiel-fallen.webp");
+    --bust-barachiel: url("archangels/busts/barachiel-fallen.webp");
+  }
+}
+.statue-angel-michael { background-image: var(--bust-michael); }
+.statue-angel-gabriel { background-image: var(--bust-gabriel); }
+.statue-angel-raphael { background-image: var(--bust-raphael); }
+.statue-angel-uriel { background-image: var(--bust-uriel); }
+.statue-angel-selaphiel { background-image: var(--bust-selaphiel); }
+.statue-angel-jegudiel { background-image: var(--bust-jegudiel); }
+.statue-angel-barachiel { background-image: var(--bust-barachiel); }
 .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
 
 .skip-link {
@@ -170,7 +201,7 @@ kbd {
   border-bottom: 1px solid color-mix(in srgb, var(--border) 70%, transparent);
 }
 .page-home:not(.past-hero) .site-header { background: color-mix(in srgb, var(--hero-bg) 82%, transparent); border-bottom-color: rgba(255,255,255,.06); color: #f1ede4; }
-.page-home:not(.past-hero) .site-header .brand-sub { color: rgba(241, 237, 228, .6); }
+.page-home:not(.past-hero) .site-header .brand-sub { color: rgba(241, 237, 228, .72); }
 .page-home:not(.past-hero) .main-nav > a, .page-home:not(.past-hero) .subnav-trigger { color: rgba(241, 237, 228, .78); }
 .page-home:not(.past-hero) .main-nav > a:hover, .page-home:not(.past-hero) .subnav-trigger:hover,
 .page-home:not(.past-hero) .subnav-trigger[aria-expanded="true"] { background: rgba(255,255,255,.08); color: #fff; }
@@ -477,6 +508,158 @@ a.brand-mark:hover::after {
 .link-arrow .icon { transition: transform .15s; width: 16px; height: 16px; }
 .link-arrow:hover .icon { transform: translateX(3px); }
 
+/* ---------- Reading room: homepage cover ---------- */
+/* The cover is navy in both themes: day brings a warm dawn light, night a cool moonlit one,
+   and the archangels flanking Socrates turn to their fallen counterparts. */
+.page-home { --strip-h: 46px; }
+/* In-page links on the homepage clear the header and its shortcut strip. */
+html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); }
+@media (max-width: 700px) { html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 16px); } }
+.hero.reading-room {
+  margin-top: calc((var(--header-h) + var(--strip-h)) * -1); padding-top: calc(var(--header-h) + var(--strip-h));
+  background:
+    radial-gradient(70% 90% at 82% 0%, rgba(240, 206, 140, .20), transparent 60%),
+    radial-gradient(ellipse at 80% 40%, #2a4669 0, #172c48 34%, #0f1e33 72%);
+  --wing-l: url("archangels/michael.webp"); --wing-r: url("archangels/gabriel.webp"); --wing-o: .72;
+}
+:root[data-theme="dark"] .hero.reading-room {
+  background:
+    radial-gradient(60% 80% at 82% 0%, rgba(150, 178, 230, .12), transparent 60%),
+    radial-gradient(ellipse at 80% 40%, #1c3150 0, #0f1d31 35%, #0a1322 72%);
+  --wing-l: url("archangels/michael-fallen.webp"); --wing-r: url("archangels/gabriel-fallen.webp"); --wing-o: .62;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .hero.reading-room {
+    background:
+      radial-gradient(60% 80% at 82% 0%, rgba(150, 178, 230, .12), transparent 60%),
+      radial-gradient(ellipse at 80% 40%, #1c3150 0, #0f1d31 35%, #0a1322 72%);
+    --wing-l: url("archangels/michael-fallen.webp"); --wing-r: url("archangels/gabriel-fallen.webp"); --wing-o: .62;
+  }
+}
+.cover-grid { display: grid; grid-template-columns: minmax(0, 1fr) 430px; align-items: center; gap: 36px; padding-top: 30px; padding-bottom: 22px; }
+.cover-copy, .cover-art { min-width: 0; }
+.cover-eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; text-transform: uppercase; letter-spacing: .19em; font-size: 11.5px; font-weight: 600; color: #e8cf98; }
+.cover-eyebrow > span { width: 28px; height: 1px; background: #d7bd86; }
+.cover-copy h1 { margin: 0 0 14px; font: 400 clamp(36px, 3.9vw, 54px)/1.06 var(--font-serif); letter-spacing: -.04em; color: #f7f3ea; }
+.cover-copy h1 em { font-weight: 400; color: #e8c887; }
+.cover-lede { margin: 0 0 4px; font-size: 16px; line-height: 1.6; color: #e7e3da; }
+.cover-description { margin: 0; font-size: 14px; line-height: 1.7; color: #cfd6e0; }
+.cover-search.hero-search { color: #575d6b; width: 100%; max-width: 620px; height: 56px; margin: 22px 0 0; padding: 0 20px; border-radius: 10px; box-shadow: none; animation: none; font-size: 15px; background: #f7f3e9; }
+.cover-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 22px; margin-top: 16px; }
+.cover-actions a { display: inline-flex; align-items: center; gap: 10px; color: #e8c887; text-decoration: none; font-size: 14px; font-weight: 600; }
+.cover-actions a:hover { color: #f6dda6; }
+.cover-actions > span { font-size: 12.5px; color: #cfd6e0; }
+/* Triptych: Socrates in the arch, an archangel standing guard on either side. */
+.cover-art { position: relative; margin: 0; height: 300px; isolation: isolate; }
+.cover-arch { position: absolute; z-index: 1; left: 50%; bottom: 8px; width: 232px; height: 284px; transform: translateX(-50%); border: 1px solid #aa895755; border-radius: 120px 120px 0 0; background: radial-gradient(ellipse at 50% 62%, #4f6c9638, transparent 70%), rgba(10, 19, 34, .35); }
+.cover-arch::before { content: ""; position: absolute; inset: 11px; border: 1px solid #aa895728; border-radius: inherit; }
+.cover-arch::after { content: ""; position: absolute; left: -26px; right: -26px; bottom: -1px; height: 1px; background: linear-gradient(90deg, transparent, #c9a14f99, transparent); }
+.cover-art > img { position: absolute; z-index: 2; left: 50%; bottom: 14px; width: 220px; height: 220px; transform: translateX(-50%); object-fit: contain; filter: drop-shadow(0 22px 22px #030a1680); }
+.cover-wing {
+  position: absolute; z-index: 0; bottom: 8px; width: 138px; height: 236px; background: center bottom / contain no-repeat;
+  opacity: var(--wing-o); filter: drop-shadow(0 18px 18px #030a1666);
+  -webkit-mask-image: linear-gradient(to top, transparent, #000 14%); mask-image: linear-gradient(to top, transparent, #000 14%);
+}
+.cover-wing-l { left: 0; background-image: var(--wing-l); transform: scaleX(-1); }
+.cover-wing-r { right: 0; background-image: var(--wing-r); }
+.cover-bottom { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 13px; padding-bottom: 14px; border-top: 1px solid #d7bd8630; }
+.cover-bottom p { margin: 0; color: #cfd6e0; font-size: 12.5px; }
+.cover-bottom p strong { margin-left: 4px; color: #ece7dc; font-weight: 400; }
+.cover-bottom p br { display: none; }
+.cover-bottom ul { list-style: none; display: flex; gap: 32px; padding: 0; margin: 0; }
+.cover-bottom li { font-size: 12.5px; color: #cfd6e0; }
+.cover-bottom li strong { margin-right: 5px; font: 400 23px var(--font-serif); color: #ede2c8; }
+.cover-bottom > a { display: flex; align-items: center; gap: 10px; font-size: 13px; font-weight: 600; color: #e8c887; text-decoration: none; }
+@media (max-width: 1000px) {
+  .cover-grid { grid-template-columns: minmax(0, 1fr) 250px; gap: 20px; }
+  .cover-wing { display: none; }
+  .cover-bottom ul { gap: 18px; }
+}
+@media (max-width: 700px) {
+  .page-home { --strip-h: 0px; }
+  .cover-grid { grid-template-columns: 1fr; padding-top: 22px; padding-bottom: 18px; }
+  .cover-copy h1 { font-size: clamp(34px, 9.5vw, 42px); }
+  .cover-lede { font-size: 15px; }
+  .cover-art { display: none; }
+  .cover-bottom { flex-wrap: wrap; gap: 14px; }
+  .cover-bottom p, .cover-bottom > a { display: none; }
+  .cover-bottom ul { flex-wrap: wrap; gap: 18px; }
+  .cover-bottom li strong { font-size: 20px; }
+}
+
+/* Homepage shortcut strip, under the header: navy over the cover, ordinary below it. */
+.course-nav { border-top: 1px solid var(--border); background: var(--bg-elev); color: var(--text); transition: background .25s, color .25s, border-color .25s; }
+.course-nav-inner { display: flex; align-items: center; gap: 26px; height: var(--strip-h); }
+.course-nav a { display: flex; align-items: center; gap: 8px; padding: 8px 0; font-size: 13px; font-weight: 500; text-decoration: none; white-space: nowrap; color: var(--text-2); }
+.course-nav a:hover { color: var(--gold); }
+.course-nav .icon { width: 16px; height: 16px; }
+.course-nav small { color: var(--muted); font-size: 12px; }
+.course-nav-all { margin-left: auto; }
+.page-home:not(.past-hero) .course-nav { background: transparent; border-top-color: rgba(255, 255, 255, .07); }
+.page-home:not(.past-hero) .course-nav a { color: rgba(241, 237, 228, .8); }
+.page-home:not(.past-hero) .course-nav a:hover { color: #f6dda6; }
+.page-home:not(.past-hero) .course-nav small { color: rgba(241, 237, 228, .72); }
+@media (max-width: 700px) { .course-nav { display: none; } }
+
+/* Course browser: a searchable directory of every course, and a preview of the one selected. */
+.cover-courses { padding-top: 32px; }
+.format-shortcuts { display: flex; align-items: center; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+.format-shortcuts > span { margin-right: 6px; font-size: 13px; color: var(--muted); }
+.format-shortcuts a { display: flex; align-items: center; gap: 7px; padding: 6px 12px 6px 8px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); text-decoration: none; font-size: 13px; font-weight: 500; transition: border-color .15s, background .15s; }
+.format-shortcuts a:hover { border-color: var(--gold); background: var(--surface-2); }
+.format-shortcuts .statue { width: 22px; height: 24px; }
+.format-shortcuts small { color: var(--muted); font-size: 12px; }
+.page-home .course-browser { display: grid; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 22px; align-items: start; }
+.page-home .course-directory { position: sticky; top: calc(var(--header-h) + var(--strip-h) + 14px); padding: 14px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); }
+.page-home .course-find { display: grid; gap: 8px; font-size: 13px; font-weight: 600; }
+.page-home .course-find input { width: 100%; min-width: 0; padding: 10px 12px; border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; font-weight: 400; }
+.page-home .directory-count { margin: 12px 6px 6px; color: var(--muted); font-size: 12.5px; }
+.page-home .course-options { max-height: 520px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; display: flex; flex-direction: column; gap: 2px; }
+.page-home .course-option { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 12px; text-decoration: none; font: 500 16px/1.25 var(--font-serif); transition: background .15s, box-shadow .15s; }
+.page-home .course-option > span:not(.icon) { flex: 1; min-width: 0; }
+.page-home .course-name { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.page-home .course-option small { display: block; margin-top: 3px; font: 400 12.5px var(--font-sans); color: var(--muted); }
+.page-home .course-option .statue { width: 38px; height: 40px; }
+.page-home .course-option > .icon:last-child { width: 16px; height: 16px; color: var(--muted); }
+.page-home .course-option:hover { background: var(--surface-2); }
+.page-home .course-option[aria-pressed="true"] { background: var(--surface); box-shadow: var(--shadow-sm), inset 3px 0 var(--gold); }
+.page-home .course-option[aria-pressed="true"] > .icon:last-child { color: var(--gold); }
+.page-home [data-course-empty] { margin: 8px 6px; font-size: 13px; color: var(--muted); }
+.page-home .course-preview { min-width: 0; }
+.page-home .course-preview:focus { outline: none; }
+.page-home .course-preview-intro { margin: 0; padding: 40px 24px; border: 1px dashed var(--border-strong); border-radius: var(--radius-lg); color: var(--muted); text-align: center; }
+.course-preview .subject-panel-head { padding: 22px 22px 0; gap: 14px; }
+.course-preview .subject-panel-icon { width: 52px; height: 56px; background: none; box-shadow: none; }
+.course-preview .subject-panel-icon .statue { width: 52px; height: 56px; }
+.course-preview .subject-panel-title .h { font-size: 28px; }
+.course-preview .subject-panel-title .s { font-size: 13px; }
+.course-preview .round-arrow { width: 36px; height: 36px; }
+.course-preview .subject-panel-desc { margin: 12px 22px 18px; font-size: 14.5px; line-height: 1.6; }
+.subject-group h3 { display: flex; justify-content: space-between; margin: 0 22px 2px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--gold-ink, var(--gold)); font: 700 11.5px var(--font-sans); letter-spacing: .1em; text-transform: uppercase; }
+.subject-group h3 span { color: var(--muted); }
+.course-preview .doc-rows { padding: 0 12px 8px; }
+.course-preview .doc-row { min-height: 56px; padding: 9px 10px; gap: 12px; }
+.course-preview .doc-row .tile { width: 32px; height: 34px; background: none; box-shadow: none; }
+.course-preview .doc-row-text strong { font-size: 15px; }
+.course-preview .doc-row-text small { font-size: 12.5px; }
+.course-preview .preview-count { margin: 4px 22px 10px; color: var(--muted); font-size: 12.5px; }
+@media (max-width: 800px) {
+  .page-home .course-browser { grid-template-columns: 1fr; }
+  .page-home .course-directory { position: static; }
+  .page-home .course-options { max-height: 260px; }
+}
+@media (max-width: 700px) {
+  .cover-courses { padding-top: 30px; }
+  .cover-courses .section-head { align-items: start; flex-direction: column; gap: 10px; }
+  .format-shortcuts > span { width: 100%; }
+  .course-preview .subject-panel-head { padding: 18px 16px 0; }
+  .course-preview .subject-panel-title .h { font-size: 24px; }
+  .course-preview .subject-panel-desc { margin: 10px 16px 14px; }
+  .subject-group h3 { margin: 0 16px 2px; }
+  .course-preview .doc-rows { padding: 0 6px 6px; }
+  .course-preview .preview-count { margin: 4px 16px 10px; }
+}
+
 /* ---------- Hero ---------- */
 .hero {
   position: relative; overflow: hidden; isolation: isolate;
@@ -622,7 +805,7 @@ a.brand-mark:hover::after {
 .section-tight { padding-top: 4px; padding-bottom: 24px; }
 main > .section:last-child { padding-bottom: 24px; }
 .section-head { display: flex; align-items: flex-end; justify-content: space-between; gap: 16px; margin-bottom: 22px; flex-wrap: wrap; }
-.kicker { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; color: var(--gold); }
+.kicker { margin: 0 0 6px; font-size: 12px; text-transform: uppercase; letter-spacing: .14em; font-weight: 700; color: var(--gold-ink, var(--gold)); }
 .section-title { margin: 0; font: 500 clamp(26px, 3.4vw, 36px)/1.12 var(--font-serif); letter-spacing: -.02em; }
 @media (max-width: 640px) {
   .section { padding-top: 44px; }

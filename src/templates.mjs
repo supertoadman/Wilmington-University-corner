@@ -162,6 +162,7 @@ ${GILT_DEFS}
       ${themeButton()}
     </div>
   </div>
+  ${active === 'home' ? `<nav class="course-nav" aria-label="Shortcuts"><div class="container course-nav-inner"><a href="#courses">${icon('layout-grid')} Courses <small>${subjects.length}</small></a><a href="${root}library/?type=practice">${icon('list-checks')} Practice questions <small>${docs.filter((d) => d.type === 'practice').length}</small></a><a href="#recent-h">${icon('clock')} Recently updated</a><a class="course-nav-all" href="${root}files/all-study-materials.zip" download>${icon('download')} Download everything</a></div></nav>` : ''}
 </header>
 <main id="main">
 ${body}
@@ -184,7 +185,7 @@ ${body}
 
 <nav class="tabbar" aria-label="Quick navigation">
   <a href="${root}"${active === 'home' ? ' aria-current="page"' : ''}>${icon('house')}<span>Home</span></a>
-  <button type="button" data-sheet-open="subjects-sheet"${subjects.some((s) => s.slug === active) ? ' aria-current="page"' : ''}>${icon('layout-grid')}<span>Subjects</span></button>
+  <button type="button" data-sheet-open="subjects-sheet"${subjects.some((s) => s.slug === active) ? ' aria-current="page"' : ''}>${icon('layout-grid')}<span>Courses</span></button>
   <button type="button" data-open-search>${icon('search')}<span>Search</span></button>
   <a href="${root}library/"${active === 'library' ? ' aria-current="page"' : ''}>${icon('library')}<span>Library</span></a>
   <a href="${root}contribute/"${active === 'contribute' ? ' aria-current="page"' : ''}>${icon('upload')}<span>Share</span></a>
@@ -194,7 +195,7 @@ ${body}
   <div class="sheet-scrim" data-sheet-close></div>
   <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="subjects-sheet-title">
     <div class="sheet-grab" aria-hidden="true"></div>
-    <div class="sheet-head"><h2 id="subjects-sheet-title">Subjects</h2><button class="icon-btn" type="button" data-sheet-close aria-label="Close">${icon('x')}</button></div>
+    <div class="sheet-head"><h2 id="subjects-sheet-title">Courses</h2><button class="icon-btn" type="button" data-sheet-close aria-label="Close">${icon('x')}</button></div>
     <ul class="sheet-list">
       ${subjects.map((s) => `<li><a class="sheet-item" href="${root}subjects/${s.slug}/" style="--accent:${s.accent}"><span class="tile">${icon(s.icon)}</span><span class="sheet-item-text"><strong>${esc(s.title)}</strong><small>${plural(s.documents.length, 'document')}</small></span>${icon('chevron-right', 'chev')}</a></li>`).join('')}
       <li><a class="sheet-item" href="${root}library/"><span class="tile">${icon('library')}</span><span class="sheet-item-text"><strong>All documents</strong><small>Search and filter everything</small></span>${icon('chevron-right', 'chev')}</a></li>
@@ -237,7 +238,7 @@ function subjectMenu(ctx, root, active) {
           </div>`;
   };
   return `<div class="subnav" data-subnav>
-        <button class="subnav-trigger" type="button" aria-expanded="false" aria-controls="subnav-panel"${current ? ' aria-current="page"' : ''}>Subjects${icon('chevron-down', 'subnav-caret')}</button>
+        <button class="subnav-trigger" type="button" aria-expanded="false" aria-controls="subnav-panel"${current ? ' aria-current="page"' : ''}>Courses${icon('chevron-down', 'subnav-caret')}</button>
         <div class="subnav-panel" id="subnav-panel" hidden>
           <div class="subnav-side">
             <p class="subnav-label">Courses <span>${subjects.length}</span></p>
@@ -301,8 +302,9 @@ function subjectPanel(ctx, root, s) {
     <span class="round-arrow" aria-hidden="true">${icon('arrow-up-right')}</span>
   </a>
   <p class="subject-panel-desc">${esc(s.description)}</p>
-  <ul class="doc-rows">${shown.map((d) => docRow(ctx, root, d)).join('')}</ul>
-  ${s.documents.length > shown.length ? `<a class="subject-panel-more" href="${root}subjects/${s.slug}/">See all ${s.documents.length} documents ${icon('arrow-right')}</a>` : ''}
+  ${Object.entries(ctx.TYPES).filter(([type]) => shown.some(d => d.type === type)).map(([type, meta]) => `<div class="subject-group"><h3>${esc(meta.plural)} <span>${shown.filter(d => d.type === type).length}</span></h3><ul class="doc-rows">${shown.filter(d => d.type === type).map(d => docRow(ctx, root, d)).join('')}</ul></div>`).join('')}
+  ${!s.documents.length ? '<p class="preview-count">No documents yet.</p>' : shown.length < s.documents.length ? `<p class="preview-count">Showing ${shown.length} of ${s.documents.length} documents</p>` : ''}
+  <a class="subject-panel-more" href="${root}subjects/${s.slug}/">${shown.length < s.documents.length ? `View all ${s.documents.length} documents` : 'Open the course page'} ${icon('arrow-right')}</a>
 </article>`;
 }
 
@@ -333,7 +335,7 @@ function filterBar(ctx, docs, { subjectFilter }) {
     </label>
   </div>
   ${subjectFilter ? `<div class="chip-scroll" role="group" aria-label="Subject">
-    <button type="button" class="chip" data-filter-subject="" aria-pressed="true">All subjects</button>
+    <button type="button" class="chip" data-filter-subject="" aria-pressed="true">All courses</button>
     ${subjects.filter((s) => s.documents.length).map((s) => `<button type="button" class="chip" data-filter-subject="${esc(s.slug)}" aria-pressed="false" style="--accent:${s.accent}"><span class="dot"></span>${esc(s.title)}</button>`).join('')}
   </div>` : ''}
   <div class="chip-scroll" role="group" aria-label="Type">
@@ -355,28 +357,34 @@ export function home(ctx) {
   const totalQ = docs.reduce((n, d) => n + (d.questions || 0), 0);
   const recent = [...docs].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 6);
   const body = `
-<section class="hero">
-  <div class="hero-glow" aria-hidden="true"></div>
-  <div class="hero-beam" aria-hidden="true"></div>
-  <div class="hero-lamp" aria-hidden="true"></div>
-  <canvas class="hero-dust" aria-hidden="true"></canvas>
-  <span class="hero-mark" aria-hidden="true">${LOGO}</span>
-  <div class="container hero-inner">
-    <p class="hero-eyebrow">${icon('graduation-cap')} Law school study library</p>
-    <h1 class="hero-title">${riseWords('Outlines, rule charts &amp; practice banks,')} <span class="hero-accent"><em>in one place.</em><svg class="hero-swash" viewBox="0 0 300 26" preserveAspectRatio="none" aria-hidden="true" focusable="false">
-      <defs><linearGradient id="swash-gold" x1="0" x2="1" y1="0" y2="0"><stop offset="0" stop-color="#b8873a" stop-opacity=".35"/><stop offset=".35" stop-color="#f3d99c"/><stop offset=".8" stop-color="#e2b462"/><stop offset="1" stop-color="#b8873a" stop-opacity=".5"/></linearGradient></defs>
-      <path pathLength="1" d="M4 15 C 64 6, 148 4, 222 8 C 256 10, 282 13, 296 5"/>
-      <path pathLength="1" d="M58 22 C 118 16, 190 15, 252 18"/>
-    </svg></span></h1>
-    <p class="hero-lede">${esc(config.tagline)}</p>
-    <button class="hero-search" type="button" data-open-search>
-      ${icon('search')}<span>Search: try “404(b)” or “conflicts”</span><kbd>Ctrl K</kbd>
-    </button>
-    <ul class="hero-stats">
-      <li><strong>${subjects.length}</strong> ${subjects.length === 1 ? 'subject' : 'subjects'}</li>
-      <li><strong>${docs.length}</strong> documents</li>
-      ${totalQ ? `<li><strong>${totalQ}+</strong> practice questions</li>` : ''}
-    </ul>
+<section class="hero reading-room" aria-labelledby="cover-title">
+  <div class="container cover-grid">
+    <div class="cover-copy">
+      <p class="cover-eyebrow"><span></span> The law school study library</p>
+      <h1 id="cover-title">Your courses.<br>Your <em>study library.</em></h1>
+      <p class="cover-lede">Outlines, rule charts, flashcards, and practice—all in one place.</p>
+      <p class="cover-description">Search for a topic or browse every document by course below.</p>
+      <button class="cover-search hero-search" type="button" data-open-search>
+        ${icon('search')}<span>Search: try “404(b)” or “conflicts”</span><kbd>Ctrl K</kbd>
+      </button>
+      <div class="cover-actions"><a href="#courses">Browse the courses ${icon('arrow-right')}</a><span>Open in your browser. Keep a copy.</span></div>
+    </div>
+    <figure class="cover-art" aria-hidden="true">
+      <span class="cover-wing cover-wing-l"></span>
+      <span class="cover-arch"></span>
+      <img src="${root}assets/statues/socrates-lg.webp" alt="" width="640" height="640" fetchpriority="high">
+      <span class="cover-wing cover-wing-r"></span>
+    </figure>
+  </div>
+  <div class="container cover-bottom"><p>Built by students.<br><strong>Shared for the next one.</strong></p><ul><li><strong>${subjects.length}</strong> ${subjects.length === 1 ? 'course' : 'courses'}</li><li><strong>${docs.length}</strong> documents</li>${totalQ ? `<li><strong>${totalQ.toLocaleString('en-US')}+</strong> practice questions</li>` : ''}</ul><a href="${root}library/">Enter the library ${icon('arrow-up-right')}</a></div>
+</section>
+
+<section class="container cover-courses" id="courses" aria-labelledby="courses-h">
+  <div class="section-head"><div><p class="kicker">Browse the complete collection</p><h2 id="courses-h" class="section-title">Choose a course. Find your materials.</h2></div><a class="link-arrow" href="${root}library/">Search &amp; filter all ${docs.length} documents ${icon('arrow-right')}</a></div>
+  <nav class="format-shortcuts" aria-label="Browse by document type"><span>Browse by format</span>${Object.entries(ctx.TYPES).filter(([type]) => docs.some(d => d.type === type)).map(([type, meta]) => `<a href="${root}library/?type=${type}">${icon(meta.icon)}${esc(meta.plural)} <small>${docs.filter(d => d.type === type).length}</small></a>`).join('')}</nav>
+  <div class="course-browser" data-course-browser>
+    <div class="course-directory"><label class="course-find" hidden data-course-find>Find a course<input type="search" placeholder="Search course names…" data-course-query></label><p class="directory-count" data-course-count>${subjects.length} courses</p><div class="course-options">${subjects.map(s => `<a class="course-option" href="${root}${ctx.P.subject(s)}" data-course-choice="${esc(s.slug)}" data-course-name="${esc(s.title)}" title="${esc(s.title)}">${icon(s.icon)}<span><span class="course-name">${esc(s.title)}</span><small>${plural(s.documents.length, 'document')}</small></span>${icon('chevron-right')}</a>`).join('')}</div><p hidden data-course-empty>No courses match. Try another name.</p></div>
+    <div class="course-preview comprehensive-subjects" id="course-preview" tabindex="-1"><p class="course-preview-intro">Select a course to preview its materials, or open its full collection.</p>${subjects.map(s => `<div data-course-panel="${esc(s.slug)}" hidden>${subjectPanel(ctx, root, s)}</div>`).join('')}</div>
   </div>
 </section>
 
@@ -385,14 +393,6 @@ export function home(ctx) {
     <div><p class="kicker">Pick up where you left off</p><h2 id="ro-h" class="section-title">Jump back in</h2></div>
   </div>
   <ul class="recent-strip" data-recent-list data-type-icons="${esc(JSON.stringify(Object.fromEntries(Object.values(ctx.TYPES).map((t) => [t.label, icon(t.icon)]))))}"></ul>
-</section>
-
-<section class="section container" aria-labelledby="subjects-h">
-  <div class="section-head">
-    <div><p class="kicker">Browse by course</p><h2 id="subjects-h" class="section-title">Subjects</h2></div>
-    <a class="link-arrow" href="${root}library/">All documents ${icon('arrow-right')}</a>
-  </div>
-  <div class="subject-grid">${subjects.map((s) => subjectPanel(ctx, root, s)).join('')}</div>
 </section>
 
 <section class="section container" aria-labelledby="recent-h">
@@ -556,7 +556,7 @@ ${GILT_DEFS}
       <h2 class="vpanel-title">${esc(d.title)}</h2>
       <p class="vpanel-desc">${esc(d.description)}</p>
       <dl class="facts">
-        <div><dt>Subject</dt><dd><a href="${root}${P.subject(s)}">${esc(s.title)}</a></dd></div>
+        <div><dt>Course</dt><dd><a href="${root}${P.subject(s)}">${esc(s.title)}</a></dd></div>
         <div><dt>Type</dt><dd>${esc(t.label)}</dd></div>
         <div><dt>Format</dt><dd>${esc(d.format.label)} · ${fmtSize(d.size)}</dd></div>
         ${d.questions ? `<div><dt>Questions</dt><dd>${d.questions}</dd></div>` : ''}
@@ -623,7 +623,7 @@ export function contribute(ctx) {
         <legend><span class="num">2</span> About it</legend>
         <div class="field-grid">
           <label class="field">
-            <span class="field-label">Subject</span>
+            <span class="field-label">Course</span>
             <select name="subject" required data-subject>
               <option value="" disabled selected>Choose a subject…</option>
               ${subjects.map((s) => `<option value="${esc(s.folder)}">${esc(s.title)}</option>`).join('')}

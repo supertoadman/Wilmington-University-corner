@@ -8,6 +8,46 @@ const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
 const body = document.body;
 
+// Homepage course directory: bounded preview, full collections remain linked.
+const courseBrowser = $('[data-course-browser]');
+if (courseBrowser) {
+  const choices = $$('[data-course-choice]', courseBrowser);
+  const panels = $$('[data-course-panel]', courseBrowser);
+  const query = $('[data-course-query]', courseBrowser);
+  const count = $('[data-course-count]', courseBrowser);
+  const intro = $('.course-preview-intro', courseBrowser);
+  function selectCourse(slug) {
+    panels.forEach(panel => { panel.hidden = panel.dataset.coursePanel !== slug; });
+    choices.forEach(choice => choice.setAttribute('aria-pressed', String(choice.dataset.courseChoice === slug)));
+    intro.hidden = true;
+  }
+  choices.forEach(choice => {
+    // Retain ordinary course links as the no-JavaScript fallback.
+    choice.setAttribute('role', 'button');
+    choice.setAttribute('aria-controls', 'course-preview');
+    choice.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
+      event.preventDefault();
+      selectCourse(choice.dataset.courseChoice);
+      $('#course-preview').focus({ preventScroll: true });
+      if (matchMedia('(max-width: 700px)').matches) $('#course-preview').scrollIntoView({ block: 'start' });
+    });
+    choice.addEventListener('keydown', event => {
+      if (event.key === ' ') { event.preventDefault(); choice.click(); }
+    });
+  });
+  $('[data-course-find]', courseBrowser).hidden = false;
+  count.setAttribute('role', 'status');
+  query.addEventListener('input', () => {
+    const term = query.value.trim().toLocaleLowerCase();
+    choices.forEach(choice => { choice.hidden = !choice.dataset.courseName.toLocaleLowerCase().includes(term); });
+    const visible = choices.filter(choice => !choice.hidden).length;
+    count.textContent = `${visible} of ${choices.length} courses`;
+    $('[data-course-empty]', courseBrowser).hidden = visible !== 0;
+  });
+  if (choices.length) selectCourse(choices[0].dataset.courseChoice);
+}
+
 let fusePromise;
 const loadFuse = () => (fusePromise ||= import('./vendor-fuse.min.mjs').then((m) => m.default));
 let indexPromise;
@@ -134,7 +174,9 @@ if (amb) {
 // ---------- Home: light header once the dark hero scrolls away ----------
 const hero = $('.hero');
 if (hero && 'IntersectionObserver' in window) {
-  new IntersectionObserver(([en]) => body.classList.toggle('past-hero', !en.isIntersecting), { rootMargin: '-70px 0px 0px 0px' }).observe(hero);
+  // The header (with the homepage's shortcut strip) turns light once the hero has slid out from under it.
+  const headerH = ($('.site-header')?.offsetHeight || 68) + 2;
+  new IntersectionObserver(([en]) => body.classList.toggle('past-hero', !en.isIntersecting), { rootMargin: `-${headerH}px 0px 0px 0px` }).observe(hero);
 }
 
 // ---------- Home: dust motes drifting through the hero's beam of light ----------
