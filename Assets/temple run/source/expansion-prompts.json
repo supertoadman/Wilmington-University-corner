@@ -1,0 +1,242 @@
+[
+  {
+    "id": "divine-socrates-moves",
+    "prompt": "Use case: stylized-concept. Asset: production animation sprite sheet. Match attached existing game artwork EXACTLY: same face, hair, costume, materials, polished sculptural painterly 3D fantasy style. Transparent PNG, no ground plane, text, labels or borders. Output 3840x1920 with exactly 6 columns x 3 rows of square cells. Allow generous transparent margin in EACH cell; never cross cell boundary. All poses face NORTHEAST (upper right and away from viewer), isometric 3/4 camera with 256x128 logical grid. Consistent scale and design, feet ground anchor bottom center of each cell. ROW 1: six DISTINCT sequential run phases, left-foot contact, left compression, left passing, right-foot contact, right compression, right passing; explicitly alternate legs and arms. ROW 2: jump takeoff crouch, airborne tucked leap, landing; slide drop, low held slide feet forward, get up. ROW 3: stumble trip, stumble recovery; fall losing balance, falling, lying down; idle. 18 separate full-body figures total. No duplicate poses, no missing limbs. Feet remain bottom-center except airborne pose, which rises above its fixed ground anchor. Keep lying and sliding bodies low, don't enlarge them to fill cells. DIVINE SOCRATES, emerald mantle, silver mane. Palette ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/characters/divine-socrates.webp"
+    ]
+  },
+  {
+    "id": "corrupt-socrates-moves",
+    "prompt": "Use case: stylized-concept. Asset: production animation sprite sheet. Match attached existing game artwork EXACTLY: same face, hair, costume, materials, polished sculptural painterly 3D fantasy style. Transparent PNG, no ground plane, text, labels or borders. Output 3840x1920 with exactly 6 columns x 3 rows of square cells. Allow generous transparent margin in EACH cell; never cross cell boundary. All poses face NORTHEAST (upper right and away from viewer), isometric 3/4 camera with 256x128 logical grid. Consistent scale and design, feet ground anchor bottom center of each cell. ROW 1: six DISTINCT sequential run phases, left-foot contact, left compression, left passing, right-foot contact, right compression, right passing; explicitly alternate legs and arms. ROW 2: jump takeoff crouch, airborne tucked leap, landing; slide drop, low held slide feet forward, get up. ROW 3: stumble trip, stumble recovery; fall losing balance, falling, lying down; idle. 18 separate full-body figures total. No duplicate poses, no missing limbs. Feet remain bottom-center except airborne pose, which rises above its fixed ground anchor. Keep lying and sliding bodies low, don't enlarge them to fill cells. CORRUPT SOCRATES, same emerald mantle, muscular build and swept silver mane, cracked stone skin, small horns, torn fabric. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/characters/corrupt-socrates.webp"
+    ]
+  },
+  {
+    "id": "divine-plato-moves",
+    "prompt": "Use case: stylized-concept. Asset: production animation sprite sheet. Match attached existing game artwork EXACTLY: same face, hair, costume, materials, polished sculptural painterly 3D fantasy style. Transparent PNG, no ground plane, text, labels or borders. Output 3840x1920 with exactly 6 columns x 3 rows of square cells. Allow generous transparent margin in EACH cell; never cross cell boundary. All poses face NORTHEAST (upper right and away from viewer), isometric 3/4 camera with 256x128 logical grid. Consistent scale and design, feet ground anchor bottom center of each cell. ROW 1: six DISTINCT sequential run phases, left-foot contact, left compression, left passing, right-foot contact, right compression, right passing; explicitly alternate legs and arms. ROW 2: jump takeoff crouch, airborne tucked leap, landing; slide drop, low held slide feet forward, get up. ROW 3: stumble trip, stumble recovery; fall losing balance, falling, lying down; idle. 18 separate full-body figures total. No duplicate poses, no missing limbs. Feet remain bottom-center except airborne pose, which rises above its fixed ground anchor. Keep lying and sliding bodies low, don't enlarge them to fill cells. DIVINE PLATO, elegant tall athletic hero, long flowing silver hair, lapis blue split coat, ivory trousers, gilded laurel shoulder armor. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/characters/divine-plato.webp"
+    ]
+  },
+  {
+    "id": "corrupt-plato-moves",
+    "prompt": "Use case: stylized-concept. Asset: production animation sprite sheet. Match attached existing game artwork EXACTLY: same face, hair, costume, materials, polished sculptural painterly 3D fantasy style. Transparent PNG, no ground plane, text, labels or borders. Output 3840x1920 with exactly 6 columns x 3 rows of square cells. Allow generous transparent margin in EACH cell; never cross cell boundary. All poses face NORTHEAST (upper right and away from viewer), isometric 3/4 camera with 256x128 logical grid. Consistent scale and design, feet ground anchor bottom center of each cell. ROW 1: six DISTINCT sequential run phases, left-foot contact, left compression, left passing, right-foot contact, right compression, right passing; explicitly alternate legs and arms. ROW 2: jump takeoff crouch, airborne tucked leap, landing; slide drop, low held slide feet forward, get up. ROW 3: stumble trip, stumble recovery; fall losing balance, falling, lying down; idle. 18 separate full-body figures total. No duplicate poses, no missing limbs. Feet remain bottom-center except airborne pose, which rises above its fixed ground anchor. Keep lying and sliding bodies low, don't enlarge them to fill cells. CORRUPT PLATO, tall elegant hero, long flowing silver hair, torn lapis split coat, small horns, cracked stone skin, tarnished gold shoulder armor. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/characters/corrupt-plato.webp"
+    ]
+  },
+  {
+    "id": "divine-aristotle-moves",
+    "prompt": "Use case: stylized-concept. Asset: production animation sprite sheet. Match attached existing game artwork EXACTLY: same face, hair, costume, materials, polished sculptural painterly 3D fantasy style. Transparent PNG, no ground plane, text, labels or borders. Output 3840x1920 with exactly 6 columns x 3 rows of square cells. Allow generous transparent margin in EACH cell; never cross cell boundary. All poses face NORTHEAST (upper right and away from viewer), isometric 3/4 camera with 256x128 logical grid. Consistent scale and design, feet ground anchor bottom center of each cell. ROW 1: six DISTINCT sequential run phases, left-foot contact, left compression, left passing, right-foot contact, right compression, right passing; explicitly alternate legs and arms. ROW 2: jump takeoff crouch, airborne tucked leap, landing; slide drop, low held slide feet forward, get up. ROW 3: stumble trip, stumble recovery; fall losing balance, falling, lying down; idle. 18 separate full-body figures total. No duplicate poses, no missing limbs. Feet remain bottom-center except airborne pose, which rises above its fixed ground anchor. Keep lying and sliding bodies low, don't enlarge them to fill cells. DIVINE ARISTOTLE: lean agile youthful hero, brown bronze curls in topknot, burgundy cropped jacket, ivory trousers, gold bracers. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/characters/divine-aristotle.webp"
+    ]
+  },
+  {
+    "id": "corrupt-aristotle-moves",
+    "prompt": "Use case: stylized-concept. Asset: production animation sprite sheet. Match attached existing game artwork EXACTLY: same face, hair, costume, materials, polished sculptural painterly 3D fantasy style. Transparent PNG, no ground plane, text, labels or borders. Output 3840x1920 with exactly 6 columns x 3 rows of square cells. Allow generous transparent margin in EACH cell; never cross cell boundary. All poses face NORTHEAST (upper right and away from viewer), isometric 3/4 camera with 256x128 logical grid. Consistent scale and design, feet ground anchor bottom center of each cell. ROW 1: six DISTINCT sequential run phases, left-foot contact, left compression, left passing, right-foot contact, right compression, right passing; explicitly alternate legs and arms. ROW 2: jump takeoff crouch, airborne tucked leap, landing; slide drop, low held slide feet forward, get up. ROW 3: stumble trip, stumble recovery; fall losing balance, falling, lying down; idle. 18 separate full-body figures total. No duplicate poses, no missing limbs. Feet remain bottom-center except airborne pose, which rises above its fixed ground anchor. Keep lying and sliding bodies low, don't enlarge them to fill cells. CORRUPT ARISTOTLE: lean agile youthful hero, brown bronze curls in topknot, burgundy cropped jacket, ivory trousers, gold bracers. Small horns, cracked stone skin, torn hems. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/characters/corrupt-aristotle.webp"
+    ]
+  },
+  {
+    "id": "divine-chaser-run",
+    "prompt": "Use case: stylized-concept. Six-frame game RUN CYCLE sheet, exactly 3 columns by 2 rows, 1920x1280 transparent PNG. Each square cell contains one complete creature with large transparent margin, no borders or captions. Match attached reference's sculptural marble, gold trim, detailed painterly fantasy game rendering (style only). Creature: DIVINE STONE SPHINX, powerful lion body, wise human marble face, swept mane and folded small feather wings, gilt collar. All six face NORTHEAST, visibly away from camera toward upper right in isometric 3/4, on 256x128 grid. Same size and identity across all frames, feet centered near bottom of cell. Six different ordered gallop phases: forepaws reach, forepaw contact, hindlegs gathering, hindlegs drive, full extension, suspended gather. Alternate visible paw positions, keep body stable, last phase transitions to first. No ground shadows or platforms. Palette ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ],
+    "repairPrompt": "Edit attached sprite sheet: REMOVE ALL BACKGROUND completely, actual alpha transparency, not black or checkerboard. Preserve six creature poses, identity, materials, same 3-column 2-row layout. Separate each complete creature into its square cell with empty transparent gutters, no crossing cell boundaries. No shadows, haze or ground. Output RGBA PNG. Correct camera to northeast three-quarter rear view, facing upper right away from viewer, while preserving creature design. ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0"
+  },
+  {
+    "id": "corrupt-chaser-run",
+    "prompt": "Use case: stylized-concept. Six-frame game RUN CYCLE sheet, exactly 3 columns by 2 rows, 1920x1280 transparent PNG. Each square cell contains one complete creature with large transparent margin, no borders or captions. Match attached reference's sculptural marble, gold trim, detailed painterly fantasy game rendering (style only). Creature: CORRUPT HORNED SHADE, powerful quadrupedal shadow-lion with curled horns, cracked charcoal stone body, ember eyes, tarnished gold collar, smoky mane. All six face NORTHEAST, visibly away from camera toward upper right in isometric 3/4, on 256x128 grid. Same size and identity across all frames, feet centered near bottom of cell. Six different ordered gallop phases: forepaws reach, forepaw contact, hindlegs gathering, hindlegs drive, full extension, suspended gather. Alternate visible paw positions, keep body stable, last phase transitions to first. No ground shadows or platforms. Palette weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ],
+    "repairPrompt": "Edit attached sprite sheet: REMOVE ALL BACKGROUND completely, actual alpha transparency, not black or checkerboard. Preserve six creature poses, identity, materials, same 3-column 2-row layout. Separate each complete creature into its square cell with empty transparent gutters, no crossing cell boundaries. No shadows, haze or ground. Output RGBA PNG. Correct camera to northeast three-quarter rear view, facing upper right away from viewer, while preserving creature design. weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a"
+  },
+  {
+    "id": "divine-slide-lintel",
+    "prompt": "Use case: stylized-concept. Game obstacle: LOW STONE LINTEL on two squat posts to SLIDE UNDER, divine realm. Attached image is material/rendering style reference only. Isometric 3/4 camera with 2:1 axes, lane runs northeast, lintel spans northwest-southeast across lane. Create TWO ALIGNED OCCLUSION LAYERS side by side on transparent PNG 1280x640 (two 640x640 cells). Left cell BACK layer contains ONLY the far northwest post at upper-left and rear-facing portion of lintel; right cell FRONT layer contains ONLY near southeast post at lower-right and front-facing portion of lintel. Both layers share EXACT same scale and coordinate origin, so superimposing cells produces one complete low gateway with open passage below. Each individual layer retains original positional placement inside its square, never recenter the halves. Leave passage entirely transparent for sliding player to be drawn between the two images. Feet of completed object bottom center (320,620). No floor, labels, border, grid or duplicate posts. Ivory marble, golden meander trim, laurel relief. Palette ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-slide-lintel",
+    "prompt": "Use case: stylized-concept. Game obstacle: LOW STONE LINTEL on two squat posts to SLIDE UNDER, corrupt realm. Attached image is material/rendering style reference only. Isometric 3/4 camera with 2:1 axes, lane runs northeast, lintel spans northwest-southeast across lane. Create TWO ALIGNED OCCLUSION LAYERS side by side on transparent PNG 1280x640 (two 640x640 cells). Left cell BACK layer contains ONLY the far northwest post at upper-left and rear-facing portion of lintel; right cell FRONT layer contains ONLY near southeast post at lower-right and front-facing portion of lintel. Both layers share EXACT same scale and coordinate origin, so superimposing cells produces one complete low gateway with open passage below. Each individual layer retains original positional placement inside its square, never recenter the halves. Leave passage entirely transparent for sliding player to be drawn between the two images. Feet of completed object bottom center (320,620). No floor, labels, border, grid or duplicate posts. Cracked soot-stained stone, tarnished meander trim, red fissures and broken edges. Palette weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-dead-end-wall",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A solid tall dead-end wall fully blocking the path, unbroken center, marble block courses with a golden meander frieze, no door or opening, broad rectangular wall oriented northwest-southeast across northeast path. Theme divine. Clean warm ivory stone, luminous gilding. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-dead-end-wall",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A solid tall dead-end wall fully blocking the path, unbroken center, marble block courses with a golden meander frieze, no door or opening, broad rectangular wall oriented northwest-southeast across northeast path. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-gap-edge",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A crumbling path end for a jumpable gap: ONLY an isometric broken paving slab with jagged fractured forward edge facing northeast, exposed rocky thickness and a few falling stone fragments. Top footprint a 2:1 diamond. No background or chasm painted behind it. Fracture clearly reads as dangerous path termination. Theme divine. Clean warm ivory stone, luminous gilding. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-gap-edge",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A crumbling path end for a jumpable gap: ONLY an isometric broken paving slab with jagged fractured forward edge facing northeast, exposed rocky thickness and a few falling stone fragments. Top footprint a 2:1 diamond. No background or chasm painted behind it. Fracture clearly reads as dangerous path termination. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-toppled-statue",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A toppled marble philosopher statue lying diagonally across the path, snapped at knees, broken pedestal and head still recognizable, gilded robe trim, broad low obstacle silhouette. Theme divine. Clean warm ivory stone, luminous gilding. Flame if present is pale gold. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-toppled-statue",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A toppled marble philosopher statue lying diagonally across the path, snapped at knees, broken pedestal and head still recognizable, gilded robe trim, broad low obstacle silhouette. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. Flame if present is crimson embers. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-brazier-obstacle",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A broad squat bronze and marble sacrificial brazier obstructing a running lane, heavy round basin on four lion feet, large visible flame, no background glow or shadow. Broad low silhouette, distinct from tall decorative braziers. Theme divine. Clean warm ivory stone, luminous gilding. Flame if present is pale gold. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-brazier-obstacle",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A broad squat bronze and marble sacrificial brazier obstructing a running lane, heavy round basin on four lion feet, large visible flame, no background glow or shadow. Broad low silhouette, distinct from tall decorative braziers. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. Flame if present is crimson embers. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-statue",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. An upright full classical Greek philosopher statue in draped robe on a small square marble pedestal, holding closed scroll, laurel crown, gilded trim. Faces northeast. Theme divine. Clean warm ivory stone, luminous gilding. Flame if present is pale gold. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-statue",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. An upright full classical Greek philosopher statue in draped robe on a small square marble pedestal, holding closed scroll, laurel crown, gilded trim. Faces northeast. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. Flame if present is crimson embers. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-brazier",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A tall narrow ornate path-side brazier, tripod gold bronze stand with carved Greek ornaments supporting a small flame bowl, complete base. Theme divine. Clean warm ivory stone, luminous gilding. Flame if present is pale gold. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-brazier",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A tall narrow ornate path-side brazier, tripod gold bronze stand with carved Greek ornaments supporting a small flame bowl, complete base. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. Flame if present is crimson embers. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-cypress",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A tall Mediterranean cypress tree with narrow sculpted dense foliage, visible twisted trunk and a tiny root mound, no pot or pavement. Natural deep green adapted to palette. Theme divine. Clean warm ivory stone, luminous gilding. If tree, living green leaves with warm sunlight. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-cypress",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A tall Mediterranean cypress tree with narrow sculpted dense foliage, visible twisted trunk and a tiny root mound, no pot or pavement. Natural deep green adapted to palette. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. If tree, blackened twisted trunk and dark dry green foliage with burgundy tips. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-broken-wall",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A short broken marble wall segment with exposed block ends, chipped gold frieze and small ivy, three-quarter view, irregular stepped height, small rubble at base. Theme divine. Clean warm ivory stone, luminous gilding. If tree, living green leaves with warm sunlight. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-broken-wall",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. A short broken marble wall segment with exposed block ends, chipped gold frieze and small ivy, three-quarter view, irregular stepped height, small rubble at base. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. If tree, blackened twisted trunk and dark dry green foliage with burgundy tips. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-urn",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. One ornate Greek amphora urn with two handles on small ring foot, polished ivory ceramic with gold meander decoration and subtle sculpted laurel, no pedestal. Theme divine. Clean warm ivory stone, luminous gilding. If tree, living green leaves with warm sunlight. Palette: ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/architecture/divine-temple.webp"
+    ]
+  },
+  {
+    "id": "corrupt-urn",
+    "prompt": "Use case: stylized-concept. Game asset in the same detailed sculptural painterly fantasy style and materials as attached reference (style only, do not copy the temple composition). Isometric three-quarter orthographic camera, 2:1 axes matching 256x128 ground grid. A single isolated complete object. Transparent PNG 640x640, no background, no text, no floor slab unless requested. Ground contact bottom center, full silhouette inside canvas with 24px transparent margin. Upper-left soft light, crisp readable silhouette, polished game art. One ornate Greek amphora urn with two handles on small ring foot, polished ivory ceramic with gold meander decoration and subtle sculpted laurel, no pedestal. Theme corrupt. Cracks, soot, tarnished gold, crimson fissures, damaged ornament. If tree, blackened twisted trunk and dark dry green foliage with burgundy tips. Palette: weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/architecture/corrupt-temple.webp"
+    ]
+  },
+  {
+    "id": "divine-far-sky",
+    "prompt": "Use case: stylized-concept. Asset: seamlessly horizontally repeating FAR SKY parallax PNG, 2048x1024 or larger, 2:1 landscape, real alpha transparency. Attached reference is style and mood only. Divine high celestial sky: expansive soft pale gold distant clouds, delicate luminous ivory atmosphere with restrained warm sunbeams, peaceful and elevated. NO buildings, ground, islands, horizon objects, text, borders or sun disk. Broad ambient sky texture with balanced composition, NO dominant central focal point. Must TILE PERFECTLY horizontally: left and right edge colors and alpha identical, no visible seam when repeated side by side. Use smoothly dissolving cloud/atmosphere along both left and right extremes fading completely to transparent before edge, with generous empty transparent margins; this is a sky overlay over solid palette base. Natural soft cloud detail not a framed painting. Palette ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/backgrounds/divine-sanctuary.webp"
+    ]
+  },
+  {
+    "id": "corrupt-far-sky",
+    "prompt": "Use case: stylized-concept. Asset: seamlessly horizontally repeating FAR SKY parallax PNG, 2048x1024 or larger, 2:1 landscape, real alpha transparency. Attached reference is style and mood only. Corrupt far sky: immense distant brooding smoke clouds in charcoal, bruised taupe and muted crimson, subtle amber light breaking through, foreboding. NO buildings, ground, islands, horizon objects, text, borders or sun disk. Broad ambient sky texture with balanced composition, NO dominant central focal point. Must TILE PERFECTLY horizontally: left and right edge colors and alpha identical, no visible seam when repeated side by side. Use smoothly dissolving cloud/atmosphere along both left and right extremes fading completely to transparent before edge, with generous empty transparent margins; this is a sky overlay over solid palette base. Natural soft cloud detail not a framed painting. Palette weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/backgrounds/corrupt-sanctuary.webp"
+    ]
+  },
+  {
+    "id": "divine-middle-ruins",
+    "prompt": "Use case: stylized-concept. Asset: horizontal looping parallax layer middle divine, transparent PNG 2048x1024 or larger, landscape2:1. Attached reference is painterly fantasy style ONLY; remove all ground, sky and foreground from that reference. Distant FLOATING GREEK RUINS on several suspended pale stone islands, fragments of ivory columns and arches with restrained gilding, softly veiled in pale mist. Evenly spaced rhythm across width, natural variations in heights. Entire scene isolated on TRUE ALPHA, including transparent sky between objects. Every shape fully within image: at least 100px fully transparent margin on LEFT AND RIGHT, all wisps gradually fade smoothly before reaching that margin. Top and bottom transparent too. This must repeat seamlessly side-to-side without cropping objects, background rectangles, vertical lines or visible seams. No text, borders, ground platform or labels. Palette ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/backgrounds/divine-sanctuary.webp"
+    ]
+  },
+  {
+    "id": "corrupt-middle-ruins",
+    "prompt": "Use case: stylized-concept. Asset: horizontal looping parallax layer middle corrupt, transparent PNG 2048x1024 or larger, landscape2:1. Attached reference is painterly fantasy style ONLY; remove all ground, sky and foreground from that reference. Distant FLOATING RUINS on broken dark rock islands, ruined cracked Greek columns, severed bridges, sparse crimson embers and smoke, weathered tarnished gilding. Evenly spaced rhythm across width, natural variations in heights. Entire scene isolated on TRUE ALPHA, including transparent sky between objects. Every shape fully within image: at least 100px fully transparent margin on LEFT AND RIGHT, all wisps gradually fade smoothly before reaching that margin. Top and bottom transparent too. This must repeat seamlessly side-to-side without cropping objects, background rectangles, vertical lines or visible seams. No text, borders, ground platform or labels. Palette weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/backgrounds/corrupt-sanctuary.webp"
+    ]
+  },
+  {
+    "id": "divine-near-clouds",
+    "prompt": "Use case: stylized-concept. Asset: horizontal looping parallax layer near divine, transparent PNG 2048x1024 or larger, landscape2:1. Attached reference is painterly fantasy style ONLY; remove all ground, sky and foreground from that reference. Only a few delicate near CLOUD WISPS: translucent airy white and warm gold streamers, thin and feathered, lots of empty space. Absolutely no buildings or solid objects. Evenly spaced rhythm across width, natural variations in heights. Entire scene isolated on TRUE ALPHA, including transparent sky between objects. Every shape fully within image: at least 100px fully transparent margin on LEFT AND RIGHT, all wisps gradually fade smoothly before reaching that margin. Top and bottom transparent too. This must repeat seamlessly side-to-side without cropping objects, background rectangles, vertical lines or visible seams. No text, borders, ground platform or labels. Palette ivory #eee4cd, light #fff8e9, shade #b5a78c, deep #302b23, gold #c7a15d, accent #f9dfa0",
+    "references": [
+      "textures/divine/backgrounds/divine-sanctuary.webp"
+    ]
+  },
+  {
+    "id": "corrupt-near-smoke",
+    "prompt": "Use case: stylized-concept. Asset: horizontal looping parallax layer near corrupt, transparent PNG 2048x1024 or larger, landscape2:1. Attached reference is painterly fantasy style ONLY; remove all ground, sky and foreground from that reference. Only near SMOKE WISPS: thin translucent charcoal and dusky crimson tendrils, feathered ends, drifting haze, lots of empty space. Absolutely no buildings, rocks or solid objects. Evenly spaced rhythm across width, natural variations in heights. Entire scene isolated on TRUE ALPHA, including transparent sky between objects. Every shape fully within image: at least 100px fully transparent margin on LEFT AND RIGHT, all wisps gradually fade smoothly before reaching that margin. Top and bottom transparent too. This must repeat seamlessly side-to-side without cropping objects, background rectangles, vertical lines or visible seams. No text, borders, ground platform or labels. Palette weathered stone #c5b7a2, light #e6d6bc, shade #817263, deep #231e24, tarnished gold #977342, accent #983e4a",
+    "references": [
+      "textures/corrupt/backgrounds/corrupt-sanctuary.webp"
+    ]
+  }
+]

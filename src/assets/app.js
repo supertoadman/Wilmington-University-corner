@@ -594,7 +594,11 @@ if (viewer) {
   // Phone and tablet browsers show only the first page of a PDF in an iframe and
   // won't scroll it, so on touch devices draw the pages ourselves with PDF.js.
   const pdfFrame = $('.vframe[src$=".pdf" i]');
-  if (pdfFrame && matchMedia('(pointer: coarse)').matches) renderPdf(pdfFrame);
+  // A link to a spot in the document (#page=9 in a PDF, #section-id in an HTML outline, as the
+  // game's review links use) goes on to the embedded document.
+  const target = location.hash;
+  if (target.length > 1) $$('iframe.vframe').forEach((f) => { f.src = f.getAttribute('src') + target; });
+  if (pdfFrame && matchMedia('(pointer: coarse)').matches) renderPdf(pdfFrame, +(target.match(/page=(\d+)/) || [])[1] || 0);
 
   const frame = $('iframe.vframe');
   if (frame) {
@@ -836,9 +840,9 @@ if (submitForm) {
 }
 
 // ---------- PDF pages (touch devices) ----------
-async function renderPdf(frame) {
+async function renderPdf(frame, startPage = 0) {
   const wrap = frame.closest('.vframe-wrap');
-  const src = frame.src;
+  const src = frame.src.split('#')[0];
   const scroller = document.createElement('div');
   scroller.className = 'vframe vpdf';
   scroller.setAttribute('role', 'document');
@@ -890,6 +894,7 @@ async function renderPdf(frame) {
       for (const e of entries) (e.isIntersecting ? draw : drop)(e.target);
     }, { root: scroller, rootMargin: '150% 0px' });
     pages.forEach((p) => near.observe(p));
+    if (startPage > 1 && pages[startPage - 1]) requestAnimationFrame(() => pages[startPage - 1].scrollIntoView({ block: 'start' }));
   } catch {
     scroller.innerHTML = `<p class="vpdf-error">This PDF couldn't be shown here. <a href="${escapeHtml(src)}" target="_blank" rel="noopener">Open it in a new tab</a>.</p>`;
   }

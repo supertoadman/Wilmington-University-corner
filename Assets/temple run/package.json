@@ -1,0 +1,15 @@
+{
+  "name": "temple-run-divine-corrupt-assets",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "preview": "node source/serve.mjs",
+    "build": "node source/build-package.mjs",
+    "check": "node source/check-package.mjs && node source/check-expansion.mjs && node source/check-web.mjs"
+  },
+  "devDependencies": {
+    "ffmpeg-static": "^5.3.0",
+    "ffprobe-static": "^3.1.0",
+    "sharp": "^0.35.5"
+  }
+}

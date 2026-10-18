@@ -1,0 +1,15 @@
+{
+  "allAssetsDecode": {
+    "images": 80,
+    "audio": 8
+  },
+  "initialCards": 88,
+  "characterFilter": 6,
+  "templeSearch": 2,
+  "realmFilter": 40,
+  "counterpartDialog": true,
+  "desktop": true,
+  "mobileNoOverflow": true,
+  "offlineFileViewer": true,
+  "browserErrors": []
+}

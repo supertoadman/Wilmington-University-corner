@@ -15,6 +15,8 @@ import mammoth from 'mammoth';
 import { zipSync, unzipSync, strFromU8, strToU8 } from 'fflate';
 import * as T from '../src/templates.mjs';
 import { slugify, decodeEntities, htmlToText } from './lib/text.mjs';
+import { addHeadingIds as idHeadings } from './lib/outline.mjs';
+import { buildGame } from './game.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'content');
@@ -270,6 +272,15 @@ ${html}`;
           doc.raw = Buffer.from(html, 'utf8');
           doc.size = doc.raw.length;
         }
+        // Outlines get heading ids so the game (and anyone) can link to a section.
+        if (type === 'outline') {
+          const withIds = idHeadings(html);
+          if (withIds !== html) {
+            html = withIds;
+            doc.raw = Buffer.from(html, 'utf8');
+            doc.size = doc.raw.length;
+          }
+        }
         doc.text = htmlToText(html);
         if (!dm.title) {
           const t = html.match(/<title>([^<]*)<\/title>/i);
@@ -447,10 +458,14 @@ write('llms.txt', [
 write('llms-full.txt', docs.map((d) =>
   `# ${d.title}\n\nSubject: ${d.subject.title} | Type: ${TYPES[d.type].label} | URL: ${abs(P.doc(d))}\n\n${d.text}\n`).join('\n\n---\n\n'));
 
+// The game: question data, art, and its page
+const game = await buildGame({ subjects, P, write, root: ROOT, dist: DIST });
+
 // Pages
-const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length };
+const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game };
 
 write('index.html', T.home(ctx));
+write('play/index.html', T.play(ctx));
 write('library/index.html', T.library(ctx));
 write('contribute/index.html', T.contribute(ctx));
 write('404.html', T.notFound(ctx));
@@ -458,7 +473,7 @@ write('admin/index.html', T.admin(ctx)); // owner-only editor; deliberately left
 for (const s of subjects) write(P.subject(s) + 'index.html', T.subjectPage(ctx, s));
 for (const d of docs) write(P.doc(d) + 'index.html', T.docPage(ctx, d));
 
-const pageUrls = ['', 'library/', 'contribute/', ...subjects.map(P.subject), ...docs.map(P.doc)];
+const pageUrls = ['', 'library/', 'contribute/', 'play/', ...subjects.map(P.subject), ...docs.map(P.doc)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pageUrls
   .map((u) => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('sitemap.xml')}\n`);

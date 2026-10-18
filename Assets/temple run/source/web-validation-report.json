@@ -1,0 +1,651 @@
+{
+  "runtimeBytes": 14759379,
+  "runtimeLimitBytes": 15000000,
+  "audio": [
+    {
+      "id": "collect-laurel",
+      "codec": "vorbis",
+      "decodedSamples": 21765,
+      "playStartSample": 0,
+      "playEndSample": 19845,
+      "playDuration": 0.45,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "collect-laurel",
+      "codec": "aac",
+      "decodedSamples": 22528,
+      "playStartSample": 0,
+      "playEndSample": 19845,
+      "playDuration": 0.45,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "collect-wisdom",
+      "codec": "vorbis",
+      "decodedSamples": 37200,
+      "playStartSample": 0,
+      "playEndSample": 35280,
+      "playDuration": 0.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "collect-wisdom",
+      "codec": "aac",
+      "decodedSamples": 37888,
+      "playStartSample": 0,
+      "playEndSample": 35280,
+      "playDuration": 0.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "activate-aegis",
+      "codec": "vorbis",
+      "decodedSamples": 50558,
+      "playStartSample": 0,
+      "playEndSample": 48510,
+      "playDuration": 1.1,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "activate-aegis",
+      "codec": "aac",
+      "decodedSamples": 51200,
+      "playStartSample": 0,
+      "playEndSample": 48510,
+      "playDuration": 1.1,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "jump",
+      "codec": "vorbis",
+      "decodedSamples": 11622,
+      "playStartSample": 0,
+      "playEndSample": 9702,
+      "playDuration": 0.22,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "jump",
+      "codec": "aac",
+      "decodedSamples": 12288,
+      "playStartSample": 0,
+      "playEndSample": 9702,
+      "playDuration": 0.22,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "land",
+      "codec": "vorbis",
+      "decodedSamples": 9858,
+      "playStartSample": 0,
+      "playEndSample": 7938,
+      "playDuration": 0.18,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "land",
+      "codec": "aac",
+      "decodedSamples": 10240,
+      "playStartSample": 0,
+      "playEndSample": 7938,
+      "playDuration": 0.18,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "damage",
+      "codec": "vorbis",
+      "decodedSamples": 16032,
+      "playStartSample": 0,
+      "playEndSample": 14112,
+      "playDuration": 0.32,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "damage",
+      "codec": "aac",
+      "decodedSamples": 16384,
+      "playStartSample": 0,
+      "playEndSample": 14112,
+      "playDuration": 0.32,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "enter-divine",
+      "codec": "vorbis",
+      "decodedSamples": 94658,
+      "playStartSample": 0,
+      "playEndSample": 92610,
+      "playDuration": 2.1,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "enter-divine",
+      "codec": "aac",
+      "decodedSamples": 95232,
+      "playStartSample": 0,
+      "playEndSample": 92610,
+      "playDuration": 2.1,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "enter-corrupt",
+      "codec": "vorbis",
+      "decodedSamples": 94658,
+      "playStartSample": 0,
+      "playEndSample": 92610,
+      "playDuration": 2.1,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "enter-corrupt",
+      "codec": "aac",
+      "decodedSamples": 95232,
+      "playStartSample": 0,
+      "playEndSample": 92610,
+      "playDuration": 2.1,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-music-loop",
+      "codec": "vorbis",
+      "decodedSamples": 3475080,
+      "playStartSample": 44070,
+      "playEndSample": 3430950,
+      "playDuration": 76.8,
+      "loopStep": 3,
+      "maxAdjacentStep": 2757,
+      "sourceAlignmentCorrelation": 0.9955874969195813
+    },
+    {
+      "id": "divine-music-loop",
+      "codec": "aac",
+      "decodedSamples": 3475456,
+      "playStartSample": 42061,
+      "playEndSample": 3428941,
+      "playDuration": 76.8,
+      "loopStep": 60,
+      "maxAdjacentStep": 2552,
+      "sourceAlignmentCorrelation": 0.9969385827597624
+    },
+    {
+      "id": "divine-slide",
+      "codec": "vorbis",
+      "decodedSamples": 37072,
+      "playStartSample": 0,
+      "playEndSample": 35280,
+      "playDuration": 0.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-slide",
+      "codec": "aac",
+      "decodedSamples": 37888,
+      "playStartSample": 0,
+      "playEndSample": 35280,
+      "playDuration": 0.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-turn-whoosh",
+      "codec": "vorbis",
+      "decodedSamples": 20314,
+      "playStartSample": 0,
+      "playEndSample": 18522,
+      "playDuration": 0.42,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-turn-whoosh",
+      "codec": "aac",
+      "decodedSamples": 21504,
+      "playStartSample": 0,
+      "playEndSample": 18522,
+      "playDuration": 0.42,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-fall",
+      "codec": "vorbis",
+      "decodedSamples": 57173,
+      "playStartSample": 0,
+      "playEndSample": 55125,
+      "playDuration": 1.25,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-fall",
+      "codec": "aac",
+      "decodedSamples": 57344,
+      "playStartSample": 0,
+      "playEndSample": 55125,
+      "playDuration": 1.25,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-game-over",
+      "codec": "vorbis",
+      "decodedSamples": 143168,
+      "playStartSample": 0,
+      "playEndSample": 141120,
+      "playDuration": 3.2,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-game-over",
+      "codec": "aac",
+      "decodedSamples": 143360,
+      "playStartSample": 0,
+      "playEndSample": 141120,
+      "playDuration": 3.2,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-ui-click",
+      "codec": "vorbis",
+      "decodedSamples": 9344,
+      "playStartSample": 0,
+      "playEndSample": 5292,
+      "playDuration": 0.12,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-ui-click",
+      "codec": "aac",
+      "decodedSamples": 8192,
+      "playStartSample": 0,
+      "playEndSample": 5292,
+      "playDuration": 0.12,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-shield-ending",
+      "codec": "vorbis",
+      "decodedSamples": 63788,
+      "playStartSample": 0,
+      "playEndSample": 61740,
+      "playDuration": 1.4,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-shield-ending",
+      "codec": "aac",
+      "decodedSamples": 64512,
+      "playStartSample": 0,
+      "playEndSample": 61740,
+      "playDuration": 1.4,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-chaser-growl",
+      "codec": "vorbis",
+      "decodedSamples": 81428,
+      "playStartSample": 0,
+      "playEndSample": 79380,
+      "playDuration": 1.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-chaser-growl",
+      "codec": "aac",
+      "decodedSamples": 81920,
+      "playStartSample": 0,
+      "playEndSample": 79380,
+      "playDuration": 1.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-footsteps",
+      "codec": "vorbis",
+      "decodedSamples": 54968,
+      "playStartSample": 0,
+      "playEndSample": 52920,
+      "playDuration": 1.2,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "divine-footsteps",
+      "codec": "aac",
+      "decodedSamples": 55296,
+      "playStartSample": 0,
+      "playEndSample": 52920,
+      "playDuration": 1.2,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-music-loop",
+      "codec": "vorbis",
+      "decodedSamples": 3224200,
+      "playStartSample": 43978,
+      "playEndSample": 3179978,
+      "playDuration": 71.11111111111111,
+      "loopStep": 5,
+      "maxAdjacentStep": 3994,
+      "sourceAlignmentCorrelation": 0.9932702019851656
+    },
+    {
+      "id": "corrupt-music-loop",
+      "codec": "aac",
+      "decodedSamples": 3224576,
+      "playStartSample": 42798,
+      "playEndSample": 3178798,
+      "playDuration": 71.11111111111111,
+      "loopStep": 49,
+      "maxAdjacentStep": 1889,
+      "sourceAlignmentCorrelation": 0.9962393463594028
+    },
+    {
+      "id": "corrupt-slide",
+      "codec": "vorbis",
+      "decodedSamples": 37072,
+      "playStartSample": 0,
+      "playEndSample": 35280,
+      "playDuration": 0.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-slide",
+      "codec": "aac",
+      "decodedSamples": 37888,
+      "playStartSample": 0,
+      "playEndSample": 35280,
+      "playDuration": 0.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-turn-whoosh",
+      "codec": "vorbis",
+      "decodedSamples": 20314,
+      "playStartSample": 0,
+      "playEndSample": 18522,
+      "playDuration": 0.42,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-turn-whoosh",
+      "codec": "aac",
+      "decodedSamples": 21504,
+      "playStartSample": 0,
+      "playEndSample": 18522,
+      "playDuration": 0.42,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-fall",
+      "codec": "vorbis",
+      "decodedSamples": 57173,
+      "playStartSample": 0,
+      "playEndSample": 55125,
+      "playDuration": 1.25,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-fall",
+      "codec": "aac",
+      "decodedSamples": 57344,
+      "playStartSample": 0,
+      "playEndSample": 55125,
+      "playDuration": 1.25,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-game-over",
+      "codec": "vorbis",
+      "decodedSamples": 143168,
+      "playStartSample": 0,
+      "playEndSample": 141120,
+      "playDuration": 3.2,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-game-over",
+      "codec": "aac",
+      "decodedSamples": 143360,
+      "playStartSample": 0,
+      "playEndSample": 141120,
+      "playDuration": 3.2,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-ui-click",
+      "codec": "vorbis",
+      "decodedSamples": 9344,
+      "playStartSample": 0,
+      "playEndSample": 5292,
+      "playDuration": 0.12,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-ui-click",
+      "codec": "aac",
+      "decodedSamples": 8192,
+      "playStartSample": 0,
+      "playEndSample": 5292,
+      "playDuration": 0.12,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-shield-ending",
+      "codec": "vorbis",
+      "decodedSamples": 63788,
+      "playStartSample": 0,
+      "playEndSample": 61740,
+      "playDuration": 1.4,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-shield-ending",
+      "codec": "aac",
+      "decodedSamples": 64512,
+      "playStartSample": 0,
+      "playEndSample": 61740,
+      "playDuration": 1.4,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-chaser-growl",
+      "codec": "vorbis",
+      "decodedSamples": 81428,
+      "playStartSample": 0,
+      "playEndSample": 79380,
+      "playDuration": 1.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-chaser-growl",
+      "codec": "aac",
+      "decodedSamples": 81920,
+      "playStartSample": 0,
+      "playEndSample": 79380,
+      "playDuration": 1.8,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-footsteps",
+      "codec": "vorbis",
+      "decodedSamples": 54968,
+      "playStartSample": 0,
+      "playEndSample": 52920,
+      "playDuration": 1.2,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "corrupt-footsteps",
+      "codec": "aac",
+      "decodedSamples": 55296,
+      "playStartSample": 0,
+      "playEndSample": 52920,
+      "playDuration": 1.2,
+      "loopStep": null,
+      "maxAdjacentStep": 0,
+      "sourceAlignmentCorrelation": null
+    },
+    {
+      "id": "menu-music",
+      "codec": "vorbis",
+      "decodedSamples": 3263400,
+      "playStartSample": 41919,
+      "playEndSample": 3217119,
+      "playDuration": 72,
+      "loopStep": 26,
+      "maxAdjacentStep": 2389,
+      "sourceAlignmentCorrelation": 0.9978901907848464
+    },
+    {
+      "id": "menu-music",
+      "codec": "aac",
+      "decodedSamples": 3263488,
+      "playStartSample": 45007,
+      "playEndSample": 3220207,
+      "playDuration": 72,
+      "loopStep": 71,
+      "maxAdjacentStep": 2675,
+      "sourceAlignmentCorrelation": 0.9804850585917161
+    }
+  ],
+  "divineBeam": {
+    "sharedCanvas": [
+      640,
+      640
+    ],
+    "anchor": {
+      "x": 0.5,
+      "y": 1
+    },
+    "splitX": 320,
+    "exactMasterReconstruction": true,
+    "webpVisibleMaxChannelDifference": 0,
+    "visualReview": "Continuous top edge, upper gold trim, frieze and lower trim; no step at center."
+  },
+  "fallSequences": [
+    {
+      "id": "divine-socrates-moves",
+      "review": "Head remains left through backward fall and landing; no head/feet reversal",
+      "landing": "original preserved"
+    },
+    {
+      "id": "divine-plato-moves",
+      "review": "Head remains left through backward fall and landing; no head/feet reversal",
+      "landing": "redrawn from fall-air"
+    },
+    {
+      "id": "divine-aristotle-moves",
+      "review": "Head remains left through backward fall and landing; no head/feet reversal",
+      "landing": "redrawn from fall-air"
+    },
+    {
+      "id": "corrupt-socrates-moves",
+      "review": "Head remains right through forward fall and landing; original direction preserved",
+      "landing": "original preserved"
+    },
+    {
+      "id": "corrupt-plato-moves",
+      "review": "Head remains left through backward fall and landing; no head/feet reversal",
+      "landing": "redrawn from fall-air"
+    },
+    {
+      "id": "corrupt-aristotle-moves",
+      "review": "Head remains left through backward fall and landing; no head/feet reversal",
+      "landing": "redrawn from fall-air"
+    }
+  ],
+  "committableFiles": 223,
+  "largestCommittableFile": {
+    "file": "previews/corrupt-sanctuary-assembly.png",
+    "bytes": 1268063
+  }
+}

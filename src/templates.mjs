@@ -308,6 +308,23 @@ function subjectPanel(ctx, root, s) {
 </article>`;
 }
 
+// The way into Sanctum Run, under the course browser: a philosopher and his fallen self.
+function playBand(ctx, root) {
+  const { game } = ctx;
+  const sets = game.courses.reduce((n, c) => n + c.sets.length, 0);
+  const sheet = (realm) => `${root}play/pack/textures/${realm}/characters/${realm}-socrates-moves.webp`;
+  return `<a class="play-band" href="${root}play/">
+    <span class="play-band-art" aria-hidden="true"><span class="play-fig play-fig-divine" style="background-image:url('${sheet('divine')}')"></span><span class="play-fig play-fig-corrupt" style="background-image:url('${sheet('corrupt')}')"></span></span>
+    <span class="play-band-text">
+      <span class="kicker">Study game · New</span>
+      <span class="play-band-title">Sanctum <em>Run</em></span>
+      <span class="play-band-desc">Run the sanctuary as Socrates, Plato or Aristotle while your practice questions wait at every gate. Pick your courses and sets. Miss one and the sanctum falls, the Fallen close in, and the gate points you to the outline section to review.</span>
+      <span class="play-band-meta">${game.total.toLocaleString('en-US')} questions · ${plural(sets, 'practice set')} · ${plural(game.courses.length, 'course')}</span>
+    </span>
+    <span class="btn btn-gold play-band-cta">${icon('play')} Play</span>
+  </a>`;
+}
+
 const breadcrumbs = (root, items) => `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
   <li><a href="${root}">Home</a></li>
   ${items.map(([href, label], i) => i === items.length - 1
@@ -386,6 +403,7 @@ export function home(ctx) {
     <div class="course-directory"><label class="course-find" hidden data-course-find>Find a course<input type="search" placeholder="Search course names…" data-course-query></label><p class="directory-count" data-course-count>${subjects.length} courses</p><div class="course-options">${subjects.map(s => `<a class="course-option" href="${root}${ctx.P.subject(s)}" data-course-choice="${esc(s.slug)}" data-course-name="${esc(s.title)}" title="${esc(s.title)}">${icon(s.icon)}<span><span class="course-name">${esc(s.title)}</span><small>${plural(s.documents.length, 'document')}</small></span>${icon('chevron-right')}</a>`).join('')}</div><p hidden data-course-empty>No courses match. Try another name.</p></div>
     <div class="course-preview comprehensive-subjects" id="course-preview" tabindex="-1"><p class="course-preview-intro">Select a course to preview its materials, or open its full collection.</p>${subjects.map(s => `<div data-course-panel="${esc(s.slug)}" hidden>${subjectPanel(ctx, root, s)}</div>`).join('')}</div>
   </div>
+  ${ctx.game?.total ? playBand(ctx, root) : ''}
 </section>
 
 <section class="section container" id="recently-opened" hidden aria-labelledby="ro-h">
@@ -463,7 +481,10 @@ export function subjectPage(ctx, s) {
         <p class="page-lede">${esc(s.description)}</p>
         <ul class="type-pills">${Object.keys(TYPES).filter((k) => counts[k]).map((k) => `<li>${icon(TYPES[k].icon)} ${esc(counts[k] === 1 ? TYPES[k].label : TYPES[k].plural)} <span class="count">${counts[k]}</span></li>`).join('')}</ul>
       </div>
-      ${s.documents.length ? `<a class="btn btn-primary subject-hero-dl" href="${root}${P.zip(s)}" download>${icon('download')} Download all <span class="btn-sub">${fmtSize(s.zipSize)}</span></a>` : ''}
+      <div class="subject-hero-actions">
+        ${s.documents.length ? `<a class="btn btn-primary subject-hero-dl" href="${root}${P.zip(s)}" download>${icon('download')} Download all <span class="btn-sub">${fmtSize(s.zipSize)}</span></a>` : ''}
+        ${ctx.game?.courses.some((c) => c.slug === s.slug) ? `<a class="btn btn-ghost subject-hero-play" href="${root}play/?course=${esc(s.slug)}">${icon('play')} Play in Sanctum Run</a>` : ''}
+      </div>
     </div>
   </div>
 </section>
@@ -723,6 +744,170 @@ export function contribute(ctx) {
   </aside>
 </section>`;
   return layout(ctx, { root, title: 'Share your work', description: 'Share your outlines, rule charts, flowcharts, and practice questions with the study library. Every submission is reviewed before publishing.', body, active: 'contribute', canonical: 'contribute/' });
+}
+
+/**
+ * Sanctum Run, the study game at /play/: a full-screen canvas (src/game/engine.js) under
+ * HTML screens and the question gates (src/game/game.js). Its data comes from scripts/game.mjs.
+ */
+export function play(ctx) {
+  const root = '../';
+  const { game } = ctx;
+  const heart = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7.5-4.6-9.5-9.3C1 8.2 3.1 4.5 6.8 4.5c2.1 0 3.6 1.1 4.6 2.6.9-1.5 2.5-2.6 4.6-2.6 3.7 0 5.8 3.7 4.3 7.2C19.5 16.4 12 21 12 21z"/></svg>';
+  const choice = (name, value, label, sub) => `<button type="button" class="g-pill" data-${name}="${value}" aria-pressed="false"><strong>${label}</strong><small>${sub}</small></button>`;
+  const sound = (cls = 'g-btn g-btn-ghost') => `<button type="button" class="${cls}" data-sound aria-pressed="true">${icon('volume-2')}<span>Sound on</span></button>`;
+  return `<!doctype html>
+<html lang="en" data-root="${root}">
+<head>
+${head(ctx, { root, title: 'Sanctum Run', description: `A running game for your practice questions: ${game.total.toLocaleString('en-US')} questions from the study library, asked at the gates of a falling sanctuary.`, canonical: 'play/' })}
+<link rel="stylesheet" href="game.css">
+</head>
+<body class="game" data-realm="divine" data-screen="title">
+<canvas id="world" aria-hidden="true"></canvas>
+<div class="g-veil" aria-hidden="true"></div>
+
+<header class="g-hud" hidden>
+  <div class="g-hud-left">
+    <p class="g-score"><span class="sr-only">Score</span><strong id="hud-score">0</strong></p>
+    <p class="g-counts"><span class="g-laurel" title="Laurels"><i></i><b id="hud-laurels">0</b></span><span class="g-insight" title="Insight: strikes out a wrong answer at a gate"><i></i><b id="hud-insight">0</b></span><span class="g-streak" id="hud-streak"></span></p>
+  </div>
+  <div class="g-hud-mid">
+    <p class="g-gatecount">Gate <strong id="hud-gate">1 / 1</strong></p>
+    <div class="g-meter" id="hud-corruption" role="meter" aria-label="Corruption" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span><em id="hud-realm">Divine</em></div>
+  </div>
+  <div class="g-hud-right">
+    <p class="g-hearts" aria-label="Hearts">${heart.replace('<svg', '<svg class="g-heart"').repeat(3)}</p>
+    ${sound('g-iconbtn')}
+    <button type="button" class="g-iconbtn" id="pause-btn" aria-label="Pause">${icon('pause')}</button>
+  </div>
+</header>
+<p class="g-hint" id="controls-hint" hidden><span class="hide-touch">← → lanes and turns · ↑ or Space jump · ↓ slide · Esc pause</span><span class="show-touch">Swipe to turn, jump and slide · tap to jump</span></p>
+
+<section class="g-screen g-title" id="title">
+  <div class="g-title-inner">
+    <p class="g-eyebrow">${esc(ctx.config.shortTitle)} · Study game</p>
+    <h1 class="g-logo">Sanctum <em>Run</em></h1>
+    <p class="g-tag">Divine &amp; Fallen</p>
+    <p class="g-lede">Run the sanctuary as Socrates, Plato or Aristotle. Every gate asks a question from your practice sets. Answer right and the light holds. Answer wrong and the sanctum falls, and the Fallen gain on you.</p>
+    <div class="g-actions">
+      <button type="button" class="g-btn g-btn-primary" id="start" disabled>Play</button>
+      <button type="button" class="g-btn g-btn-ghost" id="howto-open">How to play</button>
+    </div>
+    <p class="g-status" id="title-status">Loading the sanctuary…</p>
+    <p class="g-best" id="best"></p>
+    <a class="g-back" href="${root}">${icon('arrow-left')} Back to the study library</a>
+  </div>
+  <div class="g-howto" id="howto" hidden role="dialog" aria-labelledby="howto-h">
+    <h2 id="howto-h">How to play</h2>
+    <dl>
+      <div><dt>Run</dt><dd>You run on your own. <kbd>←</kbd> <kbd>→</kbd> change lanes, and at a corner they turn. <kbd>↑</kbd> or <kbd>Space</kbd> jumps, <kbd>↓</kbd> slides. On a phone, swipe, or tap to jump.</dd></div>
+      <div><dt>Gates</dt><dd>Each gate stops you for a question. There's no clock: take as long as you need. Use the keys <kbd>1</kbd>–<kbd>4</kbd> or tap an answer.</dd></div>
+      <div><dt>Corruption</dt><dd>A wrong answer spreads corruption. At half, the sanctum falls: the world turns, your philosopher grows horns, and the pursuer becomes a horned shade that runs closer and faster. Right answers drive it back, and a streak drives it back harder. If corruption overflows, the Fallen take a heart.</dd></div>
+      <div><dt>Review</dt><dd>When you miss, the gate shows the explanation and a link to the part of the course outline that covers it. Missed questions are saved, so you can run just those later.</dd></div>
+      <div><dt>Pickups</dt><dd>Laurels are points, worth double in the fallen realm. A wisdom scroll gives Insight, which strikes out a wrong answer at a gate. The aegis blocks one hit.</dd></div>
+      <div><dt>Hearts</dt><dd>Obstacles, falls and overflowing corruption each cost a heart. Lose all three and the Fallen catch you, but you can rise again and keep your place.</dd></div>
+    </dl>
+    <button type="button" class="g-btn g-btn-primary" id="howto-close">Got it</button>
+  </div>
+</section>
+
+<section class="g-screen g-setup" id="setup" hidden aria-labelledby="setup-h">
+  <div class="g-panel">
+    <header class="g-setup-head">
+      <button type="button" class="g-iconbtn" id="setup-back" aria-label="Back">${icon('arrow-left')}</button>
+      <h2 id="setup-h">Prepare your run</h2>
+    </header>
+    <h3 class="g-step"><span>1</span> Courses</h3>
+    <div class="g-courses" id="courses"></div>
+    <h3 class="g-step"><span>2</span> Practice sets</h3>
+    <div class="g-sets" id="sets"></div>
+    <h3 class="g-step"><span>3</span> Your philosopher</h3>
+    <div class="g-chars" id="characters"></div>
+    <h3 class="g-step"><span>4</span> The run</h3>
+    <div class="g-opts">
+      <div class="g-optrow" role="group" aria-label="Distance between gates">
+        <span class="g-optlabel">Gates</span>
+        ${choice('spacing', 'frequent', 'Frequent', 'More questions, less running')}${choice('spacing', 'standard', 'Standard', 'A balance')}${choice('spacing', 'sparse', 'Sparse', 'Longer runs between')}
+      </div>
+      <div class="g-optrow" role="group" aria-label="Running speed">
+        <span class="g-optlabel">Pace</span>
+        ${choice('pace', 'gentle', 'Gentle', 'Slower, more forgiving')}${choice('pace', 'standard', 'Standard', 'The intended speed')}${choice('pace', 'swift', 'Swift', 'For quick fingers')}
+      </div>
+      <label class="g-toggle"><input type="checkbox" id="shuffled"> <span>Shuffle the questions</span></label>
+      <label class="g-toggle"><input type="checkbox" id="missed-only"> <span>Only questions I've missed before</span></label>
+    </div>
+    <div class="g-begin">
+      <p id="begin-count"></p>
+      <button type="button" class="g-btn g-btn-primary" id="begin">Begin the run</button>
+    </div>
+  </div>
+</section>
+
+<section class="g-screen g-center" id="loading" hidden>
+  <div class="g-panel g-small">
+    <h2>Entering the sanctuary</h2>
+    <div class="g-bar" id="load-bar"><span></span></div>
+    <p class="g-status" id="load-status">Gathering the questions and the art…</p>
+  </div>
+</section>
+
+<div class="g-gate" id="gate" hidden role="dialog" aria-modal="true" aria-labelledby="gate-kicker">
+  <div class="g-gate-card">
+    <div class="g-guardian" id="gate-guardian" aria-hidden="true"></div>
+    <div class="g-gate-body">
+      <p class="g-gate-kicker" id="gate-kicker"></p>
+      <p class="g-gate-set" id="gate-set"></p>
+      <div class="g-stem" id="gate-stem"></div>
+      <ol class="g-options" id="gate-options"></ol>
+      <button type="button" class="g-insight-btn" id="gate-insight" hidden>Use Insight to strike a wrong answer <b id="gate-insight-n">0</b></button>
+      <div class="g-result" id="gate-result" hidden aria-live="polite"></div>
+      <button type="button" class="g-btn g-btn-primary g-continue" id="gate-continue" hidden>Run on</button>
+    </div>
+  </div>
+</div>
+
+<section class="g-screen g-center" id="pause" hidden aria-labelledby="pause-h">
+  <div class="g-panel g-small">
+    <h2 id="pause-h">Paused</h2>
+    <div class="g-stack">
+      <button type="button" class="g-btn g-btn-primary" id="resume">Resume</button>
+      ${sound()}
+      <button type="button" class="g-btn g-btn-ghost" id="quit">End the run</button>
+    </div>
+  </div>
+</section>
+
+<section class="g-screen g-center" id="fallen" hidden aria-labelledby="fallen-h">
+  <div class="g-panel g-small g-fallen">
+    <p class="g-eyebrow">The pursuer has you</p>
+    <h2 id="fallen-h">The Fallen caught you.</h2>
+    <p id="fallen-stats"></p>
+    <p class="g-note">Rise again with full hearts and keep your place in the questions, or end the run and see what to review.</p>
+    <div class="g-stack">
+      <button type="button" class="g-btn g-btn-primary" id="rise">Rise again</button>
+      <button type="button" class="g-btn g-btn-ghost" id="give-up">End the run</button>
+    </div>
+  </div>
+</section>
+
+<section class="g-screen g-center" id="summary" hidden aria-labelledby="summary-title">
+  <div class="g-panel g-summary">
+    <h2 id="summary-title">You ascend.</h2>
+    <p id="summary-lede"></p>
+    <dl class="g-stats" id="summary-stats"></dl>
+    <div class="g-missed" id="summary-missed"></div>
+    <div class="g-actions">
+      <button type="button" class="g-btn g-btn-primary" id="retry-missed">Run the missed ones</button>
+      <button type="button" class="g-btn g-btn-ghost" id="new-run">New run</button>
+      <a class="g-btn g-btn-ghost" href="${root}">Study library</a>
+    </div>
+  </div>
+</section>
+
+<noscript><p class="g-noscript">Sanctum Run needs JavaScript. The practice sets work on their own in the <a href="${root}library/?type=practice">library</a>.</p></noscript>
+<script type="module" src="game.js"></script>
+</body>
+</html>`;
 }
 
 export function notFound(ctx) {

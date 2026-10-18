@@ -41,6 +41,15 @@ content/
 
 The document types are `outline`, `rule-chart`, `flowcharts`, `flashcards`, `practice`, and `document`. To add a new type, add one line to `TYPES` in `scripts/build.mjs`. Icons come from the site's own set in `src/icons/` (drawn by `scripts/icons/glyphs.mjs`; run `npm run icons` after adding or changing one). Courses can also use an archangel bust, `statue-angel-michael`, `-gabriel`, `-raphael`, `-uriel`, `-selaphiel`, `-jegudiel` or `-barachiel` (from `src/assets/archangels/busts/`; the fallen counterpart shows in dark mode). Any other [Lucide](https://lucide.dev/icons) name still works and shows as an outline.
 
+## Sanctum Run (the study game)
+
+`/play/` is a running game built on the practice question banks, linked from the home page under the course browser and from each course page. Players pick courses, practice sets and a philosopher, then run an isometric sanctuary. Each gate stops the run for one question, with no time limit. A wrong answer spreads corruption: at half, the world, the runner and the pursuer turn to their fallen versions. The gate also shows the explanation and links to the section of the course outline that covers the question.
+
+- **Questions** come from the practice sets automatically at build time (`scripts/game.mjs`, readers in `scripts/lib/quiz.mjs`). A new HTML practice set in one of the existing formats joins the game with no extra step; a set in a format the reader doesn't know is skipped.
+- **Review links** go to the course's `outline` document, or its `rule-chart` if it has no outline. Each question is matched to the closest section of it (`scripts/lib/outline.mjs`): a heading in a Word or HTML outline, or a page of a PDF.
+- **Art and audio** come from the asset pack in `Assets/temple run/`; the build copies only what the game uses into `play/pack/`.
+- **Code** is in `src/game/` (`engine.js` draws and runs the world, `game.js` handles the screens and gates). Add `?debug` to the URL to get `window.sanctum`.
+
 ## Editing titles and descriptions online
 
 Go to `/admin` on the live site (it isn't linked anywhere) to edit any document's title and description from a browser or phone. Sign in with a GitHub [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new):
@@ -79,6 +88,9 @@ Each build also generates a read-only API: `catalog.json`, per-document JSON and
 ```
 content/                 source documents (edit these)
 scripts/build.mjs        static site generator
+scripts/game.mjs         game data: questions, outline sections, asset copy
+src/game/                Sanctum Run, the game at /play/
+Assets/temple run/       the game's art and audio pack (runtime files; masters stay local)
 scripts/serve.mjs        local preview server (mirrors the GitHub Pages base path)
 scripts/icons/           draws the icon set (npm run icons)
 src/templates.mjs        HTML templates for every page type

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "divine-wisdom",
+    "prompt": "Edit this supplied scroll collectible to repair its transparency mask and improve its use as a small game sprite. Retain the same marble and antique-gold style, overall diagonal composition, rolled ends and clean ivory marble and gold ribbon. IMPORTANT: the entire central blank ivory scroll sheet must be SOLID OPAQUE IVORY STONE. It must NOT be see-through and must NOT be an empty hole between the roller ends. Every part of the scroll paper, rolled ends and ribbon must have full opacity, only the exterior background and actual physical open gaps outside the object may be transparent. Make the scroll a single coherent compact object. Preserve fine sculptural detail. Square image, generous 12% outer clear margin, no background, no text, no lettering. Genuine transparent background."
+  },
+  {
+    "id": "corrupt-wisdom",
+    "prompt": "Edit this supplied scroll collectible to repair its transparency mask and improve its use as a small game sprite. Retain the same marble and antique-gold style, overall diagonal composition, rolled ends and thorned binding, cracked weathered ivory and tarnished gold. IMPORTANT: the entire central blank ivory scroll sheet must be SOLID OPAQUE IVORY STONE. It must NOT be see-through and must NOT be an empty hole between the roller ends. Every part of the scroll paper, rolled ends and ribbon must have full opacity, only the exterior background and actual physical open gaps outside the object may be transparent. Make the scroll a single coherent compact object. Preserve fine sculptural detail. Square image, generous 12% outer clear margin, no background, no text, no lettering. Genuine transparent background."
+  }
+]

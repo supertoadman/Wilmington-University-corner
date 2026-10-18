@@ -1,0 +1,1424 @@
+{
+  "counts": {
+    "raster": 76,
+    "spriteSheets": 14,
+    "vectors": 40,
+    "audio": 27,
+    "total": 143
+  },
+  "runtimeBytes": 14759379,
+  "assets": [
+    {
+      "id": "divine-laurel",
+      "width": 256,
+      "height": 256,
+      "alpha": true,
+      "bounds": {
+        "x": 20,
+        "y": 14,
+        "width": 216,
+        "height": 226,
+        "transparentFraction": 0.4124
+      },
+      "bytes": 16326
+    },
+    {
+      "id": "corrupt-laurel",
+      "width": 256,
+      "height": 256,
+      "alpha": true,
+      "bounds": {
+        "x": 21,
+        "y": 17,
+        "width": 216,
+        "height": 221,
+        "transparentFraction": 0.4361
+      },
+      "bytes": 16906
+    },
+    {
+      "id": "divine-wisdom",
+      "width": 256,
+      "height": 256,
+      "alpha": true,
+      "bounds": {
+        "x": 10,
+        "y": 19,
+        "width": 244,
+        "height": 222,
+        "transparentFraction": 0.4657
+      },
+      "bytes": 12660
+    },
+    {
+      "id": "corrupt-wisdom",
+      "width": 256,
+      "height": 256,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 12,
+        "width": 233,
+        "height": 235,
+        "transparentFraction": 0.4776
+      },
+      "bytes": 14500
+    },
+    {
+      "id": "divine-aegis",
+      "width": 256,
+      "height": 256,
+      "alpha": true,
+      "bounds": {
+        "x": 26,
+        "y": 9,
+        "width": 208,
+        "height": 237,
+        "transparentFraction": 0.4115
+      },
+      "bytes": 16334
+    },
+    {
+      "id": "corrupt-aegis",
+      "width": 256,
+      "height": 256,
+      "alpha": true,
+      "bounds": {
+        "x": 9,
+        "y": 5,
+        "width": 238,
+        "height": 245,
+        "transparentFraction": 0.3636
+      },
+      "bytes": 14864
+    },
+    {
+      "id": "divine-temple",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true,
+      "bounds": {
+        "x": 11,
+        "y": 24,
+        "width": 1006,
+        "height": 985,
+        "transparentFraction": 0.401
+      },
+      "bytes": 175438
+    },
+    {
+      "id": "corrupt-temple",
+      "width": 1024,
+      "height": 1024,
+      "alpha": true,
+      "bounds": {
+        "x": 19,
+        "y": 42,
+        "width": 992,
+        "height": 951,
+        "transparentFraction": 0.4254
+      },
+      "bytes": 222114
+    },
+    {
+      "id": "divine-gateway",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 25,
+        "y": 12,
+        "width": 586,
+        "height": 612,
+        "transparentFraction": 0.5737
+      },
+      "bytes": 54044
+    },
+    {
+      "id": "corrupt-gateway",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 34,
+        "y": 6,
+        "width": 582,
+        "height": 627,
+        "transparentFraction": 0.5667
+      },
+      "bytes": 73338
+    },
+    {
+      "id": "divine-column",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 189,
+        "y": 10,
+        "width": 263,
+        "height": 618,
+        "transparentFraction": 0.7986
+      },
+      "bytes": 23166
+    },
+    {
+      "id": "corrupt-column",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 176,
+        "y": 5,
+        "width": 290,
+        "height": 629,
+        "transparentFraction": 0.7854
+      },
+      "bytes": 37042
+    },
+    {
+      "id": "divine-floor",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 17,
+        "y": 106,
+        "width": 604,
+        "height": 470,
+        "transparentFraction": 0.6333
+      },
+      "bytes": 25142
+    },
+    {
+      "id": "corrupt-floor",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 20,
+        "y": 126,
+        "width": 599,
+        "height": 421,
+        "transparentFraction": 0.6686
+      },
+      "bytes": 41158
+    },
+    {
+      "id": "divine-barrier",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 38,
+        "y": 115,
+        "width": 583,
+        "height": 456,
+        "transparentFraction": 0.6576
+      },
+      "bytes": 42604
+    },
+    {
+      "id": "corrupt-barrier",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 18,
+        "y": 115,
+        "width": 611,
+        "height": 466,
+        "transparentFraction": 0.6332
+      },
+      "bytes": 48954
+    },
+    {
+      "id": "divine-trap",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 112,
+        "width": 607,
+        "height": 459,
+        "transparentFraction": 0.6412
+      },
+      "bytes": 47466
+    },
+    {
+      "id": "corrupt-trap",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 93,
+        "width": 609,
+        "height": 475,
+        "transparentFraction": 0.6502
+      },
+      "bytes": 59730
+    },
+    {
+      "id": "divine-socrates",
+      "width": 1280,
+      "height": 1280,
+      "alpha": true,
+      "bounds": {
+        "x": 103,
+        "y": 6,
+        "width": 1133,
+        "height": 1246,
+        "transparentFraction": 0.7145
+      },
+      "bytes": 185704
+    },
+    {
+      "id": "corrupt-socrates",
+      "width": 1280,
+      "height": 1280,
+      "alpha": true,
+      "bounds": {
+        "x": 64,
+        "y": 6,
+        "width": 1195,
+        "height": 1256,
+        "transparentFraction": 0.6536
+      },
+      "bytes": 229810
+    },
+    {
+      "id": "divine-plato",
+      "width": 1280,
+      "height": 1280,
+      "alpha": true,
+      "bounds": {
+        "x": 67,
+        "y": 7,
+        "width": 1184,
+        "height": 1259,
+        "transparentFraction": 0.7353
+      },
+      "bytes": 194048
+    },
+    {
+      "id": "corrupt-plato",
+      "width": 1280,
+      "height": 1280,
+      "alpha": true,
+      "bounds": {
+        "x": 55,
+        "y": 3,
+        "width": 1212,
+        "height": 1277,
+        "transparentFraction": 0.6747
+      },
+      "bytes": 229882
+    },
+    {
+      "id": "divine-aristotle",
+      "width": 1280,
+      "height": 1280,
+      "alpha": true,
+      "bounds": {
+        "x": 120,
+        "y": 5,
+        "width": 1092,
+        "height": 1234,
+        "transparentFraction": 0.7333
+      },
+      "bytes": 212324
+    },
+    {
+      "id": "corrupt-aristotle",
+      "width": 1280,
+      "height": 1280,
+      "alpha": true,
+      "bounds": {
+        "x": 114,
+        "y": 3,
+        "width": 1123,
+        "height": 1237,
+        "transparentFraction": 0.6964
+      },
+      "bytes": 219212
+    },
+    {
+      "id": "divine-sanctuary",
+      "width": 1536,
+      "height": 1024,
+      "alpha": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1536,
+        "height": 1024,
+        "transparentFraction": 0
+      },
+      "bytes": 160768
+    },
+    {
+      "id": "corrupt-sanctuary",
+      "width": 1536,
+      "height": 1024,
+      "alpha": false,
+      "bounds": {
+        "x": 0,
+        "y": 0,
+        "width": 1536,
+        "height": 1024,
+        "transparentFraction": 0
+      },
+      "bytes": 165950
+    },
+    {
+      "id": "divine-guardian-michael",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 24,
+        "y": 5,
+        "width": 476,
+        "height": 758,
+        "transparentFraction": 0.4818
+      },
+      "bytes": 67822
+    },
+    {
+      "id": "corrupt-guardian-michael",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 11,
+        "y": 17,
+        "width": 493,
+        "height": 736,
+        "transparentFraction": 0.5076
+      },
+      "bytes": 77422
+    },
+    {
+      "id": "divine-guardian-gabriel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 46,
+        "y": 4,
+        "width": 452,
+        "height": 757,
+        "transparentFraction": 0.5021
+      },
+      "bytes": 54888
+    },
+    {
+      "id": "corrupt-guardian-gabriel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 7,
+        "y": 7,
+        "width": 500,
+        "height": 757,
+        "transparentFraction": 0.5346
+      },
+      "bytes": 70198
+    },
+    {
+      "id": "divine-guardian-raphael",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 47,
+        "y": 5,
+        "width": 433,
+        "height": 754,
+        "transparentFraction": 0.442
+      },
+      "bytes": 63574
+    },
+    {
+      "id": "corrupt-guardian-raphael",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 22,
+        "y": 16,
+        "width": 476,
+        "height": 737,
+        "transparentFraction": 0.5322
+      },
+      "bytes": 72814
+    },
+    {
+      "id": "divine-guardian-uriel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 50,
+        "y": 1,
+        "width": 437,
+        "height": 761,
+        "transparentFraction": 0.4884
+      },
+      "bytes": 57566
+    },
+    {
+      "id": "corrupt-guardian-uriel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 10,
+        "y": 17,
+        "width": 492,
+        "height": 737,
+        "transparentFraction": 0.5328
+      },
+      "bytes": 75542
+    },
+    {
+      "id": "divine-guardian-selaphiel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 23,
+        "y": 15,
+        "width": 466,
+        "height": 747,
+        "transparentFraction": 0.4404
+      },
+      "bytes": 70558
+    },
+    {
+      "id": "corrupt-guardian-selaphiel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 23,
+        "y": 11,
+        "width": 468,
+        "height": 747,
+        "transparentFraction": 0.5424
+      },
+      "bytes": 74752
+    },
+    {
+      "id": "divine-guardian-jegudiel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 39,
+        "y": 3,
+        "width": 445,
+        "height": 753,
+        "transparentFraction": 0.4745
+      },
+      "bytes": 56876
+    },
+    {
+      "id": "corrupt-guardian-jegudiel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 9,
+        "y": 25,
+        "width": 494,
+        "height": 727,
+        "transparentFraction": 0.544
+      },
+      "bytes": 68782
+    },
+    {
+      "id": "divine-guardian-barachiel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 22,
+        "y": 8,
+        "width": 471,
+        "height": 752,
+        "transparentFraction": 0.5174
+      },
+      "bytes": 58834
+    },
+    {
+      "id": "corrupt-guardian-barachiel",
+      "width": 512,
+      "height": 768,
+      "alpha": true,
+      "bounds": {
+        "x": 9,
+        "y": 17,
+        "width": 494,
+        "height": 733,
+        "transparentFraction": 0.5768
+      },
+      "bytes": 68314
+    },
+    {
+      "id": "divine-panel",
+      "width": 512,
+      "height": 192,
+      "bytes": 555
+    },
+    {
+      "id": "divine-button-normal",
+      "width": 320,
+      "height": 88,
+      "bytes": 271
+    },
+    {
+      "id": "divine-button-hover",
+      "width": 320,
+      "height": 88,
+      "bytes": 271
+    },
+    {
+      "id": "divine-button-pressed",
+      "width": 320,
+      "height": 88,
+      "bytes": 271
+    },
+    {
+      "id": "divine-button-disabled",
+      "width": 320,
+      "height": 88,
+      "bytes": 271
+    },
+    {
+      "id": "divine-icon-play",
+      "width": 64,
+      "height": 64,
+      "bytes": 206
+    },
+    {
+      "id": "divine-icon-pause",
+      "width": 64,
+      "height": 64,
+      "bytes": 219
+    },
+    {
+      "id": "divine-icon-sound",
+      "width": 64,
+      "height": 64,
+      "bytes": 274
+    },
+    {
+      "id": "divine-icon-heart",
+      "width": 64,
+      "height": 64,
+      "bytes": 233
+    },
+    {
+      "id": "divine-icon-restart",
+      "width": 64,
+      "height": 64,
+      "bytes": 252
+    },
+    {
+      "id": "divine-icon-settings",
+      "width": 64,
+      "height": 64,
+      "bytes": 343
+    },
+    {
+      "id": "divine-health-track",
+      "width": 320,
+      "height": 32,
+      "bytes": 256
+    },
+    {
+      "id": "divine-health-fill",
+      "width": 306,
+      "height": 18,
+      "bytes": 144
+    },
+    {
+      "id": "divine-tile-plain",
+      "width": 256,
+      "height": 144,
+      "bytes": 404
+    },
+    {
+      "id": "divine-tile-inlay",
+      "width": 256,
+      "height": 144,
+      "bytes": 546
+    },
+    {
+      "id": "divine-tile-edge",
+      "width": 256,
+      "height": 144,
+      "bytes": 475
+    },
+    {
+      "id": "divine-tile-gap",
+      "width": 256,
+      "height": 144,
+      "bytes": 251
+    },
+    {
+      "id": "divine-effect-ring",
+      "width": 256,
+      "height": 128,
+      "bytes": 287
+    },
+    {
+      "id": "divine-effect-spark",
+      "width": 128,
+      "height": 128,
+      "bytes": 216
+    },
+    {
+      "id": "divine-effect-shadow",
+      "width": 256,
+      "height": 128,
+      "bytes": 302
+    },
+    {
+      "id": "corrupt-panel",
+      "width": 512,
+      "height": 192,
+      "bytes": 555
+    },
+    {
+      "id": "corrupt-button-normal",
+      "width": 320,
+      "height": 88,
+      "bytes": 271
+    },
+    {
+      "id": "corrupt-button-hover",
+      "width": 320,
+      "height": 88,
+      "bytes": 271
+    },
+    {
+      "id": "corrupt-button-pressed",
+      "width": 320,
+      "height": 88,
+      "bytes": 271
+    },
+    {
+      "id": "corrupt-button-disabled",
+      "width": 320,
+      "height": 88,
+      "bytes": 271
+    },
+    {
+      "id": "corrupt-icon-play",
+      "width": 64,
+      "height": 64,
+      "bytes": 206
+    },
+    {
+      "id": "corrupt-icon-pause",
+      "width": 64,
+      "height": 64,
+      "bytes": 219
+    },
+    {
+      "id": "corrupt-icon-sound",
+      "width": 64,
+      "height": 64,
+      "bytes": 274
+    },
+    {
+      "id": "corrupt-icon-heart",
+      "width": 64,
+      "height": 64,
+      "bytes": 233
+    },
+    {
+      "id": "corrupt-icon-restart",
+      "width": 64,
+      "height": 64,
+      "bytes": 252
+    },
+    {
+      "id": "corrupt-icon-settings",
+      "width": 64,
+      "height": 64,
+      "bytes": 343
+    },
+    {
+      "id": "corrupt-health-track",
+      "width": 320,
+      "height": 32,
+      "bytes": 256
+    },
+    {
+      "id": "corrupt-health-fill",
+      "width": 306,
+      "height": 18,
+      "bytes": 144
+    },
+    {
+      "id": "corrupt-tile-plain",
+      "width": 256,
+      "height": 144,
+      "bytes": 523
+    },
+    {
+      "id": "corrupt-tile-inlay",
+      "width": 256,
+      "height": 144,
+      "bytes": 665
+    },
+    {
+      "id": "corrupt-tile-edge",
+      "width": 256,
+      "height": 144,
+      "bytes": 594
+    },
+    {
+      "id": "corrupt-tile-gap",
+      "width": 256,
+      "height": 144,
+      "bytes": 251
+    },
+    {
+      "id": "corrupt-effect-ring",
+      "width": 256,
+      "height": 128,
+      "bytes": 287
+    },
+    {
+      "id": "corrupt-effect-spark",
+      "width": 128,
+      "height": 128,
+      "bytes": 216
+    },
+    {
+      "id": "corrupt-effect-shadow",
+      "width": 256,
+      "height": 128,
+      "bytes": 302
+    },
+    {
+      "id": "collect-laurel",
+      "bytes": 5535
+    },
+    {
+      "id": "collect-wisdom",
+      "bytes": 7635
+    },
+    {
+      "id": "activate-aegis",
+      "bytes": 9482
+    },
+    {
+      "id": "jump",
+      "bytes": 4055
+    },
+    {
+      "id": "land",
+      "bytes": 4750
+    },
+    {
+      "id": "damage",
+      "bytes": 5517
+    },
+    {
+      "id": "enter-divine",
+      "bytes": 15493
+    },
+    {
+      "id": "enter-corrupt",
+      "bytes": 15449
+    },
+    {
+      "id": "divine-socrates-moves",
+      "width": 3840,
+      "height": 1920,
+      "alpha": true,
+      "bounds": {
+        "x": 60,
+        "y": 165,
+        "width": 3661,
+        "height": 1747,
+        "transparentFraction": 0.7543965657552083
+      },
+      "bytes": 558760
+    },
+    {
+      "id": "corrupt-socrates-moves",
+      "width": 3840,
+      "height": 1920,
+      "alpha": true,
+      "bounds": {
+        "x": 57,
+        "y": 132,
+        "width": 3681,
+        "height": 1780,
+        "transparentFraction": 0.7394664171006945
+      },
+      "bytes": 647802
+    },
+    {
+      "id": "divine-plato-moves",
+      "width": 3840,
+      "height": 1920,
+      "alpha": true,
+      "bounds": {
+        "x": 24,
+        "y": 128,
+        "width": 3710,
+        "height": 1784,
+        "transparentFraction": 0.761304931640625
+      },
+      "bytes": 597906
+    },
+    {
+      "id": "corrupt-plato-moves",
+      "width": 3840,
+      "height": 1920,
+      "alpha": true,
+      "bounds": {
+        "x": 83,
+        "y": 176,
+        "width": 3662,
+        "height": 1736,
+        "transparentFraction": 0.7568197970920139
+      },
+      "bytes": 607120
+    },
+    {
+      "id": "divine-aristotle-moves",
+      "width": 3840,
+      "height": 1920,
+      "alpha": true,
+      "bounds": {
+        "x": 57,
+        "y": 109,
+        "width": 3663,
+        "height": 1803,
+        "transparentFraction": 0.7615615505642361
+      },
+      "bytes": 647348
+    },
+    {
+      "id": "corrupt-aristotle-moves",
+      "width": 3840,
+      "height": 1920,
+      "alpha": true,
+      "bounds": {
+        "x": 73,
+        "y": 142,
+        "width": 3633,
+        "height": 1770,
+        "transparentFraction": 0.7877742513020833
+      },
+      "bytes": 593902
+    },
+    {
+      "id": "divine-chaser-run",
+      "width": 1920,
+      "height": 1280,
+      "alpha": true,
+      "bounds": {
+        "x": 60,
+        "y": 218,
+        "width": 1761,
+        "height": 1054,
+        "transparentFraction": 0.7706022135416667
+      },
+      "bytes": 225470
+    },
+    {
+      "id": "corrupt-chaser-run",
+      "width": 1920,
+      "height": 1280,
+      "alpha": true,
+      "bounds": {
+        "x": 25,
+        "y": 211,
+        "width": 1791,
+        "height": 1061,
+        "transparentFraction": 0.767203369140625
+      },
+      "bytes": 261890
+    },
+    {
+      "id": "divine-slide-lintel-back",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 20,
+        "y": 245,
+        "width": 300,
+        "height": 215,
+        "transparentFraction": 0.91938232421875
+      },
+      "bytes": 74896
+    },
+    {
+      "id": "divine-slide-lintel-front",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 320,
+        "y": 371,
+        "width": 300,
+        "height": 261,
+        "transparentFraction": 0.9162060546875
+      },
+      "bytes": 77326
+    },
+    {
+      "id": "corrupt-slide-lintel-back",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 22,
+        "y": 228,
+        "width": 316,
+        "height": 280,
+        "transparentFraction": 0.893349609375
+      },
+      "bytes": 22452
+    },
+    {
+      "id": "corrupt-slide-lintel-front",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 303,
+        "y": 334,
+        "width": 315,
+        "height": 296,
+        "transparentFraction": 0.90522216796875
+      },
+      "bytes": 21010
+    },
+    {
+      "id": "divine-dead-end-wall",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 20,
+        "y": 24,
+        "width": 600,
+        "height": 608,
+        "transparentFraction": 0.4751953125
+      },
+      "bytes": 60724
+    },
+    {
+      "id": "corrupt-dead-end-wall",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 17,
+        "y": 24,
+        "width": 606,
+        "height": 608,
+        "transparentFraction": 0.46864990234375
+      },
+      "bytes": 93008
+    },
+    {
+      "id": "divine-gap-edge",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 69,
+        "width": 608,
+        "height": 563,
+        "transparentFraction": 0.626162109375
+      },
+      "bytes": 55040
+    },
+    {
+      "id": "corrupt-gap-edge",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 33,
+        "width": 608,
+        "height": 599,
+        "transparentFraction": 0.56017578125
+      },
+      "bytes": 81748
+    },
+    {
+      "id": "divine-toppled-statue",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 224,
+        "width": 608,
+        "height": 408,
+        "transparentFraction": 0.58304443359375
+      },
+      "bytes": 66816
+    },
+    {
+      "id": "corrupt-toppled-statue",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 113,
+        "width": 608,
+        "height": 519,
+        "transparentFraction": 0.5457666015625
+      },
+      "bytes": 85038
+    },
+    {
+      "id": "divine-brazier-obstacle",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 17,
+        "y": 24,
+        "width": 606,
+        "height": 608,
+        "transparentFraction": 0.524150390625
+      },
+      "bytes": 74650
+    },
+    {
+      "id": "corrupt-brazier-obstacle",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 74,
+        "width": 608,
+        "height": 558,
+        "transparentFraction": 0.4671337890625
+      },
+      "bytes": 91108
+    },
+    {
+      "id": "divine-statue",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 185,
+        "y": 24,
+        "width": 271,
+        "height": 608,
+        "transparentFraction": 0.78406005859375
+      },
+      "bytes": 36034
+    },
+    {
+      "id": "corrupt-statue",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 179,
+        "y": 24,
+        "width": 283,
+        "height": 608,
+        "transparentFraction": 0.75930908203125
+      },
+      "bytes": 41536
+    },
+    {
+      "id": "divine-brazier",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 141,
+        "y": 24,
+        "width": 358,
+        "height": 608,
+        "transparentFraction": 0.74215087890625
+      },
+      "bytes": 53992
+    },
+    {
+      "id": "corrupt-brazier",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 147,
+        "y": 24,
+        "width": 347,
+        "height": 608,
+        "transparentFraction": 0.72550048828125
+      },
+      "bytes": 58800
+    },
+    {
+      "id": "divine-cypress",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 223,
+        "y": 24,
+        "width": 194,
+        "height": 608,
+        "transparentFraction": 0.80119384765625
+      },
+      "bytes": 43408
+    },
+    {
+      "id": "corrupt-cypress",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 206,
+        "y": 24,
+        "width": 229,
+        "height": 608,
+        "transparentFraction": 0.80724853515625
+      },
+      "bytes": 38796
+    },
+    {
+      "id": "divine-broken-wall",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 31,
+        "width": 608,
+        "height": 601,
+        "transparentFraction": 0.509794921875
+      },
+      "bytes": 71864
+    },
+    {
+      "id": "corrupt-broken-wall",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 16,
+        "y": 54,
+        "width": 608,
+        "height": 578,
+        "transparentFraction": 0.51454345703125
+      },
+      "bytes": 80848
+    },
+    {
+      "id": "divine-urn",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 95,
+        "y": 24,
+        "width": 450,
+        "height": 608,
+        "transparentFraction": 0.5643896484375
+      },
+      "bytes": 63660
+    },
+    {
+      "id": "corrupt-urn",
+      "width": 640,
+      "height": 640,
+      "alpha": true,
+      "bounds": {
+        "x": 92,
+        "y": 24,
+        "width": 456,
+        "height": 608,
+        "transparentFraction": 0.53202392578125
+      },
+      "bytes": 81610
+    },
+    {
+      "id": "divine-far-sky",
+      "width": 2048,
+      "height": 1024,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 57,
+        "width": 2048,
+        "height": 933,
+        "transparentFraction": 0.06904745101928711
+      },
+      "bytes": 465678
+    },
+    {
+      "id": "corrupt-far-sky",
+      "width": 2048,
+      "height": 1024,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 91,
+        "width": 2048,
+        "height": 876,
+        "transparentFraction": 0.16936206817626953
+      },
+      "bytes": 356166
+    },
+    {
+      "id": "divine-middle-ruins",
+      "width": 2048,
+      "height": 1024,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 252,
+        "width": 2048,
+        "height": 549,
+        "transparentFraction": 0.6146693229675293
+      },
+      "bytes": 313278
+    },
+    {
+      "id": "corrupt-middle-ruins",
+      "width": 2048,
+      "height": 1024,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 231,
+        "width": 2048,
+        "height": 593,
+        "transparentFraction": 0.6599812507629395
+      },
+      "bytes": 362850
+    },
+    {
+      "id": "divine-near-clouds",
+      "width": 2048,
+      "height": 1024,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 208,
+        "width": 2048,
+        "height": 632,
+        "transparentFraction": 0.4356532096862793
+      },
+      "bytes": 496206
+    },
+    {
+      "id": "corrupt-near-smoke",
+      "width": 2048,
+      "height": 1024,
+      "alpha": true,
+      "bounds": {
+        "x": 0,
+        "y": 109,
+        "width": 2048,
+        "height": 827,
+        "transparentFraction": 0.30928611755371094
+      },
+      "bytes": 539540
+    },
+    {
+      "id": "divine-music-loop",
+      "bytes": 482506
+    },
+    {
+      "id": "divine-slide",
+      "bytes": 8529
+    },
+    {
+      "id": "divine-turn-whoosh",
+      "bytes": 6191
+    },
+    {
+      "id": "divine-fall",
+      "bytes": 11056
+    },
+    {
+      "id": "divine-game-over",
+      "bytes": 22493
+    },
+    {
+      "id": "divine-ui-click",
+      "bytes": 3925
+    },
+    {
+      "id": "divine-shield-ending",
+      "bytes": 11514
+    },
+    {
+      "id": "divine-chaser-growl",
+      "bytes": 14365
+    },
+    {
+      "id": "divine-footsteps",
+      "bytes": 10443
+    },
+    {
+      "id": "corrupt-music-loop",
+      "bytes": 448595
+    },
+    {
+      "id": "corrupt-slide",
+      "bytes": 8521
+    },
+    {
+      "id": "corrupt-turn-whoosh",
+      "bytes": 6179
+    },
+    {
+      "id": "corrupt-fall",
+      "bytes": 11030
+    },
+    {
+      "id": "corrupt-game-over",
+      "bytes": 22493
+    },
+    {
+      "id": "corrupt-ui-click",
+      "bytes": 3936
+    },
+    {
+      "id": "corrupt-shield-ending",
+      "bytes": 11514
+    },
+    {
+      "id": "corrupt-chaser-growl",
+      "bytes": 14351
+    },
+    {
+      "id": "corrupt-footsteps",
+      "bytes": 10443
+    },
+    {
+      "id": "menu-music",
+      "bytes": 452355
+    }
+  ]
+}

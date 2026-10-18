@@ -1,0 +1,256 @@
+[
+  {
+    "id": "divine-laurel",
+    "theme": "divine",
+    "category": "pickups",
+    "source": "masters/divine/pickups/divine-laurel.png"
+  },
+  {
+    "id": "corrupt-laurel",
+    "theme": "corrupt",
+    "category": "pickups",
+    "source": "masters/corrupt/pickups/corrupt-laurel.png"
+  },
+  {
+    "id": "divine-wisdom",
+    "theme": "divine",
+    "category": "pickups",
+    "source": "masters/divine/pickups/divine-wisdom.png"
+  },
+  {
+    "id": "corrupt-wisdom",
+    "theme": "corrupt",
+    "category": "pickups",
+    "source": "masters/corrupt/pickups/corrupt-wisdom.png"
+  },
+  {
+    "id": "divine-aegis",
+    "theme": "divine",
+    "category": "pickups",
+    "source": "masters/divine/pickups/divine-aegis.png"
+  },
+  {
+    "id": "corrupt-aegis",
+    "theme": "corrupt",
+    "category": "pickups",
+    "source": "masters/corrupt/pickups/corrupt-aegis.png"
+  },
+  {
+    "id": "divine-temple",
+    "theme": "divine",
+    "category": "architecture",
+    "source": "masters/divine/architecture/divine-temple.png"
+  },
+  {
+    "id": "corrupt-temple",
+    "theme": "corrupt",
+    "category": "architecture",
+    "source": "masters/corrupt/architecture/corrupt-temple.png"
+  },
+  {
+    "id": "divine-gateway",
+    "theme": "divine",
+    "category": "architecture",
+    "source": "masters/divine/architecture/divine-gateway.png"
+  },
+  {
+    "id": "corrupt-gateway",
+    "theme": "corrupt",
+    "category": "architecture",
+    "source": "masters/corrupt/architecture/corrupt-gateway.png"
+  },
+  {
+    "id": "divine-column",
+    "theme": "divine",
+    "category": "architecture",
+    "source": "masters/divine/architecture/divine-column.png"
+  },
+  {
+    "id": "corrupt-column",
+    "theme": "corrupt",
+    "category": "architecture",
+    "source": "masters/corrupt/architecture/corrupt-column.png"
+  },
+  {
+    "id": "divine-floor",
+    "theme": "divine",
+    "category": "terrain",
+    "source": "masters/divine/terrain/divine-floor.png"
+  },
+  {
+    "id": "corrupt-floor",
+    "theme": "corrupt",
+    "category": "terrain",
+    "source": "masters/corrupt/terrain/corrupt-floor.png"
+  },
+  {
+    "id": "divine-barrier",
+    "theme": "divine",
+    "category": "obstacles",
+    "source": "masters/divine/obstacles/divine-barrier.png"
+  },
+  {
+    "id": "corrupt-barrier",
+    "theme": "corrupt",
+    "category": "obstacles",
+    "source": "masters/corrupt/obstacles/corrupt-barrier.png"
+  },
+  {
+    "id": "divine-trap",
+    "theme": "divine",
+    "category": "obstacles",
+    "source": "masters/divine/obstacles/divine-trap.png"
+  },
+  {
+    "id": "corrupt-trap",
+    "theme": "corrupt",
+    "category": "obstacles",
+    "source": "masters/corrupt/obstacles/corrupt-trap.png"
+  },
+  {
+    "id": "divine-socrates",
+    "theme": "divine",
+    "category": "characters",
+    "source": "masters/divine/characters/divine-socrates.png"
+  },
+  {
+    "id": "corrupt-socrates",
+    "theme": "corrupt",
+    "category": "characters",
+    "source": "masters/corrupt/characters/corrupt-socrates.png"
+  },
+  {
+    "id": "divine-plato",
+    "theme": "divine",
+    "category": "characters",
+    "source": "masters/divine/characters/divine-plato.png"
+  },
+  {
+    "id": "corrupt-plato",
+    "theme": "corrupt",
+    "category": "characters",
+    "source": "masters/corrupt/characters/corrupt-plato.png"
+  },
+  {
+    "id": "divine-aristotle",
+    "theme": "divine",
+    "category": "characters",
+    "source": "masters/divine/characters/divine-aristotle.png"
+  },
+  {
+    "id": "corrupt-aristotle",
+    "theme": "corrupt",
+    "category": "characters",
+    "source": "masters/corrupt/characters/corrupt-aristotle.png"
+  },
+  {
+    "id": "divine-sanctuary",
+    "theme": "divine",
+    "category": "backgrounds",
+    "source": "masters/divine/backgrounds/divine-sanctuary.png"
+  },
+  {
+    "id": "corrupt-sanctuary",
+    "theme": "corrupt",
+    "category": "backgrounds",
+    "source": "masters/corrupt/backgrounds/corrupt-sanctuary.png"
+  },
+  {
+    "id": "divine-guardian-michael",
+    "theme": "divine",
+    "category": "guardians",
+    "source": "masters/divine/guardians/divine-guardian-michael.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "corrupt-guardian-michael",
+    "theme": "corrupt",
+    "category": "guardians",
+    "source": "masters/corrupt/guardians/corrupt-guardian-michael.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "divine-guardian-gabriel",
+    "theme": "divine",
+    "category": "guardians",
+    "source": "masters/divine/guardians/divine-guardian-gabriel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "corrupt-guardian-gabriel",
+    "theme": "corrupt",
+    "category": "guardians",
+    "source": "masters/corrupt/guardians/corrupt-guardian-gabriel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "divine-guardian-raphael",
+    "theme": "divine",
+    "category": "guardians",
+    "source": "masters/divine/guardians/divine-guardian-raphael.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "corrupt-guardian-raphael",
+    "theme": "corrupt",
+    "category": "guardians",
+    "source": "masters/corrupt/guardians/corrupt-guardian-raphael.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "divine-guardian-uriel",
+    "theme": "divine",
+    "category": "guardians",
+    "source": "masters/divine/guardians/divine-guardian-uriel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "corrupt-guardian-uriel",
+    "theme": "corrupt",
+    "category": "guardians",
+    "source": "masters/corrupt/guardians/corrupt-guardian-uriel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "divine-guardian-selaphiel",
+    "theme": "divine",
+    "category": "guardians",
+    "source": "masters/divine/guardians/divine-guardian-selaphiel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "corrupt-guardian-selaphiel",
+    "theme": "corrupt",
+    "category": "guardians",
+    "source": "masters/corrupt/guardians/corrupt-guardian-selaphiel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "divine-guardian-jegudiel",
+    "theme": "divine",
+    "category": "guardians",
+    "source": "masters/divine/guardians/divine-guardian-jegudiel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "corrupt-guardian-jegudiel",
+    "theme": "corrupt",
+    "category": "guardians",
+    "source": "masters/corrupt/guardians/corrupt-guardian-jegudiel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "divine-guardian-barachiel",
+    "theme": "divine",
+    "category": "guardians",
+    "source": "masters/divine/guardians/divine-guardian-barachiel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  },
+  {
+    "id": "corrupt-guardian-barachiel",
+    "theme": "corrupt",
+    "category": "guardians",
+    "source": "masters/corrupt/guardians/corrupt-guardian-barachiel.png",
+    "provenance": "Reused existing archangel collection; original generated PNG copied unchanged"
+  }
+]

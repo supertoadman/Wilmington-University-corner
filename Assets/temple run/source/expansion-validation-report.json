@@ -1,0 +1,210 @@
+{
+  "individualFrames": 120,
+  "moveSets": 6,
+  "chaserCycles": 2,
+  "props": 22,
+  "backgrounds": [
+    {
+      "id": "divine-far-sky",
+      "width": 2048,
+      "height": 1024,
+      "seamMeanChannelStep": 1.6612323835784382,
+      "interiorMeanChannelStep": 1.0910518699668033,
+      "seamMaxChannelStep": 27.45098039215685
+    },
+    {
+      "id": "divine-middle-ruins",
+      "width": 2048,
+      "height": 1024,
+      "seamMeanChannelStep": 3.60310489430145,
+      "interiorMeanChannelStep": 2.89758362329297,
+      "seamMaxChannelStep": 103
+    },
+    {
+      "id": "divine-near-clouds",
+      "width": 2048,
+      "height": 1024,
+      "seamMeanChannelStep": 0.9100672104779394,
+      "interiorMeanChannelStep": 0.8207762988007747,
+      "seamMaxChannelStep": 26.470588235294116
+    },
+    {
+      "id": "corrupt-far-sky",
+      "width": 2048,
+      "height": 1024,
+      "seamMeanChannelStep": 1.4780627680759872,
+      "interiorMeanChannelStep": 1.0623245196516249,
+      "seamMaxChannelStep": 35.294117647058826
+    },
+    {
+      "id": "corrupt-middle-ruins",
+      "width": 2048,
+      "height": 1024,
+      "seamMeanChannelStep": 1.5381519990808834,
+      "interiorMeanChannelStep": 2.3119976310836745,
+      "seamMaxChannelStep": 94
+    },
+    {
+      "id": "corrupt-near-smoke",
+      "width": 2048,
+      "height": 1024,
+      "seamMeanChannelStep": 1.6403473498774557,
+      "interiorMeanChannelStep": 1.1283170299369938,
+      "seamMaxChannelStep": 57.090196078431376
+    }
+  ],
+  "audio": [
+    {
+      "id": "divine-music-loop",
+      "duration": 76.8,
+      "peak": 23592,
+      "rms": 5069.581124608172,
+      "loopStep": 23,
+      "maxStep": 3219
+    },
+    {
+      "id": "divine-slide",
+      "duration": 0.8,
+      "peak": 23592,
+      "rms": 6214.411682430619,
+      "loopStep": null,
+      "maxStep": 19163
+    },
+    {
+      "id": "divine-turn-whoosh",
+      "duration": 0.42,
+      "peak": 23592,
+      "rms": 4081.3054841391727,
+      "loopStep": null,
+      "maxStep": 6482
+    },
+    {
+      "id": "divine-fall",
+      "duration": 1.25,
+      "peak": 23592,
+      "rms": 10206.85857298627,
+      "loopStep": null,
+      "maxStep": 1611
+    },
+    {
+      "id": "divine-game-over",
+      "duration": 3.2,
+      "peak": 23592,
+      "rms": 4352.958655475823,
+      "loopStep": null,
+      "maxStep": 1389
+    },
+    {
+      "id": "divine-ui-click",
+      "duration": 0.12,
+      "peak": 23592,
+      "rms": 10070.864050034917,
+      "loopStep": null,
+      "maxStep": 6369
+    },
+    {
+      "id": "divine-shield-ending",
+      "duration": 1.4,
+      "peak": 23592,
+      "rms": 4456.154594274732,
+      "loopStep": null,
+      "maxStep": 4786
+    },
+    {
+      "id": "divine-chaser-growl",
+      "duration": 1.8,
+      "peak": 23592,
+      "rms": 5940.621824746215,
+      "loopStep": null,
+      "maxStep": 4195
+    },
+    {
+      "id": "divine-footsteps",
+      "duration": 1.2,
+      "peak": 23592,
+      "rms": 4838.663445700645,
+      "loopStep": null,
+      "maxStep": 4936
+    },
+    {
+      "id": "corrupt-music-loop",
+      "duration": 71.11111111111111,
+      "peak": 23592,
+      "rms": 4344.186348406358,
+      "loopStep": 150,
+      "maxStep": 3898
+    },
+    {
+      "id": "corrupt-slide",
+      "duration": 0.8,
+      "peak": 23592,
+      "rms": 5771.1080820619945,
+      "loopStep": null,
+      "maxStep": 17212
+    },
+    {
+      "id": "corrupt-turn-whoosh",
+      "duration": 0.42,
+      "peak": 23592,
+      "rms": 3863.2675445292844,
+      "loopStep": null,
+      "maxStep": 6566
+    },
+    {
+      "id": "corrupt-fall",
+      "duration": 1.25,
+      "peak": 23592,
+      "rms": 10213.16264528158,
+      "loopStep": null,
+      "maxStep": 1373
+    },
+    {
+      "id": "corrupt-game-over",
+      "duration": 3.2,
+      "peak": 23592,
+      "rms": 4856.083731642878,
+      "loopStep": null,
+      "maxStep": 1149
+    },
+    {
+      "id": "corrupt-ui-click",
+      "duration": 0.12,
+      "peak": 23592,
+      "rms": 10101.101402091574,
+      "loopStep": null,
+      "maxStep": 4790
+    },
+    {
+      "id": "corrupt-shield-ending",
+      "duration": 1.4,
+      "peak": 23592,
+      "rms": 4677.419169548301,
+      "loopStep": null,
+      "maxStep": 3963
+    },
+    {
+      "id": "corrupt-chaser-growl",
+      "duration": 1.8,
+      "peak": 23592,
+      "rms": 5875.446451931224,
+      "loopStep": null,
+      "maxStep": 4104
+    },
+    {
+      "id": "corrupt-footsteps",
+      "duration": 1.2,
+      "peak": 23592,
+      "rms": 4812.272513877146,
+      "loopStep": null,
+      "maxStep": 8355
+    },
+    {
+      "id": "menu-music",
+      "duration": 72,
+      "peak": 23592,
+      "rms": 4875.059979330683,
+      "loopStep": 75,
+      "maxStep": 2683
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+[
+  {
+    "id": "divine-plato",
+    "prompt": "Edit the first attached game sprite into ONLY the very next fall-ground landing pose. Preserve this exact Divine Plato identity, white flowing hair, blue and gold coat, ivory trousers, gold boots and painterly sculptural style. He has just landed on his BACK / same near side: HEAD STAYS AT LEFT, FEET STAY AT RIGHT, face turned upward, torso never rotates or flips. Lower the raised arms and legs onto the ground, one knee slightly bent. The second image (Socrates) is a pose / landing orientation reference only; do not copy his identity or green clothes. One full body sprite on truly transparent background, no floor, no shadow plane, no text. Isometric three-quarter same camera as input. 640x640 canvas, grounded silhouette in lower part, bottom-center anchor; generous clear margins. Maintain the blue palette and all costume details of image one. Do not turn him face down. Do not mirror.",
+    "refs": [
+      "masters/frames/divine/divine-plato-moves/fall-air.png",
+      "masters/frames/divine/divine-socrates-moves/fall-ground.png"
+    ],
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "divine-aristotle",
+    "prompt": "Edit image one into ONLY its next fall-ground animation pose, preserving the exact divine-aristotle character, brown curly topknot, burgundy coat and gold armor, ivory trousers, gold boots, divine clean ivory and golden materials. HEAD REMAINS ON THE LEFT, FEET ON THE RIGHT. This is the next instant after falling backward: he lands on his BACK / same near side, face upward, arms settle and raised legs lower, one knee still slightly bent. No rolling, no 180 degree flip, never face down, never mirror. Image two is a pose and head-left orientation reference ONLY, not a costume or identity reference. Keep image one's style, identity and colors. Isometric three-quarter camera unchanged. One full body on truly transparent background, no floor, no labels or text, 640x640 square canvas with generous margins, lower centered grounded silhouette.",
+    "refs": [
+      "masters/frames/divine/divine-aristotle-moves/fall-air.png",
+      "masters/frames/divine/divine-socrates-moves/fall-ground.png"
+    ],
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "corrupt-plato",
+    "prompt": "Edit image one into ONLY its next fall-ground animation pose, preserving the exact corrupt-plato character, long flowing silver hair, lapis blue coat and gold armor, ivory trousers, gold boots, cracked stone skin, small horns and torn dark fabric. HEAD REMAINS ON THE LEFT, FEET ON THE RIGHT. This is the next instant after falling backward: he lands on his BACK / same near side, face upward, arms settle and raised legs lower, one knee still slightly bent. No rolling, no 180 degree flip, never face down, never mirror. Image two is a pose and head-left orientation reference ONLY, not a costume or identity reference. Keep image one's style, identity and colors. Isometric three-quarter camera unchanged. One full body on truly transparent background, no floor, no labels or text, 640x640 square canvas with generous margins, lower centered grounded silhouette.",
+    "refs": [
+      "masters/frames/corrupt/corrupt-plato-moves/fall-air.png",
+      "masters/frames/divine/divine-socrates-moves/fall-ground.png"
+    ],
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "corrupt-aristotle",
+    "prompt": "Edit image one into ONLY its next fall-ground animation pose, preserving the exact corrupt-aristotle character, brown curly topknot, burgundy coat and gold armor, ivory trousers, gold boots, cracked stone skin, small horns and torn dark fabric. HEAD REMAINS ON THE LEFT, FEET ON THE RIGHT. This is the next instant after falling backward: he lands on his BACK / same near side, face upward, arms settle and raised legs lower, one knee still slightly bent. No rolling, no 180 degree flip, never face down, never mirror. Image two is a pose and head-left orientation reference ONLY, not a costume or identity reference. Keep image one's style, identity and colors. Isometric three-quarter camera unchanged. One full body on truly transparent background, no floor, no labels or text, 640x640 square canvas with generous margins, lower centered grounded silhouette.",
+    "refs": [
+      "masters/frames/corrupt/corrupt-aristotle-moves/fall-air.png",
+      "masters/frames/divine/divine-socrates-moves/fall-ground.png"
+    ],
+    "mode": "built-in image_gen"
+  },
+  {
+    "id": "divine-slide-lintel-continuous",
+    "prompt": "Repair the DIVINE ivory-and-gold beam on the LEFT of the attached reference. Output only that one divine object, on transparent background. The right corrupt beam is a reference only for a clean continuous join. Preserve the divine object's ornament, proportions, low beam on two posts, two flame finials, isometric angle, colors and style. Fix ONLY the alignment at the middle: the top stone slab, gold upper trim, carved frieze and lower trim must be straight continuous parallel diagonal lines all the way between posts, with NO STEP, NO KINK, NO raised joint block, NO visible cut end in the middle. It is one uninterrupted lintel, not two disconnected pieces. Keep the exact same two posts and clean divine materials. Full object inside square 640x640 transparent canvas, bottom-center placement with clear margin. No text, no background, no ground plane. This repaired continuous assembly will be split into back/front layers afterward.",
+    "refs": [
+      "previews/expansion-lintel-review.png"
+    ],
+    "mode": "built-in image_gen"
+  }
+]
