@@ -24,7 +24,7 @@ content/
 
 - **New document:** drop a file into a subject folder and push. Supported formats are `.html`, `.docx`, `.pdf`, `.md`, and `.txt`. Word documents are converted into a readable web page with a table of contents, and the original stays available to download.
 - **New subject:** create a new folder in `content/`. That's all you need. Add a `subject.json` to set the description, icon, and color.
-- **Metadata (optional):** in `subject.json`, use `documents` keyed by file name (or a `<file>.meta.json` sidecar next to the file) to set `title`, `description`, `type`, `tags`, `questions`, `order`, `slug`, `contributor`, `"theme": "structured"` (for Word outlines that use one-cell tables as section titles and RULE/CASE boxes; turns them into real headings and callouts), or `"publish": false`. Anything you leave out is inferred: the title comes from the file's `<title>`, and the type from the file name.
+- **Metadata (optional):** in `subject.json`, use `documents` keyed by file name (or a `<file>.meta.json` sidecar next to the file) to set `title`, `description`, `type`, `tags`, `questions`, `order`, `slug`, `contributor`, `"theme": "structured"` (for Word outlines that use one-cell tables as section titles and RULE/CASE boxes; turns them into real headings, callouts and case boxes, and sets the outline between the archangel figures from `src/assets/archangels/`), `"outsideColor"` (with the structured theme: the Word font color, such as `"7030A0"`, that marks text from outside the class materials, so it keeps its own color on the site), or `"publish": false`. Anything you leave out is inferred: the title comes from the file's `<title>`, and the type from the file name.
 
 ```json
 {

@@ -1,0 +1,19 @@
+{
+  "title": "Agency & Partnership",
+  "description": "Business Associations, Weeks 1–8 (Bainbridge, Park & Rodrigues, 6th ed.). Covers creating an agency, actual and apparent authority, ratification and estoppel, a principal's tort liability, agents' fiduciary duties, choosing an entity, partnership formation under the UPA and RUPA, partners' rights, authority and duties, dissociation and dissolution, loss sharing, buyout agreements, limited partnerships, and LLCs.",
+  "icon": "handshake",
+  "accent": "#2d4e88",
+  "order": 5,
+  "documents": {
+    "Agency_and_Partnership_Condensed_Outline.docx": {
+      "slug": "agency-and-partnership-outline",
+      "title": "Agency & Partnership Outline",
+      "type": "outline",
+      "theme": "structured",
+      "outsideColor": "7030A0",
+      "description": "Condensed exam outline of Weeks 1–8, built from the Class 1–8 slides, the casebook, and the 2026 statutory supplement. Part I covers agency: creating the relationship, contract liability and authority, tort liability, and fiduciary duties. Part II covers business entities: choosing an entity, partnership formation, economic rights and property, management and authority, partners' fiduciary duties, dissociation and dissolution, Kovacik loss sharing, buyout agreements, limited partnerships, and LLCs. Rule and tip boxes throughout, a card for every case (62 main cases plus slide references and supplemental readings), and an exam toolkit with an issue-spotting checklist, a statute quick reference, and a one-line case index.",
+      "tags": ["agency", "partnership", "RUPA", "Restatement of Agency", "LLC", "outline", "Weeks 1–8"],
+      "order": 1
+    }
+  }
+}

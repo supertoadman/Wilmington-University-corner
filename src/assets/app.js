@@ -604,6 +604,44 @@ if (viewer) {
     }, { root: scrollRoot, rootMargin: '0px 0px -75% 0px' });
     map.forEach((_, id) => { const el = document.getElementById(id); if (el) obs.observe(el); });
   }
+
+  // Structured outlines: the archangels in the margins turn to the next pair at each section.
+  const nave = $('.nave');
+  const outline = $('.prose-structured[data-angel]');
+  if (nave && outline && scrollRoot) {
+    const start = Number(outline.dataset.angel);
+    const [left, right] = $$('.nave-fig', nave);
+    const heads = $$('.part-band h1, .section-band h2', outline);
+    let shown = -1;
+    let timer;
+    const pose = (i) => {
+      left.style.setProperty('--fig', `var(--a${(start + 1 + 2 * i) % 7})`);
+      right.style.setProperty('--fig', `var(--a${(start + 2 + 2 * i) % 7})`);
+      nave.classList.remove('is-turning');
+    };
+    const turnTo = (i) => {
+      if (i === shown) return;
+      const first = shown < 0;
+      shown = i;
+      clearTimeout(timer);
+      if (first || matchMedia('(prefers-reduced-motion: reduce)').matches) return pose(i);
+      nave.classList.add('is-turning');
+      timer = setTimeout(() => pose(i), 450);
+    };
+    const current = () => {
+      const line = scrollRoot.getBoundingClientRect().top + scrollRoot.clientHeight / 4;
+      let i = 0;
+      heads.forEach((h, k) => { if (h.getBoundingClientRect().top < line) i = k; });
+      turnTo(i);
+    };
+    current();
+    let ticking = false;
+    scrollRoot.addEventListener('scroll', () => {
+      if (ticking) return;
+      ticking = true;
+      setTimeout(() => { ticking = false; current(); }, 150);
+    }, { passive: true });
+  }
 }
 
 // ---------- Share your work (submission form) ----------

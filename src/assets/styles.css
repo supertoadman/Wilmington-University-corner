@@ -1256,6 +1256,22 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
     --c-tips: #e98d74; --c-tips-ink: #f6b29f; --c-tips-bg: #2a1915;
   }
 }
+/* Where the browser can, take the subject's own hue at fixed lightness, so any accent reads in both themes. */
+@supports (color: oklch(from red l c h)) {
+  .prose-structured { --s-ink: oklch(from var(--accent) .36 c h); }
+  :root[data-theme="dark"] .prose-structured {
+    --s-ink: oklch(from var(--accent) .88 calc(c * .9) h); --s-line: oklch(from var(--accent) .74 max(c, .11) h);
+    --s-band: oklch(from var(--accent) .25 calc(c * .35) h); --s-col: oklch(from var(--accent) .23 calc(c * .25) h); --s-th: oklch(from var(--accent) .29 calc(c * .4) h);
+    --c-rule: var(--s-line); --c-rule-ink: oklch(from var(--accent) .84 max(c, .09) h); --c-rule-bg: oklch(from var(--accent) .22 calc(c * .3) h);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) .prose-structured {
+      --s-ink: oklch(from var(--accent) .88 calc(c * .9) h); --s-line: oklch(from var(--accent) .74 max(c, .11) h);
+      --s-band: oklch(from var(--accent) .25 calc(c * .35) h); --s-col: oklch(from var(--accent) .23 calc(c * .25) h); --s-th: oklch(from var(--accent) .29 calc(c * .4) h);
+      --c-rule: var(--s-line); --c-rule-ink: oklch(from var(--accent) .84 max(c, .09) h); --c-rule-bg: oklch(from var(--accent) .22 calc(c * .3) h);
+    }
+  }
+}
 .prose-structured .doc-masthead {
   position: relative; overflow: hidden; margin: 0 0 2.4em; padding: 34px 34px 28px; border-radius: var(--radius-lg);
   background: radial-gradient(120% 140% at 100% 0%, color-mix(in srgb, var(--accent) 55%, transparent), transparent 60%), var(--hero-bg);
@@ -1315,6 +1331,133 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
   .prose-structured thead + tbody tr:first-child { display: block; }
 }
 
+/* Case boxes: green main cases, teal note cases, gray cited-only (the colors the outlines' own keys name). */
+.prose-structured {
+  --k-main: #2e7d32; --k-main-ink: #1f5f24; --k-main-bg: #eef6ee;
+  --k-note: #0e7490; --k-note-ink: #0b5d74; --k-note-bg: #e9f5f8;
+  --k-cited: #6b7280; --k-cited-ink: #4b5260; --k-cited-bg: #f4f4f5;
+  --k-key: #a87b22; --k-key-ink: #6f4d10; --k-key-bg: #fbf7ee;
+  --chip-fg: #ffffff;
+  --outside-purple: #6a2b9e; --outside-orange: #853908;
+  --part-line: #c9a14f;
+}
+:root[data-theme="dark"] .prose-structured {
+  --k-main: #6fc285; --k-main-ink: #a6dfb3; --k-main-bg: #14231a;
+  --k-note: #4fbfd6; --k-note-ink: #9fdeec; --k-note-bg: #10252b;
+  --k-cited: #9aa3b2; --k-cited-ink: #c9ced7; --k-cited-bg: #1a1f28;
+  --k-key: #e0b862; --k-key-ink: #f3d48c; --k-key-bg: #211d13;
+  --chip-fg: #0c1016;
+  --outside-purple: #d4b3ff; --outside-orange: #f6b27c;
+  --part-line: #8a6a2a;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .prose-structured {
+    --k-main: #6fc285; --k-main-ink: #a6dfb3; --k-main-bg: #14231a;
+    --k-note: #4fbfd6; --k-note-ink: #9fdeec; --k-note-bg: #10252b;
+    --k-cited: #9aa3b2; --k-cited-ink: #c9ced7; --k-cited-bg: #1a1f28;
+    --k-key: #e0b862; --k-key-ink: #f3d48c; --k-key-bg: #211d13;
+    --chip-fg: #0c1016;
+    --outside-purple: #d4b3ff; --outside-orange: #f6b27c;
+    --part-line: #8a6a2a;
+  }
+}
+.prose-structured .case-main { --c: var(--k-main); --c-ink: var(--k-main-ink); --c-bg: var(--k-main-bg); }
+.prose-structured .case-note { --c: var(--k-note); --c-ink: var(--k-note-ink); --c-bg: var(--k-note-bg); }
+.prose-structured .case-cited { --c: var(--k-cited); --c-ink: var(--k-cited-ink); --c-bg: var(--k-cited-bg); }
+.prose-structured .callout-key, .prose-structured .callout-note { --c: var(--k-key); --c-ink: var(--k-key-ink); --c-bg: var(--k-key-bg); }
+/* A case box wears its label as a filled chip, so it never reads as a rule box of the same hue. */
+.prose-structured .callout-case { padding-top: 38px; }
+.prose-structured .callout-case .callout-tag, .prose-structured .case-chip {
+  padding: 3px 9px; border-radius: 999px; background: var(--c); color: var(--chip-fg); font-size: 10.5px; letter-spacing: .1em; line-height: 1.5;
+}
+.prose-structured .case-chip { display: inline-block; margin-right: 4px; font-weight: 800; text-transform: uppercase; vertical-align: 1px; }
+.prose-structured .case-legend > .case-chip { --c: var(--k-main); --c-ink: var(--k-main-ink); }
+.prose-structured .case-legend > .case-note { --c: var(--k-note); --c-ink: var(--k-note-ink); }
+.prose-structured .case-legend > .case-cited { --c: var(--k-cited); --c-ink: var(--k-cited-ink); }
+/* Small white labels need the deeper shade by day; at night the bright shade carries dark text. */
+.prose-structured :is(.callout-case .callout-tag, .case-chip) { background: var(--c-ink); }
+:root[data-theme="dark"] .prose-structured :is(.callout-case .callout-tag, .case-chip) { background: var(--c); }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .prose-structured :is(.callout-case .callout-tag, .case-chip) { background: var(--c); } }
+.prose-structured .callout-star { margin-left: 2px; }
+.prose-structured .callout-source { font-size: 13.5px; color: var(--text-2); }
+.prose-structured .callout-source strong { color: var(--text-2); }
+/* Text from outside the class materials, in the tone each outline's key promises. */
+.prose-structured .outside, .prose-structured .outside strong { font-style: italic; color: var(--s-ink); }
+.prose-structured .outside-purple, .prose-structured .outside-purple strong { color: var(--outside-purple); }
+.prose-structured .outside-orange, .prose-structured .outside-orange strong { color: var(--outside-orange); }
+
+/* Statue emblems on the callout labels, from the site's own marble heads. */
+.prose-structured .callout-tag { display: inline-flex; align-items: center; gap: 7px; }
+.prose-structured .callout-tag::before {
+  content: ""; flex: none; width: 17px; height: 19px; margin: -2px 0; background: var(--emblem, url("statues/themis.webp")) center / contain no-repeat;
+}
+.prose-structured .callout-case .callout-tag { left: 16px; top: 10px; padding-left: 4px; }
+.prose-structured .callout-case .callout-tag::before { --emblem: url("statues/janus.webp"); width: 19px; height: 19px; margin: -3px 0 -3px -2px; border-radius: 50%; background-color: var(--c-bg); }
+.prose-structured .callout-roadmap .callout-tag::before { --emblem: url("statues/mercury.webp"); }
+.prose-structured .callout-tips .callout-tag::before { --emblem: url("statues/athena.webp"); }
+.prose-structured .callout-key .callout-tag::before, .prose-structured .callout-note .callout-tag::before { --emblem: url("statues/philosopher.webp"); }
+
+/* Part dividers (Heading 1 "PART I — …") */
+.prose-structured .part-band { position: relative; margin: 4.2em 0 1.4em; padding: 26px 0 22px; text-align: center; border-top: 1px solid var(--part-line); border-bottom: 1px solid var(--part-line); }
+.prose-structured .part-band::before, .prose-structured .part-band::after {
+  content: ""; position: absolute; left: 50%; width: 9px; height: 9px; background: var(--surface); border: 1px solid var(--part-line); transform: translate(-50%, -50%) rotate(45deg);
+}
+.prose-structured .part-band::before { top: 0; }
+.prose-structured .part-band::after { top: 100%; }
+.prose-structured .part-band h1 { margin: 0; font-size: clamp(25px, 3.2vw, 33px); color: var(--s-ink); letter-spacing: -.01em; scroll-margin-top: 16px; }
+.prose-structured .part-kicker { display: block; margin-bottom: 6px; font: 700 12px/1.4 var(--font-sans); letter-spacing: .3em; text-transform: uppercase; color: var(--week-ink); }
+.prose-structured .doc-masthead + .part-band, .prose-structured .part-band:first-child { margin-top: 2.4em; }
+.prose-structured .part-band + .section-band { margin-top: 1.6em; }
+
+/* The masthead's archangel: this outline's figure, standing at the right in the dark title panel. */
+.prose-structured .doc-masthead { --mast-o: .9; padding-right: clamp(34px, 26%, 250px); isolation: isolate; }
+.prose-structured .doc-masthead::before {
+  content: ""; position: absolute; z-index: -1; top: 14px; right: clamp(10px, 4%, 44px); bottom: -46%; width: clamp(110px, 21%, 200px);
+  background: var(--mast) center top / contain no-repeat; opacity: var(--mast-o);
+  -webkit-mask-image: linear-gradient(to bottom, #000 45%, transparent 82%); mask-image: linear-gradient(to bottom, #000 45%, transparent 82%);
+}
+.prose-structured .doc-meta + .doc-meta { margin-top: .6em; font-size: 13.5px; color: #c4c9d2; }
+.prose-structured .doc-masthead :is(em, strong) { color: inherit; }
+@media (max-width: 640px) {
+  .prose-structured .doc-masthead { --mast-o: .3; padding-right: 72px; }
+  .prose-structured .doc-masthead::before { right: 4px; width: 116px; }
+}
+
+/* The archangels in the margins, standing behind the page; the reader card is opaque, so they never sit under text. */
+.prose-structured, .nave {
+  --a0: url("archangels/michael.webp"); --a1: url("archangels/gabriel.webp"); --a2: url("archangels/raphael.webp"); --a3: url("archangels/uriel.webp");
+  --a4: url("archangels/selaphiel.webp"); --a5: url("archangels/jegudiel.webp"); --a6: url("archangels/barachiel.webp");
+  --fig-o: .5;
+}
+:root[data-theme="dark"] :is(.prose-structured, .nave) {
+  --a0: url("archangels/michael-fallen.webp"); --a1: url("archangels/gabriel-fallen.webp"); --a2: url("archangels/raphael-fallen.webp"); --a3: url("archangels/uriel-fallen.webp");
+  --a4: url("archangels/selaphiel-fallen.webp"); --a5: url("archangels/jegudiel-fallen.webp"); --a6: url("archangels/barachiel-fallen.webp");
+  --fig-o: .3;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) :is(.prose-structured, .nave) {
+    --a0: url("archangels/michael-fallen.webp"); --a1: url("archangels/gabriel-fallen.webp"); --a2: url("archangels/raphael-fallen.webp"); --a3: url("archangels/uriel-fallen.webp");
+    --a4: url("archangels/selaphiel-fallen.webp"); --a5: url("archangels/jegudiel-fallen.webp"); --a6: url("archangels/barachiel-fallen.webp");
+    --fig-o: .3;
+  }
+}
+.prose-structured[data-angel="0"] { --mast: var(--a0); } .prose-structured[data-angel="1"] { --mast: var(--a1); }
+.prose-structured[data-angel="2"] { --mast: var(--a2); } .prose-structured[data-angel="3"] { --mast: var(--a3); }
+.prose-structured[data-angel="4"] { --mast: var(--a4); } .prose-structured[data-angel="5"] { --mast: var(--a5); }
+.prose-structured[data-angel="6"] { --mast: var(--a6); }
+.nave { position: absolute; inset: 0; z-index: 0; pointer-events: none; container-type: size; }
+.nave + .vscroll { position: relative; z-index: 1; }
+.nave-fig {
+  position: absolute; bottom: 2cqh; height: 84cqh; width: calc((100cqw - 1040px) / 2 - 44px); max-width: 380px;
+  background: var(--fig) center bottom / contain no-repeat; opacity: var(--fig-o); transition: opacity .45s ease;
+  -webkit-mask-image: linear-gradient(to top, transparent, #000 16%); mask-image: linear-gradient(to top, transparent, #000 16%);
+}
+.nave-l { left: 22px; }
+.nave-r { right: 30px; transform: scaleX(-1); }
+.nave.is-turning .nave-fig { opacity: 0; }
+@container (max-width: 1379px) { .nave-fig { display: none; } }
+@media (min-width: 1101px) { .is-docx.toc-open .nave { left: 300px; } }
+
 @keyframes fade { from { opacity: 0; } }
 @keyframes pop { from { opacity: 0; transform: translateY(-8px) scale(.98); } }
 @keyframes sheet-up { from { transform: translateY(100%); } }
@@ -1327,7 +1470,7 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
 
 /* ---------- Print ---------- */
 @media print {
-  .site-header, .site-footer, .tabbar, .breadcrumbs, .vbar, .vtoc, .vpanel, .vscrim, .palette, .sheet, .ambience { display: none !important; }
+  .site-header, .site-footer, .tabbar, .breadcrumbs, .vbar, .vtoc, .vpanel, .vscrim, .palette, .sheet, .ambience, .nave { display: none !important; }
   body, body.is-viewer { background: #fff; color: #000; height: auto; overflow: visible; display: block; }
   .viewer-app, .vstage, .vscroll { display: block; height: auto; overflow: visible; padding: 0; }
   .reader { border: 0; box-shadow: none; padding: 0; max-width: none; }

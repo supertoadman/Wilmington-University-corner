@@ -48,6 +48,12 @@ const GILT_DEFS = '<svg width="0" height="0" style="position:absolute" aria-hidd
 // Site logo: the young Socrates head (styles.css paints it from assets/statues/socrates.webp).
 const LOGO = '<span class="logo" aria-hidden="true"></span>';
 
+// Structured outlines stand between two marble archangels (their fallen counterparts at night).
+// styles.css paints them from assets/archangels; app.js turns to the next pair at each section.
+// Each outline starts the cycle of seven at its own figure, which also stands in its masthead.
+const NAVE = '<div class="nave" aria-hidden="true"><span class="nave-fig nave-l"></span><span class="nave-fig nave-r"></span></div>';
+const angelFor = (id) => [...id].reduce((n, ch) => (n * 31 + ch.charCodeAt(0)) % 7, 0);
+
 // ---------------------------------------------------------------------------
 // Formatting helpers
 // ---------------------------------------------------------------------------
@@ -492,7 +498,8 @@ export function docPage(ctx, d) {
       <div class="vtoc-head"><span>Contents</span><button class="icon-btn" type="button" data-panel-close aria-label="Close contents">${icon('x')}</button></div>
       ${tocList}
     </aside>` : ''}
-    <div class="vscroll" data-scroll-root><article class="prose reader${d.theme ? ` prose-${esc(d.theme)}` : ''}">${d.html}</article></div>`;
+    ${d.theme === 'structured' ? NAVE : ''}
+    <div class="vscroll" data-scroll-root><article class="prose reader${d.theme ? ` prose-${esc(d.theme)}` : ''}"${d.theme === 'structured' ? ` data-angel="${angelFor(d.id)}"` : ''}>${d.html}</article></div>`;
   } else if (isFrame) {
     stage = `<div class="vframe-wrap"><div class="vloading" aria-hidden="true"><span class="spinner"></span>Loading ${esc(d.title)}…</div><iframe class="vframe" src="${fileUrl}" title="${esc(d.title)}" allow="fullscreen; clipboard-write"></iframe></div>`;
   } else {

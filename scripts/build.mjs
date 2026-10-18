@@ -12,7 +12,7 @@ import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 import mammoth from 'mammoth';
-import { zipSync } from 'fflate';
+import { zipSync, unzipSync, strFromU8, strToU8 } from 'fflate';
 import * as T from '../src/templates.mjs';
 import { slugify, decodeEntities, htmlToText } from './lib/text.mjs';
 
@@ -83,14 +83,58 @@ function addHeadingIds(html) {
 }
 
 /**
- * Opt-in (`"theme": "structured"` in subject.json) for Word outlines that fake their layout with
- * one-cell tables: the title box becomes a masthead, "I. Title    WEEK 1" boxes become real <h2>
- * sections (so the Contents panel works), "RULE / CASE / ROADMAP / EXAM TIPS   …" boxes become
- * labelled callouts, and bold-only paragraphs between them become <h3> subheadings.
+ * Word outlines that mark "outside the class materials" text only by font color (subject.json
+ * `"outsideColor": "7030A0"`): give runs in that color a highlight mammoth can read, so they come
+ * out as <span class="outside">. The outline's own key names the color, so keep its tone.
  */
-const CALLOUT_KINDS = { RULE: 'rule', CASE: 'case', ROADMAP: 'roadmap', 'EXAM TIPS': 'tips', TIP: 'tips', TIPS: 'tips', NOTE: 'note', TRAP: 'tips' };
-function structureOutline(html) {
+function markOutsideRuns(raw, color) {
+  const files = unzipSync(new Uint8Array(raw));
+  const re = new RegExp(`<w:color w:val="${color}"[^>]*/>`, 'gi');
+  files['word/document.xml'] = strToU8(strFromU8(files['word/document.xml']).replace(re, (m) => `${m}<w:highlight w:val="darkMagenta"/>`));
+  return Buffer.from(zipSync(files));
+}
+const outsideTone = (hex) => {
+  const [r, g, b] = hex.match(/../g).map((h) => parseInt(h, 16));
+  return b > g && r > g ? 'purple' : r > g && g >= b ? 'orange' : 'accent';
+};
+
+const titleCase = (s) => s.replace(/[A-Z][A-Z'’]+/g, (w) => w[0] + w.slice(1).toLowerCase());
+
+/**
+ * Opt-in (`"theme": "structured"` in subject.json) for Word outlines that fake their layout with
+ * one-cell tables: the title box (or opening bold title line) becomes a masthead, "I. Title    WEEK 1"
+ * boxes and real Heading 2s become section bands (so the Contents panel works), Heading 1 "PART I —"
+ * lines become part dividers, "RULE / CASE / ROADMAP / EXAM TIPS   …" boxes become labelled callouts,
+ * case boxes and "Name  MAIN CASE · CLASS 1" case cards become case callouts, and bold-only paragraphs
+ * between them become <h3> subheadings. Word's own table of contents is dropped.
+ */
+const CALLOUT_KINDS = { RULE: 'rule', CASE: 'case', ROADMAP: 'roadmap', 'EXAM TIPS': 'tips', TIP: 'tips', TIPS: 'tips', NOTE: 'note', TRAP: 'tips', KEY: 'key' };
+// Principal cases; cases the casebook only notes; cases only cited, only on a slide, or only in the casebook.
+const CASE_KINDS = { 'MAIN CASE': 'main', 'NOTE CASE': 'note', 'CITED ONLY': 'cited', 'SLIDE REFERENCE': 'cited', 'SUPPLEMENTAL READING': 'cited' };
+const CASE_LABEL = Object.keys(CASE_KINDS).join('|');
+function structureOutline(html, tone) {
   let first = true;
+  html = html
+    .replace(/<a id="_[^"]*"><\/a>/g, '')
+    .replace(/<p><strong>Contents<\/strong><\/p>(?:<p><a href="#_Toc[^"]*">[\s\S]*?<\/a><\/p>)+/, '')
+    .replace(/class="outside"/g, `class="outside outside-${tone}"`)
+    // An opening bold title line, followed by plain lines, is the title block.
+    .replace(/^<p><strong>([^<]+)<\/strong><\/p>((?:<p>(?!<strong>[^<]*<\/strong><\/p>)[\s\S]*?<\/p>)*)/, (_, title, rest) => {
+      first = false;
+      const [subtitle, ...meta] = (rest.match(/<p>[\s\S]*?<\/p>/g) || []).map((p) => p.replace(/^<p>|<\/p>$/g, ''));
+      return `<header class="doc-masthead"><h1 class="doc-title">${/[a-z]/.test(title.replace(/&\w+;/g, '')) ? title : titleCase(title)}</h1>${subtitle ? `<p class="doc-subtitle">${subtitle}</p>` : ''}${meta.map((m) => `<p class="doc-meta">${m}</p>`).join('')}</header>`;
+    })
+    .replace(/<h1>([\s\S]*?)<\/h1>/g, (_, text) => {
+      const part = text.match(/^PART ([IVXLC]+)\s*[—–-]\s*([\s\S]+)$/);
+      return `<div class="part-band"><h1>${part ? `<span class="part-kicker">Part ${part[1]}<span class="sr-only"> — </span></span>` : ''}${titleCase(part ? part[2] : text)}</h1></div>`;
+    })
+    .replace(/<h2>([\s\S]*?)<\/h2>/g, '<div class="section-band"><h2>$1</h2></div>')
+    // "Name (Court Year)  MAIN CASE · CLASS 1" followed by Facts / Held / Why it matters lines.
+    .replace(new RegExp(`<p><strong>([^<]+)</strong>\\s*<strong>\\s*(${CASE_LABEL})\\s*·\\s*([^<]*?)\\s*</strong></p>((?:<p><strong>(?:Facts|Held|Why it matters):[\\s\\S]*?</p>)*)`, 'g'),
+      (_, name, label, detail, body) => `<aside class="callout callout-case case-${CASE_KINDS[label]}"><span class="callout-tag">${label.toLowerCase()} · ${detail.toLowerCase()}</span><p class="callout-title">${name}</p>${body}</aside>`)
+    // The outline's key to those labels.
+    .replace(new RegExp(`<p>\\s*<strong>\\s*(${CASE_LABEL})((?:\\s*·\\s*[^<]*?)?)\\s*</strong>\\s*`, 'g'),
+      (_, label, detail) => `<p class="case-legend"><span class="case-chip case-${CASE_KINDS[label]}">${label.toLowerCase()}${detail.toLowerCase()}</span> `);
   const out = html.replace(/<table><tr><td>((?:(?!<\/?t(?:able|r|d)\b)[\s\S])*)<\/td><\/tr><\/table>/g, (whole, inner, offset) => {
     const isFirst = first && offset === 0;
     first = false;
@@ -100,13 +144,14 @@ function structureOutline(html) {
       const [title, subtitle, ...meta] = paras.map((p) => p.replace(/^<p>(?:<strong>)?|(?:<\/strong>)?<\/p>$/g, ''));
       return `<header class="doc-masthead"><h1 class="doc-title">${title}</h1>${subtitle ? `<p class="doc-subtitle">${subtitle}</p>` : ''}${meta.map((m) => `<p class="doc-meta">${m}</p>`).join('')}</header>`;
     }
-    const head = inner.match(/^<p><strong>([A-Z][A-Z ]*?)\s{2,}/);
-    if (head && CALLOUT_KINDS[head[1]]) {
-      const kind = CALLOUT_KINDS[head[1]];
+    const head = inner.match(/^<p><strong>([A-Z][A-Z ]*?)( ★)?\s{2,}/);
+    if (head && (CALLOUT_KINDS[head[1]] || CASE_KINDS[head[1]])) {
+      const cls = CASE_KINDS[head[1]] ? `case case-${CASE_KINDS[head[1]]}` : CALLOUT_KINDS[head[1]];
       let body = inner.replace(head[0], '<p><strong>').replace(/^<p><strong><\/strong>\s*/, '<p>');
       // A first line that is only bold text is the callout's own title.
-      body = body.replace(/^<p><strong>([^<]*)<\/strong><\/p>/, '<p class="callout-title">$1</p>');
-      return `<aside class="callout callout-${kind}"><span class="callout-tag">${head[1].toLowerCase()}</span>${body}</aside>`;
+      body = body.replace(/^<p><strong>([^<]*)<\/strong><\/p>/, '<p class="callout-title">$1</p>')
+        .replace(/<p><strong>((?:Source|In the casebook):)<\/strong>/g, '<p class="callout-source"><strong>$1</strong>');
+      return `<aside class="callout callout-${cls}"><span class="callout-tag">${head[1].toLowerCase()}${head[2] ? ' <span class="callout-star" title="Has its own class slide">★</span>' : ''}</span>${body}</aside>`;
     }
     const section = paras.length === 1 && inner.match(/^<p><strong>((?:[IVXLC]+\.|Part\b)[^<]*?)(?:\s{2,}(WEEKS? [^<]+))?<\/strong><\/p>$/);
     if (section) {
@@ -204,9 +249,10 @@ async function loadSubjects() {
       };
 
       if (ext === '.docx') {
-        const styleMap = ["p[style-name='Title'] => h1.doc-title:fresh", "p[style-name='Subtitle'] => p.doc-subtitle:fresh"];
-        const { value } = await mammoth.convertToHtml({ buffer: raw }, { styleMap });
-        const shaped = dm.theme === 'structured' ? structureOutline(value) : value;
+        const styleMap = ["p[style-name='Title'] => h1.doc-title:fresh", "p[style-name='Subtitle'] => p.doc-subtitle:fresh", "highlight[color='darkMagenta'] => span.outside"];
+        const source = dm.outsideColor ? markOutsideRuns(raw, dm.outsideColor) : raw;
+        const { value } = await mammoth.convertToHtml({ buffer: source }, { styleMap });
+        const shaped = dm.theme === 'structured' ? structureOutline(value, dm.outsideColor ? outsideTone(dm.outsideColor) : 'accent') : value;
         const withIds = addHeadingIds(labelTableCells(shaped).replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>'));
         doc.html = withIds.html;
         doc.toc = withIds.toc;
