@@ -76,6 +76,16 @@ $$('[data-theme-toggle]').forEach((btn) => btn.addEventListener('click', () => {
   document.documentElement.dataset.theme = next;
   try { localStorage.setItem('theme', next); } catch { /* storage unavailable */ }
 }));
+// Print in the light theme, whatever is on screen, so tints and colored text read on paper.
+let themeBeforePrint;
+addEventListener('beforeprint', () => {
+  themeBeforePrint = document.documentElement.dataset.theme;
+  document.documentElement.dataset.theme = 'light';
+});
+addEventListener('afterprint', () => {
+  if (themeBeforePrint) document.documentElement.dataset.theme = themeBeforePrint;
+  else delete document.documentElement.dataset.theme;
+});
 
 // ---------- Scenery: lo-fi scenes (off by default; cherry blossoms, snow, koi…) ----------
 // Chosen from the menu in the header (or the document toolbar) and remembered per browser

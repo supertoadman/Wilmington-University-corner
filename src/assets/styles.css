@@ -1524,29 +1524,29 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
   --s-h3: var(--ink-2);
   --s-strong: var(--ink);
   --week-bg: var(--gold-soft); --week-ink: #6f4d10; --week-line: #c9a14f;
-  --c-rule: var(--accent); --c-rule-ink: var(--s-ink); --c-rule-bg: color-mix(in srgb, var(--accent) 8%, var(--surface));
+  --c-rule: #7c3aed; --c-rule-ink: #5b21b6; --c-rule-bg: #f6f1ff;
   --c-case: #1e4f8a; --c-case-ink: #1a4478; --c-case-bg: #eef3fa;
   --c-roadmap: #a87b22; --c-roadmap-ink: #6f4d10; --c-roadmap-bg: #fbf4e3;
-  --c-tips: #b5523b; --c-tips-ink: #8c3a26; --c-tips-bg: #fcefeb;
+  --c-tips: #db2777; --c-tips-ink: #9d174d; --c-tips-bg: #fdf0f6;
 }
 :root[data-theme="dark"] .prose-structured {
   --s-ink: #b6e6c1; --s-line: #6fc285; --s-band: #172a20; --s-col: #18251e; --s-th: #1d3326; --s-zebra: #1a212c;
   --s-h3: #a9c6ec; --s-strong: #ffffff;
   --week-bg: #3a2e14; --week-ink: #f3d48c; --week-line: #8a6a2a;
-  --c-rule: #6fc285; --c-rule-ink: #9fdcae; --c-rule-bg: #15241b;
+  --c-rule: #a78bfa; --c-rule-ink: #c4b5fd; --c-rule-bg: #1d1730;
   --c-case: #79a8ff; --c-case-ink: #b3cdf5; --c-case-bg: #142034;
   --c-roadmap: #e0b862; --c-roadmap-ink: #f3d48c; --c-roadmap-bg: #262012;
-  --c-tips: #e98d74; --c-tips-ink: #f6b29f; --c-tips-bg: #2a1915;
+  --c-tips: #f472b6; --c-tips-ink: #f9a8d4; --c-tips-bg: #2a1421;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .prose-structured {
     --s-ink: #b6e6c1; --s-line: #6fc285; --s-band: #172a20; --s-col: #18251e; --s-th: #1d3326; --s-zebra: #1a212c;
     --s-h3: #a9c6ec; --s-strong: #ffffff;
     --week-bg: #3a2e14; --week-ink: #f3d48c; --week-line: #8a6a2a;
-    --c-rule: #6fc285; --c-rule-ink: #9fdcae; --c-rule-bg: #15241b;
+    --c-rule: #a78bfa; --c-rule-ink: #c4b5fd; --c-rule-bg: #1d1730;
     --c-case: #79a8ff; --c-case-ink: #b3cdf5; --c-case-bg: #142034;
     --c-roadmap: #e0b862; --c-roadmap-ink: #f3d48c; --c-roadmap-bg: #262012;
-    --c-tips: #e98d74; --c-tips-ink: #f6b29f; --c-tips-bg: #2a1915;
+    --c-tips: #f472b6; --c-tips-ink: #f9a8d4; --c-tips-bg: #2a1421;
   }
 }
 /* Where the browser can, take the subject's own hue at fixed lightness, so any accent reads in both themes. */
@@ -1555,13 +1555,11 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
   :root[data-theme="dark"] .prose-structured {
     --s-ink: oklch(from var(--accent) .88 calc(c * .9) h); --s-line: oklch(from var(--accent) .74 max(c, .11) h);
     --s-band: oklch(from var(--accent) .25 calc(c * .35) h); --s-col: oklch(from var(--accent) .23 calc(c * .25) h); --s-th: oklch(from var(--accent) .29 calc(c * .4) h);
-    --c-rule: var(--s-line); --c-rule-ink: oklch(from var(--accent) .84 max(c, .09) h); --c-rule-bg: oklch(from var(--accent) .22 calc(c * .3) h);
   }
   @media (prefers-color-scheme: dark) {
     :root:not([data-theme="light"]) .prose-structured {
       --s-ink: oklch(from var(--accent) .88 calc(c * .9) h); --s-line: oklch(from var(--accent) .74 max(c, .11) h);
       --s-band: oklch(from var(--accent) .25 calc(c * .35) h); --s-col: oklch(from var(--accent) .23 calc(c * .25) h); --s-th: oklch(from var(--accent) .29 calc(c * .4) h);
-      --c-rule: var(--s-line); --c-rule-ink: oklch(from var(--accent) .84 max(c, .09) h); --c-rule-bg: oklch(from var(--accent) .22 calc(c * .3) h);
     }
   }
 }
@@ -1573,7 +1571,7 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
 .prose-structured .doc-masthead::after { content: ""; position: absolute; left: 34px; right: 34px; bottom: 0; height: 3px; background: linear-gradient(90deg, var(--gold-2), transparent); }
 .prose-structured .doc-masthead .doc-title { color: #fbf9f4; margin: 0 0 .35em; font-size: clamp(26px, 4vw, 38px); }
 .prose-structured .doc-subtitle { margin: 0 0 .9em; color: #e9c77f; font-size: 13px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
-.prose-structured .doc-meta { margin: 0; color: #d3d6dc; font-size: 14.5px; }
+.prose-structured .doc-meta { display: block; margin: 0; padding: 0; color: #d3d6dc; font-size: 14.5px; }
 .prose-structured .section-band {
   display: flex; align-items: center; gap: 12px 16px; flex-wrap: wrap; margin: 3em 0 1.1em; padding: 14px 18px 14px 20px;
   border-radius: 14px; background: var(--s-band); border: 1px solid color-mix(in srgb, var(--s-line) 35%, transparent); border-left: 5px solid var(--s-line);
@@ -1624,39 +1622,47 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
   .prose-structured thead + tbody tr:first-child { display: block; }
 }
 
-/* Case boxes: green main cases, teal note cases, gray cited-only (the colors the outlines' own keys name). */
+/* Case boxes: red main cases, green slide references, orange supplemental readings and note cases, gray cited-only. */
 .prose-structured {
-  --k-main: #2e7d32; --k-main-ink: #1f5f24; --k-main-bg: #eef6ee;
-  --k-note: #0e7490; --k-note-ink: #0b5d74; --k-note-bg: #e9f5f8;
+  --k-main: #dc2626; --k-main-ink: #b91c1c; --k-main-bg: #fffafa;
+  --k-slide: #16a34a; --k-slide-ink: #15803d; --k-slide-bg: #f6fdf8;
+  --k-supp: #ea580c; --k-supp-ink: #c2410c; --k-supp-bg: #fffaf5;
+  --k-note: var(--k-supp); --k-note-ink: var(--k-supp-ink); --k-note-bg: var(--k-supp-bg);
   --k-cited: #6b7280; --k-cited-ink: #4b5260; --k-cited-bg: #f4f4f5;
   --k-key: #a87b22; --k-key-ink: #6f4d10; --k-key-bg: #fbf7ee;
   --chip-fg: #ffffff;
-  --outside-purple: #6a2b9e; --outside-orange: #853908;
+  --outside-purple: #6a2b9e; --outside-orange: #853908; --outside-gray: #5b6576;
   --part-line: #c9a14f;
 }
 :root[data-theme="dark"] .prose-structured {
-  --k-main: #6fc285; --k-main-ink: #a6dfb3; --k-main-bg: #14231a;
-  --k-note: #4fbfd6; --k-note-ink: #9fdeec; --k-note-bg: #10252b;
+  --k-main: #f87171; --k-main-ink: #fca5a5; --k-main-bg: #1f1517;
+  --k-slide: #4ade80; --k-slide-ink: #86efac; --k-slide-bg: #12201a;
+  --k-supp: #fb923c; --k-supp-ink: #fdba74; --k-supp-bg: #221a13;
+  --k-note: var(--k-supp); --k-note-ink: var(--k-supp-ink); --k-note-bg: var(--k-supp-bg);
   --k-cited: #9aa3b2; --k-cited-ink: #c9ced7; --k-cited-bg: #1a1f28;
   --k-key: #e0b862; --k-key-ink: #f3d48c; --k-key-bg: #211d13;
   --chip-fg: #0c1016;
-  --outside-purple: #d4b3ff; --outside-orange: #f6b27c;
+  --outside-purple: #d4b3ff; --outside-orange: #f6b27c; --outside-gray: #a7b0bf;
   --part-line: #8a6a2a;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) .prose-structured {
-    --k-main: #6fc285; --k-main-ink: #a6dfb3; --k-main-bg: #14231a;
-    --k-note: #4fbfd6; --k-note-ink: #9fdeec; --k-note-bg: #10252b;
+    --k-main: #f87171; --k-main-ink: #fca5a5; --k-main-bg: #1f1517;
+    --k-slide: #4ade80; --k-slide-ink: #86efac; --k-slide-bg: #12201a;
+    --k-supp: #fb923c; --k-supp-ink: #fdba74; --k-supp-bg: #221a13;
+    --k-note: var(--k-supp); --k-note-ink: var(--k-supp-ink); --k-note-bg: var(--k-supp-bg);
     --k-cited: #9aa3b2; --k-cited-ink: #c9ced7; --k-cited-bg: #1a1f28;
     --k-key: #e0b862; --k-key-ink: #f3d48c; --k-key-bg: #211d13;
     --chip-fg: #0c1016;
-    --outside-purple: #d4b3ff; --outside-orange: #f6b27c;
+    --outside-purple: #d4b3ff; --outside-orange: #f6b27c; --outside-gray: #a7b0bf;
     --part-line: #8a6a2a;
   }
 }
 .prose-structured .case-main { --c: var(--k-main); --c-ink: var(--k-main-ink); --c-bg: var(--k-main-bg); }
 .prose-structured .case-note { --c: var(--k-note); --c-ink: var(--k-note-ink); --c-bg: var(--k-note-bg); }
 .prose-structured .case-cited { --c: var(--k-cited); --c-ink: var(--k-cited-ink); --c-bg: var(--k-cited-bg); }
+.prose-structured .case-slide { --c: var(--k-slide); --c-ink: var(--k-slide-ink); --c-bg: var(--k-slide-bg); }
+.prose-structured .case-supp { --c: var(--k-supp); --c-ink: var(--k-supp-ink); --c-bg: var(--k-supp-bg); }
 .prose-structured .callout-key, .prose-structured .callout-note { --c: var(--k-key); --c-ink: var(--k-key-ink); --c-bg: var(--k-key-bg); }
 /* A case box wears its label as a filled chip, so it never reads as a rule box of the same hue. */
 .prose-structured .callout-case { padding-top: 38px; }
@@ -1667,6 +1673,8 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
 .prose-structured .case-legend > .case-chip { --c: var(--k-main); --c-ink: var(--k-main-ink); }
 .prose-structured .case-legend > .case-note { --c: var(--k-note); --c-ink: var(--k-note-ink); }
 .prose-structured .case-legend > .case-cited { --c: var(--k-cited); --c-ink: var(--k-cited-ink); }
+.prose-structured .case-legend > .case-slide { --c: var(--k-slide); --c-ink: var(--k-slide-ink); }
+.prose-structured .case-legend > .case-supp { --c: var(--k-supp); --c-ink: var(--k-supp-ink); }
 /* Small white labels need the deeper shade by day; at night the bright shade carries dark text. */
 .prose-structured :is(.callout-case .callout-tag, .case-chip) { background: var(--c-ink); }
 :root[data-theme="dark"] .prose-structured :is(.callout-case .callout-tag, .case-chip) { background: var(--c); }
@@ -1678,6 +1686,84 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
 .prose-structured .outside, .prose-structured .outside strong { font-style: italic; color: var(--s-ink); }
 .prose-structured .outside-purple, .prose-structured .outside-purple strong { color: var(--outside-purple); }
 .prose-structured .outside-orange, .prose-structured .outside-orange strong { color: var(--outside-orange); }
+.prose-structured .outside-gray, .prose-structured .outside-gray strong { color: var(--outside-gray); }
+
+/* ---------- Color coding: case cards, rule elements, table rows ---------- */
+/* Case cards: the name takes the card's color (red for main cases); Facts blue, Held green, Why it matters yellow. */
+.prose-structured {
+  --f-facts: #2563eb; --f-facts-ink: #1d4ed8; --f-facts-bg: #eff5ff;
+  --f-held: #16a34a; --f-held-ink: #15803d; --f-held-bg: #effbf3;
+  --f-why: #eab308; --f-why-ink: #8a5a00; --f-why-bg: #fefbe8;
+  /* Rainbow for rule elements and table rows: text, highlight, edge, row tint. */
+  --el-1: #b91c1c; --el-1-bg: #fde4e4; --el-1-edge: #ef4444; --rb-1: #fef4f4;
+  --el-2: #c2410c; --el-2-bg: #ffead6; --el-2-edge: #f97316; --rb-2: #fff7ef;
+  --el-3: #854d0e; --el-3-bg: #fdf3b5; --el-3-edge: #eab308; --rb-3: #fefce9;
+  --el-4: #15803d; --el-4-bg: #dcf7e5; --el-4-edge: #22c55e; --rb-4: #f1fcf4;
+  --el-5: #1d4ed8; --el-5-bg: #dfeafe; --el-5-edge: #3b82f6; --rb-5: #f1f6ff;
+  --el-6: #7e22ce; --el-6-bg: #f1e5ff; --el-6-edge: #a855f7; --rb-6: #f9f4ff;
+}
+:root[data-theme="dark"] .prose-structured {
+  --f-facts: #60a5fa; --f-facts-ink: #93c5fd; --f-facts-bg: rgba(96, 165, 250, .1);
+  --f-held: #4ade80; --f-held-ink: #86efac; --f-held-bg: rgba(74, 222, 128, .09);
+  --f-why: #facc15; --f-why-ink: #fde047; --f-why-bg: rgba(250, 204, 21, .09);
+  --el-1: #fca5a5; --el-1-bg: rgba(248, 113, 113, .16); --el-1-edge: #f87171; --rb-1: rgba(248, 113, 113, .08);
+  --el-2: #fdba74; --el-2-bg: rgba(251, 146, 60, .16); --el-2-edge: #fb923c; --rb-2: rgba(251, 146, 60, .08);
+  --el-3: #fde047; --el-3-bg: rgba(250, 204, 21, .14); --el-3-edge: #facc15; --rb-3: rgba(250, 204, 21, .07);
+  --el-4: #86efac; --el-4-bg: rgba(74, 222, 128, .14); --el-4-edge: #4ade80; --rb-4: rgba(74, 222, 128, .07);
+  --el-5: #93c5fd; --el-5-bg: rgba(96, 165, 250, .16); --el-5-edge: #60a5fa; --rb-5: rgba(96, 165, 250, .08);
+  --el-6: #d8b4fe; --el-6-bg: rgba(192, 132, 252, .16); --el-6-edge: #c084fc; --rb-6: rgba(192, 132, 252, .08);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .prose-structured {
+    --f-facts: #60a5fa; --f-facts-ink: #93c5fd; --f-facts-bg: rgba(96, 165, 250, .1);
+    --f-held: #4ade80; --f-held-ink: #86efac; --f-held-bg: rgba(74, 222, 128, .09);
+    --f-why: #facc15; --f-why-ink: #fde047; --f-why-bg: rgba(250, 204, 21, .09);
+    --el-1: #fca5a5; --el-1-bg: rgba(248, 113, 113, .16); --el-1-edge: #f87171; --rb-1: rgba(248, 113, 113, .08);
+    --el-2: #fdba74; --el-2-bg: rgba(251, 146, 60, .16); --el-2-edge: #fb923c; --rb-2: rgba(251, 146, 60, .08);
+    --el-3: #fde047; --el-3-bg: rgba(250, 204, 21, .14); --el-3-edge: #facc15; --rb-3: rgba(250, 204, 21, .07);
+    --el-4: #86efac; --el-4-bg: rgba(74, 222, 128, .14); --el-4-edge: #4ade80; --rb-4: rgba(74, 222, 128, .07);
+    --el-5: #93c5fd; --el-5-bg: rgba(96, 165, 250, .16); --el-5-edge: #60a5fa; --rb-5: rgba(96, 165, 250, .08);
+    --el-6: #d8b4fe; --el-6-bg: rgba(192, 132, 252, .16); --el-6-edge: #c084fc; --rb-6: rgba(192, 132, 252, .08);
+  }
+}
+.prose-structured .callout-case .callout-title { color: var(--c-ink); }
+.prose-structured .case-field {
+  --f: var(--f-facts); --f-ink: var(--f-facts-ink); --f-bg: var(--f-facts-bg);
+  margin: .55em 0; padding: 7px 12px 8px; border-left: 3px solid var(--f); border-radius: 0 9px 9px 0; background: var(--f-bg);
+}
+.prose-structured .case-held { --f: var(--f-held); --f-ink: var(--f-held-ink); --f-bg: var(--f-held-bg); }
+.prose-structured .case-why { --f: var(--f-why); --f-ink: var(--f-why-ink); --f-bg: var(--f-why-bg); }
+.prose-structured .case-label { color: var(--f-ink); font-size: 11.5px; font-weight: 800; letter-spacing: .09em; text-transform: uppercase; margin-right: 2px; }
+.prose-structured .callout > .case-field:last-child { margin-bottom: 0; }
+
+/* Elements of a rule, "(1) … (2) …", in rainbow order. */
+.prose-structured :is(.el-1) { --el: var(--el-1); --el-bg: var(--el-1-bg); --el-edge: var(--el-1-edge); }
+.prose-structured :is(.el-2) { --el: var(--el-2); --el-bg: var(--el-2-bg); --el-edge: var(--el-2-edge); }
+.prose-structured :is(.el-3) { --el: var(--el-3); --el-bg: var(--el-3-bg); --el-edge: var(--el-3-edge); }
+.prose-structured :is(.el-4) { --el: var(--el-4); --el-bg: var(--el-4-bg); --el-edge: var(--el-4-edge); }
+.prose-structured :is(.el-5) { --el: var(--el-5); --el-bg: var(--el-5-bg); --el-edge: var(--el-5-edge); }
+.prose-structured :is(.el-6) { --el: var(--el-6); --el-bg: var(--el-6-bg); --el-edge: var(--el-6-edge); }
+.prose-structured .el {
+  color: var(--el); background: var(--el-bg); border-radius: 2px; padding: 1px 0;
+  -webkit-box-decoration-break: clone; box-decoration-break: clone;
+}
+.prose-structured .el strong, .prose-structured .el em, .prose-structured .el-line strong { color: inherit; }
+.prose-structured .el-line { margin: .4em 0; padding: 5px 12px; border-left: 3px solid var(--el-edge); border-radius: 0 9px 9px 0; background: var(--el-bg); }
+.prose-structured .el-line > strong:first-child { color: var(--el); }
+
+/* Table rows in rainbow order. */
+.prose-structured tr.rb-1 { --rb: var(--rb-1); --rb-edge: var(--el-1-edge); }
+.prose-structured tr.rb-2 { --rb: var(--rb-2); --rb-edge: var(--el-2-edge); }
+.prose-structured tr.rb-3 { --rb: var(--rb-3); --rb-edge: var(--el-3-edge); }
+.prose-structured tr.rb-4 { --rb: var(--rb-4); --rb-edge: var(--el-4-edge); }
+.prose-structured tr.rb-5 { --rb: var(--rb-5); --rb-edge: var(--el-5-edge); }
+.prose-structured tr.rb-6 { --rb: var(--rb-6); --rb-edge: var(--el-6-edge); }
+.prose-structured table tr.rb:nth-child(n) > * { background: var(--rb); }
+.prose-structured table tr.rb:nth-child(n) > :first-child { background: var(--rb); box-shadow: inset 4px 0 0 var(--rb-edge); }
+@media (max-width: 640px) {
+  .prose-structured table tr.rb:nth-child(n) { border-left: 4px solid var(--rb-edge); }
+  .prose-structured table tr.rb:nth-child(n) > :first-child { box-shadow: none; }
+}
 
 /* Statue emblems on the callout labels, from the site's own marble heads. */
 .prose-structured .callout-tag { display: inline-flex; align-items: center; gap: 7px; }
@@ -1768,6 +1854,15 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
   .viewer-app, .vstage, .vscroll { display: block; height: auto; overflow: visible; padding: 0; }
   .reader { border: 0; box-shadow: none; padding: 0; max-width: none; }
   .table-wrap { overflow: visible; border: 0; }
+  /* Outlines print in their day colors (app.js switches to the light theme for printing), with tints kept. */
+  .prose-structured { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .prose-structured :is(.callout-case, .case-field, .el-line, tr) { break-inside: avoid; }
+  .prose-structured :is(.section-band, .part-band, h3) { break-after: avoid; }
+  .prose-structured .doc-masthead { background: none; color: #000; box-shadow: none; border: 0; border-bottom: 2px solid #c9a14f; border-radius: 0; padding: 0 0 12px; }
+  .prose-structured .doc-masthead::before, .prose-structured .doc-masthead::after { display: none; }
+  .prose-structured .doc-masthead .doc-title { color: #000; }
+  .prose-structured .doc-subtitle { color: #6f4d10; }
+  .prose-structured :is(.doc-meta, .doc-meta + .doc-meta) { color: #333; }
 }
 
 /* ---------- Admin editor (/admin/, owner only) ---------- */

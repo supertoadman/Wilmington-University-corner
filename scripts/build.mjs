@@ -97,6 +97,7 @@ function markOutsideRuns(raw, color) {
 }
 const outsideTone = (hex) => {
   const [r, g, b] = hex.match(/../g).map((h) => parseInt(h, 16));
+  if (Math.max(r, g, b) - Math.min(r, g, b) < 48) return 'gray';
   return b > g && r > g ? 'purple' : r > g && g >= b ? 'orange' : 'accent';
 };
 
@@ -111,8 +112,8 @@ const titleCase = (s) => s.replace(/[A-Z][A-Z'’]+/g, (w) => w[0] + w.slice(1).
  * between them become <h3> subheadings. Word's own table of contents is dropped.
  */
 const CALLOUT_KINDS = { RULE: 'rule', CASE: 'case', ROADMAP: 'roadmap', 'EXAM TIPS': 'tips', TIP: 'tips', TIPS: 'tips', NOTE: 'note', TRAP: 'tips', KEY: 'key' };
-// Principal cases; cases the casebook only notes; cases only cited, only on a slide, or only in the casebook.
-const CASE_KINDS = { 'MAIN CASE': 'main', 'NOTE CASE': 'note', 'CITED ONLY': 'cited', 'SLIDE REFERENCE': 'cited', 'SUPPLEMENTAL READING': 'cited' };
+// Principal cases; cases the casebook only notes; cases only cited; cases only on a slide; cases only in the casebook.
+const CASE_KINDS = { 'MAIN CASE': 'main', 'NOTE CASE': 'note', 'CITED ONLY': 'cited', 'SLIDE REFERENCE': 'slide', 'SUPPLEMENTAL READING': 'supp' };
 const CASE_LABEL = Object.keys(CASE_KINDS).join('|');
 function structureOutline(html, tone) {
   let first = true;
@@ -162,8 +163,100 @@ function structureOutline(html, tone) {
     return whole;
   });
   // Bold-only paragraphs outside tables and callouts are subheadings.
-  return out.split(/(<table>[\s\S]*?<\/table>|<aside[\s\S]*?<\/aside>|<header[\s\S]*?<\/header>)/).map((part, i) =>
+  const headed = out.split(/(<table>[\s\S]*?<\/table>|<aside[\s\S]*?<\/aside>|<header[\s\S]*?<\/header>)/).map((part, i) =>
     i % 2 ? part : part.replace(/<p><strong>([^<]+)<\/strong><\/p>/g, '<h3>$1</h3>')).join('');
+  // A case card's Facts / Held / Why it matters lines each get their own class, so each can wear its color.
+  const fields = headed.replace(/<p><strong>(Facts|Held|Why it matters):\s*<\/strong>\s*/g, (_, label) =>
+    `<p class="case-field case-${label === 'Why it matters' ? 'why' : label.toLowerCase()}"><strong class="case-label">${label}:</strong> `);
+  return rainbowElements(numberedLines(fields));
+}
+
+/**
+ * The elements of a rule, "(1) … (2) … (3) …" or "(a) … (b) …", each take the next color of the rainbow
+ * (`<span class="el el-1">`…). Only a run that starts at (1) or (a) and counts up counts, so a lone
+ * statutory "(c)" or a citation like "§ 2-207(2)" is left alone. Text is wrapped node by node, so the
+ * spans never cross a tag. Tables (colored by row), tip boxes (pink) and Facts / Held lines are skipped.
+ */
+const EL_COLORS = 6;
+function rainbowElements(html) {
+  const tokens = html.split(/(<[^>]+>)/);
+  const BLOCK = new Set(['p', 'li', 'ul', 'ol', 'td', 'th', 'h1', 'h2', 'h3', 'h4', 'aside', 'div', 'header', 'table', 'tr', 'thead', 'tbody', 'br']);
+  const out = [];
+  let skipTag = null;    // the tag whose region is being skipped
+  let block = [];        // indexes into `out` of the current block's text tokens
+  const flush = () => { if (block.length) colorBlock(out, block); block = []; };
+  for (const tok of tokens) {
+    if (tok.startsWith('<')) {
+      const [, close, name = '', attrs = ''] = tok.match(/^<(\/?)([a-z0-9]+)([^>]*)>/i) || [];
+      const tag = name.toLowerCase();
+      if (skipTag) {
+        if (close && tag === skipTag) skipTag = null;
+      } else if (!close && (tag === 'table' || (tag === 'aside' && /callout-tips/.test(attrs)) || (tag === 'p' && /case-(facts|held)/.test(attrs)))) {
+        skipTag = tag;
+      }
+      if (BLOCK.has(tag)) flush();
+      out.push(tok);
+    } else {
+      if (!skipTag && tok) block.push(out.length);
+      out.push(tok);
+    }
+  }
+  flush();
+  return out.join('');
+}
+function colorBlock(out, idxs) {
+  const text = idxs.map((i) => out[i]).join('');
+  const markers = [...text.matchAll(/(?<=^|\s)\((\d{1,2}|[a-h])\)/g)];
+  // Runs that start at (1)/(a) and count up by one; a new (1)/(a) starts the next run.
+  const runs = [];
+  let seq = null;
+  for (const m of markers) {
+    const want = seq && (/\d/.test(seq[0][1]) ? String(seq.length + 1) : String.fromCharCode(97 + seq.length));
+    if (seq && m[1] === want) seq.push(m);
+    else if (m[1] === '1' || m[1] === 'a') runs.push(seq = [m]);
+  }
+  // Each element runs to the next marker; the last one to the end of its sentence (or to where the next run starts).
+  const ranges = [];
+  runs.filter((r) => r.length > 1).forEach((r, n, all) => {
+    const limit = n + 1 < all.length ? all[n + 1][0].index : text.length;
+    const last = r[r.length - 1];
+    const tail = text.slice(last.index, limit).search(/[.;](?=\s+[A-Z]|\s*$)/);
+    const end = tail < 0 ? limit : last.index + tail + 1;
+    r.forEach((m, k) => ranges.push([m.index, k + 1 < r.length ? r[k + 1].index : end, (k % EL_COLORS) + 1]));
+  });
+  if (!ranges.length) return;
+  let pos = 0;
+  for (const i of idxs) {
+    const t = out[i];
+    const from = pos;
+    pos += t.length;
+    let res = '';
+    let at = from;
+    for (const [a, b, c] of ranges) {
+      if (b <= at || a >= pos) continue;
+      const s = Math.max(a, at);
+      const e = Math.min(b, pos);
+      res += t.slice(at - from, s - from) + `<span class="el el-${c}">${t.slice(s - from, e - from)}</span>`;
+      at = e;
+    }
+    out[i] = res + t.slice(at - from);
+  }
+}
+
+/** Consecutive "1.  Step" paragraphs (a numbered list of elements typed as plain lines) take rainbow colors too. */
+function numberedLines(html) {
+  return html.replace(/(?:<p><strong>\d{1,2}\.(?:\s|&nbsp;)[\s\S]*?<\/p>){2,}/g, (run) => {
+    let k = 0;
+    return run.replace(/<p><strong>(\d{1,2})\./g, (m, n) => `<p class="el-line el-${(k++ % EL_COLORS) + 1}"><strong>${n}.`);
+  });
+}
+
+/** Data rows of a structured outline's tables cycle through the rainbow, so a row reads across at a glance. */
+function rainbowRows(html) {
+  return html.replace(/<table>[\s\S]*?<\/table>/g, (table) => {
+    let i = -1;
+    return table.replace(/<tr>/g, () => (++i ? `<tr class="rb rb-${((i - 1) % EL_COLORS) + 1}">` : '<tr>'));
+  });
 }
 
 /** Tag each table cell with its column heading (data-label) so phones can show rows as labelled cards. */
@@ -255,7 +348,8 @@ async function loadSubjects() {
         const source = dm.outsideColor ? markOutsideRuns(raw, dm.outsideColor) : raw;
         const { value } = await mammoth.convertToHtml({ buffer: source }, { styleMap });
         const shaped = dm.theme === 'structured' ? structureOutline(value, dm.outsideColor ? outsideTone(dm.outsideColor) : 'accent') : value;
-        const withIds = addHeadingIds(labelTableCells(shaped).replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>'));
+        const labelled = dm.theme === 'structured' ? rainbowRows(labelTableCells(shaped)) : labelTableCells(shaped);
+        const withIds = addHeadingIds(labelled.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>'));
         doc.html = withIds.html;
         doc.toc = withIds.toc;
         doc.text = htmlToText(value);
