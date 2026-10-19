@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "Static study library site with a machine-readable API for agents.",
   "scripts": {
+    "test": "node --test tests/*.test.mjs",
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
     "dev": "node scripts/build.mjs && node scripts/serve.mjs",

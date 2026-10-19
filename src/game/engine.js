@@ -5,7 +5,7 @@
 // the screen, northeast (-y) or northwest (-x), so every sprite faces the way it was drawn
 // (northeast) or its mirror. Each straight is 3 lanes wide and ends in a 3×3 corner.
 
-import { asset, image, audio } from './assets.js';
+import { asset, audio } from './assets.js';
 
 const ZPX = 150; // screen px per tile of height, at scale 1
 const DIRS = [
@@ -20,16 +20,37 @@ const SIZE = {
   laurel: 92, wisdom: 104, aegis: 104,
 };
 const OBSTACLES = {
-  barrier: { lanes: 3, clear: 0.5, weight: 3 },
-  'toppled-statue': { lanes: 3, clear: 0.55, weight: 1.6 },
-  lintel: { lanes: 3, slide: true, weight: 3 },
-  trap: { lanes: 1, clear: 0.35, weight: 2.2 },
-  braziers: { lanes: 2, clear: 99, weight: 2.2 },
+  barrier: { lanes: 3, depth: 0.3, clear: 0.65, weight: 3 },
+  'toppled-statue': { lanes: 3, depth: 0.4, clear: 0.75, weight: 1.6 },
+  lintel: { lanes: 3, depth: 0.22, slide: true, weight: 3 },
+  trap: { lanes: 1, depth: 0.42, clear: 0.35, weight: 2.2 },
+  braziers: { lanes: 2, depth: 0.4, clear: 99, weight: 2.2 },
   gap: { lanes: 3, gap: 2, weight: 2.2, after: 160 },
 };
 const PACE = { gentle: 5.4, standard: 6.6, swift: 8 };
 const GRAVITY = 30;
 const JUMP_V = 10.6;
+const RUNNER_RADIUS = 0.12;
+const RECOVERY_RUNWAY = 4;
+
+// Ground-contact centers measured on the 640px artwork. Pack anchors mark the
+// lowest alpha pixel, which is NOT the center of an isometric footprint. Both
+// lintel layers must use the same anchor. The corrupt barrier faces the opposite
+// way to its divine counterpart, so it also needs an art-specific mirror.
+const GROUND_ART = {
+  'divine-barrier': { anchor: [330 / 640, 414 / 640] },
+  'corrupt-barrier': { anchor: [326 / 640, 424 / 640], mirror: true },
+  'divine-toppled-statue': { anchor: [320 / 640, 492 / 640] },
+  'corrupt-toppled-statue': { anchor: [320 / 640, 492 / 640] },
+  'divine-trap': { anchor: [320 / 640, 326 / 640], heightScale: 0.78 },
+  'corrupt-trap': { anchor: [320 / 640, 326 / 640], heightScale: 0.78 },
+  'divine-brazier-obstacle': { anchor: [320 / 640, 510 / 640] },
+  'corrupt-brazier-obstacle': { anchor: [320 / 640, 520 / 640] },
+  'divine-slide-lintel-back': { anchor: [320 / 640, 528 / 640] },
+  'divine-slide-lintel-front': { anchor: [320 / 640, 528 / 640] },
+  'corrupt-slide-lintel-back': { anchor: [320 / 640, 552 / 640] },
+  'corrupt-slide-lintel-front': { anchor: [320 / 640, 552 / 640] },
+};
 
 export const REALMS = ['divine', 'corrupt'];
 const BG = { divine: ['divine-far-sky', 'divine-middle-ruins', 'divine-near-clouds'], corrupt: ['corrupt-far-sky', 'corrupt-middle-ruins', 'corrupt-near-smoke'] };
@@ -93,6 +114,9 @@ export class Engine {
     this.gateSpacing = gateSpacing;
     this.gatesLeft = gates;
     this.nextGateD = demo ? Infinity : 34;
+    this.pendingGate = null;
+    this.gateIndex = 0;
+    this.fallenSent = false;
     this.segments = [];
     this.cells = new Map();
     this.particles = [];
@@ -312,7 +336,17 @@ export class Engine {
   // Simulation
   // -------------------------------------------------------------------------
   update(dt) {
-    dt = Math.min(dt, 1 / 20);
+    // Small physics steps keep lane changes, jump clearance and edge crossings
+    // consistent even when rendering stalls. Never simulate a whole hidden tab.
+    let remaining = clamp(dt, 0, 0.1);
+    while (remaining > 1e-8) {
+      const step = Math.min(remaining, 1 / 120);
+      this.simulate(step);
+      remaining -= step;
+    }
+  }
+
+  simulate(dt) {
     this.time += dt;
     const r = this.r;
     this.updateWave(dt);
@@ -353,8 +387,8 @@ export class Engine {
     r.landT = Math.max(0, r.landT - dt);
     if (r.z > 0 || r.vz > 0) {
       r.airT += dt;
+      r.z += r.vz * dt - GRAVITY * dt * dt / 2;
       r.vz -= GRAVITY * dt;
-      r.z += r.vz * dt;
       if (r.z <= 0) { r.z = 0; r.vz = 0; r.landT = 0.12; audio.play('land', { volume: 0.45 }); if (r.slide > 0) r.slide = 0.72; }
     }
 
@@ -395,10 +429,11 @@ export class Engine {
         if (near < 0.55 && Math.abs(it.l - r.l) < 0.6 && Math.abs((it.z ?? 0.4) - r.z - 0.4) < 0.9) this.collect(it);
         continue;
       }
-      if (it.kind === 'gap' || near > 0.42 || r.invuln > 0) continue;
-      if (!it.lanes.some((lane) => Math.abs(lane - r.l) < 0.62)) continue;
       const o = OBSTACLES[it.kind];
-      const hit = o.slide ? r.slide <= 0 : r.z < o.clear;
+      if (!o || it.kind === 'gap' || near > o.depth + RUNNER_RADIUS || r.invuln > 0) continue;
+      if (!it.lanes.some((lane) => Math.abs(lane - r.l) < 0.5 + RUNNER_RADIUS)) continue;
+      // A slide issued in the air is a dive, not immediate clearance below a beam.
+      const hit = o.slide ? r.slide <= 0 || r.z > 0.05 : r.z < o.clear;
       if (hit) { it.done = true; this.hit(); return; }
     }
   }
@@ -477,16 +512,41 @@ export class Engine {
     }
   }
 
-  /** Back on solid ground just past where the fall happened. */
+  /** Find solid ground with time to react, without skipping unanswered gates. */
   respawn() {
     const r = this.r;
-    let seg = this.runnerSeg;
-    if (r.t > seg.len - 0.5 && this.segments[r.seg + 1]) { r.seg++; seg = this.runnerSeg; r.t = 1; } else {
-      const gap = seg.gaps.find(([a, b]) => r.t >= a - 1 && r.t <= b + 1.5);
-      r.t = gap ? gap[1] + 1.5 : r.t + 1;
+    this.ensure();
+    let found = false;
+    for (let i = r.seg; i < this.segments.length && !found; i++) {
+      const seg = this.segments[i];
+      const gate = seg.items.find((it) => it.kind === 'gate' && !it.done);
+      if (i === r.seg && !gate && r.t > seg.len - 3.4) continue;
+      const limit = gate ? gate.t - 2 : seg.len - RECOVERY_RUNWAY;
+      const start = i === r.seg ? Math.min(r.t, limit) : 1;
+      for (let t = Math.max(1, Math.ceil(start * 2) / 2); t <= limit; t += 0.5) {
+        // A gate safely stops the runner, so it can shorten the recovery runway.
+        const end = Math.min(t + RECOVERY_RUNWAY, gate ? gate.t - 1.7 : seg.len);
+        const gap = seg.gaps.some(([a, b]) => end >= a - 0.5 && t <= b + 0.5);
+        const obstacle = seg.items.some((it) => !it.done && !it.decor && OBSTACLES[it.kind]?.depth
+          && it.t + OBSTACLES[it.kind].depth + RUNNER_RADIUS >= t
+          && it.t - OBSTACLES[it.kind].depth - RUNNER_RADIUS <= end);
+        const p = this.pos(seg, t, 0);
+        if (gap || obstacle || this.cells.get(`${Math.round(p.x)},${Math.round(p.y)}`)?.kind !== 'path') continue;
+        r.seg = i;
+        r.t = t;
+        if (gate?.state === 'asking') gate.state = 'closed';
+        found = true;
+        break;
+      }
+      // Generation reserves a clear approach to every gate; never jump past it.
+      if (gate) break;
     }
-    Object.assign(r, { l: 0, lane: 0, z: 0, vz: 0, invuln: 2, stumble: 0.3, speed: this.baseSpeed * 0.6, turnQueued: false });
+    if (!found) throw new Error('No safe recovery point on the generated path');
+    Object.assign(r, { l: 0, lane: 0, z: 0, vz: 0, slide: 0, invuln: 2,
+      stumble: 0, speed: 0, turnQueued: false, fallT: 0, airT: 0, landT: 0 });
+    this.pendingGate = null;
     this.mode = 'run';
+    this.cam = null;
     this.ensure();
   }
 
@@ -502,12 +562,11 @@ export class Engine {
 
   /** After the Fallen screen's "Rise again": full hearts, a little corruption lifted. */
   revive() {
-    const r = this.r;
-    Object.assign(r, { hearts: 3, invuln: 2.5, stumble: 0, z: 0, vz: 0, slide: 0, speed: 0, l: 0, lane: 0 });
-    r.t += 1;
-    this.chaser.gap = 6; this.chaser.target = 6;
-    this.mode = 'run';
-    this.ensure();
+    this.respawn();
+    this.r.hearts = 3;
+    this.r.invuln = 2.5;
+    this.chaser.gap = 6; this.chaser.target = 6; this.chaser.lunge = 0;
+    this.fallenSent = false;
   }
 
   updateChaser(dt) {
@@ -845,14 +904,15 @@ export class Engine {
     const img = this.img[s.id];
     if (!img) return;
     const a = asset(s.id) || {};
+    const ground = GROUND_ART[s.id];
     const { ctx } = this;
     const k = this.k;
     const { X, Y } = this.iso(s.x, s.y, s.z || 0);
     const scale = (s.size * k) / Math.max(img.width, img.height);
     const w = img.width * scale;
-    const h = img.height * scale;
-    const ax = s.center ? 0.5 : (a.anchor?.x ?? 0.5);
-    const ay = s.center ? 0.5 : (a.anchor?.y ?? 1);
+    const h = img.height * scale * (ground?.heightScale ?? 1);
+    const ax = s.center ? 0.5 : (ground?.anchor[0] ?? a.anchor?.x ?? 0.5);
+    const ay = s.center ? 0.5 : (ground?.anchor[1] ?? a.anchor?.y ?? 1);
     ctx.save();
     let alpha = s.alpha ?? 1;
     if (s.fade) {
@@ -862,7 +922,7 @@ export class Engine {
     ctx.globalAlpha = alpha;
     ctx.translate(X, Y);
     if (s.spin) ctx.scale(Math.cos(this.time * 3 + s.x), 1);
-    if (s.flip) ctx.scale(-1, 1);
+    if (!!s.flip !== !!ground?.mirror) ctx.scale(-1, 1);
     if (s.glow) { ctx.shadowColor = 'rgba(255,224,140,0.95)'; ctx.shadowBlur = 40 * s.glow * (0.7 + 0.3 * Math.sin(this.time * 4)); }
     ctx.drawImage(img, -ax * w, -ay * h, w, h);
     ctx.restore();
