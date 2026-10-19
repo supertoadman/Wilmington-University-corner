@@ -14,6 +14,15 @@
       "description": "Condensed exam outline of Weeks 1–8, built from the Class 1–8 slides, the casebook, and the 2026 statutory supplement. Part I covers agency: creating the relationship, contract liability and authority, tort liability, and fiduciary duties. Part II covers business entities: choosing an entity, partnership formation, economic rights and property, management and authority, partners' fiduciary duties, dissociation and dissolution, Kovacik loss sharing, buyout agreements, limited partnerships, and LLCs. Rule and tip boxes throughout, a card for every case (62 main cases plus slide references and supplemental readings), and an exam toolkit with an issue-spotting checklist, a statute quick reference, and a one-line case index.",
       "tags": ["agency", "partnership", "RUPA", "Restatement of Agency", "LLC", "outline", "Weeks 1–8"],
       "order": 1
+    },
+    "Agency_and_Partnership_Bar_Questions.html": {
+      "slug": "agency-and-partnership-bar-questions",
+      "title": "Agency & Partnership Bar Questions",
+      "type": "practice",
+      "description": "284 bar-style multiple-choice questions covering every rule, case, and slide problem in the Weeks 1–8 outline, across 23 topics: creating an agency, actual, apparent and inherent authority, ratification, estoppel, agents' contract and tort liability, scope of employment, independent contractors, and agents' fiduciary duties; then entity selection, partnership formation, property, management and authority, partners' duties, dissociation and dissolution under the UPA and RUPA, loss sharing, buyouts, limited partnerships, LLPs, and LLCs. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "tags": ["agency", "partnership", "RUPA", "MCQ", "bar prep", "application", "Weeks 1–8"],
+      "questions": 284,
+      "order": 2
     }
   }
 }
