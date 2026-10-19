@@ -1,0 +1,23 @@
+{
+  "title": "Contracts I",
+  "description": "Contracts I, Weeks 1–9 (Epstein, Markell & Ponoroff, Making and Doing Deals, 7th ed.). Covers whether there is an enforceable agreement, the objective theory of assent, offers and their termination, options and firm offers, methods of acceptance and silence, the mirror-image rule and UCC § 2-207, misunderstanding, indefiniteness and letters of intent, consideration, modification, promissory estoppel, the statute of frauds, duress, and misrepresentation.",
+  "icon": "statue-angel-jegudiel",
+  "accent": "#7a4a1f",
+  "order": 6,
+  "documents": {
+    "Contracts_I_Condensed_Outline.docx": {
+      "slug": "contracts-i-outline",
+      "title": "Contracts I Outline",
+      "type": "outline",
+      "theme": "structured",
+      "outsideColor": "64748B",
+      "description": "Condensed exam outline of Weeks 1–9 on the Fall 2026 syllabus. Part I covers formation: enforceable agreements and which law governs, objective assent and implied-in-fact contracts, offers, termination of the power of acceptance, irrevocable offers, acceptance and silence, the mirror-image rule and the battle of the forms, misunderstanding, and indefiniteness. Part II covers consideration, modification, and promissory estoppel. Part III covers the statute of frauds, duress, and misrepresentation. Rule and tip boxes throughout, and a card for every assigned case plus slide references.",
+      "tags": ["contracts", "Restatement (Second)", "UCC Article 2", "outline", "Weeks 1–9"],
+      "order": 1
+    },
+    "Contracts_I_Master_Outline.docx": {
+      "publish": false,
+      "description": "Full-semester master outline (Weeks 1–14), kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
+    }
+  }
+}
