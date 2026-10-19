@@ -171,6 +171,36 @@ if (amb) {
   apply(readScenery());
 }
 
+// ---------- Home: the scene behind the cover (archive, sanctuary or grove) ----------
+// The head script applies the remembered choice before paint; this only wires the picker.
+const scenePick = $('[data-scene-pick]');
+if (scenePick) {
+  const dots = $$('[data-scene-set]', scenePick);
+  const names = dots.map((b) => b.dataset.sceneSet);
+  const apply = (name) => {
+    if (!names.includes(name)) name = names[0];
+    document.documentElement.dataset.scene = name;
+    dots.forEach((b) => { const on = b.dataset.sceneSet === name; b.setAttribute('aria-checked', String(on)); b.tabIndex = on ? 0 : -1; });
+  };
+  const choose = (name) => {
+    try { localStorage.setItem('scene', name); } catch { /* storage unavailable */ }
+    apply(name);
+  };
+  dots.forEach((b) => b.addEventListener('click', () => choose(b.dataset.sceneSet)));
+  scenePick.addEventListener('keydown', (e) => {
+    const step = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[e.key];
+    const i = dots.indexOf(document.activeElement);
+    if (!step || i < 0) return;
+    e.preventDefault();
+    const next = dots[(i + step + dots.length) % dots.length];
+    choose(next.dataset.sceneSet);
+    next.focus();
+  });
+  window.addEventListener('storage', (e) => { if (e.key === 'scene') apply(e.newValue); });
+  scenePick.hidden = false;
+  apply(document.documentElement.dataset.scene);
+}
+
 // ---------- Home: light header once the dark hero scrolls away ----------
 const hero = $('.hero');
 if (hero && 'IntersectionObserver' in window) {

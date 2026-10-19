@@ -101,7 +101,7 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="${root}assets/styles.css">
-<script>(function(){var d=document.documentElement;d.dataset.theme='dark';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off';if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement;d.dataset.theme='dark';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off',s=localStorage.getItem('scene');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;if(s)d.dataset.scene=s;}catch(e){}})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
 ${extraHead}`;
 }
@@ -308,6 +308,16 @@ function subjectPanel(ctx, root, s) {
 </article>`;
 }
 
+// Scenery behind the homepage cover (assets/scenes/): each place has a divine form by day and a
+// fallen one by night. The first is the default; app.js wires the picker and remembers the choice.
+const SCENES = [
+  { id: 'archive', label: 'Archive', day: 'Celestial Archive', night: 'Forbidden Archive' },
+  { id: 'sanctuary', label: 'Sanctuary', day: 'Sanctuary of Dawn', night: 'Sanctuary of Ash' },
+  { id: 'grove', label: 'Grove', day: 'Elysian Grove', night: 'Blighted Grove' },
+];
+// Hidden until app.js wires it up, so it never shows as dead buttons without JavaScript.
+const scenePicker = () => `<div class="scene-pick" role="radiogroup" aria-label="Cover scene" data-scene-pick hidden><span class="scene-pick-label">Scene</span>${SCENES.map((s, i) => `<button type="button" role="radio" aria-checked="${i === 0}" data-scene-set="${s.id}" aria-label="${s.label}" title="${s.day} · ${s.night}" class="scene-dot scene-dot-${s.id}"></button>`).join('')}</div>`;
+
 // The way into Sanctum Run, under the course browser: a philosopher and his fallen self.
 function playBand(ctx, root) {
   const { game } = ctx;
@@ -375,6 +385,7 @@ export function home(ctx) {
   const recent = [...docs].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 6);
   const body = `
 <section class="hero reading-room" aria-labelledby="cover-title">
+  <span class="cover-scene" aria-hidden="true"></span>
   <div class="container cover-grid">
     <div class="cover-copy">
       <p class="cover-eyebrow"><span></span> The law school study library</p>
@@ -393,7 +404,7 @@ export function home(ctx) {
       <span class="cover-wing cover-wing-r"></span>
     </figure>
   </div>
-  <div class="container cover-bottom"><p>Built by students.<br><strong>Shared for the next one.</strong></p><ul><li><strong>${subjects.length}</strong> ${subjects.length === 1 ? 'course' : 'courses'}</li><li><strong>${docs.length}</strong> documents</li>${totalQ ? `<li><strong>${totalQ.toLocaleString('en-US')}+</strong> practice questions</li>` : ''}</ul><a href="${root}library/">Enter the library ${icon('arrow-up-right')}</a></div>
+  <div class="container cover-bottom"><p>Built by students.<br><strong>Shared for the next one.</strong></p><ul><li><strong>${subjects.length}</strong> ${subjects.length === 1 ? 'course' : 'courses'}</li><li><strong>${docs.length}</strong> documents</li>${totalQ ? `<li><strong>${totalQ.toLocaleString('en-US')}+</strong> practice questions</li>` : ''}</ul>${scenePicker()}<a href="${root}library/">Enter the library ${icon('arrow-up-right')}</a></div>
 </section>
 
 <section class="container cover-courses" id="courses" aria-labelledby="courses-h">

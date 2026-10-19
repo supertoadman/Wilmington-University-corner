@@ -536,6 +536,61 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
     --wing-l: url("archangels/michael-fallen.webp"); --wing-r: url("archangels/gabriel-fallen.webp"); --wing-o: .62;
   }
 }
+/* Scenery (scenes/): three places, each divine by day and fallen by night, like the archangels.
+   --scene-* are full-width covers, --scene-*-sm smaller cuts for bands, thumbnails and phones. */
+:root {
+  --scene-archive: url("scenes/divine-archive.webp"); --scene-archive-sm: url("scenes/divine-archive-sm.webp");
+  --scene-sanctuary: url("scenes/divine-sanctuary.webp"); --scene-sanctuary-sm: url("scenes/divine-sanctuary-sm.webp");
+  --scene-grove: url("scenes/divine-grove.webp"); --scene-grove-sm: url("scenes/divine-grove-sm.webp");
+}
+:root[data-theme="dark"] {
+  --scene-archive: url("scenes/corrupt-archive.webp"); --scene-archive-sm: url("scenes/corrupt-archive-sm.webp");
+  --scene-sanctuary: url("scenes/corrupt-sanctuary.webp"); --scene-sanctuary-sm: url("scenes/corrupt-sanctuary-sm.webp");
+  --scene-grove: url("scenes/corrupt-grove.webp"); --scene-grove-sm: url("scenes/corrupt-grove-sm.webp");
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --scene-archive: url("scenes/corrupt-archive.webp"); --scene-archive-sm: url("scenes/corrupt-archive-sm.webp");
+    --scene-sanctuary: url("scenes/corrupt-sanctuary.webp"); --scene-sanctuary-sm: url("scenes/corrupt-sanctuary-sm.webp");
+    --scene-grove: url("scenes/corrupt-grove.webp"); --scene-grove-sm: url("scenes/corrupt-grove-sm.webp");
+  }
+}
+/* The chosen scene sits behind the cover under a navy veil: dense where the copy is, thinner
+   behind Socrates so the place shows through, and dense again under the stats line. */
+/* Oversized and anchored left, so each scene's centrepiece (eclipse, sun, valley) lands behind Socrates. */
+.cover-scene { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: var(--scene-archive) 0% 46% / max(140%, 1100px) auto no-repeat; animation: scene-in 1.2s ease both; }
+:root[data-scene="sanctuary"] .cover-scene { background-image: var(--scene-sanctuary); }
+:root[data-scene="grove"] .cover-scene { background-image: var(--scene-grove); }
+.cover-scene::after {
+  content: ""; position: absolute; inset: 0;
+  background:
+    radial-gradient(60% 80% at 82% 0%, rgba(240, 206, 140, .14), transparent 60%),
+    linear-gradient(to bottom, rgba(13, 24, 41, .5), transparent 26%, transparent 66%, rgba(13, 24, 41, .82)),
+    linear-gradient(90deg, rgba(13, 24, 41, .9) 0%, rgba(13, 24, 41, .76) 34%, rgba(13, 24, 41, .22) 64%, rgba(13, 24, 41, .3) 100%);
+}
+@keyframes scene-in { from { opacity: 0; } }
+@media (max-width: 760px) {
+  .cover-scene { background-image: var(--scene-archive-sm); background-position: 50% 40%; background-size: cover; }
+  :root[data-scene="sanctuary"] .cover-scene { background-image: var(--scene-sanctuary-sm); }
+  :root[data-scene="grove"] .cover-scene { background-image: var(--scene-grove-sm); }
+  .cover-scene::after { background: linear-gradient(to bottom, rgba(13, 24, 41, .62), rgba(13, 24, 41, .76) 45%, rgba(13, 24, 41, .9)); }
+}
+@media (prefers-reduced-motion: reduce) { .cover-scene { animation: none; } }
+/* Scene picker, in the cover's bottom line: one small round window onto each place. */
+.scene-pick { display: flex; align-items: center; gap: 8px; }
+.scene-pick[hidden] { display: none; }
+.scene-pick-label { margin-right: 2px; font-size: 11px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: #cfd6e0; }
+.scene-dot {
+  width: 26px; height: 26px; padding: 0; border-radius: 50%; cursor: pointer;
+  border: 1px solid rgba(215, 189, 134, .45); background: center / cover no-repeat;
+  box-shadow: inset 0 0 0 2px rgba(13, 24, 41, .55); opacity: .72; transition: opacity .15s, box-shadow .15s, transform .15s;
+}
+.scene-dot:hover { opacity: 1; transform: translateY(-1px); }
+.scene-dot[aria-checked="true"] { opacity: 1; border-color: #e8c887; box-shadow: inset 0 0 0 2px rgba(13, 24, 41, .55), 0 0 0 2px rgba(232, 200, 135, .35); }
+.scene-dot:focus-visible { outline: 2px solid #e8c887; outline-offset: 3px; }
+.scene-dot-archive { background-image: var(--scene-archive-sm); }
+.scene-dot-sanctuary { background-image: var(--scene-sanctuary-sm); }
+.scene-dot-grove { background-image: var(--scene-grove-sm); }
 .cover-grid { display: grid; grid-template-columns: minmax(0, 1fr) 430px; align-items: center; gap: 36px; padding-top: 30px; padding-bottom: 22px; }
 .cover-copy, .cover-art { min-width: 0; }
 .cover-eyebrow { display: flex; align-items: center; gap: 12px; margin: 0 0 16px; text-transform: uppercase; letter-spacing: .19em; font-size: 11.5px; font-weight: 600; color: #e8cf98; }
@@ -1069,7 +1124,15 @@ main > .section:last-child { padding-bottom: 24px; }
   position: relative; overflow: hidden; display: grid; grid-template-columns: 1fr auto; gap: 24px; align-items: center;
   padding: 36px; border-radius: var(--radius-lg); color: #f1ede4; background: var(--hero-bg); isolation: isolate;
 }
-.share-band::before { content: ""; position: absolute; inset: 0; z-index: -1; background: radial-gradient(500px 220px at 100% 0%, rgba(214, 171, 85, .32), transparent 70%), radial-gradient(420px 240px at 0% 100%, rgba(64, 112, 176, .3), transparent 70%); }
+/* The grove (something that grows from what students share), veiled so the copy stays clear. */
+.share-band::before {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background:
+    radial-gradient(500px 220px at 100% 0%, rgba(214, 171, 85, .28), transparent 70%),
+    radial-gradient(420px 240px at 0% 100%, rgba(64, 112, 176, .26), transparent 70%),
+    linear-gradient(90deg, rgba(14, 24, 40, .94) 0%, rgba(14, 24, 40, .86) 45%, rgba(14, 24, 40, .55) 100%),
+    var(--scene-grove-sm) center 55% / cover no-repeat;
+}
 .share-band .kicker { color: #ecca86; }
 .share-band h2 { margin: 0 0 8px; font: 500 clamp(24px, 3vw, 32px)/1.15 var(--font-serif); letter-spacing: -.015em; color: #f7f3ea; }
 .share-band p { margin: 0; color: rgba(241, 237, 228, .75); max-width: 60ch; }
@@ -1088,6 +1151,10 @@ main > .section:last-child { padding-bottom: 24px; }
   box-shadow: 0 24px 50px -30px rgba(0, 0, 0, .7);
   transition: transform .2s ease, box-shadow .2s ease;
 }
+/* The game's sanctuary behind it, split like its two figures: dawn on the left, ash on the right. */
+.play-band::before, .play-band::after { content: ""; position: absolute; top: 0; bottom: 0; z-index: -1; width: 58%; background: center / cover no-repeat; opacity: .34; pointer-events: none; }
+.play-band::before { left: 0; background-image: url("scenes/divine-sanctuary-sm.webp"); -webkit-mask-image: linear-gradient(90deg, #000 40%, transparent); mask-image: linear-gradient(90deg, #000 40%, transparent); }
+.play-band::after { right: 0; background-image: url("scenes/corrupt-sanctuary-sm.webp"); opacity: .5; -webkit-mask-image: linear-gradient(270deg, #000 40%, transparent); mask-image: linear-gradient(270deg, #000 40%, transparent); }
 .play-band:hover { transform: translateY(-2px); box-shadow: 0 30px 60px -30px rgba(0, 0, 0, .8); }
 .play-band:focus-visible { outline: 3px solid var(--gold-2); outline-offset: 3px; }
 .play-band-art { position: relative; height: 190px; }

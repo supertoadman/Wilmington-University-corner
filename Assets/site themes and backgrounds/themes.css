@@ -1,0 +1,89 @@
+/* Generated from source/prompts.json by source/build.mjs. Paths resolve relative to this CSS file. */
+
+[data-site-theme="divine-sanctuary"] {
+  color-scheme: light;
+  --st-background: #f4ecdc;
+  --st-surface: #fffaf0;
+  --st-text: #302b23;
+  --st-muted: #655a48;
+  --st-accent: #735015;
+  --st-on-accent: #ffffff;
+  --st-gold: #c7a15d;
+  --st-art: url("./backgrounds/divine-sanctuary.webp");
+  --st-veil: rgba(244, 236, 220, .12);
+}
+
+[data-site-theme="divine-archive"] {
+  color-scheme: light;
+  --st-background: #edf0f4;
+  --st-surface: #f8fafc;
+  --st-text: #243349;
+  --st-muted: #53627a;
+  --st-accent: #315580;
+  --st-on-accent: #ffffff;
+  --st-gold: #b79a5e;
+  --st-art: url("./backgrounds/divine-archive.webp");
+  --st-veil: rgba(244, 236, 220, .12);
+}
+
+[data-site-theme="divine-grove"] {
+  color-scheme: light;
+  --st-background: #edf0e6;
+  --st-surface: #f9fbf2;
+  --st-text: #263e30;
+  --st-muted: #52634e;
+  --st-accent: #3e6247;
+  --st-on-accent: #ffffff;
+  --st-gold: #ab955f;
+  --st-art: url("./backgrounds/divine-grove.webp");
+  --st-veil: rgba(244, 236, 220, .12);
+}
+
+[data-site-theme="corrupt-sanctuary"] {
+  color-scheme: dark;
+  --st-background: #181419;
+  --st-surface: #261e23;
+  --st-text: #f6ead8;
+  --st-muted: #cdb8b5;
+  --st-accent: #efad84;
+  --st-on-accent: #24140f;
+  --st-gold: #977342;
+  --st-art: url("./backgrounds/corrupt-sanctuary.webp");
+  --st-veil: rgba(15, 12, 20, .18);
+}
+
+[data-site-theme="corrupt-archive"] {
+  color-scheme: dark;
+  --st-background: #17131e;
+  --st-surface: #251d2e;
+  --st-text: #f3eafa;
+  --st-muted: #c9b6d6;
+  --st-accent: #d9acec;
+  --st-on-accent: #25152d;
+  --st-gold: #ad805d;
+  --st-art: url("./backgrounds/corrupt-archive.webp");
+  --st-veil: rgba(15, 12, 20, .18);
+}
+
+[data-site-theme="corrupt-grove"] {
+  color-scheme: dark;
+  --st-background: #151b18;
+  --st-surface: #222b25;
+  --st-text: #eaf0df;
+  --st-muted: #b7c7b2;
+  --st-accent: #b9cf95;
+  --st-on-accent: #172314;
+  --st-gold: #968362;
+  --st-art: url("./backgrounds/corrupt-grove.webp");
+  --st-veil: rgba(15, 12, 20, .18);
+}
+
+/* Opt-in components. Put data-site-theme on the page or a containing element. */
+.st-page { color: var(--st-text); background: var(--st-background); }
+.st-backdrop { background-color: var(--st-background); background-image: linear-gradient(var(--st-veil), var(--st-veil)), var(--st-art); background-size: cover; background-position: center; }
+.st-panel { color: var(--st-text); background: var(--st-surface); border: 1px solid var(--st-gold); border-radius: 16px; box-shadow: 0 16px 48px #0002; }
+.st-muted { color: var(--st-muted); }
+.st-link { color: var(--st-accent); text-underline-offset: .2em; }
+.st-button { display: inline-block; color: var(--st-on-accent); background: var(--st-accent); border: 1px solid var(--st-accent); border-radius: 8px; padding: .8em 1.2em; font: inherit; font-weight: 650; text-decoration: none; cursor: pointer; }
+.st-button:hover { box-shadow: 0 0 0 3px var(--st-gold); }
+.st-button:focus-visible, .st-link:focus-visible { outline: 3px solid var(--st-accent); outline-offset: 4px; }

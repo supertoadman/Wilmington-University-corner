@@ -1,0 +1,140 @@
+window.SANCTUM_THEMES = {
+  "schemaVersion": "1.0.0",
+  "name": "Sanctum — Site Themes and Backgrounds",
+  "created": "2026-10-19",
+  "generator": "Built-in image_gen",
+  "themes": [
+    {
+      "id": "divine-sanctuary",
+      "name": "Sanctuary of Dawn",
+      "pair": "sanctuary",
+      "realm": "divine",
+      "counterpart": "corrupt-sanctuary",
+      "palette": {
+        "background": "#f4ecdc",
+        "surface": "#fffaf0",
+        "text": "#302b23",
+        "muted": "#655a48",
+        "accent": "#735015",
+        "onAccent": "#ffffff",
+        "gold": "#c7a15d"
+      },
+      "src": "backgrounds/divine-sanctuary.webp",
+      "original": "backgrounds/divine-sanctuary.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 241564,
+      "position": "center center"
+    },
+    {
+      "id": "divine-archive",
+      "name": "Celestial Archive",
+      "pair": "archive",
+      "realm": "divine",
+      "counterpart": "corrupt-archive",
+      "palette": {
+        "background": "#edf0f4",
+        "surface": "#f8fafc",
+        "text": "#243349",
+        "muted": "#53627a",
+        "accent": "#315580",
+        "onAccent": "#ffffff",
+        "gold": "#b79a5e"
+      },
+      "src": "backgrounds/divine-archive.webp",
+      "original": "backgrounds/divine-archive.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 296078,
+      "position": "center center"
+    },
+    {
+      "id": "divine-grove",
+      "name": "Elysian Grove",
+      "pair": "grove",
+      "realm": "divine",
+      "counterpart": "corrupt-grove",
+      "palette": {
+        "background": "#edf0e6",
+        "surface": "#f9fbf2",
+        "text": "#263e30",
+        "muted": "#52634e",
+        "accent": "#3e6247",
+        "onAccent": "#ffffff",
+        "gold": "#ab955f"
+      },
+      "src": "backgrounds/divine-grove.webp",
+      "original": "backgrounds/divine-grove.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 324892,
+      "position": "center center"
+    },
+    {
+      "id": "corrupt-sanctuary",
+      "name": "Sanctuary of Ash",
+      "pair": "sanctuary",
+      "realm": "corrupt",
+      "counterpart": "divine-sanctuary",
+      "palette": {
+        "background": "#181419",
+        "surface": "#261e23",
+        "text": "#f6ead8",
+        "muted": "#cdb8b5",
+        "accent": "#efad84",
+        "onAccent": "#24140f",
+        "gold": "#977342"
+      },
+      "src": "backgrounds/corrupt-sanctuary.webp",
+      "original": "backgrounds/corrupt-sanctuary.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 257332,
+      "position": "center center"
+    },
+    {
+      "id": "corrupt-archive",
+      "name": "Forbidden Archive",
+      "pair": "archive",
+      "realm": "corrupt",
+      "counterpart": "divine-archive",
+      "palette": {
+        "background": "#17131e",
+        "surface": "#251d2e",
+        "text": "#f3eafa",
+        "muted": "#c9b6d6",
+        "accent": "#d9acec",
+        "onAccent": "#25152d",
+        "gold": "#ad805d"
+      },
+      "src": "backgrounds/corrupt-archive.webp",
+      "original": "backgrounds/corrupt-archive.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 472698,
+      "position": "center center"
+    },
+    {
+      "id": "corrupt-grove",
+      "name": "Blighted Grove",
+      "pair": "grove",
+      "realm": "corrupt",
+      "counterpart": "divine-grove",
+      "palette": {
+        "background": "#151b18",
+        "surface": "#222b25",
+        "text": "#eaf0df",
+        "muted": "#b7c7b2",
+        "accent": "#b9cf95",
+        "onAccent": "#172314",
+        "gold": "#968362"
+      },
+      "src": "backgrounds/corrupt-grove.webp",
+      "original": "backgrounds/corrupt-grove.png",
+      "width": 1672,
+      "height": 941,
+      "bytes": 320772,
+      "position": "center center"
+    }
+  ]
+};

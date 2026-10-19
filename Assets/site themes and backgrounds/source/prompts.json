@@ -1,0 +1,114 @@
+{
+  "generator": "Built-in image_gen",
+  "created": "2026-10-19",
+  "themes": [
+    {
+      "id": "divine-sanctuary",
+      "name": "Sanctuary of Dawn",
+      "pair": "sanctuary",
+      "realm": "divine",
+      "counterpart": "corrupt-sanctuary",
+      "prompt": "Use case: stylized-concept. Asset type: reusable website background, a single landscape image at 2560x1440, 16:9. Original Sanctum Run-inspired classical divine fantasy: finely painted ivory marble, aged gold detailing, monumental Greco-Roman architecture, atmospheric depth, exquisite cinematic environment concept art. Designed as a quiet backdrop behind website content: architecture frames the outer edges and upper third, central 50 percent and lower center are calm low-detail atmosphere. Full bleed, no text, no lettering, no logo, no interface, no borders, no characters. Scene: a vast sanctuary suspended above luminous clouds at dawn; marble temple and angel-winged stone guardians on the right, circular colonnade and cypresses on the left, distant bridges between mountain spires. Fine gold roof trim and pale limestone, warm cream clouds, pale blue sky, gentle sunlight. Serene, sacred, majestic. Low contrast mist through the broad center.",
+      "reference": null,
+      "palette": {
+        "background": "#f4ecdc",
+        "surface": "#fffaf0",
+        "text": "#302b23",
+        "muted": "#655a48",
+        "accent": "#735015",
+        "onAccent": "#ffffff",
+        "gold": "#c7a15d"
+      }
+    },
+    {
+      "id": "divine-archive",
+      "name": "Celestial Archive",
+      "pair": "archive",
+      "realm": "divine",
+      "counterpart": "corrupt-archive",
+      "prompt": "Use case: stylized-concept. Asset type: reusable website background, a single landscape image at 2560x1440, 16:9. Original Sanctum Run-inspired classical divine fantasy: finely painted ivory marble, aged gold detailing, monumental Greco-Roman architecture, atmospheric depth, exquisite cinematic environment concept art. Designed as a quiet backdrop behind website content: architecture frames the outer edges and upper third, central 50 percent and lower center are calm low-detail atmosphere. Full bleed, no text, no lettering, no logo, no interface, no borders, no characters. Scene: interior of an immense celestial library and observatory; tall ivory columns and recessed scroll shelves at the sides, delicate antique gold celestial rings high beneath an open dome, a far arched opening into quiet pale blue cosmic haze, restrained star motifs, broad pale marble foreground with subtle golden inlay along its edges. Ivory, muted lapis blue and champagne gold. Scholarly, luminous, reverent. Wide central space softened by radiant haze; no legible writing anywhere.",
+      "reference": null,
+      "palette": {
+        "background": "#edf0f4",
+        "surface": "#f8fafc",
+        "text": "#243349",
+        "muted": "#53627a",
+        "accent": "#315580",
+        "onAccent": "#ffffff",
+        "gold": "#b79a5e"
+      }
+    },
+    {
+      "id": "divine-grove",
+      "name": "Elysian Grove",
+      "pair": "grove",
+      "realm": "divine",
+      "counterpart": "corrupt-grove",
+      "prompt": "Use case: stylized-concept. Asset type: reusable website background, a single landscape image at 2560x1440, 16:9. Original Sanctum Run-inspired classical divine fantasy: finely painted ivory marble, aged gold detailing, monumental Greco-Roman architecture, atmospheric depth, exquisite cinematic environment concept art. Designed as a quiet backdrop behind website content: architecture frames the outer edges and upper third, central 50 percent and lower center are calm low-detail atmosphere. Full bleed, no text, no lettering, no logo, no interface, no borders, no characters. Scene: a sacred classical garden above a sea of clouds; ancient olive and laurel trees with silver-green leaves framing the sides, marble arcades and a small circular shrine in the distance, slender streams falling from floating terraces, white flowers near lower corners and pale stone paths fading into central mist. Ivory marble, sage green, soft gold, warm pearl. Quiet morning light, restorative and divine. Open luminous center with restrained detail.",
+      "reference": null,
+      "palette": {
+        "background": "#edf0e6",
+        "surface": "#f9fbf2",
+        "text": "#263e30",
+        "muted": "#52634e",
+        "accent": "#3e6247",
+        "onAccent": "#ffffff",
+        "gold": "#ab955f"
+      }
+    },
+    {
+      "id": "corrupt-sanctuary",
+      "name": "Sanctuary of Ash",
+      "pair": "sanctuary",
+      "realm": "corrupt",
+      "counterpart": "divine-sanctuary",
+      "prompt": "Use case: style-transfer. Asset type: one landscape website background. Edit target: the supplied divine sanctuary image. Create its demonic corrupted counterpart. Preserve the exact camera, landscape framing, architecture positions, spatial layout, major silhouettes and quiet central negative space. Preserve polished painterly cinematic classical fantasy detail. Turn white marble into fractured ash-gray marble with black veins, gold into tarnished bronze, angel-winged statues into imposing horned fallen-angel stone guardians, distant bridges partially broken. Replace bright sky with layered charcoal storm clouds and faint crimson light below; small ember-lit fissures, desaturated plum haze. Grand, tragic and demonic rather than gory. Full bleed, no text, logos, interface, border, people or gore. Match the input dimensions and aspect ratio.",
+      "reference": "backgrounds/divine-sanctuary.png",
+      "palette": {
+        "background": "#181419",
+        "surface": "#261e23",
+        "text": "#f6ead8",
+        "muted": "#cdb8b5",
+        "accent": "#efad84",
+        "onAccent": "#24140f",
+        "gold": "#977342"
+      }
+    },
+    {
+      "id": "corrupt-archive",
+      "name": "Forbidden Archive",
+      "pair": "archive",
+      "realm": "corrupt",
+      "counterpart": "divine-archive",
+      "prompt": "Use case: style-transfer. Asset type: one landscape website background. Edit target: the supplied divine archive image. Create its demonic corrupted counterpart. Preserve the exact camera, landscape framing, architecture positions, spatial layout, major silhouettes and quiet central negative space. Preserve polished painterly cinematic classical fantasy detail. Turn ivory columns into cracked obsidian and ash marble, scroll shelves into ancient charred archives, celestial golden rings into broken tarnished bronze rings, the bright cosmic opening into a violet eclipse and dim wine-red nebula. Faint ember seams in the floor. Brooding forbidden knowledge; elegant, demonic, atmospheric. Keep broad floor and open center. Full bleed, no text, logos, interface, border, people or gore. Match the input dimensions and aspect ratio.",
+      "reference": "backgrounds/divine-archive.png",
+      "palette": {
+        "background": "#17131e",
+        "surface": "#251d2e",
+        "text": "#f3eafa",
+        "muted": "#c9b6d6",
+        "accent": "#d9acec",
+        "onAccent": "#25152d",
+        "gold": "#ad805d"
+      }
+    },
+    {
+      "id": "corrupt-grove",
+      "name": "Blighted Grove",
+      "pair": "grove",
+      "realm": "corrupt",
+      "counterpart": "divine-grove",
+      "prompt": "Use case: style-transfer. Asset type: one landscape website background. Edit target: the supplied divine grove image. Create its demonic corrupted counterpart. Preserve the exact camera, landscape framing, architecture positions, spatial layout, major silhouettes and quiet central negative space. Preserve polished painterly cinematic classical fantasy detail. Turn the living olives and laurels into twisted blackened trees with sparse dark leaves and thorned branches; fracture and tarnish the marble arcades, replace white flowers with sparse deep burgundy flowers, turn waterfalls into shadowy mist, and replace dawn with dusky green-gray clouds and distant dull crimson glow. Corruption spreading through an ancient sacred garden. Restrained spectral green highlights, ash stone, tarnished brass. Keep the quiet broad mist-filled center. Full bleed, no text, logos, interface, border, people or gore. Match the input dimensions and aspect ratio.",
+      "reference": "backgrounds/divine-grove.png",
+      "palette": {
+        "background": "#151b18",
+        "surface": "#222b25",
+        "text": "#eaf0df",
+        "muted": "#b7c7b2",
+        "accent": "#b9cf95",
+        "onAccent": "#172314",
+        "gold": "#968362"
+      }
+    }
+  ]
+}
