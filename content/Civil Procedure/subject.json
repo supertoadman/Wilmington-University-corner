@@ -14,6 +14,15 @@
       "description": "Condensed exam outline of Weeks 1–9 (Classes 1–16) on the Fall 2026 syllabus. Part I covers the civil justice system and the life of a lawsuit. Part II covers personal jurisdiction: the framework, the territorial era, minimum contacts, specific jurisdiction and the stream of commerce, and general, consent, and transient jurisdiction. Part III covers notice and service. Part IV covers subject-matter jurisdiction: federal question, diversity and alienage, supplemental jurisdiction, and removal. Part V covers venue, transfer, forum-selection clauses, and forum non conveniens. Part VI covers the Erie doctrine. Part VII covers pleading, Rule 11, and responding to the complaint. Rule and tip boxes throughout, and a card for every assigned case (29 main cases) plus slide references and supplemental readings.",
       "tags": ["civil procedure", "FRCP", "personal jurisdiction", "subject-matter jurisdiction", "Erie", "pleading", "outline", "Weeks 1–9"],
       "order": 1
+    },
+    "Civil_Procedure_Bar_Questions.html": {
+      "slug": "civil-procedure-bar-questions",
+      "title": "Civil Procedure Bar Questions",
+      "type": "practice",
+      "description": "308 bar-style multiple-choice questions covering every rule, case, and tip in the Weeks 1–9 outline (Classes 1–16), across 15 topics: the court systems and sources of procedural law, the personal jurisdiction framework and territorial era, minimum contacts, specific jurisdiction and the stream of commerce, general, consent, and tag jurisdiction, notice and service under Rule 4, federal question, diversity and alienage, supplemental jurisdiction, removal, venue, transfer and forum non conveniens, Swift to Erie, the modern Erie analysis, pleading and Rule 11, and responding to the complaint, plus a set of integrated multi-issue problems. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "tags": ["civil procedure", "MCQ", "bar prep", "application", "Weeks 1–9"],
+      "questions": 308,
+      "order": 2
     }
   }
 }
