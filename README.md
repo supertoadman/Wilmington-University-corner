@@ -50,6 +50,12 @@ The document types are `outline`, `rule-chart`, `flowcharts`, `flashcards`, `pra
 - **Art and audio** come from the asset pack in `Assets/temple run/`; the build copies only what the game uses into `play/pack/`.
 - **Code** is in `src/game/` (`engine.js` draws and runs the world, `game.js` handles the screens and gates). Add `?debug` to the URL to get `window.sanctum`.
 
+## Shuffle mode
+
+`/shuffle/` (linked from the home page between the course browser and Sanctum Run) lets you tick practice sets from any courses and answer all their questions in one shuffled stack, with shuffled choices, cross-outs, explanations, review links and Retry missed. It reads the same question data the game does (`play/data/`), so any set the game can read shows up here too. The page is `shuffle()` in `src/templates.mjs`; the client is `src/assets/shuffle.js`.
+
+A variation (a question that changes the facts of another) carries a "Show the question this varies" toggle here, in Sanctum Run, and in the bar-style practice sets themselves, so a shuffle or filter that separates it from its original never hides the facts it builds on.
+
 ## Editing titles and descriptions online
 
 Go to `/admin` on the live site (it isn't linked anywhere) to edit any document's title and description from a browser or phone. Sign in with a GitHub [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new):

@@ -89,6 +89,10 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
 .rat.key b{color:var(--good)}
 .verdict{font-weight:600}.verdict.ok{color:var(--good)}.verdict.no{color:var(--bad)}
 .parent{font-size:12px;color:var(--var);font-family:var(--mono)}
+/* A variation keeps the question it varies one tap away, since a shuffle or filter can separate them. */
+.pre{margin:10px 0 0;background:var(--var-soft);border-left:3px solid var(--var);border-radius:0 6px 6px 0;padding:6px 12px;font-size:15px}
+.pre summary{cursor:pointer;font-family:var(--mono);font-size:12px;color:var(--var)}
+.pre p{margin:6px 0 2px}
 </style>
 
 <div class="wrap">
@@ -298,7 +302,7 @@ const QB = [{"id": "1", "area": "Foundations & jury secrecy", "tag": "Objections
 const L = "ABCD";
 const AREAS = ["Foundations & jury secrecy", "Relevance", "Rule 403 and 105", "Specialized relevance (407–411)", "Character evidence", "Other acts (404(b))", "Impeachment", "Prior convictions (609)", "Rape shield (412)"];
 const byId = Object.fromEntries(QB.map(q => [q.id, q]));
-let st = { area:"All", kind:"all", order: QB.map(q => q.id), shuffled:false, opts:{}, picked:{}, out:{}, onlyMissed:false, missed:new Set() };
+let st = { area:"All", kind:"all", order: QB.map(q => q.id), shuffled:false, opts:{}, picked:{}, out:{}, onlyMissed:false, missed:new Set(), pre:new Set() };
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const shuffleAnswers = () => QB.forEach(q => st.opts[q.id] = shuffle([0,1,2,3]));
 
@@ -333,6 +337,14 @@ function card(q) {
   li.innerHTML = '<div class="meta"><span class="num">Q' + q.id + '</span><span class="kind">' + (q.v ? "Variation" : "Question") + '</span><span class="tag"></span>' + (q.v ? '<span class="parent">builds on Q' + q.v + '</span>' : '') + '</div><p class="stem"></p><div class="opts"></div>';
   li.querySelector(".tag").textContent = q.tag;
   li.querySelector(".stem").textContent = q.stem;
+  if (q.v && byId[q.v]) {
+    const d = document.createElement("details"); d.className = "pre"; d.open = st.pre.has(q.id);
+    d.innerHTML = "<summary></summary><p></p>";
+    d.querySelector("summary").textContent = "Show Q" + q.v + ", the question this varies";
+    d.querySelector("p").textContent = byId[q.v].stem;
+    d.ontoggle = () => { d.open ? st.pre.add(q.id) : st.pre.delete(q.id); };
+    li.querySelector(".stem").before(d);
+  }
   const box = li.querySelector(".opts");
   const out = st.out[q.id] || (st.out[q.id] = new Set());
   st.opts[q.id].forEach((k, pos) => {

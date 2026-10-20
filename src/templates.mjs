@@ -318,6 +318,22 @@ const SCENES = [
 // Hidden until app.js wires it up, so it never shows as dead buttons without JavaScript.
 const scenePicker = () => `<div class="scene-pick" role="radiogroup" aria-label="Cover scene" data-scene-pick hidden><span class="scene-pick-label">Scene</span>${SCENES.map((s, i) => `<button type="button" role="radio" aria-checked="${i === 0}" data-scene-set="${s.id}" aria-label="${s.label}" title="${s.day} · ${s.night}" class="scene-dot scene-dot-${s.id}"></button>`).join('')}</div>`;
 
+// The way into Shuffle mode, between the course browser and Sanctum Run.
+function shuffleBand(ctx, root) {
+  const { game } = ctx;
+  const sets = game.courses.reduce((n, c) => n + c.sets.length, 0);
+  return `<a class="shuffle-band" href="${root}shuffle/">
+    <span class="shuffle-band-icon" aria-hidden="true">${icon('shuffle')}</span>
+    <span class="shuffle-band-text">
+      <span class="kicker">Practice · Mix your sets</span>
+      <span class="shuffle-band-title">Shuffle mode</span>
+      <span class="shuffle-band-desc">Load several practice sets at once, from one course or many, and answer their questions in one shuffled stack. Variations keep the question they build on a tap away.</span>
+      <span class="shuffle-band-meta">${game.total.toLocaleString('en-US')} questions · ${plural(sets, 'practice set')} · ${plural(game.courses.length, 'course')}</span>
+    </span>
+    <span class="btn btn-primary shuffle-band-cta">${icon('shuffle')} Start shuffling</span>
+  </a>`;
+}
+
 // The way into Sanctum Run, under the course browser: a philosopher and his fallen self.
 function playBand(ctx, root) {
   const { game } = ctx;
@@ -414,7 +430,7 @@ export function home(ctx) {
     <div class="course-directory"><label class="course-find" hidden data-course-find>Find a course<input type="search" placeholder="Search course names…" data-course-query></label><p class="directory-count" data-course-count>${subjects.length} courses</p><div class="course-options">${subjects.map(s => `<a class="course-option" href="${root}${ctx.P.subject(s)}" data-course-choice="${esc(s.slug)}" data-course-name="${esc(s.title)}" title="${esc(s.title)}">${icon(s.icon)}<span><span class="course-name">${esc(s.title)}</span><small>${plural(s.documents.length, 'document')}</small></span>${icon('chevron-right')}</a>`).join('')}</div><p hidden data-course-empty>No courses match. Try another name.</p></div>
     <div class="course-preview comprehensive-subjects" id="course-preview" tabindex="-1"><p class="course-preview-intro">Select a course to preview its materials, or open its full collection.</p>${subjects.map(s => `<div data-course-panel="${esc(s.slug)}" hidden>${subjectPanel(ctx, root, s)}</div>`).join('')}</div>
   </div>
-  ${ctx.game?.total ? playBand(ctx, root) : ''}
+  ${ctx.game?.total ? shuffleBand(ctx, root) + playBand(ctx, root) : ''}
 </section>
 
 <section class="section container" id="recently-opened" hidden aria-labelledby="ro-h">
@@ -919,6 +935,56 @@ ${head(ctx, { root, title: 'Sanctum Run', description: `A running game for your 
 <script type="module" src="game.js"></script>
 </body>
 </html>`;
+}
+
+/**
+ * Shuffle mode, at /shuffle/: tick practice sets from any courses and answer their questions
+ * in one shuffled stack. The checklist is built here; assets/shuffle.js loads the questions
+ * from the data the build writes for Sanctum Run (play/data/) and runs the stack.
+ */
+export function shuffle(ctx) {
+  const root = '../';
+  const { game, subjects } = ctx;
+  const iconOf = (slug) => subjects.find((s) => s.slug === slug)?.icon || 'list-checks';
+  const course = (c) => `<fieldset class="shuffle-course" style="--accent:${c.accent}">
+    <legend class="shuffle-course-head"><span class="tile">${icon(iconOf(c.slug))}</span><span class="shuffle-course-name">${esc(c.title)}</span></legend>
+    <button type="button" class="shuffle-all" data-course-all="${esc(c.slug)}">Select all</button>
+    <div class="shuffle-sets">${c.sets.map((s) => `<label class="shuffle-set"><input type="checkbox" value="${esc(`${c.slug}/${s.slug}`)}" data-course="${esc(c.slug)}" data-count="${s.count}"><span><strong>${esc(s.title)}</strong><small>${plural(s.count, 'question')}</small></span></label>`).join('')}</div>
+  </fieldset>`;
+  const body = `
+<section class="page-head container">
+  ${breadcrumbs(root, [['shuffle/', 'Shuffle mode']])}
+  <h1 class="page-title">Shuffle mode</h1>
+  <p class="page-lede">Pick any practice sets, from one course or several, and work their questions in one shuffled stack. Answer choices are shuffled too. A variation keeps the question it builds on one tap away.</p>
+</section>
+<section class="container section-tight shuffle" data-shuffle>
+  <form class="shuffle-setup" data-shuffle-setup>
+    <div class="shuffle-courses">${game.courses.map(course).join('')}</div>
+    <div class="shuffle-go">
+      <p class="shuffle-picked" data-shuffle-picked aria-live="polite">No sets selected</p>
+      <label class="shuffle-limit"><span>Questions</span><select data-shuffle-limit aria-label="How many questions"><option value="0">All</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label>
+      <button class="btn btn-primary" type="submit" data-shuffle-start disabled>${icon('shuffle')} Shuffle</button>
+    </div>
+  </form>
+  <div class="shuffle-run" data-shuffle-run hidden>
+    <div class="shuffle-bar">
+      <div class="shuffle-bar-row">
+        <p class="shuffle-score" data-shuffle-score aria-live="polite">0 / 0</p>
+        <button class="btn btn-ghost" type="button" data-shuffle-missed>Retry missed</button>
+        <button class="btn btn-ghost" type="button" data-shuffle-again>${icon('shuffle')} Reshuffle</button>
+        <button class="btn btn-ghost" type="button" data-shuffle-change>Change sets</button>
+      </div>
+      <div class="shuffle-meter"><i data-shuffle-meter></i></div>
+    </div>
+    <ol class="shuffle-list" data-shuffle-list></ol>
+  </div>
+  <noscript><p>Shuffle mode needs JavaScript. Each practice set also works on its own in the <a href="${root}library/?type=practice">library</a>.</p></noscript>
+</section>`;
+  return layout(ctx, {
+    root, title: 'Shuffle mode', canonical: 'shuffle/', body,
+    description: `Mix practice sets from any course into one shuffled stack: ${game.total.toLocaleString('en-US')} questions from the study library.`,
+    extraHead: `<script type="module" src="${root}assets/shuffle.js"></script>`,
+  });
 }
 
 export function notFound(ctx) {
