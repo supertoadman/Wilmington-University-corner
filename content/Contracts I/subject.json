@@ -15,6 +15,15 @@
       "tags": ["contracts", "Restatement (Second)", "UCC Article 2", "outline", "Weeks 1–9"],
       "order": 1
     },
+    "Contracts_I_Bar_Questions.html": {
+      "slug": "contracts-i-bar-questions",
+      "title": "Contracts I Bar Questions",
+      "type": "practice",
+      "description": "266 bar-style multiple-choice questions covering every rule, case, and tip in the Weeks 1–9 outline, across 16 topics from enforceable agreements and the objective theory through offers, termination, irrevocable offers, acceptance and silence, the battle of the forms, misunderstanding, indefiniteness, consideration, modification, promissory estoppel, the Statute of Frauds, duress, and misrepresentation, plus a set of integrated multi-issue problems. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "tags": ["contracts", "MCQ", "bar prep", "application", "Weeks 1–9"],
+      "questions": 266,
+      "order": 2
+    },
     "Contracts_I_Master_Outline.docx": {
       "publish": false,
       "description": "Full-semester master outline (Weeks 1–14), kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
