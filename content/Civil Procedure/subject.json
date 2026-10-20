@@ -1,0 +1,19 @@
+{
+  "title": "Civil Procedure",
+  "description": "Civil Procedure, Weeks 1–9 (Spencer, Civil Procedure: A Contemporary Approach, 7th ed., and the Federal Civil Rules Supplement). Covers the court systems and sources of procedural law, personal jurisdiction from Pennoyer through Ford, notice and service of process under Rule 4, federal question, diversity, supplemental and removal jurisdiction, venue, transfer and forum non conveniens, the Erie doctrine through Shady Grove, pleading standards from Conley to Iqbal, Rule 11, and responding to the complaint under Rules 8, 12, and 55.",
+  "icon": "statue-angel-barachiel",
+  "accent": "#7a3e65",
+  "order": 7,
+  "documents": {
+    "Civil_Procedure_Condensed_Outline.docx": {
+      "slug": "civil-procedure-outline",
+      "title": "Civil Procedure Outline",
+      "type": "outline",
+      "theme": "structured",
+      "outsideColor": "64748B",
+      "description": "Condensed exam outline of Weeks 1–9 (Classes 1–16) on the Fall 2026 syllabus. Part I covers the civil justice system and the life of a lawsuit. Part II covers personal jurisdiction: the framework, the territorial era, minimum contacts, specific jurisdiction and the stream of commerce, and general, consent, and transient jurisdiction. Part III covers notice and service. Part IV covers subject-matter jurisdiction: federal question, diversity and alienage, supplemental jurisdiction, and removal. Part V covers venue, transfer, forum-selection clauses, and forum non conveniens. Part VI covers the Erie doctrine. Part VII covers pleading, Rule 11, and responding to the complaint. Rule and tip boxes throughout, and a card for every assigned case (29 main cases) plus slide references and supplemental readings.",
+      "tags": ["civil procedure", "FRCP", "personal jurisdiction", "subject-matter jurisdiction", "Erie", "pleading", "outline", "Weeks 1–9"],
+      "order": 1
+    }
+  }
+}
