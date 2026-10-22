@@ -56,6 +56,8 @@ The document types are `outline`, `rule-chart`, `flowcharts`, `flashcards`, `pra
 
 A variation (a question that changes the facts of another) carries a "Show the question this varies" toggle here, in Sanctum Run, and in the bar-style practice sets themselves, so a shuffle or filter that separates it from its original never hides the facts it builds on.
 
+Exam-style sets (such as the Agency & Partnership practice exams) can share one fact pattern across several questions (`h`, naming an entry in `HYPOS`; the game and Shuffle mode print it with each question), give the correct choice's index in `a`, and mark `fixed` a question whose choices refer to each other ("B and C", "None of the above"), so its choices keep their letters instead of being shuffled.
+
 ## Editing titles and descriptions online
 
 Go to `/admin` on the live site (it isn't linked anywhere) to edit any document's title and description from a browser or phone. Sign in with a GitHub [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new):

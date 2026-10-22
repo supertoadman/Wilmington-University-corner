@@ -67,6 +67,7 @@ export async function buildSession(picks, { shuffled = true, missedOnly = false,
   if (only) all = all.filter((q) => only.has(q.id));
   else if (missedOnly) all = all.filter((q) => store.isMissed(q.id));
   if (shuffled) shuffle(all);
-  for (const q of all) q.order = shuffle(q.o.map((_, i) => i));
+  // A question whose choices refer to each other ("B and C") keeps its letters.
+  for (const q of all) q.order = q.fixed ? q.o.map((_, i) => i) : shuffle(q.o.map((_, i) => i));
   return all;
 }

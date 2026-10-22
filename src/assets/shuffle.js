@@ -96,7 +96,8 @@ if (host) {
   function deal(qs) {
     stack = shuffle(qs.slice());
     if (+limit.value) stack = stack.slice(0, +limit.value);
-    for (const q of stack) q.order = shuffle(q.o.map((_, i) => i));
+    // A question whose choices refer to each other ("B and C") keeps its letters.
+    for (const q of stack) q.order = q.fixed ? q.o.map((_, i) => i) : shuffle(q.o.map((_, i) => i));
     st = { picked: {}, out: {}, pre: st.pre, onlyMissed: false };
     render();
     window.scrollTo({ top: host.offsetTop - 80 });
@@ -245,7 +246,7 @@ if (host) {
       if (!missed.has(q.id)) continue;
       delete st.picked[q.id];
       delete st.out[q.id];
-      shuffle(q.order);
+      if (!q.fixed) shuffle(q.order);
     }
     st.missed = missed;
     st.onlyMissed = true;

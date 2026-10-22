@@ -6,7 +6,8 @@
 // Every question comes out in one shape:
 //   { q: stem, o: [choices], a: index of the correct choice, e: explanation or null,
 //     oe: [per-choice explanations] or null, topic: label or null, n: number in its set,
-//     pre: the original facts, for a variation of another question (only when there is one) }
+//     pre: the original facts, for a variation of another question (only when there is one),
+//     fixed: true when the choices must keep their order (only when set) }
 // Most source formats store the correct choice first; the game shuffles them.
 //
 // Practice sets can arrive from anyone through submissions, and the build runs on those pull
@@ -100,6 +101,7 @@ function shaped(raw) {
     const oe = r.oe ? r.oe.map(clean) : null;
     const q = { q: clean(r.q), o, a: r.a, e: clean(r.e), oe: oe && oe.some(Boolean) ? oe : null, topic: clean(r.topic), n: r.n ?? i + 1 };
     if (clean(r.pre)) q.pre = clean(r.pre); // the facts a variation builds on
+    if (r.fixed) q.fixed = true; // choices refer to each other by letter ("B and C"), so keep their order
     out.push(q);
   });
   return out;
@@ -164,19 +166,23 @@ function bank(src) {
   return BANK.map(([topic, rule, q, o, e]) => ({ q, o, a: 0, e, topic: [topic, rule].filter(Boolean).join(' — ') }));
 }
 
-// QB banks: bar-style sets and mock exams store { stem, o: [[choice, why]] };
-// the case-repetition sets store { q, o: [choices], e }.
+// QB banks: bar-style sets and mock exams store { stem, o: [[choice, why]] }, correct choice first
+// unless `a` gives its index; exam-style sets may share fact patterns, `h` naming one in HYPOS, and
+// mark `fixed` the questions whose choices must keep their order. The case-repetition sets store
+// { q, o: [choices], e }.
 function qb(src) {
   const QB = value(src, 'QB');
   if (!Array.isArray(QB) || !QB.length) return null;
   if (Array.isArray(QB[0].o?.[0])) {
     const AREAS = value(src, 'AREAS');
+    const HYPOS = value(src, 'HYPOS') || {};
     const area = (a) => (AREAS && !Array.isArray(AREAS) && AREAS[a]) || a;
     // Variations change one fact of another question ("Same facts. …"): `v` names it, or the id is "<parent>V".
     const byId = new Map(QB.map((q) => [String(q.id), q]));
     const parent = (q) => byId.get(String(q.v || (String(q.id).match(/^(.*\d)V\d*$/) || [])[1] || ''));
     return QB.map((q) => ({
-      q: q.stem, o: q.o.map((x) => x[0]), oe: q.o.map((x) => x[1]), a: 0, e: q.rule ? `Rule: ${q.rule}` : null,
+      q: [HYPOS[q.h], q.stem].filter(Boolean).join('\n\n'), o: q.o.map((x) => x[0]), oe: q.o.map((x) => x[1]),
+      a: Number.isInteger(q.a) ? q.a : 0, fixed: q.fixed, e: q.rule ? `Rule: ${q.rule}` : null,
       topic: [area(q.area), q.tag].filter(Boolean).join(' — '), n: q.id, pre: parent(q)?.stem,
     }));
   }
