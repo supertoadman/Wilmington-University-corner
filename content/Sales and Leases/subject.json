@@ -24,6 +24,15 @@
       "questions": 272,
       "order": 2
     },
+    "Sales_and_Leases_Practice_Exams.html": {
+      "slug": "sales-and-leases-practice-exams",
+      "title": "Sales and Leases Practice Exams",
+      "type": "practice",
+      "description": "19 practice exams (285 questions) for the Week 10 assessment, written in the style of Professor Richardson's sample exam: 15 stand-alone, five-choice questions each, mixing rule questions (\"Which of the following is NOT…\") with short hypos that ask who wins and why, plus \"None of the above\" and \"All of the above\" choices that are sometimes the answer. Each exam samples the whole Weeks 1–8 condensed outline, and together they cover all 16 sections: which law governs, formation and § 2-207, the statute of frauds, good faith and modification, express and implied warranties, title, quantity and price, delivery and acceptance, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
+      "tags": ["UCC Article 2", "MCQ", "practice exam", "Week 10"],
+      "questions": 285,
+      "order": 3
+    },
     "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
       "publish": false,
       "description": "Full-length source outline for Weeks 1–8, kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
