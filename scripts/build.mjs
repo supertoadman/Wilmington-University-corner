@@ -35,7 +35,8 @@ const TYPES = {
   flowcharts:   { label: 'Flowcharts',         plural: 'Flowcharts',         icon: 'statue-mercury',       match: /flow/i },
   flashcards:   { label: 'Flashcards',         plural: 'Flashcards',         icon: 'statue-apollo',        match: /card/i },
   practice:     { label: 'Practice Questions', plural: 'Practice Questions', icon: 'statue-janus',         match: /mcq|question|drill|quiz|exam|mpre/i },
-  document:     { label: 'Document',           plural: 'Documents',          icon: 'statue-philosopher',   match: /.*/ },
+  music:        { label: 'Music',              plural: 'Music',              icon: 'statue-echo',          match: /(?!)/ }, // audio files default to music
+  document:    { label: 'Document',           plural: 'Documents',          icon: 'statue-philosopher',   match: /.*/ },
 };
 
 const FORMATS = {
@@ -45,6 +46,7 @@ const FORMATS = {
   '.pdf':  { label: 'PDF',  mime: 'application/pdf', viewer: 'frame' },
   '.md':   { label: 'Markdown', mime: 'text/markdown', viewer: 'text' },
   '.txt':  { label: 'Text', mime: 'text/plain', viewer: 'text' },
+  '.mp3':  { label: 'MP3', mime: 'audio/mpeg', viewer: 'audio' },
 };
 
 const IGNORED = new Set(['subject.json', '.DS_Store', 'Thumbs.db', 'desktop.ini']);
@@ -318,6 +320,7 @@ async function loadSubjects() {
       usedSlugs.add(docSlug);
 
       const type = dm.type && TYPES[dm.type] ? dm.type
+        : format.viewer === 'audio' ? 'music'
         : Object.keys(TYPES).find((k) => TYPES[k].match.test(base));
       const raw = fs.readFileSync(file);
       const doc = {
@@ -436,7 +439,8 @@ for (const s of subjects) {
   const zip = {};
   for (const d of s.documents) {
     write(P.file(d), d.raw);
-    zip[d.filename] = [new Uint8Array(d.raw), { mtime: new Date(d.updated) }];
+    // Audio is already compressed; storing it as-is keeps the build fast.
+    zip[d.filename] = [new Uint8Array(d.raw), { mtime: new Date(d.updated), ...(d.format.viewer === 'audio' && { level: 0 }) }];
     allZip[`${s.folder}/${d.filename}`] = zip[d.filename];
   }
   s.zipSize = 0;

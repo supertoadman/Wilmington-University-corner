@@ -28,6 +28,7 @@ const TYPES = {
   '.json': 'application/json', '.txt': 'text/plain; charset=utf-8', '.md': 'text/plain; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png',
   '.xml': 'application/xml', '.zip': 'application/zip',
   '.docx': 'application/vnd.openxmlformats-officedocument.wordprocessingml.document', '.pdf': 'application/pdf',
+  '.mp3': 'audio/mpeg',
 };
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
@@ -165,7 +166,18 @@ http.createServer(async (req, res) => {
       res.writeHead(404, { 'Content-Type': TYPES['.html'] });
       return fs.createReadStream(path.join(DIST, '404.html')).pipe(res);
     }
-    res.writeHead(200, { 'Content-Type': TYPES[path.extname(file).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-cache' });
+    const headers = { 'Content-Type': TYPES[path.extname(file).toLowerCase()] || 'application/octet-stream', 'Cache-Control': 'no-cache', 'Accept-Ranges': 'bytes' };
+    // Byte ranges, as GitHub Pages serves them, so audio can seek.
+    const range = /^bytes=(\d*)-(\d*)$/.exec(req.headers.range || '');
+    const { size } = fs.statSync(file);
+    if (range && (range[1] || range[2])) {
+      const start = range[1] ? +range[1] : Math.max(0, size - +range[2]);
+      const end = range[1] && range[2] ? Math.min(+range[2], size - 1) : size - 1;
+      if (start > end) { res.writeHead(416, { 'Content-Range': `bytes */${size}` }); return res.end(); }
+      res.writeHead(206, { ...headers, 'Content-Range': `bytes ${start}-${end}/${size}`, 'Content-Length': end - start + 1 });
+      return fs.createReadStream(file, { start, end }).pipe(res);
+    }
+    res.writeHead(200, { ...headers, 'Content-Length': size });
     fs.createReadStream(file).pipe(res);
   } catch (e) {
     console.error(e);

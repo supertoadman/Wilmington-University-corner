@@ -535,6 +535,7 @@ export function docPage(ctx, d) {
   const fileUrl = root + P.file(d);
   const isDocx = d.format.viewer === 'docx';
   const isFrame = d.format.viewer === 'frame';
+  const isAudio = d.format.viewer === 'audio';
   const related = s.documents.filter((x) => x !== d);
   const tocList = d.toc.length
     ? `<ol class="toc">${d.toc.map((h) => `<li class="toc-l${h.level}"><a href="#${h.id}">${esc(h.text)}</a></li>`).join('')}</ol>`
@@ -550,6 +551,18 @@ export function docPage(ctx, d) {
     <div class="vscroll" data-scroll-root><article class="prose reader${d.theme ? ` prose-${esc(d.theme)}` : ''}"${d.theme === 'structured' ? ` data-angel="${angelFor(d.id)}"` : ''}>${d.html}</article></div>`;
   } else if (isFrame) {
     stage = `<div class="vframe-wrap"><div class="vloading" aria-hidden="true"><span class="spinner"></span>Loading ${esc(d.title)}…</div><iframe class="vframe" src="${fileUrl}" title="${esc(d.title)}" allow="fullscreen; clipboard-write"></iframe></div>`;
+  } else if (isAudio) {
+    stage = `<div class="vscroll vaudio"><section class="player" aria-label="Player">
+      <span class="player-art">${icon(t.icon)}</span>
+      <p class="player-kicker">${esc(s.title)}</p>
+      <h2 class="player-title">${esc(d.title)}</h2>
+      <p class="player-desc">${esc(d.description)}</p>
+      <audio class="player-audio" src="${fileUrl}" controls preload="metadata" data-player></audio>
+      <div class="player-speed" role="radiogroup" aria-label="Playback speed">
+        <span class="player-speed-label">Speed</span>
+        ${[0.5, 0.75, 1, 1.25, 1.5].map((r) => `<button type="button" role="radio" aria-checked="${r === 1}" data-speed="${r}">${r === 1 ? 'Normal' : `${r}×`}</button>`).join('')}
+      </div>
+    </section></div>`;
   } else {
     stage = `<div class="vscroll"><pre class="prose reader text-reader">${esc(d.text)}</pre></div>`;
   }
@@ -614,7 +627,7 @@ ${GILT_DEFS}
       ${d.tags.length ? `<ul class="tag-list">${d.tags.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
       <div class="vpanel-actions">
         <a class="btn btn-primary" href="${fileUrl}" download="${esc(d.filename)}">${icon('download')} Download ${esc(d.format.label)}</a>
-        ${isFrame ? `<a class="btn btn-ghost" href="${fileUrl}" target="_blank" rel="noopener">${icon('external-link')} Open in new tab</a>` : `<button class="btn btn-ghost" type="button" data-print>${icon('printer')} Print</button>`}
+        ${isFrame || isAudio ? `<a class="btn btn-ghost" href="${fileUrl}" target="_blank" rel="noopener">${icon('external-link')} Open in new tab</a>` : `<button class="btn btn-ghost" type="button" data-print>${icon('printer')} Print</button>`}
       </div>
       ${related.length ? `<h3 class="vpanel-sub">More in ${esc(s.title)}</h3><ul class="doc-rows">${related.map((x) => docRow(ctx, root, x)).join('')}</ul>` : ''}
     </div>

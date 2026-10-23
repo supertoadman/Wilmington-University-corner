@@ -32,6 +32,14 @@
       "tags": ["agency", "partnership", "RUPA", "MCQ", "practice exam", "Week 10"],
       "questions": 210,
       "order": 3
+    },
+    "Welcome_to_the_Fortress.mp3": {
+      "slug": "welcome-to-the-fortress",
+      "title": "Welcome to the Fortress",
+      "type": "music",
+      "description": "A study song for outline sections 13 and 14: limited partnerships, LLCs, and veil piercing. Covers general partners' unlimited liability and limited partners' shield, the corporate general partner in Frigidaire v. Union Properties, LLCs as creatures of contract under the ULLCA, member-managed and manager-managed LLCs, and veil piercing as the only way through the liability shield. Play it at 0.5×, 0.75×, normal, 1.25×, or 1.5× speed.",
+      "tags": ["agency", "partnership", "limited partnership", "LLC", "ULLCA", "veil piercing", "music"],
+      "order": 4
     }
   }
 }

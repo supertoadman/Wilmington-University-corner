@@ -675,6 +675,17 @@ if (viewer) {
   }));
   $$('[data-print]').forEach((b) => b.addEventListener('click', () => print()));
 
+  // Music: playback speed buttons (pitch is kept, which browsers do by default).
+  const player = $('[data-player]');
+  if (player) {
+    const speeds = $$('[data-speed]');
+    speeds.forEach((b) => b.addEventListener('click', () => {
+      player.defaultPlaybackRate = player.playbackRate = Number(b.dataset.speed);
+    }));
+    // The browser's own controls can change the speed too, so the buttons follow the player.
+    player.addEventListener('ratechange', () => speeds.forEach((b) => b.setAttribute('aria-checked', String(Number(b.dataset.speed) === player.playbackRate))));
+  }
+
   // Highlight the current section in the contents list.
   const scrollRoot = $('[data-scroll-root]');
   const tocLinks = $$('.toc a');
