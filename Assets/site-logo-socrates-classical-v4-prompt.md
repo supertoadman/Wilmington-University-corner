@@ -1,0 +1,12 @@
+# Socrates — classical fantasy revision
+
+Created with the built-in image generation tool. Master: `site-logo-socrates-classical-v4.png`. Transparent alpha preserved in PNG exports. Replaces the anime version in the site header, hero and browser icons.
+
+## Final edit prompt
+
+Use case: style-transfer. Asset type: transparent website face emblem.
+Input image 1 is the edit target: the previous Socrates face logo. Input image 2 is a style and character reference: the Sanctum Run Socrates game sprites.
+Revise the head logo so it fits an elegant classical fantasy website with navy backgrounds, muted brass borders, parchment typography, and sculptural ivory-and-gold angels. The previous logo is TOO ANIME.
+Keep the recognizable young heroic Socrates identity: full swept-back wavy silver-ivory hair, short close-trimmed beard, strong face, discreet gold laurel, near-frontal three-quarter pose. Move the rendering much closer to the game reference: refined dimensional painterly fantasy sculpture, natural adult male anatomy, smaller naturally proportioned eyes, subtle muted gray-green irises, calm thoughtful confident expression. Natural mouth and brows. Model the facial planes with soft graduated light and shadow. Soft warm ivory stone-like complexion with a little life and warmth, matte carved alabaster hair with simplified substantial locks, aged satin gold accents. Retain a hint of the game's heroic charisma but eliminate manga styling: no black ink outlines, eyelashes or eyeliner, cel shading, hatching, exaggerated angular eyes, oversized glossy eyes, or comic-book expression.
+Simplify the ornament: small restrained laurel at the temples, and a tiny muted emerald drapery edge at the base of the neck. Remove the tall jeweled collar and big central emerald. Head and short neck only, no shoulders, bust pedestal, torso, or border. Make it cohesive and quiet enough to sit alongside classical sculptures in a scholarly website. Restrained ivory, silver, antique gold and faint desaturated green palette. Soft upper-left lighting, subtle cool shadows; no loud rim glow. Rich three-dimensional volume, readable silhouette, premium game portrait detail rather than a photograph.
+Centered square canvas, entire head/hair/laurel silhouette within frame with 6–8% transparent margin. Preserve genuine transparent background alpha. One head only. No text, scenery, watermark, or circular badge.

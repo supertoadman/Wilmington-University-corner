@@ -45,7 +45,7 @@ const GILT_DEFS = '<svg width="0" height="0" style="position:absolute" aria-hidd
   + '<linearGradient id="gilt-deep" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#d9ac4c"/><stop offset=".45" stop-color="#a87b22"/><stop offset=".62" stop-color="#c39437"/><stop offset="1" stop-color="#7a5414"/></linearGradient>'
   + '</defs></svg>';
 
-// Site logo: the young Socrates head (styles.css paints it from assets/statues/socrates.webp).
+// Site logo: the Sanctum Run-inspired classical Socrates head (painted by styles.css).
 const LOGO = '<span class="logo" aria-hidden="true"></span>';
 
 // Structured outlines stand between two marble archangels (their fallen counterparts at night).
@@ -94,9 +94,8 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="${esc(config.shortTitle)}">
-<link rel="icon" href="${root}assets/favicon.ico" sizes="32x32">
-<link rel="icon" href="${root}assets/favicon.svg" type="image/svg+xml">
-<link rel="apple-touch-icon" href="${root}assets/apple-touch-icon.png">
+<link rel="icon" href="${root}assets/statues/socrates-classical-favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="${root}assets/statues/socrates-classical-touch.png">
 <link rel="alternate" type="application/json" title="Catalog (JSON)" href="${root}api/catalog.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -417,7 +416,7 @@ export function home(ctx) {
     <figure class="cover-art" aria-hidden="true">
       <span class="cover-wing cover-wing-l"></span>
       <span class="cover-arch"></span>
-      <img src="${root}assets/statues/socrates-lg.webp" alt="" width="640" height="640" fetchpriority="high">
+      <img src="${root}assets/statues/socrates-classical-lg.png" alt="" width="640" height="640" fetchpriority="high">
       <span class="cover-wing cover-wing-r"></span>
     </figure>
   </div>
