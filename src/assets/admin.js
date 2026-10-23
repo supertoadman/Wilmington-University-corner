@@ -16,7 +16,7 @@ const API = 'https://api.github.com';
 const TOKEN_KEY = 'admin-token';
 
 // Mirrors scripts/build.mjs so the editor lists exactly the documents the site publishes.
-const EXTENSIONS = ['.html', '.htm', '.docx', '.pdf', '.md', '.txt'];
+const EXTENSIONS = ['.html', '.htm', '.docx', '.pdf', '.md', '.txt', '.mp3'];
 const IGNORED = new Set(['subject.json', '.DS_Store', 'Thumbs.db', 'desktop.ini']);
 const LIMITS = { title: 150, description: 1000 };
 const FIELDS = ['title', 'description'];
@@ -98,6 +98,8 @@ async function loadSubject(dir) {
     const ext = (name.match(/\.[^.]+$/)?.[0] || '').toLowerCase();
     return EXTENSIONS.includes(ext) && !IGNORED.has(name) && !name.startsWith('.') && !name.startsWith('~$');
   });
+  // Folders are playlists (one document each).
+  docNames.push(...entries.filter((e) => e.type === 'dir' && !e.name.startsWith('.')).map((e) => e.name));
   const docs = await Promise.all(docNames.map(async (name) => {
     // A "<file>.meta.json" sidecar overrides subject.json, so edits to a field it sets must go there.
     const sidecar = names.has(`${name}.meta.json`) ? await readJsonFile(`${dir.path}/${name}.meta.json`) : null;

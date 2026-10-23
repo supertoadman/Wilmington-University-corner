@@ -33,13 +33,35 @@
       "questions": 210,
       "order": 3
     },
-    "Welcome_to_the_Fortress.mp3": {
-      "slug": "welcome-to-the-fortress",
-      "title": "Welcome to the Fortress",
+    "Agency_and_Partnership_Playlist": {
+      "slug": "agency-and-partnership-playlist",
+      "title": "Agency & Partnership Playlist",
       "type": "music",
-      "description": "A study song for outline sections 13 and 14: limited partnerships, LLCs, and veil piercing. Covers general partners' unlimited liability and limited partners' shield, the corporate general partner in Frigidaire v. Union Properties, LLCs as creatures of contract under the ULLCA, member-managed and manager-managed LLCs, and veil piercing as the only way through the liability shield. Play it at 0.5×, 0.75×, normal, 1.25×, or 1.5× speed.",
-      "tags": ["agency", "partnership", "limited partnership", "LLC", "ULLCA", "veil piercing", "music"],
-      "order": 4
+      "description": "Study songs that walk through the Weeks 1–8 outline, one topic per track, numbered to match the planned 17-track album. So far: dissociation versus dissolution, winding up and buyouts, Kovacik loss sharing and buyout agreements, and limited partnerships, LLCs, and veil piercing. Pick any track from the list, or let it play through, at 0.5×, 0.75×, normal, 1.25×, or 1.5× speed.",
+      "tags": ["agency", "partnership", "RUPA", "LLC", "music", "playlist"],
+      "order": 4,
+      "tracks": {
+        "14_Power_to_Leave.mp3": {
+          "title": "Power to Leave",
+          "topic": "Outline §10 · Dissociation vs. dissolution",
+          "description": "At-will versus term partnerships, and a partner's power to leave versus the right to. UPA automatic dissolution against the RUPA § 603 buyout path, and judicial expulsion. Cases: Collins v. Lewis, Giles, and Page v. Page."
+        },
+        "15_Winding_Up.mp3": {
+          "title": "Winding Up",
+          "topic": "Outline §10 · Liquidation, buyouts and lingering authority",
+          "description": "Statements of dissociation that cut off lingering liability after 90 days, § 701 buyouts at the greater of liquidation or going-concern value, and no forced fire sale. Cases: Creel v. Lilly, Monin v. Monin, and Pav-Saver."
+        },
+        "16_Money_vs_Sweat.mp3": {
+          "title": "Money vs. Sweat",
+          "topic": "Outline §11–12 · Loss sharing and buyout agreements",
+          "description": "The Kovacik v. Reed exception, where the money partner bears the cash losses and the service partner loses only their labor, why RUPA rejects it, and the traps in buyout agreements (G & S Investments v. Belman)."
+        },
+        "17_Welcome_to_the_Fortress.mp3": {
+          "title": "Welcome to the Fortress",
+          "topic": "Outline §13–14 · LPs, LLCs and veil piercing",
+          "description": "General partners' unlimited liability against the LP, LLP and LLC shields; the corporate general partner in Frigidaire v. Union Properties; LLCs as creatures of contract under the ULLCA, member-managed and manager-managed; and veil piercing as the only way through the shield."
+        }
+      }
     }
   }
 }

@@ -16,6 +16,7 @@ import { zipSync, unzipSync, strFromU8, strToU8 } from 'fflate';
 import * as T from '../src/templates.mjs';
 import { slugify, decodeEntities, htmlToText } from './lib/text.mjs';
 import { addHeadingIds as idHeadings } from './lib/outline.mjs';
+import { mp3Duration } from './lib/audio.mjs';
 import { buildGame } from './game.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -48,6 +49,8 @@ const FORMATS = {
   '.txt':  { label: 'Text', mime: 'text/plain', viewer: 'text' },
   '.mp3':  { label: 'MP3', mime: 'audio/mpeg', viewer: 'audio' },
 };
+// A folder of audio files: shown as one player, downloaded as a ZIP of its tracks.
+const PLAYLIST = { label: 'Playlist', mime: 'application/zip', viewer: 'playlist' };
 
 const IGNORED = new Set(['subject.json', '.DS_Store', 'Thumbs.db', 'desktop.ini']);
 
@@ -303,9 +306,14 @@ async function loadSubjects() {
     const usedSlugs = new Set();
     for (const name of fs.readdirSync(dir)) {
       const file = path.join(dir, name);
-      if (IGNORED.has(name) || name.endsWith('.meta.json') || name.startsWith('.') || name.startsWith('~$') || !fs.statSync(file).isFile()) continue;
-      const ext = path.extname(name).toLowerCase();
-      const format = FORMATS[ext];
+      if (IGNORED.has(name) || name.endsWith('.meta.json') || name.startsWith('.') || name.startsWith('~$')) continue;
+      // A folder of audio files is one playlist document; its tracks play in file-name order.
+      const isPlaylist = fs.statSync(file).isDirectory();
+      const trackFiles = isPlaylist ? fs.readdirSync(file).filter((f) => FORMATS[path.extname(f).toLowerCase()]?.viewer === 'audio')
+        .sort((a, b) => a.localeCompare(b, 'en', { numeric: true })) : [];
+      if (isPlaylist && !trackFiles.length) { console.warn(`  skip (folder without audio): ${dirent.name}/${name}`); continue; }
+      const ext = isPlaylist ? '.zip' : path.extname(name).toLowerCase();
+      const format = isPlaylist ? PLAYLIST : FORMATS[ext];
       if (!format) { console.warn(`  skip (unsupported format): ${dirent.name}/${name}`); continue; }
       // Per-document metadata: subject.json entry, overridden by an optional "<file>.meta.json" sidecar
       // (submissions use sidecars so they never have to edit a shared file).
@@ -314,20 +322,42 @@ async function loadSubjects() {
       const dm = { ...(meta.documents?.[name] || {}), ...sidecar };
       if (dm.publish === false) { console.log(`  skip (publish: false): ${dirent.name}/${name}`); continue; }
 
-      const base = path.basename(name, ext);
+      const base = isPlaylist ? name : path.basename(name, ext);
       let docSlug = dm.slug || slugify(base);
       for (let i = 2; usedSlugs.has(docSlug); i++) docSlug = `${dm.slug || slugify(base)}-${i}`;
       usedSlugs.add(docSlug);
 
       const type = dm.type && TYPES[dm.type] ? dm.type
-        : format.viewer === 'audio' ? 'music'
+        : format.viewer === 'audio' || isPlaylist ? 'music'
         : Object.keys(TYPES).find((k) => TYPES[k].match.test(base));
-      const raw = fs.readFileSync(file);
+      // Track titles and notes come from the playlist's "tracks" metadata, keyed by file name.
+      const tracks = trackFiles.map((f) => {
+        const tm = dm.tracks?.[f] || {};
+        const tbase = path.basename(f, path.extname(f));
+        const raw = fs.readFileSync(path.join(file, f));
+        return {
+          file: f,
+          slug: slugify(tbase.replace(/^\d+[\s_.-]*/, '')) || slugify(tbase),
+          ext: path.extname(f).toLowerCase(),
+          number: tm.number ?? (Number(tbase.match(/^\d+/)?.[0]) || null),
+          title: tm.title || tbase.replace(/^\d+[\s_.-]*/, '').replace(/[_-]+/g, ' ').trim(),
+          topic: tm.topic || '',
+          description: tm.description || '',
+          duration: mp3Duration(raw),
+          size: raw.length,
+          raw,
+        };
+      });
+      const raw = isPlaylist
+        ? Buffer.from(zipSync(Object.fromEntries(tracks.map((t) => [t.file, [new Uint8Array(t.raw), { level: 0 }]]))))
+        : fs.readFileSync(file);
       const doc = {
         id: `${slug}/${docSlug}`,
         slug: docSlug,
         subject,
-        filename: name,
+        filename: isPlaylist ? `${name}.zip` : name,
+        source: name,
+        tracks: isPlaylist ? tracks : null,
         ext,
         format,
         type,
@@ -389,6 +419,8 @@ ${html}`;
         }
       } else if (format.viewer === 'text') {
         doc.text = raw.toString('utf8');
+      } else if (isPlaylist) {
+        doc.text = tracks.map((t) => [`## ${t.number ? `${t.number}. ` : ''}${t.title}`, t.topic, t.description].filter(Boolean).join('\n')).join('\n\n');
       }
       doc.headings = headingsFrom(doc.text);
       if (!doc.description) doc.description = doc.text.replace(/^#+ .*$/gm, '').replace(/\s+/g, ' ').trim().slice(0, 220);
@@ -419,6 +451,7 @@ const P = {
   zip: (s) => `files/${s.slug}/${s.slug}-all-files.zip`,
   json: (d) => `api/documents/${d.subject.slug}/${d.slug}.json`,
   text: (d) => `api/documents/${d.subject.slug}/${d.slug}.txt`,
+  track: (d, t) => `files/${d.subject.slug}/${d.slug}/${t.slug}${t.ext}`,
   subjectJson: (s) => `api/subjects/${s.slug}.json`,
 };
 const abs = (rel) => config.url + rel;
@@ -439,9 +472,14 @@ for (const s of subjects) {
   const zip = {};
   for (const d of s.documents) {
     write(P.file(d), d.raw);
-    // Audio is already compressed; storing it as-is keeps the build fast.
-    zip[d.filename] = [new Uint8Array(d.raw), { mtime: new Date(d.updated), ...(d.format.viewer === 'audio' && { level: 0 }) }];
-    allZip[`${s.folder}/${d.filename}`] = zip[d.filename];
+    // Audio is already compressed; storing it as-is keeps the build fast. Playlists go in as their folder of tracks.
+    const entries = d.tracks
+      ? d.tracks.map((t) => { write(P.track(d, t), t.raw); return [`${d.source}/${t.file}`, t.raw, 0]; })
+      : [[d.filename, d.raw, d.format.viewer === 'audio' ? 0 : undefined]];
+    for (const [name, data, level] of entries) {
+      zip[name] = [new Uint8Array(data), { mtime: new Date(d.updated), ...(level === 0 && { level }) }];
+      allZip[`${s.folder}/${name}`] = zip[name];
+    }
   }
   s.zipSize = 0;
   if (s.documents.length) {
@@ -468,6 +506,10 @@ const docRecord = (d) => ({
   originalFilename: d.filename,
   tags: d.tags,
   questions: d.questions,
+  tracks: d.tracks && d.tracks.map((t) => ({
+    number: t.number, title: t.title, topic: t.topic, description: t.description,
+    durationSeconds: t.duration && Math.round(t.duration), sizeBytes: t.size, url: abs(P.track(d, t)),
+  })),
   contributor: d.contributor,
   sizeBytes: d.size,
   updated: d.updated,

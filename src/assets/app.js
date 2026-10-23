@@ -679,11 +679,32 @@ if (viewer) {
   const player = $('[data-player]');
   if (player) {
     const speeds = $$('[data-speed]');
+    const syncSpeed = () => speeds.forEach((b) => b.setAttribute('aria-checked', String(Number(b.dataset.speed) === player.playbackRate)));
     speeds.forEach((b) => b.addEventListener('click', () => {
       player.defaultPlaybackRate = player.playbackRate = Number(b.dataset.speed);
+      syncSpeed();
     }));
     // The browser's own controls can change the speed too, so the buttons follow the player.
-    player.addEventListener('ratechange', () => speeds.forEach((b) => b.setAttribute('aria-checked', String(Number(b.dataset.speed) === player.playbackRate))));
+    player.addEventListener('ratechange', syncSpeed);
+
+    // Playlists: pick a track from the list; the next one starts when a track ends.
+    // Changing the source keeps the chosen speed, because loading resets to defaultPlaybackRate.
+    const tracks = $$('[data-track]');
+    const pick = (b, play) => {
+      tracks.forEach((x) => (x === b ? x.setAttribute('aria-current', 'true') : x.removeAttribute('aria-current')));
+      $$('[data-now]').forEach((el) => { el.textContent = b.dataset[el.dataset.now]; });
+      player.src = b.dataset.src;
+      syncSpeed(); // loading a new source drops any pending ratechange events
+      if (play) player.play().catch(() => {});
+      history.replaceState(null, '', `#track-${b.dataset.track}`);
+    };
+    tracks.forEach((b) => b.addEventListener('click', () => pick(b, true)));
+    player.addEventListener('ended', () => {
+      const next = tracks[tracks.findIndex((b) => b.hasAttribute('aria-current')) + 1];
+      if (next) pick(next, true);
+    });
+    const linked = tracks.find((b) => location.hash === `#track-${b.dataset.track}`);
+    if (linked) pick(linked, false);
   }
 
   // Highlight the current section in the contents list.

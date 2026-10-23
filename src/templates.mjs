@@ -64,6 +64,7 @@ const fmtSize = (b) => (b < 1024 ? `${b} B` : b < 1048576 ? `${Math.round(b / 10
 const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 const fmtShortDate = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
 const plural = (n, one, many = one + 's') => `${n} ${n === 1 ? one : many}`;
+const fmtDuration = (sec) => `${Math.floor(Math.round(sec) / 60)}:${String(Math.round(sec) % 60).padStart(2, '0')}`;
 // Wrap each word so the home headline can rise in one word at a time (see .hero-title .w).
 const riseWords = (html) => html.split(' ').map((w, i) => `<span class="w" style="--i:${i}">${w}</span>`).join(' ');
 
@@ -264,7 +265,7 @@ const subjectStats = (s) => {
 function docCard(ctx, root, d, { showSubject = false } = {}) {
   const { TYPES, P } = ctx;
   const t = TYPES[d.type];
-  const meta = [d.format.label, fmtSize(d.size), d.questions ? `${d.questions} questions` : null, d.contributor ? `Shared by ${d.contributor}` : null, `Updated ${fmtShortDate(d.updated)}`].filter(Boolean);
+  const meta = [d.format.label, fmtSize(d.size), d.questions ? `${d.questions} questions` : null, d.tracks ? plural(d.tracks.length, 'track') : null, d.contributor ? `Shared by ${d.contributor}` : null, `Updated ${fmtShortDate(d.updated)}`].filter(Boolean);
   return `<article class="doc-card" style="--accent:${d.subject.accent}" data-doc data-id="${esc(d.id)}" data-subject="${esc(d.subject.slug)}" data-type="${esc(d.type)}" data-updated="${esc(d.updated)}" data-title="${esc(d.title)}">
   <div class="doc-card-art" aria-hidden="true"><span class="medal">${icon(t.icon)}</span></div>
   <div class="doc-card-body">
@@ -284,7 +285,7 @@ function docRow(ctx, root, d, extra = '') {
   const t = ctx.TYPES[d.type];
   return `<li><a class="doc-row" href="${root}${ctx.P.doc(d)}" style="--accent:${d.subject.accent}"${extra}>
     <span class="tile">${icon(t.icon)}</span>
-    <span class="doc-row-text"><strong>${esc(d.title)}</strong><small>${esc(t.label)}${d.questions ? ` · ${d.questions} questions` : ''}</small></span>
+    <span class="doc-row-text"><strong>${esc(d.title)}</strong><small>${esc(t.label)}${d.questions ? ` · ${d.questions} questions` : ''}${d.tracks ? ` · ${plural(d.tracks.length, 'track')}` : ''}</small></span>
     ${icon('chevron-right', 'chev')}
   </a></li>`;
 }
@@ -535,7 +536,7 @@ export function docPage(ctx, d) {
   const fileUrl = root + P.file(d);
   const isDocx = d.format.viewer === 'docx';
   const isFrame = d.format.viewer === 'frame';
-  const isAudio = d.format.viewer === 'audio';
+  const isAudio = d.format.viewer === 'audio' || d.format.viewer === 'playlist';
   const related = s.documents.filter((x) => x !== d);
   const tocList = d.toc.length
     ? `<ol class="toc">${d.toc.map((h) => `<li class="toc-l${h.level}"><a href="#${h.id}">${esc(h.text)}</a></li>`).join('')}</ol>`
@@ -552,16 +553,28 @@ export function docPage(ctx, d) {
   } else if (isFrame) {
     stage = `<div class="vframe-wrap"><div class="vloading" aria-hidden="true"><span class="spinner"></span>Loading ${esc(d.title)}…</div><iframe class="vframe" src="${fileUrl}" title="${esc(d.title)}" allow="fullscreen; clipboard-write"></iframe></div>`;
   } else if (isAudio) {
+    // A playlist opens on its first track; app.js switches tracks (and honours #track-<slug> links).
+    const tracks = d.tracks || [{ title: d.title, topic: s.title, description: d.description }];
+    const first = tracks[0];
+    const src = (tr) => (d.tracks ? root + P.track(d, tr) : fileUrl);
     stage = `<div class="vscroll vaudio"><section class="player" aria-label="Player">
       <span class="player-art">${icon(t.icon)}</span>
-      <p class="player-kicker">${esc(s.title)}</p>
-      <h2 class="player-title">${esc(d.title)}</h2>
-      <p class="player-desc">${esc(d.description)}</p>
-      <audio class="player-audio" src="${fileUrl}" controls preload="metadata" data-player></audio>
+      <p class="player-kicker" data-now="topic">${esc(first.topic || s.title)}</p>
+      <h2 class="player-title" data-now="title">${esc(first.title)}</h2>
+      <p class="player-desc" data-now="description">${esc(first.description)}</p>
+      <audio class="player-audio" src="${src(first)}" controls preload="metadata" data-player></audio>
       <div class="player-speed" role="radiogroup" aria-label="Playback speed">
         <span class="player-speed-label">Speed</span>
         ${[0.5, 0.75, 1, 1.25, 1.5].map((r) => `<button type="button" role="radio" aria-checked="${r === 1}" data-speed="${r}">${r === 1 ? 'Normal' : `${r}×`}</button>`).join('')}
       </div>
+      ${d.tracks ? `<div class="tracklist">
+        <p class="player-speed-label">${esc(d.title)} · ${d.tracks.length} tracks</p>
+        <ol>${d.tracks.map((tr, i) => `<li><button type="button" class="track" data-track="${esc(tr.slug)}" data-src="${src(tr)}" data-title="${esc(tr.title)}" data-topic="${esc(tr.topic || s.title)}" data-description="${esc(tr.description)}"${i === 0 ? ' aria-current="true"' : ''}>
+          <span class="track-no">${tr.number ?? i + 1}</span>
+          <span class="track-text"><strong>${esc(tr.title)}</strong>${tr.topic ? `<small>${esc(tr.topic)}</small>` : ''}</span>
+          ${tr.duration ? `<span class="track-time">${fmtDuration(tr.duration)}</span>` : ''}
+        </button></li>`).join('')}</ol>
+      </div>` : ''}
     </section></div>`;
   } else {
     stage = `<div class="vscroll"><pre class="prose reader text-reader">${esc(d.text)}</pre></div>`;
@@ -627,7 +640,7 @@ ${GILT_DEFS}
       ${d.tags.length ? `<ul class="tag-list">${d.tags.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
       <div class="vpanel-actions">
         <a class="btn btn-primary" href="${fileUrl}" download="${esc(d.filename)}">${icon('download')} Download ${esc(d.format.label)}</a>
-        ${isFrame || isAudio ? `<a class="btn btn-ghost" href="${fileUrl}" target="_blank" rel="noopener">${icon('external-link')} Open in new tab</a>` : `<button class="btn btn-ghost" type="button" data-print>${icon('printer')} Print</button>`}
+        ${d.tracks ? '' : isFrame || isAudio ? `<a class="btn btn-ghost" href="${fileUrl}" target="_blank" rel="noopener">${icon('external-link')} Open in new tab</a>` : `<button class="btn btn-ghost" type="button" data-print>${icon('printer')} Print</button>`}
       </div>
       ${related.length ? `<h3 class="vpanel-sub">More in ${esc(s.title)}</h3><ul class="doc-rows">${related.map((x) => docRow(ctx, root, x)).join('')}</ul>` : ''}
     </div>
@@ -1101,6 +1114,7 @@ export function openapi(config) {
             title: { type: 'string' }, description: { type: 'string' }, type: { type: 'string' }, typeLabel: { type: 'string' },
             format: { type: 'string' }, mimeType: { type: 'string' }, originalFilename: { type: 'string' },
             tags: { type: 'array', items: { type: 'string' } }, questions: { type: ['integer', 'null'] },
+            tracks: { type: ['array', 'null'], description: 'Playlists only: the tracks in play order.', items: { type: 'object', properties: { number: { type: ['integer', 'null'] }, title: { type: 'string' }, topic: { type: 'string' }, description: { type: 'string' }, durationSeconds: { type: ['integer', 'null'] }, sizeBytes: { type: 'integer' }, url: { type: 'string' } } } },
             sizeBytes: { type: 'integer' }, updated: { type: 'string', format: 'date-time' },
             headings: { type: 'array', items: { type: 'string' } },
             urls: { type: 'object', properties: { page: { type: 'string' }, file: { type: 'string' }, download: { type: 'string' }, text: { type: 'string' }, json: { type: 'string' } } },
