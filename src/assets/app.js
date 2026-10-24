@@ -48,6 +48,75 @@ if (courseBrowser) {
   if (choices.length) selectCourse(choices[0].dataset.courseChoice);
 }
 
+// Material wheel (homepage course preview): one slice per document type. A tap anywhere on a
+// slice picks it (worked out from the angle, so the whole slice is the target), arrow keys walk
+// the ring, and the hub's arrows step through that type's documents.
+$$('[data-wheel]').forEach(wheel => {
+  const slots = $$('[data-wheel-type]', wheel);
+  const slices = $$('[data-wheel-slice]', wheel);
+  const types = slots.map(slot => slot.dataset.wheelType);
+  const usable = slot => slot.getAttribute('aria-disabled') !== 'true';
+  const page = new Map(types.map(type => [type, 0]));
+  const group = type => $(`[data-wheel-group="${type}"]`, wheel);
+  let current = (slots.find(slot => slot.getAttribute('aria-checked') === 'true') || slots[0]).dataset.wheelType;
+
+  function show(type, index) {
+    const docs = $$('[data-wheel-doc]', group(type));
+    if (!docs.length) return;
+    const n = (index + docs.length) % docs.length;
+    page.set(type, n);
+    docs.forEach((doc, i) => { doc.hidden = i !== n; });
+    const pos = $('[data-wheel-pos]', group(type));
+    if (pos) pos.textContent = n + 1;
+    $('[data-wheel-open]', group(type)).href = $('.wheel-title', docs[n]).href;
+  }
+  function pick(type, focus = false) {
+    const slot = slots[types.indexOf(type)];
+    if (!slot || !usable(slot)) return;
+    current = type;
+    slots.forEach(s => { const on = s === slot; s.setAttribute('aria-checked', String(on)); s.tabIndex = on ? 0 : -1; });
+    slices.forEach(s => s.classList.toggle('is-on', s.dataset.wheelSlice === type));
+    types.forEach(t => { group(t).hidden = t !== type; });
+    show(type, page.get(type));
+    if (focus) slot.focus();
+  }
+  // Which slice sits under a pointer, or null over the hub and outside the ring.
+  function sliceAt(event) {
+    const box = wheel.getBoundingClientRect();
+    const x = event.clientX - box.left - box.width / 2, y = event.clientY - box.top - box.height / 2;
+    const r = Math.hypot(x, y) / (box.width / 2);
+    if (r < 118 / 200 || r > 1) return null;
+    const step = 360 / types.length;
+    const deg = (Math.atan2(y, x) * 180 / Math.PI + 90 + step / 2 + 360) % 360;
+    return types[Math.floor(deg / step) % types.length];
+  }
+  wheel.addEventListener('click', event => {
+    if (event.target.closest('a, .wheel-step')) return;
+    const type = event.target.closest('[data-wheel-type]')?.dataset.wheelType || sliceAt(event);
+    if (type) pick(type);
+  });
+  wheel.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'mouse') return;
+    const type = sliceAt(event);
+    const live = Boolean(type) && usable(slots[types.indexOf(type)]);
+    slices.forEach(s => s.classList.toggle('is-hover', live && s.dataset.wheelSlice === type));
+    wheel.style.cursor = live ? 'pointer' : '';
+  });
+  wheel.addEventListener('pointerleave', () => slices.forEach(s => s.classList.remove('is-hover')));
+  slots.forEach((slot, i) => slot.addEventListener('keydown', event => {
+    const dir = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[event.key];
+    if (!dir) return;
+    event.preventDefault();
+    for (let k = 1; k < slots.length; k++) {
+      const next = slots[(i + dir * k + slots.length * k) % slots.length];
+      if (usable(next)) { pick(next.dataset.wheelType, true); break; }
+    }
+  }));
+  $$('[data-wheel-step]', wheel).forEach(button => button.addEventListener('click', () => {
+    show(current, page.get(current) + Number(button.dataset.wheelStep));
+  }));
+});
+
 let fusePromise;
 const loadFuse = () => (fusePromise ||= import('./vendor-fuse.min.mjs').then((m) => m.default));
 let indexPromise;

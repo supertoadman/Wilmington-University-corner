@@ -221,7 +221,7 @@ kbd {
   color: #daaf46; font: 600 23px/1 var(--font-serif); text-decoration: none;
   box-shadow: inset 0 0 0 1px rgba(236, 200, 116, .55), inset 0 1px 0 rgba(255,255,255,.12), 0 2px 6px -2px rgba(12, 22, 40, .5);
 }
-.logo { display: block; background: url("statues/socrates-classical.png") center / contain no-repeat; }
+.logo { display: block; background: url("statues/socrates-david-v8.png") center / contain no-repeat; }
 .brand-mark .logo { width: 86%; height: 86%; filter: drop-shadow(0 1px 1px rgba(0, 0, 0, .55)); }
 .brand-text { display: flex; flex-direction: column; line-height: 1.1; }
 .brand-name { font: 600 18px/1.15 var(--font-serif); letter-spacing: -.01em; }
@@ -510,7 +510,7 @@ a.brand-mark:hover::after {
 
 /* ---------- Reading room: homepage cover ---------- */
 /* The cover is navy in both themes: day brings a warm dawn light, night a cool moonlit one,
-   and the archangels flanking Socrates turn to their fallen counterparts. */
+   and the archangels flanking the emblem turn to their fallen counterparts. */
 .page-home { --strip-h: 46px; }
 /* In-page links on the homepage clear the header and its shortcut strip. */
 html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); }
@@ -556,8 +556,8 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
   }
 }
 /* The chosen scene sits behind the cover under a navy veil: dense where the copy is, thinner
-   behind Socrates so the place shows through, and dense again under the stats line. */
-/* Oversized and anchored left, so each scene's centrepiece (eclipse, sun, valley) lands behind Socrates. */
+   behind the emblem so the place shows through, and dense again under the stats line. */
+/* Oversized and anchored left, so each scene's centrepiece (eclipse, sun, valley) lands behind the emblem. */
 .cover-scene { position: absolute; inset: 0; z-index: -1; pointer-events: none; background: var(--scene-archive) 0% 46% / max(140%, 1100px) auto no-repeat; animation: scene-in 1.2s ease both; }
 :root[data-scene="sanctuary"] .cover-scene { background-image: var(--scene-sanctuary); }
 :root[data-scene="grove"] .cover-scene { background-image: var(--scene-grove); }
@@ -604,7 +604,7 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
 .cover-actions a { display: inline-flex; align-items: center; gap: 10px; color: #e8c887; text-decoration: none; font-size: 14px; font-weight: 600; }
 .cover-actions a:hover { color: #f6dda6; }
 .cover-actions > span { font-size: 12.5px; color: #cfd6e0; }
-/* Triptych: Socrates in the arch, an archangel standing guard on either side. */
+/* Triptych: the Socrates emblem in the arch, an archangel standing guard on either side. */
 .cover-art { position: relative; margin: 0; height: 300px; isolation: isolate; }
 .cover-arch { position: absolute; z-index: 1; left: 50%; bottom: 8px; width: 232px; height: 284px; transform: translateX(-50%); border: 1px solid #aa895755; border-radius: 120px 120px 0 0; background: radial-gradient(ellipse at 50% 62%, #4f6c9638, transparent 70%), rgba(10, 19, 34, .35); }
 .cover-arch::before { content: ""; position: absolute; inset: 11px; border: 1px solid #aa895728; border-radius: inherit; }
@@ -683,21 +683,85 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
 .page-home .course-preview { min-width: 0; }
 .page-home .course-preview:focus { outline: none; }
 .page-home .course-preview-intro { margin: 0; padding: 40px 24px; border: 1px dashed var(--border-strong); border-radius: var(--radius-lg); color: var(--muted); text-align: center; }
-.course-preview .subject-panel-head { padding: 22px 22px 0; gap: 14px; }
-.course-preview .subject-panel-icon { width: 52px; height: 56px; background: none; box-shadow: none; }
-.course-preview .subject-panel-icon .statue { width: 52px; height: 56px; }
-.course-preview .subject-panel-title .h { font-size: 28px; }
-.course-preview .subject-panel-title .s { font-size: 13px; }
-.course-preview .round-arrow { width: 36px; height: 36px; }
-.course-preview .subject-panel-desc { margin: 12px 22px 18px; font-size: 14.5px; line-height: 1.6; }
-.subject-group h3 { display: flex; justify-content: space-between; margin: 0 22px 2px; padding-top: 12px; border-top: 1px solid var(--border); color: var(--gold-ink, var(--gold)); font: 700 11.5px var(--font-sans); letter-spacing: .1em; text-transform: uppercase; }
-.subject-group h3 span { color: var(--muted); }
-.course-preview .doc-rows { padding: 0 12px 8px; }
-.course-preview .doc-row { min-height: 56px; padding: 9px 10px; gap: 12px; }
-.course-preview .doc-row .tile { width: 32px; height: 34px; background: none; box-shadow: none; }
-.course-preview .doc-row-text strong { font-size: 15px; }
-.course-preview .doc-row-text small { font-size: 12.5px; }
-.course-preview .preview-count { margin: 4px 22px 10px; color: var(--muted); font-size: 12.5px; }
+/* Material wheel: the chosen course's materials on a ring of slices, one per type. The picked
+   slice lights up in the course colour with a gold arc on its rim; the hub steps through it. */
+.wheel-course { padding: 20px 22px 22px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--bg-elev); }
+.wheel-course-head { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.wheel-course-icon { flex: none; width: 52px; height: 56px; display: grid; place-items: center; }
+.wheel-course-icon .statue { width: 52px; height: 56px; }
+.wheel-course-text { flex: 1; min-width: 0; display: grid; gap: 3px; }
+.wheel-course-text .h { font: 600 28px/1.15 var(--font-serif); letter-spacing: -.01em; }
+.wheel-course-text .s { font-size: 13px; color: var(--muted); }
+.wheel-course .round-arrow { width: 36px; height: 36px; }
+.wheel { position: relative; container-type: inline-size; width: min(100%, 470px, 68vh); aspect-ratio: 1; margin: 14px auto 0; touch-action: manipulation; -webkit-tap-highlight-color: transparent; }
+.wheel-ring { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; filter: drop-shadow(0 18px 28px rgba(5, 9, 17, .28)); }
+.wheel-slice { cursor: pointer; }
+.wheel-slice.is-empty { cursor: default; }
+.wheel-fill {
+  fill: color-mix(in srgb, var(--accent) 9%, var(--surface)); stroke: color-mix(in srgb, var(--gold) 26%, transparent); stroke-width: 1;
+  transition: fill .2s;
+}
+.wheel-slice.is-hover .wheel-fill { fill: color-mix(in srgb, var(--accent) 24%, var(--surface)); }
+.wheel-slice.is-empty .wheel-fill { fill: color-mix(in srgb, var(--surface-2) 70%, transparent); stroke: var(--border); }
+.wheel-slice.is-on .wheel-fill { fill: color-mix(in srgb, var(--accent) 62%, #9fb6d4); stroke: color-mix(in srgb, var(--gold) 55%, transparent); }
+.wheel-arc { fill: none; stroke: var(--gold); stroke-width: 7; stroke-linecap: round; opacity: 0; transition: opacity .2s; }
+.wheel-slice.is-on .wheel-arc { opacity: 1; filter: drop-shadow(0 0 6px color-mix(in srgb, var(--gold) 60%, transparent)); }
+.wheel-slots { position: absolute; inset: 0; pointer-events: none; }
+.wheel-slot {
+  position: absolute; width: 19%; height: 19%; transform: translate(-50%, -50%); pointer-events: auto;
+  display: grid; place-items: center; align-content: center; gap: 2px; padding: 0; border: 0; border-radius: 50%;
+  background: none; color: var(--text); cursor: pointer; transition: transform .2s;
+}
+.wheel-slot .statue { width: 10.5cqw; height: 11.5cqw; filter: drop-shadow(0 2px 3px rgba(0, 0, 0, .4)); }
+.wheel-slot[aria-checked="true"] { transform: translate(-50%, -50%) scale(1.1); }
+.wheel-slot[aria-disabled="true"] { cursor: default; opacity: .4; }
+.wheel-slot:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.wheel-count { font: 700 clamp(11px, 3.2cqw, 14px)/1 var(--font-sans); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
+.wheel-slot[aria-checked="true"] .wheel-count { color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .5); }
+:root[data-theme="light"] .wheel-slot[aria-checked="true"] .wheel-count { color: var(--text); text-shadow: none; }
+.wheel-hub {
+  position: absolute; left: 50%; top: 50%; width: 56%; aspect-ratio: 1; transform: translate(-50%, -50%);
+  display: grid; place-items: center; padding: 9%; border-radius: 50%; text-align: center;
+}
+.wheel-group { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; width: 100%; }
+.wheel-group[hidden], .wheel-doc[hidden] { display: none; }
+.wheel-type { margin: 0; color: var(--gold-ink, var(--gold)); font: 700 11px var(--font-sans); letter-spacing: .12em; text-transform: uppercase; }
+.wheel-doc { display: grid; gap: 4px; min-width: 0; width: 100%; }
+.wheel-title {
+  font: 600 18px/1.25 var(--font-serif); letter-spacing: -.01em; color: var(--text); text-decoration: none;
+  display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+}
+.wheel-title:hover { color: var(--gold-ink, var(--gold)); }
+.wheel-meta, .wheel-none { margin: 0; font-size: 12px; color: var(--muted); }
+.wheel-pager { display: inline-flex; align-items: center; gap: 10px; font: 600 15px var(--font-sans); font-variant-numeric: tabular-nums; }
+.wheel-step {
+  width: 32px; height: 32px; display: grid; place-items: center; padding: 0; border-radius: 50%;
+  border: 1px solid var(--border-strong); background: var(--surface); color: var(--gold-ink, var(--gold)); cursor: pointer; transition: border-color .15s, background .15s;
+}
+.wheel-step:hover { border-color: var(--gold); background: var(--surface-2); }
+.wheel-step .icon { width: 16px; height: 16px; }
+.wheel-step .flip { transform: scaleX(-1); }
+.wheel-open {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 14px; border-radius: 999px;
+  background: var(--gold-2); color: #1b1408; font-size: 13px; font-weight: 700; text-decoration: none;
+}
+.wheel-open:hover { background: var(--gold); }
+.wheel-open .icon { width: 14px; height: 14px; }
+.wheel-hint { margin: 16px auto 0; max-width: 46ch; text-align: center; font-size: 13px; color: var(--muted); }
+.wheel-all { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--gold-ink, var(--gold)); text-decoration: none; }
+.wheel-all .icon { width: 15px; height: 15px; }
+@media (max-width: 520px) {
+  .wheel-course { padding: 16px 12px 18px; }
+  .wheel-course-text .h { font-size: 23px; }
+  .wheel-hub { width: 58%; padding: 6%; }
+  .wheel-group { gap: 6px; }
+  .wheel-title { font-size: 15px; -webkit-line-clamp: 2; }
+  .wheel-meta { font-size: 11px; }
+  .wheel-count { font-size: 11.5px; }
+  .wheel-step { width: 28px; height: 28px; }
+  .wheel-pager { font-size: 13px; gap: 8px; }
+  .wheel-open { min-height: 28px; padding: 0 12px; font-size: 12px; }
+}
 @media (max-width: 800px) {
   .page-home .course-browser { grid-template-columns: 1fr; }
   .page-home .course-directory { position: static; }
@@ -707,12 +771,6 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
   .cover-courses { padding-top: 30px; }
   .cover-courses .section-head { align-items: start; flex-direction: column; gap: 10px; }
   .format-shortcuts > span { width: 100%; }
-  .course-preview .subject-panel-head { padding: 18px 16px 0; }
-  .course-preview .subject-panel-title .h { font-size: 24px; }
-  .course-preview .subject-panel-desc { margin: 10px 16px 14px; }
-  .subject-group h3 { margin: 0 16px 2px; }
-  .course-preview .doc-rows { padding: 0 6px 6px; }
-  .course-preview .preview-count { margin: 4px 16px 10px; }
 }
 
 /* ---------- Hero ---------- */
@@ -739,7 +797,7 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
   position: absolute; z-index: -1; right: -2%; bottom: -26%; pointer-events: none;
   font: 400 clamp(280px, 40vw, 560px)/1 var(--font-serif); color: rgba(241, 217, 160, .05);
 }
-.hero-mark .logo { width: .8em; height: .8em; background-image: url("statues/socrates-classical-lg.png"); opacity: .14; }
+.hero-mark .logo { width: .8em; height: .8em; background-image: url("statues/socrates-david-v8-lg.png"); opacity: .14; }
 /* A shaft of warm light falling from the top-right glow, with dust motes drifting
    through it (canvas, drawn by app.js, which mirrors the beam's 28deg tilt). */
 .hero-beam {

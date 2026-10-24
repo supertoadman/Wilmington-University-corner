@@ -45,7 +45,7 @@ const GILT_DEFS = '<svg width="0" height="0" style="position:absolute" aria-hidd
   + '<linearGradient id="gilt-deep" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#d9ac4c"/><stop offset=".45" stop-color="#a87b22"/><stop offset=".62" stop-color="#c39437"/><stop offset="1" stop-color="#7a5414"/></linearGradient>'
   + '</defs></svg>';
 
-// Site logo: the Sanctum Run-inspired classical Socrates head (painted by styles.css).
+// Site logo: the youthful marble Socrates with blue light (painted by styles.css).
 const LOGO = '<span class="logo" aria-hidden="true"></span>';
 
 // Structured outlines stand between two marble archangels (their fallen counterparts at night).
@@ -94,14 +94,14 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-title" content="${esc(config.shortTitle)}">
-<link rel="icon" href="${root}assets/statues/socrates-classical-favicon.png" type="image/png" sizes="32x32">
-<link rel="apple-touch-icon" href="${root}assets/statues/socrates-classical-touch.png">
+<link rel="icon" href="${root}assets/statues/socrates-david-v8-favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="${root}assets/statues/socrates-david-v8-touch.png">
 <link rel="alternate" type="application/json" title="Catalog (JSON)" href="${root}api/catalog.json">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="${root}assets/styles.css">
-<script>(function(){var d=document.documentElement;d.dataset.theme='dark';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off',s=localStorage.getItem('scene');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;if(s)d.dataset.scene=s;}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement;d.dataset.theme='light';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off',s=localStorage.getItem('scene');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;if(s)d.dataset.scene=s;}catch(e){}})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
 ${extraHead}`;
 }
@@ -289,22 +289,57 @@ function docRow(ctx, root, d, extra = '') {
   </a></li>`;
 }
 
-function subjectPanel(ctx, root, s) {
-  const shown = s.documents.slice(0, 6);
-  const stats = subjectStats(s);
-  return `<article class="subject-panel" style="--accent:${s.accent}">
-  <a class="subject-panel-head" href="${root}subjects/${s.slug}/">
-    <span class="subject-panel-icon">${icon(s.icon)}</span>
-    <span class="subject-panel-title">
-      <span class="h">${esc(s.title)}</span>
-      <span class="s">${stats.map(esc).join(' · ')}</span>
-    </span>
+// Material wheel: once a course is picked, its materials sit on a ring of slices, one per
+// document type (every type keeps its slot; empty ones are dimmed). The hub names the chosen
+// type and steps through its documents. app.js drives it; every document stays a plain link.
+const WHEEL = { size: 400, outer: 194, inner: 118, gap: 1.6 };
+const polar = (r, deg) => {
+  const a = (deg * Math.PI) / 180;
+  return `${(WHEEL.size / 2 + r * Math.cos(a)).toFixed(2)} ${(WHEEL.size / 2 + r * Math.sin(a)).toFixed(2)}`;
+};
+const sector = (from, to, r1, r2) => {
+  const large = to - from > 180 ? 1 : 0;
+  return `M${polar(r2, from)}A${r2} ${r2} 0 ${large} 1 ${polar(r2, to)}L${polar(r1, to)}A${r1} ${r1} 0 ${large} 0 ${polar(r1, from)}Z`;
+};
+const arc = (from, to, r) => `M${polar(r, from)}A${r} ${r} 0 ${to - from > 180 ? 1 : 0} 1 ${polar(r, to)}`;
+
+function materialWheel(ctx, root, s) {
+  const { TYPES, P } = ctx;
+  const slots = Object.entries(TYPES).map(([type, meta]) => ({ type, meta, docs: s.documents.filter((d) => d.type === type) }));
+  const step = 360 / slots.length;
+  const first = slots.find((x) => x.docs.length) || slots[0];
+  const hub = `wheel-${s.slug}`;
+  const mid = (WHEEL.outer + WHEEL.inner) / 2;
+  const docMeta = (d) => [d.format.label, d.questions ? `${d.questions} questions` : null, d.tracks ? plural(d.tracks.length, 'track') : null].filter(Boolean).join(' · ');
+  const slice = (x, i) => {
+    const c = -90 + i * step, from = c - step / 2 + WHEEL.gap / 2, to = c + step / 2 - WHEEL.gap / 2;
+    return `<g class="wheel-slice${x.docs.length ? '' : ' is-empty'}${x === first ? ' is-on' : ''}" data-wheel-slice="${x.type}"><path class="wheel-fill" d="${sector(from, to, WHEEL.inner, WHEEL.outer)}"/><path class="wheel-arc" d="${arc(from + .8, to - .8, WHEEL.outer - 5)}"/></g>`;
+  };
+  const slot = (x, i) => {
+    const c = ((-90 + i * step) * Math.PI) / 180, r = (mid / WHEEL.size) * 100, on = x === first;
+    return `<button type="button" class="wheel-slot" role="radio" aria-checked="${on}" tabindex="${on ? 0 : -1}" data-wheel-type="${x.type}" style="left:${(50 + r * Math.cos(c)).toFixed(2)}%;top:${(50 + r * Math.sin(c)).toFixed(2)}%"${x.docs.length ? '' : ' aria-disabled="true"'} aria-controls="${hub}" aria-label="${esc(x.meta.plural)}: ${plural(x.docs.length, 'document')}" title="${esc(x.meta.plural)}">${icon(x.meta.icon)}<span class="wheel-count">${x.docs.length}</span></button>`;
+  };
+  const group = (x) => `<div class="wheel-group" data-wheel-group="${x.type}"${x === first ? '' : ' hidden'}>
+        <p class="wheel-type">${esc(x.meta.plural)}</p>
+        ${x.docs.length ? x.docs.map((d, n) => `<div class="wheel-doc" data-wheel-doc${n ? ' hidden' : ''}><a class="wheel-title" href="${root}${P.doc(d)}">${esc(d.title)}</a><p class="wheel-meta">${esc(docMeta(d))}</p></div>`).join('') : '<p class="wheel-none">Nothing here yet for this course.</p>'}
+        ${x.docs.length > 1 ? `<div class="wheel-pager"><button type="button" class="wheel-step" data-wheel-step="-1" aria-label="Previous">${icon('chevron-right', 'flip')}</button><span class="wheel-pos"><span data-wheel-pos>1</span> / ${x.docs.length}</span><button type="button" class="wheel-step" data-wheel-step="1" aria-label="Next">${icon('chevron-right')}</button></div>` : ''}
+        ${x.docs.length ? `<a class="wheel-open" href="${root}${P.doc(x.docs[0])}" data-wheel-open>Open ${icon('arrow-right')}</a>` : ''}
+      </div>`;
+  return `<article class="wheel-course" style="--accent:${s.accent}">
+  <a class="wheel-course-head" href="${root}${P.subject(s)}">
+    <span class="wheel-course-icon">${icon(s.icon)}</span>
+    <span class="wheel-course-text"><span class="h">${esc(s.title)}</span><span class="s">${subjectStats(s).map(esc).join(' · ')}</span></span>
     <span class="round-arrow" aria-hidden="true">${icon('arrow-up-right')}</span>
   </a>
-  <p class="subject-panel-desc">${esc(s.description)}</p>
-  ${Object.entries(ctx.TYPES).filter(([type]) => shown.some(d => d.type === type)).map(([type, meta]) => `<div class="subject-group"><h3>${esc(meta.plural)} <span>${shown.filter(d => d.type === type).length}</span></h3><ul class="doc-rows">${shown.filter(d => d.type === type).map(d => docRow(ctx, root, d)).join('')}</ul></div>`).join('')}
-  ${!s.documents.length ? '<p class="preview-count">No documents yet.</p>' : shown.length < s.documents.length ? `<p class="preview-count">Showing ${shown.length} of ${s.documents.length} documents</p>` : ''}
-  <a class="subject-panel-more" href="${root}subjects/${s.slug}/">${shown.length < s.documents.length ? `View all ${s.documents.length} documents` : 'Open the course page'} ${icon('arrow-right')}</a>
+  <div class="wheel" data-wheel>
+    <svg class="wheel-ring" viewBox="0 0 ${WHEEL.size} ${WHEEL.size}" aria-hidden="true" focusable="false">${slots.map(slice).join('')}</svg>
+    <div class="wheel-slots" role="radiogroup" aria-label="${esc(s.title)} materials">${slots.map(slot).join('')}</div>
+    <div class="wheel-hub" id="${hub}" aria-live="polite">
+      ${slots.map(group).join('')}
+    </div>
+  </div>
+  <p class="wheel-hint">Pick a slice to choose a kind of material. Use the arrows to flip through it.</p>
+  <a class="wheel-all" href="${root}${P.subject(s)}">View all ${plural(s.documents.length, 'document')} in ${esc(s.title)} ${icon('arrow-right')}</a>
 </article>`;
 }
 
@@ -416,7 +451,7 @@ export function home(ctx) {
     <figure class="cover-art" aria-hidden="true">
       <span class="cover-wing cover-wing-l"></span>
       <span class="cover-arch"></span>
-      <img src="${root}assets/statues/socrates-classical-lg.png" alt="" width="640" height="640" fetchpriority="high">
+      <img src="${root}assets/statues/socrates-david-v8-lg.png" alt="" width="640" height="640" fetchpriority="high">
       <span class="cover-wing cover-wing-r"></span>
     </figure>
   </div>
@@ -428,7 +463,7 @@ export function home(ctx) {
   <nav class="format-shortcuts" aria-label="Browse by document type"><span>Browse by format</span>${Object.entries(ctx.TYPES).filter(([type]) => docs.some(d => d.type === type)).map(([type, meta]) => `<a href="${root}library/?type=${type}">${icon(meta.icon)}${esc(meta.plural)} <small>${docs.filter(d => d.type === type).length}</small></a>`).join('')}</nav>
   <div class="course-browser" data-course-browser>
     <div class="course-directory"><label class="course-find" hidden data-course-find>Find a course<input type="search" placeholder="Search course names…" data-course-query></label><p class="directory-count" data-course-count>${subjects.length} courses</p><div class="course-options">${subjects.map(s => `<a class="course-option" href="${root}${ctx.P.subject(s)}" data-course-choice="${esc(s.slug)}" data-course-name="${esc(s.title)}" title="${esc(s.title)}">${icon(s.icon)}<span><span class="course-name">${esc(s.title)}</span><small>${plural(s.documents.length, 'document')}</small></span>${icon('chevron-right')}</a>`).join('')}</div><p hidden data-course-empty>No courses match. Try another name.</p></div>
-    <div class="course-preview comprehensive-subjects" id="course-preview" tabindex="-1"><p class="course-preview-intro">Select a course to preview its materials, or open its full collection.</p>${subjects.map(s => `<div data-course-panel="${esc(s.slug)}" hidden>${subjectPanel(ctx, root, s)}</div>`).join('')}</div>
+    <div class="course-preview comprehensive-subjects" id="course-preview" tabindex="-1"><p class="course-preview-intro">Select a course to preview its materials, or open its full collection.</p>${subjects.map(s => `<div data-course-panel="${esc(s.slug)}" hidden>${materialWheel(ctx, root, s)}</div>`).join('')}</div>
   </div>
   ${ctx.game?.total ? shuffleBand(ctx, root) + playBand(ctx, root) : ''}
 </section>

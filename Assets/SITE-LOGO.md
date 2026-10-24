@@ -1,10 +1,10 @@
 # Wilmington University Corner — Site Logo
 
-Designated site logo: `site-logo-socrates-classical-v4.png` (prompt: `site-logo-socrates-classical-v4-prompt.md`)
+Designated site logo: `site-logo-socrates-david-v8.png` (prompt: `site-logo-socrates-david-v8-prompt.md`)
 
-Current revision (v4): a painterly classical-fantasy young Socrates in ivory, silver and antique gold, with a small laurel and an emerald drapery edge, matching the Sanctum Run sprites. It is the site header logo, the home page hero, the browser and home-screen icons, and the link-preview image. Site exports live in `src/assets/statues/socrates-classical*.png` (192 px logo, 640 px hero, 180 px touch icon, 32 px favicon) and `src/assets/og-image.png` (1200 × 630 on #0c2251).
+Current revision (v8): a youthful marble Socrates with curls, a single gold laurel sprig, lapis drapery with a gold edge, and a blue glow. It is the site header logo, the home page hero, the browser and home-screen icons, and the link-preview image. Site exports live in `src/assets/statues/socrates-david-v8*.png` (192 px logo, 640 px hero, 180 px touch icon, 32 px favicon) and `src/assets/og-image.png` (1200 × 630 on #0c2251).
 
-Earlier revisions, no longer used on the site: v2 (`wilmington-university-corner-site-logo-young-socrates-v2.png`, described below) and the original bald version.
+Earlier revisions, no longer used on the site: v4 (`site-logo-socrates-classical-v4.png`), v2 (`wilmington-university-corner-site-logo-young-socrates-v2.png`, described below) and the original bald version.
 
 ## v2 (superseded)
 
