@@ -1,0 +1,1621 @@
+{
+  "schemaVersion": "1.0",
+  "site": {
+    "title": "Wilmington University Corner",
+    "description": "A law school study library: outlines, rule charts, flowcharts, flashcards, and practice question banks you can open in the browser or download.",
+    "url": "https://supertoadman.github.io/Wilmington-University-corner/",
+    "repository": "https://github.com/supertoadman/Wilmington-University-corner",
+    "generatedAt": "2026-10-24T18:51:02.451Z"
+  },
+  "types": {
+    "outline": {
+      "label": "Outline"
+    },
+    "rule-chart": {
+      "label": "Rule Chart"
+    },
+    "flowcharts": {
+      "label": "Flowcharts"
+    },
+    "flashcards": {
+      "label": "Flashcards"
+    },
+    "practice": {
+      "label": "Practice Questions"
+    },
+    "music": {
+      "label": "Music"
+    },
+    "document": {
+      "label": "Document"
+    }
+  },
+  "subjects": [
+    {
+      "id": "evidence",
+      "slug": "evidence",
+      "title": "Evidence",
+      "description": "Federal Rules of Evidence, Weeks 1–5: relevance and 403, the policy exclusions, character evidence, 404(b), impeachment, and jury secrecy. Includes the rule chart, flowcharts, flashcards, and bar-style practice questions.",
+      "accent": "#2f6f8f",
+      "documentCount": 8,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/evidence.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-all-files.zip"
+      },
+      "documents": [
+        "evidence/evidence-rule-chart",
+        "evidence/evidence-rule-flowcharts",
+        "evidence/fre-rule-cards",
+        "evidence/evidence-rules-drill",
+        "evidence/evidence-case-files",
+        "evidence/evidence-case-files-ii",
+        "evidence/evidence-mock-midterm",
+        "evidence/evidence-mock-midterm-ii"
+      ]
+    },
+    {
+      "id": "professional-responsibility",
+      "slug": "professional-responsibility",
+      "title": "Professional Responsibility",
+      "description": "Model Rules of Professional Conduct and MPRE prep, Weeks 1–5 (Chs. 1–9, 20, 21): forming the client-lawyer relationship, competence, confidentiality, conflicts, and the duties that follow a representation from start to finish.",
+      "accent": "#8a2e3b",
+      "documentCount": 4,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/professional-responsibility.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/professional-responsibility-all-files.zip"
+      },
+      "documents": [
+        "professional-responsibility/pr-outline",
+        "professional-responsibility/mpre-drill-v3",
+        "professional-responsibility/mpre-500-course-subset",
+        "professional-responsibility/pr-course-quiz"
+      ]
+    },
+    {
+      "id": "con-law-ii",
+      "slug": "con-law-ii",
+      "title": "Con Law II",
+      "description": "Constitutional Law II: the First Amendment, Chapters 1–6. Covers the Religion Clauses, the speech framework, incitement and national security, true threats and speech integral to crime, and immoral speech, including obscenity, child pornography, and indecency.",
+      "accent": "#5b4b8a",
+      "documentCount": 10,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/con-law-ii.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/con-law-ii-all-files.zip"
+      },
+      "documents": [
+        "con-law-ii/first-amendment-outline",
+        "con-law-ii/first-amendment-flowcharts",
+        "con-law-ii/first-amendment-drill",
+        "con-law-ii/first-amendment-case-files",
+        "con-law-ii/first-amendment-case-flash-cards",
+        "con-law-ii/first-amendment-concept-flash-cards",
+        "con-law-ii/first-amendment-mock-exam",
+        "con-law-ii/first-amendment-case-repetition",
+        "con-law-ii/first-amendment-case-repetition-vol-2",
+        "con-law-ii/first-amendment-essay-questions"
+      ]
+    },
+    {
+      "id": "sales-and-leases",
+      "slug": "sales-and-leases",
+      "title": "Sales and Leases",
+      "description": "Sales and Leases of Goods under UCC Articles 1 and 2, Weeks 1–8 (Sepinuck, Chapters 1–6). Covers which law governs, formation and the battle of the forms, the statute of frauds, warranties and disclaimers, gap fillers, delivery and risk of loss, remedies, the parol evidence rule, assignment and delegation, repudiation, and excuse.",
+      "accent": "#3f6b4a",
+      "documentCount": 3,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/sales-and-leases.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-all-files.zip"
+      },
+      "documents": [
+        "sales-and-leases/sales-and-leases-outline",
+        "sales-and-leases/sales-and-leases-bar-questions",
+        "sales-and-leases/sales-and-leases-practice-exams"
+      ]
+    },
+    {
+      "id": "agency-and-partnership",
+      "slug": "agency-and-partnership",
+      "title": "Agency & Partnership",
+      "description": "Business Associations, Weeks 1–8 (Bainbridge, Park & Rodrigues, 6th ed.). Covers creating an agency, actual and apparent authority, ratification and estoppel, a principal's tort liability, agents' fiduciary duties, choosing an entity, partnership formation under the UPA and RUPA, partners' rights, authority and duties, dissociation and dissolution, loss sharing, buyout agreements, limited partnerships, and LLCs.",
+      "accent": "#2d4e88",
+      "documentCount": 4,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/agency-and-partnership/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/agency-and-partnership.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-all-files.zip"
+      },
+      "documents": [
+        "agency-and-partnership/agency-and-partnership-outline",
+        "agency-and-partnership/agency-and-partnership-bar-questions",
+        "agency-and-partnership/agency-and-partnership-practice-exams",
+        "agency-and-partnership/agency-and-partnership-playlist"
+      ]
+    },
+    {
+      "id": "contracts-i",
+      "slug": "contracts-i",
+      "title": "Contracts I",
+      "description": "Contracts I, Weeks 1–9 (Epstein, Markell & Ponoroff, Making and Doing Deals, 7th ed.). Covers whether there is an enforceable agreement, the objective theory of assent, offers and their termination, options and firm offers, methods of acceptance and silence, the mirror-image rule and UCC § 2-207, misunderstanding, indefiniteness and letters of intent, consideration, modification, promissory estoppel, the statute of frauds, duress, and misrepresentation.",
+      "accent": "#7a4a1f",
+      "documentCount": 2,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/contracts-i/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/contracts-i.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/contracts-i/contracts-i-all-files.zip"
+      },
+      "documents": [
+        "contracts-i/contracts-i-outline",
+        "contracts-i/contracts-i-bar-questions"
+      ]
+    },
+    {
+      "id": "civil-procedure",
+      "slug": "civil-procedure",
+      "title": "Civil Procedure",
+      "description": "Civil Procedure, Weeks 1–9 (Spencer, Civil Procedure: A Contemporary Approach, 7th ed., and the Federal Civil Rules Supplement). Covers the court systems and sources of procedural law, personal jurisdiction from Pennoyer through Ford, notice and service of process under Rule 4, federal question, diversity, supplemental and removal jurisdiction, venue, transfer and forum non conveniens, the Erie doctrine through Shady Grove, pleading standards from Conley to Iqbal, Rule 11, and responding to the complaint under Rules 8, 12, and 55.",
+      "accent": "#7a3e65",
+      "documentCount": 2,
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/civil-procedure/",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/civil-procedure.json",
+        "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/civil-procedure/civil-procedure-all-files.zip"
+      },
+      "documents": [
+        "civil-procedure/civil-procedure-outline",
+        "civil-procedure/civil-procedure-bar-questions"
+      ]
+    }
+  ],
+  "documents": [
+    {
+      "id": "evidence/evidence-rule-chart",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rule-chart",
+      "title": "Evidence Rule Chart/outline",
+      "description": "The master rule chart for Weeks 1–5. Each rule is explained in plain English with a note on what to watch out for. Rows tagged by class come from the Class 1–10 lecture slides, and there are notes on what the midterm covers.",
+      "type": "rule-chart",
+      "typeLabel": "Rule Chart",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "2Evidence_Rule_Chart (with class slides).docx",
+      "tags": [
+        "FRE",
+        "rule chart",
+        "midterm",
+        "class slides"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 47380,
+      "updated": "2026-10-04T18:12:36.000Z",
+      "headings": [
+        "Evidence Rule Chart — Weeks 1–5",
+        "Background: The Federal Rules of Evidence (Week 1)",
+        "1. The Jury's Secrecy (Week 1)",
+        "2. General Principles of Relevance (Weeks 1–2)",
+        "Probativeness and Materiality — FRE 401 & 402",
+        "Conditional Relevance — FRE 104(b)",
+        "Probativeness versus the Risk of Unfair Prejudice — FRE 403 & 105",
+        "Rule 403 in action",
+        "3. The Specialized Relevance Rules (Weeks 2–3)",
+        "Subsequent Remedial Measures — FRE 407",
+        "Compromise Offers and Payment of Medical Expenses — FRE 408 & 409",
+        "Pleas in Criminal Cases — FRE 410; Liability Insurance — FRE 411",
+        "4. Character Evidence (Weeks 3–4)",
+        "The Character-Propensity Rule — FRE 404(a)(1) & 404(b)",
+        "Routes Around the Box",
+        "Proof of the Defendant's and the Victim's Character — FRE 404(a)(2)",
+        "Propensity Evidence in Sexual Assault Cases — FRE 413, 414 & 415",
+        "Proving Character — FRE 405(a) & 405(b); Evidence of Habit — FRE 406",
+        "5. Impeachment and Character for Truthfulness (Weeks 4–5)",
+        "Modes of Impeachment",
+        "Impeachment by Opinion, Reputation, and Cross-Examination About Past Lies — FRE 607 & 608",
+        "Impeachment with Past Convictions — FRE 609",
+        "Rehabilitation and Use of Extrinsic Evidence",
+        "Critiques and Empirical Evidence on Rule 609",
+        "6. The Rape Shield Law — FRE 412 (Week 5)",
+        "The Shield Law",
+        "The Law in Force: Constitutional Limits, Civil Cases, Procedure",
+        "7. Plain-English Glossary",
+        "Terms A–L",
+        "Terms M–Z"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rule-chart/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-chart.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-chart.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-chart.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-chart.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-rule-flowcharts",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rule-flowcharts",
+      "title": "Evidence Flowcharts",
+      "description": "Interactive decision charts for Weeks 1–5. Zoom and pan around each chart, walk through a rule one step at a time, and search all nine charts. Covers relevance (401–403), the policy rules (407–411), character evidence, 404(b), impeachment, 609 convictions, the 412 rape shield, and 606(b) jury secrecy.",
+      "type": "flowcharts",
+      "typeLabel": "Flowcharts",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Rule_Flowcharts.html",
+      "tags": [
+        "FRE",
+        "interactive",
+        "401",
+        "403",
+        "404(b)",
+        "609",
+        "412",
+        "606(b)"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 524498,
+      "updated": "2026-10-07T12:20:29.000Z",
+      "headings": [
+        "Rule Flowcharts",
+        "Big picture",
+        "606(b) Jury secrecy",
+        "401-403 Relevance",
+        "407-411 Policy rules",
+        "Character: the box",
+        "404(b) Other acts",
+        "Impeachment",
+        "609 Convictions",
+        "412 Rape shield"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rule-flowcharts/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-flowcharts.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rule-flowcharts.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-flowcharts.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rule-flowcharts.json"
+      }
+    },
+    {
+      "id": "evidence/fre-rule-cards",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "fre-rule-cards",
+      "title": "FRE Rule Cards",
+      "description": "Flashcards for the Federal Rules of Evidence in Weeks 1–5. Pick your topics, flip each card, and rate yourself with a tap or a swipe. Missed cards come back sooner, and your mastery is saved in your browser.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "FRE_Rule_Cards.html",
+      "tags": [
+        "FRE",
+        "flashcards",
+        "spaced review",
+        "swipe"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 141648,
+      "updated": "2026-10-05T00:38:43.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/fre-rule-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/fre-rule-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/fre-rule-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/fre-rule-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/fre-rule-cards.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-rules-drill",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-rules-drill",
+      "title": "Evidence Rules easy Drill",
+      "description": "Conceptual multiple-choice questions for Weeks 1–5, weighted toward the Federal Rules. The answer order reshuffles every time you load the page, so you can't memorize the letters.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Conceptual.html",
+      "tags": [
+        "MCQ",
+        "conceptual",
+        "FRE"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 45730,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "Evidence Rules Drill"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rules-drill/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rules-drill.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-rules-drill.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rules-drill.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-rules-drill.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-case-files",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-case-files",
+      "title": "Evidence BAR style questions 1",
+      "description": "Bar-level application questions for Weeks 1–5. Each question sets two or three rules against each other and turns on a single fact. Every answer choice has its own explanation, and the set includes one-fact variations and a coverage map.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Application (strict).html",
+      "tags": [
+        "MCQ",
+        "application",
+        "bar prep",
+        "variations"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 124524,
+      "updated": "2026-10-20T19:29:12.000Z",
+      "headings": [
+        "Evidence Case Files"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-case-files/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-case-files-ii",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-case-files-ii",
+      "title": "Evidence BAR style questions 2",
+      "description": "A second, all-new set of bar-style application questions covering Classes 1–10. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 157 outline items.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_MCQ_Application (Classes 1-10).html",
+      "tags": [
+        "MCQ",
+        "application",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 177962,
+      "updated": "2026-10-20T19:29:12.000Z",
+      "headings": [
+        "Evidence Case Files II"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-case-files-ii/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files-ii.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-case-files-ii.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files-ii.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-case-files-ii.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-mock-midterm",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-mock-midterm",
+      "title": "Evidence Mock Midterm",
+      "description": "A timed practice exam for the night before the midterm: 60 new bar-style questions on Classes 1–10, in four 15-question parts that each cover every topic at the real exam’s 30-minute pace. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Mock_Midterm.html",
+      "tags": [
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": 60,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 156553,
+      "updated": "2026-10-05T23:54:11.000Z",
+      "headings": [
+        "Evidence Mock Midterm"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-mock-midterm/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm.json"
+      }
+    },
+    {
+      "id": "evidence/evidence-mock-midterm-ii",
+      "subject": "evidence",
+      "subjectTitle": "Evidence",
+      "slug": "evidence-mock-midterm-ii",
+      "title": "Evidence Mock Midterm II",
+      "description": "A second timed practice exam: 60 more new bar-style questions on Classes 1–10, with no fact patterns repeated from the first. It has the same four 15-question parts, each covering every topic at the real exam’s 30-minute pace, and draws on textbook problems the first exam didn’t use. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Evidence_Mock_Midterm_II.html",
+      "tags": [
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Classes 1–10"
+      ],
+      "questions": 60,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 154040,
+      "updated": "2026-10-06T11:01:35.000Z",
+      "headings": [
+        "Evidence Mock Midterm II"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-mock-midterm-ii/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm-ii.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/evidence/evidence-mock-midterm-ii.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm-ii.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/evidence/evidence-mock-midterm-ii.json"
+      }
+    },
+    {
+      "id": "professional-responsibility/pr-outline",
+      "subject": "professional-responsibility",
+      "subjectTitle": "Professional Responsibility",
+      "slug": "pr-outline",
+      "title": "Professional Responsibility Outline",
+      "description": "Exam-prep outline for Weeks 1–5 (Chs. 1–9, 20, 21), organized around the life of a representation. Pinpoint cites point to the readings and class slides, and every rule tested in the practice bank is covered.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "outline_v3.html",
+      "tags": [
+        "Model Rules",
+        "outline",
+        "exam prep"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 143535,
+      "updated": "2026-10-04T18:12:36.000Z",
+      "headings": [
+        "Professional Responsibility: Exam Prep Outline",
+        "Issue-spotting checklist (run on every fact pattern)",
+        "| Ask | Part",
+        "I. The Regulatory Frame",
+        "A. Sources of law [W1:1–2, 19–21]",
+        "B. Admission, character & fitness [W1:21–26, 46]",
+        "C. Where you may practice: UPL, federal courts, choice of law",
+        "D. Discipline [W1:27–29]",
+        "E. Civil liability, disqualification, fees [W1:29–34]",
+        "F. Court sanctions & other law [W1:34–36]",
+        "NEW G. Taxonomy of Professional Woes [W1:36–38; S1:48]",
+        "II. Personal Responsibility, Supervision & Human Factors",
+        "A. The responsibility rules",
+        "B. Why smart people do stupid things",
+        "C. When you mess up, 'fess up [W1:59–61]",
+        "NEW D. Stress, impairment & getting help [W1:62–66; S1:58, 76–77, 122–124]",
+        "III. Forming & Defining the Relationship",
+        "A. Declining [W2:30–34, 63–64]",
+        "B. Forming the relationship [W2:34–37]",
+        "C. Prospective clients: MR 1.18 [W3:3–6; W2:36–37]",
+        "D. Scope & limiting it [W2:37–40, 54–55]",
+        "E. Duties to non-clients [W2:40–46]",
+        "F. Organizational clients & unrepresented persons",
+        "IV. The Lawyer as Fiduciary: Loyalty, Conflicts & Candor",
+        "A. Becoming a fiduciary",
+        "B. The four duties (analyze each separately, in this order) [W4:6–9]",
+        "C. Conflicts rules the banks test",
+        "D. Candor to the client: MR 1.4 [W4:9–14]",
+        "V. Competence, Diligence & Care",
+        "A. Competence: MR 1.1",
+        "B. Diligence: MR 1.3",
+        "C. The civil duty of care [W2:9–11; W4:18]",
+        "D. Sixth Amendment: effective assistance [W2:11–18]",
+        "VI. Confidentiality",
+        "A. To whom, and what's covered",
+        "B. What the duty requires [W3:10–15]",
+        "C. Confidentiality vs. privilege vs. work product [W3:16–19]",
+        "D. Exceptions: framing principles [W3:25–29]",
+        "E. The MR 1.6(b) exceptions [W3:29–36]",
+        "F. When disclosure becomes mandatory, or goes beyond 1.6",
+        "G. Hard cases [W3:36]",
+        "VII. The Lawyer as Agent: Authority",
+        "A. The four sources of authority [W4:23–30]",
+        "B. Exceeding authority: consequences [W4:30–32]",
+        "C. Objectives vs. means: MR 1.2(a) [W4:34–43]",
+        "VIII. Fees & Client Property",
+        "A. Communicating the fee: MR 1.5(b)–(c) [W5:2–8]",
+        "B. Substantive limits: MR 1.5(a), (d) [W5:9–12, 26]",
+        "C. Consequences & recovery [W5:13–14]",
+        "D. Retainers [W5:14–15]",
+        "E. Sharing fees & paying for referrals [W5:16–19]",
+        "F. Safeguarding client property: MR 1.15 [W5:27–39]",
+        "IX. Ending the Relationship",
+        "A. Must vs. may withdraw (always subject to 1.16(c))",
+        "B. Leave of the tribunal: MR 1.16(c) [W2:57–61]",
+        "C. Noisy withdrawal [W2:66–68]",
+        "D. Exit duties: MR 1.16(d) [W2:69–74]",
+        "X. Cross-Chapter Tables",
+        "Formality ladder: what each consent must look like",
+        "Disclosure map: may, must, or must not?"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/pr-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/pr-outline.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/pr-outline.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/pr-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/pr-outline.json"
+      }
+    },
+    {
+      "id": "professional-responsibility/mpre-drill-v3",
+      "subject": "professional-responsibility",
+      "subjectTitle": "Professional Responsibility",
+      "slug": "mpre-drill-v3",
+      "title": "Pro Rep Drill",
+      "description": "355 original MPRE-style application questions on Chs. 1–9, 20, 21 and the class slides. Use study mode for instant feedback or exam mode to be graded at the end. Filter by topic and shuffle the answer order.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "PR_MPRE_Question_Bank v3.html",
+      "tags": [
+        "MPRE",
+        "MCQ",
+        "exam mode"
+      ],
+      "questions": 355,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 385678,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "PR MPRE Drill v3"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/mpre-drill-v3/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-drill-v3.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-drill-v3.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-drill-v3.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-drill-v3.json"
+      }
+    },
+    {
+      "id": "professional-responsibility/mpre-500-course-subset",
+      "subject": "professional-responsibility",
+      "subjectTitle": "Professional Responsibility",
+      "slug": "mpre-500-course-subset",
+      "title": "MPRE 500: Course Subset",
+      "description": "298 of the 500 questions in Stevenson, 500 MPRE Practice Questions (2019), limited to what Weeks 1–5 cover. Uses the book's answer key, with study and exam modes, topic filters, and answer shuffling.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "PR_MPRE_500_Course_Subset.html",
+      "tags": [
+        "MPRE",
+        "MCQ",
+        "exam mode",
+        "book questions"
+      ],
+      "questions": 298,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 682153,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "MPRE 500: Course Subset"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/mpre-500-course-subset/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-500-course-subset.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/mpre-500-course-subset.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-500-course-subset.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/mpre-500-course-subset.json"
+      }
+    },
+    {
+      "id": "professional-responsibility/pr-course-quiz",
+      "subject": "professional-responsibility",
+      "subjectTitle": "Professional Responsibility",
+      "slug": "pr-course-quiz",
+      "title": "Course Quiz",
+      "description": "The 54 multiple-choice questions from the class quizzes on Chs. 5, 6, 8, 20, and 21, checked against the course answer keys. Take the quiz for a score or open the answer view, with explanations drawn from Ethical Lawyering, the class slides, and the Model Rules.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Professional-Responsibility-Quiz.html",
+      "tags": [
+        "MCQ",
+        "class quizzes",
+        "explanations"
+      ],
+      "questions": 54,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 117193,
+      "updated": "2026-10-06T02:12:01.000Z",
+      "headings": [
+        "Professional Responsibility",
+        "Your progress",
+        "Jump to a question"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/professional-responsibility/pr-course-quiz/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/pr-course-quiz.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/professional-responsibility/pr-course-quiz.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/pr-course-quiz.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/professional-responsibility/pr-course-quiz.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-outline",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-outline",
+      "title": "First Amendment Outline",
+      "description": "Case-by-case outline of Chapters 1–6, from Barnette and Kennedy v. Bremerton through Counterman, Ferber, and Free Speech Coalition v. Paxton. Each case has its rule, facts, holding, and dissent. Includes the Free Exercise, speech, prior restraint, and immoral speech checklists, along with synthesis tables.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "PDF",
+      "mimeType": "application/pdf",
+      "originalFilename": "First_Amendment_Outline_Ch1-6_Revised.pdf",
+      "tags": [
+        "First Amendment",
+        "outline",
+        "Religion Clauses",
+        "free speech"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 96182,
+      "updated": "2026-10-13T12:46:07.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-outline.pdf",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-outline.pdf",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-outline.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-flowcharts",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-flowcharts",
+      "title": "First Amendment Flowcharts",
+      "description": "Interactive decision charts for Chapters 1–6. A big-picture map shows how the Religion Clauses and the speech doctrines fit together, and eight charts walk through coercion, Free Exercise, the Establishment Clause and funding, the speech framework, incitement and fighting words, prior restraints, true threats and speech integral to crime, and immoral speech. Tap any box for a plain-English explanation, the cases behind it, and what to watch out for.",
+      "type": "flowcharts",
+      "typeLabel": "Flowcharts",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Flowcharts.html",
+      "tags": [
+        "First Amendment",
+        "interactive",
+        "Religion Clauses",
+        "free speech",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 540797,
+      "updated": "2026-10-07T12:20:29.000Z",
+      "headings": [
+        "First Amendment Flowcharts",
+        "Big picture",
+        "Coercion: Barnette to Mahmoud",
+        "Free Exercise",
+        "Establishment & funding",
+        "Speech framework",
+        "Incitement & fighting words",
+        "Prior restraints",
+        "Threats & crime speech",
+        "Immoral speech"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-flowcharts/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-flowcharts.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-flowcharts.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-flowcharts.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-flowcharts.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-drill",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-drill",
+      "title": "First Amendment Quick Drill",
+      "description": "264 multiple-choice questions on every case and concept in the outline. They test what each case held, hypotheticals built on its facts, and how the doctrine applies. Filter by chapter or question type, shuffle the answers, and review only the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Drill.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "Chapters 1–6"
+      ],
+      "questions": 264,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 157712,
+      "updated": "2026-10-05T16:16:42.000Z",
+      "headings": [
+        "First Amendment Drill"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-drill/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-drill.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-drill.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-drill.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-drill.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-case-files",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-case-files",
+      "title": "First Amendment BAR style questions 1",
+      "description": "Bar-style application questions for Weeks 1–6 (Chapters 1–6). Each question sets out new facts, from compelled pledges and school prayer to protest livestreams, chatbot lawsuits, and age-verification laws, and asks you to apply the doctrine. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 113 outline items.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Case_Files.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "application",
+        "bar prep",
+        "Chapters 1–6"
+      ],
+      "questions": 115,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 191698,
+      "updated": "2026-10-20T19:29:12.000Z",
+      "headings": [
+        "First Amendment Case Files"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-case-files/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-files.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-files.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-files.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-files.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-case-flash-cards",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-case-flash-cards",
+      "title": "First Amendment Case Flash Cards",
+      "description": "34 flashcards, one for each main case in Chapters 1–6, from Whitney and Barnette through Paxton and Brown. Each card asks what the case held, then gives the rule, the vote, and the key reasoning. Cited cases such as Gobitis, Yoder, Zelman, and Chaplinsky appear on the card for the case that cites them. Flip each card, then mark it Got it or Revisit.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Case_Flash_Cards.html",
+      "tags": [
+        "First Amendment",
+        "flashcards",
+        "cases",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 58950,
+      "updated": "2026-10-13T14:31:47.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-case-flash-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-flash-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-flash-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-flash-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-flash-cards.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-concept-flash-cards",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-concept-flash-cards",
+      "title": "First Amendment Concept Flash Cards",
+      "description": "32 flashcards on the core concepts of Chapters 1–6. Covers the Free Exercise and speech checklists, the ways a law fails neutrality, Establishment Clause funding, RFRA, the unprotected categories, overbreadth and vagueness, prior restraints, mens rea, the Miller test, and protecting kids versus adults.",
+      "type": "flashcards",
+      "typeLabel": "Flashcards",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Concept_Flash_Cards.html",
+      "tags": [
+        "First Amendment",
+        "flashcards",
+        "doctrine",
+        "Chapters 1–6"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 52838,
+      "updated": "2026-10-13T14:31:47.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-concept-flash-cards/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-concept-flash-cards.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-concept-flash-cards.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-concept-flash-cards.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-concept-flash-cards.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-mock-exam",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-mock-exam",
+      "title": "First Amendment Mock Exam",
+      "description": "A timed practice exam covering everything in Chapters 1–6: 60 bar-style questions with new facts, in four 15-question parts that each cover every topic at two minutes a question. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Mock_Exam.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "mock exam",
+        "timed",
+        "bar prep",
+        "Chapters 1–6"
+      ],
+      "questions": 60,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 158840,
+      "updated": "2026-10-08T19:34:05.000Z",
+      "headings": [
+        "First Amendment Mock Exam"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-mock-exam/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-mock-exam.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-mock-exam.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-mock-exam.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-mock-exam.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-case-repetition",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-case-repetition",
+      "title": "First Amendment Case Repetition",
+      "description": "349 quick questions for Chapters 1–6. 236 drill all 34 cases by their full names: name the case from its facts, its rule, or a key line, then recall its holding, its reasoning, and the cases it overruled or set up. 113 more drill the core concepts and elements across 23 topics, from strict scrutiny and the ways a law fails neutrality to the Brandenburg elements, Counterman’s recklessness standard, and the Miller prongs. Every question carries an illustration; when the picture would give the answer away, it stays blurred until you answer. Filter by chapter, question type, or a single case or topic.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Case_Repetition.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "cases",
+        "concepts",
+        "repetition",
+        "Chapters 1–6"
+      ],
+      "questions": 349,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 232953,
+      "updated": "2026-10-12T22:17:05.000Z",
+      "headings": [
+        "First Amendment Case Repetition"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-case-repetition/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-repetition.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-repetition.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-repetition.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-repetition.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-case-repetition-vol-2",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-case-repetition-vol-2",
+      "title": "First Amendment Case Repetition, Volume 2",
+      "description": "239 new questions on the same 34 cases and 23 topics as Volume 1, asked from different angles. Name each case from a new detail, then recall its holding, its reasoning, and the doctrine around it, plus 45 questions on core concepts and elements. 58 application questions put the rules to new fact patterns and explain why every wrong choice is wrong. Every question carries an illustration; when the picture would give the answer away, it stays blurred until you answer. Filter by chapter, question type, or a single case or topic.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Case_Repetition_Vol_2.html",
+      "tags": [
+        "First Amendment",
+        "MCQ",
+        "cases",
+        "concepts",
+        "application",
+        "repetition",
+        "Chapters 1–6"
+      ],
+      "questions": 239,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 189701,
+      "updated": "2026-10-13T00:41:40.000Z",
+      "headings": [
+        "First Amendment Case Repetition, Volume 2"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-case-repetition-vol-2/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-repetition-vol-2.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-case-repetition-vol-2.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-repetition-vol-2.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-case-repetition-vol-2.json"
+      }
+    },
+    {
+      "id": "con-law-ii/first-amendment-essay-questions",
+      "subject": "con-law-ii",
+      "subjectTitle": "Con Law II",
+      "slug": "first-amendment-essay-questions",
+      "title": "First Amendment Essay Questions",
+      "description": "15 bar-style essay questions covering every case and concept in Chapters 1–6, organized by topic. Each essay sets out new facts with several questions, from a compelled state creed and a noise ordinance aimed at a night ceremony to a leaked convoy memo, threatening messages, and an AI companion app. Open the model answer for a full-credit response worked issue by issue, the cases it uses and why, the key concepts explained, and a 10-point scoring guide. Includes a case index and a coverage map of all 113 outline items.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "First_Amendment_Essay_Questions.html",
+      "tags": [
+        "First Amendment",
+        "essays",
+        "bar prep",
+        "model answers",
+        "Chapters 1–6"
+      ],
+      "questions": 15,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 212017,
+      "updated": "2026-10-13T19:49:50.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/con-law-ii/first-amendment-essay-questions/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-essay-questions.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/con-law-ii/first-amendment-essay-questions.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-essay-questions.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/con-law-ii/first-amendment-essay-questions.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-outline",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-outline",
+      "title": "Sales and Leases Outline",
+      "description": "Condensed outline of Weeks 1–8 for the Week 10 assessment. 16 sections cover the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse, with worked problems. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "Sales_and_Leases_Week10_Condensed_Outline.docx",
+      "tags": [
+        "UCC Article 2",
+        "outline",
+        "sales",
+        "warranties",
+        "Weeks 1–8"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 93176,
+      "updated": "2026-10-19T16:12:25.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-outline.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-outline.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-outline.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-bar-questions",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-bar-questions",
+      "title": "Sales and Leases Bar Questions",
+      "description": "272 bar-style multiple-choice questions covering every rule, case, and assigned problem in the Weeks 1–8 outline, across 18 topics from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, repudiation, and excuse. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Bar_Questions.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "bar prep",
+        "application",
+        "Weeks 1–8"
+      ],
+      "questions": 272,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 362001,
+      "updated": "2026-10-20T19:29:12.000Z",
+      "headings": [
+        "Sales and Leases Bar Questions"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-bar-questions/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-bar-questions.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-bar-questions.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-bar-questions.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-bar-questions.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-practice-exams",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-practice-exams",
+      "title": "Sales and Leases Practice Exams",
+      "description": "19 practice exams (285 questions) for the Week 10 assessment, written in the style of Professor Richardson's sample exam: 15 stand-alone, five-choice questions each, mixing rule questions (\"Which of the following is NOT…\") with short hypos that ask who wins and why, plus \"None of the above\" and \"All of the above\" choices that are sometimes the answer. Each exam samples the whole Weeks 1–8 condensed outline, and together they cover all 16 sections: which law governs, formation and § 2-207, the statute of frauds, good faith and modification, express and implied warranties, title, quantity and price, delivery and acceptance, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Practice_Exams.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "Week 10"
+      ],
+      "questions": 285,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 276947,
+      "updated": "2026-10-22T20:08:16.000Z",
+      "headings": [
+        "Sales and Leases Practice Exams"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-practice-exams/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-practice-exams.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-practice-exams.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-practice-exams.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-practice-exams.json"
+      }
+    },
+    {
+      "id": "agency-and-partnership/agency-and-partnership-outline",
+      "subject": "agency-and-partnership",
+      "subjectTitle": "Agency & Partnership",
+      "slug": "agency-and-partnership-outline",
+      "title": "Agency & Partnership Outline",
+      "description": "Condensed exam outline of Weeks 1–8, built from the Class 1–8 slides, the casebook, and the 2026 statutory supplement. Part I covers agency: creating the relationship, contract liability and authority, tort liability, and fiduciary duties. Part II covers business entities: choosing an entity, partnership formation, economic rights and property, management and authority, partners' fiduciary duties, dissociation and dissolution, Kovacik loss sharing, buyout agreements, limited partnerships, and LLCs. Rule and tip boxes throughout, and a card for every case (62 main cases plus slide references and supplemental readings).",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "Agency_and_Partnership_Condensed_Outline.docx",
+      "tags": [
+        "agency",
+        "partnership",
+        "RUPA",
+        "Restatement of Agency",
+        "LLC",
+        "outline",
+        "Weeks 1–8"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 82175,
+      "updated": "2026-10-19T16:12:25.000Z",
+      "headings": [
+        "PART I — AGENCY",
+        "1. Creating the Agency Relationship",
+        "Why agency law matters",
+        "Elements and basics",
+        "Cases",
+        "2. Contract Liability of Principal — Authority",
+        "Actual authority",
+        "Apparent authority",
+        "Inherent authority (R2d) → R3d replacements",
+        "Ratification",
+        "Estoppel",
+        "Comparing the routes to contract liability",
+        "Agent's own liability on the contract",
+        "Other supplement provisions to know",
+        "3. Tort Liability of Principal",
+        "Respondeat superior",
+        "Employee vs. independent contractor",
+        "Franchising",
+        "Scope of employment",
+        "Torts of independent contractors",
+        "4. Fiduciary Duties Between Agent and Principal",
+        "The agent's five duties",
+        "Remedies and strategy",
+        "Principal's duties to agent",
+        "PART II — BUSINESS ENTITIES & PARTNERSHIPS",
+        "5. Choosing an Entity",
+        "6. Partnership Basics and Formation",
+        "Uniform Partnership Act (UPA, 1914) vs. RUPA (1997)",
+        "Formation",
+        "Partners vs. employees",
+        "Partners vs. lenders",
+        "Partnership by estoppel (purported partner)",
+        "7. Partners' Economic Rights and Property",
+        "Default economics",
+        "Partnership property",
+        "Distribution on liquidation",
+        "8. Management and Authority",
+        "9. Partners' Fiduciary Duties",
+        "Grabbing and leaving; expulsion (supplemental readings)",
+        "10. Dissociation and Dissolution",
+        "Vocabulary",
+        "UPA (1914) — four principles",
+        "RUPA (1997) — four principles",
+        "Dissociation events (§ 601)",
+        "Buyout when the business continues (§§ 701–704)",
+        "Dissolution events (§ 801)",
+        "Winding up (§§ 802–806)",
+        "Power vs. right; wrongful dissociation",
+        "Consequences of dissolution (supplemental readings)",
+        "11. Loss Sharing — Kovacik v. Reed",
+        "12. Buyout Agreements",
+        "13. Limited Partnerships and Limited Liability",
+        "14. Limited Liability Companies (Uniform LLC Act, ULLCA)"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/agency-and-partnership/agency-and-partnership-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-outline.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-outline.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-outline.json"
+      }
+    },
+    {
+      "id": "agency-and-partnership/agency-and-partnership-bar-questions",
+      "subject": "agency-and-partnership",
+      "subjectTitle": "Agency & Partnership",
+      "slug": "agency-and-partnership-bar-questions",
+      "title": "Agency & Partnership Bar Questions",
+      "description": "284 bar-style multiple-choice questions covering every rule, case, and slide problem in the Weeks 1–8 outline, across 23 topics: creating an agency, actual, apparent and inherent authority, ratification, estoppel, agents' contract and tort liability, scope of employment, independent contractors, and agents' fiduciary duties; then entity selection, partnership formation, property, management and authority, partners' duties, dissociation and dissolution under the UPA and RUPA, loss sharing, buyouts, limited partnerships, LLPs, and LLCs. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Agency_and_Partnership_Bar_Questions.html",
+      "tags": [
+        "agency",
+        "partnership",
+        "RUPA",
+        "MCQ",
+        "bar prep",
+        "application",
+        "Weeks 1–8"
+      ],
+      "questions": 284,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 347141,
+      "updated": "2026-10-20T19:29:12.000Z",
+      "headings": [
+        "Agency & Partnership Bar Questions"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/agency-and-partnership/agency-and-partnership-bar-questions/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-bar-questions.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-bar-questions.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-bar-questions.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-bar-questions.json"
+      }
+    },
+    {
+      "id": "agency-and-partnership/agency-and-partnership-practice-exams",
+      "subject": "agency-and-partnership",
+      "subjectTitle": "Agency & Partnership",
+      "slug": "agency-and-partnership-practice-exams",
+      "title": "Agency & Partnership Practice Exams",
+      "description": "14 practice exams (210 questions) for the Week 10 exam, written in the format of Professor Richardson's sample exam: 15 five-choice questions each, with six stand-alone questions followed by two shared hypos (Q7–11 and Q12–15), and combination choices such as \"B and C\", \"A, B and C\", and \"None of the above.\" Together they cover all 14 sections of the Weeks 1–8 condensed outline, from creating an agency through authority, ratification, estoppel, tort liability, and agents' duties, to partnership formation, property, management, partners' duties, dissociation and dissolution under the UPA and RUPA, Kovacik loss sharing, buyouts, LPs, LLPs, and LLCs. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Agency_and_Partnership_Practice_Exams.html",
+      "tags": [
+        "agency",
+        "partnership",
+        "RUPA",
+        "MCQ",
+        "practice exam",
+        "Week 10"
+      ],
+      "questions": 210,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 229315,
+      "updated": "2026-10-22T20:08:16.000Z",
+      "headings": [
+        "Agency & Partnership Practice Exams"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/agency-and-partnership/agency-and-partnership-practice-exams/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-practice-exams.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-practice-exams.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-practice-exams.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-practice-exams.json"
+      }
+    },
+    {
+      "id": "agency-and-partnership/agency-and-partnership-playlist",
+      "subject": "agency-and-partnership",
+      "subjectTitle": "Agency & Partnership",
+      "slug": "agency-and-partnership-playlist",
+      "title": "Agency & Partnership Playlist",
+      "description": "Study songs that walk through the Weeks 1–8 outline, one topic per track, numbered to match the planned 17-track album. So far: dissociation versus dissolution, winding up and buyouts, Kovacik loss sharing and buyout agreements, and limited partnerships, LLCs, and veil piercing. Pick any track from the list, or let it play through, at 0.5×, 0.75×, normal, 1.25×, or 1.5× speed.",
+      "type": "music",
+      "typeLabel": "Music",
+      "format": "Playlist",
+      "mimeType": "application/zip",
+      "originalFilename": "Agency_and_Partnership_Playlist.zip",
+      "tags": [
+        "agency",
+        "partnership",
+        "RUPA",
+        "LLC",
+        "music",
+        "playlist"
+      ],
+      "questions": null,
+      "tracks": [
+        {
+          "number": 14,
+          "title": "Power to Leave",
+          "topic": "Outline §10 · Dissociation vs. dissolution",
+          "description": "At-will versus term partnerships, and a partner's power to leave versus the right to. UPA automatic dissolution against the RUPA § 603 buyout path, and judicial expulsion. Cases: Collins v. Lewis, Giles, and Page v. Page.",
+          "durationSeconds": 330,
+          "sizeBytes": 8172153,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist/power-to-leave.mp3"
+        },
+        {
+          "number": 15,
+          "title": "Winding Up",
+          "topic": "Outline §10 · Liquidation, buyouts and lingering authority",
+          "description": "Statements of dissociation that cut off lingering liability after 90 days, § 701 buyouts at the greater of liquidation or going-concern value, and no forced fire sale. Cases: Creel v. Lilly, Monin v. Monin, and Pav-Saver.",
+          "durationSeconds": 323,
+          "sizeBytes": 7821442,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist/winding-up.mp3"
+        },
+        {
+          "number": 16,
+          "title": "Money vs. Sweat",
+          "topic": "Outline §11–12 · Loss sharing and buyout agreements",
+          "description": "The Kovacik v. Reed exception, where the money partner bears the cash losses and the service partner loses only their labor, why RUPA rejects it, and the traps in buyout agreements (G & S Investments v. Belman).",
+          "durationSeconds": 273,
+          "sizeBytes": 6577391,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist/money-vs-sweat.mp3"
+        },
+        {
+          "number": 17,
+          "title": "Welcome to the Fortress",
+          "topic": "Outline §13–14 · LPs, LLCs and veil piercing",
+          "description": "General partners' unlimited liability against the LP, LLP and LLC shields; the corporate general partner in Frigidaire v. Union Properties; LLCs as creatures of contract under the ULLCA, member-managed and manager-managed; and veil piercing as the only way through the shield.",
+          "durationSeconds": 396,
+          "sizeBytes": 9514223,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist/welcome-to-the-fortress.mp3"
+        }
+      ],
+      "contributor": null,
+      "sizeBytes": 32085713,
+      "updated": "2026-10-23T16:02:02.000Z",
+      "headings": [
+        "14. Power to Leave",
+        "15. Winding Up",
+        "16. Money vs. Sweat",
+        "17. Welcome to the Fortress"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/agency-and-partnership/agency-and-partnership-playlist/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist.zip",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist.zip",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-playlist.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-playlist.json"
+      }
+    },
+    {
+      "id": "contracts-i/contracts-i-outline",
+      "subject": "contracts-i",
+      "subjectTitle": "Contracts I",
+      "slug": "contracts-i-outline",
+      "title": "Contracts I Outline",
+      "description": "Condensed exam outline of Weeks 1–9 on the Fall 2026 syllabus. Part I covers formation: enforceable agreements and which law governs, objective assent and implied-in-fact contracts, offers, termination of the power of acceptance, irrevocable offers, acceptance and silence, the mirror-image rule and the battle of the forms, misunderstanding, and indefiniteness. Part II covers consideration, modification, and promissory estoppel. Part III covers the statute of frauds, duress, and misrepresentation. Rule and tip boxes throughout, and a card for every assigned case plus slide references.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "Contracts_I_Condensed_Outline.docx",
+      "tags": [
+        "contracts",
+        "Restatement (Second)",
+        "UCC Article 2",
+        "outline",
+        "Weeks 1–9"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 60856,
+      "updated": "2026-10-19T23:41:38.000Z",
+      "headings": [
+        "PART I — FORMATION: MUTUAL ASSENT",
+        "1. Is There a Legally Enforceable Agreement?",
+        "Definitions",
+        "Which law governs?",
+        "Cases",
+        "2. The Objective Theory of Assent and Implied-in-Fact Contracts",
+        "Cases",
+        "3. The Offer",
+        "Cases",
+        "4. Termination of the Power of Acceptance",
+        "5. Irrevocable Offers: Options, Part Performance, Reliance, Firm Offers",
+        "6. Acceptance: Manner, Timing, and Silence",
+        "Acceptance by performance vs. by promise",
+        "Timing: the mailbox (dispatch) rule",
+        "Silence as acceptance (R2d § 69)",
+        "Cases",
+        "7. The Mirror-Image Rule and UCC § 2-207 (Battle of the Forms)",
+        "UCC § 2-207 — three steps",
+        "Cases",
+        "8. Misunderstanding — No Meeting of the Minds (R2d § 20)",
+        "9. Indefiniteness, Missing Terms, and Letters of Intent",
+        "Gap-fillers and agreements to agree",
+        "Letters of intent",
+        "Cases",
+        "PART II — BASES FOR ENFORCEMENT",
+        "10. Consideration",
+        "Key principles",
+        "Cases",
+        "11. Modification and the Pre-Existing Duty Rule",
+        "UCC § 2-209 (goods)",
+        "Cases",
+        "12. Promissory Estoppel (R2d § 90)",
+        "Cases",
+        "PART III — DEFENSES TO ENFORCEMENT",
+        "13. The Statute of Frauds",
+        "Contracts within the statute (R2d § 110)",
+        "A sufficient writing",
+        "Exceptions",
+        "Cases",
+        "14. Duress",
+        "When a threat is improper (R2d § 176)",
+        "Cases",
+        "15. Misrepresentation and Nondisclosure",
+        "Definitions (R2d §§ 159–162)",
+        "Cases"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/contracts-i/contracts-i-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/contracts-i/contracts-i-outline.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/contracts-i/contracts-i-outline.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/contracts-i/contracts-i-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/contracts-i/contracts-i-outline.json"
+      }
+    },
+    {
+      "id": "contracts-i/contracts-i-bar-questions",
+      "subject": "contracts-i",
+      "subjectTitle": "Contracts I",
+      "slug": "contracts-i-bar-questions",
+      "title": "Contracts I Bar Questions",
+      "description": "266 bar-style multiple-choice questions covering every rule, case, and tip in the Weeks 1–9 outline, across 16 topics from enforceable agreements and the objective theory through offers, termination, irrevocable offers, acceptance and silence, the battle of the forms, misunderstanding, indefiniteness, consideration, modification, promissory estoppel, the Statute of Frauds, duress, and misrepresentation, plus a set of integrated multi-issue problems. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Contracts_I_Bar_Questions.html",
+      "tags": [
+        "contracts",
+        "MCQ",
+        "bar prep",
+        "application",
+        "Weeks 1–9"
+      ],
+      "questions": 266,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 322922,
+      "updated": "2026-10-20T19:29:12.000Z",
+      "headings": [
+        "Contracts I Bar Questions"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/contracts-i/contracts-i-bar-questions/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/contracts-i/contracts-i-bar-questions.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/contracts-i/contracts-i-bar-questions.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/contracts-i/contracts-i-bar-questions.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/contracts-i/contracts-i-bar-questions.json"
+      }
+    },
+    {
+      "id": "civil-procedure/civil-procedure-outline",
+      "subject": "civil-procedure",
+      "subjectTitle": "Civil Procedure",
+      "slug": "civil-procedure-outline",
+      "title": "Civil Procedure Outline",
+      "description": "Condensed exam outline of Weeks 1–9 (Classes 1–16) on the Fall 2026 syllabus. Part I covers the civil justice system and the life of a lawsuit. Part II covers personal jurisdiction: the framework, the territorial era, minimum contacts, specific jurisdiction and the stream of commerce, and general, consent, and transient jurisdiction. Part III covers notice and service. Part IV covers subject-matter jurisdiction: federal question, diversity and alienage, supplemental jurisdiction, and removal. Part V covers venue, transfer, forum-selection clauses, and forum non conveniens. Part VI covers the Erie doctrine. Part VII covers pleading, Rule 11, and responding to the complaint. Rule and tip boxes throughout, and a card for every assigned case (29 main cases) plus slide references and supplemental readings.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "Civil_Procedure_Condensed_Outline.docx",
+      "tags": [
+        "civil procedure",
+        "FRCP",
+        "personal jurisdiction",
+        "subject-matter jurisdiction",
+        "Erie",
+        "pleading",
+        "outline",
+        "Weeks 1–9"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 75664,
+      "updated": "2026-10-20T09:26:14.000Z",
+      "headings": [
+        "PART I — THE CIVIL JUSTICE SYSTEM",
+        "1. Courts, Sources of Procedural Law, and the Life of a Lawsuit",
+        "Two court systems",
+        "Sources of procedural law (highest first)",
+        "The life cycle of a lawsuit (slides)",
+        "PART II — PERSONAL JURISDICTION",
+        "2. The Personal Jurisdiction Framework",
+        "Order of analysis (PJ checklist)",
+        "3. The Territorial Era",
+        "Cases",
+        "4. The Shift to Minimum Contacts",
+        "Cases",
+        "5. Specific Jurisdiction and the Stream of Commerce",
+        "Purposeful availment",
+        "Stream of commerce (no majority test)",
+        "Relatedness: \"arise out of or relate to\"",
+        "Reasonableness (\"fair play and substantial justice\")",
+        "Cases",
+        "6. General Jurisdiction, Consent, and Transient Jurisdiction",
+        "Cases",
+        "PART III — NOTICE AND SERVICE OF PROCESS",
+        "7. Notice and Due Process; Rule 4",
+        "Rule 4 mechanics",
+        "Cases",
+        "PART IV — SUBJECT-MATTER JURISDICTION",
+        "8. Subject-Matter Jurisdiction Basics",
+        "9. Federal Question Jurisdiction",
+        "Step 1: the well-pleaded complaint rule",
+        "Step 2: does federal law create the cause of action?",
+        "Step 3: a state-law claim with an embedded federal issue (narrow)",
+        "Cases",
+        "10. Diversity and Alienage Jurisdiction",
+        "Complete diversity",
+        "Citizenship",
+        "Amount in controversy",
+        "Cases",
+        "11. Supplemental Jurisdiction",
+        "Step 1: same case or controversy (Gibbs)",
+        "Step 2: § 1367(b), limits in diversity-only cases",
+        "Step 3: § 1367(c), discretion to decline",
+        "Cases",
+        "12. Removal",
+        "Requirements",
+        "Remand, § 1447",
+        "Rule 81(c): procedure after removal",
+        "Cases",
+        "PART V — VENUE, TRANSFER, AND FORUM NON CONVENIENS",
+        "13. Venue",
+        "14. Transfer Within the Federal System",
+        "15. Forum-Selection Clauses",
+        "16. Forum Non Conveniens",
+        "PART VI — CHOICE OF LAW: THE ERIE DOCTRINE",
+        "17. From Swift to Erie",
+        "Cases",
+        "18. The Modern Erie Analysis",
+        "Cases",
+        "PART VII — PLEADING AND RESPONDING",
+        "19. The Complaint and the Pleading Standard",
+        "From notice pleading to plausibility",
+        "Heightened pleading: Rule 9"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/civil-procedure/civil-procedure-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/civil-procedure/civil-procedure-outline.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/civil-procedure/civil-procedure-outline.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/civil-procedure/civil-procedure-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/civil-procedure/civil-procedure-outline.json"
+      }
+    },
+    {
+      "id": "civil-procedure/civil-procedure-bar-questions",
+      "subject": "civil-procedure",
+      "subjectTitle": "Civil Procedure",
+      "slug": "civil-procedure-bar-questions",
+      "title": "Civil Procedure Bar Questions",
+      "description": "255 bar-style multiple-choice questions covering every rule, case, and tip in the Weeks 1–9 outline (Classes 1–16), across 15 topics: the court systems and sources of procedural law, the personal jurisdiction framework and territorial era, minimum contacts, specific jurisdiction and the stream of commerce, general, consent, and tag jurisdiction, notice and service under Rule 4, federal question, diversity and alienage, supplemental jurisdiction, removal, venue, transfer and forum non conveniens, Swift to Erie, the modern Erie analysis, pleading and Rule 11, and responding to the complaint, plus a set of integrated multi-issue problems. Each question is an MBE-style fact pattern that asks what a court should do. The four choices are written to the same length and form, and the wrong ones are the usual bar traps: the right result for the wrong reason, a correct rule that does not apply, and a misstated rule. Every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Civil_Procedure_Bar_Questions.html",
+      "tags": [
+        "civil procedure",
+        "MCQ",
+        "bar prep",
+        "application",
+        "Weeks 1–9"
+      ],
+      "questions": 255,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 413044,
+      "updated": "2026-10-20T19:29:12.000Z",
+      "headings": [
+        "Civil Procedure Bar Questions"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/civil-procedure/civil-procedure-bar-questions/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/civil-procedure/civil-procedure-bar-questions.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/civil-procedure/civil-procedure-bar-questions.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/civil-procedure/civil-procedure-bar-questions.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/civil-procedure/civil-procedure-bar-questions.json"
+      }
+    }
+  ],
+  "bundles": {
+    "all": "https://supertoadman.github.io/Wilmington-University-corner/files/all-study-materials.zip"
+  }
+}

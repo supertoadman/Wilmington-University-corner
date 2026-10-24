@@ -1,0 +1,29 @@
+Evidence BAR style questions 1
+==============================
+
+Subject: Evidence
+Type: Practice Questions
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-case-files/
+
+Bar-level application questions for Weeks 1–5. Each question sets two or three rules against each other and turns on a single fact. Every answer choice has its own explanation, and the set includes one-fact variations and a coverage map.
+
+---
+
+Evidence Case Files
+
+# Evidence Case Files
+
+Bar-depth application questions for Weeks 1–5. Each stem sets two or three rules against each other, so the answer turns on one fact: who the witness is, what is actually disputed, whose statement it was, or who opened the door. After you answer, every option shows its own rationale. Variations change one fact in an earlier question and ask whether the ruling changes.
+
+0 / 0
+
+Shuffle answers
+Shuffle questions
+Retry missed
+Reset
+
+BothQuestionsVariations
+
+Coverage map
+
+Every rule, exception, and case from the Weeks 1–5 chart and readings, with the questions that test it. Tap a number to jump to it.

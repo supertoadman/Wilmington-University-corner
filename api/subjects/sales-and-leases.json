@@ -1,0 +1,117 @@
+{
+  "id": "sales-and-leases",
+  "slug": "sales-and-leases",
+  "title": "Sales and Leases",
+  "description": "Sales and Leases of Goods under UCC Articles 1 and 2, Weeks 1–8 (Sepinuck, Chapters 1–6). Covers which law governs, formation and the battle of the forms, the statute of frauds, warranties and disclaimers, gap fillers, delivery and risk of loss, remedies, the parol evidence rule, assignment and delegation, repudiation, and excuse.",
+  "accent": "#3f6b4a",
+  "documentCount": 3,
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/sales-and-leases.json",
+    "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-all-files.zip"
+  },
+  "documents": [
+    {
+      "id": "sales-and-leases/sales-and-leases-outline",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-outline",
+      "title": "Sales and Leases Outline",
+      "description": "Condensed outline of Weeks 1–8 for the Week 10 assessment. 16 sections cover the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse, with worked problems. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "Sales_and_Leases_Week10_Condensed_Outline.docx",
+      "tags": [
+        "UCC Article 2",
+        "outline",
+        "sales",
+        "warranties",
+        "Weeks 1–8"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 93176,
+      "updated": "2026-10-19T16:12:25.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-outline.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-outline.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-outline.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-bar-questions",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-bar-questions",
+      "title": "Sales and Leases Bar Questions",
+      "description": "272 bar-style multiple-choice questions covering every rule, case, and assigned problem in the Weeks 1–8 outline, across 18 topics from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, repudiation, and excuse. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Bar_Questions.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "bar prep",
+        "application",
+        "Weeks 1–8"
+      ],
+      "questions": 272,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 362001,
+      "updated": "2026-10-20T19:29:12.000Z",
+      "headings": [
+        "Sales and Leases Bar Questions"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-bar-questions/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-bar-questions.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-bar-questions.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-bar-questions.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-bar-questions.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-practice-exams",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-practice-exams",
+      "title": "Sales and Leases Practice Exams",
+      "description": "19 practice exams (285 questions) for the Week 10 assessment, written in the style of Professor Richardson's sample exam: 15 stand-alone, five-choice questions each, mixing rule questions (\"Which of the following is NOT…\") with short hypos that ask who wins and why, plus \"None of the above\" and \"All of the above\" choices that are sometimes the answer. Each exam samples the whole Weeks 1–8 condensed outline, and together they cover all 16 sections: which law governs, formation and § 2-207, the statute of frauds, good faith and modification, express and implied warranties, title, quantity and price, delivery and acceptance, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Practice_Exams.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "Week 10"
+      ],
+      "questions": 285,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 276947,
+      "updated": "2026-10-22T20:08:16.000Z",
+      "headings": [
+        "Sales and Leases Practice Exams"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-practice-exams/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-practice-exams.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-practice-exams.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-practice-exams.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-practice-exams.json"
+      }
+    }
+  ]
+}
