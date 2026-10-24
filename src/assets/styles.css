@@ -664,29 +664,12 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
 .format-shortcuts a:hover { border-color: var(--gold); background: var(--surface-2); }
 .format-shortcuts .statue { width: 22px; height: 24px; }
 .format-shortcuts small { color: var(--muted); font-size: 12px; }
-.page-home .course-browser { display: grid; grid-template-columns: minmax(240px, 300px) minmax(0, 1fr); gap: 22px; align-items: start; }
-.page-home .course-directory { position: sticky; top: calc(var(--header-h) + var(--strip-h) + 14px); padding: 14px; border: 1px solid var(--border); border-radius: var(--radius); background: var(--bg-elev); }
-.page-home .course-find { display: grid; gap: 8px; font-size: 13px; font-weight: 600; }
-.page-home .course-find input { width: 100%; min-width: 0; padding: 10px 12px; border: 1px solid var(--border-strong); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; font-weight: 400; }
-.page-home .directory-count { margin: 12px 6px 6px; color: var(--muted); font-size: 12.5px; }
-.page-home .course-options { max-height: 520px; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; display: flex; flex-direction: column; gap: 2px; }
-.page-home .course-option { display: flex; align-items: center; gap: 12px; padding: 9px 10px; border-radius: 12px; text-decoration: none; font: 500 16px/1.25 var(--font-serif); transition: background .15s, box-shadow .15s; }
-.page-home .course-option > span:not(.icon) { flex: 1; min-width: 0; }
-.page-home .course-name { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
-.page-home .course-option small { display: block; margin-top: 3px; font: 400 12.5px var(--font-sans); color: var(--muted); }
-.page-home .course-option .statue { width: 38px; height: 40px; }
-.page-home .course-option > .icon:last-child { width: 16px; height: 16px; color: var(--muted); }
-.page-home .course-option:hover { background: var(--surface-2); }
-.page-home .course-option[aria-pressed="true"] { background: var(--surface); box-shadow: var(--shadow-sm), inset 3px 0 var(--gold); }
-.page-home .course-option[aria-pressed="true"] > .icon:last-child { color: var(--gold); }
-.page-home [data-course-empty] { margin: 8px 6px; font-size: 13px; color: var(--muted); }
-.page-home .course-preview { min-width: 0; }
-.page-home .course-preview:focus { outline: none; }
-.page-home .course-preview-intro { margin: 0; padding: 40px 24px; border: 1px dashed var(--border-strong); border-radius: var(--radius-lg); color: var(--muted); text-align: center; }
 /* Material wheel: the chosen course's materials on a ring of slices, one per type. The picked
    slice lights up in the course colour with a gold arc on its rim; the hub steps through it. */
 .wheel-course { padding: 20px 22px 22px; border: 1px solid var(--border); border-radius: var(--radius-lg); background: var(--bg-elev); }
-.wheel-course-head { display: flex; align-items: center; gap: 14px; text-decoration: none; }
+.wheel-deck { max-width: 640px; margin: 0 auto; }
+.wheel-course[hidden] { display: none; }
+.wheel-course-head { display: flex; align-items: center; gap: 14px; min-height: 56px; }
 .wheel-course-icon { flex: none; width: 52px; height: 56px; display: grid; place-items: center; }
 .wheel-course-icon .statue { width: 52px; height: 56px; }
 .wheel-course-text { flex: 1; min-width: 0; display: grid; gap: 3px; }
@@ -719,9 +702,31 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
 .wheel-count { font: 700 clamp(11px, 3.2cqw, 14px)/1 var(--font-sans); font-variant-numeric: tabular-nums; letter-spacing: .02em; }
 .wheel-slot[aria-checked="true"] .wheel-count { color: #fff; text-shadow: 0 1px 2px rgba(0, 0, 0, .5); }
 :root[data-theme="light"] .wheel-slot[aria-checked="true"] .wheel-count { color: var(--text); text-shadow: none; }
+/* Courses stage: each slice wears its course's colour and carries the course name. */
+.wheel-slot-course { width: 30%; height: 21%; text-decoration: none; }
+.wheel-slot-course .statue { width: 9.5cqw; height: 10.5cqw; }
+.wheel-name {
+  max-width: 100%; font: 600 clamp(9.5px, 2.9cqw, 13px)/1.15 var(--font-sans); text-align: center; text-wrap: balance;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;
+}
+.wheel-of-courses .wheel-fill { fill: color-mix(in srgb, var(--accent) 18%, var(--surface)); }
+.wheel-of-courses .wheel-slice.is-hover .wheel-fill { fill: color-mix(in srgb, var(--accent) 40%, var(--surface)); }
+.wheel-of-courses .wheel-slice.is-hover .wheel-arc { opacity: 1; }
+.wheel-hub-back {
+  display: inline-flex; align-items: center; gap: 4px; margin-top: 2px; padding: 4px 8px; border: 0; border-radius: 999px;
+  background: none; color: var(--muted); font: 600 12px var(--font-sans); cursor: pointer;
+}
+.wheel-hub-back:hover { color: var(--gold-ink, var(--gold)); background: var(--surface-2); }
+.wheel-hub-back .icon { width: 13px; height: 13px; transform: scaleX(-1); }
+/* Switching stages spins the new ring in. */
+.wheel-course.is-entering :is(.wheel-ring, .wheel-slots) { animation: wheel-spin-in .45s cubic-bezier(.2, .7, .2, 1) both; }
+.wheel-course.is-entering .wheel-hub { animation: wheel-fade-in .35s .1s ease both; }
+@keyframes wheel-spin-in { from { opacity: 0; transform: rotate(-24deg) scale(.88); } }
+@keyframes wheel-fade-in { from { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) { .wheel-course.is-entering :is(.wheel-ring, .wheel-slots, .wheel-hub) { animation: none; } }
 .wheel-hub {
   position: absolute; left: 50%; top: 50%; width: 56%; aspect-ratio: 1; transform: translate(-50%, -50%);
-  display: grid; place-items: center; padding: 9%; border-radius: 50%; text-align: center;
+  display: grid; place-items: center; align-content: center; gap: 4px; padding: 9%; border-radius: 50%; text-align: center;
 }
 .wheel-group { display: flex; flex-direction: column; align-items: center; gap: 8px; min-width: 0; width: 100%; }
 .wheel-group[hidden], .wheel-doc[hidden] { display: none; }
@@ -761,11 +766,8 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
   .wheel-step { width: 28px; height: 28px; }
   .wheel-pager { font-size: 13px; gap: 8px; }
   .wheel-open { min-height: 28px; padding: 0 12px; font-size: 12px; }
-}
-@media (max-width: 800px) {
-  .page-home .course-browser { grid-template-columns: 1fr; }
-  .page-home .course-directory { position: static; }
-  .page-home .course-options { max-height: 260px; }
+  .wheel-doc .wheel-meta { display: none; }
+  .wheel-hub-back { padding: 2px 6px; font-size: 11px; }
 }
 @media (max-width: 700px) {
   .cover-courses { padding-top: 30px; }

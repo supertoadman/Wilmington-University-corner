@@ -8,49 +8,103 @@ const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
 const body = document.body;
 
-// Homepage course directory: bounded preview, full collections remain linked.
-const courseBrowser = $('[data-course-browser]');
-if (courseBrowser) {
-  const choices = $$('[data-course-choice]', courseBrowser);
-  const panels = $$('[data-course-panel]', courseBrowser);
-  const query = $('[data-course-query]', courseBrowser);
-  const count = $('[data-course-count]', courseBrowser);
-  const intro = $('.course-preview-intro', courseBrowser);
-  function selectCourse(slug) {
-    panels.forEach(panel => { panel.hidden = panel.dataset.coursePanel !== slug; });
-    choices.forEach(choice => choice.setAttribute('aria-pressed', String(choice.dataset.courseChoice === slug)));
-    intro.hidden = true;
-  }
-  choices.forEach(choice => {
-    // Retain ordinary course links as the no-JavaScript fallback.
-    choice.setAttribute('role', 'button');
-    choice.setAttribute('aria-controls', 'course-preview');
-    choice.addEventListener('click', event => {
-      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey) return;
-      event.preventDefault();
-      selectCourse(choice.dataset.courseChoice);
-      $('#course-preview').focus({ preventScroll: true });
-      if (matchMedia('(max-width: 700px)').matches) $('#course-preview').scrollIntoView({ block: 'start' });
-    });
-    choice.addEventListener('keydown', event => {
-      if (event.key === ' ') { event.preventDefault(); choice.click(); }
-    });
-  });
-  $('[data-course-find]', courseBrowser).hidden = false;
-  count.setAttribute('role', 'status');
-  query.addEventListener('input', () => {
-    const term = query.value.trim().toLocaleLowerCase();
-    choices.forEach(choice => { choice.hidden = !choice.dataset.courseName.toLocaleLowerCase().includes(term); });
-    const visible = choices.filter(choice => !choice.hidden).length;
-    count.textContent = `${visible} of ${choices.length} courses`;
-    $('[data-course-empty]', courseBrowser).hidden = visible !== 0;
-  });
-  if (choices.length) selectCourse(choices[0].dataset.courseChoice);
+// Homepage course wheel: a two-stage ring. It opens on the courses; picking one swaps in that
+// course's material wheel, and Back returns. The choice lives in the URL (?course=…), so the
+// browser's back button and shared links land on the same stage. Without JavaScript the course
+// slices are ordinary links to the course pages.
+
+// Which of `n` slices on `wheel` sits under a pointer, or -1 over the hub and outside the ring.
+function sliceIndex(wheel, event, n) {
+  const box = wheel.getBoundingClientRect();
+  const x = event.clientX - box.left - box.width / 2, y = event.clientY - box.top - box.height / 2;
+  const r = Math.hypot(x, y) / (box.width / 2);
+  if (r < 118 / 200 || r > 1) return -1;
+  const step = 360 / n;
+  return Math.floor(((Math.atan2(y, x) * 180 / Math.PI + 90 + step / 2 + 360) % 360) / step) % n;
+}
+// Arrow keys walk a ring of slots, skipping any that can't be picked.
+function ringKeys(slots, usable, go) {
+  slots.forEach((slot, i) => slot.addEventListener('keydown', event => {
+    const dir = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[event.key];
+    if (!dir) return;
+    event.preventDefault();
+    for (let k = 1; k < slots.length; k++) {
+      const next = slots[(i + dir * k + slots.length * k) % slots.length];
+      if (usable(next)) { go(next); break; }
+    }
+  }));
 }
 
-// Material wheel (homepage course preview): one slice per document type. A tap anywhere on a
-// slice picks it (worked out from the angle, so the whole slice is the target), arrow keys walk
-// the ring, and the hub's arrows step through that type's documents.
+const deck = $('[data-wheel-deck]');
+if (deck) {
+  const panels = $$('[data-wheel-panel]', deck);
+  const courseWheel = $('[data-course-wheel]', deck);
+  const picks = $$('[data-course-pick]', courseWheel);
+  const courseSlices = $$('[data-wheel-slice]', courseWheel);
+  const slugs = picks.map(a => a.dataset.coursePick);
+  const hubs = $$('[data-hub-course]', courseWheel);
+  let lastCourse = '';
+
+  function preview(slug) {
+    hubs.forEach(h => { h.hidden = h.dataset.hubCourse !== slug; });
+    courseSlices.forEach(s => s.classList.toggle('is-hover', s.dataset.wheelSlice === slug));
+  }
+  function showPanel(key, { animate = true, focus = true } = {}) {
+    const next = panels.find(p => p.dataset.wheelPanel === key) || panels[0];
+    panels.forEach(p => { p.hidden = p !== next; p.classList.remove('is-entering'); });
+    if (animate) { void next.offsetWidth; next.classList.add('is-entering'); }
+    if (next.dataset.wheelPanel === 'courses') preview('');
+    if (deck.getBoundingClientRect().top < 0) deck.scrollIntoView({ block: 'start' });
+    if (!focus) return;
+    const target = next.dataset.wheelPanel === 'courses'
+      ? picks.find(a => a.dataset.coursePick === lastCourse) || picks[0]
+      : $('.wheel-slot[tabindex="0"]', next);
+    target?.focus({ preventScroll: true });
+  }
+  const urlCourse = () => { const slug = new URLSearchParams(location.search).get('course'); return slugs.includes(slug) ? slug : ''; };
+  function openCourse(slug) {
+    lastCourse = slug;
+    history.pushState({ course: slug }, '', `?course=${encodeURIComponent(slug)}#courses`);
+    showPanel(slug);
+  }
+  function backToCourses() {
+    if (history.state?.course) history.back();
+    else { history.replaceState(null, '', `${location.pathname}#courses`); showPanel('courses'); }
+  }
+  window.addEventListener('popstate', () => showPanel(urlCourse() || 'courses'));
+
+  courseWheel.addEventListener('click', event => {
+    const link = event.target.closest('[data-course-pick]');
+    if (link && (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey)) return;
+    const i = link ? slugs.indexOf(link.dataset.coursePick) : sliceIndex(courseWheel, event, slugs.length);
+    if (i < 0) return;
+    event.preventDefault();
+    openCourse(slugs[i]);
+  });
+  courseWheel.addEventListener('pointermove', event => {
+    if (event.pointerType !== 'mouse') return;
+    const i = sliceIndex(courseWheel, event, slugs.length);
+    preview(slugs[i] || '');
+    courseWheel.style.cursor = i < 0 ? '' : 'pointer';
+  });
+  courseWheel.addEventListener('pointerleave', () => preview(''));
+  picks.forEach(a => {
+    a.addEventListener('focus', () => preview(a.dataset.coursePick));
+    a.addEventListener('blur', () => preview(''));
+    a.addEventListener('keydown', event => { if (event.key === ' ') { event.preventDefault(); a.click(); } });
+  });
+  ringKeys(picks, () => true, next => {
+    picks.forEach(a => { a.tabIndex = a === next ? 0 : -1; });
+    next.focus();
+  });
+  $$('[data-wheel-back]', deck).forEach(button => button.addEventListener('click', backToCourses));
+
+  const start = urlCourse();
+  if (start) { lastCourse = start; history.replaceState({ course: start }, ''); showPanel(start, { animate: false, focus: false }); }
+}
+
+// A course's material wheel: one slice per document type. A tap anywhere on a slice picks it,
+// arrow keys walk the ring, and the hub's arrows step through that type's documents.
 $$('[data-wheel]').forEach(wheel => {
   const slots = $$('[data-wheel-type]', wheel);
   const slices = $$('[data-wheel-slice]', wheel);
@@ -80,38 +134,20 @@ $$('[data-wheel]').forEach(wheel => {
     show(type, page.get(type));
     if (focus) slot.focus();
   }
-  // Which slice sits under a pointer, or null over the hub and outside the ring.
-  function sliceAt(event) {
-    const box = wheel.getBoundingClientRect();
-    const x = event.clientX - box.left - box.width / 2, y = event.clientY - box.top - box.height / 2;
-    const r = Math.hypot(x, y) / (box.width / 2);
-    if (r < 118 / 200 || r > 1) return null;
-    const step = 360 / types.length;
-    const deg = (Math.atan2(y, x) * 180 / Math.PI + 90 + step / 2 + 360) % 360;
-    return types[Math.floor(deg / step) % types.length];
-  }
   wheel.addEventListener('click', event => {
-    if (event.target.closest('a, .wheel-step')) return;
-    const type = event.target.closest('[data-wheel-type]')?.dataset.wheelType || sliceAt(event);
+    if (event.target.closest('a, button.wheel-step, [data-wheel-back]')) return;
+    const type = event.target.closest('[data-wheel-type]')?.dataset.wheelType || types[sliceIndex(wheel, event, types.length)];
     if (type) pick(type);
   });
   wheel.addEventListener('pointermove', event => {
     if (event.pointerType !== 'mouse') return;
-    const type = sliceAt(event);
+    const type = types[sliceIndex(wheel, event, types.length)];
     const live = Boolean(type) && usable(slots[types.indexOf(type)]);
     slices.forEach(s => s.classList.toggle('is-hover', live && s.dataset.wheelSlice === type));
     wheel.style.cursor = live ? 'pointer' : '';
   });
   wheel.addEventListener('pointerleave', () => slices.forEach(s => s.classList.remove('is-hover')));
-  slots.forEach((slot, i) => slot.addEventListener('keydown', event => {
-    const dir = { ArrowRight: 1, ArrowDown: 1, ArrowLeft: -1, ArrowUp: -1 }[event.key];
-    if (!dir) return;
-    event.preventDefault();
-    for (let k = 1; k < slots.length; k++) {
-      const next = slots[(i + dir * k + slots.length * k) % slots.length];
-      if (usable(next)) { pick(next.dataset.wheelType, true); break; }
-    }
-  }));
+  ringKeys(slots, usable, next => pick(next.dataset.wheelType, true));
   $$('[data-wheel-step]', wheel).forEach(button => button.addEventListener('click', () => {
     show(current, page.get(current) + Number(button.dataset.wheelStep));
   }));
