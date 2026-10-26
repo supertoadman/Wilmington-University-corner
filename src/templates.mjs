@@ -68,7 +68,7 @@ const fmtDuration = (sec) => `${Math.floor(Math.round(sec) / 60)}:${String(Math.
 // Wrap each word so the home headline can rise in one word at a time (see .hero-title .w).
 const riseWords = (html) => html.split(' ').map((w, i) => `<span class="w" style="--i:${i}">${w}</span>`).join(' ');
 
-const FONTS = 'https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap';
+const FONTS = 'https://fonts.googleapis.com/css2?family=Cinzel:wght@500..700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap';
 
 // ---------------------------------------------------------------------------
 // Layout
@@ -489,14 +489,14 @@ export function home(ctx) {
   <span class="cover-scene" aria-hidden="true"></span>
   <div class="container cover-grid">
     <div class="cover-copy">
-      <p class="cover-eyebrow"><span></span> The law school study library</p>
-      <h1 id="cover-title">Your courses.<br>Your <em>study library.</em></h1>
-      <p class="cover-lede">Outlines, rule charts, flashcards, and practice—all in one place.</p>
-      <p class="cover-description">Search for a topic or browse every document by course below.</p>
+      <p class="cover-eyebrow"><span></span>The Law School Study Library<span></span></p>
+      <h1 id="cover-title"><span class="cover-h1-top">${riseWords('Triumph over the')}</span> <span class="cover-h1-gilt"><em>Socratic method.</em></span><span class="cover-flourish" aria-hidden="true"><i></i></span></h1>
+      <p class="cover-lede">Outlines, rule charts, flashcards, and thousands of practice questions for every course, built by the students who sat in your seat.</p>
+      <p class="cover-description">Search any topic, or pick a course below.</p>
       <button class="cover-search hero-search" type="button" data-open-search>
         ${icon('search')}<span>Search: try “404(b)” or “conflicts”</span><kbd>Ctrl K</kbd>
       </button>
-      <div class="cover-actions"><a href="#courses">Browse the courses ${icon('arrow-right')}</a><span>Open in your browser. Keep a copy.</span></div>
+      <div class="cover-actions"><a href="#courses">Browse the courses ${icon('arrow-right')}</a><span>Free to read. Free to download.</span></div>
     </div>
     <figure class="cover-art" aria-hidden="true">
       <span class="cover-wing cover-wing-l"></span>
