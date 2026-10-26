@@ -93,6 +93,16 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
 .pre{margin:10px 0 0;background:var(--var-soft);border-left:3px solid var(--var);border-radius:0 6px 6px 0;padding:6px 12px;font-size:15px}
 .pre summary{cursor:pointer;font-family:var(--mono);font-size:12px;color:var(--var)}
 .pre p{margin:6px 0 2px}
+/* Flags: a question you flag, or miss, stays flagged in this browser between visits until you clear it. */
+:root{--flag:#9a5f0e;--flag-soft:#f7ecd9}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--flag:#e3b673;--flag-soft:#33281a}}
+:root[data-theme="dark"]{--flag:#e3b673;--flag-soft:#33281a}
+.flagbtn{margin-left:auto;align-self:center;background:transparent;border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:12px;color:var(--muted);display:inline-flex;gap:5px;align-items:center}
+.flagbtn svg{width:13px;height:13px}
+.flagbtn:hover{border-color:var(--flag);color:var(--ink)}
+.flagbtn[aria-pressed="true"]{background:var(--flag-soft);border-color:var(--flag);color:var(--ink)}
+.flagbtn[aria-pressed="true"] svg{color:var(--flag);fill:currentColor}
+.btn:disabled{opacity:.5;cursor:default}
 </style>
 
 <div class="wrap">
@@ -107,6 +117,7 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
       <button class="btn primary" id="shufA">Shuffle answers</button>
       <button class="btn" id="shufQ">Shuffle questions</button>
       <button class="btn" id="missed">Retry missed</button>
+      <button class="btn" id="flagged">Flagged</button>
       <button class="btn" id="reset">Reset</button>
     </div>
     <div class="row">
@@ -242,7 +253,7 @@ const QB = [{"id":"1","area":"Jury secrecy","tag":"FRE 606(b)","cov":["606-int",
 const L = "ABCD";
 const AREAS = ["Jury secrecy","Relevance","Rule 403 and 105","Specialized relevance (407–411)","Character and other acts","Impeachment","Rape shield (412)"];
 const byId = Object.fromEntries(QB.map(q => [q.id, q]));
-let st = { area:"All", kind:"all", order: QB.map(q => q.id), shuffled:false, opts:{}, picked:{}, out:{}, onlyMissed:false, missed:new Set(), pre:new Set() };
+let st = { area:"All", kind:"all", order: QB.map(q => q.id), shuffled:false, opts:{}, picked:{}, out:{}, onlyMissed:false, missed:new Set(), onlyFlagged:false, flagged:new Set(), pre:new Set() };
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const shuffleAnswers = () => QB.forEach(q => st.opts[q.id] = shuffle([0,1,2,3]));
 
@@ -262,11 +273,38 @@ function crossBtn(opt, letter, out, k) {
   return x;
 }
 
+// Flags: a question you flag, or miss, stays flagged in this browser between visits until you clear it.
+const FLAG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg>';
+const flags = (() => {
+  const KEY = "evidence-case-files-strict:flags";
+  let ids;
+  try { ids = new Set(JSON.parse(localStorage.getItem(KEY)) || []); } catch (e) { ids = new Set(); }
+  return {
+    has: id => ids.has(id),
+    list: () => [...ids].filter(id => byId[id]),
+    set(id, on) { on ? ids.add(id) : ids.delete(id); try { localStorage.setItem(KEY, JSON.stringify([...ids])); } catch (e) {} }
+  };
+})();
+function flagBtn(id) {
+  const f = document.createElement("button");
+  f.type = "button"; f.className = "flagbtn"; f.title = "Flag this question to come back to it";
+  const paint = () => { f.setAttribute("aria-pressed", flags.has(id)); f.innerHTML = FLAG + "<span>" + (flags.has(id) ? "Flagged" : "Flag") + "</span>"; };
+  f.addEventListener("click", () => { flags.set(id, !flags.has(id)); paint(); flagLabel(); });
+  paint();
+  return f;
+}
+function flagLabel() {
+  const b = document.getElementById("flagged"), n = flags.list().length;
+  b.textContent = st.onlyFlagged ? "Show all" : "Flagged (" + n + ")";
+  b.disabled = !st.onlyFlagged && !n;
+}
+
 function visible() {
   return st.order.map(id => byId[id]).filter(q =>
     (st.area === "All" || q.area === st.area) &&
     (st.kind === "all" || (st.kind === "base" ? !q.v : !!q.v)) &&
-    (!st.onlyMissed || st.missed.has(q.id)));
+    (!st.onlyMissed || st.missed.has(q.id)) &&
+    (!st.onlyFlagged || st.flagged.has(q.id)));
 }
 
 function card(q) {
@@ -276,6 +314,7 @@ function card(q) {
   const picked = st.picked[q.id];
   li.innerHTML = '<div class="meta"><span class="num">Q' + q.id + '</span><span class="kind">' + (q.v ? "Variation" : "Question") + '</span><span class="tag"></span>' + (q.v ? '<span class="parent">builds on Q' + q.v + '</span>' : '') + '</div><p class="stem"></p><div class="opts"></div>';
   li.querySelector(".tag").textContent = q.tag;
+  li.querySelector(".meta").appendChild(flagBtn(q.id));
   li.querySelector(".stem").textContent = q.stem;
   if (q.v && byId[q.v]) {
     const d = document.createElement("details"); d.className = "pre"; d.open = st.pre.has(q.id);
@@ -294,7 +333,7 @@ function card(q) {
     b.querySelector("span").textContent = q.o[k][0];
     if (out.has(k)) b.classList.add("out");
     if (picked !== undefined) { b.disabled = true; if (k === 0) b.classList.add("right"); else if (k === picked) b.classList.add("wrong"); }
-    b.onclick = () => { st.picked[q.id] = k; li.replaceWith(card(q)); score(); };
+    b.onclick = () => { st.picked[q.id] = k; if (k !== 0) flags.set(q.id, true); li.replaceWith(card(q)); score(); };
     const row = document.createElement("div"); row.className = "orow"; row.appendChild(b);
     if (picked === undefined) row.appendChild(crossBtn(b, L[pos], out, k));
     box.appendChild(row);
@@ -333,6 +372,7 @@ function render() {
   document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.a === st.area));
   ["all","base","var"].forEach(k => document.getElementById("k-" + k).setAttribute("aria-pressed", st.kind === k));
   document.getElementById("missed").textContent = st.onlyMissed ? "Show all" : "Retry missed";
+  flagLabel();
   score();
 }
 
@@ -353,7 +393,7 @@ function coverage() {
       r.innerHTML = '<span></span><span class="refs"></span>'; r.firstChild.textContent = label;
       (refs[k] || []).forEach(id => {
         const a = document.createElement("a"); a.href = "#q-" + id; a.textContent = "Q" + id;
-        a.onclick = e => { e.preventDefault(); st.area = "All"; st.kind = "all"; st.onlyMissed = false; st.shuffled = false; st.order = QB.map(q => q.id); render(); document.getElementById("q-" + id)?.scrollIntoView({ behavior:"smooth", block:"start" }); };
+        a.onclick = e => { e.preventDefault(); st.area = "All"; st.kind = "all"; st.onlyMissed = false; st.onlyFlagged = false; st.shuffled = false; st.order = QB.map(q => q.id); render(); document.getElementById("q-" + id)?.scrollIntoView({ behavior:"smooth", block:"start" }); };
         r.lastChild.appendChild(a);
       });
       g.appendChild(r);
@@ -369,15 +409,23 @@ function coverage() {
   document.getElementById("chips").appendChild(c);
 });
 ["all","base","var"].forEach(k => document.getElementById("k-" + k).onclick = () => { st.kind = k; render(); });
-document.getElementById("shufA").onclick = () => { shuffleAnswers(); st.picked = {}; st.out = {}; st.onlyMissed = false; render(); };
+document.getElementById("shufA").onclick = () => { shuffleAnswers(); st.picked = {}; st.out = {}; st.onlyMissed = false; st.onlyFlagged = false; render(); };
 document.getElementById("shufQ").onclick = () => { st.order = shuffle(st.order); st.shuffled = true; render(); window.scrollTo({ top:0 }); };
-document.getElementById("reset").onclick = () => { st.picked = {}; st.out = {}; st.onlyMissed = false; st.area = "All"; st.kind = "all"; st.shuffled = false; st.order = QB.map(q => q.id); shuffleAnswers(); render(); };
+document.getElementById("reset").onclick = () => { st.picked = {}; st.out = {}; st.onlyMissed = false; st.onlyFlagged = false; st.area = "All"; st.kind = "all"; st.shuffled = false; st.order = QB.map(q => q.id); shuffleAnswers(); render(); };
 document.getElementById("missed").onclick = () => {
   if (st.onlyMissed) { st.onlyMissed = false; render(); return; }
   st.missed = new Set(Object.keys(st.picked).filter(id => st.picked[id] !== 0));
   if (!st.missed.size) return;
   st.missed.forEach(id => { delete st.picked[id]; delete st.out[id]; st.opts[id] = shuffle(st.opts[id]); });
-  st.onlyMissed = true; render(); window.scrollTo({ top:0 });
+  st.onlyMissed = true; st.onlyFlagged = false; render(); window.scrollTo({ top:0 });
+};
+// Flagged: the flagged questions on their own, answers cleared and letters reshuffled, for another try.
+document.getElementById("flagged").onclick = () => {
+  if (st.onlyFlagged) { st.onlyFlagged = false; render(); return; }
+  st.flagged = new Set(flags.list());
+  if (!st.flagged.size) return;
+  st.flagged.forEach(id => { delete st.picked[id]; delete st.out[id]; st.opts[id] = shuffle(st.opts[id]); });
+  st.onlyFlagged = true; st.onlyMissed = false; render(); window.scrollTo({ top:0 });
 };
 
 shuffleAnswers(); render(); coverage();

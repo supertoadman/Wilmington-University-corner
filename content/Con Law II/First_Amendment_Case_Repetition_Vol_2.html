@@ -107,6 +107,16 @@ main { padding-block: 20px 60px; display: flex; flex-direction: column; gap: 14p
   .fig { grid-column: 1; grid-row: auto; width: 170px; margin: 0 0 4px; }
   .opts { grid-column: 1; }
 }
+/* Flags: a question you flag, or miss, stays flagged in this browser between visits until you clear it. */
+:root { --flag: #9A5F0E; --flag-soft: #F7ECD9; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --flag: #E3B673; --flag-soft: #33281A; } }
+:root[data-theme="dark"] { --flag: #E3B673; --flag-soft: #33281A; }
+.flagbtn { margin-left: auto; display: inline-flex; gap: 5px; align-items: center; font: 500 12px var(--f-ui); letter-spacing: 0; color: var(--muted); background: transparent; border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; cursor: pointer; }
+.flagbtn svg { width: 13px; height: 13px; }
+.flagbtn:hover { border-color: var(--flag); color: var(--ink); }
+.flagbtn[aria-pressed="true"] { background: var(--flag-soft); border-color: var(--flag); color: var(--ink); }
+.flagbtn[aria-pressed="true"] svg { color: var(--flag); fill: currentColor; }
+.btn:disabled { opacity: .5; cursor: default; }
 </style>
 
 <header class="top wrap">
@@ -130,6 +140,7 @@ main { padding-block: 20px 60px; display: flex; flex-direction: column; gap: 14p
       <button class="btn primary" id="b-shuf-ans" type="button">Shuffle answer order</button>
       <button class="btn" id="b-shuf-q" type="button">Shuffle questions</button>
       <button class="btn" id="b-missed" type="button" aria-pressed="false">Show missed only</button>
+      <button class="btn" id="b-flagged" type="button" aria-pressed="false">Flagged only</button>
       <button class="btn" id="b-reset" type="button">Reset answers</button>
       <span class="toast" id="toast" role="status"></span>
     </div>
@@ -456,7 +467,7 @@ const QB = [
   let order = [];          // question display order
   let answers = {};        // i -> original option index chosen
   let out = {};            // i -> Set of original option indices crossed out
-  let chFilter = "all", kindFilter = "all", caseFilter = "all", missedOnly = false, qShuffled = false;
+  let chFilter = "all", kindFilter = "all", caseFilter = "all", missedOnly = false, flaggedOnly = false, flagSet = new Set(), qShuffled = false;
 
   function shuffle(a) { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
   function freshPerms() { perms = QB.map(q => shuffle(q.o.map((_, j) => j))); }
@@ -471,6 +482,26 @@ const QB = [
   }
 
   function el(tag, cls, text) { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; }
+
+  // Flags: a question you flag, or miss, stays flagged in this browser between visits until you clear it.
+  const FLAG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg>';
+  const flags = (() => {
+    const K = KEY + ":flags:" + N;
+    let ids;
+    try { ids = new Set(JSON.parse(localStorage.getItem(K)) || []); } catch (e) { ids = new Set(); }
+    return {
+      has: i => ids.has(i),
+      list: () => [...ids].filter(i => i < N),
+      set(i, on) { on ? ids.add(i) : ids.delete(i); try { localStorage.setItem(K, JSON.stringify([...ids])); } catch (e) {} }
+    };
+  })();
+  function flagBtn(i) {
+    const f = el("button", "flagbtn"); f.type = "button"; f.title = "Flag this question to come back to it";
+    const paint = () => { f.setAttribute("aria-pressed", String(flags.has(i))); f.innerHTML = FLAG + "<span>" + (flags.has(i) ? "Flagged" : "Flag") + "</span>"; };
+    f.onclick = () => { flags.set(i, !flags.has(i)); paint(); flagLabel(); };
+    paint();
+    return f;
+  }
 
   // Strike-through toggle beside an option. It flips the option in place, so focus stays on the button.
   const STRIKE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><path d="M4 12h16"/></svg>';
@@ -505,12 +536,13 @@ const QB = [
     const q = QB[i];
     return (chFilter === "all" || q.c === chFilter) && (kindFilter === "all" || q.k === kindFilter) && (caseFilter === "all" || q.id === caseFilter);
   }
-  function visible(i) { return inPool(i) && !(missedOnly && !(i in answers && answers[i] !== 0)); }
+  function visible(i) { return inPool(i) && !(missedOnly && !(i in answers && answers[i] !== 0)) && !(flaggedOnly && !flagSet.has(i)); }
 
   function renderCard(i, num) {
     const q = QB[i], card = el("article", "q");
     const meta = el("div", "meta");
     meta.append(el("span", null, "Q" + num), el("span", null, "Ch. " + q.c), el("span", "kind", KIND[q.k]));
+    meta.appendChild(flagBtn(i));
     const answered = i in answers;
     const body = el("div", "qbody");
     body.append(el("p", "stem", q.q), figure(q, answered));
@@ -525,7 +557,7 @@ const QB = [
         if (orig === 0) b.classList.add("correct");
         else if (orig === answers[i]) b.classList.add("wrong");
       }
-      b.onclick = () => { answers[i] = orig; save(); card.replaceWith(renderCard(i, num)); updateScore(); };
+      b.onclick = () => { answers[i] = orig; if (orig !== 0) flags.set(i, true); save(); card.replaceWith(renderCard(i, num)); updateScore(); };
       const row = el("div", "orow"); row.appendChild(b);
       if (!answered) row.appendChild(crossBtn(b, LETTERS[pos], xs, orig));
       box.appendChild(row);
@@ -563,7 +595,7 @@ const QB = [
       }
       list.appendChild(renderCard(i, n));
     });
-    if (!n) list.appendChild(el("p", "empty", missedOnly ? "No missed questions in this set. Answer a few first, or turn off Show missed only." : "No questions match these filters."));
+    if (!n) list.appendChild(el("p", "empty", flaggedOnly ? "No flagged questions match these filters." : missedOnly ? "No missed questions in this set. Answer a few first, or turn off Show missed only." : "No questions match these filters."));
     updateScore();
   }
 
@@ -602,9 +634,29 @@ const QB = [
     e.currentTarget.textContent = qShuffled ? "Restore chapter order" : "Shuffle questions";
     render(); toast(qShuffled ? "Questions shuffled." : "Chapter order restored.");
   };
-  document.getElementById("b-missed").onclick = e => { missedOnly = !missedOnly; e.currentTarget.setAttribute("aria-pressed", String(missedOnly)); e.currentTarget.classList.toggle("primary", missedOnly); render(); };
+  // Flagged only: the flagged questions, answers cleared and letters reshuffled, for another try.
+  const fb = document.getElementById("b-flagged");
+  function flagLabel() {
+    const n = flags.list().length;
+    fb.textContent = "Flagged only (" + n + ")";
+    fb.disabled = !flaggedOnly && !n;
+  }
+  function setFlagged(on) { flaggedOnly = on; fb.setAttribute("aria-pressed", String(on)); fb.classList.toggle("primary", on); flagLabel(); }
+  fb.onclick = () => {
+    if (!flaggedOnly) {
+      flagSet = new Set(flags.list());
+      if (!flagSet.size) return;
+      flagSet.forEach(i => { delete answers[i]; delete out[i]; shuffle(perms[i]); });
+      save();
+      if (missedOnly) document.getElementById("b-missed").click();
+    }
+    setFlagged(!flaggedOnly); render();
+    if (flaggedOnly) window.scrollTo({ top: 0 });
+  };
+  document.getElementById("b-missed").onclick = e => { missedOnly = !missedOnly; if (missedOnly && flaggedOnly) setFlagged(false); e.currentTarget.setAttribute("aria-pressed", String(missedOnly)); e.currentTarget.classList.toggle("primary", missedOnly); render(); };
   document.getElementById("b-reset").onclick = () => { answers = {}; out = {}; save(); render(); toast("Answers cleared."); };
 
+  flagLabel();
   render();
 })();
 </script>

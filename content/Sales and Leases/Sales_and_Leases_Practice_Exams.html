@@ -91,6 +91,16 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
 .covrow a:hover{border-color:var(--accent)}
 @media (max-width:560px){.covrow{grid-template-columns:1fr}.covrow .refs{justify-content:flex-start}}
 @media (prefers-reduced-motion:reduce){.meter i{transition:none}}
+/* Flags: a question you flag, or miss, stays flagged in this browser between visits until you clear it. */
+:root{--flag:#9a5f0e;--flag-soft:#f7ecd9}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--flag:#e3b673;--flag-soft:#33281a}}
+:root[data-theme="dark"]{--flag:#e3b673;--flag-soft:#33281a}
+.flagbtn{margin-left:auto;align-self:center;background:transparent;border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:12px;color:var(--muted);display:inline-flex;gap:5px;align-items:center}
+.flagbtn svg{width:13px;height:13px}
+.flagbtn:hover{border-color:var(--flag);color:var(--ink)}
+.flagbtn[aria-pressed="true"]{background:var(--flag-soft);border-color:var(--flag);color:var(--ink)}
+.flagbtn[aria-pressed="true"] svg{color:var(--flag);fill:currentColor}
+.btn:disabled{opacity:.5;cursor:default}
 </style>
 
 <div class="wrap">
@@ -105,6 +115,7 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
       <button class="btn primary" id="grade" hidden>Grade</button>
       <button class="btn" id="shufQ">Shuffle questions</button>
       <button class="btn" id="missed">Retry missed</button>
+      <button class="btn" id="flagged">Flagged</button>
       <button class="btn" id="reset">Reset</button>
     </div>
     <div class="row">
@@ -134,7 +145,7 @@ const AREAS = ["1 · The UCC & which law governs", "2 · Formation", "3 · Statu
 const L = "ABCDE";
 const EXAMS = [...new Set(QB.map(q => q.exam))];
 const byId = Object.fromEntries(QB.map(q => [q.id, q]));
-const fresh = () => ({ exam:"All", area:"All", mode: st ? st.mode : "study", order: QB.map(q => q.id), shuffled:false, picked:{}, out:{}, shown:new Set(), onlyMissed:false, missed:new Set() });
+const fresh = () => ({ exam:"All", area:"All", mode: st ? st.mode : "study", order: QB.map(q => q.id), shuffled:false, picked:{}, out:{}, shown:new Set(), onlyMissed:false, missed:new Set(), onlyFlagged:false, flagged:new Set() });
 let st = null; st = fresh();
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const hypoText = h => HYPOS[h].replace(/^Q\d+–\d+ HYPO: /, "");
@@ -157,11 +168,42 @@ function crossBtn(opt, letter, out, k) {
   return x;
 }
 
+// Flags: a question you flag, or miss, stays flagged in this browser between visits until you clear it.
+const FLAG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg>';
+const flags = (() => {
+  const KEY = "sales-practice-exams:flags";
+  let ids;
+  try { ids = new Set(JSON.parse(localStorage.getItem(KEY)) || []); } catch (e) { ids = new Set(); }
+  return {
+    has: id => ids.has(id),
+    list: () => [...ids].filter(id => byId[id]),
+    set(id, on) { on ? ids.add(id) : ids.delete(id); try { localStorage.setItem(KEY, JSON.stringify([...ids])); } catch (e) {} }
+  };
+})();
+function flagBtn(id) {
+  const f = document.createElement("button");
+  f.type = "button"; f.className = "flagbtn"; f.title = "Flag this question to come back to it";
+  const paint = () => { f.setAttribute("aria-pressed", flags.has(id)); f.innerHTML = FLAG + "<span>" + (flags.has(id) ? "Flagged" : "Flag") + "</span>"; };
+  f.addEventListener("click", () => { flags.set(id, !flags.has(id)); paint(); flagLabel(); });
+  paint();
+  return f;
+}
+function flagLabel() {
+  const b = document.getElementById("flagged"), n = flags.list().length;
+  b.textContent = st.onlyFlagged ? "Show all" : "Flagged (" + n + ")";
+  b.disabled = !st.onlyFlagged && !n;
+}
+// Grading shows the answers; a wrong or skipped answer flags its question.
+function grade(qs) {
+  qs.forEach(q => { if (st.shown.has(q.id)) return; st.shown.add(q.id); if (st.picked[q.id] !== q.a) flags.set(q.id, true); });
+}
+
 function visible() {
   return st.order.map(id => byId[id]).filter(q =>
     (st.exam === "All" || q.exam === st.exam) &&
     (st.area === "All" || q.area === st.area) &&
-    (!st.onlyMissed || st.missed.has(q.id)));
+    (!st.onlyMissed || st.missed.has(q.id)) &&
+    (!st.onlyFlagged || st.flagged.has(q.id)));
 }
 
 function card(q, inlineHypo) {
@@ -173,6 +215,7 @@ function card(q, inlineHypo) {
   li.querySelector(".num").textContent = "Exam " + q.exam + " · Q" + q.num;
   li.querySelector(".kind").textContent = q.h ? hypoLabel(q.h) : "Stand-alone";
   li.querySelector(".tag").textContent = q.tag;
+  li.querySelector(".meta").appendChild(flagBtn(q.id));
   li.querySelector(".stem").textContent = (q.h ? "QUESTION: " : "") + q.stem;
   if (q.h && inlineHypo) {
     const d = document.createElement("details"); d.className = "inl"; d.open = true;
@@ -193,7 +236,7 @@ function card(q, inlineHypo) {
     else if (k === picked) { b.classList.add("chosen"); b.setAttribute("aria-pressed", "true"); }
     b.onclick = () => {
       st.picked[q.id] = k;
-      if (st.mode === "study") st.shown.add(q.id);
+      if (st.mode === "study") grade([q]);
       li.replaceWith(card(q, inlineHypo)); score();
     };
     const row = document.createElement("div"); row.className = "orow"; row.appendChild(b);
@@ -237,7 +280,7 @@ function section(title, qs, grouped) {
   sec.querySelector(".tally").textContent = tally(qs);
   if (st.mode === "exam" && qs.some(q => !st.shown.has(q.id))) {
     const g = document.createElement("button"); g.type = "button"; g.className = "btn"; g.textContent = "Grade " + title;
-    g.onclick = () => { qs.forEach(q => st.shown.add(q.id)); render(); sec.scrollIntoView({ block:"start" }); };
+    g.onclick = () => { grade(qs); render(); sec.scrollIntoView({ block:"start" }); };
     sec.querySelector(".ehead").appendChild(g);
   }
   const ol = sec.querySelector("ol"), seen = new Set();
@@ -261,6 +304,7 @@ function render() {
   document.getElementById("grade").hidden = st.mode !== "exam";
   document.getElementById("modehint").textContent = st.mode === "exam" ? "Pick your answers, then grade an exam." : "Each answer is checked as you pick it.";
   document.getElementById("missed").textContent = st.onlyMissed ? "Show all" : "Retry missed";
+  flagLabel();
   score();
 }
 
@@ -283,7 +327,7 @@ function coverage() {
     QB.filter(q => q.area === ar).forEach(q => {
       const a = document.createElement("a"); a.href = "#" + anchor(q.id); a.textContent = q.exam + "·" + q.num;
       a.title = "Exam " + q.exam + ", question " + q.num + ": " + q.tag;
-      a.onclick = e => { e.preventDefault(); st.exam = "All"; st.area = "All"; st.onlyMissed = false; st.shuffled = false; st.order = QB.map(x => x.id); render(); document.getElementById(anchor(q.id))?.scrollIntoView({ behavior:"smooth", block:"start" }); };
+      a.onclick = e => { e.preventDefault(); st.exam = "All"; st.area = "All"; st.onlyMissed = false; st.onlyFlagged = false; st.shuffled = false; st.order = QB.map(x => x.id); render(); document.getElementById(anchor(q.id))?.scrollIntoView({ behavior:"smooth", block:"start" }); };
       r.lastChild.appendChild(a);
     });
     body.appendChild(r);
@@ -304,9 +348,9 @@ sel.onchange = () => { st.area = sel.value; render(); };
 ["study","exam"].forEach(m => document.getElementById("m-" + m).onclick = () => {
   if (st.mode === m) return;
   // Switching modes starts the answers over, so a graded answer never turns back into an open one.
-  st.mode = m; st.picked = {}; st.out = {}; st.shown = new Set(); st.onlyMissed = false; render();
+  st.mode = m; st.picked = {}; st.out = {}; st.shown = new Set(); st.onlyMissed = false; st.onlyFlagged = false; render();
 });
-document.getElementById("grade").onclick = () => { visible().forEach(q => st.shown.add(q.id)); render(); window.scrollTo({ top:0 }); };
+document.getElementById("grade").onclick = () => { grade(visible()); render(); window.scrollTo({ top:0 }); };
 document.getElementById("shufQ").onclick = () => { st.order = shuffle(st.order); st.shuffled = true; render(); window.scrollTo({ top:0 }); };
 document.getElementById("reset").onclick = () => { st = fresh(); render(); window.scrollTo({ top:0 }); };
 document.getElementById("missed").onclick = () => {
@@ -314,7 +358,15 @@ document.getElementById("missed").onclick = () => {
   st.missed = new Set([...st.shown].filter(id => st.picked[id] !== byId[id].a));
   if (!st.missed.size) return;
   st.missed.forEach(id => { delete st.picked[id]; delete st.out[id]; st.shown.delete(id); });
-  st.onlyMissed = true; render(); window.scrollTo({ top:0 });
+  st.onlyMissed = true; st.onlyFlagged = false; render(); window.scrollTo({ top:0 });
+};
+// Flagged: the flagged questions on their own, answers cleared, for another try.
+document.getElementById("flagged").onclick = () => {
+  if (st.onlyFlagged) { st.onlyFlagged = false; render(); return; }
+  st.flagged = new Set(flags.list());
+  if (!st.flagged.size) return;
+  st.flagged.forEach(id => { delete st.picked[id]; delete st.out[id]; st.shown.delete(id); });
+  st.onlyFlagged = true; st.onlyMissed = false; render(); window.scrollTo({ top:0 });
 };
 
 render(); coverage();
