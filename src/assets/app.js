@@ -448,6 +448,69 @@ function closeSheets() {
 $$('[data-sheet-open]').forEach((b) => b.addEventListener('click', () => openSheet(b.dataset.sheetOpen)));
 $$('[data-sheet-close]').forEach((b) => b.addEventListener('click', closeSheets));
 
+// ---------- Progress backup ----------
+// Practice sets keep answers, flags and settings in localStorage, which lives in one browser on one
+// device. A backup is all of that as a JSON file; restoring writes it back (keys not in the file are
+// kept) and reloads, so the open practice set picks it up. No accounts and no server.
+const BACKUP = { app: 'wilmington-study-progress', version: 1 };
+const BACKUP_AT = 'progress-backup-at';
+const progressStatus = $('[data-progress-status]');
+const fmtBackupDate = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+function showBackupStatus(msg) {
+  if (!progressStatus) return;
+  const at = store.get(BACKUP_AT, null);
+  progressStatus.textContent = msg || (at ? `Last backup from this browser: ${fmtBackupDate(at)}.` : 'No backup downloaded from this browser yet.');
+}
+$$('[data-sheet-open="progress-sheet"]').forEach((b) => b.addEventListener('click', () => showBackupStatus()));
+$('[data-progress-save]')?.addEventListener('click', () => {
+  const data = {};
+  try {
+    for (let i = 0; i < localStorage.length; i++) {
+      const k = localStorage.key(i);
+      if (k !== BACKUP_AT) data[k] = localStorage.getItem(k);
+    }
+  } catch {
+    showBackupStatus("This browser isn't letting the site save anything, so there's nothing to back up.");
+    return;
+  }
+  const at = new Date().toISOString();
+  const url = URL.createObjectURL(new Blob([JSON.stringify({ ...BACKUP, saved: at, data })], { type: 'application/json' }));
+  const a = Object.assign(document.createElement('a'), { href: url, download: `study-progress-${at.slice(0, 10)}.json` });
+  body.append(a); a.click(); a.remove();
+  setTimeout(() => URL.revokeObjectURL(url), 10000);
+  store.set(BACKUP_AT, at);
+  // Backing up is a good moment to ask the browser to keep this site's data (Firefox asks the student).
+  navigator.storage?.persist?.().catch(() => {});
+  showBackupStatus('Backup downloaded. Keep the file somewhere safe, or restore it on another device.');
+});
+const backupFile = $('[data-progress-file]');
+$('[data-progress-restore]')?.addEventListener('click', () => backupFile.click());
+backupFile?.addEventListener('change', async () => {
+  const file = backupFile.files[0];
+  backupFile.value = '';
+  if (!file) return;
+  let b = null;
+  try { b = JSON.parse(await file.text()); } catch { /* not JSON */ }
+  if (!b || b.app !== BACKUP.app || b.version !== BACKUP.version || !b.data || typeof b.data !== 'object') {
+    showBackupStatus("That file isn't a progress backup from this site.");
+    return;
+  }
+  const entries = Object.entries(b.data).filter(([, v]) => typeof v === 'string');
+  const when = b.saved ? ` from ${fmtBackupDate(b.saved)}` : '';
+  if (!confirm(`Restore the backup${when}? It replaces the saved progress for the practice sets in the backup.`)) return;
+  try { entries.forEach(([k, v]) => localStorage.setItem(k, v)); } catch {
+    showBackupStatus("This browser wouldn't save the backup. Check that site data isn't blocked, then try again.");
+    return;
+  }
+  location.reload();
+});
+
+// Ask the browser to keep this site's storage when the device runs low on space. Chrome and Safari
+// decide quietly; Firefox would pop up a prompt, so there it is asked only when a student backs up.
+if (navigator.storage?.persist && !/Firefox\//.test(navigator.userAgent)) {
+  navigator.storage.persisted().then((kept) => kept || navigator.storage.persist()).catch(() => {});
+}
+
 // ---------- Desktop subjects menu ----------
 const subnav = $('[data-subnav]');
 if (subnav) {

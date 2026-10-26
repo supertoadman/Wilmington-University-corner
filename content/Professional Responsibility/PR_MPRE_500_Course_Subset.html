@@ -497,6 +497,18 @@ const S = {
   disputed: false
 };
 function saveSettings(){ store.set("settings",{topics:[...S.topics],mode:S.mode,count:S.count,shuffleQ:S.shuffleQ}); }
+// Progress: the current set (its questions, letter order, answers, and your place) is saved in this browser, so a visit picks up where the last one left off.
+const setKey = "set:" + QS.length;
+function saveSet(){ store.set(setKey,{items:S.items.map(it=>({qi:it.qi,perm:it.perm,pick:it.pick})),cur:S.cur,submitted:S.submitted,view:S.view}); }
+function loadSet(){
+  const s = store.get(setKey);
+  const ok = it => it && Number.isInteger(it.qi) && it.qi>=0 && it.qi<QS.length && Array.isArray(it.perm) && [...it.perm].sort().join()==="0,1,2,3" && (it.pick===null || [0,1,2,3].includes(it.pick));
+  if(!s || !Array.isArray(s.items) || !s.items.length || !s.items.every(ok)) return false;
+  S.items = s.items.map(it=>({qi:it.qi, perm:it.perm, pick:it.pick, out:new Set()}));
+  S.cur = Math.min(Math.max(0, s.cur|0), S.items.length-1);
+  S.submitted = !!s.submitted; S.view = s.view==="results" && S.submitted ? "results" : "quiz";
+  render(); return true;
+}
 function shuffle(arr){ const a=arr.slice(); for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1)); [a[i],a[j]]=[a[j],a[i]];} return a; }
 function newPerm(){ return shuffle([0,1,2,3]); }
 
@@ -612,6 +624,7 @@ function render(){
   if(S.view==="results") renderResults(); else renderQuiz();
   renderGrid(); renderScore();
   $("flaggedBtn").textContent = `Flagged set (${flagged.size})`; $("flaggedBtn").disabled = !flagged.size;
+  saveSet();
 }
 
 // ───────── Events
@@ -671,5 +684,5 @@ document.addEventListener("keydown",e=>{
   else if(e.key==="ArrowLeft"){ go(S.cur-1); e.preventDefault(); }
 });
 
-buildSet();
+if(!loadSet()) buildSet();
 </script>

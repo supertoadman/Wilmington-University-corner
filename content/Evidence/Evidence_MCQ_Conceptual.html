@@ -526,6 +526,22 @@ function flagLabel() {
   b.disabled = !state.onlyFlagged && !n;
 }
 
+// Progress: answers and the order of letters and questions are saved in this browser, so a visit picks up where the last one left off.
+const SAVE = "evidence-concepts:progress:" + BANK.length;
+const isPerm = (p, n) => Array.isArray(p) && p.length === n && p.every((k, i) => p.indexOf(i) >= 0 && Number.isInteger(k));
+function save() {
+  try { localStorage.setItem(SAVE, JSON.stringify({ opts: state.opts, picked: state.picked, order: state.order, topic: state.topic })); } catch (e) {}
+}
+function load() {
+  let s = null;
+  try { s = JSON.parse(localStorage.getItem(SAVE)); } catch (e) {}
+  if (!s) return;
+  BANK.forEach((b, i) => { if (isPerm(s.opts && s.opts[i], b[3].length)) state.opts[i] = s.opts[i]; });
+  Object.entries(s.picked || {}).forEach(([i, k]) => { i = Number(i); if (BANK[i] && Number.isInteger(k) && k >= 0 && k < BANK[i][3].length) state.picked[i] = k; });
+  if (isPerm(s.order, BANK.length)) state.order = s.order;
+  if (TOPICS.includes(s.topic)) state.topic = s.topic;
+}
+
 function visible() {
   return state.order.filter(i =>
     (state.topic === "All" || BANK[i][0] === state.topic) &&
@@ -584,6 +600,7 @@ function render() {
   document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.t === state.topic));
   document.getElementById("missed").textContent = state.onlyMissed ? "Show all" : "Retry missed";
   flagLabel();
+  save();
 }
 
 const chips = document.getElementById("chips");
@@ -618,5 +635,6 @@ document.getElementById("flagged").onclick = () => {
 state.order = BANK.map((_, i) => i);
 state.missedSet = new Set();
 shuffleAnswers();
+load();
 render();
 </script>

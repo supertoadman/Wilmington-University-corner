@@ -299,6 +299,23 @@ function flagLabel() {
   b.disabled = !st.onlyFlagged && !n;
 }
 
+// Progress: answers and the order of letters and questions are saved in this browser, so a visit picks up where the last one left off.
+const SAVE = "evidence-case-files-strict:progress";
+const isPerm = (p, n) => Array.isArray(p) && p.length === n && p.every((k, i) => p.indexOf(i) >= 0 && Number.isInteger(k));
+function save() {
+  try { localStorage.setItem(SAVE, JSON.stringify({ opts: st.opts, picked: st.picked, order: st.order, shuffled: st.shuffled, area: st.area, kind: st.kind })); } catch (e) {}
+}
+function load() {
+  let s = null;
+  try { s = JSON.parse(localStorage.getItem(SAVE)); } catch (e) {}
+  if (!s) return;
+  QB.forEach(q => { if (isPerm(s.opts && s.opts[q.id], q.o.length)) st.opts[q.id] = s.opts[q.id]; });
+  Object.entries(s.picked || {}).forEach(([id, k]) => { if (byId[id] && Number.isInteger(k) && k >= 0 && k < byId[id].o.length) st.picked[id] = k; });
+  if (Array.isArray(s.order) && s.order.length === QB.length && new Set(s.order).size === QB.length && s.order.every(id => byId[id])) { st.order = s.order; st.shuffled = !!s.shuffled; }
+  if (s.area === "All" || AREAS.includes(s.area)) st.area = s.area;
+  if (["all", "base", "var"].includes(s.kind)) st.kind = s.kind;
+}
+
 function visible() {
   return st.order.map(id => byId[id]).filter(q =>
     (st.area === "All" || q.area === st.area) &&
@@ -380,6 +397,7 @@ function score() {
   const vis = visible(), done = vis.filter(q => st.picked[q.id] !== undefined), right = done.filter(q => st.picked[q.id] === 0).length;
   document.getElementById("score").innerHTML = right + " / " + done.length + " correct <span>· " + done.length + " of " + vis.length + " answered</span>";
   document.getElementById("meter").style.width = vis.length ? (done.length / vis.length * 100) + "%" : "0";
+  save();
 }
 
 function coverage() {
@@ -428,6 +446,6 @@ document.getElementById("flagged").onclick = () => {
   st.onlyFlagged = true; st.onlyMissed = false; render(); window.scrollTo({ top:0 });
 };
 
-shuffleAnswers(); render(); coverage();
+shuffleAnswers(); load(); render(); coverage();
 
 </script>

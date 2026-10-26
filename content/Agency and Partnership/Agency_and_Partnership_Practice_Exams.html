@@ -198,6 +198,23 @@ function grade(qs) {
   qs.forEach(q => { if (st.shown.has(q.id)) return; st.shown.add(q.id); if (st.picked[q.id] !== q.a) flags.set(q.id, true); });
 }
 
+// Progress: answers (graded or not), the mode, and the question order are saved in this browser, so a visit picks up where the last one left off.
+const SAVE = "ap-practice-exams:progress";
+function save() {
+  try { localStorage.setItem(SAVE, JSON.stringify({ mode: st.mode, exam: st.exam, area: st.area, order: st.order, shuffled: st.shuffled, picked: st.picked, shown: [...st.shown] })); } catch (e) {}
+}
+function load() {
+  let s = null;
+  try { s = JSON.parse(localStorage.getItem(SAVE)); } catch (e) {}
+  if (!s) return;
+  if (s.mode === "study" || s.mode === "exam") st.mode = s.mode;
+  if (s.exam === "All" || EXAMS.includes(s.exam)) st.exam = s.exam;
+  if (s.area === "All" || AREAS.includes(s.area)) st.area = s.area;
+  if (Array.isArray(s.order) && s.order.length === QB.length && new Set(s.order).size === QB.length && s.order.every(id => byId[id])) { st.order = s.order; st.shuffled = !!s.shuffled; }
+  Object.entries(s.picked || {}).forEach(([id, k]) => { if (byId[id] && Number.isInteger(k) && k >= 0 && k < byId[id].o.length) st.picked[id] = k; });
+  (s.shown || []).forEach(id => { if (byId[id]) st.shown.add(id); });
+}
+
 function visible() {
   return st.order.map(id => byId[id]).filter(q =>
     (st.exam === "All" || q.exam === st.exam) &&
@@ -317,6 +334,7 @@ function score() {
     const title = sec.querySelector("h2").textContent, qs = vis.filter(q => st.shuffled || "Exam " + q.exam === title);
     sec.querySelector(".tally").textContent = tally(qs);
   });
+  save();
 }
 
 function coverage() {
@@ -369,5 +387,5 @@ document.getElementById("flagged").onclick = () => {
   st.onlyFlagged = true; st.onlyMissed = false; render(); window.scrollTo({ top:0 });
 };
 
-render(); coverage();
+load(); render(); coverage();
 </script>

@@ -437,6 +437,12 @@ kbd {
 .sheet-item-text { display: flex; flex-direction: column; flex: 1; min-width: 0; }
 .sheet-item-text strong { font-weight: 600; font-size: 16px; }
 .sheet-item-text small { color: var(--muted); font-size: 13px; }
+/* Progress backup sheet */
+.progress-body { padding: 0 4px 4px; font-size: 15px; line-height: 1.55; }
+.progress-body p { margin: 0 0 12px; }
+.progress-actions { display: grid; gap: 8px; margin: 18px 0 12px; }
+.progress-status { min-height: 1.4em; font-weight: 500; }
+.progress-note { color: var(--muted); font-size: 13.5px; }
 .chev { color: var(--muted); width: 18px; height: 18px; }
 
 /* Shared icon tile */
@@ -1455,6 +1461,8 @@ main > .section:last-child { padding-bottom: 24px; }
 .footer-links { display: flex; flex-wrap: wrap; gap: 6px 24px; align-content: flex-start; font-size: 14.5px; max-width: 520px; }
 .footer-links a { text-decoration: none; color: var(--text-2); padding: 4px 0; }
 .footer-links a:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
+.footer-progress { font: inherit; background: none; border: 0; padding: 4px 0; color: var(--text-2); cursor: pointer; }
+.footer-progress:hover { color: var(--text); text-decoration: underline; text-underline-offset: 3px; }
 .footer-bottom { border-top: 1px solid var(--border); padding-top: 16px; padding-bottom: 24px; font-size: 13px; color: var(--muted); }
 @media (max-width: 640px) { .site-footer { margin-top: 56px; } }
 

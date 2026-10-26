@@ -178,6 +178,7 @@ ${body}
       ${subjects.map((s) => `<a href="${root}subjects/${s.slug}/">${esc(s.title)}</a>`).join('')}
       <a href="${root}contribute/">Share your work</a>
       <a href="${root}files/all-study-materials.zip" download>Download everything</a>
+      <button type="button" class="footer-progress" data-sheet-open="progress-sheet">Back up your progress</button>
     </nav>
   </div>
   <div class="container footer-bottom">${plural(docs.length, 'document')} · Updated ${fmtDate(ctx.generatedAt)}</div>
@@ -202,11 +203,33 @@ ${body}
     </ul>
   </div>
 </div>
+${progressSheet()}
 ${palette()}
 <script type="module" src="${root}assets/app.js"></script>
 </body>
 </html>`;
 }
+
+// Practice sets save answers and flags in this browser (localStorage). This sheet downloads all of it as
+// one file and restores it on another device or browser: progress that moves, with no accounts.
+const progressSheet = () => `<div class="sheet" id="progress-sheet" hidden>
+  <div class="sheet-scrim" data-sheet-close></div>
+  <div class="sheet-panel" role="dialog" aria-modal="true" aria-labelledby="progress-sheet-title">
+    <div class="sheet-grab" aria-hidden="true"></div>
+    <div class="sheet-head"><h2 id="progress-sheet-title">Your progress</h2><button class="icon-btn" type="button" data-sheet-close aria-label="Close">${icon('x')}</button></div>
+    <div class="progress-body">
+      <p>Your answers, flags, and settings save automatically in this browser. Nothing is uploaded, and there's no account.</p>
+      <p>To move them to another device or browser, download a backup here and restore it there. Restoring replaces the saved progress for the sets in the backup and keeps everything else.</p>
+      <div class="progress-actions">
+        <button class="btn btn-primary" type="button" data-progress-save>${icon('download')} Download a backup</button>
+        <button class="btn btn-ghost" type="button" data-progress-restore>${icon('upload')} Restore a backup</button>
+        <input type="file" accept=".json,application/json" data-progress-file hidden>
+      </div>
+      <p class="progress-status" data-progress-status role="status" aria-live="polite"></p>
+      <p class="progress-note">Safari on iPhone and Mac clears a site's saved data after about a week without a visit, so back up now and then.</p>
+    </div>
+  </div>
+</div>`;
 
 const palette = () => `<div class="palette" id="palette" hidden>
   <div class="palette-backdrop" data-close-search></div>
@@ -699,12 +722,14 @@ ${GILT_DEFS}
       <div class="vpanel-actions">
         <a class="btn btn-primary" href="${fileUrl}" download="${esc(d.filename)}">${icon('download')} Download ${esc(d.format.label)}</a>
         ${d.tracks ? '' : isFrame || isAudio ? `<a class="btn btn-ghost" href="${fileUrl}" target="_blank" rel="noopener">${icon('external-link')} Open in new tab</a>` : `<button class="btn btn-ghost" type="button" data-print>${icon('printer')} Print</button>`}
+        ${isFrame ? `<button class="btn btn-ghost" type="button" data-sheet-open="progress-sheet">${icon('download')} Back up your progress</button>` : ''}
       </div>
       ${related.length ? `<h3 class="vpanel-sub">More in ${esc(s.title)}</h3><ul class="doc-rows">${related.map((x) => docRow(ctx, root, x)).join('')}</ul>` : ''}
     </div>
   </aside>
   <div class="vscrim" data-panel-close></div>
 </div>
+${progressSheet()}
 <div class="toast" role="status" aria-live="polite" hidden></div>
 <script type="module" src="${root}assets/app.js"></script>
 </body>
