@@ -378,6 +378,12 @@ function materialWheel(ctx, root, s) {
         ${x.docs.length > 1 ? `<div class="wheel-pager"><button type="button" class="wheel-step" data-wheel-step="-1" aria-label="Previous">${icon('chevron-right', 'flip')}</button><span class="wheel-pos"><span data-wheel-pos>1</span> / ${x.docs.length}</span><button type="button" class="wheel-step" data-wheel-step="1" aria-label="Next">${icon('chevron-right')}</button></div>` : ''}
         ${x.docs.length ? `<a class="wheel-open" href="${root}${P.doc(x.docs[0])}" data-wheel-open>Open ${icon('arrow-right')}</a>` : ''}
       </div>`;
+  // Every document of the picked type, listed under the wheel once a slice holds more than one.
+  const list = (x) => `<section class="wheel-list" data-wheel-list="${x.type}"${x === first ? '' : ' hidden'} aria-label="All ${esc(x.meta.plural)}">
+    <p class="wheel-list-head">All ${esc(x.meta.plural)} <span class="wheel-list-n">${x.docs.length}</span></p>
+    <ol>${x.docs.map((d, n) => `<li><a class="wheel-list-item" href="${root}${P.doc(d)}" data-wheel-item="${n}"${n ? '' : ' aria-current="true"'}><span class="wheel-list-num">${n + 1}</span><span class="wheel-list-text"><span class="t">${esc(d.title)}</span><span class="m">${esc(docMeta(d))}</span></span>${icon('arrow-right')}</a></li>`).join('')}</ol>
+  </section>`;
+  const listed = slots.filter((x) => x.docs.length > 1);
   return `<article class="wheel-course" style="--accent:${s.accent}" data-wheel-panel="${esc(s.slug)}" hidden>
   <div class="wheel-course-head">
     <span class="wheel-course-icon">${icon(s.icon)}</span>
@@ -392,7 +398,8 @@ function materialWheel(ctx, root, s) {
       <button type="button" class="wheel-hub-back" data-wheel-back>${icon('chevron-right', 'flip')} Courses</button>
     </div>
   </div>
-  <p class="wheel-hint">Pick a slice to choose a kind of material. Use the arrows to flip through it.</p>
+  <p class="wheel-hint">Pick a slice to choose a kind of material.${listed.length ? ' When it holds more than one, all of them are listed below.' : ''}</p>
+  ${listed.map(list).join('')}
   <a class="wheel-all" href="${root}${P.subject(s)}">View all ${plural(s.documents.length, 'document')} in ${esc(s.title)} ${icon('arrow-right')}</a>
 </article>`;
 }

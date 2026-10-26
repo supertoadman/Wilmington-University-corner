@@ -112,6 +112,9 @@ $$('[data-wheel]').forEach(wheel => {
   const usable = slot => slot.getAttribute('aria-disabled') !== 'true';
   const page = new Map(types.map(type => [type, 0]));
   const group = type => $(`[data-wheel-group="${type}"]`, wheel);
+  // The full list of the picked type sits under the wheel and follows the hub's current document.
+  const lists = $$('[data-wheel-list]', wheel.closest('[data-wheel-panel]') || wheel.parentElement);
+  const list = type => lists.find(l => l.dataset.wheelList === type);
   let current = (slots.find(slot => slot.getAttribute('aria-checked') === 'true') || slots[0]).dataset.wheelType;
 
   function show(type, index) {
@@ -123,6 +126,8 @@ $$('[data-wheel]').forEach(wheel => {
     const pos = $('[data-wheel-pos]', group(type));
     if (pos) pos.textContent = n + 1;
     $('[data-wheel-open]', group(type)).href = $('.wheel-title', docs[n]).href;
+    const items = list(type) ? $$('[data-wheel-item]', list(type)) : [];
+    items.forEach((item, i) => { if (i === n) item.setAttribute('aria-current', 'true'); else item.removeAttribute('aria-current'); });
   }
   function pick(type, focus = false) {
     const slot = slots[types.indexOf(type)];
@@ -131,6 +136,7 @@ $$('[data-wheel]').forEach(wheel => {
     slots.forEach(s => { const on = s === slot; s.setAttribute('aria-checked', String(on)); s.tabIndex = on ? 0 : -1; });
     slices.forEach(s => s.classList.toggle('is-on', s.dataset.wheelSlice === type));
     types.forEach(t => { group(t).hidden = t !== type; });
+    lists.forEach(l => { l.hidden = l.dataset.wheelList !== type; });
     show(type, page.get(type));
     if (focus) slot.focus();
   }
@@ -150,6 +156,12 @@ $$('[data-wheel]').forEach(wheel => {
   ringKeys(slots, usable, next => pick(next.dataset.wheelType, true));
   $$('[data-wheel-step]', wheel).forEach(button => button.addEventListener('click', () => {
     show(current, page.get(current) + Number(button.dataset.wheelStep));
+  }));
+  // Pointing at or tabbing to a list item brings it up in the hub; a click opens it.
+  lists.forEach(l => $$('[data-wheel-item]', l).forEach(item => {
+    const preview = () => show(l.dataset.wheelList, Number(item.dataset.wheelItem));
+    item.addEventListener('focus', preview);
+    item.addEventListener('pointerenter', event => { if (event.pointerType === 'mouse') preview(); });
   }));
 });
 

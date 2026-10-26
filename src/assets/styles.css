@@ -844,6 +844,25 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
 .wheel-hint { margin: 16px auto 0; max-width: 46ch; text-align: center; font-size: 13px; color: var(--muted); }
 .wheel-all { display: flex; justify-content: center; align-items: center; gap: 6px; margin-top: 10px; font-size: 14px; font-weight: 600; color: var(--gold-ink, var(--gold)); text-decoration: none; }
 .wheel-all .icon { width: 15px; height: 15px; }
+.wheel-list { display: grid; gap: 8px; margin-top: 18px; }
+.wheel-list[hidden] { display: none; }
+.wheel-list-head { display: flex; align-items: center; gap: 8px; margin: 0; color: var(--gold-ink, var(--gold)); font: 700 11px var(--font-sans); letter-spacing: .12em; text-transform: uppercase; }
+.wheel-list-n { padding: 1px 7px; border-radius: 999px; background: var(--gold-soft); letter-spacing: 0; }
+.wheel-list ol { display: grid; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.wheel-list-item {
+  display: flex; align-items: center; gap: 12px; padding: 10px 12px; border: 1px solid var(--border); border-radius: var(--radius-sm);
+  background: var(--surface); color: var(--text); text-decoration: none; transition: border-color .15s, background .15s;
+}
+.wheel-list-item:hover, .wheel-list-item:focus-visible { border-color: var(--gold); }
+.wheel-list-item[aria-current="true"] { border-color: var(--accent, var(--gold)); box-shadow: inset 3px 0 0 var(--accent, var(--gold)); }
+.wheel-list-num {
+  flex: none; width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%;
+  background: var(--accent, var(--gold)); color: #fff; font: 700 12px var(--font-sans); font-variant-numeric: tabular-nums;
+}
+.wheel-list-text { flex: 1; min-width: 0; display: grid; gap: 2px; }
+.wheel-list-text .t { font: 600 16px/1.25 var(--font-serif); }
+.wheel-list-text .m { font-size: 12px; color: var(--muted); }
+.wheel-list-item > .icon { flex: none; width: 16px; height: 16px; color: var(--gold-ink, var(--gold)); }
 @media (max-width: 520px) {
   .wheel-course { padding: 16px 12px 18px; }
   .wheel-course-text .h { font-size: 23px; }
