@@ -613,25 +613,63 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
 .cover-eyebrow > span { position: relative; width: 34px; height: 1px; background: linear-gradient(90deg, transparent, #d7bd86); }
 .cover-eyebrow > span:last-child { transform: scaleX(-1); }
 .cover-eyebrow > span::after { content: ""; position: absolute; right: -3px; top: -2.5px; width: 5px; height: 5px; background: #ecd39c; transform: rotate(45deg); }
-.cover-copy h1 { position: relative; margin: 0 0 22px; padding-bottom: 20px; color: #f7f3ea; }
+.cover-copy h1 { position: relative; margin: 0 0 22px; padding-bottom: 22px; color: #f7f3ea; }
+/* "Study. Argue.": marble-white capitals with gold full stops, cut into the page. */
 .cover-h1-top {
-  display: block; margin-bottom: .1em;
-  font: 600 clamp(24px, 2.6vw, 36px)/1.1 var(--font-inscription); letter-spacing: .16em; text-transform: uppercase;
-  text-shadow: 0 1px 0 rgba(4, 10, 22, .55), 0 0 32px rgba(236, 202, 134, .22);
+  display: block; margin-bottom: .02em;
+  font: 700 clamp(30px, 3.3vw, 46px)/1.05 var(--font-inscription); letter-spacing: .14em; text-transform: uppercase;
+  filter: drop-shadow(0 2px 0 rgba(4, 10, 22, .6)) drop-shadow(0 0 18px rgba(236, 202, 134, .25));
 }
-.cover-h1-top .w { display: inline-block; animation: hero-rise .95s calc(.15s + var(--i) * 110ms) cubic-bezier(.2, .7, .2, 1) both; }
-/* The glow sits on the wrapper: the gilt em animates its own filter (blur) as it rises. */
-.cover-h1-gilt { display: inline-block; filter: drop-shadow(0 0 22px rgba(236, 202, 134, .38)) drop-shadow(0 3px 2px rgba(4, 10, 22, .55)); }
+.cover-h1-top .w {
+  display: inline-block; margin-right: .18em;
+  background: linear-gradient(180deg, #ffffff 0%, #f3ede1 45%, #c9c1b2 100%); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent;
+  animation: hero-rise .95s calc(.15s + var(--i) * 140ms) cubic-bezier(.2, .7, .2, 1) both;
+}
+.cover-h1-top b { font-weight: inherit; background: linear-gradient(180deg, #fff1c9, #e9b860 60%, #b07a32); -webkit-background-clip: text; background-clip: text; }
+/* "Triumph.": raised gold. The ::before is a bronze copy behind the gilt face, stacked into an
+   edge with a warm halo; ::after is a burst of light that turns slowly behind the word. */
+.cover-h1-gilt {
+  position: relative; display: inline-block; isolation: isolate;
+  font: italic 700 clamp(96px, 10.4vw, 156px)/.86 var(--font-classical); letter-spacing: -.015em;
+  animation: gilt-rise 1.3s .5s cubic-bezier(.2, .7, .2, 1) both;
+}
+.cover-h1-gilt em, .cover-h1-gilt::before { display: inline-block; padding: .06em .16em .14em .04em; font: inherit; letter-spacing: inherit; }
+.cover-h1-gilt::before {
+  content: attr(data-text); content: attr(data-text) / ""; position: absolute; left: 0; top: 0; z-index: -1;
+  color: #5c3a12;
+  text-shadow:
+    0 1px 0 #8b5d24, 0 2px 0 #7c5120, 0 3px 0 #6c461b, 0 4px 0 #5c3a16, 0 5px 0 #4b2f11,
+    0 9px 10px rgba(3, 8, 18, .7), 0 0 34px rgba(255, 206, 120, .55), 0 0 90px rgba(255, 190, 90, .35);
+}
 .cover-h1-gilt em {
-  display: inline-block; padding: .04em .14em .12em .02em; margin: -.04em -.14em -.12em -.02em;
-  font: italic 600 clamp(54px, 6.1vw, 88px)/.98 var(--font-classical); letter-spacing: -.01em;
   background-image:
-    linear-gradient(105deg, transparent 42%, rgba(255, 250, 232, .95) 50%, transparent 58%),
-    linear-gradient(180deg, #fff1c9 8%, #f0cd80 42%, #d9a552 70%, #a8752f 100%);
-  background-size: 300% 100%, 100% 100%; background-repeat: no-repeat; background-position: 100% 0, 0 0;
+    linear-gradient(100deg, transparent 40%, rgba(255, 253, 240, .98) 50%, transparent 60%),
+    linear-gradient(180deg, #fffaf0 0%, #ffe7a8 22%, #f2c766 44%, #d99a3c 60%, #f5d27e 74%, #b9792c 100%);
+  background-size: 260% 100%, 100% 100%; background-repeat: no-repeat; background-position: 100% 0, 0 0;
   -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; color: #ecca86;
-  animation: hero-rise 1.15s .45s cubic-bezier(.2, .7, .2, 1) both, sheen 8s 2s ease-in-out infinite;
+  animation: sheen 6s 1.8s ease-in-out infinite;
 }
+.cover-h1-gilt::after {
+  content: ""; position: absolute; z-index: -2; left: 44%; top: 50%; width: 3.6em; height: 3.6em; margin: -1.8em 0 0 -1.8em; border-radius: 50%; pointer-events: none;
+  background:
+    radial-gradient(circle, rgba(255, 224, 150, .42) 0, rgba(255, 206, 120, .16) 30%, transparent 58%),
+    repeating-conic-gradient(rgba(255, 228, 165, .2) 0deg 3deg, transparent 3deg 12deg);
+  -webkit-mask-image: radial-gradient(circle, #000 12%, transparent 66%); mask-image: radial-gradient(circle, #000 12%, transparent 66%);
+  animation: hero-fade 2s 1s ease-out both, rays-turn 70s linear infinite;
+}
+/* Two glints that flare on the gold, out of step with each other. */
+.cover-glint {
+  position: absolute; z-index: 1; width: .2em; height: .2em; pointer-events: none;
+  background: radial-gradient(circle, #fff 0 12%, rgba(255, 244, 210, .9) 22%, transparent 60%);
+  clip-path: polygon(50% 0, 58% 42%, 100% 50%, 58% 58%, 50% 100%, 42% 58%, 0 50%, 42% 42%);
+  filter: drop-shadow(0 0 6px #fff4cf);
+  animation: glint-flare 4.6s 2.2s ease-in-out infinite both;
+}
+.cover-glint:nth-of-type(1) { left: .62em; top: .02em; }
+.cover-glint:nth-of-type(2) { left: 3.05em; top: .5em; width: .14em; height: .14em; animation-delay: 4.1s; animation-duration: 5.8s; }
+@keyframes gilt-rise { from { opacity: 0; transform: translateY(.18em) scale(.94); } 60% { opacity: 1; } }
+@keyframes rays-turn { to { transform: rotate(360deg); } }
+@keyframes glint-flare { 0%, 100% { opacity: 0; transform: scale(.2) rotate(0deg); } 12% { opacity: 1; transform: scale(1) rotate(45deg); } 26% { opacity: 0; transform: scale(.3) rotate(90deg); } }
 .cover-flourish {
   position: absolute; left: 0; bottom: 0; width: min(340px, 70%); height: 1px;
   background: linear-gradient(90deg, #e8c887, rgba(232, 200, 135, .55) 45%, transparent);
@@ -682,8 +720,8 @@ html:has(.page-home) { scroll-padding-top: calc(var(--header-h) + 46px + 16px); 
 @media (max-width: 700px) {
   .page-home { --strip-h: 0px; }
   .cover-grid { grid-template-columns: 1fr; padding-top: 22px; padding-bottom: 18px; }
-  .cover-h1-top { font-size: clamp(19px, 5.6vw, 24px); letter-spacing: .12em; }
-  .cover-h1-gilt em { font-size: clamp(42px, 12.4vw, 56px); }
+  .cover-h1-top { font-size: clamp(24px, 7.4vw, 32px); letter-spacing: .12em; }
+  .cover-h1-gilt { font-size: clamp(80px, 25vw, 108px); }
   .cover-eyebrow { font-size: 11px; letter-spacing: .2em; gap: 10px; }
   .cover-lede { font-size: 17.5px; }
   .cover-art { display: none; }

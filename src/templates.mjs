@@ -5,8 +5,12 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { createHash } from 'node:crypto';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
+// Stamped on the stylesheet link so browsers fetch the new styles after each deploy
+// (GitHub Pages lets them reuse a cached copy otherwise).
+const CSS_VERSION = createHash('sha1').update(fs.readFileSync(path.join(ROOT, 'src', 'assets', 'styles.css'))).digest('hex').slice(0, 10);
 
 // ---------------------------------------------------------------------------
 // Icons: the site's own solid set (src/icons, drawn by scripts/icons), inlined at
@@ -100,7 +104,7 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
-<link rel="stylesheet" href="${root}assets/styles.css">
+<link rel="stylesheet" href="${root}assets/styles.css?v=${CSS_VERSION}">
 <script>(function(){var d=document.documentElement;d.dataset.theme='light';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off',s=localStorage.getItem('scene');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;if(s)d.dataset.scene=s;}catch(e){}})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
 ${extraHead}`;
@@ -490,7 +494,7 @@ export function home(ctx) {
   <div class="container cover-grid">
     <div class="cover-copy">
       <p class="cover-eyebrow"><span></span>The Law School Study Library<span></span></p>
-      <h1 id="cover-title"><span class="cover-h1-top">${riseWords('Triumph over the')}</span> <span class="cover-h1-gilt"><em>Socratic method.</em></span><span class="cover-flourish" aria-hidden="true"><i></i></span></h1>
+      <h1 id="cover-title"><span class="cover-h1-top">${riseWords('Study<b>.</b> Argue<b>.</b>')}</span> <span class="cover-h1-gilt" data-text="Triumph."><em>Triumph.</em><i class="cover-glint"></i><i class="cover-glint"></i></span><span class="cover-flourish" aria-hidden="true"><i></i></span></h1>
       <p class="cover-lede">Outlines, rule charts, flashcards, and thousands of practice questions for every course, built by the students who sat in your seat.</p>
       <p class="cover-description">Search any topic, or pick a course below.</p>
       <button class="cover-search hero-search" type="button" data-open-search>
