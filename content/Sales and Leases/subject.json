@@ -50,6 +50,21 @@
       "tags": ["UCC Article 2", "statutes", "official comments", "reference", "Weeks 1-8"],
       "order": 5
     },
+    "Sales_and_Leases_Focused_Practice_Exams.html": {
+      "slug": "sales-and-leases-focused-practice-exams",
+      "title": "Sales and Leases Focused Practice Exams",
+      "type": "practice",
+      "description": "Four practice exams (60 new questions) on just four topics: assignment and delegation (§ 2-210), liquidated damages (§ 2-718), warranties (§§ 2-312 to 2-318), and limited remedies (§ 2-719). Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format and covers all four topics, with warranties weighted most heavily: express and implied warranties, title and infringement, disclaimers, cumulation, and privity. Every fact pattern is new, cases are tested by application rather than recall, and every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "warranties",
+        "remedies"
+      ],
+      "questions": 60,
+      "order": 6
+    },
     "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
       "publish": false,
       "description": "Full-length source outline for Weeks 1–8, kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
