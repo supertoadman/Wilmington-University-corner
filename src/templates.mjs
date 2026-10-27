@@ -1066,6 +1066,8 @@ export function shuffle(ctx) {
   const root = '../';
   const { game, subjects } = ctx;
   const iconOf = (slug) => subjects.find((s) => s.slug === slug)?.icon || 'list-checks';
+  // Courses whose questions get the reference popup (refs.js), each from its own index.
+  const refCourses = subjects.filter((s) => s.refs).map((s) => s.slug);
   const course = (c) => `<fieldset class="shuffle-course" style="--accent:${c.accent}">
     <legend class="shuffle-course-head"><span class="tile">${icon(iconOf(c.slug))}</span><span class="shuffle-course-name">${esc(c.title)}</span></legend>
     <button type="button" class="shuffle-all" data-course-all="${esc(c.slug)}">Select all</button>
@@ -1103,7 +1105,7 @@ export function shuffle(ctx) {
   return layout(ctx, {
     root, title: 'Shuffle mode', canonical: 'shuffle/', body,
     description: `Mix practice sets from any course into one shuffled stack: ${game.total.toLocaleString('en-US')} questions from the study library.`,
-    extraHead: `<script type="module" src="${root}assets/shuffle.js"></script>`,
+    extraHead: `<script type="module" src="${root}assets/shuffle.js"></script>${refCourses.length ? `<link rel="stylesheet" href="${root}assets/refs.css"><script src="${root}assets/refs.js" data-root="${root}" data-courses="${refCourses.join(' ')}" defer></script>` : ''}`,
   });
 }
 

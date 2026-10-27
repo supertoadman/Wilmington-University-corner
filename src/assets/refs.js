@@ -3,25 +3,51 @@
 // case name in a question or explanation opens the panel at that spot. build.mjs injects this
 // script into the practice pages of subjects whose subject.json has "refs"; the index it loads
 // is built from the subject's supplement and outline, so questions need no tagging.
+// Shuffle mode mixes courses, so there each card names its course (data-course) and uses that
+// course's index; the script tag lists the courses that have one (data-courses).
 // Desktop: a panel docked on the right. Phones: a bottom sheet that leaves the question visible.
 (() => {
   const me = document.currentScript;
   const ROOT = new URL(me.dataset.root || './', location.href);
-  const INDEX = new URL(me.dataset.index, ROOT);
-  // Question cards in each practice engine: the list engines' .q, and the one-at-a-time MPRE
-  // bank (.sheet) and PR quiz (#question.card).
-  const CARD = me.dataset.cards || '.q, .sheet:has(> .stem), .card:has(> .stem)';
+  const COURSES = me.dataset.courses ? new Set(me.dataset.courses.split(/\s+/)) : null;
+  // Question cards in each practice engine: the list engines' .q, the one-at-a-time MPRE bank
+  // (.sheet) and PR quiz (#question.card), and shuffle mode's .sq.
+  const CARD = me.dataset.cards || '.q, .sq, .sheet:has(> .stem), .card:has(> .stem)';
   const EXTRA = '.facts';
-  const SKIP = 'button, a, summary, input, textarea, select, script, style, .rx-panel, .meta';
+  const SKIP = 'button, a, summary, input, textarea, select, script, style, .rx-panel, .meta, .sq-meta';
 
   // ---------------------------------------------------------------------------
   // Index + matching
   // ---------------------------------------------------------------------------
-  let idx = null, loading = null;
-  const load = () => loading || (loading = fetch(INDEX).then((r) => {
-    if (!r.ok) throw new Error(`refs index ${r.status}`);
-    return r.json();
-  }).then(prepare).catch((e) => { loading = null; throw e; }));
+  /** The index a card or cite uses: its course's in shuffle mode, else the page's own. */
+  function urlFor(node) {
+    if (!COURSES) return me.dataset.index ? new URL(me.dataset.index, ROOT).href : null;
+    const course = node?.closest('[data-course]')?.dataset.course;
+    return course && COURSES.has(course) ? new URL(`assets/refs/${course}.json`, ROOT).href : null;
+  }
+  const loads = new Map(), ready = new Map();
+  const load = (url) => {
+    if (!loads.has(url)) {
+      loads.set(url, fetch(url).then((r) => {
+        if (!r.ok) throw new Error(`refs index ${r.status}`);
+        return r.json();
+      }).then((data) => { const ix = prepare(data); ready.set(url, ix); return ix; })
+        .catch((e) => { loads.delete(url); throw e; }));
+    }
+    return loads.get(url);
+  };
+  // Load an index once the page is idle, then link the cites in the cards that use it.
+  const later = window.requestIdleCallback || ((f) => setTimeout(f, 1200));
+  const queued = new Set();
+  const preload = (url) => {
+    if (queued.has(url)) return;
+    queued.add(url);
+    later(() => load(url).then(() => scan(document.body)).catch(() => {}));
+  };
+
+  // The index in use. Matching and the panel's views read it; use() switches it.
+  let idx = null, CASE_RE = null;
+  const use = (ix) => { idx = ix; CASE_RE = ix.caseRe; };
 
   const STOP = new Set(('the and for that with this from are was were which when what who whom whose will would could should may might must '
     + 'not but its his her their they them she him has have had been being does did done any all each other than then there these those '
@@ -47,7 +73,6 @@
 
   // Cites like "§ 2-207(2)(b)", "1-201(b)(20)", "UCC 2-314"; only sections in the index link.
   const CITE = /(?:§§?\s*)?\b([129])[-‑–](\d{3}[A-Z]?)(?!\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g;
-  let CASE_RE = null;
 
   function prepare(data) {
     const docs = [];
@@ -77,13 +102,13 @@
         if (byStatute[id]) (citedIn[id] ||= new Set()).add(s.id);
       }
     }
+    let caseRe = null;
     if (data.cases.length) {
       const keys = data.cases.map((c) => c.key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).sort((a, b) => b.length - a.length);
       // Not after "v.": in "Watteau v. Fenwick", Fenwick is a party, not the Fenwick case.
-      CASE_RE = new RegExp(`(?<!\\bv\\.\\s)\\b(?:${keys.join('|')})(?!\\w)`, 'g');
+      caseRe = new RegExp(`(?<!\\bv\\.\\s)\\b(?:${keys.join('|')})(?!\\w)`, 'g');
     }
-    idx = { ...data, docs, idf, byStatute, bySection, citedIn };
-    return idx;
+    return { ...data, docs, idf, byStatute, bySection, citedIn, caseRe };
   }
 
   function rank(text, kinds, limit) {
@@ -121,8 +146,14 @@
   // ---------------------------------------------------------------------------
   // Linking cites in question text
   // ---------------------------------------------------------------------------
-  function linkify(root) {
-    if (!idx) return;
+  // Links with the given index, then puts back the one the panel is showing.
+  function linkify(root, ix = idx) {
+    if (!ix) return;
+    const was = idx;
+    use(ix);
+    try { link(root); } finally { idx = was; CASE_RE = was?.caseRe; }
+  }
+  function link(root) {
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
       acceptNode: (n) => (!/\d-\d|[A-Z]/.test(n.nodeValue) || n.parentElement.closest(SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
     });
@@ -157,27 +188,34 @@
 
   const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg>';
   function enhance(card) {
+    const url = urlFor(card);
+    if (!url) return;
     if (!card.querySelector('.rx-look')) {
       const b = document.createElement('button');
       b.type = 'button';
       b.className = 'rx-look';
       b.innerHTML = `${ICON}<span>Look up</span>`;
       b.title = 'Look up the statutes, outline, and cases for this question';
-      const meta = card.querySelector(':scope > .meta');
+      const meta = card.querySelector(':scope > .meta, :scope > .sq-meta');
       const flag = card.querySelector('.flagbtn');
       // Sit beside the page's Flag pill, in one group so the two wrap together on a phone.
       if (flag) { const pair = el('span', 'rx-pair'); flag.replaceWith(pair); pair.append(b, flag); }
       else if (meta) meta.append(b); else card.prepend(b);
     }
-    linkify(card);
+    linkFrom(card, url);
+  }
+  function linkFrom(node, url = urlFor(node)) {
+    if (!url) return;
+    const ix = ready.get(url);
+    if (ix) linkify(node, ix); else preload(url);
   }
   const scan = (root) => {
     // A card that is refilled in place (the PR quiz's #question) only reports its new children.
     const card = root.closest?.(CARD);
     if (card) enhance(card);
     root.querySelectorAll?.(CARD).forEach(enhance);
-    if (root.matches?.(EXTRA)) linkify(root);
-    root.querySelectorAll?.(EXTRA).forEach(linkify);
+    if (root.matches?.(EXTRA)) linkFrom(root);
+    root.querySelectorAll?.(EXTRA).forEach((n) => linkFrom(n));
   };
 
   // ---------------------------------------------------------------------------
@@ -221,30 +259,50 @@
   function search() {
     const q = input.value.trim();
     if (!q) { if (stack.at(-1)?.type === 'search') { stack.pop(); show(); } return; }
-    const view = { type: 'search', q };
+    const view = { type: 'search', q, ix: idx };
     if (stack.at(-1)?.type === 'search') stack[stack.length - 1] = view; else stack.push(view);
     show();
   }
 
   async function open(view, from) {
+    const url = urlFor(from);
+    if (!url) return;
     if (!panel) build();
     opener = from || opener;
     if (panel.hidden || view.type === 'question') stack = [];
     stack.push(view);
     panel.hidden = false;
     document.documentElement.classList.add('rx-open');
-    if (!idx) {
+    view.ix = ready.get(url);
+    if (!view.ix) {
       body.replaceChildren(el('p', 'rx-note', 'Loading…'));
-      try { await load(); scan(document.body); } catch (e) { body.replaceChildren(el('p', 'rx-note', 'The references could not be loaded. Check your connection and try again.')); return; }
+      try { view.ix = await load(url); scan(document.body); } catch (e) { body.replaceChildren(el('p', 'rx-note', 'The references could not be loaded. Check your connection and try again.')); return; }
+      if (stack.at(-1) !== view) return; // another lookup started while this one loaded
     }
     show();
     title.focus({ preventScroll: true });
-    // On a phone the sheet covers the bottom of the screen; keep the question above it.
+    // On a phone the sheet covers the bottom of the screen; keep the question text in the gap
+    // between it and whatever the page pins to the top (shuffle mode's header and score bar).
     const card = from?.closest(CARD);
     if (card && phone.matches) {
-      const top = card.getBoundingClientRect().top;
-      if (top < 0 || top > innerHeight * 0.3) card.scrollIntoView({ block: 'start', behavior: 'smooth' });
+      const stem = card.querySelector('.stem, .sq-stem') || card;
+      const cover = pinnedTop(), top = stem.getBoundingClientRect().top;
+      if (top < cover || top > panel.getBoundingClientRect().top - 80) scrollBy({ top: top - cover - 8, behavior: 'smooth' });
     }
+  }
+  /** Bottom edge of the fixed or sticky bars at the top of the page, once they are stuck. */
+  function pinnedTop() {
+    let bottom = 0;
+    for (let y = 2; y < innerHeight * 0.4; y += 10) {
+      for (let n = document.elementFromPoint(innerWidth / 2, y); n && n !== document.body; n = n.parentElement) {
+        const cs = getComputedStyle(n);
+        if (cs.position !== 'fixed' && cs.position !== 'sticky') continue;
+        const h = n.getBoundingClientRect().height;
+        bottom = Math.max(bottom, cs.position === 'sticky' && cs.top !== 'auto' ? parseFloat(cs.top) + h : n.getBoundingClientRect().bottom);
+        break;
+      }
+    }
+    return bottom;
   }
   function close() {
     if (!panel || panel.hidden) return;
@@ -256,8 +314,9 @@
 
   function show() {
     const view = stack.at(-1);
+    use(view.ix);
     back.hidden = stack.length < 2;
-    if (!idx.statutes.length) input.placeholder = 'Search the outline';
+    input.placeholder = idx.statutes.length ? 'Search: 2-207, perfect tender, Roth Steel' : 'Search the outline';
     if (view.type !== 'search') input.value = '';
     const out = VIEWS[view.type](view);
     body.replaceChildren(...out.nodes);
@@ -266,7 +325,7 @@
     const mark = body.querySelector('.rx-hit');
     if (mark) mark.scrollIntoView({ block: 'center' });
   }
-  const go = (view) => { stack.push(view); show(); title.focus({ preventScroll: true }); };
+  const go = (view) => { view.ix ||= idx; stack.push(view); show(); title.focus({ preventScroll: true }); };
 
   // A row that opens a statute, outline section, or case.
   function row(ref) {
@@ -310,10 +369,11 @@
   const VIEWS = {
     question({ card }) {
       const clone = card.cloneNode(true);
-      clone.querySelectorAll('.rats, .meta, .question-meta, .rx-look, summary, .nav, .hint, .actions').forEach((n) => n.remove());
+      clone.querySelectorAll('.rats, .meta, .question-meta, .sq-meta, .sq-why, .rx-look, summary, .nav, .hint, .actions').forEach((n) => n.remove());
       // The card's topic tag ("Food: reasonable expectation") is a good hint, so it counts too.
       const text = `${clone.textContent} ${card.querySelector('.tag')?.textContent || ''}`;
-      const num = card.querySelector('.num, .qn')?.textContent.trim();
+      let num = card.querySelector('.num, .qn, .sq-num')?.textContent.trim();
+      if (/^\d+$/.test(num)) num = `Question ${num}`;
       const names = named(text);
       const have = new Set(names.filter((n) => n.kind === 's').map((n) => n.id));
       const haveCase = new Set(names.filter((n) => n.kind === 'c').map((n) => n.i));
@@ -346,7 +406,8 @@
       const seen = new Set([...direct, ...prefix, ...extra].map((r) => r.kind + (r.id ?? r.i)));
       const ranked = rank(q, ['s', 'o', 'c'], 12).map((h) => (h.d.kind === 'c' ? { kind: 'c', i: h.d.i } : { kind: h.d.kind, id: h.d.id }))
         .filter((r) => !seen.has(r.kind + (r.id ?? r.i)));
-      const all = [...direct, ...prefix, ...extra, ...ranked];
+      const keys = new Set();
+      const all = [...direct, ...prefix, ...extra, ...ranked].filter((r) => !keys.has(r.kind + (r.id ?? r.i)) && keys.add(r.kind + (r.id ?? r.i)));
       // Groups follow their best hit, so a case name puts Cases first.
       const groups = [['s', 'Statutes', 8], ['o', 'Outline sections', 6], ['c', 'Cases', 4]]
         .sort((a, b) => all.findIndex((r) => r.kind === a[0]) - all.findIndex((r) => r.kind === b[0]));
@@ -415,7 +476,8 @@
       const c = idx.cases[i];
       const sec = idx.bySection[c.section];
       const box = rich(c.html, 'rx-outline');
-      box.querySelectorAll('.callout-title .rx-cite').forEach((b) => b.replaceWith(b.textContent));
+      // The case's own name doesn't need to link back to itself.
+      box.querySelectorAll('.rx-cite').forEach((b) => { if (JSON.parse(b.dataset.ref).i === i) b.replaceWith(b.textContent); });
       const nodes = [box];
       nodes.push(...group('Outline section', [{ kind: 'o', id: c.section }]));
       if (idx.links.outline) nodes.push(footer(new URL(`${idx.links.outline}#${sec.id}`, ROOT), 'Open in the outline'));
@@ -442,9 +504,6 @@
     new MutationObserver((list) => {
       for (const m of list) for (const n of m.addedNodes) if (n.nodeType === 1 && !n.closest('.rx-panel')) scan(n);
     }).observe(document.body, { childList: true, subtree: true });
-    // Load the index once the page is idle so cites in the questions can become links.
-    const later = window.requestIdleCallback || ((f) => setTimeout(f, 1200));
-    later(() => load().then(() => scan(document.body)).catch(() => {}));
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();

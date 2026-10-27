@@ -127,6 +127,7 @@ if (host) {
   function card(q, pos) {
     const li = el('li', 'sq');
     li.style.setProperty('--accent', q.course.accent);
+    li.dataset.course = q.course.slug; // lets the reference popup use this course's outline
     const picked = st.picked[q.id];
     const meta = el('div', 'sq-meta');
     meta.append(el('span', 'sq-num', String(pos + 1)), el('span', 'sq-src', `${q.course.title} · ${q.set.title}${q.n != null ? ` · Q${q.n}` : ''}`));
