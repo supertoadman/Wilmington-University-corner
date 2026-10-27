@@ -5,6 +5,7 @@
 
 import { decodeEntities } from './text.mjs';
 
+const GOVERNMENT = /^(United States|People|State|Commonwealth|City|County|Equal Employment Opportunity Commission)\b/;
 const strip = (html) => decodeEntities(html.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 
 /**
@@ -56,9 +57,10 @@ export function outlineCases(sections) {
       const title = strip(m[1].match(/<p class="callout-title">([\s\S]*?)<\/p>/)?.[1] || '');
       const name = title.split(/\s+\(/)[0];
       if (!/ v\. /.test(name)) continue;
-      let key = name.split(' v. ')[0].replace(/,?\s+(Inc|Corp|Co|Ltd|LLC|Assocs|Equip|Utils|Indus|Products|Cooperative|Custom.*)\.?$/i, '').replace(/,$/, '').trim();
-      // A one-word party that is also an ordinary word ("Windows") only counts with its "v.".
-      if (!/\s/.test(key) && new RegExp(`\\b${key.toLowerCase()}\\b`).test(all)) key = `${name.split(' v. ')[0]} v.`;
+      let key = name.split(' v. ')[0].replace(/,?\s+(Inc|Corp|Co|Ltd|LLC|Assocs|Equip|Utils|Indus|Products|Cooperative|Custom.*)\.?$/i, '').replace(/,$/, '').replace(/\s+(&|and)$/, '').trim();
+      // A one-word party that is also an ordinary word ("Windows"), or a government party
+      // ("United States", "People"), only counts with its "v.".
+      if ((!/\s/.test(key) && new RegExp(`\\b${key.toLowerCase()}\\b`).test(all)) || GOVERNMENT.test(key)) key = `${name.split(' v. ')[0]} v.`;
       cases.push({ key, name, title, section: sec.id, html: m[0] });
     }
   }

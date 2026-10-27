@@ -8,7 +8,9 @@
   const me = document.currentScript;
   const ROOT = new URL(me.dataset.root || './', location.href);
   const INDEX = new URL(me.dataset.index, ROOT);
-  const CARD = me.dataset.cards || '.q';
+  // Question cards in each practice engine: the list engines' .q, and the one-at-a-time MPRE
+  // bank (.sheet) and PR quiz (#question.card).
+  const CARD = me.dataset.cards || '.q, .sheet:has(> .stem), .card:has(> .stem)';
   const EXTRA = '.facts';
   const SKIP = 'button, a, summary, input, textarea, select, script, style, .rx-panel, .meta';
 
@@ -77,7 +79,8 @@
     }
     if (data.cases.length) {
       const keys = data.cases.map((c) => c.key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).sort((a, b) => b.length - a.length);
-      CASE_RE = new RegExp(`\\b(?:${keys.join('|')})(?!\\w)`, 'g');
+      // Not after "v.": in "Watteau v. Fenwick", Fenwick is a party, not the Fenwick case.
+      CASE_RE = new RegExp(`(?<!\\bv\\.\\s)\\b(?:${keys.join('|')})(?!\\w)`, 'g');
     }
     idx = { ...data, docs, idf, byStatute, bySection, citedIn };
     return idx;
@@ -161,7 +164,7 @@
       b.innerHTML = `${ICON}<span>Look up</span>`;
       b.title = 'Look up the statutes, outline, and cases for this question';
       const meta = card.querySelector(':scope > .meta');
-      const flag = meta?.querySelector('.flagbtn');
+      const flag = card.querySelector('.flagbtn');
       // Sit beside the page's Flag pill, in one group so the two wrap together on a phone.
       if (flag) { const pair = el('span', 'rx-pair'); flag.replaceWith(pair); pair.append(b, flag); }
       else if (meta) meta.append(b); else card.prepend(b);
@@ -169,7 +172,9 @@
     linkify(card);
   }
   const scan = (root) => {
-    if (root.matches?.(CARD)) enhance(root);
+    // A card that is refilled in place (the PR quiz's #question) only reports its new children.
+    const card = root.closest?.(CARD);
+    if (card) enhance(card);
     root.querySelectorAll?.(CARD).forEach(enhance);
     if (root.matches?.(EXTRA)) linkify(root);
     root.querySelectorAll?.(EXTRA).forEach(linkify);
@@ -210,7 +215,8 @@
     let timer;
     input.oninput = () => { clearTimeout(timer); timer = setTimeout(search, 180); };
     panel.querySelector('form').onsubmit = (e) => { e.preventDefault(); clearTimeout(timer); search(); input.blur(); };
-    panel.addEventListener('keydown', (e) => { if (e.key === 'Escape') close(); });
+    // Keys typed in the panel stay there, so a page's shortcuts (A–D to answer, F to flag) don't fire.
+    panel.addEventListener('keydown', (e) => { e.stopPropagation(); if (e.key === 'Escape') close(); });
   }
   function search() {
     const q = input.value.trim();
@@ -251,6 +257,7 @@
   function show() {
     const view = stack.at(-1);
     back.hidden = stack.length < 2;
+    if (!idx.statutes.length) input.placeholder = 'Search the outline';
     if (view.type !== 'search') input.value = '';
     const out = VIEWS[view.type](view);
     body.replaceChildren(...out.nodes);
@@ -303,10 +310,10 @@
   const VIEWS = {
     question({ card }) {
       const clone = card.cloneNode(true);
-      clone.querySelectorAll('.rats, .meta, .rx-look, summary').forEach((n) => n.remove());
+      clone.querySelectorAll('.rats, .meta, .question-meta, .rx-look, summary, .nav, .hint, .actions').forEach((n) => n.remove());
       // The card's topic tag ("Food: reasonable expectation") is a good hint, so it counts too.
       const text = `${clone.textContent} ${card.querySelector('.tag')?.textContent || ''}`;
-      const num = card.querySelector('.num')?.textContent.trim();
+      const num = card.querySelector('.num, .qn')?.textContent.trim();
       const names = named(text);
       const have = new Set(names.filter((n) => n.kind === 's').map((n) => n.id));
       const haveCase = new Set(names.filter((n) => n.kind === 'c').map((n) => n.i));

@@ -4,6 +4,7 @@
   "icon": "statue-angel-michael",
   "accent": "#8a2e3b",
   "order": 2,
+  "refs": { "outline": "pr-outline" },
   "documents": {
     "outline_v3.html": {
       "slug": "pr-outline",

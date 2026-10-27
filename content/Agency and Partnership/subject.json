@@ -4,6 +4,7 @@
   "icon": "statue-angel-gabriel",
   "accent": "#2d4e88",
   "order": 5,
+  "refs": { "outline": "agency-and-partnership-outline" },
   "documents": {
     "Agency_and_Partnership_Condensed_Outline.docx": {
       "slug": "agency-and-partnership-outline",

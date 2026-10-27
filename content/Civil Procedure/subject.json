@@ -4,6 +4,7 @@
   "icon": "statue-angel-barachiel",
   "accent": "#7a3e65",
   "order": 7,
+  "refs": { "outline": "civil-procedure-outline" },
   "documents": {
     "Civil_Procedure_Condensed_Outline.docx": {
       "slug": "civil-procedure-outline",

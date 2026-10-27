@@ -4,6 +4,7 @@
   "icon": "statue-angel-jegudiel",
   "accent": "#7a4a1f",
   "order": 6,
+  "refs": { "outline": "contracts-i-outline" },
   "documents": {
     "Contracts_I_Condensed_Outline.docx": {
       "slug": "contracts-i-outline",
