@@ -42,6 +42,14 @@
       "questions": 210,
       "order": 4
     },
+    "Sales_and_Leases_Statutory_Supplement.html": {
+      "slug": "sales-and-leases-statutory-supplement",
+      "title": "Sales and Leases Statutory Supplement",
+      "type": "document",
+      "description": "Every UCC section the Weeks 1-8 outline and the practice sets cite (100 sections from Articles 1, 2, and 9), from Selected Commercial Statutes, 2026 edition, with the Official Comments. Section text is summarized in the statute's own key words and each comment is condensed; comments the outline or the practice questions rely on are marked. Search by word, phrase, or cite (type 2-207 to go straight there), filter by any of the 16 outline sections, follow cross-references between sections, and open or close all the comments at once.",
+      "tags": ["UCC Article 2", "statutes", "official comments", "reference", "Weeks 1-8"],
+      "order": 5
+    },
     "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
       "publish": false,
       "description": "Full-length source outline for Weeks 1–8, kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
