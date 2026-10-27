@@ -51,13 +51,22 @@
       "questions": 210,
       "order": 5
     },
+    "Agency_and_Partnership_Concept_Exams.html": {
+      "slug": "agency-and-partnership-concept-exams",
+      "title": "Agency & Partnership Concept Exams",
+      "type": "practice",
+      "description": "14 concept exams (210 questions) for the Week 10 exam, in the format of Professor Richardson's sample exam (15 five-choice questions each, with combination choices such as \"B and C\" and \"None of the above\"), but built around the rules rather than long fact patterns. The questions test the fine distinctions: the UPA (1914) against the RUPA on entity versus aggregate theory, property, liability, dissolution, and buyouts; general partnerships against LLPs, LPs, LLLPs, and LLCs on filing, control, liability, agency, and exit; the Restatement (Second) against the Restatement (Third); and which defaults a partnership or operating agreement can and cannot change. Questions 1–6 stand alone, and Questions 7–11 and 12–15 share a focus note naming the topic and statute, such as UPA dissolution, RUPA Article 7 buyouts, LLP shields, or managing an LLC. Every choice has its own explanation, and the exams cover all 14 sections of the Weeks 1–8 condensed outline. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
+      "tags": ["agency", "partnership", "UPA", "RUPA", "LLP", "LLC", "MCQ", "concepts", "Week 10"],
+      "questions": 210,
+      "order": 6
+    },
     "Agency_and_Partnership_Playlist": {
       "slug": "agency-and-partnership-playlist",
       "title": "Agency & Partnership Playlist",
       "type": "music",
       "description": "Study songs that walk through the Weeks 1–8 outline, one topic per track, numbered to match the planned 17-track album. So far: dissociation versus dissolution, winding up and buyouts, Kovacik loss sharing and buyout agreements, and limited partnerships, LLCs, and veil piercing. Pick any track from the list, or let it play through, at 0.5×, 0.75×, normal, 1.25×, or 1.5× speed.",
       "tags": ["agency", "partnership", "RUPA", "LLC", "music", "playlist"],
-      "order": 6,
+      "order": 7,
       "tracks": {
         "14_Power_to_Leave.mp3": {
           "title": "Power to Leave",
