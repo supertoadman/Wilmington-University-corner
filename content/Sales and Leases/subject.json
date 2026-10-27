@@ -4,6 +4,7 @@
   "icon": "statue-angel-raphael",
   "accent": "#3f6b4a",
   "order": 4,
+  "refs": { "statutes": "sales-and-leases-statutory-supplement", "outline": "sales-and-leases-outline" },
   "documents": {
     "Sales_and_Leases_Week10_Condensed_Outline.docx": {
       "slug": "sales-and-leases-outline",

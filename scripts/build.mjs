@@ -17,6 +17,7 @@ import * as T from '../src/templates.mjs';
 import { slugify, decodeEntities, htmlToText } from './lib/text.mjs';
 import { addHeadingIds as idHeadings } from './lib/outline.mjs';
 import { mp3Duration } from './lib/audio.mjs';
+import { refIndex } from './lib/refs.mjs';
 import { buildGame } from './game.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
@@ -299,6 +300,7 @@ async function loadSubjects() {
       description: meta.description || '',
       icon: meta.icon || 'folder-open',
       accent: meta.accent || '#1e3a5f',
+      refs: meta.refs || null,
       order: meta.order ?? 999,
       documents: [],
     };
@@ -466,12 +468,37 @@ for (const f of ['pdf.min.mjs', 'pdf.worker.min.mjs']) fs.copyFileSync(path.join
 fs.cpSync(path.join(PDFJS, 'standard_fonts'), path.join(DIST, 'assets', 'pdfjs', 'standard_fonts'), { recursive: true });
 write('.nojekyll', '');
 
+// Reference popup: a subject whose subject.json names its statutes and outline
+// ("refs": { "statutes": "<doc slug>", "outline": "<doc slug>" }) gets an index of both, and its
+// HTML practice pages load src/assets/refs.js to look things up from any question. Only the
+// served copy gets the script tags; downloads and ZIPs stay as written.
+const refPages = new Set();
+for (const s of subjects.filter((x) => x.refs)) {
+  const find = (slug) => slug && s.documents.find((d) => d.slug === slug);
+  const statutes = find(s.refs.statutes), outline = find(s.refs.outline);
+  if (!statutes && !outline) { console.warn(`  refs: no statutes or outline found for ${s.slug}`); continue; }
+  const index = refIndex({
+    supplementHtml: statutes?.raw.toString('utf8'),
+    outlineHtml: outline && (outline.html ?? outline.raw.toString('utf8')),
+    links: { statutes: statutes && P.doc(statutes), outline: outline && P.doc(outline) },
+  });
+  write(`assets/refs/${s.slug}.json`, JSON.stringify(index));
+  for (const d of s.documents) if (d.type === 'practice' && d.format.mime === 'text/html') refPages.add(d);
+}
+const withRefs = (d) => {
+  if (!refPages.has(d)) return d.raw;
+  const tags = `<link rel="stylesheet" href="../../assets/refs.css"><script src="../../assets/refs.js" data-root="../../" data-index="assets/refs/${d.subject.slug}.json" defer></script>`;
+  const html = d.raw.toString('utf8');
+  const at = html.toLowerCase().lastIndexOf('</body>');
+  return Buffer.from(at < 0 ? html + tags : html.slice(0, at) + tags + html.slice(at), 'utf8');
+};
+
 // Raw files + ZIP bundles
 const allZip = {};
 for (const s of subjects) {
   const zip = {};
   for (const d of s.documents) {
-    write(P.file(d), d.raw);
+    write(P.file(d), withRefs(d));
     // Audio is already compressed; storing it as-is keeps the build fast. Playlists go in as their folder of tracks.
     const entries = d.tracks
       ? d.tracks.map((t) => { write(P.track(d, t), t.raw); return [`${d.source}/${t.file}`, t.raw, 0]; })

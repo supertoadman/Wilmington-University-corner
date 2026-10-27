@@ -1,0 +1,95 @@
+/* Reference popup on practice pages (refs.js). It borrows the page's own colour variables, so
+   it follows each page's light and dark themes; the fallbacks cover pages that lack one. */
+.rx-panel {
+  --rx-bg: var(--surface, #fff); --rx-ink: var(--ink, #18212b); --rx-muted: var(--muted, #5a6673);
+  --rx-line: var(--line, #d6dce3); --rx-sunk: var(--sunk, #eef1f4); --rx-accent: var(--accent, #3f6b4a);
+  --rx-soft: var(--accent-soft, #e4efe6); --rx-mark: var(--hypo-soft, #f6ecdc); --rx-mark-ink: var(--hypo, #7a4b12);
+  --rx-w: clamp(340px, 36vw, 460px);
+  position: fixed; z-index: 50; top: 0; right: 0; bottom: 0; width: var(--rx-w);
+  display: flex; flex-direction: column; background: var(--rx-bg); color: var(--rx-ink);
+  border-left: 1px solid var(--rx-line); box-shadow: -8px 0 24px rgb(0 0 0 / .08);
+  font-family: var(--body, system-ui, sans-serif); font-size: 15px; line-height: 1.5;
+}
+.rx-panel[hidden] { display: none; }
+/* Docked on wide screens: the page narrows instead of hiding under the panel. */
+@media (min-width: 760px) { html.rx-open body { padding-right: var(--rx-w, clamp(340px, 36vw, 460px)); } }
+
+.rx-head { display: flex; align-items: center; gap: 4px; padding: 8px 8px 6px 12px; border-bottom: 1px solid var(--rx-line); }
+.rx-title { flex: 1; min-width: 0; margin: 0; font-family: var(--display, Georgia, serif); font-weight: 400; font-size: 20px; line-height: 1.2; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; outline: none; }
+.rx-icon { flex: none; width: 36px; height: 36px; display: grid; place-items: center; background: transparent; color: var(--rx-muted); border: 1px solid transparent; border-radius: 8px; padding: 0; cursor: pointer; }
+.rx-icon:hover { color: var(--rx-ink); border-color: var(--rx-line); }
+.rx-icon svg { width: 20px; height: 20px; }
+.rx-icon[hidden], .rx-size { display: none; }
+.rx-search { padding: 8px 12px; border-bottom: 1px solid var(--rx-line); }
+.rx-search input { width: 100%; box-sizing: border-box; font: inherit; font-size: 16px; color: var(--rx-ink); background: var(--rx-sunk); border: 1px solid var(--rx-line); border-radius: 8px; padding: 7px 10px; }
+.rx-search input:focus { outline: none; border-color: var(--rx-accent); box-shadow: 0 0 0 3px var(--rx-soft); }
+.rx-body { flex: 1; overflow-y: auto; overscroll-behavior: contain; padding: 12px 14px 28px; }
+
+.rx-group { margin: 0 0 16px; }
+.rx-label { margin: 0 0 6px; font-family: var(--mono, ui-monospace, monospace); font-size: 11.5px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--rx-muted); }
+.rx-row { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 10px; width: 100%; text-align: left; font: inherit; color: var(--rx-ink); background: transparent; border: 1px solid var(--rx-line); border-radius: 8px; padding: 8px 10px; margin: 0 0 6px; cursor: pointer; }
+.rx-row:hover { border-color: var(--rx-accent); background: var(--rx-soft); }
+.rx-kind { grid-row: span 2; align-self: start; font-family: var(--mono, ui-monospace, monospace); font-size: 12px; line-height: 1.6; color: var(--rx-accent); white-space: nowrap; }
+.rx-kc { color: var(--rx-mark-ink); }
+.rx-kind:not(.rx-ks) { min-width: 4.6em; }
+.rx-main { font-weight: 500; }
+.rx-sub { font-size: 13px; color: var(--rx-muted); }
+.rx-note { color: var(--rx-muted); font-size: 13.5px; }
+
+.rx-kicker { display: block; margin: 0 0 2px; font-size: 12.5px; color: var(--rx-muted); }
+button.rx-kicker { font: inherit; font-size: 12.5px; background: none; border: 0; padding: 0; color: var(--rx-accent); cursor: pointer; text-align: left; }
+button.rx-kicker::before { content: "‹ "; }
+.rx-h { margin: 0 0 10px; font-family: var(--display, Georgia, serif); font-weight: 400; font-size: 21px; line-height: 1.25; }
+.rx-statute p { margin: 0 0 8px; }
+.rx-statute b, .rx-cmts b { font-family: var(--mono, ui-monospace, monospace); font-weight: 500; font-size: 13px; color: var(--rx-accent); }
+.rx-hit { background: var(--rx-mark); border-left: 3px solid var(--rx-mark-ink); margin-left: -10px !important; padding: 4px 8px 4px 7px; border-radius: 0 6px 6px 0; }
+.rx-callnote { font-size: 13.5px; color: var(--rx-muted); border-left: 3px solid var(--rx-line); padding-left: 10px; margin: 0 0 12px; }
+.rx-callnote p { margin: 0; }
+.rx-cmts { margin: 4px 0 16px; border: 1px solid var(--rx-line); border-radius: 8px; padding: 0 12px; }
+.rx-cmts summary { cursor: pointer; padding: 8px 0; font-weight: 500; }
+.rx-cmts p { margin: 0 0 10px; font-size: 14px; }
+.rx-cmts .rx-key b::after { content: " ★"; color: var(--rx-mark-ink); }
+.rx-out { display: inline-block; margin-top: 4px; color: var(--rx-accent); font-weight: 500; text-decoration: none; }
+.rx-out::after { content: " ↗"; }
+.rx-out:hover { text-decoration: underline; }
+
+/* Outline sections and case boxes, as rendered on the outline page, reduced to fit. */
+.rx-outline { font-size: 14.5px; margin-bottom: 14px; }
+.rx-outline :is(p, ul, ol) { margin: 0 0 8px; }
+.rx-outline :is(ul, ol) { padding-left: 20px; }
+.rx-outline li { margin: 2px 0; }
+.rx-outline h3 { font-size: 16px; margin: 14px 0 6px; }
+.rx-outline .callout { position: relative; display: block; margin: 10px 0; padding: 10px 12px; border: 1px solid var(--rx-line); border-left: 3px solid var(--rx-accent); border-radius: 0 8px 8px 0; background: var(--rx-sunk); }
+.rx-outline .callout-case { border-left-color: var(--rx-mark-ink); background: var(--rx-mark); }
+.rx-outline .callout-tag { display: block; font-family: var(--mono, ui-monospace, monospace); font-size: 11px; letter-spacing: .06em; text-transform: uppercase; color: var(--rx-muted); margin-bottom: 2px; }
+.rx-outline .callout-title { font-weight: 600; }
+.rx-outline .callout-source { font-size: 12.5px; color: var(--rx-muted); }
+.rx-outline .table-wrap { overflow-x: auto; margin: 8px 0 12px; }
+.rx-outline table { border-collapse: collapse; width: 100%; font-size: 13.5px; }
+.rx-outline :is(th, td) { border: 1px solid var(--rx-line); padding: 5px 7px; vertical-align: top; text-align: left; }
+.rx-outline th { background: var(--rx-sunk); }
+.rx-outline :is(td, th) p { margin: 0 0 4px; }
+.rx-outline .outside { color: var(--rx-muted); }
+
+/* Links in question text, explanations, and the panel. */
+.rx-cite { font: inherit; color: var(--rx-accent, var(--accent, #3f6b4a)); background: none; border: 0; padding: 0; margin: 0; cursor: pointer; text-decoration: underline dotted; text-underline-offset: 3px; text-align: inherit; line-height: inherit; }
+.rx-cite:hover { text-decoration-style: solid; }
+
+/* The "Look up" pill on each question, styled like the page's Flag pill. */
+.rx-look { margin-left: auto; align-self: center; display: inline-flex; gap: 5px; align-items: center; background: transparent; border: 1px solid var(--line, #d6dce3); border-radius: 999px; padding: 2px 10px; font: inherit; font-size: 12px; color: var(--muted, #5a6673); cursor: pointer; }
+.rx-look:hover { border-color: var(--accent, #3f6b4a); color: var(--ink, #18212b); }
+.rx-look svg { width: 13px; height: 13px; }
+.rx-pair { margin-left: auto; align-self: center; display: inline-flex; gap: 6px; }
+.rx-pair .flagbtn, .rx-pair .rx-look { margin-left: 0; }
+
+/* Phones: a bottom sheet over the lower part of the screen, so the question stays in view. */
+@media (max-width: 759px) {
+  .rx-panel { top: auto; left: 0; width: auto; height: 58vh; height: 58dvh; border-left: 0; border-top: 1px solid var(--rx-line); border-radius: 14px 14px 0 0; box-shadow: 0 -8px 24px rgb(0 0 0 / .14); }
+  .rx-panel.rx-tall { height: 90vh; height: 90dvh; }
+  .rx-panel.rx-tall .rx-size svg { transform: rotate(180deg); }
+  .rx-size { display: grid; }
+  .rx-head { padding-top: 6px; }
+  .rx-title { font-size: 18px; }
+  .rx-body { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+  html.rx-open body { padding-bottom: 58vh; padding-bottom: 58dvh; }
+}
