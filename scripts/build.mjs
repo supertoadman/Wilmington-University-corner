@@ -52,6 +52,9 @@ const FORMATS = {
 };
 // A folder of audio files: shown as one player, downloaded as a ZIP of its tracks.
 const PLAYLIST = { label: 'Playlist', mime: 'application/zip', viewer: 'playlist' };
+// The deploy pushes dist/ to the gh-pages branch, and GitHub refuses files over 100 MB, so a playlist
+// bigger than this gets no ZIP; its tracks download one at a time.
+const MAX_ZIP_BYTES = 95 * 1048576;
 
 const IGNORED = new Set(['subject.json', '.DS_Store', 'Thumbs.db', 'desktop.ini']);
 
@@ -350,9 +353,11 @@ async function loadSubjects() {
           raw,
         };
       });
-      const raw = isPlaylist
-        ? Buffer.from(zipSync(Object.fromEntries(tracks.map((t) => [t.file, [new Uint8Array(t.raw), { level: 0 }]]))))
-        : fs.readFileSync(file);
+      const trackBytes = tracks.reduce((n, t) => n + t.size, 0);
+      const zipped = !isPlaylist || trackBytes <= MAX_ZIP_BYTES;
+      const raw = !isPlaylist ? fs.readFileSync(file)
+        : zipped ? Buffer.from(zipSync(Object.fromEntries(tracks.map((t) => [t.file, [new Uint8Array(t.raw), { level: 0 }]]))))
+        : null;
       const doc = {
         id: `${slug}/${docSlug}`,
         slug: docSlug,
@@ -370,7 +375,8 @@ async function loadSubjects() {
         contributor: dm.contributor || null,
         theme: dm.theme || null,
         order: dm.order ?? 999,
-        size: raw.length,
+        size: raw ? raw.length : trackBytes,
+        zipped,
         updated: lastUpdated(file),
         raw,
         text: '',
@@ -498,18 +504,15 @@ const allZip = {};
 for (const s of subjects) {
   const zip = {};
   for (const d of s.documents) {
-    write(P.file(d), withRefs(d));
-    // Audio is already compressed; storing it as-is keeps the build fast. Playlists go in as their folder of tracks.
-    const entries = d.tracks
-      ? d.tracks.map((t) => { write(P.track(d, t), t.raw); return [`${d.source}/${t.file}`, t.raw, 0]; })
-      : [[d.filename, d.raw, d.format.viewer === 'audio' ? 0 : undefined]];
-    for (const [name, data, level] of entries) {
-      zip[name] = [new Uint8Array(data), { mtime: new Date(d.updated), ...(level === 0 && { level }) }];
-      allZip[`${s.folder}/${name}`] = zip[name];
-    }
+    if (d.zipped) write(P.file(d), withRefs(d));
+    d.tracks?.forEach((t) => write(P.track(d, t), t.raw));
+    // Music stays out of the course and site ZIPs, which would otherwise pass GitHub's 100 MB file limit.
+    if (d.type === 'music') continue;
+    zip[d.filename] = [new Uint8Array(d.raw), { mtime: new Date(d.updated) }];
+    allZip[`${s.folder}/${d.filename}`] = zip[d.filename];
   }
   s.zipSize = 0;
-  if (s.documents.length) {
+  if (Object.keys(zip).length) {
     const z = zipSync(zip, { level: 9 });
     s.zipSize = z.length;
     write(P.zip(s), z);
@@ -543,8 +546,8 @@ const docRecord = (d) => ({
   headings: d.headings.slice(0, 60),
   urls: {
     page: abs(P.doc(d)),
-    file: abs(P.file(d)),
-    download: abs(P.file(d)),
+    file: d.zipped ? abs(P.file(d)) : null,
+    download: d.zipped ? abs(P.file(d)) : null,
     text: abs(P.text(d)),
     json: abs(P.json(d)),
   },

@@ -874,6 +874,7 @@ if (viewer) {
       tracks.forEach((x) => (x === b ? x.setAttribute('aria-current', 'true') : x.removeAttribute('aria-current')));
       $$('[data-now]').forEach((el) => { el.textContent = b.dataset[el.dataset.now]; });
       player.src = b.dataset.src;
+      $$('[data-track-download]').forEach((a) => { a.href = b.dataset.src; a.download = b.dataset.file; });
       syncSpeed(); // loading a new source drops any pending ratechange events
       if (play) player.play().catch(() => {});
       history.replaceState(null, '', `#track-${b.dataset.track}`);

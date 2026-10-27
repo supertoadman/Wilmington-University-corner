@@ -302,7 +302,7 @@ function docCard(ctx, root, d, { showSubject = false } = {}) {
   </div>
   <div class="doc-card-actions">
     <span class="doc-open" aria-hidden="true">Open ${icon('arrow-right')}</span>
-    <a class="dl-btn" href="${root}${P.file(d)}" download="${esc(d.filename)}" aria-label="Download ${esc(d.title)} (${esc(d.format.label)}, ${fmtSize(d.size)})" title="Download">${icon('download')}</a>
+    ${d.zipped ? `<a class="dl-btn" href="${root}${P.file(d)}" download="${esc(d.filename)}" aria-label="Download ${esc(d.title)} (${esc(d.format.label)}, ${fmtSize(d.size)})" title="Download">${icon('download')}</a>` : ''}
   </div>
 </article>`;
 }
@@ -557,7 +557,7 @@ export function home(ctx) {
     <div class="download-band-icon">${icon('package')}</div>
     <div class="download-band-text">
       <h2>Take it all offline</h2>
-      <p>Every document in one ZIP: ${plural(docs.length, 'file')}, ${fmtSize(ctx.allZipSize)}. The HTML practice tools work offline in any browser.</p>
+      <p>Every document except the music in one ZIP: ${plural(docs.filter((d) => d.type !== 'music').length, 'file')}, ${fmtSize(ctx.allZipSize)}. The HTML practice tools work offline in any browser.</p>
     </div>
     <a class="btn btn-primary" href="${root}files/all-study-materials.zip" download>${icon('download')} Download everything</a>
   </div>
@@ -602,7 +602,7 @@ export function subjectPage(ctx, s) {
         <ul class="type-pills">${Object.keys(TYPES).filter((k) => counts[k]).map((k) => `<li>${icon(TYPES[k].icon)} ${esc(counts[k] === 1 ? TYPES[k].label : TYPES[k].plural)} <span class="count">${counts[k]}</span></li>`).join('')}</ul>
       </div>
       <div class="subject-hero-actions">
-        ${s.documents.length ? `<a class="btn btn-primary subject-hero-dl" href="${root}${P.zip(s)}" download>${icon('download')} Download all <span class="btn-sub">${fmtSize(s.zipSize)}</span></a>` : ''}
+        ${s.zipSize ? `<a class="btn btn-primary subject-hero-dl" href="${root}${P.zip(s)}" download>${icon('download')} Download all <span class="btn-sub">${fmtSize(s.zipSize)}</span></a>` : ''}
         ${ctx.game?.courses.some((c) => c.slug === s.slug) ? `<a class="btn btn-ghost subject-hero-play" href="${root}play/?course=${esc(s.slug)}">${icon('play')} Play in Sanctum Run</a>` : ''}
       </div>
     </div>
@@ -626,6 +626,10 @@ export function docPage(ctx, d) {
   const t = TYPES[d.type];
   const s = d.subject;
   const fileUrl = root + P.file(d);
+  // A playlist too big to ZIP downloads the track that is playing instead; app.js keeps the link current.
+  const dl = d.zipped
+    ? `href="${fileUrl}" download="${esc(d.filename)}"`
+    : `href="${root}${P.track(d, d.tracks[0])}" download="${esc(d.tracks[0].file)}" data-track-download`;
   const isDocx = d.format.viewer === 'docx';
   const isFrame = d.format.viewer === 'frame';
   const isAudio = d.format.viewer === 'audio' || d.format.viewer === 'playlist';
@@ -661,7 +665,7 @@ export function docPage(ctx, d) {
       </div>
       ${d.tracks ? `<div class="tracklist">
         <p class="player-speed-label">${esc(d.title)} · ${d.tracks.length} tracks</p>
-        <ol>${d.tracks.map((tr, i) => `<li><button type="button" class="track" data-track="${esc(tr.slug)}" data-src="${src(tr)}" data-title="${esc(tr.title)}" data-topic="${esc(tr.topic || s.title)}" data-description="${esc(tr.description)}"${i === 0 ? ' aria-current="true"' : ''}>
+        <ol>${d.tracks.map((tr, i) => `<li><button type="button" class="track" data-track="${esc(tr.slug)}" data-src="${src(tr)}" data-file="${esc(tr.file)}" data-title="${esc(tr.title)}" data-topic="${esc(tr.topic || s.title)}" data-description="${esc(tr.description)}"${i === 0 ? ' aria-current="true"' : ''}>
           <span class="track-no">${tr.number ?? i + 1}</span>
           <span class="track-text"><strong>${esc(tr.title)}</strong>${tr.topic ? `<small>${esc(tr.topic)}</small>` : ''}</span>
           ${tr.duration ? `<span class="track-time">${fmtDuration(tr.duration)}</span>` : ''}
@@ -703,7 +707,7 @@ ${GILT_DEFS}
       <button class="vbtn" type="button" data-panel-toggle="info" aria-controls="info-panel" aria-expanded="false" title="Details">${icon('info')}<span>Details</span></button>
       ${isFrame ? `<button class="vbtn hide-touch" type="button" data-fullscreen title="Full screen">${icon('maximize')}<span>Full screen</span></button>` : ''}
       <button class="vbtn" type="button" data-share title="Share">${icon('share')}<span>Share</span></button>
-      <a class="vbtn vbtn-primary" href="${fileUrl}" download="${esc(d.filename)}" title="Download">${icon('download')}<span>Download</span></a>
+      <a class="vbtn vbtn-primary" ${dl} title="${d.zipped ? 'Download' : 'Download this track'}">${icon('download')}<span>Download</span></a>
       ${d.format.mime === 'application/pdf' ? '' : ambienceControl('vbtn')}
       ${themeButton('vbtn vbtn-icon hide-mobile')}
     </div>
@@ -731,7 +735,7 @@ ${GILT_DEFS}
       </dl>
       ${d.tags.length ? `<ul class="tag-list">${d.tags.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
       <div class="vpanel-actions">
-        <a class="btn btn-primary" href="${fileUrl}" download="${esc(d.filename)}">${icon('download')} Download ${esc(d.format.label)}</a>
+        <a class="btn btn-primary" ${dl}>${icon('download')} Download ${d.zipped ? esc(d.format.label) : 'this track'}</a>
         ${d.tracks ? '' : isFrame || isAudio ? `<a class="btn btn-ghost" href="${fileUrl}" target="_blank" rel="noopener">${icon('external-link')} Open in new tab</a>` : `<button class="btn btn-ghost" type="button" data-print>${icon('printer')} Print</button>`}
         ${isFrame ? `<button class="btn btn-ghost" type="button" data-sheet-open="progress-sheet">${icon('download')} Back up your progress</button>` : ''}
       </div>
@@ -1213,7 +1217,7 @@ export function openapi(config) {
             tracks: { type: ['array', 'null'], description: 'Playlists only: the tracks in play order.', items: { type: 'object', properties: { number: { type: ['integer', 'null'] }, title: { type: 'string' }, topic: { type: 'string' }, description: { type: 'string' }, durationSeconds: { type: ['integer', 'null'] }, sizeBytes: { type: 'integer' }, url: { type: 'string' } } } },
             sizeBytes: { type: 'integer' }, updated: { type: 'string', format: 'date-time' },
             headings: { type: 'array', items: { type: 'string' } },
-            urls: { type: 'object', properties: { page: { type: 'string' }, file: { type: 'string' }, download: { type: 'string' }, text: { type: 'string' }, json: { type: 'string' } } },
+            urls: { type: 'object', properties: { page: { type: 'string' }, file: { type: ['string', 'null'], description: 'Null for a playlist too big to ZIP; use its track URLs.' }, download: { type: ['string', 'null'] }, text: { type: 'string' }, json: { type: 'string' } } },
           },
         },
         Subject: {
