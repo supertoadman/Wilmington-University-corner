@@ -33,6 +33,15 @@
       "questions": 285,
       "order": 3
     },
+    "Sales_and_Leases_Practice_Exams_II.html": {
+      "slug": "sales-and-leases-practice-exams-ii",
+      "title": "Sales and Leases Practice Exams II",
+      "type": "practice",
+      "description": "A second set of 14 practice exams (210 new questions) for the Week 10 assessment, in the same style as the first: Professor Richardson's sample-exam format, with 15 stand-alone, five-choice questions per exam that mix short hypos asking who wins and why with rule questions (\"Which of the following is NOT…\"), plus \"None of the above\" and \"All of the above\" choices that are sometimes the answer. Every fact pattern is new. The cases are tested by application, not recall: instead of asking what happened in Daitom, Casazza, Market Street, Roth Steel, Rogath, Razor, Top of Iowa, or the note cases, each question gives new facts that track the case (a pump buyer's purchase order that reserves its remedies, a lumber mill that threatens to stop shipping, a lamp buyer warned by an appraiser, an e-bike warranty sealed in the box, a farm that goes silent in an inverted market) and asks you to apply its rule. Each exam samples the whole Weeks 1–8 condensed outline, and together they cover all 16 sections and the assigned problems. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
+      "tags": ["UCC Article 2", "MCQ", "practice exam", "application", "Week 10"],
+      "questions": 210,
+      "order": 4
+    },
     "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
       "publish": false,
       "description": "Full-length source outline for Weeks 1–8, kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
