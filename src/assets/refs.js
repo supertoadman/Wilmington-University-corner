@@ -186,7 +186,19 @@
     return b;
   }
 
-  const ICON = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/></svg>';
+  const svg = (d, w = 2) => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${d}</svg>`;
+  const ICON = svg('<path d="M2 4h6a4 4 0 0 1 4 4v13a3 3 0 0 0-3-3H2z"/><path d="M22 4h-6a4 4 0 0 0-4 4v13a3 3 0 0 1 3-3h7z"/>');
+  const ICONS = {
+    o: ICON,
+    c: svg('<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>', 1.8),
+    chev: svg('<path d="m9 18 6-6-6-6"/>'),
+    back: svg('<path d="m15 18-6-6 6-6"/>'),
+    up: svg('<path d="m18 15-6-6-6 6"/>'),
+    x: svg('<path d="M18 6 6 18M6 6l12 12"/>'),
+    search: svg('<circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/>'),
+    out: svg('<path d="M15 3h6v6M10 14 21 3M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>'),
+    info: svg('<circle cx="12" cy="12" r="9"/><path d="M12 16v-4M12 8h.01"/>'),
+  };
   function enhance(card) {
     const url = urlFor(card);
     if (!url) return;
@@ -222,8 +234,21 @@
   // Panel
   // ---------------------------------------------------------------------------
   const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
-  let panel, body, title, back, size, input, opener = null, stack = [];
+  let panel, body, title, eyebrow, back, size, input, opener = null, origin = '', stack = [];
   const phone = matchMedia('(max-width: 759px)');
+  const darkOS = matchMedia('(prefers-color-scheme: dark)');
+
+  // The panel has its own light and dark colours and follows the page's background, so it
+  // matches pages with a theme switch and pages that stay light in dark mode alike.
+  function pageIsDark() {
+    for (const n of [document.body, document.documentElement]) {
+      const c = getComputedStyle(n).backgroundColor.match(/[\d.]+/g);
+      if (c && (c[3] === undefined || +c[3] > 0.5)) return 0.2126 * c[0] + 0.7152 * c[1] + 0.0722 * c[2] < 128;
+    }
+    return darkOS.matches;
+  }
+  const syncTheme = () => panel?.classList.toggle('rx-dark', pageIsDark());
+  const resync = () => { syncTheme(); setTimeout(syncTheme, 400); }; // after any background transition
 
   function build() {
     panel = el('aside', 'rx-panel');
@@ -231,16 +256,18 @@
     panel.setAttribute('aria-label', 'References');
     panel.hidden = true;
     panel.innerHTML = `<header class="rx-head">
-        <button type="button" class="rx-icon rx-back" aria-label="Back"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg></button>
-        <h2 class="rx-title" tabindex="-1">References</h2>
-        <button type="button" class="rx-icon rx-size" aria-label="Expand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m18 15-6-6-6 6"/></svg></button>
-        <button type="button" class="rx-icon rx-close" aria-label="Close references"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+        <span class="rx-grip" aria-hidden="true"></span>
+        <button type="button" class="rx-icon rx-back" aria-label="Back">${ICONS.back}</button>
+        <div class="rx-titles"><p class="rx-eyebrow"></p><h2 class="rx-title" tabindex="-1">References</h2></div>
+        <button type="button" class="rx-icon rx-size" aria-label="Expand">${ICONS.up}</button>
+        <button type="button" class="rx-icon rx-close" aria-label="Close references">${ICONS.x}</button>
       </header>
-      <form class="rx-search" role="search"><input type="search" enterkeyhint="search" autocomplete="off" aria-label="Search the statutes and outline" placeholder="Search: 2-207, perfect tender, Roth Steel"></form>
+      <form class="rx-search" role="search">${ICONS.search}<input type="search" enterkeyhint="search" autocomplete="off" aria-label="Search the statutes and outline" placeholder="Search: 2-207, perfect tender, Roth Steel"></form>
       <div class="rx-body"></div>`;
     document.body.append(panel);
     body = panel.querySelector('.rx-body');
     title = panel.querySelector('.rx-title');
+    eyebrow = panel.querySelector('.rx-eyebrow');
     back = panel.querySelector('.rx-back');
     size = panel.querySelector('.rx-size');
     input = panel.querySelector('input');
@@ -249,6 +276,9 @@
       const tall = panel.classList.toggle('rx-tall');
       size.setAttribute('aria-label', tall ? 'Shrink' : 'Expand');
     };
+    panel.querySelector('.rx-grip').onclick = () => size.click();
+    darkOS.addEventListener('change', resync);
+    new MutationObserver(resync).observe(document.documentElement, { attributes: true, attributeFilter: ['data-theme'] });
     panel.querySelector('.rx-close').onclick = close;
     let timer;
     input.oninput = () => { clearTimeout(timer); timer = setTimeout(search, 180); };
@@ -269,21 +299,26 @@
     if (!url) return;
     if (!panel) build();
     opener = from || opener;
-    if (panel.hidden || view.type === 'question') stack = [];
+    const fresh = panel.hidden || view.type === 'question';
+    if (fresh) stack = [];
     stack.push(view);
+    // The question the panel was opened from, shown above every view until it is reopened.
+    const card = from?.closest(CARD);
+    if (fresh || card) setOrigin(card);
+    syncTheme();
     panel.hidden = false;
     document.documentElement.classList.add('rx-open');
     view.ix = ready.get(url);
     if (!view.ix) {
-      body.replaceChildren(el('p', 'rx-note', 'Loading…'));
-      try { view.ix = await load(url); scan(document.body); } catch (e) { body.replaceChildren(el('p', 'rx-note', 'The references could not be loaded. Check your connection and try again.')); return; }
+      title.textContent = 'References';
+      body.replaceChildren(...[0, 1, 2, 3].map(() => el('div', 'rx-skel')));
+      try { view.ix = await load(url); scan(document.body); } catch (e) { body.replaceChildren(empty('The references could not be loaded. Check your connection and try again.')); return; }
       if (stack.at(-1) !== view) return; // another lookup started while this one loaded
     }
     show();
     title.focus({ preventScroll: true });
     // On a phone the sheet covers the bottom of the screen; keep the question text in the gap
     // between it and whatever the page pins to the top (shuffle mode's header and score bar).
-    const card = from?.closest(CARD);
     if (card && phone.matches) {
       const stem = card.querySelector('.stem, .sq-stem') || card;
       const cover = pinnedTop(), top = stem.getBoundingClientRect().top;
@@ -304,10 +339,18 @@
     }
     return bottom;
   }
+  /** Labels the panel with the question it was opened from and marks that card's Look up button. */
+  function setOrigin(card) {
+    document.querySelectorAll('.rx-look[aria-expanded="true"]').forEach((b) => b.setAttribute('aria-expanded', 'false'));
+    card?.querySelector('.rx-look')?.setAttribute('aria-expanded', 'true');
+    const num = card?.querySelector('.num, .qn, .sq-num, .qtitle')?.textContent.trim() || '';
+    origin = /^\d+$/.test(num) ? `Question ${num}` : num;
+  }
   function close() {
     if (!panel || panel.hidden) return;
     panel.hidden = true;
     document.documentElement.classList.remove('rx-open');
+    setOrigin(null);
     if (opener?.isConnected) opener.focus({ preventScroll: true });
     opener = null;
   }
@@ -321,42 +364,133 @@
     const out = VIEWS[view.type](view);
     body.replaceChildren(...out.nodes);
     title.textContent = out.title;
-    body.scrollTop = 0;
+    eyebrow.textContent = origin;
+    eyebrow.hidden = !origin;
+    // Open at the first marked passage, a third of the way down, else at the top.
     const mark = body.querySelector('.rx-hit');
-    if (mark) mark.scrollIntoView({ block: 'center' });
+    body.scrollTop = 0;
+    if (mark) body.scrollTop = mark.getBoundingClientRect().top - body.getBoundingClientRect().top - body.clientHeight / 3;
   }
   const go = (view) => { view.ix ||= idx; stack.push(view); show(); title.focus({ preventScroll: true }); };
 
   // A row that opens a statute, outline section, or case.
   function row(ref) {
-    const b = el('button', 'rx-row');
+    const b = el('button', `rx-row rx-r${ref.kind}`);
     b.type = 'button';
-    let kind, main, sub = '';
+    const ico = el('span', 'rx-ico');
+    const txt = el('span', 'rx-txt');
+    let main, sub = '';
     if (ref.kind === 's') {
       const s = idx.byStatute[ref.id];
-      kind = `§ ${s.s}${ref.sub || ''}`; main = s.t;
+      ico.textContent = '§';
+      txt.append(el('span', 'rx-over', `§ ${s.s}${ref.sub || ''}`));
+      main = s.t;
     } else if (ref.kind === 'o') {
       const s = idx.bySection[ref.id];
-      kind = 'Outline'; main = s.title; sub = s.parent ? idx.bySection[s.parent].title : (s.week || '');
+      ico.innerHTML = ICONS.o;
+      main = s.title; sub = s.parent ? idx.bySection[s.parent].title : (s.week || '');
     } else {
       const c = idx.cases[ref.i];
-      kind = 'Case'; main = c.title.replace(/\s+[—–-]\s+.*$/, ''); sub = c.title.split(/\s+[—–-]\s+/).slice(1).join(' - ');
+      ico.innerHTML = ICONS.c;
+      main = c.title.replace(/\s+[—–-]\s+.*$/, ''); sub = c.title.split(/\s+[—–-]\s+/).slice(1).join(' - ');
     }
-    b.append(el('span', `rx-kind rx-k${ref.kind}`, kind), el('span', 'rx-main', main));
-    if (sub) b.append(el('span', 'rx-sub', sub));
+    txt.append(el('span', 'rx-main', main));
+    if (sub) txt.append(el('span', 'rx-sub', sub));
+    b.append(ico, txt);
+    b.insertAdjacentHTML('beforeend', ICONS.chev);
     b.onclick = () => go({ type: ref.kind, ...ref });
     return b;
   }
   function group(label, refs) {
     if (!refs.length) return [];
     const g = el('section', 'rx-group');
-    g.append(el('h3', 'rx-label', label), ...refs.map(row));
+    const h = el('h3', 'rx-label', label);
+    h.append(el('span', 'rx-count', String(refs.length)));
+    const list = el('div', 'rx-list');
+    list.append(...refs.map(row));
+    g.append(h, list);
     return [g];
   }
   function footer(href, label) {
     const a = el('a', 'rx-out', label);
     a.href = href; a.target = '_blank'; a.rel = 'noopener';
+    a.insertAdjacentHTML('beforeend', ICONS.out);
     return a;
+  }
+  function note(text) {
+    const p = el('p', 'rx-note');
+    p.innerHTML = ICONS.info;
+    p.append(el('span', null, text));
+    return p;
+  }
+  const empty = (text) => el('p', 'rx-empty', text);
+  function head(kicker, heading, badge) {
+    const h = el('header', 'rx-doc');
+    if (badge) h.append(el('span', 'rx-badge', badge));
+    if (kicker) h.append(kicker.nodeType ? kicker : el('p', 'rx-kicker', kicker));
+    h.append(el('h3', 'rx-h', heading));
+    return h;
+  }
+
+  // ---------------------------------------------------------------------------
+  // Statute text and the passages to mark
+  // ---------------------------------------------------------------------------
+  /** A subsection's inline "(a) … (b) …" clauses, when it has at least two of them in order. */
+  function clauses(t) {
+    const at = [];
+    let want = 97; // "a"
+    for (const m of t.matchAll(/(^|[\s:;—])\(([a-z])\)\s/g)) {
+      if (m[2].charCodeAt(0) !== want) continue;
+      at.push({ i: m.index + m[1].length, label: `(${m[2]})` });
+      want++;
+    }
+    if (at.length < 2) return null;
+    return {
+      lead: t.slice(0, at[0].i).trim(),
+      parts: at.map((a, k) => [a.label, t.slice(a.i + a.label.length, at[k + 1]?.i ?? t.length).trim()]),
+    };
+  }
+  /**
+   * A statute as passages with full paths: "(2)" and its clauses "(2)(a)", "(2)(b)", whether the
+   * clauses are their own subsections or run inline in the text, so a cite to "(2)(b)" can mark
+   * just (b).
+   */
+  function passages(s) {
+    const out = [];
+    let top = '';
+    for (const [label, t] of s.x) {
+      const lead = (label.match(/^(?:\([^)]+\))+/) || [''])[0];
+      let path = lead, depth = 0;
+      if (/^\([a-z]\)$/.test(lead) && /^\(\d+\)$/.test(top)) { path = top + lead; depth = 1; } else top = lead;
+      const split = clauses(t);
+      out.push({ label, path, depth, text: split ? split.lead : t });
+      if (split) for (const [l, text] of split.parts) out.push({ label: l, path: path + l, depth: depth + 1, text });
+    }
+    return out;
+  }
+  /** Passages a cite points at: "(2)(b)" tries "(2)(b)", then "(2)" and everything under it. */
+  function cited(list, sub) {
+    const groups = (sub || '').match(/\([^)]+\)/g) || [];
+    for (let n = groups.length; n > 0; n--) {
+      const want = groups.slice(0, n).join('');
+      const hits = list.flatMap((p, i) => (p.path.startsWith(want) ? [i] : []));
+      if (hits.length) return hits;
+    }
+    return [];
+  }
+  /** Without a usable cite, the passages that share the most telling words with the question. */
+  function relevant(list, ctx) {
+    if (!ctx || list.length < 2) return [];
+    const q = new Set(terms(ctx));
+    const scored = list.map((p, i) => {
+      const words = new Set(terms(p.text));
+      let score = 0, shared = 0;
+      for (const w of words) if (q.has(w)) { score += idx.idf(w); shared++; }
+      return { i, shared, score: score / (1 + Math.log(1 + words.size)) };
+    }).sort((a, b) => b.score - a.score);
+    const best = scored[0];
+    if (best.shared < 2) return [];
+    return scored.filter((h) => h.shared >= 2 && h.score >= best.score * 0.8).slice(0, 2).map((h) => h.i).sort((a, b) => a - b);
   }
   // Rendered outline HTML, with its cites made into panel links.
   function rich(html, cls) {
@@ -372,22 +506,22 @@
       clone.querySelectorAll('.rats, .meta, .question-meta, .sq-meta, .sq-why, .rx-look, summary, .nav, .hint, .actions').forEach((n) => n.remove());
       // The card's topic tag ("Food: reasonable expectation") is a good hint, so it counts too.
       const text = `${clone.textContent} ${card.querySelector('.tag')?.textContent || ''}`;
-      let num = card.querySelector('.num, .qn, .sq-num')?.textContent.trim();
-      if (/^\d+$/.test(num)) num = `Question ${num}`;
       const names = named(text);
       const have = new Set(names.filter((n) => n.kind === 's').map((n) => n.id));
       const haveCase = new Set(names.filter((n) => n.kind === 'c').map((n) => n.i));
       const sections = rank(text, ['o'], 4).map((h) => ({ kind: 'o', id: h.d.id }));
       const statutes = rank(text, ['s'], 6).filter((h) => !have.has(h.d.id)).slice(0, 4).map((h) => ({ kind: 's', id: h.d.id }));
       const cases = rank(text, ['c'], 2).filter((h) => !haveCase.has(h.d.i) && h.score > 0.06).map((h) => ({ kind: 'c', i: h.d.i }));
+      // Statutes carry the question's words, so the statute view can mark the passages it turns on.
+      const withCtx = (refs) => refs.map((r) => (r.kind === 's' ? { ...r, ctx: text } : r));
       return {
-        title: num ? `${num}: references` : 'References',
+        title: 'References',
         nodes: [
-          ...group('Named in this question', names),
+          ...group('Named in this question', withCtx(names)),
           ...group('Outline sections', sections),
-          ...group('Statutes', statutes),
+          ...group('Statutes', withCtx(statutes)),
           ...group('Related cases', cases),
-          el('p', 'rx-note', 'Suggestions come from the words of the question and its choices. Search above for anything else.'),
+          note('Suggested from the words of the question and its choices. Search above for anything else.'),
         ],
       };
     },
@@ -407,7 +541,8 @@
       const ranked = rank(q, ['s', 'o', 'c'], 12).map((h) => (h.d.kind === 'c' ? { kind: 'c', i: h.d.i } : { kind: h.d.kind, id: h.d.id }))
         .filter((r) => !seen.has(r.kind + (r.id ?? r.i)));
       const keys = new Set();
-      const all = [...direct, ...prefix, ...extra, ...ranked].filter((r) => !keys.has(r.kind + (r.id ?? r.i)) && keys.add(r.kind + (r.id ?? r.i)));
+      const all = [...direct, ...prefix, ...extra, ...ranked].filter((r) => !keys.has(r.kind + (r.id ?? r.i)) && keys.add(r.kind + (r.id ?? r.i)))
+        .map((r) => (r.kind === 's' ? { ...r, ctx: q } : r));
       // Groups follow their best hit, so a case name puts Cases first.
       const groups = [['s', 'Statutes', 8], ['o', 'Outline sections', 6], ['c', 'Cases', 4]]
         .sort((a, b) => all.findIndex((r) => r.kind === a[0]) - all.findIndex((r) => r.kind === b[0]));
@@ -415,38 +550,51 @@
         title: 'Search',
         nodes: all.length
           ? groups.flatMap(([kind, label, n]) => group(label, all.filter((r) => r.kind === kind).slice(0, n)))
-          : [el('p', 'rx-note', `Nothing matches "${q}".`)],
+          : [empty(`Nothing matches “${q}”.`)],
       };
     },
-    s({ id, sub }) {
+    s({ id, sub, ctx }) {
       const s = idx.byStatute[id];
-      const nodes = [el('p', 'rx-kicker', s.part), el('h3', 'rx-h', s.t)];
-      // Mark the subsection the cite points at: "(2)(b)" tries "(2)(b)", then "(2)".
-      const groups = (sub || '').match(/\([^)]+\)/g) || [];
-      let hit = -1;
-      for (let n = groups.length; n > 0 && hit < 0; n--) {
-        const want = groups.slice(0, n).join('');
-        hit = s.x.findIndex(([label]) => (label.match(/^(?:\([^)]+\))+/) || [''])[0] === want);
-      }
-      const text = el('div', 'rx-statute');
-      s.x.forEach(([label, t], i) => {
-        const p = el('p', `rx-sub-p${i === hit ? ' rx-hit' : ''}`);
-        if (label) p.append(el('b', null, label), ' ');
-        p.append(t);
-        text.append(p);
+      const nodes = [head(s.part, s.t, `UCC § ${s.s}`)];
+      const list = passages(s);
+      // The passages the cite names, else the ones the question's words point to.
+      let hits = cited(list, sub), why = 'Cited';
+      if (!hits.length) { hits = relevant(list, ctx); why = 'Matches the question'; }
+      const marked = new Set(hits);
+      const text = el('div', 'rx-card rx-statute');
+      list.forEach((p, i) => {
+        if (!p.label && !p.text) return;
+        const wide = p.label.length > 6; // "(b)(20) Good faith" sits above its text
+        const par = el('div', `rx-par rx-d${p.depth}${wide ? ' rx-wide' : ''}${p.label ? '' : ' rx-bare'}${marked.has(i) ? ' rx-hit' : ''}`);
+        if (p.label) par.append(el('b', 'rx-lab', p.label));
+        const tx = el('div', 'rx-tx');
+        if (marked.has(i) && !marked.has(i - 1)) tx.append(el('span', 'rx-why', why));
+        tx.append(p.text);
+        par.append(tx);
+        text.append(par);
       });
       linkify(text);
       nodes.push(text);
-      if (s.note) nodes.push(rich(`<p>${s.note.replace(/</g, '&lt;')}</p>`, 'rx-callnote'));
+      if (s.note) {
+        const n = rich(`<p>${s.note.replace(/</g, '&lt;')}</p>`, 'rx-callnote');
+        n.prepend(el('span', 'rx-tag', 'Note'));
+        nodes.push(n);
+      }
       if (s.c.length) {
         const d = el('details', 'rx-cmts');
         const key = new Set((s.cc || []).map(String));
-        d.append(el('summary', null, `Official comments (${s.c.length})${key.size ? ` · ${key.size} key` : ''}`));
+        const sum = el('summary', null, 'Official comments');
+        sum.append(el('span', 'rx-count', String(s.c.length)));
+        if (key.size) sum.append(el('span', 'rx-keys', `${key.size} key`));
+        sum.insertAdjacentHTML('beforeend', ICONS.chev);
+        d.append(sum);
+        const wrap = el('div', 'rx-cmt-list');
         for (const [n, t] of s.c) {
-          const p = el('p', key.has(n) ? 'rx-key' : null);
+          const p = el('p', `rx-cmt${key.has(n) ? ' rx-key' : ''}`);
           p.append(el('b', null, n ? `Cmt. ${n}` : 'Comment'), ' ', t);
-          d.append(p);
+          wrap.append(p);
         }
+        d.append(wrap);
         linkify(d);
         nodes.push(d);
       }
@@ -459,15 +607,16 @@
     },
     o({ id }) {
       const s = idx.bySection[id];
-      const nodes = [];
+      let kicker = s.week || 'Outline';
       if (s.parent) {
-        const up = el('button', 'rx-kicker rx-up', idx.bySection[s.parent].title);
-        up.type = 'button';
-        up.onclick = () => go({ type: 'o', kind: 'o', id: s.parent });
-        nodes.push(up);
-      } else if (s.week) nodes.push(el('p', 'rx-kicker', s.week));
-      nodes.push(el('h3', 'rx-h', s.title));
-      if (s.html) nodes.push(rich(s.html, 'rx-outline'));
+        kicker = el('button', 'rx-kicker rx-up');
+        kicker.type = 'button';
+        kicker.innerHTML = ICONS.back;
+        kicker.append(idx.bySection[s.parent].title);
+        kicker.onclick = () => go({ type: 'o', kind: 'o', id: s.parent });
+      }
+      const nodes = [head(kicker, s.title)];
+      if (s.html) nodes.push(rich(s.html, 'rx-card rx-outline'));
       if (s.children?.length) nodes.push(...group(s.html ? 'In this part' : 'Sections', s.children.map((c) => ({ kind: 'o', id: c }))));
       if (idx.links.outline) nodes.push(footer(new URL(`${idx.links.outline}#${s.id}`, ROOT), 'Open in the outline'));
       return { title: 'Outline', nodes };
@@ -475,7 +624,7 @@
     c({ i }) {
       const c = idx.cases[i];
       const sec = idx.bySection[c.section];
-      const box = rich(c.html, 'rx-outline');
+      const box = rich(c.html, 'rx-outline rx-case');
       // The case's own name doesn't need to link back to itself.
       box.querySelectorAll('.rx-cite').forEach((b) => { if (JSON.parse(b.dataset.ref).i === i) b.replaceWith(b.textContent); });
       const nodes = [box];
@@ -495,8 +644,12 @@
     if (!cite) return;
     e.preventDefault();
     const ref = JSON.parse(cite.dataset.ref);
-    if (panel && !panel.hidden && panel.contains(cite)) go({ type: ref.kind, ...ref });
-    else open({ type: ref.kind, ...ref }, cite);
+    if (panel && !panel.hidden && panel.contains(cite)) { go({ type: ref.kind, ...ref }); return; }
+    // A cite in a question brings its sentence and the question's facts, to mark the passages
+    // they turn on when the cite itself names no subsection.
+    const stem = cite.closest(CARD)?.querySelector('.stem, .sq-stem');
+    ref.ctx = `${cite.closest('p, li, .rat, .opt, .stem, .sq-stem')?.textContent || ''} ${stem?.textContent || ''}`;
+    open({ type: ref.kind, ...ref }, cite);
   });
 
   const start = () => {
