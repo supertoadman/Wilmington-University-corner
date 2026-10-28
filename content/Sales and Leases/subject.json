@@ -16,6 +16,15 @@
       "tags": ["UCC Article 2", "outline", "sales", "warranties", "Weeks 1–8"],
       "order": 1
     },
+    "Sales_and_Leases_Weighted_Practice_Exams.html": {
+      "slug": "sales-and-leases-weighted-practice-exams",
+      "title": "Sales and Leases Weighted Practice Exams",
+      "type": "practice",
+      "description": "Ten practice exams (150 new questions) for the Week 10 assessment, covering all of Weeks 1–8 with each topic's share set by how testable it is. Tier 1 gets 66 questions on the bright-line rules most likely to be tested: risk of loss and identification, implied warranties, express warranties, title and entrustment, and warranty disclaimers. Tier 2 gets 64: tender, inspection, acceptance and payment, course of performance and waiver, modification, quantity and price, the parol evidence rule, assignment and delegation, insecurity and repudiation, excuse, and remedy limits. Tier 3 gets 20: scope, formation and § 2-207, the statute of frauds, good faith and variation by agreement, and termination. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format, mixing short hypos that ask who wins and why with \"Which of the following is NOT…\" questions. Wrong answers are built from the near-miss rules she tests, and some questions offer \"None of the above,\" which is sometimes the answer. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
+      "tags": ["UCC Article 2", "MCQ", "practice exam", "weighted", "Week 10"],
+      "questions": 150,
+      "order": 1.5
+    },
     "Sales_and_Leases_Bar_Questions.html": {
       "slug": "sales-and-leases-bar-questions",
       "title": "Sales and Leases Bar Questions",
