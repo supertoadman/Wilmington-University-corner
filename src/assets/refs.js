@@ -1,6 +1,7 @@
 // Reference popup for practice pages. Each question card gets a "Look up" button that opens a
-// panel with the statutes, outline sections, and cases the question turns on, and every cite or
-// case name in a question or explanation opens the panel at that spot. build.mjs injects this
+// panel with the statutes, outline sections, and cases the question turns on, and every cite,
+// case name, or casebook problem ("Problem 4-3(b)") in a question or explanation opens the panel
+// at that spot. build.mjs injects this
 // script into the practice pages of subjects whose subject.json has "refs"; the index it loads
 // is built from the subject's supplement and outline, so questions need no tagging.
 // Shuffle mode mixes courses, so there each card names its course (data-course) and uses that
@@ -73,13 +74,23 @@
 
   // Cites like "§ 2-207(2)(b)", "1-201(b)(20)", "UCC 2-314"; only sections in the index link.
   const CITE = /(?:§§?\s*)?\b([129])[-‑–](\d{3}[A-Z]?)(?!\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g;
+  // Casebook problems: "Problem 4-3(b)", "Problems 1-2, 1-3", "Problems 4-10 and 4-11".
+  const PNUM = String.raw`\d{1,2}[-‑–]\d{1,2}(?!\d)(?:\([a-zA-Z0-9]{1,3}\))*`;
+  const PROB = new RegExp(String.raw`\bProblems?\s+${PNUM}(?:(?:,\s*|,?\s+(?:and|or|&)\s+)${PNUM})*`, 'g');
+  /** Each problem in a PROB match: its number, part ("(b)"), and where it sits in the match. */
+  const problemsIn = (m) => [...m[0].matchAll(/(\d+)[-‑–](\d+)((?:\([a-zA-Z0-9]{1,3}\))*)/g)].map((p, k) => ({
+    n: `${p[1]}-${p[2]}`, sub: p[3].toLowerCase(),
+    at: m.index + (k ? p.index : 0), end: m.index + p.index + p[0].length,
+  }));
 
   function prepare(data) {
+    data.problems ||= [];
     const docs = [];
     data.statutes.forEach((s, i) => docs.push({ kind: 's', i, id: s.s,
       text: `${s.s} ${s.s} ${s.t} ${s.t} ${(s.k || []).join(' ')} ${s.x.map((x) => x.join(' ')).join(' ')} ${s.note || ''} ${s.c.map((c) => c[1]).join(' ')}` }));
     data.sections.forEach((s, i) => { s.text = textOf(s.html); docs.push({ kind: 'o', i, id: s.id, text: `${s.title} ${s.title} ${s.text}` }); });
     data.cases.forEach((c, i) => docs.push({ kind: 'c', i, id: c.name, text: `${c.title} ${c.title} ${textOf(c.html)}` }));
+    data.problems.forEach((p, i) => docs.push({ kind: 'p', i, id: p.n, text: `${p.title} ${p.title} ${p.parts.map((x) => textOf(x.html)).join(' ')}` }));
     const df = new Map();
     for (const d of docs) {
       d.tf = new Map();
@@ -94,6 +105,7 @@
     }
     const byStatute = Object.fromEntries(data.statutes.map((s) => [s.s, s]));
     const bySection = Object.fromEntries(data.sections.map((s) => [s.id, s]));
+    const byProblem = Object.fromEntries(data.problems.map((p) => [p.n, p]));
     // Outline sections that cite each statute, for "In the outline" links on a statute.
     const citedIn = {};
     for (const s of data.sections) {
@@ -108,7 +120,7 @@
       // Not after "v.": in "Watteau v. Fenwick", Fenwick is a party, not the Fenwick case.
       caseRe = new RegExp(`(?<!\\bv\\.\\s)\\b(?:${keys.join('|')})(?!\\w)`, 'g');
     }
-    return { ...data, docs, idf, byStatute, bySection, citedIn, caseRe };
+    return { ...data, docs, idf, byStatute, bySection, byProblem, citedIn, caseRe };
   }
 
   function rank(text, kinds, limit) {
@@ -127,7 +139,7 @@
     return hits.sort((a, b) => b.score - a.score).slice(0, limit);
   }
 
-  /** Statute cites and case names named in a piece of text, in order, without repeats. */
+  /** Statute cites, case names, and problems named in a piece of text, in order, without repeats. */
   function named(text) {
     const out = [], seen = new Set();
     for (const m of text.matchAll(CITE)) {
@@ -139,8 +151,15 @@
       const i = caseIndex(m[0]);
       if (i >= 0 && !seen.has(`c:${i}`)) { seen.add(`c:${i}`); out.push({ kind: 'c', i }); }
     }
+    for (const m of text.matchAll(PROB)) {
+      for (const { n, sub } of problemsIn(m)) {
+        if (idx.byProblem[n] && !seen.has(`p:${n}${sub}`)) { seen.add(`p:${n}${sub}`); out.push({ kind: 'p', n, sub }); }
+      }
+    }
     return out;
   }
+  // A ref's identity, for dropping repeats from lists.
+  const refKey = (r) => r.kind + (r.id ?? r.n ?? r.i);
   const caseIndex = (key) => idx.cases.findIndex((c) => c.key === key);
 
   // ---------------------------------------------------------------------------
@@ -163,6 +182,9 @@
       const text = node.nodeValue, spots = [];
       for (const m of text.matchAll(CITE)) if (idx.byStatute[`${m[1]}-${m[2]}`]) spots.push({ at: m.index, end: m.index + m[0].length, ref: { kind: 's', id: `${m[1]}-${m[2]}`, sub: m[3] } });
       if (CASE_RE) for (const m of text.matchAll(CASE_RE)) spots.push({ at: m.index, end: m.index + m[0].length, ref: { kind: 'c', i: caseIndex(m[0]) } });
+      for (const m of text.matchAll(PROB)) {
+        for (const { n, sub, at, end } of problemsIn(m)) if (idx.byProblem[n]) spots.push({ at, end, ref: { kind: 'p', n, sub } });
+      }
       if (!spots.length) continue;
       spots.sort((a, b) => a.at - b.at);
       const frag = document.createDocumentFragment();
@@ -182,7 +204,7 @@
     b.className = 'rx-cite';
     b.textContent = label;
     b.dataset.ref = JSON.stringify(ref);
-    b.title = ref.kind === 's' ? `Look up § ${ref.id}` : `Look up ${idx.cases[ref.i].name}`;
+    b.title = ref.kind === 's' ? `Look up § ${ref.id}` : ref.kind === 'p' ? `Look up Problem ${ref.n}${ref.sub}` : `Look up ${idx.cases[ref.i].name}`;
     return b;
   }
 
@@ -191,6 +213,7 @@
   const ICONS = {
     o: ICON,
     c: svg('<path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10M12 3v18M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/>', 1.8),
+    p: svg('<rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M12 11h4M12 16h4M8 11h.01M8 16h.01"/>', 1.8),
     chev: svg('<path d="m9 18 6-6-6-6"/>'),
     back: svg('<path d="m15 18-6-6 6-6"/>'),
     up: svg('<path d="m18 15-6-6-6 6"/>'),
@@ -367,7 +390,7 @@
     eyebrow.textContent = origin;
     eyebrow.hidden = !origin;
     // Open at the first marked passage, a third of the way down, else at the top.
-    const mark = body.querySelector('.rx-hit');
+    const mark = body.querySelector('.rx-hit, .rx-mark');
     body.scrollTop = 0;
     if (mark) body.scrollTop = mark.getBoundingClientRect().top - body.getBoundingClientRect().top - body.clientHeight / 3;
   }
@@ -389,6 +412,13 @@
       const s = idx.bySection[ref.id];
       ico.innerHTML = ICONS.o;
       main = s.title; sub = s.parent ? idx.bySection[s.parent].title : (s.week || '');
+    } else if (ref.kind === 'p') {
+      const p = idx.byProblem[ref.n];
+      const where = idx.bySection[p.parts[0].section].title;
+      ico.innerHTML = ICONS.p;
+      txt.append(el('span', 'rx-over', `Problem ${p.n}${ref.sub || ''}`));
+      main = partOf(p, ref.sub)?.title || p.title || where;
+      if (main !== where) sub = where;
     } else {
       const c = idx.cases[ref.i];
       ico.innerHTML = ICONS.c;
@@ -492,6 +522,71 @@
     if (best.shared < 2) return [];
     return scored.filter((h) => h.shared >= 2 && h.score >= best.score * 0.8).slice(0, 2).map((h) => h.i).sort((a, b) => a - b);
   }
+  // ---------------------------------------------------------------------------
+  // Problems and the part a cite names
+  // ---------------------------------------------------------------------------
+  /** The excerpt written about just the cited part ("5-1(b)"), if the outline has one. */
+  const partOf = (p, sub) => sub && p.parts.find((x) => x.part && sub.startsWith(x.part));
+  const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const LABEL = /^\([a-z0-9]{1,3}\)/i;
+  /**
+   * Where part "(b)" of problem n is answered inside a rendered excerpt: a table row, list item,
+   * or paragraph that opens with "(b)" or "4-3(b)"; the clause spans of a split rule
+   * (class "el-2"); or else the run of text from "(b)" up to the next part's label.
+   */
+  function findPart(scope, n, label) {
+    const at = new RegExp(`(?:(?<![\\w)\\]])|(?<=(?:^|[^\\d-])${esc(n)}))${esc(label)}`, 'i');
+    const starts = new RegExp(`^(?:Problem\\s+)?(?:${esc(n)})?${esc(label)}`, 'i');
+    const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) {
+      const node = walker.currentNode;
+      if (!at.test(node.nodeValue)) continue;
+      const span = node.parentElement.closest('.el');
+      const blk = node.parentElement.closest('li, p, td, th');
+      if (!blk || !scope.contains(blk)) continue;
+      const k = span && scope.contains(span) && span.className.match(/\bel-\d+\b/)?.[0];
+      if (k) return { inline: [...blk.querySelectorAll(`.${k}`)] };
+      if (starts.test(blk.textContent.trim())) {
+        const tr = blk.closest('tr');
+        return { block: tr && scope.contains(tr) ? tr : (blk.parentElement.closest('li') || blk) };
+      }
+      // Inline parts: wrap the label's run of siblings, up to the next label, in one span.
+      let first = node;
+      while (first.parentNode !== blk) first = first.parentNode;
+      const run = [first];
+      for (let s = first.nextSibling; s && !LABEL.test(s.textContent.trim()); s = s.nextSibling) run.push(s);
+      const wrap = el('span');
+      first.before(wrap);
+      wrap.append(...run);
+      return { inline: [wrap] };
+    }
+    return null;
+  }
+  /** Marks the cited part ("(a)(1)" narrows to (1) inside (a) when the outline breaks it down). */
+  function markPart(card, n, sub) {
+    let hit = null;
+    for (const label of sub.match(/\([^)]+\)/g) || []) {
+      if (hit?.inline) break;
+      const next = findPart(hit?.block || card, n, label);
+      if (!next) break;
+      hit = next;
+    }
+    if (!hit) return false;
+    if (hit.block) markRow(hit.block, 'Cited');
+    else hit.inline.forEach((s) => s.classList.add('rx-mark'));
+    return true;
+  }
+  function markRow(row, why) {
+    row.classList.add('rx-hit');
+    (row.matches('tr') ? row.firstElementChild : row).prepend(el('span', 'rx-why', why));
+  }
+  /** Without a labelled part, the table rows or list items that share the most words with the question. */
+  function markRelevant(card, ctx) {
+    const rows = [...card.querySelectorAll('tbody > tr')];
+    const items = rows.length ? rows : [...card.querySelectorAll('li')];
+    relevant(items.map((r) => ({ text: r.textContent })), ctx).forEach((i) => markRow(items[i], 'Matches the question'));
+  }
+
   // Rendered outline HTML, with its cites made into panel links.
   function rich(html, cls) {
     const d = el('div', cls);
@@ -512,12 +607,16 @@
       const sections = rank(text, ['o'], 4).map((h) => ({ kind: 'o', id: h.d.id }));
       const statutes = rank(text, ['s'], 6).filter((h) => !have.has(h.d.id)).slice(0, 4).map((h) => ({ kind: 's', id: h.d.id }));
       const cases = rank(text, ['c'], 2).filter((h) => !haveCase.has(h.d.i) && h.score > 0.06).map((h) => ({ kind: 'c', i: h.d.i }));
-      // Statutes carry the question's words, so the statute view can mark the passages it turns on.
-      const withCtx = (refs) => refs.map((r) => (r.kind === 's' ? { ...r, ctx: text } : r));
+      // Problems the answer explanations cite, once they are showing (innerText skips hidden ones).
+      const haveProblem = new Set(names.filter((n) => n.kind === 'p').map((n) => n.n + n.sub));
+      const answers = named(card.innerText).filter((n) => n.kind === 'p' && !haveProblem.has(n.n + n.sub));
+      // Statutes and problems carry the question's words, so their views can mark the passages it turns on.
+      const withCtx = (refs) => refs.map((r) => (r.kind === 's' || r.kind === 'p' ? { ...r, ctx: text } : r));
       return {
         title: 'References',
         nodes: [
           ...group('Named in this question', withCtx(names)),
+          ...group('Problems cited in the answers', withCtx(answers)),
           ...group('Outline sections', sections),
           ...group('Statutes', withCtx(statutes)),
           ...group('Related cases', cases),
@@ -530,21 +629,30 @@
       const m = q.match(/^\s*(?:§\s*)?([129])[-‑–\s]?(\d{1,3})\s*$/);
       // A bare section number ("2-31") lists the sections it starts.
       const prefix = m ? idx.statutes.filter((s) => s.s.startsWith(`${m[1]}-${m[2]}`) && !direct.some((d) => d.id === s.s)).slice(0, 8).map((s) => ({ kind: 's', id: s.s })) : [];
+      // "4-3", "problem 4-3(b)", or "problem 4" (every problem in chapter 4).
+      const pm = q.match(/^\s*(?:problems?\s*)?(\d{1,2})(?:[-‑–\s](\d{1,2}))?((?:\([a-z0-9]{1,3}\))*)\s*$/i);
+      const probs = pm && (pm[2] || /problem/i.test(q))
+        ? idx.problems.filter((p) => (pm[2] ? p.n === `${pm[1]}-${pm[2]}` : p.n.startsWith(`${pm[1]}-`))).map((p) => ({ kind: 'p', n: p.n, sub: pm[2] ? pm[3].toLowerCase() : '' }))
+        : [];
       const low = q.toLowerCase();
       const titled = (list, name) => list.map((x, i) => ({ x, i })).filter(({ x }) => name(x).toLowerCase().includes(low));
       const extra = low.length >= 3 ? [
         ...titled(idx.cases, (c) => c.name).map(({ i }) => ({ kind: 'c', i })),
         ...titled(idx.sections, (s) => s.title).map(({ x }) => ({ kind: 'o', id: x.id })),
         ...titled(idx.statutes, (s) => s.t).map(({ x }) => ({ kind: 's', id: x.s })),
+        ...titled(idx.problems, (p) => p.title).map(({ x }) => ({ kind: 'p', n: x.n })),
       ] : [];
-      const seen = new Set([...direct, ...prefix, ...extra].map((r) => r.kind + (r.id ?? r.i)));
-      const ranked = rank(q, ['s', 'o', 'c'], 12).map((h) => (h.d.kind === 'c' ? { kind: 'c', i: h.d.i } : { kind: h.d.kind, id: h.d.id }))
-        .filter((r) => !seen.has(r.kind + (r.id ?? r.i)));
+      const seen = new Set([...direct, ...prefix, ...probs, ...extra].map(refKey));
+      const ranked = rank(q, ['s', 'o', 'c', 'p'], 12)
+        .map(({ d }) => (d.kind === 'c' ? { kind: 'c', i: d.i } : d.kind === 'p' ? { kind: 'p', n: d.id } : { kind: d.kind, id: d.id }))
+        .filter((r) => !seen.has(refKey(r)));
       const keys = new Set();
-      const all = [...direct, ...prefix, ...extra, ...ranked].filter((r) => !keys.has(r.kind + (r.id ?? r.i)) && keys.add(r.kind + (r.id ?? r.i)))
-        .map((r) => (r.kind === 's' ? { ...r, ctx: q } : r));
+      // A problem number lists just its problems, not every one that mentions the word "problem".
+      const loose = [...extra, ...ranked].filter((r) => !probs.length || r.kind !== 'p');
+      const all = [...direct, ...prefix, ...probs, ...loose].filter((r) => !keys.has(refKey(r)) && keys.add(refKey(r)))
+        .map((r) => (r.kind === 's' || r.kind === 'p' ? { ...r, ctx: q } : r));
       // Groups follow their best hit, so a case name puts Cases first.
-      const groups = [['s', 'Statutes', 8], ['o', 'Outline sections', 6], ['c', 'Cases', 4]]
+      const groups = [['s', 'Statutes', 8], ['o', 'Outline sections', 6], ['c', 'Cases', 4], ['p', 'Problems', 12]]
         .sort((a, b) => all.findIndex((r) => r.kind === a[0]) - all.findIndex((r) => r.kind === b[0]));
       return {
         title: 'Search',
@@ -631,6 +739,23 @@
       nodes.push(...group('Outline section', [{ kind: 'o', id: c.section }]));
       if (idx.links.outline) nodes.push(footer(new URL(`${idx.links.outline}#${sec.id}`, ROOT), 'Open in the outline'));
       return { title: 'Case', nodes };
+    },
+    p({ n, sub = '', ctx }) {
+      const p = idx.byProblem[n];
+      const own = partOf(p, sub);
+      const nodes = [head('Worked in the outline', own?.title || p.title || idx.bySection[p.parts[0].section].title, `Problem ${n}${sub}`)];
+      for (const x of p.parts) {
+        const card = rich(x.html, 'rx-card rx-outline rx-problem');
+        // The problem's own number doesn't need to link back to itself.
+        card.querySelectorAll('.rx-cite').forEach((b) => { if (JSON.parse(b.dataset.ref).n === n) b.replaceWith(b.textContent); });
+        if (x === own) { card.classList.add('rx-hit'); card.prepend(el('span', 'rx-why', 'Cited')); }
+        else if (!own && !x.part && !(sub && markPart(card, n, sub))) markRelevant(card, ctx);
+        nodes.push(card);
+      }
+      const where = [...new Set(p.parts.map((x) => x.section))];
+      nodes.push(...group(where.length > 1 ? 'Outline sections' : 'Outline section', where.map((id) => ({ kind: 'o', id }))));
+      if (idx.links.outline) nodes.push(footer(new URL(`${idx.links.outline}#${where[0]}`, ROOT), 'Open in the outline'));
+      return { title: 'Problem', nodes };
     },
   };
 
