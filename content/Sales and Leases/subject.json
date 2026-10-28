@@ -25,6 +25,15 @@
       "questions": 150,
       "order": 1.5
     },
+    "Sales_and_Leases_Acronym_Exams.html": {
+      "slug": "sales-and-leases-acronym-exams",
+      "title": "Sales and Leases Acronym Exams",
+      "type": "practice",
+      "description": "Four practice exams (60 new questions) on just the acronyms: the shipping and delivery terms and the course shorthand. 40 questions cover §§ 2-319 to 2-324 and how each term moves the risk of loss: F.O.B. place of shipment and destination, F.O.B. vessel and F.A.S., C.I.F. and C. & F., ex-ship, \"no arrival, no sale,\" C.O.D. and payment against documents, and what happens when there is no term or one side is in breach. The other 20 test the outline's shorthand: SOF, PER, NOM, CoP/CoD/UoT, LD, SOL, GFP and BIOCB, HTA and LOC (with PDM), DTW and CORS (Mathis), and UETA signatures. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format, mixing short hypos that ask who bears the loss with \"Which of the following is NOT…\" questions. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
+      "tags": ["UCC Article 2", "MCQ", "practice exam", "shipping terms", "risk of loss"],
+      "questions": 60,
+      "order": 1.6
+    },
     "Sales_and_Leases_Bar_Questions.html": {
       "slug": "sales-and-leases-bar-questions",
       "title": "Sales and Leases Bar Questions",
