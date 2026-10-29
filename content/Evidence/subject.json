@@ -1,10 +1,25 @@
 {
   "title": "Evidence",
-  "description": "Federal Rules of Evidence, Weeks 1–5: relevance and 403, the policy exclusions, character evidence, 404(b), impeachment, and jury secrecy. Includes the rule chart, flowcharts, flashcards, and bar-style practice questions.",
+  "description": "Federal Rules of Evidence, Classes 1–19 (Fisher, Evidence, 4th ed.): jury secrecy, relevance and 403, the policy exclusions, character evidence and 404(b), impeachment and the rape shield, hearsay and its exceptions, the Confrontation Clause, Bruton, the right to present a defense, and lay and expert opinion. Includes the outline, rule chart, flowcharts, flashcards, and bar-style practice questions.",
   "icon": "statue-angel-uriel",
   "accent": "#2f6f8f",
   "order": 1,
+  "refs": { "outline": "evidence-outline" },
   "documents": {
+    "Evidence_Condensed_Outline.docx": {
+      "slug": "evidence-outline",
+      "title": "Evidence Outline",
+      "type": "outline",
+      "theme": "structured",
+      "outsideColor": "64748B",
+      "description": "Condensed exam outline of Classes 1–19 on the Fall 2026 syllabus (Fisher pp. 1–783). Part I covers the Federal Rules, jury secrecy under 606(b), relevance, conditional relevance, and 403. Part II covers the specialized relevance rules, 407–411. Part III covers character evidence: the propensity ban, 404(b), Huddleston, 413–415, the defendant's and victim's character, and habit. Part IV covers impeachment under 607–609 and the rape shield. Part V covers competency, the definition of hearsay, opposing parties' statements, prior statements of witnesses, and the 803, 804, and 807 exceptions. Part VI covers the Confrontation Clause from Crawford through Smith v. Arizona. Part VII covers completeness, Bruton, and Chambers. Part VIII covers lay and expert opinion from the Week 10 reading. Rule and tip boxes throughout, and a card for every principal case with its class.",
+      "tags": ["FRE", "outline", "hearsay", "Confrontation Clause", "character evidence", "impeachment", "Classes 1–19"],
+      "order": 0
+    },
+    "Evidence_Master_Outline.docx": {
+      "publish": false,
+      "description": "Full master outline of Classes 1–19, swept against all 19 slide decks and the Week 1–10 readings, with every problem, the slides' answers, and an errata log. Kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
+    },
     "2Evidence_Rule_Chart (with class slides).docx": {
       "slug": "evidence-rule-chart",
       "title": "Evidence Rule Chart/outline",
