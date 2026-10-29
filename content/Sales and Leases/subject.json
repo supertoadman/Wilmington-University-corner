@@ -34,6 +34,15 @@
       "questions": 60,
       "order": 1.6
     },
+    "Sales_and_Leases_Complete_Coverage_Exams.html": {
+      "slug": "sales-and-leases-complete-coverage-exams",
+      "title": "Sales and Leases Complete Coverage Exams",
+      "type": "practice",
+      "description": "31 quick-fire practice exams (465 new questions) that together test every rule and concept from Weeks 1–8. A checklist of 446 rules and concepts, built from every slide in the Week 1 through Week 8 decks, the Sepinuck casebook (cases, notes and assigned problems) and the statutory supplement (UCC text and Official Comments), was used to write them, and every item on it is tested at least once. The questions are short: one- or two-line rule questions and mini-hypos, many of them \"Which of the following is NOT…\" questions that test four or five rules at once. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format and samples the whole course, from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, repudiation and excuse. Wrong answers are the near misses: the common-law rule the UCC changed, the wrong number or section, merchant vs. non-merchant, the rule from the next section over. Some questions offer \"None of the above\" or \"All of the above,\" and sometimes that is the answer. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or by any of 24 topic areas, shuffle the questions, and retry the ones you missed.",
+      "tags": ["UCC Article 2", "MCQ", "practice exam", "rule review", "Weeks 1–8"],
+      "questions": 465,
+      "order": 1.7
+    },
     "Sales_and_Leases_Bar_Questions.html": {
       "slug": "sales-and-leases-bar-questions",
       "title": "Sales and Leases Bar Questions",
