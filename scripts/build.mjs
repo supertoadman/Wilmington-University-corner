@@ -10,6 +10,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
 import mammoth from 'mammoth';
 import { zipSync, unzipSync, strFromU8, strToU8 } from 'fflate';
@@ -481,6 +482,10 @@ write('.nojekyll', '');
 // HTML practice pages load src/assets/refs.js to look things up from any question. Only the
 // served copy gets the script tags; downloads and ZIPs stay as written.
 const refPages = new Set();
+// Pages ask for refs.js, its stylesheet, and the indexes with a version taken from their contents,
+// so a browser's cached copy from before a deploy can't pair an old index with new code.
+const refsHash = createHash('sha1');
+for (const f of ['refs.js', 'refs.css']) refsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
 for (const s of subjects.filter((x) => x.refs)) {
   const find = (slug) => slug && s.documents.find((d) => d.slug === slug);
   const statutes = find(s.refs.statutes), outline = find(s.refs.outline);
@@ -492,12 +497,15 @@ for (const s of subjects.filter((x) => x.refs)) {
     cite: s.refs.cite,
     fullNames: s.refs.fullNames,
   });
-  write(`assets/refs/${s.slug}.json`, JSON.stringify(index));
+  const json = JSON.stringify(index);
+  refsHash.update(json);
+  write(`assets/refs/${s.slug}.json`, json);
   for (const d of s.documents) if (d.type === 'practice' && d.format.mime === 'text/html') refPages.add(d);
 }
+const refsVersion = refsHash.digest('hex').slice(0, 10);
 const withRefs = (d) => {
   if (!refPages.has(d)) return d.raw;
-  const tags = `<link rel="stylesheet" href="../../assets/refs.css"><script src="../../assets/refs.js" data-root="../../" data-index="assets/refs/${d.subject.slug}.json" defer></script>`;
+  const tags = `<link rel="stylesheet" href="../../assets/refs.css?v=${refsVersion}"><script src="../../assets/refs.js?v=${refsVersion}" data-root="../../" data-index="assets/refs/${d.subject.slug}.json?v=${refsVersion}" defer></script>`;
   const html = d.raw.toString('utf8');
   const at = html.toLowerCase().lastIndexOf('</body>');
   return Buffer.from(at < 0 ? html + tags : html.slice(0, at) + tags + html.slice(at), 'utf8');
@@ -636,7 +644,7 @@ write('llms-full.txt', docs.map((d) =>
 const game = await buildGame({ subjects, P, write, root: ROOT, dist: DIST });
 
 // Pages
-const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game };
+const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game, refsVersion };
 
 write('index.html', T.home(ctx));
 write('play/index.html', T.play(ctx));

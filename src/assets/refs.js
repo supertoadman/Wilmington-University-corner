@@ -25,7 +25,7 @@
   function urlFor(node) {
     if (!COURSES) return me.dataset.index ? new URL(me.dataset.index, ROOT).href : null;
     const course = node?.closest('[data-course]')?.dataset.course;
-    return course && COURSES.has(course) ? new URL(`assets/refs/${course}.json`, ROOT).href : null;
+    return course && COURSES.has(course) ? new URL(`assets/refs/${course}.json${me.dataset.v ? `?v=${me.dataset.v}` : ''}`, ROOT).href : null;
   }
   const loads = new Map(), ready = new Map();
   const load = (url) => {

@@ -1109,7 +1109,7 @@ export function shuffle(ctx) {
   return layout(ctx, {
     root, title: 'Shuffle mode', canonical: 'shuffle/', body,
     description: `Mix practice sets from any course into one shuffled stack: ${game.total.toLocaleString('en-US')} questions from the study library.`,
-    extraHead: `<script type="module" src="${root}assets/shuffle.js"></script>${refCourses.length ? `<link rel="stylesheet" href="${root}assets/refs.css"><script src="${root}assets/refs.js" data-root="${root}" data-courses="${refCourses.join(' ')}" defer></script>` : ''}`,
+    extraHead: `<script type="module" src="${root}assets/shuffle.js"></script>${refCourses.length ? `<link rel="stylesheet" href="${root}assets/refs.css?v=${ctx.refsVersion}"><script src="${root}assets/refs.js?v=${ctx.refsVersion}" data-root="${root}" data-courses="${refCourses.join(' ')}" data-v="${ctx.refsVersion}" defer></script>` : ''}`,
   });
 }
 
