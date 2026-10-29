@@ -138,6 +138,22 @@
       ],
       "questions": 60,
       "order": 8
+    },
+    "Evidence_Hearsay_Practice_Exam.html": {
+      "slug": "evidence-hearsay-practice-exam",
+      "title": "Hearsay Practice Exam",
+      "type": "practice",
+      "description": "40 bar-style questions, five choices each, covering all of hearsay: the definition and non-truth uses, opposing-party statements, prior statements and impeachment (613, 806), the 803 and 804 exceptions, 807, multiple hearsay, completeness under 106, and the Confrontation Clause through Smith v. Arizona and Samia. Includes the 2023 and 2024 amendments. Tutor mode grades each question as you go; timed mode gives you 80 minutes and grades at the end with a score by topic. Every question has the rule, an analysis, and why each choice is right or wrong.",
+      "tags": [
+        "MCQ",
+        "hearsay",
+        "Confrontation Clause",
+        "timed",
+        "bar prep",
+        "FRE 801–807"
+      ],
+      "questions": 40,
+      "order": 9
     }
   }
 }
