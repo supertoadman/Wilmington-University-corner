@@ -157,7 +157,12 @@
     }
     let caseRe = null;
     if (data.cases.length) {
-      const keys = data.cases.map((c) => c.key.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')).sort((a, b) => b.length - a.length);
+      const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // A one-party key ("Johnson") must not claim a different case with that party ("Johnson v. Lutz").
+      const keys = data.cases.flatMap((c) => (c.keys || [c.key]).map((k, j) => {
+        const vs = c.vs?.[j];
+        return { k, re: esc(k) + (vs && !/ v\. /.test(k) ? `(?!\\s+v\\.\\s+(?!${esc(vs)}\\b))` : '') };
+      })).sort((a, b) => b.k.length - a.k.length).map((x) => x.re);
       // Not after "v.": in "Watteau v. Fenwick", Fenwick is a party, not the Fenwick case.
       caseRe = new RegExp(`(?<!\\bv\\.\\s)\\b(?:${keys.join('|')})(?!\\w)`, 'g');
     }
@@ -200,7 +205,7 @@
   }
   // A ref's identity, for dropping repeats from lists.
   const refKey = (r) => r.kind + (r.id ?? r.n ?? r.i);
-  const caseIndex = (key) => idx.cases.findIndex((c) => c.key === key);
+  const caseIndex = (key) => idx.cases.findIndex((c) => (c.keys || [c.key]).includes(key));
 
   // ---------------------------------------------------------------------------
   // Linking cites in question text

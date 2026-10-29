@@ -4,7 +4,7 @@
   "icon": "statue-angel-uriel",
   "accent": "#2f6f8f",
   "order": 1,
-  "refs": { "statutes": "federal-rules-of-evidence", "outline": "evidence-outline", "cite": "fre" },
+  "refs": { "statutes": "federal-rules-of-evidence", "outline": "evidence-outline", "cite": "fre", "fullNames": ["Davis", "Smith", "Williams"] },
   "documents": {
     "Evidence_Condensed_Outline.docx": {
       "slug": "evidence-outline",

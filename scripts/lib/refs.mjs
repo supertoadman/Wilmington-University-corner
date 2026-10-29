@@ -5,7 +5,9 @@
 
 import { decodeEntities } from './text.mjs';
 
-const GOVERNMENT = /^(United States|People|State|Commonwealth|City|County|Equal Employment Opportunity Commission)\b/;
+const STATES = 'Alabama|Alaska|Arizona|Arkansas|California|Colorado|Connecticut|Delaware|Florida|Georgia|Hawaii|Idaho|Illinois|Indiana|Iowa|Kansas|Kentucky|Louisiana|Maine|Maryland|Massachusetts|Michigan|Minnesota|Mississippi|Missouri|Montana|Nebraska|Nevada|New Hampshire|New Jersey|New Mexico|New York|North Carolina|North Dakota|Ohio|Oklahoma|Oregon|Pennsylvania|Rhode Island|South Carolina|South Dakota|Tennessee|Texas|Utah|Vermont|Virginia|Washington|West Virginia|Wisconsin|Wyoming';
+// A state is a government party only as the whole name ("Ohio"), not as a prefix ("Alaska Packers'").
+const GOVERNMENT = new RegExp(`^(?:(?:United States|People|State|Commonwealth|City|County|Equal Employment Opportunity Commission)\\b|(?:${STATES})$)`);
 const strip = (html) => decodeEntities(html.replace(/<[^>]+>/g, ' ')).replace(/\s+/g, ' ').trim();
 
 /**
@@ -47,25 +49,43 @@ export function outlineSections(html) {
 }
 
 /**
- * Case boxes in the outline: the name before "(Court Year)", a short key to spot the case in
+ * Case boxes in the outline: the name before "(Court Year)", short keys to spot the case in
  * question text ("Roth Steel Products v. Sharon Steel Corp." → "Roth Steel"), and its section.
+ * A box that pairs cases ("Davis v. Washington; Hammon v. Indiana") gets a key for each, and `vs`
+ * holds each key's opposing party, so "Johnson" for Johnson v. State won't claim "Johnson v. Lutz".
+ * `fullNames` (subject.json "refs") lists parties the course's questions also use for other
+ * cases ("Davis" for Davis v. Alaska), so they only count with the other side's name.
  */
-export function outlineCases(sections) {
+export function outlineCases(sections, fullNames = []) {
   const all = sections.map((s) => strip(s.html)).join(' ');
   const cases = [];
   for (const sec of sections) {
     for (const m of sec.html.matchAll(/<aside class="callout callout-case[^"]*">([\s\S]*?)<\/aside>/g)) {
       const title = strip(m[1].match(/<p class="callout-title">([\s\S]*?)<\/p>/)?.[1] || '');
       const name = title.split(/\s+\(/)[0];
-      if (!/ v\. /.test(name)) continue;
-      let key = name.split(' v. ')[0].replace(/,?\s+(Inc|Corp|Co|Ltd|LLC|Assocs|Equip|Utils|Indus|Products|Cooperative|Custom.*)\.?$/i, '').replace(/,$/, '').replace(/\s+(&|and)$/, '').trim();
-      // A one-word party that is also an ordinary word ("Windows"), or a government party
-      // ("United States", "People"), only counts with its "v.".
-      if ((!/\s/.test(key) && new RegExp(`\\b${key.toLowerCase()}\\b`).test(all)) || GOVERNMENT.test(key)) key = `${name.split(' v. ')[0]} v.`;
-      cases.push({ key, name, title, section: sec.id, html: m[0] });
+      const parts = title.split(/;\s+/).map((p) => p.split(/\s+\(/)[0]).filter((p) => / v\. /.test(p));
+      if (!parts.length) continue;
+      const keyed = parts.map((p) => {
+        const [first, rest] = p.split(' v. ');
+        const vs = rest.split(/[\s,]/)[0];
+        let key = first.replace(/,?\s+(Inc|Corp|Co|Ltd|LLC|Assocs|Equip|Utils|Indus|Products|Cooperative|Custom.*)\.?$/i, '').replace(/,$/, '').replace(/\s+(&|and)$/, '').trim();
+        // A one-word party that is also an ordinary word ("Windows") only counts with its "v.".
+        // A government party ("United States", "People", "Ohio") or a listed full name only counts
+        // with the other side's name, since many cases share it.
+        if (GOVERNMENT.test(key) || fullNames.includes(key)) key = `${first} v. ${vs}`;
+        else if (!/\s/.test(key) && new RegExp(`\\b${key.toLowerCase()}\\b`).test(all)) key = `${first} v.`;
+        return { key, first, vs };
+      });
+      cases.push({ keyed, name, title, section: sec.id, html: m[0] });
     }
   }
-  return cases;
+  // Two cases with the same first party ("Johnson v. State", "Johnson v. Lutz") both need the full name.
+  const count = new Map();
+  for (const c of cases) for (const k of c.keyed) count.set(k.key, (count.get(k.key) || 0) + 1);
+  return cases.map(({ keyed, ...c }) => {
+    for (const k of keyed) if (count.get(k.key) > 1 && !/ v\. /.test(k.key)) k.key = `${k.first} v. ${k.vs}`;
+    return { key: keyed[0].key, keys: keyed.map((k) => k.key), vs: keyed.map((k) => k.vs), ...c };
+  });
 }
 
 /** An HTML fragment's top-level elements, each as { tag, html }. Text between them is dropped. */
@@ -144,8 +164,11 @@ export function outlineProblems(sections) {
   return [...byNum.values()].sort((a, b) => a.n.localeCompare(b.n, 'en', { numeric: true }));
 }
 
-/** `cite` names how the statutes are cited: "fre" for the Federal Rules of Evidence, else UCC sections. */
-export function refIndex({ supplementHtml, outlineHtml, links, cite }) {
+/**
+ * `cite` names how the statutes are cited: "fre" for the Federal Rules of Evidence, else UCC sections.
+ * `fullNames` lists case parties that need the other side's name to count (see outlineCases).
+ */
+export function refIndex({ supplementHtml, outlineHtml, links, cite, fullNames }) {
   const sections = outlineHtml ? outlineSections(outlineHtml) : [];
   return {
     version: 1,
@@ -153,7 +176,7 @@ export function refIndex({ supplementHtml, outlineHtml, links, cite }) {
     links,
     statutes: supplementHtml ? supplementStatutes(supplementHtml) : [],
     sections,
-    cases: outlineCases(sections),
+    cases: outlineCases(sections, fullNames),
     problems: outlineProblems(sections),
   };
 }
