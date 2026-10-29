@@ -11,12 +11,13 @@ const strip = (html) => decodeEntities(html.replace(/<[^>]+>/g, ' ')).replace(/\
 /**
  * Statutes from a supplement page's `const DATA = [...]` line (the format written by the
  * supplement template). Parsed as JSON, never run, because the build also runs on submissions.
+ * `tp` is the course topics a statute belongs to; an empty list means the course skips it.
  */
 export function supplementStatutes(html) {
   const line = html.split('\n').find((l) => l.startsWith('const DATA = '));
   if (!line) return [];
   const data = JSON.parse(line.slice('const DATA = '.length).replace(/;\s*$/, ''));
-  return data.map(({ s, t, part, x, c, cc, k, note }) => ({ s, t, part, x, c, cc, k, note }));
+  return data.map(({ s, t, part, x, c, cc, k, note, tp }) => ({ s, t, part, x, c, cc, k, note, tp }));
 }
 
 /**
@@ -143,10 +144,12 @@ export function outlineProblems(sections) {
   return [...byNum.values()].sort((a, b) => a.n.localeCompare(b.n, 'en', { numeric: true }));
 }
 
-export function refIndex({ supplementHtml, outlineHtml, links }) {
+/** `cite` names how the statutes are cited: "fre" for the Federal Rules of Evidence, else UCC sections. */
+export function refIndex({ supplementHtml, outlineHtml, links, cite }) {
   const sections = outlineHtml ? outlineSections(outlineHtml) : [];
   return {
     version: 1,
+    ...(cite && { cite }),
     links,
     statutes: supplementHtml ? supplementStatutes(supplementHtml) : [],
     sections,

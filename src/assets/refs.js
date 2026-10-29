@@ -3,7 +3,8 @@
 // case name, or casebook problem ("Problem 4-3(b)") in a question or explanation opens the panel
 // at that spot. build.mjs injects this
 // script into the practice pages of subjects whose subject.json has "refs"; the index it loads
-// is built from the subject's supplement and outline, so questions need no tagging.
+// is built from the subject's supplement and outline, so questions need no tagging. Statutes are
+// UCC sections ("2-207") unless the index says it holds the Federal Rules of Evidence (STYLES).
 // Shuffle mode mixes courses, so there each card names its course (data-course) and uses that
 // course's index; the script tag lists the courses that have one (data-courses).
 // Desktop: a panel docked on the right. Phones: a bottom sheet that leaves the question visible.
@@ -12,8 +13,8 @@
   const ROOT = new URL(me.dataset.root || './', location.href);
   const COURSES = me.dataset.courses ? new Set(me.dataset.courses.split(/\s+/)) : null;
   // Question cards in each practice engine: the list engines' .q, the one-at-a-time MPRE bank
-  // (.sheet) and PR quiz (#question.card), and shuffle mode's .sq.
-  const CARD = me.dataset.cards || '.q, .sq, .sheet:has(> .stem), .card:has(> .stem)';
+  // (.sheet) and PR quiz (#question.card), the timed mock exams' .qcard, and shuffle mode's .sq.
+  const CARD = me.dataset.cards || '.q, .sq, .qcard, .sheet:has(> .stem), .card:has(> .stem)';
   const EXTRA = '.facts';
   const SKIP = 'button, a, summary, input, textarea, select, script, style, .rx-panel, .meta, .sq-meta';
 
@@ -56,7 +57,7 @@
     + 'following best likely court rule rules case cases one two three why how does doesn didn isn wasn aren none above below true false '
     + 'section sections ucc says said under which what').split(' '));
 
-  /** Words plus cites ("2-207(2)(b)" also counts as "2-207") as matching terms. */
+  /** Words plus cites ("2-207(2)(b)" also counts as "2-207", "404(b)" as "404") as matching terms. */
   function terms(text) {
     const out = [];
     for (const m of text.toLowerCase().matchAll(/\d+(?:[.\-‑–]\d+)*(?:\([a-z0-9]+\))*|[a-z][a-z'’]+/g)) {
@@ -64,8 +65,7 @@
       if (/^\d/.test(t)) {
         if (t.length < 2) continue;
         out.push(t);
-        const base = t.match(/^\d-\d{3}/);
-        if (base && base[0] !== t) out.push(base[0]);
+        if (t.includes('(')) out.push(t.slice(0, t.indexOf('(')));
       } else if (t.length >= 4 && !STOP.has(t)) out.push(t);
     }
     return out;
@@ -74,6 +74,46 @@
 
   // Cites like "§ 2-207(2)(b)", "1-201(b)(20)", "UCC 2-314"; only sections in the index link.
   const CITE = /(?:§§?\s*)?\b([129])[-‑–](\d{3}[A-Z]?)(?!\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g;
+  const uccCites = (text) => [...text.matchAll(CITE)].map((m) => ({ at: m.index, end: m.index + m[0].length, id: `${m[1]}-${m[2]}`, sub: m[3] }));
+  // Federal Rules of Evidence: "Rule 404(b)", "FRE 803(6)", "Fed. R. Evid. 403", lists ("Rules 607,
+  // 608, and 609", "Rules 413–415"), a bare number with a subdivision ("404(b)"), and a bare
+  // number in running text ("subject to 403", "403 balancing").
+  const FNUM = String.raw`\d{3,4}(?!\d)(?:\([a-zA-Z0-9]{1,4}\))*`;
+  const FRE_LIST = new RegExp(String.raw`\b(?:FRE|F\.R\.E\.|Fed\.\s*R\.\s*Evid\.|Rules?)\s+${FNUM}(?:(?:,\s*(?:and\s+|or\s+)?|,?\s+(?:and|or|&|through)\s+|\s*[-‑–]\s*)${FNUM})*`, 'g');
+  const FRE_BARE = new RegExp(String.raw`(?<![\w$§.,(-])(\d{3,4})((?:\([a-zA-Z0-9]{1,4}\))+)`
+    + String.raw`|(?<=\b(?:under|to|and|or|of|with|by|per|see|than|from|not)\s)(\d{3})(?![\d(%]|[.,]\d)`
+    + String.raw`|\b(\d{3})(?=\s+(?:balancing|analysis|objections?|test|exceptions?|ban|bar|limits?|grounds?|exclusion)\b)`, 'g');
+  function freCites(text) {
+    const out = [];
+    for (const m of text.matchAll(FRE_LIST)) {
+      // The first cite keeps its "Rule", so the whole "Rule 404(b)" is the link.
+      [...m[0].matchAll(/(\d{3,4})((?:\([a-zA-Z0-9]{1,4}\))*)/g)].forEach((p, k) => out.push({
+        at: m.index + (k ? p.index : 0), end: m.index + p.index + p[0].length, id: p[1], sub: p[2],
+      }));
+    }
+    for (const m of text.matchAll(FRE_BARE)) {
+      const end = m.index + m[0].length;
+      if (out.some((c) => m.index < c.end && end > c.at)) continue;
+      out.push({ at: m.index, end, id: m[1] || m[3] || m[4], sub: m[2] || '' });
+    }
+    return out.sort((a, b) => a.at - b.at);
+  }
+  // How an index names its statutes. An index without "cite" holds UCC sections.
+  const STYLES = {
+    ucc: {
+      cites: uccCites, sign: '§', name: (id) => `§ ${id}`, badge: (id) => `UCC § ${id}`, group: 'Statutes', doc: 'the supplement',
+      hint: 'Search: 2-207, perfect tender, Roth Steel',
+      prefix: (q) => { const m = q.match(/^\s*(?:§\s*)?([129])[-‑–\s]?(\d{1,3})\s*$/); return m && `${m[1]}-${m[2]}`; },
+    },
+    fre: {
+      cites: freCites, sign: 'R', name: (id) => `Rule ${id}`, badge: (id) => `FRE ${id}`, group: 'Rules', doc: 'the Rules',
+      // A question's words match long rules (103, 803) better than the short one it turns on
+      // (403), so suggestions start from the rules its closest outline sections cite.
+      viaOutline: true,
+      hint: 'Search: 803(2), hearsay, Old Chief',
+      prefix: (q) => q.match(/^\s*(?:rules?\s*|fre\s*)?(\d{1,4})\s*$/i)?.[1],
+    },
+  };
   // Casebook problems: "Problem 4-3(b)", "Problems 1-2, 1-3", "Problems 4-10 and 4-11".
   const PNUM = String.raw`\d{1,2}[-‑–]\d{1,2}(?!\d)(?:\([a-zA-Z0-9]{1,3}\))*`;
   const PROB = new RegExp(String.raw`\bProblems?\s+${PNUM}(?:(?:,\s*|,?\s+(?:and|or|&)\s+)${PNUM})*`, 'g');
@@ -85,6 +125,7 @@
 
   function prepare(data) {
     data.problems ||= [];
+    const style = STYLES[data.cite] || STYLES.ucc;
     const docs = [];
     data.statutes.forEach((s, i) => docs.push({ kind: 's', i, id: s.s,
       text: `${s.s} ${s.s} ${s.t} ${s.t} ${(s.k || []).join(' ')} ${s.x.map((x) => x.join(' ')).join(' ')} ${s.note || ''} ${s.c.map((c) => c[1]).join(' ')}` }));
@@ -106,13 +147,13 @@
     const byStatute = Object.fromEntries(data.statutes.map((s) => [s.s, s]));
     const bySection = Object.fromEntries(data.sections.map((s) => [s.id, s]));
     const byProblem = Object.fromEntries(data.problems.map((p) => [p.n, p]));
-    // Outline sections that cite each statute, for "In the outline" links on a statute.
-    const citedIn = {};
+    // Outline sections that cite each statute, for "In the outline" links on a statute, and the
+    // statutes each section cites, most often first.
+    const citedIn = {}, citesOf = {};
     for (const s of data.sections) {
-      for (const m of `${s.title} ${s.text}`.matchAll(CITE)) {
-        const id = `${m[1]}-${m[2]}`;
-        if (byStatute[id]) (citedIn[id] ||= new Set()).add(s.id);
-      }
+      const n = new Map();
+      for (const { id } of style.cites(`${s.title} ${s.text}`)) if (byStatute[id]) { (citedIn[id] ||= new Set()).add(s.id); n.set(id, (n.get(id) || 0) + 1); }
+      citesOf[s.id] = [...n].sort((a, b) => b[1] - a[1]).map(([id]) => id);
     }
     let caseRe = null;
     if (data.cases.length) {
@@ -120,7 +161,7 @@
       // Not after "v.": in "Watteau v. Fenwick", Fenwick is a party, not the Fenwick case.
       caseRe = new RegExp(`(?<!\\bv\\.\\s)\\b(?:${keys.join('|')})(?!\\w)`, 'g');
     }
-    return { ...data, docs, idf, byStatute, bySection, byProblem, citedIn, caseRe };
+    return { ...data, style, docs, idf, byStatute, bySection, byProblem, citedIn, citesOf, caseRe };
   }
 
   function rank(text, kinds, limit) {
@@ -142,10 +183,9 @@
   /** Statute cites, case names, and problems named in a piece of text, in order, without repeats. */
   function named(text) {
     const out = [], seen = new Set();
-    for (const m of text.matchAll(CITE)) {
-      const id = `${m[1]}-${m[2]}`;
-      const key = `s:${id}${m[3]}`;
-      if (idx.byStatute[id] && !seen.has(key)) { seen.add(key); out.push({ kind: 's', id, sub: m[3] }); }
+    for (const { id, sub } of idx.style.cites(text)) {
+      const key = `s:${id}${sub}`;
+      if (idx.byStatute[id] && !seen.has(key)) { seen.add(key); out.push({ kind: 's', id, sub }); }
     }
     if (CASE_RE) for (const m of text.matchAll(CASE_RE)) {
       const i = caseIndex(m[0]);
@@ -174,13 +214,13 @@
   }
   function link(root) {
     const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
-      acceptNode: (n) => (!/\d-\d|[A-Z]/.test(n.nodeValue) || n.parentElement.closest(SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
+      acceptNode: (n) => (!/\d|[A-Z]/.test(n.nodeValue) || n.parentElement.closest(SKIP) ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT),
     });
     const nodes = [];
     while (walker.nextNode()) nodes.push(walker.currentNode);
     for (const node of nodes) {
       const text = node.nodeValue, spots = [];
-      for (const m of text.matchAll(CITE)) if (idx.byStatute[`${m[1]}-${m[2]}`]) spots.push({ at: m.index, end: m.index + m[0].length, ref: { kind: 's', id: `${m[1]}-${m[2]}`, sub: m[3] } });
+      for (const c of idx.style.cites(text)) if (idx.byStatute[c.id]) spots.push({ at: c.at, end: c.end, ref: { kind: 's', id: c.id, sub: c.sub } });
       if (CASE_RE) for (const m of text.matchAll(CASE_RE)) spots.push({ at: m.index, end: m.index + m[0].length, ref: { kind: 'c', i: caseIndex(m[0]) } });
       for (const m of text.matchAll(PROB)) {
         for (const { n, sub, at, end } of problemsIn(m)) if (idx.byProblem[n]) spots.push({ at, end, ref: { kind: 'p', n, sub } });
@@ -204,7 +244,7 @@
     b.className = 'rx-cite';
     b.textContent = label;
     b.dataset.ref = JSON.stringify(ref);
-    b.title = ref.kind === 's' ? `Look up § ${ref.id}` : ref.kind === 'p' ? `Look up Problem ${ref.n}${ref.sub}` : `Look up ${idx.cases[ref.i].name}`;
+    b.title = ref.kind === 's' ? `Look up ${idx.style.name(ref.id)}` : ref.kind === 'p' ? `Look up Problem ${ref.n}${ref.sub}` : `Look up ${idx.cases[ref.i].name}`;
     return b;
   }
 
@@ -366,8 +406,8 @@
   function setOrigin(card) {
     document.querySelectorAll('.rx-look[aria-expanded="true"]').forEach((b) => b.setAttribute('aria-expanded', 'false'));
     card?.querySelector('.rx-look')?.setAttribute('aria-expanded', 'true');
-    const num = card?.querySelector('.num, .qn, .sq-num, .qtitle')?.textContent.trim() || '';
-    origin = /^\d+$/.test(num) ? `Question ${num}` : num;
+    const num = card?.querySelector('.num, .qn, .qnum, .sq-num, .qtitle')?.textContent.trim() || '';
+    origin = /^Q?\d+$/.test(num) ? `Question ${num.replace(/^Q/, '')}` : num;
   }
   function close() {
     if (!panel || panel.hidden) return;
@@ -382,7 +422,7 @@
     const view = stack.at(-1);
     use(view.ix);
     back.hidden = stack.length < 2;
-    input.placeholder = idx.statutes.length ? 'Search: 2-207, perfect tender, Roth Steel' : 'Search the outline';
+    input.placeholder = idx.statutes.length ? idx.style.hint : 'Search the outline';
     if (view.type !== 'search') input.value = '';
     const out = VIEWS[view.type](view);
     body.replaceChildren(...out.nodes);
@@ -405,8 +445,8 @@
     let main, sub = '';
     if (ref.kind === 's') {
       const s = idx.byStatute[ref.id];
-      ico.textContent = '§';
-      txt.append(el('span', 'rx-over', `§ ${s.s}${ref.sub || ''}`));
+      ico.textContent = idx.style.sign;
+      txt.append(el('span', 'rx-over', `${idx.style.name(s.s)}${ref.sub || ''}`));
       main = s.t;
     } else if (ref.kind === 'o') {
       const s = idx.bySection[ref.id];
@@ -488,7 +528,14 @@
   function passages(s) {
     const out = [];
     let top = '';
-    for (const [label, t] of s.x) {
+    for (const [label, t, given] of s.x) {
+      // FRE rules carry each passage's full path ("(a)(2)(B)"); a closing paragraph shares its
+      // list's path and sits one level in.
+      if (given != null) {
+        const n = (given.match(/\([^)]+\)/g) || []).length;
+        out.push({ label, path: given, depth: label ? n - 1 : n, text: t });
+        continue;
+      }
       const lead = (label.match(/^(?:\([^)]+\))+/) || [''])[0];
       let path = lead, depth = 0;
       if (/^\([a-z]\)$/.test(lead) && /^\(\d+\)$/.test(top)) { path = top + lead; depth = 1; } else top = lead;
@@ -500,10 +547,10 @@
   }
   /** Passages a cite points at: "(2)(b)" tries "(2)(b)", then "(2)" and everything under it. */
   function cited(list, sub) {
-    const groups = (sub || '').match(/\([^)]+\)/g) || [];
+    const groups = (sub || '').toLowerCase().match(/\([^)]+\)/g) || [];
     for (let n = groups.length; n > 0; n--) {
       const want = groups.slice(0, n).join('');
-      const hits = list.flatMap((p, i) => (p.path.startsWith(want) ? [i] : []));
+      const hits = list.flatMap((p, i) => (p.path.toLowerCase().startsWith(want) ? [i] : []));
       if (hits.length) return hits;
     }
     return [];
@@ -604,8 +651,13 @@
       const names = named(text);
       const have = new Set(names.filter((n) => n.kind === 's').map((n) => n.id));
       const haveCase = new Set(names.filter((n) => n.kind === 'c').map((n) => n.i));
-      const sections = rank(text, ['o'], 4).map((h) => ({ kind: 'o', id: h.d.id }));
-      const statutes = rank(text, ['s'], 6).filter((h) => !have.has(h.d.id)).slice(0, 4).map((h) => ({ kind: 's', id: h.d.id }));
+      const top = rank(text, ['o'], 4);
+      const sections = top.map((h) => ({ kind: 'o', id: h.d.id }));
+      // Suggestions skip statutes the course doesn't cover (most of the FRE's Articles II, III, V, IX-XI).
+      const covered = (id) => idx.byStatute[id].tp?.length !== 0;
+      const viaOutline = idx.style.viaOutline ? top.slice(0, 2).flatMap((h) => idx.citesOf[h.d.id].slice(0, 3)) : [];
+      const statutes = [...new Set([...viaOutline, ...rank(text, ['s'], 10).map((h) => h.d.id)])]
+        .filter((id) => !have.has(id) && covered(id)).slice(0, 4).map((id) => ({ kind: 's', id }));
       const cases = rank(text, ['c'], 2).filter((h) => !haveCase.has(h.d.i) && h.score > 0.06).map((h) => ({ kind: 'c', i: h.d.i }));
       // Problems the answer explanations cite, once they are showing (innerText skips hidden ones).
       const haveProblem = new Set(names.filter((n) => n.kind === 'p').map((n) => n.n + n.sub));
@@ -618,7 +670,7 @@
           ...group('Named in this question', withCtx(names)),
           ...group('Problems cited in the answers', withCtx(answers)),
           ...group('Outline sections', sections),
-          ...group('Statutes', withCtx(statutes)),
+          ...group(idx.style.group, withCtx(statutes)),
           ...group('Related cases', cases),
           note('Suggested from the words of the question and its choices. Search above for anything else.'),
         ],
@@ -626,9 +678,9 @@
     },
     search({ q }) {
       const direct = named(q);
-      const m = q.match(/^\s*(?:§\s*)?([129])[-‑–\s]?(\d{1,3})\s*$/);
-      // A bare section number ("2-31") lists the sections it starts.
-      const prefix = m ? idx.statutes.filter((s) => s.s.startsWith(`${m[1]}-${m[2]}`) && !direct.some((d) => d.id === s.s)).slice(0, 8).map((s) => ({ kind: 's', id: s.s })) : [];
+      const start = idx.style.prefix(q);
+      // A bare section number ("2-31", "80") lists the sections it starts.
+      const prefix = start ? idx.statutes.filter((s) => s.s.startsWith(start) && !direct.some((d) => d.id === s.s)).slice(0, 8).map((s) => ({ kind: 's', id: s.s })) : [];
       // "4-3", "problem 4-3(b)", or "problem 4" (every problem in chapter 4).
       const pm = q.match(/^\s*(?:problems?\s*)?(\d{1,2})(?:[-‑–\s](\d{1,2}))?((?:\([a-z0-9]{1,3}\))*)\s*$/i);
       const probs = pm && (pm[2] || /problem/i.test(q))
@@ -652,7 +704,7 @@
       const all = [...direct, ...prefix, ...probs, ...loose].filter((r) => !keys.has(refKey(r)) && keys.add(refKey(r)))
         .map((r) => (r.kind === 's' || r.kind === 'p' ? { ...r, ctx: q } : r));
       // Groups follow their best hit, so a case name puts Cases first.
-      const groups = [['s', 'Statutes', 8], ['o', 'Outline sections', 6], ['c', 'Cases', 4], ['p', 'Problems', 12]]
+      const groups = [['s', idx.style.group, 8], ['o', 'Outline sections', 6], ['c', 'Cases', 4], ['p', 'Problems', 12]]
         .sort((a, b) => all.findIndex((r) => r.kind === a[0]) - all.findIndex((r) => r.kind === b[0]));
       return {
         title: 'Search',
@@ -663,7 +715,7 @@
     },
     s({ id, sub, ctx }) {
       const s = idx.byStatute[id];
-      const nodes = [head(s.part, s.t, `UCC § ${s.s}`)];
+      const nodes = [head(s.part, s.t, idx.style.badge(s.s))];
       const list = passages(s);
       // The passages the cite names, else the ones the question's words point to.
       let hits = cited(list, sub), why = 'Cited';
@@ -710,8 +762,8 @@
       const headed = (sid) => (idx.bySection[sid].title.includes(id) ? 0 : 1);
       const where = [...(idx.citedIn[id] || [])].sort((a, b) => headed(a) - headed(b)).map((sid) => ({ kind: 'o', id: sid }));
       nodes.push(...group('In the outline', where));
-      if (idx.links.statutes) nodes.push(footer(new URL(`${idx.links.statutes}#s-${s.s}`, ROOT), `Open § ${s.s} in the supplement`));
-      return { title: `§ ${s.s}`, nodes };
+      if (idx.links.statutes) nodes.push(footer(new URL(`${idx.links.statutes}#s-${s.s}`, ROOT), `Open ${idx.style.name(s.s)} in ${idx.style.doc}`));
+      return { title: idx.style.name(s.s), nodes };
     },
     o({ id }) {
       const s = idx.bySection[id];

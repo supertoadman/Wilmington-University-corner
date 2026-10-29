@@ -4,7 +4,7 @@
   "icon": "statue-angel-uriel",
   "accent": "#2f6f8f",
   "order": 1,
-  "refs": { "outline": "evidence-outline" },
+  "refs": { "statutes": "federal-rules-of-evidence", "outline": "evidence-outline", "cite": "fre" },
   "documents": {
     "Evidence_Condensed_Outline.docx": {
       "slug": "evidence-outline",
@@ -32,6 +32,14 @@
         "class slides"
       ],
       "order": 1
+    },
+    "Federal_Rules_of_Evidence.html": {
+      "slug": "federal-rules-of-evidence",
+      "title": "Federal Rules of Evidence",
+      "type": "document",
+      "description": "The full official text of all 69 Federal Rules of Evidence, as amended to December 1, 2024. Search by word, phrase, or cite (type 803(2) to go straight to the excited-utterance exception, or 404(b)(2) to see that clause marked), filter to the rules the course covers or to any of nine course topics, and follow cross-references between rules. Each rule shows how often the outline and the practice sets cite it. The practice sets use it for their Look up popup: any rule cited in a question or explanation opens its text with the cited subdivision marked.",
+      "tags": ["FRE", "rules", "statutes", "reference"],
+      "order": 1.5
     },
     "Evidence_Rule_Flowcharts.html": {
       "slug": "evidence-rule-flowcharts",

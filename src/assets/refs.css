@@ -120,6 +120,8 @@ button.rx-kicker svg { width: 15px; height: 15px; }
 .rx-par { display: grid; grid-template-columns: 2.5em minmax(0, 1fr); column-gap: 4px; padding: 7px 10px 7px 8px; border-radius: 10px; font-size: 14.5px; line-height: 1.62; color: var(--rx-ink-2); transition: background .2s; }
 .rx-par.rx-d1 { margin-left: 1.6em; }
 .rx-par.rx-d2 { margin-left: 3.2em; }
+.rx-par.rx-d3 { margin-left: 4.8em; }
+.rx-tx { white-space: pre-line; } /* FRE lists ("• a federal statute;") sit on their own lines */
 .rx-par.rx-bare .rx-tx, .rx-par.rx-wide .rx-tx { grid-column: 1 / -1; }
 .rx-par.rx-wide .rx-lab { grid-column: 1 / -1; margin-bottom: 2px; }
 .rx-lab { font: 500 12.5px/1.95 var(--rx-mono); color: var(--rx-gold-ink); }
@@ -224,6 +226,7 @@ button.rx-kicker svg { width: 15px; height: 15px; }
   .rx-statute { padding: 6px 4px; }
   .rx-par.rx-d1 { margin-left: 1em; }
   .rx-par.rx-d2 { margin-left: 2em; }
+  .rx-par.rx-d3 { margin-left: 3em; }
   html.rx-open body { padding-bottom: 58vh; padding-bottom: 58dvh; }
 }
 @media (prefers-reduced-motion: reduce) {

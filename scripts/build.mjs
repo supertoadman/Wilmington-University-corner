@@ -475,7 +475,8 @@ fs.cpSync(path.join(PDFJS, 'standard_fonts'), path.join(DIST, 'assets', 'pdfjs',
 write('.nojekyll', '');
 
 // Reference popup: a subject whose subject.json names its statutes and outline
-// ("refs": { "statutes": "<doc slug>", "outline": "<doc slug>" }) gets an index of both, and its
+// ("refs": { "statutes": "<doc slug>", "outline": "<doc slug>" }, plus "cite": "fre" when the
+// statutes are the Federal Rules of Evidence rather than UCC sections) gets an index of both, and its
 // HTML practice pages load src/assets/refs.js to look things up from any question. Only the
 // served copy gets the script tags; downloads and ZIPs stay as written.
 const refPages = new Set();
@@ -487,6 +488,7 @@ for (const s of subjects.filter((x) => x.refs)) {
     supplementHtml: statutes?.raw.toString('utf8'),
     outlineHtml: outline && (outline.html ?? outline.raw.toString('utf8')),
     links: { statutes: statutes && P.doc(statutes), outline: outline && P.doc(outline) },
+    cite: s.refs.cite,
   });
   write(`assets/refs/${s.slug}.json`, JSON.stringify(index));
   for (const d of s.documents) if (d.type === 'practice' && d.format.mime === 'text/html') refPages.add(d);
