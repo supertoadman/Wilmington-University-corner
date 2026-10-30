@@ -2175,7 +2175,7 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
   width: 100%; font: inherit; font-size: 16px; color: var(--text); background: var(--bg); border: 1px solid var(--border-strong);
   border-radius: 11px; padding: 11px 13px; min-height: 46px; transition: border-color .15s, box-shadow .15s;
 }
-.admin-head { padding-bottom: 8px; }
+.admin-head { padding-bottom: 8px; max-width: 880px; }
 .admin { max-width: 880px; padding-bottom: 40px; }
 .admin-signin { display: grid; gap: 14px; max-width: 560px; }
 .admin-signin legend { margin-bottom: 0; }

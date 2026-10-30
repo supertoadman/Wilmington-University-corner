@@ -105,7 +105,7 @@ function head(ctx, { root, title, description, canonical = '', extraHead = '', j
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="${FONTS}">
 <link rel="stylesheet" href="${root}assets/styles.css?v=${CSS_VERSION}">
-<script>(function(){var d=document.documentElement;d.dataset.theme='light';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off',s=localStorage.getItem('scene');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;if(s)d.dataset.scene=s;}catch(e){}})();</script>
+<script>(function(){var d=document.documentElement;d.dataset.theme='light';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off',s=localStorage.getItem('scene');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;if(s)d.dataset.scene=s;}catch(e){}var c=d.dataset.theme==='dark'?'#0d1117':'#f7f5f0';document.querySelectorAll('meta[name="theme-color"]').forEach(function(m){m.removeAttribute('media');m.content=c;});})();</script>
 ${jsonld ? `<script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, '\\u003c')}</script>` : ''}
 ${extraHead}`;
 }

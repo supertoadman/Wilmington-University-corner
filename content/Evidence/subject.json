@@ -81,6 +81,7 @@
         "conceptual",
         "FRE"
       ],
+      "questions": 61,
       "order": 4
     },
     "Evidence_MCQ_Application (strict).html": {
@@ -94,6 +95,7 @@
         "bar prep",
         "variations"
       ],
+      "questions": 71,
       "order": 5
     },
     "Evidence_MCQ_Application (Classes 1-10).html": {
@@ -107,6 +109,7 @@
         "bar prep",
         "Classes 1–10"
       ],
+      "questions": 124,
       "order": 6
     },
     "Evidence_Mock_Midterm.html": {

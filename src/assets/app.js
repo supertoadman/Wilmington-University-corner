@@ -188,11 +188,19 @@ function currentTheme() {
   if (set) return set;
   return matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
 }
+// The browser's toolbar color (theme-color) follows the chosen theme, not the OS setting.
+const THEME_COLORS = { light: '#f7f5f0', dark: '#0d1117' };
+function setTheme(theme) {
+  document.documentElement.dataset.theme = theme;
+  $$('meta[name="theme-color"]').forEach((m) => { m.removeAttribute('media'); m.content = THEME_COLORS[theme]; });
+}
 $$('[data-theme-toggle]').forEach((btn) => btn.addEventListener('click', () => {
   const next = currentTheme() === 'dark' ? 'light' : 'dark';
-  document.documentElement.dataset.theme = next;
+  setTheme(next);
   try { localStorage.setItem('theme', next); } catch { /* storage unavailable */ }
 }));
+// Follow a change made in another tab.
+addEventListener('storage', (e) => { if (e.key === 'theme' && THEME_COLORS[e.newValue]) setTheme(e.newValue); });
 // Print in the light theme, whatever is on screen, so tints and colored text read on paper.
 let themeBeforePrint;
 addEventListener('beforeprint', () => {
