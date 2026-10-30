@@ -1,0 +1,521 @@
+{
+  "id": "sales-and-leases",
+  "slug": "sales-and-leases",
+  "title": "Sales and Leases",
+  "description": "Sales and Leases of Goods under UCC Articles 1 and 2, Weeks 1–8 (Sepinuck, Chapters 1–6). Covers which law governs, formation and the battle of the forms, the statute of frauds, warranties and disclaimers, gap fillers, delivery and risk of loss, remedies, the parol evidence rule, assignment and delegation, repudiation, and excuse.",
+  "accent": "#3f6b4a",
+  "documentCount": 10,
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/subjects/sales-and-leases.json",
+    "zip": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-all-files.zip"
+  },
+  "documents": [
+    {
+      "id": "sales-and-leases/sales-and-leases-outline",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-outline",
+      "title": "Sales and Leases Outline",
+      "description": "Condensed outline of Weeks 1–8 for the Week 10 assessment. 16 sections cover the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse, with worked problems. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides.",
+      "type": "outline",
+      "typeLabel": "Outline",
+      "format": "Word",
+      "mimeType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "originalFilename": "Sales_and_Leases_Week10_Condensed_Outline.docx",
+      "tags": [
+        "UCC Article 2",
+        "outline",
+        "sales",
+        "warranties",
+        "Weeks 1–8"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 93176,
+      "updated": "2026-10-19T16:12:25.000Z",
+      "headings": [],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-outline/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-outline.docx",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-outline.docx",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-outline.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-outline.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-weighted-practice-exams",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-weighted-practice-exams",
+      "title": "Sales and Leases Weighted Practice Exams",
+      "description": "Ten practice exams (150 new questions) for the Week 10 assessment, covering all of Weeks 1–8 with each topic's share set by how testable it is. Tier 1 gets 66 questions on the bright-line rules most likely to be tested: risk of loss and identification, implied warranties, express warranties, title and entrustment, and warranty disclaimers. Tier 2 gets 64: tender, inspection, acceptance and payment, course of performance and waiver, modification, quantity and price, the parol evidence rule, assignment and delegation, insecurity and repudiation, excuse, and remedy limits. Tier 3 gets 20: scope, formation and § 2-207, the statute of frauds, good faith and variation by agreement, and termination. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format, mixing short hypos that ask who wins and why with \"Which of the following is NOT…\" questions. Wrong answers are built from the near-miss rules she tests, and some questions offer \"None of the above,\" which is sometimes the answer. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Weighted_Practice_Exams.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "weighted",
+        "Week 10"
+      ],
+      "questions": 150,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 247983,
+      "updated": "2026-10-28T13:42:32.000Z",
+      "headings": [
+        "Sales and Leases Weighted Practice Exams"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-weighted-practice-exams/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-weighted-practice-exams.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-weighted-practice-exams.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-weighted-practice-exams.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-weighted-practice-exams.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-acronym-exams",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-acronym-exams",
+      "title": "Sales and Leases Acronym Exams",
+      "description": "Four practice exams (60 new questions) on just the acronyms: the shipping and delivery terms and the course shorthand. 40 questions cover §§ 2-319 to 2-324 and how each term moves the risk of loss: F.O.B. place of shipment and destination, F.O.B. vessel and F.A.S., C.I.F. and C. & F., ex-ship, \"no arrival, no sale,\" C.O.D. and payment against documents, and what happens when there is no term or one side is in breach. The other 20 test the outline's shorthand: SOF, PER, NOM, CoP/CoD/UoT, LD, SOL, GFP and BIOCB, HTA and LOC (with PDM), DTW and CORS (Mathis), and UETA signatures. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format, mixing short hypos that ask who bears the loss with \"Which of the following is NOT…\" questions. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Acronym_Exams.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "shipping terms",
+        "risk of loss"
+      ],
+      "questions": 60,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 111347,
+      "updated": "2026-10-28T19:46:37.000Z",
+      "headings": [
+        "Sales and Leases Acronym Exams"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-acronym-exams/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-acronym-exams.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-acronym-exams.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-acronym-exams.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-acronym-exams.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-complete-coverage-exams",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-complete-coverage-exams",
+      "title": "Sales and Leases Complete Coverage Exams",
+      "description": "31 quick-fire practice exams (465 new questions) that together test every rule and concept from Weeks 1–8. A checklist of 446 rules and concepts, built from every slide in the Week 1 through Week 8 decks, the Sepinuck casebook (cases, notes and assigned problems) and the statutory supplement (UCC text and Official Comments), was used to write them, and every item on it is tested at least once. The questions are short: one- or two-line rule questions and mini-hypos, many of them \"Which of the following is NOT…\" questions that test four or five rules at once. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format and samples the whole course, from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, repudiation and excuse. Wrong answers are the near misses: the common-law rule the UCC changed, the wrong number or section, merchant vs. non-merchant, the rule from the next section over. Some questions offer \"None of the above\" or \"All of the above,\" and sometimes that is the answer. The 23 questions that change the facts of another question (\"Same contract, but…\") name the question they build on and show its facts, so shuffling or filtering never leaves you without them. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or by any of 24 topic areas, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Complete_Coverage_Exams.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "rule review",
+        "Weeks 1–8"
+      ],
+      "questions": 465,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 437842,
+      "updated": "2026-10-29T02:42:19.000Z",
+      "headings": [
+        "Sales and Leases Complete Coverage Exams"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-complete-coverage-exams/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-complete-coverage-exams.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-complete-coverage-exams.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-complete-coverage-exams.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-complete-coverage-exams.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-bar-questions",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-bar-questions",
+      "title": "Sales and Leases Bar Questions",
+      "description": "272 bar-style multiple-choice questions covering every rule, case, and assigned problem in the Weeks 1–8 outline, across 18 topics from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, repudiation, and excuse. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Bar_Questions.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "bar prep",
+        "application",
+        "Weeks 1–8"
+      ],
+      "questions": 272,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 366268,
+      "updated": "2026-10-26T13:43:32.000Z",
+      "headings": [
+        "Sales and Leases Bar Questions"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-bar-questions/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-bar-questions.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-bar-questions.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-bar-questions.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-bar-questions.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-practice-exams",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-practice-exams",
+      "title": "Sales and Leases Practice Exams",
+      "description": "19 practice exams (285 questions) for the Week 10 assessment, written in the style of Professor Richardson's sample exam: 15 stand-alone, five-choice questions each, mixing rule questions (\"Which of the following is NOT…\") with short hypos that ask who wins and why, plus \"None of the above\" and \"All of the above\" choices that are sometimes the answer. Each exam samples the whole Weeks 1–8 condensed outline, and together they cover all 16 sections: which law governs, formation and § 2-207, the statute of frauds, good faith and modification, express and implied warranties, title, quantity and price, delivery and acceptance, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Practice_Exams.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "Week 10"
+      ],
+      "questions": 285,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 281230,
+      "updated": "2026-10-26T13:43:32.000Z",
+      "headings": [
+        "Sales and Leases Practice Exams"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-practice-exams/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-practice-exams.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-practice-exams.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-practice-exams.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-practice-exams.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-practice-exams-ii",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-practice-exams-ii",
+      "title": "Sales and Leases Practice Exams II",
+      "description": "A second set of 14 practice exams (210 new questions) for the Week 10 assessment, in the same style as the first: Professor Richardson's sample-exam format, with 15 stand-alone, five-choice questions per exam that mix short hypos asking who wins and why with rule questions (\"Which of the following is NOT…\"), plus \"None of the above\" and \"All of the above\" choices that are sometimes the answer. Every fact pattern is new. The cases are tested by application, not recall: instead of asking what happened in Daitom, Casazza, Market Street, Roth Steel, Rogath, Razor, Top of Iowa, or the note cases, each question gives new facts that track the case (a pump buyer's purchase order that reserves its remedies, a lumber mill that threatens to stop shipping, a lamp buyer warned by an appraiser, an e-bike warranty sealed in the box, a farm that goes silent in an inverted market) and asks you to apply its rule. Each exam samples the whole Weeks 1–8 condensed outline, and together they cover all 16 sections and the assigned problems. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Practice_Exams_II.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "application",
+        "Week 10"
+      ],
+      "questions": 210,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 238976,
+      "updated": "2026-10-27T15:20:52.000Z",
+      "headings": [
+        "Sales and Leases Practice Exams II"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-practice-exams-ii/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-practice-exams-ii.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-practice-exams-ii.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-practice-exams-ii.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-practice-exams-ii.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-statutory-supplement",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-statutory-supplement",
+      "title": "Sales and Leases Statutory Supplement",
+      "description": "Every UCC section the Weeks 1-8 outline and the practice sets cite (100 sections from Articles 1, 2, and 9), from Selected Commercial Statutes, 2026 edition, with the Official Comments. Section text is summarized in the statute's own key words and each comment is condensed; comments the outline or the practice questions rely on are marked. Search by word, phrase, or cite (type 2-207 to go straight there), filter by any of the 16 outline sections, follow cross-references between sections, and open or close all the comments at once.",
+      "type": "document",
+      "typeLabel": "Document",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Statutory_Supplement.html",
+      "tags": [
+        "UCC Article 2",
+        "statutes",
+        "official comments",
+        "reference",
+        "Weeks 1-8"
+      ],
+      "questions": null,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 275380,
+      "updated": "2026-10-27T16:05:17.000Z",
+      "headings": [
+        "Sales and Leases Statutory Supplement"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-statutory-supplement/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-statutory-supplement.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-statutory-supplement.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-statutory-supplement.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-statutory-supplement.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-focused-practice-exams",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-focused-practice-exams",
+      "title": "Sales and Leases Focused Practice Exams",
+      "description": "Four practice exams (60 new questions) on just four topics: assignment and delegation (§ 2-210), liquidated damages (§ 2-718), warranties (§§ 2-312 to 2-318), and limited remedies (§ 2-719). Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format and covers all four topics, with warranties weighted most heavily: express and implied warranties, title and infringement, disclaimers, cumulation, and privity. Every fact pattern is new, cases are tested by application rather than recall, and every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
+      "type": "practice",
+      "typeLabel": "Practice Questions",
+      "format": "HTML",
+      "mimeType": "text/html",
+      "originalFilename": "Sales_and_Leases_Focused_Practice_Exams.html",
+      "tags": [
+        "UCC Article 2",
+        "MCQ",
+        "practice exam",
+        "warranties",
+        "remedies"
+      ],
+      "questions": 60,
+      "tracks": null,
+      "contributor": null,
+      "sizeBytes": 108386,
+      "updated": "2026-10-27T19:26:59.000Z",
+      "headings": [
+        "Sales and Leases Focused Practice Exams"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-focused-practice-exams/",
+        "file": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-focused-practice-exams.html",
+        "download": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-focused-practice-exams.html",
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-focused-practice-exams.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-focused-practice-exams.json"
+      }
+    },
+    {
+      "id": "sales-and-leases/sales-and-leases-playlist",
+      "subject": "sales-and-leases",
+      "subjectTitle": "Sales and Leases",
+      "slug": "sales-and-leases-playlist",
+      "title": "Sales and Leases Playlist",
+      "description": "Sixteen study songs that cover all 16 sections of the Weeks 1–8 condensed outline, from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, repudiation, and excuse. The main cases are sung through: Daitom, Casazza, Market Street, Roth Steel, Rogath, Orange & Rockland, Mathis, Razor, Santa Fe, Top of Iowa, and NIPSCO. It starts with track 1 and plays straight through; pick any track from the list, at 0.5×, 0.75×, normal, 1.25×, or 1.5× speed.",
+      "type": "music",
+      "typeLabel": "Music",
+      "format": "Playlist",
+      "mimeType": "application/zip",
+      "originalFilename": "Sales_and_Leases_Playlist.zip",
+      "tags": [
+        "UCC Article 2",
+        "music",
+        "playlist",
+        "Weeks 1–8"
+      ],
+      "questions": null,
+      "tracks": [
+        {
+          "number": 1,
+          "title": "Is It Goods?",
+          "topic": "Outline §1 · Scope and which law governs",
+          "description": "The four factors that pick the governing law, what counts as goods under § 2-105 (and what does not: money, securities, things in action), things attached to land under § 2-107, and mixed deals of goods and services: the predominant-purpose test, the gravamen test from Anthony Pools, and the 2022 two-tier rule for hybrid transactions.",
+          "durationSeconds": 323,
+          "sizeBytes": 7295854,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/is-it-goods.mp3"
+        },
+        {
+          "number": 2,
+          "title": "Battle of the Forms",
+          "topic": "Outline §2 · Offer, acceptance and § 2-207",
+          "description": "A duet between buyer and seller. Formation under §§ 2-204 and 2-206, merchants' firm offers under § 2-205, and § 2-207: an acceptance with different terms still accepts unless it is expressly conditional, additional terms between merchants, and the knock-out rule. Case: Daitom v. Pennwalt, where the clashing limitation clauses dropped out and the four-year period of § 2-725 filled the gap.",
+          "durationSeconds": 242,
+          "sizeBytes": 5704004,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/battle-of-the-forms.mp3"
+        },
+        {
+          "number": 3,
+          "title": "You Never Signed It",
+          "topic": "Outline §3 · Statute of frauds and unconscionability",
+          "description": "The § 2-201 writing rule for sales of $500 or more (a record, signed by the party sued, stating a quantity), the four exceptions, and why promissory estoppel did not save the buyer in Casazza v. Kiser. Then § 2-302 unconscionability: procedural and substantive, decided by the court as of the time the deal was made.",
+          "durationSeconds": 250,
+          "sizeBytes": 5920510,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/you-never-signed-it.mp3"
+        },
+        {
+          "number": 4,
+          "title": "Good Faith",
+          "topic": "Outline §4 · Good faith and course of performance",
+          "description": "The § 1-304 duty of good faith (honesty in fact plus fair dealing), which cannot be disclaimed and is not a claim of its own. Market Street Associates v. Frey on exploiting the other side's oversight, with Brunswick Hills and Vintage Rodeo, and the § 1-303 hierarchy: express terms, course of performance, course of dealing, usage of trade.",
+          "durationSeconds": 262,
+          "sizeBytes": 5979695,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/good-faith.mp3"
+        },
+        {
+          "number": 5,
+          "title": "Pay More or Get Nothing",
+          "topic": "Outline §4 · Modification, waiver and estoppel",
+          "description": "Section 2-209: modifications need no consideration but must be in good faith, and Roth Steel v. Sharon Steel holds that a price increase extracted by threatening to stop performing is not. No-oral-modification clauses, the statute of frauds applied to the deal as modified, waiver and its retraction, and estoppel.",
+          "durationSeconds": 254,
+          "sizeBytes": 6047992,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/pay-more-or-get-nothing.mp3"
+        },
+        {
+          "number": 6,
+          "title": "Promise or Puff?",
+          "topic": "Outline §5 · Express warranties",
+          "description": "The three ways to make an express warranty under § 2-313 (affirmation of fact, description, sample or model), the basis-of-the-bargain test without proof of reliance, and the line between specific facts and puffing. Case: Rogath v. Siebenmann, the Francis Bacon painting, on whether a buyer who learns of doubts still keeps the warranty.",
+          "durationSeconds": 224,
+          "sizeBytes": 5135986,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/promise-or-puff.mp3"
+        },
+        {
+          "number": 7,
+          "title": "Implied",
+          "topic": "Outline §6 · Implied warranties",
+          "description": "Merchantability under § 2-314 and its six standards, fitness for a particular purpose under § 2-315 (with the Ingram River barges), and the warranty of title and against infringement under § 2-312. Also voidable title and entrustment under § 2-403, and the three privity alternatives of § 2-318.",
+          "durationSeconds": 267,
+          "sizeBytes": 6174473,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/implied.mp3"
+        },
+        {
+          "number": 8,
+          "title": "Fill in the Blanks",
+          "topic": "Outline §6–7 · Gap fillers, quantity and price",
+          "description": "Open terms under § 2-204(3) and the delivery, time, and payment gap fillers. Output and requirements contracts under § 2-306 (good faith and no unreasonably disproportionate quantity, from Orange & Rockland v. Amerada Hess), and open price under § 2-305, including a price set by one party in bad faith in Mathis v. Exxon and the majority view that rejects it.",
+          "durationSeconds": 327,
+          "sizeBytes": 7667161,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/fill-in-the-blanks.mp3"
+        },
+        {
+          "number": 9,
+          "title": "Accept or Reject",
+          "topic": "Outline §8 · Delivery, inspection and payment",
+          "description": "Tender and payment as concurrent conditions, the seller's tender under § 2-503, the buyer's right to inspect under § 2-513, acceptance under § 2-606, perfect tender and installment contracts, cure under § 2-508, the buyer's duties after rejecting, and revocation of acceptance under § 2-608.",
+          "durationSeconds": 272,
+          "sizeBytes": 6274875,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/accept-or-reject.mp3"
+        },
+        {
+          "number": 10,
+          "title": "Risk of Loss",
+          "topic": "Outline §9 · Risk of loss",
+          "description": "A call-and-response duet on who bears the loss when goods are destroyed. The agreement first, then the breaching party under § 2-510, then § 2-509: shipment and destination contracts, goods held by a bailee, and everything else (merchant sellers on receipt, non-merchants on tender). Also F.O.B. and C.I.F. terms and the seller's shipping duties under § 2-504.",
+          "durationSeconds": 253,
+          "sizeBytes": 5840321,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/risk-of-loss.mp3"
+        },
+        {
+          "number": 11,
+          "title": "Make It Conspicuous",
+          "topic": "Outline §10 · Variation by agreement and disclaimers",
+          "description": "What § 1-302 lets the parties change and what it does not, and disclaimers under § 2-316: mention merchantability, put fitness in a conspicuous writing, \"as is\" and \"with all faults,\" examination of the goods, and trade usage. Why express warranties are nearly impossible to disclaim, and why title needs specific language.",
+          "durationSeconds": 297,
+          "sizeBytes": 6934449,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/make-it-conspicuous.mp3"
+        },
+        {
+          "number": 12,
+          "title": "Two Walls",
+          "topic": "Outline §11 · Remedies and remedy limitations",
+          "description": "The buyer's and seller's damage formulas, incidental and consequential damages under § 2-715, liquidated damages under § 2-718, and limited remedies under § 2-719. Case: Razor v. Hyundai, where the repair remedy failed of its essential purpose but the exclusion of consequential damages stood or fell on its own, as unconscionable.",
+          "durationSeconds": 239,
+          "sizeBytes": 5186959,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/two-walls.mp3"
+        },
+        {
+          "number": 13,
+          "title": "Parol Evidence Rule",
+          "topic": "Outline §12 · Parol evidence rule",
+          "description": "Section 2-202: a final writing cannot be contradicted by prior or contemporaneous agreements but can be explained or supplemented, and a complete and exclusive one cannot be supplemented either. What the rule never bars (later modifications, fraud, conditions precedent), how merger clauses work, and how it interacts with § 2-316(1) when oral warranties meet an \"as is\" writing.",
+          "durationSeconds": 388,
+          "sizeBytes": 8760866,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/parol-evidence-rule.mp3"
+        },
+        {
+          "number": 14,
+          "title": "Passing It On",
+          "topic": "Outline §13–14 · Assignment, delegation and termination",
+          "description": "Assigning rights and delegating duties under § 2-210, anti-assignment clauses and § 9-406(d), and the difference between cancellation and termination under § 2-106. Then ending an indefinite contract on reasonable notice under § 2-309, with Santa Fe Custom Shutters v. Home Depot: no lost profits for ending an at-will deal.",
+          "durationSeconds": 258,
+          "sizeBytes": 6194646,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/passing-it-on.mp3"
+        },
+        {
+          "number": 15,
+          "title": "Adequate Assurance",
+          "topic": "Outline §15 · Insecurity and repudiation",
+          "description": "A duet between an anxious party and a reassuring one. Demanding adequate assurance under § 2-609 and the 30-day limit, anticipatory repudiation under § 2-610, and retraction under § 2-611. Cases: Top of Iowa Coop v. Sime Farms on hedge-to-arrive corn contracts, and PDM v. Brookhaven on demanding more than is adequate.",
+          "durationSeconds": 306,
+          "sizeBytes": 6945843,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/adequate-assurance.mp3"
+        },
+        {
+          "number": 16,
+          "title": "Excuse",
+          "topic": "Outline §16 · Excuse from performance",
+          "description": "The closing anthem. Casualty to identified goods under § 2-613, substituted performance under § 2-614, impracticability and fair allocation under §§ 2-615 and 2-616, and frustration of purpose at common law. Case: NIPSCO v. Carbon County Coal, where a buyer that misjudged the market could not walk away from a fixed-price contract.",
+          "durationSeconds": 311,
+          "sizeBytes": 7264682,
+          "url": "https://supertoadman.github.io/Wilmington-University-corner/files/sales-and-leases/sales-and-leases-playlist/excuse.mp3"
+        }
+      ],
+      "contributor": null,
+      "sizeBytes": 103328316,
+      "updated": "2026-10-27T23:10:22.000Z",
+      "headings": [
+        "1. Is It Goods?",
+        "2. Battle of the Forms",
+        "3. You Never Signed It",
+        "4. Good Faith",
+        "5. Pay More or Get Nothing",
+        "6. Promise or Puff?",
+        "7. Implied",
+        "8. Fill in the Blanks",
+        "9. Accept or Reject",
+        "10. Risk of Loss",
+        "11. Make It Conspicuous",
+        "12. Two Walls",
+        "13. Parol Evidence Rule",
+        "14. Passing It On",
+        "15. Adequate Assurance",
+        "16. Excuse"
+      ],
+      "urls": {
+        "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-playlist/",
+        "file": null,
+        "download": null,
+        "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-playlist.txt",
+        "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/sales-and-leases/sales-and-leases-playlist.json"
+      }
+    }
+  ]
+}

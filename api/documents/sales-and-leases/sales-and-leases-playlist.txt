@@ -1,0 +1,74 @@
+Sales and Leases Playlist
+=========================
+
+Subject: Sales and Leases
+Type: Music
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-playlist/
+
+Sixteen study songs that cover all 16 sections of the Weeks 1–8 condensed outline, from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, repudiation, and excuse. The main cases are sung through: Daitom, Casazza, Market Street, Roth Steel, Rogath, Orange & Rockland, Mathis, Razor, Santa Fe, Top of Iowa, and NIPSCO. It starts with track 1 and plays straight through; pick any track from the list, at 0.5×, 0.75×, normal, 1.25×, or 1.5× speed.
+
+---
+
+## 1. Is It Goods?
+Outline §1 · Scope and which law governs
+The four factors that pick the governing law, what counts as goods under § 2-105 (and what does not: money, securities, things in action), things attached to land under § 2-107, and mixed deals of goods and services: the predominant-purpose test, the gravamen test from Anthony Pools, and the 2022 two-tier rule for hybrid transactions.
+
+## 2. Battle of the Forms
+Outline §2 · Offer, acceptance and § 2-207
+A duet between buyer and seller. Formation under §§ 2-204 and 2-206, merchants' firm offers under § 2-205, and § 2-207: an acceptance with different terms still accepts unless it is expressly conditional, additional terms between merchants, and the knock-out rule. Case: Daitom v. Pennwalt, where the clashing limitation clauses dropped out and the four-year period of § 2-725 filled the gap.
+
+## 3. You Never Signed It
+Outline §3 · Statute of frauds and unconscionability
+The § 2-201 writing rule for sales of $500 or more (a record, signed by the party sued, stating a quantity), the four exceptions, and why promissory estoppel did not save the buyer in Casazza v. Kiser. Then § 2-302 unconscionability: procedural and substantive, decided by the court as of the time the deal was made.
+
+## 4. Good Faith
+Outline §4 · Good faith and course of performance
+The § 1-304 duty of good faith (honesty in fact plus fair dealing), which cannot be disclaimed and is not a claim of its own. Market Street Associates v. Frey on exploiting the other side's oversight, with Brunswick Hills and Vintage Rodeo, and the § 1-303 hierarchy: express terms, course of performance, course of dealing, usage of trade.
+
+## 5. Pay More or Get Nothing
+Outline §4 · Modification, waiver and estoppel
+Section 2-209: modifications need no consideration but must be in good faith, and Roth Steel v. Sharon Steel holds that a price increase extracted by threatening to stop performing is not. No-oral-modification clauses, the statute of frauds applied to the deal as modified, waiver and its retraction, and estoppel.
+
+## 6. Promise or Puff?
+Outline §5 · Express warranties
+The three ways to make an express warranty under § 2-313 (affirmation of fact, description, sample or model), the basis-of-the-bargain test without proof of reliance, and the line between specific facts and puffing. Case: Rogath v. Siebenmann, the Francis Bacon painting, on whether a buyer who learns of doubts still keeps the warranty.
+
+## 7. Implied
+Outline §6 · Implied warranties
+Merchantability under § 2-314 and its six standards, fitness for a particular purpose under § 2-315 (with the Ingram River barges), and the warranty of title and against infringement under § 2-312. Also voidable title and entrustment under § 2-403, and the three privity alternatives of § 2-318.
+
+## 8. Fill in the Blanks
+Outline §6–7 · Gap fillers, quantity and price
+Open terms under § 2-204(3) and the delivery, time, and payment gap fillers. Output and requirements contracts under § 2-306 (good faith and no unreasonably disproportionate quantity, from Orange & Rockland v. Amerada Hess), and open price under § 2-305, including a price set by one party in bad faith in Mathis v. Exxon and the majority view that rejects it.
+
+## 9. Accept or Reject
+Outline §8 · Delivery, inspection and payment
+Tender and payment as concurrent conditions, the seller's tender under § 2-503, the buyer's right to inspect under § 2-513, acceptance under § 2-606, perfect tender and installment contracts, cure under § 2-508, the buyer's duties after rejecting, and revocation of acceptance under § 2-608.
+
+## 10. Risk of Loss
+Outline §9 · Risk of loss
+A call-and-response duet on who bears the loss when goods are destroyed. The agreement first, then the breaching party under § 2-510, then § 2-509: shipment and destination contracts, goods held by a bailee, and everything else (merchant sellers on receipt, non-merchants on tender). Also F.O.B. and C.I.F. terms and the seller's shipping duties under § 2-504.
+
+## 11. Make It Conspicuous
+Outline §10 · Variation by agreement and disclaimers
+What § 1-302 lets the parties change and what it does not, and disclaimers under § 2-316: mention merchantability, put fitness in a conspicuous writing, "as is" and "with all faults," examination of the goods, and trade usage. Why express warranties are nearly impossible to disclaim, and why title needs specific language.
+
+## 12. Two Walls
+Outline §11 · Remedies and remedy limitations
+The buyer's and seller's damage formulas, incidental and consequential damages under § 2-715, liquidated damages under § 2-718, and limited remedies under § 2-719. Case: Razor v. Hyundai, where the repair remedy failed of its essential purpose but the exclusion of consequential damages stood or fell on its own, as unconscionable.
+
+## 13. Parol Evidence Rule
+Outline §12 · Parol evidence rule
+Section 2-202: a final writing cannot be contradicted by prior or contemporaneous agreements but can be explained or supplemented, and a complete and exclusive one cannot be supplemented either. What the rule never bars (later modifications, fraud, conditions precedent), how merger clauses work, and how it interacts with § 2-316(1) when oral warranties meet an "as is" writing.
+
+## 14. Passing It On
+Outline §13–14 · Assignment, delegation and termination
+Assigning rights and delegating duties under § 2-210, anti-assignment clauses and § 9-406(d), and the difference between cancellation and termination under § 2-106. Then ending an indefinite contract on reasonable notice under § 2-309, with Santa Fe Custom Shutters v. Home Depot: no lost profits for ending an at-will deal.
+
+## 15. Adequate Assurance
+Outline §15 · Insecurity and repudiation
+A duet between an anxious party and a reassuring one. Demanding adequate assurance under § 2-609 and the 30-day limit, anticipatory repudiation under § 2-610, and retraction under § 2-611. Cases: Top of Iowa Coop v. Sime Farms on hedge-to-arrive corn contracts, and PDM v. Brookhaven on demanding more than is adequate.
+
+## 16. Excuse
+Outline §16 · Excuse from performance
+The closing anthem. Casualty to identified goods under § 2-613, substituted performance under § 2-614, impracticability and fair allocation under §§ 2-615 and 2-616, and frustration of purpose at common law. Case: NIPSCO v. Carbon County Coal, where a buyer that misjudged the market could not walk away from a fixed-price contract.

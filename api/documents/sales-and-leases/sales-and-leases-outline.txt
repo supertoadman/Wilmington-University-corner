@@ -1,0 +1,651 @@
+Sales and Leases Outline
+========================
+
+Subject: Sales and Leases
+Type: Outline
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/sales-and-leases/sales-and-leases-outline/
+
+Condensed outline of Weeks 1–8 for the Week 10 assessment. 16 sections cover the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse, with worked problems. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides.
+
+---
+
+Sales & Leases — Week 10 Study Outline Condensed Outline · Weeks 1–8 · Sepinuck Chs. 1–6 · Uniform Commercial Code (UCC) Articles 1 & 2 Prof. Richardson · Week 10 Assessment: 30 minutes · closed book · multiple choice · 15% of grade
+
+KEY How cases are marked in this outline MAIN CASE — a principal case: the casebook prints the opinion. There are seven: Daitom, Casazza, Market Street, Roth Steel, Rogath, Razor, Top of Iowa. NOTE CASE — not a principal case; the casebook quotes or summarizes it in its text or notes (e.g., Mathis, Ingram River, Orange & Rockland, Santa Fe, PDM, NIPSCO, Anthony Pools). CITED ONLY — the casebook just cites it, usually under a problem, and gives no facts (e.g., Webster, Windows v. Jordan Panel, Keith v. Buchanan). ★ = the case has its own slide(s) in class (Roth Steel, Rogath, Mathis, Razor, Top of Iowa). Each box's Source line gives the casebook pages and class slides (W1-S44 = Week 1 slides, slide 44). Gray italic text = outside the class materials: facts or labels taken from the published opinions or general legal knowledge — not from the casebook, slides, or statutory supplement. It is context only: verify before relying on it, and don't build an exam answer on it.
+
+I. The UCC & Which Law Governs WEEK 1
+
+The UCC and the common law
+
+- What it is: a model code (Uniform Law Commission (ULC) + American Law Institute (ALI)) adopted by the states to standardize commerce and protect those in business transactions. Not law until enacted; check each state's version. Louisiana never enacted Art. 2/2A.
+
+- § 1-103(a) purposes (construe liberally to promote): (1) simplify, clarify, modernize commercial law; (2) permit continued expansion of commercial practices through custom, usage, and agreement; (3) make the law uniform among jurisdictions.
+
+- § 1-103(b): unless displaced by a particular UCC provision, common law and equity (capacity, agency, estoppel, fraud, misrepresentation, duress, coercion, mistake, bankruptcy, other validating/invalidating causes) supplement the Code.
+
+- Sales law is broader than commercial law — buying and selling goods by individuals, businesses, and others; a cumulative subject, not one law.
+
+- Role of sales systems: bring buyers and sellers together; supply standard terms; supply mechanisms for performing; supply mechanisms for resolving disputes.
+
+- Recurring themes: certainty · responsiveness · laissez-faire · simplicity · efficiency · international.
+
+Statutory interpretation (slides + text)
+
+- Three rules: (1) read it all, then read it again — parse grammar, find the pauses, test hypotheticals; (2) find the definitions (§ 1-201 for all Articles; §§ 2-103 to 2-106; "purchase" includes a gift; "goods" includes unborn animals); (3) read in context of the provision's and the Code's purposes.
+
+- Then consult: Official Comments (most important aid, but not law — the text controls if they conflict), case law (other states are persuasive), treatises, state legislative history, earlier drafts; last resort, a tie-breaker policy.
+
+- Keep the client's goals in view. Good drafting: understand the deal; know the rules and risk-allocation options; attention to detail; concise, clear, simple language — goal: an enforceable agreement that clearly reflects the deal.
+
+Which law governs — four factors (in this order)
+1. Type of property (goods, real estate, services, intellectual property (IP)…);
+2. Nature of the rights transferred (sale, lease, license, lien, gift);
+3. Location of the parties (domestic vs. international / United Nations Convention on Contracts for the International Sale of Goods (CISG));
+4. The parties' agreement on governing law.
+Transaction in goods | Governing law
+Sale | UCC Article 2 (or CISG if international)
+Lease | UCC Article 2A
+Security interest | UCC Article 9
+Gift | Common law
+Bequest/devise | Law of wills
+
+Other columns of the slide chart: real property → real-property law; securities → Art. 8 (+ securities law; Art. 9 for security interests); negotiable instruments → Arts. 3 & 4; IP → common law & federal law; controllable electronic records → Art. 12.
+Is it a "good"? — § 2-105(1), § 2-107
+RULE Goods = all things (including specially manufactured goods) movable at the time of identification to the contract, except (1) the money in which the price is to be paid, (2) investment securities (Art. 8), and (3) things in action. Also includes unborn young of animals, growing crops, and things attached to realty under § 2-107.
+
+- § 2-107(1): minerals (oil, gas) or a structure to be removed from realty → goods only if severed by the SELLER.
+
+- § 2-107(2): growing crops, timber to be cut, other things severable without material harm → goods whether buyer or seller severs.
+
+Problem 1-1 item | Goods? | Why
+Isotopes in solution · oxygen | ✓ | Liquids and gases are movable things
+Excess solar electricity | ✓ (maybe) | Courts split — good once metered vs. a service
+Gold coin from a coin dealer | ✓ | It's the subject of the sale, not the money paying the price
+500 euro notes for a trip | Depends | Currency bought as a commodity vs. as money
+Yen credited to a brokerage account | Unlikely | Not a movable thing — a financial asset/thing in action
+Lottery ticket | ✗ | Thing in action
+Microsoft stock (certificated) | ✗ | Investment security
+Building — seller removes it | ✓ | Structure severed by seller (§ 2-107(1))
+Timber — buyer cuts | ✓ | Timber is goods regardless (§ 2-107(2))
+Oil & gas — buyer extracts | ✗ | Minerals are goods only if seller severs
+
+Hybrid transactions (goods + services/other property)
+Test | Question | Notes
+Predominant purpose (majority, pre-2022) | Is the predominant purpose goods or services? All-or-nothing. | Factors: contract language · nature of supplier's business · relative value of goods vs. services · whether applying Art. 2 makes sense. Hard to apply; why should services insulate goods from warranties?
+Gravamen of the claim (Anthony Pools, Md.) | Does the claim relate to the goods or the services? | Anthony Pools (note case, casebook p. 24): an unmerchantable diving board, supplied under a pool-construction contract in which services predominated, caused personal injuries → Art. 2 applied to impose the merchantability warranty and to test the disclaimer. Outside class materials: the homeowner slipped off the board. Hard to apply (contact lenses — bad lens or bad exam?); multiple statutes of limitations may apply to one deal. Little traction.
+2022 Amendments — § 2-102(2) | Two tiers | Goods predominate → Art. 2 applies. Goods don't predominate → only provisions relating primarily to the goods apply.
+
+- § 2-106(5) "hybrid transaction": a sale of goods plus services, a lease of other goods, or a sale/lease/license of non-goods property (provided by the seller).
+
+- Still apply when goods don't predominate (cmt. 5): warranties (§§ 2-312–2-318), tender & risk of loss, acceptance/rejection/cure, buyer's remedies for nondelivery/nonconforming goods. Don't apply: § 2-201, §§ 2-204–2-207, § 2-209.
+
+- Predominance factors (cmt. 3): agreement's language; share of price for the goods (an agreed allocation usually binds); parties' purposes; nature of businesses. Manufacturing services count toward goods; design services don't.
+
+- Problem 1-2 (Speedy Offset prints & binds 500 art books): printing/binding = services in manufacturing goods → goods predominate → Art. 2 applies; claims concern conformity of the books, so warranty rules apply either way.
+
+- Problem 1-4: Art. 2 governs merchant→merchant, merchant→consumer, consumer→merchant, and consumer→consumer (garage sale) — scope never depends on merchant status.
+
+- Disguised security interest: a "sale" with a mandatory repurchase at a higher price is really a secured loan → Art. 9, not Art. 2 (§ 2-102(3)(a)).
+
+II. Formation WEEK 1
+
+Common law vs. UCC; agreement vs. contract
+Common law | UCC Article 2
+Mutual assent; based on promise | Based on bargain, as to goods
+Mirror-image rule — acceptance must match the offer | Contract formed "in any manner sufficient to show agreement"; acceptance need not mirror
+All material terms needed | Open terms OK; fewer formalities; many ways to form
+
+- "Agreement" (§ 1-201(b)(3)) = the parties' bargain in fact, from language and course of performance (CoP) / course of dealing (CoD) / usage of trade (UoT). "Contract" (§ 1-201(b)(12)) = the total legal obligation that results, as determined by the UCC and other law. The contract can be more (gap fillers, implied warranties) or less (statute of frauds (SOF), unconscionable term) than the agreement.
+
+- Questions to ask: (1) Offer? (common law — Restatement § 24: manifestation of willingness to bargain that justifies another in understanding assent is invited and will conclude it) (2) Firm offer by a merchant (§ 2-205)? (3) Properly accepted (§ 2-206)? (4) Do the terms conflict (§ 2-207)?
+
+§ 2-204 — formation in general
+RULE (1) Contract may be made in any manner sufficient to show agreement, including conduct by both parties. (2) OK even if the moment of making is undetermined. (3) Open terms don't defeat a contract if the parties intended to contract AND there is a reasonably certain basis for giving an appropriate remedy.
+
+§ 2-206 — offer & acceptance
+
+- (1)(a) Unless unambiguously indicated otherwise, acceptance in any reasonable manner and medium. (Offeror can still be "master of the offer.")
+
+- (1)(b) An order for prompt or current shipment may be accepted by a prompt promise to ship or by prompt shipment of conforming OR nonconforming goods — but shipping nonconforming goods is not an acceptance if seller seasonably notifies it's an accommodation. (No notice → acceptance and breach.)
+
+- (2) Where beginning performance is a reasonable mode of acceptance, an offeror not notified within a reasonable time may treat the offer as lapsed.
+
+§ 2-205 — firm offers
+RULE An offer by a merchant in a signed record that by its terms assures it will be held open is irrevocable without consideration for the time stated (or a reasonable time) — never more than 3 months. If the assurance is on a form supplied by the offeree, the offeror must separately sign it.
+
+- Common law: irrevocable only with consideration (option contract). Only the offeror must be a merchant.
+
+§ 2-207 — battle of the forms
+
+- (1) A definite and seasonable expression of acceptance (or written confirmation) is an acceptance even with additional/different terms, unless expressly made conditional on assent to them. → Abolishes mirror image & "last shot."
+
+- (2) Additional terms = proposals. Between merchants they become part of the contract unless (a) the offer expressly limits acceptance to its terms, (b) they materially alter it, or (c) objection is given within a reasonable time.
+
+- (3) If the writings don't form a contract but conduct recognizes one → contract on the terms where the writings agree + UCC gap fillers.
+
+- Three questions: (1) Agreement despite deviation? (2) Which terms control? (3) If writings fail, does conduct create a contract?
+
+MAIN CASE Daitom, Inc. v. Pennwalt Corp. (10th Cir. 1984) — § 2-207 battle of the forms Source: principal case, casebook pp. 47–57. Not named on the slides; the topic is covered at W1-S44 to S47. Facts: Seller Pennwalt sent a typed proposal (the offer) to sell buyer Daitom two rotary vacuum dryers; its attached printed terms limited warranties and required any suit within 1 year of delivery. Daitom answered with its own purchase order (PO) — boilerplate on the back reserved "all of its rights and remedies available at law" and said acceptance was "expressly limited to such terms." The dryers were delivered in May 1977 but sat in crates while Daitom's plant was built; when finally run in June 1978 they were seriously defective. Daitom sued in March 1980 — too late under the 1-year term, timely under the UCC's 4 years. Held: (1) The PO was an acceptance, not a counteroffer: "expressly conditional" requires the offeree to clearly say it won't proceed unless its terms are accepted (Dorton) — form language like "expressly limited to such terms" isn't enough. (2) The 1-year term and Daitom's reservation of its legal remedies (which impliedly reserved the statutory period) were different (conflicting) terms → knock-out rule (cmt. 6): both drop out, and the gap filler — § 2-725's 4-year statute of limitations (SOL) — applies. Summary judgment for Pennwalt reversed. (Dissent: would affirm — Daitom accepted Pennwalt's offer.) Why it matters: the textbook illustration that § 2-207 abolished the mirror-image and "last shot" rules — a nonconforming acceptance still forms a contract, and when the forms conflict neither side's boilerplate wins; the UCC default does. The court stressed the 1-year period would have run before the machines were even installed.
+
+- Material alterations (cmt. 4): warranty disclaimers, 90–100% delivery guarantees where trade allows leeway, power to cancel on any late invoice, unusually short complaint periods. Not material (cmt. 5): reasonable force-majeure terms, customary complaint periods, interest on overdue invoices, limits on rejection within trade tolerances.
+
+- How UCC changes offer/acceptance: any reasonable medium (2-206(1)(a)); accept by shipping (2-206(1)(b)); firm offers (2-205); no mirror image (2-207(1)); confirmation = acceptance (2-207(1)).
+
+III. Statute of Frauds & Unconscionability WEEKS 1–2
+
+§ 2-201(1) — the rule
+RULE A contract for the sale of goods for $500 or more is not enforceable by action or defense unless there is a record (1) sufficient to indicate a contract for sale was made, (2) signed by the party against whom enforcement is sought (or its agent/broker). A record isn't insufficient because it omits or misstates a term, but the contract isn't enforceable beyond the quantity shown.
+
+- Only quantity is essential; price/delivery can be missing or wrong. "Record" includes email (2022 amendments; the Uniform Electronic Transactions Act (UETA) elsewhere); a typed name is a signature. Several papers can be read together if connected (Casazza).
+
+- Satisfying the SOF only opens the courthouse door — plaintiff must still prove the contract.
+
+- Flowchart: SOF applies? No → possible contract. Yes → sufficient signed record? Yes → possible contract. No → exception? Yes → possible contract; No → no enforceable contract.
+
+The four exceptions
+Section | Exception | Elements / limits
+§ 2-201(2) | Merchant's confirmation | Oral deal between merchants · confirmation sent within a reasonable time · sufficient against the sender · recipient receives it and has reason to know its contents · no written objection within 10 days
+§ 2-201(3)(a) | Specially manufactured goods | Made for buyer · not suitable for sale to others in seller's ordinary course · seller made a substantial beginning of manufacture or commitments for procurement before notice of repudiation
+§ 2-201(3)(b) | Admission | Party admits in pleading, testimony, or otherwise in court — enforceable only up to the quantity admitted
+§ 2-201(3)(c) | Part performance | Goods paid for and accepted or received and accepted — only as to those goods
+
+- Problem 2-10(A) — "sufficient against the sender": the confirmation must satisfy § 2-201(1) against its sender — signed by the sender, indicates a contract, states a quantity. ✓ "This confirms our deal: 500 widgets at $10 — /s/ Seller." ✗ an unsigned invoice, a mere quote, or a confirmation without quantity.
+
+MAIN CASE Casazza v. Kiser (8th Cir. 2002) — statute of frauds exceptions Source: principal case, casebook pp. 75–80. Not named on the slides; the exceptions are covered at W1-S50 to S54. Facts: Casazza found Kiser's internet listing for the Andante, a 52-foot sailboat, inspected it in Ft. Lauderdale, and (he said) orally agreed to buy it for $200,000, subject to a survey and sea trial. Each side jotted terms on separate sheets and Casazza typed them up, but Kiser never signed anything about the boat. The only document both signed was a license transferring the boat's navigation software, which never mentioned the boat. Casazza booked a survey and a Virginia slip; a week later Kiser backed out and sold the boat to someone else. Held: Dismissal affirmed — no enforceable contract. Part performance failed: accepting the software wasn't accepting the boat — they aren't one "commercial unit" (software bought years after the boat; boat later sold without it). No sufficient writing: the typed terms were unsigned by Kiser; the signed license didn't refer to a boat sale, so the papers couldn't be read together. Admission: hoping Kiser might admit the deal in a deposition isn't an admission. Promissory estoppel couldn't get around § 2-201 under any test — his reliance wasn't the kind that makes refusal a fraud. Why it matters: walks through every § 2-201 escape route and shows how narrow each is. Big oral deal + no signature from the party being sued = unenforceable, even between two individuals (Art. 2 still applies).
+
+Unconscionability — § 2-302
+
+- Court decides as a matter of law, judged at the time of contracting; may refuse the whole contract, strike the clause, or limit it; parties get to present evidence of commercial setting.
+
+- Procedural (unfair surprise: fine print, no meaningful choice, unequal bargaining power) + substantive (oppressive, one-sided terms). Most courts want both (some use a sliding scale). Cannot be contracted away.
+
+IV. Good Faith, Modification, Waiver & Estoppel WEEK 2
+
+Course of performance, dealing, usage of trade — § 1-303
+Concept | What it is | Timing
+Course of performance | Repeated occasions for performance under this contract, accepted/acquiesced in with knowledge and opportunity to object (one occasion isn't enough) | After contracting
+Course of dealing | Conduct in prior transactions between the parties establishing a common understanding | Before contracting
+Usage of trade | Practice with such regularity of observance in a place/trade that it's expected to apply; proved as fact; notice required (§ 1-303(g)) | Industry-wide
+
+- They explain and supplement the agreement. Construe consistently if reasonable; if not: Express terms > Course of performance > Course of dealing > Usage of trade (§ 1-303(e)). CoP can show waiver or modification, subject to § 2-209 (§ 1-303(f)). (Slides cite old §§ 1-205/2-208 — now § 1-303.)
+
+Good faith — § 1-304; § 1-201(b)(20)
+RULE Every contract imposes a duty of good faith in its performance and enforcement = honesty in fact (subjective — motive) + observance of reasonable commercial standards of fair dealing (objective).
+
+- A lens for interpreting the agreement — not a stand-alone claim; can't contradict express terms; applies to performance and enforcement, not negotiation.
+
+- Cannot be disclaimed, but parties may set standards for it if not manifestly unreasonable (§ 1-302(b)).
+
+- Objective prong = fair dealing, not negligence. Some states kept a subjective-only Art. 1 definition (merchants still held to the Art. 2 objective standard).
+
+- Good faith in performance ≠ a fiduciary duty: you need not be your partner's keeper or relax the terms when it struggles — but you may not deliberately exploit its oversight about its own contract rights (Market Street, below).
+
+MAIN CASE Market Street Assocs. v. Frey (7th Cir. 1991, Posner, J.) — what "good faith" in performance means Source: principal case, casebook pp. 92–102 (Brunswick Hills and Vintage Rodeo in the notes, pp. 100–102). Not named on the slides; good faith is covered at W2-S4. Facts: In a sale-leaseback, J.C. Penney sold properties to the GE Pension Trust and leased them back. ¶ 34 of the lease said that if the tenant asked the Trust to finance improvements and negotiations failed, the tenant could buy the property back at roughly the original price plus 6% a year — potentially far below market. Market Street, which took over the lease on a Milwaukee shopping center, couldn't get outside financing and found the Trust's $3 million asking price too high. So it wrote asking the Trust to finance $2 million of improvements without mentioning ¶ 34. The Trust's slow, unresponsive manager turned the request down without realizing the consequence. Market Street sent a letter saying it would look elsewhere, then a month later exercised the ¶ 34 option at about $1 million and sued for specific performance. Held: Summary judgment for the Trust was reversed and remanded, because liability turns on Market Street's state of mind. Good faith lies between a fiduciary duty and merely avoiding fraud. Before contracting you may exploit superior knowledge. After contracting, deliberately taking advantage of your partner's oversight about its contract rights — when you could correct it at no cost — is opportunistic "sharp dealing." On remand, the trial court found Orenstein knew the Trust was overlooking ¶ 34 and kept sending ambiguous letters → bad faith, no specific performance (affirmed). Why it matters: defines good faith in performance (§ 1-304) and the line between formation and performance (common law here — a land lease — but used for the UCC concept). Compare (note cases): Brunswick Hills (N.J.) — a landlord evaded a tenant's requests for 19 months and then declared the option void = bad faith. Vintage Rodeo (Del. Ch.) — a party that merely benefited from the other side's own missed deadline in a heavily negotiated deal did nothing wrong; good faith only fills gaps.
+
+Modification — § 2-209
+RULE (1) A modification needs no consideration. (2) A signed agreement requiring modifications by signed record (no-oral-modification (NOM) clause) is enforceable — but on a merchant's form, a non-merchant must separately sign it. (3) The SOF applies if the contract as modified is within § 2-201. (4) A failed modification can operate as a waiver. (5) A waiver of an executory term may be retracted by reasonable notification that strict performance is required, unless unjust because of a material change of position in reliance.
+
+- Analysis: (1) Did they agree to modify (formation rules §§ 2-204–2-207 apply)? (2) Is it enforceable — no consideration needed; must be in good faith; barred by SOF or NOM clause?
+
+- Common law contrast: modifications needed consideration (or Restatement (Second) of Contracts (R2d) § 89 "fair and equitable"); NOM clauses were unenforceable.
+
+- Good-faith policing (cmt. 2): extortion without a legitimate commercial reason fails; a market shift that makes performance a loss can justify seeking a modification even if it wouldn't excuse performance.
+
+MAIN CASE ★ Roth Steel Products v. Sharon Steel Corp. (6th Cir. 1983) — modification and good faith Source: principal case, casebook pp. 105–110. Slide W2-S8. Facts: In Nov. 1972, with the steel industry at 70% capacity and prices very competitive, Sharon agreed to sell Roth 200 tons/month of hot-rolled steel through 1973 at $148/ton, well below its book price. In 1973 demand boomed and every mill was fully booked. Sharon announced it was ending its 1972 price breaks and threatened to stop selling Roth any steel in the second half of 1973 unless Roth paid more. Roth was short on inventory and couldn't buy elsewhere, so it reluctantly agreed to a higher price. Roth later sued. Held: The modification was unenforceable. A modification needs no consideration (§ 2-209(1)) but must be sought in good faith, which has two parts: (1) objective — would an ordinary merchant seek it? Yes: the market shift meant Sharon was losing money on the deal. (2) Subjective / honesty in fact — a real reason, not a pretext, obtained without extortion. Sharon's threat to stop performing was evidence of bad faith it never rebutted (its contract-based excuse first appeared at trial). Judgment for Roth affirmed. Why it matters: shows what good faith adds once consideration is gone. A legitimate reason to ask for a change isn't enough if you extract the change by threatening to breach (§ 2-209 cmt. 2).
+
+Problem 3-4 — modification and the SOF
+| Facts | Result
+(a) | Oral $400 deal → orally doubled to $800 | As modified it's $500+ → needs a record → modification unenforceable; the $400 deal stands (may operate as waiver)
+(b) | Oral $1,000 deal → orally cut to 40 units/$400 | As modified it's under $500 → no record needed → enforceable
+(c) | Record: 100/$1,000 → orally 110, same price | Enforceable only to the 100 units shown in the record → SOF bars the extra 10
+(d) | Record: 100/$1,000 → orally 90/$900 | Split (Costco vs. Zemco): old record still shows a contract and quantity ≥ 90, or a quantity change needs its own record
+(e) | Record: delivery June 1 → orally July 1 | No SOF problem — only quantity must be in the record (a NOM clause would be a separate barrier)
+
+Four bases that can bar a buyer's breach claim
+Doctrine | Requirement | Reach
+Modification (§ 2-209) | Mutual assent; no consideration; good faith; SOF/NOM | Past and future
+Waiver (§ 2-209(4)–(5)) | Voluntary relinquishment of a known right | Retractable going forward → mainly affects past performance
+Course of performance (§ 1-303) | Repeated performance + knowledge + opportunity to object | Must be consistent with express terms
+Estoppel (§ 1-103(b)) | Reasonable, detrimental reliance | Performance due after the reliance arose; NOM clause undercuts reasonableness
+
+- Accepting one late delivery is not a waiver of damages (§ 2-607(2)) — but buyer must notify of breach within a reasonable time or be barred (§ 2-607(3)(a)).
+
+Problem 3-5 (10,000 widgets/month, delivery to buyer by the 5th):
+
+- (A) One late delivery accepted: no course of performance (single occasion), no modification, no waiver of damages — buyer keeps its claim if it gives timely notice.
+
+- (B) Three late deliveries accepted: arguable course of performance (but express term prevails if irreconcilable); buyer may retract any waiver for future deliveries by reasonable notice (unless seller materially relied); recovery for the past three requires timely § 2-607(3)(a) notice, and conduct may be a waiver as to them.
+
+- (C) + NOM clause: no unwritten modification (§ 2-209(2)), but conduct can still be a waiver (§ 2-209(4)); NOM clause weakens estoppel.
+
+- (D) + anti-waiver clause: courts split — some enforce it; others hold the clause itself can be waived by conduct; estoppel remains possible but weak.
+
+V. Express Warranties — § 2-313 WEEK 2
+
+RULE Created by (a) an affirmation of fact or promise relating to the goods, (b) a description of the goods, or (c) a sample or model — each must be part of the basis of the bargain. No formal words ("warrant") or intent needed. Not warranties: affirmations of value, or the seller's opinion or commendation.
+
+- § 2-313 rejects caveat emptor; it turns many representations (tort) into warranties (contract). Statements made after the deal (e.g., at delivery) can be warranties as modifications needing no consideration (cmt. 7).
+
+Points toward express warranty | Points toward puffing
+Affirmation of fact · promise · description | Affirmation of value · opinion · commendation/praise
+Specific · measurable | General · immeasurable
+Unequivocal | Equivocal, hedged, conditional
+Reasonable to rely on | Not reasonable to rely on
+Made in response to an inquiry | Freely volunteered
+Written* | Oral* (*not decisive — oral statements can be warranties)
+
+Problem 3-6 statement | Result
+"Looks good on you" · "a beautiful painting by a talented artist" | Puffing
+"Queen Anne" desk · "Ming" vase · "antique" table | Warranty (descriptions) — question whether "Queen Anne" means period or style
+Consumer seller: used washer "works great" | Close call (Petti) — present condition (fact) vs. casual opinion
+"The ball David Ortiz hit for a grand slam, Game 2, 2013 World Series" | Warranty — specific, verifiable
+"Replacement parts are readily available" | Likely warranty — specific, measurable
+"The safest car in its class" | Split — superlative puffery vs. measurable by crash ratings
+Used yacht is "seaworthy" | Split — the problem cites Keith v. Buchanan (warranty) vs. Sessa v. Riegle (cited only). Outside class materials: in Keith, a sales brochure called a 41-foot sailboat "seaworthy"; it wasn't → express warranty, no proof of reliance needed. Sessa involved a statement about a racehorse's soundness.
+
+Basis of the bargain
+
+- Cmt. 3: no particular reliance need be shown; affirmations are part of the description unless clear affirmative proof takes them out. Courts split: reliance required · no reliance · rebuttable presumption. Written-contract warranties need no proof of reliance. Owner's manuals/package inserts can count even if read after the sale.
+
+- Factors: statement plain and unambiguous · of objective importance to buyer · not easily checked by buyer · seller more expert · buyer relied in part · nothing suggested seller wasn't serious · nothing put buyer "on guard" · remedy fair to seller · price supports the claim.
+
+MAIN CASE ★ Rogath v. Siebenmann (2d Cir. 1997) — basis of the bargain Source: principal case, casebook pp. 121–126. Slide W2-S32. Facts: Siebenmann sold Rogath a "Self Portrait" attributed to Francis Bacon for $570,000. The bill of sale warranted that he was the sole owner, that the painting was authentic, and that he knew of no challenge to its authenticity. In fact, the Marlborough Fine Art gallery in London had already told him it doubted the work. Rogath resold the painting for $950,000; that buyer learned of the doubts and demanded a refund, which Rogath paid. Rogath then sued. Siebenmann claimed he had told Rogath about the Marlborough "controversy" before the sale, and Rogath had also heard doubts from a Tate Gallery curator. Held: The trial court's summary judgment for Rogath was vacated and the case remanded. The question isn't whether the buyer believed the warranted facts, but whether he bought the seller's promise. A buyer who closes knowing facts the seller disclosed that make the warranty false waives the breach unless he expressly preserves his rights. Knowledge from a third party or common knowledge doesn't bar recovery, because the buyer may have bought the warranty as insurance. So the key fact was whether Siebenmann himself told Rogath; that was disputed, so trial was needed. Why it matters: illustrates that "basis of the bargain" (§ 2-313 cmt. 3) isn't a strict reliance test. An express warranty allocates risk, and the source of the buyer's knowledge decides the case.
+
+- Problem 3-7 (HVAC: heating, ventilation, and air conditioning): rep's "300,000 BTU [British thermal units]/hr" → warranty · "you'll be very happy" → puffing · brochure "under 100 decibels" → warranty (buyer skimmed it) · owner's manual "free of defects for one year" → likely warranty (post-sale term; future-performance promise).
+
+- Tobacco ads slide: specific health claims ("immediate relief in cases of asthma"; "20,679 physicians say Luckies are less irritating") look like facts; "It's toasted" is puffery.
+
+VI. Gap Fillers & Implied Warranties WEEKS 2–3
+
+How gap fillers work
+
+- Open terms don't defeat a contract if the parties intended to contract and there's a reasonably certain basis for a remedy (§ 2-204(3)). Usage of trade and course of dealing fill some gaps; UCC gap fillers fill the rest. No gap = no gap filler.
+
+- Key gap fillers: warranties (§§ 2-312 title · 2-313 express* · 2-314 merchantability · 2-315 fitness) · price (§ 2-305) · output/requirements (§ 2-306) · price payable in money or otherwise (§ 2-304) · single lot (§ 2-307) · place (§ 2-308) · time (§ 2-309) · payment time (§ 2-310) · cooperation (§ 2-311) · tender/payment conditions (§§ 2-507, 2-511) · payment before inspection (§ 2-512). *Express warranties aren't gap fillers; § 2-313's creation rules are.
+
+- Problem 3-8: (A) signed deal for a skid loader, silent on delivery → enforceable; § 2-308 → delivery at seller's place of business → buyer breached by refusing to pick up. (B) history of seller delivering → course of dealing fills the term → seller breached.
+
+Implied warranties at a glance
+| Merchantability § 2-314 | Fitness § 2-315 | Title § 2-312(1) | Non-infringement § 2-312(3)
+Who makes it | Merchant with respect to goods of that kind | Any seller (usually merchants in practice) | Every seller | Merchant regularly dealing in goods of the kind
+Trigger | Sale by such a merchant (incl. food served for value) | Seller has reason to know buyer's particular purpose and reliance on seller's skill; buyer actually relies | Every contract for sale | Every such sale — unless buyer furnished specs (then buyer indemnifies seller)
+Promise | Goods are merchantable — fit for ordinary purposes | Fit for buyer's particular purpose | Good title, rightful transfer, no unknown liens | Free of rightful third-party infringement claims
+Disclaimer | § 2-316 (mention "merchantability"; conspicuous if written) | § 2-316 (conspicuous writing) | Only specific language or circumstances (§ 2-312(2)) — "as is" doesn't work | "Unless otherwise agreed"
+
+- Camera example: scratched lens → § 2-314; battery won't last the 4 hours buyer needs → § 2-315; stolen camera → § 2-312. Other implied warranties can arise from course of dealing or usage of trade (§ 2-314(3)).
+
+- Cumulation (§ 2-317): specs beat samples/general descriptions; a sample from bulk beats general description; express warranties displace inconsistent implied warranties except fitness.
+
+Merchantability — § 2-314
+RULE Goods must at least: (a) pass without objection in the trade under the description; (b) if fungible, be of fair average quality; (c) be fit for the ordinary purposes for which such goods are used (most important); (d) run of even kind, quality, quantity within permitted variations; (e) be adequately contained, packaged, labeled; (f) conform to promises/affirmations on the container or label.
+
+- Strict liability: usually a defect at the time of sale (or failure to give proper instructions); seller's lack of knowledge is no defense — not negligence-based.
+
+- Who is a merchant (§ 2-104(1)): one who deals in goods of the kind, or by occupation holds itself out as having knowledge/skill about the practices or goods, or to whom such skill is attributed through an agent/broker. For § 2-314 the narrow "goods" sense applies; isolated sellers aren't merchants (but must disclose known hidden defects — cmt. 3).
+
+- Used goods: warranty applies, but only to the quality appropriate for used goods.
+
+- Privity — § 2-318 (states pick one): Alt. A — buyer's family, household, and home guests injured in person; Alt. B — any natural person reasonably expected to use, consume, or be affected and injured in person; Alt. C — any person reasonably expected to be affected and injured (not limited to personal injury). The seller can't exclude § 2-318 coverage.
+
+- Examples: detergent must clean, not damage fabric or the washer, and match its label; a pencil must write and erase with ordinary effort.
+
+Problem 3-9 seller | Makes the warranty?
+Artisan (accountant) selling her stained-glass baubles at a semi-annual craft fair | Likely yes — regularly makes and sells goods of that kind; the day job isn't decisive
+Rental company selling oldest fleet cars every 4 months | Likely yes — regular, recurring used-car sales
+Contractor (60% services/40% materials; clients pick materials) | Hybrid — warranty rules still apply to the goods; likely a merchant in what it regularly supplies
+Decorator paid a finder's fee by the client | No — not the seller
+
+Problem 3-10 | Breach?
+New mower fails on 4th use | Likely — early failure is circumstantial proof of a defect at sale (unless misuse)
+Bone in a salmon fillet | Depends on the approach — the problem cites Webster (no breach) against Mexicali Rose and Schafer. Outside class materials: these are usually called the "foreign-natural" test (Webster) and the "reasonable-expectation" test (Schafer); a fillet sold as boneless is the stronger claim under the latter.
+Yarn color varies across five dye lots | Likely not if within trade-usage variations (§ 2-314(2)(d))
+Car meets all safety rules but rates low in crashes | Likely not — needs minimal, not top, safety (different under fitness if buyer stated a safety need)
+
+CITED ONLY Webster v. Blue Ship Tea Room (Mass. 1964) — merchantability of food In the casebook: cited only, in Problem 3-10(b) (Boggs chokes on a bone in a salmon fillet), alongside Mexicali Rose and Schafer. The casebook gives no facts or holding. Outside class materials — facts: a diner ordered fish chowder at a Boston restaurant; a fish bone lodged in her throat and had to be removed. She sued for breach of the implied warranty of merchantability, and a jury found for her. Outside class materials — held: reversed. Bones are natural to New England fish chowder and to be expected, so the chowder was fit for its ordinary purpose. Why it matters: merchantability = fit for ordinary purposes (§ 2-314(2)(c)); the problem asks whether a bone in a fillet is different.
+
+Fitness for a particular purpose — § 2-315
+
+- Four elements: seller has reason to know the purpose · buyer has a particular (not ordinary) purpose · seller has reason to know of reliance · buyer actually relies. Seller need not be a merchant; reliance need not be reasonable.
+
+- Particular vs. ordinary (cmt. 2): shoes for walking vs. for mountain climbing. The use needn't be unique — just different from customary use (Ingram River v. Pott).
+
+NOTE CASE Ingram River Equip. v. Pott Indus. (8th Cir. 1987) — "particular" purpose Source: note case — the casebook quotes the opinion, pp. 139–141. Not on the slides. Facts: Ingram bought four tank barges with heating coils from builder Pott to haul heavy petroleum products on the Mississippi and heat them so they would unload in cold weather. Pott argued that carrying and heating heavy oil is the ordinary use of coil-equipped barges — it had built 30+ for exactly that — so no fitness warranty arose. Held: A fitness warranty could arise. The buyer's use need not be unique; the question is whether it is sufficiently different from the customary use of the goods. That depends on whether the goods are "tank barges" (used for many cargoes) or "heating-coil barges" — like buying climbing shoes at a general shoe store vs. a climbing store. It's a fact question, and the finding for Ingram stood. Why it matters: draws the line between § 2-315 (particular purpose) and § 2-314 (ordinary purpose).
+
+- No reliance if buyer gives precise specifications or insists on a brand.
+
+- Disclaiming fitness: must be in writing and conspicuous; needn't mention "fitness" — e.g., "There are no warranties which extend beyond the description on the face hereof"; "as is" also works.
+
+Title and the power to transfer — § 2-312, § 2-403
+
+- Approach: (1) what rights were purported to be transferred (§ 2-403); (2) did buyer actually get good title (§ 2-312)? (3) if not, breach. Most courts: a colorable third-party claim breaches even if title proves good — buyer shouldn't have to litigate to protect title (cmt. 1).
+
+- § 2-403(1): a purchaser gets the title its transferor had or had power to transfer; a buyer of a limited interest gets only that. A transferor with voidable title (fraud, dishonored check, identity deception, "cash sale," larcenous fraud) can pass good title to a good-faith purchaser for value. A thief has void title — passes nothing.
+
+- Entrustment § 2-403(2)–(3): entrusting goods to a merchant who deals in goods of that kind lets it pass all the entruster's rights to a buyer in ordinary course (jewelry left for repair, sold by the jeweler).
+
+- "Purchase" includes sale, lease, pledge, security interest, gift, any voluntary transaction (§ 1-201(b)(29)).
+
+- Infringement claims: the claim must cast a "substantial shadow" on buyer's use; buyer need not prove the claim valid — only that it's substantial and reasonably likely to bring litigation.
+
+VII. Quantity & Price WEEK 3
+
+Output & requirements — § 2-306
+RULE Quantity measured by output or requirements = actual output/requirements occurring in good faith, except no quantity unreasonably disproportionate to a stated estimate (or, if none, to normal or comparable prior output/requirements). Exclusive dealing implies best efforts by both sides.
+
+- Not really a gap filler — it interprets a quantity term the parties chose. Two limits: good faith and not unreasonably disproportionate (expectations of the parties; degree of risk).
+
+- A shutdown for lack of orders can be good faith; one merely to curtail losses isn't; sudden plant expansion isn't covered; a market price far above the contract price signals opportunism (cmt. 2). Decreases: some courts apply only good faith; others both tests.
+
+- Orange & Rockland factors (disproportion): size of excess over estimate · seller's ability to foresee it · market vs. contract price gap · whether the market rise was fortuitous · reason for the increase.
+
+NOTE CASE Orange & Rockland Utils. v. Amerada Hess (N.Y. App. Div. 1977) — § 2-306 "unreasonably disproportionate" Source: note case — the casebook quotes the factors and summarizes the result, pp. 151–152. Not on the slides. Facts (casebook): a requirements contract for oil with stated estimates, which were based on the buyer's plans to burn the oil to produce electricity for its customer base. The buyer then doubled its "requirements," seeking the extra oil in order to sell the additional quantity in the market. Outside class materials: the contract price was fixed, oil's market price had risen far above it, and Hess refused to supply the excess. Held: "Unreasonably disproportionate" is a limit separate from good faith (it applies "even where one party acts with complete good faith"), judged by the parties' expectations using the five factors above. The doubling was unreasonably disproportionate. Why it matters: a requirements buyer can't use the contract to speculate on the market. Cf. Problem 4-1(B) (buyer jumps to plant capacity when the market rises to $1.15).
+
+- Problem 4-1: (a) fixed 50,000 sq ft/yr → buyer can't cut to 20,000 without seller's assent (fixed quantity; demand risk is buyer's). (b) "requirements," no estimate: 25,000 → 32,500 → 35,000 → 60,000 (plant capacity) when market rose to $1.15 → seller can resist as disproportionate and opportunistic. (c) drop to 5,000 in a recession at 90¢ market → seller argues disproportion and buying elsewhere; a genuine lack of orders may be good faith.
+
+- Problem 4-2 (90,000, then 100,000): good faith but disproportionate — buyer honestly lands a huge new customer and needs 400,000. Proportionate but bad faith — buyer orders a normal 110,000 to resell at a higher market price, or 85,000 because it's secretly buying cheaper elsewhere.
+
+Open price — § 2-305
+RULE If the parties intend to contract without a settled price, the price is a reasonable price at the time for delivery when (a) nothing is said, (b) it's left to be agreed and they fail to agree, or (c) an agreed market/third-party standard isn't set. (2) A price set by one party must be set in good faith. (3) If the price fails to be fixed through one party's fault, the other may cancel or fix a reasonable price. (4) If they intended not to be bound without agreement on price → no contract (return goods/payments).
+
+- Cmt. 3 safe harbor: in the "normal case," a posted/market price satisfies good faith.
+
+NOTE CASE ★ Mathis v. Exxon Corp. (5th Cir. 2002) — price set by one party, § 2-305(2) Source: note case — the casebook summarizes it and quotes the opinion, pp. 154–157 (Autry/HRN excerpt pp. 156–158). Slides W3-S44 and S45 — treat it like a main case. Facts: Exxon franchise dealers had to buy a minimum amount of gas each month at a price Exxon set (the "dealer tank wagon" price). The dealers claimed Exxon set that price to squeeze them out so it could replace them with company-run stations. Their evidence: Exxon planned to convert stations to company stores; the price exceeded the wholesale (rack) price plus delivery; after 1994 Exxon barred dealers from buying cheaper gas from jobbers; and many dealers became unprofitable. Exxon replied that its price was within the range competitors charged. Held: The jury's bad-faith finding was upheld. Good faith under § 2-305(2) has both a subjective and an objective part. Comment 3's posted-price safe harbor covers only the "normal case," and an intent to drive the buyer out of business takes the case outside it — even when the price is in the competitive range. Why it matters / split: shows how good faith limits a price-setter's discretion. The majority rejects Mathis — Shell v. HRN (Tex. 2004) and Autry v. BP (11th Cir. 2009) hold that a commercially reasonable, non-discriminatory price is in good faith regardless of motive, for the sake of certainty.
+
+Problem 4-3 (1,000 sacks; Feb. 1 market $7) | Result
+(a) "To be agreed at delivery"; seller demands $15; market $12; buyer covers at $13 | Contract exists (intent to be bound) → reasonable price ≈ $12 → seller breached; buyer recovers cover difference
+(b) "Chicago Board price on March 15"; board closed; Mar. 13 price $12; buyer buys at $11 | Standard failed → reasonable price (≈ $12) → contract exists; buyer's rejection likely a breach
+(c) "Set by a third party both agree on"; buyer refuses to name anyone; market $13 | Failure is buyer's fault → seller may cancel or fix a reasonable price (≈ $13) and sue
+
+VIII. Delivery, Inspection & Payment WEEKS 4–5
+
+The core obligations
+
+- § 2-301: seller must transfer and deliver conforming goods; buyer must accept and pay.
+
+- § 2-507(1): seller's tender is a condition to buyer's duty to accept and (unless otherwise agreed) to pay. § 2-507(2): if payment is due on delivery, buyer's right to keep the goods is conditional on paying.
+
+- § 2-511: buyer's tender of payment is a condition to seller's duty to deliver; any means current in the ordinary course works unless seller demands legal tender (and gives time to get it); check payment is conditional — defeated by dishonor.
+
+- Tenders are concurrent conditions unless otherwise agreed; problems assume seller tenders first.
+
+Seller's tender — § 2-503(1)
+RULE Seller must put and hold conforming goods at the buyer's disposition and give any notice reasonably necessary for buyer to take delivery. Tender must be at a reasonable hour, and goods kept available for the period reasonably necessary for buyer to take possession. Buyer must furnish facilities reasonably suited to receiving the goods.
+
+Default rule (unless otherwise agreed) | Section
+"Conforming" = in accordance with the contract obligations | § 2-106(2)
+All goods in a single delivery; payment due on that tender | § 2-307
+Place: seller's place of business (or residence); if identified goods are known by both at contracting to be elsewhere, that place | § 2-308
+Time: reasonable time | § 2-309(1)
+Payment due when and where buyer receives the goods; no credit presumed | § 2-310(a)
+Unseasonable cooperation → other party excused for delay; may proceed reasonably or treat as breach | § 2-311(3)
+Shipping terms: F.O.B. (free on board) / F.A.S. (free alongside) § 2-319 · C.I.F. (cost, insurance, and freight) / C.&F. (cost and freight) § 2-320 (slide says "2-329") · ex-ship § 2-322
+
+Problem 4-4 (100 bushels at $4; seller tenders first):
+Facts | Proper tender?
+Only 95 bushels + broken loading auger | No — nonconforming quantity (single lot); auger turns on who must load (trade usage); seller may cure
+Moldy wheat | No — nonconforming goods
+"Pick it up within 2 hours or I sell it" | Probably no — must hold for a reasonably necessary period
+Pick up at a warehouse 300 miles away | Only if both knew at contracting the identified goods were there (§ 2-308(b))
+Buyer brings a small truck, wants half now, half tomorrow | Seller's tender is fine — single lot; buyer must furnish suitable facilities
+Seller arrives at buyer's farm on time; buyer's bins aren't ready | Seller's tender is fine — buyer failed to cooperate; seller excused for delay (§ 2-311(3))
+
+Inspection, acceptance & rejection
+RULE § 2-513: unless otherwise agreed, buyer may inspect before payment or acceptance, at any reasonable place, time, and manner (after arrival if goods are shipped). Buyer bears inspection costs but recovers them if the goods are nonconforming and rejected. No pre-payment inspection under C.O.D. (cash on delivery) or payment-against-documents terms.
+
+- Accepting goods ≠ accepting an offer. Possession ≠ acceptance (buyer may be inspecting). Payment ≠ acceptance (§ 2-512(2)).
+
+- § 2-512: if buyer agreed to pay before inspection, nonconformity doesn't excuse payment unless it appears without inspection (or fraud would justify enjoining a letter of credit).
+
+- Acceptance occurs (§ 2-606) when buyer, after a reasonable chance to inspect, signifies acceptance, fails to effectively reject, or acts inconsistently with seller's ownership. Accepting part of a commercial unit accepts the whole unit.
+
+If buyer ACCEPTS | If buyer REJECTS
+Can't reject later (§ 2-607(2)) | Must reject within a reasonable time with seasonable notice (§ 2-602(1))
+Must pay the contract price (§ 2-607(1)) | May not exercise ownership (§ 2-602(2)(a))
+Burden of proving nonconformity shifts to buyer (§ 2-607(4)) | If in possession, must hold with reasonable care for seller (§ 2-602(2)(b))
+Must notify of breach within a reasonable time or be barred (§ 2-607(3)(a)) | Merchant buyer follows seller's reasonable instructions / sells perishables (§ 2-603); may store, reship, resell (§ 2-604)
+Only a small window to revoke — nonconformity must substantially impair value (§ 2-608) | Must state curable defects or lose them (§ 2-605)
+
+- Effective vs. rightful rejection: rejecting conforming goods can be effective but wrongful → buyer's breach (§ 2-703). Rejecting nonconforming goods is rightful → buyer has remedies (§§ 2-601, 2-711).
+
+- Perfect tender (§ 2-601): if goods or tender "fail in any respect," buyer may reject all, accept all, or accept any commercial units and reject the rest. Installment contracts (§ 2-612): reject an installment only if it substantially impairs that installment and can't be cured; breach of the whole only if the whole contract's value is substantially impaired.
+
+- Cure (§ 2-508): seller may cure within the contract time on seasonable notice, or get a further reasonable time if it reasonably thought the tender would be acceptable.
+
+- Problem 4-5: (a) seller demands payment before inspection → buyer is right (inspect first unless otherwise agreed). (b) buyer wants a 2-week genetically modified organism (GMO) lab test → reasonable only if GMO-free is a contract term and the test is a reasonable manner/time; buyer may hold the wheat for testing without accepting; buyer pays test costs unless the wheat fails and is rejected; agree on a protocol.
+
+IX. Risk of Loss WEEKS 4–5
+
+Principles
+
+- Risk of loss = who bears a casualty to the goods (fire, theft, flood) — not the same as performance or breach, and not tied to title.
+
+- Three principles: risk goes to the party who controls the goods (best able to avoid loss), who is most likely insured (§ 2-509 cmt. 3), and who is in breach (§ 2-510).
+
+- If seller bears the risk and goods are destroyed: unique/identified goods → seller excused (§ 2-613); fungible goods → seller must still tender. If buyer bears the risk → buyer must pay (§ 2-709(1)(a)).
+
+- Sequence: (1) What is seller's tender obligation (§§ 2-307–2-309, 2-503, 2-504)? (2) Has anyone breached (§ 2-509 or § 2-510)? (3) Apply the rule for carrier / bailee / seller-tender (merchant vs. non-merchant) / other agreement.
+
+ROADMAP Risk-of-loss decision tree 1. Agreement on risk? → follow it (§ 2-509(4)); sale on approval: risk stays with seller until acceptance (§ 2-327). 2. Seller in breach? Nonconforming tender → risk stays with seller until cure or acceptance (§ 2-510(1)). Rightful revocation → treat as on seller from the beginning, to the extent of buyer's insurance gap (§ 2-510(2)). 3. Buyer in breach (repudiates) as to identified conforming goods → risk on buyer for a commercially reasonable time, to the extent of seller's insurance gap (§ 2-510(3)). 4. Carrier, shipment contract (presumed) → passes on due delivery to the carrier (§ 2-509(1)(a)). 5. Carrier, destination contract → passes when duly tendered at the destination (§ 2-509(1)(b)). 6. Bailee, goods not moved → on receipt of a negotiable document, the bailee's acknowledgment, or a reasonable time after a non-negotiable document/delivery order (§ 2-509(2)). 7. Everything else (seller delivers or buyer picks up) → merchant seller: on buyer's RECEIPT (physical possession); non-merchant seller: on TENDER (§ 2-509(3)).
+
+Non-shipment contracts — Problem 4-6
+
+- (a) Seller drives the wheat in its own truck; truck burns en route → the seller's own truck is not a carrier → § 2-509(3). Merchant: no receipt → seller's risk. Non-merchant: risk passes at the completion of tender, which never happened → seller's risk. Seller bears it either way (fungible wheat → must re-tender).
+
+- (b) Seller says "ready for pickup"; fire destroys it before buyer arrives → merchant seller: seller bears (no receipt); non-merchant: buyer bears (tender complete). Merchant status decides the case.
+
+- Rationale (cmt. 3): a merchant seller still controls and can insure the goods — risk stays even if buyer has paid.
+
+Shipment vs. destination contracts
+| Shipment contract (the norm) | Destination contract
+Risk passes | When goods are duly delivered to the carrier | When duly tendered at the destination
+Transit loss | Buyer bears (sue the carrier/insure) | Seller bears
+Signals | F.O.B. seller's city; "ship to"; C.I.F./C.&F. | F.O.B. buyer's city; seller expressly agrees to deliver at a place; ex-ship
+Title passes | At shipment (§ 2-401(2)(a)) | On tender at destination
+
+- Presumption: shipment contract unless the seller expressly took responsibility during transit. Naming a destination or paying freight doesn't make it a destination contract.
+
+- § 2-504 shipment duties: (a) put goods in the carrier's possession and make a reasonable transport contract; (b) obtain and promptly deliver any needed documents; (c) promptly notify buyer. Failure on (a) or (c) justifies rejection only if material delay or loss results.
+
+- C.I.F. = price includes cost, insurance, freight; seller ships, insures, and tenders documents; buyer pays against documents (no inspection first) — still a shipment contract. C.&F. = same minus insurance. F.A.S. = deliver alongside the vessel.
+
+- Buyer who bears transit risk isn't helpless: it can sue the carrier (§ 2-722; Art. 7) or claim on its insurance; the seller keeps an insurable interest while it has title (§ 2-501).
+
+Problem 4-7 (custom windows, South Dakota → New York) | Who bears the loss?
+(a) "Delivered to" the site; properly packaged; destroyed in transit | Buyer — shipment contract (Windows v. Jordan Panel)
+(b) "Delivered at" the site | Arguably seller — destination contract
+(c) How to make it a destination contract | "F.O.B. buyer's site" or "seller bears risk until tender at the site"
+(d)(1) Improperly packaged; damage caused by packaging | Seller — improper shipment caused the loss (§§ 2-504, 2-510(1))
+(d)(2) Damage caused by the carrier's fault (slide: properly packaged) | Buyer — risk already passed; sue the carrier. Even with bad packaging, no shift unless the packaging caused the loss
+
+CITED ONLY Windows, Inc. v. Jordan Panel Sys. (2d Cir. 1999) — the case behind Problem 4-7 In the casebook: cited only, in Problem 4-7 (casebook p. 171), whose facts track the case: a South Dakota seller of custom windows; a contract to ship them "properly crated … and delivered to" the buyer's New York construction site; damage in transit. The casebook gives no holding; the slides (W4-S39–40, W5-S21–24) work through the problem. Outside class materials — what happened and the holding: the carrier's truck had an accident en route; the buyer refused to pay and the seller sued for the price. The court held for the seller: "delivered to" didn't create a destination contract, so risk passed on delivery to the carrier (§ 2-509(1)(a)); and even if the packing was inadequate, the accident — not the packing — caused the loss, so § 2-504/§ 2-510(1) didn't shift risk back to the seller. Why it matters: the shipment-contract presumption (casebook and slides) plus the causation requirement in § 2-504. The buyer bearing transit risk must go after the carrier (§ 2-722) or its insurer.
+
+Goods held by a bailee (warehouse), not moved
+
+- Tender (§ 2-503(4)): give a negotiable document of title or get the bailee's acknowledgment of buyer's right; a non-negotiable document or delivery order works unless buyer seasonably objects, and risk stays on seller until buyer has a reasonable time to present it.
+
+- Insurable interest (§ 2-501): buyer gets one on identification; seller keeps one while it has title or a security interest.
+
+X. Variation by Agreement & Warranty Disclaimers WEEKS 5–7
+
+Varying the Code — § 1-302
+RULE Parties may vary the effect of UCC provisions except: (1) obligations of good faith, diligence, reasonableness, and care cannot be disclaimed — but parties may set standards that are not manifestly unreasonable, and may fix a specific time for a "reasonable time" if not manifestly unreasonable; (2) some provisions can't be varied.
+
+- Non-modifiable (Problem 5-1(b)): § 2-302 unconscionability · § 2-102 scope · §§ 2-204–2-207 formation · § 2-403 rights of third-party purchasers · also § 2-201 (cmt. 1).
+
+- Problem 5-1(a): buyer setting a good-faith standard for a seller-set fuel price → tie it to an objective index or seller's lowest price to similar customers (or use an index price instead). Seller limiting requirements → stated estimate with min/max, fuel actually consumed by the existing fleet, notice of changes.
+
+Disclaimer rules — § 2-316
+Warranty | How to disclaim | Writing? | Conspicuous? | Magic words?
+Express | Nearly impossible if part of the basis of the bargain — disclaimer inoperative where it can't be reconciled (§ 2-316(1)); seller's defense is the parol evidence rule | — | — | —
+Merchantability | § 2-316(2) or (3) | No (oral OK) | Yes, if written | Must mention "merchantability"
+Fitness | § 2-316(2) or (3) | Yes | Yes | No — "no warranties beyond the description on the face hereof" works
+All implied | "As is," "with all faults" · examination (or refusal after seller's demand) — only defects inspection should reveal · CoD/CoP/UoT | — | — | —
+Title | Specific language or circumstances (sheriff's/executor's sale) — § 2-316 doesn't apply; "as is" fails | No | No | Specific language
+
+- "Conspicuous" (§ 1-201(b)(10)): a reasonable person ought to have noticed it — capitals, larger or contrasting type; a question for the court.
+
+- Before applying § 2-316, ask: (1) did the implied warranty arise? (2) is the disclaimer part of the contract? A disclaimer in a later form is a material alteration under § 2-207 → usually not part of the deal.
+
+- Continuum of protection: freedom of contract ← specially made commercial goods · merchant-to-merchant commercial goods · used goods · prepackaged new consumer goods → paternalism.
+
+- Problem 5-3 — every way to disclaim fitness: conspicuous writing (need not say "fitness") · "no warranties beyond the face hereof" · "as is"/"with all faults" · buyer's examination or refusal after seller's demand · CoD/CoP/UoT.
+
+- Problem 5-4 (fisherman's engine; disclaimer on the back of a delivery receipt): both implied warranties arose (merchant dealer; boat specs + reliance on dealer's recommendation); a post-sale receipt term is likely not part of the contract (§§ 2-207/2-209); if it is, it mentions merchantability and covers "all implied warranties," but is it conspicuous on the back? Consumer buyer: additional terms are mere proposals; consumer law may void it. Non-merchant dealer: no merchantability warranty at all; fitness can still arise.
+
+- Problem 5-5 (title): buyer accepts an express title disclaimer when provenance is uncertain and the price reflects the risk (quitclaim-style, estate or liquidation sales). Circumstances alone: storage-unit auctions, executor/trustee or police auctions, lien sales.
+
+XI. Remedies & Remedy Limitations WEEKS 6–7
+
+- Framework: Contract + Breach + Damages + Causation. A disclaimer removes the breach (no warranty); a remedy limitation limits damages after a breach (liquidated damages (LD), limited remedy, consequential exclusion). Always ask: what happened to the goods, and how are damages calculated?
+
+- Damages types: compensatory · incidental (§ 2-715(1) — reasonable costs of responding: inspection, transport, storage, arranging cover) · consequential (§ 2-715(2) — losses from needs the seller had reason to know at contracting that buyer couldn't reasonably prevent, plus injury to person/property from breach of warranty — e.g., lost profits from a production shutdown; fire from a defective oven) · liquidated (§ 2-718).
+
+Breach | Remedies
+Seller repudiates / doesn't deliver | Buyer cancels, recovers price paid, and gets market − contract (§ 2-713) or cover − contract (§ 2-712) + incidental & consequential; specific performance only rarely (§ 2-716)
+Seller tenders nonconforming goods | Buyer rejects → same as nondelivery; or accepts → pays price, recovers value as warranted − value as accepted (§ 2-714(2)) + incidental & consequential
+Buyer revokes acceptance | Cancel, recover price, cover or market damages + incidental & consequential
+Buyer repudiates (or wrongfully rejects) | Seller withholds/stops delivery, cancels, recovers resale − contract (§ 2-706), market − contract (§ 2-708(1)), or lost profit (§ 2-708(2)) + incidental; prepaying buyer gets restitution less seller's damages (§ 2-718(2))
+Buyer accepts but doesn't pay | Seller recovers the price (§ 2-709) + incidental; rarely may reclaim (§§ 2-507(2), 2-702(2))
+
+Remedy limitations — ask: (1) part of the agreement? (2) enforceable? Limitations are never implied.
+RULE Liquidated damages (§ 2-718(1)): valid only at an amount reasonable in light of the anticipated or actual harm, difficulty of proving loss, and inconvenience of other remedies; unreasonably large = void penalty. Need not be conspicuous. Down-payment forfeitures are often enforced (absent an LD term, buyer recovers payments above 20% of the price or $500, whichever is smaller — § 2-718(2)).
+
+RULE Limited remedies (§ 2-719): parties may substitute or limit remedies (e.g., repair or replace, return and refund, caps); an agreed remedy is optional unless expressly exclusive. If it fails of its essential purpose, normal UCC remedies return. Consequential damages may be excluded unless unconscionable — prima facie unconscionable for personal injury from consumer goods; commercial-loss exclusions are fine. Need not be conspicuous.
+
+- LD vs. limitation (Problem 5-9): LD fixes damages in advance (higher or lower than actual) and is tested for reasonableness/penalty; a limitation eliminates or caps categories, buyer still proves actual loss, tested by failure of essential purpose / unconscionability.
+
+- Problem 5-6 (oven LD: $1,000/day; 30 days late = $30,000; actual lost profit $2,500): the "anticipated OR actual" wording lets a clause reasonable when made survive — negotiated by merchants, based on profit discussions, hard-to-prove harm, time of the essence → likely enforceable; the seller argues the 12x gap makes it a penalty.
+
+- Problem 5-7 — failure of essential purpose: Circuit City store credit (retailer goes bankrupt; credit worthless); repair-or-replace that never fixes the defect; replacement parts when the whole machine is destroyed.
+
+- Personal injury isn't defined in Art. 2 — other law supplies it. A seller can sidestep § 2-719(3) by validly disclaiming warranties.
+
+MAIN CASE ★ Razor v. Hyundai Motor America (Ill. 2006) — failed limited remedy and the consequential-damages exclusion Source: principal case, casebook pp. 202–212. Slide W67-S32. Facts: A consumer bought a new Hyundai Sonata. Hyundai's written warranty limited her remedy to repair or replacement and separately excluded incidental and consequential damages. The car had a no-start problem that numerous repairs never fixed. The jury found the repair remedy failed of its essential purpose and awarded $5,000 for lost value plus $3,500 for inconvenience and loss of use. The warranty and its exclusion were in the owner's manual in the glove box; she never saw them until after she signed and drove off. Held: (1) Independent approach (majority; Chatlos): the failure of the repair remedy does not automatically void the consequential-damages exclusion. The exclusion stands unless unconscionable under § 2-719(3) — the "two concentric walls." The court rejected the dependent approach of Adams v. J.I. Case (a tractor stuck in the repair shop for over a year) because it would make exclusions meaningless. (2) This exclusion was unconscionable: a preprinted consumer form with no bargaining power, and decisively, it wasn't available to her before she signed. Clear capital letters don't matter if she couldn't see it. Remanded for a new trial on § 2-714(2) damages. Why it matters: shows the two separate tests in § 2-719: failure of essential purpose (for the limited remedy) vs. unconscionability (for the consequential exclusion). Dissent: the ruling burdens manufacturers and discourages written warranties.
+
+XII. Parol Evidence Rule — § 2-202 WEEKS 6–8
+
+RULE Terms in a record the parties intended as a final expression of their agreement (as to the terms it includes) may not be contradicted by evidence of any prior agreement or a contemporaneous oral agreement, but may be explained or supplemented by (a) course of dealing, usage of trade, or course of performance, and (b) consistent additional terms — unless the court finds the record was also intended as a complete and exclusive statement of the terms.
+
+- Parol evidence rule (PER) = admissibility of evidence about terms. SOF = enforceability. Merger clause = prior and contemporaneous agreements; NOM clause = future modifications.
+
+- Analysis: (1) What extrinsic evidence is offered? (2) For what purpose? The PER applies only to evidence of an alleged term of the agreement — not to evidence of a separate agreement, interpretation, a modification (later deal), a formation defect (fraud, mistake, duress), or a condition precedent.
+
+- Classify the writing: Unfinished (tentative draft) → PER doesn't apply · Final / partial integration (states its terms definitively but not the whole deal) → no contradiction, but consistent additional terms come in · Complete & exclusive / full integration → no contradiction or supplementation (except CoD/UoT/CoP).
+
+- Classify the evidence: explanatory · supplemental · contradictory. Some courts require ambiguity before admitting explanatory evidence (not for CoD/UoT/CoP — cmt. 1(c)). Tests for contradiction: directly negates a term · lacks reasonable harmony · parties would certainly have included it (cmt. 3) · vs. supplementary if it might naturally be omitted (R2d § 216).
+
+Problem 5-10 — the PER chart (slides W67-S37, W8-S8):
+Evidence offered | Final (partial) | Complete & exclusive
+Supplementary — oral, prior | Admissible | Inadmissible
+Supplementary — oral, contemporaneous | Admissible | Inadmissible
+Supplementary — written, prior | Admissible | Inadmissible
+Supplementary — written, contemporaneous | Admissible | N/A (part of the record)
+Supplementary — UoT / CoD / CoP | Admissible | Admissible
+Contradictory — oral, prior | Inadmissible | Inadmissible
+Contradictory — oral, contemporaneous | Inadmissible | Inadmissible
+Contradictory — written, prior | Inadmissible | Inadmissible
+Contradictory — written, contemporaneous | Admissible | N/A
+Contradictory — UoT / CoD / CoP | § 2-202(a) / § 1-303(e) | § 2-202(a) / § 1-303(e)
+
+- Merger clause = evidence of full integration (probative, not conclusive). The PER never bars later agreements or evidence of fraud/mistake, and getting evidence in doesn't make the fact-finder believe it.
+
+Problem 5-11 clause | Effect
+1. "Represents the final agreement" | Only partial integration — not a true merger clause
+2. "Complete and exclusive statement… no other agreements" | Best — tracks § 2-202(b)
+3. "Supersedes all prior agreements, written or oral" | Helpful but misses contemporaneous terms; pair with #2
+4. "May not be modified except by a signed writing" | NOM clause — about future changes, not a merger clause
+
+- Problem 5-12 (fiber supplier; both forms say "complete and exclusive"): (a) usage of trade that a supplier sells for the carpet style's market life → admissible (UoT supplements even complete records unless carefully negated); (b) same term from prior oral discussions → inadmissible (full integration); (c)(1) UoT to explain "support the integration of all materials" → admissible; (c)(2) prior talks to explain it → depends (some courts require ambiguity).
+
+- Problem 5-13 (used car: "never been in an accident" + "we'll fix it within 30 days"; signed "AS IS… no warranty, express or implied"): the oral statements are express warranties, and § 2-316(1) would make the disclaimer inoperative — but it's subject to § 2-202: if the writing is final on warranties, the prior oral contradictory warranties are excluded → disclaimer stands; "as is" kills the implied warranties. Buyer's best route: fraud (not barred by the PER), or argue the writing wasn't final (consumer form).
+
+XIII. Assignment & Delegation — § 2-210 WEEK 8
+
+- Rights are assigned; duties are delegated. Structure: (1),(6) delegation · (2),(3) assignment · (4) reading prohibition language · (5) what an assignment "of the contract" transfers.
+
+RULE Delegation (§ 2-210(1)): allowed unless otherwise agreed or the other party has a substantial interest in the original promisor performing. Delegation never relieves the delegator of its duty or liability. The other party may treat a delegating assignment as grounds for insecurity and demand assurances from the assignee (§ 2-210(6)).
+
+RULE Assignment (§ 2-210(2)): all rights assignable unless it would materially change the other party's duty, materially increase its burden or risk, or materially impair its chance of return performance. A right to damages for breach of the whole contract, or a right from the assignor's full performance, is assignable despite a contrary agreement.
+
+- § 2-210(4): a ban on assigning "the contract" bars only delegation, not assignment of rights. "May not assign its rights" may only make an assignment a breach; to make it ineffective, say "any attempted assignment is void." § 9-406(d): a ban on assigning a right to payment (account) is ineffective — and assigning it is not a breach.
+
+- § 2-210(5): assigning "the contract" (or "all my rights") = assignment of rights plus delegation; the assignee's acceptance is a promise to perform, enforceable by the assignor or the other party.
+
+- The assignee steps into the assignor's shoes; once notified, the obligor must pay the assignee but keeps its defenses.
+
+Problem 6-1 | Assignment by buyer (right to goods) | Assignment by seller (right to payment) | Delegation by buyer (duty to pay) | Delegation by seller (duty to deliver)
+No prohibition | OK unless it materially changes the other party's duty, burden, risk, or chance of return performance — § 2-210(2) | Same; assigning the right to payment rarely affects buyer — § 2-210(3) | OK unless other party has a substantial interest in original performance — § 2-210(1) | Same — § 2-210(1)
+Contract prohibits | Not permitted (except a claim for breach of the whole, or after buyer fully performed) | Permitted — §§ 2-210(2)–(3), 9-406 | Not permitted | Not permitted
+
+- Problem 6-2 (100 steel I-beams, $20,000): (a) seller assigns its rights to Bank → after notice, buyer must pay Bank (keeps defenses). (b) contract says assignment is "prohibited and void" → still effective for the right to payment (§ 9-406(d)). (c) seller assigns "the contract" to Manufacturer → assignment + delegation; standard beams → no substantial interest → buyer must accept Manufacturer's conforming goods and pay Manufacturer; seller stays liable; buyer may demand assurances.
+
+XIV. Termination WEEK 8
+
+Cancellation | Termination
+Ending the contract because of the other party's breach (§ 2-106(4)) | Ending it for a reason other than breach, under a power from agreement or law (§ 2-106(3))
+Canceling party keeps remedies for breach | Executory duties discharged; rights from prior breach or performance survive
+
+- Typical with a long gap before performance or indefinite-duration supply deals; may occur at an agreed time/event.
+
+- § 2-309(2)–(3): an indefinite contract for successive performances lasts a reasonable time but either party may terminate at any time — with reasonable notification (enough time to find substitutes), unless on an agreed event; waiving notice is invalid if unconscionable. Good faith applies, but no reason is needed (Santa Fe Custom Shutters v. Home Depot).
+
+NOTE CASE Santa Fe Custom Shutters & Doors v. Home Depot (N.M. App. 2005) — terminating an at-will supply deal Source: note case — the casebook quotes the opinion, pp. 230–232. Not named on the slides; termination is covered at W8-S22. Facts: A shutter manufacturer supplied Home Depot under an indefinite, at-will arrangement. Relying on it (and on Home Depot's alleged promises of a profitable partnership and professional marketing), the manufacturer made enormous up-front investments and took on debt to expand production. Home Depot terminated before the investment paid off, and the trial court awarded five years of lost profits. The manufacturer argued good faith barred the termination. Held: Good faith applies to termination but doesn't override § 2-309(2)'s right to end an indefinite contract "at any time," so the five-year lost-profits award was error. No good reason is required, and the contract needn't have run a reasonable time. "The essence of the at-will doctrine is the right … to cease doing business without liability for future profits." Remaining claims: fraud in the inducement, breaches before termination, and unreasonable notice. Why it matters: good faith can't contradict an express or statutory right. Termination (§ 2-106(3)) isn't breach — the duty is reasonable notice (enough time to find substitutes).
+
+XV. Insecurity & Repudiation — §§ 2-609 to 2-611 WEEK 8
+
+RULE § 2-609: If reasonable grounds for insecurity arise, a party may demand in writing adequate assurance and, if commercially reasonable, suspend its own performance until it gets it. Between merchants, grounds and adequacy are judged by commercial standards. Failure to give adequate assurance within a reasonable time, not over 30 days, after a justified demand = repudiation → aggrieved party may cancel and pursue remedies (§§ 2-610, 2-703(f), 2-711(1)).
+
+- Three questions: (1) reasonable grounds for insecurity? (2) assurances requested reasonable? (3) response adequate?
+
+- Grounds are objective and need not relate to this contract (e.g., late on other accounts; market conditions). Delegation is a statutory ground (§ 2-210(6)). Adequacy depends on the party's reputation and facts (cmt. 4). Contract clauses can define adequacy reasonably, but arbitrary standards are ineffective (cmt. 6). § 2-609 is optional — not a precondition to suing.
+
+ROADMAP § 2-609 / § 2-610 flowchart 1. Reasonable grounds for insecurity? No → the request itself could be a repudiation. 2. Yes → demand in writing (or electronic record)? No → no right to suspend performance. 3. Yes → demand seeks only adequate assurance? No → demanding more than adequate can be a repudiation, and no right to suspend. 4. Yes → may suspend performance without breaching until adequate assurance arrives.
+
+MAIN CASE ★ Top of Iowa Cooperative v. Sime Farms, Inc. (Iowa 2000) — § 2-609 adequate assurance Source: principal case, casebook pp. 235–243. Slide W8-S26. Facts: Farmer Sime signed "hedge-to-arrive" corn contracts with its grain co-op for 60,000 bushels. The Coop hedged each contract by selling futures, paying margin as prices rose. Sime kept "rolling" (postponing) delivery and sold its 1995 crop elsewhere at high cash prices. By spring 1996 the market had inverted — rolling to December would cost about $1.30/bushel — and Sime had no corn to deliver in July. Sime told the manager he'd get back to the Coop but never did. That same month the Iowa Attorney General (AG) said some of these contracts might be illegal. The Coop wrote demanding, as assurance, (1) payment of margins (or a letter of credit) and (2) a signed promise to deliver; refusal would be treated as repudiation. Sime's lawyer replied that the contracts were illegal and refused. Held: The jury verdict for the Coop was affirmed. (1) Reasonable grounds for insecurity are judged objectively by commercial standards and need not come from the other party's own conduct. The inverted market, the AG's statement, and Sime's silence were enough. (2) The demand was not unreasonable as a matter of law: "all demands for adequate assurance call for more than was originally promised," and asking for more isn't itself a repudiation (§ 2-610 cmt. 2). Contrast — PDM v. Brookhaven (7th Cir. 1976) (note case; casebook quotes a concurrence, p. 243): PDM would have been "assured" only by Betke's personal guarantee, escrow financing, or buying an interest in Brookhaven. Those demands were more than "adequate assurance" as a matter of law — § 2-609 doesn't let a party redraft the contract. Outside class materials: PDM was building a water-storage tank for Brookhaven and acted on reports that Brookhaven's financing might fall through.
+
+- Problem 6-3 (custom goods; pay 15 days after each delivery; buyer's credit downgraded, paying others late, changed banks): (a) don't demand cash on delivery — § 2-702(1) allows that only if buyer is insolvent; unilaterally changing credit terms risks repudiation → use § 2-609. (b) seller demands a letter of credit and withholds delivery; buyer only professes ability to pay → grounds are reasonable; a letter of credit (LOC) is a common assurance (Top of Iowa) but insisting only on it may be too much; a bare promise from a shaky buyer is likely inadequate, but real proof of solvency may be adequate — then seller's continued withholding becomes the breach. (c) Demand letter: list the specific grounds; ask for adequate assurance with several options (LOC, guaranty, payment in advance/on delivery, "other assurances might also be adequate"); reserve the right to suspend; set a deadline within 30 days.
+
+- Problem 6-4 (Big Discount's one-sided clauses): the clause letting Big Discount demand "whatever assurances it deems appropriate" whenever it wants sets an arbitrary standard → ineffective (cmt. 6; § 1-302(b); cf. § 1-309). Barring the supplier from ever demanding assurance is vulnerable as unconscionable given the take-it-or-leave-it market power.
+
+Repudiation — § 2-610; retraction — § 2-611
+
+- Not a failure to perform when due (that's breach). Repudiation = signaling before performance is due that you won't perform (words or acts). It also results from failing to answer a justified § 2-609 demand, or from making an unjustified or excessive demand. Demanding more than the contract gives is not by itself a repudiation — unless you condition your performance on it (cmt. 2).
+
+- If the repudiation substantially impairs the contract's value, the aggrieved party may suspend its performance and (a) await performance for a commercially reasonable time, or (b) resort to remedies immediately.
+
+- Retraction (§ 2-611): allowed until the next performance is due, unless the aggrieved party has canceled, materially changed position, or indicated the repudiation is final; must include any assurance justifiably demanded; reinstates the contract.
+
+- "Game of chicken": call it a repudiation and you may be the one in breach if a court disagrees.
+
+- Problem 6-5 (Ace's email: first valve installment will be late; "we expect you will cover the extra expenses"; will catch up by the second): a definite repudiation of installment 1; the cost demand isn't a repudiation unless performance is conditioned on it; canceling the whole requires substantial impairment of the whole contract (§§ 2-610, 2-612). Buyer's real motive (needing only half the valves) is not a valid reason. Advice: don't cancel yet — send a § 2-609 demand (perform at the contract price, give a catch-up schedule), reserve rights, suspend payments; if Ace conditions performance on extra money or gives no adequate assurance → repudiation → cancel, recover the 25% advance, cover.
+
+XVI. Excuse from Performance — §§ 2-613 to 2-616 WEEK 8
+
+Existing at formation | Arising after formation
+Incapacity · fraud · mistake · duress · illegality & public policy · unconscionability · statute of frauds | Death of a party · impracticability/impossibility · frustration of purpose · intervening illegality · failure of a condition
+
+Event | Restatement (2d) | UCC
+Casualty to identified goods | § 263 | § 2-613
+Obstruction of delivery method | § 270 | § 2-614(1)
+Obstruction of payment method | — | § 2-614(2)
+Damage to production facilities / interference with tender | § 261 | § 2-615 (seller) · § 2-616 (buyer)
+Death of a party | § 262 | No rule
+Intervening illegality | § 264 | No rule
+
+- Contracts allocate risk; excuse is applied sparingly. Foreseeability matters most but isn't decisive. All of these yield to contrary agreement (e.g., force majeure clauses). Excuse decides who pays damages; risk of loss decides who absorbs the goods' value.
+
+RULE § 2-613 — casualty to identified goods: goods identified when the contract was made, destroyed without fault of either party (negligence counts as fault) before risk passes → total loss: contract avoided; partial loss/deterioration: buyer may inspect and either avoid or accept with a price allowance (no further claim). Fungible goods → no excuse.
+
+RULE § 2-614 — substituted performance: if agreed loading/berthing facilities, carrier type, or manner of delivery becomes commercially impracticable without fault, a commercially reasonable substitute must be tendered and accepted. If the agreed payment method fails due to governmental regulation, seller may withhold delivery unless buyer offers a substantially equivalent payment method.
+
+RULE § 2-615 — impracticability (seller): delay or non-delivery isn't a breach if performance became impracticable due to a contingency whose non-occurrence was a basic assumption (or good-faith compliance with government regulation) — but seller must allocate fairly among customers if capacity is partly affected and seasonably notify buyers. Increased cost or market swings alone don't excuse (cmt. 4); war, embargo, crop failure, shutdown of major supply sources can. § 2-616: buyer may terminate or take its quota; silence for 30 days = contract lapses as to affected deliveries.
+
+- Buyer's excuse: common-law frustration of purpose (§ 1-103(b); R2d § 265); § 2-615 cmt. 9 — a supply contract tied to a specific construction venture may excuse the buyer. NIPSCO v. Carbon County Coal (7th Cir. 1986, Posner) (note case; the casebook quotes it, p. 256): a fixed-price contract (there, with a price floor and escalation) assigns the risk of market increases to the seller and decreases to the buyer; a buyer that misforecasts the market "has only himself to blame" and can't walk away when costs drop steeply. Outside class materials: NIPSCO was an Indiana electric utility locked into a 20-year coal contract; regulators wouldn't let it pass fuel costs through when cheaper power was available.
+
+Problem | Answer
+6-6(a) Art dealer's Picasso etching burns overnight before buyer's pickup | Merchant seller → risk not passed (no receipt) → identified goods, total loss → avoided — if no fault: a neglected coffee pot (negligence) = seller breaches; lightning = excused
+6-6(b) Etching was stolen; true owner reclaims it | Not a casualty — a title failure → seller breaches (no § 2-613 excuse)
+6-6(c) Print #10 water-damaged; seller has #12 | If #10 specifically → § 2-613(b): buyer avoids or accepts with allowance; if prints are interchangeable → must deliver #12
+6-6(d) Buyer's options under § 2-613 | Total loss → avoided (refund); partial → inspect, then avoid or accept with allowance
+6-8(a) Town cancels the sewer project; fittings have no other use | Frustration of purpose likely (shared basic assumption; § 2-615 cmt. 9)
+6-8(b) Buyer's bank seized, account frozen | Not excused — § 2-614(2): buyer must provide a substantially equivalent payment method
