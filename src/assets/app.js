@@ -212,7 +212,7 @@ const SCENERY_DEFAULT = 'off';
 const sceneryChoice = (stored) => stored || SCENERY_DEFAULT;
 const readScenery = () => { try { return sceneryChoice(localStorage.getItem('ambience')); } catch { return SCENERY_DEFAULT; } };
 let sceneryModule;
-const loadScenery = () => (sceneryModule ||= import('./ambience.js'));
+const loadScenery = () => (sceneryModule ||= import(`./ambience.js${new URL(import.meta.url).search}`));
 
 // Where a scene is drawn. On site pages it drifts over the content. In the document viewer it
 // stays behind the document so it never covers what is being studied: around the reader for

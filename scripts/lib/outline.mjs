@@ -101,11 +101,13 @@ export function matcher(sections) {
     const q = new Map();
     for (const t of terms(text)) q.set(t, (q.get(t) || 0) + 1);
     for (const t of terms(boost)) q.set(t, (q.get(t) || 0) + 3);
+    // Terms no section has can't score, and each term's idf is the same for every section.
+    const qs = [...q].filter(([t]) => df.has(t)).map(([t, n]) => [t, n, idf(t)]);
     let best = -1;
     let bestScore = 0.04;
     vecs.forEach(({ v, norm }, i) => {
       let dot = 0;
-      for (const [t, n] of q) if (v.has(t)) dot += v.get(t) * n * idf(t);
+      for (const [t, n, w] of qs) if (v.has(t)) dot += v.get(t) * n * w;
       const score = dot / norm;
       if (score > bestScore) { bestScore = score; best = i; }
     });

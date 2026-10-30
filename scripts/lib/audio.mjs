@@ -1,6 +1,9 @@
 // MP3 duration from the file bytes, so track lists can show lengths without loading audio.
 // Reads the Xing/Info or VBRI frame count when there is one (VBR files), and otherwise
 // assumes a constant bitrate from the first frame. Returns seconds, or null if no frame is found.
+//
+// `buf` may be just the start of the file, with `size` its full length: then a frame too close to
+// the end of `buf` to read in full returns undefined, and the caller reads the whole file instead.
 
 const BITRATES = { // kbps by [MPEG-1, MPEG-2/2.5] for Layer III
   1: [0, 32, 40, 48, 56, 64, 80, 96, 112, 128, 160, 192, 224, 256, 320],
@@ -8,7 +11,8 @@ const BITRATES = { // kbps by [MPEG-1, MPEG-2/2.5] for Layer III
 };
 const RATES = { 3: [44100, 48000, 32000], 2: [22050, 24000, 16000], 0: [11025, 12000, 8000] };
 
-export function mp3Duration(buf) {
+export function mp3Duration(buf, size = buf.length) {
+  const partial = size > buf.length;
   let o = 0;
   if (buf.toString('latin1', 0, 3) === 'ID3') o = 10 + ((buf[6] << 21) | (buf[7] << 14) | (buf[8] << 7) | buf[9]);
   for (; o < buf.length - 4; o++) {
@@ -18,6 +22,7 @@ export function mp3Duration(buf) {
     const rate = RATES[version]?.[(buf[o + 2] >> 2) & 3];
     const kbps = BITRATES[version === 3 ? 1 : 2][buf[o + 2] >> 4];
     if (layer !== 1 || !rate || !kbps) continue;
+    if (partial && o + 54 > buf.length) return undefined;
     const mono = (buf[o + 3] >> 6) === 3;
     const samples = version === 3 ? 1152 : 576;
     const side = version === 3 ? (mono ? 17 : 32) : (mono ? 9 : 17);
@@ -25,7 +30,7 @@ export function mp3Duration(buf) {
     const tag = buf.toString('latin1', xing, xing + 4);
     if ((tag === 'Xing' || tag === 'Info') && buf[xing + 7] & 1) return (buf.readUInt32BE(xing + 8) * samples) / rate;
     if (buf.toString('latin1', o + 36, o + 40) === 'VBRI') return (buf.readUInt32BE(o + 50) * samples) / rate;
-    return ((buf.length - o) * 8) / (kbps * 1000);
+    return ((size - o) * 8) / (kbps * 1000);
   }
-  return null;
+  return partial ? undefined : null;
 }

@@ -68,6 +68,12 @@ const write = (rel, data) => {
   fs.writeFileSync(file, data);
 };
 
+const copy = (from, rel) => {
+  const file = path.join(DIST, rel);
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.copyFileSync(from, file);
+};
+
 const headingsFrom = (text) =>
   text.split('\n').filter((l) => /^#{1,3} /.test(l)).map((l) => l.replace(/^#+ /, ''));
 
@@ -110,6 +116,25 @@ const outsideTone = (hex) => {
   if (Math.max(r, g, b) - Math.min(r, g, b) < 48) return 'gray';
   return b > g && r > g ? 'purple' : r > g && g >= b ? 'orange' : 'accent';
 };
+
+/**
+ * A track's length from the start of its file, so timing a track doesn't read all of it (the tracks
+ * are copied to dist/ as files); the whole file is read only if its first frame lies past that.
+ */
+function trackDuration(file, size) {
+  const fd = fs.openSync(file, 'r');
+  try {
+    const head = Buffer.alloc(Math.min(size, 10));
+    fs.readSync(fd, head, 0, head.length, 0);
+    const tag = head.toString('latin1', 0, 3) === 'ID3' ? 10 + ((head[6] << 21) | (head[7] << 14) | (head[8] << 7) | head[9]) : 0;
+    const buf = Buffer.alloc(Math.min(size, tag + 262144));
+    fs.readSync(fd, buf, 0, buf.length, 0);
+    const seconds = mp3Duration(buf, size);
+    return seconds === undefined ? mp3Duration(fs.readFileSync(file)) : seconds;
+  } finally {
+    fs.closeSync(fd);
+  }
+}
 
 const titleCase = (s) => s.replace(/[A-Z][A-Z'’]+/g, (w) => w[0] + w.slice(1).toLowerCase());
 
@@ -340,7 +365,8 @@ async function loadSubjects() {
       const tracks = trackFiles.map((f) => {
         const tm = dm.tracks?.[f] || {};
         const tbase = path.basename(f, path.extname(f));
-        const raw = fs.readFileSync(path.join(file, f));
+        const tfile = path.join(file, f);
+        const size = fs.statSync(tfile).size;
         return {
           file: f,
           slug: slugify(tbase.replace(/^\d+[\s_.-]*/, '')) || slugify(tbase),
@@ -349,15 +375,15 @@ async function loadSubjects() {
           title: tm.title || tbase.replace(/^\d+[\s_.-]*/, '').replace(/[_-]+/g, ' ').trim(),
           topic: tm.topic || '',
           description: tm.description || '',
-          duration: mp3Duration(raw),
-          size: raw.length,
-          raw,
+          duration: trackDuration(tfile, size),
+          size,
+          path: tfile,
         };
       });
       const trackBytes = tracks.reduce((n, t) => n + t.size, 0);
       const zipped = !isPlaylist || trackBytes <= MAX_ZIP_BYTES;
       const raw = !isPlaylist ? fs.readFileSync(file)
-        : zipped ? Buffer.from(zipSync(Object.fromEntries(tracks.map((t) => [t.file, [new Uint8Array(t.raw), { level: 0 }]]))))
+        : zipped ? Buffer.from(zipSync(Object.fromEntries(tracks.map((t) => [t.file, [new Uint8Array(fs.readFileSync(t.path)), { level: 0 }]]))))
         : null;
       const doc = {
         id: `${slug}/${docSlug}`,
@@ -503,9 +529,11 @@ for (const s of subjects.filter((x) => x.refs)) {
   for (const d of s.documents) if (d.type === 'practice' && d.format.mime === 'text/html') refPages.add(d);
 }
 const refsVersion = refsHash.digest('hex').slice(0, 10);
+// The popup's fonts (Fraunces headings, Inter text, JetBrains Mono cites; see refs.css).
+const REFS_FONTS = 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap';
 const withRefs = (d) => {
   if (!refPages.has(d)) return d.raw;
-  const tags = `<link rel="stylesheet" href="../../assets/refs.css?v=${refsVersion}"><script src="../../assets/refs.js?v=${refsVersion}" data-root="../../" data-index="assets/refs/${d.subject.slug}.json?v=${refsVersion}" defer></script>`;
+  const tags = `<link rel="stylesheet" href="${REFS_FONTS}"><link rel="stylesheet" href="../../assets/refs.css?v=${refsVersion}"><script src="../../assets/refs.js?v=${refsVersion}" data-root="../../" data-index="assets/refs/${d.subject.slug}.json?v=${refsVersion}" defer></script>`;
   const html = d.raw.toString('utf8');
   const at = html.toLowerCase().lastIndexOf('</body>');
   return Buffer.from(at < 0 ? html + tags : html.slice(0, at) + tags + html.slice(at), 'utf8');
@@ -517,7 +545,7 @@ for (const s of subjects) {
   const zip = {};
   for (const d of s.documents) {
     if (d.zipped) write(P.file(d), withRefs(d));
-    d.tracks?.forEach((t) => write(P.track(d, t), t.raw));
+    d.tracks?.forEach((t) => copy(t.path, P.track(d, t)));
     // Music stays out of the course and site ZIPs, which would otherwise pass GitHub's 100 MB file limit.
     if (d.type === 'music') continue;
     zip[d.filename] = [new Uint8Array(d.raw), { mtime: new Date(d.updated) }];

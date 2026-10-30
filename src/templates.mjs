@@ -11,6 +11,10 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 // Stamped on the stylesheet link so browsers fetch the new styles after each deploy
 // (GitHub Pages lets them reuse a cached copy otherwise).
 const CSS_VERSION = createHash('sha1').update(fs.readFileSync(path.join(ROOT, 'src', 'assets', 'styles.css'))).digest('hex').slice(0, 10);
+// The same for the page scripts; app.js passes its version on to the scenery module it loads.
+const jsHash = createHash('sha1');
+for (const f of ['app.js', 'ambience.js', 'shuffle.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
+const JS_VERSION = jsHash.digest('hex').slice(0, 10);
 
 // ---------------------------------------------------------------------------
 // Icons: the site's own solid set (src/icons, drawn by scripts/icons), inlined at
@@ -209,7 +213,7 @@ ${body}
 </div>
 ${progressSheet()}
 ${palette()}
-<script type="module" src="${root}assets/app.js"></script>
+<script type="module" src="${root}assets/app.js?v=${JS_VERSION}"></script>
 </body>
 </html>`;
 }
@@ -512,7 +516,7 @@ export function home(ctx) {
     <figure class="cover-art" aria-hidden="true">
       <span class="cover-wing cover-wing-l"></span>
       <span class="cover-arch"></span>
-      <img src="${root}assets/statues/socrates-david-v8-lg.png" alt="" width="640" height="640" fetchpriority="high">
+      <img src="${root}assets/statues/socrates-david-v8-lg.webp" alt="" width="640" height="640" fetchpriority="high">
       <span class="cover-wing cover-wing-r"></span>
     </figure>
   </div>
@@ -746,7 +750,7 @@ ${GILT_DEFS}
 </div>
 ${progressSheet()}
 <div class="toast" role="status" aria-live="polite" hidden></div>
-<script type="module" src="${root}assets/app.js"></script>
+<script type="module" src="${root}assets/app.js?v=${JS_VERSION}"></script>
 </body>
 </html>`;
 }
@@ -1109,7 +1113,7 @@ export function shuffle(ctx) {
   return layout(ctx, {
     root, title: 'Shuffle mode', canonical: 'shuffle/', body,
     description: `Mix practice sets from any course into one shuffled stack: ${game.total.toLocaleString('en-US')} questions from the study library.`,
-    extraHead: `<script type="module" src="${root}assets/shuffle.js"></script>${refCourses.length ? `<link rel="stylesheet" href="${root}assets/refs.css?v=${ctx.refsVersion}"><script src="${root}assets/refs.js?v=${ctx.refsVersion}" data-root="${root}" data-courses="${refCourses.join(' ')}" data-v="${ctx.refsVersion}" defer></script>` : ''}`,
+    extraHead: `<script type="module" src="${root}assets/shuffle.js?v=${JS_VERSION}"></script>${refCourses.length ? `<link rel="stylesheet" href="${root}assets/refs.css?v=${ctx.refsVersion}"><script src="${root}assets/refs.js?v=${ctx.refsVersion}" data-root="${root}" data-courses="${refCourses.join(' ')}" data-v="${ctx.refsVersion}" defer></script>` : ''}`,
   });
 }
 

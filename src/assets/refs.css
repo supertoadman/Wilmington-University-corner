@@ -1,7 +1,8 @@
 /* Reference popup on practice pages and shuffle mode (refs.js), in the site's own look: warm
    paper, navy ink, a gilt rule, Fraunces headings, Inter text, JetBrains Mono cites. It keeps
-   its own light and dark colours; refs.js adds .rx-dark when the page behind it is dark. */
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap');
+   its own light and dark colours; refs.js adds .rx-dark when the page behind it is dark. Its fonts
+   are linked next to it on practice pages (REFS_FONTS in scripts/build.mjs), so they load alongside
+   this file instead of after it; site pages already load them. */
 
 .rx-panel {
   --rx-bg: #f6f3ec; --rx-surface: #fff; --rx-sunk: #f3efe6; --rx-raise: #e9e3d6;
