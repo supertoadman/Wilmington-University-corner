@@ -1,17 +1,35 @@
 {
   "title": "Con Law II",
-  "description": "Constitutional Law II: the First Amendment, Chapters 1–6. Covers the Religion Clauses, the speech framework, incitement and national security, true threats and speech integral to crime, and immoral speech, including obscenity, child pornography, and indecency.",
+  "description": "Constitutional Law II: the First Amendment, Weeks 1–15 (Chapters 1–13). Covers the Religion Clauses, the speech framework, incitement and national security, true threats and speech integral to crime, immoral speech, torts involving speech, commercial speech, content-neutral rules and expressive conduct, government speech, funding and forum doctrine, government employees and public schools, and social media and elections.",
   "icon": "statue-angel-selaphiel",
   "accent": "#5b4b8a",
   "order": 3,
+  "refs": { "outline": "first-amendment-outline", "fullNames": ["Kennedy", "Thomas", "Brown", "Ward", "Lane", "Lee", "Garcia", "Rice", "Moody"] },
   "documents": {
-    "First_Amendment_Outline_Ch1-6_Revised.pdf": {
+    "First_Amendment_Outline.html": {
       "slug": "first-amendment-outline",
       "title": "First Amendment Outline",
       "type": "outline",
-      "description": "Case-by-case outline of Chapters 1–6, from Barnette and Kennedy v. Bremerton through Counterman, Ferber, and Free Speech Coalition v. Paxton. Each case has its rule, facts, holding, and dissent. Includes the Free Exercise, speech, prior restraint, and immoral speech checklists, along with synthesis tables.",
-      "tags": ["First Amendment", "outline", "Religion Clauses", "free speech"],
+      "description": "Case-by-case outline of Weeks 1–15 (Chapters 1–13), from Barnette and Kennedy v. Bremerton through Counterman, Ferber, New York Times v. Sullivan, Central Hudson, Texas v. Johnson, Shurtleff, Rosenberger, Tinker, NetChoice, and Citizens United. Each case has its rule, facts, holding, and dissent. Includes checklists for each doctrine, synthesis tables, and the stretch exercises. Every case box opens in the Look up panel on the practice pages.",
+      "tags": ["First Amendment", "outline", "Religion Clauses", "free speech", "Weeks 1–15"],
+      "order": 0
+    },
+    "First_Amendment_Outline_Ch1-13.pdf": {
+      "slug": "first-amendment-outline-pdf",
+      "title": "First Amendment Outline (PDF)",
+      "type": "outline",
+      "description": "The same Weeks 1–15 outline (Chapters 1–13) as a 74-page PDF to download or print.",
+      "tags": ["First Amendment", "outline", "PDF", "Weeks 1–15"],
       "order": 1
+    },
+    "First_Amendment_Concepts_Test.html": {
+      "slug": "first-amendment-concepts-test",
+      "title": "First Amendment Concepts Test",
+      "type": "practice",
+      "description": "110 concept questions on the whole course, Weeks 1–15 (Chapters 1–13), in outline order: the Religion Clauses, the speech framework and unprotected categories, immoral speech, defamation and IIED, commercial speech, time, place, and manner rules and expressive conduct, government speech, funding and forum doctrine, employee and student speech, and social media and elections. It works like Shuffle mode: shuffled choices, cross-outs, an explanation for every choice, the rule, Retry missed, and a link to the outline section to review. Filter by chapter or shuffle the whole set.",
+      "tags": ["First Amendment", "MCQ", "concepts", "Weeks 1–15", "Chapters 1–13"],
+      "questions": 110,
+      "order": 2
     },
     "First_Amendment_Drill.html": {
       "slug": "first-amendment-drill",
