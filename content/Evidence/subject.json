@@ -1,6 +1,6 @@
 {
   "title": "Evidence",
-  "description": "Federal Rules of Evidence, Classes 1–19 (Fisher, Evidence, 4th ed.): jury secrecy, relevance and 403, the policy exclusions, character evidence and 404(b), impeachment and the rape shield, hearsay and its exceptions, the Confrontation Clause, Bruton, the right to present a defense, and lay and expert opinion. Includes the outline, rule chart, flowcharts, flashcards, and bar-style practice questions.",
+  "description": "Federal Rules of Evidence, Weeks 1–15 (Fisher, Evidence, 4th ed.): jury secrecy, relevance and 403, the policy exclusions, character evidence and 404(b), impeachment and the rape shield, hearsay and its exceptions, the Confrontation Clause, Bruton, the right to present a defense, lay and expert opinion, expert reliability, authentication and the best evidence rule, and privileges. Includes the outline, rule chart, flowcharts, flashcards, and bar-style practice questions.",
   "icon": "statue-angel-uriel",
   "accent": "#2f6f8f",
   "order": 1,
@@ -12,13 +12,13 @@
       "type": "outline",
       "theme": "structured",
       "outsideColor": "64748B",
-      "description": "Condensed exam outline of Classes 1–19 on the Fall 2026 syllabus (Fisher pp. 1–783). Part I covers the Federal Rules, jury secrecy under 606(b), relevance, conditional relevance, and 403. Part II covers the specialized relevance rules, 407–411. Part III covers character evidence: the propensity ban, 404(b), Huddleston, 413–415, the defendant's and victim's character, and habit. Part IV covers impeachment under 607–609 and the rape shield. Part V covers competency, the definition of hearsay, opposing parties' statements, prior statements of witnesses, and the 803, 804, and 807 exceptions. Part VI covers the Confrontation Clause from Crawford through Smith v. Arizona. Part VII covers completeness, Bruton, and Chambers. Part VIII covers lay and expert opinion from the Week 10 reading. Rule and tip boxes throughout, and a card for every principal case with its class.",
-      "tags": ["FRE", "outline", "hearsay", "Confrontation Clause", "character evidence", "impeachment", "Classes 1–19"],
+      "description": "Condensed exam outline of Weeks 1–15 on the Fall 2026 syllabus (Fisher pp. 1–1098). Part I covers the Federal Rules, jury secrecy under 606(b), relevance, conditional relevance, and 403. Part II covers the specialized relevance rules, 407–411. Part III covers character evidence: the propensity ban, 404(b), Huddleston, 413–415, the defendant's and victim's character, and habit. Part IV covers impeachment under 607–609 and the rape shield. Part V covers competency, the definition of hearsay, opposing parties' statements, prior statements of witnesses, and the 803, 804, and 807 exceptions. Part VI covers the Confrontation Clause from Crawford through Smith v. Arizona. Part VII covers completeness, Bruton, and Chambers. Part VIII covers lay and expert opinion from the Week 10 reading. Part IX covers expert bases and reliability (703, 705, Frye, Daubert, Joiner, Kumho Tire). Part X covers authentication and the best evidence rule (901–902, 1001–1008). Part XI covers Rule 501, the psychotherapist and lawyer-client privileges, and 502 waiver. Part XII covers the spousal and marital-confidences privileges. Rule and tip boxes throughout, and a card for every principal case with its class.",
+      "tags": ["FRE", "outline", "hearsay", "Confrontation Clause", "character evidence", "impeachment", "privileges", "authentication", "Weeks 1–15"],
       "order": 0
     },
     "Evidence_Master_Outline.docx": {
       "publish": false,
-      "description": "Full master outline of Classes 1–19, swept against all 19 slide decks and the Week 1–10 readings, with every problem, the slides' answers, and an errata log. Kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
+      "description": "Full master outline of Weeks 1–15: Classes 1–19 swept against all 19 slide decks and the Week 1–10 readings, plus Parts IX–XII from the Week 11–15 readings, with every problem, the slides' answers, a syllabus coverage map, and an errata log. Kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
     },
     "2Evidence_Rule_Chart (with class slides).docx": {
       "slug": "evidence-rule-chart",
@@ -154,6 +154,15 @@
       ],
       "questions": 40,
       "order": 9
+    },
+    "Evidence_Concepts_Test.html": {
+      "slug": "evidence-concepts-test",
+      "title": "Evidence Concepts Test",
+      "type": "practice",
+      "description": "A 115-question concepts test on the whole course, Weeks 1–15, in outline order: jury secrecy, relevance and 403, the policy rules (407–411), character evidence, 404(b), and 413–415, impeachment and the rape shield, the hearsay definition, 801(d), and the 803–807 exceptions, the Confrontation Clause through Smith v. Arizona, completeness, Bruton, and the right to present a defense, lay and expert opinion through Daubert and Kumho Tire, authentication and the best evidence rule, and the lawyer-client, psychotherapist, and spousal privileges. Each question turns on a holding, an element, or a recent amendment, and its wrong choices are the dissents, overruled cases, and older rules students mix up. Five choices each. Tutor mode grades as you go; timed mode gives you 90 seconds a question. Every question has the rule, an analysis, and why each choice is right or wrong.",
+      "tags": ["MCQ", "conceptual", "FRE", "Confrontation Clause", "privileges", "Weeks 1–15"],
+      "questions": 115,
+      "order": 10
     }
   }
 }
