@@ -1,6 +1,6 @@
 {
   "title": "Sales and Leases",
-  "description": "Sales and Leases of Goods under UCC Articles 1 and 2, Weeks 1–8 (Sepinuck, Chapters 1–6). Covers which law governs, formation and the battle of the forms, the statute of frauds, warranties and disclaimers, gap fillers, delivery and risk of loss, remedies, the parol evidence rule, assignment and delegation, repudiation, and excuse.",
+  "description": "Sales and Leases of Goods under UCC Articles 1, 2 and 2A, Weeks 1–14 (Sepinuck, Chapters 1–7, 9 and 11). Covers which law governs, formation and the battle of the forms, the statute of frauds, warranties and disclaimers, gap fillers, delivery and risk of loss, the parol evidence rule, assignment and delegation, repudiation, excuse, buyer's and seller's remedies, rejection, cure and revocation, privity, and leases under Article 2A.",
   "icon": "statue-angel-raphael",
   "accent": "#3f6b4a",
   "order": 4,
@@ -12,8 +12,8 @@
       "type": "outline",
       "theme": "structured",
       "outsideColor": "64748B",
-      "description": "Condensed outline of Weeks 1–8 for the Week 10 assessment. 16 sections cover the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse, with worked problems. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides.",
-      "tags": ["UCC Article 2", "outline", "sales", "warranties", "Weeks 1–8"],
+      "description": "Condensed outline of Weeks 1–14 for the final exam. 35 sections. Sections I–XVI cover Weeks 1–8: the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse. Sections XVII–XXXV follow the syllabus through Week 14: buyer's remedies, rejection, cure, acceptance and revocation, privity, seller's remedies, Article 2A leases and finance leases, and final-exam checklists, with every assigned problem worked. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides. Slides on file end at Week 8, so later sections rest on the casebook and statutes.",
+      "tags": ["UCC Article 2", "UCC Article 2A", "outline", "sales", "leases", "warranties", "remedies", "Weeks 1–14"],
       "order": 1
     },
     "Sales_and_Leases_Weighted_Practice_Exams.html": {
@@ -74,8 +74,8 @@
       "slug": "sales-and-leases-statutory-supplement",
       "title": "Sales and Leases Statutory Supplement",
       "type": "document",
-      "description": "Every UCC section the Weeks 1-8 outline and the practice sets cite (100 sections from Articles 1, 2, and 9), from Selected Commercial Statutes, 2026 edition, with the Official Comments. Section text is summarized in the statute's own key words and each comment is condensed; comments the outline or the practice questions rely on are marked. Search by word, phrase, or cite (type 2-207 to go straight there), filter by any of the 16 outline sections, follow cross-references between sections, and open or close all the comments at once.",
-      "tags": ["UCC Article 2", "statutes", "official comments", "reference", "Weeks 1-8"],
+      "description": "Every UCC section the Weeks 1-14 outline and the practice sets cite (182 sections from Articles 1, 2, 2A, and 9), from Selected Commercial Statutes, 2026 edition, with the Official Comments. Section text is summarized in the statute's own key words and each comment is condensed; comments the outline or the practice questions rely on are marked. Search by word, phrase, or cite (type 2-207 to go straight there), filter by any of the outline's first 34 sections, follow cross-references between sections, and open or close all the comments at once.",
+      "tags": ["UCC Article 2", "UCC Article 2A", "statutes", "official comments", "reference", "Weeks 1-14"],
       "order": 5
     },
     "Sales_and_Leases_Focused_Practice_Exams.html": {

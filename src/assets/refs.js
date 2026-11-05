@@ -73,7 +73,7 @@
   const textOf = (html) => { const d = document.createElement('div'); d.innerHTML = html; return d.textContent; };
 
   // Cites like "§ 2-207(2)(b)", "1-201(b)(20)", "UCC 2-314"; only sections in the index link.
-  const CITE = /(?:§§?\s*)?\b([129])[-‑–](\d{3}[A-Z]?)(?!\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g;
+  const CITE = /(?:§§?\s*)?\b([129]A?)[-‑–](\d{3}[A-Z]?)(?!\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g;
   const uccCites = (text) => [...text.matchAll(CITE)].map((m) => ({ at: m.index, end: m.index + m[0].length, id: `${m[1]}-${m[2]}`, sub: m[3] }));
   // Federal Rules of Evidence: "Rule 404(b)", "FRE 803(6)", "Fed. R. Evid. 403", lists ("Rules 607,
   // 608, and 609", "Rules 413–415"), a bare number with a subdivision ("404(b)"), and a bare
@@ -103,7 +103,7 @@
     ucc: {
       cites: uccCites, sign: '§', name: (id) => `§ ${id}`, badge: (id) => `UCC § ${id}`, group: 'Statutes', doc: 'the supplement',
       hint: 'Search: 2-207, perfect tender, Roth Steel',
-      prefix: (q) => { const m = q.match(/^\s*(?:§\s*)?([129])[-‑–\s]?(\d{1,3})\s*$/); return m && `${m[1]}-${m[2]}`; },
+      prefix: (q) => { const m = q.match(/^\s*(?:§\s*)?([129]a?)[-‑–\s]?(\d{1,3})\s*$/i); return m && `${m[1].toUpperCase()}-${m[2]}`; },
     },
     fre: {
       cites: freCites, sign: 'R', name: (id) => `Rule ${id}`, badge: (id) => `FRE ${id}`, group: 'Rules', doc: 'the Rules',
