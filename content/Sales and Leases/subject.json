@@ -16,59 +16,23 @@
       "tags": ["UCC Article 2", "UCC Article 2A", "outline", "sales", "leases", "warranties", "remedies", "Weeks 1–14"],
       "order": 1
     },
-    "Sales_and_Leases_Weighted_Practice_Exams.html": {
-      "slug": "sales-and-leases-weighted-practice-exams",
-      "title": "Sales and Leases Weighted Practice Exams",
-      "type": "practice",
-      "description": "Ten practice exams (150 new questions) for the Week 10 assessment, covering all of Weeks 1–8 with each topic's share set by how testable it is. Tier 1 gets 66 questions on the bright-line rules most likely to be tested: risk of loss and identification, implied warranties, express warranties, title and entrustment, and warranty disclaimers. Tier 2 gets 64: tender, inspection, acceptance and payment, course of performance and waiver, modification, quantity and price, the parol evidence rule, assignment and delegation, insecurity and repudiation, excuse, and remedy limits. Tier 3 gets 20: scope, formation and § 2-207, the statute of frauds, good faith and variation by agreement, and termination. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format, mixing short hypos that ask who wins and why with \"Which of the following is NOT…\" questions. Wrong answers are built from the near-miss rules she tests, and some questions offer \"None of the above,\" which is sometimes the answer. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
-      "tags": ["UCC Article 2", "MCQ", "practice exam", "weighted", "Week 10"],
-      "questions": 150,
-      "order": 1.5
-    },
-    "Sales_and_Leases_Acronym_Exams.html": {
-      "slug": "sales-and-leases-acronym-exams",
-      "title": "Sales and Leases Acronym Exams",
-      "type": "practice",
-      "description": "Four practice exams (60 new questions) on just the acronyms: the shipping and delivery terms and the course shorthand. 40 questions cover §§ 2-319 to 2-324 and how each term moves the risk of loss: F.O.B. place of shipment and destination, F.O.B. vessel and F.A.S., C.I.F. and C. & F., ex-ship, \"no arrival, no sale,\" C.O.D. and payment against documents, and what happens when there is no term or one side is in breach. The other 20 test the outline's shorthand: SOF, PER, NOM, CoP/CoD/UoT, LD, SOL, GFP and BIOCB, HTA and LOC (with PDM), DTW and CORS (Mathis), and UETA signatures. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format, mixing short hypos that ask who bears the loss with \"Which of the following is NOT…\" questions. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
-      "tags": ["UCC Article 2", "MCQ", "practice exam", "shipping terms", "risk of loss"],
-      "questions": 60,
-      "order": 1.6
-    },
-    "Sales_and_Leases_Complete_Coverage_Exams.html": {
-      "slug": "sales-and-leases-complete-coverage-exams",
-      "title": "Sales and Leases Complete Coverage Exams",
-      "type": "practice",
-      "description": "31 quick-fire practice exams (465 new questions) that together test every rule and concept from Weeks 1–8. A checklist of 446 rules and concepts, built from every slide in the Week 1 through Week 8 decks, the Sepinuck casebook (cases, notes and assigned problems) and the statutory supplement (UCC text and Official Comments), was used to write them, and every item on it is tested at least once. The questions are short: one- or two-line rule questions and mini-hypos, many of them \"Which of the following is NOT…\" questions that test four or five rules at once. Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format and samples the whole course, from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, repudiation and excuse. Wrong answers are the near misses: the common-law rule the UCC changed, the wrong number or section, merchant vs. non-merchant, the rule from the next section over. Some questions offer \"None of the above\" or \"All of the above,\" and sometimes that is the answer. The 23 questions that change the facts of another question (\"Same contract, but…\") name the question they build on and show its facts, so shuffling or filtering never leaves you without them. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or by any of 24 topic areas, shuffle the questions, and retry the ones you missed.",
-      "tags": ["UCC Article 2", "MCQ", "practice exam", "rule review", "Weeks 1–8"],
-      "questions": 465,
-      "order": 1.7
-    },
     "Sales_and_Leases_Bar_Questions.html": {
       "slug": "sales-and-leases-bar-questions",
       "title": "Sales and Leases Bar Questions",
       "type": "practice",
-      "description": "272 bar-style multiple-choice questions covering every rule, case, and assigned problem in the Weeks 1–8 outline, across 18 topics from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, repudiation, and excuse. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
-      "tags": ["UCC Article 2", "MCQ", "bar prep", "application", "Weeks 1–8"],
-      "questions": 272,
+      "description": "444 bar-style multiple-choice questions on Weeks 1–14: the rules, cases, and assigned problems in the outline, from which law governs and the battle of the forms through warranties, risk of loss, disclaimers, buyer's and seller's remedies, privity, and leases under Article 2A. Each question sets out new facts, and every answer choice has its own explanation. Variations change one fact to test whether the result changes. Filter by topic, shuffle the questions or answers, retry the ones you missed, and use the coverage map to find the questions for any outline item.",
+      "tags": ["UCC Article 2", "UCC Article 2A", "MCQ", "bar prep", "application", "Weeks 1–14"],
+      "questions": 444,
       "order": 2
     },
     "Sales_and_Leases_Practice_Exams.html": {
       "slug": "sales-and-leases-practice-exams",
       "title": "Sales and Leases Practice Exams",
       "type": "practice",
-      "description": "19 practice exams (285 questions) for the Week 10 assessment, written in the style of Professor Richardson's sample exam: 15 stand-alone, five-choice questions each, mixing rule questions (\"Which of the following is NOT…\") with short hypos that ask who wins and why, plus \"None of the above\" and \"All of the above\" choices that are sometimes the answer. Each exam samples the whole Weeks 1–8 condensed outline, and together they cover all 16 sections: which law governs, formation and § 2-207, the statute of frauds, good faith and modification, express and implied warranties, title, quantity and price, delivery and acceptance, risk of loss, disclaimers, remedies, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
-      "tags": ["UCC Article 2", "MCQ", "practice exam", "Week 10"],
-      "questions": 285,
+      "description": "58 cumulative practice exams (870 questions) for the final, covering all of Weeks 1–14 and all 35 sections of the course outline, from which law governs and the battle of the forms through warranties, risk of loss, buyer's and seller's remedies, privity, and leases under Article 2A. Each exam follows Professor Richardson's sample-exam format: 15 stand-alone, five-choice questions that mix rule questions (“Which of the following is NOT…”) with short hypos asking who wins and why, plus “None of the above” and “All of the above” choices that are sometimes the answer. Every exam samples the whole course, and about 40% of the questions come from the Weeks 8–14 remedies and lease units, including integrated hypos and damages calculations. Every choice has its own explanation. Use Study mode to check answers as you go, or Exam mode to grade a full exam, and pick a topic to drill one outline section by week.",
+      "tags": ["UCC Article 2", "MCQ", "practice exam", "Final exam"],
+      "questions": 870,
       "order": 3
-    },
-    "Sales_and_Leases_Practice_Exams_II.html": {
-      "slug": "sales-and-leases-practice-exams-ii",
-      "title": "Sales and Leases Practice Exams II",
-      "type": "practice",
-      "description": "A second set of 14 practice exams (210 new questions) for the Week 10 assessment, in the same style as the first: Professor Richardson's sample-exam format, with 15 stand-alone, five-choice questions per exam that mix short hypos asking who wins and why with rule questions (\"Which of the following is NOT…\"), plus \"None of the above\" and \"All of the above\" choices that are sometimes the answer. Every fact pattern is new. The cases are tested by application, not recall: instead of asking what happened in Daitom, Casazza, Market Street, Roth Steel, Rogath, Razor, Top of Iowa, or the note cases, each question gives new facts that track the case (a pump buyer's purchase order that reserves its remedies, a lumber mill that threatens to stop shipping, a lamp buyer warned by an appraiser, an e-bike warranty sealed in the box, a farm that goes silent in an inverted market) and asks you to apply its rule. Each exam samples the whole Weeks 1–8 condensed outline, and together they cover all 16 sections and the assigned problems. Every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or outline section, shuffle the questions, and retry the ones you missed.",
-      "tags": ["UCC Article 2", "MCQ", "practice exam", "application", "Week 10"],
-      "questions": 210,
-      "order": 4
     },
     "Sales_and_Leases_Statutory_Supplement.html": {
       "slug": "sales-and-leases-statutory-supplement",
@@ -77,21 +41,6 @@
       "description": "Every UCC section the Weeks 1-14 outline and the practice sets cite (182 sections from Articles 1, 2, 2A, and 9), from Selected Commercial Statutes, 2026 edition, with the Official Comments. Section text is summarized in the statute's own key words and each comment is condensed; comments the outline or the practice questions rely on are marked. Search by word, phrase, or cite (type 2-207 to go straight there), filter by any of the outline's first 34 sections, follow cross-references between sections, and open or close all the comments at once.",
       "tags": ["UCC Article 2", "UCC Article 2A", "statutes", "official comments", "reference", "Weeks 1-14"],
       "order": 5
-    },
-    "Sales_and_Leases_Focused_Practice_Exams.html": {
-      "slug": "sales-and-leases-focused-practice-exams",
-      "title": "Sales and Leases Focused Practice Exams",
-      "type": "practice",
-      "description": "Four practice exams (60 new questions) on just four topics: assignment and delegation (§ 2-210), liquidated damages (§ 2-718), warranties (§§ 2-312 to 2-318), and limited remedies (§ 2-719). Each exam has 15 stand-alone, five-choice questions in Professor Richardson's sample-exam format and covers all four topics, with warranties weighted most heavily: express and implied warranties, title and infringement, disclaimers, cumulation, and privity. Every fact pattern is new, cases are tested by application rather than recall, and every choice has its own explanation. Study mode checks each answer as you pick it; Exam mode lets you answer a full exam and then grade it. Filter by exam or topic, shuffle the questions, and retry the ones you missed.",
-      "tags": [
-        "UCC Article 2",
-        "MCQ",
-        "practice exam",
-        "warranties",
-        "remedies"
-      ],
-      "questions": 60,
-      "order": 6
     },
     "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
       "publish": false,
