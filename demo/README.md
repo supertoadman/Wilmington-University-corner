@@ -80,10 +80,11 @@ API is computed from the events:
 
 * base questions ≈ 74% correct, one-fact variations ≈ 51%
 * each question has a "trap magnet" wrong choice, preferring the trap that dominates its rule
-* end of course ≈ 73% → six months later ≈ 52% unreviewed vs ≈ 66% with spaced review
+* end of course ≈ 74% → six months later ≈ 55% unreviewed vs ≈ 70% with spaced review
 * bar-only topics trail taught ones in all 7 subjects
-* 12 at-risk 3Ls (rushing, collapsing on variations, or gone quiet) plus Jordan; Maya is strong but
-  weak on § 2-207 variations with a nine-day streak
+* 12 at-risk 3Ls (rushing, collapsing on variations, or gone quiet) plus Jordan; the roster's rules
+  find them along with a few students whose numbers are simply weak (16 flagged in all). Maya is
+  strong but weak on § 2-207 variations, with a nine-day streak
 * 5 questions with an inverted discrimination (stronger students miss them) are seeded `flagged`;
   their point-biserial correlation comes out far below −0.05 from the data (about −0.3 to −0.5),
   alongside a dozen items that barely discriminate and, as in real item banks, a few borderline
@@ -133,7 +134,32 @@ case and casebook-problem cites and adds a **Look up** button that opens the doc
 indexes it loads are built by `refIndex()` from `scripts/lib/refs.mjs`, from the same outlines and
 statutory supplements the site uses — for all 7 subjects.
 
-## Live compiler mode
+## The compiler
+
+`compiler.mjs` turns material into a package of three artifacts and checks it before anything reaches
+students:
+
+* **Master rule graph**: rules with ordered elements, the traps each one sets (the same eight
+  families), statute and case cites, a bar overlay (MEE/MBE, how often tested) and `depends_on` edges.
+* **Student outline**: the library's structured-outline markup (section bands, RULE / ROADMAP / TRAP /
+  CASE callouts, rainbow `el-N` elements, comparison tables), styled by `public/outline.css`.
+* **Six bar questions**: three base questions and three one-fact variations, every wrong choice
+  tagged with its trap.
+* **Deterministic verification**: every cite in the graph, outline and questions must match the
+  package's table of authorities (pure string matching, no model), plus structural checks (exactly one
+  key, a trap on every wrong choice, a base for every variation, no dangling edges). A run with
+  structural problems cannot be published; the workbench can plant a fake cite to show the check
+  working.
+* **Publish**: one transaction inserts the rules (scoped `course` / `both` / `bar_only`) and questions
+  into the live bank, creating the subject if it is new. A package publishes once.
+
+The two $0 showcase packets (`fixtures/sample_packet.mjs`) are *Corporate Law: MBCA fundamental
+changes with the MEE overlay* (publishes as a new `corporate-law` subject) and *UCC § 2-102 hybrid
+transactions and § 2-209 modification with the common-law comparison* (publishes into Sales and
+Leases). Their authority tables paraphrase the MBCA (2016 numbering), the UCC, the Restatement and
+the cases. They are teaching aids: have a subject-matter expert check them before relying on them.
+
+### Live compiler mode
 
 Live mode sends pasted material to the Anthropic Messages API with `fetch`. It uses
 `ANTHROPIC_API_KEY` from the server's environment, or a key typed into the workbench, which the page

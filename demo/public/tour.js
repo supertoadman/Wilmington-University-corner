@@ -31,26 +31,36 @@
     {
       path: '/compiler', as: ACTORS.adm, dwell: 17, title: '1 · Start from any course material',
       say: 'A professor’s outline, notes or a statute excerpt goes in. Here is a $0 showcase packet: Corporate Law — MBCA fundamental changes, with the MEE bar overlay. No API key needed.',
-      target: ['[data-stage="ingest"]', '.ingest', '.choice-cards', '#ingest', 'main .card'],
-      act: async () => { await click(/showcase/i, '.choice-card, .mode-card, [role=tab], button, .tab', 150); },
+      target: ['#cmp-stage-ingest .packets', '#cmp-stage-ingest .card', '#cmp-stage-ingest'],
+      act: async () => {
+        if (!$('#cmp-stage-ingest') || $('#cmp-stage-ingest').hidden) $('#cmp-stepper [data-stage="ingest"]')?.click();
+        await until(() => $('.packets .packet'), 6000);
+        const corp = [...document.querySelectorAll('.packets .packet')].find((p) => /MBCA|corporate/i.test(p.textContent));
+        corp?.click();
+      },
     },
     {
       path: '/compiler', as: ACTORS.adm, dwell: 16, title: '2 · A master rule graph',
       say: 'In a second the material becomes a rule graph: every rule with its elements, doctrinal traps, citations, and whether the bar tests it beyond the syllabus.',
-      target: ['[data-stage="graph"]', '#graph', '.graph', 'svg.graph', '.rule-graph', 'main svg'],
-      act: async () => { await click(/compile instantly|compile|run showcase/i, 'button, .btn', 400); await until(() => byText(/master rule graph|rule graph/i, '[role=tab], .step, .stage-tab, button, a'), 7000); await click(/master rule graph|rule graph/i, '[role=tab], .step, .stage-tab, button, a', 500); },
+      target: ['#cmp-stage-graph svg', '#cmp-stage-graph .card', '#cmp-stage-graph'],
+      act: async () => {
+        const ready = () => $('#cmp-stepper [data-stage="graph"]:not([disabled])');
+        if (!ready() || !/MBCA|corporate/i.test($('#cmp-runbar')?.textContent || '')) { $('button[data-act="compile-showcase"]')?.click(); await wait(300); }
+        (await until(ready, 9000))?.click();
+        await wait(400);
+      },
     },
     {
       path: '/compiler', as: ACTORS.adm, dwell: 15, title: '3 · A student outline with rainbow elements',
       say: 'The same graph renders as a student outline: RULE, ROADMAP, TRAP and CASE callouts, each rule’s elements colour-coded so students can see what to memorise.',
-      target: ['.outline-doc', '[data-stage="outline"]', '#outline'],
-      act: async () => { await click(/student outline/i, '[role=tab], .step, .stage-tab, button, a', 500); },
+      target: ['#cmp-stage-outline .outline-doc', '#cmp-stage-outline'],
+      act: async () => { (await until(() => $('#cmp-stepper [data-stage="outline"]:not([disabled])'), 6000))?.click(); await wait(400); },
     },
     {
       path: '/compiler', as: ACTORS.adm, dwell: 17, title: '4 · A bar question factory, with citation checks',
       say: 'Six bar-style questions — base plus one-fact variations — each wrong answer tagged with its trap. A deterministic checker confirms every citation against the source. One click publishes the package straight into the live question bank.',
-      target: ['[data-stage="questions"]', '#questions', '.q-card', '.question-card', '.publish', 'button.gold'],
-      act: async () => { await click(/question factory|bar question/i, '[role=tab], .step, .stage-tab, button, a', 500); },
+      target: ['#cmp-stage-factory', '#cmp-runbar'],
+      act: async () => { (await until(() => $('#cmp-stepper [data-stage="factory"]:not([disabled])'), 6000))?.click(); await wait(400); },
     },
     {
       path: '/student', as: ACTORS.maya, dwell: 17, title: '5 · Maya: strong, but one fact flips her',
@@ -239,7 +249,8 @@
     try { await step.act?.(); } catch (e) { console.warn('tour step action failed', e); }
     if (my !== token) return;
     await wait(250);
-    targetEl = find(step.target);
+    targetEl = step.target?.length ? await until(() => find(step.target), 4000) : null;
+    if (my !== token) return;
     if (targetEl) { targetEl.scrollIntoView({ block: 'center', behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth' }); await wait(450); }
     place();
   }

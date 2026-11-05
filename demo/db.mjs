@@ -9,7 +9,7 @@ export const DEMO_DIR = path.dirname(fileURLToPath(import.meta.url));
 export const DATA_DIR = path.join(DEMO_DIR, 'data');
 export const DEFAULT_DB = path.join(DATA_DIR, 'scale_demo.sqlite');
 // Bump when the schema or the seeded data changes shape: an older file is rebuilt on boot.
-export const SCHEMA_VERSION = 3;
+export const SCHEMA_VERSION = 4;
 
 export const SCHEMA = `
 CREATE TABLE IF NOT EXISTS meta (key TEXT PRIMARY KEY, value TEXT);

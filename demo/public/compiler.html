@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compiler · Wilmington Law</title>
+<link rel="stylesheet" href="/public/shell.css">
+<link rel="stylesheet" href="/public/outline.css">
+<link rel="stylesheet" href="/public/compiler.css">
+</head>
+<body data-portal="compiler">
+<main class="wrap cmp">
+  <header class="page-head">
+    <div class="grow">
+      <span class="eyebrow">Material → Master Rule Graph → Student Outline → Bar Question Factory</span>
+      <h1>The Compiler</h1>
+      <p class="lede">Paste a professor’s notes, or load a prepared packet. The compiler extracts the rules, builds the student outline, drafts bar questions with one-fact variations, and checks every citation against a table of authorities before anything reaches students.</p>
+    </div>
+  </header>
+
+  <nav class="stepper" id="cmp-stepper" aria-label="Compiler stages"></nav>
+  <div class="runbar" id="cmp-runbar" hidden></div>
+
+  <section class="stage" id="cmp-stage-ingest" aria-label="Stage 1: Ingest"></section>
+  <section class="stage" id="cmp-stage-graph" aria-label="Stage 2: Master rule graph" hidden></section>
+  <section class="stage" id="cmp-stage-outline" aria-label="Stage 3: Student outline" hidden></section>
+  <section class="stage" id="cmp-stage-factory" aria-label="Stage 4: Bar question factory" hidden></section>
+  <div class="sr-only" id="cmp-live" role="status" aria-live="polite"></div>
+</main>
+<script src="/public/shell.js" defer></script>
+<script src="/public/compiler.js" defer></script>
+</body>
+</html>

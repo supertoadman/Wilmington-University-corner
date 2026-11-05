@@ -29,7 +29,9 @@
 .outline-doc h1, .outline-doc h2, .outline-doc h3, .outline-doc h4 { color: var(--s-ink); scroll-margin-top: calc(var(--bar-h) + 16px); }
 .outline-doc h3 { font-size: 18px; margin: 1.5em 0 .4em; font-family: var(--font-sans); font-weight: 600; }
 .outline-doc h4 { font-family: var(--font-sans); font-weight: 600; margin: 1.1em 0 .3em; }
-.outline-doc .doc-masthead { margin: 0 0 1.2em; padding: 22px 26px; border-radius: var(--radius); background: var(--ink); color: #fbf9f4; position: relative; }
+.outline-doc .doc-masthead { margin: 0 0 1.2em; padding: 22px 26px; border-radius: var(--radius); background: #12213a; color: #fbf9f4; position: relative; border: 1px solid rgba(214,171,85,.35); border-bottom: 3px solid #d6ab55; }
+:root[data-theme="dark"] .outline-doc .doc-masthead { background: #0e1828; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .outline-doc .doc-masthead { background: #0e1828; } }
 .outline-doc .doc-masthead .doc-title { color: #fbf9f4; margin: 0 0 .3em; font-size: clamp(24px, 3.4vw, 34px); }
 .outline-doc .doc-subtitle, .outline-doc .doc-meta { margin: .2em 0; opacity: .85; font-size: 14px; }
 .outline-doc .part-band { margin: 2.4em 0 1em; padding: 18px 0; text-align: center; border-top: 1px solid var(--s-line); border-bottom: 1px solid var(--s-line); }
