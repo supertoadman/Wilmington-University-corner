@@ -20,6 +20,7 @@ import { addHeadingIds as idHeadings } from './lib/outline.mjs';
 import { mp3Duration } from './lib/audio.mjs';
 import { refIndex } from './lib/refs.mjs';
 import { buildGame } from './game.mjs';
+import { buildSurvivors } from './survivors.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CONTENT = path.join(ROOT, 'content');
@@ -670,13 +671,16 @@ write('llms-full.txt', docs.map((d) =>
 
 // The game: question data, art, and its page
 const game = await buildGame({ subjects, P, write, root: ROOT, dist: DIST });
+// Crypt Survivors: its code and sprite pack (its questions are the game's play/data/).
+const survivorsPack = game.total ? buildSurvivors({ root: ROOT, dist: DIST, write }) : null;
 
 // Pages
-const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game, refsVersion };
+const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game, refsVersion, survivors: survivorsPack };
 
 write('index.html', T.home(ctx));
 write('play/index.html', T.play(ctx));
 if (game.total) write('shuffle/index.html', T.shuffle(ctx));
+if (game.total) write('survivors/index.html', T.survivors(ctx));
 write('library/index.html', T.library(ctx));
 write('contribute/index.html', T.contribute(ctx));
 write('404.html', T.notFound(ctx));
@@ -684,7 +688,7 @@ write('admin/index.html', T.admin(ctx)); // owner-only editor; deliberately left
 for (const s of subjects) write(P.subject(s) + 'index.html', T.subjectPage(ctx, s));
 for (const d of docs) write(P.doc(d) + 'index.html', T.docPage(ctx, d));
 
-const pageUrls = ['', 'library/', 'contribute/', 'play/', ...(game.total ? ['shuffle/'] : []), ...subjects.map(P.subject), ...docs.map(P.doc)];
+const pageUrls = ['', 'library/', 'contribute/', 'play/', ...(game.total ? ['shuffle/', 'survivors/'] : []), ...subjects.map(P.subject), ...docs.map(P.doc)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pageUrls
   .map((u) => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('sitemap.xml')}\n`);

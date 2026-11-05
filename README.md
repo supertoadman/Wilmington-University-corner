@@ -59,6 +59,15 @@ A variation (a question that changes the facts of another) carries a "Show the q
 
 Exam-style sets (such as the Agency & Partnership practice exams) can share one fact pattern across several questions (`h`, naming an entry in `HYPOS`; the game and Shuffle mode print it with each question), give the correct choice's index in `a`, and mark `fixed` a question whose choices refer to each other ("B and C", "None of the above"), so its choices keep their letters instead of being shuffled.
 
+## Crypt Survivors
+
+`/survivors/` (linked from the home page under Sanctum Run, and from each course page with practice sets) is a survival study game: hold a crypt of the restless dead for fifteen minutes while your weapons fire on their own. Every level-up stops the world for one question from the practice sets you picked (the same course + set checklist as Shuffle mode, with shuffle, missed-only and feedback-pacing options). A right answer lets you choose one of three boons: a new weapon, a weapon level, a relic, an evolution when a maxed weapon has its relic, or, every third answer in a row while corrupted, a Purify card. A wrong answer shows the right choice, the explanation and the outline section to review, then makes you choose one of three corruptions (Leaden Shackles, Rusted Edge, Fell Beacon…) that stack in a tray on the HUD. The run ends with a review of every missed question and a button to run just those.
+
+- **Questions** are the game's own data (`play/data/`, from `scripts/game.mjs`), so every practice set Sanctum Run can read shows up here with no extra step. A link ending in `?course=<slug>` picks that course's sets.
+- **Art** is a curated set of CC0 tiles from [crawl/tiles](https://github.com/crawl/tiles) in `Assets/survivors/tiles/` (list and paths in `Assets/survivors/tiles.json`, provenance in `Assets/survivors/LICENSE.md`). The build packs them into one atlas (`scripts/survivors.mjs`, with the PNG codec in `scripts/lib/png.mjs`); tints, hit flashes and corrupted variants are drawn at runtime. To change the list, edit `tiles.json` and run `node scripts/survivors-import.mjs <crawl-tiles>/releases/Nov-2015` (the script's header shows the sparse clone).
+- **Music** is the divine and corrupt score from `Assets/temple run/audio/`; combat sounds are synthesized in the browser.
+- **Code** is in `src/survivors/`: `defs.js` (weapons, relics, corruptions, enemies, waves), `logic.js` (the rules, as pure functions), `engine.js` (simulation and drawing), `game.js` (screens, questions, HUD). Add `?debug` to the URL to get `window.survivors`. Tests: `tests/survivors.test.mjs`.
+
 ## Editing titles and descriptions online
 
 Go to `/admin` on the live site (it isn't linked anywhere) to edit any document's title and description from a browser or phone. Sign in with a GitHub [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new):
@@ -100,6 +109,9 @@ scripts/build.mjs        static site generator
 scripts/game.mjs         game data: questions, outline sections, asset copy
 src/game/                Sanctum Run, the game at /play/
 Assets/temple run/       the game's art and audio pack (runtime files; masters stay local)
+scripts/survivors.mjs    Crypt Survivors' build step: sprite atlas and audio for /survivors/
+src/survivors/           Crypt Survivors, the game at /survivors/
+Assets/survivors/        its CC0 sprite tiles (from crawl/tiles) and their license
 scripts/serve.mjs        local preview server (mirrors the GitHub Pages base path)
 scripts/icons/           draws the icon set (npm run icons)
 src/templates.mjs        HTML templates for every page type
