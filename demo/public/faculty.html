@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Faculty Console · Wilmington Law</title>
+<link rel="stylesheet" href="/public/shell.css">
+<link rel="stylesheet" href="/public/faculty.css">
+</head>
+<body data-portal="faculty">
+<main>
+  <div class="wrap fac" id="app">
+    <header class="page-head fac-head">
+      <div class="grow">
+        <span class="eyebrow" id="fac-eyebrow">Faculty console</span>
+        <h1 id="fac-title"><span class="fac-dot" aria-hidden="true"></span><span id="fac-title-text">Loading your course…</span></h1>
+        <p class="lede" id="fac-lede">See where students lose points before your next lecture, and control exactly which topics they are drilled on.</p>
+      </div>
+    </header>
+
+    <nav class="rail" id="rail" aria-label="Course"></nav>
+
+    <section id="hero" class="hero-region" aria-label="Course summary" aria-busy="true"></section>
+
+    <div class="tabs fac-tabs" role="tablist" aria-label="Faculty tools" id="tabs">
+      <button class="tab" role="tab" id="tab-heatmap" data-tab="heatmap" aria-selected="true" aria-controls="panel-heatmap">Pre-Lecture Heatmap <span class="tab-count" id="cnt-heatmap"></span></button>
+      <button class="tab" role="tab" id="tab-scope" data-tab="scope" aria-selected="false" aria-controls="panel-scope" tabindex="-1">Syllabus vs. Bar Scope Matrix <span class="tab-count" id="cnt-scope"></span></button>
+      <button class="tab" role="tab" id="tab-flagged" data-tab="flagged" aria-selected="false" aria-controls="panel-flagged" tabindex="-1">Flagged Questions <span class="tab-count" id="cnt-flagged"></span></button>
+    </div>
+
+    <section id="panel-heatmap" class="panel" role="tabpanel" aria-labelledby="tab-heatmap" tabindex="-1"></section>
+    <section id="panel-scope" class="panel" role="tabpanel" aria-labelledby="tab-scope" tabindex="-1" hidden></section>
+    <section id="panel-flagged" class="panel" role="tabpanel" aria-labelledby="tab-flagged" tabindex="-1" hidden></section>
+  </div>
+</main>
+
+<!-- Rendered by faculty.js when a reteach drill is previewed; only the printed page shows it. -->
+<div class="print-only" id="print-root" aria-hidden="true"></div>
+
+<script src="/public/shell.js" defer></script>
+<script src="/public/faculty.js" defer></script>
+</body>
+</html>
