@@ -145,6 +145,8 @@ export function studentSession(db, p) {
 
   const where = [`q.subject_id IN (${marks(picked.length)})`, "q.status = 'approved'", `r.scope IN (${marks(SCOPE_SETS[scope].length)})`];
   const args = [...picked, ...SCOPE_SETS[scope]];
+  const rules = String(p.rules || '').split(',').map((r) => r.trim()).filter(Boolean).slice(0, 50);
+  if (rules.length) { where.push(`q.rule_node_id IN (${marks(rules.length)})`); args.push(...rules); }
   if (kind === 'base') where.push('q.is_variation = 0');
   if (kind === 'variation') where.push('q.is_variation = 1');
   let note = null;
@@ -164,6 +166,7 @@ export function studentSession(db, p) {
     // Fall back to a mixed set rather than an empty quiz.
     const w2 = where.filter((w) => !/rule_node_id IN|q\.id IN/.test(w));
     const a2 = [...picked, ...SCOPE_SETS[scope]];
+    if (rules.length) note = 'Those rules have no questions in this scope, so this is a mixed set.';
     pool = db.prepare(sql.replace(where.join(' AND '), w2.join(' AND '))).all(userId, ...a2);
     note = note || 'No questions matched that focus, so this is a mixed set.';
   }
@@ -188,7 +191,7 @@ export function studentSession(db, p) {
       choices: ordered.map((c) => ({ index: c.choice_index, text: c.choice_text, peer_pick_pct: pc.pcts[c.choice_index] })),
     };
   });
-  return { user_id: userId, filters: { subjects: picked, scope, kind, focus, limit }, pool: total, count: questions.length, note, questions };
+  return { user_id: userId, filters: { subjects: picked, scope, kind, focus, limit, rules }, pool: total, count: questions.length, note, questions };
 }
 
 export function recordAttempt(db, b, now = Date.now()) {

@@ -24,6 +24,8 @@
     { id: 'factory', n: 4, label: 'Bar Question Factory', short: 'Questions', sub: 'Base + variations' },
   ];
   const MAX_CHARS = 60000;
+  // The student builder, preset to the course a package was published into.
+  const studentHref = (subject) => `/student?as=stu-maya&tab=builder&scope=all${subject ? `&subjects=${encodeURIComponent(subject)}` : ''}`;
   const LETTERS = 'ABCDEF';
   const reduced = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
@@ -101,7 +103,7 @@
         </div>
       </div>
       <div class="rb-actions no-print">
-        ${published ? `<a class="btn" href="/student?as=stu-maya">Open in Student portal</a>` : `<button type="button" class="btn gold" data-act="publish"${block ? ' aria-disabled="true"' : ''} ${block ? `aria-describedby="cmp-pub-why"` : ''}>Publish Package to Live Question Bank</button>`}
+        ${published ? `<a class="btn" href="${esc(studentHref(run.subject_id))}">Open in Student portal</a>` : `<button type="button" class="btn gold" data-act="publish"${block ? ' aria-disabled="true"' : ''} ${block ? `aria-describedby="cmp-pub-why"` : ''}>Publish Package to Live Question Bank</button>`}
         <button type="button" class="btn ghost sm" data-act="new">New compile</button>
       </div>
       ${block && !published ? `<p class="rb-why" id="cmp-pub-why">${esc(block)}</p>` : ''}`;
@@ -634,7 +636,7 @@
       ${verifyCard(v)}
       <div class="pairs">${pairsHtml()}</div>
       <section class="card cta"><div><h3>Ready for students?</h3><p class="muted">Publishing adds ${run.master_nodes.length} rules and ${qs.length} approved questions to the live bank. Students see them at once in their practice sets.</p></div>
-        <div class="cta-actions">${run.status === 'published' ? '<a class="btn" href="/student?as=stu-maya">Open in Student portal</a>' : `<button type="button" class="btn gold" data-act="publish"${publishBlock(run) ? ' aria-disabled="true"' : ''}>Publish Package to Live Question Bank</button>${publishBlock(run) ? `<small class="hint">${esc(publishBlock(run))}</small>` : ''}`}</div></section>`;
+        <div class="cta-actions">${run.status === 'published' ? `<a class="btn" href="${esc(studentHref(run.subject_id))}">Open in Student portal</a>` : `<button type="button" class="btn gold" data-act="publish"${publishBlock(run) ? ' aria-disabled="true"' : ''}>Publish Package to Live Question Bank</button>${publishBlock(run) ? `<small class="hint">${esc(publishBlock(run))}</small>` : ''}`}</div></section>`;
     void qCites;
     if (state.focusQ != null) {
       const card = $(`.qcard[data-q="${state.focusQ}"]`);
@@ -761,7 +763,7 @@
     return `<div class="pub-ok"><div class="big-check" aria-hidden="true">✓</div><h3>Published</h3>
       <p>${r.rules_inserted} rules and ${r.questions_inserted} questions are now live in <b>${esc(r.subject_title || r.subject_id)}</b>${r.created_subject ? ' (a new subject)' : ''}.</p>
       ${r.citation_warnings ? `<p class="muted small">${r.citation_warnings} flagged citation${r.citation_warnings > 1 ? 's were' : ' was'} published as they stood.</p>` : ''}
-      <div class="pub-links"><a class="btn primary" href="/student?as=stu-maya">Open in Student portal</a>
+      <div class="pub-links"><a class="btn primary" href="${esc(studentHref(r.subject_id))}">Open in Student portal</a>
         <a class="btn" href="/faculty?as=fac-richardson&amp;subject=${encodeURIComponent(r.subject_id)}">Review ${esc(r.subject_title || r.subject_id)} in the Faculty portal</a></div>
       <p class="muted small">Reload the Student portal if it is already open so it picks up the new questions.</p></div>`;
   }

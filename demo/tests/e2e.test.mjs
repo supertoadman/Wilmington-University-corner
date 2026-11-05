@@ -220,7 +220,7 @@ test('the showcase compiler publishes a package into the live question bank', as
   assert.equal((await api(`/api/compiler/runs/${r.id}`)).body.status, 'published');
 });
 
-test('headless browser smoke test (skipped without Playwright)', async (t) => {
+test('in the browser: every portal loads and its key interaction works (skipped without Playwright)', async (t) => {
   let playwright;
   try { playwright = createRequire(import.meta.url)('playwright'); } catch { return t.skip('playwright is not installed'); }
   let browser;
@@ -243,13 +243,63 @@ test('headless browser smoke test (skipped without Playwright)', async (t) => {
       assert.ok(await page.locator('.persona-btn .who b').textContent());
       await page.close();
     }
-    // The student portal: a question card gets the library's reference popup.
+    // Student: a quiz card gets the library's Look up drawer, and answering records a live attempt.
     const page = await ctx.newPage();
     watch(page, 'student-quiz');
-    await page.goto(`${base}/student?as=stu-maya`, { waitUntil: 'networkidle' });
-    const hasAfter = await page.evaluate(() => typeof window.Demo?.user?.id === 'string');
-    assert.ok(hasAfter);
-    await page.close();
+    await page.goto(`${base}/student?as=stu-maya&tab=builder&subjects=evidence&scope=all`, { waitUntil: 'networkidle' });
+    await page.waitForSelector('#bld-start:not([disabled])', { timeout: 15000 });
+    await page.click('#bld-start');
+    const card = page.locator('article.sq[data-course="evidence"]').first();
+    await card.waitFor({ timeout: 15000 });
+    await card.locator('.rx-look').waitFor({ timeout: 15000 });
+    await card.locator('.rx-look').click();
+    await page.locator('.rx-panel:not([hidden])').waitFor({ timeout: 15000 });
+    await page.keyboard.press('Escape');
+    const answered = page.waitForResponse((r) => r.url().endsWith('/api/student/attempts') && r.request().method() === 'POST');
+    await card.locator('.opt').first().click();
+    assert.equal((await answered).status(), 200, 'the answer is recorded');
+
+    // Faculty: hiding a rule in the scope matrix shrinks the live student-view counter.
+    const fac = await ctx.newPage();
+    watch(fac, 'faculty-scope');
+    await fac.goto(`${base}/faculty?as=fac-richardson#scope`, { waitUntil: 'networkidle' });
+    const counter = fac.locator('[data-pool="course"] .big');
+    await fac.waitForFunction(() => /\d/.test(document.querySelector('[data-pool="course"] .big')?.textContent || ''), null, { timeout: 15000 });
+    const before = await counter.textContent();
+    await fac.getByRole('button', { name: 'Expand all' }).click();
+    const row = fac.locator('.mx-row[data-scope="both"]:visible').first();
+    const ruleId = await row.getAttribute('data-rule');
+    const patched = fac.waitForResponse((r) => r.url().includes('/api/faculty/rules/') && r.request().method() === 'PATCH');
+    await row.locator('button[data-scope="hidden"]').click();
+    assert.equal((await patched).status(), 200);
+    await fac.waitForFunction((b) => { const t = document.querySelector('[data-pool="course"] .big')?.textContent; return t && t !== b && /\d/.test(t); }, before, { timeout: 15000 });
+    const restore = await api(`/api/faculty/rules/${enc(ruleId)}`, { method: 'PATCH', body: { scope: 'both' } });
+    assert.equal(restore.status, 200);
+
+    // Dean: a #q= deep link opens the SME editor on that item.
+    const flagged = (await api('/api/dean/overview')).body.psychometrics.alerts.find((a) => a.status === 'flagged');
+    const dean = await ctx.newPage();
+    watch(dean, 'dean-editor');
+    await dean.goto(`${base}/dean?as=dean-carter#q=${enc(flagged.question_id)}`, { waitUntil: 'networkidle' });
+    await dean.locator('.aq-editor:not([hidden]) textarea').first().waitFor({ timeout: 15000 });
+
+    // Compiler: a showcase packet compiles into a rule graph in the browser.
+    const cmp = await ctx.newPage();
+    watch(cmp, 'compiler');
+    await cmp.goto(`${base}/compiler?as=adm-ta`, { waitUntil: 'networkidle' });
+    await cmp.locator('.packets .packet').first().click();
+    await cmp.click('button[data-act="compile-showcase"]');
+    await cmp.locator('#cmp-stepper [data-stage="graph"]:not([disabled])').waitFor({ timeout: 15000 });
+    await cmp.locator('#cmp-stepper [data-stage="graph"]').click();
+    await cmp.locator('#cmp-stage-graph svg').first().waitFor({ timeout: 15000 });
+
+    // The guided pitch starts from any portal and opens on the compiler.
+    await page.click('.demo-bar [data-tour]');
+    await page.waitForURL(/\/compiler/, { timeout: 15000 });
+    await page.locator('.tour-card [data-title]').waitFor({ timeout: 15000 });
+    assert.match(await page.locator('.tour-card [data-title]').textContent(), /^1 · /);
+    await page.locator('.tour-card [data-exit]').click();
+    for (const pg of [page, fac, dean, cmp]) await pg.close();
     assert.deepEqual(issues, [], issues.join('\n'));
   } finally { await browser.close(); }
 });

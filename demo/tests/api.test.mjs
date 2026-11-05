@@ -106,6 +106,10 @@ test('study sessions: scope, kind and focus filters', async () => {
   const all = (await q('subjects=sales-and-leases&scope=all&limit=100')).body;
   assert.ok(all.pool > course.pool, 'the full bar scope is a bigger pool');
   assert.ok(all.questions.some((x) => x.rule.scope === 'bar_only') || all.pool > 100);
+  const rule = app.db.prepare("SELECT rule_node_id r, COUNT(*) n FROM questions WHERE subject_id = 'sales-and-leases' AND status = 'approved' GROUP BY 1 HAVING n BETWEEN 3 AND 9 LIMIT 1").get();
+  const drill = (await q(`subjects=sales-and-leases&scope=all&rules=${encodeURIComponent(rule.r)}&limit=20`)).body;
+  assert.equal(drill.pool, rule.n, 'a rule drill draws only that rule\'s questions');
+  assert.ok(drill.questions.every((x) => x.rule.id === rule.r));
   const weak = (await q('subjects=sales-and-leases,evidence,agency-and-partnership&focus=weak&limit=15')).body;
   assert.ok(weak.count > 0);
   assert.equal((await q('subjects=nonsense')).status, 400);

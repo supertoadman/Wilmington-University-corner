@@ -22,7 +22,8 @@ The first start builds `demo/data/scale_demo.sqlite` and `demo/data/refs/*.json`
 | Dean command center | `/dean` | Dean Carter | Cohort filter, FERPA identity mask, printable report, 7-subject readiness matrix (taught vs bar-only), retention decay, early-intervention roster, psychometric audit queue with an inline SME editor |
 | Compiler workbench | `/compiler` | T. Alvarez (SME admin) | Material → master rule graph → student outline → six bar questions with trap tags and deterministic citation checks → publish into the live bank. Two $0 showcase packets; optional live mode through the Anthropic API |
 
-The persona switcher in the top bar changes who you are (`?as=<id>` in a URL does the same); the
+The persona switcher in the top bar changes who you are (`?as=<id>` in a URL does the same, and
+`/student?tab=builder&subjects=<id>&scope=all` opens the quiz builder preset to a course); the
 **▶ 3-Min Guided Pitch** button walks a viewer across all four portals with narration and spotlights.
 
 ## How it is built
@@ -42,7 +43,7 @@ demo/
     structure.mjs   verbatim copy of the private outline helpers in scripts/build.mjs
     dataset.mjs     subjects, master rule nodes, questions, classified choices, refs bundles
     traps.mjs       the eight doctrinal trap families and the classifier
-    sim.mjs         personas, 150 students, ~34,000 attempts (deterministic PRNG)
+    sim.mjs         personas, 150 students, ~35,000 attempts (deterministic PRNG)
     prng.mjs        mulberry32 + FNV-1a
   public/           shell.css/js (shared look, top bar, persona switcher), outline.css, tour.js,
                     student.*, faculty.*, dean.*, compiler.*
@@ -65,7 +66,7 @@ demo/
 (`const COV = { area: { code: summary } }`, with `QB[i].cov` per question); those become rule nodes
 directly. Other sets get rule nodes from their topic labels, placed in the outline by TF-IDF matching
 (`matcher(htmlSections(outline))`). Scopes are assigned per outline section so whole topics are
-bar-only or course-only: ~19% `bar_only`, ~13% `course`, ~68% `both`.
+bar-only or course-only, then topped up rule by rule to 20% `bar_only`, 15% `course` and 65% `both`.
 
 **Traps.** Each wrong choice is scored against cue-word families in its rationale and text
 (falling back to the question's explanation when a set has no per-choice rationales); the family
@@ -78,12 +79,12 @@ generator's model (ability, item difficulty and discrimination, a variation pena
 six months unless the student reviewed, weaker results on bar-only topics) and every number in the
 API is computed from the events:
 
-* base questions ≈ 74% correct, one-fact variations ≈ 51%
+* base questions ≈ 73% correct, one-fact variations ≈ 50%
 * each question has a "trap magnet" wrong choice, preferring the trap that dominates its rule
-* end of course ≈ 74% → six months later ≈ 55% unreviewed vs ≈ 70% with spaced review
+* end of course ≈ 74% → six months later ≈ 56% unreviewed vs ≈ 72% with spaced review
 * bar-only topics trail taught ones in all 7 subjects
 * 12 at-risk 3Ls (rushing, collapsing on variations, or gone quiet) plus Jordan; the roster's rules
-  find them along with a few students whose numbers are simply weak (16 flagged in all). Maya is
+  find them along with a few students whose numbers are simply weak (14 flagged in all). Maya is
   strong but weak on § 2-207 variations, with a nine-day streak
 * 5 questions with an inverted discrimination (stronger students miss them) are seeded `flagged`;
   their point-biserial correlation comes out far below −0.05 from the data (about −0.3 to −0.5),
@@ -110,7 +111,7 @@ variation − base. Errors are `{ "error": "…" }` with a 4xx status.
 | `GET /api/subjects` | subjects with counts and rule-scope counts |
 | `GET /api/subjects/:id/outline?scope=course\|all` | outline HTML (bar-only sections removed in `course`, scope badges added) and rule nodes |
 | `GET /api/student/dashboard?userId=` | accuracy, base vs variation, streak, habits, per-subject, weak rules, trap breakdown, 14-day activity |
-| `GET /api/student/session?userId=&subjects=&scope=&kind=&focus=&limit=` | a quiz: questions with display-ordered choices and per-choice `peer_pick_pct` (no answer key) |
+| `GET /api/student/session?userId=&subjects=&scope=&kind=&focus=&rules=&limit=` | a quiz (`rules` narrows it to given rule ids, as the dashboard's "Drill this" does): questions with display-ordered choices and per-choice `peer_pick_pct` (no answer key) |
 | `POST /api/student/attempts` | record an answer; returns the key, rationales, trap, `peer_choice_pcts`, updated stats |
 | `GET /api/faculty/analytics?subjectId=` | KPIs, `ruleHeatmap` (`base_acc`, `var_acc`, `delta_v`, `top_trap_label`, `top_trap_pct`, …), areas, `recentFlagged` |
 | `PATCH /api/faculty/rules/:ruleId` | `{ scope }` — changes what students see immediately |
@@ -175,8 +176,11 @@ npm test                                                                  # the 
 
 `api.test.mjs` seeds a temporary database and checks the data and every endpoint.
 `e2e.test.mjs` starts `demo/server.mjs` as a child process against an empty temporary directory
-(so first-boot seeding is tested), walks the flows across all four roles, runs a headless-browser
-smoke test when Playwright is available, and confirms the server shuts down cleanly.
+(so first-boot seeding is tested), walks the flows across all four roles, and confirms the server
+shuts down cleanly. When Playwright is available it also drives a real browser: a student quiz card
+opens the Look up drawer and records an answer, a faculty scope toggle moves the live student-view
+counter, a `/dean#q=…` link opens the SME editor, a showcase packet compiles into a rule graph, and
+the guided pitch starts.
 
 ## Notes
 

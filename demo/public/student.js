@@ -382,8 +382,8 @@
   function drillRule(ruleId) {
     const r = S.dash?.weak_rules.find((x) => x.rule_id === ruleId);
     if (!r) return;
-    patchBuilder({ subjects: [r.subject_id], scope: r.scope === 'bar_only' ? 'all' : S.b.scope, kind: 'all', focus: 'weak' });
-    startQuiz();
+    // A drill on exactly this rule; the builder's saved settings are left alone.
+    startQuiz({ subjects: [r.subject_id], scope: r.scope === 'bar_only' ? 'all' : S.b.scope, kind: 'all', focus: 'all', rules: [r.rule_id], limit: 10 });
   }
 
   // ==========================================================================================
@@ -394,6 +394,8 @@
     const mine = S.user?.assigned_subject_id;
     return { subjects: mine && D.subject(mine) ? [mine] : [], scope: 'course', kind: 'all', focus: 'all', mode: 'study', limit: 20 };
   }
+  const URLP = new URLSearchParams(location.search);
+  const URL_ONCE = { pending: true };
   function loadBuilder() {
     const b = defaultBuilder();
     try {
@@ -408,6 +410,13 @@
         if ([10, 20, 40].includes(saved.limit)) b.limit = saved.limit;
       }
     } catch { /* ignore a corrupt value */ }
+    // Links into the portal (e.g. from the compiler after publishing) may preset the builder once.
+    if (URL_ONCE.pending) {
+      const subs = (URLP.get('subjects') || '').split(',').filter((id) => D.subject(id));
+      if (subs.length) b.subjects = subs;
+      if (['course', 'all'].includes(URLP.get('scope'))) b.scope = URLP.get('scope');
+      if (['all', 'base', 'variation'].includes(URLP.get('kind'))) b.kind = URLP.get('kind');
+    }
     return b;
   }
   const saveBuilder = () => store.set(bKey(), JSON.stringify(S.b));
@@ -468,7 +477,7 @@
     renderPool();
     S.poolTimer = setTimeout(fetchPool, delay);
   }
-  const sessionQuery = (b, limit) => new URLSearchParams({ userId: S.user.id, subjects: b.subjects.join(','), scope: b.scope, kind: b.kind, focus: b.focus, limit: String(limit) });
+  const sessionQuery = (b, limit) => new URLSearchParams({ userId: S.user.id, subjects: b.subjects.join(','), scope: b.scope, kind: b.kind, focus: b.focus, limit: String(limit), ...(b.rules?.length ? { rules: b.rules.join(',') } : {}) });
   async function fetchPool() {
     const token = ++S.poolToken;
     try {
@@ -1129,6 +1138,7 @@
   // Boot
   // ==========================================================================================
   function onUser(u) {
+    if (URL_ONCE.pending && ['dashboard', 'builder'].includes(URLP.get('tab'))) S.tab = URLP.get('tab');
     const changed = S.user?.id !== u.id;
     S.user = u;
     if (changed) {
@@ -1139,6 +1149,7 @@
     renderHead();
     loadDash();
     setTab(S.tab);
+    URL_ONCE.pending = false;
   }
 
   $('#view-dashboard').innerHTML = dashSkeleton();

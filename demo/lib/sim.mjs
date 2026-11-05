@@ -78,7 +78,7 @@ export function simulate({ dataset, now = Date.now(), seed = 'wilmington-demo-v1
   Object.assign(risk[9], { speed: 26, cross: 0.03, tags: ['quiet', 'rusher'] });
 
   const maya = mk(users.find((u) => u.id === 'stu-maya'), { theta: 1.55, speed: 66, cross: 0.55, popup: 0.3, weight: 0, persona: 'maya' });
-  const jordan = mk(users.find((u) => u.id === 'stu-jordan'), { theta: -1.45, speed: 32, cross: 0, popup: 0.03, weight: 0, persona: 'jordan', tags: ['rusher'] });
+  const jordan = mk(users.find((u) => u.id === 'stu-jordan'), { theta: -1.45, speed: 29.9, cross: 0, popup: 0.03, weight: 0, persona: 'jordan', tags: ['rusher'] });
 
   // ---- per-student, per-subject timelines ----------------------------------------------------
   const week = (lo, hi) => R.range(lo, hi);
@@ -196,7 +196,7 @@ export function simulate({ dataset, now = Date.now(), seed = 'wilmington-demo-v1
   // 2) Coverage: every other question is answered 4-5 times, variations 8 (they are what the portals compare).
   for (const q of questions) {
     if (audit.has(q.id)) continue;
-    const n = q.is_variation ? 8 : 4 + (R.chance(0.35) ? 1 : 0);
+    const n = q.is_variation ? 8 : 4 + (R.chance(0.6) ? 1 : 0);
     for (let i = 0; i < n; i++) { const s = pickStudent(q.subject_id); emit(s, q, slot(s, q.subject_id)); }
   }
 

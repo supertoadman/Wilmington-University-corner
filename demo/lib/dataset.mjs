@@ -54,6 +54,14 @@ function assignScopes(nodes) {
     const kind = lead.get(key) || 'both';
     for (const n of list) n.scope = kind === 'both' || kind === 'bar_only' || hash32(`n${n.id}`) % 100 < 90 ? kind : 'both';
   }
+  // Whole sections rarely add up exactly; top each quota up with single rules from 'both' sections.
+  for (const [kind, share] of [['bar_only', 0.2], ['course', 0.15]]) {
+    let short = Math.round(total * share) - nodes.filter((n) => n.scope === kind).length;
+    for (const n of nodes.filter((x) => x.scope === 'both' && !lead.has(x.group)).sort((a, b) => hash32(`t${kind}${a.id}`) - hash32(`t${kind}${b.id}`))) {
+      if (short-- <= 0) break;
+      n.scope = kind;
+    }
+  }
 }
 
 export async function buildDataset() {
