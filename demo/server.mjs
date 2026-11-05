@@ -100,6 +100,7 @@ export function createHandler({ db, refsDir = REFS_DIR }) {
   route('PATCH', '/api/admin/questions/:questionId', ({ params, body }) => A.patchQuestion(db, decodeURIComponent(params.questionId), body));
 
   // compiler (demo/compiler.mjs)
+  route('GET', '/api/compiler/status', async () => { const m = await compiler(); return { installed: !!m, live_env_key: !!process.env.ANTHROPIC_API_KEY, model: process.env.ANTHROPIC_MODEL || m?.DEFAULT_MODEL || null }; });
   route('GET', '/api/compiler/showcases', () => withCompiler((m) => ({ showcases: m.listShowcases() })));
   route('GET', '/api/compiler/runs', () => withCompiler((m) => ({ runs: m.listRuns(db) })));
   route('GET', '/api/compiler/runs/:id', ({ params }) => withCompiler((m) => m.getRun(db, Number(params.id))));
@@ -144,7 +145,7 @@ export function createHandler({ db, refsDir = REFS_DIR }) {
  * Seed if needed, open the database and listen. Resolves to { server, db, port, url, close() }.
  * Tests pass their own dbFile and port 0.
  */
-export async function startServer({ port = Number(process.env.PORT) || 4280, dbFile = process.env.DEMO_DB || DEFAULT_DB, refsDir = REFS_DIR, quiet = false } = {}) {
+export async function startServer({ port = Number(process.env.PORT) || 4280, dbFile = process.env.DEMO_DB || DEFAULT_DB, refsDir = process.env.DEMO_REFS || REFS_DIR, quiet = false } = {}) {
   const log = quiet ? () => {} : (m) => console.log(m);
   if (await ensureSeeded({ dbFile, refsDir, log })) log('Database built from content/.');
   const db = openDb(dbFile);

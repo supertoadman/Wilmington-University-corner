@@ -105,10 +105,10 @@
     onUser(fn) { Demo.ready.then(() => fn(Demo.user)); window.addEventListener('demo:user', (e) => fn(e.detail.user)); },
 
     /** Start the 3-minute guided pitch (loads tour.js on demand). */
-    async startTour() {
+    async startTour(opts = {}) {
       try {
         if (!window.DemoTour) await new Promise((ok, no) => { const s = document.createElement('script'); s.src = '/public/tour.js'; s.onload = ok; s.onerror = () => no(new Error('missing')); document.head.append(s); });
-        window.DemoTour.start();
+        window.DemoTour.start(opts);
       } catch { Demo.toast('The guided pitch is not available in this build.', 'bad'); }
     },
   };
@@ -151,7 +151,7 @@
   menu.addEventListener('click', (e) => { const b = e.target.closest('[data-id]'); if (b) { menu.hidden = true; personaBtn.setAttribute('aria-expanded', 'false'); Demo.setUser(b.dataset.id); } });
   document.addEventListener('click', (e) => { if (!e.target.closest('.persona')) { menu.hidden = true; personaBtn.setAttribute('aria-expanded', 'false'); } });
   bar.querySelector('[data-theme-toggle]').addEventListener('click', () => { const next = isDark() ? 'light' : 'dark'; store.set('demoTheme', next); applyTheme(next); window.dispatchEvent(new CustomEvent('demo:theme', { detail: { theme: next } })); });
-  bar.querySelector('[data-tour]').addEventListener('click', () => Demo.startTour());
+  bar.querySelector('[data-tour]').addEventListener('click', () => Demo.startTour({ restart: true }));
 
   // ---- boot --------------------------------------------------------------------------------
   Demo.ready = (async () => {
