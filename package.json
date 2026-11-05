@@ -7,7 +7,9 @@
     "build": "node scripts/build.mjs",
     "serve": "node scripts/serve.mjs",
     "dev": "node scripts/build.mjs && node scripts/serve.mjs",
-    "icons": "node scripts/icons/build.mjs"
+    "icons": "node scripts/icons/build.mjs",
+    "demo": "node --disable-warning=ExperimentalWarning demo/server.mjs",
+    "test:demo": "node --disable-warning=ExperimentalWarning --test demo/tests/*.test.mjs"
   },
   "author": "",
   "license": "UNLICENSED",

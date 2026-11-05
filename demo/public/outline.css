@@ -1,0 +1,74 @@
+/* Styles for outline HTML (the library site's structured outlines and the compiler's student
+   outlines) inside the demo. Wrap the HTML in <div class="outline-doc" style="--accent:#3f6b4a">.
+   Same markup the site build produces: masthead, part and section bands, RULE / CASE / ROADMAP /
+   TRAP callouts, rainbow `el-N` elements, and scope badges added by /api/subjects/:id/outline. */
+.outline-doc {
+  --s-ink: color-mix(in srgb, var(--accent) 70%, #0b1a10); --s-band: color-mix(in srgb, var(--accent) 12%, var(--surface)); --s-line: color-mix(in srgb, var(--accent) 60%, var(--surface));
+  --c-rule: #6d4bc4; --c-rule-ink: #4b2f94; --c-rule-bg: #f3effb;
+  --c-case: #1e4f8a; --c-case-ink: #1a4478; --c-case-bg: #eef3fa;
+  --c-roadmap: #a87b22; --c-roadmap-ink: #6f4d10; --c-roadmap-bg: #fbf4e3;
+  --c-tips: #db2777; --c-tips-ink: #9d174d; --c-tips-bg: #fdf0f6;
+  --c-key: #1f7a4d; --c-key-ink: #14573a; --c-key-bg: #e8f5ee;
+  --el-1: #b3261e; --el-2: #b45309; --el-3: #4d7c0f; --el-4: #0e7490; --el-5: #4338ca; --el-6: #a21caf;
+  font-size: 15.5px; line-height: 1.65; color: var(--text); overflow-wrap: anywhere;
+}
+:root[data-theme="dark"] .outline-doc {
+  --s-ink: color-mix(in srgb, var(--accent) 45%, #ffffff); --s-band: color-mix(in srgb, var(--accent) 20%, var(--surface)); --s-line: color-mix(in srgb, var(--accent) 70%, var(--surface));
+  --c-rule: #a78bfa; --c-rule-ink: #c4b5fd; --c-rule-bg: #1d1730; --c-case: #79a8ff; --c-case-ink: #b3cdf5; --c-case-bg: #142034;
+  --c-roadmap: #e0b862; --c-roadmap-ink: #f3d48c; --c-roadmap-bg: #262012; --c-tips: #f472b6; --c-tips-ink: #f9a8d4; --c-tips-bg: #2a1421; --c-key: #5fd39b; --c-key-ink: #8be3b8; --c-key-bg: #12281e;
+  --el-1: #ff8a80; --el-2: #fbbf6a; --el-3: #a3d86a; --el-4: #5fd0e8; --el-5: #a5a8ff; --el-6: #e9a3f0;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) .outline-doc {
+    --s-ink: color-mix(in srgb, var(--accent) 45%, #ffffff); --s-band: color-mix(in srgb, var(--accent) 20%, var(--surface)); --s-line: color-mix(in srgb, var(--accent) 70%, var(--surface));
+    --c-rule: #a78bfa; --c-rule-ink: #c4b5fd; --c-rule-bg: #1d1730; --c-case: #79a8ff; --c-case-ink: #b3cdf5; --c-case-bg: #142034;
+    --c-roadmap: #e0b862; --c-roadmap-ink: #f3d48c; --c-roadmap-bg: #262012; --c-tips: #f472b6; --c-tips-ink: #f9a8d4; --c-tips-bg: #2a1421; --c-key: #5fd39b; --c-key-ink: #8be3b8; --c-key-bg: #12281e;
+    --el-1: #ff8a80; --el-2: #fbbf6a; --el-3: #a3d86a; --el-4: #5fd0e8; --el-5: #a5a8ff; --el-6: #e9a3f0;
+  }
+}
+.outline-doc h1, .outline-doc h2, .outline-doc h3, .outline-doc h4 { color: var(--s-ink); scroll-margin-top: calc(var(--bar-h) + 16px); }
+.outline-doc h3 { font-size: 18px; margin: 1.5em 0 .4em; font-family: var(--font-sans); font-weight: 600; }
+.outline-doc h4 { font-family: var(--font-sans); font-weight: 600; margin: 1.1em 0 .3em; }
+.outline-doc .doc-masthead { margin: 0 0 1.2em; padding: 22px 26px; border-radius: var(--radius); background: var(--ink); color: #fbf9f4; position: relative; }
+.outline-doc .doc-masthead .doc-title { color: #fbf9f4; margin: 0 0 .3em; font-size: clamp(24px, 3.4vw, 34px); }
+.outline-doc .doc-subtitle, .outline-doc .doc-meta { margin: .2em 0; opacity: .85; font-size: 14px; }
+.outline-doc .part-band { margin: 2.4em 0 1em; padding: 18px 0; text-align: center; border-top: 1px solid var(--s-line); border-bottom: 1px solid var(--s-line); }
+.outline-doc .part-band h1 { margin: 0; font-size: clamp(22px, 2.8vw, 30px); }
+.outline-doc .part-kicker { display: block; font: 600 11px/1 var(--font-sans); letter-spacing: .18em; text-transform: uppercase; color: var(--gold-ink); margin-bottom: 6px; }
+.outline-doc .section-band { display: flex; flex-wrap: wrap; align-items: center; gap: 4px 12px; margin: 2.2em 0 .9em; padding: 12px 18px; background: var(--s-band); border-left: 5px solid var(--s-line); border-radius: 0 12px 12px 0; }
+.outline-doc .section-band h2 { margin: 0; flex: 1 1 260px; font-size: 22px; }
+.outline-doc .section-week { font: 600 11px/1 var(--font-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-ink); background: var(--gold-soft); padding: 4px 9px; border-radius: 999px; }
+/* h2 sections of outlines that are plain HTML */
+.outline-doc > h2:not(.doc-title), .outline-doc section > h2 { margin: 2em 0 .6em; padding: 10px 16px; background: var(--s-band); border-left: 5px solid var(--s-line); border-radius: 0 12px 12px 0; font-size: 22px; }
+.outline-doc .callout { --c: var(--c-rule); --c-ink: var(--c-rule-ink); --c-bg: var(--c-rule-bg); position: relative; margin: 1.1em 0; padding: 34px 20px 14px; background: var(--c-bg); border: 1px solid color-mix(in srgb, var(--c) 35%, transparent); border-left: 5px solid var(--c); border-radius: 12px; }
+.outline-doc .callout-case { --c: var(--c-case); --c-ink: var(--c-case-ink); --c-bg: var(--c-case-bg); }
+.outline-doc .callout-roadmap { --c: var(--c-roadmap); --c-ink: var(--c-roadmap-ink); --c-bg: var(--c-roadmap-bg); }
+.outline-doc .callout-tips, .outline-doc .callout-trap { --c: var(--c-tips); --c-ink: var(--c-tips-ink); --c-bg: var(--c-tips-bg); }
+.outline-doc .callout-key, .outline-doc .callout-note { --c: var(--c-key); --c-ink: var(--c-key-ink); --c-bg: var(--c-key-bg); }
+.outline-doc .callout-tag { position: absolute; top: 9px; left: 20px; font: 800 11px/1 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--c-ink); }
+.outline-doc .callout p { margin: .45em 0; }
+.outline-doc .callout > :last-child { margin-bottom: 0; }
+.outline-doc .callout-title { font: 600 17px/1.35 var(--font-serif); color: var(--text); }
+.outline-doc .case-field { margin: .4em 0; }
+.outline-doc .case-label { color: var(--c-ink); }
+.outline-doc .case-chip { display: inline-block; padding: 1px 8px; border-radius: 999px; background: var(--c-case); color: #fff; font: 800 10.5px/1.6 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; }
+.outline-doc .el { padding: 0 3px; border-radius: 4px; color: var(--el); background: color-mix(in srgb, var(--el) 11%, transparent); box-shadow: inset 0 -2px 0 color-mix(in srgb, var(--el) 40%, transparent); }
+.outline-doc .el-1 { --el: var(--el-1); } .outline-doc .el-2 { --el: var(--el-2); } .outline-doc .el-3 { --el: var(--el-3); }
+.outline-doc .el-4 { --el: var(--el-4); } .outline-doc .el-5 { --el: var(--el-5); } .outline-doc .el-6 { --el: var(--el-6); }
+.outline-doc .el-line { margin: .4em 0; padding: 5px 12px; border-left: 3px solid var(--el); border-radius: 0 9px 9px 0; background: color-mix(in srgb, var(--el) 9%, transparent); }
+.outline-doc .el-line > strong:first-child { color: var(--el); }
+.outline-doc .table-wrap { overflow-x: auto; margin: 1em 0; border: 1px solid var(--border); border-radius: 10px; }
+.outline-doc table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+.outline-doc th { background: var(--s-band); color: var(--s-ink); text-align: left; padding: 8px 12px; }
+.outline-doc td { padding: 8px 12px; border-top: 1px solid var(--border); vertical-align: top; }
+.outline-doc tr.rb-1 td:first-child { box-shadow: inset 4px 0 var(--el-1); } .outline-doc tr.rb-2 td:first-child { box-shadow: inset 4px 0 var(--el-2); }
+.outline-doc tr.rb-3 td:first-child { box-shadow: inset 4px 0 var(--el-3); } .outline-doc tr.rb-4 td:first-child { box-shadow: inset 4px 0 var(--el-4); }
+.outline-doc tr.rb-5 td:first-child { box-shadow: inset 4px 0 var(--el-5); } .outline-doc tr.rb-6 td:first-child { box-shadow: inset 4px 0 var(--el-6); }
+.outline-doc .outside { font-style: italic; color: var(--muted); }
+.outline-doc .scope-badge { display: inline-block; margin-left: 10px; padding: 2px 9px; border-radius: 999px; font: 700 10.5px/1.6 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; vertical-align: middle; }
+.outline-doc .scope-course { background: var(--c-course-soft); color: var(--c-course); }
+.outline-doc .scope-bar_only { background: var(--c-bar-soft); color: var(--c-bar); }
+.outline-doc .scope-both { background: var(--c-both-soft); color: var(--c-both); }
+.outline-doc a { color: var(--link); }
+.outline-doc img { max-width: 100%; height: auto; }
+.outline-doc [class*="flash"] { position: static; }
