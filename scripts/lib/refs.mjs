@@ -36,6 +36,8 @@ export function outlineSections(html) {
     const end = heads[i + 1]?.index ?? html.length;
     const body = html.slice(m.index + m[0].length, end)
       .replace(/<\/article>[\s\S]*$/, '')
+      // The next Part's divider sits just before the next section; it isn't part of this one.
+      .replace(/<div class="part-band">[\s\S]*$/, '')
       .replace(/\s(id|data-label)="[^"]*"/g, '')
       .replace(/<a href="#[^"]*">([\s\S]*?)<\/a>/g, '$1')
       .trim();
@@ -116,7 +118,8 @@ function problemTitle(text, before) {
  * The casebook problems the outline works through ("Problem 4-3"), so a question that cites one
  * can show what the outline says about it. A problem is a list item or paragraph that starts
  * with its number (a paragraph brings the list or table after it), or a table headed by it.
- * Passing mentions inside case boxes don't count. One problem can be worked in several places.
+ * A subsection titled by a problem holds that problem up to the next one. Passing mentions inside
+ * case boxes don't count. One problem can be worked in several places.
  */
 export function outlineProblems(sections) {
   const byNum = new Map();
@@ -131,35 +134,49 @@ export function outlineProblems(sections) {
     if (m[3]) { part.part = m[3].toLowerCase(); if (title) part.title = title; } else p.title ||= title;
     p.parts.push(part);
   };
-  for (const sec of sections) {
-    // A section headed by a problem ("Problem 3-4 — modification and the SOF") is all about it.
-    const head = sec.title.match(/^(.*?)\s*[—–-]\s*(Problem\s+\d+-\d+)$/);
-    if (/^Problem\s/.test(sec.title) || head) { add(sec, head ? `${head[2]} — ${head[1]}` : sec.title, sec.html); continue; }
-    const list = blocks(sec.html);
-    list.forEach((b, i) => {
-      const text = strip(b.html);
-      if (b.tag === 'p') {
-        if (!/^Problem\s/.test(text)) return;
-        const next = list[i + 1];
-        add(sec, text, b.html + (next && /^(ul|ol|div)$/.test(next.tag) ? next.html : ''));
-      } else if (b.tag === 'div' && b.html.includes('<table')) {
-        const th = b.html.match(/<th\b[^>]*>([\s\S]*?)<\/th>/);
-        if (!th) return;
-        if (!/^Problems?$/i.test(strip(th[1]))) { add(sec, strip(th[1]), b.html); return; }
-        // A "Problem | Answer" table of several problems, one row per part ("6-6(a)"): each
-        // problem gets the table with just its own rows.
-        const rows = new Map();
-        for (const tr of b.html.matchAll(/<tr\b[^>]*>(?:(?!<\/tr>)[\s\S])*?<td\b[\s\S]*?<\/tr>/g)) {
-          const n = strip(tr[0]).match(/^(\d+-\d+)/)?.[1];
-          if (n) rows.set(n, (rows.get(n) || '') + tr[0]);
-        }
-        const [top, rest] = [b.html.slice(0, b.html.indexOf('<tbody')), b.html.slice(b.html.indexOf('</tbody>'))];
-        for (const [n, trs] of rows) add(sec, `Problem ${n}`, `${top}<tbody>${trs}${rest}`);
-      } else if (b.tag === 'ul' || b.tag === 'ol') {
-        const inner = b.html.replace(/^<[^>]+>/, '').replace(/<\/[^>]+>$/, '');
-        for (const li of blocks(inner)) if (li.tag === 'li') add(sec, strip(li.html), `<${b.tag}>${li.html}</${b.tag}>`);
+  // Whether a block starts a problem of its own: a "Problem 4-3 …" paragraph, list, or table.
+  const startsProblem = (b) => {
+    if (b.tag === 'p') return /^Problem\s/.test(strip(b.html));
+    if (b.tag === 'ul' || b.tag === 'ol') return /^Problem\s/.test(strip(b.html));
+    const th = b.tag === 'div' && b.html.includes('<table') && b.html.match(/<th\b[^>]*>([\s\S]*?)<\/th>/);
+    return !!th && /^Problems?(?:\s|$)/i.test(strip(th[1]));
+  };
+  const scan = (sec, list) => list.forEach((b, i) => {
+    const text = strip(b.html);
+    if (b.tag === 'p') {
+      if (!/^Problem\s/.test(text)) return;
+      const next = list[i + 1];
+      add(sec, text, b.html + (next && /^(ul|ol|div)$/.test(next.tag) ? next.html : ''));
+    } else if (b.tag === 'div' && b.html.includes('<table')) {
+      const th = b.html.match(/<th\b[^>]*>([\s\S]*?)<\/th>/);
+      if (!th) return;
+      if (!/^Problems?$/i.test(strip(th[1]))) { add(sec, strip(th[1]), b.html); return; }
+      // A "Problem | Answer" table of several problems, one row per part ("6-6(a)"): each
+      // problem gets the table with just its own rows.
+      const rows = new Map();
+      for (const tr of b.html.matchAll(/<tr\b[^>]*>(?:(?!<\/tr>)[\s\S])*?<td\b[\s\S]*?<\/tr>/g)) {
+        const n = strip(tr[0]).match(/^(\d+-\d+)/)?.[1];
+        if (n) rows.set(n, (rows.get(n) || '') + tr[0]);
       }
-    });
+      const [top, rest] = [b.html.slice(0, b.html.indexOf('<tbody')), b.html.slice(b.html.indexOf('</tbody>'))];
+      for (const [n, trs] of rows) add(sec, `Problem ${n}`, `${top}<tbody>${trs}${rest}`);
+    } else if (b.tag === 'ul' || b.tag === 'ol') {
+      const inner = b.html.replace(/^<[^>]+>/, '').replace(/<\/[^>]+>$/, '');
+      for (const li of blocks(inner)) if (li.tag === 'li') add(sec, strip(li.html), `<${b.tag}>${li.html}</${b.tag}>`);
+    }
+  });
+  for (const sec of sections) {
+    const list = blocks(sec.html);
+    // A section headed by a problem ("Problem 3-4 — modification and the SOF") is about it, up to
+    // the first block that starts another problem; problems after that are found as usual.
+    const head = sec.title.match(/^(.*?)\s*[—–-]\s*(Problem\s+\d+-\d+)$/);
+    if (/^Problem\s/.test(sec.title) || head) {
+      const at = list.findIndex(startsProblem);
+      add(sec, head ? `${head[2]} — ${head[1]}` : sec.title, at < 0 ? sec.html : list.slice(0, at).map((b) => b.html).join(''));
+      if (at >= 0) scan(sec, list.slice(at));
+      continue;
+    }
+    scan(sec, list);
   }
   return [...byNum.values()].sort((a, b) => a.n.localeCompare(b.n, 'en', { numeric: true }));
 }
@@ -179,4 +196,19 @@ export function refIndex({ supplementHtml, outlineHtml, links, cite, fullNames }
     cases: outlineCases(sections, fullNames),
     problems: outlineProblems(sections),
   };
+}
+
+// The popup's fonts (Fraunces headings, Inter text, JetBrains Mono cites; see src/assets/refs.css).
+export const REFS_FONTS = 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap';
+
+/**
+ * A practice page with the reference popup: refs.css, refs.js and the course's index, linked just
+ * before </body>. The build does this to the served copy of every HTML practice page in a subject
+ * whose subject.json has "refs" (downloads stay as written). `version` keeps a cached refs.js from
+ * pairing with a newer index; `root` is the way back to the site root from files/<subject>/.
+ */
+export function injectRefs(html, { slug, version, root = '../../' }) {
+  const tags = `<link rel="stylesheet" href="${REFS_FONTS}"><link rel="stylesheet" href="${root}assets/refs.css?v=${version}"><script src="${root}assets/refs.js?v=${version}" data-root="${root}" data-index="assets/refs/${slug}.json?v=${version}" defer></script>`;
+  const at = html.toLowerCase().lastIndexOf('</body>');
+  return at < 0 ? html + tags : html.slice(0, at) + tags + html.slice(at);
 }

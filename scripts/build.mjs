@@ -6,25 +6,31 @@
 // OpenAPI) for agents and other integrations.
 //
 // Usage: node scripts/build.mjs
+// (SITE_CONTENT_DIR and SITE_DIST_DIR point it at another content folder and output folder; the
+// tests build a small fixture site that way.)
 
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { createHash } from 'node:crypto';
 import { fileURLToPath } from 'node:url';
-import mammoth from 'mammoth';
-import { zipSync, unzipSync, strFromU8, strToU8 } from 'fflate';
+import { zipSync } from 'fflate';
 import * as T from '../src/templates.mjs';
 import { slugify, decodeEntities, htmlToText } from './lib/text.mjs';
 import { addHeadingIds as idHeadings } from './lib/outline.mjs';
+import { convertDocx } from './lib/docx.mjs';
 import { mp3Duration } from './lib/audio.mjs';
-import { refIndex } from './lib/refs.mjs';
+import { refIndex, injectRefs } from './lib/refs.mjs';
+import { readMcq, normalizeMcq, hasMcqBlock, mcqText } from './lib/mcq.mjs';
+import { renderPracticeShell } from './lib/practice-shell.mjs';
+import { readSupplement, readSupplementPage, normalizeSupplement, renderSupplement, supplementText } from './lib/supplement-shell.mjs';
+import { buildOutlineDocx } from './templates/build-outline-docx.mjs';
 import { buildGame } from './game.mjs';
 import { buildSurvivors } from './survivors.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const CONTENT = path.join(ROOT, 'content');
-const DIST = path.join(ROOT, 'dist');
+const CONTENT = process.env.SITE_CONTENT_DIR ? path.resolve(process.env.SITE_CONTENT_DIR) : path.join(ROOT, 'content');
+const DIST = process.env.SITE_DIST_DIR ? path.resolve(process.env.SITE_DIST_DIR) : path.join(ROOT, 'dist');
 const config = JSON.parse(fs.readFileSync(path.join(ROOT, 'site.config.json'), 'utf8'));
 config.url = config.url.endsWith('/') ? config.url : config.url + '/';
 config.basePath = new URL(config.url).pathname;
@@ -87,37 +93,6 @@ function lastUpdated(file) {
   return fs.statSync(file).mtime.toISOString();
 }
 
-function addHeadingIds(html) {
-  const used = new Set();
-  const toc = [];
-  const out = html.replace(/<h([1-3])>([\s\S]*?)<\/h\1>/g, (_, level, inner) => {
-    const text = decodeEntities(inner.replace(/<[^>]+>/g, '')).trim();
-    let id = slugify(text) || 'section';
-    for (let i = 2; used.has(id); i++) id = `${slugify(text)}-${i}`;
-    used.add(id);
-    if (level !== '3') toc.push({ level: +level, id, text });
-    return `<h${level} id="${id}">${inner}</h${level}>`;
-  });
-  return { html: out, toc };
-}
-
-/**
- * Word outlines that mark "outside the class materials" text only by font color (subject.json
- * `"outsideColor": "7030A0"`): give runs in that color a highlight mammoth can read, so they come
- * out as <span class="outside">. The outline's own key names the color, so keep its tone.
- */
-function markOutsideRuns(raw, color) {
-  const files = unzipSync(new Uint8Array(raw));
-  const re = new RegExp(`<w:color w:val="${color}"[^>]*/>`, 'gi');
-  files['word/document.xml'] = strToU8(strFromU8(files['word/document.xml']).replace(re, (m) => `${m}<w:highlight w:val="darkMagenta"/>`));
-  return Buffer.from(zipSync(files));
-}
-const outsideTone = (hex) => {
-  const [r, g, b] = hex.match(/../g).map((h) => parseInt(h, 16));
-  if (Math.max(r, g, b) - Math.min(r, g, b) < 48) return 'gray';
-  return b > g && r > g ? 'purple' : r > g && g >= b ? 'orange' : 'accent';
-};
-
 /**
  * A track's length from the start of its file, so timing a track doesn't read all of it (the tracks
  * are copied to dist/ as files); the whole file is read only if its first frame lies past that.
@@ -137,178 +112,42 @@ function trackDuration(file, size) {
   }
 }
 
-const titleCase = (s) => s.replace(/[A-Z][A-Z'’]+/g, (w) => w[0] + w.slice(1).toLowerCase());
-
-/**
- * Opt-in (`"theme": "structured"` in subject.json) for Word outlines that fake their layout with
- * one-cell tables: the title box (or opening bold title line) becomes a masthead, "I. Title    WEEK 1"
- * boxes and real Heading 2s become section bands (so the Contents panel works), Heading 1 "PART I —"
- * lines become part dividers, "RULE / CASE / ROADMAP / EXAM TIPS   …" boxes become labelled callouts,
- * case boxes and "Name  MAIN CASE · CLASS 1" case cards become case callouts, and bold-only paragraphs
- * between them become <h3> subheadings. Word's own table of contents is dropped.
- */
-const CALLOUT_KINDS = { RULE: 'rule', CASE: 'case', ROADMAP: 'roadmap', 'EXAM TIPS': 'tips', TIP: 'tips', TIPS: 'tips', NOTE: 'note', TRAP: 'tips', KEY: 'key' };
-// Principal cases; cases the casebook only notes; cases only cited; cases only on a slide; cases only in the casebook.
-const CASE_KINDS = { 'MAIN CASE': 'main', 'NOTE CASE': 'note', 'CITED ONLY': 'cited', 'SLIDE REFERENCE': 'slide', 'SUPPLEMENTAL READING': 'supp' };
-const CASE_LABEL = Object.keys(CASE_KINDS).join('|');
-function structureOutline(html, tone) {
-  let first = true;
-  html = html
-    .replace(/<a id="_[^"]*"><\/a>/g, '')
-    .replace(/<p><strong>Contents<\/strong><\/p>(?:<p><a href="#_Toc[^"]*">[\s\S]*?<\/a><\/p>)+/, '')
-    .replace(/class="outside"/g, `class="outside outside-${tone}"`)
-    // An opening bold title line, followed by plain lines, is the title block.
-    .replace(/^<p><strong>([^<]+)<\/strong><\/p>((?:<p>(?!<strong>[^<]*<\/strong><\/p>)[\s\S]*?<\/p>)*)/, (_, title, rest) => {
-      first = false;
-      const [subtitle, ...meta] = (rest.match(/<p>[\s\S]*?<\/p>/g) || []).map((p) => p.replace(/^<p>|<\/p>$/g, ''));
-      return `<header class="doc-masthead"><h1 class="doc-title">${/[a-z]/.test(title.replace(/&\w+;/g, '')) ? title : titleCase(title)}</h1>${subtitle ? `<p class="doc-subtitle">${subtitle}</p>` : ''}${meta.map((m) => `<p class="doc-meta">${m}</p>`).join('')}</header>`;
-    })
-    .replace(/<h1>([\s\S]*?)<\/h1>/g, (_, text) => {
-      const part = text.match(/^PART ([IVXLC]+)\s*[—–-]\s*([\s\S]+)$/);
-      return `<div class="part-band"><h1>${part ? `<span class="part-kicker">Part ${part[1]}<span class="sr-only"> — </span></span>` : ''}${titleCase(part ? part[2] : text)}</h1></div>`;
-    })
-    .replace(/<h2>([\s\S]*?)<\/h2>/g, '<div class="section-band"><h2>$1</h2></div>')
-    // "Name (Court Year)  MAIN CASE · CLASS 1" followed by Facts / Held / Why it matters lines.
-    .replace(new RegExp(`<p><strong>([^<]+)</strong>\\s*<strong>\\s*(${CASE_LABEL})\\s*·\\s*([^<]*?)\\s*</strong></p>((?:<p><strong>(?:Facts|Held|Why it matters):[\\s\\S]*?</p>)*)`, 'g'),
-      (_, name, label, detail, body) => `<aside class="callout callout-case case-${CASE_KINDS[label]}"><span class="callout-tag">${label.toLowerCase()} · ${detail.toLowerCase()}</span><p class="callout-title">${name}</p>${body}</aside>`)
-    // The outline's key to those labels.
-    .replace(new RegExp(`<p>\\s*<strong>\\s*(${CASE_LABEL})((?:\\s*·\\s*[^<]*?)?)\\s*</strong>\\s*`, 'g'),
-      (_, label, detail) => `<p class="case-legend"><span class="case-chip case-${CASE_KINDS[label]}">${label.toLowerCase()}${detail.toLowerCase()}</span> `);
-  const out = html.replace(/<table><tr><td>((?:(?!<\/?t(?:able|r|d)\b)[\s\S])*)<\/td><\/tr><\/table>/g, (whole, inner, offset) => {
-    const isFirst = first && offset === 0;
-    first = false;
-    if (!inner.trim()) return '';
-    const paras = inner.match(/<p>[\s\S]*?<\/p>/g) || [];
-    if (isFirst) {
-      const [title, subtitle, ...meta] = paras.map((p) => p.replace(/^<p>(?:<strong>)?|(?:<\/strong>)?<\/p>$/g, ''));
-      return `<header class="doc-masthead"><h1 class="doc-title">${title}</h1>${subtitle ? `<p class="doc-subtitle">${subtitle}</p>` : ''}${meta.map((m) => `<p class="doc-meta">${m}</p>`).join('')}</header>`;
-    }
-    const head = inner.match(/^<p><strong>([A-Z][A-Z ]*?)( ★)?\s{2,}/);
-    if (head && (CALLOUT_KINDS[head[1]] || CASE_KINDS[head[1]])) {
-      const cls = CASE_KINDS[head[1]] ? `case case-${CASE_KINDS[head[1]]}` : CALLOUT_KINDS[head[1]];
-      let body = inner.replace(head[0], '<p><strong>').replace(/^<p><strong><\/strong>\s*/, '<p>');
-      // A first line that is only bold text is the callout's own title.
-      body = body.replace(/^<p><strong>([^<]*)<\/strong><\/p>/, '<p class="callout-title">$1</p>')
-        .replace(/<p><strong>((?:Source|In the casebook):)<\/strong>/g, '<p class="callout-source"><strong>$1</strong>');
-      return `<aside class="callout callout-${cls}"><span class="callout-tag">${head[1].toLowerCase()}${head[2] ? ' <span class="callout-star" title="Has its own class slide">★</span>' : ''}</span>${body}</aside>`;
-    }
-    const section = paras.length === 1 && inner.match(/^<p><strong>((?:[IVXLC]+\.|Part\b)[^<]*?)(?:\s{2,}(WEEKS? [^<]+))?<\/strong><\/p>$/);
-    if (section) {
-      return `<div class="section-band"><h2>${section[1].trim()}</h2>${section[2] ? `<span class="section-week">${section[2].trim().toLowerCase()}</span>` : ''}</div>`;
-    }
-    return whole;
-  });
-  // Bold-only paragraphs outside tables and callouts are subheadings.
-  const headed = out.split(/(<table>[\s\S]*?<\/table>|<aside[\s\S]*?<\/aside>|<header[\s\S]*?<\/header>)/).map((part, i) =>
-    i % 2 ? part : part.replace(/<p><strong>([^<]+)<\/strong><\/p>/g, '<h3>$1</h3>')).join('');
-  // A case card's Facts / Held / Why it matters lines each get their own class, so each can wear its color.
-  const fields = headed.replace(/<p><strong>(Facts|Held|Why it matters):\s*<\/strong>\s*/g, (_, label) =>
-    `<p class="case-field case-${label === 'Why it matters' ? 'why' : label.toLowerCase()}"><strong class="case-label">${label}:</strong> `);
-  return rainbowElements(numberedLines(fields));
-}
-
-/**
- * The elements of a rule, "(1) … (2) … (3) …" or "(a) … (b) …", each take the next color of the rainbow
- * (`<span class="el el-1">`…). Only a run that starts at (1) or (a) and counts up counts, so a lone
- * statutory "(c)" or a citation like "§ 2-207(2)" is left alone. Text is wrapped node by node, so the
- * spans never cross a tag. Tables (colored by row), tip boxes (pink) and Facts / Held lines are skipped.
- */
-const EL_COLORS = 6;
-function rainbowElements(html) {
-  const tokens = html.split(/(<[^>]+>)/);
-  const BLOCK = new Set(['p', 'li', 'ul', 'ol', 'td', 'th', 'h1', 'h2', 'h3', 'h4', 'aside', 'div', 'header', 'table', 'tr', 'thead', 'tbody', 'br']);
-  const out = [];
-  let skipTag = null;    // the tag whose region is being skipped
-  let block = [];        // indexes into `out` of the current block's text tokens
-  const flush = () => { if (block.length) colorBlock(out, block); block = []; };
-  for (const tok of tokens) {
-    if (tok.startsWith('<')) {
-      const [, close, name = '', attrs = ''] = tok.match(/^<(\/?)([a-z0-9]+)([^>]*)>/i) || [];
-      const tag = name.toLowerCase();
-      if (skipTag) {
-        if (close && tag === skipTag) skipTag = null;
-      } else if (!close && (tag === 'table' || (tag === 'aside' && /callout-tips/.test(attrs)) || (tag === 'p' && /case-(facts|held)/.test(attrs)))) {
-        skipTag = tag;
-      }
-      if (BLOCK.has(tag)) flush();
-      out.push(tok);
-    } else {
-      if (!skipTag && tok) block.push(out.length);
-      out.push(tok);
-    }
+// ---------------------------------------------------------------------------
+// Canonical sources (docs/mcq-format.md, docs/supplement-format.md). The build renders them into
+// their standalone pages, so every set gets the current Shuffle-mode shell and every supplement the
+// current viewer, whatever the source file carried:
+//   <Name>.mcq.json, or an .html page with an mcq-data block   -> the practice shell (type practice)
+//   <Name>.supplement.json, or a page the viewer built          -> the supplement viewer (type document)
+// Returns null for any other file, { skip: true } for a canonical file with nothing usable.
+// ---------------------------------------------------------------------------
+function compile(name, bytes, accent, label) {
+  const isJson = (kind) => name.toLowerCase().endsWith(`.${kind}.json`);
+  if (!isJson('mcq') && !isJson('supplement') && !/\.html?$/i.test(name)) return null;
+  const text = bytes.toString('utf8');
+  const tell = (errors, warnings) => {
+    const all = [...errors.map((e) => `error: ${e}`), ...warnings.map((w) => `warning: ${w}`)];
+    if (!all.length) return;
+    console.warn(`  ${label}: ${errors.length} error(s), ${warnings.length} warning(s) (npm run check -- <file> lists them)`);
+    for (const m of all.slice(0, 8)) console.warn(`    ${m}`);
+    if (all.length > 8) console.warn(`    … and ${all.length - 8} more`);
+  };
+  if (isJson('mcq') || hasMcqBlock(text)) {
+    const raw = readMcq(text);
+    if (!raw) { console.warn(`  ${label}: not an mcq/v1 set (docs/mcq-format.md)`); return isJson('mcq') ? { skip: true } : null; }
+    const { set, errors, warnings } = normalizeMcq(raw);
+    tell(errors, warnings);
+    if (!set.questions.length) return { skip: true };
+    return { type: 'practice', html: renderPracticeShell(set, { accent }), questions: set.questions.length, text: mcqText(set) };
   }
-  flush();
-  return out.join('');
-}
-function colorBlock(out, idxs) {
-  const text = idxs.map((i) => out[i]).join('');
-  const markers = [...text.matchAll(/(?<=^|\s)\((\d{1,2}|[a-h])\)/g)];
-  // Runs that start at (1)/(a) and count up by one; a new (1)/(a) starts the next run.
-  const runs = [];
-  let seq = null;
-  for (const m of markers) {
-    const want = seq && (/\d/.test(seq[0][1]) ? String(seq.length + 1) : String.fromCharCode(97 + seq.length));
-    if (seq && m[1] === want) seq.push(m);
-    else if (m[1] === '1' || m[1] === 'a') runs.push(seq = [m]);
+  const raw = isJson('supplement') ? readSupplement(text) : readSupplementPage(text);
+  if (!raw) {
+    if (isJson('supplement')) { console.warn(`  ${label}: not a supplement/v1 supplement (docs/supplement-format.md)`); return { skip: true }; }
+    return null;
   }
-  // Each element runs to the next marker; the last one to the end of its sentence (or to where the next run starts).
-  const ranges = [];
-  runs.filter((r) => r.length > 1).forEach((r, n, all) => {
-    const limit = n + 1 < all.length ? all[n + 1][0].index : text.length;
-    const last = r[r.length - 1];
-    const tail = text.slice(last.index, limit).search(/[.;](?=\s+[A-Z]|\s*$)/);
-    const end = tail < 0 ? limit : last.index + tail + 1;
-    r.forEach((m, k) => ranges.push([m.index, k + 1 < r.length ? r[k + 1].index : end, (k % EL_COLORS) + 1]));
-  });
-  if (!ranges.length) return;
-  let pos = 0;
-  for (const i of idxs) {
-    const t = out[i];
-    const from = pos;
-    pos += t.length;
-    let res = '';
-    let at = from;
-    for (const [a, b, c] of ranges) {
-      if (b <= at || a >= pos) continue;
-      const s = Math.max(a, at);
-      const e = Math.min(b, pos);
-      res += t.slice(at - from, s - from) + `<span class="el el-${c}">${t.slice(s - from, e - from)}</span>`;
-      at = e;
-    }
-    out[i] = res + t.slice(at - from);
-  }
-}
-
-/** Consecutive "1.  Step" paragraphs (a numbered list of elements typed as plain lines) take rainbow colors too. */
-function numberedLines(html) {
-  return html.replace(/(?:<p><strong>\d{1,2}\.(?:\s|&nbsp;)[\s\S]*?<\/p>){2,}/g, (run) => {
-    let k = 0;
-    return run.replace(/<p><strong>(\d{1,2})\./g, (m, n) => `<p class="el-line el-${(k++ % EL_COLORS) + 1}"><strong>${n}.`);
-  });
-}
-
-/** Data rows of a structured outline's tables cycle through the rainbow, so a row reads across at a glance. */
-function rainbowRows(html) {
-  return html.replace(/<table>[\s\S]*?<\/table>/g, (table) => {
-    let i = -1;
-    return table.replace(/<tr>/g, () => (++i ? `<tr class="rb rb-${((i - 1) % EL_COLORS) + 1}">` : '<tr>'));
-  });
-}
-
-/** Tag each table cell with its column heading (data-label) so phones can show rows as labelled cards. */
-function labelTableCells(html) {
-  return html.replace(/<table>([\s\S]*?)<\/table>/g, (table, inner) => {
-    const rows = inner.match(/<tr>[\s\S]*?<\/tr>/g);
-    if (!rows || rows.length < 2) return table;
-    const cellRe = /<(td|th)\b([^>]*)>([\s\S]*?)<\/\1>/g;
-    const labels = [...rows[0].matchAll(cellRe)].map((m) => decodeEntities(m[3].replace(/<[^>]+>/g, '')).trim().replace(/"/g, '&quot;'));
-    let first = true;
-    return table.replace(/<tr>[\s\S]*?<\/tr>/g, (row) => {
-      if (first) { first = false; return row; }
-      let i = 0;
-      return row.replace(/<(td|th)\b([^>]*)>/g, (m, tag, attrs) => (labels[i] ? `<${tag}${attrs} data-label="${labels[i++]}">` : (i++, m)));
-    });
-  });
+  const supp = normalizeSupplement(raw);
+  tell(supp.errors, supp.warnings);
+  if (!supp.data.length) return { skip: true };
+  return { type: 'document', html: renderSupplement(supp, { accent }), text: supplementText(supp) };
 }
 
 // ---------------------------------------------------------------------------
@@ -344,7 +183,9 @@ async function loadSubjects() {
       const trackFiles = isPlaylist ? fs.readdirSync(file).filter((f) => FORMATS[path.extname(f).toLowerCase()]?.viewer === 'audio')
         .sort((a, b) => a.localeCompare(b, 'en', { numeric: true })) : [];
       if (isPlaylist && !trackFiles.length) { console.warn(`  skip (folder without audio): ${dirent.name}/${name}`); continue; }
-      const ext = isPlaylist ? '.zip' : path.extname(name).toLowerCase();
+      // A canonical data file (.mcq.json, .supplement.json) is built into an HTML page.
+      const dataFile = !isPlaylist && /\.(?:mcq|supplement)\.json$/i.test(name);
+      const ext = isPlaylist ? '.zip' : dataFile ? '.html' : path.extname(name).toLowerCase();
       const format = isPlaylist ? PLAYLIST : FORMATS[ext];
       if (!format) { console.warn(`  skip (unsupported format): ${dirent.name}/${name}`); continue; }
       // Per-document metadata: subject.json entry, overridden by an optional "<file>.meta.json" sidecar
@@ -354,12 +195,17 @@ async function loadSubjects() {
       const dm = { ...(meta.documents?.[name] || {}), ...sidecar };
       if (dm.publish === false) { console.log(`  skip (publish: false): ${dirent.name}/${name}`); continue; }
 
-      const base = isPlaylist ? name : path.basename(name, ext);
+      const base = isPlaylist ? name : dataFile ? name.replace(/\.(?:mcq|supplement)\.json$/i, '') : path.basename(name, ext);
+      let raw = isPlaylist ? null : fs.readFileSync(file);
+      const compiled = isPlaylist ? null : compile(name, raw, subject.accent, `${dirent.name}/${name}`);
+      if (compiled?.skip) { console.warn(`  skip (nothing usable): ${dirent.name}/${name}`); continue; }
+      if (compiled) raw = Buffer.from(compiled.html, 'utf8');
       let docSlug = dm.slug || slugify(base);
       for (let i = 2; usedSlugs.has(docSlug); i++) docSlug = `${dm.slug || slugify(base)}-${i}`;
       usedSlugs.add(docSlug);
 
       const type = dm.type && TYPES[dm.type] ? dm.type
+        : compiled ? compiled.type
         : format.viewer === 'audio' || isPlaylist ? 'music'
         : Object.keys(TYPES).find((k) => TYPES[k].match.test(base));
       // Track titles and notes come from the playlist's "tracks" metadata, keyed by file name.
@@ -383,14 +229,13 @@ async function loadSubjects() {
       });
       const trackBytes = tracks.reduce((n, t) => n + t.size, 0);
       const zipped = !isPlaylist || trackBytes <= MAX_ZIP_BYTES;
-      const raw = !isPlaylist ? fs.readFileSync(file)
-        : zipped ? Buffer.from(zipSync(Object.fromEntries(tracks.map((t) => [t.file, [new Uint8Array(fs.readFileSync(t.path)), { level: 0 }]]))))
+      if (isPlaylist) raw = zipped ? Buffer.from(zipSync(Object.fromEntries(tracks.map((t) => [t.file, [new Uint8Array(fs.readFileSync(t.path)), { level: 0 }]]))))
         : null;
       const doc = {
         id: `${slug}/${docSlug}`,
         slug: docSlug,
         subject,
-        filename: isPlaylist ? `${name}.zip` : name,
+        filename: isPlaylist ? `${name}.zip` : dataFile ? `${base}.html` : name,
         source: name,
         tracks: isPlaylist ? tracks : null,
         ext,
@@ -399,7 +244,7 @@ async function loadSubjects() {
         title: dm.title || base.replace(/[_-]+/g, ' ').trim(),
         description: dm.description || '',
         tags: dm.tags || [],
-        questions: dm.questions ?? null,
+        questions: dm.questions ?? compiled?.questions ?? null,
         contributor: dm.contributor || null,
         theme: dm.theme || null,
         order: dm.order ?? 999,
@@ -413,15 +258,10 @@ async function loadSubjects() {
       };
 
       if (ext === '.docx') {
-        const styleMap = ["p[style-name='Title'] => h1.doc-title:fresh", "p[style-name='Subtitle'] => p.doc-subtitle:fresh", "highlight[color='darkMagenta'] => span.outside"];
-        const source = dm.outsideColor ? markOutsideRuns(raw, dm.outsideColor) : raw;
-        const { value } = await mammoth.convertToHtml({ buffer: source }, { styleMap });
-        const shaped = dm.theme === 'structured' ? structureOutline(value, dm.outsideColor ? outsideTone(dm.outsideColor) : 'accent') : value;
-        const labelled = dm.theme === 'structured' ? rainbowRows(labelTableCells(shaped)) : labelTableCells(shaped);
-        const withIds = addHeadingIds(labelled.replace(/<table>/g, '<div class="table-wrap"><table>').replace(/<\/table>/g, '</table></div>'));
-        doc.html = withIds.html;
-        doc.toc = withIds.toc;
-        doc.text = htmlToText(value);
+        const converted = await convertDocx(raw, { theme: dm.theme, outsideColor: dm.outsideColor });
+        doc.html = converted.html;
+        doc.toc = converted.toc;
+        doc.text = converted.text;
       } else if (format.mime === 'text/html') {
         let html = raw.toString('utf8');
         // Without a viewport tag, phones render the page zoomed out at desktop width when it is opened directly.
@@ -453,6 +293,8 @@ ${html}`;
           const d = html.match(/<meta\s+name=["']description["']\s+content=["']([^"']*)["']/i);
           if (d) doc.description = decodeEntities(d[1]);
         }
+        // A canonical page's questions or sections live in its data; the API gets them as text.
+        if (compiled) doc.text = compiled.text;
       } else if (format.viewer === 'text') {
         doc.text = raw.toString('utf8');
       } else if (isPlaylist) {
@@ -503,11 +345,12 @@ fs.cpSync(path.join(PDFJS, 'standard_fonts'), path.join(DIST, 'assets', 'pdfjs',
 write('.nojekyll', '');
 
 // Reference popup: a subject whose subject.json names its statutes and outline
-// ("refs": { "statutes": "<doc slug>", "outline": "<doc slug>" }, plus "cite": "fre" when the
-// statutes are the Federal Rules of Evidence rather than UCC sections, and "fullNames": [...] for case
-// parties its questions also use for other cases) gets an index of both, and its
-// HTML practice pages load src/assets/refs.js to look things up from any question. Only the
-// served copy gets the script tags; downloads and ZIPs stay as written.
+// ("refs": { "statutes": "<doc slug>", "outline": "<doc slug>" }, plus "cite" naming how the
+// statutes are cited when they aren't UCC sections: "fre", "mrpc", "frcp", "restatement" or
+// "section" (STYLES in src/assets/refs.js), and "fullNames": [...] for case parties its questions
+// also use for other cases) gets an index of both, and its HTML practice pages, canonical .mcq.json
+// sets included, load src/assets/refs.js to look things up from any question. Only the served copy
+// gets the script tags; downloads and ZIPs stay as written. See docs/supplement-format.md.
 const refPages = new Set();
 // Pages ask for refs.js, its stylesheet, and the indexes with a version taken from their contents,
 // so a browser's cached copy from before a deploy can't pair an old index with new code.
@@ -517,6 +360,7 @@ for (const s of subjects.filter((x) => x.refs)) {
   const find = (slug) => slug && s.documents.find((d) => d.slug === slug);
   const statutes = find(s.refs.statutes), outline = find(s.refs.outline);
   if (!statutes && !outline) { console.warn(`  refs: no statutes or outline found for ${s.slug}`); continue; }
+  if (s.refs.cite && !['ucc', 'fre', 'mrpc', 'frcp', 'restatement', 'section'].includes(s.refs.cite)) console.warn(`  refs: ${s.slug} has an unknown "cite" (${s.refs.cite}); cites will read as UCC sections`);
   const index = refIndex({
     supplementHtml: statutes?.raw.toString('utf8'),
     outlineHtml: outline && (outline.html ?? outline.raw.toString('utf8')),
@@ -530,15 +374,7 @@ for (const s of subjects.filter((x) => x.refs)) {
   for (const d of s.documents) if (d.type === 'practice' && d.format.mime === 'text/html') refPages.add(d);
 }
 const refsVersion = refsHash.digest('hex').slice(0, 10);
-// The popup's fonts (Fraunces headings, Inter text, JetBrains Mono cites; see refs.css).
-const REFS_FONTS = 'https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&amp;family=Inter:wght@400;500;600&amp;family=JetBrains+Mono:wght@500&amp;display=swap';
-const withRefs = (d) => {
-  if (!refPages.has(d)) return d.raw;
-  const tags = `<link rel="stylesheet" href="${REFS_FONTS}"><link rel="stylesheet" href="../../assets/refs.css?v=${refsVersion}"><script src="../../assets/refs.js?v=${refsVersion}" data-root="../../" data-index="assets/refs/${d.subject.slug}.json?v=${refsVersion}" defer></script>`;
-  const html = d.raw.toString('utf8');
-  const at = html.toLowerCase().lastIndexOf('</body>');
-  return Buffer.from(at < 0 ? html + tags : html.slice(0, at) + tags + html.slice(at), 'utf8');
-};
+const withRefs = (d) => (refPages.has(d) ? Buffer.from(injectRefs(d.raw.toString('utf8'), { slug: d.subject.slug, version: refsVersion }), 'utf8') : d.raw);
 
 // Raw files + ZIP bundles
 const allZip = {};
@@ -645,6 +481,29 @@ write('api/search-index.json', JSON.stringify(docs.map((d) => ({
 
 write('api/openapi.json', JSON.stringify(T.openapi(config), null, 2));
 
+// Authoring specs for the canonical formats, for AI agents and people who write new materials. They
+// sit with the other machine-readable files under api/: listed in llms.txt, api/specs/index.json and
+// docs/agents-api.md, but linked from no page and left out of the sitemap.
+const SPECS = [
+  { file: 'outline-format.md', from: 'docs/outline-format.md', title: 'Outline format (outline/v1)', description: 'How to write a Word outline the site turns into headings, callouts and case cards, and that the reference popup indexes (sections, case keys, worked problems).' },
+  { file: 'supplement-format.md', from: 'docs/supplement-format.md', title: 'Statutory / rule supplement format (supplement/v1)', description: 'The AREAS and DATA contract behind a course supplement and the reference popup, and the citation styles (ucc, fre, mrpc, frcp, restatement, section).' },
+  { file: 'mcq-format.md', from: 'docs/mcq-format.md', title: 'MCQ practice set format (mcq/v1)', description: 'The canonical multiple-choice schema, the Shuffle-mode practice page it builds into, and the citation rules that make every question link to the supplement and outline.' },
+  { file: 'ai-prompts.md', from: 'docs/ai-prompts.md', title: 'Prompt templates', description: 'Copy-paste prompts for generating an outline, a supplement and a practice set in these formats.' },
+  { file: 'mcq-shuffle-template.html', from: 'docs/templates/mcq-shuffle-template.html', title: 'MCQ practice page template', description: 'The standalone Shuffle-mode practice page with a sample mcq/v1 set; replace the JSON in its mcq-data block.' },
+  { file: 'supplement-template.html', from: 'docs/templates/supplement-template.html', title: 'Supplement viewer template', description: 'The standalone supplement viewer with sample UCC data; replace its SUPP, AREAS and DATA lines.' },
+  { file: 'sample.mcq.json', from: 'docs/templates/sample.mcq.json', title: 'Sample mcq/v1 set', description: 'Six Sales and Leases questions using every mcq/v1 feature.' },
+  { file: 'sample.supplement.json', from: 'docs/templates/sample.supplement.json', title: 'Sample supplement/v1 data', description: 'Seven UCC sections in the supplement/v1 format.' },
+  { file: 'sample-outline.json', from: 'docs/templates/sample-outline.json', title: 'Sample outline/v1 data', description: 'An outline as data, for scripts/templates/build-outline-docx.mjs.' },
+  { file: 'sample-outline.docx', build: () => buildOutlineDocx(JSON.parse(fs.readFileSync(path.join(ROOT, 'docs', 'templates', 'sample-outline.json'), 'utf8'))), title: 'Sample outline (Word)', description: 'sample-outline.json built into the Word file the site reads.' },
+].filter((sp) => sp.build || fs.existsSync(path.join(ROOT, sp.from)) || console.warn(`  specs: missing ${sp.from}`));
+const SPEC_TYPES = { '.md': 'text/markdown', '.html': 'text/html', '.json': 'application/json', '.docx': FORMATS['.docx'].mime };
+for (const sp of SPECS) write(`api/specs/${sp.file}`, sp.build ? sp.build() : fs.readFileSync(path.join(ROOT, sp.from)));
+write('api/specs/index.json', JSON.stringify({
+  schemaVersion: '1.0',
+  formats: { mcq: 'mcq/v1', supplement: 'supplement/v1', outline: 'outline/v1' },
+  specs: SPECS.map(({ file, title, description }) => ({ name: file, title, description, mediaType: SPEC_TYPES[path.extname(file)], url: abs(`api/specs/${file}`) })),
+}, null, 2));
+
 write('llms.txt', [
   `# ${config.title}`,
   '',
@@ -655,6 +514,10 @@ write('llms.txt', [
   `- [Search index](${abs('api/search-index.json')}): compact index for keyword search`,
   `- [OpenAPI spec](${abs('api/openapi.json')}): describes the endpoints above`,
   `- [Full text](${abs('llms-full.txt')}): plain text of every document in one file`,
+  '',
+  'Authoring specs, for agents that write new outlines, supplements and practice sets in the formats the site builds and links automatically:',
+  `- [Spec index](${abs('api/specs/index.json')}): every spec and template below, with media types`,
+  ...SPECS.map((sp) => `- [${sp.title}](${abs(`api/specs/${sp.file}`)}): ${sp.description}`),
   '',
   ...subjects.flatMap((s) => [
     `## ${s.title}`,
