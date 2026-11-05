@@ -12,7 +12,7 @@
       "type": "outline",
       "theme": "structured",
       "outsideColor": "64748B",
-      "description": "Condensed exam outline of Weeks 1–15 on the Fall 2026 syllabus (Fisher pp. 1–1098). Part I covers the Federal Rules, jury secrecy under 606(b), relevance, conditional relevance, and 403. Part II covers the specialized relevance rules, 407–411. Part III covers character evidence: the propensity ban, 404(b), Huddleston, 413–415, the defendant's and victim's character, and habit. Part IV covers impeachment under 607–609 and the rape shield. Part V covers competency, the definition of hearsay, opposing parties' statements, prior statements of witnesses, and the 803, 804, and 807 exceptions. Part VI covers the Confrontation Clause from Crawford through Smith v. Arizona. Part VII covers completeness, Bruton, and Chambers. Part VIII covers lay and expert opinion from the Week 10 reading. Part IX covers expert bases and reliability (703, 705, Frye, Daubert, Joiner, Kumho Tire). Part X covers authentication and the best evidence rule (901–902, 1001–1008). Part XI covers Rule 501, the psychotherapist and lawyer-client privileges, and 502 waiver. Part XII covers the spousal and marital-confidences privileges. Rule and tip boxes throughout, and a card for every principal case with its class.",
+      "description": "Condensed exam outline of Weeks 1–15 on the Fall 2026 syllabus (Fisher pp. 1–1098). Part I covers the Federal Rules, jury secrecy under 606(b), relevance, conditional relevance, and 403. Part II covers the specialized relevance rules, 407–411. Part III covers character evidence: the propensity ban, 404(b), Huddleston, 413–415, the defendant's and victim's character, and habit. Part IV covers impeachment under 607–609 and the rape shield. Part V covers competency, the definition of hearsay, opposing parties' statements, prior statements of witnesses, and the 803, 804, and 807 exceptions. Part VI covers the Confrontation Clause from Crawford through Smith v. Arizona. Part VII covers completeness, Bruton, and Chambers. Part VIII covers lay and expert opinion from the Week 10 reading. Part IX covers expert bases and reliability (703, 705, Frye, Daubert, Joiner, Kumho Tire). Part X covers authentication and the best evidence rule (901–902, 1001–1008). Part XI covers Rule 501, the psychotherapist and lawyer-client privileges, 502 waiver, government lawyers, and self-incrimination. Part XII covers the spousal and marital-confidences privileges. Rule and tip boxes throughout, and a card for every principal case with its class.",
       "tags": ["FRE", "outline", "hearsay", "Confrontation Clause", "character evidence", "impeachment", "privileges", "authentication", "Weeks 1–15"],
       "order": 0
     },
@@ -37,7 +37,7 @@
       "slug": "federal-rules-of-evidence",
       "title": "Federal Rules of Evidence",
       "type": "document",
-      "description": "The full official text of all 69 Federal Rules of Evidence, as amended to December 1, 2024. Search by word, phrase, or cite (type 803(2) to go straight to the excited-utterance exception, or 404(b)(2) to see that clause marked), filter to the rules the course covers or to any of nine course topics, and follow cross-references between rules. Each rule shows how often the outline and the practice sets cite it. The practice sets use it for their Look up popup: any rule cited in a question or explanation opens its text with the cited subdivision marked.",
+      "description": "The full official text of all 69 Federal Rules of Evidence, as amended to December 1, 2024, with notes on the 2023 and 2024 amendments and the Rule 801(d)(1)(A) amendment taking effect December 1, 2026. Search by word, phrase, or cite (type 803(2) to go straight to the excited-utterance exception, or 404(b)(2) to see that clause marked), filter to the rules the course covers or to any of eleven course topics, and follow cross-references between rules. Each rule shows how often the outline and the practice sets cite it. The practice sets use it for their Look up popup: any rule cited in a question or explanation opens its text with the cited subdivision marked.",
       "tags": ["FRE", "rules", "statutes", "reference"],
       "order": 1.5
     },
@@ -143,7 +143,7 @@
       "slug": "evidence-hearsay-practice-exam",
       "title": "Hearsay Practice Exam",
       "type": "practice",
-      "description": "40 bar-style questions, five choices each, covering all of hearsay: the definition and non-truth uses, opposing-party statements, prior statements and impeachment (613, 806), the 803 and 804 exceptions, 807, multiple hearsay, completeness under 106, and the Confrontation Clause through Smith v. Arizona and Samia. Includes the 2023 and 2024 amendments. Tutor mode grades each question as you go; timed mode gives you 80 minutes and grades at the end with a score by topic. Every question has the rule, an analysis, and why each choice is right or wrong.",
+      "description": "41 bar-style questions, five choices each, covering all of hearsay: the definition and non-truth uses, opposing-party statements, prior statements and impeachment (613, 806), the 803 and 804 exceptions, 807, multiple hearsay, completeness under 106, and the Confrontation Clause through Smith v. Arizona and Samia. Includes the 2023 and 2024 amendments. Tutor mode grades each question as you go; timed mode gives you 80 minutes and grades at the end with a score by topic. Every question has the rule, an analysis, and why each choice is right or wrong.",
       "tags": [
         "MCQ",
         "hearsay",
@@ -152,16 +152,16 @@
         "bar prep",
         "FRE 801–807"
       ],
-      "questions": 40,
+      "questions": 41,
       "order": 9
     },
     "Evidence_Concepts_Test.html": {
       "slug": "evidence-concepts-test",
       "title": "Evidence Concepts Test",
       "type": "practice",
-      "description": "A 115-question concepts test on the whole course, Weeks 1–15, in outline order: jury secrecy, relevance and 403, the policy rules (407–411), character evidence, 404(b), and 413–415, impeachment and the rape shield, the hearsay definition, 801(d), and the 803–807 exceptions, the Confrontation Clause through Smith v. Arizona, completeness, Bruton, and the right to present a defense, lay and expert opinion through Daubert and Kumho Tire, authentication and the best evidence rule, and the lawyer-client, psychotherapist, and spousal privileges. Each question turns on a holding, an element, or a recent amendment, and its wrong choices are the dissents, overruled cases, and older rules students mix up. Five choices each. Tutor mode grades as you go; timed mode gives you 90 seconds a question. Every question has the rule, an analysis, and why each choice is right or wrong.",
+      "description": "A 116-question concepts test on the whole course, Weeks 1–15, in outline order: jury secrecy, relevance and 403, the policy rules (407–411), character evidence, 404(b), and 413–415, impeachment and the rape shield, the hearsay definition, 801(d), and the 803–807 exceptions, the Confrontation Clause through Smith v. Arizona, completeness, Bruton, and the right to present a defense, lay and expert opinion through Daubert and Kumho Tire, authentication and the best evidence rule, and the lawyer-client, psychotherapist, and spousal privileges. Each question turns on a holding, an element, or a recent amendment, and its wrong choices are the dissents, overruled cases, and older rules students mix up. Five choices each. Tutor mode grades as you go; timed mode gives you 90 seconds a question. Every question has the rule, an analysis, and why each choice is right or wrong.",
       "tags": ["MCQ", "conceptual", "FRE", "Confrontation Clause", "privileges", "Weeks 1–15"],
-      "questions": 115,
+      "questions": 116,
       "order": 10
     }
   }
