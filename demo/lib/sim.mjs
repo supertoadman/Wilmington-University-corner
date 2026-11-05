@@ -136,7 +136,7 @@ export function simulate({ dataset, now = Date.now(), seed = 'wilmington-demo-v1
   const weak = R.shuffle(base.filter((q) => !taken.has(q.id))).slice(0, 12).map((q) => { taken.add(q.id); return q.id; });
   const ordinary = R.shuffle(base.filter((q) => !taken.has(q.id) && (q.subject_id !== 'professional-responsibility' || R.chance(0.2)))).slice(0, 133).map((q) => { taken.add(q.id); return q.id; });
   flagged.forEach((id) => { info.get(id).a = -1.8; });
-  weak.forEach((id) => { info.get(id).a = 0.2; });
+  weak.forEach((id) => { info.get(id).a = 0.35; });
   const audit = new Set([...flagged, ...weak, ...ordinary]);
 
   // ---- attempts ------------------------------------------------------------------------------

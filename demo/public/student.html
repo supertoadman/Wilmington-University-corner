@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Study Workspace · Wilmington Law</title>
+<link rel="stylesheet" href="/public/shell.css">
+<link rel="stylesheet" href="/public/outline.css">
+<link rel="stylesheet" href="/assets/refs.css">
+<link rel="stylesheet" href="/public/student.css">
+</head>
+<body data-portal="student">
+<main>
+  <div class="wrap st">
+    <header class="page-head st-head">
+      <div class="grow">
+        <span class="eyebrow">Adaptive study workspace</span>
+        <h1 id="st-title">Study workspace</h1>
+        <p class="lede" id="st-sub">Practice that adapts to the questions and the traps you keep missing.</p>
+      </div>
+      <div class="st-who" id="st-who" aria-live="polite"></div>
+    </header>
+
+    <div class="tabs st-tabs" role="tablist" aria-label="Study workspace">
+      <button class="tab" role="tab" id="tab-dashboard" data-tab="dashboard" aria-controls="view-dashboard" aria-selected="true">My Dashboard</button>
+      <button class="tab" role="tab" id="tab-builder" data-tab="builder" aria-controls="view-builder" aria-selected="false" tabindex="-1">Quiz Builder</button>
+      <button class="tab" role="tab" id="tab-session" data-tab="session" aria-controls="view-session" aria-selected="false" tabindex="-1" hidden>Quiz</button>
+    </div>
+
+    <section id="view-dashboard" class="panel" role="tabpanel" aria-labelledby="tab-dashboard" aria-live="off"></section>
+    <section id="view-builder" class="panel" role="tabpanel" aria-labelledby="tab-builder" hidden></section>
+    <section id="view-session" class="panel" role="tabpanel" aria-labelledby="tab-session" hidden></section>
+
+    <noscript><div class="empty">The study workspace needs JavaScript.</div></noscript>
+  </div>
+</main>
+<script src="/public/shell.js" defer></script>
+<script src="/public/student.js" defer></script>
+<script src="/assets/refs.js" data-root="/" data-courses="agency-and-partnership civil-procedure con-law-ii contracts-i evidence professional-responsibility sales-and-leases" defer></script>
+</body>
+</html>

@@ -131,7 +131,7 @@
     <div class="demo-actions">
       <button class="btn tour" type="button" data-tour title="A guided three-minute walk through all four portals">▶ <span>3-Min <span class="long">Guided </span>Pitch</span></button>
       <div class="persona"><button class="btn persona-btn" type="button" aria-haspopup="true" aria-expanded="false" data-persona-btn></button><div class="persona-menu" role="menu" hidden></div></div>
-      <button class="btn" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode">◐</button>
+      <button class="btn icon" type="button" data-theme-toggle aria-label="Toggle dark mode" title="Toggle dark mode"><svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg></button>
     </div>`;
   document.body.prepend(bar);
   const main = document.querySelector('main');

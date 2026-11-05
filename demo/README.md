@@ -85,8 +85,9 @@ API is computed from the events:
 * 12 at-risk 3Ls (rushing, collapsing on variations, or gone quiet) plus Jordan; Maya is strong but
   weak on § 2-207 variations with a nine-day streak
 * 5 questions with an inverted discrimination (stronger students miss them) are seeded `flagged`;
-  their point-biserial correlation comes out below −0.05 from the data, alongside a dozen items that
-  barely discriminate
+  their point-biserial correlation comes out far below −0.05 from the data (about −0.3 to −0.5),
+  alongside a dozen items that barely discriminate and, as in real item banks, a few borderline
+  negatives produced by sampling noise
 
 All students and their activity are synthetic. No real student data is involved.
 

@@ -1,0 +1,385 @@
+/* Dean / Academic Success command center. Builds on shell.css tokens; only page-specific rules live here. */
+
+/* ---- data-viz series tokens (blue / orange / neutral: safe for the common colour-vision deficiencies,
+        and also told apart by line style and marker shape). Dark values are stepped for the dark surface. */
+.dean { --viz-eoc: #6b6a66; --viz-unrev: #eb6834; --viz-ref: #2a78d6; }
+@media (prefers-color-scheme: dark) {
+  :root:where(:not([data-theme="light"])) .dean { --viz-eoc: #a8a79f; --viz-unrev: #d95926; --viz-ref: #3987e5; }
+}
+:root[data-theme="dark"] .dean { --viz-eoc: #a8a79f; --viz-unrev: #d95926; --viz-ref: #3987e5; }
+
+html { scroll-padding-top: calc(var(--dean-bar, var(--bar-h)) + var(--dean-ctl, 0px) + 12px); }
+.dean { padding-top: 22px; }
+.dean .page-head { margin-bottom: 14px; }
+.dean h3 { font-size: 20px; }
+.dean .grow { flex: 1 1 320px; min-width: 0; }
+.dean sub { font-size: .75em; line-height: 0; }
+
+/* ---- sticky header controls ------------------------------------------------------------------ */
+.dean .controls {
+  position: sticky; top: var(--dean-bar, var(--bar-h)); z-index: 40;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 10px 20px;
+  margin: 0 -24px 18px; padding: 10px 24px;
+  background: color-mix(in srgb, var(--bg) 92%, transparent); -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+.dean .ctl { display: flex; align-items: center; gap: 10px; min-width: 0; }
+.dean .ctl-label { font: 600 11px/1 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
+.dean .mask-state { font-size: 10.5px; }
+.dean .stamp { white-space: nowrap; }
+.dean .switch input:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+@media (max-width: 640px) {
+  .dean .controls { margin: 0 -14px 14px; padding: 10px 14px; position: static; }
+  .dean .stamp { display: none; }
+}
+
+/* ---- loading / generic ------------------------------------------------------------------------ */
+#app { transition: opacity .18s; }
+#app.is-loading { opacity: .5; pointer-events: none; }
+.dean .linkbtn { border: 0; background: none; padding: 0; font: inherit; color: var(--link); text-decoration: underline; text-underline-offset: 2px; cursor: pointer; }
+.dean .linkbtn:hover { color: var(--ink); }
+.dean .card.err { border-color: color-mix(in srgb, var(--bad) 45%, var(--border)); }
+.dean .dean-panel { min-width: 0; }
+.dean .tab-count { display: inline-block; min-width: 22px; margin-left: 6px; padding: 0 7px; border-radius: 999px; font: 600 11.5px/19px var(--font-sans); text-align: center; background: var(--surface-3); color: var(--text-2); }
+.dean .tab-count:empty { display: none; }
+.dean .tab-count.warn { background: var(--warn-soft); color: var(--warn); }
+.dean .tab-count.bad { background: var(--bad-soft); color: var(--bad); }
+.dean .kpis { margin-bottom: 20px; }
+.dean .kpi-sub { line-height: 1.45; }
+.dean .chip.bad { background: var(--bad-soft); color: var(--bad); border-color: color-mix(in srgb, var(--bad) 30%, var(--border)); }
+.dean .th-btn { border: 0; background: none; padding: 0; margin: 0; font: inherit; letter-spacing: inherit; text-transform: inherit; color: inherit; cursor: pointer; text-align: inherit; }
+.dean .th-btn:hover { color: var(--ink); }
+.dean .sortsel { display: none; min-width: 170px; }
+.dean .insight {
+  margin: 2px 0 14px; padding: 2px 0 2px 16px; border-left: 3px solid var(--gold);
+  font: 400 clamp(18px, 1.9vw, 22px)/1.4 var(--font-serif); color: var(--ink); max-width: 92ch;
+}
+.dean .insight strong { font-weight: 400; background: linear-gradient(transparent 62%, var(--gold-soft) 62%); }
+.dean .footnote { margin: 14px 0 0; max-width: 110ch; line-height: 1.5; }
+.dean .legend-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 20px; margin: 0 0 10px; }
+.dean .legend-row > span { display: inline-flex; align-items: center; gap: 7px; }
+.dean .legend-chips { gap: 6px !important; flex-wrap: wrap; }
+.dean .lg { display: inline-block; width: 22px; height: 8px; border-radius: 99px; }
+.dean .lg-course { background: var(--c-course); } .dean .lg-bar { background: var(--c-bar); }
+.dean .lg-tick { width: 2px; height: 14px; border-radius: 1px; background: var(--text-2); opacity: .55; }
+
+/* ---- readiness matrix ------------------------------------------------------------------------- */
+.dean .matrix td { vertical-align: middle; }
+.dean .matrix td.subj { min-width: 190px; }
+.dean .subj-name { display: flex; align-items: center; gap: 8px; }
+.dean .subj-name .dot { width: 11px; height: 11px; }
+.dean .subj-cat { margin: 1px 0 0 19px; }
+.dean .matrix .mt { min-width: 160px; }
+.dean .matrix .num.gapcell { white-space: nowrap; }
+.dean .matrix .rulecell { min-width: 250px; max-width: 360px; }
+.dean .rule-line { display: flex; align-items: center; gap: 8px; margin-bottom: 2px; }
+.dean .rule-line b { font-variant-numeric: tabular-nums; }
+.dean .rule-title { font-size: 12.5px; color: var(--text-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; line-height: 1.4; }
+.dean .matrix tr.is-empty { opacity: .6; }
+.dean .ready-chip { font-size: 11.5px; }
+.dean .mt { --mt-color: var(--c-course); display: grid; gap: 5px; }
+.dean .mt.bar { --mt-color: var(--c-bar); }
+.dean .mt-track { position: relative; height: 10px; border-radius: 999px; background: color-mix(in srgb, var(--mt-color) 15%, var(--surface-2)); }
+.dean .mt-track i { position: absolute; inset: 0 auto 0 0; width: calc(var(--v) * 100%); border-radius: 999px; background: var(--mt-color); }
+.dean .mt-tick { position: absolute; left: 75%; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; border-radius: 1px; background: var(--text-2); opacity: .5; }
+.dean .mt-meta { display: flex; align-items: baseline; gap: 8px; font-size: 12.5px; color: var(--muted); }
+.dean .mt-meta b { font-size: 14px; color: var(--text); font-variant-numeric: tabular-nums; }
+
+/* ---- retention chart -------------------------------------------------------------------------- */
+.dean .ret-legend { list-style: none; display: flex; flex-wrap: wrap; gap: 8px 24px; margin: 0 0 10px; padding: 0; font-size: 13px; color: var(--text-2); }
+.dean .ret-legend li { display: inline-flex; align-items: center; gap: 8px; }
+.dean .ret-legend svg { flex: none; overflow: visible; }
+.dean .ret-body.multi { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 14px; }
+.dean .ret-card { margin: 0; padding: 10px 12px 4px; border: 1px solid var(--border); border-radius: var(--radius-sm); background: var(--surface); min-width: 0; }
+.dean .ret-card figcaption { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 2px; font-size: 14px; }
+.dean .ret-name { display: inline-flex; align-items: center; gap: 7px; min-width: 0; }
+.dean .ret-badge { font: 600 11.5px/1.5 var(--font-sans); padding: 1px 8px; border-radius: 6px; white-space: nowrap; color: var(--text); background: color-mix(in srgb, var(--viz-unrev) 16%, var(--surface)); }
+.dean .ret-wrap { min-width: 0; }
+.dean .ret-body:not(.multi) { max-width: 1020px; }
+.dean .ret-svg { display: block; width: 100%; height: auto; overflow: visible; }
+.dean .ret-svg text { font-family: var(--font-sans); font-size: 11.5px; fill: var(--muted); }
+.dean .ret-svg .ax-x { fill: var(--text-2); font-weight: 500; }
+.dean .ret-svg .tiny-n { font-size: 11px; }
+.dean .ret-svg .ax-title { font-size: 11px; letter-spacing: .04em; fill: var(--muted); }
+.dean .ret-svg .lbl { font-size: 13px; font-weight: 600; fill: var(--text); font-variant-numeric: tabular-nums; }
+.dean .ret-svg .gapnum { font-size: 17px; font-weight: 600; fill: var(--text); }
+.dean .ret-svg .gaptxt { font-size: 12px; fill: var(--text-2); }
+.dean .ret-svg .ny-t { font-size: 14px; font-weight: 600; fill: var(--text-2); }
+.dean .ret-svg .ny-s { font-size: 12px; font-style: italic; fill: var(--muted); }
+.dean .ret-svg .ny-line { stroke: var(--border-strong); stroke-width: 1; stroke-dasharray: 2 4; }
+.dean .ret-svg .gl { stroke: var(--border); stroke-width: 1; }
+.dean .ret-svg .gl.base { stroke: var(--border-strong); }
+.dean .ln { fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.dean .ln-unrev { stroke: var(--viz-unrev); stroke-dasharray: 7 5; }
+.dean .ln-ref { stroke: var(--viz-ref); }
+.dean .mk { stroke: var(--surface); stroke-width: 4; paint-order: stroke; stroke-linejoin: round; }
+.dean .mk-eoc { fill: var(--viz-eoc); } .dean .mk-unrev { fill: var(--viz-unrev); } .dean .mk-ref { fill: var(--viz-ref); }
+.dean .ret-wedge { fill: var(--viz-unrev); opacity: .12; }
+.dean .ret-svg .br { fill: none; stroke: var(--text-2); stroke-width: 1.5; }
+.dean .ret-svg .hit { fill: transparent; }
+.dean .ret-svg .pt { cursor: default; }
+.dean .ret-svg .pt .mk { transform-box: fill-box; transform-origin: center; transition: transform .12s; }
+.dean .ret-svg .pt:hover .mk { transform: scale(1.22); }
+.dean .ret-table .num { white-space: nowrap; }
+
+/* ---- roster ----------------------------------------------------------------------------------- */
+.dean .fchips { display: flex; flex-wrap: wrap; gap: 8px; margin: 2px 0 10px; }
+.dean .fchip { display: inline-flex; align-items: center; gap: 7px; padding: 5px 12px; border-radius: 999px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--text-2); font-size: 13px; font-weight: 500; cursor: pointer; }
+.dean .fchip b { font-variant-numeric: tabular-nums; padding: 0 6px; border-radius: 99px; background: var(--surface-3); color: var(--text); font-size: 12px; line-height: 18px; }
+.dean .fchip:hover:not([disabled]) { background: var(--surface-2); }
+.dean .fchip[aria-pressed="true"] { background: var(--ink-2); color: var(--ink-fg); border-color: var(--ink-2); }
+.dean .fchip[aria-pressed="true"] b { background: color-mix(in srgb, var(--ink-fg) 22%, transparent); color: var(--ink-fg); }
+.dean .fchip[disabled] { opacity: .45; cursor: not-allowed; }
+.dean .rcount { margin: 0 0 8px; }
+.dean .roster-wrap.tall { max-height: 640px; }
+.dean .roster td { vertical-align: middle; }
+.dean .roster.mixed tr.r-main.is-risk td:first-child { box-shadow: inset 3px 0 0 var(--bad); }
+.dean .roster td.num, .dean .roster .c-stu { white-space: nowrap; }
+.dean .roster .heat { margin: 0; }
+.dean .roster .c-stu { min-width: 150px; }
+.dean .r-name { white-space: nowrap; }
+.dean .insight-tag { font: 600 11px/1 var(--font-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-ink); margin-right: 6px; }
+.dean .r-toggle { display: inline-flex; align-items: center; gap: 9px; padding: 3px 0; border: 0; background: none; cursor: pointer; font-weight: 600; font-size: 14px; color: var(--ink); text-align: left; }
+.dean .r-name.mono { font-size: 13px; letter-spacing: .02em; }
+.dean .chev { width: 8px; height: 8px; flex: none; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(-45deg); transition: transform .15s; margin: 0 2px; }
+.dean .r-toggle[aria-expanded="true"] .chev { transform: rotate(45deg); }
+.dean .persona-tag { display: block; width: max-content; margin: 1px 0 0 17px; font-size: 10px; }
+.dean .roster th, .dean .roster td { padding-left: 8px; padding-right: 8px; }
+.dean .bv, .dean .bv-gap { display: block; }
+.dean .bv-gap { font-size: 12px; }
+.dean .weak { max-width: 200px; }
+.dean .risk { display: flex; align-items: center; gap: 8px; min-width: 96px; --risk-c: var(--good); }
+.dean .risk.warn { --risk-c: var(--warn); } .dean .risk.bad { --risk-c: var(--bad); }
+.dean .risk b { min-width: 1.1em; font-variant-numeric: tabular-nums; color: var(--text); }
+.dean .risk-track { flex: 1; min-width: 44px; height: 8px; border-radius: 999px; background: var(--surface-3); overflow: hidden; }
+.dean .risk-track i { display: block; height: 100%; width: calc(var(--v) * 100%); background: var(--risk-c); border-radius: 999px; min-width: 3px; }
+.dean .tagcell { min-width: 170px; }
+.dean .tagchip { display: inline-flex; align-items: center; margin: 2px 4px 2px 0; padding: 1px 9px; border-radius: 999px; font: 600 12px/1.6 var(--font-sans); border: 1px solid transparent; cursor: help; white-space: nowrap; }
+.dean .tagchip.bad { background: var(--bad-soft); color: var(--bad); border-color: color-mix(in srgb, var(--bad) 28%, transparent); }
+.dean .tagchip.warn { background: var(--warn-soft); color: var(--warn); border-color: color-mix(in srgb, var(--warn) 28%, transparent); }
+.dean .weak { display: inline-flex; align-items: center; gap: 7px; }
+.dean .roster .heat { min-width: 50px; }
+.dean .r-detail td { background: var(--surface-2); padding: 14px 18px 18px; }
+.dean .r-detail:hover { background: none; }
+.dean .detail-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) auto; gap: 8px 28px; align-items: start; }
+.dean .detail-grid h4 { font: 600 11.5px/1.2 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); margin: 0 0 8px; }
+.dean .bul { margin: 0 0 6px; padding-left: 18px; font-size: 14px; }
+.dean .bul li { margin-bottom: 5px; }
+.dean .detail-actions { max-width: 230px; }
+.dean .detail-actions p { margin: 8px 0 0; }
+
+/* ---- audit queue ------------------------------------------------------------------------------ */
+.dean .explain { margin: 0; padding: 12px 16px; border-left: 3px solid var(--gold); border-radius: 0 var(--radius-sm) var(--radius-sm) 0; background: var(--surface-2); font-size: 14.5px; max-width: 100ch; }
+.dean .aq-summary { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin: 14px 0 12px; }
+.dean .aq { list-style: none; margin: 0; padding: 0; border: 1px solid var(--border); border-radius: var(--radius-sm); overflow: hidden; background: var(--surface); }
+.dean .aq-cols, .dean .aq-head { display: grid; grid-template-columns: 118px minmax(0, 1fr) 46px 92px 270px 18px; gap: 14px; align-items: center; }
+.dean .aq-cols { padding: 8px 17px 8px 17px; font: 600 11px/1.2 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.dean .aq-cols .r { text-align: right; }
+.dean .aq-cols .pcol { white-space: nowrap; letter-spacing: .04em; }
+.dean .aq-cols .axis { position: relative; display: block; height: 14px; margin-right: 50px; }
+.dean .aq-cols .axis i { position: absolute; top: 0; font-style: normal; transform: translateX(-50%); letter-spacing: 0; text-transform: none; font-variant-numeric: tabular-nums; }
+.dean .aq-cols .axis i:nth-child(1) { left: 0; transform: none; } .dean .aq-cols .axis i:nth-child(2) { left: 50%; } .dean .aq-cols .axis i:nth-child(4) { left: 100%; transform: translateX(-100%); }
+.dean .aq-cols .axis i.thr { color: var(--good); font-weight: 700; }
+.dean .aq-item { border-bottom: 1px solid var(--border); scroll-margin-top: calc(var(--dean-bar, 60px) + var(--dean-ctl, 0px) + 14px); }
+.dean .aq-item:last-child { border-bottom: 0; }
+.dean .aq-item.is-open { background: color-mix(in srgb, var(--gold-soft) 30%, var(--surface)); box-shadow: inset 3px 0 0 var(--gold); }
+.dean .aq-head { width: 100%; padding: 12px 17px; border: 0; background: none; cursor: pointer; text-align: left; color: inherit; }
+.dean .aq-head:hover { background: color-mix(in srgb, var(--gold-soft) 45%, transparent); }
+.dean .aq-sev { display: flex; flex-wrap: wrap; gap: 4px; align-items: flex-start; }
+.dean .aq-main { display: block; min-width: 0; }
+.dean .aq-meta { display: flex; flex-wrap: wrap; align-items: center; gap: 2px 6px; font-size: 12.5px; color: var(--text-2); margin-bottom: 3px; }
+.dean .subj-chip { display: inline-flex; align-items: center; gap: 6px; padding: 0 9px; border-radius: 999px; background: var(--surface-2); border: 1px solid var(--border); font-size: 12px; font-weight: 500; color: var(--text); white-space: nowrap; }
+.dean .subj-chip .dot { width: 8px; height: 8px; }
+.dean .aq-head:focus-visible { outline-offset: -3px; }
+.dean .aq-stem { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 14px; line-height: 1.45; color: var(--text); }
+.dean .aq-n, .dean .aq-p { text-align: right; font-size: 14px; font-variant-numeric: tabular-nums; }
+.dean .aq-chev { width: 8px; height: 8px; border-right: 2px solid var(--muted); border-bottom: 2px solid var(--muted); transform: rotate(-45deg); transition: transform .15s; justify-self: center; }
+.dean .aq-head[aria-expanded="true"] .aq-chev { transform: rotate(45deg); }
+.dean .rb { display: grid; grid-template-columns: minmax(0, 1fr) 44px; gap: 6px; align-items: center; --rb-c: var(--warn); }
+.dean .rb.inverted { --rb-c: var(--bad); } .dean .rb.ceiling { --rb-c: var(--muted); }
+.dean .rb-track { position: relative; display: block; height: 16px; border-radius: 4px; background: var(--surface-2); border: 1px solid var(--border); }
+.dean .rb-ok { position: absolute; top: 0; bottom: 0; right: 0; background: color-mix(in srgb, var(--good) 14%, transparent); }
+.dean .rb-track i { position: absolute; top: 3px; bottom: 3px; border-radius: 3px; background: var(--rb-c); min-width: 2px; }
+.dean .rb-zero { position: absolute; left: 50%; top: -3px; bottom: -3px; width: 2px; margin-left: -1px; background: var(--text-2); }
+.dean .rb-thr { position: absolute; top: -3px; bottom: -3px; width: 0; margin-left: -1px; border-left: 2px dashed var(--good); }
+.dean .rb-val { font: 500 12.5px var(--font-mono); text-align: right; color: var(--text); }
+.dean .aq-editor { padding: 2px 17px 18px; }
+
+/* ---- the inline SME editor -------------------------------------------------------------------- */
+.dean .ed { display: flex; flex-direction: column; gap: 14px; padding: 16px 18px 14px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: var(--radius); box-shadow: var(--shadow-sm); }
+.dean .ed-standalone { border-color: var(--gold); }
+.dean .ed-standalone .ed { box-shadow: none; border: 0; padding: 0; }
+.dean .ed-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 8px 18px; }
+.dean .ed-ids { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; min-width: 0; }
+.dean .ed-ids .mono { overflow-wrap: anywhere; }
+.dean .ed-stats { display: flex; flex-wrap: wrap; gap: 4px 20px; font-size: 13.5px; color: var(--text-2); }
+.dean .ed-stats b { color: var(--text); font-variant-numeric: tabular-nums; }
+.dean .ed-note { margin: 0; padding: 10px 14px; border-radius: 8px; background: var(--surface-2); border-left: 3px solid var(--warn); font-size: 14px; }
+.dean .ed-choices { margin: 0; padding: 0; border: 0; display: grid; gap: 10px; min-width: 0; }
+.dean .ed-choices legend { padding: 0 0 6px; font: 600 11px/1.2 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+.dean .ed-choices legend .muted { text-transform: none; letter-spacing: 0; font-weight: 400; margin-left: 6px; }
+.dean .ed-ch { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 10px 14px; padding: 12px 14px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); min-width: 0; }
+.dean .ed-ch.is-key { border-color: color-mix(in srgb, var(--good) 55%, var(--border)); background: color-mix(in srgb, var(--good-soft) 60%, var(--surface)); }
+.dean .ed-ch-head { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.dean .ed-key { display: inline-flex; align-items: center; gap: 8px; cursor: pointer; font-weight: 600; font-size: 14px; }
+.dean .ed-letter { display: grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; background: var(--surface-3); color: var(--text); font: 600 12px/1 var(--font-sans); }
+.dean .ed-ch.is-key .ed-letter { background: var(--good); color: var(--surface); }
+.dean .ed-pick { display: flex; align-items: center; gap: 8px; min-width: 150px; font-size: 13px; }
+.dean .ed-pickbar { flex: 1; min-width: 90px; height: 8px; border-radius: 99px; background: var(--surface-3); overflow: hidden; }
+.dean .ed-pickbar i { display: block; height: 100%; background: var(--muted); border-radius: 99px; }
+.dean .ed-ch.is-key .ed-pickbar i { background: var(--good); }
+.dean .ed-pick b { min-width: 38px; text-align: right; font-variant-numeric: tabular-nums; }
+.dean .ed textarea { min-height: 56px; overflow: hidden; }
+.dean .ed-error { padding: 10px 14px; border-radius: 8px; background: var(--bad-soft); color: var(--bad); font-weight: 500; font-size: 14px; }
+.dean .ed-foot { display: flex; flex-wrap: wrap; align-items: flex-end; gap: 10px; padding-top: 4px; border-top: 1px solid var(--border); margin-top: 2px; }
+.dean .ed-foot .ed-status { width: 150px; margin-top: 10px; }
+.dean .ed-foot .btn { margin-top: 10px; }
+.dean .ed-hint { margin: 0; max-width: 100ch; }
+
+/* ---- recently resolved ------------------------------------------------------------------------ */
+.dean .rs { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.dean .rs-item { padding: 12px 16px; border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: 10px; background: var(--surface); }
+.dean .rs-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.dean .rs-top .aq-meta { margin: 0; }
+.dean .rs-stem { margin: 6px 0 8px; font-size: 14px; color: var(--text-2); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.dean .rs-foot { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.dean .rs-mon { color: var(--text-2); }
+
+/* ---- tooltip ---------------------------------------------------------------------------------- */
+.dean-tip { position: fixed; z-index: 120; max-width: 300px; padding: 8px 11px; border-radius: 8px; background: var(--ink); color: var(--ink-fg); font: 400 13px/1.4 var(--font-sans); pointer-events: none; box-shadow: var(--shadow); }
+
+/* ---- print-only report head ------------------------------------------------------------------- */
+.report-head .rh-top { display: flex; justify-content: space-between; align-items: baseline; border-bottom: 2px solid var(--ink); padding-bottom: 6px; margin-bottom: 10px; }
+.report-head .rh-brand { font: 400 20px/1 var(--font-serif); color: var(--ink); letter-spacing: .02em; }
+.report-head .rh-conf { font: 600 10px/1 var(--font-sans); letter-spacing: .14em; text-transform: uppercase; color: var(--muted); }
+.report-head h1 { margin: 0 0 8px; font-size: 30px; }
+.report-head .rh-meta { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px 28px; margin: 0 0 14px; }
+.report-head .rh-meta div { display: flex; gap: 8px; font-size: 12.5px; }
+.report-head .rh-meta dt { color: var(--muted); min-width: 118px; }
+.report-head .rh-meta dd { margin: 0; font-weight: 600; }
+
+/* ---- small screens: tables become cards -------------------------------------------------------- */
+@media screen and (max-width: 980px) {
+  .dean .aq-cols, .dean .aq-head { grid-template-columns: 104px minmax(0, 1fr) 40px 88px 220px 16px; gap: 10px; }
+  .dean .detail-grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  .dean .detail-actions { grid-column: 1 / -1; max-width: none; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+  .dean .detail-actions p { margin: 0; }
+}
+@media screen and (max-width: 760px) {
+  .dean .sortsel { display: flex; }
+  .dean .table.cards, .dean .table.cards tbody { display: block; }
+  .dean .table.cards thead { display: none; }
+  .dean .table.cards tr { display: block; padding: 12px 14px; border-bottom: 1px solid var(--border); }
+  .dean .table.cards tr:last-child { border-bottom: 0; }
+  .dean .table.cards td { display: flex; align-items: center; justify-content: space-between; gap: 14px; padding: 4px 0; border: 0; text-align: right; }
+  .dean .table.cards td::before { content: attr(data-label); flex: none; font: 600 11px/1.2 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--muted); text-align: left; }
+  .dean .table.cards td[data-label=""]::before { display: none; }
+  .dean .table.cards td.num { text-align: right; }
+  .dean .bv, .dean .bv-gap { display: inline; }
+  .dean .weak { max-width: none; }
+  .dean .matrix td.subj, .dean .matrix .rulecell { min-width: 0; max-width: none; }
+  .dean .table.cards td.subj { display: block; text-align: left; padding-bottom: 8px; }
+  .dean .table.cards td.rulecell { display: block; text-align: left; padding-top: 8px; }
+  .dean .table.cards td.rulecell::before { display: block; margin-bottom: 4px; }
+  .dean .matrix .mt { min-width: 0; width: 62%; }
+  .dean .matrix .mt-meta { justify-content: flex-end; }
+  .dean .table.cards td.tagcell { display: block; min-width: 0; text-align: left; }
+  .dean .table.cards td.tagcell::before { display: block; margin-bottom: 3px; }
+  .dean .roster tr.r-main { padding-top: 14px; }
+  .dean .roster.mixed tr.r-main.is-risk { box-shadow: inset 3px 0 0 var(--bad); }
+  .dean .roster tr.r-main.is-risk td:first-child { box-shadow: none; }
+  .dean .roster tr.r-detail { padding: 0; }
+  .dean .roster tr.r-detail td { display: block; padding: 12px 14px 14px; text-align: left; }
+  .dean .roster tr.r-detail td::before { display: none; }
+  .dean .detail-grid { grid-template-columns: minmax(0, 1fr); }
+  .dean .roster-wrap.tall { max-height: none; }
+  .dean .aq-cols { display: none; }
+  .dean .aq-head { grid-template-columns: auto auto minmax(0, 1fr) 16px; grid-template-areas: "sev sev sev chev" "main main main main" "n p bar bar"; gap: 8px 14px; padding: 12px 14px; }
+  .dean .aq-sev { grid-area: sev; } .dean .aq-main { grid-area: main; } .dean .aq-n { grid-area: n; text-align: left; } .dean .aq-p { grid-area: p; text-align: left; }
+  .dean .aq-bar { grid-area: bar; } .dean .aq-chev { grid-area: chev; }
+  .dean .aq-n::before, .dean .aq-p::before { content: attr(data-l) " "; color: var(--muted); font-size: 12px; }
+  .dean .aq-editor { padding: 2px 8px 14px; }
+  .dean .ed { padding: 12px; }
+  .dean .ed-ch { grid-template-columns: minmax(0, 1fr); padding: 10px 12px; }
+  .dean .ed-foot .ed-status { width: 100%; }
+  .dean .ed-foot .spacer { display: none; }
+  .dean .ed-foot .btn { flex: 1 1 140px; }
+  .dean .ret-body.multi { grid-template-columns: minmax(0, 1fr); }
+  .dean .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .dean .kpi-value { font-size: 28px; }
+}
+@media screen and (max-width: 420px) {
+  .dean .kpis { grid-template-columns: minmax(0, 1fr); }
+}
+
+/* ---- print: a clean one-document Bar Success Report ---------------------------------------------- */
+@media print {
+  @page { margin: 14mm 12mm; }
+  :root:root:root:root {
+    --bg: #fff; --bg-elev: #fff; --surface: #fff; --surface-2: #f4f2ed; --surface-3: #e5e2da; --text: #161c27; --text-2: #3b4352; --muted: #5a6070;
+    --border: #d6d2c6; --border-strong: #b9b4a5; --ink: #12213a; --ink-2: #1e3658; --ink-fg: #fff; --gold: #8a6418; --gold-2: #b98a2c; --gold-soft: #f4e9cf; --gold-ink: #6b4f12;
+    --link: #1e4f8a; --good: #1f7a4d; --good-soft: #e3f3ea; --warn: #8f5200; --warn-soft: #fbeed5; --bad: #b3261e; --bad-soft: #fbe4e1;
+    --c-course: #1e5fa8; --c-course-soft: #e2edf9; --c-bar: #8a4b9e; --c-bar-soft: #f1e5f6; --c-both: #1f7a4d; --c-both-soft: #e3f3ea; --c-hidden: #5a6070; --c-hidden-soft: #ebe8e1;
+    color-scheme: light;
+  }
+  :root:root:root:root .dean { --viz-eoc: #6b6a66; --viz-unrev: #eb6834; --viz-ref: #2a78d6; }
+  html, body { background: #fff !important; color: #000; }
+  body { font-size: 11.5px; }
+  .demo-bar, .no-print, .toasts, .dean-tip, .modal-backdrop { display: none !important; }
+  .wrap.dean { padding: 0; max-width: none; }
+  .report-head { display: block; margin-bottom: 14px; }
+  #app { opacity: 1 !important; }
+  .dean .dean-panel, .dean .dean-panel[hidden] { display: flex !important; flex-direction: column; gap: 14px; margin-bottom: 14px; }
+  .dean .kpis { grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 8px; margin-bottom: 14px; }
+  .dean .kpi { padding: 8px 10px; break-inside: avoid; }
+  .dean .kpi-value { font-size: 22px; }
+  .dean .kpi-sub { font-size: 10.5px; }
+  .dean .linkbtn { display: none; }
+  .dean .card { padding: 10px 0 4px; border: 0; border-top: 2px solid var(--ink); border-radius: 0; box-shadow: none; background: #fff; break-inside: auto; }
+  .dean .insight strong { background: none; text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 1.5px; text-underline-offset: 3px; }
+  .dean .th-btn { display: contents; }
+  .dean .card h3 { font-size: 17px; break-after: avoid; }
+  .dean .card-head { break-after: avoid; margin-bottom: 8px; }
+  .dean .insight { font-size: 14px; }
+  .dean .table-wrap { overflow: visible !important; max-height: none !important; border: 0; background: none; }
+  .dean .table { font-size: 10.5px; }
+  .dean .table th { position: static; padding: 5px 6px; font-size: 9.5px; background: var(--surface-2); }
+  .dean .table td { padding: 5px 6px; }
+  .dean .table thead { display: table-header-group; }
+  .dean .table tr, .dean .ret-card, .dean .rs-item, .dean .aq-item, .dean .explain { break-inside: avoid; }
+  .dean .table tbody tr:hover { background: none; }
+  .dean .r-detail, .dean .r-detail[hidden] { display: table-row !important; }
+  .dean .r-detail td { background: #fff; padding: 2px 6px 10px; border-bottom: 1px solid var(--border-strong); }
+  .dean .detail-grid { grid-template-columns: 1fr; }
+  .dean .detail-grid > div:nth-child(2), .dean .detail-grid h4, .dean .detail-grid .tiny { display: none; }
+  .dean .detail-grid .bul { margin: 0; font-size: 10.5px; }
+  .dean .detail-grid .bul li { margin-bottom: 1px; }
+  .dean .detail-actions { display: none; }
+  .dean .r-toggle .chev { display: none; }
+  .dean .r-toggle { font-size: 11px; }
+  .dean .tagchip { cursor: auto; font-size: 10px; padding: 0 6px; }
+  .dean .matrix .mt { min-width: 110px; }
+  .dean .matrix .rulecell { min-width: 150px; }
+  .dean .matrix td.subj { min-width: 110px; }
+  .dean .mt.bar .mt-track i { background: repeating-linear-gradient(135deg, var(--mt-color) 0 4px, color-mix(in srgb, var(--mt-color) 55%, #fff) 4px 7px); }
+  .dean .aq-cols, .dean .aq-head { grid-template-columns: 76px minmax(0, 1fr) 30px 70px 160px 0; gap: 8px; }
+  .dean .aq-cols .pcol { font-size: 9px; letter-spacing: 0; }
+  .dean .ret-body:not(.multi), .dean .ret-legend, .dean .insight { break-inside: avoid; }
+  .dean .ret-legend, .dean .insight { break-after: avoid; }
+  .dean .aq-head { padding: 6px 4px; }
+  .dean .aq-chev { display: none; }
+  .dean .aq-editor { display: none !important; }
+  .dean .aq-item:nth-child(n+11) { display: none; }
+  .dean .aq-stem { font-size: 11px; -webkit-line-clamp: 2; }
+  .dean .rs-item { padding: 6px 10px; }
+  .dean .ret-body.multi { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .dean .ret-card { padding: 6px 6px 2px; }
+  .dean .ret-body:not(.multi) { max-width: 700px; }
+  .dean .roster tr.r-main.is-risk td:first-child { box-shadow: none; }
+  .dean .ret-tablewrap[hidden] { display: none !important; }
+  .dean #errorBox { display: none; }
+  .dean .footnote { font-size: 9.5px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .dean .chev, .dean .aq-chev, .dean .ret-svg .pt .mk { transition: none; }
+}

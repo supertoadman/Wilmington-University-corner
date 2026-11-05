@@ -93,6 +93,7 @@ button { font: inherit; color: inherit; }
 .demo-actions { margin-left: auto; display: flex; align-items: center; gap: 10px; }
 .demo-bar .btn { background: rgba(255,255,255,.1); border-color: rgba(255,255,255,.22); color: inherit; }
 .demo-bar .btn:hover { background: rgba(255,255,255,.2); }
+.demo-bar .btn.icon { padding: 8px 10px; }
 .demo-bar .btn.tour { background: linear-gradient(145deg, #f1d999, #d6ab55); color: #12213a; border-color: transparent; font-weight: 600; }
 .demo-bar .btn.tour:hover { filter: brightness(1.06); }
 .persona { position: relative; }
@@ -112,6 +113,10 @@ button { font: inherit; color: inherit; }
 .persona-item b { display: block; font-size: 14px; }
 .persona-item span { display: block; font-size: 12px; color: var(--muted); }
 .demo-main { min-height: calc(100vh - var(--bar-h)); }
+@media (max-width: 640px) {
+  .demo-brand .name { display: none; }
+  .persona-btn .who b { max-width: 92px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; display: block; }
+}
 @media (max-width: 900px) {
   .demo-bar { flex-wrap: wrap; height: auto; padding: 8px 12px; gap: 8px; }
   .demo-brand .name small { display: none; }

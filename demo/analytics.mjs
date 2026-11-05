@@ -210,7 +210,7 @@ export function recordAttempt(db, b, now = Date.now()) {
   const trapPeer = chosen.trap_code && !correct ? peers.pcts[sel] : null;
   return {
     ok: true, correct: !!correct, correct_index: q.correct_index, selected_index: sel,
-    explanation: q.explanation || choices.find((c) => c.is_correct)?.rationale || null,
+    explanation: q.explanation || choices.find((c) => c.is_correct)?.rationale?.replace(/^Correct[.!:]?\s*/i, '') || null,
     choices: choices.map((c) => ({ index: c.choice_index, text: c.choice_text, rationale: c.rationale, is_correct: !!c.is_correct, trap_code: c.trap_code, trap_label: c.trap_label, peer_pick_pct: peers.pcts[c.choice_index] })),
     peer_choice_pcts: peers.pcts, peer_n: peers.n,
     trap: chosen.trap_code && !correct ? { code: chosen.trap_code, label: chosen.trap_label, peer_pct: trapPeer } : null,
@@ -326,15 +326,17 @@ function auditRows(db, ids) {
 }
 
 /** Audit queue: tested items below the discrimination threshold, worst first, plus items fixed recently. */
-export function psychometrics(db, { cohort = 'all', subjectId = null, limit = 40 } = {}) {
+export function psychometrics(db, { cohort = 'all', subjectId = null, limit = 60 } = {}) {
   const stats = itemStats(db, { subjectId, cohort, minN: 1 });
   const tested = [...stats].filter(([, s]) => s.n >= RPB_MIN_N && s.rpb != null);
   const flagged = new Map(db.prepare(`SELECT id FROM questions WHERE status = 'flagged'${subjectId ? ' AND subject_id = ?' : ''}`).all(...(subjectId ? [subjectId] : [])).map((r) => [r.id, true]));
-  const hits = tested.filter(([id, s]) => s.rpb < RPB_THRESHOLD || flagged.has(id)).sort((a, b) => a[1].rpb - b[1].rpb).slice(0, limit);
+  const retired = new Set(db.prepare("SELECT id FROM questions WHERE status = 'retired'").all().map((r) => r.id));
+  const allHits = tested.filter(([id, s]) => !retired.has(id) && (s.rpb < RPB_THRESHOLD || flagged.has(id))).sort((a, b) => a[1].rpb - b[1].rpb);
+  const hits = allHits.slice(0, limit);
   const rows = auditRows(db, hits.map(([id]) => id));
   const alerts = hits.map(([id, s]) => {
     const q = rows.find((x) => x.id === id);
-    const severity = s.rpb < -0.05 ? 'inverted' : s.p >= 0.95 ? 'ceiling' : 'weak';
+    const severity = s.p >= 0.95 ? 'ceiling' : s.rpb < -0.05 ? 'inverted' : 'weak';
     return { question_id: id, ...q, id: undefined, n: s.n, p: s.p, rpb: s.rpb, severity, stem_preview: q.stem.length > 190 ? `${q.stem.slice(0, 189)}…` : q.stem,
       note: severity === 'inverted' ? 'Stronger students miss this more than weaker ones: look for a keyed-wrong answer or an ambiguous stem.' : severity === 'ceiling' ? 'Nearly everyone gets it right, so it cannot separate students.' : 'Barely separates strong from weak students.' };
   });
@@ -343,7 +345,7 @@ export function psychometrics(db, { cohort = 'all', subjectId = null, limit = 40
   const resolved = auditRows(db, edited.map((e) => e.id)).map((q) => ({ question_id: q.id, subject_id: q.subject_id, subject_title: q.subject_title, rule_title: q.rule_title, stem_preview: q.stem.length > 190 ? `${q.stem.slice(0, 189)}…` : q.stem, status: q.status, revision: q.revision, updated_at: q.updated_at, since_edit: stats.get(q.id) || { n: 0, p: null, rpb: null } }));
   return {
     threshold: RPB_THRESHOLD, min_n: RPB_MIN_N,
-    summary: { items_tested: tested.length, alerts: alerts.length, inverted: alerts.filter((a) => a.severity === 'inverted').length, flagged: flagged.size, median_rpb: tested.length ? r3(tested.map(([, s]) => s.rpb).sort((a, b) => a - b)[Math.floor(tested.length / 2)]) : null },
+    summary: { items_tested: tested.length, alerts: allHits.length, shown: alerts.length, inverted: allHits.filter(([, s]) => s.rpb < -0.05 && s.p < 0.95).length, flagged: flagged.size, median_rpb: tested.length ? r3(tested.map(([, s]) => s.rpb).sort((a, b) => a - b)[Math.floor(tested.length / 2)]) : null },
     alerts: alerts.map(({ id: _drop, ...a }) => a), resolved,
   };
 }
@@ -525,10 +527,10 @@ export function deanOverview(db, cohortParam = 'all', now = Date.now()) {
       COALESCE(SUM(CASE WHEN q.is_variation=1 THEN 1 END),0) vn, COALESCE(SUM(CASE WHEN q.is_variation=1 THEN a.is_correct END),0) vc
     FROM attempt_events a JOIN questions q ON q.id = a.question_id JOIN users u ON u.id = a.user_id WHERE u.role = 'student'${cf.sql}`).get(...cf.args);
   const matrix = db.prepare(`SELECT s.id subject_id, s.title, s.ncbe_category, s.accent,
-      COALESCE(SUM(CASE WHEN r.scope IN ('course','both') THEN 1 END),0) cn, COALESCE(SUM(CASE WHEN r.scope IN ('course','both') THEN a.is_correct END),0) cc,
-      COALESCE(SUM(CASE WHEN r.scope = 'bar_only' THEN 1 END),0) bn, COALESCE(SUM(CASE WHEN r.scope = 'bar_only' THEN a.is_correct END),0) bc
-    FROM subjects s LEFT JOIN attempt_events a ON a.subject_id = s.id LEFT JOIN master_rule_nodes r ON r.id = a.rule_node_id LEFT JOIN users u ON u.id = a.user_id
-    WHERE (u.id IS NULL OR u.role = 'student')${cf.sql} GROUP BY s.id ORDER BY s.sort_order`).all(...cf.args);
+      COALESCE(SUM(CASE WHEN x.scope IN ('course','both') THEN 1 END),0) cn, COALESCE(SUM(CASE WHEN x.scope IN ('course','both') THEN x.c END),0) cc,
+      COALESCE(SUM(CASE WHEN x.scope = 'bar_only' THEN 1 END),0) bn, COALESCE(SUM(CASE WHEN x.scope = 'bar_only' THEN x.c END),0) bc
+    FROM subjects s LEFT JOIN (SELECT a.subject_id, a.is_correct c, r.scope FROM attempt_events a JOIN master_rule_nodes r ON r.id = a.rule_node_id JOIN users u ON u.id = a.user_id
+      WHERE u.role = 'student'${cf.sql}) x ON x.subject_id = s.id GROUP BY s.id ORDER BY s.sort_order`).all(...cf.args);
   const riskRule = db.prepare(`SELECT a.subject_id s, r.id rule_id, r.title, r.scope, COUNT(*) n, AVG(a.is_correct) acc FROM attempt_events a JOIN master_rule_nodes r ON r.id = a.rule_node_id JOIN users u ON u.id = a.user_id
     WHERE u.role = 'student' AND r.scope != 'hidden'${cf.sql} GROUP BY r.id HAVING n >= 12 ORDER BY acc ASC`).all(...cf.args);
   const people = roster(db, cf, now);

@@ -55,21 +55,25 @@
     {
       path: '/student', as: ACTORS.maya, dwell: 17, title: '5 · Maya: strong, but one fact flips her',
       say: 'This is a 2L with 88% accuracy — until a single fact changes. Her variation accuracy collapses, and the weakest rules are all § 2-207. The platform finds that without anyone asking.',
-      target: ['.kpis', '.kpi', '[data-view="dashboard"] .card', 'main .card'],
-      act: async () => { await click(/dashboard/i, '[role=tab], .tab, button', 300); },
+      target: ['.card.dropoff', '#view-dashboard', 'main .card'],
+      act: async () => { await click(/my dashboard/i, '[role=tab], .tab', 300); await until(() => $('.card.dropoff'), 6000); },
     },
     {
       path: '/student', as: ACTORS.maya, dwell: 15, title: '6 · A quiz built around the professor’s syllabus',
       say: 'Students build quizzes by course, difficulty and focus — weak rules, missed questions, one-fact variations. One switch moves between “My Professor’s Course Scope” and the full NCBE bar scope.',
-      target: ['.builder', '[data-view="builder"]', '#builder', 'form', 'main .card'],
-      act: async () => { await click(/quiz builder|builder/i, '[role=tab], .tab, button', 400); },
+      target: ['.card.bld-form', '#view-builder', 'main .card'],
+      act: async () => { await click(/quiz builder/i, '[role=tab], .tab', 500); },
     },
     {
       path: '/student', as: ACTORS.maya, dwell: 18, title: '7 · Every answer teaches',
       say: 'Pick a wrong answer and it names the trap — and what share of peers fell for it. Statute and case cites open a docked reference drawer from the real outline and rules, no tab-switching.',
       target: ['.sq', '.rx-look', '.stem'],
       act: async () => {
-        await click(/start quiz|start/i, 'button, .btn', 600);
+        if (!$('.sq .opt')) {
+          await click(/quiz builder/i, '[role=tab], .tab', 400);
+          const start = await until(() => { const b = byText(/^start\b.*quiz/i, 'button, .btn'); return b && !b.disabled ? b : null; }, 6000);
+          start?.click();
+        }
         await until(() => $('.sq .opt'), 8000);
         const opts = [...document.querySelectorAll('.sq .opt')].filter(visible);
         if (opts.length > 1) { (opts[1]).click(); await wait(500); }
@@ -78,32 +82,32 @@
     {
       path: '/faculty', as: ACTORS.rich, dwell: 17, title: '8 · Professor Richardson’s pre-lecture heatmap',
       say: 'The night before class, a professor sees where the section actually misses: concept miss rate, the base-to-variation drop-off, and the number-one distractor trap. Tick rules, and build a ten-question reteach drill.',
-      target: ['.kpis', 'table.table', '.table-wrap', 'main .card'],
-      act: async () => { await click(/heatmap/i, '[role=tab], .tab, button', 300); },
+      target: ['#hero', '#panel-heatmap', '.kpis', 'main .card'],
+      act: async () => { await click(/pre-lecture heatmap|heatmap/i, '[role=tab], .tab', 300); window.scrollTo({ top: 0 }); },
     },
     {
       path: '/faculty', as: ACTORS.rich, dwell: 15, title: '9 · Syllabus vs. bar scope, live',
       say: 'Toggle a rule between In Course, Both, Bar Only and Hidden — and watch the student-view counter change. Students’ quizzes and outlines follow immediately.',
-      target: ['.scope-matrix', '[data-view="scope"]', '.student-view', '.seg'],
-      act: async () => { await click(/syllabus|scope matrix|bar scope/i, '[role=tab], .tab, button', 500); },
+      target: ['#sv', '#panel-scope', '.seg'],
+      act: async () => { await click(/syllabus|scope matrix/i, '[role=tab], .tab', 600); },
     },
     {
       path: '/dean', as: ACTORS.dean, dwell: 17, title: '10 · The dean’s bar-readiness command center',
       say: 'Seven NCBE subjects, taught topics versus bar-only topics, and the highest-risk rule in each. The retention chart shows what students forget after six months — and what a spaced refresher recovers.',
-      target: ['.matrix', '#matrix', '.kpis', 'main .card'],
-      act: async () => { window.scrollTo({ top: 0 }); },
+      target: ['#panel-readiness .card', '#kpis', 'main .card'],
+      act: async () => { await click(/bar readiness/i, '[role=tab]', 400); },
     },
     {
       path: '/dean', as: ACTORS.dean, dwell: 13, title: '11 · Early intervention, FERPA-masked',
       say: 'Students who rush, collapse on variations or go quiet surface weeks before an exam. Names stay masked by default; a printable report is one click.',
-      target: ['.roster', '#roster', 'table.roster', '[data-section="roster"]', '.table-wrap'],
-      act: async () => { await click(/roster|risk/i, '[role=tab], .tab, button', 400); },
+      target: ['#panel-risk .card', '#panel-risk', '.table-wrap'],
+      act: async () => { await click(/student risk/i, '[role=tab]', 500); },
     },
     {
       path: '/dean', as: ACTORS.dean, dwell: 14, title: '12 · Bad questions get caught — and fixed',
-      say: 'Item analysis runs on every answer. Five questions show negative point-biserial correlation — stronger students miss them. The SME fixes the key inline, re-approves, and the item leaves the queue.',
-      target: ['.audit', '#audit', '[data-section="audit"]', '.queue', '.table-wrap'],
-      act: async () => { await click(/audit|psychometric/i, '[role=tab], .tab, button', 500); },
+      say: 'Item analysis runs on every answer. The worst items have a negative point-biserial correlation: the stronger the student, the likelier the miss. The SME opens one, fixes the key or stem inline, re-approves it, and it leaves the queue.',
+      target: ['#panel-audit .card', '#panel-audit'],
+      act: async () => { await click(/item audit/i, '[role=tab]', 500); },
     },
     {
       path: '/compiler', as: ACTORS.adm, dwell: 11, title: 'One platform. Four roles. Your materials.',
