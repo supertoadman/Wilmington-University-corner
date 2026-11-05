@@ -1156,6 +1156,9 @@ export function survivors(ctx) {
   const { game, subjects } = ctx;
   const iconOf = (slug) => subjects.find((s) => s.slug === slug)?.icon || 'list-checks';
   const sets = game.courses.reduce((n, c) => n + c.sets.length, 0);
+  // The reference popup (assets/refs.js), as in Shuffle mode: each question card (.sv-qcard) names its
+  // course, and gets Look up, linked cites and cases, and the passages it turns on marked.
+  const refCourses = subjects.filter((s) => s.refs).map((s) => s.slug);
   const course = (c) => `<fieldset class="sv-course" style="--accent:${c.accent}" data-course-group="${esc(c.slug)}">
         <legend class="sv-course-head"><span class="sv-tile">${icon(iconOf(c.slug))}</span><span class="sv-course-name">${esc(c.title)}</span></legend>
         <button type="button" class="sv-all" data-course-all="${esc(c.slug)}">Select all</button>
@@ -1168,6 +1171,8 @@ export function survivors(ctx) {
 ${head(ctx, { root, title: 'Crypt Survivors', description: `A survival study game: hold a crypt of the restless dead for fifteen minutes while every level-up asks one of ${game.total.toLocaleString('en-US')} practice questions. Right answers bring boons; wrong ones, corruption.`, canonical: 'survivors/' })}
 <script>document.documentElement.dataset.theme = 'dark';</script>
 <link rel="stylesheet" href="survivors.css?v=${SV_VERSION}">
+${refCourses.length ? `<link rel="stylesheet" href="${root}assets/refs.css?v=${ctx.refsVersion}">
+<script src="${root}assets/refs.js?v=${ctx.refsVersion}" data-root="${root}" data-courses="${refCourses.join(' ')}" data-v="${ctx.refsVersion}" data-cards=".sv-qcard" defer></script>` : ''}
 </head>
 <body class="sv" data-screen="setup">
 ${GILT_DEFS}
@@ -1255,12 +1260,12 @@ ${GILT_DEFS}
 </section>
 
 <div class="sv-modal" id="ask" hidden role="dialog" aria-modal="true" aria-labelledby="ask-kicker">
-  <div class="sv-card" id="ask-card" tabindex="-1">
-    <header class="sv-card-head"><p class="sv-kicker" id="ask-kicker"></p><p class="sv-source" id="ask-source"></p></header>
+  <div class="sv-card sv-qcard" id="ask-card" tabindex="-1">
+    <header class="sv-card-head meta"><div class="sv-card-titles"><p class="sv-kicker" id="ask-kicker"></p><p class="sv-source" id="ask-source"></p></div></header>
     <div id="ask-question"></div>
-    <div id="ask-verdict" hidden aria-live="polite"></div>
-    <div id="ask-cards" hidden></div>
-    <button type="button" class="sv-btn sv-btn-dark" id="ask-continue" hidden>Continue</button>
+    <div id="ask-verdict" class="sq-why" hidden aria-live="polite"></div>
+    <div id="ask-cards" class="actions" hidden></div>
+    <button type="button" class="sv-btn sv-btn-dark actions" id="ask-continue" hidden>Continue</button>
   </div>
 </div>
 

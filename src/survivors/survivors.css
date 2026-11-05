@@ -219,7 +219,8 @@
   animation: sv-rise .22s ease-out;
 }
 @keyframes sv-rise { from { transform: translateY(14px) scale(.98); opacity: 0; } }
-.sv-card-head { margin-bottom: 10px; }
+.sv-card-head { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 10px; }
+.sv-card-titles { flex: 1; min-width: 0; }
 .sv-kicker { margin: 0; font: 700 12px/1.2 var(--font-sans); letter-spacing: .16em; text-transform: uppercase; color: var(--gold); }
 .sv-source { margin: 4px 0 0; font-size: 13px; color: var(--ink-3); }
 .sv-topic { margin: 0 0 8px; font-size: 12.5px; font-weight: 600; color: color-mix(in srgb, var(--accent) 50%, var(--ink-2)); }
@@ -343,4 +344,24 @@
   .sv-card { animation: none; }
   .sv-pick:hover, .sv-pick:focus-visible { transform: none; }
   .sv-banner { transition: opacity .2s; }
+}
+
+/* ---------- The reference popup (assets/refs.js) ---------- */
+/* Look up sits in the card's header; cites in the question and its explanations open the panel. */
+.sv .rx-look { flex: none; margin-top: -2px; padding: 5px 12px; font-size: 12.5px; font-weight: 600; color: var(--gold-2); border-color: var(--line-2); background: rgba(227, 187, 108, .08); }
+.sv .rx-look:hover, .sv .rx-look[aria-expanded="true"] { color: #20140a; background: var(--gold); border-color: var(--gold); }
+.sv .rx-look svg { width: 14px; height: 14px; }
+.sv-review-src.meta { display: flex; align-items: center; gap: 10px; }
+.sv-qcard .rx-cite { color: #f3d79b; text-decoration-color: rgba(243, 215, 155, .6); }
+.sv-qcard .rx-cite:hover { background: rgba(243, 215, 155, .14); }
+.sv .rx-panel { user-select: text; -webkit-user-select: text; }
+.sv .rx-panel a { color: inherit; }
+/* Docked on wide screens: the question moves left to stay beside the panel; on phones, above its sheet. */
+@media (min-width: 760px) {
+  html.rx-open .sv-modal, html.rx-open .sv-screen { padding-right: calc(clamp(340px, 36vw, 460px) + 14px); }
+}
+@media (max-width: 759px) {
+  html.rx-open .sv-modal { place-items: start center; padding-bottom: calc(58dvh + 8px); }
+  html.rx-open .sv-card { max-height: calc(42dvh - 22px); }
+  html.rx-open .sv-screen { padding-bottom: 58dvh; }
 }

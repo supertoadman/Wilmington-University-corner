@@ -19,6 +19,18 @@ const paras = (s) => esc(s).split(/\n{2,}/).map((p) => `<p>${p.replace(/\n/g, '<
 const ROOT = document.documentElement.dataset.root || '../';
 const DATA = new URL(`${ROOT}play/data/`, location.href);
 const KEY = 'survivors-mode.v1';
+// The reference popup (assets/refs.js, loaded by the page): the courses with an index, and its panel.
+const REFS = document.querySelector('script[data-cards][data-courses]');
+const REF_COURSES = new Set(REFS?.dataset.courses.split(/\s+/) || []);
+const refsPanel = () => document.querySelector('.rx-panel:not([hidden])');
+const closeRefs = () => refsPanel()?.querySelector('.rx-close')?.click();
+/** Fetch the picked courses' reference indexes early, so cites are linked by the first level-up. */
+function warmRefs(courses) {
+  if (!REFS) return;
+  for (const slug of courses) {
+    if (REF_COURSES.has(slug)) fetch(new URL(`assets/refs/${slug}.json${REFS.dataset.v ? `?v=${REFS.dataset.v}` : ''}`, new URL(REFS.dataset.root || ROOT, location.href))).catch(() => {});
+  }
+}
 const STRIKE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><path d="M4 12h16"/></svg>';
 
 // ---------------------------------------------------------------------------
@@ -199,6 +211,7 @@ async function begin(only = null) {
     return;
   }
   if (!questions.length) { show('setup'); return; }
+  warmRefs(new Set(questions.map((q) => q.course.slug)));
   wake();
   run = {
     deck: new QuestionDeck(questions, { shuffled: saved.shuffled }),
@@ -249,12 +262,16 @@ function openQuestion() {
   ask = { q, order: q.order.slice(), picked: null, stage: 'question', out: new Set(), opened: performance.now() };
   const dlg = $('#ask');
   $('#ask-kicker').textContent = `Level ${world.player.level} · Answer to claim your boon`;
-  $('#ask-source').textContent = `${q.course.title} · ${q.set.title}${q.n != null ? ` · Q${q.n}` : ''}`;
-  $('#ask-card').style.setProperty('--accent', q.course.accent);
+  const card = $('#ask-card');
+  card.style.setProperty('--accent', q.course.accent);
+  // The reference popup reads the card's course; a course without an index gets no Look up button.
+  card.dataset.course = q.course.slug;
+  if (!REF_COURSES.has(q.course.slug)) card.querySelector('.rx-look')?.remove();
   const pre = q.pre ? `<details class="sv-pre"><summary>Show the question this varies</summary>${paras(q.pre)}</details>` : '';
-  $('#ask-question').innerHTML = `${q.topic ? `<p class="sv-topic">${esc(q.topic)}</p>` : ''}${pre}<div class="sv-stem">${paras(q.q)}</div>
+  $('#ask-source').innerHTML = `${esc(q.course.title)} · ${esc(q.set.title)}${q.n != null ? ` · Q${esc(q.n)}<span class="qn" hidden>Q${esc(q.n)}</span>` : ''}`;
+  $('#ask-question').innerHTML = `${q.topic ? `<p class="sv-topic">${esc(q.topic)}</p>` : ''}${pre}<div class="sv-stem stem">${paras(q.q)}</div>
     <ol class="sv-choices">${ask.order.map((orig, i) => `<li class="sv-row"><button type="button" class="sv-opt" data-orig="${orig}"><b>${LETTERS[i]}</b><span>${esc(q.o[orig])}</span></button><button type="button" class="sv-x" data-strike="${orig}" aria-pressed="false" aria-label="Cross out choice ${LETTERS[i]}" title="Cross out">${STRIKE}</button></li>`).join('')}</ol>
-    <p class="sv-keys">Keys <kbd>1</kbd>–<kbd>${ask.order.length}</kbd> or <kbd>A</kbd>–<kbd>${LETTERS[ask.order.length - 1]}</kbd> to answer</p>`;
+    <p class="sv-keys hint">Keys <kbd>1</kbd>–<kbd>${ask.order.length}</kbd> or <kbd>A</kbd>–<kbd>${LETTERS[ask.order.length - 1]}</kbd> to answer</p>`;
   $$('.sv-opt', dlg).forEach((b) => b.addEventListener('click', () => answer(+b.dataset.orig)));
   $$('[data-strike]', dlg).forEach((x) => x.addEventListener('click', () => strike(+x.dataset.strike)));
   $('#ask-question').hidden = false;
@@ -301,12 +318,12 @@ function answer(orig) {
   const why = explain(q, ask.order, orig);
   if (right) {
     const streak = run.streak > 1 ? ` <span class="sv-streak-chip">${run.streak} in a row</span>` : '';
-    v.className = 'sv-verdict ok';
+    v.className = 'sv-verdict sq-why ok';
     v.innerHTML = `<p class="sv-verdict-line" tabindex="-1">Correct.${streak}</p>${run.pacing === 'end' ? '' : `<details class="sv-why"${run.pacing === 'always' ? ' open' : ''}><summary>Why?</summary>${why}</details>`}`;
     v.hidden = false;
     showCards();
   } else {
-    v.className = 'sv-verdict no';
+    v.className = 'sv-verdict sq-why no';
     v.innerHTML = run.pacing === 'end'
       ? '<p class="sv-verdict-line" tabindex="-1">Not quite. You\'ll see the answer in the review after the run.</p>'
       : `<p class="sv-verdict-line" tabindex="-1">Not quite. The answer is ${letter}.</p><div class="sv-why sv-why-open">${why}</div>`;
@@ -420,6 +437,7 @@ function choose(i) {
 }
 
 function closeAsk() {
+  closeRefs();
   $('#ask').hidden = true;
   document.body.classList.remove('is-asking');
   modal = null;
@@ -628,9 +646,9 @@ function finish(how) {
     ? `<h3>Missed questions <span>${missed.length}</span></h3><ol class="sv-review">${missed.map((r) => {
       const q = r.q;
       const L = (k) => LETTERS[r.order.indexOf(k)];
-      return `<li style="--accent:${esc(q.course.accent)}"><p class="sv-review-src">${esc(q.course.title)} · ${esc(q.set.title)}${q.n != null ? ` · Q${q.n}` : ''}</p>
+      return `<li class="sv-qcard" data-course="${esc(q.course.slug)}" style="--accent:${esc(q.course.accent)}"><p class="sv-review-src meta">${esc(q.course.title)} · ${esc(q.set.title)}${q.n != null ? ` · Q${q.n}` : ''}</p>
         ${q.pre ? `<details class="sv-pre"><summary>Show the question this varies</summary>${paras(q.pre)}</details>` : ''}
-        <details class="sv-review-q"><summary>${esc(q.q.split(/\n{2,}/).pop().slice(0, 220))}${q.q.length > 220 ? '…' : ''}</summary>${paras(q.q)}</details>
+        <details class="sv-review-q"><summary>${esc(q.q.split(/\n{2,}/).pop().slice(0, 220))}${q.q.length > 220 ? '…' : ''}</summary><div class="stem">${paras(q.q)}</div></details>
         <p class="sv-ans no"><b>${L(r.picked)}</b> Your answer: ${esc(q.o[r.picked])}</p>
         <p class="sv-ans ok"><b>${L(q.a)}</b> Correct: ${esc(q.o[q.a])}</p>
         ${explain(q, r.order, r.picked)}</li>`;
@@ -660,6 +678,7 @@ addEventListener('keydown', (e) => {
   wake();
   const k = e.key.toLowerCase();
   if (e.metaKey || e.ctrlKey || e.altKey) return;
+  if (k === 'escape' && refsPanel()) { e.preventDefault(); closeRefs(); return; }
   if (modal === 'ask' && ask) {
     // A key held down for movement when the question opens must not answer it.
     if (e.repeat || performance.now() - ask.opened < 350) { if (k.length === 1 || k === 'enter') e.preventDefault(); return; }
@@ -744,9 +763,10 @@ $('#resume').addEventListener('click', () => pause(false));
 $('#quit').addEventListener('click', () => { pause(false); finish('quit'); });
 $('#ask-continue').addEventListener('click', () => { if (ask?.stage === 'review') showCards(); });
 $('#chest-go').addEventListener('click', closeChest);
-$('#retry-missed').addEventListener('click', () => begin(run.missedIds));
-$('#new-run').addEventListener('click', () => begin(run.only));
+$('#retry-missed').addEventListener('click', () => { closeRefs(); begin(run.missedIds); });
+$('#new-run').addEventListener('click', () => { closeRefs(); begin(run.only); });
 $('#change-sets').addEventListener('click', () => {
+  closeRefs();
   run = null;
   world.reset({ demo: true, character: saved.character });
   sound.duck(false);
