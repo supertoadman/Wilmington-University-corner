@@ -15,6 +15,10 @@ const CSS_VERSION = createHash('sha1').update(fs.readFileSync(path.join(ROOT, 's
 const jsHash = createHash('sha1');
 for (const f of ['app.js', 'ambience.js', 'shuffle.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
 const JS_VERSION = jsHash.digest('hex').slice(0, 10);
+// Crypt Survivors (/survivors/) loads its stylesheet and entry module with a version from all its files.
+const svHash = createHash('sha1');
+for (const f of fs.readdirSync(path.join(ROOT, 'src', 'survivors')).sort()) svHash.update(fs.readFileSync(path.join(ROOT, 'src', 'survivors', f)));
+const SV_VERSION = svHash.digest('hex').slice(0, 10);
 
 // ---------------------------------------------------------------------------
 // Icons: the site's own solid set (src/icons, drawn by scripts/icons), inlined at
@@ -451,6 +455,30 @@ function playBand(ctx, root) {
   </a>`;
 }
 
+// The way into Crypt Survivors, under Sanctum Run: its survivor among the dead, drawn from the game's
+// own sprite atlas (CC0 crawl/tiles art) at whole-pixel scale.
+function survivorsBand(ctx, root) {
+  const { game } = ctx;
+  const sets = game.courses.reduce((n, c) => n + c.sets.length, 0);
+  const atlas = ctx.survivors?.atlas;
+  const fig = (id, cls, scale) => {
+    const f = atlas?.frames[id];
+    if (!f) return '';
+    // The URL goes inline: inside a custom property it would resolve against the stylesheet instead of the page.
+    return `<span class="sv-band-fig ${cls}" style="background-image:url('${root}survivors/pack/atlas.png');width:${32 * scale}px;height:${32 * scale}px;background-size:${atlas.width * scale}px ${atlas.height * scale}px;background-position:-${f[0] * scale}px -${f[1] * scale}px"></span>`;
+  };
+  return `<a class="sv-band" href="${root}survivors/">
+    <span class="sv-band-art" aria-hidden="true">${fig('boss-reaper', 'sv-band-boss', 4)}${fig('foe-bat', 'sv-band-bat', 2)}${fig('foe-skeleton', 'sv-band-skel', 2)}${fig('foe-vampire', 'sv-band-vamp', 2)}${fig('gem-1', 'sv-band-gem', 1.5)}${fig('hero-advocate', 'sv-band-hero', 3)}</span>
+    <span class="sv-band-text">
+      <span class="kicker">Study game · New</span>
+      <span class="sv-band-title">Crypt <em>Survivors</em></span>
+      <span class="sv-band-desc">Hold a crypt of the restless dead for fifteen minutes while your weapons fire on their own. Every level-up asks one of your practice questions: answer right and choose a boon, answer wrong and choose your corruption.</span>
+      <span class="sv-band-meta">${game.total.toLocaleString('en-US')} questions · ${plural(sets, 'practice set')} · ${plural(game.courses.length, 'course')}</span>
+    </span>
+    <span class="btn btn-primary sv-band-cta">${icon('skull')} Enter the crypt</span>
+  </a>`;
+}
+
 const breadcrumbs = (root, items) => `<nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
   <li><a href="${root}">Home</a></li>
   ${items.map(([href, label], i) => i === items.length - 1
@@ -527,7 +555,7 @@ export function home(ctx) {
   <div class="section-head"><div><p class="kicker">Browse the complete collection</p><h2 id="courses-h" class="section-title">Choose a course. Find your materials.</h2></div><a class="link-arrow" href="${root}library/">Search &amp; filter all ${docs.length} documents ${icon('arrow-right')}</a></div>
   <nav class="format-shortcuts" aria-label="Browse by document type"><span>Browse by format</span>${Object.entries(ctx.TYPES).filter(([type]) => docs.some(d => d.type === type)).map(([type, meta]) => `<a href="${root}library/?type=${type}">${icon(meta.icon)}${esc(meta.plural)} <small>${docs.filter(d => d.type === type).length}</small></a>`).join('')}</nav>
   <div class="wheel-deck" data-wheel-deck>${courseWheel(ctx, root)}${subjects.map((s) => materialWheel(ctx, root, s)).join('')}</div>
-  ${ctx.game?.total ? shuffleBand(ctx, root) + playBand(ctx, root) : ''}
+  ${ctx.game?.total ? shuffleBand(ctx, root) + playBand(ctx, root) + survivorsBand(ctx, root) : ''}
 </section>
 
 <section class="section container" id="recently-opened" hidden aria-labelledby="ro-h">
@@ -607,7 +635,7 @@ export function subjectPage(ctx, s) {
       </div>
       <div class="subject-hero-actions">
         ${s.zipSize ? `<a class="btn btn-primary subject-hero-dl" href="${root}${P.zip(s)}" download>${icon('download')} Download all <span class="btn-sub">${fmtSize(s.zipSize)}</span></a>` : ''}
-        ${ctx.game?.courses.some((c) => c.slug === s.slug) ? `<a class="btn btn-ghost subject-hero-play" href="${root}play/?course=${esc(s.slug)}">${icon('play')} Play in Sanctum Run</a>` : ''}
+        ${ctx.game?.courses.some((c) => c.slug === s.slug) ? `<a class="btn btn-ghost subject-hero-play" href="${root}play/?course=${esc(s.slug)}">${icon('play')} Play in Sanctum Run</a><a class="btn btn-ghost subject-hero-play" href="${root}survivors/?course=${esc(s.slug)}">${icon('skull')} Play Crypt Survivors</a>` : ''}
       </div>
     </div>
   </div>
@@ -1115,6 +1143,169 @@ export function shuffle(ctx) {
     description: `Mix practice sets from any course into one shuffled stack: ${game.total.toLocaleString('en-US')} questions from the study library.`,
     extraHead: `<script type="module" src="${root}assets/shuffle.js?v=${JS_VERSION}"></script>${refCourses.length ? `<link rel="stylesheet" href="${root}assets/refs.css?v=${ctx.refsVersion}"><script src="${root}assets/refs.js?v=${ctx.refsVersion}" data-root="${root}" data-courses="${refCourses.join(' ')}" data-v="${ctx.refsVersion}" defer></script>` : ''}`,
   });
+}
+
+/**
+ * Crypt Survivors, at /survivors/: a bullet-heaven study game on a full-screen canvas
+ * (src/survivors/). Every level-up asks a question from the practice sets picked here, with the same
+ * course + set checklist as Shuffle mode. Questions come from play/data/ (scripts/game.mjs); the
+ * sprite pack from scripts/survivors.mjs.
+ */
+export function survivors(ctx) {
+  const root = '../';
+  const { game, subjects } = ctx;
+  const iconOf = (slug) => subjects.find((s) => s.slug === slug)?.icon || 'list-checks';
+  const sets = game.courses.reduce((n, c) => n + c.sets.length, 0);
+  const course = (c) => `<fieldset class="sv-course" style="--accent:${c.accent}" data-course-group="${esc(c.slug)}">
+        <legend class="sv-course-head"><span class="sv-tile">${icon(iconOf(c.slug))}</span><span class="sv-course-name">${esc(c.title)}</span></legend>
+        <button type="button" class="sv-all" data-course-all="${esc(c.slug)}">Select all</button>
+        <div class="sv-sets">${c.sets.map((s) => `<label class="sv-set"><input type="checkbox" value="${esc(`${c.slug}/${s.slug}`)}" data-set data-course="${esc(c.slug)}" data-count="${s.count}"><span><strong>${esc(s.title)}</strong><small>${plural(s.count, 'question')}<span data-missed></span></small></span></label>`).join('')}</div>
+      </fieldset>`;
+  const sound = (cls) => `<button type="button" class="${cls}" data-sound aria-pressed="true" aria-label="Sound on">${icon('volume-2', 'sv-on')}${icon('volume-x', 'sv-off')}<span>Sound on</span></button>`;
+  return `<!doctype html>
+<html lang="en" data-root="${root}">
+<head>
+${head(ctx, { root, title: 'Crypt Survivors', description: `A survival study game: hold a crypt of the restless dead for fifteen minutes while every level-up asks one of ${game.total.toLocaleString('en-US')} practice questions. Right answers bring boons; wrong ones, corruption.`, canonical: 'survivors/' })}
+<script>document.documentElement.dataset.theme = 'dark';</script>
+<link rel="stylesheet" href="survivors.css?v=${SV_VERSION}">
+</head>
+<body class="sv" data-screen="setup">
+${GILT_DEFS}
+<canvas id="sv-world" aria-hidden="true" tabindex="-1"></canvas>
+<div class="sv-veil" aria-hidden="true"></div>
+
+<header class="sv-hud" id="hud" hidden>
+  <div class="sv-xp" id="hud-xp" aria-hidden="true"><span></span><b id="hud-level">Lv 1</b></div>
+  <div class="sv-hud-row">
+    <div class="sv-slots">
+      <ul id="hud-weapons" aria-label="Weapons"></ul>
+      <ul id="hud-passives" aria-label="Relics"></ul>
+      <div class="sv-tray" id="hud-corruptions" hidden><span class="sv-tray-label">Corruptions</span><ul aria-label="Corruptions"></ul></div>
+    </div>
+    <div class="sv-clock">
+      <strong id="hud-time" aria-label="Time survived">00:00</strong>
+      <span class="sv-meta"><span class="sv-kills" title="Destroyed"><span class="sr-only">Destroyed </span><b id="hud-kills">0</b></span><span class="sv-gold" title="Gold"><span class="sr-only">Gold </span><b id="hud-gold">0</b></span></span>
+      <span class="sv-streak" id="hud-streak"></span>
+    </div>
+    <div class="sv-hud-actions">
+      <span class="sv-hp" title="Health"><span class="sr-only">Health </span><b id="hud-hp"></b></span>
+      ${sound('sv-iconbtn')}
+      <button type="button" class="sv-iconbtn" id="pause-btn" aria-label="Pause">${icon('pause')}</button>
+    </div>
+  </div>
+</header>
+<div class="sv-boss" id="boss" hidden><strong id="boss-name"></strong><div class="sv-boss-bar"><span id="boss-bar"></span></div></div>
+<p class="sv-banner" id="banner" role="status" aria-live="polite"></p>
+<div class="sv-stick" id="stick" hidden aria-hidden="true"><span></span></div>
+<p class="sv-hint" id="hint" hidden><span class="hide-touch"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrows to move · your weapons fire on their own · <kbd>Esc</kbd> pauses</span><span class="show-touch">Drag anywhere to move. Your weapons fire on their own.</span></p>
+
+<section class="sv-screen sv-setup" id="setup" aria-labelledby="setup-h">
+  <div class="sv-panel">
+    <header class="sv-title">
+      <p class="sv-eyebrow">${esc(ctx.config.shortTitle)} · Study game</p>
+      <h1 id="setup-h">Crypt <em>Survivors</em></h1>
+      <p class="sv-lede">Hold a crypt of the restless dead for fifteen minutes. You steer; your weapons fire on their own. Every level-up asks a question from your practice sets. Answer right and choose a boon. Answer wrong and a corruption takes hold.</p>
+      <p class="sv-count">${game.total.toLocaleString('en-US')} questions · ${plural(sets, 'practice set')} · ${plural(game.courses.length, 'course')}</p>
+    </header>
+
+    <h2 class="sv-step"><span>1</span> Practice sets</h2>
+    <div class="sv-courses">
+      ${game.courses.map(course).join('\n      ')}
+    </div>
+
+    <h2 class="sv-step"><span>2</span> Your survivor</h2>
+    <div class="sv-chars" id="chars"><p class="sv-note">Summoning the survivors…</p></div>
+
+    <h2 class="sv-step"><span>3</span> The run</h2>
+    <div class="sv-opts">
+      <label class="sv-toggle"><input type="checkbox" id="opt-shuffle"> <span><strong>Shuffle questions</strong><small>Otherwise they come in set order</small></span></label>
+      <label class="sv-toggle"><input type="checkbox" id="opt-missed"> <span><strong>Only questions I've missed before</strong><small>Missed here, until you answer them right</small></span></label>
+      <label class="sv-toggle"><input type="checkbox" id="opt-endless"> <span><strong>Endless</strong><small>Keep fighting past 15:00, harder each lap</small></span></label>
+      <fieldset class="sv-pacing">
+        <legend>Feedback pacing</legend>
+        <label><input type="radio" name="pacing" value="wrong"> <span><strong>Explain wrong answers</strong><small>Right answers get a "Why?" you can open</small></span></label>
+        <label><input type="radio" name="pacing" value="always"> <span><strong>Always explain</strong><small>Every answer shows its explanation</small></span></label>
+        <label><input type="radio" name="pacing" value="end"> <span><strong>Review at the end</strong><small>Just right or wrong now; explanations after the run</small></span></label>
+      </fieldset>
+    </div>
+
+    <details class="sv-howto">
+      <summary>How to play</summary>
+      <dl>
+        <div><dt>Move</dt><dd><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or the arrow keys. On a phone or with a mouse, press anywhere and drag. <kbd>Esc</kbd> pauses.</dd></div>
+        <div><dt>Fight</dt><dd>Your weapons aim and fire on their own. Destroyed foes drop soul gems; gather them to fill the bar at the top.</dd></div>
+        <div><dt>Level up</dt><dd>Each level stops the world for one question, with no time limit. Answer with a click or the keys <kbd>1</kbd>–<kbd>6</kbd> or <kbd>A</kbd>–<kbd>F</kbd>; cross out choices with ×.</dd></div>
+        <div><dt>Boons</dt><dd>A right answer lets you choose one of three: a new weapon, a weapon level, or a relic. A maxed weapon with its matching relic evolves. Three right in a row while corrupted offers a Purify card.</dd></div>
+        <div><dt>Corruption</dt><dd>A wrong answer makes you choose one of three corruptions (slower feet, weaker blows, more foes…). They stack, and the crypt darkens as they do. The answer, its explanation and the outline section to review are shown either way.</dd></div>
+        <div><dt>The crypt</dt><dd>A boss rises every three minutes and drops a reliquary. Braziers and coffins hide gold, food and the Lodestar, which pulls in every gem. Survive to 15:00 to see the dawn.</dd></div>
+      </dl>
+    </details>
+
+    <div class="sv-go">
+      <p class="sv-picked" id="picked" aria-live="polite">No sets selected</p>
+      <p class="sv-begin-note" id="begin-note"></p>
+      <button type="button" class="sv-btn sv-btn-primary" id="begin" disabled>${icon('play')} Enter the crypt</button>
+    </div>
+    <p class="sv-back"><a href="${root}">${icon('arrow-left')} Back to the study library</a> <span>Art: Dungeon Crawl Stone Soup tiles (CC0)</span></p>
+  </div>
+</section>
+
+<section class="sv-screen sv-center" id="loading" hidden>
+  <div class="sv-panel sv-small"><h2>Descending…</h2><p class="sv-status" id="load-status"></p></div>
+</section>
+
+<div class="sv-modal" id="ask" hidden role="dialog" aria-modal="true" aria-labelledby="ask-kicker">
+  <div class="sv-card" id="ask-card" tabindex="-1">
+    <header class="sv-card-head"><p class="sv-kicker" id="ask-kicker"></p><p class="sv-source" id="ask-source"></p></header>
+    <div id="ask-question"></div>
+    <div id="ask-verdict" hidden aria-live="polite"></div>
+    <div id="ask-cards" hidden></div>
+    <button type="button" class="sv-btn sv-btn-dark" id="ask-continue" hidden>Continue</button>
+  </div>
+</div>
+
+<div class="sv-modal" id="chest" hidden role="dialog" aria-modal="true" aria-labelledby="chest-title">
+  <div class="sv-card sv-chest">
+    <p class="sv-kicker">The boss is destroyed</p>
+    <h2 id="chest-title">A reliquary</h2>
+    <ul class="sv-list" id="chest-list"></ul>
+    <button type="button" class="sv-btn sv-btn-primary" id="chest-go">Take it all</button>
+  </div>
+</div>
+
+<section class="sv-screen sv-center" id="pause" hidden aria-labelledby="pause-h">
+  <div class="sv-panel sv-mid">
+    <h2 id="pause-h">Paused</h2>
+    <p class="sv-sub" id="pause-sub"></p>
+    <div class="sv-actions">
+      <button type="button" class="sv-btn sv-btn-primary" id="resume">${icon('play')} Resume</button>
+      ${sound('sv-btn sv-btn-ghost')}
+      <button type="button" class="sv-btn sv-btn-ghost" id="quit">End the run</button>
+    </div>
+    <div class="sv-build" id="pause-build"></div>
+  </div>
+</section>
+
+<section class="sv-screen sv-center" id="summary" hidden aria-labelledby="summary-title">
+  <div class="sv-panel sv-summary">
+    <h2 id="summary-title">The run is over.</h2>
+    <p class="sv-sub" id="summary-lede"></p>
+    <dl class="sv-stats" id="summary-stats"></dl>
+    <div class="sv-actions">
+      <button type="button" class="sv-btn sv-btn-primary" id="retry-missed">${icon('rotate-ccw')} Run missed questions</button>
+      <button type="button" class="sv-btn sv-btn-ghost" id="new-run">New run</button>
+      <button type="button" class="sv-btn sv-btn-ghost" id="change-sets">Change sets</button>
+      <a class="sv-btn sv-btn-ghost" href="${root}">Study library</a>
+    </div>
+    <div class="sv-build" id="summary-build"></div>
+    <div class="sv-missed" id="summary-missed"></div>
+  </div>
+</section>
+
+<noscript><p class="sv-noscript">Crypt Survivors needs JavaScript. The practice sets work on their own in the <a href="${root}library/?type=practice">library</a>.</p></noscript>
+<script type="module" src="game.js?v=${SV_VERSION}"></script>
+</body>
+</html>`;
 }
 
 export function notFound(ctx) {
