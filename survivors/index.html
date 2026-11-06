@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en" data-root="../">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Crypt Survivors · WilmU Corner</title>
+<meta name="description" content="A survival study game: hold a crypt of the restless dead for fifteen minutes while every level-up asks one of 5,453 practice questions. Right answers bring boons; wrong ones, corruption.">
+<link rel="canonical" href="https://supertoadman.github.io/Wilmington-University-corner/survivors/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Wilmington University Corner">
+<meta property="og:title" content="Crypt Survivors · WilmU Corner">
+<meta property="og:description" content="A survival study game: hold a crypt of the restless dead for fifteen minutes while every level-up asks one of 5,453 practice questions. Right answers bring boons; wrong ones, corruption.">
+<meta property="og:url" content="https://supertoadman.github.io/Wilmington-University-corner/survivors/">
+<meta property="og:image" content="https://supertoadman.github.io/Wilmington-University-corner/assets/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#f7f5f0" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0d1117" media="(prefers-color-scheme: dark)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WilmU Corner">
+<link rel="icon" href="../assets/statues/socrates-david-v8-favicon.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../assets/statues/socrates-david-v8-touch.png">
+<link rel="alternate" type="application/json" title="Catalog (JSON)" href="../api/catalog.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500..700&family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Fraunces:ital,opsz,wght@0,9..144,400..700;1,9..144,400..600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="../assets/styles.css?v=b11b5b01ee">
+<script>(function(){var d=document.documentElement;d.dataset.theme='light';try{var t=localStorage.getItem('theme'),a=localStorage.getItem('ambience')||'off',s=localStorage.getItem('scene');if(t)d.dataset.theme=t;if(a!=='off')d.dataset.ambience=a;if(s)d.dataset.scene=s;}catch(e){}})();</script>
+
+
+<script>document.documentElement.dataset.theme = 'dark';</script>
+<link rel="stylesheet" href="survivors.css?v=d55f019844">
+<link rel="stylesheet" href="../assets/refs.css?v=2aed9eeb77">
+<script src="../assets/refs.js?v=2aed9eeb77" data-root="../" data-courses="evidence professional-responsibility con-law-ii sales-and-leases agency-and-partnership contracts-i civil-procedure" data-v="2aed9eeb77" data-cards=".sv-qcard" defer></script>
+</head>
+<body class="sv" data-screen="setup">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false"><defs><linearGradient id="gilt" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#fff3c8"/><stop offset=".24" stop-color="#f1cf74"/><stop offset=".5" stop-color="#c99630"/><stop offset=".64" stop-color="#e8c167"/><stop offset=".82" stop-color="#b98a2c"/><stop offset="1" stop-color="#8e6420"/></linearGradient><linearGradient id="gilt-deep" x1="0" y1="0" x2=".3" y2="1"><stop offset="0" stop-color="#d9ac4c"/><stop offset=".45" stop-color="#a87b22"/><stop offset=".62" stop-color="#c39437"/><stop offset="1" stop-color="#7a5414"/></linearGradient></defs></svg>
+<canvas id="sv-world" aria-hidden="true" tabindex="-1"></canvas>
+<div class="sv-veil" aria-hidden="true"></div>
+
+<header class="sv-hud" id="hud" hidden>
+  <div class="sv-xp" id="hud-xp" aria-hidden="true"><span></span><b id="hud-level">Lv 1</b></div>
+  <div class="sv-hud-row">
+    <div class="sv-slots">
+      <ul id="hud-weapons" aria-label="Weapons"></ul>
+      <ul id="hud-passives" aria-label="Relics"></ul>
+      <div class="sv-tray" id="hud-corruptions" hidden><span class="sv-tray-label">Corruptions</span><ul aria-label="Corruptions"></ul></div>
+    </div>
+    <div class="sv-clock">
+      <strong id="hud-time" aria-label="Time survived">00:00</strong>
+      <span class="sv-meta"><span class="sv-kills" title="Destroyed"><span class="sr-only">Destroyed </span><b id="hud-kills">0</b></span><span class="sv-gold" title="Gold"><span class="sr-only">Gold </span><b id="hud-gold">0</b></span></span>
+      <span class="sv-streak" id="hud-streak"></span>
+    </div>
+    <div class="sv-hud-actions">
+      <span class="sv-hp" title="Health"><span class="sr-only">Health </span><b id="hud-hp"></b></span>
+      <button type="button" class="sv-iconbtn" data-sound aria-pressed="true" aria-label="Sound on"><svg class="icon sv-on line" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /> <path d="M16 9a5 5 0 0 1 0 6" /> <path d="M19.364 18.364a9 9 0 0 0 0-12.728" /> </svg><svg class="icon sv-off line" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 4.702a.7.7 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.7.7 0 0 0 11 19.298z" /> <path d="m16.5 14.5 5-5" /> <path d="m16.5 9.5 5 5" /> </svg><span>Sound on</span></button>
+      <button type="button" class="sv-iconbtn" id="pause-btn" aria-label="Pause"><svg class="icon line" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <rect x="14" y="3" width="5" height="18" rx="1" /> <rect x="5" y="3" width="5" height="18" rx="1" /> </svg></button>
+    </div>
+  </div>
+</header>
+<div class="sv-boss" id="boss" hidden><strong id="boss-name"></strong><div class="sv-boss-bar"><span id="boss-bar"></span></div></div>
+<p class="sv-banner" id="banner" role="status" aria-live="polite"></p>
+<div class="sv-stick" id="stick" hidden aria-hidden="true"><span></span></div>
+<p class="sv-hint" id="hint" hidden><span class="hide-touch"><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or arrows to move · your weapons fire on their own · <kbd>Esc</kbd> pauses</span><span class="show-touch">Drag anywhere to move. Your weapons fire on their own.</span></p>
+
+<section class="sv-screen sv-setup" id="setup" aria-labelledby="setup-h">
+  <div class="sv-panel">
+    <header class="sv-title">
+      <p class="sv-eyebrow">WilmU Corner · Study game</p>
+      <h1 id="setup-h">Crypt <em>Survivors</em></h1>
+      <p class="sv-lede">Hold a crypt of the restless dead for fifteen minutes. You steer; your weapons fire on their own. Every level-up asks a question from your practice sets. Answer right and choose a boon. Answer wrong and a corruption takes hold.</p>
+      <p class="sv-count">5,453 questions · 27 practice sets · 7 courses</p>
+    </header>
+
+    <h2 class="sv-step"><span>1</span> Practice sets</h2>
+    <div class="sv-courses">
+      <fieldset class="sv-course" style="--accent:#2f6f8f" data-course-group="evidence">
+        <legend class="sv-course-head"><span class="sv-tile"><span class="icon statue statue-angel-uriel" aria-hidden="true"></span></span><span class="sv-course-name">Evidence</span></legend>
+        <button type="button" class="sv-all" data-course-all="evidence">Select all</button>
+        <div class="sv-sets"><label class="sv-set"><input type="checkbox" value="evidence/evidence-rules-drill" data-set data-course="evidence" data-count="61"><span><strong>Evidence Rules easy Drill</strong><small>61 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="evidence/evidence-case-files" data-set data-course="evidence" data-count="71"><span><strong>Evidence BAR style questions 1</strong><small>71 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="evidence/evidence-case-files-ii" data-set data-course="evidence" data-count="124"><span><strong>Evidence BAR style questions 2</strong><small>124 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="evidence/evidence-mock-midterm" data-set data-course="evidence" data-count="60"><span><strong>Evidence Mock Midterm</strong><small>60 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="evidence/evidence-mock-midterm-ii" data-set data-course="evidence" data-count="60"><span><strong>Evidence Mock Midterm II</strong><small>60 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="evidence/evidence-hearsay-practice-exam" data-set data-course="evidence" data-count="41"><span><strong>Hearsay Practice Exam</strong><small>41 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="evidence/evidence-concepts-test" data-set data-course="evidence" data-count="116"><span><strong>Evidence Concepts Test</strong><small>116 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="evidence/evidence-most-testable-questions" data-set data-course="evidence" data-count="60"><span><strong>Evidence Most Testable Questions</strong><small>60 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="evidence/evidence-most-testable-questions-ii" data-set data-course="evidence" data-count="60"><span><strong>Evidence Most Testable Questions II</strong><small>60 questions<span data-missed></span></small></span></label></div>
+      </fieldset>
+      <fieldset class="sv-course" style="--accent:#8a2e3b" data-course-group="professional-responsibility">
+        <legend class="sv-course-head"><span class="sv-tile"><span class="icon statue statue-angel-michael" aria-hidden="true"></span></span><span class="sv-course-name">Professional Responsibility</span></legend>
+        <button type="button" class="sv-all" data-course-all="professional-responsibility">Select all</button>
+        <div class="sv-sets"><label class="sv-set"><input type="checkbox" value="professional-responsibility/mpre-drill-v3" data-set data-course="professional-responsibility" data-count="355"><span><strong>Pro Rep Drill</strong><small>355 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="professional-responsibility/mpre-500-course-subset" data-set data-course="professional-responsibility" data-count="298"><span><strong>MPRE 500: Course Subset</strong><small>298 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="professional-responsibility/pr-course-quiz" data-set data-course="professional-responsibility" data-count="51"><span><strong>Course Quiz</strong><small>51 questions<span data-missed></span></small></span></label></div>
+      </fieldset>
+      <fieldset class="sv-course" style="--accent:#5b4b8a" data-course-group="con-law-ii">
+        <legend class="sv-course-head"><span class="sv-tile"><span class="icon statue statue-angel-selaphiel" aria-hidden="true"></span></span><span class="sv-course-name">Con Law II</span></legend>
+        <button type="button" class="sv-all" data-course-all="con-law-ii">Select all</button>
+        <div class="sv-sets"><label class="sv-set"><input type="checkbox" value="con-law-ii/first-amendment-concepts-test" data-set data-course="con-law-ii" data-count="110"><span><strong>First Amendment Concepts Test</strong><small>110 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="con-law-ii/first-amendment-drill" data-set data-course="con-law-ii" data-count="264"><span><strong>First Amendment Quick Drill</strong><small>264 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="con-law-ii/first-amendment-case-files" data-set data-course="con-law-ii" data-count="115"><span><strong>First Amendment BAR style questions 1</strong><small>115 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="con-law-ii/first-amendment-mock-exam" data-set data-course="con-law-ii" data-count="60"><span><strong>First Amendment Mock Exam</strong><small>60 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="con-law-ii/first-amendment-case-repetition" data-set data-course="con-law-ii" data-count="349"><span><strong>First Amendment Case Repetition</strong><small>349 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="con-law-ii/first-amendment-case-repetition-vol-2" data-set data-course="con-law-ii" data-count="239"><span><strong>First Amendment Case Repetition, Volume 2</strong><small>239 questions<span data-missed></span></small></span></label></div>
+      </fieldset>
+      <fieldset class="sv-course" style="--accent:#3f6b4a" data-course-group="sales-and-leases">
+        <legend class="sv-course-head"><span class="sv-tile"><span class="icon statue statue-angel-raphael" aria-hidden="true"></span></span><span class="sv-course-name">Sales and Leases</span></legend>
+        <button type="button" class="sv-all" data-course-all="sales-and-leases">Select all</button>
+        <div class="sv-sets"><label class="sv-set"><input type="checkbox" value="sales-and-leases/sales-and-leases-bar-questions" data-set data-course="sales-and-leases" data-count="444"><span><strong>Sales and Leases Bar Questions</strong><small>444 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="sales-and-leases/sales-and-leases-practice-exams" data-set data-course="sales-and-leases" data-count="870"><span><strong>Sales and Leases Practice Exams</strong><small>870 questions<span data-missed></span></small></span></label></div>
+      </fieldset>
+      <fieldset class="sv-course" style="--accent:#2d4e88" data-course-group="agency-and-partnership">
+        <legend class="sv-course-head"><span class="sv-tile"><span class="icon statue statue-angel-gabriel" aria-hidden="true"></span></span><span class="sv-course-name">Agency &amp; Partnership</span></legend>
+        <button type="button" class="sv-all" data-course-all="agency-and-partnership">Select all</button>
+        <div class="sv-sets"><label class="sv-set"><input type="checkbox" value="agency-and-partnership/agency-and-partnership-bar-questions" data-set data-course="agency-and-partnership" data-count="284"><span><strong>Agency &amp; Partnership Bar Questions</strong><small>284 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="agency-and-partnership/agency-and-partnership-practice-exams" data-set data-course="agency-and-partnership" data-count="210"><span><strong>Agency &amp; Partnership Practice Exams</strong><small>210 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="agency-and-partnership/agency-and-partnership-practice-exams-ii" data-set data-course="agency-and-partnership" data-count="210"><span><strong>Agency &amp; Partnership Practice Exams II</strong><small>210 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="agency-and-partnership/agency-and-partnership-practice-exams-iii" data-set data-course="agency-and-partnership" data-count="210"><span><strong>Agency &amp; Partnership Practice Exams III</strong><small>210 questions<span data-missed></span></small></span></label><label class="sv-set"><input type="checkbox" value="agency-and-partnership/agency-and-partnership-concept-exams" data-set data-course="agency-and-partnership" data-count="210"><span><strong>Agency &amp; Partnership Concept Exams</strong><small>210 questions<span data-missed></span></small></span></label></div>
+      </fieldset>
+      <fieldset class="sv-course" style="--accent:#7a4a1f" data-course-group="contracts-i">
+        <legend class="sv-course-head"><span class="sv-tile"><span class="icon statue statue-angel-jegudiel" aria-hidden="true"></span></span><span class="sv-course-name">Contracts I</span></legend>
+        <button type="button" class="sv-all" data-course-all="contracts-i">Select all</button>
+        <div class="sv-sets"><label class="sv-set"><input type="checkbox" value="contracts-i/contracts-i-bar-questions" data-set data-course="contracts-i" data-count="266"><span><strong>Contracts I Bar Questions</strong><small>266 questions<span data-missed></span></small></span></label></div>
+      </fieldset>
+      <fieldset class="sv-course" style="--accent:#7a3e65" data-course-group="civil-procedure">
+        <legend class="sv-course-head"><span class="sv-tile"><span class="icon statue statue-angel-barachiel" aria-hidden="true"></span></span><span class="sv-course-name">Civil Procedure</span></legend>
+        <button type="button" class="sv-all" data-course-all="civil-procedure">Select all</button>
+        <div class="sv-sets"><label class="sv-set"><input type="checkbox" value="civil-procedure/civil-procedure-bar-questions" data-set data-course="civil-procedure" data-count="255"><span><strong>Civil Procedure Bar Questions</strong><small>255 questions<span data-missed></span></small></span></label></div>
+      </fieldset>
+    </div>
+
+    <h2 class="sv-step"><span>2</span> Your survivor</h2>
+    <div class="sv-chars" id="chars"><p class="sv-note">Summoning the survivors…</p></div>
+
+    <h2 class="sv-step"><span>3</span> The run</h2>
+    <div class="sv-opts">
+      <label class="sv-toggle"><input type="checkbox" id="opt-shuffle"> <span><strong>Shuffle questions</strong><small>Otherwise they come in set order</small></span></label>
+      <label class="sv-toggle"><input type="checkbox" id="opt-missed"> <span><strong>Only questions I've missed before</strong><small>Missed here, until you answer them right</small></span></label>
+      <label class="sv-toggle"><input type="checkbox" id="opt-endless"> <span><strong>Endless</strong><small>Keep fighting past 15:00, harder each lap</small></span></label>
+      <fieldset class="sv-pacing">
+        <legend>Feedback pacing</legend>
+        <label><input type="radio" name="pacing" value="wrong"> <span><strong>Explain wrong answers</strong><small>Right answers get a "Why?" you can open</small></span></label>
+        <label><input type="radio" name="pacing" value="always"> <span><strong>Always explain</strong><small>Every answer shows its explanation</small></span></label>
+        <label><input type="radio" name="pacing" value="end"> <span><strong>Review at the end</strong><small>Just right or wrong now; explanations after the run</small></span></label>
+      </fieldset>
+    </div>
+
+    <details class="sv-howto">
+      <summary>How to play</summary>
+      <dl>
+        <div><dt>Move</dt><dd><kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> or the arrow keys. On a phone or with a mouse, press anywhere and drag. <kbd>Esc</kbd> pauses.</dd></div>
+        <div><dt>Fight</dt><dd>Your weapons aim and fire on their own. Destroyed foes drop soul gems; gather them to fill the bar at the top.</dd></div>
+        <div><dt>Level up</dt><dd>Each level stops the world for one question, with no time limit. Answer with a click or the keys <kbd>1</kbd>–<kbd>6</kbd> or <kbd>A</kbd>–<kbd>F</kbd>; cross out choices with ×.</dd></div>
+        <div><dt>Boons</dt><dd>A right answer lets you choose one of three: a new weapon, a weapon level, or a relic. A maxed weapon with its matching relic evolves. Three right in a row while corrupted offers a Purify card.</dd></div>
+        <div><dt>Corruption</dt><dd>A wrong answer makes you choose one of three corruptions (slower feet, weaker blows, more foes…). They stack, and the crypt darkens as they do. The answer, its explanation and the outline section to review are shown either way.</dd></div>
+        <div><dt>The crypt</dt><dd>A boss rises every three minutes and drops a reliquary. Braziers and coffins hide gold, food and the Lodestar, which pulls in every gem. Survive to 15:00 to see the dawn.</dd></div>
+      </dl>
+    </details>
+
+    <div class="sv-go">
+      <p class="sv-picked" id="picked" aria-live="polite">No sets selected</p>
+      <p class="sv-begin-note" id="begin-note"></p>
+      <button type="button" class="sv-btn sv-btn-primary" id="begin" disabled><svg class="icon line" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /> </svg> Enter the crypt</button>
+    </div>
+    <p class="sv-back"><a href="../"><svg class="icon" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="currentColor"><path d="M21,10.85c0.64,0 1.15,0.51 1.15,1.15c0,0.64-0.51,1.15-1.15,1.15l-11.85,0l1.45,4.78c0.14,0.45 0.02,0.52-0.34,0.22l-6.92,-5.71c-0.36,-0.3-0.36,-0.59 0,-0.89l6.92,-5.71c0.36,-0.3 0.47,-0.22 0.34,0.22l-1.45,4.78z"/></svg> Back to the study library</a> <span>Art: Dungeon Crawl Stone Soup tiles (CC0)</span></p>
+  </div>
+</section>
+
+<section class="sv-screen sv-center" id="loading" hidden>
+  <div class="sv-panel sv-small"><h2>Descending…</h2><p class="sv-status" id="load-status"></p></div>
+</section>
+
+<div class="sv-modal" id="ask" hidden role="dialog" aria-modal="true" aria-labelledby="ask-kicker">
+  <div class="sv-card sv-qcard" id="ask-card" tabindex="-1">
+    <header class="sv-card-head meta"><div class="sv-card-titles"><p class="sv-kicker" id="ask-kicker"></p><p class="sv-source" id="ask-source"></p></div></header>
+    <div id="ask-question"></div>
+    <div id="ask-verdict" class="sq-why" hidden aria-live="polite"></div>
+    <div id="ask-cards" class="actions" hidden></div>
+    <button type="button" class="sv-btn sv-btn-dark actions" id="ask-continue" hidden>Continue</button>
+  </div>
+</div>
+
+<div class="sv-modal" id="chest" hidden role="dialog" aria-modal="true" aria-labelledby="chest-title">
+  <div class="sv-card sv-chest">
+    <p class="sv-kicker">The boss is destroyed</p>
+    <h2 id="chest-title">A reliquary</h2>
+    <ul class="sv-list" id="chest-list"></ul>
+    <button type="button" class="sv-btn sv-btn-primary" id="chest-go">Take it all</button>
+  </div>
+</div>
+
+<section class="sv-screen sv-center" id="pause" hidden aria-labelledby="pause-h">
+  <div class="sv-panel sv-mid">
+    <h2 id="pause-h">Paused</h2>
+    <p class="sv-sub" id="pause-sub"></p>
+    <div class="sv-actions">
+      <button type="button" class="sv-btn sv-btn-primary" id="resume"><svg class="icon line" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z" /> </svg> Resume</button>
+      <button type="button" class="sv-btn sv-btn-ghost" data-sound aria-pressed="true" aria-label="Sound on"><svg class="icon sv-on line" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z" /> <path d="M16 9a5 5 0 0 1 0 6" /> <path d="M19.364 18.364a9 9 0 0 0 0-12.728" /> </svg><svg class="icon sv-off line" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M11 4.702a.7.7 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.7.7 0 0 0 11 19.298z" /> <path d="m16.5 14.5 5-5" /> <path d="m16.5 9.5 5 5" /> </svg><span>Sound on</span></button>
+      <button type="button" class="sv-btn sv-btn-ghost" id="quit">End the run</button>
+    </div>
+    <div class="sv-build" id="pause-build"></div>
+  </div>
+</section>
+
+<section class="sv-screen sv-center" id="summary" hidden aria-labelledby="summary-title">
+  <div class="sv-panel sv-summary">
+    <h2 id="summary-title">The run is over.</h2>
+    <p class="sv-sub" id="summary-lede"></p>
+    <dl class="sv-stats" id="summary-stats"></dl>
+    <div class="sv-actions">
+      <button type="button" class="sv-btn sv-btn-primary" id="retry-missed"><svg class="icon line" aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" > <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" /> <path d="M3 3v5h5" /> </svg> Run missed questions</button>
+      <button type="button" class="sv-btn sv-btn-ghost" id="new-run">New run</button>
+      <button type="button" class="sv-btn sv-btn-ghost" id="change-sets">Change sets</button>
+      <a class="sv-btn sv-btn-ghost" href="../">Study library</a>
+    </div>
+    <div class="sv-build" id="summary-build"></div>
+    <div class="sv-missed" id="summary-missed"></div>
+  </div>
+</section>
+
+<noscript><p class="sv-noscript">Crypt Survivors needs JavaScript. The practice sets work on their own in the <a href="../library/?type=practice">library</a>.</p></noscript>
+<script type="module" src="game.js?v=d55f019844"></script>
+</body>
+</html>

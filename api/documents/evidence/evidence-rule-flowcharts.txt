@@ -1,0 +1,48 @@
+Evidence Flowcharts
+===================
+
+Subject: Evidence
+Type: Flowcharts
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-rule-flowcharts/
+
+Interactive decision charts for Weeks 1–5. Zoom and pan around each chart, walk through a rule one step at a time, and search all nine charts. Covers relevance (401–403), the policy rules (407–411), character evidence, 404(b), impeachment, 609 convictions, the 412 rape shield, and 606(b) jury secrecy.
+
+---
+
+Evidence · Weeks 1–5
+
+# Rule Flowcharts
+
+1
+
+Walk through
+Tap any box to dive in
+
+100%
+
+## Big picture
+Start here. Evidence must be relevant (401), then survive any rule that excludes it (402), then the 403 balance. The four exclusionary families are the rest of the course; blue dashed arrows show where one rule hands off to another.
+
+## 606(b) Jury secrecy
+Why we screen evidence at all: once the jury has deliberated, its verdict is almost never reopened. Walk down the exceptions in order.
+
+## 401-403 Relevance
+The gate every item passes through: probative + material, conditional relevance, then the 403 safety valve and limiting instructions.
+
+## 407-411 Policy rules
+Five rules that bar socially useful conduct for one specific use. Read each column down. 410 is the outlier.
+
+## Character: the box
+The forbidden inference (trait -> conduct on this occasion) and the genuine exceptions that pass THROUGH it, plus how character may be proved.
+
+## 404(b) Other acts
+Routes AROUND the box: other acts offered for a non-character purpose, and the three steps they must still clear.
+
+## Impeachment
+Name the attack first: error, lying, or liar. That decides which rules apply, whether extrinsic evidence is allowed, and whether rehabilitation is allowed.
+
+## 609 Convictions
+Ask the questions in order. The ranking table (top left) runs from most to least permissive.
+
+## 412 Rape shield
+The shield, its three criminal exceptions, the civil balancing test, and the mandatory procedure.

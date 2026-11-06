@@ -1,0 +1,21 @@
+Evidence Concepts Test
+======================
+
+Subject: Evidence
+Type: Practice Questions
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-concepts-test/
+
+A 116-question concepts test on the whole course, Weeks 1–15, in outline order: jury secrecy, relevance and 403, the policy rules (407–411), character evidence, 404(b), and 413–415, impeachment and the rape shield, the hearsay definition, 801(d), and the 803–807 exceptions, the Confrontation Clause through Smith v. Arizona, completeness, Bruton, and the right to present a defense, lay and expert opinion through Daubert and Kumho Tire, authentication and the best evidence rule, and the lawyer-client, psychotherapist, and spousal privileges. Each question turns on a holding, an element, or a recent amendment, and its wrong choices are the dissents, overruled cases, and older rules students mix up. Five choices each. Tutor mode grades as you go; timed mode gives you 90 seconds a question. Every question has the rule, an analysis, and why each choice is right or wrong.
+
+---
+
+# Evidence Concepts Test
+
+Weeks 1–15 · FRE 104–1008 · Confrontation · privileges · 116 questions
+
+Tutor
+Timed exam
+
+174:00
+
+Assume for every question that the Federal Rules of Evidence, as amended through December 1, 2024, govern (including in state prosecutions), unless a question says the December 1, 2026 amendment to Rule 801(d)(1)(A) applies, and that courts follow current U.S. Supreme Court Confrontation Clause precedent. Questions follow the course outline in order, from jury secrecy through familial privileges. Choose the best answer. Tutor mode grades each question as you go; Timed exam mode gives you 90 seconds per question (174:00) and grades at the end.

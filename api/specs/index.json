@@ -1,0 +1,80 @@
+{
+  "schemaVersion": "1.0",
+  "formats": {
+    "mcq": "mcq/v1",
+    "supplement": "supplement/v1",
+    "outline": "outline/v1"
+  },
+  "specs": [
+    {
+      "name": "outline-format.md",
+      "title": "Outline format (outline/v1)",
+      "description": "How to write a Word outline the site turns into headings, callouts and case cards, and that the reference popup indexes (sections, case keys, worked problems).",
+      "mediaType": "text/markdown",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/outline-format.md"
+    },
+    {
+      "name": "supplement-format.md",
+      "title": "Statutory / rule supplement format (supplement/v1)",
+      "description": "The AREAS and DATA contract behind a course supplement and the reference popup, and the citation styles (ucc, fre, mrpc, frcp, restatement, section).",
+      "mediaType": "text/markdown",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/supplement-format.md"
+    },
+    {
+      "name": "mcq-format.md",
+      "title": "MCQ practice set format (mcq/v1)",
+      "description": "The canonical multiple-choice schema, the Shuffle-mode practice page it builds into, and the citation rules that make every question link to the supplement and outline.",
+      "mediaType": "text/markdown",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/mcq-format.md"
+    },
+    {
+      "name": "ai-prompts.md",
+      "title": "Prompt templates",
+      "description": "Copy-paste prompts for generating an outline, a supplement and a practice set in these formats.",
+      "mediaType": "text/markdown",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/ai-prompts.md"
+    },
+    {
+      "name": "mcq-shuffle-template.html",
+      "title": "MCQ practice page template",
+      "description": "The standalone Shuffle-mode practice page with a sample mcq/v1 set; replace the JSON in its mcq-data block.",
+      "mediaType": "text/html",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/mcq-shuffle-template.html"
+    },
+    {
+      "name": "supplement-template.html",
+      "title": "Supplement viewer template",
+      "description": "The standalone supplement viewer with sample UCC data; replace its SUPP, AREAS and DATA lines.",
+      "mediaType": "text/html",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/supplement-template.html"
+    },
+    {
+      "name": "sample.mcq.json",
+      "title": "Sample mcq/v1 set",
+      "description": "Six Sales and Leases questions using every mcq/v1 feature.",
+      "mediaType": "application/json",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/sample.mcq.json"
+    },
+    {
+      "name": "sample.supplement.json",
+      "title": "Sample supplement/v1 data",
+      "description": "Seven UCC sections in the supplement/v1 format.",
+      "mediaType": "application/json",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/sample.supplement.json"
+    },
+    {
+      "name": "sample-outline.json",
+      "title": "Sample outline/v1 data",
+      "description": "An outline as data, for scripts/templates/build-outline-docx.mjs.",
+      "mediaType": "application/json",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/sample-outline.json"
+    },
+    {
+      "name": "sample-outline.docx",
+      "title": "Sample outline (Word)",
+      "description": "sample-outline.json built into the Word file the site reads.",
+      "mediaType": "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/api/specs/sample-outline.docx"
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "id": "agency-and-partnership/agency-and-partnership-playlist",
+  "subject": "agency-and-partnership",
+  "subjectTitle": "Agency & Partnership",
+  "slug": "agency-and-partnership-playlist",
+  "title": "Agency & Partnership Playlist",
+  "description": "Study songs that walk through the Weeks 1–8 outline, one topic per track, numbered to match the planned 17-track album. So far: dissociation versus dissolution, winding up and buyouts, Kovacik loss sharing and buyout agreements, and limited partnerships, LLCs, and veil piercing. Pick any track from the list, or let it play through, at 0.5×, 0.75×, normal, 1.25×, or 1.5× speed.",
+  "type": "music",
+  "typeLabel": "Music",
+  "format": "Playlist",
+  "mimeType": "application/zip",
+  "originalFilename": "Agency_and_Partnership_Playlist.zip",
+  "tags": [
+    "agency",
+    "partnership",
+    "RUPA",
+    "LLC",
+    "music",
+    "playlist"
+  ],
+  "questions": null,
+  "tracks": [
+    {
+      "number": 14,
+      "title": "Power to Leave",
+      "topic": "Outline §10 · Dissociation vs. dissolution",
+      "description": "At-will versus term partnerships, and a partner's power to leave versus the right to. UPA automatic dissolution against the RUPA § 603 buyout path, and judicial expulsion. Cases: Collins v. Lewis, Giles, and Page v. Page.",
+      "durationSeconds": 330,
+      "sizeBytes": 8172153,
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist/power-to-leave.mp3"
+    },
+    {
+      "number": 15,
+      "title": "Winding Up",
+      "topic": "Outline §10 · Liquidation, buyouts and lingering authority",
+      "description": "Statements of dissociation that cut off lingering liability after 90 days, § 701 buyouts at the greater of liquidation or going-concern value, and no forced fire sale. Cases: Creel v. Lilly, Monin v. Monin, and Pav-Saver.",
+      "durationSeconds": 323,
+      "sizeBytes": 7821442,
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist/winding-up.mp3"
+    },
+    {
+      "number": 16,
+      "title": "Money vs. Sweat",
+      "topic": "Outline §11–12 · Loss sharing and buyout agreements",
+      "description": "The Kovacik v. Reed exception, where the money partner bears the cash losses and the service partner loses only their labor, why RUPA rejects it, and the traps in buyout agreements (G & S Investments v. Belman).",
+      "durationSeconds": 273,
+      "sizeBytes": 6577391,
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist/money-vs-sweat.mp3"
+    },
+    {
+      "number": 17,
+      "title": "Welcome to the Fortress",
+      "topic": "Outline §13–14 · LPs, LLCs and veil piercing",
+      "description": "General partners' unlimited liability against the LP, LLP and LLC shields; the corporate general partner in Frigidaire v. Union Properties; LLCs as creatures of contract under the ULLCA, member-managed and manager-managed; and veil piercing as the only way through the shield.",
+      "durationSeconds": 396,
+      "sizeBytes": 9514223,
+      "url": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist/welcome-to-the-fortress.mp3"
+    }
+  ],
+  "contributor": null,
+  "sizeBytes": 32085713,
+  "updated": "2026-10-23T16:02:02.000Z",
+  "headings": [
+    "14. Power to Leave",
+    "15. Winding Up",
+    "16. Money vs. Sweat",
+    "17. Welcome to the Fortress"
+  ],
+  "urls": {
+    "page": "https://supertoadman.github.io/Wilmington-University-corner/subjects/agency-and-partnership/agency-and-partnership-playlist/",
+    "file": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist.zip",
+    "download": "https://supertoadman.github.io/Wilmington-University-corner/files/agency-and-partnership/agency-and-partnership-playlist.zip",
+    "text": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-playlist.txt",
+    "json": "https://supertoadman.github.io/Wilmington-University-corner/api/documents/agency-and-partnership/agency-and-partnership-playlist.json"
+  },
+  "text": "## 14. Power to Leave\nOutline §10 · Dissociation vs. dissolution\nAt-will versus term partnerships, and a partner's power to leave versus the right to. UPA automatic dissolution against the RUPA § 603 buyout path, and judicial expulsion. Cases: Collins v. Lewis, Giles, and Page v. Page.\n\n## 15. Winding Up\nOutline §10 · Liquidation, buyouts and lingering authority\nStatements of dissociation that cut off lingering liability after 90 days, § 701 buyouts at the greater of liquidation or going-concern value, and no forced fire sale. Cases: Creel v. Lilly, Monin v. Monin, and Pav-Saver.\n\n## 16. Money vs. Sweat\nOutline §11–12 · Loss sharing and buyout agreements\nThe Kovacik v. Reed exception, where the money partner bears the cash losses and the service partner loses only their labor, why RUPA rejects it, and the traps in buyout agreements (G & S Investments v. Belman).\n\n## 17. Welcome to the Fortress\nOutline §13–14 · LPs, LLCs and veil piercing\nGeneral partners' unlimited liability against the LP, LLP and LLC shields; the corporate general partner in Frigidaire v. Union Properties; LLCs as creatures of contract under the ULLCA, member-managed and manager-managed; and veil piercing as the only way through the shield."
+}
