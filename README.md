@@ -22,7 +22,7 @@ content/
     ...
 ```
 
-- **New document:** drop a file into a subject folder and push. Supported formats are `.html`, `.docx`, `.pdf`, `.md`, and `.txt`. Word documents are converted into a readable web page with a table of contents, and the original stays available to download.
+- **New document:** drop a file into a subject folder and push. Supported formats are `.html`, `.docx`, `.pdf`, `.md`, and `.txt`, plus two data formats the build turns into pages: `<Name>.mcq.json` (a practice set) and `<Name>.supplement.json` (a statutory supplement); see [Canonical formats](#canonical-formats-for-outlines-supplements-and-practice-sets). Word documents are converted into a readable web page with a table of contents, and the original stays available to download.
 - **Music:** an `.mp3` in a subject folder is a song with its own player. A folder of `.mp3` files inside a subject folder is one playlist document: its tracks play in file-name order (so `14_Power_to_Leave.mp3` is track 14), and listeners pick a track from the list or let it play through, at 0.5× to 1.5× speed. Give the playlist a `subject.json` entry like any document, plus `tracks` keyed by file name with each track's `title`, `topic` and `description`. A link ending in `#track-<slug>` (such as `#track-winding-up`) opens on that track.
 - **New subject:** create a new folder in `content/`. That's all you need. Add a `subject.json` to set the description, icon, and color.
 - **Metadata (optional):** in `subject.json`, use `documents` keyed by file name (or a `<file>.meta.json` sidecar next to the file) to set `title`, `description`, `type`, `tags`, `questions`, `order`, `slug`, `contributor`, `"theme": "structured"` (for Word outlines that use one-cell tables as section titles and RULE/CASE boxes; turns them into real headings, callouts and case boxes, and sets the outline between the archangel figures from `src/assets/archangels/`), `"outsideColor"` (with the structured theme: the Word font color, such as `"7030A0"`, that marks text from outside the class materials, so it keeps its own color on the site), or `"publish": false`. Anything you leave out is inferred: the title comes from the file's `<title>`, and the type from the file name.
@@ -43,6 +43,16 @@ content/
 Outlines follow [docs/outline-format.md](docs/outline-format.md), which sets how tests and factors are labeled.
 
 The document types are `outline`, `rule-chart`, `flowcharts`, `flashcards`, `practice`, and `document`. To add a new type, add one line to `TYPES` in `scripts/build.mjs`. Icons come from the site's own set in `src/icons/` (drawn by `scripts/icons/glyphs.mjs`; run `npm run icons` after adding or changing one). Courses can also use an archangel bust, `statue-angel-michael`, `-gabriel`, `-raphael`, `-uriel`, `-selaphiel`, `-jegudiel` or `-barachiel` (from `src/assets/archangels/busts/`; the fallen counterpart shows in dark mode). Any other [Lucide](https://lucide.dev/icons) name still works and shows as an outline.
+
+## Canonical formats for outlines, supplements and practice sets
+
+New study materials use three canonical formats, modeled on the Sales and Leases materials, so they need no cleanup and the reference popup works on them automatically:
+
+- **Outlines:** write the outline as outline/v1 JSON and build the Word file with `node scripts/templates/build-outline-docx.mjs outline.json "content/<Subject>/<Name>_Outline.docx"` (or follow the same rules in Word). Spec: [docs/outline-format.md](docs/outline-format.md).
+- **Statutory / rule supplements:** `content/<Subject>/<Name>.supplement.json` (the AREAS and DATA of the supplement viewer). Spec: [docs/supplement-format.md](docs/supplement-format.md).
+- **Practice sets:** `content/<Subject>/<Name>.mcq.json`, built into a standalone Shuffle-mode practice page. Spec: [docs/mcq-format.md](docs/mcq-format.md).
+
+`npm run check -- <file>` validates any of them (and, after `npm run build`, checks that a practice set's citations link). Prompts for outside AIs are in [docs/ai-prompts.md](docs/ai-prompts.md); copyable templates and samples are in `docs/templates/` (`npm run templates` regenerates the templates).
 
 ## Sanctum Run (the study game)
 
@@ -108,6 +118,10 @@ Each build also generates a read-only API: `catalog.json`, per-document JSON and
 ```
 content/                 source documents (edit these)
 scripts/build.mjs        static site generator
+scripts/lib/             build helpers: docx.mjs (structured outlines), refs.mjs (popup index), quiz.mjs (game reader),
+                         mcq.mjs + practice-shell.mjs (mcq/v1 sets), supplement-shell.mjs (supplement/v1)
+scripts/templates/       build-outline-docx.mjs, check.mjs (npm run check), build-templates.mjs (npm run templates)
+src/practice/            the standalone practice page and supplement viewer, inlined into built pages
 scripts/game.mjs         game data: questions, outline sections, asset copy
 src/game/                Sanctum Run, the game at /play/
 Assets/temple run/       the game's art and audio pack (runtime files; masters stay local)
@@ -121,6 +135,7 @@ src/icons/               the site's icon set (generated SVGs, committed)
 src/assets/              CSS, client JS, favicon, social image
 site.config.json         site title, URL, repository, disclaimer
 docs/agents-api.md       internal API reference for agents and integrations
+docs/*-format.md         the canonical outline, supplement and practice set formats; docs/templates/ holds samples
 docs/contributions-setup.md  how submissions work and how to turn them on
 submissions/             submission relay (Cloudflare Worker), safety checks, local test inbox
 ```

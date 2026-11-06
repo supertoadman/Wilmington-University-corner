@@ -14,6 +14,7 @@ Base URL: `https://supertoadman.github.io/Wilmington-University-corner/`
 | `api/documents/{subject}/{doc}.txt` | One document as plain text, good for retrieval |
 | `api/search-index.json` | Compact index the site's own search uses |
 | `api/openapi.json` | OpenAPI 3.1 description, for GPT actions or tool-calling agents |
+| `api/specs/index.json` | Authoring specs and templates for new materials, with media types (below) |
 
 Each document page also carries schema.org JSON-LD and `<link rel="alternate">` tags that point to its JSON and text versions, so a crawler that lands on a page can find the structured data.
 
@@ -72,6 +73,23 @@ The schema is versioned with `schemaVersion` in `catalog.json`. New fields may b
 - **RAG pipelines:** index each `urls.text` file. Use `updated` to re-index only what changed.
 - **MCP:** a small [Model Context Protocol](https://modelcontextprotocol.io) server can wrap `catalog.json` to expose `list_documents`, `get_document(id)`, and `search(query)` tools.
 
+## Authoring specs (for agents that write new materials)
+
+Agents that *write* outlines, statutory supplements or practice sets for the site can fetch the formats it builds automatically. Files in these formats get the site's structured outline page, supplement viewer, or Shuffle-mode practice page, and the reference popup links their citations, with no manual cleanup.
+
+| Path | What it is |
+| --- | --- |
+| `api/specs/index.json` | List of the files below, with titles, descriptions, media types and URLs |
+| `api/specs/outline-format.md` | Outline format (outline/v1): the Word structures the site turns into sections, callouts and case cards, and that the popup indexes |
+| `api/specs/supplement-format.md` | Supplement format (supplement/v1): the `AREAS`/`DATA` contract and the citation styles (`ucc`, `fre`, `mrpc`, `frcp`, `restatement`, `section`) |
+| `api/specs/mcq-format.md` | Practice set format (mcq/v1): the question schema, the writing standard, and the citation rules that make questions link |
+| `api/specs/ai-prompts.md` | Copy-paste prompts for generating each of the three |
+| `api/specs/mcq-shuffle-template.html` | The standalone practice page with a sample set (replace the JSON in its `mcq-data` block) |
+| `api/specs/supplement-template.html` | The standalone supplement viewer with sample data (replace its `SUPP`, `AREAS` and `DATA` lines) |
+| `api/specs/sample.mcq.json`, `sample.supplement.json`, `sample-outline.json`, `sample-outline.docx` | Samples of each format |
+
+The sources live in `docs/` and `docs/templates/` in the repository. Like the rest of this API, they are not linked from the public site or listed in the sitemap.
+
 ## Limitations
 
-The interactive practice banks keep their questions inside the page's script, so their `.txt` and `.json` text holds only the visible text. To work with the full question set, fetch the HTML file (`urls.file`).
+The older interactive practice banks keep their questions inside the page's script, so their `.txt` and `.json` text holds only the visible text; to work with the full question set, fetch the HTML file (`urls.file`). Sets in the canonical mcq/v1 format are the exception: their text holds every question, choice, answer and rationale, and their HTML carries the set as JSON in `<script id="mcq-data" type="application/json">`.

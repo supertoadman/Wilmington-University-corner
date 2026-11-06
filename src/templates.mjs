@@ -1404,6 +1404,7 @@ export function openapi(config) {
         },
       },
       '/api/search-index.json': { get: { operationId: 'getSearchIndex', summary: 'Compact search index', responses: { 200: json({ type: 'array', items: { type: 'object' } }) } } },
+      '/api/specs/index.json': { get: { operationId: 'getAuthoringSpecs', summary: 'Authoring specs and templates for new outlines, supplements and practice sets (mcq/v1, supplement/v1, outline/v1)', responses: { 200: json({ type: 'object', properties: { schemaVersion: { type: 'string' }, formats: { type: 'object' }, specs: { type: 'array', items: { type: 'object', properties: { name: { type: 'string' }, title: { type: 'string' }, description: { type: 'string' }, mediaType: { type: 'string' }, url: { type: 'string' } } } } } }) } } },
     },
     components: {
       schemas: {

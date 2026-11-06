@@ -15,6 +15,7 @@
 // literals (strings, numbers, true/false/null, arrays, objects) and fails on anything else.
 
 import { decodeEntities } from './text.mjs';
+import { readMcq, normalizeMcq, mcqToQuiz } from './mcq.mjs';
 
 const BS = String.fromCharCode(92);
 const ESCAPES = { n: '\n', t: '\t', r: '\r', b: '\b', f: '\f', v: '\v', 0: '\0' };
@@ -109,6 +110,14 @@ function shaped(raw) {
 
 // --- Formats -------------------------------------------------------------------------
 
+// Canonical sets (mcq/v1, docs/mcq-format.md): `<script id="mcq-data" type="application/json">`, read
+// with JSON.parse. The build renders every .mcq.json file into a page with this block, so this is the
+// format new sets should use; the readers after it are for the sets written before it existed.
+function canonical(src) {
+  const raw = readMcq(src);
+  return raw && mcqToQuiz(normalizeMcq(raw).set);
+}
+
 // Course quiz: a JSON block, { stem: [paragraphs], choices, answer, explanation, references }.
 function courseQuiz(src) {
   const m = src.match(/<script[^>]*id=["']quiz-data["'][^>]*>([\s\S]*?)<\/script>/i);
@@ -198,7 +207,7 @@ function qb(src) {
   return null;
 }
 
-const FORMATS = [courseQuiz, drill, mpre, bank, qb];
+const FORMATS = [canonical, courseQuiz, drill, mpre, bank, qb];
 
 /** The questions in an HTML practice set, or [] if it isn't in a format the game reads. */
 export function extractQuestions(html) {

@@ -149,6 +149,8 @@ button.rx-kicker svg { width: 15px; height: 15px; }
 .rx-cmt + .rx-cmt { border-top: 1px dashed var(--rx-line); }
 .rx-cmt b { margin-right: 2px; font: 500 12px var(--rx-mono); color: var(--rx-gold-ink); }
 .rx-cmt.rx-key b::after { content: "★ Key"; margin-left: 6px; padding: 1px 6px; font: 600 9.5px/1.4 var(--rx-sans); letter-spacing: .06em; text-transform: uppercase; vertical-align: 1px; color: var(--rx-gold-ink); background: var(--rx-gold-soft); border-radius: 999px; }
+/* A comment the question cites ("§ 2-209 cmt. 2"), opened and marked. */
+.rx-cmt.rx-hit { margin: 0 -14px; padding: 10px 14px 10px 17px; }
 
 .rx-out { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 4px 0 0; padding: 11px 14px; font-size: 14px; font-weight: 600; color: var(--rx-ink); text-decoration: none; background: var(--rx-surface); border: 1px solid var(--rx-line-2); border-radius: 12px; box-shadow: var(--rx-card-shadow); transition: background .15s, border-color .15s; }
 .rx-out svg { width: 15px; height: 15px; color: var(--rx-muted); }

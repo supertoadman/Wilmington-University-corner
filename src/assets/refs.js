@@ -3,17 +3,188 @@
 // case name, or casebook problem ("Problem 4-3(b)") in a question or explanation opens the panel
 // at that spot. build.mjs injects this
 // script into the practice pages of subjects whose subject.json has "refs"; the index it loads
-// is built from the subject's supplement and outline, so questions need no tagging. Statutes are
-// UCC sections ("2-207") unless the index says it holds the Federal Rules of Evidence (STYLES).
+// is built from the subject's supplement and outline, so questions need no tagging. The index's
+// "cite" says how its statutes are cited (STYLES): UCC sections ("2-207", the default), the Federal
+// Rules of Evidence ("fre"), the Model Rules of Professional Conduct ("mrpc"), the Federal Rules of
+// Civil Procedure and U.S.C. sections ("frcp"), Restatement sections ("restatement"), or any
+// "§ 12-345" style code ("section"). See docs/supplement-format.md.
 // Shuffle mode mixes courses, so there each card names its course (data-course) and uses that
 // course's index; the script tag lists the courses that have one (data-courses).
 // Desktop: a panel docked on the right. Phones: a bottom sheet that leaves the question visible.
 (() => {
+  // ---------------------------------------------------------------------------
+  // Cite matching. Pure functions, no DOM: under Node (tests/canonical-formats.test.mjs) they are
+  // handed to the test as globalThis.refsCites and the script stops there.
+  // ---------------------------------------------------------------------------
+  const STOP = new Set(('the and for that with this from are was were which when what who whom whose will would could should may might must '
+    + 'not but its his her their they them she him has have had been being does did done any all each other than then there these those '
+    + 'into onto upon about over under after before because while such only also more most some can cannot question answer correct '
+    + 'following best likely court rule rules case cases one two three why how does doesn didn isn wasn aren none above below true false '
+    + 'section sections ucc says said under which what').split(' '));
+
+  /** Words plus cites ("2-207(2)(b)" also counts as "2-207", "404(b)" as "404") as matching terms. */
+  function terms(text) {
+    const out = [];
+    for (const m of text.toLowerCase().matchAll(/\d+(?:[.\-‑–]\d+)*(?:\([a-z0-9]+\))*|[a-z][a-z'’]+/g)) {
+      const t = m[0].replace(/[‑–]/g, '-').replace(/['’]s?$/, '');
+      if (/^\d/.test(t)) {
+        if (t.length < 2) continue;
+        out.push(t);
+        if (t.includes('(')) out.push(t.slice(0, t.indexOf('(')));
+      } else if (t.length >= 4 && !STOP.has(t)) out.push(t);
+    }
+    return out;
+  }
+
+  // A cite followed by an Official Comment ("§ 2-209 cmt. 2", "Rule 1.7, Comment [8]") takes the
+  // comment into its link, so the panel opens that comment.
+  const CMT = /^,?\s+(?:Official\s+)?(?:[Cc]mts?\.?|[Cc]omments?)\s+\[?(\d{1,3})\]?/;
+  const withComments = (find) => (text) => find(text).map((c) => {
+    const m = text.slice(c.end).match(CMT);
+    return m ? { ...c, end: c.end + m[0].length, cmt: m[1] } : c;
+  });
+  // A list of cites after one "Rule" or "§": "Rules 607, 608, and 609", "Rules 413–415", "§§ 71 and 90".
+  const listOf = (num) => String.raw`${num}(?:(?:,\s*(?:and\s+|or\s+)?|,?\s+(?:and|or|&|through)\s+|\s*[-‑–]\s*)${num})*`;
+  /** Each cite in a list match: the first keeps the list's lead-in ("Rule"), so "Rule 404(b)" is the whole link. */
+  const eachIn = (m, part) => [...m[0].matchAll(part)].map((p, k) => ({
+    at: m.index + (k ? p.index : 0), end: m.index + p.index + p[0].length, id: p[1], sub: p[2] || '',
+  }));
+  /** Bare cites (no "Rule"), skipping any that overlap a cite already found. */
+  function addBare(out, text, re, pick) {
+    for (const m of text.matchAll(re)) {
+      const end = m.index + m[0].length;
+      if (out.some((c) => m.index < c.end && end > c.at)) continue;
+      out.push({ at: m.index, end, ...pick(m) });
+    }
+    return out.sort((a, b) => a.at - b.at);
+  }
+
+  // UCC: "§ 2-207(2)(b)", "1-201(b)(20)", "UCC 2-314"; only sections in the index link.
+  const CITE = /(?:§§?\s*)?\b([129]A?)[-‑–](\d{3}[A-Z]?)(?!\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g;
+  const uccCites = (text) => [...text.matchAll(CITE)].map((m) => ({ at: m.index, end: m.index + m[0].length, id: `${m[1]}-${m[2]}`, sub: m[3] }));
+  // Federal Rules of Evidence: "Rule 404(b)", "FRE 803(6)", "Fed. R. Evid. 403", lists ("Rules 607,
+  // 608, and 609", "Rules 413–415"), a bare number with a subdivision ("404(b)"), and a bare
+  // number in running text ("subject to 403", "403 balancing").
+  const FNUM = String.raw`\d{3,4}(?!\d)(?:\([a-zA-Z0-9]{1,4}\))*`;
+  const FRE_LIST = new RegExp(String.raw`\b(?:FRE|F\.R\.E\.|Fed\.\s*R\.\s*Evid\.|Rules?)\s+${listOf(FNUM)}`, 'g');
+  const FRE_BARE = new RegExp(String.raw`(?<![\w$§.,(-])(\d{3,4})((?:\([a-zA-Z0-9]{1,4}\))+)`
+    + String.raw`|(?<=\b(?:under|to|and|or|of|with|by|per|see|than|from|not)\s)(\d{3})(?![\d(%]|[.,]\d)`
+    + String.raw`|\b(\d{3})(?=\s+(?:balancing|analysis|objections?|test|exceptions?|ban|bar|limits?|grounds?|exclusion)\b)`, 'g');
+  function freCites(text) {
+    const out = [];
+    for (const m of text.matchAll(FRE_LIST)) out.push(...eachIn(m, /(\d{3,4})((?:\([a-zA-Z0-9]{1,4}\))*)/g));
+    return addBare(out, text, FRE_BARE, (m) => ({ id: m[1] || m[3] || m[4], sub: m[2] || '' }));
+  }
+  // Model Rules of Professional Conduct: "Rule 1.7(a)(2)", "MRPC 1.6", "Model Rule 1.8(e)", "Rules 1.7
+  // and 1.9", and a bare number with a subdivision ("1.6(b)(1)"). A bare "1.7" alone is a decimal.
+  const MNUM = String.raw`[1-8]\.\d{1,2}(?![\d.]\d|\d)(?:\([a-zA-Z0-9]{1,4}\))*`;
+  const MRPC_LIST = new RegExp(String.raw`\b(?:MRPC|M\.R\.P\.C\.|(?:ABA\s+)?Model\s+Rules?(?:\s+of\s+Professional\s+Conduct)?|RPC|Rules?)\s+${listOf(MNUM)}`, 'g');
+  const MRPC_BARE = /(?<![\w$§.,(-])([1-8]\.\d{1,2})((?:\([a-zA-Z0-9]{1,4}\))+)/g;
+  function mrpcCites(text) {
+    const out = [];
+    for (const m of text.matchAll(MRPC_LIST)) out.push(...eachIn(m, /([1-8]\.\d{1,2})((?:\([a-zA-Z0-9]{1,4}\))*)/g));
+    return addBare(out, text, MRPC_BARE, (m) => ({ id: m[1], sub: m[2] }));
+  }
+  // Federal Rules of Civil Procedure: "Rule 12(b)(6)", "FRCP 56(a)", "Fed. R. Civ. P. 23(b)(3)",
+  // "Rules 12, 13, and 14", a bare number whose first subdivision is a letter ("12(b)(6)"), and the
+  // U.S.C. sections a civil procedure course cites ("28 U.S.C. § 1332(a)", "§§ 1331 and 1367"):
+  // rules are 1-2 digits ("4.1" too), sections 3-5 digits, so the two never collide.
+  const CNUM = String.raw`\d{1,2}(?:\.\d)?(?![\d.]\d|\d)(?:\([a-zA-Z0-9]{1,4}\))*`;
+  // A comma continues the list only before another separator, so "Rule 56, 30 days later" stays one cite.
+  const FRCP_LIST = new RegExp(String.raw`\b(?:FRCP|F\.R\.C\.P\.|Fed\.\s*R\.\s*Civ\.\s*P\.|Rules?)\s+${CNUM}(?:(?:,\s*(?=${CNUM}(?:,|\s+(?:and|or)\b))|,?\s+(?:and|or|&|through)\s+|\s*[-‑–]\s*)${CNUM})*`, 'g');
+  const FRCP_BARE = /(?<![\w$§.,(-]|§\s|Section\s|Article\s|Amendment\s|Title\s)(\d{1,2}(?:\.\d)?)(\([a-z]\)(?:\([a-zA-Z0-9]{1,4}\))*)/g;
+  const USC = /(?:\b\d{1,2}\s+U\.\s?S\.\s?C\.(?:\s?A\.)?\s*)?§§?\s*(\d{3,5}[a-z]?)(?![\d.\-‑–]\d|\d)((?:\([a-zA-Z0-9]{1,4}\))*)((?:(?:,\s*|,?\s+(?:and|or|through)\s+|\s*[-‑–]\s*)\d{3,5}[a-z]?(?:\([a-zA-Z0-9]{1,4}\))*)*)/g;
+  function frcpCites(text) {
+    const out = [];
+    for (const m of text.matchAll(FRCP_LIST)) out.push(...eachIn(m, /(\d{1,2}(?:\.\d)?)(?![\d.]\d|\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g));
+    for (const m of text.matchAll(USC)) out.push(...eachIn(m, /(\d{3,5}[a-z]?)((?:\([a-zA-Z0-9]{1,4}\))*)/g));
+    return addBare(out, text, FRCP_BARE, (m) => ({ id: m[1], sub: m[2] }));
+  }
+  // Sections: "§ 90", "§ 90(1)", "§§ 71 and 90", "Section 87(2)", "Sec. 139". Restatement sections are
+  // numbers or decimals ("§ 7.03"); a "section" code may also use hyphens ("§ 12-345"). A UCC-style
+  // "§ 2-207" never reads as § 2 of a Restatement.
+  const RNUM = String.raw`\d{1,4}[A-Za-z]?(?:\.\d{1,3}[A-Za-z]?)?(?![\d.\-‑–]\d|\d)(?:\([a-zA-Z0-9]{1,4}\))*`;
+  const GNUM = String.raw`\d{1,5}[A-Za-z]?(?:[.\-]\d{1,5}[A-Za-z]?)*(?![\d.\-]\d|\d)(?:\([a-zA-Z0-9]{1,4}\))*`;
+  const LEAD = String.raw`(?:§§?\s*|\bSections?\s+|\bSecs?\.\s*)`;
+  const SEC_LIST = (num) => new RegExp(LEAD + String.raw`${num}(?:(?:,\s*(?:and\s+|or\s+)?|,?\s+(?:and|or|&|through)\s+|\s*[–‑]\s*|\s+-\s+)${num})*`, 'g');
+  const RST_LIST = SEC_LIST(RNUM), GEN_LIST = SEC_LIST(GNUM);
+  const sectionCites = (re, part) => (text) => [...text.matchAll(re)].flatMap((m) => eachIn(m, part));
+  const restatementCites = sectionCites(RST_LIST, /(\d{1,4}[A-Za-z]?(?:\.\d{1,3}[A-Za-z]?)?)(?![\d.\-‑–]\d|\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g);
+  const genericCites = sectionCites(GEN_LIST, /(\d{1,5}[A-Za-z]?(?:[.\-]\d{1,5}[A-Za-z]?)*)(?![\d.\-]\d|\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g);
+
+  // How an index names its statutes. An index without "cite" holds UCC sections.
+  const usc = (id) => /^\d{3,}/.test(id);
+  const STYLES = {
+    ucc: {
+      cites: withComments(uccCites), sign: '§', name: (id) => `§ ${id}`, badge: (id) => `UCC § ${id}`, group: 'Statutes', doc: 'the supplement',
+      hint: 'Search: 2-207, perfect tender, Roth Steel',
+      prefix: (q) => { const m = q.match(/^\s*(?:§\s*)?([129]a?)[-‑–\s]?(\d{1,3})\s*$/i); return m && `${m[1].toUpperCase()}-${m[2]}`; },
+    },
+    fre: {
+      cites: withComments(freCites), sign: 'R', name: (id) => `Rule ${id}`, badge: (id) => `FRE ${id}`, group: 'Rules', doc: 'the Rules',
+      // A question's words match long rules (103, 803) better than the short one it turns on
+      // (403), so suggestions start from the rules its closest outline sections cite.
+      viaOutline: true,
+      hint: 'Search: 803(2), hearsay, Old Chief',
+      prefix: (q) => q.match(/^\s*(?:rules?\s*|fre\s*)?(\d{1,4})\s*$/i)?.[1],
+    },
+    mrpc: {
+      cites: withComments(mrpcCites), sign: 'R', name: (id) => `Rule ${id}`, badge: (id) => `MRPC ${id}`, group: 'Rules', doc: 'the Rules',
+      viaOutline: true,
+      hint: 'Search: 1.7(a), informed consent, Rule 1.6',
+      prefix: (q) => q.match(/^\s*(?:(?:model\s+)?rules?\s*|m?rpc\s*)?([1-8](?:\.\d{0,2})?)\s*$/i)?.[1],
+    },
+    frcp: {
+      cites: withComments(frcpCites), sign: (id) => (usc(id) ? '§' : 'R'), name: (id) => (usc(id) ? `§ ${id}` : `Rule ${id}`),
+      badge: (id) => (usc(id) ? `U.S.C. § ${id}` : `FRCP ${id}`), group: 'Rules and statutes', doc: 'the supplement',
+      viaOutline: true,
+      hint: 'Search: 12(b)(6), summary judgment, § 1332',
+      prefix: (q) => q.match(/^\s*(?:rules?\s*|frcp\s*|fed\.?\s*r\.?\s*civ\.?\s*p\.?\s*|(?:\d+\s*u\.?s\.?c\.?\s*)?§+\s*)?(\d{1,5}(?:\.\d?)?)\s*$/i)?.[1],
+    },
+    restatement: {
+      cites: withComments(restatementCites), sign: '§', name: (id) => `§ ${id}`, badge: (id) => `Restatement § ${id}`, group: 'Sections', doc: 'the supplement',
+      hint: 'Search: § 90, promissory estoppel',
+      prefix: (q) => q.match(/^\s*(?:restatement\s*)?(?:§+\s*|sec(?:tion)?\.?\s*)?(\d{1,4}(?:\.\d{0,3})?)\s*$/i)?.[1],
+    },
+    section: {
+      cites: withComments(genericCites), sign: '§', name: (id) => `§ ${id}`, badge: (id) => `§ ${id}`, group: 'Sections', doc: 'the supplement',
+      hint: 'Search: a section number or a word',
+      prefix: (q) => q.match(/^\s*(?:§+\s*|sec(?:tion)?\.?\s*)?(\d[\w.\-]*)\s*$/i)?.[1],
+    },
+  };
+  // Casebook problems: "Problem 4-3(b)", "Problems 1-2, 1-3", "Problems 4-10 and 4-11".
+  const PNUM = String.raw`\d{1,2}[-‑–]\d{1,2}(?!\d)(?:\([a-zA-Z0-9]{1,3}\))*`;
+  const PROB = new RegExp(String.raw`\bProblems?\s+${PNUM}(?:(?:,\s*|,?\s+(?:and|or|&)\s+)${PNUM})*`, 'g');
+  /** Each problem in a PROB match: its number, part ("(b)"), and where it sits in the match. */
+  const problemsIn = (m) => [...m[0].matchAll(/(\d+)[-‑–](\d+)((?:\([a-zA-Z0-9]{1,3}\))*)/g)].map((p, k) => ({
+    n: `${p[1]}-${p[2]}`, sub: p[3].toLowerCase(),
+    at: m.index + (k ? p.index : 0), end: m.index + p.index + p[0].length,
+  }));
+  /** One pattern for every case key in an index (see outlineCases in scripts/lib/refs.mjs). */
+  function caseRegex(cases) {
+    if (!cases.length) return null;
+    const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    // A one-party key ("Johnson") must not claim a different case with that party ("Johnson v. Lutz").
+    const keys = cases.flatMap((c) => (c.keys || [c.key]).map((k, j) => {
+      const vs = c.vs?.[j];
+      return { k, re: esc(k) + (vs && !/ v\. /.test(k) ? `(?!\\s+v\\.\\s+(?!${esc(vs)}\\b))` : '') };
+    })).sort((a, b) => b.k.length - a.k.length).map((x) => x.re);
+    // Not after "v.": in "Watteau v. Fenwick", Fenwick is a party, not the Fenwick case.
+    return new RegExp(`(?<!\\bv\\.\\s)\\b(?:${keys.join('|')})(?!\\w)`, 'g');
+  }
+  const signOf = (style, id) => (typeof style.sign === 'function' ? style.sign(id) : style.sign);
+
+  if (typeof document === 'undefined') {
+    globalThis.refsCites = { STYLES, PROB, problemsIn, caseRegex, terms, CMT };
+    return;
+  }
+
   const me = document.currentScript;
   const ROOT = new URL(me.dataset.root || './', location.href);
   const COURSES = me.dataset.courses ? new Set(me.dataset.courses.split(/\s+/)) : null;
   // Question cards in each practice engine: the list engines' .q, the one-at-a-time MPRE bank
-  // (.sheet) and PR quiz (#question.card), the timed mock exams' .qcard, and shuffle mode's .sq.
+  // (.sheet) and PR quiz (#question.card), the timed mock exams' .qcard, and shuffle mode's .sq
+  // (also the canonical practice shell, scripts/lib/practice-shell.mjs).
   const CARD = me.dataset.cards || '.q, .sq, .qcard, .sheet:has(> .stem), .card:has(> .stem)';
   const EXTRA = '.facts';
   const SKIP = 'button, a, summary, input, textarea, select, script, style, .rx-panel, .meta, .sq-meta';
@@ -50,78 +221,7 @@
   // The index in use. Matching and the panel's views read it; use() switches it.
   let idx = null, CASE_RE = null;
   const use = (ix) => { idx = ix; CASE_RE = ix.caseRe; };
-
-  const STOP = new Set(('the and for that with this from are was were which when what who whom whose will would could should may might must '
-    + 'not but its his her their they them she him has have had been being does did done any all each other than then there these those '
-    + 'into onto upon about over under after before because while such only also more most some can cannot question answer correct '
-    + 'following best likely court rule rules case cases one two three why how does doesn didn isn wasn aren none above below true false '
-    + 'section sections ucc says said under which what').split(' '));
-
-  /** Words plus cites ("2-207(2)(b)" also counts as "2-207", "404(b)" as "404") as matching terms. */
-  function terms(text) {
-    const out = [];
-    for (const m of text.toLowerCase().matchAll(/\d+(?:[.\-‑–]\d+)*(?:\([a-z0-9]+\))*|[a-z][a-z'’]+/g)) {
-      const t = m[0].replace(/[‑–]/g, '-').replace(/['’]s?$/, '');
-      if (/^\d/.test(t)) {
-        if (t.length < 2) continue;
-        out.push(t);
-        if (t.includes('(')) out.push(t.slice(0, t.indexOf('(')));
-      } else if (t.length >= 4 && !STOP.has(t)) out.push(t);
-    }
-    return out;
-  }
   const textOf = (html) => { const d = document.createElement('div'); d.innerHTML = html; return d.textContent; };
-
-  // Cites like "§ 2-207(2)(b)", "1-201(b)(20)", "UCC 2-314"; only sections in the index link.
-  const CITE = /(?:§§?\s*)?\b([129]A?)[-‑–](\d{3}[A-Z]?)(?!\d)((?:\([a-zA-Z0-9]{1,4}\))*)/g;
-  const uccCites = (text) => [...text.matchAll(CITE)].map((m) => ({ at: m.index, end: m.index + m[0].length, id: `${m[1]}-${m[2]}`, sub: m[3] }));
-  // Federal Rules of Evidence: "Rule 404(b)", "FRE 803(6)", "Fed. R. Evid. 403", lists ("Rules 607,
-  // 608, and 609", "Rules 413–415"), a bare number with a subdivision ("404(b)"), and a bare
-  // number in running text ("subject to 403", "403 balancing").
-  const FNUM = String.raw`\d{3,4}(?!\d)(?:\([a-zA-Z0-9]{1,4}\))*`;
-  const FRE_LIST = new RegExp(String.raw`\b(?:FRE|F\.R\.E\.|Fed\.\s*R\.\s*Evid\.|Rules?)\s+${FNUM}(?:(?:,\s*(?:and\s+|or\s+)?|,?\s+(?:and|or|&|through)\s+|\s*[-‑–]\s*)${FNUM})*`, 'g');
-  const FRE_BARE = new RegExp(String.raw`(?<![\w$§.,(-])(\d{3,4})((?:\([a-zA-Z0-9]{1,4}\))+)`
-    + String.raw`|(?<=\b(?:under|to|and|or|of|with|by|per|see|than|from|not)\s)(\d{3})(?![\d(%]|[.,]\d)`
-    + String.raw`|\b(\d{3})(?=\s+(?:balancing|analysis|objections?|test|exceptions?|ban|bar|limits?|grounds?|exclusion)\b)`, 'g');
-  function freCites(text) {
-    const out = [];
-    for (const m of text.matchAll(FRE_LIST)) {
-      // The first cite keeps its "Rule", so the whole "Rule 404(b)" is the link.
-      [...m[0].matchAll(/(\d{3,4})((?:\([a-zA-Z0-9]{1,4}\))*)/g)].forEach((p, k) => out.push({
-        at: m.index + (k ? p.index : 0), end: m.index + p.index + p[0].length, id: p[1], sub: p[2],
-      }));
-    }
-    for (const m of text.matchAll(FRE_BARE)) {
-      const end = m.index + m[0].length;
-      if (out.some((c) => m.index < c.end && end > c.at)) continue;
-      out.push({ at: m.index, end, id: m[1] || m[3] || m[4], sub: m[2] || '' });
-    }
-    return out.sort((a, b) => a.at - b.at);
-  }
-  // How an index names its statutes. An index without "cite" holds UCC sections.
-  const STYLES = {
-    ucc: {
-      cites: uccCites, sign: '§', name: (id) => `§ ${id}`, badge: (id) => `UCC § ${id}`, group: 'Statutes', doc: 'the supplement',
-      hint: 'Search: 2-207, perfect tender, Roth Steel',
-      prefix: (q) => { const m = q.match(/^\s*(?:§\s*)?([129]a?)[-‑–\s]?(\d{1,3})\s*$/i); return m && `${m[1].toUpperCase()}-${m[2]}`; },
-    },
-    fre: {
-      cites: freCites, sign: 'R', name: (id) => `Rule ${id}`, badge: (id) => `FRE ${id}`, group: 'Rules', doc: 'the Rules',
-      // A question's words match long rules (103, 803) better than the short one it turns on
-      // (403), so suggestions start from the rules its closest outline sections cite.
-      viaOutline: true,
-      hint: 'Search: 803(2), hearsay, Old Chief',
-      prefix: (q) => q.match(/^\s*(?:rules?\s*|fre\s*)?(\d{1,4})\s*$/i)?.[1],
-    },
-  };
-  // Casebook problems: "Problem 4-3(b)", "Problems 1-2, 1-3", "Problems 4-10 and 4-11".
-  const PNUM = String.raw`\d{1,2}[-‑–]\d{1,2}(?!\d)(?:\([a-zA-Z0-9]{1,3}\))*`;
-  const PROB = new RegExp(String.raw`\bProblems?\s+${PNUM}(?:(?:,\s*|,?\s+(?:and|or|&)\s+)${PNUM})*`, 'g');
-  /** Each problem in a PROB match: its number, part ("(b)"), and where it sits in the match. */
-  const problemsIn = (m) => [...m[0].matchAll(/(\d+)[-‑–](\d+)((?:\([a-zA-Z0-9]{1,3}\))*)/g)].map((p, k) => ({
-    n: `${p[1]}-${p[2]}`, sub: p[3].toLowerCase(),
-    at: m.index + (k ? p.index : 0), end: m.index + p.index + p[0].length,
-  }));
 
   function prepare(data) {
     data.problems ||= [];
@@ -155,17 +255,7 @@
       for (const { id } of style.cites(`${s.title} ${s.text}`)) if (byStatute[id]) { (citedIn[id] ||= new Set()).add(s.id); n.set(id, (n.get(id) || 0) + 1); }
       citesOf[s.id] = [...n].sort((a, b) => b[1] - a[1]).map(([id]) => id);
     }
-    let caseRe = null;
-    if (data.cases.length) {
-      const esc = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-      // A one-party key ("Johnson") must not claim a different case with that party ("Johnson v. Lutz").
-      const keys = data.cases.flatMap((c) => (c.keys || [c.key]).map((k, j) => {
-        const vs = c.vs?.[j];
-        return { k, re: esc(k) + (vs && !/ v\. /.test(k) ? `(?!\\s+v\\.\\s+(?!${esc(vs)}\\b))` : '') };
-      })).sort((a, b) => b.k.length - a.k.length).map((x) => x.re);
-      // Not after "v.": in "Watteau v. Fenwick", Fenwick is a party, not the Fenwick case.
-      caseRe = new RegExp(`(?<!\\bv\\.\\s)\\b(?:${keys.join('|')})(?!\\w)`, 'g');
-    }
+    const caseRe = caseRegex(data.cases);
     return { ...data, style, docs, idf, byStatute, bySection, byProblem, citedIn, citesOf, caseRe };
   }
 
@@ -188,9 +278,9 @@
   /** Statute cites, case names, and problems named in a piece of text, in order, without repeats. */
   function named(text) {
     const out = [], seen = new Set();
-    for (const { id, sub } of idx.style.cites(text)) {
-      const key = `s:${id}${sub}`;
-      if (idx.byStatute[id] && !seen.has(key)) { seen.add(key); out.push({ kind: 's', id, sub }); }
+    for (const { id, sub, cmt } of idx.style.cites(text)) {
+      const key = `s:${id}${sub}${cmt ? `c${cmt}` : ''}`;
+      if (idx.byStatute[id] && !seen.has(key)) { seen.add(key); out.push({ kind: 's', id, sub, ...(cmt && { cmt }) }); }
     }
     if (CASE_RE) for (const m of text.matchAll(CASE_RE)) {
       const i = caseIndex(m[0]);
@@ -204,7 +294,7 @@
     return out;
   }
   // A ref's identity, for dropping repeats from lists.
-  const refKey = (r) => r.kind + (r.id ?? r.n ?? r.i);
+  const refKey = (r) => r.kind + (r.id ?? r.n ?? r.i) + (r.cmt ? `c${r.cmt}` : '');
   const caseIndex = (key) => idx.cases.findIndex((c) => (c.keys || [c.key]).includes(key));
 
   // ---------------------------------------------------------------------------
@@ -225,7 +315,7 @@
     while (walker.nextNode()) nodes.push(walker.currentNode);
     for (const node of nodes) {
       const text = node.nodeValue, spots = [];
-      for (const c of idx.style.cites(text)) if (idx.byStatute[c.id]) spots.push({ at: c.at, end: c.end, ref: { kind: 's', id: c.id, sub: c.sub } });
+      for (const c of idx.style.cites(text)) if (idx.byStatute[c.id]) spots.push({ at: c.at, end: c.end, ref: { kind: 's', id: c.id, sub: c.sub, ...(c.cmt && { cmt: c.cmt }) } });
       if (CASE_RE) for (const m of text.matchAll(CASE_RE)) spots.push({ at: m.index, end: m.index + m[0].length, ref: { kind: 'c', i: caseIndex(m[0]) } });
       for (const m of text.matchAll(PROB)) {
         for (const { n, sub, at, end } of problemsIn(m)) if (idx.byProblem[n]) spots.push({ at, end, ref: { kind: 'p', n, sub } });
@@ -249,7 +339,7 @@
     b.className = 'rx-cite';
     b.textContent = label;
     b.dataset.ref = JSON.stringify(ref);
-    b.title = ref.kind === 's' ? `Look up ${idx.style.name(ref.id)}` : ref.kind === 'p' ? `Look up Problem ${ref.n}${ref.sub}` : `Look up ${idx.cases[ref.i].name}`;
+    b.title = ref.kind === 's' ? `Look up ${idx.style.name(ref.id)}${ref.cmt ? `, comment ${ref.cmt}` : ''}` : ref.kind === 'p' ? `Look up Problem ${ref.n}${ref.sub}` : `Look up ${idx.cases[ref.i].name}`;
     return b;
   }
 
@@ -450,8 +540,8 @@
     let main, sub = '';
     if (ref.kind === 's') {
       const s = idx.byStatute[ref.id];
-      ico.textContent = idx.style.sign;
-      txt.append(el('span', 'rx-over', `${idx.style.name(s.s)}${ref.sub || ''}`));
+      ico.textContent = signOf(idx.style, s.s);
+      txt.append(el('span', 'rx-over', `${idx.style.name(s.s)}${ref.sub || ''}${ref.cmt ? ` cmt. ${ref.cmt}` : ''}`));
       main = s.t;
     } else if (ref.kind === 'o') {
       const s = idx.bySection[ref.id];
@@ -718,13 +808,15 @@
           : [empty(`Nothing matches “${q}”.`)],
       };
     },
-    s({ id, sub, ctx }) {
+    s({ id, sub, ctx, cmt }) {
       const s = idx.byStatute[id];
       const nodes = [head(s.part, s.t, idx.style.badge(s.s))];
       const list = passages(s);
-      // The passages the cite names, else the ones the question's words point to.
+      // A cite to one of its comments ("§ 2-209 cmt. 2") opens the comments at that one.
+      const cmtHit = cmt && s.c.some(([n]) => String(n) === String(cmt)) ? String(cmt) : null;
+      // The passages the cite names, else the ones the question's words point to (unless it names a comment).
       let hits = cited(list, sub), why = 'Cited';
-      if (!hits.length) { hits = relevant(list, ctx); why = 'Matches the question'; }
+      if (!hits.length && !cmtHit) { hits = relevant(list, ctx); why = 'Matches the question'; }
       const marked = new Set(hits);
       const text = el('div', 'rx-card rx-statute');
       list.forEach((p, i) => {
@@ -752,6 +844,7 @@
       }
       if (s.c.length) {
         const d = el('details', 'rx-cmts');
+        d.open = !!cmtHit;
         const key = new Set((s.cc || []).map(String));
         const sum = el('summary', null, 'Official comments');
         sum.append(el('span', 'rx-count', String(s.c.length)));
@@ -760,7 +853,9 @@
         d.append(sum);
         const wrap = el('div', 'rx-cmt-list');
         for (const [n, t] of s.c) {
-          const p = el('p', `rx-cmt${key.has(n) ? ' rx-key' : ''}`);
+          const hit = cmtHit === String(n);
+          const p = el('p', `rx-cmt${key.has(n) ? ' rx-key' : ''}${hit ? ' rx-hit' : ''}`);
+          if (hit) p.append(el('span', 'rx-why', 'Cited'));
           p.append(el('b', null, n ? `Cmt. ${n}` : 'Comment'), ' ', t);
           wrap.append(p);
         }
