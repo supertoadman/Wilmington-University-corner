@@ -19,7 +19,7 @@ export function supplementStatutes(html) {
   const line = html.split('\n').find((l) => l.startsWith('const DATA = '));
   if (!line) return [];
   const data = JSON.parse(line.slice('const DATA = '.length).replace(/;\s*$/, ''));
-  return data.map(({ s, t, part, x, c, cc, k, note, tp }) => ({ s, t, part, x, c, cc, k, note, tp }));
+  return data.map(({ s, t, part, x, c, cc, k, note, std, tp }) => ({ s, t, part, x, c, cc, k, note, std, tp }));
 }
 
 /**

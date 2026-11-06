@@ -2092,6 +2092,7 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
   -webkit-box-decoration-break: clone; box-decoration-break: clone;
 }
 .prose-structured .el strong, .prose-structured .el em, .prose-structured .el-line strong { color: inherit; }
+.prose-structured .el-conn { display: inline-block; margin: 0 2px; padding: 0 6px; border: 1px solid currentColor; border-radius: 999px; font-size: .78em; font-weight: 600; line-height: 1.4; white-space: nowrap; opacity: .85; }
 .prose-structured .el-line { margin: .4em 0; padding: 5px 12px; border-left: 3px solid var(--el-edge); border-radius: 0 9px 9px 0; background: var(--el-bg); }
 .prose-structured .el-line > strong:first-child { color: var(--el); }
 

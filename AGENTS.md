@@ -2,6 +2,7 @@
 
 - Source documents live in `content/<Subject>/`. Never edit files in `dist/`; the build regenerates it.
 - To add or describe documents, edit `content/<Subject>/subject.json` (see README). Don't hand-edit generated HTML.
+- Every outline follows `docs/outline-format.md`: label each element or factor of a multi-part test `(1), (2), (3)` or `(a), (b), (c)`, mirror statutory subsections where a test tracks enacted text, and show with a lead-in whether a list is conjunctive `(all required)`, disjunctive `(any one suffices)`, or balancing `(weighed together)`.
 - Build with `npm run build`, then preview with `npm run serve` (http://localhost:4173/Wilmington-University-corner/).
 - All internal links must stay relative (templates use the `root` prefix), so the site works under any base path.
 - The JSON API schema is versioned (`schemaVersion` in `api/catalog.json`). Add fields freely, but don't rename or remove existing ones without bumping the major version.

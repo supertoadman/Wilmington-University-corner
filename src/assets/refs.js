@@ -128,7 +128,7 @@
     const style = STYLES[data.cite] || STYLES.ucc;
     const docs = [];
     data.statutes.forEach((s, i) => docs.push({ kind: 's', i, id: s.s,
-      text: `${s.s} ${s.s} ${s.t} ${s.t} ${(s.k || []).join(' ')} ${s.x.map((x) => x.join(' ')).join(' ')} ${s.note || ''} ${s.c.map((c) => c[1]).join(' ')}` }));
+      text: `${s.s} ${s.s} ${s.t} ${s.t} ${(s.k || []).join(' ')} ${s.x.map((x) => x.join(' ')).join(' ')} ${s.note || ''} ${(s.std || []).map((c) => `${c[1]} ${c[2]}`).join(' ')} ${s.c.map((c) => c[1]).join(' ')}` }));
     data.sections.forEach((s, i) => { s.text = textOf(s.html); docs.push({ kind: 'o', i, id: s.id, text: `${s.title} ${s.title} ${s.text}` }); });
     data.cases.forEach((c, i) => docs.push({ kind: 'c', i, id: c.name, text: `${c.title} ${c.title} ${textOf(c.html)}` }));
     data.problems.forEach((p, i) => docs.push({ kind: 'p', i, id: p.n, text: `${p.title} ${p.title} ${p.parts.map((x) => textOf(x.html)).join(' ')}` }));
@@ -740,6 +740,11 @@
       });
       linkify(text);
       nodes.push(text);
+      (s.std || []).forEach((c) => {
+        const n = rich(`<p>${c[2].replace(/</g, '&lt;')}</p>`, 'rx-callnote');
+        n.prepend(el('span', 'rx-tag', /^Standard/.test(c[1]) ? c[1] : `Standard: ${c[1]}`));
+        nodes.push(n);
+      });
       if (s.note) {
         const n = rich(`<p>${s.note.replace(/</g, '&lt;')}</p>`, 'rx-callnote');
         n.prepend(el('span', 'rx-tag', 'Note'));
