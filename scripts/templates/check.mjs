@@ -34,6 +34,30 @@ export function loadCites() {
   return ctx.refsCites;
 }
 
+/**
+ * Whether choice length gives the answer away. For each question whose choices shuffle, ranks the
+ * key by length (0 = longest). By chance the key is longest about 1 time in n and in the top two
+ * about 2 in n; a set where "pick the longest" or "pick between the two longest" does much better
+ * than that has a tell. Returns the share at each rank and warnings past the thresholds.
+ */
+export function answerLengthBias(set) {
+  const ranks = [];
+  for (const q of set.questions) {
+    if (q.fixed || !Array.isArray(q.o) || q.o.length < 4) continue;
+    const len = q.o.map((o) => String(o).length);
+    ranks.push(len.filter((l, i) => l > len[q.a] || (l === len[q.a] && i < q.a)).length / (q.o.length - 1));
+  }
+  const n = ranks.length;
+  if (n < 10) return { n, longest: 0, topTwo: 0, warnings: [] };
+  const longest = ranks.filter((r) => r === 0).length / n;
+  const topTwo = ranks.filter((r) => r <= 0.25).length / n;
+  const pct = (x) => `${Math.round(100 * x)}%`;
+  const warnings = [];
+  if (longest > 0.35) warnings.push(`the correct choice is the longest in ${pct(longest)} of questions (about 20% by chance): even out choice lengths`);
+  if (topTwo > 0.6) warnings.push(`the correct choice is one of the two longest in ${pct(topTwo)} of questions (about 40% by chance): even out choice lengths`);
+  return { n, longest, topTwo, warnings };
+}
+
 /** The subject folder and subject.json of a file under content/, if it is in one. */
 function subjectOf(file) {
   const rel = path.relative(path.join(ROOT, 'content'), path.resolve(file));
@@ -126,6 +150,9 @@ async function check(file, refsPath) {
   if (!raw) return report(file, { errors: ['not an mcq/v1 set, supplement/v1 supplement, or outline/v1 outline (see docs/*-format.md)'] });
   const { set, errors, warnings } = normalizeMcq(raw);
   const notes = [`questions: ${set.questions.length} in ${set.exams.length || 1} exam${set.exams.length > 1 ? 's' : ''}, ${set.areas.length} topic areas`];
+  const bias = answerLengthBias(set);
+  warnings.push(...bias.warnings);
+  if (bias.n >= 10) notes.push(`choice length: the key is the longest in ${Math.round(100 * bias.longest)}% and one of the two longest in ${Math.round(100 * bias.topTwo)}% of ${bias.n} shuffled questions`);
   const index = refsPath ? path.resolve(refsPath) : subject && path.join(ROOT, 'dist', 'assets', 'refs', `${subject.slug}.json`);
   if (index && fs.existsSync(index)) {
     const lint = lintCitations(set, JSON.parse(fs.readFileSync(index, 'utf8')));
