@@ -22,7 +22,7 @@ import { convertDocx } from './lib/docx.mjs';
 import { mp3Duration } from './lib/audio.mjs';
 import { refIndex, injectRefs } from './lib/refs.mjs';
 import { readMcq, normalizeMcq, hasMcqBlock, mcqText } from './lib/mcq.mjs';
-import { renderPracticeShell } from './lib/practice-shell.mjs';
+import { renderPracticeShell, injectAnswerLog } from './lib/practice-shell.mjs';
 import { readSupplement, readSupplementPage, normalizeSupplement, renderSupplement, supplementText } from './lib/supplement-shell.mjs';
 import { buildOutlineDocx } from './templates/build-outline-docx.mjs';
 import { buildGame } from './game.mjs';
@@ -247,6 +247,8 @@ async function loadSubjects() {
         questions: dm.questions ?? compiled?.questions ?? null,
         contributor: dm.contributor || null,
         theme: dm.theme || null,
+        // A page built from an mcq/v1 set: the site's copy reports its answers to Your stats.
+        practiceShell: compiled?.type === 'practice',
         order: dm.order ?? 999,
         size: raw ? raw.length : trackBytes,
         zipped,
@@ -374,7 +376,17 @@ for (const s of subjects.filter((x) => x.refs)) {
   for (const d of s.documents) if (d.type === 'practice' && d.format.mime === 'text/html') refPages.add(d);
 }
 const refsVersion = refsHash.digest('hex').slice(0, 10);
-const withRefs = (d) => (refPages.has(d) ? Buffer.from(injectRefs(d.raw.toString('utf8'), { slug: d.subject.slug, version: refsVersion }), 'utf8') : d.raw);
+// Pages built from an mcq/v1 set also load assets/practice-log.js, which records their graded answers
+// for Your stats (/stats/). Like the reference popup, only the served copy gets it.
+const logVersion = createHash('sha1').update(fs.readFileSync(path.join(ROOT, 'src', 'assets', 'answer-log.js')))
+  .update(fs.readFileSync(path.join(ROOT, 'src', 'assets', 'practice-log.js'))).digest('hex').slice(0, 10);
+const withRefs = (d) => {
+  if (!refPages.has(d) && !d.practiceShell) return d.raw;
+  let html = d.raw.toString('utf8');
+  if (d.practiceShell) html = injectAnswerLog(html, { set: d.id, version: logVersion });
+  if (refPages.has(d)) html = injectRefs(html, { slug: d.subject.slug, version: refsVersion });
+  return Buffer.from(html, 'utf8');
+};
 
 // Raw files + ZIP bundles
 const allZip = {};
@@ -544,6 +556,7 @@ write('index.html', T.home(ctx));
 write('play/index.html', T.play(ctx));
 if (game.total) write('shuffle/index.html', T.shuffle(ctx));
 if (game.total) write('survivors/index.html', T.survivors(ctx));
+if (game.total) write('stats/index.html', T.stats(ctx));
 write('library/index.html', T.library(ctx));
 write('contribute/index.html', T.contribute(ctx));
 write('404.html', T.notFound(ctx));
@@ -551,7 +564,7 @@ write('admin/index.html', T.admin(ctx)); // owner-only editor; deliberately left
 for (const s of subjects) write(P.subject(s) + 'index.html', T.subjectPage(ctx, s));
 for (const d of docs) write(P.doc(d) + 'index.html', T.docPage(ctx, d));
 
-const pageUrls = ['', 'library/', 'contribute/', 'play/', ...(game.total ? ['shuffle/', 'survivors/'] : []), ...subjects.map(P.subject), ...docs.map(P.doc)];
+const pageUrls = ['', 'library/', 'contribute/', 'play/', ...(game.total ? ['shuffle/', 'survivors/', 'stats/'] : []), ...subjects.map(P.subject), ...docs.map(P.doc)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pageUrls
   .map((u) => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('sitemap.xml')}\n`);

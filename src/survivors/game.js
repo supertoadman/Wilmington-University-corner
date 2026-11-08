@@ -11,6 +11,7 @@ import {
   rollUpgrades, rollCorruptions, applyOffer, eligibleEvolutions, levelText, selectQuestions, QuestionDeck,
   LETTERS, fmtTime, corruptionLevel,
 } from './logic.js';
+import { record } from '../assets/answer-log.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -301,6 +302,7 @@ function answer(orig) {
   ask.right = right;
   if (right) delete saved.missed[q.id]; else saved.missed[q.id] = 1;
   persist();
+  record({ set: `${q.course.slug}/${q.set.slug}`, n: q.n, topic: q.topic, right, from: 'survivors' }); // Your stats
   run.results.push({ q, picked: orig, right, order: ask.order.slice(), level: world.player.level, time: world.time });
   if (right) { run.streak++; run.bestStreak = Math.max(run.bestStreak, run.streak); } else run.streak = 0;
   $$('.sv-opt').forEach((b) => {

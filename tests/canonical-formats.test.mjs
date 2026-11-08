@@ -423,7 +423,9 @@ test('the build renders canonical sources, wires the popup, and keeps the specs 
     const set = out('files/sample-course/sample-set.html');
     assert.match(set, /<meta name="generator" content="mcq\/v1 practice shell">/);
     assert.match(set, /--accent:#3f6b4a/);
-    assert.equal(out('files/sample-course/template-copy.html'), set);
+    // The served copies differ only in the set their answer listener (Your stats) records under.
+    assert.match(set, /practice-log\.js\?v=\w+&amp;set=sample-course%2Fsample-set"/);
+    assert.equal(out('files/sample-course/template-copy.html').replace('set=sample-course%2Ftemplate-copy', 'set=sample-course%2Fsample-set'), set);
     const supp = out('files/sample-course/sample-statutes.html');
     assert.equal(supplementStatutes(supp).length, 7);
 

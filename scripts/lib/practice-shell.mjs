@@ -23,6 +23,18 @@ const asset = (f) => {
 };
 
 /**
+ * The site's copy of a practice page also records its graded answers for Your stats: this adds
+ * assets/practice-log.js, which listens for the page's "practice:answer" events. `set` is the
+ * question data's name for the set ("<course>/<set slug>", as in play/data/). Downloads and ZIPs
+ * keep the page as rendered, with no outside script.
+ */
+export function injectAnswerLog(html, { set, version, root = '../../' }) {
+  const tag = `<script type="module" src="${root}assets/practice-log.js?v=${encodeURIComponent(version)}&amp;set=${encodeURIComponent(set)}"></script>`;
+  const at = html.toLowerCase().lastIndexOf('</body>');
+  return at < 0 ? html + tag : html.slice(0, at) + tag + html.slice(at);
+}
+
+/**
  * The page for a checked set (normalizeMcq(...).set). `accent` colors the cards' left bar (the
  * course's accent); `noindex` keeps search engines off a copy; `comment` goes at the top of the file.
  */

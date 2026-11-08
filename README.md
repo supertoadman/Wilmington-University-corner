@@ -80,6 +80,15 @@ Exam-style sets (such as the Agency & Partnership practice exams) can share one 
 - **Music** is the divine and corrupt score from `Assets/temple run/audio/`; combat sounds are synthesized in the browser.
 - **Code** is in `src/survivors/`: `defs.js` (weapons, relics, corruptions, enemies, waves), `logic.js` (the rules, as pure functions), `engine.js` (simulation and drawing), `game.js` (screens, questions, HUD). Add `?debug` to the URL to get `window.survivors`. Tests: `tests/survivors.test.mjs`.
 
+## Your stats
+
+`/stats/` (linked from the header, the home page shortcuts, the footer and Shuffle mode) shows a student which topics they miss most: answers, accuracy, the last 7 days, a day streak, the questions to review, their weakest topics, the last 12 weeks, and every topic by course. Each topic links to a **drill**: Shuffle mode opened on that topic's questions (`shuffle/?course=<slug>&area=<area>`), or on just the ones whose latest answer was wrong (`&missed=1`).
+
+- **What counts:** every answer graded in Shuffle mode, Sanctum Run, Crypt Survivors, and the pages built from `.mcq.json` sets (the site's copy of those pages loads `src/assets/practice-log.js`, which records the page's `practice:answer` events; downloads stay standalone). Older practice pages with their own scripts don't report yet; a set moved to the canonical format starts counting with no extra step.
+- **Where it lives:** in the browser's `localStorage` (key `answer-log`), written and read by `src/assets/answer-log.js`. Nothing is uploaded and there are no accounts. The footer's progress backup includes it, and restoring a backup merges answer histories instead of replacing them.
+- **Topics** are the questions' `area` (the part of the topic before " — "), grouped per course; area names that differ only in case or spacing count as one. Each answer keeps its topic as it read then, so later edits to a set don't re-file old answers.
+- **Code:** the page is `stats()` in `src/templates.mjs`, drawn by `src/assets/stats.js`. Tests: `tests/answer-log.test.mjs`.
+
 ## Editing titles and descriptions online
 
 Go to `/admin` on the live site (it isn't linked anywhere) to edit any document's title and description from a browser or phone. Sign in with a GitHub [fine-grained personal access token](https://github.com/settings/personal-access-tokens/new):
