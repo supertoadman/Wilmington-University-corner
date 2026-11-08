@@ -43,8 +43,7 @@ export async function preload(ids, onProgress = () => {}) {
 export const imageUrl = (id) => (asset(id) ? new URL(asset(id).src, PACK).href : '');
 
 // ---------------------------------------------------------------------------
-// Audio: effects are one-shots. Sanctum Run plays no music (the build leaves the pack's music loops
-// out of play/pack/); mix() can still crossfade loops if music ever comes back.
+// Audio: music loops crossfade between realms; effects are one-shots.
 // ---------------------------------------------------------------------------
 export const audio = (() => {
   let ctx = null;

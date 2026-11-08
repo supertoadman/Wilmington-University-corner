@@ -50,8 +50,6 @@ function copyPack(root, dist) {
   const files = new Set();
   for (const a of manifest.assets) {
     if (a.type !== 'audio' && !PACK_IDS.some((re) => re.test(a.id))) continue;
-    // Sanctum Run plays sound effects only: the pack's music loops stay out of the published site.
-    if (a.type === 'audio' && /music/.test(a.id)) continue;
     const entry = { src: a.src, w: a.width, h: a.height, anchor: a.anchor };
     if (a.frames) entry.frames = Object.fromEntries(Object.entries(a.frames).map(([k, f]) => [k, [f.x, f.y, f.width, f.height]]));
     if (a.animations) entry.animations = a.animations;
@@ -75,7 +73,11 @@ function copyPack(root, dist) {
   return bytes;
 }
 
-export async function buildGame({ subjects, P, write, root, dist }) {
+/**
+ * The question data (play/data/, which Shuffle mode and Your stats also read) always; the game's
+ * code and art only `withGame` (a local build with --games: the games stay off the published site).
+ */
+export async function buildGame({ subjects, P, write, root, dist, withGame = true }) {
   const courses = [];
   let total = 0;
   for (const s of subjects) {
@@ -105,8 +107,13 @@ export async function buildGame({ subjects, P, write, root, dist }) {
     });
   }
   write('play/data/index.json', JSON.stringify({ courses }));
+  const setCount = courses.reduce((n, c) => n + c.sets.length, 0);
+  if (!withGame) {
+    console.log(`Questions: ${total} from ${setCount} practice sets (the games are local-only: npm run dev:games)`);
+    return { courses, total };
+  }
   fs.cpSync(path.join(root, 'src', 'game'), path.join(dist, 'play'), { recursive: true, filter: (f) => !f.endsWith('.html') });
   const packBytes = copyPack(root, dist);
-  console.log(`Game: ${total} questions from ${courses.reduce((n, c) => n + c.sets.length, 0)} practice sets, ${(packBytes / 1048576).toFixed(1)} MB of art and audio`);
+  console.log(`Game: ${total} questions from ${setCount} practice sets, ${(packBytes / 1048576).toFixed(1)} MB of art and audio`);
   return { courses, total };
 }

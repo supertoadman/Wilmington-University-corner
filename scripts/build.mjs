@@ -544,18 +544,22 @@ write('llms.txt', [
 write('llms-full.txt', docs.map((d) =>
   `# ${d.title}\n\nSubject: ${d.subject.title} | Type: ${TYPES[d.type].label} | URL: ${abs(P.doc(d))}\n\n${d.text}\n`).join('\n\n---\n\n'));
 
-// The game: question data, art, and its page
-const game = await buildGame({ subjects, P, write, root: ROOT, dist: DIST });
+// The games (Sanctum Run at /play/, Crypt Survivors at /survivors/) are local-only: the published site
+// leaves out their pages, code, art and every link to them. `npm run dev:games` (or build --games)
+// builds them for play on this computer. The question data in play/data/ is always built, because
+// Shuffle mode and Your stats read it too.
+const GAMES = process.argv.includes('--games');
+const game = await buildGame({ subjects, P, write, root: ROOT, dist: DIST, withGame: GAMES });
 // Crypt Survivors: its code and sprite pack (its questions are the game's play/data/).
-const survivorsPack = game.total ? buildSurvivors({ root: ROOT, dist: DIST, write }) : null;
+const survivorsPack = GAMES && game.total ? buildSurvivors({ root: ROOT, dist: DIST, write }) : null;
 
 // Pages
-const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game, refsVersion, survivors: survivorsPack };
+const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game, games: GAMES && game.total > 0, refsVersion, survivors: survivorsPack };
 
 write('index.html', T.home(ctx));
-write('play/index.html', T.play(ctx));
+if (ctx.games) write('play/index.html', T.play(ctx));
 if (game.total) write('shuffle/index.html', T.shuffle(ctx));
-if (game.total) write('survivors/index.html', T.survivors(ctx));
+if (ctx.games) write('survivors/index.html', T.survivors(ctx));
 if (game.total) write('stats/index.html', T.stats(ctx));
 write('library/index.html', T.library(ctx));
 write('contribute/index.html', T.contribute(ctx));
@@ -564,7 +568,7 @@ write('admin/index.html', T.admin(ctx)); // owner-only editor; deliberately left
 for (const s of subjects) write(P.subject(s) + 'index.html', T.subjectPage(ctx, s));
 for (const d of docs) write(P.doc(d) + 'index.html', T.docPage(ctx, d));
 
-const pageUrls = ['', 'library/', 'contribute/', 'play/', ...(game.total ? ['shuffle/', 'survivors/', 'stats/'] : []), ...subjects.map(P.subject), ...docs.map(P.doc)];
+const pageUrls = ['', 'library/', 'contribute/', ...(game.total ? ['shuffle/', 'stats/'] : []), ...(ctx.games ? ['play/', 'survivors/'] : []), ...subjects.map(P.subject), ...docs.map(P.doc)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pageUrls
   .map((u) => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('sitemap.xml')}\n`);
