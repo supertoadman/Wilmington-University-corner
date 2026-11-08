@@ -13,7 +13,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CSS_VERSION = createHash('sha1').update(fs.readFileSync(path.join(ROOT, 'src', 'assets', 'styles.css'))).digest('hex').slice(0, 10);
 // The same for the page scripts; app.js passes its version on to the scenery module it loads.
 const jsHash = createHash('sha1');
-for (const f of ['app.js', 'ambience.js', 'shuffle.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
+for (const f of ['app.js', 'ambience.js', 'shuffle.js', 'answer-log.js', 'stats.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
 const JS_VERSION = jsHash.digest('hex').slice(0, 10);
 // Crypt Survivors (/survivors/) loads its stylesheet and entry module with a version from all its files.
 const svHash = createHash('sha1');
@@ -164,6 +164,7 @@ ${GILT_DEFS}
     <nav class="main-nav" aria-label="Main">
       ${subjectMenu(ctx, root, active)}
       <a href="${root}library/"${active === 'library' ? ' aria-current="page"' : ''}>Library</a>
+      ${ctx.game?.total ? `<a href="${root}stats/"${active === 'stats' ? ' aria-current="page"' : ''}>Your stats</a>` : ''}
     </nav>
     <div class="header-actions">
       <button class="search-trigger" type="button" data-open-search aria-label="Search all documents">
@@ -174,7 +175,7 @@ ${GILT_DEFS}
       ${themeButton()}
     </div>
   </div>
-  ${active === 'home' ? `<nav class="course-nav" aria-label="Shortcuts"><div class="container course-nav-inner"><a href="#courses">${icon('layout-grid')} Courses <small>${subjects.length}</small></a><a href="${root}library/?type=practice">${icon('list-checks')} Practice questions <small>${docs.filter((d) => d.type === 'practice').length}</small></a><a href="#recent-h">${icon('clock')} Recently updated</a><a class="course-nav-all" href="${root}files/all-study-materials.zip" download>${icon('download')} Download everything</a></div></nav>` : ''}
+  ${active === 'home' ? `<nav class="course-nav" aria-label="Shortcuts"><div class="container course-nav-inner"><a href="#courses">${icon('layout-grid')} Courses <small>${subjects.length}</small></a><a href="${root}library/?type=practice">${icon('list-checks')} Practice questions <small>${docs.filter((d) => d.type === 'practice').length}</small></a><a href="#recent-h">${icon('clock')} Recently updated</a>${ctx.game?.total ? `<a href="${root}stats/">${icon('chart-column')} Your stats</a>` : ''}<a class="course-nav-all" href="${root}files/all-study-materials.zip" download>${icon('download')} Download everything</a></div></nav>` : ''}
 </header>
 <main id="main">
 ${body}
@@ -189,6 +190,7 @@ ${body}
       <a href="${root}library/">All documents</a>
       ${subjects.map((s) => `<a href="${root}subjects/${s.slug}/">${esc(s.title)}</a>`).join('')}
       <a href="${root}contribute/">Share your work</a>
+      ${ctx.game?.total ? `<a href="${root}stats/">Your stats</a>` : ''}
       <a href="${root}files/all-study-materials.zip" download>Download everything</a>
       <button type="button" class="footer-progress" data-sheet-open="progress-sheet">Back up your progress</button>
     </nav>
@@ -1113,7 +1115,7 @@ export function shuffle(ctx) {
 <section class="page-head container">
   ${breadcrumbs(root, [['shuffle/', 'Shuffle mode']])}
   <h1 class="page-title">Shuffle mode</h1>
-  <p class="page-lede">Pick any practice sets, from one course or several, and work their questions in one shuffled stack. Answer choices are shuffled too. A variation keeps the question it builds on one tap away.</p>
+  <p class="page-lede">Pick any practice sets, from one course or several, and work their questions in one shuffled stack. Answer choices are shuffled too. A variation keeps the question it builds on one tap away. Every answer counts toward <a href="${root}stats/">your stats</a>.</p>
 </section>
 <section class="container section-tight shuffle" data-shuffle>
   <form class="shuffle-setup" data-shuffle-setup>
@@ -1125,12 +1127,14 @@ export function shuffle(ctx) {
     </div>
   </form>
   <div class="shuffle-run" data-shuffle-run hidden>
+    <p class="shuffle-drill" data-shuffle-drill hidden>${icon('target')}<span data-drill-text></span><a href="${root}stats/">Back to your stats</a></p>
     <div class="shuffle-bar">
       <div class="shuffle-bar-row">
         <p class="shuffle-score" data-shuffle-score aria-live="polite">0 / 0</p>
         <button class="btn btn-ghost" type="button" data-shuffle-missed>Retry missed</button>
         <button class="btn btn-ghost" type="button" data-shuffle-again>${icon('shuffle')} Reshuffle</button>
         <button class="btn btn-ghost" type="button" data-shuffle-change>Change sets</button>
+        <a class="btn btn-ghost" href="${root}stats/">${icon('chart-column')} Your stats</a>
       </div>
       <div class="shuffle-meter"><i data-shuffle-meter></i></div>
     </div>
@@ -1142,6 +1146,69 @@ export function shuffle(ctx) {
     root, title: 'Shuffle mode', canonical: 'shuffle/', body,
     description: `Mix practice sets from any course into one shuffled stack: ${game.total.toLocaleString('en-US')} questions from the study library.`,
     extraHead: `<script type="module" src="${root}assets/shuffle.js?v=${JS_VERSION}"></script>${refCourses.length ? `<link rel="stylesheet" href="${root}assets/refs.css?v=${ctx.refsVersion}"><script src="${root}assets/refs.js?v=${ctx.refsVersion}" data-root="${root}" data-courses="${refCourses.join(' ')}" data-v="${ctx.refsVersion}" defer></script>` : ''}`,
+  });
+}
+
+/**
+ * Your stats, at /stats/: which topics a student misses most, from the answer log every graded
+ * question writes in this browser (src/assets/answer-log.js). The page is a frame; assets/stats.js
+ * reads the log and draws everything, with the course names and colors handed to it here.
+ */
+export function stats(ctx) {
+  const root = '../';
+  const { game, subjects } = ctx;
+  const courses = game.courses.map((c) => ({ slug: c.slug, title: c.title, accent: c.accent, sets: Object.fromEntries(c.sets.map((s) => [s.slug, s.title])) }));
+  // Sets whose own page reports answers here: the ones built from an mcq/v1 set (the practice shell).
+  const ownPage = subjects.flatMap((s) => s.documents.filter((d) => d.practiceShell).map((d) => d.title));
+  const sources = ['Shuffle mode', 'Sanctum Run', 'Crypt Survivors'];
+  if (ownPage.length) sources.push(`the pages of ${ownPage.length === 1 ? 'one practice set' : `${ownPage.length} practice sets`} (${ownPage.map(esc).join(', ')})`);
+  const tracked = `${sources.slice(0, -1).join(', ')}${sources.length > 2 ? ',' : ''} and ${sources.at(-1)}`;
+  const body = `
+<section class="page-head container">
+  ${breadcrumbs(root, [['stats/', 'Your stats']])}
+  <h1 class="page-title">Your stats</h1>
+  <p class="page-lede">See which topics you miss most, then drill them. Saved in this browser only: nothing is uploaded, and there's no account.</p>
+</section>
+<section class="container section-tight stats" data-stats>
+  <div class="stats-empty" data-stats-empty hidden>
+    <h2>No answers yet</h2>
+    <p>Answer some practice questions and your results show up here, sorted by course and topic.</p>
+    <div class="stats-go">
+      <a class="btn btn-primary" href="${root}shuffle/">${icon('shuffle')} Shuffle mode</a>
+      <a class="btn btn-ghost" href="${root}play/">${icon('play')} Sanctum Run</a>
+      <a class="btn btn-ghost" href="${root}survivors/">${icon('skull')} Crypt Survivors</a>
+    </div>
+  </div>
+  <div data-stats-body hidden>
+    <div class="chip-scroll stats-filter" role="group" aria-label="Course" data-stats-filter></div>
+    <dl class="stats-kpis" data-stats-kpis></dl>
+    <section class="stats-card" aria-labelledby="stats-weak-h">
+      <h2 id="stats-weak-h">Topics to work on</h2>
+      <p class="stats-sub" data-stats-weak-sub></p>
+      <ol class="stats-topics" data-stats-weak></ol>
+    </section>
+    <section class="stats-card" aria-labelledby="stats-weeks-h">
+      <h2 id="stats-weeks-h">The last 12 weeks</h2>
+      <div class="stats-charts">
+        <figure class="stats-chart" data-stats-chart="answered"><h3>Questions answered</h3></figure>
+        <figure class="stats-chart" data-stats-chart="accuracy"><h3>Accuracy</h3></figure>
+      </div>
+      <details class="stats-table" data-stats-table><summary>Show as a table</summary></details>
+    </section>
+    <div data-stats-courses></div>
+  </div>
+  <p class="stats-note">Answers count here from ${tracked}. The other practice sets don't report here from their own pages yet, so practice those in Shuffle mode to track them.</p>
+  <div class="stats-foot">
+    <button class="btn btn-ghost" type="button" data-sheet-open="progress-sheet">${icon('download')} Back up or move your progress</button>
+    <button class="btn btn-ghost" type="button" data-stats-clear hidden>${icon('trash-2')} Clear your stats</button>
+  </div>
+  <noscript><p>Your stats need JavaScript.</p></noscript>
+</section>
+<script type="application/json" id="stats-data">${JSON.stringify({ courses }).replace(/</g, '\\u003c')}</script>`;
+  return layout(ctx, {
+    root, title: 'Your stats', canonical: 'stats/', body, active: 'stats',
+    description: 'See which practice topics you miss most, from the questions you answer on this site, and drill them in Shuffle mode.',
+    extraHead: `<script type="module" src="${root}assets/stats.js?v=${JS_VERSION}"></script>`,
   });
 }
 

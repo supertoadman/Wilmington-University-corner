@@ -3,6 +3,7 @@
 import { loadPack, preload, imageUrl, audio } from './assets.js';
 import { Engine, artFor } from './engine.js';
 import { loadIndex, buildSession, store } from './quiz.js';
+import { record } from '../assets/answer-log.js';
 
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -309,6 +310,8 @@ function answer(orig) {
   const q = gateQ;
   const right = orig === q.a;
   store.mark(q.id, right);
+  // Your stats (/stats/): q.id is "<course>/<set>/<index>".
+  record({ set: q.id.split('/').slice(0, 2).join('/'), n: q.n, topic: q.topic, right, from: 'run' });
   run.results.push({ q, picked: orig, right });
   $$('.g-opt').forEach((b) => {
     b.disabled = true;

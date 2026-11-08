@@ -1,6 +1,11 @@
 // Shuffle mode (/shuffle/): tick practice sets from any courses, then answer all their questions
 // in one shuffled stack. Questions come from the data the build writes for Sanctum Run
 // (play/data/, see scripts/game.mjs), so every set the game can read works here too.
+// Every answer goes into the answer log behind Your stats (answer-log.js). A drill link from that
+// page, ?course=<slug>[&area=<area>][&missed=1], opens straight on that course's questions in one
+// topic area and/or the ones whose latest answer was wrong, without touching the saved set picks.
+
+import { record, loadLog, missedKeys, splitTopic, areaKey } from './answer-log.js';
 
 const host = document.querySelector('[data-shuffle]');
 if (host) {
@@ -73,6 +78,8 @@ if (host) {
   let pool = [];   // every question in the picked sets
   let stack = [];  // the questions on screen, in order
   let st = { picked: {}, out: {}, pre: new Set(), onlyMissed: false };
+  const params = new URLSearchParams(location.search);
+  let drill = params.get('course') ? { course: params.get('course'), area: params.get('area') || '', missed: params.get('missed') === '1' } : null;
 
   async function load(keys) {
     index = index || await getJson('index.json');
@@ -95,7 +102,7 @@ if (host) {
 
   function deal(qs) {
     stack = shuffle(qs.slice());
-    if (+limit.value) stack = stack.slice(0, +limit.value);
+    if (+limit.value && !drill) stack = stack.slice(0, +limit.value);
     // A question whose choices refer to each other ("B and C") keeps its letters.
     for (const q of stack) q.order = q.fixed ? q.o.map((_, i) => i) : shuffle(q.o.map((_, i) => i));
     st = { picked: {}, out: {}, pre: st.pre, onlyMissed: false };
@@ -160,6 +167,7 @@ if (host) {
       }
       b.addEventListener('click', () => {
         st.picked[q.id] = k;
+        record({ set: `${q.course.slug}/${q.set.slug}`, n: q.n ?? q.id.split('/').pop(), topic: q.topic, right: k === q.a, from: 'shuffle' });
         const next = card(q, pos);
         li.replaceWith(next);
         next.querySelector('.sq-verdict')?.focus({ preventScroll: true });
@@ -234,6 +242,7 @@ if (host) {
 
   $('[data-shuffle-again]').addEventListener('click', () => deal(pool));
   $('[data-shuffle-change]').addEventListener('click', () => {
+    endDrill();
     run.hidden = true;
     setup.hidden = false;
     list.replaceChildren();
@@ -254,4 +263,45 @@ if (host) {
     render();
     window.scrollTo({ top: host.offsetTop - 80 });
   });
+
+  // ---------------------------------------------------------------------------
+  // Drills from Your stats
+  // ---------------------------------------------------------------------------
+  const banner = $('[data-shuffle-drill]');
+  function endDrill() {
+    if (!drill) return;
+    drill = null;
+    banner.hidden = true;
+    history.replaceState(null, '', location.pathname);
+  }
+  async function startDrill() {
+    const keys = boxes.filter((b) => b.dataset.course === drill.course).map((b) => b.value);
+    if (!keys.length) { drill = null; return; }
+    const title = setup.querySelector(`[data-course-all="${CSS.escape(drill.course)}"]`)?.closest('fieldset')?.querySelector('.shuffle-course-name')?.textContent || drill.course;
+    $('[data-shuffle-picked]').textContent = 'Loading your drill…';
+    try {
+      const all = await load(keys);
+      const missed = drill.missed ? missedKeys(loadLog(), { course: drill.course, area: drill.area || null }) : null;
+      const want = drill.area ? areaKey(drill.area) : null;
+      pool = all.filter((q) => (want == null || areaKey(splitTopic(q.topic)[0]) === want)
+        && (!missed || missed.has(`${q.course.slug}/${q.set.slug}#${q.n}`)));
+    } catch {
+      $('[data-shuffle-picked]').textContent = "Couldn't load that drill. Check your connection and try again.";
+      drill = null;
+      return;
+    }
+    if (!pool.length) {
+      endDrill();
+      syncSetup();
+      $('[data-shuffle-picked]').textContent = 'Nothing left to drill there: no questions match. Pick sets below instead.';
+      return;
+    }
+    const what = [title, drill.area].filter(Boolean).join(' · ');
+    banner.querySelector('[data-drill-text]').textContent = `Drill: ${what} · ${pool.length} ${pool.length === 1 ? 'question' : 'questions'}${drill.missed ? ' you missed last time' : ''}`;
+    banner.hidden = false;
+    setup.hidden = true;
+    run.hidden = false;
+    deal(pool);
+  }
+  if (drill) startDrill();
 }

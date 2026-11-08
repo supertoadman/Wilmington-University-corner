@@ -3,6 +3,8 @@
 // "Jump back in" list of recently opened documents.
 // Pages stay fully usable without JavaScript.
 
+import { LOG_KEY, mergeLogs, serializeLog } from './answer-log.js';
+
 const ROOT = document.documentElement.dataset.root || './';
 const $ = (sel, el = document) => el.querySelector(sel);
 const $$ = (sel, el = document) => [...el.querySelectorAll(sel)];
@@ -509,8 +511,11 @@ backupFile?.addEventListener('change', async () => {
   }
   const entries = Object.entries(b.data).filter(([, v]) => typeof v === 'string');
   const when = b.saved ? ` from ${fmtBackupDate(b.saved)}` : '';
-  if (!confirm(`Restore the backup${when}? It replaces the saved progress for the practice sets in the backup.`)) return;
-  try { entries.forEach(([k, v]) => localStorage.setItem(k, v)); } catch {
+  if (!confirm(`Restore the backup${when}? It replaces the saved progress for the practice sets in the backup, and adds its answer history to Your stats.`)) return;
+  try {
+    // The answer history behind Your stats is merged, so answers from both devices count.
+    entries.forEach(([k, v]) => localStorage.setItem(k, k === LOG_KEY ? serializeLog(mergeLogs(localStorage.getItem(LOG_KEY), v)) : v));
+  } catch {
     showBackupStatus("This browser wouldn't save the backup. Check that site data isn't blocked, then try again.");
     return;
   }

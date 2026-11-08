@@ -319,10 +319,17 @@ button, select, input { font: inherit; color: inherit; }
       set(id, on) { if (on) ids.add(id); else ids.delete(id); store.set(`${KEY}:flags`, [...ids]); },
     };
   })();
+  // Each graded answer is also announced as a "practice:answer" event. The site's copy of the page
+  // records it for Your stats (src/assets/practice-log.js, added by the build); a downloaded copy has
+  // no listener, so nothing happens there.
   const grade = (qs) => qs.forEach((q) => {
     if (st.shown.has(q.id)) return;
     st.shown.add(q.id);
     if (st.picked[q.id] !== q.a) flags.set(q.id, true);
+    if (st.picked[q.id] === undefined) return;
+    try {
+      document.dispatchEvent(new CustomEvent('practice:answer', { detail: { n: q.id, topic: [q.area, q.tag].filter(Boolean).join(' — '), right: st.picked[q.id] === q.a } }));
+    } catch (e) { /* very old browser */ }
   });
 
   // ---------------------------------------------------------------------------
