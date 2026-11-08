@@ -203,6 +203,7 @@ ${body}
   <button type="button" data-sheet-open="subjects-sheet"${subjects.some((s) => s.slug === active) ? ' aria-current="page"' : ''}>${icon('layout-grid')}<span>Courses</span></button>
   <button type="button" data-open-search>${icon('search')}<span>Search</span></button>
   <a href="${root}library/"${active === 'library' ? ' aria-current="page"' : ''}>${icon('library')}<span>Library</span></a>
+  ${ctx.game?.total ? `<a href="${root}stats/"${active === 'stats' ? ' aria-current="page"' : ''}>${icon('chart-column')}<span>Stats</span></a>` : ''}
   <a href="${root}contribute/"${active === 'contribute' ? ' aria-current="page"' : ''}>${icon('upload')}<span>Share</span></a>
 </nav>
 
