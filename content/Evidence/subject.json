@@ -173,6 +173,11 @@
       "slug": "evidence-most-testable-questions-ii",
       "tags": ["MCQ", "FRE", "hearsay", "character evidence", "Confrontation Clause", "experts", "privileges", "Weeks 1–15"],
       "order": 12
+    },
+    "Evidence_Bar_Exam_Questions.mcq.json": {
+      "slug": "evidence-bar-exam-questions",
+      "tags": ["MCQ", "bar prep", "FRE", "hearsay", "Confrontation Clause", "character evidence", "experts", "privileges", "Weeks 1–15"],
+      "order": 13
     }
   }
 }
