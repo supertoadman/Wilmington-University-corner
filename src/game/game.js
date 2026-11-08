@@ -55,6 +55,7 @@ function setRealm(realm) {
   const changed = document.body.dataset.realm !== realm;
   document.body.dataset.realm = realm;
   if (!run || run.finished) return;
+  audio.mix(realm === 'corrupt' ? { 'corrupt-music-loop': 0.8 } : { 'divine-music-loop': 0.7 }, 2.4);
   if (changed) setTimeout(() => engine.say(realm === 'corrupt' ? 'The sanctum falls · laurels count double' : 'The light returns', realm === 'corrupt' ? '#ff9aa4' : '#f9dfa0'), 700);
 }
 
@@ -104,6 +105,7 @@ const wake = () => {
   audio.init();
   audio.setMuted(!!store.settings.muted);
   syncSound();
+  audio.mix(run ? { 'divine-music-loop': 0.7 } : { 'menu-music': 0.6 }, 1.5);
   audio.prefetch(['jump', 'land', 'collect-laurel', 'damage', 'divine-slide', 'divine-turn-whoosh', 'divine-footsteps', 'divine-ui-click', 'enter-corrupt', 'enter-divine']);
 };
 addEventListener('pointerdown', wake, { capture: true });
@@ -235,7 +237,8 @@ async function begin(only = null) {
   document.body.dataset.realm = 'divine';
   document.body.classList.add('is-live');
   wake();
-  audio.prefetch(['damage', 'divine-chaser-growl', 'corrupt-chaser-growl', 'divine-fall', 'collect-wisdom', 'activate-aegis', 'divine-shield-ending']);
+  audio.mix({ 'divine-music-loop': 0.7 }, 1.5);
+  audio.prefetch(['damage', 'divine-chaser-growl', 'corrupt-chaser-growl', 'divine-fall', 'corrupt-music-loop', 'collect-wisdom', 'activate-aegis', 'divine-shield-ending']);
   paused = false;
   show('play');
   hint();
@@ -481,6 +484,7 @@ function finish(complete) {
     </li>`).join('')}</ol>` : '';
   $('#retry-missed').hidden = !missed.length;
   run.missedIds = new Set(missed.map((x) => x.q.id));
+  audio.mix({ 'menu-music': 0.6 }, 2);
   show('summary');
   setRealm('divine');
 }

@@ -214,7 +214,7 @@ export function levelText(id, level) {
 export const newBuild = (startWeapon) => ({ weapons: startWeapon ? [{ id: startWeapon, level: 1 }] : [], passives: {}, corruptions: {}, purified: 0, taken: {} });
 
 export const corruptionStacks = (build) => Object.values(build.corruptions).reduce((n, v) => n + v, 0);
-/** 0 (pure) to 1 (fully corrupted): drives the floor, the vignette and the game-over sting. */
+/** 0 (pure) to 1 (fully corrupted): drives the music, the floor and the vignette. */
 export const corruptionLevel = (build) => Math.min(1, corruptionStacks(build) / 6);
 
 export function eligibleEvolutions(build) {

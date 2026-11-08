@@ -424,7 +424,7 @@ const SCENES = [
 // Hidden until app.js wires it up, so it never shows as dead buttons without JavaScript.
 const scenePicker = () => `<div class="scene-pick" role="radiogroup" aria-label="Cover scene" data-scene-pick hidden><span class="scene-pick-label">Scene</span>${SCENES.map((s, i) => `<button type="button" role="radio" aria-checked="${i === 0}" data-scene-set="${s.id}" aria-label="${s.label}" title="${s.day} · ${s.night}" class="scene-dot scene-dot-${s.id}"></button>`).join('')}</div>`;
 
-// The way into Shuffle mode, between the course browser and Sanctum Run.
+// The way into Shuffle mode, under the course browser (and above the games, in a local build that has them).
 function shuffleBand(ctx, root) {
   const { game } = ctx;
   const sets = game.courses.reduce((n, c) => n + c.sets.length, 0);
@@ -557,7 +557,7 @@ export function home(ctx) {
   <div class="section-head"><div><p class="kicker">Browse the complete collection</p><h2 id="courses-h" class="section-title">Choose a course. Find your materials.</h2></div><a class="link-arrow" href="${root}library/">Search &amp; filter all ${docs.length} documents ${icon('arrow-right')}</a></div>
   <nav class="format-shortcuts" aria-label="Browse by document type"><span>Browse by format</span>${Object.entries(ctx.TYPES).filter(([type]) => docs.some(d => d.type === type)).map(([type, meta]) => `<a href="${root}library/?type=${type}">${icon(meta.icon)}${esc(meta.plural)} <small>${docs.filter(d => d.type === type).length}</small></a>`).join('')}</nav>
   <div class="wheel-deck" data-wheel-deck>${courseWheel(ctx, root)}${subjects.map((s) => materialWheel(ctx, root, s)).join('')}</div>
-  ${ctx.game?.total ? shuffleBand(ctx, root) + playBand(ctx, root) + survivorsBand(ctx, root) : ''}
+  ${ctx.game?.total ? shuffleBand(ctx, root) : ''}${ctx.games ? playBand(ctx, root) + survivorsBand(ctx, root) : ''}
 </section>
 
 <section class="section container" id="recently-opened" hidden aria-labelledby="ro-h">
@@ -637,7 +637,7 @@ export function subjectPage(ctx, s) {
       </div>
       <div class="subject-hero-actions">
         ${s.zipSize ? `<a class="btn btn-primary subject-hero-dl" href="${root}${P.zip(s)}" download>${icon('download')} Download all <span class="btn-sub">${fmtSize(s.zipSize)}</span></a>` : ''}
-        ${ctx.game?.courses.some((c) => c.slug === s.slug) ? `<a class="btn btn-ghost subject-hero-play" href="${root}play/?course=${esc(s.slug)}">${icon('play')} Play in Sanctum Run</a><a class="btn btn-ghost subject-hero-play" href="${root}survivors/?course=${esc(s.slug)}">${icon('skull')} Play Crypt Survivors</a>` : ''}
+        ${ctx.games && ctx.game.courses.some((c) => c.slug === s.slug) ? `<a class="btn btn-ghost subject-hero-play" href="${root}play/?course=${esc(s.slug)}">${icon('play')} Play in Sanctum Run</a><a class="btn btn-ghost subject-hero-play" href="${root}survivors/?course=${esc(s.slug)}">${icon('skull')} Play Crypt Survivors</a>` : ''}
       </div>
     </div>
   </div>
@@ -1160,9 +1160,9 @@ export function stats(ctx) {
   const courses = game.courses.map((c) => ({ slug: c.slug, title: c.title, accent: c.accent, sets: Object.fromEntries(c.sets.map((s) => [s.slug, s.title])) }));
   // Sets whose own page reports answers here: the ones built from an mcq/v1 set (the practice shell).
   const ownPage = subjects.flatMap((s) => s.documents.filter((d) => d.practiceShell).map((d) => d.title));
-  const sources = ['Shuffle mode', 'Sanctum Run', 'Crypt Survivors'];
+  const sources = ['Shuffle mode', ...(ctx.games ? ['Sanctum Run', 'Crypt Survivors'] : [])];
   if (ownPage.length) sources.push(`the pages of ${ownPage.length === 1 ? 'one practice set' : `${ownPage.length} practice sets`} (${ownPage.map(esc).join(', ')})`);
-  const tracked = `${sources.slice(0, -1).join(', ')}${sources.length > 2 ? ',' : ''} and ${sources.at(-1)}`;
+  const tracked = sources.length < 2 ? sources[0] : `${sources.slice(0, -1).join(', ')}${sources.length > 2 ? ',' : ''} and ${sources.at(-1)}`;
   const body = `
 <section class="page-head container">
   ${breadcrumbs(root, [['stats/', 'Your stats']])}
@@ -1175,8 +1175,8 @@ export function stats(ctx) {
     <p>Answer some practice questions and your results show up here, sorted by course and topic.</p>
     <div class="stats-go">
       <a class="btn btn-primary" href="${root}shuffle/">${icon('shuffle')} Shuffle mode</a>
-      <a class="btn btn-ghost" href="${root}play/">${icon('play')} Sanctum Run</a>
-      <a class="btn btn-ghost" href="${root}survivors/">${icon('skull')} Crypt Survivors</a>
+      ${ctx.games ? `<a class="btn btn-ghost" href="${root}play/">${icon('play')} Sanctum Run</a>
+      <a class="btn btn-ghost" href="${root}survivors/">${icon('skull')} Crypt Survivors</a>` : `<a class="btn btn-ghost" href="${root}library/?type=practice">${icon('list-checks')} Browse practice sets</a>`}
     </div>
   </div>
   <div data-stats-body hidden>

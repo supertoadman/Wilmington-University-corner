@@ -4,8 +4,8 @@
 //   practice set in content/), so a new practice set shows up here with no extra step.
 // - survivors/pack/atlas.png + atlas.json: every tile in Assets/survivors/tiles/ (CC0, from crawl/tiles;
 //   see Assets/survivors/LICENSE.md) packed into one image, with each tile's opaque bounds.
-// - survivors/pack/audio/: a few stings from Assets/temple run/. No music: it stays off the site (see
-//   README). Combat sounds are synthesized.
+// - survivors/pack/audio/: the two music loops (the divine and the corrupt score, which share tempo and
+//   length so they can be layered) and a few stings, from Assets/temple run/. Combat sounds are synthesized.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -13,7 +13,7 @@ import { decodePng, encodePng } from './lib/png.mjs';
 
 const TILE = 32;
 const COLS = 16;
-const AUDIO = ['enter-corrupt', 'enter-divine', 'collect-laurel', 'activate-aegis', 'divine-game-over', 'corrupt-game-over'];
+const AUDIO = ['divine-music-loop', 'corrupt-music-loop', 'enter-corrupt', 'enter-divine', 'collect-laurel', 'activate-aegis', 'divine-game-over', 'corrupt-game-over'];
 
 function packAtlas(root) {
   const dir = path.join(root, 'Assets', 'survivors', 'tiles');

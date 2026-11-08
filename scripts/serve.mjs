@@ -32,8 +32,9 @@ const TYPES = {
 };
 const esc = (s = '') => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
+// A rebuild keeps the local-only games if the current build has them (npm run dev:games).
 const rebuild = () => new Promise((resolve, reject) =>
-  execFile(process.execPath, [path.join(ROOT, 'scripts', 'build.mjs')], { cwd: ROOT }, (err, stdout, stderr) => (err ? reject(new Error(stderr || err.message)) : resolve(stdout))));
+  execFile(process.execPath, [path.join(ROOT, 'scripts', 'build.mjs'), ...(fs.existsSync(path.join(DIST, 'play', 'index.html')) ? ['--games'] : [])], { cwd: ROOT }, (err, stdout, stderr) => (err ? reject(new Error(stderr || err.message)) : resolve(stdout))));
 
 function toWebRequest(req) {
   return new Request(`http://localhost${req.url}`, { method: req.method, headers: req.headers, body: Readable.toWeb(req), duplex: 'half' });

@@ -228,6 +228,7 @@ async function begin(only = null) {
   world.reset({ character: saved.character, endless: saved.endless });
   world.resize();
   sound.setCorruption(0);
+  sound.startMusic();
   show('play');
   hudVersion = -1;
   paused = false;
@@ -244,6 +245,7 @@ function pause(on) {
   paused = on;
   show(on ? 'pause' : 'play');
   if (on) renderPause();
+  sound.duck(on);
   keys.clear();
 }
 
@@ -256,6 +258,7 @@ function openQuestion() {
   const q = run.deck.next();
   modal = 'ask';
   keys.clear();
+  sound.duck(true);
   if (!q) { ask = { q: null, stage: 'cards', right: true, opened: performance.now() }; $('#ask-question').hidden = true; $('#ask-verdict').hidden = true; $('#ask').hidden = false; showCards(); return; }
   ask = { q, order: q.order.slice(), picked: null, stage: 'question', out: new Set(), opened: performance.now() };
   const dlg = $('#ask');
@@ -441,6 +444,7 @@ function closeAsk() {
   document.body.classList.remove('is-asking');
   modal = null;
   ask = null;
+  sound.duck(false);
   hudVersion = -1;
   canvas.focus?.({ preventScroll: true });
 }
@@ -451,6 +455,7 @@ function closeAsk() {
 function openChest() {
   modal = 'chest';
   keys.clear();
+  sound.duck(true);
   const b = world.build;
   const roll = Math.random();
   const n = roll < 0.1 ? 5 : roll < 0.35 ? 3 : 1;
@@ -483,6 +488,7 @@ function closeChest() {
   $('#chest').hidden = true;
   document.body.classList.remove('is-asking');
   modal = null;
+  sound.duck(false);
   hudVersion = -1;
   world.chestResolved();
 }
@@ -600,6 +606,7 @@ function finish(how) {
   $('#ask').hidden = true;
   $('#chest').hidden = true;
   document.body.classList.remove('is-asking');
+  sound.duck(true);
   const results = run.results;
   const right = results.filter((r) => r.right).length;
   const t = world.time;
@@ -731,6 +738,7 @@ function wake() {
   if (sound.ready) { sound.init(); return; }
   sound.init();
   syncSound();
+  if (run && !run.finished) sound.startMusic();
 }
 addEventListener('pointerdown', wake, { capture: true });
 
@@ -763,6 +771,7 @@ $('#change-sets').addEventListener('click', () => {
   closeRefs();
   run = null;
   world.reset({ demo: true, character: saved.character });
+  sound.duck(false);
   sound.setCorruption(0);
   show('setup');
   syncSetup();
