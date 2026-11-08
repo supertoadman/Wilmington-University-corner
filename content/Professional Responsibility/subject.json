@@ -1,26 +1,32 @@
 {
   "title": "Professional Responsibility",
-  "description": "Model Rules of Professional Conduct and MPRE prep, Weeks 1–5 (Chs. 1–9, 20, 21): forming the client-lawyer relationship, competence, confidentiality, conflicts, and the duties that follow a representation from start to finish.",
+  "description": "Model Rules of Professional Conduct, Weeks 1–15 (Burk, Ethical Lawyering, Chs. 1–25): regulating lawyers and bar admission, forming and ending the client-lawyer relationship, competence, confidentiality, agency and fiduciary duty, fees and client funds, conflicts of interest, government lawyers and prosecutors, ethics in advocacy, law firms and organizational clients, public service, duties to third parties, advertising and solicitation, and harassment and discrimination.",
   "icon": "statue-angel-michael",
   "accent": "#8a2e3b",
   "order": 2,
-  "refs": { "statutes": "aba-model-rules", "outline": "pr-outline", "cite": "mrpc" },
+  "refs": { "statutes": "aba-model-rules", "outline": "pr-outline", "cite": "mrpc", "fullNames": ["Howard", "Berger"] },
   "documents": {
     "ABA_Model_Rules.supplement.json": {
       "slug": "aba-model-rules",
       "title": "ABA Model Rules of Professional Conduct",
       "type": "document",
-      "description": "The full text of all 56 ABA Model Rules of Professional Conduct with all 449 Comments. Search by word, phrase, or cite (type 1.7(a)(2) to see that clause marked, or MR 1.18 to go straight there), filter to the rules the course covers or to any of the outline's nine parts, follow cross-references between rules, and open or close all the Comments at once. Each rule shows how often the outline and the practice sets cite it, and the Comments they rely on are marked. The practice sets use it for their Look up popup: any rule cited in a question or explanation opens its text with the cited paragraph or Comment marked.",
+      "description": "The full text of all 56 ABA Model Rules of Professional Conduct with all 449 Comments. Search by word, phrase, or cite (type 1.7(a)(2) to see that clause marked, or MR 1.18 to go straight there), filter to the rules the course covers or to any of the outline's twelve parts, follow cross-references between rules, and open or close all the Comments at once. Each rule shows how often the outline and the practice sets cite it, and the Comments they rely on are marked. The practice sets use it for their Look up popup: any rule cited in a question or explanation opens its text with the cited paragraph or Comment marked.",
       "tags": ["Model Rules", "rules", "comments", "reference", "MPRE"],
       "order": 1.5
     },
-    "outline_v3.html": {
+    "Professional_Responsibility_Condensed_Outline.docx": {
       "slug": "pr-outline",
       "title": "Professional Responsibility Outline",
       "type": "outline",
-      "description": "Exam-prep outline for Weeks 1–5 (Chs. 1–9, 20, 21), organized around the life of a representation. Pinpoint cites point to the readings and class slides, and every rule tested in the practice bank is covered.",
-      "tags": ["Model Rules", "outline", "exam prep"],
+      "theme": "structured",
+      "outsideColor": "64748B",
+      "description": "Condensed exam outline of Weeks 1–15 on the Fall 2026 syllabus (Burk, Ethical Lawyering, Chs. 1–25, and the Model Rules with their Comments), in syllabus order. Part I covers regulating lawyers: sources of law, bar admission and discipline, unauthorized practice, the consequences of misconduct, and why smart people do stupid things. Part II covers the MR 1.0 definitions, competence and diligence, the duty of care and ineffective assistance, forming the relationship, scope, duties to non-clients, clients with decision-making limitations (MR 1.14), and declining and withdrawing. Part III covers confidentiality, privilege and work product, and the MR 1.6(b) exceptions. Part IV covers the lawyer as fiduciary and agent, candor under MR 1.4, and the allocation of authority. Part V covers fees, retainers, fee sharing, and trust accounts. Part VI covers conflicts: personal-interest conflicts under MR 1.8, concurrent and former clients, imputation and screening, and consent. Part VII covers government lawyers, the revolving door (MR 1.11, 1.12), and prosecutors (MR 3.8). Part VIII covers ethics in advocacy (MR 2.1–2.4, 3.1–3.9). Part IX covers supervision in law firms, selling a practice, and organizational clients (MR 1.13). Part X covers public service (MR 6.1–6.5). Part XI covers truthfulness, represented and unrepresented persons, client wrongdoing, threats and reporting, restrictions on practice, and advertising and solicitation. Part XII covers MR 8.4(g), and Part XIII has review tables for the final. Rule and tip boxes throughout, the class quiz answers for Chs. 22, 24, and 25 worked in, and case cards for the cases the readings rely on, including the assigned Bradwell and Zauderer.",
+      "tags": ["Model Rules", "outline", "conflicts", "confidentiality", "advocacy", "MPRE", "Weeks 1–15"],
       "order": 1
+    },
+    "Professional_Responsibility_Outline.json": {
+      "publish": false,
+      "description": "The outline/v1 source for the condensed outline. Edit it, then rebuild the Word file with scripts/templates/build-outline-docx.mjs."
     },
     "PR_MPRE_Question_Bank v3.html": {
       "slug": "mpre-drill-v3",
