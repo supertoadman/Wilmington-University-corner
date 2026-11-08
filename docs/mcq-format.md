@@ -125,7 +125,7 @@ On the site, `refs.js` links a statute cite, a case name, or a casebook problem 
 | --- | --- | --- |
 | `ucc` | `§ 2-207(2)(b)`, `§§ 2-312, 2-313`, `UCC 2-314` | `2-207b`, `§ 2207`, or `207(2)` without its article |
 | `fre` | `Rule 404(b)`, `FRE 803(6)`, `Rules 413–415`, `803(2)` | `R. 404`, `Evidence Rule 404` |
-| `mrpc` | `Rule 1.7(a)(2)`, `MRPC 1.6`, `Model Rule 1.8(e)` | a bare `1.7` without "Rule" (read as a decimal) |
+| `mrpc` | `Rule 1.7(a)(2)`, `MRPC 1.6`, `MR 1.18`, `Model Rule 1.8(e)` | a bare `1.7` without "Rule" (read as a decimal) |
 | `frcp` | `Rule 12(b)(6)`, `FRCP 56(a)`, `28 U.S.C. § 1332(a)(1)`, `§ 1367` | `12b6`, `Rule 12b(6)` |
 | `restatement` | `§ 90(1)`, `Restatement (Second) of Contracts § 90`, `§§ 71 and 90` | `R2K 90` without `§` |
 

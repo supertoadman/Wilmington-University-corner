@@ -75,10 +75,10 @@
     for (const m of text.matchAll(FRE_LIST)) out.push(...eachIn(m, /(\d{3,4})((?:\([a-zA-Z0-9]{1,4}\))*)/g));
     return addBare(out, text, FRE_BARE, (m) => ({ id: m[1] || m[3] || m[4], sub: m[2] || '' }));
   }
-  // Model Rules of Professional Conduct: "Rule 1.7(a)(2)", "MRPC 1.6", "Model Rule 1.8(e)", "Rules 1.7
-  // and 1.9", and a bare number with a subdivision ("1.6(b)(1)"). A bare "1.7" alone is a decimal.
+  // Model Rules of Professional Conduct: "Rule 1.7(a)(2)", "MRPC 1.6", "MR 1.18", "Model Rule 1.8(e)",
+  // "Rules 1.7 and 1.9", and a bare number with a subdivision ("1.6(b)(1)"). A bare "1.7" alone is a decimal.
   const MNUM = String.raw`[1-8]\.\d{1,2}(?![\d.]\d|\d)(?:\([a-zA-Z0-9]{1,4}\))*`;
-  const MRPC_LIST = new RegExp(String.raw`\b(?:MRPC|M\.R\.P\.C\.|(?:ABA\s+)?Model\s+Rules?(?:\s+of\s+Professional\s+Conduct)?|RPC|Rules?)\s+${listOf(MNUM)}`, 'g');
+  const MRPC_LIST = new RegExp(String.raw`\b(?:MRPC|MR|M\.R\.P\.C\.|(?:ABA\s+)?Model\s+Rules?(?:\s+of\s+Professional\s+Conduct)?|RPC|Rules?)\s+${listOf(MNUM)}`, 'g');
   const MRPC_BARE = /(?<![\w$§.,(-])([1-8]\.\d{1,2})((?:\([a-zA-Z0-9]{1,4}\))+)/g;
   function mrpcCites(text) {
     const out = [];
@@ -132,7 +132,7 @@
       cites: withComments(mrpcCites), sign: 'R', name: (id) => `Rule ${id}`, badge: (id) => `MRPC ${id}`, group: 'Rules', doc: 'the Rules',
       viaOutline: true,
       hint: 'Search: 1.7(a), informed consent, Rule 1.6',
-      prefix: (q) => q.match(/^\s*(?:(?:model\s+)?rules?\s*|m?rpc\s*)?([1-8](?:\.\d{0,2})?)\s*$/i)?.[1],
+      prefix: (q) => q.match(/^\s*(?:(?:model\s+)?rules?\s*|m?rpc\s*|mr\s*)?([1-8](?:\.\d{0,2})?)\s*$/i)?.[1],
     },
     frcp: {
       cites: withComments(frcpCites), sign: (id) => (usc(id) ? '§' : 'R'), name: (id) => (usc(id) ? `§ ${id}` : `Rule ${id}`),

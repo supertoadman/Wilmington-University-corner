@@ -176,8 +176,9 @@ test('UCC and FRE cites link as before, and a comment joins its cite', () => {
 });
 
 test('Model Rules, Civil Procedure, Restatement and section cites', () => {
-  assert.deepEqual(cites('mrpc', 'Rule 1.7(a)(2), MRPC 1.6, Model Rule 1.8(e), Rules 1.7 and 1.10, 1.6(b)(1), $1.50, Rule 1.7, Comment [8], version 2.0'), [
+  assert.deepEqual(cites('mrpc', 'Rule 1.7(a)(2), MRPC 1.6, Model Rule 1.8(e), Rules 1.7 and 1.10, 1.6(b)(1), $1.50, Rule 1.7, Comment [8], version 2.0, MR 1.18 cmt [2], Mr. 1.5'), [
     ['Rule 1.7(a)(2)', '1.7', '(a)(2)'], ['MRPC 1.6', '1.6', ''], ['Model Rule 1.8(e)', '1.8', '(e)'], ['Rules 1.7', '1.7', ''], ['1.10', '1.10', ''], ['1.6(b)(1)', '1.6', '(b)(1)'], ['Rule 1.7, Comment [8]', '1.7', '', '8'],
+    ['MR 1.18 cmt [2]', '1.18', '', '2'],
   ]);
   assert.deepEqual(cites('frcp', 'Rule 12(b)(6); FRCP 56(a); Fed. R. Civ. P. 23(b)(3); Rules 12, 13, and 14; Rule 56, 30 days later; 28 U.S.C. § 1332(a)(1) and §§ 1331 and 1367; 12(h)(1); Problem 4-3(b); Section 2(a); Rule 4.1'), [
     ['Rule 12(b)(6)', '12', '(b)(6)'], ['FRCP 56(a)', '56', '(a)'], ['Fed. R. Civ. P. 23(b)(3)', '23', '(b)(3)'], ['Rules 12', '12', ''], ['13', '13', ''], ['14', '14', ''], ['Rule 56', '56', ''],
@@ -192,6 +193,7 @@ test('Model Rules, Civil Procedure, Restatement and section cites', () => {
   assert.equal(STYLES.frcp.name('1332'), '§ 1332');
   assert.equal(STYLES.frcp.name('12'), 'Rule 12');
   assert.equal(STYLES.mrpc.prefix('rule 1.7'), '1.7');
+  assert.equal(STYLES.mrpc.prefix('MR 1.18'), '1.18');
   assert.equal(STYLES.restatement.prefix('§ 90'), '90');
 });
 

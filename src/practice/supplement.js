@@ -15,7 +15,7 @@
       cite: (v) => { const m = v.match(/^(?:rules?\s*|fre\s*|fed\.?\s*r\.?\s*evid\.?\s*)?(\d{1,4})((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
       xref: /(?<![\d§$.,])(\b\d{3,4}\b)(?![\d%]|,\s?\d{3})/ },
     mrpc: { label: (id) => `Rule ${id}`, unit: 'rule', example: '1.7(a)',
-      cite: (v) => { const m = v.match(/^(?:(?:model\s+)?rules?\s*|m?rpc\s*)?([1-8](?:\.\d{0,2})?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
+      cite: (v) => { const m = v.match(/^(?:(?:model\s+)?rules?\s*|m?rpc\s*|mr\s*)?([1-8](?:\.\d{0,2})?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
       xref: /(?<![\d$.,])\b([1-8]\.\d{1,2})\b(?![\d%]|\.\d)/ },
     frcp: { label: (id) => (/^\d{3,}/.test(id) ? `§ ${id}` : `Rule ${id}`), unit: 'rule', example: '12(b)(6)',
       cite: (v) => { const m = v.match(/^(?:rules?\s*|frcp\s*|fed\.?\s*r\.?\s*civ\.?\s*p\.?\s*|(?:\d+\s*u\.?s\.?c\.?\s*)?§+\s*)?(\d{1,5}(?:\.\d)?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },

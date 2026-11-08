@@ -4,8 +4,16 @@
   "icon": "statue-angel-michael",
   "accent": "#8a2e3b",
   "order": 2,
-  "refs": { "outline": "pr-outline" },
+  "refs": { "statutes": "aba-model-rules", "outline": "pr-outline", "cite": "mrpc" },
   "documents": {
+    "ABA_Model_Rules.supplement.json": {
+      "slug": "aba-model-rules",
+      "title": "ABA Model Rules of Professional Conduct",
+      "type": "document",
+      "description": "The full text of all 56 ABA Model Rules of Professional Conduct with all 449 Comments. Search by word, phrase, or cite (type 1.7(a)(2) to see that clause marked, or MR 1.18 to go straight there), filter to the rules the course covers or to any of the outline's nine parts, follow cross-references between rules, and open or close all the Comments at once. Each rule shows how often the outline and the practice sets cite it, and the Comments they rely on are marked. The practice sets use it for their Look up popup: any rule cited in a question or explanation opens its text with the cited paragraph or Comment marked.",
+      "tags": ["Model Rules", "rules", "comments", "reference", "MPRE"],
+      "order": 1.5
+    },
     "outline_v3.html": {
       "slug": "pr-outline",
       "title": "Professional Responsibility Outline",

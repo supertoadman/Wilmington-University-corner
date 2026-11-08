@@ -112,7 +112,7 @@ Comment numbers are strings (`"4"`), as printed; MRPC comments are numbered the 
 | --- | --- | --- | --- |
 | `ucc` (default) | `2-207`, `1-201`, `9-406` | `§ 2-207(2)(b)`, `§§ 2-312, 2-313`, `UCC 2-314`, bare `2-207(1)`, `1-201(b)(20)` | § 2-207 · UCC § 2-207 |
 | `fre` | `404`, `803` | `Rule 404(b)`, `FRE 803(6)`, `Fed. R. Evid. 403`, `Rules 607, 608, and 609`, `Rules 413–415`, bare `803(2)`, and a bare 3-digit rule after *under/to/of/see…* or before *balancing/analysis/exception…* | Rule 404 · FRE 404 |
-| `mrpc` | `1.7`, `1.10`, `5.5` | `Rule 1.7(a)(2)`, `MRPC 1.6`, `Model Rule 1.8(e)`, `Rules 1.7 and 1.9`, bare `1.6(b)(1)` (a bare `1.7` alone is read as a decimal) | Rule 1.7 · MRPC 1.7 |
+| `mrpc` | `1.7`, `1.10`, `5.5` | `Rule 1.7(a)(2)`, `MRPC 1.6`, `MR 1.18`, `Model Rule 1.8(e)`, `Rules 1.7 and 1.9`, bare `1.6(b)(1)` (a bare `1.7` alone is read as a decimal) | Rule 1.7 · MRPC 1.7 |
 | `frcp` | rules `12`, `4.1`; U.S.C. sections `1332`, `1367` | `Rule 12(b)(6)`, `FRCP 56(a)`, `Fed. R. Civ. P. 23(b)(3)`, `Rules 12, 13, and 14`, bare `12(b)(6)` (a letter first); `28 U.S.C. § 1332(a)(1)`, `§§ 1331 and 1367` | Rule 12 · FRCP 12; § 1332 · U.S.C. § 1332 |
 | `restatement` | `90`, `7.03` | `§ 90(1)`, `§§ 71 and 90`, `Section 87(2)`, `Sec. 139`, `Restatement (Second) of Contracts § 90` (the `§ 90` part links). `§ 2-207` is never read as § 2. | § 90 · Restatement § 90 |
 | `section` | `12-345`, `1983`, `4.01` | `§ 12-345(b)`, `§§ 1983, 1988`, `Section 4.01` | § 12-345 |
