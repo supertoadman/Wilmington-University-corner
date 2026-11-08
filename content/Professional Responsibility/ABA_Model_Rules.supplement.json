@@ -2,22 +2,25 @@
  "schema": "supplement/v1",
  "id": "aba-model-rules",
  "title": "ABA Model Rules of Professional Conduct",
- "description": "The full text of all 56 ABA Model Rules of Professional Conduct with their Comments, for Professional Responsibility Weeks 1-5 and MPRE review.",
+ "description": "The full text of all 56 ABA Model Rules of Professional Conduct with their Comments, for Professional Responsibility Weeks 1-15 and MPRE review.",
  "intro": "The full text of the ABA Model Rules of Professional Conduct, with every Comment. Rules the course covers carry the outline part they appear in; the rest are here for reference and MPRE review. Search by word, phrase, or cite (type 1.7(a)(2) or MR 1.18), filter by topic, and open or close all the Comments at once. Comments the outline or the practice sets rely on are marked Cited.",
  "source": "Source: American Bar Association, Model Rules of Professional Conduct and the Comments to the Rules, current text as published by the ABA Center for Professional Responsibility. Copyright American Bar Association; reproduced here as a study aid. The Rules and Comments are given in full. Straight quotes replace curly ones and hyphens lost at line breaks in the ABA printout are restored. Comment subheadings are not shown but are searchable. Deleted Rules 2.2, 7.4 and 7.5 are omitted. Bracketed text in Rules 1.15(a), 1.17(a) and 5.5(e)(2) marks a choice the ABA leaves to each jurisdiction. The Preamble and Scope are not included.",
  "cite": "mrpc",
  "textLabel": "Text",
  "commentsLabel": "Comments",
  "areas": [
-  "The regulatory frame",
-  "Personal responsibility, supervision & human factors",
-  "Forming & defining the relationship",
-  "Loyalty, conflicts & candor",
-  "Competence, diligence & care",
+  "Regulating lawyer conduct",
+  "Forming, defining & ending the relationship",
   "Confidentiality",
-  "The lawyer as agent: authority",
-  "Fees & client property",
-  "Ending the relationship"
+  "Agency & fiduciary duty",
+  "Fees & client funds",
+  "Conflicts of interest",
+  "Government lawyers",
+  "Ethics in advocacy",
+  "Law firms, supervision & organizational clients",
+  "Public service",
+  "Third parties, advertising & solicitation",
+  "Harassment, discrimination & bias"
  ],
  "data": [
   {
@@ -138,7 +141,11 @@
      "In order to be effective, screening measures must be implemented as soon as practical after a lawyer or law firm knows or reasonably should know that there is a need for screening."
     ]
    ],
-   "cc": [],
+   "cc": [
+    "6",
+    "7",
+    "8"
+   ],
    "k": [
     "terminology",
     "definitions",
@@ -160,9 +167,10 @@
     "Screened"
    ],
    "tp": [
-    3
+    2,
+    6
    ],
-   "o": 2,
+   "o": 26,
    "q": 8
   },
   {
@@ -236,9 +244,9 @@
     "Maintaining Competence"
    ],
    "tp": [
-    5
+    2
    ],
-   "o": 3,
+   "o": 16,
    "q": 36
   },
   {
@@ -327,7 +335,8 @@
     "6",
     "7",
     "9",
-    "10"
+    "10",
+    "12"
    ],
    "k": [
     "objectives vs. means",
@@ -348,13 +357,12 @@
     "Criminal, Fraudulent and Prohibited Transactions"
    ],
    "tp": [
-    3,
+    2,
     4,
-    5,
-    7,
-    9
+    11,
+    8
    ],
-   "o": 12,
+   "o": 33,
    "q": 92
   },
   {
@@ -405,10 +413,9 @@
     "sole practitioner succession plan"
    ],
    "tp": [
-    2,
-    5
+    2
    ],
-   "o": 3,
+   "o": 14,
    "q": 26
   },
   {
@@ -505,12 +512,11 @@
     "Withholding Information"
    ],
    "tp": [
-    3,
     4,
-    7,
-    9
+    2,
+    11
    ],
-   "o": 8,
+   "o": 17,
    "q": 54
   },
   {
@@ -681,10 +687,9 @@
     "Disputes over Fees"
    ],
    "tp": [
-    2,
-    8
+    5
    ],
-   "o": 9,
+   "o": 22,
    "q": 142
   },
   {
@@ -858,14 +863,15 @@
     "Former Client"
    ],
    "tp": [
-    1,
+    3,
     2,
-    4,
-    5,
+    11,
+    1,
     6,
+    8,
     9
    ],
-   "o": 21,
+   "o": 64,
    "q": 178
   },
   {
@@ -1061,14 +1067,19 @@
     "3",
     "4",
     "5",
+    "7",
     "8",
     "10",
     "11",
     "14",
+    "18",
     "21",
+    "22",
     "23",
+    "24",
     "26",
     "28",
+    "29",
     "31",
     "33"
    ],
@@ -1105,11 +1116,11 @@
     "Organizational Clients"
    ],
    "tp": [
-    1,
-    3,
-    4
+    6,
+    2,
+    10
    ],
-   "o": 4,
+   "o": 56,
    "q": 79
   },
   {
@@ -1390,12 +1401,13 @@
     "Imputation of Prohibitions"
    ],
    "tp": [
+    6,
+    5,
     3,
     4,
-    6,
-    8
+    2
    ],
-   "o": 22,
+   "o": 59,
    "q": 148
   },
   {
@@ -1472,7 +1484,8 @@
    ],
    "cc": [
     "1",
-    "3"
+    "3",
+    "5"
    ],
    "k": [
     "former client",
@@ -1484,10 +1497,12 @@
     "Lawyers Moving Between Firms"
    ],
    "tp": [
-    4,
-    6
+    6,
+    3,
+    7,
+    10
    ],
-   "o": 9,
+   "o": 38,
    "q": 35
   },
   {
@@ -1601,7 +1616,10 @@
      "Where a lawyer is prohibited from engaging in certain transactions under Rule 1.8, paragraph (k) of that Rule, and not this Rule, determines whether that prohibition also applies to other lawyers associated in a firm with the personally prohibited lawyer."
     ]
    ],
-   "cc": [],
+   "cc": [
+    "3",
+    "4"
+   ],
    "k": [
     "imputation",
     "imputed disqualification",
@@ -1613,8 +1631,11 @@
     "Definition of Firm",
     "Principles of Imputed Disqualification"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    6,
+    10
+   ],
+   "o": 24,
    "q": 6
   },
   {
@@ -1749,8 +1770,11 @@
     "screening",
     "former government lawyer"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    7,
+    6
+   ],
+   "o": 24,
    "q": 0
   },
   {
@@ -1821,8 +1845,10 @@
     "negotiating for employment",
     "partisan arbitrator"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    7
+   ],
+   "o": 11,
    "q": 0
   },
   {
@@ -1935,6 +1961,7 @@
     ]
    ],
    "cc": [
+    "2",
     "9"
    ],
    "k": [
@@ -1958,10 +1985,11 @@
     "Derivative Actions"
    ],
    "tp": [
+    9,
     3,
-    6
+    2
    ],
-   "o": 9,
+   "o": 28,
    "q": 34
   },
   {
@@ -2083,8 +2111,10 @@
     "Disclosure of Information When Taking Protective Action",
     "Emergency Legal Assistance"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    2
+   ],
+   "o": 7,
    "q": 0
   },
   {
@@ -2160,9 +2190,9 @@
     "In re Pressly"
    ],
    "tp": [
-    8
+    5
    ],
-   "o": 3,
+   "o": 14,
    "q": 75
   },
   {
@@ -2288,7 +2318,8 @@
     "3",
     "4",
     "5",
-    "7"
+    "7",
+    "9"
    ],
    "k": [
     "withdrawal",
@@ -2312,10 +2343,11 @@
    ],
    "tp": [
     2,
-    3,
-    9
+    11,
+    12,
+    1
    ],
-   "o": 14,
+   "o": 44,
    "q": 83
   },
   {
@@ -2445,9 +2477,10 @@
     "Applicability of the Rule"
    ],
    "tp": [
-    8
+    9,
+    5
    ],
-   "o": 1,
+   "o": 8,
    "q": 2
   },
   {
@@ -2539,11 +2572,11 @@
     "disqualifying information"
    ],
    "tp": [
-    3,
-    4,
-    6
+    6,
+    2,
+    3
    ],
-   "o": 11,
+   "o": 27,
    "q": 41
   },
   {
@@ -2592,9 +2625,9 @@
     "Offering Advice"
    ],
    "tp": [
-    4
+    8
    ],
-   "o": 1,
+   "o": 7,
    "q": 13
   },
   {
@@ -2656,9 +2689,9 @@
     "Financial Auditors' Requests for Information"
    ],
    "tp": [
-    3
+    8
    ],
-   "o": 1,
+   "o": 7,
    "q": 4
   },
   {
@@ -2708,8 +2741,10 @@
     "arbitrator",
     "ADR"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    8
+   ],
+   "o": 5,
    "q": 1
   },
   {
@@ -2745,8 +2780,10 @@
     "Rule 11",
     "criminal defense put the state to its proof"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    8
+   ],
+   "o": 7,
    "q": 3
   },
   {
@@ -2772,8 +2809,10 @@
     "delay",
     "dilatory tactics"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    8
+   ],
+   "o": 3,
    "q": 0
   },
   {
@@ -2882,6 +2921,7 @@
    "cc": [
     "1",
     "3",
+    "7",
     "8",
     "9"
    ],
@@ -2905,9 +2945,10 @@
     "Withdrawal"
    ],
    "tp": [
-    6
+    8,
+    3
    ],
-   "o": 1,
+   "o": 32,
    "q": 32
   },
   {
@@ -2993,12 +3034,10 @@
     "asking witnesses not to talk"
    ],
    "tp": [
-    1,
-    2,
-    6,
-    9
+    8,
+    11
    ],
-   "o": 4,
+   "o": 28,
    "q": 21
   },
   {
@@ -3077,8 +3116,10 @@
     "decorum",
     "disrupting tribunal"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    8
+   ],
+   "o": 8,
    "q": 0
   },
   {
@@ -3204,8 +3245,10 @@
     "safe harbor statements",
     "right of reply"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    8
+   ],
+   "o": 10,
    "q": 0
   },
   {
@@ -3277,8 +3320,10 @@
     "Advocate-Witness Rule",
     "Conflict of Interest"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    8
+   ],
+   "o": 5,
    "q": 0
   },
   {
@@ -3416,8 +3461,10 @@
     "wrongful conviction",
     "new evidence of innocence"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    7
+   ],
+   "o": 23,
    "q": 3
   },
   {
@@ -3451,8 +3498,10 @@
     "lobbying",
     "legislative hearing"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    8
+   ],
+   "o": 4,
    "q": 1
   },
   {
@@ -3490,7 +3539,9 @@
      "Under Rule 1.2(d), a lawyer is prohibited from counseling or assisting a client in conduct that the lawyer knows is criminal or fraudulent. Paragraph (b) states a specific application of the principle set forth in Rule 1.2(d) and addresses the situation where a client's crime or fraud takes the form of a lie or misrepresentation. Ordinarily, a lawyer can avoid assisting a client's crime or fraud by withdrawing from the representation. Sometimes it may be necessary for the lawyer to give notice of the fact of withdrawal and to disaffirm an opinion, document, affirmation or the like. In extreme cases, substantive law may require a lawyer to disclose information relating to the representation to avoid being deemed to have assisted the client's crime or fraud. If the lawyer can avoid assisting a client's crime or fraud only by disclosing this information, then under paragraph (b) the lawyer is required to do so, unless the disclosure is prohibited by Rule 1.6."
     ]
    ],
-   "cc": [],
+   "cc": [
+    "2"
+   ],
    "k": [
     "truthfulness to others",
     "false statement to third person",
@@ -3502,11 +3553,10 @@
     "Crime or Fraud by Client"
    ],
    "tp": [
-    6,
-    7,
-    9
+    11,
+    3
    ],
-   "o": 5,
+   "o": 28,
    "q": 32
   },
   {
@@ -3558,7 +3608,9 @@
      "In the event the person with whom the lawyer communicates is not known to be represented by counsel in the matter, the lawyer's communications are subject to Rule 4.3."
     ]
    ],
-   "cc": [],
+   "cc": [
+    "7"
+   ],
    "k": [
     "no-contact rule",
     "represented person",
@@ -3568,9 +3620,9 @@
     "consent of other lawyer"
    ],
    "tp": [
-    1
+    11
    ],
-   "o": 1,
+   "o": 9,
    "q": 5
   },
   {
@@ -3602,9 +3654,9 @@
     "legal advice to unrepresented person"
    ],
    "tp": [
-    3
+    11
    ],
-   "o": 1,
+   "o": 9,
    "q": 10
   },
   {
@@ -3643,10 +3695,11 @@
     "embarrass"
    ],
    "tp": [
-    2,
-    6
+    11,
+    8,
+    12
    ],
-   "o": 2,
+   "o": 22,
    "q": 11
   },
   {
@@ -3729,9 +3782,10 @@
     "firm policies"
    ],
    "tp": [
-    2
+    9,
+    1
    ],
-   "o": 4,
+   "o": 9,
    "q": 32
   },
   {
@@ -3768,9 +3822,10 @@
     "arguable question of professional duty"
    ],
    "tp": [
-    2
+    9,
+    1
    ],
-   "o": 5,
+   "o": 10,
    "q": 24
   },
   {
@@ -3839,9 +3894,9 @@
     "Nonlawyers Outside the Firm"
    ],
    "tp": [
-    2
+    9
    ],
-   "o": 1,
+   "o": 8,
    "q": 21
   },
   {
@@ -3925,10 +3980,10 @@
     "alternative business structures"
    ],
    "tp": [
-    3,
-    8
+    9,
+    5
    ],
-   "o": 5,
+   "o": 9,
    "q": 42
   },
   {
@@ -4113,7 +4168,7 @@
    "tp": [
     1
    ],
-   "o": 4,
+   "o": 6,
    "q": 25
   },
   {
@@ -4151,14 +4206,19 @@
      "This Rule does not apply to prohibit restrictions that may be included in the terms of the sale of a law practice pursuant to Rule 1.17."
     ]
    ],
-   "cc": [],
+   "cc": [
+    "3"
+   ],
    "k": [
     "restrictions on right to practice",
     "noncompete",
     "settlement restricting practice"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    9,
+    11
+   ],
+   "o": 11,
    "q": 0
   },
   {
@@ -4226,8 +4286,10 @@
     "law-related services",
     "ancillary business"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    9
+   ],
+   "o": 3,
    "q": 0
   },
   {
@@ -4337,8 +4399,10 @@
     "voluntary service",
     "50 hours"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    10
+   ],
+   "o": 5,
    "q": 0
   },
   {
@@ -4389,9 +4453,9 @@
     "Appointed Counsel"
    ],
    "tp": [
-    3
+    10
    ],
-   "o": 1,
+   "o": 3,
    "q": 6
   },
   {
@@ -4425,8 +4489,10 @@
    "k": [
     "legal services organization"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    10
+   ],
+   "o": 2,
    "q": 0
   },
   {
@@ -4450,8 +4516,10 @@
    "k": [
     "law reform activities"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    10
+   ],
+   "o": 2,
    "q": 0
   },
   {
@@ -4508,8 +4576,10 @@
     "hotline",
     "court-annexed"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    10
+   ],
+   "o": 4,
    "q": 1
   },
   {
@@ -4557,16 +4627,18 @@
      "It is misleading to use the name of a lawyer holding a public office in the name of a law firm, or in communications on the law firm's behalf, during any substantial period in which the lawyer is not actively and regularly practicing with the firm."
     ]
    ],
-   "cc": [],
+   "cc": [
+    "3"
+   ],
    "k": [
     "advertising",
     "false or misleading communication",
     "unjustified expectations"
    ],
    "tp": [
-    8
+    11
    ],
-   "o": 1,
+   "o": 11,
    "q": 2
   },
   {
@@ -4708,9 +4780,10 @@
     "Required Contact Information"
    ],
    "tp": [
-    8
+    11,
+    5
    ],
-   "o": 3,
+   "o": 11,
    "q": 27
   },
   {
@@ -4807,7 +4880,9 @@
      "Paragraph (e) of this Rule permits a lawyer to participate with an organization which uses personal contact to enroll members for its group or prepaid legal service plan, provided that the personal contact is not undertaken by any lawyer who would be a provider of legal services through the plan. The organization must not be owned by or directed (whether as manager or otherwise) by any lawyer or law firm that participates in the plan. For example, paragraph (e) would not permit a lawyer to create an organization controlled directly or indirectly by the lawyer and use the organization for the person-toperson solicitation of legal employment of the lawyer through memberships in the plan or otherwise. The communication permitted by these organizations must not be directed to a person known to need legal services in a particular matter, but must be designed to inform potential plan members generally of another means of affordable legal services. Lawyers who participate in a legal service plan must reasonably assure that the plan sponsors are in compliance with Rules 7.1, 7.2 and 7.3 (c)."
     ]
    ],
-   "cc": [],
+   "cc": [
+    "2"
+   ],
    "k": [
     "solicitation",
     "live person-to-person contact",
@@ -4815,8 +4890,10 @@
     "ambulance chasing",
     "targeted letters"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    11
+   ],
+   "o": 10,
    "q": 0
   },
   {
@@ -4853,8 +4930,10 @@
     "pay to play",
     "political contributions"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    11
+   ],
+   "o": 3,
    "q": 0
   },
   {
@@ -4907,7 +4986,7 @@
    "tp": [
     1
    ],
-   "o": 1,
+   "o": 10,
    "q": 27
   },
   {
@@ -4946,8 +5025,11 @@
     "statements about judges",
     "judicial candidates"
    ],
-   "tp": [],
-   "o": 0,
+   "tp": [
+    1,
+    8
+   ],
+   "o": 6,
    "q": 0
   },
   {
@@ -5004,9 +5086,11 @@
     "lawyer assistance program"
    ],
    "tp": [
-    2
+    1,
+    11,
+    3
    ],
-   "o": 3,
+   "o": 20,
    "q": 41
   },
   {
@@ -5103,12 +5187,11 @@
    ],
    "tp": [
     1,
-    2,
-    4,
-    6,
-    7
+    12,
+    11,
+    8
    ],
-   "o": 6,
+   "o": 38,
    "q": 93
   },
   {
@@ -5179,7 +5262,7 @@
    "tp": [
     1
    ],
-   "o": 2,
+   "o": 5,
    "q": 18
   }
  ]
