@@ -326,92 +326,28 @@ function docRow(ctx, root, d, extra = '') {
   </a></li>`;
 }
 
-// Course wheel (homepage): a two-stage ring. It opens on the courses, one slice each; picking a
-// course turns the same ring into that course's materials, one slice per document type (every
-// type keeps its slot; empty ones are dimmed). The hub names what is under the pointer or chosen,
-// steps through a type's documents, and leads back to the courses. app.js drives it; without it
-// the course slices are plain links to the course pages.
-const WHEEL = { size: 400, outer: 194, inner: 118, gap: 1.6 };
-const polar = (r, deg) => {
-  const a = (deg * Math.PI) / 180;
-  return `${(WHEEL.size / 2 + r * Math.cos(a)).toFixed(2)} ${(WHEEL.size / 2 + r * Math.sin(a)).toFixed(2)}`;
-};
-const sector = (from, to, r1, r2) => {
-  const large = to - from > 180 ? 1 : 0;
-  return `M${polar(r2, from)}A${r2} ${r2} 0 ${large} 1 ${polar(r2, to)}L${polar(r1, to)}A${r1} ${r1} 0 ${large} 0 ${polar(r1, from)}Z`;
-};
-const arc = (from, to, r) => `M${polar(r, from)}A${r} ${r} 0 ${to - from > 180 ? 1 : 0} 1 ${polar(r, to)}`;
-// One ring of `n` slices, the first centred at the top. `cls(i)` adds classes, `style(i)` inline style.
-const ringSvg = (keys, { cls = () => '', style = () => '' } = {}) => {
-  const step = 360 / keys.length;
-  return `<svg class="wheel-ring" viewBox="0 0 ${WHEEL.size} ${WHEEL.size}" aria-hidden="true" focusable="false">${keys.map((key, i) => {
-    const c = -90 + i * step, from = c - step / 2 + WHEEL.gap / 2, to = c + step / 2 - WHEEL.gap / 2;
-    return `<g class="wheel-slice${cls(i)}" data-wheel-slice="${esc(key)}"${style(i) ? ` style="${style(i)}"` : ''}><path class="wheel-fill" d="${sector(from, to, WHEEL.inner, WHEEL.outer)}"/><path class="wheel-arc" d="${arc(from + .8, to - .8, WHEEL.outer - 5)}"/></g>`;
-  }).join('')}</svg>`;
-};
-// Where slice i's icon sits, as percentages of the wheel box.
-const slotPos = (i, n) => {
-  const c = ((-90 + (i * 360) / n) * Math.PI) / 180, r = (((WHEEL.outer + WHEEL.inner) / 2) / WHEEL.size) * 100;
-  return `left:${(50 + r * Math.cos(c)).toFixed(2)}%;top:${(50 + r * Math.sin(c)).toFixed(2)}%`;
-};
-
-function courseWheel(ctx, root) {
-  const { subjects, docs, P } = ctx;
-  const n = subjects.length;
-  return `<article class="wheel-course" data-wheel-panel="courses">
-  <div class="wheel-course-head"><span class="wheel-course-text"><span class="h">Choose a course</span><span class="s">${plural(n, 'course')} · ${plural(docs.length, 'document')}</span></span></div>
-  <div class="wheel wheel-of-courses" data-course-wheel>
-    ${ringSvg(subjects.map((s) => s.slug), { style: (i) => `--accent:${subjects[i].accent}` })}
-    <div class="wheel-slots">${subjects.map((s, i) => `<a class="wheel-slot wheel-slot-course" href="${root}${P.subject(s)}" data-course-pick="${esc(s.slug)}" tabindex="${i ? -1 : 0}" style="${slotPos(i, n)};--accent:${s.accent}" aria-label="${esc(s.title)}: ${plural(s.documents.length, 'document')}">${icon(s.icon)}<span class="wheel-name">${esc(s.title)}</span></a>`).join('')}</div>
-    <div class="wheel-hub">
-      <div class="wheel-group" data-hub-course=""><p class="wheel-type">Your courses</p><p class="wheel-title">Pick a course</p><p class="wheel-meta">Tap a slice to see its outlines, flashcards, practice, and more.</p></div>
-      ${subjects.map((s) => `<div class="wheel-group" data-hub-course="${esc(s.slug)}" hidden><p class="wheel-type">Open course</p><p class="wheel-title">${esc(s.title)}</p><p class="wheel-meta">${subjectStats(s).map(esc).join(' · ')}</p></div>`).join('')}
-    </div>
-  </div>
-  <p class="wheel-hint">Pick a course on the wheel. Its materials open in the same wheel.</p>
-</article>`;
-}
-
-function materialWheel(ctx, root, s) {
+// Course directory (homepage): every course at once, each listing its materials as plain labeled
+// links, so anything is one click away. A kind of material with one document opens it; with
+// several, the course page opens filtered to that kind.
+function courseCard(ctx, root, s) {
   const { TYPES, P } = ctx;
-  const slots = Object.entries(TYPES).map(([type, meta]) => ({ type, meta, docs: s.documents.filter((d) => d.type === type) }));
-  const first = slots.find((x) => x.docs.length) || slots[0];
-  const hub = `wheel-${s.slug}`;
-  const docMeta = (d) => [d.format.label, d.questions ? `${d.questions} questions` : null, d.tracks ? plural(d.tracks.length, 'track') : null].filter(Boolean).join(' · ');
-  const slot = (x, i) => {
-    const on = x === first;
-    return `<button type="button" class="wheel-slot" role="radio" aria-checked="${on}" tabindex="${on ? 0 : -1}" data-wheel-type="${x.type}" style="${slotPos(i, slots.length)}"${x.docs.length ? '' : ' aria-disabled="true"'} aria-controls="${hub}" aria-label="${esc(x.meta.plural)}: ${plural(x.docs.length, 'document')}" title="${esc(x.meta.plural)}">${icon(x.meta.icon)}<span class="wheel-count">${x.docs.length}</span></button>`;
-  };
-  const group = (x) => `<div class="wheel-group" data-wheel-group="${x.type}"${x === first ? '' : ' hidden'}>
-        <p class="wheel-type">${esc(x.meta.plural)}</p>
-        ${x.docs.length ? x.docs.map((d, n) => `<div class="wheel-doc" data-wheel-doc${n ? ' hidden' : ''}><a class="wheel-title" href="${root}${P.doc(d)}">${esc(d.title)}</a><p class="wheel-meta">${esc(docMeta(d))}</p></div>`).join('') : '<p class="wheel-none">Nothing here yet for this course.</p>'}
-        ${x.docs.length > 1 ? `<div class="wheel-pager"><button type="button" class="wheel-step" data-wheel-step="-1" aria-label="Previous">${icon('chevron-right', 'flip')}</button><span class="wheel-pos"><span data-wheel-pos>1</span> / ${x.docs.length}</span><button type="button" class="wheel-step" data-wheel-step="1" aria-label="Next">${icon('chevron-right')}</button></div>` : ''}
-        ${x.docs.length ? `<a class="wheel-open" href="${root}${P.doc(x.docs[0])}" data-wheel-open>Open ${icon('arrow-right')}</a>` : ''}
-      </div>`;
-  // Every document of the picked type, listed under the wheel once a slice holds more than one.
-  const list = (x) => `<section class="wheel-list" data-wheel-list="${x.type}"${x === first ? '' : ' hidden'} aria-label="All ${esc(x.meta.plural)}">
-    <p class="wheel-list-head">All ${esc(x.meta.plural)} <span class="wheel-list-n">${x.docs.length}</span></p>
-    <ol>${x.docs.map((d, n) => `<li><a class="wheel-list-item" href="${root}${P.doc(d)}" data-wheel-item="${n}"${n ? '' : ' aria-current="true"'}><span class="wheel-list-num">${n + 1}</span><span class="wheel-list-text"><span class="t">${esc(d.title)}</span><span class="m">${esc(docMeta(d))}</span></span>${icon('arrow-right')}</a></li>`).join('')}</ol>
-  </section>`;
-  const listed = slots.filter((x) => x.docs.length > 1);
-  return `<article class="wheel-course" style="--accent:${s.accent}" data-wheel-panel="${esc(s.slug)}" hidden>
-  <div class="wheel-course-head">
-    <span class="wheel-course-icon">${icon(s.icon)}</span>
-    <span class="wheel-course-text"><span class="h">${esc(s.title)}</span><span class="s">${subjectStats(s).map(esc).join(' · ')}</span></span>
-    <a class="round-arrow" href="${root}${P.subject(s)}" aria-label="Open the ${esc(s.title)} course page" title="Course page">${icon('arrow-up-right')}</a>
-  </div>
-  <div class="wheel" data-wheel>
-    ${ringSvg(slots.map((x) => x.type), { cls: (i) => `${slots[i].docs.length ? '' : ' is-empty'}${slots[i] === first ? ' is-on' : ''}` })}
-    <div class="wheel-slots" role="radiogroup" aria-label="${esc(s.title)} materials">${slots.map(slot).join('')}</div>
-    <div class="wheel-hub" id="${hub}" aria-live="polite">
-      ${slots.map(group).join('')}
-      <button type="button" class="wheel-hub-back" data-wheel-back>${icon('chevron-right', 'flip')} Courses</button>
-    </div>
-  </div>
-  <p class="wheel-hint">Pick a slice to choose a kind of material.${listed.length ? ' When it holds more than one, all of them are listed below.' : ''}</p>
-  ${listed.map(list).join('')}
-  <a class="wheel-all" href="${root}${P.subject(s)}">View all ${plural(s.documents.length, 'document')} in ${esc(s.title)} ${icon('arrow-right')}</a>
-</article>`;
+  const kinds = Object.entries(TYPES)
+    .map(([type, meta]) => ({ type, meta, docs: s.documents.filter((d) => d.type === type) }))
+    .filter((k) => k.docs.length);
+  const href = (k) => (k.docs.length === 1 ? `${root}${P.doc(k.docs[0])}` : `${root}${P.subject(s)}?type=${k.type}`);
+  // "Document" says nothing on its own, so a lone one goes by its title (less the course name).
+  const own = (t) => (t.toLowerCase().startsWith(`${s.title.toLowerCase()} `) ? t.slice(s.title.length + 1) : t);
+  const label = (k) => (k.docs.length > 1 ? k.meta.plural : k.type === 'document' ? own(k.docs[0].title) : k.meta.label);
+  const kind = (k) => `<li><a href="${href(k)}">${icon(k.meta.icon)}<span>${esc(label(k))}</span>${k.docs.length > 1 ? `<small>${k.docs.length}</small>` : ''}</a></li>`;
+  const q = s.documents.reduce((n, d) => n + (d.questions || 0), 0);
+  return `<li class="course-card" style="--accent:${s.accent}">
+    <a class="course-card-head" href="${root}${P.subject(s)}">
+      <span class="tile">${icon(s.icon)}</span>
+      <span class="course-card-text"><strong>${esc(s.title)}</strong><small>${plural(s.documents.length, 'document')}${q ? ` · ${q.toLocaleString('en-US')}+ questions` : ''}</small></span>
+      ${icon('chevron-right', 'chev')}
+    </a>
+    ${kinds.length ? `<ul class="course-kinds" aria-label="${esc(s.title)} materials">${kinds.map(kind).join('')}</ul>` : '<p class="course-none">Nothing here yet.</p>'}
+  </li>`;
 }
 
 // Scenery behind the homepage cover (assets/scenes/): each place has a divine form by day and a
@@ -537,11 +473,14 @@ export function home(ctx) {
       <p class="cover-eyebrow"><span></span>The Law School Study Library<span></span></p>
       <h1 id="cover-title"><span class="cover-h1-top">${riseWords('Study<b>.</b> Argue<b>.</b>')}</span> <span class="cover-h1-gilt" data-text="Triumph."><em>Triumph.</em><i class="cover-glint"></i><i class="cover-glint"></i></span><span class="cover-flourish" aria-hidden="true"><i></i></span></h1>
       <p class="cover-lede">Outlines, rule charts, flashcards, and thousands of practice questions for every course, built by the students who sat in your seat.</p>
-      <p class="cover-description">Search any topic, or pick a course below.</p>
       <button class="cover-search hero-search" type="button" data-open-search>
         ${icon('search')}<span>Search: try “404(b)” or “conflicts”</span><kbd>Ctrl K</kbd>
       </button>
-      <div class="cover-actions"><a href="#courses">Browse the courses ${icon('arrow-right')}</a><span>Free to read. Free to download.</span></div>
+      <div class="cover-actions">
+        <a class="btn btn-gold" href="#courses">${icon('arrow-down')} Pick your course</a>
+        ${ctx.game?.total ? `<a class="btn btn-cover" href="${root}shuffle/">${icon('list-checks')} Practice questions</a>` : ''}
+      </div>
+      <a class="cover-continue" href="${root}" data-continue hidden>${icon('history')}<span>Pick up where you left off: <strong data-continue-title></strong></span>${icon('arrow-right')}</a>
     </div>
     <figure class="cover-art" aria-hidden="true">
       <span class="cover-wing cover-wing-l"></span>
@@ -553,18 +492,18 @@ export function home(ctx) {
   <div class="container cover-bottom"><p>Built by students.<br><strong>Shared for the next one.</strong></p><ul><li><strong>${subjects.length}</strong> ${subjects.length === 1 ? 'course' : 'courses'}</li><li><strong>${docs.length}</strong> documents</li>${totalQ ? `<li><strong>${totalQ.toLocaleString('en-US')}+</strong> practice questions</li>` : ''}</ul>${scenePicker()}<a href="${root}library/">Enter the library ${icon('arrow-up-right')}</a></div>
 </section>
 
-<section class="container cover-courses" id="courses" aria-labelledby="courses-h">
-  <div class="section-head"><div><p class="kicker">Browse the complete collection</p><h2 id="courses-h" class="section-title">Choose a course. Find your materials.</h2></div><a class="link-arrow" href="${root}library/">Search &amp; filter all ${docs.length} documents ${icon('arrow-right')}</a></div>
-  <nav class="format-shortcuts" aria-label="Browse by document type"><span>Browse by format</span>${Object.entries(ctx.TYPES).filter(([type]) => docs.some(d => d.type === type)).map(([type, meta]) => `<a href="${root}library/?type=${type}">${icon(meta.icon)}${esc(meta.plural)} <small>${docs.filter(d => d.type === type).length}</small></a>`).join('')}</nav>
-  <div class="wheel-deck" data-wheel-deck>${courseWheel(ctx, root)}${subjects.map((s) => materialWheel(ctx, root, s)).join('')}</div>
-  ${ctx.game?.total ? shuffleBand(ctx, root) : ''}${ctx.games ? playBand(ctx, root) + survivorsBand(ctx, root) : ''}
-</section>
-
-<section class="section container" id="recently-opened" hidden aria-labelledby="ro-h">
+<section class="container recently-opened" id="recently-opened" hidden aria-labelledby="ro-h">
   <div class="section-head">
     <div><p class="kicker">Pick up where you left off</p><h2 id="ro-h" class="section-title">Jump back in</h2></div>
   </div>
   <ul class="recent-strip" data-recent-list data-type-icons="${esc(JSON.stringify(Object.fromEntries(Object.values(ctx.TYPES).map((t) => [t.label, icon(t.icon)]))))}"></ul>
+</section>
+
+<section class="container cover-courses" id="courses" aria-labelledby="courses-h">
+  <div class="section-head"><div><p class="kicker">${plural(subjects.length, 'course')} · ${plural(docs.length, 'document')}</p><h2 id="courses-h" class="section-title">Pick your course</h2></div><a class="link-arrow" href="${root}library/">Search &amp; filter all ${docs.length} documents ${icon('arrow-right')}</a></div>
+  <ul class="course-grid">${subjects.map((s) => courseCard(ctx, root, s)).join('')}</ul>
+  <nav class="format-shortcuts" aria-label="Browse by document type"><span>Or browse every course by format</span>${Object.entries(ctx.TYPES).filter(([type]) => docs.some(d => d.type === type)).map(([type, meta]) => `<a href="${root}library/?type=${type}">${icon(meta.icon)}${esc(meta.plural)} <small>${docs.filter(d => d.type === type).length}</small></a>`).join('')}</nav>
+  ${ctx.game?.total ? shuffleBand(ctx, root) : ''}${ctx.games ? playBand(ctx, root) + survivorsBand(ctx, root) : ''}
 </section>
 
 <section class="section container" aria-labelledby="recent-h">
