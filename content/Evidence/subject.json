@@ -178,6 +178,11 @@
       "slug": "evidence-bar-exam-questions",
       "tags": ["MCQ", "bar prep", "FRE", "hearsay", "Confrontation Clause", "character evidence", "experts", "privileges", "Weeks 1–15"],
       "order": 13
+    },
+    "Evidence_Best_Answer_Questions.mcq.json": {
+      "slug": "evidence-best-answer-questions",
+      "tags": ["MCQ", "bar prep", "best answer", "FRE", "hearsay", "Confrontation Clause", "character evidence", "privileges", "Weeks 1–15"],
+      "order": 14
     }
   }
 }
