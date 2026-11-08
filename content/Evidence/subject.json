@@ -71,89 +71,10 @@
       ],
       "order": 3
     },
-    "Evidence_MCQ_Conceptual.html": {
-      "slug": "evidence-rules-drill",
-      "title": "Evidence Rules easy Drill",
-      "type": "practice",
-      "description": "Conceptual multiple-choice questions for Weeks 1–5, weighted toward the Federal Rules. The answer order reshuffles every time you load the page, so you can't memorize the letters.",
-      "tags": [
-        "MCQ",
-        "conceptual",
-        "FRE"
-      ],
+    "Evidence_Comprehensive_Practice_Questions.mcq.json": {
+      "slug": "evidence-comprehensive-practice-questions",
+      "tags": ["MCQ", "bar prep", "FRE", "hearsay", "Confrontation Clause", "character evidence", "experts", "authentication", "privileges", "Weeks 1–15"],
       "order": 4
-    },
-    "Evidence_MCQ_Application (strict).html": {
-      "slug": "evidence-case-files",
-      "title": "Evidence BAR style questions 1",
-      "type": "practice",
-      "description": "Bar-level application questions for Weeks 1–5. Each question sets two or three rules against each other and turns on a single fact. Every answer choice has its own explanation, and the set includes one-fact variations and a coverage map.",
-      "tags": [
-        "MCQ",
-        "application",
-        "bar prep",
-        "variations"
-      ],
-      "order": 5
-    },
-    "Evidence_MCQ_Application (Classes 1-10).html": {
-      "slug": "evidence-case-files-ii",
-      "title": "Evidence BAR style questions 2",
-      "type": "practice",
-      "description": "A second, all-new set of bar-style application questions covering Classes 1–10. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 157 outline items.",
-      "tags": [
-        "MCQ",
-        "application",
-        "bar prep",
-        "Classes 1–10"
-      ],
-      "order": 6
-    },
-    "Evidence_Mock_Midterm.html": {
-      "slug": "evidence-mock-midterm",
-      "title": "Evidence Mock Midterm",
-      "type": "practice",
-      "description": "A timed practice exam for the night before the midterm: 60 new bar-style questions on Classes 1–10, in four 15-question parts that each cover every topic at the real exam’s 30-minute pace. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
-      "tags": [
-        "MCQ",
-        "mock exam",
-        "timed",
-        "bar prep",
-        "Classes 1–10"
-      ],
-      "questions": 60,
-      "order": 7
-    },
-    "Evidence_Mock_Midterm_II.html": {
-      "slug": "evidence-mock-midterm-ii",
-      "title": "Evidence Mock Midterm II",
-      "type": "practice",
-      "description": "A second timed practice exam: 60 more new bar-style questions on Classes 1–10, with no fact patterns repeated from the first. It has the same four 15-question parts, each covering every topic at the real exam’s 30-minute pace, and draws on textbook problems the first exam didn’t use. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
-      "tags": [
-        "MCQ",
-        "mock exam",
-        "timed",
-        "bar prep",
-        "Classes 1–10"
-      ],
-      "questions": 60,
-      "order": 8
-    },
-    "Evidence_Hearsay_Practice_Exam.html": {
-      "slug": "evidence-hearsay-practice-exam",
-      "title": "Hearsay Practice Exam",
-      "type": "practice",
-      "description": "41 bar-style questions, five choices each, covering all of hearsay: the definition and non-truth uses, opposing-party statements, prior statements and impeachment (613, 806), the 803 and 804 exceptions, 807, multiple hearsay, completeness under 106, and the Confrontation Clause through Smith v. Arizona and Samia. Includes the 2023 and 2024 amendments. Tutor mode grades each question as you go; timed mode gives you 80 minutes and grades at the end with a score by topic. Every question has the rule, an analysis, and why each choice is right or wrong.",
-      "tags": [
-        "MCQ",
-        "hearsay",
-        "Confrontation Clause",
-        "timed",
-        "bar prep",
-        "FRE 801–807"
-      ],
-      "questions": 41,
-      "order": 9
     },
     "Evidence_Concepts_Test.html": {
       "slug": "evidence-concepts-test",
