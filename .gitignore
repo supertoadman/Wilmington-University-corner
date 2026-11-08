@@ -9,3 +9,9 @@ Thumbs.db
 
 # Local-only source material for AI use (not published or committed)
 content/Sales and Leases/*Comprehensive_Outline*
+
+# Music stays on this computer: the course playlists are "publish": false in subject.json, and
+# their audio isn't committed. Music/ is the local working folder for songs.
+content/**/*.mp3
+content/**/*.wav
+Music/
