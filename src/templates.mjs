@@ -591,7 +591,7 @@ export function home(ctx) {
     <div class="download-band-icon">${icon('package')}</div>
     <div class="download-band-text">
       <h2>Take it all offline</h2>
-      <p>Every document except the music in one ZIP: ${plural(docs.filter((d) => d.type !== 'music').length, 'file')}, ${fmtSize(ctx.allZipSize)}. The HTML practice tools work offline in any browser.</p>
+      <p>Every document${docs.some((d) => d.type === 'music') ? ' except the music' : ''} in one ZIP: ${plural(docs.filter((d) => d.type !== 'music').length, 'file')}, ${fmtSize(ctx.allZipSize)}. The HTML practice tools work offline in any browser.</p>
     </div>
     <a class="btn btn-primary" href="${root}files/all-study-materials.zip" download>${icon('download')} Download everything</a>
   </div>

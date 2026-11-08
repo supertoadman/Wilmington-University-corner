@@ -51,6 +51,7 @@
       "description": "PDF copy of the comprehensive outline, kept off the public site."
     },
     "Sales_and_Leases_Playlist": {
+      "publish": false,
       "slug": "sales-and-leases-playlist",
       "title": "Sales and Leases Playlist",
       "type": "music",

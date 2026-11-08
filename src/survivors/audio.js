@@ -1,8 +1,7 @@
-// Sound for Crypt Survivors. The score is the site's own pair of loops from Assets/temple run/: the
-// divine theme darkens (a closing low-pass) as corruption builds, then gives way to the corrupt
-// theme once the build is heavily corrupted. Combat sounds are synthesized here with Web Audio, so
-// hundreds of hits cost no downloads; a few recorded stings (corruption, purification, gold, chests)
-// come from the pack. Nothing plays until the first tap or key (browsers require a gesture).
+// Sound for Crypt Survivors: sound effects only, no music (music stays off the site; see README).
+// Combat sounds are synthesized here with Web Audio, so hundreds of hits cost no downloads; a few
+// recorded stings (corruption, purification, gold, chests, game over) come from the pack. Nothing
+// plays until the first tap or key (browsers require a gesture).
 
 const PACK = new URL('./pack/', import.meta.url);
 
@@ -12,11 +11,9 @@ export class Sound {
     this.muted = false;
     this.meta = {};
     this.buffers = new Map();
-    this.loops = new Map();
     this.last = new Map();
     this.voices = 0;
     this.corruption = 0;
-    this.ducked = false;
     this.noise = null;
   }
 
@@ -38,12 +35,6 @@ export class Sound {
     this.comp.threshold.value = -16;
     this.comp.ratio.value = 6;
     this.comp.connect(this.master);
-    this.music = ctx.createGain();
-    this.music.gain.value = 0.5;
-    this.musicFilter = ctx.createBiquadFilter();
-    this.musicFilter.type = 'lowpass';
-    this.musicFilter.frequency.value = 18000;
-    this.musicFilter.connect(this.music).connect(this.master);
     this.sfx = ctx.createGain();
     this.sfx.gain.value = 0.55;
     this.sfx.connect(this.comp);
@@ -59,7 +50,7 @@ export class Sound {
   }
 
   // -------------------------------------------------------------------------
-  // Recorded audio (music loops and stings)
+  // Recorded audio (stings)
   // -------------------------------------------------------------------------
   decode(id) {
     if (!this.ctx) return Promise.resolve(null);
@@ -100,51 +91,9 @@ export class Sound {
     src.start();
   }
 
-  async startMusic() {
-    if (!this.ctx) return;
-    for (const id of ['divine-music-loop', 'corrupt-music-loop']) {
-      if (this.loops.has(id)) continue;
-      this.loops.set(id, null);
-      const buf = await this.decode(id);
-      if (!buf) continue;
-      const source = this.ctx.createBufferSource();
-      source.buffer = buf;
-      source.loop = true;
-      const gain = this.ctx.createGain();
-      gain.gain.value = 0;
-      source.connect(gain).connect(this.musicFilter);
-      source.start();
-      this.loops.set(id, { source, gain });
-    }
-    this.mix(1.2);
-  }
-
-  /** 0..1 corruption: the divine theme closes in, then the corrupt theme takes over past half. */
+  /** 0..1 corruption: past half, the run ends on the corrupt game-over sting instead of the divine one. */
   setCorruption(c) {
     this.corruption = c;
-    this.mix();
-  }
-
-  /** Quieter and muffled while a question is open, so it's easy to think. */
-  duck(on) {
-    this.ducked = on;
-    this.mix(0.6);
-  }
-
-  mix(fade = 2.2) {
-    if (!this.ctx) return;
-    const t = this.ctx.currentTime;
-    const c = this.corruption;
-    const fallen = c >= 0.5;
-    const levels = { 'divine-music-loop': fallen ? 0 : 0.85, 'corrupt-music-loop': fallen ? 0.85 : 0 };
-    for (const [id, m] of this.loops) {
-      if (!m) continue;
-      m.gain.gain.cancelScheduledValues(t);
-      m.gain.gain.setTargetAtTime(levels[id] * (this.ducked ? 0.45 : 1), t, fade / 4);
-    }
-    const cutoff = this.ducked ? 1400 : fallen ? 16000 : 18000 * (1 - c * 1.7) + 900;
-    this.musicFilter.frequency.cancelScheduledValues(t);
-    this.musicFilter.frequency.setTargetAtTime(Math.max(700, cutoff), t, fade / 4);
   }
 
   // -------------------------------------------------------------------------

@@ -50,6 +50,8 @@ function copyPack(root, dist) {
   const files = new Set();
   for (const a of manifest.assets) {
     if (a.type !== 'audio' && !PACK_IDS.some((re) => re.test(a.id))) continue;
+    // Sanctum Run plays sound effects only: the pack's music loops stay out of the published site.
+    if (a.type === 'audio' && /music/.test(a.id)) continue;
     const entry = { src: a.src, w: a.width, h: a.height, anchor: a.anchor };
     if (a.frames) entry.frames = Object.fromEntries(Object.entries(a.frames).map(([k, f]) => [k, [f.x, f.y, f.width, f.height]]));
     if (a.animations) entry.animations = a.animations;
