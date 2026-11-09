@@ -291,7 +291,9 @@
     $('sh-flagged').disabled = st.only !== 'flagged' && !n;
     $('sh-exam').value = st.exam;
     $('sh-area').value = st.area;
-    $('sh-shufq').checked = st.shufQ;
+    // One button: shuffle the questions, and press again to put them back in the set's order.
+    $('sh-shufq').textContent = st.shufQ ? 'Original order' : 'Shuffle questions';
+    $('sh-shufq').title = st.shufQ ? 'Put the questions back in the set’s order' : 'Put the questions in a random order';
     $('sh-shufo').checked = st.shufO;
   }
   function score() {
@@ -324,7 +326,7 @@
     Object.assign(st, { mode: m, picked: {}, out: {}, shown: new Set(), only: '', subset: new Set() });
     render();
   });
-  $('sh-shufq').addEventListener('change', (e) => { st.shufQ = e.target.checked; st.order = st.shufQ ? shuffle(IDS) : IDS.slice(); render(); top(); });
+  $('sh-shufq').addEventListener('click', () => { st.shufQ = !st.shufQ; st.order = st.shufQ ? shuffle(IDS) : IDS.slice(); render(); top(); });
   $('sh-shufo').addEventListener('change', (e) => {
     st.shufO = e.target.checked;
     st.opts = {};

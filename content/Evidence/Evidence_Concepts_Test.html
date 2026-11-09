@@ -342,12 +342,20 @@ const LETTERS = ["A", "B", "C", "D", "E"];
 const KEY = "evidence-concepts-v1";
 const EXAM_SECONDS = Q.length * 90;
 
-function fresh(mode) {
-  return { mode: mode || "tutor", cur: 0, sel: {}, done: {}, flags: {}, strikes: {}, examEnd: null, finished: false, view: "q", pending: null };
+// Answers, flags and strike-outs are keyed by the question's place in QB; S.order is the order you
+// move through them (the course order, or a shuffle), so shuffling never moves an answer.
+const inOrder = () => Q.map((_, i) => i);
+function shuffled() { const a = inOrder(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function fresh(mode, shuffle) {
+  const order = shuffle ? shuffled() : inOrder();
+  return { mode: mode || "tutor", cur: order[0], order, shuffled: !!shuffle, sel: {}, done: {}, flags: {}, strikes: {}, examEnd: null, finished: false, view: "q", pending: null };
 }
 let S = fresh();
 try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(fresh(), JSON.parse(raw)); } catch (e) {}
 S.pending = null;
+if (!Array.isArray(S.order) || S.order.length !== Q.length || new Set(S.order).size !== Q.length || !S.order.every(i => Number.isInteger(i) && i >= 0 && i < Q.length)) { S.order = inOrder(); S.shuffled = false; }
+if (!(Number.isInteger(S.cur) && S.cur >= 0 && S.cur < Q.length)) S.cur = S.order[0];
+const pos = i => S.order.indexOf(i);
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
 function esc(s) { return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;"); }
@@ -388,17 +396,17 @@ function renderConfirm() {
   const label = S.pending === "exam" ? "Start timed exam" : S.pending === "reset" ? "Start over" : "Switch to Tutor";
   el.innerHTML = `<div class="confirm" role="alert"><p>${msg}</p><button class="btn dark" id="cf-yes" type="button">${label}</button><button class="btn" id="cf-no" type="button">Cancel</button></div>`;
   document.getElementById("cf-yes").onclick = () => {
-    const p = S.pending;
-    if (p === "exam") { S = fresh("exam"); S.examEnd = Date.now() + EXAM_SECONDS * 1000; }
-    else if (p === "tutor") { S = fresh("tutor"); }
-    else { const m = S.mode; S = fresh(m); if (m === "exam") S.examEnd = Date.now() + EXAM_SECONDS * 1000; }
+    const p = S.pending, mix = S.shuffled;
+    if (p === "exam") { S = fresh("exam", mix); S.examEnd = Date.now() + EXAM_SECONDS * 1000; }
+    else if (p === "tutor") { S = fresh("tutor", mix); }
+    else { const m = S.mode; S = fresh(m, mix); if (m === "exam") S.examEnd = Date.now() + EXAM_SECONDS * 1000; }
     save(); render(); window.scrollTo(0, 0);
   };
   document.getElementById("cf-no").onclick = () => { S.pending = null; renderConfirm(); };
 }
 
 function renderQuestion() {
-  const i = S.cur, q = Q[i], rev = revealed(i), sel = S.sel[i], st = S.strikes[i] || [];
+  const i = S.cur, q = Q[i], rev = revealed(i), sel = S.sel[i], st = S.strikes[i] || [], p = pos(i), last = p === Q.length - 1;
   const parts = q.stem.split(/\n\s*\n/), call = parts.pop();
   let opts = q.o.map(([txt], k) => {
     let cls = "opt";
@@ -415,7 +423,7 @@ function renderQuestion() {
 
   let submit = "";
   if (S.mode === "tutor" && !rev) submit = `<button type="button" class="btn primary" id="submit" ${sel === undefined ? "disabled" : ""}>Check answer</button>`;
-  if (S.mode === "exam" && !S.finished && i === Q.length - 1) submit = `<button type="button" class="btn dark" id="finish">Finish exam</button>`;
+  if (S.mode === "exam" && !S.finished && last) submit = `<button type="button" class="btn dark" id="finish">Finish exam</button>`;
 
   let explain = "";
   if (rev) {
@@ -433,7 +441,7 @@ function renderQuestion() {
 
   document.getElementById("main").innerHTML = `<article class="qcard">
     <div class="qhead">
-      <span class="qnum">Question ${String(i + 1).padStart(2, "0")} <span>/ ${Q.length}</span></span>
+      <span class="qnum">Question ${String(p + 1).padStart(2, "0")} <span>/ ${Q.length}</span></span>
       ${rev ? `<span class="topic">${TOPICS[q.area]}</span>` : ""}
       <button type="button" class="flagbtn" id="flag" aria-pressed="${!!S.flags[i]}">${flagSvg}${S.flags[i] ? "Flagged" : "Flag for review"}</button>
     </div>
@@ -441,11 +449,11 @@ function renderQuestion() {
     <p class="call">${fmt(call)}</p>
     <div class="opts" role="group" aria-label="Answer choices">${opts}</div>
     <div class="actions">
-      <button type="button" class="btn" id="prev" ${i === 0 ? "disabled" : ""}>← Previous</button>
+      <button type="button" class="btn" id="prev" ${p === 0 ? "disabled" : ""}>← Previous</button>
       ${submit}
       <span class="spacer"></span>
       <span class="kbd">Keys: A–E select · Enter check · ←/→ move · F flag</span>
-      <button type="button" class="btn" id="next" ${i === Q.length - 1 ? "disabled" : ""}>Next →</button>
+      <button type="button" class="btn" id="next" ${last ? "disabled" : ""}>Next →</button>
     </div>
     ${explain}
   </article>`;
@@ -456,8 +464,8 @@ function renderQuestion() {
     arr[k] = !arr[k]; S.strikes[i] = arr; save(); renderQuestion();
   });
   document.getElementById("flag").onclick = toggleFlag;
-  document.getElementById("prev").onclick = () => go(i - 1);
-  document.getElementById("next").onclick = () => go(i + 1);
+  document.getElementById("prev").onclick = () => step(-1);
+  document.getElementById("next").onclick = () => step(1);
   const sb = document.getElementById("submit"); if (sb) sb.onclick = check;
   const fb = document.getElementById("finish"); if (fb) fb.onclick = finish;
 }
@@ -467,7 +475,8 @@ function renderResults() {
   Object.keys(TOPICS).forEach(k => byT[k] = { n: 0, d: 0 });
   let n = 0;
   const missed = [];
-  Q.forEach((q, i) => {
+  S.order.forEach(i => {
+    const q = Q[i];
     byT[q.area].d++;
     if (S.sel[i] === q.a) { n++; byT[q.area].n++; } else missed.push(i);
   });
@@ -485,24 +494,24 @@ function renderResults() {
     <div class="bigscore"><b>${n}/${Q.length}</b><span>${pct}% correct${unanswered ? ` · ${unanswered} unanswered` : ""}</span></div>
     <span class="label">By topic</span>
     <div class="bars">${bars}</div>
-    ${missed.length ? `<span class="label">Missed or skipped · open to review</span><div class="missed">${missed.map(i => `<button type="button" data-go="${i}">Q${i + 1}</button>`).join("")}</div>` : ""}
+    ${missed.length ? `<span class="label">Missed or skipped · open to review</span><div class="missed">${missed.map(i => `<button type="button" data-go="${i}">Q${pos(i) + 1}</button>`).join("")}</div>` : ""}
     <p>${missed.length ? `Your weakest areas were <b>${fmt(weakest[0])}</b>${weakest[1] ? ` and <b>${fmt(weakest[1])}</b>` : ""}. Re-read the "Option by option" notes on the questions you missed: on this exam, most wrong answers state a real rule applied to the wrong facts, a dissent or an overruled case, an outdated version of a rule, or the right rule from the wrong part of the course.` : "A perfect paper. Take the timed version to practice under the clock."}</p>
     <div class="actions"><button type="button" class="btn primary" id="rev1">Review from Question 1</button><button type="button" class="btn" id="again">Start over</button></div>
   </article>`;
   document.querySelectorAll("[data-go]").forEach(b => b.onclick = () => { S.view = "q"; go(+b.dataset.go); });
-  document.getElementById("rev1").onclick = () => { S.view = "q"; go(0); };
+  document.getElementById("rev1").onclick = () => { S.view = "q"; go(S.order[0]); };
   document.getElementById("again").onclick = () => { S.pending = "reset"; renderConfirm(); window.scrollTo(0, 0); };
 }
 
 function renderSide() {
-  const cells = Q.map((q, i) => {
+  const cells = S.order.map((i, p) => {
     let c = "cell";
     if (revealed(i) && S.sel[i] !== undefined) c += isRight(i) ? " correct" : " wrong";
     else if (revealed(i)) c += " wrong";
     else if (S.sel[i] !== undefined) c += " answered";
     if (S.flags[i]) c += " flagged";
     if (S.view === "q" && i === S.cur) c += " current";
-    return `<button type="button" class="${c}" data-n="${i}" aria-label="Question ${i + 1}">${i + 1}</button>`;
+    return `<button type="button" class="${c}" data-n="${i}" aria-label="Question ${p + 1}">${p + 1}</button>`;
   }).join("");
   const sc = scoreNow();
   const flagged = Object.keys(S.flags).filter(k => S.flags[k]).length;
@@ -517,6 +526,7 @@ function renderSide() {
   let btns = "";
   if (S.mode === "exam" && !S.finished) btns += `<button type="button" class="btn dark" id="s-finish">Finish exam &amp; grade</button>`;
   if (S.mode === "tutor" || S.finished) btns += `<button type="button" class="btn" id="s-report">Score report</button>`;
+  btns += `<button type="button" class="btn" id="s-shuffle" title="${S.shuffled ? "Put the questions back in course-outline order" : "Put the questions in a random order"}">${S.shuffled ? "Original order" : "Shuffle questions"}</button>`;
   btns += `<button type="button" class="btn" id="s-reset">Start over</button>`;
   document.getElementById("side").innerHTML = `
     <section class="panel"><h2>${S.mode === "tutor" ? "Tutor mode" : S.finished ? "Exam graded" : "Timed exam"}</h2>
@@ -535,6 +545,7 @@ function renderSide() {
   document.querySelectorAll(".cell").forEach(b => b.onclick = () => { S.view = "q"; go(+b.dataset.n); });
   const f = document.getElementById("s-finish"); if (f) f.onclick = finish;
   const r = document.getElementById("s-report"); if (r) r.onclick = () => { S.view = "results"; save(); render(); window.scrollTo(0, 0); };
+  document.getElementById("s-shuffle").onclick = reorder;
   document.getElementById("s-reset").onclick = () => { S.pending = "reset"; renderConfirm(); window.scrollTo(0, 0); };
 }
 
@@ -543,9 +554,16 @@ function render() {
   if (S.view === "results") renderResults(); else renderQuestion();
 }
 function go(i) {
-  if (i < 0 || i >= Q.length) return;
+  if (!(i >= 0 && i < Q.length)) return;
   S.cur = i; S.view = "q"; save(); render();
   const m = document.getElementById("main"); if (m.getBoundingClientRect().top < 0) m.scrollIntoView({ block: "start" });
+}
+function step(d) { go(S.order[pos(S.cur) + d]); }
+// Shuffle the questions, or press again for the course order. Answers stay with their questions.
+function reorder() {
+  S.shuffled = !S.shuffled;
+  S.order = S.shuffled ? shuffled() : inOrder();
+  S.view = "q"; go(S.order[0]);
 }
 function choose(k) { if (revealed(S.cur)) return; S.sel[S.cur] = k; save(); renderQuestion(); renderSide(); renderHeader(); }
 function check() { if (S.mode !== "tutor" || S.sel[S.cur] === undefined) return; S.done[S.cur] = true; save(); renderQuestion(); renderSide(); }
@@ -574,8 +592,8 @@ document.addEventListener("keydown", e => {
   if (idx >= 0 && k.length === 1) { choose(idx); return; }
   if ("12345".includes(k) && k.length === 1) { choose(+k - 1); return; }
   if (k === "enter" && document.activeElement.tagName !== "BUTTON") { check(); return; }
-  if (k === "arrowright") go(S.cur + 1);
-  if (k === "arrowleft") go(S.cur - 1);
+  if (k === "arrowright") step(1);
+  if (k === "arrowleft") step(-1);
   if (k === "f") toggleFlag();
 });
 

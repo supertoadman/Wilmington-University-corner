@@ -184,7 +184,6 @@ button, select, input { font: inherit; color: inherit; }
       <div class="sh-seg" role="group" aria-label="Mode"><button type="button" id="sh-m-study" aria-pressed="true">Study</button><button type="button" id="sh-m-exam" aria-pressed="false">Exam</button></div>
       <select class="sh-pick" id="sh-exam" aria-label="Exam"></select>
       <select class="sh-pick" id="sh-area" aria-label="Topic"></select>
-      <label class="sh-toggle"><input type="checkbox" id="sh-shufq"> Shuffle questions</label>
       <label class="sh-toggle"><input type="checkbox" id="sh-shufo"> Shuffle choices</label>
       <span class="sh-hint" id="sh-hint"></span>
     </div>
@@ -192,6 +191,7 @@ button, select, input { font: inherit; color: inherit; }
       <div class="shuffle-bar-row">
         <p class="shuffle-score" id="sh-score" aria-live="polite">0 / 0 correct</p>
         <button class="btn btn-primary" type="button" id="sh-grade" hidden>Grade</button>
+        <button class="btn btn-ghost" type="button" id="sh-shufq" title="Put the questions in a random order">Shuffle questions</button>
         <button class="btn btn-ghost" type="button" id="sh-missed">Retry missed</button>
         <button class="btn btn-ghost" type="button" id="sh-flagged">Flagged</button>
         <button class="btn btn-ghost" type="button" id="sh-reset">Reset</button>
@@ -497,7 +497,9 @@ button, select, input { font: inherit; color: inherit; }
     $('sh-flagged').disabled = st.only !== 'flagged' && !n;
     $('sh-exam').value = st.exam;
     $('sh-area').value = st.area;
-    $('sh-shufq').checked = st.shufQ;
+    // One button: shuffle the questions, and press again to put them back in the set's order.
+    $('sh-shufq').textContent = st.shufQ ? 'Original order' : 'Shuffle questions';
+    $('sh-shufq').title = st.shufQ ? 'Put the questions back in the set’s order' : 'Put the questions in a random order';
     $('sh-shufo').checked = st.shufO;
   }
   function score() {
@@ -530,7 +532,7 @@ button, select, input { font: inherit; color: inherit; }
     Object.assign(st, { mode: m, picked: {}, out: {}, shown: new Set(), only: '', subset: new Set() });
     render();
   });
-  $('sh-shufq').addEventListener('change', (e) => { st.shufQ = e.target.checked; st.order = st.shufQ ? shuffle(IDS) : IDS.slice(); render(); top(); });
+  $('sh-shufq').addEventListener('click', () => { st.shufQ = !st.shufQ; st.order = st.shufQ ? shuffle(IDS) : IDS.slice(); render(); top(); });
   $('sh-shufo').addEventListener('change', (e) => {
     st.shufO = e.target.checked;
     st.opts = {};

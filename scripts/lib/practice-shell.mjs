@@ -65,7 +65,6 @@ ${asset('shell.css')}</style>
       <div class="sh-seg" role="group" aria-label="Mode"><button type="button" id="sh-m-study" aria-pressed="true">Study</button><button type="button" id="sh-m-exam" aria-pressed="false">Exam</button></div>
       <select class="sh-pick" id="sh-exam" aria-label="Exam"></select>
       <select class="sh-pick" id="sh-area" aria-label="Topic"></select>
-      <label class="sh-toggle"><input type="checkbox" id="sh-shufq"> Shuffle questions</label>
       <label class="sh-toggle"><input type="checkbox" id="sh-shufo"> Shuffle choices</label>
       <span class="sh-hint" id="sh-hint"></span>
     </div>
@@ -73,6 +72,7 @@ ${asset('shell.css')}</style>
       <div class="shuffle-bar-row">
         <p class="shuffle-score" id="sh-score" aria-live="polite">0 / 0 correct</p>
         <button class="btn btn-primary" type="button" id="sh-grade" hidden>Grade</button>
+        <button class="btn btn-ghost" type="button" id="sh-shufq" title="Put the questions in a random order">Shuffle questions</button>
         <button class="btn btn-ghost" type="button" id="sh-missed">Retry missed</button>
         <button class="btn btn-ghost" type="button" id="sh-flagged">Flagged</button>
         <button class="btn btn-ghost" type="button" id="sh-reset">Reset</button>

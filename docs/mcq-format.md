@@ -151,7 +151,7 @@ The build's page is Shuffle mode's card stack in a standalone file (inline CSS a
 | Stem | `.sq-stem` | Paragraphs. The popup keeps it in view on phones. |
 | Choices | `.sq-opts` > `.sq-row` > `button.sq-opt` + `button.sq-x` | Cross-out toggles strike a choice. `.chosen` (exam mode), `.right`, `.wrong` after grading. |
 | Answer | `.sq-why` | `.sq-verdict` (`ok`/`no`), one `.sq-rat` per choice (`.sq-rat.key` for the answer), `.sq-rule` for `e`. Removed from the text Look up ranks with, so suggestions don't give the answer away. |
-| Bar | `.shuffle-bar` | Sticky: score, Grade (exam mode), Retry missed, Flagged (n), Reset, progress meter. Mode, Exam and Topic filters, and Shuffle questions / Shuffle choices sit above it. |
+| Bar | `.shuffle-bar` | Sticky: score, Grade (exam mode), Shuffle questions (pressed again: Original order), Retry missed, Flagged (n), Reset, progress meter. Mode, Exam and Topic filters, and the Shuffle choices toggle sit above it. |
 
 The `.sq*` and `.shuffle-*` rules in `src/practice/shell.css` are copied verbatim from `src/assets/styles.css`, and the tests fail if they drift. Answers, mode, filters and order are saved in the browser per set (`mcq:<id>:progress`), flags per set (`mcq:<id>:flags`); a wrong or skipped answer is flagged when graded. A link to `#q-<id>` (the id slugified: `#q-3-12` for `3.12`) opens on that question. The page follows the site's light/dark theme when framed (`data-theme`) and the system setting when opened directly.
 
