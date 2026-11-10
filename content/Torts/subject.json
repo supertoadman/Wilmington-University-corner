@@ -24,6 +24,11 @@
       "tags": ["torts", "Restatement (Third)", "statutes of limitations", "immunities", "apportionment", "reference"],
       "order": 1.5
     },
+    "Torts_Bar_Exam_Questions.mcq.json": {
+      "slug": "torts-bar-exam-questions",
+      "tags": ["MCQ", "bar prep", "practice final", "intentional torts", "negligence", "causation", "defenses", "strict liability", "nuisance", "Weeks 1–15"],
+      "order": 2
+    },
     "Torts_Outline.json": {
       "publish": false,
       "description": "The outline/v1 source for the condensed outline. Edit it, then rebuild the Word file with scripts/templates/build-outline-docx.mjs."
