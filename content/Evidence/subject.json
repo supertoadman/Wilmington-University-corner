@@ -16,6 +16,16 @@
       "tags": ["FRE", "outline", "hearsay", "Confrontation Clause", "character evidence", "impeachment", "privileges", "authentication", "Weeks 1–15"],
       "order": 0
     },
+    "Evidence_Rules_Outline.docx": {
+      "slug": "evidence-rules-outline",
+      "title": "Evidence Rules Outline",
+      "type": "outline",
+      "theme": "structured",
+      "outsideColor": "64748B",
+      "description": "The condensed outline with the case cards taken out, for reviewing by rule. It covers the same twelve parts and 35 sections, Weeks 1–15, and keeps every rule box, black-letter rule, exam tip, and step-by-step checklist. Holdings the course tests are restated as rules in the sections they govern, such as the Peña-Rodriguez exception to 606(b), the Gordon factors, the Daubert factors, the Jaffee psychotherapist privilege, Swidler & Berlin, Zolin's crime-fraud procedure, and Trammel's spousal privilege.",
+      "tags": ["FRE", "outline", "rules", "black letter", "hearsay", "Confrontation Clause", "privileges", "Weeks 1–15"],
+      "order": 0.5
+    },
     "Evidence_Master_Outline.docx": {
       "publish": false,
       "description": "Full master outline of Weeks 1–15: Classes 1–19 swept against all 19 slide decks and the Week 1–10 readings, plus Parts IX–XII from the Week 11–15 readings, with every problem, the slides' answers, a syllabus coverage map, and an errata log. Kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
