@@ -54,10 +54,6 @@
    "weeks": "WEEK 1"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 8/25, 15th ed. pp. 1–16 · 13th ed. Ch. 1 (Development of Liability Based upon Fault)."
-  },
-  {
    "type": "subsection",
    "title": "What tort law is for"
   },
@@ -185,10 +181,6 @@
    "title": "Intent",
    "style": "heading",
    "weeks": "WEEK 1"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 8/27, 15th ed. pp. 27–38; Module on Intent (due 9/1), pp. 38–45 · 13th ed. Ch. 2.A."
   },
   {
    "type": "callout",
@@ -319,10 +311,6 @@
    "title": "Battery and Assault",
    "style": "heading",
    "weeks": "WEEK 2"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 9/1, 15th ed. pp. 45–66 (with § 4) · 13th ed. Ch. 2.B–C."
   },
   {
    "type": "callout",
@@ -469,10 +457,6 @@
    "weeks": "WEEK 2"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 9/1, 15th ed. pp. 45–66 (with § 3) · 13th ed. Ch. 2.D."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "False imprisonment: R2d § 35",
@@ -573,10 +557,6 @@
    "title": "Intentional Infliction of Emotional Distress",
    "style": "heading",
    "weeks": "WEEK 2"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 9/3, 15th ed. pp. 66–79; Module on IIED (due 9/8), pp. 79–95 · 13th ed. Ch. 2.E."
   },
   {
    "type": "callout",
@@ -688,10 +668,6 @@
    "title": "Trespass to Land, Trespass to Chattels, and Conversion",
    "style": "heading",
    "weeks": "WEEK 3"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 9/8, 15th ed. pp. 97–114, and Bradley v. American Smelting (Canvas) · 13th ed. Ch. 2.F–H."
   },
   {
    "type": "callout",
@@ -884,10 +860,6 @@
    "weeks": "WEEK 3"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 9/10, Module on Consent (due 9/15), 15th ed. pp. 137–140, 145–156 · 13th ed. Ch. 3.A."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "When consent is a defense",
@@ -997,10 +969,6 @@
    "weeks": "WEEK 3"
   },
   {
-   "type": "p",
-   "text": "**Reading:** Module on Privileges (due 9/15), 15th ed. pp. 140–145, 162–166 · 13th ed. Ch. 3.B–C."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "Self-defense: R2d §§ 63–65",
@@ -1056,10 +1024,6 @@
    "title": "Defense and Recovery of Property; the Shopkeeper's Privilege",
    "style": "heading",
    "weeks": "WEEK 4"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 9/15, 15th ed. pp. 167–187 · 13th ed. Ch. 3.D–E."
   },
   {
    "type": "callout",
@@ -1162,10 +1126,6 @@
    "title": "Necessity and Discipline",
    "style": "heading",
    "weeks": "WEEK 4"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 9/15, 15th ed. pp. 167–187, 190–192 · 13th ed. Ch. 3.F–H."
   },
   {
    "type": "table",
@@ -1295,10 +1255,6 @@
    "weeks": "WEEKS 4–5"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 9/17 (hour 2), 15th ed. pp. 193–205; 9/22 (hour 2), pp. 205–218 · 13th ed. Ch. 4.A–B."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "The prima facie case for negligence",
@@ -1415,10 +1371,6 @@
    "title": "The Reasonable Person",
    "style": "heading",
    "weeks": "WEEK 5"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** Module on Standard of Care (due 9/24), 15th ed. pp. 218–227; 9/24, pp. 227–235, 240–245 · 13th ed. Ch. 4.B–C."
   },
   {
    "type": "callout",
@@ -1581,10 +1533,6 @@
    "weeks": "WEEK 6"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 9/29, 15th ed. pp. 245–275 · 13th ed. Ch. 4.C."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "The professional standard",
@@ -1735,10 +1683,6 @@
    "title": "Judge and Jury; Negligence Per Se",
    "style": "heading",
    "weeks": "WEEK 6"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** Module on Alternative Standards of Care (due 10/1), 15th ed. pp. 278–293; 10/1 (hour 1), pp. 293–303 · 13th ed. Ch. 4.D–E."
   },
   {
    "type": "subsection",
@@ -1917,10 +1861,6 @@
    "weeks": "WEEK 7"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 10/6, 15th ed. pp. 303–321, and McDougald v. Perry (Canvas) · 13th ed. Ch. 4.F."
-  },
-  {
    "type": "list",
    "items": [
     "**Burden:** the plaintiff must prove each element by a preponderance of the evidence. Circumstantial evidence is enough if it permits a reasonable inference that the defendant was negligent, and not just a guess.",
@@ -1999,10 +1939,6 @@
    "title": "Res Ipsa Loquitur",
    "style": "heading",
    "weeks": "WEEK 7"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** Module on Res Ipsa / Factual Causation (due 10/8), 15th ed. pp. 325–326, 330–335, 337–340, and Ybarra v. Spangard (Canvas) · 13th ed. Ch. 4.G."
   },
   {
    "type": "callout",
@@ -2158,10 +2094,6 @@
    "weeks": "WEEKS 7–8"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 10/8 (hour 1), 15th ed. pp. 340–344, and Gentry v. Douglas Hereford Ranch (Canvas); Module on Concurrent Causes (due 10/15), pp. 345–349, 356–366 · 13th ed. Ch. 5.A."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "But-for causation: R2d § 432(1); R3d § 26",
@@ -2272,10 +2204,6 @@
    "title": "Multiple and Indeterminate Causes",
    "style": "heading",
    "weeks": "WEEK 8"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** Module on Concurrent Causes (due 10/15), 15th ed. pp. 345–349, 356–366; 10/13 (hour 1), pp. 366–384 · 13th ed. Ch. 5.B–C."
   },
   {
    "type": "table",
@@ -2394,10 +2322,6 @@
    "title": "Proximate Cause: Unforeseeable Plaintiffs and Consequences",
    "style": "heading",
    "weeks": "WEEK 8"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 10/15, 15th ed. pp. 395–423, 428–433 · 13th ed. Ch. 6.A–B."
   },
   {
    "type": "p",
@@ -2562,10 +2486,6 @@
    "weeks": "WEEK 9"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 10/20 (hour 1), 15th ed. pp. 434–444; Module on Proximate Cause (due 10/22), pp. 449–454, 532–535; 10/22, pp. 458–462 · 13th ed. Ch. 6.C."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "Superseding cause: R2d §§ 440–453; R3d § 34",
@@ -2694,10 +2614,6 @@
    "title": "Duty and the Failure to Act",
    "style": "heading",
    "weeks": "WEEK 9"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 10/22, 15th ed. pp. 458–462, 526–527 (note 10), 553–555, 565–570; Proximate Cause module pp. 532–535 · 13th ed. Ch. 8.A–B."
   },
   {
    "type": "list",
@@ -2857,10 +2773,6 @@
    "weeks": "WEEK 10"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 10/27, 15th ed. pp. 749–765 · 13th ed. Ch. 12.A."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "Contributory negligence",
@@ -2984,10 +2896,6 @@
    "title": "Assumption of Risk",
    "style": "heading",
    "weeks": "WEEK 10"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** Module on Assumption of Risk (due 10/29), 15th ed. pp. 765–771; 10/29 (hour 1), pp. 772–789 · 13th ed. Ch. 12.B."
   },
   {
    "type": "table",
@@ -3120,10 +3028,6 @@
    "weeks": "WEEK 11"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 11/3, 15th ed. pp. 789–806 · 13th ed. Ch. 12.C."
-  },
-  {
    "type": "list",
    "items": [
     "**Statute of limitations:** a claim must be filed within a set time after it accrues, typically 1–3 years for personal injury. It is an affirmative defense.",
@@ -3188,10 +3092,6 @@
      "text": "**Government (§§ 9–10):** a state is immune unless it consents to suit or abrogates its immunity. Even when it consents, and always for local governments, immunity remains for acts or omissions that (any one suffices) (1) are specifically immunized by statute; (2) are the exercise of a judicial or legislative function; or (3) are the exercise of an administrative function involving the discretionary determination of important governmental policy."
     }
    ]
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 11/3, 15th ed. pp. 789–806, 818–825 · 13th ed. Ch. 12.D."
   },
   {
    "type": "subsection",
@@ -3338,10 +3238,6 @@
    "title": "Owners and Occupiers of Land",
    "style": "heading",
    "weeks": "WEEK 11"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** Module on Premises Liability (due 11/5), 15th ed. pp. 631–648 · 13th ed. Ch. 9."
   },
   {
    "type": "subsection",
@@ -3537,10 +3433,6 @@
    "weeks": "WEEK 12"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 11/10, 15th ed. pp. 669–681, 691–698, skim 681–691 and 698–700, and Zimmerman v. Ausland (Canvas) · 13th ed. Ch. 10.A–B."
-  },
-  {
    "type": "table",
    "header": [
     "Kind",
@@ -3683,10 +3575,6 @@
    "weeks": "WEEK 12"
   },
   {
-   "type": "p",
-   "text": "**Reading:** Module on Punitive Damages (due 11/12), 15th ed. pp. 700–717 · 13th ed. Ch. 10.C."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "When punitive damages are available",
@@ -3760,10 +3648,6 @@
    "title": "Joint and Several Liability, Satisfaction, Release, and Settlement",
    "style": "heading",
    "weeks": "WEEKS 12–13"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 11/12 (hour 1), 15th ed. pp. 463–476; Module on Joint and Several Liability (due 11/17), pp. 476–484, 489–492 · 13th ed. Ch. 7.A–B."
   },
   {
    "type": "callout",
@@ -3921,10 +3805,6 @@
    "weeks": "WEEK 13"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 11/17 (hour 1), 15th ed. pp. 492–498 · 13th ed. Ch. 7.C–D."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "Contribution",
@@ -4044,10 +3924,6 @@
    "title": "Vicarious Liability",
    "style": "heading",
    "weeks": "WEEK 13"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** Module on Vicarious Liability (due 11/19), 15th ed. pp. 843–853; 11/19 (hour 1), pp. 853–856, skim 866–868 · 13th ed. Ch. 13."
   },
   {
    "type": "callout",
@@ -4214,10 +4090,6 @@
    "weeks": "WEEKS 13–14"
   },
   {
-   "type": "p",
-   "text": "**Reading:** 11/19 (hour 1), 15th ed. pp. 883–897; 11/24 (hour 1), pp. 897–913 · 13th ed. Ch. 14."
-  },
-  {
    "type": "subsection",
    "title": "Animals"
   },
@@ -4371,10 +4243,6 @@
    "weeks": "WEEK 15"
   },
   {
-   "type": "p",
-   "text": "**Reading:** Module on Private Nuisance (due 12/3), reading materials on Canvas. This section uses the 13th ed. Ch. 16 instead."
-  },
-  {
    "type": "callout",
    "kind": "RULE",
    "title": "Private nuisance: R2d §§ 821D, 822",
@@ -4466,10 +4334,6 @@
    "title": "Public Nuisance and Nuisance Remedies",
    "style": "heading",
    "weeks": "WEEK 15"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** Module on Public Nuisance (due 12/3), reading materials on Canvas. This section uses the 13th ed. Ch. 16 instead."
   },
   {
    "type": "callout",
@@ -4582,10 +4446,6 @@
    "title": "Review Tables for the Final",
    "style": "heading",
    "weeks": "WEEK 15"
-  },
-  {
-   "type": "p",
-   "text": "**Reading:** 12/3 (hour 1), exam review session. Final exam Wednesday, Dec. 16, 1:00 PM."
   },
   {
    "type": "subsection",
