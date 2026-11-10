@@ -31,14 +31,10 @@
       "questions": 110,
       "order": 2
     },
-    "First_Amendment_Drill.html": {
-      "slug": "first-amendment-drill",
-      "title": "First Amendment Quick Drill",
-      "type": "practice",
-      "description": "264 multiple-choice questions on every case and concept in the outline. They test what each case held, hypotheticals built on its facts, and how the doctrine applies. Filter by chapter or question type, shuffle the answers, and review only the ones you missed.",
-      "tags": ["First Amendment", "MCQ", "Chapters 1–6"],
-      "questions": 264,
-      "order": 3
+    "First_Amendment_Bar_Exam_Questions.mcq.json": {
+      "slug": "first-amendment-bar-exam-questions",
+      "tags": ["First Amendment", "MCQ", "bar prep", "practice final", "Religion Clauses", "free speech", "Weeks 1–15", "Chapters 1–13"],
+      "order": 2.5
     },
     "First_Amendment_Flowcharts.html": {
       "slug": "first-amendment-flowcharts",
@@ -47,15 +43,6 @@
       "description": "Interactive decision charts for Chapters 1–6. A big-picture map shows how the Religion Clauses and the speech doctrines fit together, and eight charts walk through coercion, Free Exercise, the Establishment Clause and funding, the speech framework, incitement and fighting words, prior restraints, true threats and speech integral to crime, and immoral speech. Tap any box for a plain-English explanation, the cases behind it, and what to watch out for.",
       "tags": ["First Amendment", "interactive", "Religion Clauses", "free speech", "Chapters 1–6"],
       "order": 2
-    },
-    "First_Amendment_Case_Files.html": {
-      "slug": "first-amendment-case-files",
-      "title": "First Amendment BAR style questions 1",
-      "type": "practice",
-      "description": "Bar-style application questions for Weeks 1–6 (Chapters 1–6). Each question sets out new facts, from compelled pledges and school prayer to protest livestreams, chatbot lawsuits, and age-verification laws, and asks you to apply the doctrine. Every answer choice has its own explanation. Includes one-fact variations and a coverage map of all 113 outline items.",
-      "tags": ["First Amendment", "MCQ", "application", "bar prep", "Chapters 1–6"],
-      "questions": 115,
-      "order": 4
     },
     "First_Amendment_Case_Flash_Cards.html": {
       "slug": "first-amendment-case-flash-cards",
@@ -72,33 +59,6 @@
       "description": "32 flashcards on the core concepts of Chapters 1–6. Covers the Free Exercise and speech checklists, the ways a law fails neutrality, Establishment Clause funding, RFRA, the unprotected categories, overbreadth and vagueness, prior restraints, mens rea, the Miller test, and protecting kids versus adults.",
       "tags": ["First Amendment", "flashcards", "doctrine", "Chapters 1–6"],
       "order": 6
-    },
-    "First_Amendment_Mock_Exam.html": {
-      "slug": "first-amendment-mock-exam",
-      "title": "First Amendment Mock Exam",
-      "type": "practice",
-      "description": "A timed practice exam covering everything in Chapters 1–6: 60 bar-style questions with new facts, in four 15-question parts that each cover every topic at two minutes a question. Answers stay hidden until you submit. Then you get your score by topic, the rules to review, and an explanation for every choice.",
-      "tags": ["First Amendment", "MCQ", "mock exam", "timed", "bar prep", "Chapters 1–6"],
-      "questions": 60,
-      "order": 7
-    },
-    "First_Amendment_Case_Repetition.html": {
-      "slug": "first-amendment-case-repetition",
-      "title": "First Amendment Case Repetition",
-      "type": "practice",
-      "description": "349 quick questions for Chapters 1–6. 236 drill all 34 cases by their full names: name the case from its facts, its rule, or a key line, then recall its holding, its reasoning, and the cases it overruled or set up. 113 more drill the core concepts and elements across 23 topics, from strict scrutiny and the ways a law fails neutrality to the Brandenburg elements, Counterman’s recklessness standard, and the Miller prongs. Every question carries an illustration; when the picture would give the answer away, it stays blurred until you answer. Filter by chapter, question type, or a single case or topic.",
-      "tags": ["First Amendment", "MCQ", "cases", "concepts", "repetition", "Chapters 1–6"],
-      "questions": 349,
-      "order": 8
-    },
-    "First_Amendment_Case_Repetition_Vol_2.html": {
-      "slug": "first-amendment-case-repetition-vol-2",
-      "title": "First Amendment Case Repetition, Volume 2",
-      "type": "practice",
-      "description": "239 new questions on the same 34 cases and 23 topics as Volume 1, asked from different angles. Name each case from a new detail, then recall its holding, its reasoning, and the doctrine around it, plus 45 questions on core concepts and elements. 58 application questions put the rules to new fact patterns and explain why every wrong choice is wrong. Every question carries an illustration; when the picture would give the answer away, it stays blurred until you answer. Filter by chapter, question type, or a single case or topic.",
-      "tags": ["First Amendment", "MCQ", "cases", "concepts", "application", "repetition", "Chapters 1–6"],
-      "questions": 239,
-      "order": 9
     },
     "First_Amendment_Essay_Questions.html": {
       "slug": "first-amendment-essay-questions",
