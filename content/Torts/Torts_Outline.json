@@ -6,9 +6,7 @@
   "title": "Torts",
   "subtitle": "Condensed Exam Outline · Weeks 1–15",
   "meta": [
-   "Torts (40018 / 40041) · Prof. Stephen Johnson · Wilmington University School of Law · Fall 2026",
-   "Prosser, Wade & Schwartz, Torts: Cases and Materials. The syllabus assigns the 15th ed. (2024); this outline follows the 13th ed. (2015), Chs. 1–10, 12–14, and 16, plus the Canvas cases and the Restatement (Third) of Torts: Miscellaneous Provisions (2024)",
-   "Final exam: Wednesday, Dec. 16, 1:00 PM · 180 minutes · closed-book short essay, 30 closed-book multiple-choice questions, and an open-book essay (75% of the grade)"
+   "Torts (40018 / 40041) · Prof. Stephen Johnson · Wilmington University School of Law · Fall 2026"
   ],
   "style": "box"
  },
@@ -16,13 +14,10 @@
   {
    "type": "callout",
    "kind": "KEY",
-   "title": "How to read this outline",
+   "title": "Labels and cites",
    "body": [
-    "**MAIN CASE**: a principal case in the 13th edition that falls within the topics and pages the syllabus assigns.",
-    "**NOTE CASE**: a principal case from the 13th-ed. chapter whose pages the syllabus skips or only says to skim. It is included for context.",
-    "**Editions.** The syllabus assigns Prosser, Wade & Schwartz, *Torts: Cases and Materials* (15th ed. 2024) and gives its page numbers. This outline follows the 13th edition (2015). Each section lists the syllabus pages (15th ed.) and the matching 13th-ed. chapter. The two editions number their pages differently, so look up a reading by chapter and case name. A 15th-ed. case that the 13th ed. lacks is not covered here.",
-    "**Canvas readings.** The five cases posted on Canvas (Bradley v. American Smelting, McDougald v. Perry, Ybarra v. Spangard, Gentry v. Douglas Hereford Ranch, Zimmerman v. Ausland) have full case cards, briefed from the opinions; their Source line says \"Canvas reading.\" The Week 15 nuisance materials on Canvas are not in the course folder, so §§ 33–34 use the 13th edition's nuisance chapter (Ch. 16).",
-    "**Cites:** R2d § 13 means Restatement (Second) of Torts § 13; R3d is the Restatement (Third) of Torts (Liability for Physical and Emotional Harm unless noted). R3d Misc. Prov. is the Restatement (Third) of Torts: Miscellaneous Provisions (Tentative Draft No. 3, 2024) in the course folder; its boxes say \"approved\" for sections the ALI membership adopted (2022–2023) and \"T.D. 3, draft\" for sections still in draft. [[Gray italic text]] comes from outside the class materials, such as Delaware law and later cases. Verify it before relying on it."
+    "**MAIN CASE**: a principal case in the assigned reading. **NOTE CASE**: a principal case from the same chapter, included for context.",
+    "**Cites:** R2d § 13 means Restatement (Second) of Torts § 13; R3d is the Restatement (Third) of Torts (Liability for Physical and Emotional Harm unless noted). R3d Misc. Prov. is the Restatement (Third) of Torts: Miscellaneous Provisions (Tentative Draft No. 3, 2024); its boxes say \"approved\" for sections the ALI membership adopted (2022–2023) and \"T.D. 3, draft\" for sections still in draft. The Restatement supplement has the text of each, with the Comments for the T.D. 3 sections. [[Gray italic text]] comes from outside the class materials, such as Delaware law and later cases. Verify it before relying on it."
    ]
   },
   {
@@ -42,150 +37,6 @@
       "**Prima facie case.** Run the elements one at a time, using the labels in the rule boxes. Name the element that is weakest on the facts.",
       "**Defenses and privileges.** Consent, self-defense, necessity, comparative fault, assumption of risk, limitations, and immunity.",
       "**Remedy and allocation.** Compensatory and punitive damages, joint and several liability, contribution, and indemnity."
-     ]
-    }
-   ]
-  },
-  {
-   "type": "subsection",
-   "title": "Reading map: the syllabus and the 13th edition"
-  },
-  {
-   "type": "table",
-   "header": [
-    "Week",
-    "Syllabus reading (15th ed.)",
-    "Topic",
-    "13th ed. chapter and principal cases",
-    "Outline"
-   ],
-   "rows": [
-    [
-     "1",
-     "8/25: 1–16; 8/27: 27–38; Intent module 38–45",
-     "Fault; intent",
-     "Ch. 1 (Hulle, Weaver, Brown v. Kendall, Cohen, Spano); Ch. 2.A (Garratt, Wagner, Ranson, McGuire, Talmage)",
-     "§§ 1–2"
-    ],
-    [
-     "2",
-     "9/1: 45–66; 9/3: 66–79; IIED module 79–95",
-     "Battery, assault, false imprisonment, IIED",
-     "Ch. 2.B–E (Cole, Wallace, Fisher, I de S, Western Union, Big Town, Parvi, Hardy, Enright, Whittaker, Siliznoff, Slocum, Harris, Taylor)",
-     "§§ 3–5"
-    ],
-    [
-     "3",
-     "9/8: 97–114 + Bradley (Canvas); Consent module 137–140, 145–156; Privileges module 140–145, 162–166",
-     "Trespass to land and chattels; consent; self-defense; defense of others",
-     "Ch. 2.F–H (Dougherty, Herrin, Rogers, Glidden, CompuServe); Ch. 3.A–C (O'Brien, Hackbart, Mohr, De May)",
-     "§§ 6–8"
-    ],
-    [
-     "4",
-     "9/15: 167–187, 190–192; 9/17: practice exam; 193–205",
-     "Defense and recovery of property; necessity; discipline; negligence introduced",
-     "Ch. 3.D–H (Katko, Hodgeden, Bonkowski, Surocco, Vincent, Sindle); Ch. 4.A–B (Lubitz, Blyth, Pipher, Krayenbuhl, Davison)",
-     "§§ 9–11"
-    ],
-    [
-     "5",
-     "9/22: MC exam; 205–218; Standard of Care module 218–227; 9/24: 227–235, 240–245",
-     "Risk-utility; the reasonable person",
-     "Ch. 4.B–C (Carroll Towing, Vaughan, Delair, Trimarco, Cordas, Roberts, Robinson, Breunig)",
-     "§§ 11–12"
-    ],
-    [
-     "6",
-     "9/29: 245–275; Alternative Standards module 278–293; 10/1: 293–303",
-     "Professionals; judge and jury; negligence per se",
-     "Ch. 4.C–E (Heath, Hodges, Boyce, Morrison, Scott, Moore; Pokora; Osborne, Stachniewicz, Ney, Perry, Martin, Zeni)",
-     "§§ 13–14"
-    ],
-    [
-     "7",
-     "10/6: 303–321 + McDougald (Canvas); Res Ipsa module 325–326, 330–335, 337–340 + Ybarra (Canvas); 10/8: 340–344 + Gentry (Canvas)",
-     "Proof of negligence; res ipsa; cause in fact",
-     "Ch. 4.F–G (Goddard, Anjou, Joye, Ortega, Jasko, H.E. Butt, Byrne, Larson, Cruz, James, Sullivan); Ch. 5.A (Perkins, Reynolds)",
-     "§§ 15–17"
-    ],
-    [
-     "8",
-     "Concurrent Causes module 345–349, 356–366; 10/13: 366–384; 10/15: 395–423, 428–433",
-     "Proof of causation; multiple causes; proximate cause",
-     "Ch. 5.A–C (Kramer, Herskovits, Hill, Anderson, Summers, Sindell); Ch. 6.A–B (Daniels, Ryan, Bartolone, Polemis, Wagon Mounds, Palsgraf, Yun)",
-     "§§ 17–19"
-    ],
-    [
-     "9",
-     "10/20: 434–444; Proximate Cause module 449–454, 532–535; 10/22: 458–462, 526–527 n.10, 553–555, 565–570",
-     "Intervening causes; duty; failure to act",
-     "Ch. 6.C (Derdiarian, Watson, Fuller, McCoy, Kelly, Enright); Ch. 8.A–B (MacPherson, Moch, Clagett, Peterson, Hegel, Ayres, J.S., Tarasoff)",
-     "§§ 20–21"
-    ],
-    [
-     "10",
-     "10/27: short essay exam; 749–765; Assumption of Risk module 765–771; 10/29: 772–789",
-     "Contributory and comparative negligence; assumption of risk",
-     "Ch. 12.A–B (Butterfield, Davies, McIntyre, Seigneur, Rush, Blackburn)",
-     "§§ 22–23"
-    ],
-    [
-     "11",
-     "11/3: 789–806, 818–825; Premises module 631–648; 11/5: practice exam",
-     "Limitations; immunities; premises liability",
-     "Ch. 12.C–D (Teeters, Freehe, Zellmer, Abernathy, Clarke, Riss, DeLong, Deuser); Ch. 9 (Taylor, Salevan, Sheehan, Barmore, Campbell, Whelan, Rowland)",
-     "§§ 24–26"
-    ],
-    [
-     "12",
-     "11/10: 669–681, 691–698, skim 681–691, 698–700 + Zimmerman (Canvas); Punitive module 700–717; 11/12: 463–476",
-     "Damages; joint and several liability",
-     "Ch. 10 (Anderson v. Sears, Richardson, Montgomery Ward, Cheatham, State Farm, Exxon); Ch. 7.A (Bierczynski, Coney, Bartlett)",
-     "§§ 27–29"
-    ],
-    [
-     "13",
-     "J&S module 476–484, 489–492; 11/17: 492–498; Vicarious module 843–853; 11/19: 853–856, 883–897, skim 866–868",
-     "Joint and several liability; contribution; vicarious liability; strict liability",
-     "Ch. 7.B–D (Bundt, Cox, Elbaor, Knell, Dreslin, Slocum, Bruckman); Ch. 13 (Bussard, O'Shea, Murrell, Maloney, Popejoy, Malchose, Smalich); Ch. 14 (Rylands, Miller)",
-     "§§ 29–32"
-    ],
-    [
-     "14",
-     "11/24: 897–913; 11/26 Thanksgiving",
-     "Strict liability",
-     "Ch. 14 (Indiana Harbor, Foster, Golden, Sandy)",
-     "§ 32"
-    ],
-    [
-     "15",
-     "Private and Public Nuisance modules due 12/3 (Canvas readings); 12/3: exam review",
-     "Private and public nuisance",
-     "Ch. 16 (Philadelphia Electric, Morgan, Carpenter, Boomer, Spur)",
-     "§§ 33–35"
-    ]
-   ],
-   "widths": [
-    0.06,
-    0.27,
-    0.19,
-    0.38,
-    0.1
-   ]
-  },
-  {
-   "type": "callout",
-   "kind": "NOTE",
-   "title": "Assessments (syllabus)",
-   "body": [
-    {
-     "type": "list",
-     "items": [
-      "**Week 5 (9/22):** 30-minute closed-book multiple-choice exam, 15 questions (15%). It covers the intentional torts and privileges (§§ 1–10).",
-      "**Week 10 (10/27):** 30-minute closed-book short essay (10%), covering negligence through duty (§§ 11–21).",
-      "**Final (Wed. 12/16, 1:00 PM, 180 minutes, 75%), in three parts:** (1) a closed-book short essay (30 min); (2) 30 closed-book multiple-choice questions (60 min); and (3) an open-book essay (90 min).",
-      "**Modules:** you need 70 of 100 points to pass the course. Each module has readings, 2–3 videos, and 2 CALI exercises. CALI exercises, practice exams, and the introduction video are required even though they are ungraded."
      ]
     }
    ]

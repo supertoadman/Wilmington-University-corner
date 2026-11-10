@@ -22,7 +22,10 @@
       xref: /((?<=\bRules?\s)\d{1,2}(?:\.\d)?(?![\d.]\d|\d)|(?<=§§?\s?)\d{3,5}[a-z]?)/ },
     restatement: { label: (id) => `§ ${id}`, unit: 'section', example: '90',
       cite: (v) => { const m = v.match(/^(?:restatement\s*)?(?:§+\s*|sec(?:tion)?\.?\s*)?(\d{1,4}(?:\.\d{0,3})?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
-      xref: /((?<=§§?\s?|\bSections?\s)\d{1,4}(?:\.\d{1,3})?(?![\d.\-‑–]\d|\d))/ },
+      xref: /((?<=§§?\s?|\bSections?\s)\d{1,4}(?:\.\d{1,3})?(?![\d.\-‑–]\d|\d))/,
+      // A cite right after another work's name ("Restatement Second, Torts § 7", "Id. § 6",
+      // "UNIF. TRADE SECRETS ACT § 6") is to that work.
+      foreign: /(?:\bRestatement(?:,| of| First| Second| Third)(?:[^;§.]|\.(?!\s)|(?<=\b(?:No|Ed|ed|Vol))\.\s){0,120}|\b[Ii]d\.,?\s*|\b[A-Z]{2,}\.?\s+)§§?\s?$/ },
     section: { label: (id) => `§ ${id}`, unit: 'section', example: '12-345',
       cite: (v) => { const m = v.match(/^(?:§+\s*|sec(?:tion)?\.?\s*)?(\d[\w.\-]*?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
       xref: /((?<=§§?\s?|\bSections?\s)\d{1,5}[A-Za-z]?(?:[.\-]\d{1,5}[A-Za-z]?)*)/ },
@@ -30,7 +33,8 @@
   const style = STYLE[SUPP.cite] || STYLE.ucc;
   const unit = SUPP.unit || style.unit;
   const units = (n) => `${n} ${n === 1 ? unit : SUPP.units || `${unit}s`}`;
-  const label = (s) => style.label(s.s);
+  // An entry may carry its own label ("n"), for a section the cite style can't number.
+  const label = (s) => s.n || style.label(s.s);
 
   const $ = (s) => document.querySelector(s);
   const list = $('#list'), toc = $('#toc'), q = $('#q'), topicSel = $('#topic'), jump = $('#jump'), count = $('#count');
@@ -85,10 +89,13 @@
   // Escape, highlight search terms, and turn cites of other sections into links to their cards.
   let markRe = null;
   function fmt(text, self) {
-    return String(text).split(style.xref).map((p, i) => {
+    // An entry with its own label ("n") numbers its sections apart from the rest, so its cites stay plain.
+    const own = BY[self] && BY[self].n;
+    const parts = String(text).split(style.xref);
+    return parts.map((p, i) => {
       let h = esc(p);
       if (markRe) h = h.replace(markRe, '<mark>$&</mark>');
-      if (i % 2 === 1 && BY[p] && p !== self) return `<a class="xr" href="#s-${esc(p)}" data-go="${esc(p)}">${h}</a>`;
+      if (i % 2 === 1 && !own && BY[p] && p !== self && !(style.foreign && style.foreign.test(parts[i - 1]))) return `<a class="xr" href="#s-${esc(p)}" data-go="${esc(p)}">${h}</a>`;
       return h;
     }).join('');
   }
@@ -118,7 +125,10 @@
       if (hit) anyHit = true;
       const cls = ['cm', !n ? 'one' : String(n).length > 3 ? 'wide' : '', cited.has(String(n)) ? 'cited' : '', hit ? 'hit' : ''].filter(Boolean).join(' ');
       const tag = cited.has(String(n)) ? '<span class="tag" title="Cited in the outline or practice questions">Cited</span>' : '';
-      return `<li class="${cls}" id="s-${esc(s.s)}-c${esc(n)}">${n ? `<b>${esc(n)}</b>` : ''}<p>${fmt(t, s.s)}${tag}</p></li>`;
+      // A blank line in a comment starts a new paragraph (Illustrations, quoted text).
+      const paras = String(t).split(/\n\s*\n/);
+      const body = paras.length > 1 ? `<div>${paras.map((p, j) => `<p>${fmt(p, s.s)}${j === paras.length - 1 ? tag : ''}</p>`).join('')}</div>` : `<p>${fmt(t, s.s)}${tag}</p>`;
+      return `<li class="${cls}" id="s-${esc(s.s)}-c${esc(n)}">${n ? `<b>${esc(n)}</b>` : ''}${body}</li>`;
     }).join('');
     const open = openAll || anyHit;
     const citeNote = s.cc.length ? ` <span class="cit">· cited: ${s.cc.map((n) => (/^\d+$/.test(n) ? `cmt. ${n}` : esc(n))).join(', ')}</span>` : '';
@@ -154,7 +164,7 @@
         opts += `<optgroup label="${esc(partLabel(s.part))}">`;
         last = s.part;
       }
-      html += `<a href="#s-${esc(s.s)}" data-go="${esc(s.s)}"${someSkipped && s.tp.length ? ' class="course"' : ''}><span>${esc(s.s)}</span><span>${esc(s.t)}</span></a>`;
+      html += `<a href="#s-${esc(s.s)}" data-go="${esc(s.s)}"${someSkipped && s.tp.length ? ' class="course"' : ''}><span>${esc(s.n ? s.n.replace(/^§\s*/, '') : s.s)}</span><span>${esc(s.t)}</span></a>`;
       opts += `<option value="${esc(s.s)}">${esc(label(s))} ${esc(s.t.length > 48 ? `${s.t.slice(0, 46)}...` : s.t)}</option>`;
     }
     toc.innerHTML = html;

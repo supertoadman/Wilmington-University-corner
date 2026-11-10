@@ -4,7 +4,7 @@
   "icon": "scale",
   "accent": "#9a4a2a",
   "order": 8,
-  "refs": { "outline": "torts-outline" },
+  "refs": { "statutes": "torts-restatement", "outline": "torts-outline", "cite": "restatement" },
   "documents": {
     "Torts_Condensed_Outline.docx": {
       "slug": "torts-outline",
@@ -15,6 +15,14 @@
       "description": "Condensed exam outline of Weeks 1–15 on the Fall 2026 syllabus, in syllabus order. The syllabus assigns the 15th edition of Prosser, Wade & Schwartz; the outline follows the 13th edition and maps each reading to its 13th-ed. chapter and cases. Part I covers the move from strict liability to fault. Parts II and III cover intent, battery, assault, false imprisonment, IIED, trespass to land and chattels, conversion, and the privileges: consent, self-defense, defense of others and of property, recapture, the shopkeeper's privilege, necessity, and discipline. Parts IV and V cover the negligence case, the Hand formula, the reasonable person, professionals and informed consent, negligence per se, notice, and res ipsa loquitur. Part VI covers but-for and substantial-factor causation, lost chance, alternative and market share liability, proximate cause, and superseding causes. Part VII covers duty and the failure to act. Part VIII covers comparative fault, assumption of risk, limitations, and immunities. Parts IX through XIV cover premises liability, damages, joint and several liability and contribution, vicarious liability, strict liability, and nuisance, and Part XV has review tables for the final. Rule and tip boxes throughout, and a case card for each principal case in the assigned pages. The Canvas-only readings are not briefed.",
       "tags": ["torts", "Restatement (Second)", "negligence", "intentional torts", "outline", "Weeks 1–15"],
       "order": 1
+    },
+    "Restatement_Third_Torts.supplement.json": {
+      "slug": "torts-restatement",
+      "title": "Restatement (Third) of Torts: Miscellaneous Provisions",
+      "type": "document",
+      "description": "The Restatement (Third) of Torts: Miscellaneous Provisions sections the outline relies on, from Tentative Draft No. 3 (2024). Statutes of limitations and repose (§§ 1–16), aiding and abetting negligence, agreements to act negligently, the firefighter's rule, and liability for providing alcohol come with their black letter, Comments, and Illustrations. The Sections the ALI approved in 2022 come as black letter: apportionment (§§ 4 A–4 B and 27–37), immunities (§§ 1–10A), and loss of consortium (§§ 48 A–48 C). Search by word or section number, filter by outline topic, and open or close the Comments.",
+      "tags": ["torts", "Restatement (Third)", "statutes of limitations", "immunities", "apportionment", "reference"],
+      "order": 1.5
     },
     "Torts_Outline.json": {
       "publish": false,

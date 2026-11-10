@@ -64,6 +64,7 @@ The contract `supplementStatutes()` reads. The popup keeps `s`, `t`, `part`, `x`
 | Key | Type | Meaning |
 | --- | --- | --- |
 | `s` | string | The section or rule number, exactly as the cite style writes it: `"2-207"`, `"404"`, `"1.7"`, `"12"`, `"1332"`, `"90"`. Unique. This is what cites in questions are matched against, and the page anchor (`#s-2-207`). |
+| `n` | string | Optional label shown instead of the style's (`"§ __"`, `"Immunities § 6"`), for a section the cite style can't number: an unnumbered draft section, or one whose number another project in the same supplement already uses. Give it an `s` that isn't a number (`"imm-6"`, `"alcohol"`), so cites never link to it by mistake; `npm run check` doesn't warn about such an `s`. |
 | `t` | string | Its title: `"Additional Terms in Acceptance or Confirmation"`. |
 | `part` | string | The heading it is listed under: `"Article 2, Part 2 - Form, Formation and Readjustment of Contract"`, `"Article IV - Relevance and Its Limits"`. Consecutive entries with the same `part` form one group in the index. |
 | `am` | string | Amendment years: `"2003, 2022"`. |
@@ -102,7 +103,7 @@ Use one form for the whole supplement. Summarize long text in the statute's own 
 
 ### Comments: `c` and `cc`
 
-Comment numbers are strings (`"4"`), as printed; MRPC comments are numbered the same way (`"8"` for Comment [8]). Questions cite them as `§ 2-207 cmt. 4`, `§ 2-207, Comment 4` or `Rule 1.7, Comment [8]`: the popup opens the statute with its comments expanded and that comment marked. List in `cc` every comment a question or the outline relies on.
+Comment numbers are strings (`"4"`, or a Restatement's `"b"`), as printed; MRPC comments are numbered the same way (`"8"` for Comment [8]). Questions cite them as `§ 2-207 cmt. 4`, `§ 2-207, Comment 4` or `Rule 1.7, Comment [8]`: the popup opens the statute with its comments expanded and that comment marked. List in `cc` every comment a question or the outline relies on. A blank line (`\n\n`) in a comment's text starts a new paragraph on the page, for Illustrations and quoted text.
 
 ## Citation styles
 

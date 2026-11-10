@@ -89,6 +89,7 @@ button,select{cursor:pointer}
 .cm{display:grid;grid-template-columns:2.4em minmax(0,1fr);gap:10px;align-items:baseline;font-size:14.5px;padding:6px 8px;border-radius:6px}
 .cm>b{font-family:var(--mono);font-weight:500;font-size:12.5px;color:var(--muted);text-align:right}
 .cm p{margin:0}
+.cm>div>p+p{margin-top:8px}
 .cm.one{grid-template-columns:minmax(0,1fr)}
 .cm.cited{background:var(--accent-soft)}
 .cm.cited>b{color:var(--accent)}

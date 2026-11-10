@@ -77,7 +77,8 @@ export function normalizeSupplement(raw) {
     const s = str(r.s);
     if (!s) { errors.push(`${where}: no "s" (section or rule number)`); return; }
     if (ids.has(s)) { errors.push(`${where}: duplicate "s"`); return; }
-    if (!ID_PATTERNS[cite].test(s)) warnings.push(`${where}: "${s}" doesn't look like a ${cite} number, so cites to it won't link`);
+    // An entry with its own label ("n") is one the cite style can't number, so it isn't cited by number.
+    if (!str(r.n) && !ID_PATTERNS[cite].test(s)) warnings.push(`${where}: "${s}" doesn't look like a ${cite} number, so cites to it won't link`);
     const t = str(r.t);
     if (!t) { errors.push(`${where}: no "t" (title)`); return; }
     const x = Array.isArray(r.x) ? r.x.filter((p) => Array.isArray(p) && p.length >= 2 && p.length <= 3).map((p) => (p.length === 3 ? [str(p[0]), str(p[1]), str(p[2])] : [str(p[0]), str(p[1])])) : [];
@@ -89,7 +90,7 @@ export function normalizeSupplement(raw) {
     const tp = Array.isArray(r.tp) ? r.tp.filter((n) => Number.isInteger(n)) : [];
     for (const n of tp) if (n < 1 || n > areas.length) warnings.push(`${where}: topic ${n} isn't in "areas" (topics count from 1)`);
     if (!Array.isArray(r.tp)) warnings.push(`${where}: no "tp" (its topics); an empty list means the course skips it`);
-    const out = { s, t, part: str(r.part) };
+    const out = { s, ...(str(r.n) && { n: str(r.n) }), t, part: str(r.part) };
     if (!out.part) warnings.push(`${where}: no "part" (the heading it is listed under)`);
     if (str(r.am)) out.am = str(r.am);
     Object.assign(out, { x, c, cc, k: Array.isArray(r.k) ? r.k.map(str).filter(Boolean) : [] });
