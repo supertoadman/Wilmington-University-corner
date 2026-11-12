@@ -209,13 +209,15 @@
     }
     return loads.get(url);
   };
-  // Load an index once the page is idle, then link the cites in the cards that use it.
-  const later = window.requestIdleCallback || ((f) => setTimeout(f, 1200));
+  // Load an index once the page is idle (or after two seconds of a busy page), then link the cites
+  // in the cards that use it. A load that fails (a dropped connection) is tried again when the next
+  // card turns up, so one bad moment doesn't leave the rest of a test without links.
+  const later = window.requestIdleCallback ? (f) => requestIdleCallback(f, { timeout: 2000 }) : (f) => setTimeout(f, 1200);
   const queued = new Set();
   const preload = (url) => {
     if (queued.has(url)) return;
     queued.add(url);
-    later(() => load(url).then(() => scan(document.body)).catch(() => {}));
+    later(() => load(url).then(() => scan(document.body)).catch(() => setTimeout(() => queued.delete(url), 5000)));
   };
 
   // The index in use. Matching and the panel's views read it; use() switches it.
@@ -441,8 +443,13 @@
     let timer;
     input.oninput = () => { clearTimeout(timer); timer = setTimeout(search, 180); };
     panel.querySelector('form').onsubmit = (e) => { e.preventDefault(); clearTimeout(timer); search(); input.blur(); };
-    // Keys typed in the panel stay there, so a page's shortcuts (A–D to answer, F to flag) don't fire.
-    panel.addEventListener('keydown', (e) => { e.stopPropagation(); if (e.key === 'Escape') close(); });
+    // Keys typed into the search box stay there, so a page's shortcuts (A–D to answer, F to flag)
+    // don't fire while you type. Every other key goes on to the page: with the panel open, a test's
+    // own keys (← → to move between questions) still work.
+    panel.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') { e.stopPropagation(); close(); return; }
+      if (e.target.closest('input, textarea, select, [contenteditable]')) e.stopPropagation();
+    });
   }
   function search() {
     const q = input.value.trim();
@@ -462,10 +469,12 @@
     stack.push(view);
     // The question the panel was opened from, shown above every view until it is reopened.
     const card = from?.closest(CARD);
+    if (view.type === 'question' && view.card) view.sig = questionOf(view.card);
     if (fresh || card) setOrigin(card);
     syncTheme();
-    panel.hidden = false;
-    document.documentElement.classList.add('rx-open');
+    // Docking the panel narrows the page, so everything above the question reflows longer: keep
+    // what was clicked where it was on screen.
+    steady(from, () => { panel.hidden = false; document.documentElement.classList.add('rx-open'); });
     view.ix = ready.get(url);
     if (!view.ix) {
       title.textContent = 'References';
@@ -475,13 +484,44 @@
     }
     show();
     title.focus({ preventScroll: true });
-    // On a phone the sheet covers the bottom of the screen; keep the question text in the gap
-    // between it and whatever the page pins to the top (shuffle mode's header and score bar).
-    if (card && phone.matches) {
-      const stem = card.querySelector('.stem, .sq-stem') || card;
-      const cover = pinnedTop(), top = stem.getBoundingClientRect().top;
-      if (top < cover || top > panel.getBoundingClientRect().top - 80) scrollBy({ top: top - cover - 8, behavior: 'smooth' });
+    // On a phone the sheet covers the bottom of the screen. Keep what was tapped in the gap between
+    // it and whatever the page pins to the top (shuffle mode's header and score bar): the cite
+    // itself, so a cite in an explanation stays beside the text around it, or for Look up the
+    // question's text. Scroll only when it is out of that gap.
+    if (phone.matches && from?.isConnected && !panel.contains(from)) {
+      const look = from.closest('.rx-look');
+      const target = look ? card?.querySelector('.stem, .sq-stem') || card : from;
+      if (!target) return;
+      const cover = pinnedTop(), floor = innerHeight - panel.offsetHeight;
+      const r = target.getBoundingClientRect();
+      // A cite keeps a line or two of what leads up to it above it.
+      const lead = look ? 8 : Math.max(8, Math.min(56, (floor - cover) / 4));
+      if (r.top < cover || (look ? r.top : r.bottom) > floor - (look ? 80 : 8)) scrollBy({ top: r.top - cover - lead, behavior: 'smooth' });
     }
+  }
+  /**
+   * Runs change(), which docks or undocks the panel, then scrolls so `node` is back where it was on
+   * screen. A docked panel narrows the page, so the text above the question reflows longer (and
+   * shorter again on closing), and browsers don't hold the scroll still across that change: without
+   * this, the question you were reading jumps off the screen.
+   */
+  function steady(node, change) {
+    const at = node?.isConnected ? node.getBoundingClientRect().top : null;
+    change();
+    if (at == null || !node.isConnected) return;
+    const dy = node.getBoundingClientRect().top - at;
+    if (Math.abs(dy) < 1) return;
+    try { scrollBy({ top: dy, behavior: 'instant' }); } catch (e) { scrollBy(0, dy); }
+  }
+  /** What the reader is looking at beside the panel: the button that opened it, if that is on screen, else whatever is a third of the way down. */
+  function inView() {
+    const edge = phone.matches ? innerWidth : panel.getBoundingClientRect().left;
+    if (opener?.isConnected && !panel.contains(opener)) {
+      const r = opener.getBoundingClientRect();
+      if (r.bottom > 0 && r.top < innerHeight && r.right <= edge) return opener;
+    }
+    const n = document.elementFromPoint(Math.max(1, edge / 2), innerHeight / 3);
+    return n && n !== document.body && n !== document.documentElement && !panel.contains(n) ? n : null;
   }
   /** Bottom edge of the fixed or sticky bars at the top of the page, once they are stuck. */
   function pinnedTop() {
@@ -506,15 +546,43 @@
   }
   function close() {
     if (!panel || panel.hidden) return;
-    panel.hidden = true;
-    document.documentElement.classList.remove('rx-open');
+    steady(inView(), () => { panel.hidden = true; document.documentElement.classList.remove('rx-open'); });
     setOrigin(null);
     if (opener?.isConnected) opener.focus({ preventScroll: true });
     opener = null;
   }
 
+  /** What tells one question from another: its number and its text (which linking cites leaves as it was). */
+  const questionOf = (card) => `${card.querySelector('.num, .qn, .qnum, .sq-num, .qtitle')?.textContent.trim() || ''}\n${(card.querySelector('.stem, .sq-stem') || card).textContent.trim()}`;
+  /**
+   * The question view follows the page. When a test moves on (a one-at-a-time test replaces or
+   * refills its card), the panel shows the new question's references instead of the last one's;
+   * when the page redraws the same question (a list redraws a card once it is answered), the panel
+   * just keeps to the new card. Deeper in (a statute the question led to), Back shows the new question.
+   */
+  function follow() {
+    const view = stack[0];
+    if (!panel || panel.hidden || view?.type !== 'question' || !view.card) return;
+    let card = view.card;
+    if (!card.isConnected) {
+      const same = card.id ? document.getElementById(card.id) : null;
+      const all = document.querySelectorAll(CARD);
+      card = same?.matches(CARD) ? same : all.length === 1 ? all[0] : null;
+      if (!card) return;
+    }
+    const sig = questionOf(card);
+    if (card === view.card && sig === view.sig) return;
+    const ix = ready.get(urlFor(card));
+    if (!ix) return;
+    const moved = sig !== view.sig;
+    Object.assign(view, { card, sig, ix });
+    if (stack.length > 1) return;
+    if (moved) show(); else setOrigin(card);
+  }
+
   function show() {
     const view = stack.at(-1);
+    if (view.type === 'question') setOrigin(view.card);
     use(view.ix);
     back.hidden = stack.length < 2;
     input.placeholder = idx.statutes.length ? idx.style.hint : 'Search the outline';
@@ -938,6 +1006,7 @@
     scan(document.body);
     new MutationObserver((list) => {
       for (const m of list) for (const n of m.addedNodes) if (n.nodeType === 1 && !n.closest('.rx-panel')) scan(n);
+      follow();
     }).observe(document.body, { childList: true, subtree: true });
   };
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();

@@ -20,7 +20,7 @@
   --rx-w: clamp(340px, 36vw, 460px);
   /* Above the site's sticky header and phone tab bar, below its full-screen sheets. */
   position: fixed; z-index: 80; top: 0; right: 0; bottom: 0; width: var(--rx-w);
-  display: flex; flex-direction: column; background: var(--rx-bg); color: var(--rx-ink);
+  display: flex; flex-direction: column; gap: 0; background: var(--rx-bg); color: var(--rx-ink);
   box-shadow: var(--rx-shadow);
   font: 400 15px/1.55 var(--rx-sans); text-align: left; letter-spacing: normal;
   -webkit-font-smoothing: antialiased; color-scheme: light;
