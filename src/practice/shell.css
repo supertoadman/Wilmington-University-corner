@@ -112,6 +112,55 @@ button, select, input { font: inherit; color: inherit; }
 .sq-links a { color: var(--link); }
 @media (prefers-reduced-motion: reduce) { .shuffle-meter i { transition: none; } }
 
+/* ---------- Topic picker (src/assets/topic-picker.js; the same rules in styles.css and src/practice/shell.css) ---------- */
+.tp-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 0 6px 0 12px; border: 1.5px solid var(--accent); border-radius: 999px; background: var(--surface); color: var(--text); font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.tp-btn svg { width: 16px; height: 16px; flex: none; color: var(--accent-ink); }
+.tp-btn b { padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.tp-btn:hover:not(:disabled) { background: var(--accent-soft); }
+.tp-btn:disabled { opacity: .5; cursor: default; }
+.tp-btn[hidden] { display: none; }
+.tp-btn.tp-btn-on { border-color: var(--gold); background: var(--gold-soft); }
+.tp-btn.tp-btn-on b { background: var(--gold-ink); color: var(--surface); }
+.tp-note { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 14px 0 0; padding: 10px 12px 10px 14px; border-radius: var(--radius-sm); background: var(--gold-soft); color: var(--text); font-size: 14.5px; font-weight: 600; }
+.tp-note[hidden] { display: none; }
+.tp-note span { margin-right: auto; }
+.tp-note button { min-height: 34px; padding: 0 14px; border: 1px solid var(--gold); border-radius: 999px; background: var(--surface); color: var(--text); font-size: 13.5px; font-weight: 600; cursor: pointer; }
+.tp-note button:hover { background: var(--surface-2); }
+.tp-lock { overflow: hidden; }
+.tp-btn, .tp-close, .tp-q, .tp-go, .tp-note button { font-family: inherit; }
+.tp { width: min(560px, calc(100vw - 24px)); max-width: none; max-height: min(780px, calc(100vh - 24px)); max-height: min(780px, calc(100dvh - 24px)); padding: 0; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); box-shadow: 0 24px 64px rgba(0, 0, 0, .3); overflow: hidden; }
+.tp[open] { display: flex; flex-direction: column; }
+.tp:focus { outline: none; }
+.tp::backdrop { background: rgba(12, 16, 22, .55); }
+.tp-head { display: flex; align-items: center; gap: 12px; padding: 18px 16px 0 20px; }
+.tp-title { margin: 0 auto 0 0; font: 500 25px/1.2 var(--font-serif); letter-spacing: -.01em; }
+.tp-close { flex: none; width: 42px; height: 42px; display: grid; place-items: center; padding: 0; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text-2); cursor: pointer; }
+.tp-close:hover { background: var(--surface-2); color: var(--text); }
+.tp-close svg { width: 20px; height: 20px; }
+.tp-sub { margin: 0; padding: 4px 20px 0; color: var(--text-2); font-size: 15px; }
+.tp-quick { display: flex; gap: 10px; padding: 14px 20px; border-bottom: 1px solid var(--border); }
+.tp-q { flex: 1 1 0; min-height: 44px; border: 1px solid var(--border-strong); border-radius: 12px; background: var(--surface); color: var(--text); font-size: 15px; font-weight: 600; cursor: pointer; }
+.tp-q:hover:not(:disabled) { background: var(--surface-2); }
+.tp-q:disabled { opacity: .45; cursor: default; }
+.tp-list { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 12px 14px; display: grid; gap: 14px; align-content: start; }
+.tp-group { display: grid; gap: 6px; }
+.tp-group-title { margin: 0; padding: 0 6px; font: 600 12px/1.4 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); }
+.tp-row { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 14px 8px 12px; border: 1.5px solid var(--border); border-radius: 12px; cursor: pointer; user-select: none; -webkit-user-select: none; }
+.tp-row:hover { border-color: var(--border-strong); }
+.tp-row:has(input:checked) { border-color: color-mix(in srgb, var(--accent) 50%, transparent); background: var(--accent-soft); }
+.tp-row input { flex: none; width: 24px; height: 24px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.tp-name { flex: 1 1 auto; min-width: 0; font-size: 15.5px; line-height: 1.35; }
+.tp-row:has(input:not(:checked)) .tp-name { color: var(--muted); text-decoration: line-through; }
+.tp-count { flex: none; color: var(--muted); font: 500 13px var(--font-mono); font-variant-numeric: tabular-nums; }
+.tp-foot { padding: 12px 16px 14px; padding-bottom: max(14px, env(safe-area-inset-bottom)); border-top: 1px solid var(--border); }
+.tp-go { width: 100%; min-height: 52px; border: 0; border-radius: 12px; background: var(--ink); color: var(--ink-fg); font-size: 16.5px; font-weight: 600; cursor: pointer; }
+.tp-go:hover:not(:disabled) { background: color-mix(in srgb, var(--ink) 86%, var(--gold)); }
+.tp-go:disabled { background: var(--surface-3); color: var(--muted); cursor: default; }
+@media (max-width: 560px) {
+  .tp { width: 100%; max-height: 92vh; max-height: 92dvh; margin: auto 0 0; border-radius: 20px 20px 0 0; border-bottom: 0; }
+  .tp-title { font-size: 22px; }
+}
+
 /* ---------- Shell-only: controls, exam groups, facts, flags, exam-mode picks ---------- */
 .shuffle-run { margin-top: 18px; }
 .sh-controls { padding: 2px 0 8px; } /* not sticky: only the score, actions and meter stay pinned */

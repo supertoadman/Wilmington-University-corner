@@ -5,13 +5,15 @@
 //   npm run check -- path/to/outline.json            (outline/v1 data for build-outline-docx.mjs)
 //   npm run check -- "content/Evidence/Evidence_Condensed_Outline.docx"
 //   npm run check -- path/to/Rules.supplement.json
+//   npm run check -- "content/Evidence/Evidence_Rules_Flashcards.cards.json"
 //
 // Practice sets (.mcq.json, or .html with an mcq-data block) are validated against mcq/v1, and their
 // citations are checked against the course's reference index: every statute cite, case name and
 // "Problem 4-3(b)" should link in the popup. The index comes from the last build
 // (dist/assets/refs/<subject>.json; run `npm run build` first) or from --refs <file>.
 // Outlines are built and read the way the site reads them, and the sections, case keys and worked
-// problems the popup will index are listed. Exit code 1 means errors.
+// problems the popup will index are listed. Flashcard decks (.cards.json, or .html with a cards-data
+// block) are validated against cards/v1. Exit code 1 means errors.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -19,6 +21,7 @@ import vm from 'node:vm';
 import { fileURLToPath } from 'node:url';
 import { readMcq, normalizeMcq } from '../lib/mcq.mjs';
 import { readSupplement, readSupplementPage, normalizeSupplement } from '../lib/supplement-shell.mjs';
+import { readCards, normalizeCards } from '../lib/cards.mjs';
 import { convertDocx } from '../lib/docx.mjs';
 import { refIndex } from '../lib/refs.mjs';
 import { slugify } from '../lib/text.mjs';
@@ -141,13 +144,19 @@ async function check(file, refsPath) {
     try { ({ html } = await convertDocx(buildOutlineDocx(json), { theme: 'structured', outsideColor: json.outsideColor })); } catch (e) { return report(file, { errors: [e.message] }); }
     return report(file, { notes: summarizeIndex(refIndex({ outlineHtml: html, links: {} })) });
   }
+  const cardsRaw = readCards(text);
+  if (cardsRaw) {
+    const { deck, errors, warnings } = normalizeCards(cardsRaw);
+    const per = deck.topics.map((t) => `  ${t}: ${deck.cards.filter((c) => c.topic === t).length}`);
+    return report(file, { errors, warnings, notes: [`cards: ${deck.cards.length} in ${deck.topics.length} topic${deck.topics.length === 1 ? '' : 's'}`, ...per] });
+  }
   const suppRaw = json && !Array.isArray(json.questions) ? readSupplement(text) : readSupplementPage(text);
   if (suppRaw) {
     const { data, errors, warnings } = normalizeSupplement(suppRaw);
     return report(file, { errors, warnings, notes: [`entries: ${data.length}`] });
   }
   const raw = readMcq(text);
-  if (!raw) return report(file, { errors: ['not an mcq/v1 set, supplement/v1 supplement, or outline/v1 outline (see docs/*-format.md)'] });
+  if (!raw) return report(file, { errors: ['not an mcq/v1 set, supplement/v1 supplement, cards/v1 deck, or outline/v1 outline (see docs/*-format.md)'] });
   const { set, errors, warnings } = normalizeMcq(raw);
   const notes = [`questions: ${set.questions.length} in ${set.exams.length || 1} exam${set.exams.length > 1 ? 's' : ''}, ${set.areas.length} topic areas`];
   const bias = answerLengthBias(set);
@@ -172,7 +181,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const at = args.indexOf('--refs');
   const refs = at >= 0 ? args.splice(at, 2)[1] : null;
   if (!args.length) {
-    console.error('Usage: npm run check -- <file.mcq.json | file.html | outline.json | outline.docx | file.supplement.json> [--refs dist/assets/refs/<subject>.json]');
+    console.error('Usage: npm run check -- <file.mcq.json | file.cards.json | file.html | outline.json | outline.docx | file.supplement.json> [--refs dist/assets/refs/<subject>.json]');
     process.exit(2);
   }
   let errors = 0;

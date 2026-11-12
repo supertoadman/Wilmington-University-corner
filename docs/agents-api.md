@@ -83,10 +83,12 @@ Agents that *write* outlines, statutory supplements or practice sets for the sit
 | `api/specs/outline-format.md` | Outline format (outline/v1): the Word structures the site turns into sections, callouts and case cards, and that the popup indexes |
 | `api/specs/supplement-format.md` | Supplement format (supplement/v1): the `AREAS`/`DATA` contract and the citation styles (`ucc`, `fre`, `mrpc`, `frcp`, `restatement`, `section`) |
 | `api/specs/mcq-format.md` | Practice set format (mcq/v1): the question schema, the writing standard, and the citation rules that make questions link |
-| `api/specs/ai-prompts.md` | Copy-paste prompts for generating each of the three |
+| `api/specs/cards-format.md` | Flashcard deck format (cards/v1): the card schema, how to write cards, and the study page it builds into |
+| `api/specs/ai-prompts.md` | Copy-paste prompts for generating each of the four |
 | `api/specs/mcq-shuffle-template.html` | The standalone practice page with a sample set (replace the JSON in its `mcq-data` block) |
 | `api/specs/supplement-template.html` | The standalone supplement viewer with sample data (replace its `SUPP`, `AREAS` and `DATA` lines) |
-| `api/specs/sample.mcq.json`, `sample.supplement.json`, `sample-outline.json`, `sample-outline.docx` | Samples of each format |
+| `api/specs/cards-template.html` | The standalone flashcard page with a sample deck (replace the JSON in its `cards-data` block) |
+| `api/specs/sample.mcq.json`, `sample.supplement.json`, `sample.cards.json`, `sample-outline.json`, `sample-outline.docx` | Samples of each format |
 
 The sources live in `docs/` and `docs/templates/` in the repository. Like the rest of this API, they are not linked from the public site or listed in the sitemap.
 

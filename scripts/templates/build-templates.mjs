@@ -4,9 +4,10 @@
 //
 //   docs/templates/sample.mcq.json        -> docs/templates/mcq-shuffle-template.html
 //   docs/templates/sample.supplement.json -> docs/templates/supplement-template.html
+//   docs/templates/sample.cards.json      -> docs/templates/cards-template.html
 //
-// Run `npm run templates` after changing src/practice/ or scripts/lib/practice-shell.mjs or
-// supplement-shell.mjs; tests/canonical-formats.test.mjs fails while a template is stale. The build
+// Run `npm run templates` after changing src/practice/ or scripts/lib/practice-shell.mjs,
+// supplement-shell.mjs or cards-shell.mjs; tests/canonical-formats.test.mjs fails while a template is stale. The build
 // also publishes these files (with the specs) under api/specs/, unlinked.
 
 import fs from 'node:fs';
@@ -15,6 +16,8 @@ import { fileURLToPath } from 'node:url';
 import { readMcq, normalizeMcq } from '../lib/mcq.mjs';
 import { renderPracticeShell } from '../lib/practice-shell.mjs';
 import { readSupplement, normalizeSupplement, renderSupplement } from '../lib/supplement-shell.mjs';
+import { readCards, normalizeCards } from '../lib/cards.mjs';
+import { renderCardsShell } from '../lib/cards-shell.mjs';
 
 const DIR = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'docs', 'templates');
 
@@ -37,16 +40,26 @@ To make a new supplement, do ONE of these:
      each one on a single line. The build re-renders the page from them.
 Then point subject.json "refs.statutes" at the supplement's slug.`;
 
-/** The two templates, as { file: html }. */
+const CARDS_NOTE = `cards/v1 flashcard deck: copyable template. Spec: docs/cards-format.md (also api/specs/cards-format.md).
+The whole deck is the JSON in the script element with id "cards-data", near the end of this file.
+To make a new deck, do ONE of these:
+  1. Save just that JSON as content/<Subject>/<Name>.cards.json (preferred), or
+  2. Copy this whole file to content/<Subject>/<Name>.html and replace only that JSON.
+The build re-renders the page from the JSON with the current page, so edit nothing else.
+Opened straight from disk, this file works offline as it is.`;
+
+/** The templates, as { file: html }. */
 export function renderTemplates() {
   const mcq = normalizeMcq(readMcq(fs.readFileSync(path.join(DIR, 'sample.mcq.json'), 'utf8')));
   const supp = normalizeSupplement(readSupplement(fs.readFileSync(path.join(DIR, 'sample.supplement.json'), 'utf8')));
-  for (const [name, r] of [['sample.mcq.json', mcq], ['sample.supplement.json', supp]]) {
+  const cards = normalizeCards(readCards(fs.readFileSync(path.join(DIR, 'sample.cards.json'), 'utf8')));
+  for (const [name, r] of [['sample.mcq.json', mcq], ['sample.supplement.json', supp], ['sample.cards.json', cards]]) {
     if (r.errors.length || r.warnings.length) throw new Error(`${name}: ${[...r.errors, ...r.warnings].join('; ')}`);
   }
   return {
     'mcq-shuffle-template.html': renderPracticeShell(mcq.set, { accent: '#3f6b4a', noindex: true, comment: MCQ_NOTE }),
     'supplement-template.html': renderSupplement(supp, { accent: '#3f6b4a', noindex: true, comment: SUPP_NOTE }),
+    'cards-template.html': renderCardsShell(cards.deck, { accent: '#2f6f8f', noindex: true, comment: CARDS_NOTE }),
   };
 }
 

@@ -6,6 +6,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { createHash } from 'node:crypto';
+import { topicsButton } from './assets/topic-picker.js';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 // Stamped on the stylesheet link so browsers fetch the new styles after each deploy
@@ -13,7 +14,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CSS_VERSION = createHash('sha1').update(fs.readFileSync(path.join(ROOT, 'src', 'assets', 'styles.css'))).digest('hex').slice(0, 10);
 // The same for the page scripts; app.js passes its version on to the scenery module it loads.
 const jsHash = createHash('sha1');
-for (const f of ['app.js', 'ambience.js', 'shuffle.js', 'answer-log.js', 'stats.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
+for (const f of ['app.js', 'ambience.js', 'shuffle.js', 'answer-log.js', 'stats.js', 'topic-picker.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
 const JS_VERSION = jsHash.digest('hex').slice(0, 10);
 // Crypt Survivors (/survivors/) loads its stylesheet and entry module with a version from all its files.
 const svHash = createHash('sha1');
@@ -302,7 +303,7 @@ const subjectStats = (s) => {
 function docCard(ctx, root, d, { showSubject = false } = {}) {
   const { TYPES, P } = ctx;
   const t = TYPES[d.type];
-  const meta = [d.format.label, fmtSize(d.size), d.questions ? `${d.questions} questions` : null, d.tracks ? plural(d.tracks.length, 'track') : null, d.contributor ? `Shared by ${d.contributor}` : null, `Updated ${fmtShortDate(d.updated)}`].filter(Boolean);
+  const meta = [d.format.label, fmtSize(d.size), d.questions ? `${d.questions} questions` : null, d.cards ? plural(d.cards, 'card') : null, d.tracks ? plural(d.tracks.length, 'track') : null, d.contributor ? `Shared by ${d.contributor}` : null, `Updated ${fmtShortDate(d.updated)}`].filter(Boolean);
   return `<article class="doc-card" style="--accent:${d.subject.accent}" data-doc data-id="${esc(d.id)}" data-subject="${esc(d.subject.slug)}" data-type="${esc(d.type)}" data-updated="${esc(d.updated)}" data-title="${esc(d.title)}">
   <div class="doc-card-art" aria-hidden="true"><span class="medal">${icon(t.icon)}</span></div>
   <div class="doc-card-body">
@@ -322,7 +323,7 @@ function docRow(ctx, root, d, extra = '') {
   const t = ctx.TYPES[d.type];
   return `<li><a class="doc-row" href="${root}${ctx.P.doc(d)}" style="--accent:${d.subject.accent}"${extra}>
     <span class="tile">${icon(t.icon)}</span>
-    <span class="doc-row-text"><strong>${esc(d.title)}</strong><small>${esc(t.label)}${d.questions ? ` · ${d.questions} questions` : ''}${d.tracks ? ` · ${plural(d.tracks.length, 'track')}` : ''}</small></span>
+    <span class="doc-row-text"><strong>${esc(d.title)}</strong><small>${esc(t.label)}${d.questions ? ` · ${d.questions} questions` : ''}${d.cards ? ` · ${plural(d.cards, 'card')}` : ''}${d.tracks ? ` · ${plural(d.tracks.length, 'track')}` : ''}</small></span>
     ${icon('chevron-right', 'chev')}
   </a></li>`;
 }
@@ -704,6 +705,7 @@ ${GILT_DEFS}
         <div><dt>Type</dt><dd>${esc(t.label)}</dd></div>
         <div><dt>Format</dt><dd>${esc(d.format.label)} · ${fmtSize(d.size)}</dd></div>
         ${d.questions ? `<div><dt>Questions</dt><dd>${d.questions}</dd></div>` : ''}
+        ${d.cards ? `<div><dt>Cards</dt><dd>${d.cards}</dd></div>` : ''}
         ${d.contributor ? `<div><dt>Shared by</dt><dd>${esc(d.contributor)}</dd></div>` : ''}
         <div><dt>Updated</dt><dd>${fmtDate(d.updated)}</dd></div>
       </dl>
@@ -1051,17 +1053,24 @@ export function shuffle(ctx) {
     <button type="button" class="shuffle-all" data-course-all="${esc(c.slug)}">Select all</button>
     <div class="shuffle-sets">${c.sets.map((s) => `<label class="shuffle-set"><input type="checkbox" value="${esc(`${c.slug}/${s.slug}`)}" data-course="${esc(c.slug)}" data-count="${s.count}"><span><strong>${esc(s.title)}</strong><small>${plural(s.count, 'question')}</small></span></label>`).join('')}</div>
   </fieldset>`;
+  // Every set's topics with their question counts, so the Topics button can list and count them
+  // before any questions load: { course: { title, accent, sets: { set: [[area, count], ...] } } }.
+  const topics = Object.fromEntries(game.courses.map((c) => [c.slug, {
+    title: c.title, accent: c.accent, sets: Object.fromEntries(c.sets.map((s) => [s.slug, s.topics || []])),
+  }]));
   const body = `
 <section class="page-head container">
   ${breadcrumbs(root, [['shuffle/', 'Shuffle mode']])}
   <h1 class="page-title">Shuffle mode</h1>
-  <p class="page-lede">Pick any practice sets, from one course or several, and work their questions in one shuffled stack. Answer choices are shuffled too. A variation keeps the question it builds on one tap away. Every answer counts toward <a href="${root}stats/">your stats</a>.</p>
+  <p class="page-lede">Pick any practice sets, from one course or several, and work their questions in one shuffled stack. Want only some topics? Press <strong>Topics</strong> and untick the rest. Answer choices are shuffled too. A variation keeps the question it builds on one tap away. Every answer counts toward <a href="${root}stats/">your stats</a>.</p>
 </section>
 <section class="container section-tight shuffle" data-shuffle>
+  <script type="application/json" data-shuffle-topics>${JSON.stringify(topics).replace(/</g, '\\u003c')}</script>
   <form class="shuffle-setup" data-shuffle-setup>
     <div class="shuffle-courses">${game.courses.map(course).join('')}</div>
     <div class="shuffle-go">
       <p class="shuffle-picked" data-shuffle-picked aria-live="polite">No sets selected</p>
+      ${topicsButton('data-shuffle-topics-btn disabled')}
       <label class="shuffle-limit"><span>Questions</span><select data-shuffle-limit aria-label="How many questions"><option value="0">All</option><option value="25">25</option><option value="50">50</option><option value="100">100</option></select></label>
       <button class="btn btn-primary" type="submit" data-shuffle-start disabled>${icon('shuffle')} Shuffle</button>
     </div>
@@ -1071,6 +1080,7 @@ export function shuffle(ctx) {
     <div class="shuffle-bar">
       <div class="shuffle-bar-row">
         <p class="shuffle-score" data-shuffle-score aria-live="polite">0 / 0</p>
+        ${topicsButton('data-shuffle-topics-run')}
         <button class="btn btn-ghost" type="button" data-shuffle-missed>Retry missed</button>
         <button class="btn btn-ghost" type="button" data-shuffle-again>${icon('shuffle')} Reshuffle</button>
         <button class="btn btn-ghost" type="button" data-shuffle-change>Change sets</button>
@@ -1078,6 +1088,7 @@ export function shuffle(ctx) {
       </div>
       <div class="shuffle-meter"><i data-shuffle-meter></i></div>
     </div>
+    <p class="tp-note" data-shuffle-topics-note aria-live="polite" hidden></p>
     <ol class="shuffle-list" data-shuffle-list></ol>
   </div>
   <noscript><p>Shuffle mode needs JavaScript. Each practice set also works on its own in the <a href="${root}library/?type=practice">library</a>.</p></noscript>
@@ -1421,7 +1432,7 @@ export function openapi(config) {
             id: { type: 'string' }, subject: { type: 'string' }, subjectTitle: { type: 'string' }, slug: { type: 'string' },
             title: { type: 'string' }, description: { type: 'string' }, type: { type: 'string' }, typeLabel: { type: 'string' },
             format: { type: 'string' }, mimeType: { type: 'string' }, originalFilename: { type: 'string' },
-            tags: { type: 'array', items: { type: 'string' } }, questions: { type: ['integer', 'null'] },
+            tags: { type: 'array', items: { type: 'string' } }, questions: { type: ['integer', 'null'] }, cards: { type: ['integer', 'null'] },
             tracks: { type: ['array', 'null'], description: 'Playlists only: the tracks in play order.', items: { type: 'object', properties: { number: { type: ['integer', 'null'] }, title: { type: 'string' }, topic: { type: 'string' }, description: { type: 'string' }, durationSeconds: { type: ['integer', 'null'] }, sizeBytes: { type: 'integer' }, url: { type: 'string' } } } },
             sizeBytes: { type: 'integer' }, updated: { type: 'string', format: 'date-time' },
             headings: { type: 'array', items: { type: 'string' } },

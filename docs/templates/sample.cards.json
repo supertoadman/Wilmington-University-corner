@@ -1,0 +1,90 @@
+{
+  "schema": "cards/v1",
+  "id": "sample-evidence-cards",
+  "title": "Sample Flashcards (Evidence)",
+  "description": "Eight sample cards on relevance, 403, and hearsay, using every cards/v1 field. Flip each card, shuffle the deck, remove the cards you know, and see them all at once under All cards.",
+  "course": "Evidence",
+  "source": "Evidence Rules Outline, Parts I and V",
+  "topics": ["Relevance", "Unfair Prejudice", "The Definition of Hearsay"],
+  "cards": [
+    {
+      "id": "fre-401",
+      "topic": "Relevance",
+      "cite": "FRE 401",
+      "front": "When is evidence relevant?",
+      "back": "Evidence is relevant if both (all required):",
+      "points": [
+        "(a) it has any tendency to make a fact more or less probable than it would be without the evidence (probativeness); and",
+        "(b) the fact is of consequence in determining the action (materiality)."
+      ],
+      "note": "At trial, \"irrelevant\" covers both probativeness and materiality."
+    },
+    {
+      "id": "fre-402",
+      "topic": "Relevance",
+      "cite": "FRE 402",
+      "front": "Is relevant evidence admissible?",
+      "back": "Yes, unless the Constitution, a federal statute, the FRE, or other Supreme Court rules provide otherwise. Irrelevant evidence is not admissible."
+    },
+    {
+      "id": "fre-104b",
+      "topic": "Relevance",
+      "cite": "FRE 104(b)",
+      "front": "When relevance depends on whether a fact exists, how much proof of that fact is needed, and who decides?",
+      "back": "Proof sufficient to support a finding that the fact exists. The judge asks only whether a jury could reasonably find the fact by a preponderance (Huddleston), without weighing credibility; the jury decides.",
+      "note": "Contrast 104(a): the judge herself decides by a preponderance, not bound by the evidence rules except privilege."
+    },
+    {
+      "id": "fre-403",
+      "topic": "Unfair Prejudice",
+      "cite": "FRE 403",
+      "front": "When may the court exclude relevant evidence under Rule 403?",
+      "back": "When its probative value is substantially outweighed by a danger of (any one suffices):",
+      "points": ["unfair prejudice", "confusing the issues", "misleading the jury", "undue delay", "wasting time", "needlessly presenting cumulative evidence"],
+      "note": "The rule tilts toward admission: exclusion only when the imbalance is substantial."
+    },
+    {
+      "id": "fre-403-factors",
+      "topic": "Unfair Prejudice",
+      "cite": "FRE 403",
+      "front": "What factors does a court weigh in the 403 balance?",
+      "back": "Weighed together:",
+      "points": [
+        "(1) whether the fact is actually disputed;",
+        "(2) the availability of other means of proof; and",
+        "(3) the likely effectiveness of a limiting instruction."
+      ]
+    },
+    {
+      "id": "fre-801a",
+      "topic": "The Definition of Hearsay",
+      "cite": "FRE 801(a)",
+      "front": "What is a \"statement\" for hearsay purposes?",
+      "back": "A person's oral assertion, written assertion, or nonverbal conduct, if the person intended it as an assertion."
+    },
+    {
+      "id": "fre-801c",
+      "topic": "The Definition of Hearsay",
+      "cite": "FRE 801(c)",
+      "front": "What is hearsay?",
+      "back": "A statement that (all required):",
+      "points": [
+        "(1) the declarant does not make while testifying at the current trial or hearing; and",
+        "(2) a party offers to prove the truth of the matter asserted."
+      ],
+      "note": "You can't say whether something is hearsay without knowing the proponent's purpose."
+    },
+    {
+      "id": "not-hearsay",
+      "topic": "The Definition of Hearsay",
+      "front": "Name four kinds of out-of-court words or conduct that are not hearsay.",
+      "back": "Any of these:",
+      "points": [
+        "Words offered for their effect on the listener (notice, motive, reasonable fear).",
+        "Verbal acts (contract words, threats, defamation).",
+        "Nonassertive conduct.",
+        "Words offered as circumstantial evidence of knowledge."
+      ]
+    }
+  ]
+}

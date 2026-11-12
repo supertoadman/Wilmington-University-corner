@@ -10,6 +10,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { extractQuestions } from './lib/quiz.mjs';
 import { htmlSections, pdfSections, matcher } from './lib/outline.mjs';
+import { splitTopic } from '../src/assets/answer-log.js';
 
 const PACK_IDS = [
   /^(divine|corrupt)-(laurel|wisdom|aegis|gateway|column|temple)$/,
@@ -22,6 +23,35 @@ const PACK_IDS = [
   /^(divine|corrupt)-tile-(plain|inlay|edge|gap)$/,
   /^(divine|corrupt)-effect-(ring|spark|shadow)$/,
 ];
+
+/**
+ * A set's topic areas (the part of each question's topic before " — "), with how many questions
+ * each has: [[area, count], ...], for Shuffle mode's topic picker. They come in the order the set
+ * first uses them, which is course order for most sets. A set that deals its questions out of order
+ * and numbers its areas ("6 · Partnership basics", "Wk 2 · IV · Good faith", "Ch. 9 · ...") is put
+ * back in number order, then by the Roman-numeral section after the first " · ".
+ */
+export function topicsOf(questions) {
+  const counts = new Map();
+  for (const q of questions) {
+    const area = splitTopic(q.topic)[0];
+    counts.set(area, (counts.get(area) || 0) + 1);
+  }
+  const list = [...counts];
+  const num = (a) => { const m = a.match(/^(?:wks?\.?|weeks?|ch(?:apter)?\.?|part)?\s*(\d+)/i); return m ? +m[1] : null; };
+  const nums = list.map(([a]) => num(a));
+  const descents = nums.filter((n, i) => i && n != null && nums[i - 1] != null && n < nums[i - 1]).length;
+  if (nums.some((n) => n == null) || descents < 2) return list;
+  const ROMAN = { I: 1, V: 5, X: 10, L: 50, C: 100 };
+  const roman = (a) => {
+    const m = a.match(/·\s*([IVXLC]+)\s*·/);
+    if (!m) return 0;
+    return [...m[1]].reduce((sum, c, i, s) => sum + (ROMAN[c] < (ROMAN[s[i + 1]] || 0) ? -ROMAN[c] : ROMAN[c]), 0);
+  };
+  return list.map((t, i) => ({ t, i, n: nums[i], r: roman(t[0]) }))
+    .sort((x, y) => x.n - y.n || x.r - y.r || x.i - y.i)
+    .map((x) => x.t);
+}
 
 /** The outline a wrong answer links to: the course's outline, else its rule chart. */
 const outlineOf = (s) => s.documents.find((d) => d.type === 'outline') || s.documents.find((d) => d.type === 'rule-chart');
@@ -94,7 +124,7 @@ export async function buildGame({ subjects, P, write, root, dist, withGame = tru
         if (section >= 0) q.s = section;
       }
       write(`play/data/${s.slug}/${d.slug}.json`, JSON.stringify(questions));
-      sets.push({ slug: d.slug, title: d.title, count: questions.length, url: P.doc(d) });
+      sets.push({ slug: d.slug, title: d.title, count: questions.length, url: P.doc(d), topics: topicsOf(questions) });
       total += questions.length;
     }
     if (!sets.length) continue;
@@ -106,7 +136,8 @@ export async function buildGame({ subjects, P, write, root, dist, withGame = tru
       sets,
     });
   }
-  write('play/data/index.json', JSON.stringify({ courses }));
+  // Each set's topics go to Shuffle mode's page (the shuffle() template), not into index.json.
+  write('play/data/index.json', JSON.stringify({ courses }, (k, v) => (k === 'topics' ? undefined : v)));
   const setCount = courses.reduce((n, c) => n + c.sets.length, 0);
   if (!withGame) {
     console.log(`Questions: ${total} from ${setCount} practice sets (the games are local-only: npm run dev:games)`);

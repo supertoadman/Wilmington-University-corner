@@ -80,7 +80,12 @@ h1 { margin: 6px 0 8px; font: 500 clamp(28px, 4.4vw, 40px)/1.1 var(--serif); let
 .sq-links { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13.5px; }
 .empty { padding: 24px; text-align: center; color: var(--muted); border: 1px dashed var(--border-strong); border-radius: 10px; }
 @media (max-width: 560px) { .sq { padding: 14px 14px 12px; } .bar select { max-width: 100%; } }
+/* Topics checklist: the site's topic picker (the build fills in <style data-topic-picker>), in this page's colors. */
+.tp,.tp-btn,.tp-note{--surface-2:color-mix(in srgb,var(--text) 5%,var(--surface));--surface-3:color-mix(in srgb,var(--text) 10%,var(--surface));--ink:var(--text);--ink-fg:var(--surface);--gold:var(--gold-ink);--radius:14px;--radius-sm:10px;--font-serif:var(--serif);--font-sans:var(--sans);--font-mono:var(--mono)}
+.bar .tp-btn{padding:0 6px 0 12px;border:1.5px solid var(--accent)}
+.bar .tp-btn.tp-btn-on{border-color:var(--gold);background:var(--gold-soft)}
 </style>
+<style data-topic-picker></style>
 </head>
 <body>
 <div class="wrap">
@@ -89,7 +94,7 @@ h1 { margin: 6px 0 8px; font: 500 clamp(28px, 4.4vw, 40px)/1.1 var(--serif); let
   <p class="lede">110 concept questions covering every chapter of the outline, from Barnette and the Religion Clauses through Citizens United. Each question tests a rule, a test, or the reason a case came out the way it did. Choices are shuffled, and you can cross out the ones you rule out. After you answer you see why each choice is right or wrong, the rule, and a link to the outline section to review. Tap <b>Look up</b> or any case name for the outline's case card.</p>
   <div class="bar">
     <div class="bar-row">
-      <select id="filter" aria-label="Chapter"></select>
+      <button type="button" class="tp-btn" id="topics" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 5h20"/><path d="M6 12h12"/><path d="M9 19h6"/></svg><span>Topics</span><b>All</b></button>
       <button type="button" id="order-outline" aria-pressed="true">Outline order</button>
       <button type="button" id="order-shuffle" aria-pressed="false">Shuffle</button>
       <button type="button" id="missed">Retry missed</button>
@@ -99,8 +104,10 @@ h1 { margin: 6px 0 8px; font: 500 clamp(28px, 4.4vw, 40px)/1.1 var(--serif); let
     </div>
     <div class="meter"><i id="meter"></i></div>
   </div>
+  <p class="tp-note" id="topics-note" aria-live="polite" hidden></p>
   <ol class="sq-list" id="list"></ol>
 </div>
+<script data-topic-picker></script>
 <script>
 const AREAS = {
  "c1": "Ch. 1 · First Amendment overview",
@@ -248,22 +255,30 @@ const QB = [
 
   let st = {};
   try { st = JSON.parse(localStorage.getItem(KEY)) || {}; } catch { st = {}; }
-  st.picked ||= {}; st.out ||= {}; st.order ||= {}; st.mode ||= 'outline'; st.filter ||= 'all';
+  st.picked ||= {}; st.out ||= {}; st.order ||= {}; st.mode ||= 'outline';
+  // Chapters switched off in the Topics checklist. An older save kept one chapter ("filter"): that one stays on.
+  if (!Array.isArray(st.skip)) st.skip = st.filter && st.filter !== 'all' && AREAS[st.filter] ? Object.keys(AREAS).filter((k) => k !== st.filter) : [];
+  st.skip = st.skip.filter((k) => k in AREAS);
+  delete st.filter;
   st.missed = new Set(st.missed || []); st.onlyMissed = !!st.onlyMissed;
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify({ ...st, missed: [...st.missed] })); } catch { /* storage unavailable */ } };
 
   for (const q of QB) if (!Array.isArray(st.order[q.id]) || st.order[q.id].length !== q.o.length) st.order[q.id] = shuffle([0, 1, 2, 3]);
   if (!Array.isArray(st.stack) || st.stack.length !== QB.length) st.stack = shuffle(QB.map((q) => q.id));
 
-  const filter = $('filter');
-  filter.append(new Option(`All chapters (${QB.length})`, 'all'));
-  for (const [k, name] of Object.entries(AREAS)) filter.append(new Option(`${name} (${QB.filter((q) => q.area === k).length})`, k));
-  filter.value = st.filter;
+  // Topics: tick the chapters to practice in a pop-up checklist (the site's topic picker, which the
+  // build fills in above this script). Without the picker the Topics button stays hidden.
+  const paintTopics = typeof TopicPicker === 'object' ? TopicPicker.topicFilter({
+    button: $('topics'), note: $('topics-note'),
+    list: () => Object.entries(AREAS).map(([key, label]) => ({ key, label, count: QB.filter((q) => q.area === key).length })).filter((t) => t.count),
+    get: () => new Set(st.skip),
+    set: (off) => { st.skip = [...off]; save(); render(); window.scrollTo({ top: 0 }); },
+  }) : () => {};
 
   const byId = new Map(QB.map((q) => [q.id, q]));
   function visible() {
     const ids = st.mode === 'shuffle' ? st.stack : QB.map((q) => q.id);
-    return ids.map((id) => byId.get(id)).filter((q) => (st.filter === 'all' || q.area === st.filter) && (!st.onlyMissed || st.missed.has(q.id)));
+    return ids.map((id) => byId.get(id)).filter((q) => !st.skip.includes(q.area) && (!st.onlyMissed || st.missed.has(q.id)));
   }
 
   function card(q, pos) {
@@ -350,10 +365,11 @@ const QB = [
     const vis = visible();
     const list = $('list');
     list.replaceChildren(...vis.map(card));
-    if (!vis.length) list.append(el('li', 'empty', st.onlyMissed ? 'No missed questions in this view. Nice work.' : 'No questions in this view.'));
+    if (!vis.length) list.append(el('li', 'empty', st.onlyMissed ? 'No missed questions in this view. Nice work.' : 'No questions here. Press Topics and tick more topics.'));
     $('missed').textContent = st.onlyMissed ? 'Show all' : 'Retry missed';
     $('order-outline').setAttribute('aria-pressed', st.mode === 'outline');
     $('order-shuffle').setAttribute('aria-pressed', st.mode === 'shuffle');
+    paintTopics();
     score();
   }
 
@@ -367,7 +383,6 @@ const QB = [
     $('meter').style.width = vis.length ? `${(done.length / vis.length) * 100}%` : '0';
   }
 
-  filter.addEventListener('change', () => { st.filter = filter.value; save(); render(); });
   $('order-outline').addEventListener('click', () => { st.mode = 'outline'; save(); render(); });
   $('order-shuffle').addEventListener('click', () => { st.mode = 'shuffle'; st.stack = shuffle(QB.map((q) => q.id)); save(); render(); });
   $('missed').addEventListener('click', () => {

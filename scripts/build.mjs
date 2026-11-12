@@ -23,6 +23,9 @@ import { mp3Duration } from './lib/audio.mjs';
 import { refIndex, injectRefs } from './lib/refs.mjs';
 import { readMcq, normalizeMcq, hasMcqBlock, mcqText } from './lib/mcq.mjs';
 import { renderPracticeShell, injectAnswerLog } from './lib/practice-shell.mjs';
+import { readCards, normalizeCards, hasCardsBlock, cardsText } from './lib/cards.mjs';
+import { renderCardsShell } from './lib/cards-shell.mjs';
+import { hasTopicPicker, inlineTopicPicker } from './lib/topic-picker.mjs';
 import { readSupplement, readSupplementPage, normalizeSupplement, renderSupplement, supplementText } from './lib/supplement-shell.mjs';
 import { buildOutlineDocx } from './templates/build-outline-docx.mjs';
 import { buildGame } from './game.mjs';
@@ -113,16 +116,17 @@ function trackDuration(file, size) {
 }
 
 // ---------------------------------------------------------------------------
-// Canonical sources (docs/mcq-format.md, docs/supplement-format.md). The build renders them into
-// their standalone pages, so every set gets the current Shuffle-mode shell and every supplement the
-// current viewer, whatever the source file carried:
+// Canonical sources (docs/mcq-format.md, docs/supplement-format.md, docs/cards-format.md). The build
+// renders them into their standalone pages, so every set gets the current Shuffle-mode shell, every
+// supplement the current viewer and every deck the current flashcard page, whatever the file carried:
 //   <Name>.mcq.json, or an .html page with an mcq-data block   -> the practice shell (type practice)
+//   <Name>.cards.json, or an .html page with a cards-data block -> the flashcard page (type flashcards)
 //   <Name>.supplement.json, or a page the viewer built          -> the supplement viewer (type document)
 // Returns null for any other file, { skip: true } for a canonical file with nothing usable.
 // ---------------------------------------------------------------------------
 function compile(name, bytes, accent, label) {
   const isJson = (kind) => name.toLowerCase().endsWith(`.${kind}.json`);
-  if (!isJson('mcq') && !isJson('supplement') && !/\.html?$/i.test(name)) return null;
+  if (!isJson('mcq') && !isJson('supplement') && !isJson('cards') && !/\.html?$/i.test(name)) return null;
   const text = bytes.toString('utf8');
   const tell = (errors, warnings) => {
     const all = [...errors.map((e) => `error: ${e}`), ...warnings.map((w) => `warning: ${w}`)];
@@ -138,6 +142,14 @@ function compile(name, bytes, accent, label) {
     tell(errors, warnings);
     if (!set.questions.length) return { skip: true };
     return { type: 'practice', html: renderPracticeShell(set, { accent }), questions: set.questions.length, text: mcqText(set) };
+  }
+  if (isJson('cards') || hasCardsBlock(text)) {
+    const raw = readCards(text);
+    if (!raw) { console.warn(`  ${label}: not a cards/v1 deck (docs/cards-format.md)`); return isJson('cards') ? { skip: true } : null; }
+    const { deck, errors, warnings } = normalizeCards(raw);
+    tell(errors, warnings);
+    if (!deck.cards.length) return { skip: true };
+    return { type: 'flashcards', html: renderCardsShell(deck, { accent }), cards: deck.cards.length, text: cardsText(deck) };
   }
   const raw = isJson('supplement') ? readSupplement(text) : readSupplementPage(text);
   if (!raw) {
@@ -183,8 +195,8 @@ async function loadSubjects() {
       const trackFiles = isPlaylist ? fs.readdirSync(file).filter((f) => FORMATS[path.extname(f).toLowerCase()]?.viewer === 'audio')
         .sort((a, b) => a.localeCompare(b, 'en', { numeric: true })) : [];
       if (isPlaylist && !trackFiles.length) { console.warn(`  skip (folder without audio): ${dirent.name}/${name}`); continue; }
-      // A canonical data file (.mcq.json, .supplement.json) is built into an HTML page.
-      const dataFile = !isPlaylist && /\.(?:mcq|supplement)\.json$/i.test(name);
+      // A canonical data file (.mcq.json, .supplement.json, .cards.json) is built into an HTML page.
+      const dataFile = !isPlaylist && /\.(?:mcq|supplement|cards)\.json$/i.test(name);
       const ext = isPlaylist ? '.zip' : dataFile ? '.html' : path.extname(name).toLowerCase();
       const format = isPlaylist ? PLAYLIST : FORMATS[ext];
       if (!format) { console.warn(`  skip (unsupported format): ${dirent.name}/${name}`); continue; }
@@ -195,11 +207,17 @@ async function loadSubjects() {
       const dm = { ...(meta.documents?.[name] || {}), ...sidecar };
       if (dm.publish === false) { console.log(`  skip (publish: false): ${dirent.name}/${name}`); continue; }
 
-      const base = isPlaylist ? name : dataFile ? name.replace(/\.(?:mcq|supplement)\.json$/i, '') : path.basename(name, ext);
+      const base = isPlaylist ? name : dataFile ? name.replace(/\.(?:mcq|supplement|cards)\.json$/i, '') : path.basename(name, ext);
       let raw = isPlaylist ? null : fs.readFileSync(file);
       const compiled = isPlaylist ? null : compile(name, raw, subject.accent, `${dirent.name}/${name}`);
       if (compiled?.skip) { console.warn(`  skip (nothing usable): ${dirent.name}/${name}`); continue; }
       if (compiled) raw = Buffer.from(compiled.html, 'utf8');
+      // An older hand-built practice page gets the current Topics checklist where it holds the
+      // placeholders (scripts/lib/topic-picker.mjs), in every copy: served, downloaded and zipped.
+      else if (raw && /\.html?$/i.test(name)) {
+        const html = raw.toString('utf8');
+        if (hasTopicPicker(html)) raw = Buffer.from(inlineTopicPicker(html), 'utf8');
+      }
       let docSlug = dm.slug || slugify(base);
       for (let i = 2; usedSlugs.has(docSlug); i++) docSlug = `${dm.slug || slugify(base)}-${i}`;
       usedSlugs.add(docSlug);
@@ -245,6 +263,7 @@ async function loadSubjects() {
         description: dm.description || '',
         tags: dm.tags || [],
         questions: dm.questions ?? compiled?.questions ?? null,
+        cards: compiled?.cards ?? null,
         contributor: dm.contributor || null,
         theme: dm.theme || null,
         // A page built from an mcq/v1 set: the site's copy reports its answers to Your stats.
@@ -425,6 +444,7 @@ const docRecord = (d) => ({
   originalFilename: d.filename,
   tags: d.tags,
   questions: d.questions,
+  cards: d.cards,
   tracks: d.tracks && d.tracks.map((t) => ({
     number: t.number, title: t.title, topic: t.topic, description: t.description,
     durationSeconds: t.duration && Math.round(t.duration), sizeBytes: t.size, url: abs(P.track(d, t)),
@@ -500,11 +520,14 @@ const SPECS = [
   { file: 'outline-format.md', from: 'docs/outline-format.md', title: 'Outline format (outline/v1)', description: 'How to write a Word outline the site turns into headings, callouts and case cards, and that the reference popup indexes (sections, case keys, worked problems).' },
   { file: 'supplement-format.md', from: 'docs/supplement-format.md', title: 'Statutory / rule supplement format (supplement/v1)', description: 'The AREAS and DATA contract behind a course supplement and the reference popup, and the citation styles (ucc, fre, mrpc, frcp, restatement, section).' },
   { file: 'mcq-format.md', from: 'docs/mcq-format.md', title: 'MCQ practice set format (mcq/v1)', description: 'The canonical multiple-choice schema, the Shuffle-mode practice page it builds into, and the citation rules that make every question link to the supplement and outline.' },
-  { file: 'ai-prompts.md', from: 'docs/ai-prompts.md', title: 'Prompt templates', description: 'Copy-paste prompts for generating an outline, a supplement and a practice set in these formats.' },
+  { file: 'cards-format.md', from: 'docs/cards-format.md', title: 'Flashcard deck format (cards/v1)', description: 'The canonical flashcard schema and the study page it builds into: one card at a time, shuffle, remove, and an all-cards overview.' },
+  { file: 'ai-prompts.md', from: 'docs/ai-prompts.md', title: 'Prompt templates', description: 'Copy-paste prompts for generating an outline, a supplement, a practice set and a flashcard deck in these formats.' },
   { file: 'mcq-shuffle-template.html', from: 'docs/templates/mcq-shuffle-template.html', title: 'MCQ practice page template', description: 'The standalone Shuffle-mode practice page with a sample mcq/v1 set; replace the JSON in its mcq-data block.' },
   { file: 'supplement-template.html', from: 'docs/templates/supplement-template.html', title: 'Supplement viewer template', description: 'The standalone supplement viewer with sample UCC data; replace its SUPP, AREAS and DATA lines.' },
+  { file: 'cards-template.html', from: 'docs/templates/cards-template.html', title: 'Flashcard page template', description: 'The standalone flashcard page with a sample cards/v1 deck; replace the JSON in its cards-data block.' },
   { file: 'sample.mcq.json', from: 'docs/templates/sample.mcq.json', title: 'Sample mcq/v1 set', description: 'Six Sales and Leases questions using every mcq/v1 feature.' },
   { file: 'sample.supplement.json', from: 'docs/templates/sample.supplement.json', title: 'Sample supplement/v1 data', description: 'Seven UCC sections in the supplement/v1 format.' },
+  { file: 'sample.cards.json', from: 'docs/templates/sample.cards.json', title: 'Sample cards/v1 deck', description: 'Eight Evidence flashcards using every cards/v1 field.' },
   { file: 'sample-outline.json', from: 'docs/templates/sample-outline.json', title: 'Sample outline/v1 data', description: 'An outline as data, for scripts/templates/build-outline-docx.mjs.' },
   { file: 'sample-outline.docx', build: () => buildOutlineDocx(JSON.parse(fs.readFileSync(path.join(ROOT, 'docs', 'templates', 'sample-outline.json'), 'utf8'))), title: 'Sample outline (Word)', description: 'sample-outline.json built into the Word file the site reads.' },
 ].filter((sp) => sp.build || fs.existsSync(path.join(ROOT, sp.from)) || console.warn(`  specs: missing ${sp.from}`));
@@ -512,7 +535,7 @@ const SPEC_TYPES = { '.md': 'text/markdown', '.html': 'text/html', '.json': 'app
 for (const sp of SPECS) write(`api/specs/${sp.file}`, sp.build ? sp.build() : fs.readFileSync(path.join(ROOT, sp.from)));
 write('api/specs/index.json', JSON.stringify({
   schemaVersion: '1.0',
-  formats: { mcq: 'mcq/v1', supplement: 'supplement/v1', outline: 'outline/v1' },
+  formats: { mcq: 'mcq/v1', supplement: 'supplement/v1', outline: 'outline/v1', cards: 'cards/v1' },
   specs: SPECS.map(({ file, title, description }) => ({ name: file, title, description, mediaType: SPEC_TYPES[path.extname(file)], url: abs(`api/specs/${file}`) })),
 }, null, 2));
 
@@ -527,7 +550,7 @@ write('llms.txt', [
   `- [OpenAPI spec](${abs('api/openapi.json')}): describes the endpoints above`,
   `- [Full text](${abs('llms-full.txt')}): plain text of every document in one file`,
   '',
-  'Authoring specs, for agents that write new outlines, supplements and practice sets in the formats the site builds and links automatically:',
+  'Authoring specs, for agents that write new outlines, supplements, practice sets and flashcard decks in the formats the site builds and links automatically:',
   `- [Spec index](${abs('api/specs/index.json')}): every spec and template below, with media types`,
   ...SPECS.map((sp) => `- [${sp.title}](${abs(`api/specs/${sp.file}`)}): ${sp.description}`),
   '',

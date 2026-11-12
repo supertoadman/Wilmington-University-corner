@@ -9,6 +9,8 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { MCQ_SCHEMA, mcqDataBlock } from './mcq.mjs';
+import { topicsButton } from '../../src/assets/topic-picker.js';
+import { topicPickerScript } from './topic-picker.mjs';
 
 const SRC = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..', '..', 'src', 'practice');
 // The site's fonts. Offline, the page falls back to system fonts.
@@ -17,7 +19,8 @@ export const DEFAULT_ACCENT = '#1e3658';
 
 const esc = (s) => String(s ?? '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const asset = (f) => {
-  const text = fs.readFileSync(path.join(SRC, f), 'utf8');
+  // The Topics checklist is the site's own (src/assets/topic-picker.js), as the global `TopicPicker`.
+  const text = f === 'topic-picker.js' ? topicPickerScript() : fs.readFileSync(path.join(SRC, f), 'utf8');
   if (/<\/(?:script|style)/i.test(text)) throw new Error(`${f} must not contain a closing script or style tag`);
   return text;
 };
@@ -64,7 +67,7 @@ ${asset('shell.css')}</style>
     <div class="shuffle-bar-row sh-controls">
       <div class="sh-seg" role="group" aria-label="Mode"><button type="button" id="sh-m-study" aria-pressed="true">Study</button><button type="button" id="sh-m-exam" aria-pressed="false">Exam</button></div>
       <select class="sh-pick" id="sh-exam" aria-label="Exam"></select>
-      <select class="sh-pick" id="sh-area" aria-label="Topic"></select>
+      ${topicsButton('id="sh-topics" hidden')}
       <label class="sh-toggle"><input type="checkbox" id="sh-shufo"> Shuffle choices</label>
       <span class="sh-hint" id="sh-hint"></span>
     </div>
@@ -79,13 +82,14 @@ ${asset('shell.css')}</style>
       </div>
       <div class="shuffle-meter"><i id="sh-meter"></i></div>
     </div>
+    <p class="tp-note" id="sh-topics-note" aria-live="polite" hidden></p>
     <ol class="shuffle-list" id="sh-list"></ol>
   </div>
   <noscript><p>This practice set needs JavaScript to run.</p></noscript>
 </div>
 ${mcqDataBlock(set)}
 <script>
-${asset('shell.js')}</script>
+${asset('topic-picker.js')}${asset('shell.js')}</script>
 </body>
 </html>
 `;

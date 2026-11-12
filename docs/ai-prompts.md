@@ -5,7 +5,8 @@ Copy a prompt, fill in the `{…}` parts, and attach or paste the source materia
 - `https://supertoadman.github.io/Wilmington-University-corner/api/specs/outline-format.md`
 - `https://supertoadman.github.io/Wilmington-University-corner/api/specs/supplement-format.md`
 - `https://supertoadman.github.io/Wilmington-University-corner/api/specs/mcq-format.md`
-- Samples: `…/api/specs/sample-outline.json`, `…/api/specs/sample.supplement.json`, `…/api/specs/sample.mcq.json`; index: `…/api/specs/index.json`
+- `https://supertoadman.github.io/Wilmington-University-corner/api/specs/cards-format.md`
+- Samples: `…/api/specs/sample-outline.json`, `…/api/specs/sample.supplement.json`, `…/api/specs/sample.mcq.json`, `…/api/specs/sample.cards.json`; index: `…/api/specs/index.json`
 
 If the AI can't fetch URLs, paste the spec file from `docs/` instead. Make them in this order (supplement, outline, practice sets), because the practice sets' links depend on the other two. After each one: save the file in `content/<Subject>/`, run `npm run build`, then `npm run check -- <file>` and fix what it reports.
 
@@ -94,6 +95,33 @@ Output only the JSON object, valid and complete.
 ```
 
 Save it as `content/{Subject}/{Subject}_{Kind}.mcq.json`, add a `documents` entry with an `order` and `tags` if you like, then `npm run build` and `npm run check -- <file>`: fix every error, and every cite it says won't link.
+
+## 4. Flashcards (cards/v1 JSON, flashcard page)
+
+Make the outline first: the cards are drawn from it.
+
+```text
+You are writing flashcards for {COURSE} as cards/v1 JSON, drawn from the attached outline.
+Follow this spec exactly: https://supertoadman.github.io/Wilmington-University-corner/api/specs/cards-format.md
+Model your output on: https://supertoadman.github.io/Wilmington-University-corner/api/specs/sample.cards.json
+
+Deck: "{TITLE}", covering {SECTIONS / WEEKS}. "topics" must be these outline section titles, in order: {PASTE}.
+
+Each card:
+- One rule, test, definition, or tested holding. Split anything bigger into more cards.
+- "front": one plain question ("When is evidence relevant?"), never just a rule number.
+- "back": the direct answer first, in the outline's own words. For a test, put the lead-in here with the list's kind,
+  "(all required)", "(any one suffices)" or "(weighed together)", and each element or factor in "points",
+  labeled "(1)", "(2)" or "(a)", "(b)" as the rule labels them.
+- "note": at most one exam tip, trap, or contrast, taken from the outline's tip and trap boxes.
+- "cite": the rule or case, unless the cite is the answer to the front.
+- "topic": one of the topics; "id": a short stable slug such as "fre-803-6".
+- Nothing from outside the attached outline. Plain text only: no HTML or Markdown.
+
+Output only the JSON object, valid and complete.
+```
+
+Save it as `content/{Subject}/{Subject}_{Kind}_Flashcards.cards.json`, add a `documents` entry with a `slug`, `order` and `tags`, then `npm run check -- <file>` and fix what it reports.
 
 ## Fixing what the checker reports
 

@@ -1,6 +1,6 @@
 # Multiple-choice practice set format (mcq/v1)
 
-The canonical format for every new practice set: one JSON object with the set's metadata and its questions. The build turns it into a standalone page that works like **Shuffle mode** (`/shuffle/`): the same `.sq` cards, cross-outs, per-choice rationales, variation toggles and Retry missed, plus Study/Exam modes, exam and topic filters, flags, and saved progress. On the site that page also gets the **reference popup** (Look up, and every cite, case name and casebook problem as a link) whenever the course's `subject.json` has `refs`. The same questions feed Shuffle mode, Sanctum Run and Crypt Survivors with no extra step.
+The canonical format for every new practice set: one JSON object with the set's metadata and its questions. The build turns it into a standalone page that works like **Shuffle mode** (`/shuffle/`): the same `.sq` cards, cross-outs, per-choice rationales, variation toggles and Retry missed, plus Study/Exam modes, an exam filter, a Topics checklist (tick the topics to practice, untick the rest), flags, and saved progress. On the site that page also gets the **reference popup** (Look up, and every cite, case name and casebook problem as a link) whenever the course's `subject.json` has `refs`. The same questions feed Shuffle mode, Sanctum Run and Crypt Survivors with no extra step.
 
 Write questions to the standard of the Sales and Leases sets (`content/Sales and Leases/Sales_and_Leases_Practice_Exams.html`, `…_Bar_Questions.html`): five choices (A–E) by default, new facts, one best answer, near-miss distractors, and a rationale for every choice.
 
@@ -47,7 +47,7 @@ Check a set before committing: `npm run check -- "content/<Subject>/<Name>.mcq.j
 | `id` | no | Stable key for saved progress and flags (defaults to the title, slugified). Keep it when you retitle. |
 | `course` | no | Shown above the title. |
 | `modeDefault` | no | `"study"` (default: each answer is checked when picked) or `"exam"` (answer, then grade). |
-| `areas` | recommended | Topic areas in course order, for the Topic filter. Use the outline's section titles (or close to them): they also steer the games' "review this section" links. Areas a question names but this list doesn't are added at the end, with a warning. |
+| `areas` | recommended | Topic areas in course order, for the Topics checklist. Use the outline's section titles (or close to them): they also steer the games' "review this section" links. Areas a question names but this list doesn't are added at the end, with a warning. |
 | `exams` | no | `[1, 2]` or `[{ "id": 1, "title": "Exam 1", "description": "…" }]`. With more than one exam the page groups questions under exam headings and offers an Exam filter. Exams questions name but this list doesn't are added. |
 | `hypos` | no | Shared fact patterns: `{ "<id>": "text" }` or `{ "<id>": { "label": "Facts for Q4–6", "text": "…" } }`. |
 | `accent` | no | Hex color for the cards' left bar (the build uses the course accent). |
@@ -151,7 +151,7 @@ The build's page is Shuffle mode's card stack in a standalone file (inline CSS a
 | Stem | `.sq-stem` | Paragraphs. The popup keeps it in view on phones. |
 | Choices | `.sq-opts` > `.sq-row` > `button.sq-opt` + `button.sq-x` | Cross-out toggles strike a choice. `.chosen` (exam mode), `.right`, `.wrong` after grading. |
 | Answer | `.sq-why` | `.sq-verdict` (`ok`/`no`), one `.sq-rat` per choice (`.sq-rat.key` for the answer), `.sq-rule` for `e`. Removed from the text Look up ranks with, so suggestions don't give the answer away. |
-| Bar | `.shuffle-bar` | Sticky: score, Grade (exam mode), Shuffle questions (pressed again: Original order), Retry missed, Flagged (n), Reset, progress meter. Mode, Exam and Topic filters, and the Shuffle choices toggle sit above it. |
+| Bar | `.shuffle-bar` | Sticky: score, Grade (exam mode), Shuffle questions (pressed again: Original order), Retry missed, Flagged (n), Reset, progress meter. Mode, the Exam filter, the Topics button (src/assets/topic-picker.js: a pop-up checklist of the set's areas with Select all / Clear all, remembered in the browser; Reset keeps it) and the Shuffle choices toggle sit above it. While some topics are off, a bar above the questions says so and turns them all back on. |
 
 The `.sq*` and `.shuffle-*` rules in `src/practice/shell.css` are copied verbatim from `src/assets/styles.css`, and the tests fail if they drift. Answers, mode, filters and order are saved in the browser per set (`mcq:<id>:progress`), flags per set (`mcq:<id>:flags`); a wrong or skipped answer is flagged when graded. A link to `#q-<id>` (the id slugified: `#q-3-12` for `3.12`) opens on that question. The page follows the site's light/dark theme when framed (`data-theme`) and the system setting when opened directly.
 

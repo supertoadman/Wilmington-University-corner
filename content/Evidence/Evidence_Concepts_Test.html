@@ -173,7 +173,10 @@ aside { display: grid; gap: 16px; position: sticky; top: calc(env(safe-area-inse
 .results p { max-width: 70ch; }
 
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+/* Topics checklist: the site's topic picker (the build fills in <style data-topic-picker>), in this page's colors. */
+.tp,.tp-btn,.tp-note{--text:var(--ink);--text-2:var(--ink);--border:var(--line);--border-strong:var(--muted);--surface-2:var(--soft);--surface-3:var(--soft);--ink-fg:var(--surface);--accent-soft:color-mix(in srgb,var(--accent) 12%,var(--surface));--accent-ink:var(--accent);--gold:var(--flag);--gold-soft:color-mix(in srgb,var(--flag) 22%,var(--surface));--gold-ink:var(--ink);--radius:12px;--radius-sm:8px;--font-serif:var(--f-display);--font-sans:var(--f-ui);--font-mono:var(--f-mono)}
 </style>
+<style data-topic-picker></style>
 
 </head>
 <body>
@@ -187,6 +190,7 @@ aside { display: grid; gap: 16px; position: sticky; top: calc(env(safe-area-inse
       <button id="mode-tutor" type="button">Tutor</button>
       <button id="mode-exam" type="button">Timed exam</button>
     </div>
+    <button type="button" class="tp-btn" id="topics" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 5h20"/><path d="M6 12h12"/><path d="M9 19h6"/></svg><span>Topics</span><b>All</b></button>
     <div class="timer" id="timer" hidden>174:00</div>
   </div>
   <div class="progress"><i id="prog" style="width:0%"></i></div>
@@ -194,6 +198,7 @@ aside { display: grid; gap: 16px; position: sticky; top: calc(env(safe-area-inse
 
 <div class="wrap">
   <p class="assume"><b>Assume for every question</b> that the Federal Rules of Evidence, as amended through December 1, 2024, govern (including in state prosecutions), unless a question says the December 1, 2026 amendment to Rule 801(d)(1)(A) applies, and that courts follow current U.S. Supreme Court Confrontation Clause precedent. Questions follow the course outline in order, from jury secrecy through familial privileges. Choose the <b>best</b> answer. Tutor mode grades each question as you go; Timed exam mode gives you 90 seconds per question (174:00) and grades at the end.</p>
+  <p class="tp-note" id="topics-note" aria-live="polite" hidden></p>
   <div id="confirm"></div>
   <div class="layout">
     <main id="main"></main>
@@ -201,6 +206,7 @@ aside { display: grid; gap: 16px; position: sticky; top: calc(env(safe-area-inse
   </div>
 </div>
 
+<script data-topic-picker></script>
 <script>
 const AREAS = {
  "rel": "Jury secrecy, relevance & 403",
@@ -340,21 +346,26 @@ const QB = [
 const Q = QB, TOPICS = AREAS;
 const LETTERS = ["A", "B", "C", "D", "E"];
 const KEY = "evidence-concepts-v1";
-const EXAM_SECONDS = Q.length * 90;
+// A timed exam allows 90 seconds a question, for the questions in the topics that are on.
+const examSeconds = (n = S.order.length) => n * 90;
+const clock = s => String(Math.floor(s / 60)).padStart(2, "0") + ":" + String(s % 60).padStart(2, "0");
 
 // Answers, flags and strike-outs are keyed by the question's place in QB; S.order is the order you
 // move through them (the course order, or a shuffle), so shuffling never moves an answer.
-const inOrder = () => Q.map((_, i) => i);
-function shuffled() { const a = inOrder(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
-function fresh(mode, shuffle) {
-  const order = shuffle ? shuffled() : inOrder();
-  return { mode: mode || "tutor", cur: order[0], order, shuffled: !!shuffle, sel: {}, done: {}, flags: {}, strikes: {}, examEnd: null, finished: false, view: "q", pending: null };
+// Topics switched off in the Topics checklist (S.skip, AREAS keys) leave the order; their answers stay put.
+const inOrder = (skip = []) => Q.map((_, i) => i).filter(i => !skip.includes(Q[i].area));
+function shuffled(skip) { const a = inOrder(skip); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function fresh(mode, shuffle, skip = []) {
+  const order = shuffle ? shuffled(skip) : inOrder(skip);
+  return { mode: mode || "tutor", cur: order[0], order, shuffled: !!shuffle, skip, sel: {}, done: {}, flags: {}, strikes: {}, examEnd: null, finished: false, view: "q", pending: null };
 }
 let S = fresh();
 try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(fresh(), JSON.parse(raw)); } catch (e) {}
 S.pending = null;
-if (!Array.isArray(S.order) || S.order.length !== Q.length || new Set(S.order).size !== Q.length || !S.order.every(i => Number.isInteger(i) && i >= 0 && i < Q.length)) { S.order = inOrder(); S.shuffled = false; }
-if (!(Number.isInteger(S.cur) && S.cur >= 0 && S.cur < Q.length)) S.cur = S.order[0];
+S.skip = Array.isArray(S.skip) ? S.skip.filter(k => k in TOPICS) : [];
+if (!inOrder(S.skip).length) S.skip = [];
+{ const want = inOrder(S.skip); if (!Array.isArray(S.order) || S.order.length !== want.length || new Set(S.order).size !== want.length || !S.order.every(i => want.includes(i))) { S.order = want; S.shuffled = false; } }
+if (!S.order.includes(S.cur)) S.cur = S.order[0];
 const pos = i => S.order.indexOf(i);
 function save() { try { localStorage.setItem(KEY, JSON.stringify(S)); } catch (e) {} }
 
@@ -368,10 +379,10 @@ function paras(s) { return s.split(/\n\s*\n/).map(p => "<p>" + fmt(p).replace(/\
 
 function revealed(i) { return S.mode === "tutor" ? !!S.done[i] : S.finished; }
 function isRight(i) { return S.sel[i] === Q[i].a; }
-function answeredCount() { return Object.keys(S.sel).length; }
+function answeredCount() { return S.order.filter(i => S.sel[i] !== undefined).length; }
 function scoreNow() {
   let n = 0, d = 0;
-  Q.forEach((q, i) => { if (revealed(i) && S.sel[i] !== undefined) { d++; if (isRight(i)) n++; } });
+  S.order.forEach(i => { if (revealed(i) && S.sel[i] !== undefined) { d++; if (isRight(i)) n++; } });
   return { n, d };
 }
 const flagSvg = '<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1.5v13M3 2h8.5l-1.8 3 1.8 3H3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>';
@@ -381,32 +392,35 @@ function renderHeader() {
   document.getElementById("mode-exam").setAttribute("aria-pressed", S.mode === "exam");
   const t = document.getElementById("timer");
   t.hidden = S.mode !== "exam";
-  document.getElementById("prog").style.width = (answeredCount() / Q.length * 100) + "%";
+  document.getElementById("prog").style.width = (answeredCount() / S.order.length * 100) + "%";
   tick();
 }
 
 function renderConfirm() {
   const el = document.getElementById("confirm");
   if (!S.pending) { el.innerHTML = ""; return; }
+  const n = S.pending === "topics" ? inOrder(S.pendingSkip).length : S.order.length;
   const msg = S.pending === "reset"
     ? "Start over? This clears every answer, flag, and strike-out."
     : S.pending === "exam"
-      ? "Start a timed exam? You get 174:00 for all 116 questions, answers are graded at the end, and your current progress is cleared."
-      : "Switch to Tutor mode? This clears your timed-exam answers.";
-  const label = S.pending === "exam" ? "Start timed exam" : S.pending === "reset" ? "Start over" : "Switch to Tutor";
+      ? `Start a timed exam? You get ${clock(examSeconds(n))} for ${n === Q.length ? "all " : ""}${n} questions, answers are graded at the end, and your current progress is cleared.`
+      : S.pending === "topics"
+        ? `Start the timed exam over on the topics you picked? You get ${clock(examSeconds(n))} for ${n} questions, and your exam answers are cleared.`
+        : "Switch to Tutor mode? This clears your timed-exam answers.";
+  const label = S.pending === "exam" ? "Start timed exam" : S.pending === "reset" ? "Start over" : S.pending === "topics" ? "Start over on these topics" : "Switch to Tutor";
   el.innerHTML = `<div class="confirm" role="alert"><p>${msg}</p><button class="btn dark" id="cf-yes" type="button">${label}</button><button class="btn" id="cf-no" type="button">Cancel</button></div>`;
   document.getElementById("cf-yes").onclick = () => {
-    const p = S.pending, mix = S.shuffled;
-    if (p === "exam") { S = fresh("exam", mix); S.examEnd = Date.now() + EXAM_SECONDS * 1000; }
-    else if (p === "tutor") { S = fresh("tutor", mix); }
-    else { const m = S.mode; S = fresh(m, mix); if (m === "exam") S.examEnd = Date.now() + EXAM_SECONDS * 1000; }
+    const p = S.pending, mix = S.shuffled, skip = p === "topics" ? S.pendingSkip : S.skip;
+    if (p === "exam") { S = fresh("exam", mix, skip); S.examEnd = Date.now() + examSeconds() * 1000; }
+    else if (p === "tutor") { S = fresh("tutor", mix, skip); }
+    else { const m = S.mode; S = fresh(m, mix, skip); if (m === "exam") S.examEnd = Date.now() + examSeconds() * 1000; }
     save(); render(); window.scrollTo(0, 0);
   };
   document.getElementById("cf-no").onclick = () => { S.pending = null; renderConfirm(); };
 }
 
 function renderQuestion() {
-  const i = S.cur, q = Q[i], rev = revealed(i), sel = S.sel[i], st = S.strikes[i] || [], p = pos(i), last = p === Q.length - 1;
+  const i = S.cur, q = Q[i], rev = revealed(i), sel = S.sel[i], st = S.strikes[i] || [], p = pos(i), last = p === S.order.length - 1;
   const parts = q.stem.split(/\n\s*\n/), call = parts.pop();
   let opts = q.o.map(([txt], k) => {
     let cls = "opt";
@@ -441,7 +455,7 @@ function renderQuestion() {
 
   document.getElementById("main").innerHTML = `<article class="qcard">
     <div class="qhead">
-      <span class="qnum">Question ${String(p + 1).padStart(2, "0")} <span>/ ${Q.length}</span></span>
+      <span class="qnum">Question ${String(p + 1).padStart(2, "0")} <span>/ ${S.order.length}</span></span>
       ${rev ? `<span class="topic">${TOPICS[q.area]}</span>` : ""}
       <button type="button" class="flagbtn" id="flag" aria-pressed="${!!S.flags[i]}">${flagSvg}${S.flags[i] ? "Flagged" : "Flag for review"}</button>
     </div>
@@ -480,18 +494,18 @@ function renderResults() {
     byT[q.area].d++;
     if (S.sel[i] === q.a) { n++; byT[q.area].n++; } else missed.push(i);
   });
-  const pct = Math.round(n / Q.length * 100);
+  const pct = Math.round(n / S.order.length * 100);
   const ranked = Object.keys(TOPICS).filter(k => byT[k].d).sort((a, b) => byT[a].n / byT[a].d - byT[b].n / byT[b].d);
   const weakest = ranked.slice(0, 2).map(k => TOPICS[k]);
-  const bars = Object.keys(TOPICS).map(k => {
+  const bars = Object.keys(TOPICS).filter(k => byT[k].d).map(k => {
     const r = byT[k], p = r.d ? Math.round(r.n / r.d * 100) : 0;
     return `<div class="bar"><span class="name">${fmt(TOPICS[k])}</span><span class="val">${r.n}/${r.d}</span><div class="track"><i class="${p < 60 ? "low" : ""}" style="width:${p}%"></i></div></div>`;
   }).join("");
-  const unanswered = Q.length - answeredCount();
+  const unanswered = S.order.length - answeredCount();
   document.getElementById("main").innerHTML = `<article class="qcard results">
     <span class="label">Score report</span>
     <h2>${pct >= 80 ? "Strong command of the course" : pct >= 60 ? "Solid, with gaps to close" : "Time to drill the fundamentals"}</h2>
-    <div class="bigscore"><b>${n}/${Q.length}</b><span>${pct}% correct${unanswered ? ` · ${unanswered} unanswered` : ""}</span></div>
+    <div class="bigscore"><b>${n}/${S.order.length}</b><span>${pct}% correct${unanswered ? ` · ${unanswered} unanswered` : ""}</span></div>
     <span class="label">By topic</span>
     <div class="bars">${bars}</div>
     ${missed.length ? `<span class="label">Missed or skipped · open to review</span><div class="missed">${missed.map(i => `<button type="button" data-go="${i}">Q${pos(i) + 1}</button>`).join("")}</div>` : ""}
@@ -518,8 +532,8 @@ function renderSide() {
   const stats = S.mode === "tutor"
     ? `<div class="stat"><b>${sc.n}</b><span>Correct</span></div><div class="stat"><b>${sc.d}</b><span>Checked</span></div><div class="stat"><b>${sc.d ? Math.round(sc.n / sc.d * 100) : 0}%</b><span>Accuracy</span></div>`
     : S.finished
-      ? `<div class="stat"><b>${sc.n}</b><span>Correct</span></div><div class="stat"><b>${Q.length}</b><span>Questions</span></div><div class="stat"><b>${Math.round(sc.n / Q.length * 100)}%</b><span>Score</span></div>`
-      : `<div class="stat"><b>${answeredCount()}</b><span>Answered</span></div><div class="stat"><b>${Q.length - answeredCount()}</b><span>Remaining</span></div><div class="stat"><b>${flagged}</b><span>Flagged</span></div>`;
+      ? `<div class="stat"><b>${sc.n}</b><span>Correct</span></div><div class="stat"><b>${S.order.length}</b><span>Questions</span></div><div class="stat"><b>${Math.round(sc.n / S.order.length * 100)}%</b><span>Score</span></div>`
+      : `<div class="stat"><b>${answeredCount()}</b><span>Answered</span></div><div class="stat"><b>${S.order.length - answeredCount()}</b><span>Remaining</span></div><div class="stat"><b>${flagged}</b><span>Flagged</span></div>`;
   const legend = (S.mode === "tutor" || S.finished)
     ? `<span><i style="background:var(--good-bg);border-color:var(--good)"></i>Correct</span><span><i style="background:var(--bad-bg);border-color:var(--bad)"></i>Incorrect</span><span><i style="background:var(--soft);border-color:var(--muted)"></i>Answered</span><span><i style="background:var(--flag);border-color:var(--flag)"></i>Flagged</span>`
     : `<span><i style="background:var(--soft);border-color:var(--muted)"></i>Answered</span><span><i></i>Open</span><span><i style="background:var(--flag);border-color:var(--flag)"></i>Flagged</span>`;
@@ -550,11 +564,11 @@ function renderSide() {
 }
 
 function render() {
-  renderHeader(); renderConfirm(); renderSide();
+  paintTopics(); renderHeader(); renderConfirm(); renderSide();
   if (S.view === "results") renderResults(); else renderQuestion();
 }
 function go(i) {
-  if (!(i >= 0 && i < Q.length)) return;
+  if (!S.order.includes(i)) return;
   S.cur = i; S.view = "q"; save(); render();
   const m = document.getElementById("main"); if (m.getBoundingClientRect().top < 0) m.scrollIntoView({ block: "start" });
 }
@@ -562,7 +576,7 @@ function step(d) { go(S.order[pos(S.cur) + d]); }
 // Shuffle the questions, or press again for the course order. Answers stay with their questions.
 function reorder() {
   S.shuffled = !S.shuffled;
-  S.order = S.shuffled ? shuffled() : inOrder();
+  S.order = S.shuffled ? shuffled(S.skip) : inOrder(S.skip);
   S.view = "q"; go(S.order[0]);
 }
 function choose(k) { if (revealed(S.cur)) return; S.sel[S.cur] = k; save(); renderQuestion(); renderSide(); renderHeader(); }
@@ -583,6 +597,21 @@ setInterval(tick, 1000);
 
 document.getElementById("mode-tutor").onclick = () => { if (S.mode === "tutor") return; S.pending = "tutor"; renderConfirm(); };
 document.getElementById("mode-exam").onclick = () => { if (S.mode === "exam") return; S.pending = "exam"; renderConfirm(); };
+// Topics: tick the course topics to practice in a pop-up checklist (the site's topic picker, which the
+// build fills in above this script). In Tutor mode the change is immediate and answers stay; a timed
+// exam asks first, then starts over on the new topics. Without the picker the Topics button stays hidden.
+const paintTopics = typeof TopicPicker === "object" ? TopicPicker.topicFilter({
+  button: document.getElementById("topics"), note: document.getElementById("topics-note"),
+  list: () => Object.keys(TOPICS).map(k => ({ key: k, label: TOPICS[k], count: Q.filter(q => q.area === k).length })).filter(t => t.count),
+  get: () => new Set(S.skip),
+  set: off => {
+    const skip = [...off];
+    if (S.mode === "exam") { S.pending = "topics"; S.pendingSkip = skip; renderConfirm(); window.scrollTo(0, 0); return; }
+    S.skip = skip;
+    S.order = S.shuffled ? shuffled(skip) : inOrder(skip);
+    go(S.order.includes(S.cur) ? S.cur : S.order[0]);
+  }
+}) : () => {};
 document.addEventListener("keydown", e => {
   if (e.metaKey || e.ctrlKey || e.altKey) return;
   if (/input|textarea|select/i.test(document.activeElement.tagName)) return;

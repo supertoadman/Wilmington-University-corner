@@ -103,7 +103,10 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
 .flagbtn[aria-pressed="true"]{background:var(--flag-soft);border-color:var(--flag);color:var(--ink)}
 .flagbtn[aria-pressed="true"] svg{color:var(--flag);fill:currentColor}
 .btn:disabled{opacity:.5;cursor:default}
+/* Topics checklist: the site's topic picker (the build fills in <style data-topic-picker>), in this page's colors. */
+.tp,.tp-btn,.tp-note{--text:var(--ink);--text-2:var(--ink);--border:var(--line);--border-strong:color-mix(in srgb,var(--line) 55%,var(--muted));--surface-2:var(--sunk);--surface-3:var(--sunk);--ink-fg:var(--surface);--accent-ink:var(--accent);--gold:var(--flag);--gold-soft:var(--flag-soft);--gold-ink:var(--flag);--radius:12px;--radius-sm:8px;--font-serif:var(--display);--font-sans:var(--body);--font-mono:var(--mono)}
 </style>
+<style data-topic-picker></style>
 
 <div class="wrap">
   <header>
@@ -124,11 +127,12 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
       <div class="seg" role="group" aria-label="Question type">
         <button id="k-all" aria-pressed="true">Both</button><button id="k-base" aria-pressed="false">Questions</button><button id="k-var" aria-pressed="false">Variations</button>
       </div>
+      <button type="button" class="tp-btn" id="topics" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 5h20"/><path d="M6 12h12"/><path d="M9 19h6"/></svg><span>Topics</span><b>All</b></button>
     </div>
-    <div class="row" id="chips" role="group" aria-label="Filter by area"></div>
     <div class="meter" aria-hidden="true"><i id="meter"></i></div>
   </div>
 
+  <p class="tp-note" id="topics-note" aria-live="polite" hidden></p>
   <div class="cases" id="list"></div>
 
   <details class="cov" id="cov">
@@ -138,6 +142,7 @@ ol.qs{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:
   </details>
 </div>
 
+<script data-topic-picker></script>
 <script>
 const COV = {
  "Wk 1 · The UCC & which law governs": {
@@ -840,7 +845,7 @@ const QB = [
 const L = "ABCD";
 const AREAS = ["Wk 1 · The UCC & which law governs","Wk 1 · Formation & the battle of the forms","Wks 1–2 · Statute of frauds & unconscionability","Wk 2 · Trade usage, dealing & good faith","Wk 2 · Modification, waiver & estoppel","Wk 2 · Express warranties","Wks 2–3 · Gap fillers & implied warranties","Wk 3 · Title & infringement","Wk 3 · Quantity & price","Wks 4–5 · Tender, delivery & payment","Wks 4–5 · Inspection, acceptance & rejection","Wks 4–5 · Risk of loss","Wks 5–7 · Variation by agreement & disclaimers","Wks 6–7 · Remedies & remedy limits","Wks 6–8 · Parol evidence rule","Wk 8 · Assignment & delegation","Wk 8 · Termination, insecurity & repudiation","Wk 8 · Excuse from performance","Wk 8 · XVII · Buyer's remedies: roadmap & getting the goods (§§ 2-711, 2-716, 2-502)","Wk 8 · XVIII · Buyer's damages: cover, market, incidental & consequential (§§ 2-712, 2-713, 2-715, 2-723)","Wk 9 · XIX · Rejecting the goods; installment contracts (§§ 2-601, 2-602, 2-605, 2-612)","Wk 9 · XX · Cure, care of rejected goods & rejection damages (§§ 2-508, 2-602 to 2-604)","Wk 9 · XXI · Acceptance, notice of breach & accepted-goods damages (§§ 2-606, 2-607, 2-714, 2-717)","Wk 9 · XXII · Revocation of acceptance (§ 2-608)","Wk 10 · XXIII · Privity & remote sellers (§ 2-318)","Wk 11 · XXIV · Seller's remedies: price & reclamation (§§ 2-703, 2-709, 2-507, 2-702)","Wk 11 · XXV · Withholding, stopping in transit & cancelling (§§ 2-702, 2-703, 2-705)","Wk 11 · XXVI · Seller's damages: resale, market, lost profit, price (§§ 2-704, 2-706, 2-708 to 2-710)","Wk 11 · XXVII · Prepaying buyers, casualty & limitations (§§ 2-718(2), 2-510(3), 2-725)","Wk 12 · XXVIII · Leases: scope & lease vs. sale (§§ 2A-103, 1-203)","Wk 12 · XXIX · Finance leases (§§ 2A-103(1)(g), 2A-209, 2A-407)","Wk 12 · XXX · Lease formation, terms & warranties (Art. 2A Parts 1 & 2)","Wk 13 · XXXI · Lease performance: risk, excuse & transfers (§§ 2A-219 to 2A-221, 2A-303)","Wk 13 · XXXII · Lessor's default & lessee's remedies (§§ 2A-508 to 2A-522)","Wk 13 · XXXIII · Lessee's default & lessor's remedies (§§ 2A-523 to 2A-532)","Wk 13 · XXXIV · Property rights in leased goods (§§ 2A-304 to 2A-308)","Wk 14 · XXXV · Final review: integrated problems & traps"];
 const byId = Object.fromEntries(QB.map(q => [q.id, q]));
-let st = { area:"All", kind:"all", order: QB.map(q => q.id), shuffled:false, opts:{}, picked:{}, out:{}, onlyMissed:false, missed:new Set(), onlyFlagged:false, flagged:new Set(), pre:new Set() };
+let st = { skip:new Set(), kind:"all", order: QB.map(q => q.id), shuffled:false, opts:{}, picked:{}, out:{}, onlyMissed:false, missed:new Set(), onlyFlagged:false, flagged:new Set(), pre:new Set() };
 const shuffle = a => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
 const shuffleAnswers = () => QB.forEach(q => st.opts[q.id] = shuffle([0,1,2,3]));
 
@@ -890,7 +895,7 @@ function flagLabel() {
 const SAVE = "sales-bar-questions:progress";
 const isPerm = (p, n) => Array.isArray(p) && p.length === n && p.every((k, i) => p.indexOf(i) >= 0 && Number.isInteger(k));
 function save() {
-  try { localStorage.setItem(SAVE, JSON.stringify({ opts: st.opts, picked: st.picked, order: st.order, shuffled: st.shuffled, area: st.area, kind: st.kind })); } catch (e) {}
+  try { localStorage.setItem(SAVE, JSON.stringify({ opts: st.opts, picked: st.picked, order: st.order, shuffled: st.shuffled, skip: [...st.skip], kind: st.kind })); } catch (e) {}
 }
 function load() {
   let s = null;
@@ -899,14 +904,16 @@ function load() {
   QB.forEach(q => { if (isPerm(s.opts && s.opts[q.id], q.o.length)) st.opts[q.id] = s.opts[q.id]; });
   Object.entries(s.picked || {}).forEach(([id, k]) => { if (byId[id] && Number.isInteger(k) && k >= 0 && k < byId[id].o.length) st.picked[id] = k; });
   if (Array.isArray(s.order) && s.order.length === QB.length && new Set(s.order).size === QB.length && s.order.every(id => byId[id])) { st.order = s.order; st.shuffled = !!s.shuffled; }
-  if (s.area === "All" || AREAS.includes(s.area)) st.area = s.area;
+  // Areas switched off in the Topics checklist. An older save kept one area: that one stays on, the rest go off.
+  if (Array.isArray(s.skip)) st.skip = new Set(s.skip.filter(a => AREAS.includes(a)));
+  else if (AREAS.includes(s.area)) st.skip = new Set(AREAS.filter(a => a !== s.area));
   if (["all", "base", "var"].includes(s.kind)) st.kind = s.kind;
 }
 
+const kindOk = q => st.kind === "all" || (st.kind === "base" ? !q.v : !!q.v);
 function visible() {
   return st.order.map(id => byId[id]).filter(q =>
-    (st.area === "All" || q.area === st.area) &&
-    (st.kind === "all" || (st.kind === "base" ? !q.v : !!q.v)) &&
+    !st.skip.has(q.area) && kindOk(q) &&
     (!st.onlyMissed || st.missed.has(q.id)) &&
     (!st.onlyFlagged || st.flagged.has(q.id)));
 }
@@ -970,10 +977,10 @@ function section(title, qs) {
 function render() {
   const root = document.getElementById("list"); root.innerHTML = "";
   const vis = visible();
-  if (!vis.length) root.innerHTML = '<p class="empty">Nothing matches this filter. Choose another area or press Reset.</p>';
+  if (!vis.length) root.innerHTML = '<p class="empty">No questions match. Press Topics and tick more topics, or choose Both.</p>';
   else if (st.shuffled) root.appendChild(section("Shuffled set", vis));
   else AREAS.forEach(a => { const qs = vis.filter(q => q.area === a); if (qs.length) root.appendChild(section(a, qs)); });
-  document.querySelectorAll(".chip").forEach(c => c.setAttribute("aria-pressed", c.dataset.a === st.area));
+  paintTopics();
   ["all","base","var"].forEach(k => document.getElementById("k-" + k).setAttribute("aria-pressed", st.kind === k));
   document.getElementById("missed").textContent = st.onlyMissed ? "Show all" : "Retry missed";
   flagLabel();
@@ -998,7 +1005,7 @@ function coverage() {
       r.innerHTML = '<span></span><span class="refs"></span>'; r.firstChild.textContent = label;
       (refs[k] || []).forEach(id => {
         const a = document.createElement("a"); a.href = "#q-" + id; a.textContent = "Q" + id;
-        a.onclick = e => { e.preventDefault(); st.area = "All"; st.kind = "all"; st.onlyMissed = false; st.onlyFlagged = false; st.shuffled = false; st.order = QB.map(q => q.id); render(); document.getElementById("q-" + id)?.scrollIntoView({ behavior:"smooth", block:"start" }); };
+        a.onclick = e => { e.preventDefault(); st.skip.delete(byId[id].area); st.kind = "all"; st.onlyMissed = false; st.onlyFlagged = false; st.shuffled = false; st.order = QB.map(q => q.id); render(); document.getElementById("q-" + id)?.scrollIntoView({ behavior:"smooth", block:"start" }); };
         r.lastChild.appendChild(a);
       });
       g.appendChild(r);
@@ -1007,16 +1014,18 @@ function coverage() {
   });
 }
 
-["All", ...AREAS].forEach(a => {
-  const c = document.createElement("button"); c.type = "button"; c.className = "chip"; c.dataset.a = a;
-  c.textContent = a + " (" + (a === "All" ? QB.length : QB.filter(q => q.area === a).length) + ")";
-  c.onclick = () => { st.area = a; render(); };
-  document.getElementById("chips").appendChild(c);
-});
+// Topics: tick the areas to practice in a pop-up checklist (the site's topic picker, which the build
+// fills in above this script). Reset keeps them. Without the picker the Topics button stays hidden.
+const paintTopics = typeof TopicPicker === "object" ? TopicPicker.topicFilter({
+  button: document.getElementById("topics"), note: document.getElementById("topics-note"),
+  list: () => AREAS.map(a => ({ key: a, label: a, count: QB.filter(q => q.area === a && kindOk(q)).length })).filter(t => t.count),
+  get: () => st.skip,
+  set: off => { st.skip = off; render(); window.scrollTo({ top:0 }); }
+}) : () => {};
 ["all","base","var"].forEach(k => document.getElementById("k-" + k).onclick = () => { st.kind = k; render(); });
 document.getElementById("shufA").onclick = () => { shuffleAnswers(); st.picked = {}; st.out = {}; st.onlyMissed = false; st.onlyFlagged = false; render(); };
 document.getElementById("shufQ").onclick = () => { st.order = shuffle(st.order); st.shuffled = true; render(); window.scrollTo({ top:0 }); };
-document.getElementById("reset").onclick = () => { st.picked = {}; st.out = {}; st.onlyMissed = false; st.onlyFlagged = false; st.area = "All"; st.kind = "all"; st.shuffled = false; st.order = QB.map(q => q.id); shuffleAnswers(); render(); };
+document.getElementById("reset").onclick = () => { st.picked = {}; st.out = {}; st.onlyMissed = false; st.onlyFlagged = false; st.kind = "all"; st.shuffled = false; st.order = QB.map(q => q.id); shuffleAnswers(); render(); };
 document.getElementById("missed").onclick = () => {
   if (st.onlyMissed) { st.onlyMissed = false; render(); return; }
   st.missed = new Set(Object.keys(st.picked).filter(id => st.picked[id] !== 0));

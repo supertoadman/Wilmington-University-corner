@@ -9,6 +9,7 @@ import { htmlToText } from '../scripts/lib/text.mjs';
 import { ALLOWED_EXTENSIONS, LIMITS } from './core.mjs';
 import { readMcq, normalizeMcq } from '../scripts/lib/mcq.mjs';
 import { readSupplement, normalizeSupplement } from '../scripts/lib/supplement-shell.mjs';
+import { readCards, normalizeCards } from '../scripts/lib/cards.mjs';
 
 // Script/style hosts that published pages may load from.
 const TRUSTED_HOSTS = ['fonts.googleapis.com', 'fonts.gstatic.com', 'cdnjs.cloudflare.com', 'cdn.jsdelivr.net', 'unpkg.com'];
@@ -83,15 +84,20 @@ export async function checkFile(name, bytes) {
     try { JSON.parse(Buffer.from(bytes).toString('utf8')); } catch { findings.push({ level: 'block', message: 'Not valid JSON.' }); }
     return findings;
   }
-  // Canonical data files (docs/mcq-format.md, docs/supplement-format.md) that a pull request adds next to
-  // the documents: read as JSON only, and built into pages by the site's own templates.
-  const data = name.match(/\.(mcq|supplement)\.json$/i)?.[1].toLowerCase();
+  // Canonical data files (docs/mcq-format.md, docs/supplement-format.md, docs/cards-format.md) that a
+  // pull request adds next to the documents: read as JSON only, and built into pages by the site's own templates.
+  const data = name.match(/\.(mcq|supplement|cards)\.json$/i)?.[1].toLowerCase();
   if (data) {
     if (bytes.length > LIMITS.maxBytes) findings.push({ level: 'block', message: `File is larger than ${LIMITS.maxBytes / 1048576} MB.` });
     const text = Buffer.from(bytes).toString('utf8');
-    const raw = data === 'mcq' ? readMcq(text) : readSupplement(text);
-    if (!raw) { findings.push({ level: 'block', message: `Not a valid ${data === 'mcq' ? 'mcq/v1 practice set' : 'supplement/v1 supplement'} (see docs/${data}-format.md).` }); return findings; }
-    const { errors } = data === 'mcq' ? normalizeMcq(raw) : normalizeSupplement(raw);
+    const kind = {
+      mcq: { read: readMcq, check: normalizeMcq, label: 'mcq/v1 practice set' },
+      supplement: { read: readSupplement, check: normalizeSupplement, label: 'supplement/v1 supplement' },
+      cards: { read: readCards, check: normalizeCards, label: 'cards/v1 flashcard deck' },
+    }[data];
+    const raw = kind.read(text);
+    if (!raw) { findings.push({ level: 'block', message: `Not a valid ${kind.label} (see docs/${data}-format.md).` }); return findings; }
+    const { errors } = kind.check(raw);
     if (errors.length) findings.push({ level: 'warn', message: `${errors.length} item${errors.length === 1 ? '' : 's'} will be left out of the built page: ${preview(errors)}. Run \`npm run check -- <file>\` for the full list.` });
     scanText(text, findings);
     return findings;

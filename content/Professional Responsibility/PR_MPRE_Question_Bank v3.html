@@ -109,7 +109,11 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:righ
 .flagbtn[aria-pressed="true"] svg{color:var(--flag);fill:currentColor}
 .cell{position:relative}
 .cell.flag::after{content:"";position:absolute;top:3px;right:3px;width:6px;height:6px;border-radius:50%;background:var(--flag)}
+/* Topics checklist: the site's topic picker (the build fills in <style data-topic-picker>), in this page's colors. */
+.tp,.tp-btn,.tp-note{--text:var(--ink);--text-2:var(--ink);--border:var(--line);--border-strong:color-mix(in srgb,var(--line) 55%,var(--muted));--surface-2:color-mix(in srgb,var(--ink) 5%,var(--surface));--surface-3:color-mix(in srgb,var(--ink) 10%,var(--surface));--ink-fg:var(--surface);--accent-ink:var(--accent);--gold:var(--flag);--gold-soft:var(--flag-soft);--gold-ink:var(--flag);--radius:10px;--radius-sm:8px;--font-serif:var(--serif);--font-sans:var(--sans);--font-mono:var(--mono)}
+.panel .tp-note{margin:10px 0 0}
 </style>
+<style data-topic-picker></style>
 
 <div class="wrap">
   <header>
@@ -123,7 +127,8 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:righ
   <section class="panel" aria-label="Quiz settings">
     <div>
       <p class="label">Topics</p>
-      <div class="chips" id="chips"></div>
+      <button type="button" class="tp-btn" id="topics" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 5h20"/><path d="M6 12h12"/><path d="M9 19h6"/></svg><span>Topics</span><b>All</b></button>
+      <p class="tp-note" id="topics-note" aria-live="polite" hidden></p>
     </div>
     <div class="row">
       <div class="field">
@@ -156,6 +161,7 @@ td.num{font-family:var(--mono);font-variant-numeric:tabular-nums;text-align:righ
   </section>
 </div>
 
+<script data-topic-picker></script>
 <script>
 const TOPICS = {
   reg:  "Ch. 1–3 · Regulation & Discipline",
@@ -586,13 +592,6 @@ const revealed = it => it.pick !== null && (S.mode === "study" || S.submitted);
 const $ = id => document.getElementById(id);
 function esc(s){ return s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
 
-function renderChips(){
-  const counts = {}; QS.forEach(q=>counts[q.t]=(counts[q.t]||0)+1);
-  const allOn = S.topics.size === Object.keys(TOPICS).length;
-  let h = `<button type="button" class="chip" id="chip-all" aria-pressed="${allOn}">All topics<span class="n">${QS.length}</span></button>`;
-  for(const k in TOPICS) h += `<button type="button" class="chip" id="chip-${k}" data-t="${k}" aria-pressed="${S.topics.has(k)}">${TOPICS[k]}<span class="n">${counts[k]||0}</span></button>`;
-  $("chips").innerHTML = h;
-}
 function renderScore(){
   const ans = S.items.filter(it=>it.pick!==null).length;
   const shown = S.items.filter(revealed);
@@ -667,7 +666,7 @@ function renderResults(){
   </section>`;
 }
 function render(){
-  renderChips();
+  paintTopics();
   $("modeStudy").setAttribute("aria-pressed", S.mode==="study");
   $("modeExam").setAttribute("aria-pressed", S.mode==="exam");
   $("count").value = S.count; $("shuffleQ").checked = S.shuffleQ;
@@ -696,12 +695,14 @@ function crossOut(x){
   x.previousElementSibling.classList.toggle("out", it.out.has(o));
 }
 
-$("chips").addEventListener("click",e=>{
-  const b = e.target.closest(".chip"); if(!b) return;
-  if(b.id==="chip-all"){ S.topics = S.topics.size===Object.keys(TOPICS).length ? new Set() : new Set(Object.keys(TOPICS)); }
-  else { const t=b.dataset.t; S.topics.has(t)?S.topics.delete(t):S.topics.add(t); }
-  saveSettings(); buildSet();
-});
+// Topics: tick the chapters to drill in a pop-up checklist (the site's topic picker, which the build
+// fills in above this script). A change deals a new set. Without the picker the Topics button stays hidden.
+const paintTopics = typeof TopicPicker === "object" ? TopicPicker.topicFilter({
+  button: $("topics"), note: $("topics-note"),
+  list: () => Object.keys(TOPICS).map(k => ({ key: k, label: TOPICS[k], count: QS.filter(q => q.t === k).length })).filter(t => t.count),
+  get: () => new Set(Object.keys(TOPICS).filter(k => !S.topics.has(k))),
+  set: off => { S.topics = new Set(Object.keys(TOPICS).filter(k => !off.has(k))); saveSettings(); buildSet(); }
+}) : () => {};
 $("modeSeg").addEventListener("click",e=>{ const b=e.target.closest("button"); if(!b) return; S.mode=b.dataset.mode; saveSettings(); buildSet(); });
 $("count").addEventListener("change",e=>{ S.count=e.target.value; saveSettings(); buildSet(); });
 $("shuffleQ").addEventListener("change",e=>{ S.shuffleQ=e.target.checked; saveSettings(); buildSet(); });

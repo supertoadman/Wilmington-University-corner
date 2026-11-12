@@ -118,8 +118,10 @@ test('the practice shell embeds the set safely and the game reader reads it back
   assert.equal(html.match(/<\/script>/g).length, 2, 'only the data block and the runtime close a script');
   assert.match(html, /<meta name="generator" content="mcq\/v1 practice shell">/);
   assert.match(html, /data-mcq-shell style="--accent:#3f6b4a"/);
-  for (const id of ['sh-score', 'sh-grade', 'sh-missed', 'sh-flagged', 'sh-reset', 'sh-m-study', 'sh-m-exam', 'sh-exam', 'sh-area', 'sh-shufq', 'sh-shufo', 'sh-meter', 'sh-list']) assert.match(html, new RegExp(`id="${id}"`), id);
+  for (const id of ['sh-score', 'sh-grade', 'sh-missed', 'sh-flagged', 'sh-reset', 'sh-m-study', 'sh-m-exam', 'sh-exam', 'sh-topics', 'sh-topics-note', 'sh-shufq', 'sh-shufo', 'sh-meter', 'sh-list']) assert.match(html, new RegExp(`id="${id}"`), id);
   assert.match(html, /class="shuffle-bar"/);
+  assert.match(html, /function pickTopics\(/, 'the topic picker is inlined');
+  assert.doesNotMatch(html, /^export /m, 'the inlined topic picker is plain script');
 
   const qs = extractQuestions(html);
   assert.equal(qs.length, 6);
@@ -155,10 +157,11 @@ test('the older practice formats still read the same', () => {
   assert.ok(exams.some((q) => q.fixed) && exams.every((q) => q.oe?.length === q.o.length));
 });
 
-test('the shell uses Shuffle mode\'s card and bar rules verbatim', () => {
+test('the shell uses Shuffle mode\'s card, bar and topic-picker rules verbatim', () => {
   const site = read('src/assets/styles.css').split('\n');
-  const rules = site.filter((l) => /^\.(sq\b|sq-|shuffle-(run|bar|score|meter|list)\b)/.test(l));
+  const rules = site.filter((l) => /^\.(sq\b|sq-|shuffle-(run|bar|score|meter|list)\b|tp\b|tp-)/.test(l));
   assert.ok(rules.length > 30);
+  assert.ok(rules.some((l) => l.startsWith('.tp-row ')), 'the topic picker rules are in styles.css');
   const shell = read('src/practice/shell.css');
   for (const rule of rules) assert.ok(shell.includes(rule), `src/practice/shell.css is missing: ${rule}`);
 });
@@ -375,7 +378,7 @@ test('the committed templates match the current shell and viewer (npm run templa
 });
 
 test('the templates and a generated outline pass the submission safety checks', async () => {
-  for (const f of ['mcq-shuffle-template.html', 'supplement-template.html']) assert.deepEqual(await checkFile(f, new Uint8Array(fs.readFileSync(path.join(ROOT, 'docs/templates', f)))), [], f);
+  for (const f of ['mcq-shuffle-template.html', 'supplement-template.html', 'cards-template.html']) assert.deepEqual(await checkFile(f, new Uint8Array(fs.readFileSync(path.join(ROOT, 'docs/templates', f)))), [], f);
   assert.deepEqual(await checkFile('Outline.docx', new Uint8Array(buildOutlineDocx(SAMPLE_OUTLINE()))), []);
 });
 
@@ -409,6 +412,7 @@ test('the build renders canonical sources, wires the popup, and keeps the specs 
     fs.writeFileSync(path.join(dir, 'Sample_Outline.docx'), buildOutlineDocx(SAMPLE_OUTLINE()));
     fs.writeFileSync(path.join(dir, 'Sample_Set.mcq.json'), read('docs/templates/sample.mcq.json'));
     fs.writeFileSync(path.join(dir, 'Sample_Statutes.supplement.json'), read('docs/templates/sample.supplement.json'));
+    fs.writeFileSync(path.join(dir, 'Sample_Cards.cards.json'), read('docs/templates/sample.cards.json'));
     fs.copyFileSync(path.join(ROOT, 'docs/templates/mcq-shuffle-template.html'), path.join(dir, 'Template_Copy.html'));
     // An older-format set in the same course gets the popup too.
     fs.writeFileSync(path.join(dir, 'Legacy_Quiz.html'), `<title>Legacy Quiz</title><body><script>const QB = ${JSON.stringify([{ id: '1', area: 'Formation', stem: 'Is § 2-207 about forms?', o: [['Yes', 'It is.'], ['No', 'It is not.']] }])};</script></body>`);
@@ -447,24 +451,34 @@ test('the build renders canonical sources, wires the popup, and keeps the specs 
     assert.ok(JSON.parse(out('play/data/index.json')).courses[0].sets.some((s) => s.slug === 'sample-set'));
     assert.match(out('api/documents/sample-course/sample-set.txt'), /Answer: B\n- A: Objection is only one of three exceptions/);
     assert.match(out('api/documents/sample-course/sample-statutes.txt'), /## § 2-207 Additional Terms/);
+    // A flashcard deck: its own page, a flashcards document with a card count, and its cards as text.
+    const deckPage = out('files/sample-course/sample-cards.html');
+    assert.match(deckPage, /<meta name="generator" content="cards\/v1 flashcards">/);
+    assert.match(deckPage, /data-cards-shell style="--accent:#3f6b4a"/);
+    assert.doesNotMatch(deckPage, /practice-log\.js|assets\/refs\.js/, 'flashcards are not graded and have no popup');
+    assert.deepEqual([docs['sample-cards'].type, docs['sample-cards'].cards, docs['sample-cards'].questions, docs['sample-cards'].originalFilename], ['flashcards', 8, null, 'Sample_Cards.html']);
+    assert.match(out('api/documents/sample-course/sample-cards.txt'), /Q: When is evidence relevant\?\nA: Evidence is relevant if both/);
+    assert.match(out('subjects/sample-course/index.html'), /8 cards/);
+    assert.ok(!JSON.parse(out('play/data/index.json')).courses[0].sets.some((x) => x.slug === 'sample-cards'), 'the games only ask practice questions');
 
     // The specs: published under api/specs/, listed in llms.txt and the index …
     const specs = JSON.parse(out('api/specs/index.json')).specs.map((s) => s.name);
-    for (const f of ['outline-format.md', 'supplement-format.md', 'mcq-format.md', 'ai-prompts.md', 'mcq-shuffle-template.html', 'supplement-template.html', 'sample.mcq.json', 'sample-outline.docx']) {
+    for (const f of ['outline-format.md', 'supplement-format.md', 'mcq-format.md', 'cards-format.md', 'ai-prompts.md', 'mcq-shuffle-template.html', 'supplement-template.html', 'cards-template.html', 'sample.mcq.json', 'sample.cards.json', 'sample-outline.docx']) {
       assert.ok(specs.includes(f), f);
       assert.ok(fs.existsSync(path.join(dist, 'api/specs', f)), f);
       assert.ok(out('llms.txt').includes(`api/specs/${f}`), f);
     }
     assert.equal(out('api/specs/mcq-format.md'), read('docs/mcq-format.md'));
+    assert.equal(JSON.parse(out('api/specs/index.json')).formats.cards, 'cards/v1');
     // … and nowhere on the public site: no page links them, and the sitemap leaves out api/ entirely.
     const sitemap = out('sitemap.xml');
-    assert.doesNotMatch(sitemap, /api\/|\/specs\/|llms|-format\.md|mcq-shuffle-template|supplement-template|ai-prompts/);
+    assert.doesNotMatch(sitemap, /api\/|\/specs\/|llms|-format\.md|mcq-shuffle-template|supplement-template|cards-template|ai-prompts/);
     assert.match(sitemap, /subjects\/sample-course\/sample-set\//, 'the practice set itself is a normal library page');
     const pages = [];
     const walk = (d) => { for (const e of fs.readdirSync(d, { withFileTypes: true })) { const p = path.join(d, e.name); if (e.isDirectory()) { if (!['api', 'files', 'assets', 'play', 'survivors'].includes(path.relative(dist, p).split(path.sep)[0])) walk(p); } else if (p.endsWith('.html')) pages.push(p); } };
     walk(dist);
     assert.ok(pages.length >= 8);
-    for (const p of pages) assert.doesNotMatch(fs.readFileSync(p, 'utf8'), /api\/specs|llms\.txt|outline-format|supplement-format|mcq-format|ai-prompts|mcq-shuffle-template/, path.relative(dist, p));
+    for (const p of pages) assert.doesNotMatch(fs.readFileSync(p, 'utf8'), /api\/specs|llms\.txt|outline-format|supplement-format|mcq-format|cards-format|ai-prompts|mcq-shuffle-template|cards-template/, path.relative(dist, p));
   } finally {
     fs.rmSync(tmp, { recursive: true, force: true });
   }

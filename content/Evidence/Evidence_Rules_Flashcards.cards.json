@@ -1,0 +1,2266 @@
+{
+  "schema": "cards/v1",
+  "id": "evidence-rules-flashcards",
+  "title": "Evidence Rules Flashcards",
+  "description": "236 flashcards for every rule, test and tested holding in the Evidence Rules Outline, Weeks 1–15, in outline order: jury secrecy, relevance and 403, the policy rules, character evidence and 404(b), impeachment and the rape shield, hearsay and its exceptions, the Confrontation Clause, Bruton, lay and expert opinion, authentication and best evidence, and privileges. Each card asks for one rule or test; elements and factors are listed the way the outline labels them, with the outline's exam tip where it has one. Study one card at a time or see all of them at once, shuffle, pick a topic, and remove the cards you know.",
+  "course": "Evidence",
+  "source": "content/Evidence/Evidence_Rules_Outline.docx (Evidence Rules Outline, Weeks 1–15)",
+  "topics": [
+    "The Federal Rules and Jury Secrecy",
+    "Relevance (401, 402, 104(b))",
+    "Unfair Prejudice (403)",
+    "The Policy Rules (407–411)",
+    "The Propensity Ban and 404(b)",
+    "Sexual-Assault Propensity (413–415)",
+    "Character of the Defendant and Victim; Habit",
+    "The Modes of Impeachment",
+    "Character for Truthfulness (608)",
+    "Impeachment by Conviction (609)",
+    "The Rape Shield (412)",
+    "Competency (601–603)",
+    "The Definition of Hearsay",
+    "Opposing Party's Statements (801(d)(2))",
+    "Prior Statements of a Testifying Witness",
+    "Exceptions Requiring Unavailability (804)",
+    "Exceptions Regardless of Availability (803)",
+    "The Residual Exception (807)",
+    "The Confrontation Clause",
+    "Completeness and Bruton",
+    "Compulsory Process and Due Process",
+    "Lay Opinion (701)",
+    "Expert Testimony: Qualification and Topics",
+    "Eyewitness-Identification Experts",
+    "Bases of Expert Opinion (703, 705)",
+    "Reliability: Frye, Daubert, Joiner, Kumho",
+    "Authentication (901, 902)",
+    "The Best Evidence Rule (1001–1008)",
+    "Rule 501 and Recognizing Privileges",
+    "The Lawyer-Client Privilege",
+    "Duration, Crime-Fraud, and Self-Incrimination",
+    "The Spousal Testimonial Privilege",
+    "The Marital Confidences Privilege",
+    "A Parent-Child Privilege?"
+  ],
+  "cards": [
+    {
+      "id": "fre-statute",
+      "topic": "The Federal Rules and Jury Secrecy",
+      "front": "How do courts read the Federal Rules of Evidence?",
+      "back": "As a statute (effective July 1, 1975; restyled in 2011 with no change in meaning). Read the text first, in light of legislative history, which “on occasion may even override an apparently plain and unmistakable meaning.”",
+      "note": "Most courts give the Advisory Committee Notes weight (Cleary); Justice Scalia said they “bear no special authoritativeness” (Tome, concurring)."
+    },
+    {
+      "id": "fre-105",
+      "topic": "The Federal Rules and Jury Secrecy",
+      "cite": "FRE 105",
+      "front": "What must the court do when evidence is admissible for one purpose or party but not another?",
+      "back": "On timely request, restrict the evidence to its proper scope and instruct the jury accordingly."
+    },
+    {
+      "id": "fre-606b1",
+      "topic": "The Federal Rules and Jury Secrecy",
+      "cite": "FRE 606(b)(1)",
+      "front": "In an inquiry into the validity of a verdict, what may a juror not testify about?",
+      "back": "Any of these (each is barred):",
+      "points": [
+        "(1) any statement made or incident that occurred during deliberations;",
+        "(2) the effect of anything on any juror's vote; or",
+        "(3) any juror's mental processes concerning the verdict."
+      ],
+      "note": "No affidavit or evidence of a juror's statement on these matters may be received either."
+    },
+    {
+      "id": "fre-606b2",
+      "topic": "The Federal Rules and Jury Secrecy",
+      "cite": "FRE 606(b)(2)",
+      "front": "What may a juror testify about after a verdict?",
+      "back": "Whether (any one suffices):",
+      "points": [
+        "(A) extraneous prejudicial information was improperly brought to the jury's attention;",
+        "(B) an outside influence was improperly brought to bear on any juror; or",
+        "(C) a mistake was made in entering the verdict on the verdict form."
+      ]
+    },
+    {
+      "id": "606b-internal-external",
+      "topic": "The Federal Rules and Jury Secrecy",
+      "cite": "FRE 606(b)",
+      "front": "How do you tell whether a juror-misconduct matter is internal (barred) or external (open to testimony)?",
+      "back": "By the nature of the matter, not where it happened. Juror incompetence, intoxication, and bias are internal.",
+      "note": "Drugs and alcohol are no more an “outside influence” than a virus, poorly prepared food, or a lack of sleep (Tanner, 1987)."
+    },
+    {
+      "id": "tanner",
+      "topic": "The Federal Rules and Jury Secrecy",
+      "cite": "Tanner",
+      "front": "Does barring juror testimony about jurors' drug and alcohol use violate the Sixth Amendment right to a competent jury?",
+      "back": "No (Tanner, 1987). Other safeguards protect the right:",
+      "points": [
+        "voir dire;",
+        "observation during trial;",
+        "juror reports before the verdict; and",
+        "non-juror evidence."
+      ],
+      "note": "606(b) serves four ends: protecting jurors from harassment, frank deliberation, finality, and public trust."
+    },
+    {
+      "id": "pena-rodriguez",
+      "topic": "The Federal Rules and Jury Secrecy",
+      "cite": "Peña-Rodriguez v. Colorado",
+      "front": "When does the Sixth Amendment require the no-impeachment rule to give way for racial bias?",
+      "back": "All required (Peña-Rodriguez, 2017):",
+      "points": [
+        "(1) a juror made a clear statement showing reliance on racial stereotypes or animus;",
+        "(2) in a criminal case; and",
+        "(3) the animus was a significant motivating factor in the vote to convict."
+      ],
+      "note": "It is the only constitutional exception to 606(b). Coded remarks in a civil case are a hard fit."
+    },
+    {
+      "id": "warger",
+      "topic": "The Federal Rules and Jury Secrecy",
+      "cite": "Warger",
+      "front": "What must a party show to get a new trial for a juror's dishonesty in voir dire?",
+      "back": "All required (Warger, 2014):",
+      "points": [
+        "(1) the juror failed to answer honestly a material voir dire question; and",
+        "(2) a correct answer would have supported a challenge for cause."
+      ],
+      "note": "606(b) still bars juror testimony about deliberations to prove it, and a juror's own past experiences are not “extraneous prejudicial information.”"
+    },
+
+    {
+      "id": "fre-401",
+      "topic": "Relevance (401, 402, 104(b))",
+      "cite": "FRE 401",
+      "front": "When is evidence relevant?",
+      "back": "Evidence is relevant if (all required):",
+      "points": [
+        "(a) it has any tendency to make a fact more or less probable than it would be without the evidence (probativeness); and",
+        "(b) the fact is of consequence in determining the action (materiality)."
+      ],
+      "note": "At trial, “irrelevant” covers both probativeness and materiality. State the chain of inferences and test each link."
+    },
+    {
+      "id": "fre-401-threshold",
+      "topic": "Relevance (401, 402, 104(b))",
+      "cite": "FRE 401",
+      "front": "How high is the relevance threshold, and must the fact be disputed?",
+      "back": "A minimal threshold, far below a preponderance: “A brick is not a wall” (ACN to 401). The fact need not be disputed (ACN to 401; relied on in Old Chief)."
+    },
+    {
+      "id": "materiality",
+      "topic": "Relevance (401, 402, 104(b))",
+      "front": "Where does materiality come from?",
+      "back": "The substantive law. A statute can make a probative fact immaterial (Montana v. Egelhoff: voluntary intoxication on mens rea), and ignorance is immaterial to a strict-liability offense (Wingate).",
+      "note": "Materiality turns on the elements of the claim or defense."
+    },
+    {
+      "id": "fre-402",
+      "topic": "Relevance (401, 402, 104(b))",
+      "cite": "FRE 402",
+      "front": "Is relevant evidence admissible? Is irrelevant evidence?",
+      "back": "Relevant evidence is admissible unless the Constitution, a federal statute, the FRE, or other Supreme Court rules provide otherwise. Irrelevant evidence is not admissible."
+    },
+    {
+      "id": "fre-104b",
+      "topic": "Relevance (401, 402, 104(b))",
+      "cite": "FRE 104(b)",
+      "front": "When relevance depends on whether a fact exists, how much proof of that fact is needed, and who decides?",
+      "back": "Proof sufficient to support a finding that the fact exists. The judge asks only whether a jury could reasonably find the fact by a preponderance (Huddleston), without weighing credibility; the jury decides. The court may admit the evidence on condition that the proof be introduced later.",
+      "note": "Contrast 104(a): the judge herself decides by a preponderance and is not bound by the evidence rules, except privilege."
+    },
+    {
+      "id": "fre-104a-list",
+      "topic": "Relevance (401, 402, 104(b))",
+      "cite": "FRE 104(a)",
+      "front": "Which preliminary questions does the judge decide herself, by a preponderance?",
+      "back": "The 104(a) questions (the proponent's burden; the judge is not bound by the evidence rules except privilege):",
+      "points": [
+        "a witness's qualification;",
+        "privilege;",
+        "hearsay foundations, such as unavailability and the 801(d)(2)(E) conspiracy (Bourjaily);",
+        "the 702 requirements; and",
+        "the 1004 conditions."
+      ]
+    },
+    {
+      "id": "fre-104b-list",
+      "topic": "Relevance (401, 402, 104(b))",
+      "cite": "FRE 104(b)",
+      "front": "Which preliminary questions are 104(b) questions, where the jury decides?",
+      "back": "Those where the judge asks only whether a jury could reasonably find the fact by a preponderance:",
+      "points": [
+        "other acts (Huddleston);",
+        "personal knowledge (602);",
+        "authentication (901); and",
+        "the 1008 jury questions."
+      ]
+    },
+    {
+      "id": "james",
+      "topic": "Relevance (401, 402, 104(b))",
+      "cite": "United States v. James",
+      "front": "Can evidence the defendant never saw be relevant to the reasonableness of her belief in self-defense?",
+      "back": "Yes. It can corroborate her testimony about what she was told, which bears on the reasonableness of her belief (James, 9th Cir. 1999 (en banc): records of the victim's past violence)."
+    },
+    {
+      "id": "cox",
+      "topic": "Relevance (401, 402, 104(b))",
+      "cite": "Cox v. State",
+      "front": "When evidence is relevant only if the defendant knew something, what does 104(b) ask?",
+      "back": "Whether a jury could reasonably find that he knew. Regular presence where the information circulated can suffice (Cox v. State, Ind. 1998)."
+    },
+
+    {
+      "id": "fre-403",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "FRE 403",
+      "front": "When may the court exclude relevant evidence under Rule 403?",
+      "back": "When its probative value is substantially outweighed by a danger of (any one suffices):",
+      "points": [
+        "unfair prejudice;",
+        "confusing the issues;",
+        "misleading the jury;",
+        "undue delay;",
+        "wasting time; or",
+        "needlessly presenting cumulative evidence."
+      ],
+      "note": "Pro-admission: exclusion only when the imbalance is substantial. Reviewed for abuse of discretion, then harmlessness."
+    },
+    {
+      "id": "unfair-prejudice",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "FRE 403",
+      "front": "What is “unfair prejudice”?",
+      "back": "“An undue tendency to suggest decision on an improper basis, commonly, though not necessarily, an emotional one” (ACN). It includes the propensity inference (Old Chief) and overvaluation (Collins)."
+    },
+    {
+      "id": "fre-403-factors",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "FRE 403",
+      "front": "What factors does a court weigh in the 403 balance?",
+      "back": "Weighed together:",
+      "points": [
+        "(1) whether the fact is actually disputed;",
+        "(2) the availability of other means of proof (ACN); and",
+        "(3) the likely effectiveness of a limiting instruction."
+      ],
+      "note": "An undisputed fact lowers probative value on the 403 scale without making the evidence irrelevant."
+    },
+    {
+      "id": "403-exemption",
+      "topic": "Unfair Prejudice (403)",
+      "front": "What is the only evidence exempt from 403 balancing?",
+      "back": "Crimen falsi convictions under 609(a)(2): they must be admitted, with no balancing."
+    },
+    {
+      "id": "flight-chain",
+      "topic": "Unfair Prejudice (403)",
+      "front": "What are the four links in the flight inference (Myers)?",
+      "back": "Each link can fail:",
+      "points": [
+        "(1) behavior → flight;",
+        "(2) flight → consciousness of guilt;",
+        "(3) → consciousness of guilt of the crime charged;",
+        "(4) → actual guilt."
+      ],
+      "note": "Race may weaken link 2 (Commonwealth v. Warren, Mass. 2016). Explaining flight may force a defendant to reveal a prior record or an uncharged crime."
+    },
+    {
+      "id": "bocharski",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "State v. Bocharski",
+      "front": "When are gruesome photos admissible over a 403 objection?",
+      "back": "When they bear on a disputed issue, but not when they have little tendency to prove one and are “introduced primarily to inflame the jury” (Bocharski, Ariz. 2001)."
+    },
+    {
+      "id": "collins",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "People v. Collins",
+      "front": "When is probability evidence admissible?",
+      "back": "Only with a foundation in real data (as with DNA) and independent factors. Made-up numbers and interrelated variables, presented by an impressive expert the defense cannot refute, mislead the jury (Collins, Cal. 1968).",
+      "note": "Even an accurate figure would not have shown that this couple was guilty."
+    },
+    {
+      "id": "old-chief",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "Old Chief",
+      "front": "When must the court accept a defendant's offer to concede an element?",
+      "back": "When the only issue is the defendant's legal status (a prior felony): the name and nature of the offense add nothing but a propensity risk (Old Chief, 1997).",
+      "note": "Otherwise the prosecution may prove its case its own way, for narrative richness, a morally reasonable verdict, and jurors' expectations. The holding is confined to status elements."
+    },
+    {
+      "id": "403-steps",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "FRE 403",
+      "front": "What are the steps of a 403 analysis?",
+      "back": "In order:",
+      "points": [
+        "(1) probative value on a disputed fact, discounted for concessions and alternatives;",
+        "(2) the specific danger;",
+        "(3) is it substantially outweighed?",
+        "(4) less prejudicial alternatives and a 105 instruction;",
+        "(5) abuse of discretion and harmlessness."
+      ]
+    },
+    {
+      "id": "scale-403",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "FRE 403",
+      "front": "Which way does the 403 scale tilt, and who bears the burden?",
+      "back": "Toward admission, with the opponent's burden: evidence is excluded only if its probative value is substantially outweighed."
+    },
+    {
+      "id": "scale-609a1b",
+      "topic": "Unfair Prejudice (403)",
+      "cite": "FRE 609(a)(1)(B)",
+      "front": "What balance governs a testifying criminal defendant's felony conviction?",
+      "back": "Straight balancing, with the proponent's burden, and ties exclude: the conviction comes in only if its probative value outweighs its prejudicial effect to that defendant."
+    },
+    {
+      "id": "scale-reverse-403",
+      "topic": "Unfair Prejudice (403)",
+      "front": "Which rules use a reverse-403 test, tilted against admission?",
+      "back": "The proponent's heavy burden: probative value must substantially outweigh the harm. Three rules:",
+      "points": [
+        "609(b): convictions more than 10 years old;",
+        "412(b)(2): civil rape-shield evidence (harm to any victim and unfair prejudice to any party);",
+        "703: disclosing otherwise-inadmissible bases of an expert's opinion to the jury."
+      ]
+    },
+
+    {
+      "id": "policy-structure",
+      "topic": "The Policy Rules (407–411)",
+      "front": "What do Rules 407–411 have in common, and how does 410 differ from the rest?",
+      "back": "Each reflects a judgment that the evidence fails 403 as a matter of law and serves a public policy. 407, 408, 409, and 411 bar only certain purposes. 410 bars the evidence for all purposes against the defendant, with two narrow exceptions."
+    },
+    {
+      "id": "fre-407",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 407",
+      "front": "What may subsequent remedial measures not prove, and what may they still prove?",
+      "back": "Measures that would have made an earlier injury less likely are not admissible to prove negligence, culpable conduct, a defect in a product or its design, or a need for a warning or instruction. The court may admit them for another purpose, such as:",
+      "points": [
+        "impeachment; or",
+        "if disputed, ownership, control, or the feasibility of precautions."
+      ],
+      "note": "“If disputed” modifies all three. Strict-liability cases are covered (1997)."
+    },
+    {
+      "id": "407-timing",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 407",
+      "front": "Against what event is a measure “subsequent” under 407?",
+      "back": "The injury sued on. Chaining a wolf after it attacked a beagle is barred in the beagle owner's suit, but not in the suit by the child it later mauled."
+    },
+    {
+      "id": "407-third-party",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 407",
+      "front": "Does 407 bar evidence of repairs made by a third party?",
+      "back": "Generally no: the policy does not apply. Such evidence is often weak under 403, though."
+    },
+    {
+      "id": "407-door",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 407",
+      "front": "How can a defendant open the door to a subsequent remedial measure?",
+      "back": "By saying the old design is still fine or that a fix was impossible. That invites impeachment with the measure (Grotto Pizza's $55.26 repair; the wood-chipper defendant who touted identical machines in use)."
+    },
+    {
+      "id": "fre-408a",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 408(a)",
+      "front": "What compromise evidence does Rule 408 bar, and for what purposes?",
+      "back": "Not admissible on behalf of any party to prove or disprove the validity or amount of a disputed claim, or to impeach by a prior inconsistent statement or contradiction:",
+      "points": [
+        "(1) furnishing, promising, or offering, or accepting or offering to accept, valuable consideration to compromise the claim; and",
+        "(2) conduct or statements made during compromise negotiations about the claim."
+      ],
+      "note": "Exception: (a)(2) statements are admissible in a criminal case when the negotiations related to a claim by a public office exercising regulatory, investigative, or enforcement authority."
+    },
+    {
+      "id": "fre-408b",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 408(b)",
+      "front": "For what other purposes may compromise evidence be admitted?",
+      "back": "For example:",
+      "points": [
+        "a witness's bias or prejudice;",
+        "negating a contention of undue delay; or",
+        "proving obstruction."
+      ]
+    },
+    {
+      "id": "408-trigger",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 408",
+      "front": "What triggers Rule 408?",
+      "back": "A claim disputed as to validity or amount. A report commissioned to support settlement talks counts as made “during” negotiations (Ramada v. Rauch: the Goldsmith report).",
+      "note": "Courts may apply 408 to settlements with third parties."
+    },
+    {
+      "id": "fre-409",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 409",
+      "front": "What does Rule 409 bar?",
+      "back": "Furnishing, promising, or offering to pay medical, hospital, or similar expenses resulting from an injury, offered to prove liability.",
+      "note": "Statements made along with the offer are not covered."
+    },
+    {
+      "id": "409-vs-408",
+      "topic": "The Policy Rules (407–411)",
+      "front": "“I'm so sorry,” said at the accident scene and again at a settlement meeting: which is barred?",
+      "back": "Only the one at the settlement meeting, by 408. At the scene, “Let me give you a bandaid” is barred by 409, but the apology is an admission 409 does not cover.",
+      "note": "Why the difference: an accident-scene apology is not deterred by a rule the speaker has never heard of, while negotiations after a claim need broad protection."
+    },
+    {
+      "id": "fre-411",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 411",
+      "front": "What may liability-insurance evidence not prove, and what may it still prove?",
+      "back": "That a person was or was not insured is not admissible to prove negligence or other wrongful conduct. It may be admitted for another purpose, such as:",
+      "points": [
+        "bias or prejudice; or",
+        "agency, ownership, or control."
+      ]
+    },
+    {
+      "id": "fre-410a",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 410(a)",
+      "front": "What plea evidence is inadmissible against the defendant who pleaded or negotiated?",
+      "back": "Each of these:",
+      "points": [
+        "(1) a guilty plea later withdrawn;",
+        "(2) a nolo contendere plea;",
+        "(3) statements in a Rule 11 (or comparable state) proceeding on either; and",
+        "(4) statements in plea discussions with an attorney for the prosecuting authority that did not result in a guilty plea or resulted in a withdrawn one."
+      ]
+    },
+    {
+      "id": "fre-410b",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 410(b)",
+      "front": "When may statements from pleas or plea discussions be admitted?",
+      "back": "Either (any one suffices):",
+      "points": [
+        "(1) when another statement from the same plea or discussions has been introduced and in fairness they should be considered together; or",
+        "(2) in a perjury or false-statement prosecution, if made under oath, on the record, with counsel present."
+      ]
+    },
+    {
+      "id": "410-impeach-waive",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 410",
+      "front": "May plea statements be used to impeach? Can 410 be waived?",
+      "back": "No impeachment use: Congress removed it in 1975. But 410 is waivable: impeachment waivers are valid (United States v. Mezzanatto, 1995), and several circuits uphold case-in-chief waivers."
+    },
+    {
+      "id": "410-police",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 410",
+      "front": "Does 410 cover a defendant's statements to police?",
+      "back": "No. It covers discussions with prosecutors (or their designated agents), not police, though some courts protect a defendant's actual, reasonable expectation of negotiating (Robertson, 5th Cir. 1978)."
+    },
+    {
+      "id": "410-defense-use",
+      "topic": "The Policy Rules (407–411)",
+      "cite": "FRE 410",
+      "front": "May a defendant offer the prosecutor's plea offer, or his own refusal of immunity?",
+      "back": "Courts generally bar a defendant's use of the prosecutor's offer, since admitting it would chill offers (Problem 2.8). But 410 protects the defendant, not the government, so a defendant may offer his refusal of immunity as evidence of innocence (United States v. Biaggi, 2d Cir. 1990).",
+      "note": "Probative value depends on what was turned down: rejecting immunity strongly suggests innocence; rejecting a plea to a lesser charge may be only a gamble."
+    },
+    {
+      "id": "policy-steps",
+      "topic": "The Policy Rules (407–411)",
+      "front": "What are the steps for a policy-rule (407–411) problem?",
+      "back": "In order:",
+      "points": [
+        "(1) match the evidence to its rule (a repair, a compromise, payment of expenses, plea material, insurance);",
+        "(2) check the trigger (407: after the injury; 408: a claim disputed as to validity or amount; 410: a plea, or talks with a prosecutor);",
+        "(3) name the purpose: the barred use, or a permitted one actually in issue;",
+        "(4) check who it is offered against (410 protects only the defendant who pleaded or negotiated; 408 applies on behalf of any party);",
+        "(5) then 403 and a 105 instruction."
+      ]
+    },
+
+    {
+      "id": "fre-404a1",
+      "topic": "The Propensity Ban and 404(b)",
+      "cite": "FRE 404(a)(1)",
+      "front": "What does the character-evidence ban prohibit?",
+      "back": "Evidence of a person's character or character trait to prove that on a particular occasion the person acted in accordance with it.",
+      "note": "Applies in civil and criminal cases. Propensity evidence is relevant but barred for policy reasons: jurors overweight it and may punish a bad person regardless of guilt."
+    },
+    {
+      "id": "fre-404b",
+      "topic": "The Propensity Ban and 404(b)",
+      "cite": "FRE 404(b)(1)–(2)",
+      "front": "What may other crimes, wrongs, or acts not prove, and what may they still prove?",
+      "back": "They may not prove character to show action in accordance with it. They may be admissible for another purpose, such as motive, opportunity, intent, preparation, plan, knowledge, identity, absence of mistake, or lack of accident.",
+      "note": "MIMIC is only a memory aid: the rule's list is longer and not exhaustive. 404(b)(2) never compels admission; 403 still applies."
+    },
+    {
+      "id": "404b-not-exceptions",
+      "topic": "The Propensity Ban and 404(b)",
+      "front": "Are the 404(b)(2) purposes exceptions to the propensity ban? What are the true exceptions?",
+      "back": "No: they are non-character routes (State v. Kirsch). The true exceptions are 404(a)(2), 404(a)(3), and 413–415."
+    },
+    {
+      "id": "fre-404b3",
+      "topic": "The Propensity Ban and 404(b)",
+      "cite": "FRE 404(b)(3)",
+      "front": "What notice must a prosecutor give before offering other-acts evidence?",
+      "back": "Reasonable written notice before trial (or during trial for good cause), articulating the permitted purpose and the reasoning that supports it."
+    },
+    {
+      "id": "huddleston",
+      "topic": "The Propensity Ban and 404(b)",
+      "cite": "Huddleston",
+      "front": "What are the four Huddleston steps for other-acts evidence?",
+      "back": "All four:",
+      "points": [
+        "(1) a proper purpose;",
+        "(2) relevance, with the other act proved under 104(b) (a jury could reasonably find it by a preponderance);",
+        "(3) 403; and",
+        "(4) a 105 instruction on request."
+      ],
+      "note": "An acquittal of the other act does not bar its use (Dowling)."
+    },
+    {
+      "id": "404b-identity",
+      "topic": "The Propensity Ban and 404(b)",
+      "cite": "FRE 404(b)(2)",
+      "front": "When can another crime be used to prove identity?",
+      "back": "When it shares characteristics “sufficiently idiosyncratic to permit an inference of pattern.” “Prosaic commonalities” are not enough (Trenkler).",
+      "note": "Reverse 404(b) evidence offered by a defendant needs only ordinary 401/403 similarity (Stevens)."
+    },
+    {
+      "id": "404b-plan-motive",
+      "topic": "The Propensity Ban and 404(b)",
+      "cite": "FRE 404(b)(2)",
+      "front": "When do “plan” and “motive” slide into forbidden propensity?",
+      "back": "Plan requires that the acts be parts of one overall scheme, not a mere pattern. Motive that is just a desire to commit this kind of crime is propensity (Kirsch)."
+    },
+    {
+      "id": "doctrine-of-chances",
+      "topic": "The Propensity Ban and 404(b)",
+      "front": "What is the doctrine of chances, and why is it debated?",
+      "back": "Many “accidents” are objectively improbable (Brides in the Bath). One view says the inference avoids character; the other says it still runs through propensity."
+    },
+    {
+      "id": "rap-lyrics",
+      "topic": "The Propensity Ban and 404(b)",
+      "cite": "State v. Skinner",
+      "front": "When are a defendant's rap lyrics barred?",
+      "back": "When they have no specific link to the crime: then they only invite a violent-character inference (Skinner, N.J. 2014).",
+      "note": "California, Louisiana, and Maryland have statutes restricting creative-expression evidence."
+    },
+    {
+      "id": "zackowitz",
+      "topic": "The Propensity Ban and 404(b)",
+      "cite": "People v. Zackowitz",
+      "front": "When may weapons the defendant owned be admitted?",
+      "back": "Not when they prove only that he is a dangerous man. Weapons bought after the threat (preparation) or found at the scene (placing him there) come in for that purpose, with a 105 instruction (Zackowitz, N.Y. 1930)."
+    },
+
+    {
+      "id": "fre-413-415",
+      "topic": "Sexual-Assault Propensity (413–415)",
+      "cite": "FRE 413–415",
+      "front": "What do Rules 413–415 allow?",
+      "back": "When a defendant is accused of sexual assault (413) or child molestation (414), or in a civil case based on either (415), the court may admit evidence that the defendant committed another such act, and it may be considered on any matter to which it is relevant.",
+      "note": "The proponent must disclose the evidence at least 15 days before trial (or later for good cause)."
+    },
+    {
+      "id": "413-threshold",
+      "topic": "Sexual-Assault Propensity (413–415)",
+      "cite": "FRE 413",
+      "front": "What is the 413 threshold?",
+      "back": "All required:",
+      "points": [
+        "(1) the defendant is accused of sexual assault;",
+        "(2) the evidence is of another sexual assault; and",
+        "(3) it is relevant."
+      ],
+      "note": "Then 403 applies with its normal balance; courts may not treat propensity as inherently too prejudicial (United States v. Guardia, 10th Cir. 1998)."
+    },
+    {
+      "id": "413-proof",
+      "topic": "Sexual-Assault Propensity (413–415)",
+      "cite": "FRE 413",
+      "front": "Does 413 require a conviction for the other act? Can 403 still exclude it?",
+      "back": "No conviction is required; the standard is presumably Huddleston's (Rep. Molinari). 403 still applies with its normal balance (Guardia), and due-process challenges have failed (Mound).",
+      "note": "Disputes over whether the other acts were improper can still justify exclusion when they would turn a trial of two incidents into six (Guardia)."
+    },
+    {
+      "id": "413-critique",
+      "topic": "Sexual-Assault Propensity (413–415)",
+      "cite": "FRE 413–415",
+      "front": "Why are Rules 413–415 criticized?",
+      "back": "The critiques (Lannan; Baker):",
+      "points": [
+        "sex offenders are not shown to reoffend more (BJS: 7.7% rearrested for sexual assault within three years, versus about 60% for property and drug offenders);",
+        "juries overweight priors; and",
+        "police “round up the usual suspects.”"
+      ],
+      "note": "Congress enacted the rules in 1994 over the Judicial Conference's opposition."
+    },
+
+    {
+      "id": "fre-404a2a",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "cite": "FRE 404(a)(2)(A)",
+      "front": "How does a criminal defendant open the door to evidence of the defendant's own character?",
+      "back": "By offering evidence of the defendant's own pertinent trait. If it is admitted, the prosecutor may rebut it.",
+      "note": "Only the accused opens the door, and only in criminal cases."
+    },
+    {
+      "id": "fre-404a2b",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "cite": "FRE 404(a)(2)(B)",
+      "front": "What happens when a criminal defendant offers an alleged victim's pertinent trait?",
+      "back": "Subject to 412, if it is admitted, the prosecutor may rebut it and may also offer evidence of the defendant's same trait."
+    },
+    {
+      "id": "fre-404a2c",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "cite": "FRE 404(a)(2)(C)",
+      "front": "When may the prosecutor offer the victim's trait of peacefulness in a homicide case?",
+      "back": "To rebut evidence that the victim was the first aggressor."
+    },
+    {
+      "id": "fre-405a",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "cite": "FRE 405(a)",
+      "front": "How may character be proved when character evidence is allowed?",
+      "back": "By reputation or opinion. On cross-examination of the character witness, the court may allow inquiry into relevant specific instances of conduct.",
+      "note": "“Have you heard” or “do you know” questions test the witness's basis. They need a good-faith basis, and the examiner is stuck with the answer (Michelson)."
+    },
+    {
+      "id": "fre-405b",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "cite": "FRE 405(b)",
+      "front": "When may character be proved by specific instances of conduct?",
+      "back": "When character is an essential element of a charge, claim, or defense, as in:",
+      "points": [
+        "entrapment (predisposition);",
+        "truth as a defense to defamation;",
+        "negligent entrustment;",
+        "custody; and",
+        "sexually-violent-person commitment."
+      ],
+      "note": "Character is not an element of self-defense (the issue is the defendant's reasonable fear), so a victim's specific violent acts don't come in under 405(b) to prove his character."
+    },
+    {
+      "id": "i-wouldnt-shoot",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "front": "A defendant testifies, “I wouldn't shoot anybody.” What follows?",
+      "back": "She has made herself a character witness and may be cross-examined about past shootings (Problem 3.16)."
+    },
+    {
+      "id": "fre-406",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "cite": "FRE 406",
+      "front": "What may habit or routine-practice evidence prove?",
+      "back": "That on a particular occasion the person or organization acted in accordance with the habit or routine practice, regardless of corroboration or an eyewitness."
+    },
+    {
+      "id": "habit-vs-character",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "cite": "FRE 406",
+      "front": "What makes conduct a habit rather than character?",
+      "back": "A regular, specific, semi-automatic response to a specific recurring situation (buckling a seatbelt): “predictable and predictive.”",
+      "note": "Occasional conduct is not enough (Halloran: regularly heating Freon cans with a coil). Deliberate, morally charged conduct (a doctor's deceptions in Weil v. Seltzer) is usually character."
+    },
+    {
+      "id": "character-steps",
+      "topic": "Character of the Defendant and Victim; Habit",
+      "front": "What are the steps for a character-evidence problem?",
+      "back": "In order:",
+      "points": [
+        "(1) is it offered to show action in character? If not, 404 does not apply, though 403 does;",
+        "(2) a propensity route exists only through 404(a)(2) in a criminal case once the accused opens the door, or 413–415 in sex cases;",
+        "(3) form: reputation or opinion (405(a)); specific acts only on cross of a character witness, or when character is an essential element (405(b));",
+        "(4) 404(b)(2): state the non-propensity chain, then Huddleston, and in a criminal case written notice;",
+        "(5) a witness's truthfulness goes to 607–609, not 404;",
+        "(6) habit under 406 is not character."
+      ]
+    },
+
+    {
+      "id": "fre-607",
+      "topic": "The Modes of Impeachment",
+      "cite": "FRE 607",
+      "front": "Who may attack a witness's credibility?",
+      "back": "Any party, including the party that called the witness."
+    },
+    {
+      "id": "impeachment-families",
+      "topic": "The Modes of Impeachment",
+      "front": "What are the two families of impeachment?",
+      "back": "Two:",
+      "points": [
+        "“The witness is lying now”: contradiction, prior inconsistent statement, bias, capacity.",
+        "“The witness is a liar”: 608(a), 608(b), 609."
+      ]
+    },
+    {
+      "id": "extrinsic-by-mode",
+      "topic": "The Modes of Impeachment",
+      "front": "Which modes of impeachment may be proved by extrinsic evidence?",
+      "back": "By mode:",
+      "points": [
+        "Bias and capacity: yes. Bias is never collateral (Abel).",
+        "608(b) acts: no. Cross only.",
+        "609 convictions: yes.",
+        "A contradiction or inconsistent statement on a collateral matter (relevant only to contradict the witness): usually no. The witness's answer stands."
+      ],
+      "note": "608(b)'s bar is absolute only when the sole purpose is to attack character for truthfulness (ACN; Abel)."
+    },
+    {
+      "id": "fre-610",
+      "topic": "The Modes of Impeachment",
+      "cite": "FRE 610",
+      "front": "May a witness's religious beliefs be used to attack or support credibility?",
+      "back": "No."
+    },
+
+    {
+      "id": "fre-608a",
+      "topic": "Character for Truthfulness (608)",
+      "cite": "FRE 608(a)",
+      "front": "How may a witness's character for truthfulness be attacked or supported?",
+      "back": "By reputation or opinion testimony about the witness's character for truthfulness or untruthfulness. Evidence of truthful character comes in only after that character has been attacked.",
+      "note": "608 applies in civil and criminal cases, to every witness, and either side may start the attack."
+    },
+    {
+      "id": "fre-608b",
+      "topic": "Character for Truthfulness (608)",
+      "cite": "FRE 608(b)",
+      "front": "How may specific instances of a witness's conduct be used on truthfulness?",
+      "back": "Not by extrinsic evidence (609 convictions aside). On cross-examination, the court may allow inquiry into instances probative of the character for truthfulness of:",
+      "points": [
+        "(1) the witness; or",
+        "(2) another witness about whose character the witness being cross-examined has testified."
+      ]
+    },
+    {
+      "id": "608b-limits",
+      "topic": "Character for Truthfulness (608)",
+      "cite": "FRE 608(b)",
+      "front": "What limits apply to a 608(b) question?",
+      "back": "All required:",
+      "points": [
+        "(1) the act must be probative of truthfulness (the lie, not the underlying misconduct);",
+        "(2) no extrinsic proof (take the answer);",
+        "(3) 403 discretion;",
+        "(4) a good-faith basis (Whitmore); and",
+        "(5) protection from harassment (611(a))."
+      ],
+      "note": "Extrinsic evidence offered for another purpose, such as bias, is governed by 401–403."
+    },
+    {
+      "id": "rehabilitation",
+      "topic": "Character for Truthfulness (608)",
+      "cite": "FRE 608(a)",
+      "front": "What kinds of attack open the door to evidence of a witness's truthful character?",
+      "back": "An attack on character for truthfulness (any one suffices):",
+      "points": [
+        "(1) 608 opinion or reputation;",
+        "(2) 608(b) acts; or",
+        "(3) 609 convictions."
+      ],
+      "note": "Bias is not such an attack (ACN), and a single contradiction usually is not (Problems 4.6–4.7)."
+    },
+    {
+      "id": "whitmore",
+      "topic": "Character for Truthfulness (608)",
+      "cite": "United States v. Whitmore",
+      "front": "May a court bar a good-faith 608(b) cross about a witness's lie?",
+      "back": "Barring it can be an abuse of discretion: 608(b) bars extrinsic proof, not questions. But 608(a) witnesses whose information is too remote or too narrow may be excluded (Whitmore, D.C. Cir. 2004)."
+    },
+
+    {
+      "id": "fre-609a1",
+      "topic": "Impeachment by Conviction (609)",
+      "cite": "FRE 609(a)(1)",
+      "front": "When is a felony conviction admitted to attack a witness's character for truthfulness?",
+      "back": "For a crime punishable by death or more than one year in the convicting jurisdiction:",
+      "points": [
+        "(A) in a civil case, or for a witness who is not a criminal defendant: it must be admitted, subject to 403;",
+        "(B) against a testifying criminal defendant: it must be admitted if its probative value outweighs its prejudicial effect to that defendant."
+      ],
+      "note": "What counts is the maximum punishment, not the sentence imposed."
+    },
+    {
+      "id": "fre-609a2",
+      "topic": "Impeachment by Conviction (609)",
+      "cite": "FRE 609(a)(2)",
+      "front": "When must a conviction for any crime, whatever the punishment, be admitted?",
+      "back": "When the court can readily determine that establishing its elements required proving, or the witness's admitting, a dishonest act or false statement. No 403 balancing.",
+      "note": "Larceny, robbery, and drug crimes generally are not crimen falsi. The court looks to the elements and, if needed, the indictment, admitted facts, or jury instructions (ACN 2006)."
+    },
+    {
+      "id": "fre-609b",
+      "topic": "Impeachment by Conviction (609)",
+      "cite": "FRE 609(b)",
+      "front": "What test applies to a conviction more than 10 years old?",
+      "back": "Admissible only if its probative value, supported by specific facts and circumstances, substantially outweighs its prejudicial effect, and the proponent gives reasonable written notice.",
+      "note": "The 10 years run from the later of conviction or release from confinement, including release from reconfinement for a parole violation. 609(b) applies to crimen falsi too."
+    },
+    {
+      "id": "fre-609c",
+      "topic": "Impeachment by Conviction (609)",
+      "cite": "FRE 609(c)",
+      "front": "When does a pardon bar using a conviction to impeach?",
+      "back": "When the pardon (or similar procedure) was based on rehabilitation and the person has no later felony conviction, or was based on innocence."
+    },
+    {
+      "id": "fre-609d",
+      "topic": "Impeachment by Conviction (609)",
+      "cite": "FRE 609(d)",
+      "front": "When may a juvenile adjudication be used to impeach?",
+      "back": "All required:",
+      "points": [
+        "(1) in a criminal case;",
+        "(2) against a witness other than the defendant;",
+        "(3) an adult's conviction for the offense would be admissible; and",
+        "(4) admitting it is necessary to fairly determine guilt or innocence."
+      ]
+    },
+    {
+      "id": "fre-609e",
+      "topic": "Impeachment by Conviction (609)",
+      "cite": "FRE 609(e)",
+      "front": "Is a conviction admissible to impeach while an appeal is pending?",
+      "back": "Yes, and the pendency of the appeal is also admissible."
+    },
+    {
+      "id": "luce-ohler",
+      "topic": "Impeachment by Conviction (609)",
+      "front": "How does a defendant preserve a challenge to an in limine ruling admitting her conviction?",
+      "back": "She must testify to challenge it (Luce, 1984), and she waives the challenge by introducing the conviction herself on direct (Ohler, 2000)."
+    },
+    {
+      "id": "gordon-factors",
+      "topic": "Impeachment by Conviction (609)",
+      "cite": "FRE 609(a)(1)(B)",
+      "front": "What are the Gordon factors for admitting a criminal defendant's felony conviction?",
+      "back": "Weighed together:",
+      "points": [
+        "(1) the nature of the crime (violence says little about veracity);",
+        "(2) its recency and the witness's later history;",
+        "(3) similarity to the charged crime (weighs against admission);",
+        "(4) the importance of the defendant's testimony (weighs against admission);",
+        "(5) the centrality of credibility (weighs for admission)."
+      ],
+      "note": "A conviction identical to the charged crime is usually excluded (United States v. Brewer, E.D. Tenn. 1978)."
+    },
+
+    {
+      "id": "fre-412a",
+      "topic": "The Rape Shield (412)",
+      "cite": "FRE 412(a)",
+      "front": "What does the rape shield bar?",
+      "back": "In a civil or criminal proceeding involving alleged sexual misconduct, evidence offered to prove that a victim engaged in other sexual behavior, or to prove a victim's sexual predisposition."
+    },
+    {
+      "id": "fre-412b1",
+      "topic": "The Rape Shield (412)",
+      "cite": "FRE 412(b)(1)",
+      "front": "What are the exceptions to the rape shield in a criminal case?",
+      "back": "The court may admit (any one suffices):",
+      "points": [
+        "(A) specific instances of the victim's sexual behavior, offered to prove that someone other than the defendant was the source of semen, injury, or other physical evidence;",
+        "(B) specific instances with the accused, offered by the defendant to prove consent or by the prosecutor;",
+        "(C) evidence whose exclusion would violate the defendant's constitutional rights."
+      ]
+    },
+    {
+      "id": "fre-412b2",
+      "topic": "The Rape Shield (412)",
+      "cite": "FRE 412(b)(2)",
+      "front": "When is a victim's sexual behavior or predisposition admissible in a civil case?",
+      "back": "If its probative value substantially outweighs the danger of harm to any victim and of unfair prejudice to any party. The victim's reputation comes in only if the victim placed it in controversy."
+    },
+    {
+      "id": "fre-412c",
+      "topic": "The Rape Shield (412)",
+      "cite": "FRE 412(c)",
+      "front": "What procedure must a party follow to offer evidence under a rape-shield exception?",
+      "back": "A motion at least 14 days before trial, notice to the victim, and a sealed in camera hearing."
+    },
+    {
+      "id": "412-false-accusation",
+      "topic": "The Rape Shield (412)",
+      "cite": "FRE 412",
+      "front": "Does the rape shield bar evidence of a victim's prior false accusation?",
+      "back": "No: a false accusation is not sexual behavior. The threshold is whether a jury could find it false (State v. Smith, La. 1999).",
+      "note": "Ordinary 403 and 608(b) limits still apply."
+    },
+    {
+      "id": "olden",
+      "topic": "The Rape Shield (412)",
+      "cite": "Olden v. Kentucky",
+      "front": "Which case is the model for the constitutional exception in 412(b)(1)(C)?",
+      "back": "Olden v. Kentucky (1988): excluding cross-examination that shows a complainant's motive to fabricate, “a prototypical form of bias,” violates the Confrontation Clause."
+    },
+    {
+      "id": "412-vs-413",
+      "topic": "The Rape Shield (412)",
+      "front": "Why protect a victim's sexual history (412) but admit a defendant's (413–415)?",
+      "back": "The shield protects reporting and privacy, interests a past offender lacks. And a victim's history cuts both ways, while a defendant's prior rapes cut one way."
+    },
+    {
+      "id": "impeachment-steps",
+      "topic": "The Rape Shield (412)",
+      "front": "What are the steps for an impeachment problem?",
+      "back": "In order:",
+      "points": [
+        "(1) name the theory (bias, contradiction, inconsistency, 608(a), 608(b), 609);",
+        "(2) apply its form-of-proof limits (opinion or reputation; cross only; record of conviction);",
+        "(3) is extrinsic evidence allowed? (bias and non-collateral matters, yes; 608(b) character, no);",
+        "(4) has character been attacked before rehabilitation?",
+        "(5) 403, 611(a), and in sex cases, 412."
+      ]
+    },
+
+    {
+      "id": "fre-601-603",
+      "topic": "Competency (601–603)",
+      "cite": "FRE 601–603",
+      "front": "What do Rules 601, 602, and 603 require of a witness?",
+      "back": "Three rules:",
+      "points": [
+        "601: every person is competent unless the rules provide otherwise (state law governs in civil cases where state law supplies the rule of decision);",
+        "602: personal knowledge, shown by evidence sufficient to support a finding, a 104(b) question (not required for expert opinion under 703);",
+        "603: an oath or affirmation."
+      ],
+      "note": "The presiding judge (605) and jurors at the trial (606(a)) may not testify."
+    },
+    {
+      "id": "child-competency",
+      "topic": "Competency (601–603)",
+      "front": "What does competency mostly concern today, and what makes a young child competent?",
+      "back": "Young children. The child must be able to perceive and remember, communicate, understand the duty to tell the truth, and answer on cross.",
+      "note": "18 U.S.C. § 3509(c) presumes children competent."
+    },
+    {
+      "id": "competency-vs-hearsay",
+      "topic": "Competency (601–603)",
+      "front": "How does the competency question differ from the hearsay question?",
+      "back": "Competency asks whether this witness can be tested by cross; hearsay asks whether this statement can be."
+    },
+
+    {
+      "id": "fre-801a",
+      "topic": "The Definition of Hearsay",
+      "cite": "FRE 801(a)",
+      "front": "What is a “statement” for hearsay purposes?",
+      "back": "A person's oral assertion, written assertion, or nonverbal conduct, if the person intended it as an assertion."
+    },
+    {
+      "id": "fre-801c",
+      "topic": "The Definition of Hearsay",
+      "cite": "FRE 801(c)",
+      "front": "What is hearsay?",
+      "back": "A statement that (all required):",
+      "points": [
+        "(1) the declarant does not make while testifying at the current trial or hearing; and",
+        "(2) a party offers to prove the truth of the matter asserted."
+      ],
+      "note": "“You can never answer the question, ‘Is this hearsay?’ without knowing the proponent's purpose.”"
+    },
+    {
+      "id": "fre-802",
+      "topic": "The Definition of Hearsay",
+      "cite": "FRE 802",
+      "front": "Is hearsay admissible?",
+      "back": "No, unless a federal statute, the FRE, or other Supreme Court rules provide otherwise."
+    },
+    {
+      "id": "testimonial-capacities",
+      "topic": "The Definition of Hearsay",
+      "front": "What four testimonial capacities does cross-examination test, and hearsay leave untested?",
+      "back": "All four:",
+      "points": ["perception;", "memory;", "narration; and", "sincerity."]
+    },
+    {
+      "id": "own-earlier-words",
+      "topic": "The Definition of Hearsay",
+      "front": "Is a witness repeating her own earlier words on the stand hearsay?",
+      "back": "Yes, it is still hearsay when offered for its truth: she did not make the statement while testifying at the current trial."
+    },
+    {
+      "id": "not-hearsay",
+      "topic": "The Definition of Hearsay",
+      "front": "What kinds of out-of-court words or conduct are not hearsay?",
+      "back": "Any of these:",
+      "points": [
+        "words offered for their effect on the listener (notice, motive, reasonable fear);",
+        "verbal acts (contract words, threats, defamation);",
+        "nonassertive conduct (the sea captain sailing with his family);",
+        "involuntary exclamations;",
+        "words offered as circumstantial evidence of knowledge (a child's accurate description of the defendant's room);",
+        "machine output."
+      ]
+    },
+    {
+      "id": "assertive-conduct",
+      "topic": "The Definition of Hearsay",
+      "cite": "FRE 801(a)",
+      "front": "When is conduct a “statement”?",
+      "back": "When it is intended as an assertion: pointing at a fleeing car, or a minister eating beef for the press."
+    },
+    {
+      "id": "implied-assertions",
+      "topic": "The Definition of Hearsay",
+      "cite": "United States v. Zenni",
+      "front": "Are implied assertions hearsay under the Federal Rules?",
+      "back": "Words not intended to assert the fact they are offered to prove are not hearsay: callers placing bets on a bookmaker's phone did not assert that the premises were a betting operation (Zenni, E.D. Ky. 1980). The Rules reject the common-law view (Wright v. Tatham, 1837).",
+      "note": "But an indirect assertion offered for the belief behind it is hearsay if the speaker intended to communicate that belief (“Planning my retirement home,” offered to show the speaker was not suicidal)."
+    },
+    {
+      "id": "fre-805",
+      "topic": "The Definition of Hearsay",
+      "cite": "FRE 805",
+      "front": "When is hearsay within hearsay admissible?",
+      "back": "Only if each layer fits an exception."
+    },
+    {
+      "id": "hearsay-justifications",
+      "topic": "The Definition of Hearsay",
+      "front": "What two justifications lie behind every hearsay exception?",
+      "back": "Necessity and trustworthiness."
+    },
+
+    {
+      "id": "fre-801d2",
+      "topic": "Opposing Party's Statements (801(d)(2))",
+      "cite": "FRE 801(d)(2)",
+      "front": "Which statements offered against an opposing party are not hearsay?",
+      "back": "A statement (any one suffices):",
+      "points": [
+        "(A) made by the party in an individual or representative capacity;",
+        "(B) adopted by the party or believed to be true;",
+        "(C) made by a person the party authorized to speak on the subject;",
+        "(D) made by the party's agent or employee on a matter within the scope of that relationship while it existed; or",
+        "(E) made by the party's coconspirator during and in furtherance of the conspiracy."
+      ]
+    },
+    {
+      "id": "801d2-bootstrap",
+      "topic": "Opposing Party's Statements (801(d)(2))",
+      "cite": "FRE 801(d)(2)",
+      "front": "Can the statement itself establish authority, agency, or a conspiracy?",
+      "back": "It must be considered, but it does not by itself establish authority under (C), the relationship under (D), or the conspiracy and participation under (E)."
+    },
+    {
+      "id": "801d2-no-knowledge",
+      "topic": "Opposing Party's Statements (801(d)(2))",
+      "cite": "FRE 801(d)(2)",
+      "front": "Must an opposing party's statement rest on personal knowledge or be against interest?",
+      "back": "No (Mahlandt), and opinions are fine. The justification is the adversary system: a party cannot complain she was unable to cross-examine herself."
+    },
+    {
+      "id": "adoption-by-silence",
+      "topic": "Opposing Party's Statements (801(d)(2))",
+      "cite": "FRE 801(d)(2)(B)",
+      "front": "When is a party's silence an adoption of a statement?",
+      "back": "All required:",
+      "points": [
+        "(1) the party heard and understood;",
+        "(2) was free to respond;",
+        "(3) the circumstances naturally called for a denial; and",
+        "(4) the party did not deny."
+      ],
+      "note": "Post-Miranda silence may not be used to impeach (Doyle) and likely not as an adoption. Pre-arrest and pre-Miranda silence may impeach (Jenkins; Fletcher v. Weir)."
+    },
+    {
+      "id": "coconspirator",
+      "topic": "Opposing Party's Statements (801(d)(2))",
+      "cite": "FRE 801(d)(2)(E)",
+      "front": "How does the judge decide whether a coconspirator's statement qualifies?",
+      "back": "Under 104(a), by a preponderance: the judge finds the conspiracy and “during and in furtherance,” may consider the statement itself, but needs some independent evidence (Bourjaily; the 1997 amendment).",
+      "note": "No conspiracy charge is needed; a joint venture suffices. Confessions to police almost never qualify."
+    },
+    {
+      "id": "801d2-successors",
+      "topic": "Opposing Party's Statements (801(d)(2))",
+      "cite": "FRE 801(d)(2) (2024)",
+      "front": "What did the 2024 amendment to 801(d)(2) add about successors?",
+      "back": "If a party's claim, defense, or potential liability is directly derived from a declarant or the declarant's principal, a statement admissible against the declarant or principal is also admissible against the party.",
+      "note": "An estate suing on the decedent's claim takes the decedent's statements; so do an assignee and a trustee. It doesn't reach statements made after the rights or obligations were transferred."
+    },
+    {
+      "id": "mahlandt",
+      "topic": "Opposing Party's Statements (801(d)(2))",
+      "cite": "Mahlandt",
+      "front": "Against whom does an opposing party's statement come in?",
+      "back": "Only against the party it fits. An employee's statements came in against him under (A) and against his employer under (D), while the organization's minutes came in against the organization but not the employee (Mahlandt, 8th Cir. 1978).",
+      "note": "Statements made within an organization count."
+    },
+
+    {
+      "id": "fre-801d1",
+      "topic": "Prior Statements of a Testifying Witness",
+      "cite": "FRE 801(d)(1)",
+      "front": "Which prior statements of a testifying witness are not hearsay?",
+      "back": "If the declarant testifies and is subject to cross about it, a statement that (any one suffices):",
+      "points": [
+        "(A) is inconsistent with the testimony and was given under penalty of perjury at a trial, hearing, or other proceeding or in a deposition;",
+        "(B) is consistent with the testimony and offered (i) to rebut a charge of recent fabrication or recent improper influence or motive, or (ii) to rehabilitate credibility attacked on another ground;",
+        "(C) identifies a person as someone the declarant perceived earlier."
+      ],
+      "note": "This is the rule Fisher and the slides teach. (A) changes on Dec. 1, 2026: see the next card."
+    },
+    {
+      "id": "801d1a-2026",
+      "topic": "Prior Statements of a Testifying Witness",
+      "cite": "FRE 801(d)(1)(A) (2026)",
+      "front": "How does the Dec. 1, 2026 amendment change the rule for prior inconsistent statements?",
+      "back": "New (A): the statement “is inconsistent with the declarant's testimony.” The oath requirement is gone, so a prior inconsistent statement of a witness who testifies and is subject to cross about it is substantive evidence even if unsworn, and no limiting instruction is needed.",
+      "note": "Ask Prof. Hornzell which version the Dec. 10 final uses. Until then, give both results for an unsworn statement. 613(b) still governs extrinsic proof."
+    },
+    {
+      "id": "613-vs-801d1a",
+      "topic": "Prior Statements of a Testifying Witness",
+      "front": "What's the difference between using a prior inconsistent statement under 613 and under 801(d)(1)(A)?",
+      "back": "613 impeaches; 801(d)(1)(A) is substantive. Under the rule the course teaches, an unsworn statement to police is impeachment only, so counsel may not argue it as proof (Troisi).",
+      "note": "An inconsistent statement may impeach even when it can't come in for its truth, and its vagueness goes to weight (United States v. Barrett, 1st Cir. 1976)."
+    },
+    {
+      "id": "fre-613",
+      "topic": "Prior Statements of a Testifying Witness",
+      "cite": "FRE 613",
+      "front": "What does Rule 613 require when a witness is examined about a prior statement?",
+      "back": "Two rules:",
+      "points": [
+        "(a) the examiner need not show the statement or disclose its contents to the witness, but must on request show or disclose it to an adverse party's attorney;",
+        "(b) unless the court orders otherwise, extrinsic evidence of a prior inconsistent statement may not be admitted until after the witness is given an opportunity to explain or deny it and an adverse party may examine the witness about it (as amended 2024)."
+      ],
+      "note": "613(b) does not apply to an opposing party's statement under 801(d)(2). Extrinsic proof is allowed only on a non-collateral point."
+    },
+    {
+      "id": "tome",
+      "topic": "Prior Statements of a Testifying Witness",
+      "cite": "Tome",
+      "front": "When can a prior consistent statement rebut a charge of recent fabrication?",
+      "back": "Only if it was made before the alleged motive to fabricate arose (Tome)."
+    },
+    {
+      "id": "owens",
+      "topic": "Prior Statements of a Testifying Witness",
+      "cite": "United States v. Owens",
+      "front": "Is a witness who cannot remember “subject to cross-examination”?",
+      "back": "Yes, for 801(d)(1)(C) and the Confrontation Clause, which guarantees “an opportunity for effective cross-examination,” not cross that is effective in whatever way the defense might wish (Owens, 1988).",
+      "note": "So an identification comes in even if the witness now cannot remember or misidentifies in court."
+    },
+    {
+      "id": "fre-612",
+      "topic": "Prior Statements of a Testifying Witness",
+      "cite": "FRE 612",
+      "front": "What happens when a writing is used to refresh a witness's memory?",
+      "back": "Anything may refresh memory: the witness reads silently and testifies from memory. The adverse party may inspect the writing and introduce relevant parts. That applies to a writing used while testifying, and to one used before testifying if the court decides justice requires it.",
+      "note": "A recorded recollection comes in for its truth only with the 803(5) foundation. If the prosecution does not comply with an order to produce it, the court must strike the testimony or, if justice so requires, declare a mistrial."
+    },
+
+    {
+      "id": "fre-804a",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 804(a)",
+      "front": "When is a declarant “unavailable”?",
+      "back": "Any one suffices. The declarant:",
+      "points": [
+        "(1) is exempted by a privilege ruling;",
+        "(2) refuses to testify despite a court order;",
+        "(3) testifies to not remembering the subject matter;",
+        "(4) cannot testify because of death or then-existing infirmity or illness; or",
+        "(5) is absent, and the proponent could not procure attendance (or, for (b)(2)–(4), attendance or testimony) by process or other reasonable means."
+      ],
+      "note": "Not unavailable if the proponent procured or wrongfully caused the unavailability to prevent the declarant from attending or testifying."
+    },
+    {
+      "id": "fre-804b1",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 804(b)(1)",
+      "front": "What is the former-testimony exception?",
+      "back": "Testimony given as a witness at a trial, hearing, or lawful deposition, offered against a party who had (or, in a civil case, whose predecessor in interest had) an opportunity and similar motive to develop it by direct, cross, or redirect examination."
+    },
+    {
+      "id": "similar-motive",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 804(b)(1)",
+      "front": "What does “similar motive” require for former testimony?",
+      "back": "A substantially similar interest at a similar stage, which prosecutors usually lack at the grand jury (United States v. DiNapoli, 2d Cir. 1993 (en banc)). It binds the government too, with no “adversarial fairness” shortcut (United States v. Salerno, 1992)."
+    },
+    {
+      "id": "predecessor-in-interest",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 804(b)(1)",
+      "front": "What is a “predecessor in interest”?",
+      "back": "In civil cases only: an earlier party with a similar stake and a similar motive, not formal privity. The State that prosecuted a man was the officers' predecessor in interest in his later § 1983 suit against them (Volland-Golden, N.D. Ill. 2015)."
+    },
+    {
+      "id": "fre-804b2",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 804(b)(2)",
+      "front": "What is a dying declaration?",
+      "back": "In a homicide prosecution or a civil case, a statement made while the declarant believed death imminent, about its cause or circumstances.",
+      "note": "The declarant must have had “a settled hopeless expectation” of imminent death (Shepard, 1933). It looks to the declarant's actual state of mind."
+    },
+    {
+      "id": "fre-804b3",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 804(b)(3)",
+      "front": "What is a statement against interest?",
+      "back": "A statement a reasonable person in the declarant's position would have made only if believing it true, because it was so contrary to the declarant's pecuniary or proprietary interest, or tended to invalidate a claim or expose the declarant to civil or criminal liability.",
+      "note": "It uses a reasonable person; dying declarations and excited utterances look to the declarant's actual state."
+    },
+    {
+      "id": "804b3-corroboration",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 804(b)(3)(B)",
+      "front": "What more does a penal-interest statement need in a criminal case?",
+      "back": "Corroborating circumstances that clearly indicate trustworthiness, considering the totality of circumstances and any evidence that supports or undermines it (2024).",
+      "note": "The court weighs both the circumstances of the statement (timing, spontaneity, motives) and independent evidence, which is relevant but not necessarily dispositive."
+    },
+    {
+      "id": "williamson",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "Williamson",
+      "front": "Does 804(b)(3) admit a whole confession?",
+      "back": "No. Only the individual remarks that are themselves self-inculpatory. Collateral statements within a broader confession, such as an accomplice's statements shifting blame, are not admissible (Williamson, 1994)."
+    },
+    {
+      "id": "fre-804b6",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 804(b)(6)",
+      "front": "What is forfeiture by wrongdoing?",
+      "back": "A statement offered against a party that wrongfully caused, or acquiesced in wrongfully causing, the declarant's unavailability, intending that result.",
+      "note": "The proponent proves the wrongdoing and the intent by a preponderance under 104(a) (United States v. Gray, 4th Cir. 2005: a wife who killed her husband a week before he was to testify against her)."
+    },
+    {
+      "id": "fre-806",
+      "topic": "Exceptions Requiring Unavailability (804)",
+      "cite": "FRE 806",
+      "front": "Once a hearsay statement is admitted, may the absent declarant be impeached?",
+      "back": "Yes. The declarant's credibility may be attacked and supported as if the declarant had testified, and the 613(b) foundation is not required. This also covers (d)(2)(C)–(E) statements."
+    },
+
+    {
+      "id": "fre-803-1",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(1)",
+      "front": "What is a present sense impression?",
+      "back": "A statement describing or explaining an event or condition, made while or immediately after the declarant perceived it."
+    },
+    {
+      "id": "fre-803-2",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(2)",
+      "front": "What is an excited utterance?",
+      "back": "A statement relating to a startling event, made while the declarant was under the stress of excitement it caused.",
+      "note": "Personal knowledge applies to declarants. Judge Posner doubts both 803(1) and (2): most lies are spontaneous, and excitement impairs perception (Boyce, concurring)."
+    },
+    {
+      "id": "fre-803-3",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(3)",
+      "front": "What does the state-of-mind exception cover, and what does it exclude?",
+      "back": "A statement of the declarant's then-existing state of mind or condition: motive, intent, plan, emotion, sensation, pain, or bodily health. It excludes a statement of memory or belief offered to prove the fact remembered, except as to the declarant's will.",
+      "note": "“Dr. Shepard has poisoned me” looks backward, so it isn't a state-of-mind statement (Shepard)."
+    },
+    {
+      "id": "hillmon",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(3)",
+      "front": "What is the Hillmon doctrine, and how far does it reach?",
+      "back": "A statement of the declarant's own intent may prove the declarant later acted on it. Using it to prove another person's conduct is contested.",
+      "note": "The Ninth Circuit admits it to show the other person was there too (Pheaster, 1976), despite the House report's view that 803(3) proves only the declarant's own conduct. Some courts require independent evidence of the other person's involvement."
+    },
+    {
+      "id": "fre-803-4",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(4)",
+      "front": "What does the medical-diagnosis exception cover?",
+      "back": "A statement made for, and reasonably pertinent to, medical diagnosis or treatment, describing medical history, symptoms, their inception, or their general cause.",
+      "note": "Fault and identity are ordinarily not pertinent. Some courts admit the identity of a household child abuser if the proponent shows how identity affected treatment (State v. Smith, Iowa 2016)."
+    },
+    {
+      "id": "fre-803-5",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(5)",
+      "front": "What is a recorded recollection, and how is it used at trial?",
+      "back": "A record on a matter the witness once knew but cannot now recall well enough to testify fully and accurately, made or adopted when fresh, that accurately reflects the witness's knowledge. It may be read into evidence, but received as an exhibit only if offered by an adverse party."
+    },
+    {
+      "id": "803-5-foundation",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(5)",
+      "front": "What is the foundation for a recorded recollection?",
+      "back": "All required (Johnson):",
+      "points": [
+        "(1) firsthand knowledge;",
+        "(2) made when fresh;",
+        "(3) insufficient present memory; and",
+        "(4) the witness vouches for the record's accuracy."
+      ]
+    },
+    {
+      "id": "fre-803-6",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(6)",
+      "front": "What are the elements of the business-records exception?",
+      "back": "All required:",
+      "points": [
+        "(A) made at or near the time by, or from information transmitted by, someone with knowledge;",
+        "(B) kept in the course of a regularly conducted activity;",
+        "(C) making the record was a regular practice of that activity;",
+        "(D) shown by a custodian, another qualified witness, or a 902(11)/(12) certification; and",
+        "(E) the opponent does not show a lack of trustworthiness."
+      ],
+      "note": "Since 2014 the opponent bears the burden on (E). Litigation-driven reports are suspect (Palmer)."
+    },
+    {
+      "id": "johnson-v-lutz",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "Johnson v. Lutz",
+      "front": "A bystander's statement appears in a police report. Does the business-records exception cover it?",
+      "back": "Not by itself. An informant with no business duty to report is a separate layer that needs its own exception under 805 (Johnson v. Lutz, N.Y. 1930)."
+    },
+    {
+      "id": "fre-803-8",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(8)",
+      "front": "What does the public-records exception cover?",
+      "back": "A record of a public office setting out (unless the opponent shows untrustworthiness):",
+      "points": [
+        "(A)(i) the office's activities;",
+        "(ii) a matter observed under a legal duty to report, but not, in a criminal case, a matter observed by law-enforcement personnel; or",
+        "(iii) in a civil case or against the government in a criminal case, factual findings from a legally authorized investigation."
+      ],
+      "note": "Police reports offered against a defendant cannot evade 803(8)'s limits through 803(6)."
+    },
+    {
+      "id": "beech-aircraft",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "Beech Aircraft v. Rainey",
+      "front": "Do “factual findings” in a public record include opinions and conclusions?",
+      "back": "Yes, when based on a factual investigation, subject to the rule's trustworthiness check (Beech Aircraft, 1988)."
+    },
+    {
+      "id": "fre-803-7-10",
+      "topic": "Exceptions Regardless of Availability (803)",
+      "cite": "FRE 803(7), (10)",
+      "front": "How can the absence of a record be proved?",
+      "back": "803(7): the absence of an entry in a business record. 803(10): the absence of a public record, with notice-and-demand in criminal cases."
+    },
+
+    {
+      "id": "fre-807a",
+      "topic": "The Residual Exception (807)",
+      "cite": "FRE 807(a)",
+      "front": "When is a hearsay statement admissible under the residual exception?",
+      "back": "When it is not admissible under 803 or 804, and (all required):",
+      "points": [
+        "(1) it is supported by sufficient guarantees of trustworthiness, after considering the totality of circumstances under which it was made and any corroborating evidence; and",
+        "(2) it is more probative on the point for which it is offered than any other evidence the proponent can obtain through reasonable efforts."
+      ],
+      "note": "(2) is a comparative-necessity test, not a prejudice balance."
+    },
+    {
+      "id": "fre-807b",
+      "topic": "The Residual Exception (807)",
+      "cite": "FRE 807(b)",
+      "front": "What notice must a party give to use the residual exception?",
+      "back": "Reasonable written notice before trial, including the statement's substance and the declarant's name (or during trial for good cause)."
+    },
+    {
+      "id": "807-near-miss",
+      "topic": "The Residual Exception (807)",
+      "cite": "FRE 807",
+      "front": "Can a statement that narrowly misses another exception come in under 807?",
+      "back": "Yes. The 2019 amendment ended the “near-miss” debate: such a statement may be considered (contrast the Laster dissent).",
+      "note": "Courts use 807 rarely."
+    },
+    {
+      "id": "dallas-county",
+      "topic": "The Residual Exception (807)",
+      "cite": "Dallas County",
+      "front": "What case is the model for the residual exception, and why was the evidence admitted?",
+      "back": "Dallas County (5th Cir. 1961): a 1901 newspaper report of a courthouse fire was admitted because it was necessary (no living witnesses) and trustworthy (no motive to lie; public and easily corrected).",
+      "note": "Today such an article might be an ancient document under 803(16) (prepared before Jan. 1, 1998)."
+    },
+    {
+      "id": "hearsay-steps",
+      "topic": "The Residual Exception (807)",
+      "front": "What are the steps for a hearsay problem?",
+      "back": "In order:",
+      "points": [
+        "(1) a statement (801(a)): a person's assertion, or conduct intended as one?",
+        "(2) offered for its truth? Name the proponent's purpose;",
+        "(3) layers: give each layer its own route (805);",
+        "(4) 801(d) exclusions: an opposing party's statement, or a testifying witness's prior statement;",
+        "(5) exceptions: 803; 804 (prove unavailability first); 807 last, with written notice;",
+        "(6) the proponent proves the foundation to the judge under 104(a);",
+        "(7) 403, a 105 instruction, and 806 attacks on the declarant;",
+        "(8) against a criminal defendant, run the Confrontation Clause separately."
+      ]
+    },
+
+    {
+      "id": "confrontation-scope",
+      "topic": "The Confrontation Clause",
+      "front": "Whom does the Confrontation Clause protect, and how does it relate to the hearsay rules?",
+      "back": "Only criminal defendants: the Sixth Amendment guarantees the accused the right “to be confronted with the witnesses against him.” Evidence must survive both the hearsay rules and the Clause."
+    },
+    {
+      "id": "roberts",
+      "topic": "The Confrontation Clause",
+      "cite": "Roberts",
+      "front": "What was the Ohio v. Roberts test, and what happened to it?",
+      "back": "A statement was admissible if the declarant was unavailable and the statement bore “indicia of reliability” (a firmly rooted exception or particularized guarantees of trustworthiness). Crawford overruled it."
+    },
+    {
+      "id": "crawford",
+      "topic": "The Confrontation Clause",
+      "cite": "Crawford v. Washington",
+      "front": "When are testimonial statements of a witness absent from trial admissible?",
+      "back": "Only if (all required) (Crawford, 2004):",
+      "points": [
+        "(1) the declarant is unavailable; and",
+        "(2) the defendant had a prior opportunity to cross-examine."
+      ],
+      "note": "Nontestimonial statements are governed only by the hearsay rules (Whorton v. Bockting, 2007)."
+    },
+    {
+      "id": "crawford-outside",
+      "topic": "The Confrontation Clause",
+      "cite": "Crawford v. Washington",
+      "front": "Which statements does the Confrontation Clause not bar, even if testimonial?",
+      "back": "Any of these:",
+      "points": [
+        "statements the declarant is cross-examined about at trial;",
+        "statements not offered for their truth;",
+        "statements admissible under forfeiture by wrongdoing (Giles); and",
+        "perhaps dying declarations."
+      ]
+    },
+    {
+      "id": "testimonial",
+      "topic": "The Confrontation Clause",
+      "front": "What statements are “testimonial”?",
+      "back": "Ex parte in-court testimony and its equivalents (affidavits, custodial examinations), formalized materials, prior testimony, statements made for use at trial, and police interrogations.",
+      "note": "Nontestimonial: casual remarks to acquaintances, statements in furtherance of a conspiracy, most business records."
+    },
+    {
+      "id": "davis-hammon",
+      "topic": "The Confrontation Clause",
+      "cite": "Davis and Hammon",
+      "front": "When are statements made in police interrogation testimonial?",
+      "back": "Nontestimonial when the objective primary purpose is to enable police to meet an ongoing emergency. Testimonial when there is no emergency and the primary purpose is to establish or prove past events for prosecution (2006).",
+      "note": "A 911 call describing an ongoing emergency can become testimonial once the emergency ends (Davis). An account of past events to police at the scene, with no emergency, is testimonial (Hammon)."
+    },
+    {
+      "id": "bryant",
+      "topic": "The Confrontation Clause",
+      "cite": "Bryant",
+      "front": "What do courts consider in deciding the primary purpose of an interrogation (Bryant)?",
+      "back": "Judged objectively:",
+      "points": [
+        "(1) the location;",
+        "(2) the declarant's and interrogators' purposes;",
+        "(3) the declarant's medical condition; and",
+        "(4) formality."
+      ],
+      "note": "The emergency depends on the threat: a gun and a shooter at large threaten the public, unlike a domestic assault by fists (2011)."
+    },
+    {
+      "id": "clark",
+      "topic": "The Confrontation Clause",
+      "cite": "Ohio v. Clark",
+      "front": "Are a young child's statements to teachers testimonial?",
+      "back": "Rarely. Testimonial means made with “the primary purpose of assisting in a prosecution.” Statements to non-police are much less likely to be testimonial, very young children's statements rarely are, and mandatory reporting duties don't make teachers police agents (Clark, 2015).",
+      "note": "A testimonial primary purpose is necessary but not always sufficient: dying declarations and forfeiture remain."
+    },
+    {
+      "id": "forensic-reports",
+      "topic": "The Confrontation Clause",
+      "front": "When do forensic reports raise a Confrontation problem?",
+      "back": "Three holdings:",
+      "points": [
+        "sworn lab certificates are testimonial (Melendez-Diaz, 2009);",
+        "a “surrogate” analyst who did not perform or observe the test cannot satisfy the Clause (Bullcoming, 2011);",
+        "an expert who conveys an absent analyst's statements as the basis of an opinion offers them for their truth if the opinion depends on their truth (Smith v. Arizona, 2024)."
+      ],
+      "note": "Whether those statements are testimonial is a separate question."
+    },
+    {
+      "id": "giles",
+      "topic": "The Confrontation Clause",
+      "cite": "Giles v. California",
+      "front": "What does forfeiture by wrongdoing require under the Confrontation Clause?",
+      "back": "That the defendant intended to prevent the witness from testifying, matching 804(b)(6)'s “intending that result” (Giles, 2008).",
+      "note": "An abusive relationship meant to isolate the victim from police may show that intent."
+    },
+    {
+      "id": "confrontation-steps",
+      "topic": "The Confrontation Clause",
+      "front": "What are the steps for a Confrontation Clause problem?",
+      "back": "In order:",
+      "points": [
+        "(1) a criminal case, and prosecution evidence?",
+        "(2) offered for its truth (including as an expert's basis)?",
+        "(3) does the declarant testify and submit to cross?",
+        "(4) is the statement testimonial (emergency, formality, audience, the declarant's age)?",
+        "(5) if so, unavailability plus a prior opportunity to cross, or forfeiture with intent;",
+        "(6) then the hearsay rules, separately."
+      ]
+    },
+
+    {
+      "id": "fre-106",
+      "topic": "Completeness and Bruton",
+      "cite": "FRE 106",
+      "front": "What does the rule of completeness allow (as amended 2023)?",
+      "back": "If a party introduces all or part of a statement, an adverse party may require the introduction, at that time, of any other part, or any other statement, that in fairness ought to be considered at the same time, and may do so over a hearsay objection.",
+      "note": "It now covers oral statements. Fisher (2022) prints the old text, limited to writings and recorded statements."
+    },
+    {
+      "id": "106-misimpression",
+      "topic": "Completeness and Bruton",
+      "cite": "FRE 106",
+      "front": "When does a completing statement come in for its truth?",
+      "back": "When it corrects the misimpression only if true. If a murder defendant said he owned the gun but had sold it months earlier, the prosecution cannot offer only the ownership half, and the sale comes in for its truth. Otherwise it comes in for context.",
+      "note": "The statement must actually correct a misimpression: a prior denial of guilt does not come in merely because it contradicts a later admission (United States v. Williams, 2d Cir. 2019)."
+    },
+    {
+      "id": "bruton",
+      "topic": "Completeness and Bruton",
+      "cite": "Bruton v. United States",
+      "front": "What is the Bruton rule?",
+      "back": "At a joint trial, admitting a nontestifying codefendant's confession that facially incriminates the defendant violates the Confrontation Clause, even with a clear limiting instruction (1968).",
+      "note": "The statement must be inadmissible against the defendant and, after Crawford, testimonial."
+    },
+    {
+      "id": "bruton-options",
+      "topic": "Completeness and Bruton",
+      "cite": "Bruton v. United States",
+      "front": "What are the prosecutor's options when a codefendant's confession implicates the defendant?",
+      "back": "Any one suffices:",
+      "points": [
+        "(1) sever;",
+        "(2) use separate juries;",
+        "(3) have the confessing codefendant testify;",
+        "(4) use prior cross-examined testimony;",
+        "(5) redact;",
+        "(6) try the case to the bench; or",
+        "(7) use a statement admissible against both (a nontestimonial coconspirator statement raises no Bruton problem)."
+      ]
+    },
+    {
+      "id": "bruton-redaction",
+      "topic": "Completeness and Bruton",
+      "front": "Which redactions of a codefendant's confession satisfy Bruton?",
+      "back": "Removing the defendant's name and any reference to his existence is permitted (Richardson v. Marsh, 1987). Replacing the name with an obvious blank, “deleted,” or a symbol is not (Gray, 1998).",
+      "note": "Test: would it point at the defendant “even were the confession the very first item introduced at trial”? Obvious redactions fall within Bruton only if “directly accusatory” (Samia, 2023). Harmless-error review applies."
+    },
+
+    {
+      "id": "complete-defense",
+      "topic": "Compulsory Process and Due Process",
+      "cite": "Crane v. Kentucky",
+      "front": "What constitutional right lets a defendant challenge a rule that excludes defense evidence?",
+      "back": "“A meaningful opportunity to present a complete defense,” whether through due process, compulsory process, or confrontation (Crane, 1986).",
+      "note": "A defendant must still comply with established rules of evidence."
+    },
+    {
+      "id": "defense-two-tests",
+      "topic": "Compulsory Process and Due Process",
+      "front": "What are the two tests for whether excluding defense evidence is unconstitutional?",
+      "back": "Two tests:",
+      "points": [
+        "Chambers's critical-and-trustworthy test, for valid rules applied mechanistically to unusual facts;",
+        "the arbitrariness test (Washington v. Texas, Rock v. Arkansas, Holmes v. South Carolina), for rules or constructions that are arbitrary or disproportionate to their purposes."
+      ]
+    },
+    {
+      "id": "chambers",
+      "topic": "Compulsory Process and Due Process",
+      "cite": "Chambers v. Mississippi",
+      "front": "What made the excluded third-party confessions in Chambers trustworthy?",
+      "back": "Weighed together, the confessions were:",
+      "points": [
+        "(1) made spontaneously to close friends shortly after the crime;",
+        "(2) corroborated by other evidence;",
+        "(3) against the declarant's interest; and",
+        "(4) backed by the declarant's availability to the State for cross-examination."
+      ],
+      "note": "“The hearsay rule may not be applied mechanistically to defeat the ends of justice” (1973). Green v. Georgia (1979) extended it to a single hearsay ruling."
+    },
+    {
+      "id": "holmes",
+      "topic": "Compulsory Process and Due Process",
+      "cite": "Holmes v. South Carolina",
+      "front": "When is a rule excluding evidence of third-party guilt arbitrary?",
+      "back": "When it judges the defense evidence only by the strength of the prosecution's case (Holmes, 2006). Ordinary rules excluding third-party-guilt evidence that raises only a bare suspicion remain valid.",
+      "note": "Contrast Scheffer: a per se polygraph ban was upheld."
+    },
+
+    {
+      "id": "fre-701",
+      "topic": "Lay Opinion (701)",
+      "cite": "FRE 701",
+      "front": "What limits apply to a lay witness's opinion?",
+      "back": "All required. The opinion must be:",
+      "points": [
+        "(a) rationally based on the witness's perception;",
+        "(b) helpful to clearly understanding the testimony or determining a fact in issue; and",
+        "(c) not based on scientific, technical, or other specialized knowledge within the scope of 702."
+      ],
+      "note": "(c) stops “an expert in lay witness clothing” from evading 702 and its disclosure rules."
+    },
+    {
+      "id": "701-examples",
+      "topic": "Lay Opinion (701)",
+      "cite": "FRE 701",
+      "front": "What ordinary inferences may a lay witness give?",
+      "back": "Appearance, age, emotional state, speed, intoxication (with a foundation), identity, and a familiar substance's identity (2000 ACN).",
+      "note": "A business owner may give opinions based on particularized knowledge of the business, but not specialized expertise."
+    },
+
+    {
+      "id": "fre-702",
+      "topic": "Expert Testimony: Qualification and Topics",
+      "cite": "FRE 702",
+      "front": "What must the proponent show to admit expert testimony (as amended 2023)?",
+      "back": "That the witness is qualified by knowledge, skill, experience, training, or education, and that it is more likely than not that (all required):",
+      "points": [
+        "(a) the expert's specialized knowledge will help the trier of fact;",
+        "(b) the testimony is based on sufficient facts or data;",
+        "(c) it is the product of reliable principles and methods; and",
+        "(d) the opinion reflects a reliable application of the principles and methods to the facts."
+      ]
+    },
+    {
+      "id": "fre-704",
+      "topic": "Expert Testimony: Qualification and Topics",
+      "cite": "FRE 704",
+      "front": "May an expert give an opinion on the ultimate issue?",
+      "back": "Yes: an opinion is not objectionable just because it embraces an ultimate issue (704(a)). One limit: in a criminal case, an expert may not state an opinion about whether the defendant had a mental state or condition that is an element of the crime or a defense (704(b))."
+    },
+    {
+      "id": "expert-limits",
+      "topic": "Expert Testimony: Qualification and Topics",
+      "front": "What may an expert not do?",
+      "back": "Three limits:",
+      "points": [
+        "(1) instruct on the law or tell the jury what result to reach (Hygh);",
+        "(2) opine on a criminal defendant's own mens rea (704(b));",
+        "(3) vouch for a witness's credibility, though experts may explain behavior that seems inconsistent with abuse (Batangan; Nimely)."
+      ]
+    },
+    {
+      "id": "qualification-helpfulness",
+      "topic": "Expert Testimony: Qualification and Topics",
+      "cite": "FRE 702",
+      "front": "Is an expert's qualification general? When does helpfulness fail?",
+      "back": "Qualification is topic-specific, and experience can qualify. Helpfulness fails on matters of common knowledge (whether “Match” and “Macho” sound alike) but not on technical ones (the slip resistance of wet tile; how all-white ads communicate to Black viewers)."
+    },
+    {
+      "id": "opinion-steps",
+      "topic": "Expert Testimony: Qualification and Topics",
+      "front": "What are the steps for an opinion problem?",
+      "back": "In order:",
+      "points": [
+        "(1) lay or expert: is it specialized?",
+        "(2) lay: perception, helpfulness, not specialized;",
+        "(3) expert: qualified for this opinion, helpful, no legal conclusions, no 704(b) mental-state opinion, no vouching;",
+        "(4) basis and reliability (702(b)–(d) and 703);",
+        "(5) 403."
+      ]
+    },
+
+    {
+      "id": "eyewitness-findings",
+      "topic": "Eyewitness-Identification Experts",
+      "front": "What findings about eyewitness identification may an expert explain to a jury?",
+      "back": "Findings many jurors would not expect:",
+      "points": [
+        "confidence and accuracy are at best weakly correlated;",
+        "weapon focus and high stress impair perception and memory;",
+        "cross-racial identifications are less accurate;",
+        "memory fades within hours;",
+        "procedures that are not double-blind and sequential are less reliable;",
+        "postevent information inflates confidence;",
+        "witnesses can unconsciously transfer a face from another setting."
+      ],
+      "note": "Cross-examination exposes lies better than sincere mistakes, and a cautionary instruction comes too late and says too little."
+    },
+    {
+      "id": "guilbert",
+      "topic": "Eyewitness-Identification Experts",
+      "cite": "State v. Guilbert",
+      "front": "When is expert testimony on eyewitness identification admissible, and what may the expert not say?",
+      "back": "When it would help the jury, subject to the usual qualification, relevance, and reliability screening. The expert may describe general factors bearing on the identification but may not opine on whether a particular eyewitness is accurate (Guilbert, Conn. 2012).",
+      "note": "A near-national consensus: 44 states, D.C., and at least ten circuits."
+    },
+
+    {
+      "id": "fre-703",
+      "topic": "Bases of Expert Opinion (703, 705)",
+      "cite": "FRE 703",
+      "front": "What may an expert base an opinion on, and must the basis be admissible?",
+      "back": "Facts or data the expert has been made aware of or personally observed. If experts in the field would reasonably rely on that kind of facts or data, they need not be admissible for the opinion to be admitted.",
+      "note": "But the proponent may disclose otherwise-inadmissible facts to the jury only if their probative value in helping the jury evaluate the opinion substantially outweighs their prejudicial effect."
+    },
+    {
+      "id": "three-bases",
+      "topic": "Bases of Expert Opinion (703, 705)",
+      "cite": "FRE 703",
+      "front": "What are the three permissible bases for an expert's opinion?",
+      "back": "Any one suffices (ACN to 703):",
+      "points": [
+        "(1) facts the expert personally observed;",
+        "(2) facts made known at the hearing (watching the trial, or a hypothetical question whose assumed facts the evidence could support); and",
+        "(3) facts made known before the hearing, including inadmissible hearsay, if experts in the field reasonably rely on that kind of data."
+      ],
+      "note": "Rule 602's personal-knowledge requirement does not apply to expert testimony."
+    },
+    {
+      "id": "fre-705",
+      "topic": "Bases of Expert Opinion (703, 705)",
+      "cite": "FRE 705",
+      "front": "Must an expert testify to the underlying facts before giving an opinion?",
+      "back": "No. Unless the court orders otherwise, the expert may state the opinion and the reasons without first testifying to the underlying facts, but may be required to disclose them on cross-examination."
+    },
+    {
+      "id": "expert-conduit",
+      "topic": "Bases of Expert Opinion (703, 705)",
+      "cite": "FRE 703",
+      "front": "Does an expert's reliance on hearsay make the hearsay admissible?",
+      "back": "No: only the opinion comes in. The expert must apply the discipline's methods, not act as a conduit for others' statements. Hearsay becomes substantive only through its own exception, such as 803(18) (learned treatises, read in but not received as exhibits) or 803(4).",
+      "note": "The 2000 reverse-403 test creates “a presumption against disclosure” by the proponent, with a limiting instruction if the facts are disclosed. The opponent may bring them out on cross (705)."
+    },
+    {
+      "id": "smith-v-arizona",
+      "topic": "Bases of Expert Opinion (703, 705)",
+      "cite": "Smith v. Arizona",
+      "front": "Is an absent analyst's statement that an expert relies on offered “for its truth”?",
+      "back": "Yes, if the expert relies on it for its truth, so the Confrontation Clause applies (Smith v. Arizona, 2024, rejecting the Williams v. Illinois plurality's “not for its truth” theory)."
+    },
+    {
+      "id": "melton",
+      "topic": "Bases of Expert Opinion (703, 705)",
+      "cite": "In re Melton",
+      "front": "What does “reasonable reliance” under 703 ask?",
+      "back": "What experts in the discipline reasonably rely on, not what the judge would. Psychiatrists reasonably rely on reports from family members (In re Melton, D.C. 1991).",
+      "note": "Disclosure is harder, because the jury cannot use a basis to evaluate the opinion without believing it: “Labels cannot perform juridical alchemy.”"
+    },
+
+    {
+      "id": "frye",
+      "topic": "Reliability: Frye, Daubert, Joiner, Kumho",
+      "cite": "Frye",
+      "front": "What is the Frye test?",
+      "back": "General acceptance: the thing from which the deduction is made “must be sufficiently established to have gained general acceptance in the particular field in which it belongs” (Frye, D.C. Cir. 1923).",
+      "note": "It still governs in a handful of states, and its rejection of lie detection survives almost everywhere."
+    },
+    {
+      "id": "daubert",
+      "topic": "Reliability: Frye, Daubert, Joiner, Kumho",
+      "cite": "Daubert",
+      "front": "What are the Daubert factors?",
+      "back": "Weighed together:",
+      "points": [
+        "(1) whether the theory can be and has been tested;",
+        "(2) peer review and publication;",
+        "(3) the known or potential error rate;",
+        "(4) standards controlling the technique; and",
+        "(5) general acceptance."
+      ],
+      "note": "The trial judge is the gatekeeper, under 104(a). The focus is on principles and methodology, not conclusions, and the testimony must “fit” the issue (1993)."
+    },
+    {
+      "id": "daubert-shaky",
+      "topic": "Reliability: Frye, Daubert, Joiner, Kumho",
+      "cite": "Daubert",
+      "front": "How is shaky but admissible expert evidence met?",
+      "back": "By cross-examination, contrary evidence, and instructions."
+    },
+    {
+      "id": "joiner",
+      "topic": "Reliability: Frye, Daubert, Joiner, Kumho",
+      "cite": "General Electric Co. v. Joiner",
+      "front": "What is the “analytical gap” in Joiner, and what is the standard of review?",
+      "back": "Conclusions and methodology are not entirely distinct, so a court need not admit an opinion “connected to existing data only by the ipse dixit of the expert” when the gap between the data and the opinion is too great. Rulings are reviewed for abuse of discretion (1997)."
+    },
+    {
+      "id": "kumho",
+      "topic": "Reliability: Frye, Daubert, Joiner, Kumho",
+      "cite": "Kumho Tire",
+      "front": "Does Daubert gatekeeping apply to non-scientific experts?",
+      "back": "Yes: to all “scientific, technical, or other specialized knowledge.” The judge may use the Daubert factors where they reasonably measure reliability, with the same latitude in deciding how to test reliability as in deciding whether it exists. The question is whether this method can reliably answer this question in this case (1999)."
+    },
+    {
+      "id": "702-2023",
+      "topic": "Reliability: Frye, Daubert, Joiner, Kumho",
+      "cite": "FRE 702 (2023)",
+      "front": "What did the 2023 amendment to Rule 702 change?",
+      "back": "The proponent must show each element to the court by a preponderance (104(a)), and each opinion must stay within what a reliable application supports. Treating the sufficiency of the basis or the application of the method as questions of weight is “an incorrect application of Rules 702 and 104(a).”",
+      "note": "Once the requirements are met, remaining attacks go to weight. The proponent need not prove the expert correct, only reliable. Fisher (2022) predates the amendment."
+    },
+    {
+      "id": "forensic-science",
+      "topic": "Reliability: Frye, Daubert, Joiner, Kumho",
+      "front": "How do courts usually treat forensic-science testimony after the NAS (2009) and PCAST (2016) reports?",
+      "back": "They usually admit it with limits rather than exclude it: no claims of certainty or a zero error rate, and class associations such as “consistent with” for hair and fiber.",
+      "note": "PCAST required empirical error rates for “foundational validity” (702(c)) and examiner proficiency for “validity as applied” (702(d)), and found bitemarks not valid. Polygraph evidence is still excluded almost everywhere."
+    },
+    {
+      "id": "expert-steps",
+      "topic": "Reliability: Frye, Daubert, Joiner, Kumho",
+      "front": "What are the steps for an expert-testimony problem?",
+      "back": "In order:",
+      "points": [
+        "(1) qualified for this opinion;",
+        "(2) helpful, not a legal conclusion (Hygh), not vouching, not a 704(b) mental-state opinion;",
+        "(3) sufficient facts or data, of a kind experts reasonably rely on (703), not a conduit, with the reverse-403 test before the proponent discloses inadmissible bases;",
+        "(4) reliable methods reliably applied (Daubert, Kumho, Joiner), each shown by a preponderance;",
+        "(5) 403;",
+        "(6) in a criminal case, confrontation for basis evidence (Smith v. Arizona)."
+      ]
+    },
+
+    {
+      "id": "fre-901a",
+      "topic": "Authentication (901, 902)",
+      "cite": "FRE 901(a)",
+      "front": "What must a proponent show to authenticate an item of evidence?",
+      "back": "Evidence sufficient to support a finding that the item is what the proponent claims it is.",
+      "note": "A conditional-relevance (104(b)) standard: the judge asks only whether a reasonable jury could find authenticity, and the jury decides. Authentication is only the first gate; hearsay, best evidence, and 403 remain."
+    },
+    {
+      "id": "fre-901b",
+      "topic": "Authentication (901, 902)",
+      "cite": "FRE 901(b)",
+      "front": "What are the 901(b) examples of authentication?",
+      "back": "Not a complete list:",
+      "points": [
+        "(1) testimony of a witness with knowledge;",
+        "(2) a nonexpert's opinion on handwriting, from familiarity not acquired for the litigation;",
+        "(3) comparison with an authenticated specimen by an expert or the trier of fact;",
+        "(4) distinctive characteristics, taken together with all the circumstances;",
+        "(5) voice identification by anyone who has heard the voice at any time;",
+        "(6) phone calls to an assigned number plus circumstances such as self-identification;",
+        "(7) public records;",
+        "(8) ancient documents;",
+        "(9) a process or system shown to produce an accurate result."
+      ]
+    },
+    {
+      "id": "fre-902",
+      "topic": "Authentication (901, 902)",
+      "cite": "FRE 902",
+      "front": "What items are self-authenticating?",
+      "back": "Items that need no extrinsic evidence of authenticity (the opponent may still dispute them), such as:",
+      "points": [
+        "sealed or certified public documents;",
+        "certified copies of public records;",
+        "official publications;",
+        "newspapers and periodicals;",
+        "trade inscriptions and labels;",
+        "notarized documents;",
+        "commercial paper;",
+        "certified business and electronic records under 902(11)–(14), with advance notice."
+      ]
+    },
+    {
+      "id": "chain-of-custody",
+      "topic": "Authentication (901, 902)",
+      "front": "When is a chain of custody needed to authenticate an object?",
+      "back": "For a fungible item (white powder): a chain from seizure to court. A unique item can be identified by a witness who recognizes it.",
+      "note": "The chain need not be perfect; gaps usually go to weight."
+    },
+    {
+      "id": "texts-posts",
+      "topic": "Authentication (901, 902)",
+      "cite": "FRE 901(b)(4)",
+      "front": "How do you authenticate a text message or social-media post?",
+      "back": "Prove the author, not just the device: ownership of the device alone does not authenticate a message. Content, timing, and context can show the author (State v. Benton, S.C. Ct. App. 2021)."
+    },
+    {
+      "id": "photos-video",
+      "topic": "Authentication (901, 902)",
+      "front": "What are the two ways to authenticate a photo or video?",
+      "back": "Either:",
+      "points": [
+        "pictorial testimony: a witness testifies that it fairly and accurately shows what the witness saw; or",
+        "silent witness (901(b)(9)): with no eyewitness, the proponent shows the recording process is accurate."
+      ],
+      "note": "A regular user can usually lay the silent-witness foundation, and his lack of technical knowledge goes to weight (State v. Luke, Haw. Ct. App. 2020)."
+    },
+    {
+      "id": "ancient-documents",
+      "topic": "Authentication (901, 902)",
+      "cite": "FRE 901(b)(8)",
+      "front": "What authenticates an ancient document? Is it also a hearsay exception?",
+      "back": "No suspicious condition, found where such records would likely be, and at least 20 years old; no strict chain of custody is required (United States v. Stelmokas, 3d Cir. 1996).",
+      "note": "Authentication and hearsay are separate hurdles: since 2017 the 803(16) hearsay exception covers only documents prepared before Jan. 1, 1998, while 901(b)(8)'s 20-year rule is unchanged."
+    },
+    {
+      "id": "oreckinto",
+      "topic": "Authentication (901, 902)",
+      "cite": "United States v. Oreckinto",
+      "front": "How much authentication does internet evidence need?",
+      "back": "It depends on what the proponent claims the exhibit is; there is no heightened standard for internet evidence. Images offered only to show what a commercially available item looks like need no testimony from the maker or the websites (Oreckinto, D. Conn. 2017)."
+    },
+
+    {
+      "id": "fre-1002",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "cite": "FRE 1002",
+      "front": "What does the best evidence rule require?",
+      "back": "An original writing, recording, or photograph to prove its content, unless these rules or a federal statute provide otherwise."
+    },
+    {
+      "id": "1002-scope",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "cite": "FRE 1002",
+      "front": "When does the best evidence rule apply?",
+      "back": "Only to writings, recordings, and photographs, and only when a party proves their content: when the writing itself is at issue (libel, copyright, the terms of a contract or will), or the event is proved through the recording.",
+      "note": "A teller may testify from memory about a robbery even though a tape exists. Objects (the knife in the robber's sock) are not covered."
+    },
+    {
+      "id": "original-duplicate",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "cite": "FRE 1001, 1003",
+      "front": "What counts as an “original,” and when is a duplicate as good?",
+      "back": "An original includes any counterpart intended to have the same effect, any accurate printout of electronically stored information, and a photo's negative or a print from it. A duplicate made by an accurate mechanical or electronic process (not by hand) is admissible like the original, unless there is a genuine question about the original's authenticity or admitting the duplicate would be unfair."
+    },
+    {
+      "id": "fre-1004",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "cite": "FRE 1004",
+      "front": "When is other evidence of a writing's content admissible without the original?",
+      "back": "Any one suffices:",
+      "points": [
+        "(a) all the originals are lost or destroyed, and not by the proponent acting in bad faith;",
+        "(b) an original cannot be obtained by any available judicial process;",
+        "(c) the party against whom the original would be offered had control of it, was put on notice that it would be a subject of proof, and fails to produce it; or",
+        "(d) it is not closely related to a controlling issue."
+      ],
+      "note": "Drawings lost in bad faith can't be replaced with reconstructions (Seiler v. Lucasfilm, 9th Cir. 1986)."
+    },
+    {
+      "id": "content-other-routes",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "front": "Besides an original, a duplicate, or a 1004 excuse, how else may content be proved?",
+      "back": "Three more routes:",
+      "points": [
+        "certified copies of public records (1005);",
+        "summaries of voluminous records (1006);",
+        "the opponent's own testimony or written statement about the content (1007)."
+      ]
+    },
+    {
+      "id": "fre-1008",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "cite": "FRE 1008",
+      "front": "Who decides best-evidence disputes?",
+      "back": "The court decides the 1004 conditions. The jury decides whether a writing ever existed, which is the original, and whether other evidence of content is accurate."
+    },
+    {
+      "id": "fre-1006",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "cite": "FRE 1006",
+      "front": "What does Rule 1006 allow (as amended 2024)?",
+      "back": "A summary, chart, or calculation offered to prove the content of voluminous admissible writings, recordings, or photographs that cannot be conveniently examined in court, whether or not they have been introduced. It is substantive evidence, and the court may not tell the jury otherwise.",
+      "note": "The proponent must make the underlying originals or duplicates available at a reasonable time and place, and the summary must pass 403."
+    },
+    {
+      "id": "fre-107",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "cite": "FRE 107",
+      "front": "What is an illustrative aid, and how is it treated (2024)?",
+      "back": "A chart or other aid that only helps the jury follow other evidence. It is allowed if its utility is not substantially outweighed by the 403 dangers. It is not evidence, and it stays out of the jury room unless all parties consent or the court orders otherwise for good cause."
+    },
+    {
+      "id": "meyers-bennett",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "front": "Is testimony about an event that was also recorded “proof of content”?",
+      "back": "No: a witness may testify from memory to what was said under oath without the transcript (Meyers). But testimony about what a GPS device's stored data showed is proof of a recording's content and requires the original or a 1004 excuse (United States v. Bennett)."
+    },
+    {
+      "id": "authentication-steps",
+      "topic": "The Best Evidence Rule (1001–1008)",
+      "front": "What are the steps for an authentication and best evidence problem?",
+      "back": "In order:",
+      "points": [
+        "(1) what does the proponent claim the exhibit is?",
+        "(2) which 901(b) route, or is it self-authenticating under 902?",
+        "(3) is the party proving the content of a writing, recording, or photograph? If so, an original or duplicate, a 1004 excuse, or 1005–1007;",
+        "(4) 1008 allocates disputes;",
+        "(5) then hearsay and 403."
+      ]
+    },
+
+    {
+      "id": "fre-501",
+      "topic": "Rule 501 and Recognizing Privileges",
+      "cite": "FRE 501",
+      "front": "What law governs a claim of privilege in federal court?",
+      "back": "The common law, as interpreted by United States courts in the light of reason and experience, unless the Constitution, a federal statute, or Supreme Court rules provide otherwise. In a civil case, state law governs privilege for a claim or defense for which state law supplies the rule of decision."
+    },
+    {
+      "id": "proposed-privilege-rules",
+      "topic": "Rule 501 and Recognizing Privileges",
+      "front": "What happened to the proposed privilege rules, and what weight do they carry?",
+      "back": "Congress replaced the 13 proposed privilege rules (nine specific privileges) with 501. Never enacted, they remain respected statements of the common law.",
+      "note": "Privileges exclude reliable evidence to serve outside goals, so they are strictly construed. There is no federal physician-patient privilege."
+    },
+    {
+      "id": "proposed-506",
+      "topic": "Rule 501 and Recognizing Privileges",
+      "cite": "Proposed FRE 506",
+      "front": "What would the proposed clergy privilege have protected?",
+      "back": "A person could refuse to disclose, and prevent a clergy member from disclosing, a confidential communication made to the clergy member as a spiritual adviser."
+    },
+    {
+      "id": "proposed-511",
+      "topic": "Rule 501 and Recognizing Privileges",
+      "cite": "Proposed FRE 511",
+      "front": "How does a holder waive a privilege under the proposed waiver rule?",
+      "back": "By voluntarily disclosing, or consenting to disclosure of, any significant part of the matter, unless that disclosure is itself privileged."
+    },
+    {
+      "id": "jaffee",
+      "topic": "Rule 501 and Recognizing Privileges",
+      "cite": "Jaffee v. Redmond",
+      "front": "What are the elements of the psychotherapist-patient privilege?",
+      "back": "All required (Jaffee, 1996):",
+      "points": [
+        "(1) a confidential communication;",
+        "(2) between a licensed psychotherapist, including a licensed clinical social worker, and a patient; and",
+        "(3) made in the course of diagnosis or treatment."
+      ],
+      "note": "No case-by-case balancing: “An uncertain privilege … is little better than no privilege at all.”"
+    },
+    {
+      "id": "jaffee-reason-experience",
+      "topic": "Rule 501 and Recognizing Privileges",
+      "cite": "Jaffee v. Redmond",
+      "front": "How did Jaffee apply Rule 501's “reason and experience” to recognize a new privilege?",
+      "back": "Reason: effective therapy depends on confidence, mental health is a public good, and little evidence is lost because the statements would otherwise not be made. Experience: all 50 states and D.C. recognize it.",
+      "note": "This is the template for recognizing a new privilege."
+    },
+    {
+      "id": "privilege-vs-defendant",
+      "topic": "Rule 501 and Recognizing Privileges",
+      "front": "When a criminal defendant's constitutional need collides with a witness's privilege, which wins?",
+      "back": "Courts weigh the defendant's need against the privilege; reliability alone cannot defeat a privilege. The lawyer-client privilege usually holds, some courts make the psychotherapist privilege yield, and a witness's Fifth Amendment privilege almost always prevails."
+    },
+
+    {
+      "id": "lawyer-client-elements",
+      "topic": "The Lawyer-Client Privilege",
+      "cite": "Proposed FRE 503",
+      "front": "What are the common elements of the lawyer-client privilege?",
+      "back": "All four:",
+      "points": [
+        "(1) the privilege is the client's, and only the client may waive it;",
+        "(2) it protects communications made to facilitate professional legal services, not a lawyer acting as a friend, lobbyist, or business agent;",
+        "(3) only confidential communications (the client intends confidentiality, and precautions bear on reasonableness);",
+        "(4) only communications, not the underlying facts."
+      ],
+      "note": "A client cannot refuse to state a fact because he told it to his lawyer. Prospective clients are covered even if the lawyer declines the case."
+    },
+    {
+      "id": "gionis",
+      "topic": "The Lawyer-Client Privilege",
+      "cite": "People v. Gionis",
+      "front": "When is a client consulting a lawyer “in a professional capacity”?",
+      "back": "Discussing legal matters with a lawyer is not enough; the client must consult the lawyer professionally, and statements made after the lawyer clearly refuses to act are not privileged. It is a question of fact, and the party claiming the privilege bears the burden (Gionis, Cal. 1995)."
+    },
+    {
+      "id": "fre-502b",
+      "topic": "The Lawyer-Client Privilege",
+      "cite": "FRE 502(b)",
+      "front": "When is an inadvertent disclosure in a federal proceeding not a waiver?",
+      "back": "All required:",
+      "points": [
+        "(1) the disclosure is inadvertent;",
+        "(2) the holder took reasonable steps to prevent disclosure; and",
+        "(3) the holder promptly took reasonable steps to rectify the error."
+      ],
+      "note": "The holder bears the burden on each element. Unsworn claims that a paralegal reviewed the documents, and one letter followed by years of silence, were not enough (Williams v. District of Columbia, D.D.C. 2011)."
+    },
+    {
+      "id": "fre-502a",
+      "topic": "The Lawyer-Client Privilege",
+      "cite": "FRE 502(a)",
+      "front": "When does an intentional waiver extend to undisclosed material?",
+      "back": "Only if the undisclosed material concerns the same subject matter and in fairness ought to be considered together with what was disclosed."
+    },
+    {
+      "id": "fre-502-c-g",
+      "topic": "The Lawyer-Client Privilege",
+      "cite": "FRE 502(c)–(g)",
+      "front": "What do 502(c) through (g) provide about orders, agreements, and state proceedings?",
+      "back": "Five rules:",
+      "points": [
+        "(c) a disclosure in a state proceeding is no waiver in a federal proceeding if it would not be one under 502 or under the law of the state where it occurred;",
+        "(d) a federal court order that disclosure is not a waiver binds all other federal and state proceedings;",
+        "(e) an agreement on the effect of disclosure binds only the parties unless it is put in a court order;",
+        "(f) the rule applies in state proceedings, even if state law provides the rule of decision;",
+        "(g) it covers the attorney-client privilege and work-product protection."
+      ]
+    },
+    {
+      "id": "fees-identity",
+      "topic": "The Lawyer-Client Privilege",
+      "front": "Are a client's identity and fee arrangement privileged?",
+      "back": "Ordinarily not: they are facts, not confidential communications. The narrow exception applies only when revealing them would itself disclose a confidential communication (the Baird case, where naming clients would tie them to admissions about unpaid taxes)."
+    },
+
+    {
+      "id": "swidler",
+      "topic": "Duration, Crime-Fraud, and Self-Incrimination",
+      "cite": "Swidler & Berlin v. United States",
+      "front": "Does the lawyer-client privilege survive the client's death?",
+      "back": "Yes, and it applies the same way in criminal and civil cases (Swidler & Berlin, 1998).",
+      "note": "Clients care about reputation, civil liability, and harm to family after death; the testamentary exception carries out the client's wishes rather than showing the privilege ends; and posthumous balancing would add the uncertainty Jaffee rejected."
+    },
+    {
+      "id": "crime-fraud",
+      "topic": "Duration, Crime-Fraud, and Self-Incrimination",
+      "front": "What does the crime-fraud exception reach?",
+      "back": "Communications seeking advice for future wrongdoing. Past crimes stay protected."
+    },
+    {
+      "id": "zolin",
+      "topic": "Duration, Crime-Fraud, and Self-Incrimination",
+      "cite": "United States v. Zolin",
+      "front": "What showing lets a court review allegedly privileged communications in camera for the crime-fraud exception?",
+      "back": "“A factual basis adequate to support a good faith belief by a reasonable person” that review may reveal evidence establishing the exception, a lower showing than is needed to defeat the privilege. It may rest on any lawfully obtained evidence not adjudicated privileged (Zolin, 1989)."
+    },
+    {
+      "id": "rowland",
+      "topic": "Duration, Crime-Fraud, and Self-Incrimination",
+      "cite": "In re Grand Jury Investigation [Rowland]",
+      "front": "Can a state government office claim the lawyer-client privilege against a federal grand jury?",
+      "back": "Rowland (2d Cir. 2005) upheld the Connecticut governor's office's privilege for communications with its official counsel, refusing to abrogate it because the investigation was criminal.",
+      "note": "It conflicts with Ryan (7th Cir.) and is in tension with the Eighth and D.C. Circuits (Lindsey). Who controls the privilege when a later governor waives it is open (Problem 12.9)."
+    },
+    {
+      "id": "fisher-doe",
+      "topic": "Duration, Crime-Fraud, and Self-Incrimination",
+      "cite": "Fisher v. United States; United States v. Doe",
+      "front": "How do the lawyer-client privilege and the Fifth Amendment apply to documents a client gives a lawyer?",
+      "back": "Four rules:",
+      "points": [
+        "(1) the lawyer-client privilege protects communications, not underlying facts or preexisting documents just handed to a lawyer;",
+        "(2) the client's Fifth Amendment privilege does not protect documents in the lawyer's hands, because the client is not the one compelled;",
+        "(3) if the documents would have been protected in the client's hands and were given to the lawyer in confidence to get legal advice, the lawyer-client privilege protects them in the lawyer's hands;",
+        "(4) the Fifth Amendment protects only against compelled, testimonial self-incrimination."
+      ]
+    },
+    {
+      "id": "privilege-steps",
+      "topic": "Duration, Crime-Fraud, and Self-Incrimination",
+      "front": "What are the steps for a privilege problem?",
+      "back": "In order:",
+      "points": [
+        "(1) which law governs under 501 (state law for state-law claims in civil cases);",
+        "(2) which privilege, and who holds it;",
+        "(3) a communication, not a fact, confidential, made to obtain professional services;",
+        "(4) waiver: voluntary disclosure by the holder, 502(b) for inadvertence, 502(a) for scope, 502(d) orders;",
+        "(5) exceptions: crime-fraud (Zolin) and testamentary; death does not end it (Swidler);",
+        "(6) identity and fees;",
+        "(7) no ad hoc balancing (Jaffee)."
+      ]
+    },
+
+    {
+      "id": "trammel",
+      "topic": "The Spousal Testimonial Privilege",
+      "cite": "Trammel v. United States",
+      "front": "Who holds the spousal testimonial privilege in federal court?",
+      "back": "The witness-spouse alone (Trammel, 1980, modifying Hawkins). The witness-spouse may be neither compelled to testify nor foreclosed from testifying, so the defendant cannot block a willing spouse.",
+      "note": "Testifying after immunity and promises of leniency is not involuntary. When one spouse is willing to testify, little marital harmony is left to preserve."
+    },
+    {
+      "id": "spousal-scope",
+      "topic": "The Spousal Testimonial Privilege",
+      "front": "What is the scope of the spousal testimonial privilege?",
+      "back": "All required:",
+      "points": [
+        "(1) a valid marriage when the privilege is claimed;",
+        "(2) in federal court, only in criminal cases (including the grand jury) in which a spouse is the defendant; and",
+        "(3) only adverse testimony, including acts observed."
+      ],
+      "note": "Most courts deny it when one spouse is charged with a crime against the other or a child of either. States vary: a few let the defendant bar the testimony (Washington, in Crawford)."
+    },
+    {
+      "id": "proposed-505",
+      "topic": "The Spousal Testimonial Privilege",
+      "cite": "Proposed FRE 505",
+      "front": "What would proposed Rule 505 have done with the spousal privilege?",
+      "back": "Codified Hawkins by giving the privilege to the defendant-spouse, which Trammel rejected. It excepted crimes against the spouse or a child of either and limited the privilege to events during the marriage.",
+      "note": "It recognized no privilege for marital confidences, which survives anyway at federal common law."
+    },
+
+    {
+      "id": "marital-confidences",
+      "topic": "The Marital Confidences Privilege",
+      "front": "What are the elements of the marital confidences privilege?",
+      "back": "All required:",
+      "points": [
+        "(1) a communication (not observations of the other spouse's conduct);",
+        "(2) made in confidence (presumed, but third parties or monitored systems defeat it);",
+        "(3) during a valid marriage."
+      ],
+      "note": "Either spouse may refuse to disclose and may prevent the other from disclosing."
+    },
+    {
+      "id": "confidences-vs-testimonial",
+      "topic": "The Marital Confidences Privilege",
+      "front": "How does the marital confidences privilege differ from the spousal testimonial privilege?",
+      "back": "It is held by both spouses, survives divorce, applies in civil and criminal cases, and applies even if neither spouse is a party.",
+      "note": "Exceptions: communications about joint ongoing or future crimes, and crimes against the spouse or a child of either."
+    },
+    {
+      "id": "rakes",
+      "topic": "The Marital Confidences Privilege",
+      "cite": "United States v. Rakes",
+      "front": "Does the joint-crime exception reach a spouse who was the victim of the crime?",
+      "back": "No: it requires the holder's wrongful complicity, and an extortion victim is not a participant. Telling a third party the underlying facts doesn't waive the privilege for the conversations (Rakes, 1st Cir. 1998).",
+      "note": "Confidential conversations stay privileged despite a later divorce or the presence of infant children, and there is no general exception for financial matters."
+    },
+    {
+      "id": "familial-steps",
+      "topic": "The Marital Confidences Privilege",
+      "front": "What are the steps for a familial-privilege problem?",
+      "back": "In order:",
+      "points": [
+        "(1) a valid marriage (when the testimonial privilege is claimed; when a confidence was made);",
+        "(2) testimonial privilege: a criminal case, a spouse is the defendant, adverse testimony, and the witness-spouse decides;",
+        "(3) confidences: a confidential communication during the marriage, held by both spouses, surviving divorce, with exceptions for joint crimes (complicity required) and crimes against family members;",
+        "(4) no federal parent-child privilege."
+      ]
+    },
+
+    {
+      "id": "parent-child",
+      "topic": "A Parent-Child Privilege?",
+      "front": "Is there a federal parent-child privilege?",
+      "back": "No. Almost every court rejects it: only four states protect such communications, it did not exist at common law, a testimonial privilege is not essential to the relationship, and children are unlikely to know the law. Any such privilege should come from Congress (In re Grand Jury Proceedings, 3d Cir. 1997).",
+      "note": "Without a consensus in “experience,” there is no new privilege: the counterexample to Jaffee."
+    }
+  ]
+}

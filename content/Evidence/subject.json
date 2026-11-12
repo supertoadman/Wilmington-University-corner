@@ -68,6 +68,11 @@
       ],
       "order": 2
     },
+    "Evidence_Rules_Flashcards.cards.json": {
+      "slug": "evidence-rules-flashcards",
+      "tags": ["FRE", "flashcards", "rules", "hearsay", "Confrontation Clause", "character evidence", "privileges", "Weeks 1–15"],
+      "order": 2.5
+    },
     "FRE_Rule_Cards.html": {
       "slug": "fre-rule-cards",
       "title": "FRE Rule Cards",

@@ -4,8 +4,10 @@
 // Every answer goes into the answer log behind Your stats (answer-log.js). A drill link from that
 // page, ?course=<slug>[&area=<area>][&missed=1], opens straight on that course's questions in one
 // topic area and/or the ones whose latest answer was wrong, without touching the saved set picks.
+// The Topics button (topic-picker.js), before shuffling or above the stack, switches topics off and on.
 
 import { record, loadLog, missedKeys, splitTopic, areaKey } from './answer-log.js';
+import { pickTopics, showTopics } from './topic-picker.js';
 
 const host = document.querySelector('[data-shuffle]');
 if (host) {
@@ -34,20 +36,61 @@ if (host) {
   };
   const paras = (parent, text) => { String(text).split(/\n{2,}/).forEach((p) => parent.append(el('p', '', p))); return parent; };
 
-  // The picked sets and size are remembered on this device only.
+  // The picked sets, size and switched-off topics are remembered on this device only.
   let saved = {};
   try { saved = JSON.parse(localStorage.getItem(KEY) || '{}'); } catch { /* storage unavailable */ }
-  const remember = () => { try { localStorage.setItem(KEY, JSON.stringify({ sets: picks(), limit: limit.value })); } catch { /* private mode */ } };
+  let skip = new Set(Array.isArray(saved.skip) ? saved.skip.filter((k) => typeof k === 'string') : []);
+  const remember = () => { try { localStorage.setItem(KEY, JSON.stringify({ sets: picks(), limit: limit.value, skip: [...skip] })); } catch { /* private mode */ } };
+
+  // ---------------------------------------------------------------------------
+  // Topics: the build lists every set's topic areas with their question counts (data-shuffle-topics),
+  // so the Topics button can show and count them before any questions load. A topic is one area of
+  // one course ("<course>|<area>"), merged across that course's sets the way Your stats merges them.
+  // ---------------------------------------------------------------------------
+  let TOPICS = {};
+  try { TOPICS = JSON.parse($('[data-shuffle-topics]').textContent); } catch { /* no topic list: every question stays in */ }
+  const topicKey = (course, area) => `${course}|${areaKey(area)}`;
+  const topicOf = (q) => topicKey(q.course.slug, splitTopic(q.topic)[0]);
+  const withTopics = (qs) => qs.filter((q) => !skip.has(topicOf(q)));
+  function topicGroups(keys = picks()) {
+    const groups = new Map();
+    for (const key of keys) {
+      const [c, s] = key.split('/');
+      const course = TOPICS[c];
+      if (!course) continue;
+      let g = groups.get(c);
+      if (!g) groups.set(c, g = { title: course.title, accent: course.accent, topics: [], by: new Map() });
+      for (const [area, count] of course.sets[s] || []) {
+        const k = topicKey(c, area);
+        const t = g.by.get(k);
+        if (t) t.count += count;
+        else { const nt = { key: k, label: area || 'Other', count }; g.by.set(k, nt); g.topics.push(nt); }
+      }
+    }
+    return [...groups.values()];
+  }
+  const topicsIn = (groups) => groups.flatMap((g) => g.topics);
+  const topicsBtn = $('[data-shuffle-topics-btn]');
+  const runTopicsBtn = $('[data-shuffle-topics-run]');
+  const topicsNote = $('[data-shuffle-topics-note]');
+  const sameSet = (a, b) => a.size === b.size && [...a].every((k) => b.has(k));
 
   const picks = () => boxes.filter((b) => b.checked).map((b) => b.value);
   function syncSetup() {
     const chosen = boxes.filter((b) => b.checked);
-    const total = chosen.reduce((n, b) => n + +b.dataset.count, 0);
+    const topics = topicsIn(topicGroups());
+    const on = topics.filter((t) => !skip.has(t.key));
+    const total = topics.length ? on.reduce((n, t) => n + t.count, 0) : chosen.reduce((n, b) => n + +b.dataset.count, 0);
     const n = +limit.value ? Math.min(+limit.value, total) : total;
     $('[data-shuffle-picked]').textContent = chosen.length
       ? `${chosen.length} ${chosen.length === 1 ? 'set' : 'sets'} · ${total.toLocaleString('en-US')} questions`
       : 'No sets selected';
-    start.disabled = !chosen.length;
+    if (topicsBtn) {
+      topicsBtn.disabled = topics.length < 2;
+      if (topicsBtn.disabled) { topicsBtn.querySelector('b').textContent = 'All'; topicsBtn.classList.remove('tp-btn-on'); }
+      else showTopics({ button: topicsBtn, on: on.length, total: topics.length });
+    }
+    start.disabled = !chosen.length || !total;
     start.lastChild.textContent = chosen.length ? ` Shuffle ${n.toLocaleString('en-US')} questions` : ' Shuffle';
     setup.querySelectorAll('[data-course-all]').forEach((btn) => {
       const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll);
@@ -61,6 +104,10 @@ if (host) {
     syncSetup(); remember();
   }));
   setup.addEventListener('change', () => { syncSetup(); remember(); });
+  topicsBtn?.addEventListener('click', () => pickTopics({
+    groups: topicGroups(), off: skip, parent: host,
+    done: (next) => { skip = next; syncSetup(); remember(); },
+  }));
   boxes.forEach((b) => { b.checked = (saved.sets || []).includes(b.value); });
   if (saved.limit && [...limit.options].some((o) => o.value === saved.limit)) limit.value = saved.limit;
   syncSetup();
@@ -75,7 +122,8 @@ if (host) {
     return cache.get(rel);
   };
 
-  let pool = [];   // every question in the picked sets
+  let loaded = []; // every question in the picked sets
+  let pool = [];   // the ones in the topics that are on (or a drill's questions)
   let stack = [];  // the questions on screen, in order
   let st = { picked: {}, out: {}, pre: new Set(), onlyMissed: false };
   const params = new URLSearchParams(location.search);
@@ -116,7 +164,9 @@ if (host) {
     start.disabled = true;
     start.lastChild.textContent = ' Loading…';
     try {
-      pool = await load(picks());
+      loaded = await load(picks());
+      pool = withTopics(loaded);
+      if (!pool.length) pool = loaded;
       setup.hidden = true;
       run.hidden = false;
       deal(pool);
@@ -227,8 +277,37 @@ if (host) {
   function render() {
     list.replaceChildren(...visible().map(card));
     $('[data-shuffle-missed]').textContent = st.onlyMissed ? 'Show all' : 'Retry missed';
+    runTopics();
     score();
   }
+
+  // The Topics button above the stack: changing the topics deals a new stack from them. A drill
+  // from Your stats picks its own topic, so it has no Topics button.
+  function runTopics() {
+    if (!runTopicsBtn) return;
+    const topics = topicsIn(topicGroups());
+    runTopicsBtn.hidden = !!drill || topics.length < 2;
+    if (runTopicsBtn.hidden) { topicsNote.hidden = true; return; }
+    showTopics({
+      button: runTopicsBtn, note: topicsNote, on: topics.filter((t) => !skip.has(t.key)).length, total: topics.length,
+      everything: () => { for (const t of topics) skip.delete(t.key); retopic(); },
+    });
+  }
+  function retopic() {
+    remember();
+    syncSetup();
+    pool = withTopics(loaded);
+    if (!pool.length) pool = loaded;
+    deal(pool);
+  }
+  runTopicsBtn?.addEventListener('click', () => pickTopics({
+    groups: topicGroups(), off: skip, parent: host,
+    done: (next) => {
+      const same = sameSet(next, skip);
+      skip = next;
+      if (!same) retopic();
+    },
+  }));
 
   function score() {
     const vis = visible();

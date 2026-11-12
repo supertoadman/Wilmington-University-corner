@@ -70,6 +70,8 @@
   for (const q of questions) if (q.exam && !exams.some((x) => x.id === q.exam)) exams.push({ id: q.exam, title: `Exam ${q.exam}`, description: '' });
   const examOf = (id) => exams.find((x) => x.id === id);
   const areas = [...new Set([...(set.areas || []), ...questions.map((q) => q.area).filter(Boolean)])];
+  // The topics the Topics button lists: the set's areas, and "Other" for questions that name none.
+  const TOPICS = [...areas, ...(questions.some((q) => !q.area) ? [''] : [])];
   const IDS = questions.map((q) => q.id);
   const KEY = `mcq:${set.id || slug(set.title || 'practice')}`;
 
@@ -78,7 +80,7 @@
   // ---------------------------------------------------------------------------
   const identity = (q) => q.o.map((_, k) => k);
   const fresh = (mode = set.modeDefault === 'exam' ? 'exam' : 'study') => ({
-    mode, exam: '', area: '', shufQ: false, shufO: false, order: IDS.slice(), opts: {}, picked: {}, out: {}, shown: new Set(), only: '', subset: new Set(), pre: new Set(),
+    mode, exam: '', skip: new Set(), shufQ: false, shufO: false, order: IDS.slice(), opts: {}, picked: {}, out: {}, shown: new Set(), only: '', subset: new Set(), pre: new Set(),
   });
   let st = fresh();
   const optsOf = (q) => st.opts[q.id] || identity(q);
@@ -87,14 +89,16 @@
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode */ } },
   };
   function save() {
-    store.set(`${KEY}:progress`, { mode: st.mode, exam: st.exam, area: st.area, shufQ: st.shufQ, shufO: st.shufO, order: st.order, opts: st.opts, picked: st.picked, shown: [...st.shown] });
+    store.set(`${KEY}:progress`, { mode: st.mode, exam: st.exam, skip: [...st.skip], shufQ: st.shufQ, shufO: st.shufO, order: st.order, opts: st.opts, picked: st.picked, shown: [...st.shown] });
   }
   function restore() {
     const s = store.get(`${KEY}:progress`);
     if (!s || typeof s !== 'object') return;
     if (s.mode === 'study' || s.mode === 'exam') st.mode = s.mode;
     if (s.exam === '' || examOf(s.exam)) st.exam = s.exam;
-    if (s.area === '' || areas.includes(s.area)) st.area = s.area;
+    // Topics switched off. An older save kept one topic ("area"): that one stays on, the rest go off.
+    if (Array.isArray(s.skip)) st.skip = new Set(s.skip.filter((a) => TOPICS.includes(a)));
+    else if (s.area && areas.includes(s.area)) st.skip = new Set(TOPICS.filter((a) => a !== s.area));
     if (Array.isArray(s.order) && s.order.length === IDS.length && s.order.every((id) => byId.has(id)) && new Set(s.order).size === IDS.length) { st.order = s.order; st.shufQ = !!s.shufQ; }
     st.shufO = !!s.shufO;
     for (const [id, p] of Object.entries(s.opts || {})) {
@@ -245,7 +249,12 @@
   // The stack
   // ---------------------------------------------------------------------------
   const visible = () => st.order.map((id) => byId.get(id)).filter((q) =>
-    (!st.exam || q.exam === st.exam) && (!st.area || q.area === st.area) && (!st.only || st.subset.has(q.id)));
+    (!st.exam || q.exam === st.exam) && !st.skip.has(q.area) && (!st.only || st.subset.has(q.id)));
+  // The topics in the chosen exam (or the whole set), each with its number of questions.
+  const topicList = () => {
+    const pool = questions.filter((q) => !st.exam || q.exam === st.exam);
+    return TOPICS.map((key) => ({ key, label: key || 'Other', count: pool.filter((q) => q.area === key).length })).filter((t) => t.count);
+  };
   function tally(qs) {
     const shown = qs.filter((q) => st.shown.has(q.id));
     const right = shown.filter((q) => st.picked[q.id] === q.a).length;
@@ -275,7 +284,7 @@
       items.push(card(q, pos++, !!(q.hypo && prev && prev.hypo === q.hypo)));
       prev = q;
     }
-    if (!items.length) items.push(el('li', 'sh-empty', 'Nothing matches these filters. Choose another exam or topic, or press Reset.'));
+    if (!items.length) items.push(el('li', 'sh-empty', 'No questions here. Press Topics and tick more topics, or choose another exam.'));
     list.replaceChildren(...items);
     bar();
     score();
@@ -290,7 +299,7 @@
     $('sh-flagged').textContent = st.only === 'flagged' ? 'Show all' : `Flagged (${n})`;
     $('sh-flagged').disabled = st.only !== 'flagged' && !n;
     $('sh-exam').value = st.exam;
-    $('sh-area').value = st.area;
+    paintTopics();
     // One button: shuffle the questions, and press again to put them back in the set's order.
     $('sh-shufq').textContent = st.shufQ ? 'Original order' : 'Shuffle questions';
     $('sh-shufq').title = st.shufQ ? 'Put the questions back in the set’s order' : 'Put the questions in a random order';
@@ -317,9 +326,14 @@
     sel.hidden = items.length < 2;
   };
   fill($('sh-exam'), `All exams (${questions.length})`, exams.map((e) => [e.id, `${e.title} (${questions.filter((q) => q.exam === e.id).length})`]));
-  fill($('sh-area'), `All topics (${questions.length})`, areas.map((a) => [a, `${a} (${questions.filter((q) => q.area === a).length})`]));
   $('sh-exam').addEventListener('change', (e) => { st.exam = e.target.value; render(); top(); });
-  $('sh-area').addEventListener('change', (e) => { st.area = e.target.value; render(); top(); });
+  // Topics: a checklist of the set's topics (src/assets/topic-picker.js, inlined above this script
+  // as TopicPicker). Without it (a copy saved without that script) the button just stays hidden.
+  const paintTopics = typeof TopicPicker === 'object' ? TopicPicker.topicFilter({
+    button: $('sh-topics'), note: $('sh-topics-note'), list: topicList, parent: host,
+    get: () => st.skip,
+    set: (off) => { st.skip = off; render(); top(); },
+  }) : () => {};
   for (const m of ['study', 'exam']) $(`sh-m-${m}`).addEventListener('click', () => {
     if (st.mode === m) return;
     // Switching modes starts the answers over, so a graded answer never turns back into an open one.
@@ -348,7 +362,8 @@
   };
   $('sh-missed').addEventListener('click', () => retry('missed', new Set(visible().filter((q) => st.shown.has(q.id) && st.picked[q.id] !== q.a).map((q) => q.id))));
   $('sh-flagged').addEventListener('click', () => retry('flagged', new Set(flags.list())));
-  $('sh-reset').addEventListener('click', () => { st = fresh(st.mode); render(); top(); });
+  // Reset starts the answers, order and exam over; the topics you picked stay picked.
+  $('sh-reset').addEventListener('click', () => { st = Object.assign(fresh(st.mode), { skip: st.skip }); render(); top(); });
 
   restore();
   render();
