@@ -1,0 +1,1720 @@
+Torts Bar Exam Questions
+========================
+
+Subject: Torts
+Type: Practice Questions
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/torts/torts-bar-exam-questions/
+
+90 bar-style questions on all of Weeks 1–15, in three practice finals of 30, each sized like the final
+
+---
+
+## Practice Final 1 · Q1 · From Strict Liability to Fault — Fault, not strict liability, for accidental injury
+Wendell Achebe was walking his large dog on a leash along a public sidewalk when the dog lunged at a cat. Achebe pulled back on the leash the way careful owners do, but the loop slipped from his hand and the leash whipped across the face of a passerby, Corinne Lassiter, cutting her eye. Lassiter sues Achebe for her injury in a jurisdiction that follows the modern fault-based approach to accidental harm. At trial, she proves only the facts above. Achebe offers evidence that he was holding and handling the leash with ordinary care.
+
+Which statement best describes the law the court should apply?
+
+A. Lassiter wins, because the injury was direct and immediate, and a direct injury is actionable without regard to fault.
+B. Lassiter wins unless Achebe proves the injury was utterly without his fault.
+C. Achebe wins if the jury finds he used ordinary care, because Lassiter must prove that he did not.
+D. Achebe wins only if Lassiter was also careless, because her contributory fault is his only defense.
+E. Achebe wins, because walking a dog is a lawful act, and a lawful act cannot give rise to tort liability.
+
+Answer: C
+- A: That is the old trespass rule of the Case of Thorns. Brown v. Kendall rejected it for unintended injuries: the plaintiff must prove a lack of ordinary care.
+- B: That is Weaver v. Ward, which put the burden of excuse on the actor. Under fault-based liability the plaintiff bears the burden of proving negligence.
+- C: Correct. Under Brown v. Kendall there is no liability for an unintended injury caused while doing a lawful act with ordinary care, and the plaintiff bears the burden of proving the defendant's lack of ordinary care.
+- D: Achebe doesn't need a defense. If Lassiter can't prove he was careless, she has no prima facie case, whatever her own conduct.
+- E: A lawful act done carelessly is the classic negligence case. The lawful act matters only when it was done with ordinary care.
+Rule: Liability for unintended harm rests on fault: the plaintiff must prove the defendant failed to use ordinary care (Brown v. Kendall). Strict liability in trespass (Hulle) and the actor's burden of excuse (Weaver) are history.
+
+## Practice Final 1 · Q2 · Intent — Substantial certainty; no desire to harm needed
+Nine-year-old Felix Okonkwo saw his aunt, Rosalind Vesey, begin to lower herself onto a lawn chair at a family picnic. As she bent down, Felix slid the chair a foot to one side so that he could sit in it himself. He did not want her to fall. She sat where the chair had been, hit the ground, and broke her wrist. Vesey sues Felix for battery. The jury finds that Felix did not desire to cause any contact but that he knew with substantial certainty that she would try to sit where the chair had been.
+
+Is Felix liable for battery?
+
+A. Yes, because he knew with substantial certainty that she would hit the ground.
+B. No, because he did not act for the purpose of causing a harmful or offensive contact.
+C. No, because a nine-year-old cannot form the intent required for an intentional tort.
+D. Yes, because a reasonable person in his position would have known that she was likely to fall.
+E. No, because he intended only to take the chair, not that any contact be harmful.
+
+Answer: A
+- A: Correct. Intent is either purpose or knowledge that the consequence is substantially certain to follow. Garratt v. Dailey applied exactly that to a child who moved a chair, and no desire to harm is needed.
+- B: Purpose is only one form of intent. Knowledge with substantial certainty is the other, and the jury found it.
+- C: A child who actually forms the intent is liable (Garratt). The Restatement (Third) also gives minors no immunity; age bears only on whether the intent was formed.
+- D: That is a negligence standard. Substantial certainty is the actor's actual knowledge, not what a reasonable person would have known.
+- E: That is the dual-intent view. Most courts require only intent to cause the contact, and the law decides whether it is harmful (Wagner).
+Rule: An actor intends a consequence when he acts with the purpose of causing it or knows it is substantially certain to result (Garratt). Motive and a desire to harm are irrelevant.
+
+## Practice Final 1 · Q3 · Battery and Assault — Contact with an object identified with the body
+At a professional reception in a hotel ballroom, the hotel's banquet manager, Desmond Halvorsen, approached a guest, Amara Ndiaye, as she stood in the buffet line holding a plate. Saying loudly, “We don't serve your kind here,” he snatched the plate out of her hands. He never touched her body, and she was not afraid of being struck. She was deeply humiliated in front of her colleagues but suffered no physical injury. She sues Halvorsen for battery.
+
+What is the most likely result?
+
+A. Halvorsen wins, because he never touched any part of Ndiaye's body.
+B. Halvorsen wins, because Ndiaye suffered no physical injury and was not put in fear of a blow.
+C. Ndiaye wins, because offensive contact with an object closely identified with her body is a battery.
+D. Ndiaye wins, but only nominal damages, because humiliation is not compensable without physical harm.
+E. Ndiaye loses on battery but wins on assault, because the act threatened her dignity.
+
+Answer: C
+- A: Battery protects dignity, so contact with something closely identified with the body counts as contact with the person (Fisher).
+- B: Offensive battery needs no physical harm, and apprehension is the element of assault, not battery.
+- C: Correct. Fisher v. Carrousel Motor Hotel held that snatching a plate from a guest's hand in an offensive manner is a battery, and damages for humiliation are recoverable without physical injury.
+- D: Nominal damages are available, but so are damages for humiliation and indignity. Fisher upheld compensatory and punitive damages with no physical injury.
+- E: Assault requires apprehension of an imminent contact, which she didn't have. The claim that fits is battery.
+Rule: Battery requires a harmful or offensive contact with the plaintiff's person, which includes anything closely identified with the body (Fisher). Humiliation is compensable without physical injury.
+
+## Practice Final 1 · Q4 · False Imprisonment — Confinement by duress over property
+Odette Fairweather was trying on shoes at a department store when a clerk, Gil Pruitt, suspected her of switching price tags. Pruitt took her handbag, which held her car keys, phone, and wallet, and told her, “You can leave whenever you want, but the bag stays here until the manager gets back.” Fairweather waited 40 minutes. The manager then returned the bag and apologized; there had been no switching. No one touched her, and the store's doors were unlocked throughout. In her suit for false imprisonment, the store argues that she was never confined.
+
+How should the court rule on that argument?
+
+A. For the store, because the exits were unlocked, so she had a reasonable means of escape.
+B. For the store, because no force or threat of force was directed at her person.
+C. For the store, because a demand to stay, without any threat, is not a confinement.
+D. For Fairweather, because holding her valuable property to keep her there can be a confinement.
+E. For Fairweather, because a merchant may never detain a customer without probable cause of a theft.
+
+Answer: D
+- A: An exit is a reasonable means of escape only if taking it is reasonable. Leaving meant abandoning her keys, phone, and wallet.
+- B: Force against the person is only one means of confinement. Duress, such as keeping a person's valuable property, is another.
+- C: That is Hardy, where the plaintiff stayed of her own accord. Here the store held her property to make her stay.
+- D: Correct. The means of confinement include duress, such as keeping the plaintiff's purse or other valuable property. The store's privilege, if any, is a separate defense.
+- E: The shopkeeper's privilege requires only a reasonable belief, not probable cause (Bonkowski). And the privilege is a defense, not part of whether she was confined.
+Rule: False imprisonment requires an intended confinement within fixed boundaries, by barriers, force, threats, asserted authority, duress (such as keeping the plaintiff's valuables), or refusing a duty to release (Whittaker). Moral pressure alone is not enough (Hardy).
+
+## Practice Final 1 · Q5 · Intentional Infliction of Emotional Distress — Severity of distress (Harris)
+Over three months, landlord Ferris Molyneux tried to drive tenant Talia Brandt out of her rent-controlled apartment. Knowing she was recovering from a breakdown, he cut off her heat in January, taped notices to her door calling her a “deadbeat,” and phoned her at 3 a.m. on a dozen nights. Brandt testifies that she was upset, cried several times, and had trouble sleeping for about a week. She kept working full time and never sought treatment. Molyneux moves for a directed verdict on her claim for intentional infliction of emotional distress.
+
+Should the court grant the motion?
+
+A. No, because a landlord's abuse of power over a tenant he knows to be fragile is outrageous as a matter of law.
+B. No, because physical symptoms are not required to prove severe distress.
+C. Yes, because she suffered no physical injury from the conduct.
+D. Yes, because a landlord is privileged to pressure a tenant to leave.
+E. Yes, because even if the conduct is outrageous, the distress she describes is not severe.
+
+Answer: E
+- A: The conduct may well be outrageous, but outrageousness is only one of four elements. The distress must also be severe.
+- B: That is true, but it doesn't make her distress severe. Brief crying and a week of poor sleep fall short of what no reasonable person could endure.
+- C: IIED needs no physical injury (Siliznoff). The claim fails on severity, not for lack of physical harm.
+- D: No privilege covers cutting off heat and harassing calls. The problem with the claim is the evidence of severity.
+- E: Correct. Harris v. Jones requires (1) intentional or reckless conduct, (2) extreme and outrageous conduct, (3) causation, and (4) severe distress. Distress no reasonable person could endure is required, and brief upset and lost sleep are not enough.
+Rule: IIED requires (1) intent or recklessness, (2) extreme and outrageous conduct, (3) causation, and (4) severe distress (Harris v. Jones). Plaintiffs often lose on severity even when the conduct is outrageous.
+
+## Practice Final 1 · Q6 · Trespass to Land, Trespass to Chattels, and Conversion — Trespass: mistake about ownership; no harm needed
+Lorenzo Quist hired a licensed surveyor to mark his property line, then cleared brush from a 20-foot strip that the surveyor's stakes placed on his side. The survey was wrong: the strip belongs to his neighbor, Imelda Brask. The clearing did no harm to the strip, and an appraiser testifies that it slightly increased its value. Brask sues Quist for trespass to land.
+
+What is the most likely result?
+
+A. Brask wins, because Quist intended to enter the strip, and mistake is no defense.
+B. Quist wins, because he did not intend to enter land belonging to someone else.
+C. Quist wins, because the entry caused no damage to the land.
+D. Quist wins, because he reasonably relied on a licensed surveyor and so was not negligent.
+E. Brask recovers the full value of the strip, because Quist exercised dominion over her land.
+
+Answer: A
+- A: Correct. The intent required is intent to enter the land, not intent to trespass, and a good-faith mistake about ownership is no defense (compare Ranson). Trespass needs no harm; the law infers damage from the entry (Dougherty).
+- B: Trespass requires only an intent to enter the particular land. Believing it is your own doesn't negate that intent.
+- C: Trespass to land is actionable without harm (Dougherty v. Stepp). Nominal damages vindicate the possessor's right.
+- D: Negligence is beside the point for an intentional entry. Liability for trespass doesn't depend on whether the mistake was reasonable.
+- E: Forced-sale damages are the measure for conversion of a chattel, not for a trespass to land.
+Rule: Trespass to land requires only an intentional entry onto land in another's possession. A mistake about ownership is no defense, and no harm is needed (Dougherty; Ranson).
+
+## Practice Final 1 · Q7 · Consent — Exceeding the scope of consent
+Paloma Strand consented to arthroscopic surgery on her right knee. While she was under general anesthesia, the surgeon, Dr. Ivo Kessler, examined her left knee during prep and found a worse tear there. Believing it would spare her a second operation, he repaired the left knee instead and left the right knee alone. The repair was skillful and the result was good. Nothing about the left knee threatened her life or health or required immediate action. Strand sues Dr. Kessler for battery.
+
+What is the most likely result?
+
+A. Strand wins only if she proves she would have refused the left-knee surgery had she been asked.
+B. Strand loses, because the operation was skillful and benefited her.
+C. Strand loses, because consent to knee surgery extends to closely related knee procedures.
+D. Strand wins, because the surgeon operated outside the scope of her consent without an emergency.
+E. Strand loses unless an expert testifies that the left-knee repair fell below the standard of care.
+
+Answer: D
+- A: That is the causation element of an informed-consent negligence claim. A battery claim for an unconsented operation has no such element.
+- B: An unconsented touching is a battery however skillful or beneficial (Mohr v. Williams).
+- C: Consent to operate on one part of the body doesn't cover a different part. Mohr found a battery when the surgeon operated on the other ear.
+- D: Correct. A surgeon may go beyond the consent only when he finds, during the authorized operation, a condition that endangers life or health and requires immediate action (Mohr). There was none here.
+- E: Expert testimony is needed for a malpractice claim, not for battery. The wrong here is the lack of consent, not poor technique.
+Rule: Operating on a different part of the body than the patient consented to is a battery, however skillful, unless an unforeseen condition found during the authorized operation endangers life or health and requires immediate action (Mohr).
+
+## Practice Final 1 · Q8 · Self-Defense and Defense of Others — Deadly force against a non-deadly threat
+In a crowded bar, Rufus Delacroix, who was unarmed and much smaller than Silas Penhallow, shoved Penhallow and swung a fist at him, missing. Penhallow, who was not hurt, drew a hunting knife and stabbed Delacroix in the abdomen. Penhallow could have walked out the front door in complete safety. Delacroix sues Penhallow for battery, and Penhallow pleads self-defense. The jurisdiction follows the Restatement (Second).
+
+What is the most likely result?
+
+A. Penhallow wins, because Delacroix started the fight and cannot complain of its consequences.
+B. Delacroix wins, because Penhallow met a non-deadly attack with deadly force.
+C. Delacroix wins, because Penhallow had to retreat from the bar before using any force at all.
+D. Penhallow wins, because a person attacked in a public place may use whatever force ends the attack.
+E. Delacroix loses, because by starting a fight he consented to the risk of being hurt.
+
+Answer: B
+- A: The original aggressor may sue for force that exceeds what the threat justified, and may defend himself against it.
+- B: Correct. Self-defense permits force reasonably necessary and proportionate to the threat. Deadly force is privileged only against a reasonably perceived threat of death or serious bodily harm, and an unarmed punch is not one.
+- C: No one must retreat before using non-deadly force. Retreat matters only before deadly force, and deadly force wasn't justified here in any event.
+- D: Force must be proportionate to the threat. The privilege never allows unlimited force.
+- E: Starting a fight is not consent to being stabbed. Mutual-combat consent, where it applies at all, doesn't reach force far beyond the fight.
+Rule: Self-defense requires a reasonable belief in an imminent attack and force proportionate to it. Deadly force is privileged only against a reasonably perceived threat of death or serious bodily harm.
+
+## Practice Final 1 · Q9 · Defense and Recovery of Property; the Shopkeeper's Privilege — Spring guns: no deadly force for property
+Gideon Thornbury's vacant summer cabin had been broken into several times. He rigged a shotgun inside the bedroom door to fire at leg level when the door opened, and he posted no warning. Nils Varga broke in one night to steal antique bottles, opened the bedroom door, and was shot, losing part of his leg. Varga pleaded guilty to a theft offense, then sued Thornbury for battery.
+
+What is the most likely result?
+
+A. Thornbury wins, because Varga was a trespasser committing a crime, and a possessor owes a trespasser only a duty not to injure him willfully.
+B. Thornbury wins, because Varga's own crime bars him from recovering for any injury suffered while committing it.
+C. Varga wins, but only because Thornbury failed to post a warning that the device was there.
+D. Thornbury wins, because he could have used the same force in person against a burglar in his cabin.
+E. Varga wins, because a possessor may not use force likely to kill or seriously injure merely to protect property.
+
+Answer: E
+- A: The trespasser rule governs negligence claims about conditions on land. Setting a gun to shoot intruders is an intentional use of force, judged by the defense-of-property privilege.
+- B: A plaintiff isn't barred merely because he was engaged in a wrongful act when injured (the Restatement (Third) wrongful-acts rule). Katko let the burglar recover.
+- C: A warning matters for devices whose force would otherwise be privileged. No warning makes deadly force to protect property alone lawful.
+- D: In person, he could not have shot an intruder who threatened only property. A device gets no more force than its owner could use in person.
+- E: Correct. Katko v. Briney held that a possessor may not use, to protect property alone, force or a device intended or likely to kill or seriously injure an intruder, even a criminal trespasser. Deadly force is justified only to prevent a violent felony or protect human life.
+Rule: Force likely to cause death or serious bodily harm is never privileged to protect property alone, and a mechanical device is privileged only to the extent its owner could have used the same force in person (Katko).
+
+## Practice Final 1 · Q10 · Necessity and Discipline — Private necessity: privileged, but pay for damage
+During a sudden ice storm, trucker Ansel Brightwater pulled his rig off the highway onto a farmer's private lane to keep it from jackknifing. He stayed there overnight. The farmer, Hester Lindqvist, saw the truck but did nothing. The truck's weight cracked a culvert under the lane, causing $3,000 in damage. Brightwater drove carefully the whole time. Lindqvist sues him.
+
+What is the most likely result?
+
+A. Brightwater is not liable, because public necessity is a complete privilege.
+B. Lindqvist recovers $3,000, because private necessity privileged the entry but not the damage it caused.
+C. Lindqvist recovers $3,000 plus damages for the trespass, because the entry was unprivileged.
+D. Lindqvist recovers only if she proves that Brightwater drove carelessly on the lane.
+E. Brightwater is not liable, because Lindqvist saw the truck and did not object.
+
+Answer: B
+- A: Public necessity protects those who act to avert a public disaster. Brightwater acted to protect himself and his truck, which is private necessity.
+- B: Correct. Private necessity is an incomplete privilege. The actor may enter and stay, and the owner may not expel him, but the actor must pay for the actual damage he causes (Vincent v. Lake Erie).
+- C: The entry was privileged by necessity, so there is no trespass. The privilege is incomplete only in that he must pay for actual damage.
+- D: Vincent imposed liability with no negligence at all: the ship's master acted prudently. Fault isn't required.
+- E: Her silence doesn't matter. Necessity is why the entry was lawful, and necessity carries a duty to pay for the damage.
+Rule: Private necessity privileges entry to protect oneself or one's property from serious harm, but the actor pays for actual damage (Vincent). Public necessity is complete: no liability (Surocco).
+
+## Practice Final 1 · Q11 · The Negligence Case and Unreasonable Risk — Hand formula arithmetic
+A marina leaves its fuel dock unattended overnight. Undisputed evidence shows that on any given night, an unattended dock has a 1-in-1,000 chance of a fuel fire, and that such a fire would cause about $2,000,000 in damage to nearby boats. A night watchman would cost $1,500 a night and would eliminate the risk. One night a fire breaks out at the unattended dock and destroys a neighbor's yacht. The neighbor sues the marina for negligence.
+
+Applying the Hand formula, which is correct?
+
+A. The marina was not negligent, because a 1-in-1,000 chance is too remote to be foreseeable.
+B. The marina was not negligent, because a watchman costs $1,500 every night while a fire is unlikely on any one night.
+C. The marina was negligent, because a $2,000,000 loss is far greater than a $1,500 precaution.
+D. The marina was negligent per se, because it left fuel equipment unattended.
+E. The marina was negligent, because the burden ($1,500) was less than the expected loss ($2,000).
+
+Answer: E
+- A: A small probability is still foreseeable. The formula weighs it with the gravity of the loss (Overseas Tankship v. Miller: a small but real risk counts).
+- B: That compares the burden with the probability alone. The formula compares the burden with probability times loss.
+- C: Right result, wrong reasoning. The loss must be discounted by its probability. If the chance had been 1 in 10,000, the same comparison would wrongly find negligence.
+- D: Negligence per se requires a statute. Nothing here states one.
+- E: Correct. Under United States v. Carroll Towing, liability follows if B < P × L. Here B = $1,500 and P × L = 0.001 × $2,000,000 = $2,000, so the precaution was worth taking.
+Rule: The Hand formula: the defendant is negligent if the burden of the precaution (B) is less than the probability of harm (P) times the gravity of the loss (L) (Carroll Towing). It organizes the risk-utility factors: likelihood, severity, and burden.
+
+## Practice Final 1 · Q12 · The Reasonable Person — Child engaged in an adult activity
+Fourteen-year-old Oriel Danforth took her family's 150-horsepower motorboat across a crowded lake at high speed, passing close to a roped-off swimming area, and struck a swimmer, Bram Kowalczyk. Kowalczyk sues Danforth for negligence. The jurisdiction follows Robinson v. Lindsay. Danforth asks the court to instruct the jury on the standard of a reasonable 14-year-old.
+
+What standard should the court give?
+
+A. A reasonable adult, because driving a powerful motorboat is an adult activity.
+B. A reasonable child of like age, intelligence, and experience, because Danforth is a minor.
+C. Danforth's own capacity and judgment, because a child should not be held to a standard she cannot meet.
+D. None, because minors are immune from negligence liability.
+E. A reasonable child, unless a boating statute set a minimum age, in which case negligence per se applies.
+
+Answer: A
+- A: Correct. Children are generally held to the standard of a child of like age, intelligence, and experience, but a child engaged in an inherently dangerous activity normally pursued only by adults, such as driving a powerful motorized vehicle, is held to the adult standard (Robinson).
+- B: That is the general rule for children, but Robinson makes an exception for adult activities like operating powerful motor vehicles.
+- C: No standard is subjective. Even the child standard is objective, measured by a reasonable child of like age, intelligence, and experience.
+- D: There is no tort immunity for minors. The Restatement (Third) confirms it; age matters only to the standard of care.
+- E: No statute is given, and the adult standard doesn't depend on one. Robinson turns on the nature of the activity.
+Rule: Children are held to the standard of a reasonable child of like age, intelligence, and experience, except in inherently dangerous adult activities such as driving powerful motor vehicles, where the adult standard applies (Robinson v. Lindsay).
+
+## Practice Final 1 · Q13 · Professionals and Informed Consent — Informed consent: material risk, subjective causation
+Before removing Bettina Rourke's thyroid, Dr. Amos Feld did not tell her that the operation carries a 3% risk of permanent hoarseness. The risk materialized. Rourke, a professional choir director, sues for lack of informed consent in a jurisdiction that follows Scott v. Bradford. She testifies that she would have refused the surgery had she known. Dr. Feld's experts testify that (1) most surgeons in the area don't mention this risk, and (2) a reasonable patient would have had the surgery anyway.
+
+Which is correct?
+
+A. Rourke loses, because local surgeons customarily do not disclose this risk.
+B. Rourke loses, because a reasonable patient would have consented even with the disclosure.
+C. Rourke may recover if the risk was material and she herself would have refused the surgery.
+D. Rourke wins on battery, because consent given without disclosure of the risks is no consent at all.
+E. Rourke loses unless she also proves that Dr. Feld performed the surgery negligently.
+
+Answer: C
+- A: That is the traditional physician-oriented rule. Scott asks what a reasonable patient would find material, not what doctors customarily disclose.
+- B: That is the objective causation test of Canterbury and most courts. Scott uses a subjective test: would this patient have refused?
+- C: Correct. Scott v. Bradford requires (1) failure to disclose a material risk, (2) that this plaintiff would have declined the treatment, judged by her own testimony, and (3) that the undisclosed risk materialized and injured her.
+- D: She consented to the very procedure performed, so there was no battery. Nondisclosure of risks is a negligence claim.
+- E: Informed consent is a separate duty. A risk can materialize from a perfectly performed operation, and the claim is the failure to disclose it.
+Rule: Under Scott v. Bradford the doctor must disclose material risks and alternatives. The patient proves (1) nondisclosure of a material risk, (2) she would have refused (judged subjectively), and (3) the risk materialized and injured her.
+
+## Practice Final 1 · Q14 · Judge and Jury; Negligence Per Se — Negligence per se: type of harm
+A state statute requires anyone hauling gravel on a public highway to cover the load with a tarp “to prevent stones from falling or blowing onto the highway and endangering motorists.” A contractor, Pembrook Paving, parked a truck with an uncovered gravel load in a residential cul-de-sac overnight. Ten-year-old Tobias Hanlon climbed up the side of the truck, slipped on the loose gravel, and broke his arm. His parents sue Pembrook and argue negligence per se.
+
+Will the statute establish Pembrook's negligence?
+
+A. Yes, because Pembrook violated the statute without any excuse.
+B. Yes, because Tobias was a member of the public, whom every traffic statute protects.
+C. No, because the harm Tobias suffered is not the type the statute was designed to prevent.
+D. No, because the jurisdiction treats a statutory violation only as evidence of negligence.
+E. No, because a statute can never set the standard of care owed to a child trespasser.
+
+Answer: C
+- A: An unexcused violation is not enough. The plaintiff must also be in the protected class and suffer the type of harm the statute was meant to prevent.
+- B: The statute protects motorists from falling stones. Even if Tobias were in a protected class, a fall while climbing is not the risk it addresses.
+- C: Correct. Negligence per se requires that the plaintiff be in the protected class and that the harm be of the type the statute was meant to prevent (Stachniewicz). The tarp rule addresses stones falling on motorists, not children climbing parked trucks. The parents may still try ordinary negligence.
+- D: Nothing says the jurisdiction follows the minority evidence-only rule. The claim fails on the type of harm whatever the effect of a violation.
+- E: There is no such categorical rule. The problem is the statute's purpose, not the plaintiff's age or status.
+Rule: An unexcused violation is negligence per se only if (1) the statute prescribes conduct for others' safety, (2) it was violated without excuse, (3) the plaintiff is in the protected class, (4) the harm is the type the statute targets, and (5) the violation caused the harm (Osborne; Stachniewicz).
+
+## Practice Final 1 · Q15 · Circumstantial Evidence and Notice — Constructive notice: no evidence of time
+Celeste Amundsen slipped on a smear of spilled yogurt in the dairy aisle of a supermarket and broke her hip. At trial, she offered no evidence of who spilled the yogurt, how long it had been on the floor, or when the aisle was last inspected. A witness testified that the yogurt looked fresh and had no footprints or cart tracks through it. The store sells yogurt only in sealed containers. At the close of her case, the store moves for a directed verdict.
+
+Should the court grant the motion?
+
+A. No, because a store owes its invitees a duty to keep its aisles free of hazards.
+B. No, because spills do not ordinarily occur in a store aisle without negligence, so res ipsa loquitur applies.
+C. Yes, because the plaintiff must prove the store actually knew about the spill.
+D. Yes, because nothing shows the store caused the spill or how long it was there.
+E. No, because the mode-of-operation rule relieves the plaintiff of proving notice in any self-service store.
+
+Answer: D
+- A: The duty is reasonable care, not insurance. The plaintiff still has to show the store created the hazard or had actual or constructive notice of it.
+- B: Customers spill things without any negligence by the store, so the event doesn't point to the store's fault.
+- C: Right result, wrong standard. Constructive notice, from the hazard existing long enough that inspection would have found it, also suffices.
+- D: Correct. The plaintiff must show (1) the store created the condition, (2) actual notice, or (3) constructive notice. With no evidence of how long the spill was there, and signs that it was fresh, a jury could only guess (Joye; Goddard).
+- E: Mode of operation applies when the store's own method makes hazards continuous or foreseeable, such as eating samples on the floor (Jasko). Selling sealed yogurt is not that, and mere self-service isn't enough (H.E. Butt Grocery).
+Rule: A premises plaintiff must show that the defendant created the dangerous condition or had actual or constructive notice of it. Without evidence of how long it existed, there is no constructive notice (Joye; Goddard).
+
+## Practice Final 1 · Q16 · Res Ipsa Loquitur — Res ipsa against a surgical team
+Marisol Quintero went into the hospital for an appendectomy. While she was unconscious, she was handled by a surgeon, an anesthesiologist, two nurses, and an orderly who moved her to and from the operating table. She woke with a nerve injury in her left shoulder, which was nowhere near the operation and had been healthy. She cannot say who did what, and all of them deny wrongdoing. She sues all five and the hospital that employs the nurses and orderly.
+
+May she rely on res ipsa loquitur against the defendants?
+
+A. No, because no single defendant had exclusive control of her body or of any instrument that injured her.
+B. Only against the hospital, because it is vicariously liable for the employees who handled her.
+C. Yes, against each defendant who had control of her body or the instruments during the operation.
+D. Only against the surgeon, because as captain of the ship he is responsible for everyone in the operating room.
+E. No, because she must have expert testimony identifying which defendant was negligent.
+
+Answer: C
+- A: Ybarra rejected that argument. The test is right of control, and every defendant with control of her body or the instruments during the operation may be required to explain.
+- B: Respondeat superior makes the hospital liable for its employees' negligence, but Ybarra applies res ipsa to the individual defendants too, including the independent surgeon and anesthesiologist.
+- C: Correct. Ybarra v. Spangard applied res ipsa to everyone in control of an unconscious patient: an injury to a healthy part of the body away from the operation ordinarily doesn't happen without negligence, and she contributed nothing. Each defendant must explain.
+- D: Ybarra did not rest on a captain-of-the-ship theory. It reached every defendant with control during the operation.
+- E: The point of applying res ipsa in Ybarra was that an unconscious patient can't identify who caused the injury. Expert testimony may show the injury ordinarily doesn't happen without negligence, but identifying the actor isn't required.
+Rule: Res ipsa lets the jury infer negligence when the event ordinarily doesn't happen without negligence, other causes are sufficiently eliminated, and the negligence is within the defendant's duty. For an unconscious patient, every defendant with control during the operation must explain (Ybarra).
+
+## Practice Final 1 · Q17 · Cause in Fact — But-for cause: harm would have happened anyway
+A freight train traveling 40 miles per hour, in a zone where a regulation set the limit at 25, struck a car that suddenly drove onto an unguarded crossing from behind a hedge. The driver, Elio Brandvold, was killed. His estate sues the railroad. Uncontradicted expert testimony shows that the car entered the crossing so close to the train that even at 25 miles per hour the train could not have stopped in time or slowed enough to avoid a fatal collision.
+
+What is the most likely result?
+
+A. The estate wins, because violating the speed regulation was negligence per se.
+B. The estate wins, because the train's excessive speed was a substantial factor in the collision.
+C. The railroad wins, because the driver's own negligence in entering the crossing superseded the railroad's.
+D. The railroad wins, because the estate cannot show that the excess speed was a but-for cause of the death.
+E. The estate wins, because speeding greatly increased the chance of a fatal crossing accident.
+
+Answer: D
+- A: Negligence per se establishes breach, not causation. The violation must still be a cause of the harm.
+- B: Substantial factor is for two causes that are each sufficient alone. It doesn't rescue a claim where due care would have produced the same harm.
+- C: The driver's conduct may matter to comparative fault, but the railroad wins for a more basic reason: its negligence made no difference.
+- D: Correct. Under Perkins v. Texas and New Orleans R. Co., negligence is not a cause in fact if the harm would have happened anyway. Imagine the train at 25 miles per hour: the collision and death still occur.
+- E: Reynolds lets a jury find causation when negligence greatly increases the chance of harm and the possibility of the harm happening anyway is speculative. Here it is uncontradicted that it would have happened anyway.
+Rule: Cause in fact asks whether the harm would have occurred if the defendant had acted with due care. If it would have, the negligence is not a cause (Perkins).
+
+## Practice Final 1 · Q18 · Multiple and Indeterminate Causes — Alternative liability: a defendant who exculpates himself
+Two hunters, Ruben Achterberg and Kai Lindholm, each negligently fired at a grouse in the direction of their companion, Adaeze Mbeki. One pellet struck her eye. She cannot tell which hunter fired it. At trial, Lindholm proves that he was using only No. 4 shot, while the pellet removed from her eye is No. 7½ shot, the size Achterberg was using.
+
+What is the most likely result?
+
+A. Both are jointly and severally liable, because both were negligent and both put her at risk.
+B. Achterberg alone is liable for her whole injury, because Lindholm has proved he did not cause it.
+C. Neither is liable, because she cannot prove by a preponderance of the evidence which one caused her injury.
+D. Each is liable for half of her damages, because they were equally negligent.
+E. Each is liable in proportion to the share of shot he fired, under market-share liability.
+
+Answer: B
+- A: Under Summers v. Tice the burden shifts to each defendant to prove he did not cause the harm. Lindholm carried that burden.
+- B: Correct. Under Summers alternative liability shifts the burden to each negligent defendant to exculpate himself. Lindholm did. Achterberg did not, and the evidence now points to him.
+- C: That would be the result without Summers. Alternative liability shifts the burden precisely because the plaintiff cannot identify which negligent defendant injured her.
+- D: Alternative liability is joint and several when it applies, not split in equal shares. And here Lindholm is out entirely.
+- E: Market-share liability is for many makers of a fungible product (Sindell), not two identified defendants with distinguishable conduct.
+Rule: Alternative liability (Summers v. Tice) shifts the burden when every defendant acted tortiously, one of them caused the harm, the plaintiff can't prove which, and all are before the court. A defendant who proves he did not cause the harm escapes.
+
+## Practice Final 1 · Q19 · Proximate Cause: Unforeseeable Plaintiffs and Consequences — Unforeseeable plaintiff (Cardozo)
+A courier for a parcel service, hurrying to finish his route, tossed a sealed box onto a crowded loading dock instead of handing it up. The box, which gave no sign of what was inside, held mislabeled fireworks. It exploded on impact, and the blast knocked over a ladder 40 yards away, injuring a painter, Lucinda Ferro. A jury could find that tossing packages onto a crowded dock was negligent toward the people on the dock. The jurisdiction follows the majority opinion in Palsgraf.
+
+What is the most likely result in Ferro's suit against the parcel service?
+
+A. Ferro wins, because the courier's negligence directly caused her injury.
+B. Ferro wins if the jury finds her harm was not too remote as a matter of policy.
+C. Ferro loses, because the explosion was a superseding cause of her injury.
+D. Ferro wins, because a defendant takes the plaintiff as he finds her.
+E. Ferro loses, because she was outside the zone of foreseeable danger.
+
+Answer: E
+- A: That is the direct-consequences rule of Polemis, which Cardozo's approach rejects. Directness doesn't create a duty to an unforeseeable plaintiff.
+- B: That is Andrews's dissent, which treats the issue as proximate cause for the jury. The jurisdiction follows Cardozo.
+- C: The explosion came from the box itself, not from an independent intervening act. Ferro loses on duty, not superseding cause.
+- D: The eggshell rule concerns the extent of harm to a plaintiff to whom a duty is owed. It doesn't make an unforeseeable plaintiff foreseeable.
+- E: Correct. In Palsgraf, Cardozo held that “the risk reasonably to be perceived defines the duty to be obeyed.” Negligence toward people on the dock is not a wrong to someone outside the range of apparent danger.
+Rule: Under Cardozo's Palsgraf opinion, a duty is owed only to plaintiffs within the zone of foreseeable danger; negligence toward others doesn't transfer. Andrews would treat the question as proximate cause for the jury.
+
+## Practice Final 1 · Q20 · Intervening and Superseding Causes — Intervening negligence within the risk
+Halberd Construction was repairing a gas main beside a busy road. Its foreman decided not to set up the concrete barrier the job plan called for between the traffic lane and the excavation. A driver, Osric Penfold, had an epileptic seizure after negligently skipping his medication, veered off the road, and struck a Halberd worker, Inez Corvo, knocking her into a kettle of boiling enamel. Corvo sues Halberd. Halberd argues that Penfold's negligence was a superseding cause.
+
+How should the court rule?
+
+A. For Corvo, because a car entering the work area was the very risk that made the missing barrier negligent.
+B. For Halberd, because a driver's seizure is an extraordinary event that no contractor could anticipate.
+C. For Halberd, because Penfold's negligent failure to take his medication was an independent wrongful act.
+D. For Corvo, but only if Halberd violated a statute requiring the barrier.
+E. For Halberd, because Corvo's injury came from the enamel, not from the car.
+
+Answer: A
+- A: Correct. Under Derdiarian v. Felix Contracting, an intervening act doesn't break the chain if it is a normal or foreseeable consequence of the situation the defendant created. That the risk materialized in an unusual way, through a seizure and boiling enamel, doesn't matter.
+- B: The precise manner of harm need not be foreseeable. What matters is that a car entering the site was foreseeable.
+- C: Ordinary negligence of other drivers is usually not superseding, especially when it is the very risk the defendant's precaution would have guarded against.
+- D: No statute is needed. The common-law risk analysis decides superseding cause.
+- E: The car set the injury in motion. A harm within the risk that occurs in an unexpected manner is still within the scope of liability.
+Rule: An intervening act is not a superseding cause when it is foreseeable or within the very risk that made the defendant negligent; the precise manner of harm need not be foreseen (Derdiarian).
+
+## Practice Final 1 · Q21 · Duty and the Failure to Act — Duty to act: innocently created peril
+Late at night, through no fault of his own, Thaddeus Kemble's car struck a deer and stalled across the right lane of an unlit two-lane highway. Kemble had flares and a reflective triangle in his trunk, but he walked to a gas station a mile away to call a tow truck without setting any of them out. Twenty minutes later a driver, Gwendolyn Ashworth, came around a curve at a lawful speed, hit the stalled car, and was injured. Ashworth sues Kemble for negligence.
+
+Did Kemble owe Ashworth a duty to warn approaching traffic?
+
+A. No, because the stall was not his fault, and there is no duty to act to protect others from a risk one did not negligently create.
+B. No, because his failure to set out flares was nonfeasance, and there is no general duty to rescue.
+C. Yes, because he created the peril, even innocently, and so had a duty to take reasonable steps to protect others from it.
+D. No, because Kemble had no special relationship with Ashworth.
+E. Yes, but only if a statute required him to set out flares.
+
+Answer: C
+- A: The duty arises from creating the peril, even innocently. Fault in creating it is not required.
+- B: The no-duty rule applies to one who has not created the risk. Kemble's car created it.
+- C: Correct. The no-duty-to-rescue rule has an exception when the defendant created the peril, even innocently. Kemble's stalled car created the risk to approaching traffic, so he had to use reasonable care, such as setting out his flares.
+- D: A special relationship is only one of the exceptions. Creating the peril is another.
+- E: A statute is one source of a duty to act, but not the only one. Creating the peril is enough.
+Rule: There is no general duty to rescue, but a duty to act arises from (1) a special relationship (L.S. Ayres), (2) creating the peril, even innocently, (3) an undertaking, (4) a relationship with the dangerous person, (5) a statute, or (6) a contract.
+
+## Practice Final 1 · Q22 · Contributory and Comparative Negligence — Modified comparative fault (50% bar) with two defendants
+Cassius Ondaatje was injured when his motorcycle collided with two cars at an intersection. The jury finds his damages are $200,000 and assigns fault as follows: Ondaatje 50%, Driver One 30%, Driver Two 20%. The jurisdiction's statute allows a plaintiff to recover if his negligence “was not greater than” the combined negligence of the defendants, with damages reduced in proportion to his fault.
+
+How much can Ondaatje recover in total?
+
+A. $0, because a plaintiff whose fault equals the defendants' combined fault is barred.
+B. $0, because his fault (50%) is greater than the fault of each defendant individually.
+C. $60,000, the 30% share attributable to Driver One alone.
+D. $200,000, because his fault is not greater than the defendants' fault.
+E. $100,000, because he clears the 50% bar and his damages are cut in half.
+
+Answer: E
+- A: That is the 49% bar (“not as great as”), as in McIntyre v. Balentine. The statute here uses the 50% bar, “not greater than.”
+- B: Most modified-comparative-fault states compare the plaintiff's fault with the defendants' combined fault, and the statute says so here.
+- C: That treats the drivers' liability as several and ignores Driver Two. The question is his total recovery after the reduction for his own fault.
+- D: Clearing the threshold lets him recover, but his damages are still reduced by his own percentage of fault.
+- E: Correct. Under the 50% bar a plaintiff recovers if his fault is no greater than the defendants' combined fault. 50% is not greater than 50%, so he recovers $200,000 less 50%, or $100,000.
+Rule: Pure comparative fault reduces any recovery by the plaintiff's share. The 49% bar requires the plaintiff's fault to be less than the defendants'; the 50% bar requires it to be no greater. Most states compare against the defendants' combined fault.
+
+## Practice Final 1 · Q23 · Assumption of Risk — Exculpatory clause: reckless conduct
+Before using a climbing gym, Leopold Varnum signed a release of “any and all claims, including claims arising from the gym's own negligence.” The release was clear and conspicuous, and the gym is one of several in town. A staff member told the manager that the rope on wall 3 was badly frayed. To avoid closing the busiest wall on a Saturday, the manager kept it in use, saying, “It'll hold one more day.” The rope snapped while Varnum was climbing, and he was badly hurt.
+
+Does the release bar Varnum's negligence action?
+
+A. No, because a release does not protect a defendant whose conduct was reckless or grossly negligent.
+B. Yes, because the release clearly and specifically covered the gym's own negligence.
+C. No, because a recreational gym is a business affecting the public interest.
+D. No, because a release of liability for one's own negligence is void as against public policy.
+E. Yes, but his recovery is reduced by his share of fault for choosing to climb.
+
+Answer: A
+- A: Correct. Under Seigneur, a clear release of the defendant's own negligence is enforceable unless (1) the conduct was intentional, reckless, wanton, or grossly negligent, (2) bargaining power was grossly unequal, or (3) the transaction affects the public interest. Knowingly using a badly frayed rope fits the first exception.
+- B: Clear language is necessary but not sufficient. A release doesn't reach reckless or grossly negligent conduct.
+- C: Seigneur held that a fitness club does not affect the public interest. Recreation is not an essential service, and other gyms were available.
+- D: Most courts enforce clear releases of ordinary negligence. Seigneur upheld one.
+- E: Express assumption of risk is a complete bar when it applies, not a reduction. It doesn't apply here.
+Rule: An exculpatory clause bars a negligence claim if it clearly releases the defendant's own negligence and no exception applies: (1) intentional, reckless, or grossly negligent conduct; (2) grossly unequal bargaining power; or (3) a transaction affecting the public interest (Seigneur).
+
+## Practice Final 1 · Q24 · Statutes of Limitation and Repose — Discovery rule
+In March 2021, a surgeon left a small sponge in Delphine Arceneaux's abdomen during a hysterectomy. In 2022 she complained of abdominal pain, and the surgeon told her it was normal post-operative discomfort. In June 2025, a CT scan ordered for an unrelated problem revealed the sponge. She sued in May 2026. The limitations period is two years from accrual, and the jurisdiction has adopted the discovery rule.
+
+Is her action timely?
+
+A. No, because her claim accrued in March 2021, when all the elements of the tort were complete.
+B. Yes, because she could not reasonably have discovered the sponge until 2025.
+C. No, because her pain in 2022 put her on notice of the injury, so the period ran out in 2024.
+D. Yes, but only because the period was tolled while she remained under the surgeon's care.
+E. Yes, because no statute of limitations applies to foreign objects left in the body.
+
+Answer: B
+- A: That is the all-elements rule of § 2. The jurisdiction has adopted the discovery rule, which delays accrual.
+- B: Correct. Under the discovery rule (§ 3; Teeters v. Currey), the period doesn't start until the plaintiff discovers, or with reasonable diligence should have discovered, the facts of her claim. Her doctor's reassurance in 2022 made it reasonable not to suspect a sponge.
+- C: Pain her own surgeon explained away as normal doesn't show she should have discovered the sponge. Reasonable diligence doesn't require disbelieving one's doctor.
+- D: Continuous-treatment tolling (§ 7) applies only while treatment for the same condition continues, and nothing shows that here. The discovery rule is what saves the claim.
+- E: Limitations periods apply. Foreign-object cases are the classic setting for the discovery rule, which delays accrual but doesn't remove the period.
+Rule: Under the discovery rule (§ 3; Teeters), the limitations period begins when the plaintiff discovers, or with reasonable diligence should discover, the facts of her claim, not when the tort occurs (§ 2).
+
+## Practice Final 1 · Q25 · Immunities — FTCA discretionary function exception
+National Park rangers found Crispin Dalloway drunk and disorderly in a campground at 2 a.m. No statute, regulation, or policy told rangers how to handle intoxicated visitors; the matter was left to their judgment, balancing visitor safety, resources, and enforcement goals. The rangers decided to detain him briefly and then release him in a parking lot rather than arrest him. Dalloway wandered onto a highway and was struck and killed. His estate sues the United States under the Federal Tort Claims Act.
+
+What is the most likely result?
+
+A. The United States is liable, because the rangers acted within the scope of their employment and a private person would be liable.
+B. The United States is not liable, because the public duty doctrine bars claims for failing to protect a member of the public.
+C. The United States is not liable, because the FTCA bars every claim arising out of law enforcement.
+D. The United States is liable, because deciding what to do with one visitor is operational, not policy-making.
+E. None of the above.
+
+Answer: E
+- A: That states the FTCA's basic waiver, but the waiver is subject to exceptions, and one applies here.
+- B: The public duty doctrine is a state-law limit on duty (Riss). The FTCA claim fails on one of the Act's own exceptions.
+- C: The FTCA bars most intentional torts, but it expressly allows some claims against law enforcement officers. There is no blanket law-enforcement exception.
+- D: Deuser rejected that framing. The test is whether the decision involved judgment grounded in policy, not whether it was made in the field.
+- E: Correct. The United States is not liable because the discretionary function exception applies. Under Deuser v. Vecera, conduct is shielded if (1) it involves judgment or choice, with no mandatory directive, and (2) the judgment is grounded in social, economic, or political policy. How to handle an intoxicated visitor, balancing safety and resources, meets both.
+Rule: The FTCA makes the United States liable like a private person, except for (1) discretionary functions, (2) most intentional torts, and (3) injuries incident to military service. The discretionary function test asks whether the conduct involved judgment and whether that judgment is grounded in policy (Deuser).
+
+## Practice Final 1 · Q26 · Owners and Occupiers of Land — Social guest as licensee; no duty to inspect
+Cordelia Wyndham invited a friend, Barnaby Holt, to her house for dinner. On his way down to her basement to fetch a bottle of wine at her request, a stair tread gave way because it had rotted underneath, and Holt was injured. Wyndham did not know the tread was rotten, but a reasonable inspection would have revealed it. The jurisdiction keeps the traditional categories of entrants.
+
+Is Wyndham liable to Holt?
+
+A. Yes, because a reasonable inspection would have revealed the rotten tread.
+B. Yes, because she asked him to go to the basement, which made him an invitee.
+C. No, because a possessor owes a licensee only a warning of dangers she knows of and he is unlikely to discover.
+D. No, because an entrant must take the premises as he finds them, and she owed him only a duty not to injure him willfully.
+E. Yes, because a possessor owes everyone on her land a duty of reasonable care.
+
+Answer: C
+- A: A duty to inspect is owed to invitees. Holt, a social guest, is a licensee, owed no inspection.
+- B: An invitee is a business visitor or a public invitee. Running an errand for a host at dinner doesn't change a social guest's status (Barmore).
+- C: Correct. Social guests are licensees (Barmore v. Elmore). The possessor must warn of, or make safe, known dangerous conditions the licensee is unlikely to discover, but has no duty to inspect. Wyndham didn't know of the rot.
+- D: That is the duty owed an undiscovered trespasser. A licensee is owed more: a warning of known hidden dangers.
+- E: That is Rowland v. Christian. The jurisdiction keeps the traditional categories.
+Rule: Under the traditional categories, an invitee is owed reasonable care including inspection; a licensee, including a social guest, is owed only a warning of known dangers he is unlikely to discover; an undiscovered trespasser, only freedom from willful or wanton injury.
+
+## Practice Final 1 · Q27 · Compensatory Damages — Collateral source rule: gratuitous services
+Imogen Thackeray was injured by Rudd Hardware's negligence. Her hospital charged $90,000 for her treatment. Her health insurer paid $60,000 of it, and the hospital, a charity, forgave the remaining $30,000 under its program for patients in need. Her employer also paid her full salary during her six weeks off. Rudd Hardware concedes liability and asks the court to reduce her damages by every amount she did not pay herself.
+
+What should the court do?
+
+A. Reduce her damages by the $30,000 the hospital forgave, but not by the insurance payments she paid premiums for.
+B. Reduce her damages by all three amounts, because otherwise she will recover more than her actual loss.
+C. Reduce her damages by the salary her employer paid, because she lost no wages.
+D. Make no reduction for any of the three, because each came from a source independent of Rudd Hardware.
+E. Make no reduction for the insurance, but reduce for the forgiven bill and salary, which cost her nothing.
+
+Answer: D
+- A: Gratuitous and discounted services are collateral sources too. Montgomery Ward refused to reduce damages for charity write-offs.
+- B: The collateral source rule accepts that result: the wrongdoer should not benefit from the plaintiff's foresight or others' generosity.
+- C: Sick pay and other employment benefits are classic collateral sources.
+- D: Correct. Benefits from sources independent of the defendant, including insurance, employment benefits, and gratuitous services, don't reduce its liability (Montgomery Ward v. Anderson).
+- E: Whether the plaintiff paid for a benefit doesn't decide whether it is collateral. Each came from a source independent of the defendant.
+Rule: Under the collateral source rule, benefits from sources independent of the tortfeasor (insurance, employment benefits, gratuitous or discounted services, government benefits) do not reduce damages (Montgomery Ward).
+
+## Practice Final 1 · Q28 · Joint and Several Liability, Satisfaction, Release, and Settlement — Joint and several liability with an insolvent defendant
+Ramona Ellery, who was not at fault, suffered a single, indivisible injury in a collision caused by the negligence of two drivers. The jury finds her damages are $400,000 and assigns 25% of the fault to Driver A, who is well insured, and 75% to Driver B, who is uninsured and insolvent. The jurisdiction has adopted comparative fault but, like Illinois in Coney, has kept joint and several liability.
+
+How much can Ellery collect from Driver A?
+
+A. $100,000, Driver A's 25% share, because comparative fault ended joint and several liability.
+B. $200,000, half of her damages, because the two drivers share the liability equally.
+C. $400,000, the full amount, though Driver A may seek contribution from Driver B.
+D. $100,000 plus a share of Driver B's uncollectible amount reallocated between Ellery and Driver A.
+E. $400,000, but only if she first tries and fails to collect from Driver B.
+
+Answer: C
+- A: That is Bartlett, which abolished joint and several liability. Coney held that comparative fault does not require abolishing it.
+- B: Joint and several liability makes each defendant liable for the whole, not for a per-capita share. Pro rata shares matter only to contribution between the drivers.
+- C: Correct. Independent tortfeasors who cause a single, indivisible injury are jointly and severally liable, so Ellery may collect everything from Driver A (Coney). Driver A's right of contribution against insolvent Driver B is worth little, but that risk falls on the defendants, not the innocent plaintiff.
+- D: Reallocation is the Restatement (Third) hybrid, a minority approach, and Ellery bears no fault to reallocate to. The jurisdiction keeps joint and several liability.
+- E: Joint and several liability lets the plaintiff collect from any one or more defendants, in any order.
+Rule: Under joint and several liability, each tortfeasor who caused an indivisible injury is liable for all of it, and the paying defendant seeks contribution (Coney). Under several liability, each pays only its share and the plaintiff bears an insolvent defendant's share (Bartlett).
+
+## Practice Final 1 · Q29 · Vicarious Liability — Frolic vs. detour
+Ezekiel Pomfret drove a delivery van for a bakery. Halfway through his afternoon route, without permission, he drove 35 miles out of his way to watch the last hour of his daughter's soccer tournament. While parking at the tournament, he negligently backed into a spectator, Winifred Aske. Aske sues the bakery.
+
+Is the bakery vicariously liable?
+
+A. No, because the trip was a frolic outside the scope of employment.
+B. Yes, because he was driving the bakery's van during his working hours.
+C. Yes, because any deviation from an assigned route is only a detour.
+D. No, because the going-and-coming rule excludes travel by an employee to a place of his own choosing.
+E. Yes, because the bakery could have monitored the van's location and stopped the trip.
+
+Answer: A
+- A: Correct. A minor deviation (a detour) stays within the scope of employment, but a substantial departure for the employee's own purposes (a frolic) does not, until he returns to the employer's business (O'Shea v. Welch). A 35-mile trip to a soccer game is a frolic.
+- B: Using the employer's vehicle during work hours is not enough. The conduct must be within the scope of employment, which a frolic is not.
+- C: The law distinguishes minor deviations (detours) from substantial departures for personal purposes (frolics).
+- D: The going-and-coming rule concerns commuting to and from work. Pomfret was mid-route, so the frolic-and-detour rule applies.
+- E: That would be a direct claim of negligent supervision, which the facts don't support. Vicarious liability turns on scope of employment.
+Rule: An employer is vicariously liable for torts an employee commits within the scope of employment. A detour stays within it; a frolic, a substantial departure for the employee's own purposes, does not (O'Shea).
+
+## Practice Final 1 · Q30 · Strict Liability: Animals and Abnormally Dangerous Activities — Strict liability limited to the risk
+Granite Quarry Co. used dynamite to blast rock at its quarry, using every precaution. No debris or concussion reached a mink farm two miles away, but the noise and vibrations frightened the farm's nursing mink, which, as mink do when frightened, killed their young. The farm's owner, Aurelio Brisbane, sues the quarry in strict liability.
+
+What is the most likely result?
+
+A. Brisbane wins, because blasting is an abnormally dangerous activity, so care is irrelevant.
+B. Brisbane wins, because the quarry knew of the mink farm, so the harm was foreseeable.
+C. The quarry wins, because it used every precaution.
+D. The quarry wins, because the mink's reaction was an act of God.
+E. The quarry wins, because the harm was outside the risk that makes blasting dangerous.
+
+Answer: E
+- A: Blasting is abnormally dangerous, but strict liability reaches only harm within the risk that makes it so.
+- B: Even known, the harm came from the mink's exceptional sensitivity, not from the risks of debris and concussion that make blasting abnormally dangerous.
+- C: Care is no defense to strict liability. The quarry wins because the harm was outside the risk.
+- D: An act of God is an unforeseeable natural force (Golden). The mink's nervous disposition is not one.
+- E: Correct. Under Foster v. Preston Mill, strict liability covers only harm from the kind of risk that makes the activity abnormally dangerous, such as flying debris and concussion. Harm from the mink's exceedingly nervous disposition is outside it.
+Rule: Strict liability for an abnormally dangerous activity reaches only harm of the kind whose possibility makes the activity abnormally dangerous (Foster). Abnormally sensitive activities of the plaintiff, like mink farming, are outside it.
+
+## Practice Final 2 · Q1 · Intent — Transferred intent between persons and torts
+Standing on a sidewalk, Benedikt Oyelaran threw a rock toward his rival, Lazlo Pembury, meaning only to frighten him by making it land at his feet. Oyelaran aimed carefully at the pavement, but the rock skipped and struck a stranger, Henrietta Quill, in the knee. Quill sues Oyelaran for battery.
+
+What is the most likely result?
+
+A. Quill loses, because Oyelaran did not intend to touch anyone.
+B. Quill wins, because Oyelaran's intent to frighten Pembury transfers to Quill.
+C. Quill can recover only in negligence, because intent cannot transfer from one person to another.
+D. Quill loses, because intent transfers between persons but not from one tort to a different tort.
+E. Quill wins on assault but not battery, because Oyelaran intended only to cause apprehension.
+
+Answer: B
+- A: Intent to cause apprehension of a contact is enough for battery when a harmful contact results, and the intent transfers to Quill.
+- B: Correct. Intent transfers between persons and among the five trespass-based torts. Oyelaran intended an assault on Pembury, and that intent supplies the intent for a battery on Quill (Talmage v. Smith).
+- C: Transferred intent does exactly that: an intent to commit a tort against one person satisfies the intent for a tort against another (Talmage).
+- D: Intent transfers among battery, assault, false imprisonment, trespass to land, and trespass to chattels, and between persons, or both at once.
+- E: Quill never saw the rock coming, so she had no apprehension. The completed tort against her is a battery.
+Rule: Intent transfers (1) from the intended victim to another person, (2) from one of the five trespass-based torts to another, or (3) both. It does not transfer into IIED or conversion.
+
+## Practice Final 2 · Q2 · Battery and Assault — Assault: words that negate the threat
+During a heated argument at a family barbecue, Ignatius Morrow pointed an unloaded pistol at his brother-in-law, Caspar Wendt, and said, “If you weren't married to my sister, I'd blow your head off right now.” Wendt did not know the gun was unloaded. He was badly shaken and sues Morrow for assault.
+
+What is the most likely result?
+
+A. Wendt wins, because the unloaded gun gave Morrow an apparent present ability to shoot.
+B. Wendt loses, because the gun was not loaded, so Morrow could not have shot him.
+C. Wendt loses, because the words accompanying the gesture negated any threat of an imminent contact.
+D. Wendt loses, because words alone can never constitute an assault.
+E. Wendt wins, because a conditional threat is an assault when the defendant has no right to impose the condition.
+
+Answer: C
+- A: Apparent ability is satisfied, but the words made clear that Morrow would not shoot. The threat was not imminent.
+- B: Apparent, not actual, ability is what counts (Western Union Telegraph Co. v. Hill). An unloaded gun the plaintiff thinks is loaded can support an assault.
+- C: Correct. Words can negate an assault, as in “If you weren't my friend, I'd hit you.” Morrow's words told Wendt he would not be shot, so there was no apprehension of an imminent contact.
+- D: Morrow did more than speak: he pointed a gun. The claim fails because his words negated the threat, not because it was words alone.
+- E: That rule covers demands like “your money or your life,” where the threat is carried out unless the plaintiff complies. Morrow's condition was already met in Wendt's favor, so nothing was threatened.
+Rule: Assault requires intent and the plaintiff's apprehension of an imminent harmful or offensive contact. Apparent ability suffices, but words alone are not enough, and words can negate an otherwise threatening act.
+
+## Practice Final 2 · Q3 · False Imprisonment — Neither conscious of nor harmed by confinement
+Late one night, while Theodora Ruskin was asleep in a guest room at her cousin's house, the cousin locked her door from the outside for two hours to keep her from waking the baby. The cousin unlocked it before dawn. Ruskin slept through the night, never tried the door, suffered no harm, and learned of the locking only a year later, when the cousin mentioned it. She sues for false imprisonment.
+
+What is the most likely result?
+
+A. Ruskin wins, because the duration of a confinement is irrelevant to liability.
+B. Ruskin wins nominal damages, because, as with battery, awareness is not required.
+C. Ruskin loses, because no force or threat of force was used against her.
+D. Ruskin loses, because she was neither conscious of the confinement nor harmed by it.
+E. Ruskin loses, because the cousin acted for a good reason.
+
+Answer: D
+- A: Duration doesn't matter to liability, but the plaintiff must still be conscious of the confinement or harmed by it.
+- B: Battery doesn't require awareness, but false imprisonment does: the plaintiff must be conscious of the confinement or harmed by it.
+- C: Physical barriers are a means of confinement. A locked door is enough without any force.
+- D: Correct. False imprisonment requires (1) intent to confine, (2) confinement, and (3) that the plaintiff be conscious of it or harmed by it. Ruskin was neither. Parvi shows awareness at the time can be proved even without a later memory, but there is no awareness here.
+- E: Motive doesn't negate intent. The cousin intended to confine her; the claim fails on consciousness and harm.
+Rule: False imprisonment requires intent to confine, a confinement within fixed boundaries, and that the plaintiff be conscious of the confinement or harmed by it (Parvi).
+
+## Practice Final 2 · Q4 · Intentional Infliction of Emotional Distress — Bystander IIED: presence must be known
+Phineas Grell, a collection agent, went to a debtor's home and savagely beat the debtor's 16-year-old son, Ambrose, in the front yard after the boy refused to say where his father was. Ambrose's mother, Clementine, watched the whole beating from an upstairs window. Grell never saw her and did not know anyone else was home. Clementine suffered severe emotional distress but no bodily harm. She sues Grell for intentional infliction of emotional distress.
+
+What is the most likely result?
+
+A. Clementine wins, because she is a member of the victim's immediate family who was present.
+B. Clementine wins, because Grell's intent to injure her son transfers to her distress.
+C. Clementine loses, because she suffered no bodily harm.
+D. Clementine loses, because Grell did not know she was present when he beat her son.
+E. Clementine loses, because a beating is a battery, and IIED is unavailable where a traditional tort fits.
+
+Answer: D
+- A: Presence alone isn't enough in most courts. They also require that the defendant knew the family member was present (Taylor v. Vallelunga).
+- B: Intent generally does not transfer into IIED. A bystander's claim is governed by the third-person rule instead.
+- C: A present member of the immediate family needs no bodily harm. That requirement applies to bystanders who are not family.
+- D: Correct. Under the third-person rule a present family member may recover without bodily harm, but most courts also require that the defendant know she is present, so that he intends or is substantially certain to cause her distress (Taylor v. Vallelunga).
+- E: The battery was against Ambrose. Clementine's own claim can only be IIED, and it fails on Grell's lack of knowledge.
+Rule: When outrageous conduct is aimed at a third person, the actor is liable for severe distress to (a) a present member of the immediate family, or (b) any other present person who suffers bodily harm, and most courts require that the actor know the plaintiff is present (Taylor).
+
+## Practice Final 2 · Q5 · Trespass to Land, Trespass to Chattels, and Conversion — Harmless intermeddling with a chattel
+While his neighbor, Agatha Vosburgh, was at work, Mortimer Fleck took her lawnmower from her open garage without asking, mowed his own lawn for 40 minutes, cleaned it, and put it back exactly where he found it. Vosburgh did not need the mower that day, and it was not damaged or worn in any measurable way. When she learned what had happened, she sued Fleck.
+
+What is the most likely result?
+
+A. Vosburgh recovers the mower's full value in conversion, because Fleck used it as his own.
+B. Vosburgh recovers nominal damages for trespass to chattels, because Fleck intentionally used her mower.
+C. Vosburgh loses, because Fleck acted without any intent to harm the mower.
+D. Vosburgh recovers nominal damages for trespass to land, because Fleck entered her garage.
+E. Vosburgh loses, because the mower was not harmed and she lost no use of it.
+
+Answer: E
+- A: Conversion requires a serious interference that justifies a forced sale. A brief, harmless use falls far short under the seriousness factors.
+- B: Unlike trespass to land, trespass to chattels requires actual harm or loss of use; harmless intermeddling earns no nominal damages (Glidden).
+- C: Intent to use or intermeddle is enough; no intent to harm is needed. The claim fails for lack of harm, not intent.
+- D: That would be a different claim, and a sound one for the entry. But the question is her claim for the mower, which fails for lack of harm.
+- E: Correct. Trespass to chattels is actionable only if the chattel is impaired, the possessor is dispossessed or deprived of its use for a substantial time, or bodily or other legally protected harm results. Harmless intermeddling is not actionable (Glidden v. Szybiak).
+Rule: Trespass to chattels requires actual harm: dispossession, impairment, substantial loss of use, or harm to the possessor or a protected interest (Glidden). Conversion requires a serious interference that justifies paying full value.
+
+## Practice Final 2 · Q6 · Consent — Consent in sports: rules and customs
+In a semi-professional hockey game, defenseman Rasmus Thiele became angry after an opponent, Oskar Mbatha, scored. Ten seconds after the whistle had stopped play, Thiele skated up behind Mbatha and struck him in the back of the head with his stick, fracturing his skull. League rules forbid striking with the stick at any time, and the referee ejected Thiele. Mbatha sues Thiele for battery. Thiele argues that by playing hockey, Mbatha consented to violent contact.
+
+How should the court rule on the consent defense?
+
+A. For Thiele, because a player in a violent contact sport consents to the contact that comes with it.
+B. For Thiele, because rule violations and fights are customary in hockey.
+C. For Mbatha, because his consent did not extend to a deliberate blow after the whistle.
+D. For Mbatha, but only if Thiele intended to cause a serious injury.
+E. For Mbatha, because consent is never a defense to a battery that is also a crime of violence.
+
+Answer: C
+- A: Players consent to contact within the rules and customs of the game, not to every contact that happens during it.
+- B: Rough play within the game's customs may be within the consent. A deliberate blow with a stick to the head after the whistle, in anger, is not.
+- C: Correct. Hackbart v. Cincinnati Bengals held that players consent to contact within the rules and customs of the game, not to an intentional blow the rules prohibit, struck in anger after the play.
+- D: Battery requires only intent to cause the contact. Hackbart allows liability for intentional or reckless conduct outside the consent.
+- E: Whether consent to a crime is effective is a separate debate. Here there was simply no consent to this conduct.
+Rule: Participants in a sport consent to contact within the game's rules and customs, not to intentional blows the rules forbid, struck outside the play (Hackbart).
+
+## Practice Final 2 · Q7 · Self-Defense and Defense of Others — Defense of others: reasonable mistake
+Walking through a parking garage, Bartholomew Szabo saw a man in jeans grab a woman by the arm and twist it behind her back as she screamed. Reasonably believing she was being attacked, Szabo tackled the man, breaking his wrist. The man was in fact a plainclothes police officer, Duncan Ferrante, lawfully arresting the woman for a robbery she had just committed. Ferrante sues Szabo for battery. The jurisdiction follows the Restatement (Second).
+
+What is the most likely result?
+
+A. Szabo wins, because he reasonably believed the woman was being attacked and that his help was needed.
+B. Ferrante wins, because Szabo stands in the shoes of the woman, who had no right to resist a lawful arrest.
+C. Ferrante wins, because a lawful arrest is privileged, so no one may interfere with it.
+D. Szabo wins, because he acted in good faith to help a stranger in distress.
+E. Ferrante wins, because Szabo should have asked what was happening before using force.
+
+Answer: A
+- A: Correct. A person may use the force he could use in self-defense to protect a third person when he reasonably believes that person would be privileged to defend herself and that his intervention is necessary. The modern majority and the Restatement (Second) protect a reasonable mistake.
+- B: That is the older “in the shoes” rule. The Restatement (Second) and the modern majority protect a reasonable mistake.
+- C: The arrest was privileged, but the question is whether Szabo was privileged, and that turns on what he reasonably believed.
+- D: Good faith is not enough. The belief must also be reasonable, and the force proportionate.
+- E: No demand is required before defending a person from what reasonably appears to be an ongoing attack.
+Rule: A defender of others may use the force the third person could use, if he reasonably believes the third person is privileged to defend herself and that intervention is necessary. The modern majority protects a reasonable mistake.
+
+## Practice Final 2 · Q8 · Defense and Recovery of Property; the Shopkeeper's Privilege — Recapture of chattels: no wrongful taking, no fresh pursuit
+In April, Leocadia Brun lent her extension ladder to her neighbor, Harlan Duquesne, for a week. Duquesne kept it into June despite her reminders. In mid-June, seeing the ladder leaning against Duquesne's shed, Brun walked into his yard to take it. When Duquesne grabbed one end and refused to let go, she shoved him hard; he fell and broke his collarbone. Duquesne sues Brun for battery.
+
+Was Brun's use of force privileged?
+
+A. Yes, because the ladder was hers and she was entitled to its return.
+B. No, because the ladder was not wrongfully taken from her and she was not acting in fresh pursuit.
+C. Yes, because she had demanded its return before using force.
+D. No, but only because a shove that breaks a bone is deadly force.
+E. Yes, because Duquesne had no privilege to resist her.
+
+Answer: B
+- A: Ownership alone doesn't privilege force. The recapture privilege has specific requirements.
+- B: Correct. Force to recover a chattel requires (1) wrongful dispossession by force, fraud, or theft, not merely a failure to return, (2) fresh pursuit, (3) a demand, and (4) reasonable force (Hodgeden v. Hubbard). Duquesne got the ladder lawfully, and two months had passed.
+- C: A demand is required, but so are a wrongful taking and fresh pursuit, both missing here.
+- D: A shove is not deadly force. The privilege fails at the threshold, whatever the degree of force.
+- E: A wrongdoer may not resist a privileged recapture (Hodgeden), but Brun's recapture was not privileged.
+Rule: Reasonable force to recover a chattel is privileged only when (1) the owner was wrongfully dispossessed, (2) she acts in fresh pursuit, (3) she first demands return, and (4) the force is reasonable (Hodgeden). A borrower's failure to return isn't a wrongful taking.
+
+## Practice Final 2 · Q9 · Necessity and Discipline — Public necessity: complete privilege
+A wildfire was racing toward a town of 4,000 people. To create a firebreak, the county fire chief, Augustin Rheinholt, ordered a bulldozer to knock down Solveig Amari's barn, which stood in the fire's path. Hours later the wind shifted, and the fire never reached the spot. Amari proves that her barn would have survived untouched. She sues Rheinholt personally for the barn's value.
+
+What is the most likely result?
+
+A. Amari recovers the barn's value, because necessity privileges the act but not the damage it causes.
+B. Amari recovers, because her barn would have survived, so the destruction was not actually necessary.
+C. Rheinholt wins, because public necessity is a complete privilege.
+D. Rheinholt wins, because as a government official he has sovereign immunity.
+E. Amari recovers half the barn's value, because both she and the town benefited from the firebreak.
+
+Answer: C
+- A: That is private necessity (Vincent). Destroying property to avert a public disaster is public necessity, which is complete.
+- B: The privilege turns on reasonable, good-faith belief in apparent necessity at the time, not hindsight (Surocco v. Geary).
+- C: Correct. Under Surocco v. Geary, destroying private property to stop a conflagration is privileged if done in good faith under apparent necessity, even if the property would have been saved. Otherwise no one would act to save the community. Any compensation claim lies against the government, not the actor.
+- D: The actor's privilege doesn't depend on official status. Anyone acting under public necessity is protected.
+- E: There is no splitting. Public necessity gives a complete privilege to the actor.
+Rule: Public necessity, a reasonable belief that the act is needed to avert a public disaster, is a complete privilege, even if hindsight shows it was unnecessary (Surocco). Private necessity is incomplete: the actor pays for actual damage (Vincent).
+
+## Practice Final 2 · Q10 · The Negligence Case and Unreasonable Risk — Foreseeable conduct of a passenger
+Seventeen-year-old Primrose Delacorte was driving three friends on a two-lane highway at 55 miles per hour. Her front-seat passenger, Jasper Fenwick, jokingly grabbed the steering wheel and jerked it, sending the car onto the shoulder. Delacorte regained control, laughed, and said nothing. A minute later Fenwick grabbed the wheel again, and the car ran off the road and hit a tree, injuring a back-seat passenger, Odile Marchetti. Marchetti sues Delacorte for negligence.
+
+Should the court grant Delacorte summary judgment?
+
+A. Yes, because a driver has no duty to control the conduct of the passengers riding with her.
+B. Yes, because Fenwick's deliberate grabbing of the wheel was a superseding cause of the crash.
+C. No, because a driver is strictly liable for injuries to her passengers.
+D. No, because a jury could find the second grab foreseeable and her inaction unreasonable.
+E. No, because her failure to act was negligent as a matter of law.
+
+Answer: D
+- A: A driver owes passengers a duty of reasonable care in operating the car, which includes preventing foreseeable interference with safe driving (Pipher v. Parsell).
+- B: A repeat of conduct that has already happened once is the opposite of an unforeseeable intervention. It is the very risk her inaction allowed.
+- C: There is no strict liability for driving; the claim is negligence.
+- D: Correct. Pipher v. Parsell held that when it is foreseeable that a passenger may interfere with safe driving, failing to prevent it may breach the duty of care. After the first grab, a jury could find the second foreseeable and her inaction unreasonable.
+- E: Breach is ordinarily for the jury. Pipher held only that a jury could find negligence, not that it must.
+Rule: Negligence requires a foreseeable risk that a reasonable person would guard against. When it is foreseeable that a passenger may interfere with driving, failing to prevent it can be a breach, ordinarily a jury question (Pipher).
+
+## Practice Final 2 · Q11 · The Reasonable Person — Mental illness with forewarning
+Over the past year, Marguerite Olafsen had two episodes in which she believed that God was steering her car, and her psychiatrist told her not to drive until her medication was adjusted. She drove anyway. On the highway she had a third delusion, believing she could fly the car, and swerved into oncoming traffic, injuring Cyril Abernethy-Lowe. Abernethy-Lowe sues her for negligence. Olafsen argues she was incapable of understanding or controlling her conduct at the time.
+
+What is the most likely result?
+
+A. Olafsen wins, because she could not understand or control her conduct when the accident happened.
+B. Abernethy-Lowe wins, because Olafsen had forewarning of her condition.
+C. Olafsen wins if she acted as a reasonable person with her mental illness would have.
+D. Olafsen wins, because the Restatement (Third) gives people with mental disabilities immunity from tort liability.
+E. Olafsen wins, because the delusion created a sudden emergency not of her own making.
+
+Answer: B
+- A: Mental illness is generally no defense to negligence. The narrow exception requires a sudden incapacity without forewarning.
+- B: Correct. Under Breunig v. American Family, insanity is generally no defense to negligence, except for a sudden mental incapacity without forewarning. Olafsen had prior episodes and was told not to drive.
+- C: That is the rule for physical disabilities (Roberts). Mental illness gets no allowance in the standard of care.
+- D: The Restatement (Third) gives no immunity for mental or emotional disability. Disability bears only on whether the person committed the tort.
+- E: The emergency doctrine helps someone who reacts reasonably to an emergency. Driving after being warned not to is what created this one.
+Rule: Mental illness gets no allowance in the negligence standard, except a sudden incapacity without forewarning (Breunig). Physical disabilities are accommodated (Roberts); intoxication is not.
+
+## Practice Final 2 · Q12 · Professionals and Informed Consent — National standard for specialists; expert testimony
+Dr. Henrik Vasquez-Lund, a board-certified dermatologist practicing in a rural county, failed to biopsy a changing mole on a patient, Eugenia Pratt-Hollis, who later died of melanoma. Her estate sues. Its only standard-of-care witness is a board-certified dermatologist from a large city, who testifies that the national standard of care for dermatologists required a biopsy. Dr. Vasquez-Lund objects that the witness doesn't know the standard of practice in his rural county. The jurisdiction follows Morrison v. MacNamara.
+
+How should the court rule?
+
+A. Sustain the objection, because a doctor is held to the standard of practice in his own locality.
+B. Sustain the objection, because the standard is that of a similar community, and a large city is not similar.
+C. Overrule the objection, because no expert testimony is needed when a doctor fails to perform a test.
+D. Overrule the objection, because what most dermatologists do is only evidence of reasonable care.
+E. Overrule the objection, because board-certified physicians are held to a national standard of care.
+
+Answer: E
+- A: That is the old locality rule, which Morrison rejected for board-certified physicians.
+- B: The similar-locality rule is a softened form of the locality rule. Morrison applies a national standard.
+- C: Failure to biopsy isn't obvious to a layperson the way a sponge left inside is. Expert testimony is still required (Boyce).
+- D: That is the rule for ordinary custom (Trimarco). Professional custom sets the standard of care itself.
+- E: Correct. Morrison v. MacNamara held that the standard for board-certified physicians and other health care providers is national. National certification removed the urban-rural gap the locality rule assumed, and the rule can shield substandard local practice.
+Rule: Professionals are held to the knowledge and skill of the profession, proved by expert testimony unless the negligence is obvious (Boyce). For board-certified physicians and specialists, the standard is national (Morrison).
+
+## Practice Final 2 · Q13 · Judge and Jury; Negligence Per Se — Excused violation of a safety statute
+A statute requires pedestrians walking on a road without a sidewalk to walk on the left side, facing traffic. After a blizzard, the left shoulder of a rural road was buried under six-foot snowbanks, so Linnea Hargrove walked on the plowed right shoulder, with traffic. A car driven by Oswin Teague, who was speeding, struck her from behind. Teague argues that Hargrove's violation of the statute bars or reduces her recovery. The jurisdiction follows Zeni v. Anderson.
+
+What is the effect of Hargrove's violation?
+
+A. It raises a rebuttable presumption of negligence, which her excuse may overcome.
+B. It is negligence as a matter of law, so her recovery must be reduced by her share of fault.
+C. It bars her recovery entirely, because she was engaged in an illegal act when she was hurt.
+D. It has no effect, because the statute was enacted to protect drivers, not pedestrians.
+E. It is merely evidence the jury may weigh, because a pedestrian statute cannot set a standard of care.
+
+Answer: A
+- A: Correct. Under Zeni a statutory violation creates a rebuttable presumption of negligence that the violator may overcome with an adequate excuse. Being unable to comply after reasonable diligence, or compliance that would involve a greater risk, are both recognized excuses.
+- B: That is the Martin v. Herzog approach. In a Zeni jurisdiction, a violation is only a rebuttable presumption, and excuse is available.
+- C: A plaintiff is not barred merely because she was violating the law (the Restatement (Third) wrongful-acts rule). At most, an unexcused violation is comparative negligence.
+- D: Walking-facing-traffic statutes protect pedestrians from being hit from behind, the very accident here.
+- E: Pedestrian statutes can be adopted as standards. In a Zeni jurisdiction the effect is a rebuttable presumption, not mere evidence.
+Rule: Effects of an unexcused violation vary: negligence per se (Martin v. Herzog), a rebuttable presumption (Zeni), or evidence of negligence (Ney). Excuses include incapacity, ignorance of the occasion, inability to comply, emergency, and greater risk from compliance.
+
+## Practice Final 2 · Q14 · Res Ipsa Loquitur — Res ipsa: no exclusive control
+During a downtown parade, a heavy clay flowerpot fell from the balcony of a seventh-floor room at the Grandview Hotel and struck a spectator, Fitzgerald Okeke, on the street below. The room had been rented for the weekend to a group of parade-goers who had been partying on the balcony. No one saw how the pot fell. Okeke sues the hotel and relies only on res ipsa loquitur.
+
+Will res ipsa loquitur get Okeke to the jury?
+
+A. Yes, because a flowerpot does not fall from a building without someone's negligence.
+B. Yes, because the hotel owns the building and the balcony from which the pot fell.
+C. Yes, because control is judged by the right of control, not actual exclusive control.
+D. No, because the hotel did not have exclusive control of the pot, and a guest more likely caused the fall.
+E. No, because res ipsa never applies when the injured person is a stranger to the defendant.
+
+Answer: D
+- A: That satisfies only the first element. The evidence must also point to this defendant, which it doesn't (Byrne v. Boadle involved a warehouse's own barrel).
+- B: Ownership is not control. Guests who rent rooms have partial control of the furniture and fixtures in them.
+- C: That is Ybarra, for an unconscious patient handled by many defendants. Here the guests, not the hotel, had the right to use and move things in the room.
+- D: Correct. Larson refused res ipsa when furniture fell from a hotel window: guests share control of what is in their rooms, and the likeliest explanation is a guest the hotel couldn't prevent from acting. Other responsible causes aren't eliminated.
+- E: There is no such rule. Byrne itself involved a passerby.
+Rule: Res ipsa requires that other responsible causes, including third persons, be sufficiently eliminated. A hotel lacks control of things in rented rooms (Larson).
+
+## Practice Final 2 · Q15 · Cause in Fact — Lost chance: proportional damages
+Dr. Mireille Okafor negligently failed to diagnose Gustav Ellingsen's lung cancer at an office visit. By the time it was found a year later, his chance of five-year survival had fallen from 40% to 15%. He died. The jury finds that the full damages for his death are $1,000,000. The jurisdiction recognizes lost chance as the compensable injury and uses proportional damages.
+
+How much can his estate recover?
+
+A. $0, because Ellingsen's chance of survival was below 50% even with a timely diagnosis.
+B. $1,000,000, because the negligence substantially reduced his chance of survival.
+C. $400,000, his original 40% chance times the full damages.
+D. $250,000, the 25 percentage points of chance he lost times the full damages.
+E. $150,000, his remaining 15% chance times the full damages.
+
+Answer: D
+- A: That is the traditional all-or-nothing rule. The jurisdiction treats the lost chance itself as the injury.
+- B: Full damages for the death would require proof that he more likely than not would have survived. Here the injury is the lost chance only.
+- C: He still had a 15% chance after the negligence. The estate recovers only for the chance the negligence took away.
+- D: Correct. Under the proportional approach (the Herskovits concurrence, now the majority among courts that allow lost chance), the lost chance is the injury: (40% − 15%) × $1,000,000 = $250,000.
+- E: That values the chance he kept, not the chance he lost.
+Rule: Lost chance: the traditional rule requires a better-than-even chance of survival. Under the proportional approach (Herskovits), the lost chance is the injury, valued as the percentage of chance lost times full damages.
+
+## Practice Final 2 · Q16 · Proximate Cause: Unforeseeable Plaintiffs and Consequences — Eggshell plaintiff: extent need not be foreseeable
+Backing out of a parking space at 3 miles per hour without looking, Leandro Fitzwilliam bumped the rear of a car stopped behind him. The bump would have caused no injury to an ordinary person. But the other driver, Henrietta Brisk, has a rare bone disease, and the jolt fractured three of her vertebrae. Fitzwilliam had no way of knowing about her condition. Brisk sues for her full injuries.
+
+What is the most likely result?
+
+A. Fitzwilliam is liable only for the injury an ordinary person would have suffered, which is none.
+B. Fitzwilliam is liable for all of her injuries, because a defendant takes the plaintiff as he finds her.
+C. Fitzwilliam is not liable, because her bone disease was a superseding cause of the fractures.
+D. Fitzwilliam is liable only if he knew or should have known of her condition.
+E. Fitzwilliam is not liable, because under Overseas Tankship v. Morts Dock only foreseeable harm is recoverable.
+
+Answer: B
+- A: That would make the extent of harm turn on foreseeability, which the eggshell rule rejects.
+- B: Correct. Under the eggshell plaintiff rule (Bartolone v. Jeckovich), the extent of harm need not be foreseeable. A negligent defendant is liable for all the harm his negligence causes, even if a pre-existing condition makes it far greater than expected.
+- C: A pre-existing condition is not an intervening act. It is the plaintiff's condition when the negligence acted on her.
+- D: Knowledge of the condition is not required. The eggshell rule applies precisely when the defendant could not have known.
+- E: Wagon Mound No. 1 requires a foreseeable type of harm. Bodily injury from a collision is foreseeable; only its extent was not, and extent need not be.
+Rule: The type of harm must be foreseeable (Overseas Tankship v. Morts Dock), but its extent need not be: a defendant takes the plaintiff as he finds her (Bartolone).
+
+## Practice Final 2 · Q17 · Intervening and Superseding Causes — Malicious intervening act
+A tanker truck owned by Calloway Fuels negligently leaked hundreds of gallons of gasoline into a street gutter. While the gasoline was pooled there, Bertrand Voss, who had a grudge against the owner of a nearby shop, deliberately tossed a lit match into the gutter to burn the shop. The explosion injured a pedestrian, Ottoline Graff. Graff sues Calloway Fuels. The jurisdiction follows Watson v. Kentucky & Indiana Bridge & R.R. Co. The jury finds that Voss lit the match intending to start a fire.
+
+What is the most likely result?
+
+A. Graff wins, because an explosion was the very risk that made the leak negligent.
+B. Graff wins, because Calloway's negligence was a but-for cause of the explosion.
+C. Calloway wins, because a gasoline leak is not negligent unless the owner knew it was happening.
+D. Graff wins only if she proves Calloway knew Voss was in the area.
+E. Calloway wins, because the malicious ignition was a superseding cause.
+
+Answer: E
+- A: That reasoning drives cases like Derdiarian, but Watson treats a malicious ignition differently from an inadvertent one.
+- B: But-for causation is satisfied, but proximate cause is a separate element, and a superseding cause defeats it.
+- C: The leak is assumed negligent. The issue is whether Voss's act cut off Calloway's liability.
+- D: Under Watson the question is the character of Voss's act, not Calloway's knowledge of him.
+- E: Correct. Watson held that if the match was thrown inadvertently, the act was a foreseeable consequence of the spill; if maliciously, the railroad could not reasonably have anticipated it, and the act was the sole proximate cause.
+Rule: Intervening negligence is usually foreseeable and not superseding; an intentional crime usually is superseding, unless the defendant's negligence created the very opportunity or it had a duty to protect against it. Watson drew the line between an inadvertent and a malicious match.
+
+## Practice Final 2 · Q18 · Duty and the Failure to Act — Therapist's duty to protect third persons
+During therapy sessions, Absalom Krieger told his psychologist, Dr. Seraphina Lowe, that he planned to kill his former girlfriend, Rosalind Hartigan, when she returned from a trip abroad, and he described buying a gun. Dr. Lowe concluded he was serious but did nothing beyond noting it in her file. Two months later Krieger shot and wounded Hartigan. Hartigan sues Dr. Lowe. The jurisdiction follows Tarasoff.
+
+What is the most likely result?
+
+A. Dr. Lowe wins, because there is no duty to protect another person from a third party's criminal act.
+B. Dr. Lowe wins, because Hartigan was not her patient, so she owed Hartigan no duty.
+C. Hartigan wins, if Dr. Lowe failed to use reasonable care to protect her.
+D. Hartigan wins, because a therapist is strictly liable for violent acts by her patients.
+E. Dr. Lowe wins, because confidentiality forbade her from disclosing what Krieger told her.
+
+Answer: C
+- A: That is the general rule, but a special relationship with the person who poses the danger, such as therapist and patient, creates an exception.
+- B: Tarasoff imposes a duty to the intended victim precisely because of the therapist's relationship with the patient, not with the victim.
+- C: Correct. Under Tarasoff, when a therapist determines, or should determine, that a patient presents a serious danger of violence to another, she must use reasonable care to protect the intended victim, as by warning her or notifying the police.
+- D: The duty is one of reasonable care, not strict liability.
+- E: Tarasoff held that “the protective privilege ends where the public peril begins.” Confidentiality yields to the duty to protect.
+Rule: No one has a general duty to protect others from third parties, but a special relationship with the dangerous person, such as therapist and patient, creates a duty of reasonable care to protect a foreseeable victim (Tarasoff).
+
+## Practice Final 2 · Q19 · Contributory and Comparative Negligence — Contributory negligence and last clear chance
+Leopold Arkwright negligently left his car stalled partly in a traffic lane on a straight, well-lit road while he looked for a gas can. Marisol Venn, driving a delivery truck, saw the stalled car from 500 feet away with ample time to stop or change lanes, but she kept going while reading a text and hit it. Arkwright's car was destroyed. He sues Venn in a jurisdiction that still follows contributory negligence and its traditional exceptions.
+
+What is the most likely result?
+
+A. Arkwright recovers nothing, because his own negligence contributed to the collision.
+B. Arkwright recovers his damages reduced by his percentage of fault.
+C. Arkwright recovers in full, because Venn had the last clear chance to avoid the collision.
+D. Arkwright recovers only if Venn acted recklessly or wantonly.
+E. Arkwright recovers nothing, because his negligence came first.
+
+Answer: C
+- A: Contributory negligence is ordinarily a complete bar, but the last clear chance doctrine is an exception, and it applies here.
+- B: Reduction by percentage is comparative fault. This jurisdiction follows contributory negligence, which is all or nothing.
+- C: Correct. Under Davies v. Mann, a plaintiff's earlier negligence doesn't bar recovery when the defendant had the last opportunity to avoid the harm with ordinary care. Venn saw the car with ample time to stop.
+- D: Reckless conduct is a separate exception. Last clear chance applies to Venn's ordinary negligence.
+- E: Under last clear chance, the order of negligence cuts the other way: the later opportunity to avoid the harm is what matters.
+Rule: At common law, contributory negligence bars recovery (Butterfield), with exceptions for (1) last clear chance (Davies v. Mann), (2) the defendant's reckless or intentional conduct, (3) statutes protecting the plaintiff from her own carelessness, and (4) reasonable rescuers.
+
+## Practice Final 2 · Q20 · Assumption of Risk — Primary assumption of risk: foul balls
+Philippa Cardew bought a ticket to a minor-league baseball game and sat in an unscreened seat along the third-base line. The stadium screened the seats behind home plate, where foul balls are most dangerous, and had seats available there. A foul ball struck Cardew in the face. She testifies that she was watching her phone and never thought about foul balls. The jurisdiction has adopted comparative fault and follows the Blackburn classification of assumption of risk.
+
+What is the most likely result in her negligence action against the stadium?
+
+A. The stadium wins, because it had no duty to screen every seat against a risk inherent in watching baseball.
+B. Cardew wins, but her damages are reduced by her share of fault for not watching the game.
+C. Cardew wins, because she did not subjectively know of the risk, so she did not assume it.
+D. The stadium wins, because the warning on the back of her ticket was an express assumption of risk.
+E. Cardew wins, because foul balls into the stands are foreseeable, and the stadium could have screened her seat.
+
+Answer: A
+- A: Correct. Primary assumption of risk is really a no-duty or no-breach rule: a stadium that screens the most dangerous area owes no duty to screen every seat. With no negligence, there is nothing to compare.
+- B: Comparative fault applies only if the stadium was negligent. Under primary assumption of risk, it was not.
+- C: Subjective knowledge is required for implied secondary assumption of risk. Primary assumption of risk turns on the defendant's duty, not the plaintiff's knowledge.
+- D: Nothing shows a clear release on the ticket, and the stadium doesn't need one: it owed no duty to screen every seat.
+- E: Foreseeability alone doesn't create a duty to eliminate every inherent risk of the game.
+Rule: Primary implied assumption of risk means the defendant owed no duty, or did not breach one, as to risks inherent in an activity. Secondary assumption of risk is merged into comparative fault (Blackburn).
+
+## Practice Final 2 · Q21 · Immunities — Public duty doctrine and the special-duty exception
+At 11 p.m., Zinnia Fairbanks called 911 to report that her estranged husband was breaking into her back door with a knife. The dispatcher said, “Stay inside and lock yourself in a room. Officers are on the way.” Relying on that, she did not flee to a neighbor's house. Because the dispatcher entered the wrong street address, no officer came. Twenty minutes later her husband stabbed her. She sues the city.
+
+What is the most likely result?
+
+A. The city wins, because a municipality has no duty to provide police protection to individual members of the public.
+B. The city wins, because allocating police resources is a discretionary policy decision.
+C. Fairbanks wins, because the city was negligent in entering the address.
+D. Fairbanks wins, because the city assumed a special duty by promising help and she relied on that promise.
+E. The city wins, because the husband's crime was a superseding cause of her injury.
+
+Answer: D
+- A: That is Riss v. City of New York, the general public duty doctrine. A special relationship is an exception, and the facts here create one.
+- B: Entering an address correctly is not a policy choice about allocating resources. The special duty arose from the city's assurance and her reliance.
+- C: Negligence alone doesn't create liability under the public duty doctrine. She wins because the city assumed a special duty to her.
+- D: Correct. DeLong v. Erie County held that by setting up an emergency number, inviting reliance, and telling the caller help was on the way, the government assumed a special duty to her, and she relied on it by staying home instead of seeking help elsewhere.
+- E: A crime is not superseding when it is the very harm the defendant had a duty to guard against.
+Rule: Under the public duty doctrine, a duty owed to the public at large, such as police protection, is not owed to any individual (Riss), unless a special relationship arises, as through an assurance of help and the plaintiff's reliance (DeLong).
+
+## Practice Final 2 · Q22 · Owners and Occupiers of Land — Attractive nuisance: child who appreciates the risk
+An electric utility keeps a transformer station beside a residential neighborhood, behind a chain-link fence with a gate it often leaves unlatched. Children often play in the neighborhood. Twelve-year-old Quentin Albrecht went through the open gate, climbed a transformer, touched a wire, and was badly burned. His parents sue the utility under the attractive nuisance doctrine of the Restatement (Second).
+
+Which fact, if proved, would most help the utility?
+
+A. The utility had posted “No Trespassing” signs on the fence.
+B. Quentin was not drawn onto the property by the transformer itself.
+C. The station's fencing met the standard custom of the electric industry.
+D. Quentin was a trespasser, so the utility owed him only a duty not to injure him willfully.
+E. Quentin testified that he knew touching the wires could kill him.
+
+Answer: E
+- A: The doctrine applies to trespassing children. A sign may matter to whether the utility used reasonable care, but it doesn't defeat the claim.
+- B: The Restatement (Second) doesn't require that the condition lure the child onto the land; it requires that children are likely to trespass where it exists.
+- C: Custom is evidence of due care, not conclusive (Trimarco). It is far weaker than proof the child understood the danger.
+- D: That is the general trespasser rule. The attractive nuisance doctrine is the exception for children, so his status is the premise of the claim, not a defense.
+- E: Correct. Element (c) requires that the children, because of their youth, do not discover the condition or realize the risk. A child who actually understood the danger of electrocution falls outside the doctrine.
+Rule: A possessor is liable to trespassing children for an artificial condition when (a) children are likely to trespass there, (b) the possessor knows of the condition and its unreasonable risk, (c) the children, because of youth, don't realize the risk, (d) the burden of eliminating it is slight compared with the risk, and (e) the possessor fails to use reasonable care.
+
+## Practice Final 2 · Q23 · Compensatory Damages — Avoidable consequences: refusing surgery
+Ignatius Faraday tore a knee ligament when he fell on a negligently maintained stairway at Ostrander Mall. His surgeon recommended a routine reconstruction with a 90% chance of restoring full function and a very small risk of complications; most patients in his position accept it. Faraday refused because he dislikes hospitals, and his knee became permanently unstable. The mall concedes liability and proves these facts at trial.
+
+What is the effect of Faraday's refusal on his damages?
+
+A. None, because the mall must take Faraday as it finds him, including his dislike of hospitals.
+B. He recovers nothing, because his unreasonable refusal was a superseding cause of his injury.
+C. He cannot recover for the instability that reasonable surgery would have prevented.
+D. His total damages are reduced by his percentage of fault for refusing surgery.
+E. None, because a plaintiff is never required to undergo surgery to mitigate damages.
+
+Answer: C
+- A: The eggshell rule covers physical vulnerability at the time of the tort, not the plaintiff's later unreasonable choices.
+- B: The refusal doesn't wipe out the claim. He still recovers for the harm the mall caused that surgery would not have avoided.
+- C: Correct. Under the avoidable consequences rule, a plaintiff can't recover for harm she could have avoided with reasonable effort after the injury, including surgery a reasonable person would accept (Zimmerman v. Ausland). The defendant bears the burden of proof, and the mall carried it.
+- D: Mitigation is not apportioned like comparative fault. It cuts off the particular harm that was avoidable.
+- E: Zimmerman held that a plaintiff must submit to treatment, including surgery, that a reasonable person would accept in the same circumstances.
+Rule: Avoidable consequences: the plaintiff cannot recover for harm she could have avoided by reasonable effort or treatment after the injury. The defendant must prove a reasonable course was available, the plaintiff unreasonably refused it, and how much it would have reduced the harm (Zimmerman).
+
+## Practice Final 2 · Q24 · Punitive Damages — Punitive damages against an employer for an agent's act
+Corwin Ashgrove, a nightclub bouncer, savagely beat a patron, Delphine Mortlake, who had argued about a cover charge. The club concedes it is vicariously liable for her compensatory damages. Mortlake also seeks punitive damages from the club. The jurisdiction follows the Restatement (Second) rule on punitive damages for an agent's acts.
+
+Which fact, if proved, would best support punitive damages against the club?
+
+A. Ashgrove was acting within the scope of his employment when he beat Mortlake.
+B. The club's general manager knew Ashgrove had beaten two other patrons and kept him on the door anyway.
+C. The club is highly profitable, so a large award is needed to deter it.
+D. Ashgrove acted with actual malice toward Mortlake.
+E. The club refused to apologize to Mortlake after the beating.
+
+Answer: B
+- A: Scope of employment makes the club vicariously liable for compensatory damages. Punitive damages against the principal require more.
+- B: Correct. Under the Restatement (Second), a principal is liable for punitive damages for an agent's act if it authorized the act, was reckless in employing or retaining an unfit agent, the agent was a managerial employee acting within scope, or a manager ratified the act. Keeping a known violent bouncer on the door is reckless retention.
+- C: Wealth is relevant to the amount of punitive damages, not to whether the club is liable for them at all.
+- D: Ashgrove's malice supports punitive damages against Ashgrove. The principal is liable only on one of the specific grounds.
+- E: Refusing to apologize is not ratification or approval of the beating.
+Rule: Punitive damages require aggravated conduct. A principal is liable for punitive damages for an agent's act only if it (a) authorized it, (b) recklessly employed or retained an unfit agent, (c) the agent was managerial and acting in scope (Fisher), or (d) a manager ratified it.
+
+## Practice Final 2 · Q25 · Joint and Several Liability, Satisfaction, Release, and Settlement — Release with reservation of rights
+Ottilie Harrow was injured in a collision caused by two drivers, Brannagh and Coyle. She settled with Brannagh for $40,000 and signed a document titled “Release” that discharged Brannagh and stated: “The plaintiff expressly reserves all claims against any other person, including Coyle.” She then sued Coyle, who moved to dismiss, arguing that releasing one joint tortfeasor releases all.
+
+How should the court rule?
+
+A. Grant the motion, because at common law a release of one joint tortfeasor releases all of them.
+B. Grant the motion, because she accepted payment for the same indivisible injury.
+C. Deny the motion, and Coyle gets no credit for the $40,000.
+D. Deny the motion, because an instrument that expressly reserves claims against others does not release them.
+E. Deny the motion, but only because the document was really a covenant not to sue.
+
+Answer: D
+- A: That was the old rule. Today a release discharges only the person released unless it says otherwise (Cox v. Pearl Investment).
+- B: Full satisfaction discharges the others (Bundt). A partial settlement for $40,000 is not full satisfaction.
+- C: Coyle is not discharged, but he gets credit for the settlement in some form so Harrow doesn't recover twice.
+- D: Correct. Cox v. Pearl Investment held that a release that reserves rights against other tortfeasors doesn't release them: contract law gives effect to the parties' intent, and the non-settling defendant gets credit for the payment, so there is no double recovery.
+- E: A covenant not to sue never discharged others, but the result doesn't depend on recharacterizing the document. A release with a reservation works too.
+Rule: Today a release discharges only the person released unless it provides otherwise (Cox). Full satisfaction from one tortfeasor discharges all (Bundt). Non-settling defendants get a credit: pro tanto, pro rata, or proportionate share.
+
+## Practice Final 2 · Q26 · Contribution, Indemnity, and Apportionment — Contribution requires common liability
+Seven-year-old Wilhelmina Pell ran into the street while her mother, Augusta, was negligently not watching her, and she was struck by a car driven negligently by Elric Vandermeer. Wilhelmina sued only Vandermeer and recovered a judgment, which he paid in full. Vandermeer then sued Augusta for contribution. The jurisdiction, like Washington in Zellmer, retains parental immunity for a parent's negligent supervision of her child.
+
+What is the most likely result?
+
+A. Vandermeer recovers half of what he paid, because contribution is shared equally among tortfeasors.
+B. Vandermeer recovers in proportion to Augusta's share of fault.
+C. Vandermeer recovers everything he paid, because Augusta's negligence was primary and his was secondary.
+D. Augusta wins, because she was immune from liability to her daughter, so there was no common liability.
+E. Augusta wins, because Vandermeer paid voluntarily rather than under a joint judgment.
+
+Answer: D
+- A: Pro rata shares are one way to measure contribution, but contribution requires common liability first, and there is none.
+- B: Comparative contribution also requires that the other tortfeasor be liable to the plaintiff.
+- C: Active-passive indemnity concerns relative fault, and both were actively negligent. In any event, Augusta was not liable to her daughter.
+- D: Correct. Contribution requires common liability: the other tortfeasor must also be liable to the plaintiff. Augusta's parental immunity means she was not, so there is no contribution (Yellow Cab Co. of D.C. v. Dreslin, applying the same principle to interspousal immunity).
+- E: Contribution doesn't require a joint judgment (Knell v. Feltman). The problem is the lack of common liability.
+Rule: Contribution requires (1) common liability to the plaintiff (Dreslin), (2) payment of more than one's share, and (3) no discharge of the other tortfeasor. A joint judgment is not required (Knell).
+
+## Practice Final 2 · Q27 · Vicarious Liability — Nondelegable statutory duty
+A state statute requires every owner of a motor vehicle to keep its brakes in good working order. Rosamund Delacourt took her car to a reputable, licensed independent mechanic, Brixton Auto, for a brake job. Brixton negligently installed a brake line, which failed a week later, and Delacourt's car struck a pedestrian, Fyodor Lanigan. Delacourt had no reason to suspect a problem. Lanigan sues Delacourt.
+
+What is the most likely result?
+
+A. Delacourt is not liable, because Brixton was an independent contractor, not her employee.
+B. Delacourt is not liable, because she used reasonable care in choosing a reputable mechanic.
+C. Delacourt is liable, because her statutory duty to maintain the brakes is nondelegable, though she may seek indemnity from Brixton.
+D. Delacourt is liable, because an owner is strictly liable for any brake failure in her car.
+E. Delacourt is liable, because she negligently entrusted her car to Brixton.
+
+Answer: C
+- A: That is the general rule, but a nondelegable duty, such as one imposed by a safety statute, is an exception.
+- B: Careful selection defeats a claim of negligent selection, but it doesn't matter when the duty itself is nondelegable.
+- C: Correct. Maloney v. Rath held that the statutory duty to maintain brakes is nondelegable, so an owner who hires an independent contractor is liable for its negligence, with a right of indemnity against the contractor.
+- D: Maloney rejected strict liability. The owner is liable only if someone, here the contractor, was negligent.
+- E: Negligent entrustment is lending a car to an incompetent driver. Brixton didn't drive the car, and she chose it carefully.
+Rule: A hiring party is generally not liable for an independent contractor's negligence, except for (1) nondelegable duties (Maloney), (2) inherently dangerous work, (3) its own negligence in selecting or supervising, or (4) apparent agency.
+
+## Practice Final 2 · Q28 · Strict Liability: Animals and Abnormally Dangerous Activities — Domestic animal with known vicious propensity
+Barnaby Quackenbush kept a German shepherd that had lunged at and bitten two delivery workers in the past year, which he knew. A neighbor, Clementina Rhee, saw the “Beware of Dog” sign on his gate but carelessly reached over the gate to retrieve her cat, and the dog bit her hand. The jurisdiction has no dog-bite statute and has not adopted comparative fault; it follows Sandy v. Bushey.
+
+What is the most likely result in Rhee's action against Quackenbush?
+
+A. Quackenbush wins, because Rhee's own carelessness in reaching over the gate bars her recovery.
+B. Rhee wins only if she proves Quackenbush failed to use reasonable care to restrain the dog.
+C. Quackenbush wins, because every dog is entitled to one bite before its keeper is liable.
+D. Rhee wins, because Quackenbush knew of the dog's vicious propensity, and her ordinary carelessness is no defense.
+E. Rhee's damages are reduced by her share of fault.
+
+Answer: D
+- A: Ordinary contributory negligence is no defense to strict liability for a known vicious animal (Sandy v. Bushey).
+- B: Once the keeper knows of a dangerous propensity, liability is strict. Negligence need not be shown.
+- C: The “one-bite rule” is shorthand for knowledge. This dog had already bitten twice, and Quackenbush knew it.
+- D: Correct. A keeper who knows of a domestic animal's dangerous propensity is strictly liable; the plaintiff proves only the keeping, the propensity, and scienter. Because negligence isn't the basis of liability, ordinary contributory negligence is no defense (Sandy v. Bushey). Knowingly provoking or assuming the risk would be different.
+- E: The jurisdiction hasn't adopted comparative fault, and under Sandy her ordinary carelessness has no effect.
+Rule: Keepers of wild animals, and of domestic animals with known dangerous propensities (scienter), are strictly liable. Assumption of risk is a defense; ordinary contributory negligence is not (Sandy), though many comparative-fault states now compare it.
+
+## Practice Final 2 · Q29 · Private Nuisance — Intentional nuisance despite due care
+A small oil refinery opened in a rural area near Imelda Prescott's farmhouse. Using the best available technology, it nonetheless emitted strong sulfur odors several nights a week that made her house unlivable at those times and kept her from sleeping. She complained to the refinery repeatedly in writing, but it kept operating as before. She sues for private nuisance. The refinery proves that it used all reasonable care.
+
+What is the most likely result?
+
+A. The refinery wins, because it used all reasonable care in operating the plant.
+B. The refinery wins, because odors that leave no physical deposit on her land are not an invasion.
+C. Prescott wins, because the refinery continued after notice, making the invasion intentional, and it substantially and unreasonably interfered with her use of her land.
+D. Prescott wins, because any invasion of her use and enjoyment of land is actionable.
+E. The refinery wins, because a refinery's social utility outweighs the harm to a single landowner.
+
+Answer: C
+- A: An intentional nuisance doesn't require negligence. Care is no defense to an intentional and unreasonable invasion (Morgan v. High Penn Oil).
+- B: That is the line between trespass and nuisance. Nuisance protects use and enjoyment against odors, noise, and the like.
+- C: Correct. Morgan v. High Penn Oil held that one who intentionally creates or maintains a private nuisance is liable regardless of the care used, and continuing after notice of the harm makes an invasion intentional.
+- D: The invasion must be substantial, judged by a normal person in the community, and an intentional one must be unreasonable.
+- E: Unreasonableness is weighed on the facts, and harm that makes a home unlivable several nights a week is serious. Nothing suggests the jurisdiction follows Carpenter's utility-focused approach.
+Rule: Private nuisance requires a substantial invasion of the use and enjoyment of land that is (a) intentional and unreasonable or (b) unintentional and negligent, reckless, or abnormally dangerous. Continuing after notice makes it intentional, and due care is no defense (Morgan).
+
+## Practice Final 2 · Q30 · Public Nuisance and Nuisance Remedies — Public nuisance: special injury
+For six months, Tolliver Quarry illegally blocked a public road with piles of rock. Thousands of commuters, including Hamish Ostrowski, had to take a ten-minute detour twice a day. Odalys Ferreira's diner, which sat on the blocked road, lost 70% of its business because customers couldn't reach it. Both Ostrowski and Ferreira sue Tolliver for public nuisance.
+
+Who may maintain a private action for public nuisance?
+
+A. Ostrowski only.
+B. Ferreira only.
+C. Both of them.
+D. Neither of them; only a public official may sue for a public nuisance.
+E. Both of them, but only for an injunction, not for damages.
+
+Answer: B
+- A: Ostrowski's harm is the same kind the public suffered, only perhaps greater. He has no special injury.
+- B: Correct. A private person may sue for public nuisance only if she suffered harm of a kind different from that suffered by the general public. Ferreira's distinct business loss qualifies; Ostrowski's detour, shared with thousands, does not.
+- C: Ostrowski's detour is the same inconvenience every commuter suffered, so he lacks special injury.
+- D: A public official may sue, but so may a private person with special injury, as Ferreira has.
+- E: Ostrowski can't sue at all, and Ferreira's special injury supports damages.
+Rule: A public nuisance is an unreasonable interference with a right common to the general public. A private plaintiff must show special injury, harm different in kind from the public's: personal injury, property damage, or a distinct business loss. Without it, even a large private plaintiff cannot sue (Philadelphia Electric).
+
+## Practice Final 3 · Q1 · Intent — Mental illness and intent
+Lucius Varnhagen, who has severe schizophrenia, was living with his sister when a neighbor, Perpetua Oakes, came by with a casserole. Believing Oakes was a demon sent to poison him, Varnhagen deliberately struck her in the face with a lamp to drive her away. Psychiatrists agree that he could not understand that his act was wrong. Oakes sues him for battery in a jurisdiction that follows the single-intent rule and the Restatement (Third) on immunities.
+
+What is the most likely result?
+
+A. Varnhagen wins, because he could not understand that striking her was harmful or wrong.
+B. Varnhagen wins, because people with severe mental disabilities are immune from tort liability.
+C. Oakes wins, because Varnhagen intended to strike her, even though his reason was irrational.
+D. Oakes wins only if she proves Varnhagen was negligent in failing to take his medication.
+E. Varnhagen wins, because his sister, as his caretaker, is the only one who can be liable.
+
+Answer: C
+- A: That is the dual-intent view. Under single intent, he need only intend the contact; the law decides that a blow with a lamp is harmful.
+- B: The Restatement (Third) gives no immunity for mental or emotional disability. Disability matters only to whether the person formed the intent.
+- C: Correct. McGuire v. Almy held that an insane person who forms the intent to strike is liable for battery, however irrational his reasons. Under single intent (Wagner), intent to make the contact is enough.
+- D: She sues for battery, which requires intent, not negligence. Varnhagen formed the intent to strike her.
+- E: Caretakers aren't vicariously liable at common law, and the actor himself remains liable for his own intentional tort.
+Rule: A person with a mental illness who forms the intent to make a contact is liable for battery (McGuire). Under single intent, the actor need only intend the contact (Wagner). The Restatement (Third) gives no immunity for minors or people with disabilities.
+
+## Practice Final 3 · Q2 · Battery and Assault — Battery without awareness; assault requires it
+Rosalind Aubert fell asleep on a late-night commuter train. A stranger, Gaspard Mellon, sat down beside her, kissed her on the cheek, and got off at the next stop before she woke. She learned what had happened two days later, when transit police showed her a video, and she was deeply upset. She sues Mellon.
+
+Which tort or torts has Mellon committed?
+
+A. Battery only.
+B. Assault only.
+C. Both battery and assault.
+D. Neither, because she was unaware of the contact when it happened.
+E. Battery, and also assault because she felt fear when she later saw the video.
+
+Answer: A
+- A: Correct. Battery requires an intended harmful or offensive contact, and the plaintiff need not be aware of it when it happens. Assault requires apprehension of an imminent contact at the time, and Aubert was asleep.
+- B: Assault requires that the plaintiff be aware of the threatened contact at the time. Aubert was asleep.
+- C: There was a battery, but no assault: she never apprehended the contact before it happened.
+- D: Awareness is required for assault, not for battery. A sleeping or anesthetized plaintiff can recover for a battery discovered later.
+- E: Assault requires apprehension of an imminent contact, not distress about a completed one learned of later.
+Rule: Battery doesn't require the plaintiff's awareness at the time; assault does. An unseen blow is a battery but not an assault.
+
+## Practice Final 3 · Q3 · False Imprisonment — Staying to clear one's name
+Annika Bellweather, a cashier at Ridley's Pharmacy, was called into the manager's office and told that $300 was missing from her register. The door was closed but not locked. The manager said, “We'd like you to stay until we sort this out,” but made no threats and never said she couldn't leave. Bellweather stayed for an hour because she wanted to prove her innocence and was afraid that leaving would look like an admission. She was cleared and sues for false imprisonment.
+
+What is the most likely result?
+
+A. Bellweather wins, because the closed door and the manager's request confined her within the office.
+B. Bellweather wins, because she was an employee and could reasonably fear losing her job if she left.
+C. Ridley's wins, because it had a shopkeeper's privilege to investigate a suspected theft.
+D. Bellweather wins, because she was held for an hour, an unreasonable time for an investigation.
+E. Ridley's wins, because she stayed voluntarily to clear her name, not because she was confined.
+
+Answer: E
+- A: A closed, unlocked door is not a barrier, and a request to stay without threats is not confinement.
+- B: Fear of future consequences, such as losing a job, is not a threat of immediate force and doesn't confine.
+- C: The privilege is a defense to a confinement. Here there was no confinement to defend.
+- D: Duration matters to damages and to the reasonableness of a privileged detention, but there must first be a confinement.
+- E: Correct. Moral pressure or a wish to clear one's name is not confinement (Hardy v. LaBelle's Distributing). With no threats or force, she remained free to leave.
+Rule: Confinement requires barriers, force, threats of immediate force, asserted legal authority, duress, or refusing a duty to release. Moral pressure, a wish to clear one's name, or future threats are not enough (Hardy).
+
+## Practice Final 3 · Q4 · Intentional Infliction of Emotional Distress — Factors pointing to outrageousness
+A grocery clerk, Fenwick Dorsey, told a customer, Magnolia Treadwell, “You look like a fat cow,” in front of other shoppers. Treadwell was humiliated, cried in her car, and sues for intentional infliction of emotional distress. As in Slocum v. Food Fair Stores, a single insult of this kind is not enough. Treadwell's lawyer is considering what additional facts, if proved, would support a finding that the conduct was outrageous.
+
+Which of the following would support that finding?
+
+A. Dorsey was Treadwell's employer, and he made the remark to her at work.
+B. Dorsey knew that Treadwell was being treated for an eating disorder.
+C. Dorsey made similar remarks to her every time she shopped there for six months.
+D. Dorsey added that he would “run her over in the parking lot” if she came back.
+E. All of the above.
+
+Answer: E
+- A: This is one factor (abuse of a position of power), but it is not the only one listed that would help.
+- B: This is one factor (knowledge of a special susceptibility), but other listed facts also help.
+- C: This is one factor (a repeated campaign of harassment), but other listed facts also help.
+- D: This is one factor (threats of violence), but other listed facts also help.
+- E: Correct. Factors that point to outrageousness, weighed together, include (1) abuse of a position of power, (2) knowledge of the plaintiff's special susceptibility, (3) repeated conduct, (4) threats of violence, and (5) public humiliation or identity-based abuse. Each listed fact supports the finding, though she must still prove severe distress (Harris v. Jones).
+Rule: Mere insults and indignities are not outrageous (Slocum). Outrageousness is supported by (weighed together) abuse of power, known susceptibility, repetition, threats of violence, and public or identity-based humiliation.
+
+## Practice Final 3 · Q5 · Trespass to Land, Trespass to Chattels, and Conversion — Airborne particles: trespass needs substantial damage
+For years, a cement plant has emitted fine dust that settles in microscopic amounts on Barnabas Ingersoll's land a mile away. The dust is invisible, has caused no measurable damage to his soil, crops, or buildings, and does not affect the land's value. Ingersoll is upset to learn the particles are there and sues the plant in trespass. The jurisdiction follows Bradley v. American Smelting.
+
+What is the most likely result?
+
+A. Ingersoll wins nominal damages, because trespass to land is actionable without proof of harm.
+B. Ingersoll wins, because the plant intentionally emitted the dust knowing it would reach neighboring land.
+C. The plant wins, because microscopic particles can never be an entry onto land.
+D. The plant wins, because the dust did no substantial damage to the land.
+E. The plant wins, because the emissions are the kind of interference the law addresses only through public nuisance.
+
+Answer: D
+- A: That is the rule for a traditional entry (Dougherty). Bradley requires substantial damage to the land for a trespass by microscopic airborne particles.
+- B: Intent and foreseeability are only two of the four elements. Substantial damage to the land is also required.
+- C: Bradley accepted that particles can be a trespass. The claim fails only because there was no substantial damage.
+- D: Correct. Under Bradley (adopting Borland), a trespass by microscopic airborne particles requires (1) an invasion of exclusive possession, (2) an intentional act, (3) foreseeability, and (4) substantial damage to the res. Without it, the claim is nuisance, which requires a substantial interference with use and enjoyment.
+- E: Ingersoll's own land is affected, so his claim, if any, is private nuisance.
+Rule: A trespass by microscopic airborne particles requires substantial damage to the land; otherwise the claim is nuisance (Bradley; Borland).
+
+## Practice Final 3 · Q6 · Consent — Consent obtained by fraud about an essential matter
+Cosima Albescu went to a clinic for a physical examination. A man in scrubs, Lorcan Fitzhugh, introduced himself as the clinic's medical technician, and Albescu allowed him to take her pulse and place monitoring pads on her chest. In fact, Fitzhugh was the doctor's unlicensed brother-in-law, who had come along to watch. Albescu learned the truth weeks later and sues Fitzhugh for battery.
+
+Is her consent a defense?
+
+A. Yes, because she agreed to the very touching that occurred.
+B. Yes, because the deception concerned a collateral matter, not the nature of the touching.
+C. No, because consent obtained by deceit about an essential matter, such as who is touching her and why, is no consent.
+D. Yes, because fraud vitiates consent only if it concerns a risk of physical harm.
+E. No, because consent to medical touching must be in writing.
+
+Answer: C
+- A: She agreed to the touching only because she believed Fitzhugh was medical staff. Fraud about an essential matter vitiates consent.
+- B: Who is touching a patient during a medical exam is essential, not collateral, as De May v. Roberts held.
+- C: Correct. De May v. Roberts held that consent given because the plaintiff believed the defendant was a medical assistant is no consent. Fraud about the essential character of the act vitiates consent; a lie about a collateral matter, such as payment, would not.
+- D: The deceit need not concern harm. De May involved no physical harm at all.
+- E: Consent can be express, implied in fact, or implied by law. Writing is not required.
+Rule: Consent procured by fraud about an essential matter is no consent (De May); fraud about a collateral matter does not vitiate consent.
+
+## Practice Final 3 · Q7 · Defense and Recovery of Property; the Shopkeeper's Privilege — Shopkeeper's privilege applied
+A store detective at Pellham's Department Store watched Juniper Abara put a scarf in her tote bag and walk out without stopping at a register. He followed her into the store's parking lot, identified himself, and asked her to come back inside. In the security office, she produced a receipt showing she had bought the scarf at another Pellham's branch that morning. She was released after 15 minutes, with no force used and an apology. She sues for false imprisonment.
+
+What is the most likely result?
+
+A. Abara wins, because she had not taken anything, so the detention was unjustified.
+B. Abara wins, because she had already left the store when he stopped her.
+C. Pellham's wins, because Abara consented by walking back into the store.
+D. Pellham's wins, because a merchant may detain any customer it suspects for as long as the investigation takes.
+E. Pellham's wins, because the detention fell within the shopkeeper's privilege.
+
+Answer: E
+- A: The privilege rests on a reasonable belief, not on actual theft. An innocent shopper detained on reasonable grounds has no claim.
+- B: The privilege covers detention on the premises or in their immediate vicinity, which includes the store's parking lot.
+- C: She went back in response to an assertion of authority. Submission to asserted authority is a confinement, not consent.
+- D: The detention must be reasonable in time and manner and based on a reasonable belief. That is why Pellham's wins, not because the privilege is unlimited.
+- E: Correct. The shopkeeper's privilege requires (1) a reasonable belief of theft, (2) detention on or in the immediate vicinity of the premises, (3) for a reasonable time and only to investigate, and (4) in a reasonable manner (Bonkowski). All four are met.
+Rule: A merchant may detain a suspected shoplifter on a reasonable belief, on or near the premises, for a reasonable time to investigate, in a reasonable manner (Bonkowski). Actual guilt is not required.
+
+## Practice Final 3 · Q8 · The Negligence Case and Unreasonable Risk — Foreseeable risk from a dangerous instrument
+Thurston Merriweather, a contractor, finished framing a backyard shed for a family on a Friday afternoon. He knew the family had young children who played in the yard. He left his pneumatic nail gun loaded and connected to its compressor on the lawn over the weekend, though unplugging it would have taken a few seconds. On Saturday, eight-year-old Linus picked it up and fired a nail into his friend's hand. The friend's parents sue Merriweather for negligence.
+
+What is the most likely result?
+
+A. Merriweather wins, because a child's misuse of a tool is not reasonably foreseeable.
+B. The friend's parents win, because the risk was foreseeable and easily avoided.
+C. Merriweather wins, because Linus's act was an intentional intervening act that superseded his negligence.
+D. The friend's parents win, because using pneumatic tools is an abnormally dangerous activity.
+E. Merriweather wins, because Linus's parents, not he, were responsible for supervising the children.
+
+Answer: B
+- A: That was true of a golf club in Lubitz v. Wells, which is not inherently dangerous. A loaded, live nail gun in a yard where he knew children played is different.
+- B: Correct. Negligence is the creation of an unreasonable risk: a foreseeable risk that a reasonable person would guard against, given its likelihood and severity and the burden of avoiding it. Here the risk was foreseeable and serious, and the precaution trivial.
+- C: A child playing with a dangerous tool is the very risk that made leaving it negligent, so the child's act is not superseding.
+- D: Nail guns can be used safely with reasonable care and are in common use. The claim is negligence.
+- E: The parents' possible negligence doesn't erase his own. Both may be at fault.
+Rule: Negligence is conduct creating an unreasonable risk: a foreseeable risk that a reasonable person would take precautions against, weighing likelihood, severity, and burden. Compare Lubitz (golf club not foreseeable) with an inherently dangerous instrument.
+
+## Practice Final 3 · Q9 · The Reasonable Person — Sudden emergency of one's own making
+Driving 20 miles per hour over the limit on a residential street, Barnabus Quell came over a hill and suddenly saw a stopped school bus with its lights flashing. To avoid hitting it, he swerved onto the sidewalk and struck a pedestrian, Hyacinth Morley. He argues that he acted reasonably in a sudden emergency and asks for an emergency instruction.
+
+Should the court give the instruction?
+
+A. Yes, because a person confronted with a sudden emergency is judged by what a reasonable person would do in that emergency.
+B. Yes, because swerving to avoid a busload of children was the reasonable choice at that moment.
+C. Yes, because the law does not require a driver to be a hero.
+D. No, because the emergency was of Quell's own making.
+E. No, because the emergency doctrine has been abolished in comparative-fault jurisdictions.
+
+Answer: D
+- A: That is the rule, but it applies only to an emergency not of the actor's own making.
+- B: The choice at the moment may have been reasonable, but his speeding created the emergency, so he can't rely on the doctrine.
+- C: Cordas said the law doesn't require heroism, but only for a driver confronted with an emergency he didn't cause.
+- D: Correct. Under Cordas v. Peerless Transportation, a person faced with a sudden emergency is judged by what a reasonable person would do in it, but only if the emergency is not of his own making. Quell's speeding created it.
+- E: Some courts have criticized the instruction, but nothing here says this jurisdiction abolished it. It fails on these facts because Quell caused the emergency.
+Rule: A person facing a sudden emergency not of his own making is judged by what a reasonable person would do in that emergency (Cordas).
+
+## Practice Final 3 · Q10 · Professionals and Informed Consent — Schools of thought: respectable minority
+Dr. Eleanora Fitch, an orthopedic surgeon, treated Wendell Prothero's fractured wrist with a cast rather than surgery. About 80% of orthopedists would have operated, but a respectable minority, supported by published studies, prefers casting for this kind of fracture. The wrist healed with some loss of motion that surgery might have prevented. Prothero sues for malpractice, and his expert testifies that most surgeons would have operated.
+
+What is the most likely result?
+
+A. Prothero wins, because Dr. Fitch departed from what most orthopedists would have done.
+B. Dr. Fitch wins, because she followed a method accepted by a respectable minority of her profession.
+C. Prothero wins, because the jury may decide under the Hand formula whether surgery was worth its cost.
+D. Dr. Fitch wins, because a doctor is not liable for any error made in good faith.
+E. Prothero wins, because the poor result shows the treatment was negligent.
+
+Answer: B
+- A: Following a method accepted by a respectable minority of the profession is not negligence.
+- B: Correct. A doctor who follows a school of thought accepted by a respectable minority is not negligent. Professional custom sets the standard, and here the profession accepts two methods (compare Boyce v. Brown: a different method is not negligence).
+- C: In malpractice, the profession's standard, proved by expert testimony, defines reasonable care. Jurors don't set it by their own cost-benefit weighing.
+- D: Good faith alone isn't enough. A doctor must use the profession's knowledge and skill; the protection is for choices reasonable professionals disagree about.
+- E: A bad result is not proof of negligence, and res ipsa doesn't apply to a choice between accepted treatments.
+Rule: Professionals must use the knowledge and skill of the profession, their best judgment, and reasonable care (Hodges). A method accepted by a respectable minority is not negligence, and an honest error of judgment where professionals disagree is not either.
+
+## Practice Final 3 · Q11 · Judge and Jury; Negligence Per Se — Licensing statutes and negligence per se
+A state statute makes it a crime to perform electrical work without a license. Ferdinand Oakhurst, who had no license, rewired Lavinia Corrigan's kitchen. Six months later a fire started in the kitchen and badly burned Corrigan. She sues Oakhurst and argues that his violation of the licensing statute is negligence per se. Oakhurst offers evidence that his wiring met the electrical code.
+
+Which is the best statement of the law?
+
+A. The violation is negligence per se, because the licensing statute was enacted to protect people like Corrigan from fires.
+B. The violation creates a presumption of negligence that Oakhurst must rebut.
+C. The violation bars Oakhurst from offering evidence that his work was competent.
+D. Corrigan wins, because Oakhurst's compliance with the electrical code is irrelevant to an unlicensed worker.
+E. None of the above.
+
+Answer: E
+- A: Licensing statutes usually don't support negligence per se. Lacking a license doesn't show the particular work was done carelessly.
+- B: That treats the licensing statute as setting a standard of conduct for the work itself, which courts generally refuse to do.
+- C: The quality of the work is exactly what the case is about. His evidence is admissible.
+- D: Compliance with a safety code is evidence of care, though not conclusive (the reasonable person may have to do more).
+- E: Correct. Licensing statutes usually do not support negligence per se: practicing without a license doesn't prove the work was negligent (the outline cites a New York case holding that an unlicensed practitioner's treatment is not negligent for that reason alone). Corrigan must prove that Oakhurst's work fell below the standard of care and caused the fire.
+Rule: Negligence per se requires a statute prescribing specific conduct for others' safety. Licensing statutes usually don't qualify, and compliance with a statute is evidence of care but not conclusive.
+
+## Practice Final 3 · Q12 · Circumstantial Evidence and Notice — Mode of operation
+Tavola Pizza sells slices over a counter at the front of its store. Customers carry them on paper plates and often eat while browsing the aisles of the attached Tavola Market. Grease and cheese regularly end up on the floor. Lysander Pocock slipped on a piece of pizza in an aisle and was hurt. He has no evidence of how long the piece had been there. The jurisdiction follows Jasko.
+
+Must Pocock prove that Tavola had notice of the particular piece of pizza?
+
+A. Yes, because without evidence of how long the pizza was there, there is no constructive notice.
+B. Yes, because merely selling food in a store does not create an unreasonable risk.
+C. No, because res ipsa loquitur applies to any slip on food in a store.
+D. No, because Tavola's method of operation made such hazards continuous and foreseeable.
+E. No, because a store is strictly liable to invitees for hazards on its floors.
+
+Answer: D
+- A: That is the usual rule (Joye), but Jasko relieves the plaintiff of proving notice when the store's own method makes the danger continuous.
+- B: That is H.E. Butt Grocery, which limited mode of operation to more than merely displaying food. Selling slices to be eaten while walking the aisles is more.
+- C: Res ipsa isn't the theory here. Customers drop food without the store's negligence. Jasko works through notice, not an inference of negligence.
+- D: Correct. Under Jasko, when a proprietor's method of operation makes dangerous conditions continuous or easily foreseeable, the plaintiff need not prove notice of the particular condition. The store must still be shown to have failed to use reasonable care.
+- E: Mode of operation removes the notice requirement, not the need to show that the store failed to use reasonable care.
+Rule: Under the mode-of-operation rule (Jasko), when the proprietor's method makes hazards continuous or easily foreseeable, the plaintiff need not prove notice of the specific hazard. Merely displaying goods isn't enough (H.E. Butt Grocery).
+
+## Practice Final 3 · Q13 · Res Ipsa Loquitur — Res ipsa: permissible inference
+A section of a stadium's upper-deck railing gave way when Oriana Feld leaned against it, and she fell and was injured. She sued the stadium and relied on res ipsa loquitur. The court found the doctrine applicable and instructed the jury on it. The stadium offered evidence that it inspected the railings monthly but could not explain why this one failed. The jury returned a verdict for the stadium. The jurisdiction follows the majority view of res ipsa's procedural effect.
+
+On appeal, what is the best ruling?
+
+A. Reverse, because when the defendant cannot explain the accident, res ipsa requires a verdict for the plaintiff.
+B. Reverse, because res ipsa shifts the burden of proof to the defendant to prove it was not negligent.
+C. Reverse, because a directed verdict should have been entered for Feld.
+D. Affirm, because res ipsa does not apply to injuries in places open to the public.
+E. Affirm, because res ipsa permits but does not compel the jury to infer negligence.
+
+Answer: E
+- A: That would treat res ipsa as a presumption or a shift of the burden of proof, a minority view.
+- B: Only a few states shift the burden of proof, often for carriers. The majority treats res ipsa as a permissible inference.
+- C: Under the majority view, res ipsa gets the plaintiff to the jury but never compels a finding of negligence.
+- D: The trial court properly applied res ipsa. The verdict stands for a different reason.
+- E: Correct. Under Sullivan v. Crabtree, the majority view, res ipsa is circumstantial evidence from which the jury may infer negligence. It does not compel that finding, even when the defendant cannot fully explain the accident.
+Rule: Res ipsa's procedural effect varies: a permissible inference (the majority, Sullivan), a presumption that shifts the burden of production, or, in a few states, a shift of the burden of proof.
+
+## Practice Final 3 · Q14 · Cause in Fact — Negligence that increases the chance of harm
+An apartment building's owner left the stairwell light burned out for three weeks despite tenants' complaints. Late one night, tenant Seraphine Aldous fell down the dark stairs and broke her hip. No one saw the fall. The owner argues that she might have fallen even with the light on, because people sometimes trip on lit stairs, so she cannot prove causation.
+
+How should the court rule?
+
+A. For the owner, because a possibility that the negligence caused the fall is not proof that it did.
+B. For Aldous, because the owner's negligence was a substantial factor in her fall.
+C. For Aldous, because the darkness greatly increased the risk of just such a fall.
+D. For the owner, because Aldous has no eyewitness to how she fell.
+E. For Aldous, because the burden shifts to the owner to prove the fall would have happened anyway.
+
+Answer: C
+- A: Kramer Service rejected verdicts resting on a mere possibility, but here the negligence is the kind that naturally leads to falls, which supports an inference of causation.
+- B: Substantial factor is for two sufficient causes acting together. The issue here is ordinary but-for proof.
+- C: Correct. Under Reynolds v. Texas & Pacific Ry., when negligence greatly multiplies the chances of an accident and is of a kind that naturally leads to it, the mere possibility that it might have happened anyway does not break the causal connection.
+- D: Circumstantial evidence can prove causation if it supports a reasonable inference, not just a guess.
+- E: The burden of proving causation stays with the plaintiff. She meets it through a reasonable inference, not a burden shift.
+Rule: The plaintiff must prove but-for causation by a preponderance. A mere possibility is not enough (Kramer), but when negligence greatly increases the chance of the very kind of harm that occurs, the jury may infer causation (Reynolds).
+
+## Practice Final 3 · Q15 · Multiple and Indeterminate Causes — Market share liability: several shares
+Rosalba Penhurst was injured by a fungible drug that her mother took during pregnancy 30 years ago. Through no fault of her own, she cannot identify the manufacturer. She sues four manufacturers that together made 80% of the drug sold at the time. The jury finds her damages are $1,000,000. Defendant Halcyon Pharma made 10% of the drug sold in the market. The jurisdiction follows Sindell v. Abbott Laboratories.
+
+How much is Halcyon liable for?
+
+A. $1,000,000, because the defendants are jointly and severally liable for the whole.
+B. $100,000, its 10% share of the market.
+C. $250,000, one quarter of the judgment, because four defendants were joined.
+D. $125,000, its share of the 80% of the market represented by the defendants.
+E. $0, because Penhurst cannot prove that Halcyon made the drug her mother took.
+
+Answer: B
+- A: Market share liability is several, not joint and several. Each defendant pays only its share.
+- B: Correct. Under Sindell, a plaintiff who joins makers of a substantial share of the market may recover, and each defendant is liable for the share of the judgment matching its share of the market, unless it proves it could not have made the product that injured her.
+- C: Shares follow market share, not the number of defendants.
+- D: Rescaling would make the defendants pay for the 20% made by absent makers. The outline's rule is the share of the judgment matching each defendant's market share.
+- E: Market share liability exists precisely for plaintiffs who can't identify the maker through no fault of their own.
+Rule: Market share liability (Sindell) requires (1) a fungible product, (2) that injured the plaintiff, (3) whose maker she can't identify through no fault of her own, and (4) joinder of makers of a substantial share of the market. Liability is several, by market share.
+
+## Practice Final 3 · Q16 · Proximate Cause: Unforeseeable Plaintiffs and Consequences — Manner of harm need not be foreseeable
+A utility crew negligently left an open manhole on a sidewalk overnight, surrounded only by a tent and four lit kerosene lanterns. Two boys, ages 8 and 10, crawled into the tent to explore and knocked a lantern into the hole. Through a rare chemical reaction no expert would have predicted, the kerosene vaporized and exploded rather than simply burning, and one boy, Cassian Mbeki-Rowe, was severely burned. The utility concedes negligence but argues that an explosion was unforeseeable.
+
+What is the most likely result?
+
+A. The utility wins, because the explosion was not a foreseeable consequence of leaving the manhole open.
+B. The utility wins, because the boys' meddling with the lantern was a superseding cause.
+C. The boy wins, because the explosion was a direct result of the utility's negligence.
+D. The boy wins, because the type of harm, burns, was foreseeable.
+E. The boy wins only if the jurisdiction follows Andrews's dissent in Palsgraf.
+
+Answer: D
+- A: The type of harm, burns from the lanterns, was foreseeable. The manner, an explosion rather than a fire, need not be.
+- B: Children exploring an unguarded open manhole and lanterns is the very risk that made leaving them negligent, not an independent intervention.
+- C: Right result, wrong test. The direct-consequences rule of Polemis has been displaced by the foreseeability of the type of harm.
+- D: Correct. Under the risk rule and Wagon Mound No. 1, the type of harm must be foreseeable, but the extent and the precise manner need not be (as in the House of Lords' Hughes case, where a lamp exploded unforeseeably but the risk was burns).
+- E: The boys were within the foreseeable zone of danger, so even Cardozo's approach finds a duty. The issue is scope of liability, which the risk rule resolves for the boy.
+Rule: Scope of liability: the type of harm and the class of plaintiff must be within the risk that made the conduct negligent, but the extent of the harm and the precise manner in which it occurs need not be foreseeable.
+
+## Practice Final 3 · Q17 · Intervening and Superseding Causes — Social host and adult guests (Restatement (Third) draft)
+At a backyard party, Lysander Holloway kept refilling the wine glass of his adult friend, Margaux Pettibone, though she was slurring her words and he knew she would drive home. On the way home she ran a red light and injured Ignatius Rowe. The jurisdiction has no dram shop or social host statute, and its supreme court has said it will follow the Restatement (Third) draft on liability for providing alcohol.
+
+Is Holloway liable to Rowe?
+
+A. Yes, because a social host who serves a visibly intoxicated adult guest, knowing she will drive, is liable to third parties she injures.
+B. Yes, because a provider of alcohol is liable for negligently serving a visibly intoxicated person of any age.
+C. No, because a social host is not liable for providing alcohol to guests of legal drinking age, even past the point of intoxication.
+D. No, because the guest's drunk driving was a superseding cause as a matter of law.
+E. Yes, because Holloway acted recklessly, and a social host is liable for reckless service to any guest.
+
+Answer: C
+- A: That is Kelly v. Gwinnell. The Restatement (Third) draft rejects it for guests of legal drinking age, in line with most states.
+- B: That rule applies to commercial establishments, not social hosts.
+- C: Correct. The Restatement (Third) draft makes commercial establishments liable for negligently serving underage or visibly intoxicated patrons, and social hosts liable for recklessly serving underage guests, but a social host is not liable for providing alcohol to adult guests, even past intoxication.
+- D: The draft rests on a duty rule, not superseding cause. Drunk driving is the foreseeable risk of over-serving.
+- E: Recklessness matters under the draft only for underage guests. Margaux was an adult.
+Rule: Under the Restatement (Third) draft on alcohol: a statute controls if there is one; a commercial establishment is liable for negligently serving underage or visibly intoxicated patrons; a social host is liable for recklessly serving underage guests but not for serving adults. Kelly v. Gwinnell is the minority view.
+
+## Practice Final 3 · Q18 · Duty and the Failure to Act — Nonfeasance under a contract with a city
+Aquaterra Water Co. contracted with the city of Millbrook to supply water at a specified pressure to the city's fire hydrants. One night, because of Aquaterra's negligent maintenance of a pump, the hydrants near Osgood Pembleton's house had almost no pressure, and firefighters could not save his house from a fire that started in his kitchen. Pembleton sues Aquaterra in tort.
+
+What is the most likely result?
+
+A. Pembleton wins, because a company that undertakes a public service owes a duty of care to everyone it serves.
+B. Aquaterra wins, because withholding a benefit is nonfeasance, which creates no duty here.
+C. Pembleton wins, because MacPherson v. Buick abolished the privity requirement for negligence.
+D. Aquaterra wins, because the fire, not the low pressure, caused the damage.
+E. Pembleton wins, because Aquaterra's negligent pump maintenance was misfeasance, not nonfeasance.
+
+Answer: B
+- A: H.R. Moch rejected that duty. The company merely withheld a benefit, and citizens were incidental beneficiaries.
+- B: Correct. H.R. Moch Co. v. Rensselaer Water held that the company owed no tort duty to individual citizens: its failure was nonfeasance, not the launching of a force or instrument of harm, and recognizing the claim would make it an insurer of the whole city.
+- C: MacPherson concerned a maker who launched a dangerous product into the world, which is misfeasance. Moch distinguished it.
+- D: The low pressure may well have been a cause of the loss. The claim fails on duty.
+- E: Moch treated the failure to supply water, however it came about, as withholding a benefit under the contract.
+Rule: Misfeasance (launching a force of harm) creates a duty; nonfeasance (withholding a benefit) generally doesn't (H.R. Moch). MacPherson removed the privity limit for makers of dangerous products.
+
+## Practice Final 3 · Q19 · Contributory and Comparative Negligence — Pure comparative fault arithmetic
+Domenica Farrow, who was jaywalking against the light while looking at her phone, was struck by a car driven by Ulric Batterby, who was going 15 miles per hour over the limit. The jury finds Farrow's damages are $100,000 and assigns 60% of the fault to her and 40% to Batterby. The jurisdiction follows pure comparative fault.
+
+How much can Farrow recover?
+
+A. $0
+B. $40,000
+C. $60,000
+D. $100,000
+E. None of the above
+
+Answer: B
+- A: That is the result under contributory negligence or either modified system, such as the 49% bar of McIntyre v. Balentine. Pure comparative fault lets a plaintiff recover even when she is mostly at fault.
+- B: Correct. Under pure comparative fault, a plaintiff recovers any amount below 100% fault, with damages reduced by her percentage: $100,000 less 60% is $40,000.
+- C: That reduces her damages by the defendant's share instead of her own.
+- D: Her damages must be reduced by her own share of fault.
+- E: The correct amount is listed: $40,000.
+Rule: Under pure comparative fault the plaintiff recovers her damages less her own percentage of fault, at any percentage below 100%. Under the 49% and 50% bars, a 60%-at-fault plaintiff recovers nothing.
+
+## Practice Final 3 · Q20 · Assumption of Risk — Firefighter's rule: not the very peril
+Firefighter Bronwyn Ashdown responded to a kitchen fire that started when homeowner Ruprecht Vale negligently left a pan of oil on a hot burner. After the fire was out and Ashdown was leaving through the front door, she fell through a rotten porch step that Vale had known about for months, breaking her leg. She sues Vale for negligence. The jurisdiction follows the Restatement (Third) draft on the firefighter's rule.
+
+What is the most likely result?
+
+A. Vale wins, because Ashdown was on duty and acting within the scope of her employment.
+B. Vale wins, because professional rescuers assume all the risks of entering the scenes of emergencies.
+C. Ashdown wins, because the rescue doctrine makes one who creates a peril liable to anyone who comes to the rescue.
+D. Ashdown wins, because she was not injured by the very peril (the fire) that brought her to the house.
+E. Vale wins, because Ashdown entered as a licensee and was owed no duty to inspect the porch.
+
+Answer: D
+- A: Those are requirements of the rule, but it also requires that she be injured by the very peril that brought her there.
+- B: The firefighter's rule is narrower. It covers only the very peril that occasioned the rescuer's presence.
+- C: Right result, wrong reason. The rescue doctrine protects volunteer rescuers (McCoy); the question for a professional rescuer is whether the firefighter's rule applies.
+- D: Correct. Under the Restatement (Third) draft, an actor who negligently creates a peril owes no duty to a professional rescuer injured by the very peril that brought her there, while on duty, within the scope of employment, and performing emergency activities. A rotten step is a separate hazard, so ordinary premises-liability rules apply.
+- E: Even a licensee is owed a warning of known dangers she is unlikely to discover. Vale knew of the rotten step.
+Rule: The firefighter's rule (Restatement (Third) draft): no duty to a professional rescuer injured by the very peril that brought her there, while on duty, in the scope of employment, and performing emergency activities. Volunteer rescuers are protected by the rescue doctrine (McCoy).
+
+## Practice Final 3 · Q21 · Statutes of Limitation and Repose — Statute of repose
+In 2010, Corbel Industries sold a commercial meat slicer to a restaurant. The state has a two-year statute of limitations for personal injury and a ten-year statute of repose for product claims, running from the date of sale. In 2023, a design defect caused the slicer to sever two of an employee's fingers. The employee, Sabine Whitlock, sued Corbel six months later. Corbel did not conceal anything about the defect.
+
+Is her action timely?
+
+A. Yes, because she sued within two years of her injury, when her claim accrued.
+B. Yes, because under the discovery rule no period could begin until she discovered her injury.
+C. No, because the repose period ran from the 2010 sale and expired before she was injured.
+D. Yes, because equitable tolling suspends the repose period until a plaintiff could reasonably have sued.
+E. No, because her claim accrued in 2010 when the defective slicer was sold.
+
+Answer: C
+- A: She is within the limitations period, but a statute of repose is a separate outer limit, and it expired in 2020.
+- B: The discovery rule delays the start of a limitations period (§ 3). A repose period runs from the specified event regardless (§ 13).
+- C: Correct. A statute of repose begins to run on the specified event, such as the sale of a product, whether or not the plaintiff can yet sue (§§ 12–13). It can bar a claim before the injury occurs. Common-law tolling doesn't suspend it (§ 14); fraudulent concealment or estoppel would (§ 15), but there was none.
+- D: Common-law tolling, including equitable tolling, does not suspend a statute of repose (§ 14).
+- E: Right result, wrong reason. Her claim didn't accrue until she was injured; she is barred by repose, not limitations.
+Rule: A statute of limitations runs from accrual (all elements, § 2, or discovery, § 3). A statute of repose runs from a fixed event, such as a sale, even before injury (§§ 12–13); common-law tolling doesn't suspend it (§ 14), but fraudulent concealment and estoppel do (§ 15).
+
+## Practice Final 3 · Q22 · Owners and Occupiers of Land — Leaving the area of invitation: licensee owed warning of known danger
+Thibault Okonjo was shopping at Langford Hardware when he asked a clerk for an empty cardboard box to take home. The clerk said, “Help yourself—they're in the stockroom in back.” The stockroom was unlit. An employee had opened a trapdoor to the basement in the middle of the stockroom floor an hour earlier and left it open, as the manager knew. Okonjo fell through it and was hurt. The jurisdiction keeps the traditional entrant categories.
+
+What is the most likely result?
+
+A. Langford wins, because Okonjo went beyond the area of his invitation and became a trespasser.
+B. Okonjo wins, because he remained an invitee owed a duty of reasonable inspection.
+C. Langford wins, because a licensee is owed no duty to inspect the premises.
+D. Okonjo wins, because even as a licensee he was owed a warning of a known danger he was unlikely to discover.
+E. Langford wins, because Okonjo assumed the risk by walking into an unlit room.
+
+Answer: D
+- A: He entered the stockroom with permission, so he became a licensee, not a trespasser (Whelan v. Van Natta).
+- B: Going into the back room for his own purpose took him outside the area of invitation; he was a licensee there (Whelan).
+- C: No inspection was needed. Langford already knew the trapdoor was open.
+- D: Correct. Under Whelan v. Van Natta, an invitee who goes outside the area of invitation for his own purpose, with permission, becomes a licensee. But a licensee is still owed a warning of, or protection from, known dangerous conditions he is unlikely to discover, and an open trapdoor in a dark room is one.
+- E: Implied assumption of risk requires actual knowledge of the specific risk. He didn't know about the trapdoor.
+Rule: An invitee keeps that status only within the area of invitation; going elsewhere for his own purposes with permission makes him a licensee (Whelan). A licensee is owed a warning of known dangers he is unlikely to discover.
+
+## Practice Final 3 · Q23 · Compensatory Damages — Loss of consortium: who may recover
+Evander Lockwood was permanently brain-injured in a crash caused by Orsino Trucking's negligence. His family members sue Orsino for the loss of his companionship, affection, and support: (1) his wife, Isolde; (2) his 10-year-old son, Pascal; (3) his 25-year-old daughter, Ravenna, who lives on her own; and (4) his brother, Tobiah. The jurisdiction follows the Restatement (Third) Miscellaneous Provisions on consortium.
+
+Which of them may recover for loss of consortium?
+
+A. Isolde only.
+B. Isolde and Pascal only.
+C. Isolde, Pascal, and Ravenna only.
+D. All four of them.
+E. None of them, because loss of consortium is recoverable only when the injured person dies.
+
+Answer: B
+- A: A spouse may recover (§ 48A), but so may a minor child of the injured parent (§ 48C).
+- B: Correct. A spouse may recover for loss of consortium (§ 48A), and so may a minor child of an injured parent (§ 48C). The Restatement provisions don't extend the claim to adult children or siblings.
+- C: The parental-consortium claim belongs to a minor child of the injured parent (§ 48C). An adult child living independently isn't covered.
+- D: Siblings and adult children aren't among the relationships the consortium sections cover.
+- E: Consortium claims arise from physical or emotional harm to the family member; death isn't required.
+Rule: Loss of consortium (loss of society, affection, companionship, support, and services) belongs to (1) a spouse (§ 48A), (2) a parent of an injured unemancipated minor child (§ 48B), and (3) a minor child of an injured parent (§ 48C).
+
+## Practice Final 3 · Q24 · Punitive Damages — Due process limits on punitive damages
+An insurer, Bellcrest Mutual, refused in bad faith to settle a claim against its policyholders, the Ashcombes, within policy limits, exposing them to an excess judgment. Their emotional and financial distress supported a $1,000,000 compensatory award. To show a national scheme, the Ashcombes introduced evidence of Bellcrest's practices in other states, many of them lawful where they occurred and unrelated to claims like theirs. The jury awarded $145,000,000 in punitive damages.
+
+What is the most likely ruling on Bellcrest's due process challenge?
+
+A. The award stands, because Bellcrest's conduct was highly reprehensible.
+B. The award stands, because a large award is needed to deter a defendant of Bellcrest's wealth.
+C. The award is excessive, because punitive damages may never exceed compensatory damages.
+D. The award is excessive, given its ratio and its use of out-of-state conduct.
+E. The award is excessive, because due process sets a fixed 4-to-1 limit on punitive damages.
+
+Answer: D
+- A: Reprehensibility is the most important guidepost, but the ratio and the punishment of out-of-state and dissimilar conduct still make this award excessive.
+- B: Wealth can't justify an otherwise unconstitutional award. State Farm Mut. Auto. Ins. Co. v. Campbell rejected that reasoning.
+- C: The 1:1 limit of Exxon Shipping v. Baker is federal maritime law, not a due process rule for state-court verdicts.
+- D: Correct. State Farm Mut. Auto. Ins. Co. v. Campbell struck down a 145:1 award on these grounds: few awards exceeding a single-digit ratio satisfy due process, and when compensatory damages are substantial, a 1:1 ratio may be the limit. A state may not punish lawful out-of-state conduct or conduct unrelated to the plaintiff's harm.
+- E: There is no bright-line ratio. Single-digit ratios are a strong presumption, not a fixed cap.
+Rule: Due process review of punitive damages weighs (1) reprehensibility, (2) the ratio to the harm, and (3) comparable civil penalties (the Gore guideposts). Single-digit ratios are the norm, and a state may not punish lawful out-of-state or dissimilar conduct (State Farm Mut. Auto. Ins. Co. v. Campbell).
+
+## Practice Final 3 · Q25 · Joint and Several Liability, Satisfaction, Release, and Settlement — Concerted action: drag racing
+Late one night, Wolfram Teasdale and Ambrose Quinlivan agreed to race their cars side by side down a city boulevard. At 90 miles per hour, Quinlivan's car swerved and struck a pedestrian, Hermione Calder. Teasdale's car never touched her. Calder sues both drivers.
+
+Is Teasdale liable for her injuries?
+
+A. No, because his car did not strike her, so his conduct was not a cause in fact of her injury.
+B. Yes, but only for the share of fault the jury assigns to him, because joint and several liability has been abolished for negligence.
+C. No, because Quinlivan's loss of control was a superseding cause.
+D. Yes, because the two drivers acted in concert, so each is liable for the harm caused by either.
+E. Yes, but only if Calder cannot collect from Quinlivan.
+
+Answer: D
+- A: Participants in concerted action are liable for harm caused by any of them; each encouraged the reckless conduct that caused it (Bierczynski v. Rogers).
+- B: Concerted action is a classic ground for joint and several liability, and the Restatement (Third) draft keeps it joint and several unless a statute changes it.
+- C: Losing control at 90 miles per hour is the very risk the race created.
+- D: Correct. Bierczynski v. Rogers held that participants in a race on a public highway act in concert, and each is liable for harm caused by any of them, because each participated in and encouraged the wrongful conduct. The Restatement (Third) draft reaches the same result for agreements to act negligently and for aiding and abetting negligence.
+- E: Each concerted actor is fully liable; Calder may collect from either one, in any order.
+Rule: Defendants who act in concert, by agreement or by knowingly giving substantial assistance or encouragement, are jointly and severally liable for harm caused by any of them (Bierczynski).
+
+## Practice Final 3 · Q26 · Contribution, Indemnity, and Apportionment — Settlement credit: proportionate share
+Philomena Grantham, who was not at fault, suffered $300,000 in damages from the combined negligence of two contractors. Before trial she settled with Contractor A for $50,000. At trial against Contractor B, the jury assigns 40% of the responsibility to A and 60% to B. The jurisdiction follows the Restatement (Third) apportionment rules on settlement credits.
+
+What judgment should be entered against Contractor B?
+
+A. $250,000, the damages less the $50,000 Grantham received in settlement.
+B. $180,000, B's 60% share of the damages.
+C. $150,000, half the damages, because there were two tortfeasors.
+D. $300,000, because B is jointly and severally liable for the whole and may seek contribution from A.
+E. $130,000, B's share less A's settlement payment.
+
+Answer: B
+- A: That is the pro tanto, dollar-for-dollar credit. The Restatement (Third) gives a credit equal to the settling party's percentage share.
+- B: Correct. Under the proportionate-share approach of the Restatement (Third) apportionment rules, the nonsettling defendant gets a credit equal to the settling person's share of responsibility: $300,000 less 40%, so B owes $180,000. Neither B nor A may seek contribution from the other.
+- C: That is a pro rata credit. The Restatement uses comparative responsibility, not per-capita shares.
+- D: A settling defendant is discharged from contribution, and the plaintiff's recovery against B is reduced by A's share.
+- E: That double-counts the credit. B gets credit for A's percentage share, not for both the share and the payment.
+Rule: Credits for settlement: pro tanto (dollar for dollar), pro rata (per capita), or proportionate share (the settling party's percentage of fault, the Restatement (Third) approach). A good-faith settlement discharges contribution (Slocum v. Donahue).
+
+## Practice Final 3 · Q27 · Vicarious Liability — Imputed contributory negligence: the both-ways rule
+Ottoline Brack lent her car to her friend Casimir Wood for a shopping trip they took together, with Brack riding in the passenger seat. Wood was driving carelessly when a truck driven negligently by Fenella Strachan ran a stop sign and hit them, injuring Brack. Brack sues Strachan, who argues that Wood's negligence should be imputed to Brack, as the car's owner, to reduce her recovery. Brack and Wood were not on a business trip, and Wood was not her employee.
+
+Should Wood's negligence be imputed to Brack?
+
+A. Yes, because an owner-passenger has the right to control how her car is driven.
+B. Yes, because Brack and Wood were on a joint enterprise to go shopping together.
+C. Yes, because the owner of a car is vicariously liable for anyone who drives it with permission.
+D. No, because Brack would not be vicariously liable for Wood's driving, so his negligence is not imputed to her.
+E. No, because a passenger's recovery can never be reduced for anyone's negligence but her own.
+
+Answer: D
+- A: Smalich rejected imputation based on ownership and a theoretical right of control. Only a master-servant relationship or joint enterprise justifies it.
+- B: A joint enterprise requires a community of pecuniary interest, which a personal shopping trip lacks (Popejoy).
+- C: Owner-consent statutes impose that liability in some states, but nothing says this jurisdiction has one, and the both-ways rule asks about common-law vicarious liability.
+- D: Correct. Under the both-ways rule of Smalich v. Westfall, a driver's negligence is imputed to a plaintiff only if their relationship would make the plaintiff vicariously liable as a defendant, such as master and servant or joint enterprise. An owner-passenger ordinarily is not.
+- E: Imputation is possible when the relationship would make the passenger vicariously liable, as with an employer or a joint enterpriser.
+Rule: Imputed contributory negligence follows the both-ways rule: a third person's negligence is imputed to the plaintiff only if the plaintiff would be vicariously liable for it as a defendant (Smalich). A joint enterprise requires a community of pecuniary interest (Popejoy).
+
+## Practice Final 3 · Q28 · Strict Liability: Animals and Abnormally Dangerous Activities — Which activities are abnormally dangerous
+A state supreme court that applies the six factors of the Restatement (Second) for abnormally dangerous activities is asked to decide five cases, each involving harm to a neighbor that occurred despite the defendant's use of reasonable care.
+
+In which case is the court LEAST likely to impose strict liability?
+
+A. A company blasting rock with dynamite to build a road through a residential area.
+B. A firm storing large quantities of explosives in a warehouse beside a housing development.
+C. A pest-control firm fumigating an apartment building with cyanide gas.
+D. A police department operating a firearms training range at a rural gravel pit.
+E. A chemical company storing large volumes of a highly toxic gas in tanks near a town.
+
+Answer: D
+- A: Blasting is the classic abnormally dangerous activity (Spano v. Perini).
+- B: Storing explosives near homes carries a high risk of great harm that care can't eliminate, in an inappropriate place.
+- C: Fumigation with highly toxic gas is a recognized abnormally dangerous activity.
+- D: Correct. Miller v. Civil Constructors held that firearms practice is not ultrahazardous: reasonable care can make it safe, guns are in common use, and a rural range is an appropriate place with social value. The neighbor must prove negligence.
+- E: Toxic chemical storage near a populated area weighs strongly toward strict liability under the six factors.
+Rule: The six factors for an abnormally dangerous activity (weighed together): high risk, likely great harm, inability to eliminate the risk with reasonable care, uncommon usage, inappropriateness to the place, and value outweighed by danger. Blasting qualifies (Spano); firearms (Miller) and shipping chemicals (Indiana Harbor Belt) generally don't.
+
+## Practice Final 3 · Q29 · Private Nuisance — No nuisance claim by a buyer against the seller
+For decades, Montclair Chemical ran a plant on a riverside parcel and buried waste there. It sold the parcel to Rivenhall Properties, which bought it “as is” after a cursory inspection. Rivenhall later discovered the buried waste and spent $4,000,000 cleaning it up. It sues Montclair for private nuisance, claiming the waste interferes with its use and enjoyment of the land.
+
+What is the most likely result?
+
+A. Rivenhall wins, because the buried waste substantially and unreasonably interferes with its use of the land.
+B. Rivenhall wins, because a possessor of land may always sue whoever created a nuisance on it.
+C. Montclair wins, because the waste was buried before Rivenhall owned the land, so Rivenhall came to the nuisance.
+D. Montclair wins, because a buyer of land cannot sue the seller in private nuisance; its remedies lie in the sale contract.
+E. Montclair wins, because cleanup costs are pure economic loss, which is never recoverable in tort.
+
+Answer: D
+- A: The interference may be substantial, but the duty not to maintain a nuisance runs to neighbors, not to a later buyer of the same land.
+- B: Philadelphia Electric held otherwise for a buyer suing its own seller.
+- C: Coming to the nuisance is only a factor and concerns neighbors who move next to an existing use. The claim fails for a more basic reason.
+- D: Correct. Philadelphia Electric Co. v. Hercules held that the duty not to maintain a private nuisance runs to neighboring owners and occupiers, not to a later buyer of the same land, whose remedies lie in the contract of sale under caveat emptor.
+- E: The case turns on who may sue in nuisance, not on the economic-loss rule.
+Rule: A private nuisance plaintiff needs a possessory or property interest, but a buyer of land cannot sue the seller in nuisance; its remedies lie in the contract (Philadelphia Electric).
+
+## Practice Final 3 · Q30 · Public Nuisance and Nuisance Remedies — Remedy when the plaintiff came to the nuisance
+A cattle feedlot operated lawfully for 20 years in an open farming area. A developer, Saffron Homes, then bought nearby land cheaply and built a large retirement community. As the homes spread toward the feedlot, flies and odors from it made life miserable for thousands of residents, and the court finds the feedlot a public nuisance. Saffron sues to enjoin the feedlot's operation.
+
+Under Spur Industries v. Del E. Webb Development, what remedy is most appropriate?
+
+A. No relief, because Saffron came to the nuisance and is barred from complaining of it.
+B. An injunction, with no conditions, because a public nuisance must be abated.
+C. Damages to Saffron only, while the feedlot keeps operating, as in Boomer.
+D. An injunction, conditioned on Saffron's paying the feedlot's reasonable costs of moving or shutting down.
+E. A finding of no nuisance, because the feedlot's utility outweighs the residents' harm.
+
+Answer: D
+- A: Coming to the nuisance would bar the developer if only it were harmed, but the residents' interests justify relief.
+- B: An unconditioned injunction ignores that the developer brought the residents to the feedlot for profit.
+- C: Boomer awarded permanent damages instead of an injunction. Spur enjoined the feedlot but made the developer pay.
+- D: Correct. Spur held that the feedlot must be enjoined to protect the residents, but because the developer, for its own profit, brought people to the nuisance, it must indemnify the feedlot for the cost of moving or shutting down.
+- E: That is Carpenter's approach to private nuisance. Spur treated the feedlot as a public nuisance the residents were entitled to have abated.
+Rule: The four nuisance remedies: (1) injunction (Morgan); (2) damages only (Boomer); (3) no nuisance (Carpenter); (4) an injunction conditioned on the plaintiff's compensating the defendant (Spur).

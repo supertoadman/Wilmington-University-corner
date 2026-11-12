@@ -1,0 +1,733 @@
+<!doctype html>
+<!--
+cards/v1 flashcard deck: copyable template. Spec: docs/cards-format.md (also api/specs/cards-format.md).
+The whole deck is the JSON in the script element with id "cards-data", near the end of this file.
+To make a new deck, do ONE of these:
+  1. Save just that JSON as content/<Subject>/<Name>.cards.json (preferred), or
+  2. Copy this whole file to content/<Subject>/<Name>.html and replace only that JSON.
+The build re-renders the page from the JSON with the current page, so edit nothing else.
+Opened straight from disk, this file works offline as it is.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Sample Flashcards (Evidence)</title>
+<meta name="description" content="Eight sample cards on relevance, 403, and hearsay, using every cards/v1 field. Flip each card, shuffle the deck, remove the cards you know, and see them all at once under All cards.">
+<meta name="generator" content="cards/v1 flashcards">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Canonical flashcard page (cards/v1): the standalone page every .cards.json deck is built into by
+   scripts/lib/cards-shell.mjs, which inlines this file. Tokens are the site's own (as in shell.css),
+   light and dark; the site's viewer sets data-theme on this page when it is framed.
+
+   Built to need no instructions: big type, big buttons that say what they do in words, one card at
+   a time, the main controls in one row that stays at the bottom of the screen on a phone. */
+
+:root {
+  --bg: #f6f3ec; --bg-elev: #fbf9f4; --surface: #ffffff; --surface-2: #f3efe6; --surface-3: #e9e3d6;
+  --text: #161c27; --text-2: #3b4352; --muted: #636978; --border: #e5dfd2; --border-strong: #d4ccbb;
+  --ink: #12213a; --ink-2: #1e3658; --ink-fg: #ffffff;
+  --gold: #a87b22; --gold-2: #d6ab55; --gold-soft: #f4e9cf; --gold-ink: #80601c;
+  --link: #1e4f8a; --focus: #2f6fdd;
+  --warn: #a2341f; --warn-soft: #fbe9e4;
+  --shadow-sm: 0 1px 2px rgba(22, 28, 39, .06), 0 1px 1px rgba(22, 28, 39, .03);
+  --shadow-card: 0 1px 2px rgba(22, 28, 39, .06), 0 18px 40px -22px rgba(22, 28, 39, .35);
+  --radius-sm: 10px; --radius: 16px; --radius-lg: 22px;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --accent: var(--ink-2);
+  --ink-mix: 82%; --tint: 10%;
+  --scale: 1;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1016; --bg-elev: #10151d; --surface: #141a23; --surface-2: #1a212c; --surface-3: #232c39;
+    --text: #ebe8e1; --text-2: #c3c7cf; --muted: #8f96a3; --border: #242c38; --border-strong: #323d4d;
+    --ink: #ece6d6; --ink-2: #a9c6ec; --ink-fg: #0c1016;
+    --gold: #e0b862; --gold-2: #e9c77f; --gold-soft: #2f2716; --gold-ink: #e0b862;
+    --link: #9cc0ec; --focus: #79a8ff; --warn: #f19a85; --warn-soft: #3a1f19;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+    --shadow-card: 0 1px 2px rgba(0, 0, 0, .5), 0 20px 44px -22px rgba(0, 0, 0, .9);
+    --ink-mix: 45%; --tint: 16%;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1016; --bg-elev: #10151d; --surface: #141a23; --surface-2: #1a212c; --surface-3: #232c39;
+  --text: #ebe8e1; --text-2: #c3c7cf; --muted: #8f96a3; --border: #242c38; --border-strong: #323d4d;
+  --ink: #ece6d6; --ink-2: #a9c6ec; --ink-fg: #0c1016;
+  --gold: #e0b862; --gold-2: #e9c77f; --gold-soft: #2f2716; --gold-ink: #e0b862;
+  --link: #9cc0ec; --focus: #79a8ff; --warn: #f19a85; --warn-soft: #3a1f19;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+  --shadow-card: 0 1px 2px rgba(0, 0, 0, .5), 0 20px 44px -22px rgba(0, 0, 0, .9);
+  --ink-mix: 45%; --tint: 16%;
+  color-scheme: dark;
+}
+:root.fc-large { --scale: 1.22; }
+/* Accent helpers: an accent color readable as text, and a soft accent tint (as on the site). */
+* { --accent-ink: color-mix(in srgb, var(--accent) var(--ink-mix), var(--text)); --accent-soft: color-mix(in srgb, var(--accent) var(--tint), var(--surface)); }
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 17px/1.6 var(--font-sans); -webkit-font-smoothing: antialiased; }
+button, select, input { font: inherit; color: inherit; }
+button { cursor: pointer; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; }
+kbd { font: 600 12px var(--font-sans); padding: 1px 6px; border: 1px solid var(--border-strong); border-bottom-width: 2px; border-radius: 6px; background: var(--surface); }
+.fc-sr { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.fc-ico { width: 22px; height: 22px; flex: none; fill: none; stroke: currentColor; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
+
+.fc-app { max-width: 860px; margin: 0 auto; padding: 24px 16px 40px; padding-left: max(16px, env(safe-area-inset-left)); padding-right: max(16px, env(safe-area-inset-right)); }
+
+/* ---- Header ---- */
+.fc-head { margin-bottom: 18px; }
+.fc-kicker { margin: 0 0 4px; font: 600 13px/1.3 var(--font-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-ink); }
+.fc-title { margin: 0; font: 500 clamp(28px, 5vw, 42px)/1.1 var(--font-serif); letter-spacing: -.02em; text-wrap: balance; }
+.fc-lede { margin: 8px 0 0; color: var(--text-2); font-size: 16px; max-width: 68ch; text-wrap: pretty; }
+.fc-framed .fc-head { display: none; }
+.fc-framed .fc-app { padding-top: 16px; }
+@media (max-width: 640px) {
+  .fc-app { padding-top: 16px; }
+  .fc-lede { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; font-size: 15px; }
+}
+
+/* ---- Top bar: view switch, topic, text size ---- */
+.fc-bar { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px; margin-bottom: 18px; }
+.fc-views { display: inline-flex; padding: 4px; gap: 4px; border-radius: 14px; background: var(--surface-2); border: 1px solid var(--border); }
+.fc-views button { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 16px; border: 0; border-radius: 10px; background: transparent; color: var(--text-2); font-weight: 600; font-size: 16px; }
+.fc-views button[aria-pressed="true"] { background: var(--surface); color: var(--text); box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--border-strong); }
+.fc-views button:hover:not([aria-pressed="true"]) { color: var(--text); }
+.fc-topic { display: inline-flex; align-items: center; gap: 8px; flex: 1 1 220px; min-width: 0; }
+.fc-topic-label { font-weight: 600; color: var(--text-2); }
+.fc-topic select { flex: 1; min-width: 0; min-height: 48px; padding: 0 40px 0 14px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23636978' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center; -webkit-appearance: none; appearance: none; font-size: 16px; font-weight: 500; text-overflow: ellipsis; }
+@media (max-width: 640px) {
+  .fc-views { flex: 1 1 100%; }
+  .fc-views button { flex: 1; justify-content: center; padding: 0 10px; }
+  .fc-topic { flex: 1 1 0; }
+  .fc-topic-label { display: none; }
+  .fc-size { padding: 0 12px; }
+  .fc-tools .fc-tool { flex: 1 1 auto; justify-content: center; }
+}
+
+/* ---- Buttons ---- */
+.fc-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 58px; padding: 0 20px; border-radius: 14px; border: 2px solid var(--border-strong); background: var(--surface); color: var(--text); font-size: 17px; font-weight: 650; white-space: nowrap; box-shadow: var(--shadow-sm); transition: background .15s, border-color .15s, transform .1s; }
+.fc-btn:hover:not(:disabled) { border-color: var(--accent-ink); background: var(--surface-2); }
+.fc-btn:active:not(:disabled) { transform: translateY(1px); }
+.fc-btn:disabled { opacity: .4; cursor: default; box-shadow: none; }
+.fc-btn-primary { background: var(--ink); border-color: var(--ink); color: var(--ink-fg); }
+.fc-btn-primary:hover:not(:disabled) { background: color-mix(in srgb, var(--ink) 86%, var(--gold)); border-color: color-mix(in srgb, var(--ink) 86%, var(--gold)); }
+.fc-tool { display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--text); font-size: 16px; font-weight: 600; }
+.fc-tool:hover { background: var(--surface-2); }
+.fc-tool[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent-ink); }
+.fc-tool-remove { color: var(--warn); }
+.fc-tool-remove:hover { background: var(--warn-soft); border-color: var(--warn); }
+/* An on/off switch with its state also said in words. */
+.fc-switch { position: relative; width: 44px; height: 26px; flex: none; border-radius: 999px; background: var(--surface-3); box-shadow: inset 0 0 0 1px var(--border-strong); transition: background .15s; }
+.fc-switch i { position: absolute; top: 3px; left: 3px; width: 20px; height: 20px; border-radius: 50%; background: var(--surface); box-shadow: 0 1px 3px rgba(0, 0, 0, .3); transition: transform .15s; }
+[aria-checked="true"] > .fc-switch { background: var(--accent-ink); box-shadow: none; }
+[aria-checked="true"] > .fc-switch i { transform: translateX(18px); }
+.fc-switch-word { min-width: 2em; font-size: 14px; font-weight: 700; color: var(--muted); text-transform: uppercase; letter-spacing: .04em; }
+[aria-checked="true"] > .fc-switch-word { color: var(--accent-ink); }
+
+/* ---- Study: status line ---- */
+.fc-status { display: flex; align-items: center; gap: 14px; margin-bottom: 12px; }
+.fc-count { margin: 0; font-weight: 700; font-size: calc(18px * var(--scale)); white-space: nowrap; }
+.fc-meter { flex: 1; height: 8px; border-radius: 999px; background: var(--surface-3); overflow: hidden; }
+.fc-meter i { display: block; height: 100%; width: 0; border-radius: inherit; background: var(--accent-ink); transition: width .25s ease; }
+
+/* ---- Study: the card ---- */
+.fc-stage { perspective: 1600px; }
+.fc-card { position: relative; display: flex; flex-direction: column; min-height: min(440px, 54vh); padding: 22px 24px 18px; border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--border); border-top: 6px solid var(--accent); box-shadow: var(--shadow-card); cursor: pointer; user-select: none; -webkit-user-select: none; touch-action: pan-y; transform-origin: 50% 50%; }
+.fc-card.is-back { background: color-mix(in srgb, var(--accent) 4%, var(--surface)); border-top-color: var(--gold); cursor: pointer; user-select: text; -webkit-user-select: text; }
+.fc-side { display: flex; align-items: center; gap: 10px; margin: 0 0 6px; font: 700 13px/1.3 var(--font-sans); letter-spacing: .12em; text-transform: uppercase; color: var(--accent-ink); }
+.fc-card.is-back .fc-side { color: var(--gold-ink); }
+.fc-side-topic { font-weight: 600; letter-spacing: .04em; text-transform: none; color: var(--muted); font-size: calc(14px * var(--scale)); }
+.fc-face { flex: 1; display: flex; flex-direction: column; }
+.fc-cite { align-self: flex-start; margin: 4px 0 0; padding: 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; font-size: calc(14px * var(--scale)); }
+.fc-front { flex: 1; display: flex; align-items: center; margin: 0; padding: 18px 0; font: 500 calc(clamp(23px, 3.8vw, 31px) * var(--scale))/1.32 var(--font-serif); letter-spacing: -.01em; text-wrap: pretty; overflow-wrap: anywhere; }
+.fc-asked { margin: 6px 0 14px; padding-bottom: 12px; border-bottom: 1px solid var(--border); color: var(--muted); font-size: calc(15.5px * var(--scale)); line-height: 1.45; }
+.fc-asked b { color: var(--text-2); font-weight: 600; }
+.fc-answer { font-size: calc(19.5px * var(--scale)); line-height: 1.55; overflow-wrap: anywhere; }
+.fc-answer p { margin: 0 0 .7em; }
+.fc-points { margin: 0 0 .8em; padding-left: 0; list-style: none; }
+.fc-points li { position: relative; margin: 0 0 .55em; padding-left: 1.1em; }
+.fc-points li::before { content: ''; position: absolute; left: .1em; top: .62em; width: .42em; height: .42em; border-radius: 50%; background: var(--accent-ink); }
+.fc-points.is-labeled li { padding-left: 0; }
+.fc-points.is-labeled li::before { content: none; }
+.fc-note { margin: 6px 0 0; padding: 12px 14px; border-radius: 12px; background: var(--gold-soft); border-left: 4px solid var(--gold); font-size: calc(16.5px * var(--scale)); line-height: 1.5; }
+.fc-note b { display: block; margin-bottom: 2px; font-size: 12.5px; letter-spacing: .1em; text-transform: uppercase; color: var(--gold-ink); }
+.fc-hint { display: flex; align-items: center; justify-content: center; gap: 8px; margin: 14px 0 0; color: var(--muted); font-size: 15px; font-weight: 500; text-align: center; }
+.fc-card.slide-next { animation: fc-in-right .22s ease-out; }
+.fc-card.slide-prev { animation: fc-in-left .22s ease-out; }
+@keyframes fc-in-right { from { opacity: .2; transform: translateX(36px); } }
+@keyframes fc-in-left { from { opacity: .2; transform: translateX(-36px); } }
+@media (prefers-reduced-motion: reduce) { .fc-card.slide-next, .fc-card.slide-prev { animation: none; } }
+
+/* Done and empty panels take the card's place. */
+.fc-panel { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; min-height: min(440px, 54vh); padding: 28px 22px; border-radius: var(--radius-lg); background: var(--surface); border: 1px solid var(--border); border-top: 6px solid var(--gold); box-shadow: var(--shadow-card); text-align: center; }
+.fc-panel-big { margin: 0; font: 500 calc(28px * var(--scale))/1.25 var(--font-serif); text-wrap: balance; }
+.fc-panel-sub { margin: 0; color: var(--text-2); font-size: calc(17px * var(--scale)); }
+.fc-panel-actions { display: flex; flex-direction: column; gap: 10px; width: min(100%, 360px); margin-top: 14px; }
+
+/* ---- Study: Back / Show answer / Next. Stays in reach at the bottom of the screen. ---- */
+.fc-nav { position: sticky; bottom: 0; z-index: 5; display: grid; grid-template-columns: 1fr 1.45fr 1fr; gap: 10px; margin: 0 -16px; padding: 14px 16px; padding-bottom: max(14px, env(safe-area-inset-bottom)); background: linear-gradient(to bottom, transparent, var(--bg) 14px); }
+.fc-nav .fc-btn { padding: 0 12px; }
+@media (max-width: 420px) {
+  .fc-nav { gap: 8px; }
+  .fc-nav .fc-btn { font-size: 16px; gap: 4px; padding: 0 6px; }
+  .fc-nav-side .fc-ico { width: 20px; height: 20px; }
+  .fc-nav-flip .fc-ico { display: none; }
+}
+.fc-tools { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-top: 4px; }
+.fc-keys { margin: 16px 0 0; text-align: center; color: var(--muted); font-size: 14px; }
+@media (hover: none), (max-width: 640px) { .fc-keys { display: none; } }
+
+/* ---- All cards ---- */
+.fc-all-bar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 10px; }
+.fc-find { flex: 1 1 260px; display: flex; align-items: center; gap: 8px; min-height: 50px; padding: 0 14px; border-radius: 12px; border: 1px solid var(--border-strong); background: var(--surface); color: var(--muted); }
+.fc-find:focus-within { outline: 3px solid var(--focus); outline-offset: 2px; }
+.fc-find input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: var(--text); font-size: 17px; }
+.fc-all-status { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 8px 12px; margin: 6px 0 2px; }
+.fc-all-count { margin: 0; font-weight: 700; font-size: 17px; }
+.fc-all-help { margin: 2px 0 16px; color: var(--muted); font-size: 15px; }
+.fc-group { margin: 0 0 26px; }
+.fc-group-title { display: flex; align-items: baseline; gap: 10px; margin: 0 0 10px; padding-bottom: 6px; border-bottom: 2px solid var(--border); font: 600 calc(20px * var(--scale))/1.3 var(--font-serif); }
+.fc-group-title small { font: 600 14px var(--font-sans); color: var(--muted); }
+.fc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr)); gap: 12px; margin: 0; padding: 0; list-style: none; }
+.fc-tile { position: relative; display: flex; flex-direction: column; border-radius: var(--radius); background: var(--surface); border: 1px solid var(--border); border-left: 5px solid var(--accent); box-shadow: var(--shadow-sm); overflow: hidden; }
+.fc-tile.is-current { box-shadow: 0 0 0 3px var(--gold), var(--shadow-sm); }
+.fc-tile-open { flex: 1; display: flex; flex-direction: column; gap: 6px; padding: 14px 16px 10px; border: 0; background: transparent; text-align: left; }
+.fc-tile-open:hover:not(:disabled) { background: var(--surface-2); }
+.fc-tile-open:disabled { cursor: default; }
+.fc-tile-top { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.fc-tile-cite { padding: 1px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); font-weight: 700; font-size: calc(13px * var(--scale)); }
+.fc-tile-here { padding: 1px 8px; border-radius: 999px; background: var(--gold-soft); color: var(--gold-ink); font-weight: 700; font-size: 13px; }
+.fc-tile-front { font: 500 calc(17px * var(--scale))/1.4 var(--font-serif); overflow-wrap: anywhere; }
+/* With answers shown, the answer sits right under its question and the button stays at the bottom. */
+.fc-answers-on .fc-tile-open { flex: none; }
+.fc-tile-back { flex: 1; padding: 10px 16px 4px; border-top: 1px dashed var(--border-strong); font-size: calc(15.5px * var(--scale)); line-height: 1.5; color: var(--text-2); overflow-wrap: anywhere; }
+.fc-tile-back p { margin: 0 0 .5em; }
+.fc-tile-back .fc-points li { margin-bottom: .35em; }
+.fc-tile-back .fc-note { font-size: calc(14.5px * var(--scale)); padding: 8px 10px; margin-bottom: 8px; }
+.fc-tile-foot { display: flex; align-items: center; justify-content: flex-end; gap: 8px; padding: 4px 10px 10px; }
+.fc-tile-state { margin-right: auto; padding-left: 6px; font-size: 14px; font-weight: 700; color: var(--warn); }
+.fc-tile-toggle { min-height: 44px; padding: 0 14px; border-radius: 10px; border: 1px solid var(--border-strong); background: var(--surface); font-size: 15px; font-weight: 600; color: var(--warn); }
+.fc-tile-toggle:hover { background: var(--warn-soft); }
+.fc-tile.is-removed { border-left-color: var(--border-strong); background: var(--surface-2); }
+.fc-tile.is-removed .fc-tile-open, .fc-tile.is-removed .fc-tile-back { opacity: .55; }
+.fc-tile.is-removed .fc-tile-toggle { color: var(--text); border-color: var(--accent-ink); background: var(--accent-soft); }
+.fc-nothing { padding: 30px 10px; text-align: center; color: var(--muted); font-size: 17px; }
+
+/* ---- Toast (Removed. Undo) ---- */
+.fc-toast { position: fixed; left: 50%; bottom: calc(96px + env(safe-area-inset-bottom)); z-index: 20; transform: translateX(-50%); display: flex; align-items: center; gap: 14px; max-width: calc(100% - 32px); padding: 10px 10px 10px 18px; border-radius: 14px; background: var(--ink); color: var(--ink-fg); box-shadow: 0 10px 30px -10px rgba(0, 0, 0, .5); font-weight: 600; font-size: 16px; animation: fc-toast .2s ease-out; }
+.fc-toast-undo { min-height: 44px; padding: 0 16px; border-radius: 10px; border: 2px solid currentColor; background: transparent; color: inherit; font-weight: 700; }
+@keyframes fc-toast { from { opacity: 0; transform: translate(-50%, 10px); } }
+.fc-noscript { padding: 20px; text-align: center; }
+
+@media print {
+  .fc-bar, .fc-nav, .fc-tools, .fc-keys, .fc-toast, .fc-all-bar, .fc-tile-foot, .fc-all-help { display: none !important; }
+  .fc-card, .fc-tile { box-shadow: none; break-inside: avoid; }
+}
+</style>
+</head>
+<body>
+<div class="fc-app" data-cards-shell style="--accent:#2f6f8f">
+  <header class="fc-head">
+    <p class="fc-kicker">Evidence</p>
+    <h1 class="fc-title">Sample Flashcards (Evidence)</h1>
+    <p class="fc-lede">Eight sample cards on relevance, 403, and hearsay, using every cards/v1 field. Flip each card, shuffle the deck, remove the cards you know, and see them all at once under All cards.</p>
+  </header>
+
+  <div class="fc-bar">
+    <div class="fc-views" role="group" aria-label="View">
+      <button type="button" id="fc-view-study" aria-pressed="true"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M7 10h10M7 14h6"/></svg><span>One at a time</span></button>
+      <button type="button" id="fc-view-all" aria-pressed="false"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>All cards</span></button>
+    </div>
+    <label class="fc-topic"><span class="fc-topic-label">Topic</span><select id="fc-topic"><option value="">All topics</option></select></label>
+    <button type="button" class="fc-tool fc-size" id="fc-size" aria-pressed="false"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 7V5h11v2"/><path d="M9.5 5v14"/><path d="M7.5 19h4"/><path d="M15 13v-1.5h6V13"/><path d="M18 11.5V19"/><path d="M16.8 19h2.4"/></svg><span>Larger text</span></button>
+  </div>
+
+  <section class="fc-study" id="fc-study" aria-label="Study one card at a time">
+    <div class="fc-status">
+      <p class="fc-count" id="fc-count">Card 1 of 8</p>
+      <div class="fc-meter" aria-hidden="true"><i id="fc-meter"></i></div>
+    </div>
+
+    <div class="fc-stage">
+      <article class="fc-card" id="fc-card" aria-live="polite">
+        <p class="fc-side" id="fc-side">Question</p>
+        <div class="fc-face" id="fc-face"></div>
+        <p class="fc-hint" id="fc-hint"></p>
+      </article>
+      <div class="fc-panel" id="fc-done" hidden>
+        <p class="fc-panel-big">You went through every card.</p>
+        <p class="fc-panel-sub" id="fc-done-sub"></p>
+        <div class="fc-panel-actions">
+          <button type="button" class="fc-btn fc-btn-primary" id="fc-again"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span>Start again</span></button>
+          <button type="button" class="fc-btn" id="fc-again-shuffled"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h1.97a4 4 0 0 0 3.3-1.7l5.45-8.6a4 4 0 0 1 3.3-1.7H22"/><path d="M2 6h1.97a4 4 0 0 1 3.3 1.7l.36.57"/><path d="M22 18h-6.04a4 4 0 0 1-3.3-1.8l-.36-.45"/></svg><span>Shuffle and start again</span></button>
+          <button type="button" class="fc-btn" id="fc-done-all"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>See all cards</span></button>
+        </div>
+      </div>
+      <div class="fc-panel" id="fc-empty" hidden>
+        <p class="fc-panel-big" id="fc-empty-msg">No cards left here.</p>
+        <div class="fc-panel-actions">
+          <button type="button" class="fc-btn fc-btn-primary" id="fc-empty-restore"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span>Put the removed cards back</span></button>
+          <button type="button" class="fc-btn" id="fc-empty-topics"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg><span>Show all topics</span></button>
+        </div>
+      </div>
+    </div>
+
+    <nav class="fc-nav" aria-label="Move through the cards">
+      <button type="button" class="fc-btn fc-nav-side" id="fc-prev"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15 18-6-6 6-6"/></svg><span>Back</span></button>
+      <button type="button" class="fc-btn fc-btn-primary fc-nav-flip" id="fc-flip"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 0 1 15.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg><span id="fc-flip-label">Show answer</span></button>
+      <button type="button" class="fc-btn fc-nav-side fc-nav-next" id="fc-next"><span>Next</span><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m9 18 6-6-6-6"/></svg></button>
+    </nav>
+
+    <div class="fc-tools">
+      <button type="button" class="fc-tool" id="fc-shuffle" role="switch" aria-checked="false"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m18 14 4 4-4 4"/><path d="m18 2 4 4-4 4"/><path d="M2 18h1.97a4 4 0 0 0 3.3-1.7l5.45-8.6a4 4 0 0 1 3.3-1.7H22"/><path d="M2 6h1.97a4 4 0 0 1 3.3 1.7l.36.57"/><path d="M22 18h-6.04a4 4 0 0 1-3.3-1.8l-.36-.45"/></svg><span>Shuffle</span><span class="fc-switch" aria-hidden="true"><i></i></span><span class="fc-switch-word" id="fc-shuffle-word">Off</span></button>
+      <button type="button" class="fc-tool fc-tool-remove" id="fc-remove"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/><path d="M10 11v6M14 11v6"/></svg><span>Remove this card</span></button>
+    </div>
+    <p class="fc-keys">Keyboard: <kbd>←</kbd> <kbd>→</kbd> move, <kbd>Space</kbd> flips the card.</p>
+  </section>
+
+  <section class="fc-all" id="fc-all" aria-label="All cards" hidden>
+    <div class="fc-all-bar">
+      <label class="fc-find"><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg><span class="fc-sr">Find a card</span><input type="search" id="fc-find" placeholder="Find a card" autocomplete="off"></label>
+      <button type="button" class="fc-tool" id="fc-answers" role="switch" aria-checked="false"><span>Show answers</span><span class="fc-switch" aria-hidden="true"><i></i></span><span class="fc-switch-word" id="fc-answers-word">Off</span></button>
+    </div>
+    <div class="fc-all-status">
+      <p class="fc-all-count" id="fc-all-count" aria-live="polite"></p>
+      <button type="button" class="fc-tool" id="fc-restore" hidden><svg class="fc-ico" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 3-6.7L3 8"/><path d="M3 3v5h5"/></svg><span id="fc-restore-label">Put removed cards back</span></button>
+    </div>
+    <p class="fc-all-help">Pick a card to study it. Removed cards stay here, faded, until you put them back.</p>
+    <div id="fc-groups"></div>
+  </section>
+
+  <div class="fc-toast" id="fc-toast" role="status" aria-live="polite" hidden><span id="fc-toast-msg"></span><button type="button" class="fc-toast-undo" id="fc-toast-undo" hidden>Undo</button></div>
+  <noscript><p class="fc-noscript">These flashcards need JavaScript to run.</p></noscript>
+</div>
+<script id="cards-data" type="application/json">{"schema":"cards/v1","title":"Sample Flashcards (Evidence)","description":"Eight sample cards on relevance, 403, and hearsay, using every cards/v1 field. Flip each card, shuffle the deck, remove the cards you know, and see them all at once under All cards.","id":"sample-evidence-cards","course":"Evidence","source":"Evidence Rules Outline, Parts I and V","topics":["Relevance","Unfair Prejudice","The Definition of Hearsay"],"cards":[{"id":"fre-401","front":"When is evidence relevant?","back":"Evidence is relevant if both (all required):","points":["(a) it has any tendency to make a fact more or less probable than it would be without the evidence (probativeness); and","(b) the fact is of consequence in determining the action (materiality)."],"topic":"Relevance","note":"At trial, \"irrelevant\" covers both probativeness and materiality.","cite":"FRE 401"},{"id":"fre-402","front":"Is relevant evidence admissible?","back":"Yes, unless the Constitution, a federal statute, the FRE, or other Supreme Court rules provide otherwise. Irrelevant evidence is not admissible.","topic":"Relevance","cite":"FRE 402"},{"id":"fre-104b","front":"When relevance depends on whether a fact exists, how much proof of that fact is needed, and who decides?","back":"Proof sufficient to support a finding that the fact exists. The judge asks only whether a jury could reasonably find the fact by a preponderance (Huddleston), without weighing credibility; the jury decides.","topic":"Relevance","note":"Contrast 104(a): the judge herself decides by a preponderance, not bound by the evidence rules except privilege.","cite":"FRE 104(b)"},{"id":"fre-403","front":"When may the court exclude relevant evidence under Rule 403?","back":"When its probative value is substantially outweighed by a danger of (any one suffices):","points":["unfair prejudice","confusing the issues","misleading the jury","undue delay","wasting time","needlessly presenting cumulative evidence"],"topic":"Unfair Prejudice","note":"The rule tilts toward admission: exclusion only when the imbalance is substantial.","cite":"FRE 403"},{"id":"fre-403-factors","front":"What factors does a court weigh in the 403 balance?","back":"Weighed together:","points":["(1) whether the fact is actually disputed;","(2) the availability of other means of proof; and","(3) the likely effectiveness of a limiting instruction."],"topic":"Unfair Prejudice","cite":"FRE 403"},{"id":"fre-801a","front":"What is a \"statement\" for hearsay purposes?","back":"A person's oral assertion, written assertion, or nonverbal conduct, if the person intended it as an assertion.","topic":"The Definition of Hearsay","cite":"FRE 801(a)"},{"id":"fre-801c","front":"What is hearsay?","back":"A statement that (all required):","points":["(1) the declarant does not make while testifying at the current trial or hearing; and","(2) a party offers to prove the truth of the matter asserted."],"topic":"The Definition of Hearsay","note":"You can't say whether something is hearsay without knowing the proponent's purpose.","cite":"FRE 801(c)"},{"id":"not-hearsay","front":"Name four kinds of out-of-court words or conduct that are not hearsay.","back":"Any of these:","points":["Words offered for their effect on the listener (notice, motive, reasonable fear).","Verbal acts (contract words, threats, defamation).","Nonassertive conduct.","Words offered as circumstantial evidence of knowledge."],"topic":"The Definition of Hearsay"}]}</script>
+<script>
+// Canonical flashcard page (cards/v1). scripts/lib/cards-shell.mjs inlines this script into every page
+// it builds from a .cards.json deck; the deck itself is the JSON in <script id="cards-data">. Every
+// piece of card text is set with textContent, never parsed as HTML.
+//
+// Two views: one card at a time (Back / Show answer / Next, tap or Space to flip, swipe to move) and
+// All cards (every card in course order, grouped by topic, with search and Show answers). Shuffle is
+// an on/off switch; Remove takes a card out of the deck, with Undo, until it is put back. Removed
+// cards, the shuffled order, the topic and the current card are saved in this browser under
+// "cards:<deck id>"; the larger-text choice is shared by every deck ("cards:text-size").
+(() => {
+  const host = document.querySelector('[data-cards-shell]');
+  if (!host) return;
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  // Blank lines split paragraphs; a single line break stays a line break.
+  const paras = (parent, text) => {
+    String(text).split(/\n{2,}/).forEach((para) => {
+      const p = el('p');
+      para.split('\n').forEach((line, i) => { if (i) p.append(el('br')); p.append(line); });
+      parent.append(p);
+    });
+    return parent;
+  };
+  const shuffled = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'flashcards';
+  const plural = (n, word) => `${n} ${word}${n === 1 ? '' : 's'}`;
+  // A list whose items carry their own labels, "(1)", "(a)", "(iv)", gets no bullets.
+  const LABELED = /^\((?:\d{1,2}|[a-z]|[ivx]{1,5})\)\s/i;
+  const pointList = (points) => {
+    const ul = el('ul', `fc-points${points.every((p) => LABELED.test(p)) ? ' is-labeled' : ''}`);
+    points.forEach((p) => ul.append(el('li', null, p)));
+    return ul;
+  };
+  const reduceMotion = () => window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const touch = () => window.matchMedia && matchMedia('(hover: none)').matches;
+
+  const face = $('fc-face');
+  // Inside the site's document viewer, its bar already shows the title and description.
+  try { if (window.top !== window) document.documentElement.classList.add('fc-framed'); } catch (e) { document.documentElement.classList.add('fc-framed'); }
+  const fail = (msg) => { face.replaceChildren(el('p', 'fc-front', msg)); ['fc-prev', 'fc-flip', 'fc-next', 'fc-shuffle', 'fc-remove'].forEach((id) => { $(id).disabled = true; }); };
+  let deck;
+  try { deck = JSON.parse($('cards-data').textContent); } catch (e) { fail('These flashcards could not be read.'); return; }
+  if (!deck || !Array.isArray(deck.cards)) { fail('There are no cards in this deck.'); return; }
+
+  // ---------------------------------------------------------------------------
+  // The deck. The build hands this page a checked deck (scripts/lib/cards.mjs); this pass only fills
+  // in what a hand-edited copy of the template may leave out, so the page also works on its own.
+  // ---------------------------------------------------------------------------
+  const text = (v) => (typeof v === 'string' || typeof v === 'number' ? String(v).trim() : '');
+  const cards = [];
+  const ids = new Set();
+  deck.cards.forEach((c, i) => {
+    if (!c || typeof c !== 'object') return;
+    const points = Array.isArray(c.points) ? c.points.map(text).filter(Boolean) : [];
+    const front = text(c.front), back = text(c.back);
+    if (!front || (!back && !points.length)) return;
+    let id = text(c.id) || `card-${i + 1}`;
+    while (ids.has(id)) id += '+';
+    ids.add(id);
+    cards.push({ id, front, back, points, topic: text(c.topic), note: text(c.note), cite: text(c.cite) });
+  });
+  if (!cards.length) { fail('There are no cards in this deck.'); return; }
+  const byId = new Map(cards.map((c) => [c.id, c]));
+  const topics = [];
+  for (const t of [...(Array.isArray(deck.topics) ? deck.topics.map(text) : []), ...cards.map((c) => c.topic)]) {
+    if (t && !topics.includes(t) && cards.some((c) => c.topic === t)) topics.push(t);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Saved progress
+  // ---------------------------------------------------------------------------
+  const KEY = `cards:${slug(text(deck.id) || text(deck.title))}`;
+  const SIZE_KEY = 'cards:text-size';
+  const load = (k) => { try { return JSON.parse(localStorage.getItem(k) || 'null'); } catch (e) { return null; } };
+  const store = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* storage unavailable */ } };
+  const saved = load(KEY) || {};
+  const state = {
+    removed: new Set((Array.isArray(saved.removed) ? saved.removed : []).filter((id) => byId.has(id))),
+    order: null, // a shuffled list of card ids, or null for course order
+    topic: topics.includes(saved.topic) ? saved.topic : '',
+    at: byId.has(saved.at) ? saved.at : null,
+    back: false,
+    done: false,
+    view: 'study',
+    answers: false,
+  };
+  if (Array.isArray(saved.order)) {
+    const known = saved.order.filter((id, i, a) => byId.has(id) && a.indexOf(id) === i);
+    const added = cards.map((c) => c.id).filter((id) => !known.includes(id));
+    state.order = known.concat(shuffled(added));
+  }
+  const persist = () => store(KEY, { v: 1, removed: [...state.removed], order: state.order, topic: state.topic, at: state.at });
+
+  const inTopic = (c) => !state.topic || c.topic === state.topic;
+  const ordered = () => (state.order ? state.order.map((id) => byId.get(id)) : cards);
+  const queue = () => ordered().filter((c) => inTopic(c) && !state.removed.has(c.id));
+  const position = (q) => q.findIndex((c) => c.id === state.at);
+
+  // ---------------------------------------------------------------------------
+  // One card at a time
+  // ---------------------------------------------------------------------------
+  const card = $('fc-card');
+  function drawCard(c, slide) {
+    card.classList.toggle('is-back', state.back);
+    const side = $('fc-side');
+    side.replaceChildren(el('span', null, state.back ? 'Answer' : 'Question'));
+    if (c.topic && !state.topic) side.append(el('span', 'fc-side-topic', c.topic));
+    face.replaceChildren();
+    if (!state.back) {
+      if (c.cite) face.append(el('p', 'fc-cite', c.cite));
+      face.append(el('p', 'fc-front', c.front));
+    } else {
+      const asked = el('p', 'fc-asked');
+      asked.append(el('b', null, c.cite ? `${c.cite}: ` : 'Q: '), c.front);
+      face.append(asked);
+      const answer = el('div', 'fc-answer');
+      if (c.back) paras(answer, c.back);
+      if (c.points.length) answer.append(pointList(c.points));
+      face.append(answer);
+      if (c.note) { const n = el('p', 'fc-note'); n.append(el('b', null, 'Tip'), c.note); face.append(n); }
+    }
+    const verb = touch() ? 'Tap' : 'Click';
+    $('fc-hint').textContent = state.back ? `${verb} the card to see the question again.` : `${verb} the card to see the answer.`;
+    $('fc-flip-label').textContent = state.back ? 'Show question' : 'Show answer';
+    if (slide && !reduceMotion()) {
+      card.classList.remove('slide-next', 'slide-prev');
+      void card.offsetWidth; // restart the animation
+      card.classList.add(`slide-${slide}`);
+    }
+  }
+
+  function renderStudy(slide) {
+    const q = queue();
+    let i = position(q);
+    if (i < 0 && q.length) { i = 0; state.at = q[0].id; }
+    const empty = !q.length;
+    if (empty) state.done = false;
+    card.hidden = empty || state.done;
+    $('fc-done').hidden = !state.done;
+    $('fc-empty').hidden = !empty;
+    $('fc-count').textContent = empty ? 'No cards' : state.done ? `All ${plural(q.length, 'card')} done` : `Card ${i + 1} of ${q.length}`;
+    $('fc-meter').style.width = empty ? '0' : `${state.done ? 100 : ((i + 1) / q.length) * 100}%`;
+    $('fc-prev').disabled = empty || (!state.done && i === 0);
+    $('fc-next').disabled = empty || state.done;
+    $('fc-flip').disabled = empty || state.done;
+    $('fc-remove').disabled = empty || state.done;
+    if (empty) {
+      const inThis = cards.filter(inTopic).length;
+      $('fc-empty-msg').textContent = state.topic ? `You removed all ${plural(inThis, 'card')} in “${state.topic}”.` : 'You removed every card.';
+      $('fc-empty-topics').hidden = !state.topic;
+    } else if (state.done) {
+      const gone = cards.filter((c) => inTopic(c) && state.removed.has(c.id)).length;
+      $('fc-done-sub').textContent = `${plural(q.length, 'card')}${state.topic ? ` in “${state.topic}”` : ''}${gone ? `, plus ${gone} removed` : ''}.`;
+    } else {
+      drawCard(q[i], slide);
+    }
+    const shuffleOn = !!state.order;
+    $('fc-shuffle').setAttribute('aria-checked', String(shuffleOn));
+    $('fc-shuffle-word').textContent = shuffleOn ? 'On' : 'Off';
+    persist();
+  }
+
+  function go(step) {
+    const q = queue();
+    if (!q.length) return;
+    if (state.done) {
+      if (step < 0) { state.done = false; state.back = false; renderStudy('prev'); }
+      return;
+    }
+    const j = position(q) + step;
+    if (j < 0) return;
+    state.back = false;
+    if (j >= q.length) { state.done = true; renderStudy(); $('fc-done').scrollIntoView({ block: 'nearest' }); return; }
+    state.at = q[j].id;
+    renderStudy(step > 0 ? 'next' : 'prev');
+    keepInView();
+  }
+  // After a long answer, the next card starts at its top.
+  const keepInView = () => { if (card.getBoundingClientRect().top < 0) card.scrollIntoView({ block: 'start' }); };
+
+  let flipping = false;
+  function flip() {
+    if (state.done || card.hidden) return;
+    const swap = () => { state.back = !state.back; const q = queue(); drawCard(q[Math.max(0, position(q))]); };
+    if (reduceMotion() || !card.animate) { swap(); return; }
+    if (flipping) return;
+    flipping = true;
+    card.animate([{ transform: 'rotateY(0deg)' }, { transform: 'rotateY(90deg)' }], { duration: 130, easing: 'ease-in' }).finished
+      .then(() => { swap(); return card.animate([{ transform: 'rotateY(-90deg)' }, { transform: 'rotateY(0deg)' }], { duration: 150, easing: 'ease-out' }).finished; })
+      .catch(() => {})
+      .then(() => { flipping = false; });
+  }
+
+  // Take a card out of the deck. `fromList` keeps the All cards view where it is.
+  function remove(id, fromList) {
+    const q = queue();
+    const i = q.findIndex((c) => c.id === id);
+    if (i < 0) return;
+    const wasAt = state.at, wasDone = state.done;
+    state.removed.add(id);
+    if (state.at === id) {
+      state.back = false;
+      if (q[i + 1]) state.at = q[i + 1].id;
+      else if (q.length > 1) state.done = true;
+    }
+    render(fromList ? undefined : 'next');
+    toast(fromList ? 'Card removed.' : 'Card removed. You can find it under All cards.', () => {
+      state.removed.delete(id);
+      state.at = wasAt; state.done = wasDone; state.back = false;
+      render(fromList ? undefined : 'prev');
+    });
+  }
+
+  function putBack(list) {
+    if (!list.length) return;
+    list.forEach((id) => state.removed.delete(id));
+    render();
+    toast(`${plural(list.length, 'card')} put back.`, () => { list.forEach((id) => state.removed.add(id)); render(); });
+  }
+  const removedHere = () => cards.filter((c) => inTopic(c) && state.removed.has(c.id)).map((c) => c.id);
+
+  function setShuffle(on) {
+    state.order = on ? shuffled(cards.map((c) => c.id)) : null;
+    state.done = false; state.back = false;
+    state.at = queue()[0]?.id || null;
+    render();
+    toast(on ? 'Shuffled. Starting from the first card.' : 'Back in order. Starting from the first card.');
+  }
+
+  // ---------------------------------------------------------------------------
+  // All cards
+  // ---------------------------------------------------------------------------
+  const groups = $('fc-groups');
+  const find = $('fc-find');
+  function answerBlock(c) {
+    const box = el('div', 'fc-tile-back');
+    if (c.back) paras(box, c.back);
+    if (c.points.length) box.append(pointList(c.points));
+    if (c.note) { const n = el('p', 'fc-note'); n.append(el('b', null, 'Tip'), c.note); box.append(n); }
+    return box;
+  }
+  function tile(c) {
+    const removed = state.removed.has(c.id);
+    const current = !removed && c.id === state.at && !state.done;
+    const li = el('li', `fc-tile${removed ? ' is-removed' : ''}${current ? ' is-current' : ''}`);
+    li.dataset.id = c.id;
+    const open = el('button', 'fc-tile-open');
+    open.type = 'button';
+    open.disabled = removed;
+    const top = el('span', 'fc-tile-top');
+    if (c.cite) top.append(el('span', 'fc-tile-cite', c.cite));
+    if (current) top.append(el('span', 'fc-tile-here', 'Current card'));
+    if (top.childNodes.length) open.append(top);
+    open.append(el('span', 'fc-tile-front', c.front));
+    open.addEventListener('click', () => {
+      state.topic = state.topic && c.topic !== state.topic ? '' : state.topic;
+      state.at = c.id; state.done = false; state.back = false;
+      setView('study');
+      card.scrollIntoView({ block: 'nearest' });
+    });
+    li.append(open);
+    if (state.answers) li.append(answerBlock(c));
+    const foot = el('div', 'fc-tile-foot');
+    if (removed) foot.append(el('span', 'fc-tile-state', 'Removed'));
+    const toggle = el('button', 'fc-tile-toggle', removed ? 'Put back' : 'Remove');
+    toggle.type = 'button';
+    toggle.setAttribute('aria-label', `${removed ? 'Put back' : 'Remove'} card: ${c.front}`);
+    toggle.addEventListener('click', () => {
+      if (state.removed.has(c.id)) putBack([c.id]); else remove(c.id, true);
+      groups.querySelector(`[data-id="${CSS.escape(c.id)}"] .fc-tile-toggle`)?.focus();
+    });
+    foot.append(toggle);
+    li.append(foot);
+    return li;
+  }
+  function renderAll() {
+    const words = find.value.trim().toLowerCase();
+    const list = cards.filter(inTopic);
+    const hits = list.filter((c) => !words || [c.front, c.back, ...c.points, c.note, c.cite, c.topic].join(' ').toLowerCase().includes(words));
+    const gone = list.filter((c) => state.removed.has(c.id)).length;
+    $('fc-all-count').textContent = words
+      ? `${plural(hits.length, 'card')} of ${list.length} match`
+      : `${plural(list.length, 'card')}${gone ? ` · ${gone} removed` : ''}`;
+    $('fc-restore').hidden = !gone;
+    $('fc-restore-label').textContent = `Put ${gone === 1 ? 'the removed card' : `all ${gone} removed cards`} back`;
+    $('fc-answers').setAttribute('aria-checked', String(state.answers));
+    $('fc-answers-word').textContent = state.answers ? 'On' : 'Off';
+    groups.replaceChildren();
+    groups.classList.toggle('fc-answers-on', state.answers);
+    if (!hits.length) { groups.append(el('p', 'fc-nothing', words ? `No cards match “${find.value.trim()}”.` : 'No cards here.')); return; }
+    const sections = topics.length ? [...topics, ''] : [''];
+    for (const t of sections) {
+      const these = hits.filter((c) => c.topic === t);
+      if (!these.length) continue;
+      const sec = el('section', 'fc-group');
+      if (topics.length) {
+        const h = el('h2', 'fc-group-title', t || 'Other cards');
+        h.append(el('small', null, plural(these.length, 'card')));
+        sec.append(h);
+      }
+      const ol = el('ol', 'fc-grid');
+      these.forEach((c) => ol.append(tile(c)));
+      sec.append(ol);
+      groups.append(sec);
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // Shared: topic, view, text size, toast
+  // ---------------------------------------------------------------------------
+  const topicSel = $('fc-topic');
+  function renderTopics() {
+    const active = (t) => cards.filter((c) => (!t || c.topic === t) && !state.removed.has(c.id)).length;
+    topicSel.replaceChildren(el('option', null, `All topics (${active('')})`));
+    topicSel.firstChild.value = '';
+    for (const t of topics) { const o = el('option', null, `${t} (${active(t)})`); o.value = t; topicSel.append(o); }
+    topicSel.value = state.topic;
+    topicSel.closest('.fc-topic').hidden = topics.length < 2;
+  }
+  topicSel.addEventListener('change', () => {
+    state.topic = topicSel.value;
+    state.done = false; state.back = false;
+    state.at = queue()[0]?.id || null;
+    render();
+  });
+
+  function render(slide) {
+    renderTopics();
+    renderStudy(slide);
+    if (state.view === 'all') renderAll();
+  }
+
+  function setView(view) {
+    state.view = view;
+    $('fc-study').hidden = view !== 'study';
+    $('fc-all').hidden = view !== 'all';
+    $('fc-view-study').setAttribute('aria-pressed', String(view === 'study'));
+    $('fc-view-all').setAttribute('aria-pressed', String(view === 'all'));
+    render();
+    if (view === 'all') groups.querySelector('.is-current')?.scrollIntoView({ block: 'center' });
+  }
+
+  const size = $('fc-size');
+  const setSize = (big) => {
+    document.documentElement.classList.toggle('fc-large', big);
+    size.setAttribute('aria-pressed', String(big));
+    store(SIZE_KEY, big ? 'large' : 'normal');
+  };
+  setSize(load(SIZE_KEY) === 'large');
+  size.addEventListener('click', () => setSize(size.getAttribute('aria-pressed') !== 'true'));
+
+  let toastTimer = 0;
+  const hideToast = () => { $('fc-toast').hidden = true; clearTimeout(toastTimer); };
+  function toast(msg, undo) {
+    $('fc-toast-msg').textContent = msg;
+    const btn = $('fc-toast-undo');
+    btn.hidden = !undo;
+    btn.onclick = undo ? () => { hideToast(); undo(); } : null;
+    $('fc-toast').hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, undo ? 8000 : 3500);
+  }
+
+  // ---------------------------------------------------------------------------
+  // Controls
+  // ---------------------------------------------------------------------------
+  $('fc-prev').addEventListener('click', () => go(-1));
+  $('fc-next').addEventListener('click', () => go(1));
+  $('fc-flip').addEventListener('click', flip);
+  $('fc-remove').addEventListener('click', () => remove(state.at));
+  $('fc-shuffle').addEventListener('click', () => setShuffle(!state.order));
+  $('fc-view-study').addEventListener('click', () => setView('study'));
+  $('fc-view-all').addEventListener('click', () => setView('all'));
+  $('fc-again').addEventListener('click', () => { state.done = false; state.back = false; state.at = queue()[0]?.id || null; render('next'); });
+  $('fc-again-shuffled').addEventListener('click', () => setShuffle(true));
+  $('fc-done-all').addEventListener('click', () => setView('all'));
+  $('fc-empty-restore').addEventListener('click', () => putBack(removedHere()));
+  $('fc-empty-topics').addEventListener('click', () => { state.topic = ''; state.at = queue()[0]?.id || null; render(); });
+  $('fc-restore').addEventListener('click', () => putBack(removedHere()));
+  $('fc-answers').addEventListener('click', () => { state.answers = !state.answers; renderAll(); });
+  find.addEventListener('input', renderAll);
+
+  // Tap or click the card to flip it; swipe it left or right to move.
+  let start = null, swiped = false;
+  card.addEventListener('pointerdown', (e) => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    start = { x: e.clientX, y: e.clientY };
+    swiped = false;
+  });
+  card.addEventListener('pointerup', (e) => {
+    if (!start) return;
+    const dx = e.clientX - start.x, dy = e.clientY - start.y;
+    start = null;
+    if (Math.abs(dx) > 60 && Math.abs(dx) > 1.5 * Math.abs(dy)) { swiped = true; go(dx < 0 ? 1 : -1); }
+  });
+  card.addEventListener('pointercancel', () => { start = null; });
+  card.addEventListener('click', () => {
+    if (swiped) { swiped = false; return; }
+    // Selecting answer text to copy it shouldn't flip the card.
+    if (state.back && String(window.getSelection ? getSelection() : '').trim()) return;
+    flip();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (state.view !== 'study' || e.altKey || e.ctrlKey || e.metaKey) return;
+    const tag = e.target && e.target.tagName;
+    if (tag === 'INPUT' || tag === 'SELECT' || tag === 'TEXTAREA') return;
+    if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); go(-1); }
+    else if ((e.key === ' ' || e.key === 'Enter') && tag !== 'BUTTON' && tag !== 'A') { e.preventDefault(); flip(); }
+  });
+
+  setView('study');
+})();
+</script>
+</body>
+</html>
