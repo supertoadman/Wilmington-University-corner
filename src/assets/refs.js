@@ -411,7 +411,8 @@
   const resync = () => { syncTheme(); setTimeout(syncTheme, 400); }; // after any background transition
 
   function build() {
-    panel = el('aside', 'rx-panel');
+    // A div, not an <aside>: practice pages style bare <aside>s as their own sidebars.
+    panel = el('div', 'rx-panel');
     panel.setAttribute('role', 'dialog');
     panel.setAttribute('aria-label', 'References');
     panel.hidden = true;

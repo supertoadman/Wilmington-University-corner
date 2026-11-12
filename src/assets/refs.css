@@ -39,6 +39,15 @@
 }
 .rx-panel[hidden] { display: none; }
 .rx-panel *, .rx-panel *::before, .rx-panel *::after { box-sizing: border-box; }
+/* Practice pages style bare elements, and those rules reached into the panel: the Evidence Concepts
+   Test pins every <aside> as a sticky sidebar 92px down, which pushed the outline's case boxes
+   (<aside class="callout">) 92px over the rows below them, so the end of a case was hidden and no
+   scrolling showed it. Undo whatever a page sets on these elements' position, size, and layout;
+   at one class's weight, so the panel's own rules below still win. */
+.rx-panel :where(aside, header, footer, nav, section, article, details, summary, form, h1, h2, h3, h4, h5, h6, table, caption, thead, tbody, tfoot, tr, th, td) {
+  position: revert; inset: revert; float: revert; z-index: revert; display: revert; gap: revert;
+  width: revert; min-width: revert; max-width: revert; height: revert; min-height: revert; max-height: revert; overflow: revert;
+}
 .rx-panel svg { display: block; flex: none; }
 .rx-panel :focus-visible { outline: 2px solid var(--rx-focus); outline-offset: 2px; }
 @keyframes rx-in { from { transform: translateX(28px); opacity: 0; } }
