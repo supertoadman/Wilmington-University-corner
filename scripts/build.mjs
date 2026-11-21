@@ -521,6 +521,8 @@ const SPECS = [
   { file: 'supplement-format.md', from: 'docs/supplement-format.md', title: 'Statutory / rule supplement format (supplement/v1)', description: 'The AREAS and DATA contract behind a course supplement and the reference popup, and the citation styles (ucc, fre, mrpc, frcp, restatement, section).' },
   { file: 'mcq-format.md', from: 'docs/mcq-format.md', title: 'MCQ practice set format (mcq/v1)', description: 'The canonical multiple-choice schema, the Shuffle-mode practice page it builds into, and the citation rules that make every question link to the supplement and outline.' },
   { file: 'cards-format.md', from: 'docs/cards-format.md', title: 'Flashcard deck format (cards/v1)', description: 'The canonical flashcard schema and the study page it builds into: one card at a time, shuffle, remove, and an all-cards overview.' },
+  { file: 'essay-format.md', from: 'docs/essay-format.md', title: 'Essay and short-answer format (essays/v1)', description: 'The canonical essay, short-answer and open-resource problem schema (facts, call, issue checklist with points, model answer, pitfalls) and the timed writing page it builds into.' },
+  { file: 'study-format.md', from: 'docs/study-format.md', title: 'Study Run format (study/v1)', description: 'A course\'s Study Run and coverage ledger: the exam, the units in syllabus order with the areas and topics each owns, the practice finals, and the coverage check.' },
   { file: 'ai-prompts.md', from: 'docs/ai-prompts.md', title: 'Prompt templates', description: 'Copy-paste prompts for generating an outline, a supplement, a practice set and a flashcard deck in these formats.' },
   { file: 'mcq-shuffle-template.html', from: 'docs/templates/mcq-shuffle-template.html', title: 'MCQ practice page template', description: 'The standalone Shuffle-mode practice page with a sample mcq/v1 set; replace the JSON in its mcq-data block.' },
   { file: 'supplement-template.html', from: 'docs/templates/supplement-template.html', title: 'Supplement viewer template', description: 'The standalone supplement viewer with sample UCC data; replace its SUPP, AREAS and DATA lines.' },
@@ -528,6 +530,8 @@ const SPECS = [
   { file: 'sample.mcq.json', from: 'docs/templates/sample.mcq.json', title: 'Sample mcq/v1 set', description: 'Six Sales and Leases questions using every mcq/v1 feature.' },
   { file: 'sample.supplement.json', from: 'docs/templates/sample.supplement.json', title: 'Sample supplement/v1 data', description: 'Seven UCC sections in the supplement/v1 format.' },
   { file: 'sample.cards.json', from: 'docs/templates/sample.cards.json', title: 'Sample cards/v1 deck', description: 'Eight Evidence flashcards using every cards/v1 field.' },
+  { file: 'sample.essays.json', from: 'docs/templates/sample.essays.json', title: 'Sample essays/v1 set', description: 'Three Evidence problems (an essay, a short answer and an open-rules problem) using every essays/v1 field.' },
+  { file: 'sample.study.json', from: 'docs/templates/sample.study.json', title: 'Sample study/v1 file', description: 'An Evidence Study Run with three units, two practice finals and a coverage floor.' },
   { file: 'sample-outline.json', from: 'docs/templates/sample-outline.json', title: 'Sample outline/v1 data', description: 'An outline as data, for scripts/templates/build-outline-docx.mjs.' },
   { file: 'sample-outline.docx', build: () => buildOutlineDocx(JSON.parse(fs.readFileSync(path.join(ROOT, 'docs', 'templates', 'sample-outline.json'), 'utf8'))), title: 'Sample outline (Word)', description: 'sample-outline.json built into the Word file the site reads.' },
 ].filter((sp) => sp.build || fs.existsSync(path.join(ROOT, sp.from)) || console.warn(`  specs: missing ${sp.from}`));
@@ -535,7 +539,7 @@ const SPEC_TYPES = { '.md': 'text/markdown', '.html': 'text/html', '.json': 'app
 for (const sp of SPECS) write(`api/specs/${sp.file}`, sp.build ? sp.build() : fs.readFileSync(path.join(ROOT, sp.from)));
 write('api/specs/index.json', JSON.stringify({
   schemaVersion: '1.0',
-  formats: { mcq: 'mcq/v1', supplement: 'supplement/v1', outline: 'outline/v1', cards: 'cards/v1' },
+  formats: { mcq: 'mcq/v1', supplement: 'supplement/v1', outline: 'outline/v1', cards: 'cards/v1', essays: 'essays/v1', study: 'study/v1' },
   specs: SPECS.map(({ file, title, description }) => ({ name: file, title, description, mediaType: SPEC_TYPES[path.extname(file)], url: abs(`api/specs/${file}`) })),
 }, null, 2));
 

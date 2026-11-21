@@ -1,0 +1,69 @@
+{
+  "format": "study/v1",
+  "id": "evidence-study-run",
+  "title": "Evidence Study Run",
+  "description": "Weeks 1–15 of Evidence in syllabus order: each unit's outline section, its flashcards, its drill questions, one essay or short answer, and a checkpoint, then three timed practice finals. This sample shows three units; a real file lists every unit of the syllabus.",
+  "exam": {
+    "date": "2026-12-10",
+    "time": "09:00",
+    "minutes": 180,
+    "parts": [
+      { "kind": "mcq", "count": 40, "minutes": 100, "title": "Part I: Multiple choice" },
+      { "kind": "essay", "count": 2, "minutes": 80, "title": "Part II: Essays" }
+    ]
+  },
+  "units": [
+    {
+      "id": "w01-rules-and-jury-secrecy",
+      "week": 1,
+      "title": "The Federal Rules and Jury Secrecy",
+      "readings": ["Casebook pp. 1–38", "FRE 101–106, 606(b)"],
+      "outline": "1. The Federal Rules and Jury Secrecy",
+      "rules": ["Rule 103", "Rule 104(a)", "Rule 105", "Rule 606(b)"],
+      "cases": ["Tanner v. United States", "Pena-Rodriguez v. Colorado"],
+      "problems": [],
+      "areas": ["Jury Secrecy and Competency"],
+      "topics": ["The Federal Rules and Jury Secrecy", "Competency (601–603)"],
+      "minutes": 120
+    },
+    {
+      "id": "w02-relevance-and-403",
+      "week": 2,
+      "title": "Relevance and Unfair Prejudice",
+      "readings": ["Casebook pp. 39–96", "FRE 401–403, 104(b)"],
+      "outline": "2. Relevance (FRE 401, 402, 104(b))",
+      "rules": ["Rule 401", "Rule 402", "Rule 403", "Rule 104(b)"],
+      "cases": ["Old Chief v. United States", "Knapp v. State"],
+      "problems": ["Problem 2-1", "Problem 2-2"],
+      "areas": ["Relevance and Rule 403"],
+      "topics": ["Relevance (401, 402, 104(b))", "Unfair Prejudice (403)"],
+      "minutes": 180,
+      "essay": "ev-e-02",
+      "checkpoint": { "questions": 6 }
+    },
+    {
+      "id": "w03-policy-rules",
+      "week": 3,
+      "title": "The Policy Rules",
+      "readings": ["Casebook pp. 97–140", "FRE 407–411"],
+      "outline": "4. Structure and Rationale",
+      "rules": ["Rule 407", "Rule 408", "Rule 409", "Rule 410", "Rule 411"],
+      "cases": ["Tuer v. McDonald"],
+      "problems": [],
+      "areas": ["Specialized Relevance Rules"],
+      "topics": ["The Policy Rules (407–411)"],
+      "minutes": 150
+    }
+  ],
+  "finals": [
+    { "set": "evidence-bar-exam-questions", "exam": 1, "title": "Practice final 1" },
+    { "set": "evidence-bar-exam-questions", "exam": 2, "title": "Practice final 2", "essays": ["ev-e-01", "ev-e-02"] }
+  ],
+  "sources": {
+    "mcq": ["evidence-bar-exam-questions", "evidence-most-testable-questions"],
+    "cards": ["evidence-rules-flashcards"],
+    "essays": ["evidence-essays"]
+  },
+  "floor": { "mcq": 15, "cards": 10, "essays": 1 },
+  "plan": { "hoursPerDay": 3 }
+}
