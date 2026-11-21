@@ -124,7 +124,8 @@ function totalPicked() {
   }
   return n;
 }
-const setOn = (c, s) => settings.sets[c]?.[s] !== false;
+// A set is on unless the player turned it off; an archived set (an earlier version) starts off.
+const setOn = (c, s) => { const v = settings.sets[c]?.[s]; return v === undefined ? !index.courses.find((x) => x.slug === c)?.sets.find((x) => x.slug === s)?.archived : v !== false; };
 
 function buildSetup() {
   const courses = $('#courses');
@@ -173,7 +174,7 @@ function renderSets() {
   const host = $('#sets');
   const chosen = index.courses.filter((c) => settings.courses.has(c.slug));
   host.innerHTML = chosen.length ? chosen.map((c) => `<fieldset class="g-setgroup" style="--accent:${esc(c.accent)}">
-      <legend>${esc(c.title)} <button type="button" class="g-link" data-all="${esc(c.slug)}">${c.sets.every((s) => setOn(c.slug, s.slug)) ? 'Clear' : 'Select all'}</button></legend>
+      <legend>${esc(c.title)} <button type="button" class="g-link" data-all="${esc(c.slug)}">${c.sets.filter((s) => !s.archived).every((s) => setOn(c.slug, s.slug)) ? 'Clear' : 'Select all'}</button></legend>
       ${c.sets.map((s) => {
         const missed = store.missedIn(c.slug, s.slug);
         return `<label class="g-set"><input type="checkbox" data-set="${esc(c.slug)}/${esc(s.slug)}"${setOn(c.slug, s.slug) ? ' checked' : ''}>
@@ -187,8 +188,8 @@ function renderSets() {
   }));
   $$('[data-all]', host).forEach((b) => b.addEventListener('click', () => {
     const c = index.courses.find((x) => x.slug === b.dataset.all);
-    const on = !c.sets.every((s) => setOn(c.slug, s.slug));
-    settings.sets[c.slug] = Object.fromEntries(c.sets.map((s) => [s.slug, on]));
+    const on = !c.sets.filter((s) => !s.archived).every((s) => setOn(c.slug, s.slug));
+    settings.sets[c.slug] = Object.fromEntries(c.sets.map((s) => [s.slug, on && !s.archived]));
     renderSets();
   }));
   const n = totalPicked();

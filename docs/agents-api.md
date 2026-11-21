@@ -57,12 +57,15 @@ for d in catalog["documents"]:
   "originalFilename": "2Evidence_Rule_Chart (with class slides).docx",
   "tags": ["FRE", "rule chart"],
   "questions": null,
+  "archived": false,
   "sizeBytes": 47380,
   "updated": "2026-10-04T18:10:00.000Z",
   "headings": ["..."],
   "urls": { "page": "...", "file": "...", "download": "...", "text": "...", "json": "..." }
 }
 ```
+
+`archived` is `true` for an earlier version of a document that the course keeps for reference (still built and linkable, listed under "Earlier versions" on the course page); prefer the documents where it is `false`.
 
 The schema is versioned with `schemaVersion` in `catalog.json`. New fields may be added, but existing fields keep their meaning within a major version.
 

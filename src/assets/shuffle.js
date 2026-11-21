@@ -93,12 +93,12 @@ if (host) {
     start.disabled = !chosen.length || !total;
     start.lastChild.textContent = chosen.length ? ` Shuffle ${n.toLocaleString('en-US')} questions` : ' Shuffle';
     setup.querySelectorAll('[data-course-all]').forEach((btn) => {
-      const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll);
+      const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll && !('archived' in b.dataset));
       btn.textContent = mine.every((b) => b.checked) ? 'Clear' : 'Select all';
     });
   }
   setup.querySelectorAll('[data-course-all]').forEach((btn) => btn.addEventListener('click', () => {
-    const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll);
+    const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll && !('archived' in b.dataset));
     const on = !mine.every((b) => b.checked);
     mine.forEach((b) => { b.checked = on; });
     syncSetup(); remember();
@@ -354,7 +354,7 @@ if (host) {
     history.replaceState(null, '', location.pathname);
   }
   async function startDrill() {
-    const keys = boxes.filter((b) => b.dataset.course === drill.course).map((b) => b.value);
+    const keys = boxes.filter((b) => b.dataset.course === drill.course && (drill.missed || !('archived' in b.dataset))).map((b) => b.value);
     if (!keys.length) { drill = null; return; }
     const title = setup.querySelector(`[data-course-all="${CSS.escape(drill.course)}"]`)?.closest('fieldset')?.querySelector('.shuffle-course-name')?.textContent || drill.course;
     $('[data-shuffle-picked]').textContent = 'Loading your drill…';

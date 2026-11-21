@@ -266,6 +266,10 @@ async function loadSubjects() {
         cards: compiled?.cards ?? null,
         contributor: dm.contributor || null,
         theme: dm.theme || null,
+        // "archived": true keeps an earlier version built and linkable, but moves it to the course
+        // page's collapsed "Earlier versions" and out of the default picks in Shuffle mode, the games
+        // and the Study Run.
+        archived: dm.archived === true,
         // A page built from an mcq/v1 set: the site's copy reports its answers to Your stats.
         practiceShell: compiled?.type === 'practice',
         order: dm.order ?? 999,
@@ -450,6 +454,7 @@ const docRecord = (d) => ({
     durationSeconds: t.duration && Math.round(t.duration), sizeBytes: t.size, url: abs(P.track(d, t)),
   })),
   contributor: d.contributor,
+  archived: d.archived,
   sizeBytes: d.size,
   updated: d.updated,
   headings: d.headings.slice(0, 60),

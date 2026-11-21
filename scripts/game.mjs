@@ -124,7 +124,7 @@ export async function buildGame({ subjects, P, write, root, dist, withGame = tru
         if (section >= 0) q.s = section;
       }
       write(`play/data/${s.slug}/${d.slug}.json`, JSON.stringify(questions));
-      sets.push({ slug: d.slug, title: d.title, count: questions.length, url: P.doc(d), topics: topicsOf(questions) });
+      sets.push({ slug: d.slug, title: d.title, count: questions.length, url: P.doc(d), topics: topicsOf(questions), ...(d.archived && { archived: true }) });
       total += questions.length;
     }
     if (!sets.length) continue;

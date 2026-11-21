@@ -96,7 +96,7 @@ function syncSetup() {
   $('#begin').disabled = !sets || !qs;
   $('#begin-note').textContent = sets && !qs && saved.missedOnly ? 'No missed questions in these sets yet.' : '';
   $$('[data-course-all]', setup).forEach((btn) => {
-    const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll);
+    const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll && !('archived' in b.dataset));
     btn.textContent = mine.every((b) => b.checked) ? 'Clear' : 'Select all';
   });
   boxes.forEach((b) => {
@@ -114,15 +114,15 @@ function remember() {
 function initSetup() {
   // ?course=<slug> (from a course page) picks every set in that course.
   const wanted = new URLSearchParams(location.search).get('course');
-  const courseBoxes = wanted ? boxes.filter((b) => b.dataset.course === wanted) : [];
+  const courseBoxes = wanted ? boxes.filter((b) => b.dataset.course === wanted && !('archived' in b.dataset)) : [];
   if (courseBoxes.length) {
-    boxes.forEach((b) => { b.checked = b.dataset.course === wanted; });
+    boxes.forEach((b) => { b.checked = courseBoxes.includes(b); });
     remember();
     $(`[data-course-group="${CSS.escape(wanted)}"]`)?.scrollIntoView({ block: 'center' });
   } else boxes.forEach((b) => { b.checked = saved.sets.includes(b.value); });
 
   $$('[data-course-all]', setup).forEach((btn) => btn.addEventListener('click', () => {
-    const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll);
+    const mine = boxes.filter((b) => b.dataset.course === btn.dataset.courseAll && !('archived' in b.dataset));
     const on = !mine.every((b) => b.checked);
     mine.forEach((b) => { b.checked = on; });
     syncSetup(); remember();

@@ -1060,6 +1060,19 @@ main > .section:last-child { padding-bottom: 24px; }
 .doc-kicker { margin: 0; display: flex; gap: 10px; white-space: nowrap; overflow: hidden; min-width: 0; font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--accent-ink); }
 .doc-kicker-subject { color: var(--muted); overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .doc-kicker-subject::before { content: "·"; margin-right: 10px; }
+.doc-kicker-archived { color: var(--muted); }
+.doc-kicker-archived::before { content: "·"; margin-right: 10px; }
+/* Earlier versions ("archived": true): collapsed at the bottom of the course page. */
+.archive-section { margin-top: 36px; border-top: 1px solid var(--border); padding-top: 18px; }
+.archive-section > summary { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; cursor: pointer; list-style: none; padding: 10px 4px; border-radius: 10px; }
+.archive-section > summary::-webkit-details-marker { display: none; }
+.archive-section > summary::before { content: "▸"; color: var(--muted); transition: transform .15s; }
+.archive-section[open] > summary::before { transform: rotate(90deg); }
+.archive-section > summary:hover { background: var(--surface-2); }
+.archive-title { font: 600 18px/1.3 var(--font-serif); }
+.archive-section > summary small { color: var(--muted); font-size: 13px; }
+.archive-hint { flex-basis: 100%; color: var(--muted); font-size: 13.5px; padding-left: 20px; }
+.archive-grid { margin-top: 14px; opacity: .92; }
 .doc-title { margin: 0; font: 600 20px/1.25 var(--font-serif); letter-spacing: -.01em; }
 .doc-title a { text-decoration: none; }
 .doc-title a:focus-visible { outline: none; }
@@ -1339,6 +1352,11 @@ main > .section:last-child { padding-bottom: 24px; }
 .shuffle-set span { display: grid; min-width: 0; }
 .shuffle-set strong { font-size: 14.5px; font-weight: 500; }
 .shuffle-set small { color: var(--muted); font-size: 12.5px; }
+.shuffle-earlier { margin-top: 8px; }
+.shuffle-earlier > summary { cursor: pointer; color: var(--muted); font-size: 13.5px; font-weight: 500; padding: 6px 10px; border-radius: 8px; }
+.shuffle-earlier > summary:hover { color: var(--text); background: var(--surface-2); }
+.shuffle-earlier > summary small { margin-left: 4px; }
+.shuffle-earlier .shuffle-sets { margin-top: 6px; }
 .shuffle-go {
   position: sticky; bottom: 16px; z-index: 5; margin-top: 18px; display: flex; flex-wrap: wrap; align-items: center; gap: 10px 12px;
   padding: 12px 14px; border-radius: var(--radius); background: color-mix(in srgb, var(--bg-elev) 92%, transparent);

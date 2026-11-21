@@ -76,6 +76,9 @@ export const esc = (s = '') =>
 const fmtSize = (b) => (b < 1024 ? `${b} B` : b < 1048576 ? `${Math.round(b / 1024)} KB` : `${(b / 1048576).toFixed(1)} MB`);
 const fmtDate = (iso) => new Date(iso).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' });
 const fmtShortDate = (iso) => new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' });
+// Documents marked "archived" (earlier versions) stay built and linkable, but only the course page's
+// collapsed "Earlier versions" lists them; course cards, counts and the recent list leave them out.
+const live = (list) => list.filter((d) => !d.archived);
 const plural = (n, one, many = one + 's') => `${n} ${n === 1 ? one : many}`;
 const fmtDuration = (sec) => `${Math.floor(Math.round(sec) / 60)}:${String(Math.round(sec) % 60).padStart(2, '0')}`;
 // Wrap each word so the home headline can rise in one word at a time (see .hero-title .w).
@@ -307,7 +310,7 @@ function docCard(ctx, root, d, { showSubject = false } = {}) {
   return `<article class="doc-card" style="--accent:${d.subject.accent}" data-doc data-id="${esc(d.id)}" data-subject="${esc(d.subject.slug)}" data-type="${esc(d.type)}" data-updated="${esc(d.updated)}" data-title="${esc(d.title)}">
   <div class="doc-card-art" aria-hidden="true"><span class="medal">${icon(t.icon)}</span></div>
   <div class="doc-card-body">
-    <p class="doc-kicker"><span>${esc(t.label)}</span>${showSubject ? `<span class="doc-kicker-subject">${esc(d.subject.title)}</span>` : ''}</p>
+    <p class="doc-kicker"><span>${esc(t.label)}</span>${d.archived ? '<span class="doc-kicker-archived">Earlier version</span>' : ''}${showSubject ? `<span class="doc-kicker-subject">${esc(d.subject.title)}</span>` : ''}</p>
     <h3 class="doc-title"><a class="stretched" href="${root}${P.doc(d)}">${esc(d.title)}</a></h3>
     <p class="doc-desc">${esc(d.description)}</p>
     <p class="doc-meta">${meta.map((m) => `<span>${esc(m)}</span>`).join('')}</p>
@@ -334,18 +337,18 @@ function docRow(ctx, root, d, extra = '') {
 function courseCard(ctx, root, s) {
   const { TYPES, P } = ctx;
   const kinds = Object.entries(TYPES)
-    .map(([type, meta]) => ({ type, meta, docs: s.documents.filter((d) => d.type === type) }))
+    .map(([type, meta]) => ({ type, meta, docs: live(s.documents).filter((d) => d.type === type) }))
     .filter((k) => k.docs.length);
   const href = (k) => (k.docs.length === 1 ? `${root}${P.doc(k.docs[0])}` : `${root}${P.subject(s)}?type=${k.type}`);
   // "Document" says nothing on its own, so a lone one goes by its title (less the course name).
   const own = (t) => (t.toLowerCase().startsWith(`${s.title.toLowerCase()} `) ? t.slice(s.title.length + 1) : t);
   const label = (k) => (k.docs.length > 1 ? k.meta.plural : k.type === 'document' ? own(k.docs[0].title) : k.meta.label);
   const kind = (k) => `<li><a href="${href(k)}">${icon(k.meta.icon)}<span>${esc(label(k))}</span>${k.docs.length > 1 ? `<small>${k.docs.length}</small>` : ''}</a></li>`;
-  const q = s.documents.reduce((n, d) => n + (d.questions || 0), 0);
+  const q = live(s.documents).reduce((n, d) => n + (d.questions || 0), 0);
   return `<li class="course-card" style="--accent:${s.accent}">
     <a class="course-card-head" href="${root}${P.subject(s)}">
       <span class="tile">${icon(s.icon)}</span>
-      <span class="course-card-text"><strong>${esc(s.title)}</strong><small>${plural(s.documents.length, 'document')}${q ? ` · ${q.toLocaleString('en-US')}+ questions` : ''}</small></span>
+      <span class="course-card-text"><strong>${esc(s.title)}</strong><small>${plural(live(s.documents).length, 'document')}${q ? ` · ${q.toLocaleString('en-US')}+ questions` : ''}</small></span>
       ${icon('chevron-right', 'chev')}
     </a>
     ${kinds.length ? `<ul class="course-kinds" aria-label="${esc(s.title)} materials">${kinds.map(kind).join('')}</ul>` : '<p class="course-none">Nothing here yet.</p>'}
@@ -466,7 +469,7 @@ export function home(ctx) {
   const root = './';
   const { config, subjects, docs } = ctx;
   const totalQ = docs.reduce((n, d) => n + (d.questions || 0), 0);
-  const recent = [...docs].sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 6);
+  const recent = live(docs).sort((a, b) => b.updated.localeCompare(a.updated)).slice(0, 6);
   const body = `
 <section class="hero reading-room" aria-labelledby="cover-title">
   <span class="cover-scene" aria-hidden="true"></span>
@@ -564,7 +567,9 @@ export function subjectPage(ctx, s) {
   const root = '../../';
   const { P, TYPES } = ctx;
   const counts = {};
-  for (const d of s.documents) counts[d.type] = (counts[d.type] || 0) + 1;
+  const current = live(s.documents);
+  const earlier = s.documents.filter((d) => d.archived);
+  for (const d of current) counts[d.type] = (counts[d.type] || 0) + 1;
   const body = `
 <section class="subject-hero" style="--accent:${s.accent}">
   <div class="container">
@@ -584,9 +589,13 @@ export function subjectPage(ctx, s) {
   </div>
 </section>
 <section class="container section-tight">
-  ${s.documents.length > 3 ? filterBar(ctx, s.documents, { subjectFilter: false }) : ''}
-  <div class="doc-grid" data-filter-list>${s.documents.map((d) => docCard(ctx, root, d)).join('')}</div>
+  ${current.length > 3 ? filterBar(ctx, current, { subjectFilter: false }) : ''}
+  <div class="doc-grid" data-filter-list>${current.map((d) => docCard(ctx, root, d)).join('')}</div>
   ${emptyState()}
+  ${earlier.length ? `<details class="archive-section">
+    <summary><span class="archive-title">Earlier versions</span><small>${plural(earlier.length, 'document')}</small><span class="archive-hint">Kept for reference. Shuffle mode and the Study Run leave them out unless you pick them.</span></summary>
+    <div class="doc-grid archive-grid">${earlier.map((d) => docCard(ctx, root, d)).join('')}</div>
+  </details>` : ''}
 </section>`;
   return layout(ctx, {
     root, title: s.title, description: s.description, body, active: s.slug, canonical: P.subject(s),
@@ -608,7 +617,7 @@ export function docPage(ctx, d) {
   const isDocx = d.format.viewer === 'docx';
   const isFrame = d.format.viewer === 'frame';
   const isAudio = d.format.viewer === 'audio' || d.format.viewer === 'playlist';
-  const related = s.documents.filter((x) => x !== d);
+  const related = live(s.documents).filter((x) => x !== d);
   const tocList = d.toc.length
     ? `<ol class="toc">${d.toc.map((h) => `<li class="toc-l${h.level}"><a href="#${h.id}">${esc(h.text)}</a></li>`).join('')}</ol>`
     : '';
@@ -674,7 +683,7 @@ ${GILT_DEFS}
     <a class="vbar-back" href="${root}${P.subject(s)}" aria-label="Back to ${esc(s.title)}">${icon('arrow-left')}</a>
     <a class="brand-mark vbar-home" href="${root}" aria-label="Home">${LOGO}</a>
     <div class="vbar-title">
-      <span class="vbar-kicker">${icon(t.icon)}<span>${esc(s.title)} · ${esc(t.label)}</span></span>
+      <span class="vbar-kicker">${icon(t.icon)}<span>${esc(s.title)} · ${esc(t.label)}${d.archived ? ' · Earlier version' : ''}</span></span>
       <h1>${esc(d.title)}</h1>
     </div>
     <div class="vbar-actions">
@@ -1051,8 +1060,11 @@ export function shuffle(ctx) {
   const course = (c) => `<fieldset class="shuffle-course" style="--accent:${c.accent}">
     <legend class="shuffle-course-head"><span class="tile">${icon(iconOf(c.slug))}</span><span class="shuffle-course-name">${esc(c.title)}</span></legend>
     <button type="button" class="shuffle-all" data-course-all="${esc(c.slug)}">Select all</button>
-    <div class="shuffle-sets">${c.sets.map((s) => `<label class="shuffle-set"><input type="checkbox" value="${esc(`${c.slug}/${s.slug}`)}" data-course="${esc(c.slug)}" data-count="${s.count}"><span><strong>${esc(s.title)}</strong><small>${plural(s.count, 'question')}</small></span></label>`).join('')}</div>
+    <div class="shuffle-sets">${c.sets.filter((s) => !s.archived).map(setBox(c)).join('')}</div>
+    ${c.sets.some((s) => s.archived) ? `<details class="shuffle-earlier"><summary>Earlier versions <small>${c.sets.filter((s) => s.archived).length}</small></summary><div class="shuffle-sets">${c.sets.filter((s) => s.archived).map(setBox(c)).join('')}</div></details>` : ''}
   </fieldset>`;
+  // An archived set (an earlier version) can still be picked, but Select all leaves it out.
+  const setBox = (c) => (s) => `<label class="shuffle-set"><input type="checkbox" value="${esc(`${c.slug}/${s.slug}`)}" data-course="${esc(c.slug)}" data-count="${s.count}"${s.archived ? ' data-archived' : ''}><span><strong>${esc(s.title)}</strong><small>${plural(s.count, 'question')}</small></span></label>`;
   // Every set's topics with their question counts, so the Topics button can list and count them
   // before any questions load: { course: { title, accent, sets: { set: [[area, count], ...] } } }.
   const topics = Object.fromEntries(game.courses.map((c) => [c.slug, {
@@ -1180,7 +1192,7 @@ export function survivors(ctx) {
   const course = (c) => `<fieldset class="sv-course" style="--accent:${c.accent}" data-course-group="${esc(c.slug)}">
         <legend class="sv-course-head"><span class="sv-tile">${icon(iconOf(c.slug))}</span><span class="sv-course-name">${esc(c.title)}</span></legend>
         <button type="button" class="sv-all" data-course-all="${esc(c.slug)}">Select all</button>
-        <div class="sv-sets">${c.sets.map((s) => `<label class="sv-set"><input type="checkbox" value="${esc(`${c.slug}/${s.slug}`)}" data-set data-course="${esc(c.slug)}" data-count="${s.count}"><span><strong>${esc(s.title)}</strong><small>${plural(s.count, 'question')}<span data-missed></span></small></span></label>`).join('')}</div>
+        <div class="sv-sets">${c.sets.map((s) => `<label class="sv-set"><input type="checkbox" value="${esc(`${c.slug}/${s.slug}`)}" data-set data-course="${esc(c.slug)}" data-count="${s.count}"${s.archived ? ' data-archived' : ''}><span><strong>${esc(s.title)}${s.archived ? ' <em>(earlier version)</em>' : ''}</strong><small>${plural(s.count, 'question')}<span data-missed></span></small></span></label>`).join('')}</div>
       </fieldset>`;
   const sound = (cls) => `<button type="button" class="${cls}" data-sound aria-pressed="true" aria-label="Sound on">${icon('volume-2', 'sv-on')}${icon('volume-x', 'sv-off')}<span>Sound on</span></button>`;
   return `<!doctype html>
