@@ -45,7 +45,8 @@ if (host) {
   let idx = 0, seg = 0;
 
   async function load() {
-    const res = await fetch(new URL('data.json', location.href));
+    // Revalidate: GitHub Pages lets browsers reuse a stale copy for 10 minutes after a deploy.
+    const res = await fetch(new URL('data.json', location.href), { cache: 'no-cache' });
     if (!res.ok) throw new Error(`listen data ${res.status}`);
     const d = await res.json();
     audio = Array.isArray(d.audio) ? d.audio.filter((c) => c && Array.isArray(c.days)) : [];
@@ -274,9 +275,21 @@ if (host) {
     const rec = recordedNow();
     voiceSel.replaceChildren(new Option(rec ? `Best ${word} voice: ${st.gender === 'male' ? 'Michael' : 'Nicole'} (recorded)` : auto ? `Best ${word} voice: ${auto.name}` : `Best ${word} voice`, ''),
       ...rankVoices(voices, st.gender, lang).map((v) => new Option(`${v.name} (${v.lang})`, v.name)));
+    // The recorded voice can always be picked back from the list, above the browser's voices.
+    if (isCourse() && queue.some((it) => it.segments.some((x) => recordingFor(x, { gender: 'female' })))) {
+      const g = document.createElement('optgroup');
+      g.label = 'Recorded (natural)';
+      g.append(new Option('Nicole (recorded, natural)', 'rec:female'));
+      voiceSel.options[0].after(g);
+    }
     voiceSel.value = voices.some((v) => v.name === st.voice) ? st.voice : '';
   }
-  voiceSel.addEventListener('change', () => { st.voice = voiceSel.value; save(); drawVoices(); restartIfPlaying(() => {}); });
+  voiceSel.addEventListener('change', () => {
+    if (voiceSel.value === 'rec:female') { st.gender = 'female'; st.voice = ''; } else st.voice = voiceSel.value;
+    save();
+    drawVoices();
+    restartIfPlaying(() => {});
+  });
   $$('[data-ls-gender]').forEach((r) => r.addEventListener('change', () => {
     if (!r.checked) return;
     st.gender = r.value;
