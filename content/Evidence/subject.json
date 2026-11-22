@@ -12,7 +12,7 @@
       "type": "outline",
       "theme": "structured",
       "outsideColor": "64748B",
-      "description": "Condensed exam outline of Weeks 1–15 on the Fall 2026 syllabus (Fisher pp. 1–1098). Part I covers the Federal Rules, jury secrecy under 606(b), relevance, conditional relevance, and 403. Part II covers the specialized relevance rules, 407–411. Part III covers character evidence: the propensity ban, 404(b), Huddleston, 413–415, the defendant's and victim's character, and habit. Part IV covers impeachment under 607–609 and the rape shield. Part V covers competency, the definition of hearsay, opposing parties' statements, prior statements of witnesses, and the 803, 804, and 807 exceptions. Part VI covers the Confrontation Clause from Crawford through Smith v. Arizona. Part VII covers completeness, Bruton, and Chambers. Part VIII covers lay and expert opinion from the Week 10 reading. Part IX covers expert bases and reliability (703, 705, Frye, Daubert, Joiner, Kumho Tire). Part X covers authentication and the best evidence rule (901–902, 1001–1008). Part XI covers Rule 501, the psychotherapist and lawyer-client privileges, 502 waiver, government lawyers, and self-incrimination. Part XII covers the spousal and marital-confidences privileges. Rule and tip boxes throughout, and a card for every principal case with its class.",
+      "description": "Condensed exam outline of Weeks 1–15 on the Fall 2026 syllabus (Fisher pp. 1–1098), with each section labeled by its syllabus week. Part I covers the Federal Rules, jury secrecy under 606(b), relevance, conditional relevance, and 403. Part II covers the specialized relevance rules, 407–411. Part III covers character evidence: the propensity ban, 404(b), Huddleston, 413–415, the defendant's and victim's character, and habit. Part IV covers impeachment under 607–609 and the rape shield. Part V covers competency, the definition of hearsay, opposing parties' statements, prior statements of witnesses, and the 803, 804, and 807 exceptions. Part VI covers the Confrontation Clause from Crawford through Smith v. Arizona. Part VII covers completeness, Bruton, and Chambers. Part VIII covers lay and expert opinion from the Week 10 reading. Part IX covers expert bases and reliability (703, 705, Frye, Daubert, Joiner, Kumho Tire). Part X covers authentication and the best evidence rule (901–902, 1001–1008). Part XI covers Rule 501, the psychotherapist and lawyer-client privileges, 502 waiver, government lawyers, and self-incrimination. Part XII covers the spousal and marital-confidences privileges. Rule and tip boxes throughout, and a card for every principal case with its class.",
       "tags": ["FRE", "outline", "hearsay", "Confrontation Clause", "character evidence", "impeachment", "privileges", "authentication", "Weeks 1–15"],
       "order": 0
     },
@@ -86,10 +86,16 @@
       ],
       "order": 3
     },
+    "Evidence_Practice_Finals.mcq.json": {
+      "slug": "evidence-practice-finals",
+      "tags": ["MCQ", "practice finals", "bar prep", "FRE", "hearsay", "Confrontation Clause", "character evidence", "experts", "authentication", "privileges", "Weeks 1–15"],
+      "order": 4
+    },
     "Evidence_Comprehensive_Practice_Questions.mcq.json": {
       "slug": "evidence-comprehensive-practice-questions",
       "tags": ["MCQ", "bar prep", "FRE", "hearsay", "Confrontation Clause", "character evidence", "experts", "authentication", "privileges", "Weeks 1–15"],
-      "order": 4
+      "archived": true,
+      "order": 4.1
     },
     "Evidence_Concepts_Test.html": {
       "slug": "evidence-concepts-test",
@@ -103,21 +109,25 @@
     "Evidence_Most_Testable_Questions.mcq.json": {
       "slug": "evidence-most-testable-questions",
       "tags": ["MCQ", "FRE", "hearsay", "character evidence", "Confrontation Clause", "experts", "privileges", "Weeks 1–15"],
+      "archived": true,
       "order": 11
     },
     "Evidence_Most_Testable_Questions_II.mcq.json": {
       "slug": "evidence-most-testable-questions-ii",
       "tags": ["MCQ", "FRE", "hearsay", "character evidence", "Confrontation Clause", "experts", "privileges", "Weeks 1–15"],
+      "archived": true,
       "order": 12
     },
     "Evidence_Bar_Exam_Questions.mcq.json": {
       "slug": "evidence-bar-exam-questions",
       "tags": ["MCQ", "bar prep", "FRE", "hearsay", "Confrontation Clause", "character evidence", "experts", "privileges", "Weeks 1–15"],
+      "archived": true,
       "order": 13
     },
     "Evidence_Best_Answer_Questions.mcq.json": {
       "slug": "evidence-best-answer-questions",
       "tags": ["MCQ", "bar prep", "best answer", "FRE", "hearsay", "Confrontation Clause", "character evidence", "privileges", "Weeks 1–15"],
+      "archived": true,
       "order": 14
     }
   }
