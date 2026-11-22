@@ -25,11 +25,11 @@
             },
             {
               "id": "s3",
-              "say": "The map. Today, Day 1: what an agency is, how it is created, and every route to a principal's contract liability: actual, apparent and inherent authority, ratification, and estoppel, plus when the agent is personally liable. Day 2: tort liability, employees and independent contractors, franchising, scope of employment, and the agent's fiduciary duties."
+              "say": "The map. Today, Day 1: what an agency is, how it is created, and every route to a principal's contract liability: actual, apparent and inherent authority, ratification, and estoppel, plus when the agent is personally liable. Day 2: tort liability, employees and independent contractors, franchising, scope of employment, the agent's fiduciary duties, and choosing an entity."
             },
             {
               "id": "s4",
-              "say": "Day 3: choosing an entity, forming a partnership, partnership property, and management and authority. Day 4: partners' fiduciary duties, grabbing and leaving, dissociation and dissolution under the UPA and RUPA, loss sharing in Kovacik, buyout agreements, and limited partnerships and LLPs. Day 5: LLCs from formation to dissolution, then a full review of every test and list, and how to work the open-book short answer."
+              "say": "Day 3: forming a partnership, partnership property, management and authority, partners' fiduciary duties, and grabbing and leaving. Day 4: dissociation and dissolution under the UPA and RUPA, loss sharing in Kovacik, buyout agreements, and limited partnerships and LLPs. Day 5: LLCs from formation to dissolution, then a full review of every test and list, and how to work the open-book short answer."
             },
             {
               "id": "s5",
@@ -1187,8 +1187,8 @@
     },
     {
       "day": 2,
-      "title": "Tort liability, scope of employment, and the agent's fiduciary duties",
-      "minutes": 52,
+      "title": "Tort liability, scope of employment, the agent's fiduciary duties, and choosing an entity",
+      "minutes": 61,
       "episodes": [
         {
           "id": "ap-d2-e00",
@@ -1979,9 +1979,130 @@
           ]
         },
         {
-          "id": "ap-d2-e12",
-          "title": "Day 2 cumulative quiz",
+          "id": "ap-d2-e13",
+          "title": "Putting agency together: one fact pattern, every issue",
           "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. One long fact pattern, worked the way the short-answer part wants: issue by issue, rule, application, answer. Pause at each question and outline your answer before you hear mine."
+            },
+            {
+              "id": "s2",
+              "say": "The facts. Greenleaf Nurseries hires Tom as manager of its garden center, with a written job description: run the store, order stock from approved vendors, hire seasonal help. The owner, privately, tells Tom never to sign service contracts over five thousand dollars. Tom signs a twelve thousand dollar irrigation service contract with AquaPro, who knows nothing of the limit. Tom also hires his cousin Lee to deliver mulch in Lee's own truck, paid by the load. Lee, on a delivery, detours to pick up lunch, then crashes into a cyclist on the way back to the route. And all year, Tom has been taking a two percent \"thank you\" payment from one approved vendor."
+            },
+            {
+              "id": "s3",
+              "ask": "Is Greenleaf bound to the AquaPro contract?",
+              "answer": "No actual authority: the private instruction forbade it. But likely apparent authority: Greenleaf put Tom in the manager's position, managers customarily contract for store services, AquaPro reasonably believed it, and the secret limit didn't bind AquaPro without notice, Restatement Third § 3.03 comment b, Second § 160. Inherent authority under § 161 points the same way. Tom may owe Greenleaf for exceeding his actual authority.",
+              "pause": 15
+            },
+            {
+              "id": "s4",
+              "ask": "Is Lee Greenleaf's employee or not, and does Greenleaf answer for the crash?",
+              "answer": "Lee is paid by the load, uses his own truck, and is in a distinct business, which under the § 220(2) factors points to an independent contractor or nonagent service provider. If so, Greenleaf is generally not vicariously liable, unless an exception applies, such as negligent selection. If Lee were an employee, the lunch detour followed by a return to the route would likely stay within scope: a deviation, not a total abandonment.",
+              "pause": 15
+            },
+            {
+              "id": "s5",
+              "ask": "Can the cyclist sue Lee?",
+              "answer": "Yes. An agent, or any actor, is always liable for his own torts, Restatement Third § 7.01.",
+              "pause": 15
+            },
+            {
+              "id": "s6",
+              "ask": "What does Tom owe for the vendor payments?",
+              "answer": "He must account for and disgorge them: profit from his position breaches loyalty, § 8.02, and Reading v. Regem says no loss to the principal is needed. Unless Greenleaf consented after full disclosure under § 8.06, which it didn't.",
+              "pause": 15
+            },
+            {
+              "id": "s7",
+              "say": "Notice the method. Contract liability: walk actual, apparent, inherent, ratification, estoppel. Tort liability: agent, then direct, then employee and scope, then independent-contractor exceptions. Duties: name the duty and its section, then the matching case."
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e14",
+          "title": "Choosing an entity: the five forms and the selection factors",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The five business forms compared on four points, the eight factors for choosing one, a word on each form, and asset partitioning."
+            },
+            {
+              "id": "s2",
+              "say": "The chart, read aloud. Four rows: state action, classes of owners, limited liability, and control."
+            },
+            {
+              "id": "s3",
+              "say": "General partnership: no state action needed; one class of owners; no limited liability; equal control. Limited liability partnership, an LLP: file a certificate; one class; limited liability, yes; equal control. Limited partnership, an LP: file a certificate; two classes, general and limited partners; limited liability for the limited partners only; control in the general partner only. Limited liability limited partnership, an LLLP: file a certificate; two classes; limited liability, yes; control in the general partner only. And the LLC: file articles; one class, members; limited liability, yes; control in members or managers."
+            },
+            {
+              "id": "s4",
+              "say": "The LLP shield, RUPA § 306(c): partnership debts incurred while the firm is an LLP are the LLP's alone. The outline flags, as general knowledge, that partners still answer for their own torts."
+            },
+            {
+              "id": "s5",
+              "say": "The eight selection factors, weighed together. One: formation complexity. Two: the right to manage. Three: ability to raise money. Four: filing paperwork. Five: avoiding personal liability. Six: tax treatment. Seven: ability to exit and cash out promptly. Eight: which fiduciary duties apply."
+            },
+            {
+              "id": "s6",
+              "say": "The sole proprietorship. The default for one person. Full control. No separation of personal and business assets or liabilities. It can use a trade name. And it's hard to raise money."
+            },
+            {
+              "id": "s7",
+              "say": "The general partnership. The default for two or more people. Simple, democratic, flexible, and it can be formed inadvertently. Partners are agents and fiduciaries of each other, and personally liable for partnership obligations. Pros: simplicity, a single layer of tax, and more resources, cost sharing and broader skills than a sole proprietorship. Cons: no indefinite life, unlimited liability, conflict, and problems with expansion, succession and termination."
+            },
+            {
+              "id": "s8",
+              "say": "The LLC. Not a corporation. Limited liability plus pass-through tax. Veil piercing is the main exception. And it is a creature of contract: the operating agreement shapes agency. The statute is RULLCA."
+            },
+            {
+              "id": "s9",
+              "say": "The corporation. Shareholders elect directors; directors hire officers; directors and officers are agents and owe care and loyalty. The statutes are the Delaware General Corporation Law, the DGCL, and the Model Business Corporation Act, the MBCA."
+            },
+            {
+              "id": "s10",
+              "say": "Asset partitioning. Two kinds. Affirmative partitioning shields the firm's assets from the owners' personal creditors. That's entity shielding. Defensive partitioning shields the owners' assets from the firm's creditors. That's limited liability, and a general partnership doesn't have it."
+            },
+            {
+              "id": "s11",
+              "say": "Which entity? Two friends start a food truck with no paperwork at all. What are they?",
+              "voice": "alt"
+            },
+            {
+              "id": "s12",
+              "say": "A general partnership, the default for two or more people carrying on a business for profit as co-owners. They're each personally liable for its debts. If they want a shield, they need a filing: an LLP, or an LLC."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. General partnership: no filing, no shield, equal control. LLP: filing, shield, equal control. LP: filing, two classes, limited partners shielded, general partner controls. LLLP: shields the general partner too. LLC: filing, shield, members or managers. Eight factors. Entity shielding versus limited liability."
+            },
+            {
+              "id": "s14",
+              "ask": "Which forms require a filing with the state?",
+              "answer": "All but the general partnership: the LLP, LP, LLLP, and LLC file.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "What's the difference between entity shielding and limited liability?",
+              "answer": "Entity shielding protects firm assets from owners' personal creditors; limited liability protects owners' assets from firm creditors.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "Name five of the eight entity selection factors.",
+              "answer": "Any five: formation complexity; right to manage; raising money; filing paperwork; avoiding personal liability; tax treatment; ability to exit and cash out; which fiduciary duties apply.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e15",
+          "title": "Day 2 cumulative quiz",
+          "minutes": 5,
           "segments": [
             {
               "id": "s1",
@@ -2049,19 +2170,1029 @@
             },
             {
               "id": "s12",
+              "ask": "Which entity shields owners' personal assets from firm creditors without any filing?",
+              "answer": "None. The general partnership needs no filing and gives no limited liability; every shield requires a filing.",
+              "pause": 10
+            },
+            {
+              "id": "s13",
               "ask": "From Day 1: an agent signs for a company that doesn't exist. Who's bound?",
               "answer": "The agent, as a party, Restatement Third § 6.04, as in Atlantic Salmon.",
               "pause": 10
             },
             {
-              "id": "s13",
+              "id": "s14",
               "ask": "From Day 1: in Kidd v. Edison, what principle did Learned Hand state?",
               "answer": "Choosing an agent vouches for him; uncommunicated, unusual limits don't bind third parties.",
               "pause": 10
             },
             {
+              "id": "s15",
+              "say": "That's Day 2, and the end of pure agency law. Tomorrow: forming a partnership, partnership property, management and authority, partners' fiduciary duties, and grabbing and leaving."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 3,
+      "title": "Partnership formation, property, management, partners' duties, and grabbing and leaving",
+      "minutes": 60,
+      "episodes": [
+        {
+          "id": "ap-d3-e00",
+          "title": "Spaced review of Days 1 and 2",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Day 3. Spaced review first, mixing both earlier days. Pause and answer each."
+            },
+            {
+              "id": "s2",
+              "ask": "What does Cargill teach about lenders?",
+              "answer": "A creditor that takes over management of the debtor becomes its principal, Restatement Second § 14O, and inherits its debts.",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "Which perspective governs implied actual authority?",
+              "answer": "The agent's reasonable understanding of the principal's manifestations, including past conduct.",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "Name the three bars to ratification.",
+              "answer": "Illegality at the time of ratification, the third party's withdrawal, and a material change in circumstances.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "What two routes to vicarious liability does Restatement Third § 7.03(2) give?",
+              "answer": "An employee's tort within scope, § 7.07, and an agent's tort with apparent authority, § 7.08.",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "Kerl's franchise test in one sentence?",
+              "answer": "Liability only if the franchisor controls or has the right to control the daily operation of the specific aspect that caused the harm.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "Under § 7.07, when is an employee outside scope?",
+              "answer": "Only in an independent course of conduct not intended to serve any purpose of the employer.",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "Town and Country versus Corroon and Black: what's the difference?",
+              "answer": "Town and Country's customer list was a trade secret, found by costly cold calls, so soliciting from it was enjoined. Corroon and Black's lists were widely accessible and not secret, so there was no liability.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "What's an LLLP?",
+              "answer": "A limited liability limited partnership: a filed LP whose general partners are shielded too.",
+              "pause": 10
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e01",
+          "title": "UPA versus RUPA: aggregate versus entity",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The two partnership statutes, the one big idea that divides them, and the eight-row comparison you should be able to recite."
+            },
+            {
+              "id": "s2",
+              "say": "The UPA, 1914, takes the aggregate theory. A partnership is an association of its partners, not a separate entity. That caused problems with lawsuits and with property."
+            },
+            {
+              "id": "s3",
+              "say": "RUPA, 1997, takes the entity theory. Section 201: \"A partnership is an entity distinct from its partners.\" And property belongs to the entity, § 203. Entity features: it can sue and be sued, § 307; own and convey property; keep books; file tax returns. And judgments are collected from the firm first, then the partners."
+            },
+            {
+              "id": "s4",
+              "say": "But RUPA keeps two aggregate leftovers. Partners are still jointly and severally liable, § 306. And there's no entity-level income tax; it's pass-through."
+            },
+            {
+              "id": "s5",
+              "say": "Now the comparison, row by row. Nature: under the UPA, an association of partners; under RUPA, an entity distinct from its partners, § 201."
+            },
+            {
+              "id": "s6",
+              "say": "Property: under the UPA, partners co-own it as \"tenants in partnership,\" § 25. Under RUPA, the entity owns it, and a partner is not a co-owner, §§ 203 and 501."
+            },
+            {
+              "id": "s7",
+              "say": "Liability: under the UPA, joint and several for torts, but only joint for contracts, § 15. Under RUPA, joint and several for everything, but creditors exhaust firm assets first, §§ 306 and 307."
+            },
+            {
+              "id": "s8",
+              "say": "A partner leaves: under the UPA, that always dissolves the partnership, §§ 29 and 31. Under RUPA, it's a dissociation, followed by either a buyout or winding up, § 603."
+            },
+            {
+              "id": "s9",
+              "say": "Power to dissolve: under the UPA, the power always exists, though exercising it may be wrongful. Under RUPA, the power to dissociate always exists, though it may be wrongful, § 602."
+            },
+            {
+              "id": "s10",
+              "say": "Exit price: under the UPA, liquidation; a wrongful partner is paid less damages and with no goodwill, § 38. Under RUPA, the greater of liquidation or going-concern value, less damages, plus interest, § 701."
+            },
+            {
+              "id": "s11",
+              "say": "Liquidation order: under the UPA, outside creditors, then partner loans, then capital, then profits, § 40. Under RUPA, creditors including partners, then contributions, then surplus, § 806."
+            },
+            {
+              "id": "s12",
+              "say": "Fiduciary duties: under the UPA, common law plus § 21, the duty to account, and § 20, information. Under RUPA, defined duties of loyalty and care plus good faith, § 409, with limited waivers under § 105."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. UPA aggregate, RUPA entity. Eight rows: nature, property, liability, departure, power to dissolve, exit price, liquidation order, and fiduciary duties."
+            },
+            {
               "id": "s14",
-              "say": "That's Day 2, and the end of pure agency law. Tomorrow we turn to partnerships: choosing an entity, forming a partnership, property, and who gets to decide."
+              "ask": "What are RUPA's two aggregate leftovers?",
+              "answer": "Partners' joint and several liability, § 306, and no entity-level income tax.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "Under the UPA, how are partners liable on partnership contracts versus torts?",
+              "answer": "Jointly for contracts; jointly and severally for torts, UPA § 15.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "What happens when a partner leaves, under each act?",
+              "answer": "UPA: the partnership always dissolves, §§ 29 and 31. RUPA: dissociation, then buyout or winding up, § 603.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e02",
+          "title": "Forming a partnership: the rule, the presumption, and the factors",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The formation rule, the profit-sharing presumption and its six exceptions, the seven factors, agency inside partnerships, and joint ventures."
+            },
+            {
+              "id": "s2",
+              "say": "The rule, quoted from RUPA § 202(a), matching UPA § 6: \"The association of two or more persons to carry on as co-owners a business for profit forms a partnership, whether or not the persons intend to form a partnership.\""
+            },
+            {
+              "id": "s3",
+              "say": "Count the elements. One: two or more persons. Two: carrying on. Three: as co-owners. Four: a business for profit. And intent to form a partnership is not required. No formalities. And disclaimers don't control if the parties do the things that make a partnership."
+            },
+            {
+              "id": "s4",
+              "say": "Why so easy? Because the partnership is the default form for people doing business together. If people act as co-owners, the law treats them as co-owners, so outsiders who dealt with them are protected."
+            },
+            {
+              "id": "s5",
+              "say": "The presumption. Sharing profits creates a presumption of partnership, RUPA § 202(c)(3). The UPA, § 7(4), calls it \"prima facie evidence.\" Unless the profits were received in any one of six ways. One: repayment of a debt. Two: wages, or pay to an independent contractor. Three: rent. Four: an annuity or retirement benefit. Five: interest on a loan, even if it varies with profits. Six: the price of goodwill or other property."
+            },
+            {
+              "id": "s6",
+              "say": "And two things that alone are not a partnership: co-owning property, and sharing gross returns."
+            },
+            {
+              "id": "s7",
+              "say": "There's no single test. The outline gives seven factors, weighed together. One: sharing profits, the reward. Two: sharing losses, the risk. Three: the right to manage, control. Four: intent, express or implied. Five: capital contribution. Six: dealings with third parties, like tax returns and holding out. Seven: rights on dissolution."
+            },
+            {
+              "id": "s8",
+              "say": "Agency inside partnerships. Each partner is an agent of the partnership. A partner may have actual or apparent authority. Partners' torts create vicarious liability. Each partner is a fiduciary. And partners are personally liable for partnership obligations, including co-partners' and employees' acts."
+            },
+            {
+              "id": "s9",
+              "say": "What to distinguish a partner from: an employee, a lender, a franchisee, and a landlord or tenant. The next two episodes take those in turn."
+            },
+            {
+              "id": "s10",
+              "say": "A joint venture is a partnership for a limited undertaking, and partnership law applies. You'll hear its elements with Sandvick later today."
+            },
+            {
+              "id": "s11",
+              "say": "Recap. Two or more persons, carrying on as co-owners, a business for profit, intent irrelevant. Profit sharing presumes partnership unless it's debt repayment, wages, rent, an annuity, interest, or the price of goodwill or property. Seven factors weighed together."
+            },
+            {
+              "id": "s12",
+              "ask": "Quote or paraphrase the formation rule of RUPA § 202(a).",
+              "answer": "The association of two or more persons to carry on as co-owners a business for profit forms a partnership, whether or not they intend to form one.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "Name the six exceptions to the profit-sharing presumption.",
+              "answer": "Profits received as debt repayment; wages or independent-contractor pay; rent; an annuity or retirement benefit; interest on a loan; or the price of goodwill or other property.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "Does sharing gross returns create a partnership?",
+              "answer": "Not by itself, and neither does co-ownership of property alone.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e03",
+          "title": "Partners versus employees: Fenwick, Zajac, Clackamas, Davis, Sidley, and Frank",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Six cases on who is really a partner, and one on the power of the agreement."
+            },
+            {
+              "id": "s2",
+              "say": "Fenwick v. Unemployment Compensation Commission, New Jersey, 1945. A beauty-shop owner turned his receptionist into a \"partner\" on paper when she asked for a raise. She put in no capital, had no control, shared no losses; same job, same pay, plus twenty percent of profits if business allowed. If she was an employee, he owed unemployment taxes."
+            },
+            {
+              "id": "s3",
+              "say": "Held: she was an employee. Weighing intent, profit and loss sharing, ownership and control, management, conduct toward others, and rights on dissolution, co-ownership was missing. Her profit share was really wages. Why it matters: a partnership label doesn't make a partnership, and the wages exception defeats the presumption."
+            },
+            {
+              "id": "s4",
+              "say": "Zajac v. Harris, Arkansas, 1967. An illiterate man joined a car-salvage business. He put in nine thousand dollars of his own borrowed money to buy cars, and split profits equally, even on deals the other man handled alone. The other man's books treated him as an employee. Held: a partnership existed. His capital contribution and share of all the profits showed co-ownership, and one-sided bookkeeping didn't change that. Contrast Fenwick: capital in, and a share of the whole business's profits."
+            },
+            {
+              "id": "s5",
+              "say": "Clackamas Gastroenterology Associates v. Wells, United States Supreme Court, 2003. A bookkeeper sued a medical clinic under the Americans with Disabilities Act, which covers only employers with fifteen or more employees. The count depended on whether its four physician-owners were \"employees.\""
+            },
+            {
+              "id": "s6",
+              "say": "Held: apply the common-law control test, using the EEOC's six factors. One: whether the organization can hire or fire the individual or set the rules of the work. Two: supervision. Three: whether the individual reports to someone higher. Four: the individual's influence over the organization. Five: the parties' intent in their agreements. Six: whether the individual shares in profits, losses and liabilities. Remanded. Why it matters: status turns on control, not titles. Owners who run the business are employers, not employees."
+            },
+            {
+              "id": "s7",
+              "say": "Davis v. Loftus, Illinois Appellate Court, 2002. Malpractice plaintiffs sued a law firm's \"income partners.\" These partners got fixed salaries and bonuses, shared no profits or losses, had their small capital returned without gain, and couldn't vote. Held: they aren't partners under the UPA, so they aren't vicariously liable. Profit sharing and control define real partners, not titles."
+            },
+            {
+              "id": "s8",
+              "say": "EEOC v. Sidley Austin Brown and Wood, Seventh Circuit, 2002, Judge Posner. Sidley demoted thirty-two partners, and the EEOC investigated age discrimination. A self-perpetuating executive committee controlled everything, although the thirty-two shared profits, had capital at risk, and were personally liable. Held: the EEOC may pursue its coverage subpoena. Partners under state law might still be \"employees\" for federal antidiscrimination purposes if they lack real control. A concurrence said they were bona fide partners. Why it matters: formal partner status versus actual power. Compare Clackamas and Davis."
+            },
+            {
+              "id": "s9",
+              "say": "Frank v. R.A. Pickens and Son, Arkansas, 1978. A twenty-two member farming partnership. Partners bought in at book value, under an understanding that the manager could end anyone's interest at will and pay book value. The manager ended Frank's interest, and Frank sued to force a liquidation. Held: Frank was a partner, but the agreement controls. He gets book value and can't force a sale. Why it matters: UPA rules are defaults that partners can change by agreement."
+            },
+            {
+              "id": "s10",
+              "say": "Who's liable? A consultant gets \"fifteen percent of the restaurant's profits\" instead of a fee. She has no say in management, contributes no capital, and bears no losses. When the restaurant fails, a supplier sues her as a partner. Partner?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "Profit sharing creates a presumption. But it's rebutted if the share was compensation for services, the wages or independent-contractor exception, as in Fenwick. No control, no capital, no losses: likely not a partner."
+            },
+            {
+              "id": "s12",
+              "say": "The traps. Trap one: a partnership can exist even if the books say employee, Zajac. Trap two: a title of partner doesn't make one, Fenwick and Davis. Trap three: for federal statutes, the question is control, Clackamas and Sidley. Trap four: the agreement can override defaults, Frank."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. Fenwick: label, but really wages. Zajac: capital and shared profits make a partner. Clackamas: six EEOC control factors. Davis: income partners aren't partners. Sidley: state-law partners may be federal employees. Frank: the agreement controls."
+            },
+            {
+              "id": "s14",
+              "ask": "Name four of the six EEOC factors from Clackamas.",
+              "answer": "Any four: hiring, firing and setting rules; supervision; reporting to someone higher; influence over the organization; intent in agreements; sharing profits, losses and liabilities.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "Why was Zajac a partner despite the books?",
+              "answer": "He contributed capital and shared all the business's profits, which showed co-ownership.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "What did Frank v. Pickens hold about the UPA rules?",
+              "answer": "They are defaults; the partners' agreement controls, so Frank got book value and couldn't force a liquidation.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e04",
+          "title": "Partners versus lenders, and partnership by estoppel",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Martin v. Peyton and Kaufman-Brown on lenders. Then partnership by estoppel and Young v. Jones."
+            },
+            {
+              "id": "s2",
+              "say": "Martin v. Peyton, New York, 1927. Wealthy friends of a partner lent a failing brokerage two and a half million dollars in securities, in exchange for forty percent of profits, with a cap. They also got information rights, a veto over speculative deals, an option to buy in, and the partners' resignations held in escrow. A creditor sued them as partners."
+            },
+            {
+              "id": "s3",
+              "say": "Held: they were lenders, not partners. Each term was a reasonable protection for a big, risky loan. They could veto but not initiate or bind. But the court warned: enough such terms together could cross the line. It's \"a question of degree.\" Why it matters: the leading lender-versus-partner case. Contrast Cargill, Day 1, and Kaufman-Brown."
+            },
+            {
+              "id": "s4",
+              "say": "Kaufman-Brown Potato v. Long, Ninth Circuit, 1950. Potato distributors bought interests in growers' crops, advanced money, and agreed to split profits and losses \"between the partners.\" When the growers went bankrupt, the distributors claimed to be creditors. Held: they were partners, not creditors. They shared profits and losses in the venture and acted like co-owners. The contrast: sharing losses and co-owner conduct tip toward partnership."
+            },
+            {
+              "id": "s5",
+              "say": "Now partnership by estoppel, the purported partner. The rule. One who represents himself, or consents to being represented, as a partner is liable to a person who relies on the representation. Under UPA § 16, the relying party has \"given credit\" to the apparent partnership. Under RUPA § 308, the relying party \"enters into a transaction.\" And a public representation reaches anyone who relies on it."
+            },
+            {
+              "id": "s6",
+              "say": "Young v. Jones, District of South Carolina, 1992. Investors lost $550,000 relying on a fraudulent audit letter from Price Waterhouse's Bahamas firm. They sued the U.S. firm as its partner, citing its worldwide-firm advertising. Held: no partnership in fact, and none by estoppel. The plaintiffs didn't see or rely on any representation that the firms were partners, and they extended no credit on that basis. Why it matters: partnership by estoppel requires a representation and reliance."
+            },
+            {
+              "id": "s7",
+              "say": "Who's liable? A retired chef lets a new restaurant print \"in partnership with Chef Rosa\" on its menus and ads. She has no ownership. A produce supplier, who read the ads, extends credit because of her name. The restaurant defaults. Can the supplier reach Rosa?",
+              "voice": "alt"
+            },
+            {
+              "id": "s8",
+              "say": "Yes, likely, by partnership by estoppel. She consented to being represented as a partner, the supplier relied on that and extended credit, UPA § 16, or entered into a transaction, RUPA § 308. A diner who never saw the ads couldn't use it; reliance is required, as in Young v. Jones."
+            },
+            {
+              "id": "s9",
+              "say": "The traps. Trap one: a veto right alone doesn't make a lender a partner; Martin's lenders could veto but not initiate. Trap two: it's a question of degree, so pile up the facts. Trap three: estoppel needs reliance on the representation by this plaintiff."
+            },
+            {
+              "id": "s10",
+              "say": "Recap. Martin v. Peyton: protections for a risky loan aren't partnership, but it's a question of degree. Kaufman-Brown: sharing losses and acting as co-owners makes partners. Partnership by estoppel, UPA § 16 and RUPA § 308: representation plus reliance. Young v. Jones: no reliance, no estoppel."
+            },
+            {
+              "id": "s11",
+              "ask": "In Martin v. Peyton, what could the lenders not do that would have pointed toward partnership?",
+              "answer": "Initiate transactions or bind the firm. They could only veto.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "What tipped Kaufman-Brown toward partnership?",
+              "answer": "The distributors shared losses as well as profits and acted like co-owners.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "What does partnership by estoppel require?",
+              "answer": "A representation, made or consented to, that the person is a partner, and reliance on it by the plaintiff: giving credit under UPA § 16, entering a transaction under RUPA § 308.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e05",
+          "title": "Partners' economic rights: defaults, transfers, finance, and liability",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The default economic rules, becoming a partner, transferable interests and charging orders, five finance terms, the liability rules, and a worked capital account."
+            },
+            {
+              "id": "s2",
+              "say": "Default economics. Partners put in labor and property. They get an equal share of profits. On exit, they get their contributions back, valued at contribution, with no interest. Losses are shared like profits. And there's no compensation for services, except for winding up. RUPA § 401(a) and (j); UPA § 18(a) and (f)."
+            },
+            {
+              "id": "s3",
+              "say": "Notice \"equal\" means per partner, not per dollar contributed. A partner who put in ninety percent of the capital still gets an equal share of profits by default."
+            },
+            {
+              "id": "s4",
+              "say": "Becoming a partner after formation: as the agreement provides, through an Article 11 transaction, or with unanimous consent. RUPA § 402; UPA § 18(g)."
+            },
+            {
+              "id": "s5",
+              "say": "The transferable interest. It is the right to receive distributions, § 102(23). A partner may transfer it. The transferee gets distributions only, no management and no information. The transferor stays a partner. But if he transfers all of it, the others may expel him unanimously, § 601(4)(B). And a charging order is a judgment creditor's lien on the partner's distributions, § 504."
+            },
+            {
+              "id": "s6",
+              "say": "Five finance terms. Capital contribution: not returned before withdrawal or liquidation. Capital account: contributions, plus profits, minus losses, minus draws, kept at book value. Draws: periodic distributions of profit. Advances or loans: repaid with interest. Compensation: none by default."
+            },
+            {
+              "id": "s7",
+              "say": "Liability. All partners are jointly and severally liable for all partnership obligations, unless the claimant agrees otherwise or the law provides otherwise, RUPA § 306(a). An incoming partner is not personally liable for debts from before admission, § 306(b). And a creditor must generally exhaust partnership assets first, § 307. Contrast UPA § 15: joint and several for torts, only joint for contracts."
+            },
+            {
+              "id": "s8",
+              "say": "At formation, three planning points. Value the non-cash contributions. Distinguish capital contributions from loans. And distinguish partnership-owned assets from partner-owned assets the firm merely uses."
+            },
+            {
+              "id": "s9",
+              "say": "The worked example. Three equal partners each contribute fifty thousand dollars. Year one profit is three hundred thirty thousand, so one hundred ten thousand each. Each draws ninety thousand. Each capital account: fifty thousand, plus one hundred ten thousand, minus ninety thousand, equals seventy thousand."
+            },
+            {
+              "id": "s10",
+              "say": "And remember: capital accounts are kept at book value, at cost, not market value. That's why the \"capital account\" buyout in G and S v. Belman, on Day 4, paid so little."
+            },
+            {
+              "id": "s11",
+              "say": "Who's liable? Ann and Ben are partners with no agreement. Ann put in ninety thousand dollars, Ben ten thousand. Ann works full time; Ben part time. Year one profit is forty thousand. How is it split, and does Ann get a salary?",
+              "voice": "alt"
+            },
+            {
+              "id": "s12",
+              "say": "Equal shares by default: twenty thousand each, regardless of capital or work. And no salary for services by default, RUPA § 401. If they wanted otherwise, they needed an agreement."
+            },
+            {
+              "id": "s13",
+              "say": "Next. Ben's personal creditor gets a judgment against him. Can it seize the partnership's delivery van?",
+              "voice": "alt"
+            },
+            {
+              "id": "s14",
+              "say": "No. The van is partnership property, and Ben isn't a co-owner of it under RUPA § 501. The creditor can get a charging order, a lien on Ben's distributions, § 504."
+            },
+            {
+              "id": "s15",
+              "say": "The traps. Trap one: equal profit shares regardless of capital. Trap two: no pay for work, except winding up. Trap three: an advance is a loan with interest; a capital contribution isn't. Trap four: a new partner isn't personally liable for old debts, § 306(b), though his capital is at risk."
+            },
+            {
+              "id": "s16",
+              "say": "Recap. Equal profits, losses like profits, no pay, contributions returned without interest. New partners by unanimous consent. A transferee gets only distributions. Joint and several liability under RUPA § 306(a), with exhaustion first under § 307. Capital account: contributions plus profits minus losses minus draws, at book value."
+            },
+            {
+              "id": "s17",
+              "ask": "By default, how are partnership profits shared, and is a working partner paid a salary?",
+              "answer": "Equally per partner, regardless of capital, and no salary except for winding up. RUPA § 401(a) and (j).",
+              "pause": 8
+            },
+            {
+              "id": "s18",
+              "ask": "What does a transferee of a partner's transferable interest get?",
+              "answer": "Only the right to distributions: no management rights and no information.",
+              "pause": 8
+            },
+            {
+              "id": "s19",
+              "ask": "Compute: contribution twenty thousand, share of profit thirty thousand, draws twenty-five thousand. Capital account?",
+              "answer": "Twenty-five thousand: twenty plus thirty minus twenty-five.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e06",
+          "title": "Partnership property, In re Fulton, Putnam v. Shoaf, and liquidation order",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The rule for what is partnership property, In re Fulton, what a partner owns, conveyances, Putnam v. Shoaf, and the two liquidation orders, with a worked example."
+            },
+            {
+              "id": "s2",
+              "say": "The rule, RUPA §§ 203 and 204. Three parts. One: property acquired in the partnership's name, or by a partner with the transfer document indicating partner capacity or the partnership, is partnership property. Two: property bought with partnership funds is presumed partnership property. Three: property in a partner's name, without such indication and without partnership funds, is presumed separate. And intent at the time of acquisition controls."
+            },
+            {
+              "id": "s3",
+              "say": "In re Fulton, Bankruptcy Court, 1984. Carroll supplied a truck and the capital, and Fulton drove, for C and F Trucking, splitting the profits. Carroll used money wired by his grandmother to buy a trailer. The invoice and the certificate of title named C and F Trucking. Fulton filed for Chapter 7 bankruptcy and listed the trailer as his asset."
+            },
+            {
+              "id": "s4",
+              "say": "Held: C and F was a partnership, and the trailer was partnership property. Ownership turns on the partners' intent when the property was acquired, shown by the purchase documents in the firm's name and its use in the business. The grandmother's money was a loan to Carroll, and his purchase was a capital contribution. Fulton's bankruptcy dissolved the partnership under UPA § 31(5), so the trailer's equity goes out in the UPA § 40(b) order. A partner can't claim title to partnership property; his bankruptcy estate gets only his partnership interest. Why it matters: title in the firm's name and use in the business make it the partnership's, whoever paid. RUPA § 204 codifies that."
+            },
+            {
+              "id": "s5",
+              "say": "What does a partner own? Under UPA § 25, a partner is a co-owner of specific property as a \"tenant in partnership.\" Under RUPA § 501, a partner is not a co-owner and has no transferable interest in partnership property."
+            },
+            {
+              "id": "s6",
+              "say": "Conveyance. Title in the partnership's name passes only in that name. Any partner may sign. And the partnership can recover an improper transfer, except from a good-faith purchaser for value. RUPA § 302; UPA § 10. And the duty: a partner must account for and hold as trustee any benefit from using partnership property or taking a partnership opportunity, § 409(b)(1)."
+            },
+            {
+              "id": "s7",
+              "say": "Putnam v. Shoaf, Tennessee Court of Appeals, 1981. To leave a money-losing cotton gin partnership, Mrs. Putnam paid in cash and conveyed her interest to buyers who took over the debts. Later, a bookkeeper's embezzlement was discovered, and the partnership recovered sixty-eight thousand dollars from banks. She claimed a share. Held: she gets nothing. A partner owns an interest in the partnership, not specific assets. The claims belonged to the partnership, and she sold her whole interest. Why it matters: selling your partnership interest sells everything, including claims nobody knew about."
+            },
+            {
+              "id": "s8",
+              "say": "Liquidation order. Under UPA § 40(b): one, outside creditors; two, partners' loans and advances; three, partners' capital; four, partners' profits. And § 40(d): partners contribute to cover shortfalls according to their loss shares under § 18(a)."
+            },
+            {
+              "id": "s9",
+              "say": "Under RUPA § 806: one, creditors, including partner-creditors, paid together; two, unreturned contributions; three, the remaining surplus by distribution shares; four, partners contribute for shortfalls in proportion to their shares, but not for debts from the LLP era."
+            },
+            {
+              "id": "s10",
+              "say": "Spot the difference. Under the UPA, partner loans come after outside creditors. Under RUPA, partner-creditors stand with outside creditors."
+            },
+            {
+              "id": "s11",
+              "say": "The worked example, from the outline. The partnership's only asset sells for four thousand dollars. It owes an outside creditor one thousand. Carroll contributed the forty-six hundred dollar trailer as capital. Fulton contributed only labor. Pay the creditor one thousand. Return three thousand of Carroll's capital. Nothing is left for profits. That leaves a sixteen hundred dollar capital shortfall, which is shared with Fulton under the loss-sharing rules, unless Kovacik applies, in which case Carroll bears it alone. You'll get Kovacik on Day 4. And Carroll's personal creditors reach only his distribution, not the trailer."
+            },
+            {
+              "id": "s12",
+              "say": "Recap. Partnership property by title, by documents showing partner capacity, or presumed from partnership funds. Intent at acquisition controls. Fulton: firm name on the title and business use make it the firm's. UPA § 25 tenants in partnership versus RUPA § 501 no co-ownership. Putnam: sell your interest, sell everything. UPA § 40(b) and RUPA § 806 orders."
+            },
+            {
+              "id": "s13",
+              "ask": "A partner buys a truck with her own money, titles it in her own name, and lets the firm use it. Whose is it, presumptively?",
+              "answer": "Hers. Property in a partner's name without partnership funds or indication of partner capacity is presumed separate, RUPA § 204.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "Why did Mrs. Putnam get nothing from the embezzlement recovery?",
+              "answer": "She owned an interest in the partnership, not specific assets, and she had sold her whole interest; the claims belonged to the partnership.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "State the UPA § 40(b) order.",
+              "answer": "Outside creditors, then partners' loans and advances, then partners' capital, then profits.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e07",
+          "title": "Management and authority: the default rules",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The equality default, the voting rules, the authority rule of RUPA § 301, statements of authority, suits among partners, torts and indemnity, and deadlock."
+            },
+            {
+              "id": "s2",
+              "say": "Equality is the default. Each partner has equal management rights, RUPA § 401(h), regardless of capital contributed or work done."
+            },
+            {
+              "id": "s3",
+              "say": "The voting rules. Ordinary-course matters: a majority. Acts outside the ordinary course, and amendments to the partnership agreement: unanimous. RUPA § 401(k). UPA § 18(h) says the same, and adds that acts contravening the agreement need everyone's consent."
+            },
+            {
+              "id": "s4",
+              "say": "Authority to bind, RUPA § 301. Each partner is an agent of the partnership. An act apparently carrying on, in the ordinary course, the partnership's business, or business of the kind it does, binds the partnership. Unless, and this is a two-part exception, the partner lacked authority AND the third party knew or had notice of that. Acts outside the ordinary course bind only if authorized by all the other partners."
+            },
+            {
+              "id": "s5",
+              "say": "Statements of partnership authority, § 303. A filed grant of authority is conclusive in favor of those who give value in reliance on it. But a filed limitation is NOT notice to third parties, except recorded limits on transferring real property. And statements of dissociation or dissolution give constructive notice after ninety days, § 103(d)."
+            },
+            {
+              "id": "s6",
+              "say": "No duty to inquire. Without actual knowledge or notice, third parties needn't read the partnership agreement. That's RNR, coming next episode."
+            },
+            {
+              "id": "s7",
+              "say": "Breach inside the firm. The partnership is still bound to the third party. But the partner who exceeded his actual authority must indemnify. The partnership may sue a partner for breach of the agreement or of duty, § 410(a). A partner may sue the partnership or other partners, with or without an accounting, § 410(b)."
+            },
+            {
+              "id": "s8",
+              "say": "Torts. The partnership is liable for a partner's wrongful acts in the ordinary course or with authority, § 305. And the partnership must indemnify a partner for ordinary-course liabilities, § 401(c)."
+            },
+            {
+              "id": "s9",
+              "say": "Deadlock. In a two-partner firm, each can make ordinary decisions and bind the firm. Undoing a decision takes a majority, and with two partners that means both. A good-faith dissenter can't veto as to the outside world."
+            },
+            {
+              "id": "s10",
+              "say": "Why these defaults? Equality reflects co-ownership. And the authority rule puts the risk of a partner's overreach on the partnership, which picked its partners and can protect itself, rather than on outsiders who can't see inside."
+            },
+            {
+              "id": "s11",
+              "say": "Recap. Equal rights. Majority for ordinary matters; unanimity for extraordinary acts and amendments. Section 301: ordinary-course acts bind unless no authority and the third party knew or had notice. Filed grants are conclusive; filed limits aren't notice, except for real property. Section 305 torts; § 401(c) indemnity runs from the partnership to the partner."
+            },
+            {
+              "id": "s12",
+              "ask": "What vote does RUPA require for an act outside the ordinary course?",
+              "answer": "Unanimous consent of the partners, § 401(k).",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "Under § 301, when does a partner's ordinary-course act NOT bind the partnership?",
+              "answer": "When the partner lacked authority and the third party knew or had notice of that.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "Is a filed limit on a partner's authority notice to third parties?",
+              "answer": "No, except a recorded limit on transferring real property. Filed grants, by contrast, are conclusive for those who rely.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e08",
+          "title": "Management cases: National Biscuit, Summers, Moren, RNR, and Day v. Sidley",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Five cases. A pair, National Biscuit and Summers, then Moren, RNR, and Day v. Sidley and Austin."
+            },
+            {
+              "id": "s2",
+              "say": "National Biscuit v. Stroud, North Carolina, 1959. In a two-man grocery partnership, Stroud told Nabisco he wouldn't be responsible for any more bread. His partner Freeman ordered more anyway. Held: the partnership and Stroud are bound. Buying bread was ordinary business, and with two equal partners, Stroud \"was not, and could not be, a majority,\" so he couldn't restrict Freeman. Why it matters: a partner's authority binds the firm to outsiders on ordinary matters, even over a co-partner's objection."
+            },
+            {
+              "id": "s3",
+              "say": "Summers v. Dooley, Idaho, 1971. In a two-man trash-collection partnership, Summers hired a third worker over Dooley's objection, paid him personally, and sued Dooley for reimbursement. Held: no reimbursement. Business differences must be decided by a majority; one of two partners isn't a majority, and Dooley never agreed. Why it matters: it's the internal counterpart to National Biscuit. Between partners, a dissenting half can block an expense."
+            },
+            {
+              "id": "s4",
+              "say": "Reconcile them. National Biscuit says ordinary differences \"may be decided by a majority,\" and the contract was binding because Stroud wasn't a majority who could restrict Freeman. Summers says differences \"must be decided by a majority\" absent other agreement, so the expense wasn't reimbursable without a majority's consent. As between partners and third parties, National Biscuit controls. As among the partners, Summers controls. Covalt v. High puts it this way: when partners are evenly divided, the power to act on the disputed matter is suspended internally, but not as to third parties. Always ask: ordinary course?"
+            },
+            {
+              "id": "s5",
+              "say": "Moren v. Jax Restaurant, Minnesota Court of Appeals, 2004. A restaurant partner, helping in the kitchen after her shift, set her toddler on the counter, and he was hurt in the dough press. The partnership was sued and sought indemnity from her. Held: the partnership is liable and can't get indemnity from her. Her conduct was in the ordinary course, even if partly personal, and the statute gives partners indemnity from the partnership, not the reverse. RUPA §§ 305 and 401(c)."
+            },
+            {
+              "id": "s6",
+              "say": "RNR Investments v. Peoples First Community Bank, Florida District Court of Appeal, 2002. A limited partnership's agreement capped what its general partner could borrow without the limited partners' consent. He borrowed $990,000 from a bank that didn't know of the cap, and the partnership defaulted. Held: the partnership is bound. A partner's ordinary-course act binds the firm unless the third party knew or had notice of the lack of authority, and banks needn't read partnership agreements. Why it matters: the risk of overreach falls on the partnership. To protect yourself, file a statement of authority or notify the lender."
+            },
+            {
+              "id": "s7",
+              "say": "Day v. Sidley and Austin, District of D.C., 1975. A senior partner who chaired the firm's Washington office voted for a merger, after being told no one would be worse off. Afterward he lost sole chairmanship, and the office moved. He resigned and sued. Held: no claim. The partnership agreement gave the executive committee control of firm policy and let a majority approve the merger. Fiduciary duty doesn't require disclosing internal changes that bring no profit to the others or loss to the firm. Why it matters: partners can contract around the statutory defaults of unanimity and equal management, and a bruised ego isn't a claim."
+            },
+            {
+              "id": "s8",
+              "say": "Who's liable? Two partners run a bike shop. Partner A tells the bike distributor in writing, \"Don't sell to us on credit anymore.\" Partner B orders twenty bikes on credit. Is the shop bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "These are the National Biscuit facts. Buying stock is ordinary business, and in a two-partner firm A alone is not a majority, so A can't strip B of his ordinary-course authority. The shop is bound to the distributor, even though A gave notice. Internally it's Summers: without a majority, B may not be able to make A share the cost."
+            },
+            {
+              "id": "s10",
+              "say": "Next. A three-partner firm votes two to one to buy new software, an ordinary expense. The dissenter refuses to pay his share. Bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "Yes. Ordinary matters are decided by a majority, § 401(k), and two of three is a majority. The dissenter shares the cost."
+            },
+            {
+              "id": "s12",
+              "say": "The traps. Trap one: confusing the external question, does the firm owe the outsider, with the internal one, who bears the cost among partners. Trap two: indemnity runs from the partnership to the partner, Moren, not the other way. Trap three: a secret cap in the agreement doesn't bind a bank without notice, RNR."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. National Biscuit: outsiders win on ordinary matters. Summers: internally, half isn't a majority. Covalt: evenly divided partners suspend power internally only. Moren: partnership liable, no indemnity from the partner. RNR: no duty to read the agreement. Day: the agreement can override defaults."
+            },
+            {
+              "id": "s14",
+              "ask": "How do you reconcile National Biscuit and Summers v. Dooley?",
+              "answer": "National Biscuit governs partners versus third parties: the firm is bound on ordinary matters. Summers governs among partners: without a majority, the expense isn't shared.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "In Moren, who indemnifies whom?",
+              "answer": "The partnership indemnifies the partner for ordinary-course liabilities, § 401(c); not the reverse.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "What could the limited partners in RNR have done to protect themselves?",
+              "answer": "File a statement of partnership authority or notify the lender of the cap.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e09",
+          "title": "Partners' fiduciary duties under RUPA § 409, and waivers under § 105",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The duties in RUPA § 409, the defenses inside it, the UPA's versions, what a partnership agreement can and can't change under § 105, and the organizational opportunity doctrine."
+            },
+            {
+              "id": "s2",
+              "say": "RUPA § 409, loyalty. Three parts. One: to account for and hold as trustee any property, profit or benefit derived in the conduct or winding up of the business, from use of partnership property, or from appropriating a partnership opportunity. Two: to refrain from dealing with the partnership as, or for, an adverse party. Three: to refrain from competing with the partnership before dissolution."
+            },
+            {
+              "id": "s3",
+              "say": "Care. To refrain from gross negligence or recklessness, intentional misconduct, or a knowing violation of law. Ordinary negligence is NOT a breach. And on top, the contractual obligation of good faith and fair dealing, § 409(d)."
+            },
+            {
+              "id": "s4",
+              "say": "Three rules inside § 409. One, § 409(e): pursuing one's own interest isn't by itself a breach. Two, § 409(f): all the partners may authorize or ratify after full disclosure. Three, § 409(g): fairness is a defense to a self-dealing claim."
+            },
+            {
+              "id": "s5",
+              "say": "The UPA's version is thinner. Section 21, the duty to account for benefits. Section 20, information on demand. Plus the common law, which means Meinhard."
+            },
+            {
+              "id": "s6",
+              "say": "Now what the agreement can change. RUPA § 105. The agreement can't eliminate the duty of loyalty, the duty of care, or good faith. It can't exculpate bad faith, intentional misconduct, or knowing violations of law. But, if not manifestly unreasonable, it may alter or eliminate aspects of loyalty, identify specific permitted activities, alter the duty of care, and set procedures for disinterested approval."
+            },
+            {
+              "id": "s7",
+              "say": "The organizational opportunity doctrine. Opportunities connected to the firm's business, which a fiduciary learns about through his position, belong to the firm. Restatement Second of Agency § 387; it's the same idea as the corporate opportunity doctrine."
+            },
+            {
+              "id": "s8",
+              "say": "Why these rules? Partners are agents of each other with power over shared property. The loyalty duties stop one from taking what belongs to all. The low care standard reflects that partners take business risks together and courts don't second-guess ordinary judgment calls."
+            },
+            {
+              "id": "s9",
+              "say": "Recap. Loyalty: account for benefits and opportunities, no adverse dealing, no competing before dissolution. Care: no gross negligence, recklessness, intentional misconduct, or knowing violations. Good faith. Own interest alone isn't a breach; all partners can authorize after full disclosure; fairness defends self-dealing. Section 105: narrow but don't eliminate, if not manifestly unreasonable."
+            },
+            {
+              "id": "s10",
+              "ask": "Is ordinary negligence a breach of a partner's duty of care under RUPA § 409?",
+              "answer": "No. Only gross negligence or recklessness, intentional misconduct, or a knowing violation of law.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "What can a partnership agreement do to loyalty under § 105, and what can't it do?",
+              "answer": "It can, if not manifestly unreasonable, alter aspects of loyalty, identify permitted activities, and set disinterested-approval procedures. It can't eliminate loyalty, care or good faith, or exculpate bad faith, intentional misconduct, or knowing violations.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "Who must approve a conflicted act under § 409(f)?",
+              "answer": "All the partners, after full disclosure.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e10",
+          "title": "Loyalty cases: Meinhard v. Salmon, Sandvick, and Singer v. Singer",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Meinhard, the foundation. Sandvick, joint ventures. Singer, contracting around loyalty."
+            },
+            {
+              "id": "s2",
+              "say": "Meinhard v. Salmon, New York, 1928, Chief Judge Cardozo. Salmon leased the Hotel Bristol for twenty years. Meinhard put up half the money for a share of the profits, and Salmon managed. Near the end of the lease, the landlord offered Salmon alone a far larger, longer lease covering the hotel and neighboring lots. Salmon took it without telling Meinhard."
+            },
+            {
+              "id": "s3",
+              "say": "Held: Meinhard gets half the new lease. Co-venturers owe \"the punctilio of an honor the most sensitive.\" The new deal grew out of the venture, so Salmon, as the manager, at least had to disclose it, so Meinhard could compete for it. The dissent said the venture had ended. Why it matters: it's the foundational loyalty case, the root of the partnership opportunity rule and of a manager's duty to disclose."
+            },
+            {
+              "id": "s4",
+              "say": "Sandvick v. LaCrosse, North Dakota, 2008. Four investors jointly bought oil leases to resell. Shortly before the leases expired, two of them secretly bought \"top leases\" on the same land, effective when the originals ended. Held: not a partnership, because it was a single deal, not an ongoing business. But it was a joint venture, and the two breached their duty of loyalty by not offering the others a share. Why it matters: it distinguishes joint ventures from partnerships, and applies Meinhard's renewal logic."
+            },
+            {
+              "id": "s5",
+              "say": "The comparison chart. A partnership: two or more persons, carrying on, as co-owners, a business for profit. A joint venture, under Sandvick, four elements. One: contributions of money, property, time or skill, which need not be equal. Two: a proprietary interest and mutual control over the engaged property. Three: an agreement to share profits, and usually losses. Four: an express or implied contract forming it."
+            },
+            {
+              "id": "s6",
+              "say": "Singer v. Singer, Oklahoma Court of Appeals, 1981. A family oil partnership's agreement expressly let partners compete with the partnership for their own accounts. After the family discussed buying a parcel, two partners bought it themselves. Held: no breach. The clause allowed even \"predatory\" competition. Only taking existing partnership assets or funds would breach. Why it matters: partners can contract around the duty not to take opportunities. Contrast Meinhard."
+            },
+            {
+              "id": "s7",
+              "say": "Who's liable? Two partners run a parking garage on a leased lot. The landlord offers one of them, privately, a lease on the lot next door. She takes it for herself and opens a competing garage. No agreement on competition. Breach?",
+              "voice": "alt"
+            },
+            {
+              "id": "s8",
+              "say": "Yes. Under Meinhard and RUPA § 409(b)(1), the opportunity grew out of the partnership's business and came to her through it. She had to disclose it and give the partnership a chance. And she can't compete before dissolution, § 409(b)(3). With a Singer clause allowing competition, the answer could flip, subject to § 105's limits."
+            },
+            {
+              "id": "s9",
+              "say": "The traps. Trap one: Sandvick wasn't a partnership, but joint venturers still owe loyalty. Trap two: Meinhard's duty was at least disclosure, so the partner could compete. Trap three: a competition clause can permit even predatory competition, but not taking existing assets or funds."
+            },
+            {
+              "id": "s10",
+              "say": "Recap. Meinhard: punctilio of an honor; disclose opportunities that grow out of the venture. Sandvick: a joint venture, four elements, same loyalty. Singer: a clause can permit competition."
+            },
+            {
+              "id": "s11",
+              "ask": "What phrase did Cardozo use for the duty co-venturers owe?",
+              "answer": "\"The punctilio of an honor the most sensitive.\"",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "Name the four elements of a joint venture from Sandvick.",
+              "answer": "Contributions of money, property, time or skill; a proprietary interest and mutual control over the property; an agreement to share profits, usually losses; and an express or implied contract.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "What would have been a breach even under the Singer clause?",
+              "answer": "Taking existing partnership assets or funds.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e11",
+          "title": "Duties cases: Nemec, Bane, and Second Measure",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Three cases on the limits and the endurance of duties. Nemec, the implied covenant. Bane, who is owed duties and how low care is. Second Measure, duties through winding up."
+            },
+            {
+              "id": "s2",
+              "say": "Nemec v. Shrader, Delaware, 2010. Booz Allen could redeem retired officers' stock at book value at any time. Weeks before a two point five four billion dollar sale, it redeemed two retirees at about one hundred sixty-two dollars a share, instead of the seven hundred plus the deal implied. Held: no claim. The implied covenant of good faith can't override conduct the contract expressly allows, and the sale was foreseeable. Fiduciary claims are displaced where a contract governs. The dissent said contractual powers must serve a legitimate company interest. Why it matters: insiders are held to their bargains, and the implied covenant is a narrow gap filler."
+            },
+            {
+              "id": "s3",
+              "say": "Bane v. Ferguson, Seventh Circuit, 1989, Judge Posner. A retired law partner's pension stopped when his old firm collapsed after a bad merger. He sued the managing partners for negligence. Held: no claim. Partners owe duties to current partners, not former ones. And the business judgment rule shields mere negligence anyway. Why it matters: who is owed partner duties, and how low the duty of care is."
+            },
+            {
+              "id": "s4",
+              "say": "Second Measure v. Kim, Northern District of California, 2015. Kim says he and Babineau orally agreed to build a data business as equal partners, until Babineau locked him out, incorporated the business, and raised money. Held: Kim's claims survive. Even after dissolution, a partner must account for partnership property and opportunities. He can't dissolve just to take the business without compensating his partner. Why it matters: duties continue through winding up. No freeze-outs, the same lesson as Page v. Page tomorrow."
+            },
+            {
+              "id": "s5",
+              "say": "Recap. Nemec: the implied covenant can't override express rights. Bane: no duty to former partners, and negligence isn't a breach. Second Measure: duties continue through winding up."
+            },
+            {
+              "id": "s6",
+              "ask": "Why did the retirees lose in Nemec?",
+              "answer": "The contract expressly allowed redemption at book value at any time; the implied covenant can't override express terms, and the sale was foreseeable.",
+              "pause": 8
+            },
+            {
+              "id": "s7",
+              "ask": "What two reasons defeated the retired partner in Bane?",
+              "answer": "Partners owe duties to current partners, not former ones, and the business judgment rule shields mere negligence.",
+              "pause": 8
+            },
+            {
+              "id": "s8",
+              "ask": "What can't a partner do, per Second Measure?",
+              "answer": "Dissolve, or lock out his partner, to take the business without accounting for partnership property and opportunities.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e12",
+          "title": "Grabbing and leaving, and expulsion: Meehan, Gibbs, Lawlis, and Bohatch",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Week 9. Two cases on partners leaving with clients and staff, two on expelling a partner."
+            },
+            {
+              "id": "s2",
+              "say": "Meehan v. Shaughnessy, Massachusetts, 1989. Two partners secretly planned a new firm. They denied it when asked. They prepared client letters on the old firm's letterhead, and rushed to sign up clients the moment they gave notice. Held: preparing to leave was fine. But they breached loyalty by unfairly acquiring client consents. The remedy: they must prove the clients would have come anyway, or hold the profits from those cases in trust for the old firm. Why it matters: it's the leading partner grabbing-and-leaving case. Notice the burden shift to the departing partners."
+            },
+            {
+              "id": "s3",
+              "say": "Gibbs v. Breed, Abbott and Morgan, New York Appellate Division, 2000. Two departing partners gave their new firm a confidential memo of their department's staff salaries and billing rates, and lined up recruits before giving notice. Held: a breach for using confidential information and recruiting before notice. But no breach for planning the move together, or for taking duplicate desk files. Compare Bancroft-Whitney from Day 2."
+            },
+            {
+              "id": "s4",
+              "say": "Lawlis v. Kightlinger and Gray, Indiana Court of Appeals, 1990. A law firm expelled a recovering alcoholic partner, by the two-thirds vote its agreement required for a no-cause expulsion. Held: no breach. Expulsion under a negotiated no-cause clause is in good faith if nothing owed to the partner is wrongfully withheld. Why it matters: courts enforce \"guillotine\" expulsion clauses as written."
+            },
+            {
+              "id": "s5",
+              "say": "Bohatch v. Butler and Binion, Texas, 1998. A new partner reported suspected overbilling by another partner. The client and the firm found the bills reasonable, and the firm expelled her. Held: there's no fiduciary duty not to expel a partner for reporting suspected misconduct. Partners may part ways when trust breaks down. The dissent warned this deters reporting. Why it matters: the limits of partner fiduciary duties in expulsion."
+            },
+            {
+              "id": "s6",
+              "say": "Who's liable? Two accounting partners plan to leave. Before giving notice, they lease an office and form an LLP. They also call their biggest clients to say, \"We're leaving; sign this form to come with us,\" and deny it when the managing partner asks. Breach?",
+              "voice": "alt"
+            },
+            {
+              "id": "s7",
+              "say": "Leasing and forming the LLP: permitted preparation. Secret pre-notice solicitation and lying when asked: a breach, as in Meehan. They'd have to prove the clients would have come anyway, or hold the profits in trust."
+            },
+            {
+              "id": "s8",
+              "say": "Next. A partnership agreement allows expulsion by a two-thirds vote without cause. The partners vote out a partner who's been difficult. She says it's a breach of fiduciary duty. Result?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "No breach, under Lawlis, so long as nothing owed to her is wrongfully withheld. And Bohatch adds that partners may part ways when trust breaks down."
+            },
+            {
+              "id": "s10",
+              "say": "The traps. Trap one: preparation is permitted; secret pre-notice solicitation and lying aren't. Trap two: Meehan shifts the burden to the departing partners. Trap three: in expulsion, the question is the agreement and good faith in paying what's owed, not the reason."
+            },
+            {
+              "id": "s11",
+              "say": "Recap. Meehan: unfair acquisition of client consents breaches loyalty; burden shifts. Gibbs: confidential salary memos and pre-notice recruiting breach; planning together doesn't. Lawlis: no-cause expulsion clauses enforced. Bohatch: no duty not to expel a whistleblower."
+            },
+            {
+              "id": "s12",
+              "ask": "In Meehan, what must the departing partners prove to keep the profits?",
+              "answer": "That the clients would have come with them anyway; otherwise they hold the profits in trust for the old firm.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "In Gibbs, what was not a breach?",
+              "answer": "Planning the move together and taking duplicate desk files.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "What did Bohatch hold?",
+              "answer": "There's no fiduciary duty not to expel a partner for reporting suspected misconduct.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d3-e13",
+          "title": "Day 3 cumulative quiz",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Day 3 quiz. Pause, answer, check."
+            },
+            {
+              "id": "s2",
+              "ask": "Does a partnership require intent to be partners?",
+              "answer": "No. RUPA § 202(a): it forms whether or not the persons intend to form a partnership.",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "Profits paid as interest on a loan, even if they vary with profits: partner?",
+              "answer": "No. Interest on a loan is one of the six exceptions to the presumption.",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "Which case: the receptionist made a partner on paper?",
+              "answer": "Fenwick v. Unemployment Compensation Commission. She was an employee.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "What does Martin v. Peyton call the lender-versus-partner question?",
+              "answer": "A question of degree.",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "Under UPA § 16 and RUPA § 308, what does the relying party have to do?",
+              "answer": "Give credit to the apparent partnership under the UPA; enter into a transaction under RUPA.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "Three partners each put in sixty thousand. Profit ninety thousand, draws twenty thousand each. Each capital account?",
+              "answer": "Seventy thousand: sixty plus thirty minus twenty.",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "Under RUPA § 806, where do partner-creditors stand?",
+              "answer": "With the outside creditors, paid together first.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "Two partners, one objects to buying bread, the other orders anyway. Is the firm bound to the supplier?",
+              "answer": "Yes. National Biscuit v. Stroud: ordinary business, and one of two can't be a majority to restrict the other.",
+              "pause": 10
+            },
+            {
+              "id": "s10",
+              "ask": "In Day v. Sidley and Austin, why no claim?",
+              "answer": "The agreement gave the executive committee control and let a majority approve the merger; partners can contract around defaults.",
+              "pause": 10
+            },
+            {
+              "id": "s11",
+              "ask": "What three things does RUPA § 409(b) require for loyalty?",
+              "answer": "Account for benefits, property use and opportunities; no adverse dealing; no competing before dissolution.",
+              "pause": 10
+            },
+            {
+              "id": "s12",
+              "ask": "Meinhard or Singer: which allowed partners to take the opportunity?",
+              "answer": "Singer v. Singer, because the agreement expressly allowed competition.",
+              "pause": 10
+            },
+            {
+              "id": "s13",
+              "ask": "From Day 2: what did Majestic Realty hold about demolition?",
+              "answer": "Demolition in a built-up area is inherently dangerous work, an exception to non-liability for independent contractors.",
+              "pause": 10
+            },
+            {
+              "id": "s14",
+              "ask": "From Day 1: three elements of apparent authority?",
+              "answer": "The principal holds out the agent, the third party reasonably believes, and the belief traces to the principal's manifestations.",
+              "pause": 10
+            },
+            {
+              "id": "s15",
+              "say": "That's Day 3. Tomorrow: how partnerships end. Dissociation, dissolution, buyouts, Kovacik's loss rule, buyout agreements, and limited partnerships."
             }
           ]
         }
