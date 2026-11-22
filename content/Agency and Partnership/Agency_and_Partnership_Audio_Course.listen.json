@@ -29,7 +29,7 @@
             },
             {
               "id": "s4",
-              "say": "Day 3: forming a partnership, partnership property, management and authority, partners' fiduciary duties, and grabbing and leaving. Day 4: dissociation and dissolution under the UPA and RUPA, loss sharing in Kovacik, buyout agreements, and limited partnerships and LLPs. Day 5: LLCs from formation to dissolution, then a full review of every test and list, and how to work the open-book short answer."
+              "say": "Day 3: forming a partnership, partnership property, management and authority, partners' fiduciary duties, and grabbing and leaving. Day 4: dissociation and dissolution under the UPA and RUPA, loss sharing in Kovacik, buyout agreements, limited partnerships and LLPs, and then forming an LLC and its operating agreement. Day 5: the rest of LLCs, veil piercing, duties, capital, expulsion and dissolution, then a full review of every test and list, and how to work the open-book short answer."
             },
             {
               "id": "s5",
@@ -1016,7 +1016,7 @@
             },
             {
               "id": "s7",
-              "say": "Held: Curran is personally liable, about $255,000. An agent for a partially disclosed principal is a party to the contract. The agent must disclose the principal's identity, and it doesn't matter that the seller could have searched the records. Why it matters: it puts the disclosure burden on the agent. You'll see it again on Day 5, when LLC managers fail to name their company."
+              "say": "Held: Curran is personally liable, about $255,000. An agent for a partially disclosed principal is a party to the contract. The agent must disclose the principal's identity, and it doesn't matter that the seller could have searched the records. Why it matters: it puts the disclosure burden on the agent. You'll see it again on Day 4, when an LLC manager fails to name his company."
             },
             {
               "id": "s8",
@@ -3193,6 +3193,1141 @@
             {
               "id": "s15",
               "say": "That's Day 3. Tomorrow: how partnerships end. Dissociation, dissolution, buyouts, Kovacik's loss rule, buyout agreements, and limited partnerships."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 4,
+      "title": "Dissociation and dissolution, Kovacik, buyouts, limited partnerships, and forming an LLC",
+      "minutes": 68,
+      "episodes": [
+        {
+          "id": "ap-d4-e00",
+          "title": "Spaced review of Days 1 to 3",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Day 4. Spaced review first. Pause, answer, check."
+            },
+            {
+              "id": "s2",
+              "ask": "What does Restatement Third § 2.06(2) do?",
+              "answer": "Stops an undisclosed principal from relying on instructions that reduce the agent's authority below what a third party would assume if the principal were disclosed.",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "Name the five exceptions to non-liability for independent contractors.",
+              "answer": "Retained control, negligent selection, inherently dangerous work, abnormally dangerous activity, and nondelegable duties.",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "What's the profit-sharing presumption, and where is it?",
+              "answer": "Sharing profits presumes a partnership, RUPA § 202(c)(3), UPA § 7(4), unless received as debt repayment, wages, rent, an annuity, interest, or the price of goodwill or property.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "What did In re Fulton hold about the trailer?",
+              "answer": "Partnership property, from the title in the firm's name and its use in the business; intent at acquisition controls.",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "Under RUPA § 301, when does a partner's ordinary-course act not bind the firm?",
+              "answer": "When the partner lacked authority and the third party knew or had notice.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "What care standard do partners owe under § 409(c)?",
+              "answer": "No gross negligence or recklessness, intentional misconduct, or knowing violation of law. Ordinary negligence isn't a breach.",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "Which case enforced a two-thirds no-cause expulsion clause?",
+              "answer": "Lawlis v. Kightlinger and Gray.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "In Meehan v. Shaughnessy, what was the breach?",
+              "answer": "Unfairly acquiring client consents: secret pre-notice preparation of client letters, denying plans when asked, and rushing to sign clients.",
+              "pause": 10
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e01",
+          "title": "Exit vocabulary: at-will and term partnerships, dissociation, dissolution, winding up",
+          "minutes": 2,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Week 10 begins with vocabulary. Get these words exact and the rest of today falls into place."
+            },
+            {
+              "id": "s2",
+              "say": "An at-will partnership has no agreed term or undertaking. Any partner may end it at any time."
+            },
+            {
+              "id": "s3",
+              "say": "A term partnership has a term, explicit or implicit. Explicit: a duration or purpose is stated. Implicit: there's clear evidence of a minimum or maximum duration, or a venture certain to end, such as \"until the debts are repaid\" or \"until the investment is recouped.\" But a mere hope of profits isn't enough. That's Page, and Owen."
+            },
+            {
+              "id": "s4",
+              "say": "Courts use \"dissolution\" loosely: for a partner's departure, for the winding-up process, or for its completion. The best usage: dissolution is the point when the firm stops operating as a forward-looking business and begins to wind up."
+            },
+            {
+              "id": "s5",
+              "say": "Four terms. Dissociation: a partner ceases to be associated, RUPA § 601. Dissolution: under the UPA, the change in relation when any partner ceases to be associated, § 29; under RUPA, the start of winding up. Winding up: settling the firm's affairs. Termination: winding up is complete."
+            },
+            {
+              "id": "s6",
+              "say": "So the sequence is: dissociation, maybe dissolution, then winding up, then termination. Under RUPA, dissociation doesn't have to lead to dissolution at all."
+            },
+            {
+              "id": "s7",
+              "ask": "What makes a partnership a term partnership by implication?",
+              "answer": "Clear evidence of a minimum or maximum duration, or a venture certain to end, like until debts are repaid; a mere hope of profits isn't enough.",
+              "pause": 8
+            },
+            {
+              "id": "s8",
+              "ask": "Under RUPA, what is dissolution?",
+              "answer": "The start of winding up.",
+              "pause": 8
+            },
+            {
+              "id": "s9",
+              "ask": "What's termination?",
+              "answer": "Completion of winding up.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e02",
+          "title": "The UPA's four principles of dissolution",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The UPA, 1914, on partners leaving, in four principles. Then why critics disliked it."
+            },
+            {
+              "id": "s2",
+              "say": "Principle one. Any partner's departure dissolves the partnership. That's the aggregate theory: the partnership is its partners, so change the partners and you've changed the partnership. Adding a partner, though, doesn't dissolve it."
+            },
+            {
+              "id": "s3",
+              "say": "Principle two. Partners always have the power, though not always the right, to dissolve, and that power can't be contracted away. In an at-will partnership, a partner has both the power and the right. In a term partnership, premature dissolution is wrongful, but it still happens. Expulsion under the agreement, done rightfully, still dissolves. Death and bankruptcy dissolve, and aren't wrongful. And the end of the term or undertaking dissolves."
+            },
+            {
+              "id": "s4",
+              "say": "Principle three. Dissolution starts winding up; it isn't termination, § 30. Fiduciary duties continue. And authority is limited to winding up, §§ 33 and 35, with notice and advertising rules."
+            },
+            {
+              "id": "s5",
+              "say": "Principle four. The business may continue through a new firm. On a rightful dissolution, any partner may force liquidation, § 38(1). On a wrongful dissolution, the innocent partners get damages, and may continue the business by paying the wrongdoer the value of his interest, less damages, and without goodwill, § 38(2)."
+            },
+            {
+              "id": "s6",
+              "say": "The criticisms. The UPA rules destabilize firms, undercut continuation agreements, and don't separate departures that need only a buyout from true wind-ups."
+            },
+            {
+              "id": "s7",
+              "say": "Recap. UPA: every departure dissolves; the power to dissolve is always there; dissolution starts winding up; rightful dissolution lets anyone force liquidation; wrongful dissolution lets the innocent partners continue, paying value less damages and without goodwill."
+            },
+            {
+              "id": "s8",
+              "ask": "Under the UPA, does a partner's death dissolve the partnership? Is it wrongful?",
+              "answer": "Yes, it dissolves; no, it isn't wrongful.",
+              "pause": 8
+            },
+            {
+              "id": "s9",
+              "ask": "Under UPA § 38(2), what do innocent partners pay a wrongful dissolver if they continue?",
+              "answer": "The value of his interest, less damages, and without goodwill.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "Can the UPA power to dissolve be contracted away?",
+              "answer": "No. The power always exists, though its exercise may be wrongful.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e03",
+          "title": "RUPA's four principles, and the dissociation events of § 601",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. RUPA's four principles, the seven dissociation events in § 601, and what is not a dissociation."
+            },
+            {
+              "id": "s2",
+              "say": "Principle one. Dissociation does not necessarily dissolve. Article 6 lists the dissociations."
+            },
+            {
+              "id": "s3",
+              "say": "Principle two. The § 603 switch. After a dissociation, the track is either an Article 7 buyout and continuation, or Article 8 dissolution, winding up, and liquidation."
+            },
+            {
+              "id": "s4",
+              "say": "Principle three. Filed statements of dissociation or dissolution cut off apparent authority and liability, with ninety-day constructive notice, § 103(d)."
+            },
+            {
+              "id": "s5",
+              "say": "Principle four. Almost everything is a default. The agreement can make a partnership nearly indissoluble, except for the § 105(c) items."
+            },
+            {
+              "id": "s6",
+              "say": "The dissociation events, § 601. Any one suffices. One: the partner's express will to withdraw. Two: an event the agreement specifies. Three: expulsion under the agreement. Four: unanimous expulsion by the other partners, if it is unlawful to continue with the partner, if the partner transferred all his interest, or if an entity partner dissolved. Five: judicial expulsion, for wrongful conduct materially affecting the business, willful or persistent material breach, or conduct making it not reasonably practicable to carry on with that partner. Six: bankruptcy, or an assignment for creditors. Seven: death, appointment of a guardian, or incapacity."
+            },
+            {
+              "id": "s7",
+              "say": "Not dissociation: transferring a transferable interest; a charging order; adding a partner; and disagreements."
+            },
+            {
+              "id": "s8",
+              "say": "Recap. RUPA: dissociation doesn't necessarily dissolve; § 603 switches to buyout or winding up; filed statements cut off lingering power after ninety days; almost everything is a default. Seven dissociation events in § 601."
+            },
+            {
+              "id": "s9",
+              "ask": "What is the § 603 switch?",
+              "answer": "After dissociation, either an Article 7 buyout and continuation, or Article 8 dissolution and winding up.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "Name the three grounds for judicial expulsion under § 601(5).",
+              "answer": "Wrongful conduct materially affecting the business; willful or persistent material breach; or conduct making it not reasonably practicable to carry on with the partner.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "Is transferring a transferable interest a dissociation?",
+              "answer": "No. Neither is a charging order, adding a partner, or a disagreement.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e04",
+          "title": "Six exit events under the UPA and under RUPA",
+          "minutes": 2,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The outline's chart: six events, and the result under each act. Say each pair aloud."
+            },
+            {
+              "id": "s2",
+              "say": "Event one: an at-will partner withdraws. UPA: rightful dissolution, and any partner can force liquidation. RUPA: dissolution and winding up, § 801(1)."
+            },
+            {
+              "id": "s3",
+              "say": "Event two: a term partner withdraws early. UPA: wrongful dissolution; the others may continue, paying value less damages, with no goodwill. RUPA: wrongful dissociation, § 602(b). The others continue, unless half vote to wind up within ninety days. And the departing partner gets a buyout less damages, with deferred payment."
+            },
+            {
+              "id": "s4",
+              "say": "Event three: a partner dies or goes bankrupt. UPA: dissolution, not wrongful. RUPA: dissociation. A term firm continues unless half vote to wind up, § 801(2)(A). An at-will firm continues, with a buyout."
+            },
+            {
+              "id": "s5",
+              "say": "Event four: a partner is expelled under the agreement. UPA: dissolution, rightful if done in good faith. RUPA: dissociation and a buyout, § 601(3)."
+            },
+            {
+              "id": "s6",
+              "say": "Event five: a partner's misconduct. UPA: the court may dissolve, § 32. RUPA: the court may expel, § 601(5), or dissolve, § 801(4)."
+            },
+            {
+              "id": "s7",
+              "say": "Event six: a new partner is admitted. UPA: no dissolution. RUPA: no dissociation."
+            },
+            {
+              "id": "s8",
+              "say": "The pattern to see: the UPA dissolves on every departure; RUPA usually keeps the business going and buys the departing partner out."
+            },
+            {
+              "id": "s9",
+              "ask": "Under RUPA, a partner in an at-will partnership dies. What happens?",
+              "answer": "Dissociation; the firm continues, and the estate gets a buyout.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "Under RUPA, a term partner quits early. What happens?",
+              "answer": "Wrongful dissociation under § 602(b). The others continue unless half vote to wind up within ninety days; the partner gets a buyout less damages, with deferred payment.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "Under RUPA, what can a court do about a misbehaving partner?",
+              "answer": "Expel him, § 601(5), or dissolve the partnership, § 801(4).",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e05",
+          "title": "Power versus right: wrongful dissociation, Collins, Giles, Owen, and Page",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The power-versus-right rule and the § 602 list of wrongful dissociations. Then four cases."
+            },
+            {
+              "id": "s2",
+              "say": "The rule. A partner has the power to dissociate at any time by express will, § 602(a). That comes from Collins v. Lewis. Dissociation is wrongful only if, one, it breaches an express term of the agreement, or two, in a term partnership, before the end of the term, the partner withdraws by express will, unless within ninety days after another partner's death-type or wrongful dissociation; is judicially expelled; becomes a bankruptcy debtor; or, if an entity partner, willfully dissolves. The wrongdoer is liable for the damages caused, § 602(c)."
+            },
+            {
+              "id": "s3",
+              "say": "Notice the ninety-day safe harbor. If a co-partner dies or wrongfully leaves, you have ninety days to leave too without it being wrongful."
+            },
+            {
+              "id": "s4",
+              "say": "Collins v. Lewis, Texas Civil Appeals, 1955. Collins financed a cafeteria partnership set to last the thirty-year lease. When it lost money early, he stopped funding and sued to dissolve. Held: dissolution denied. The losses came from Collins's own conduct. A partner always has the power, but not always the right, to dissolve, and wrongful dissolution means damages. Why it matters: it's the source of the power-versus-right rule, now RUPA § 602(a)."
+            },
+            {
+              "id": "s5",
+              "say": "Giles v. Giles Land Company, Kansas Court of Appeals, 2012. In a family farm partnership, a son threatened the others, with lines like \"last man standing\" and \"paybacks are hell,\" berated his father, and stalled the business. Held: the court expelled him, judicial dissociation, because his conduct made it not reasonably practicable to continue in partnership with him. Why it matters: RUPA lets courts remove one partner, with a buyout, instead of dissolving the whole business."
+            },
+            {
+              "id": "s6",
+              "say": "Owen v. Cohen, California, 1941. In a bowling-alley partnership, one partner tried to dominate, humiliated the other, refused to work, and took money without consent. Held: court-ordered dissolution affirmed. Persistent misconduct destroying cooperation is enough. And the other partner's loan is repaid first from the sale. Why it matters: grounds for judicial dissolution, now RUPA § 801(4)."
+            },
+            {
+              "id": "s7",
+              "say": "Page v. Page, California, 1961. Two brothers' linen partnership lost money for years. Once it turned profitable, the brother whose company held its debt sought to dissolve it. Held: it was an at-will partnership, so he may dissolve, since a hope of recouping losses didn't make a term. But only in good faith. He may not freeze out his brother to grab the business. Why it matters: the good-faith limit on dissolution, and how to tell at-will from term."
+            },
+            {
+              "id": "s8",
+              "say": "Who's liable? Three partners sign a five-year partnership to run a ski shop. In year two, one partner, Dee, announces she's quitting to move abroad. Can she? What does it cost her?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "She has the power, § 602(a). But it's a term partnership and she's leaving early by express will, so it's wrongful under § 602(b). She's liable for damages, § 602(c). The others may continue, and her buyout is reduced by damages, and payment may be deferred until the term ends."
+            },
+            {
+              "id": "s10",
+              "say": "Next. Same shop, but Dee leaves sixty days after her co-partner dies. Wrongful?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "No. Withdrawal within ninety days after another partner's death-type dissociation isn't wrongful."
+            },
+            {
+              "id": "s12",
+              "say": "The traps. Trap one: confusing power and right. Every partner has the power. The question is whether it's wrongful. Trap two: a hope of profits isn't a term, Page. Trap three: even at-will dissolution must be in good faith; no freeze-outs, Page and Second Measure."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. Power always; right sometimes. Wrongful: breaches an express term, or a term partner leaves early, is judicially expelled, goes bankrupt, or an entity partner willfully dissolves. Collins: power versus right. Giles: judicial expulsion. Owen: judicial dissolution. Page: at-will, but good faith."
+            },
+            {
+              "id": "s14",
+              "ask": "Name the ways a term partner's dissociation is wrongful under § 602(b).",
+              "answer": "Withdrawing by express will before the term ends, unless within ninety days after another partner's death-type or wrongful dissociation; judicial expulsion; becoming a bankruptcy debtor; or, for an entity partner, willfully dissolving. Plus any breach of an express term.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "In Giles, what did the court do instead of dissolving?",
+              "answer": "It expelled the son by judicial dissociation, because his conduct made it not reasonably practicable to continue with him.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "What limit did Page v. Page put on at-will dissolution?",
+              "answer": "It must be in good faith; a partner can't dissolve to freeze out the other and grab the business.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e06",
+          "title": "The buyout of §§ 701 to 704, and the dissolution events of § 801",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. When the business continues: the buyout price, the timing, and lingering power. When it doesn't: the dissolution events of § 801, and which ones the agreement can't change."
+            },
+            {
+              "id": "s2",
+              "say": "The buyout rule, § 701. The partnership must buy the dissociated partner's interest at the amount that would have been distributable if, on the date of dissociation, the assets were sold at the greater of liquidation value or going-concern value without the partner. Minus damages for wrongful dissociation. Plus interest from the date of dissociation. And no goodwill deduction."
+            },
+            {
+              "id": "s3",
+              "say": "Contrast the UPA. Under UPA § 38(2), the wrongful partner got value less damages and without goodwill. Under RUPA, there's no goodwill penalty; the greater of the two values."
+            },
+            {
+              "id": "s4",
+              "say": "Timing. The partnership pays the estimated price within 120 days of a written demand. A wrongful dissociator from a term partnership waits until the term ends, unless he shows the early payment causes no undue hardship, and then it's secured and with interest. And the partner sues within 120 days of the tender."
+            },
+            {
+              "id": "s5",
+              "say": "Lingering power and liability. For two years after dissociation, a dissociated partner can bind the firm, and is liable to third parties who don't know of the dissociation and reasonably believe he's still a partner, §§ 702 and 703. A filed statement of dissociation, § 704, cuts that off after ninety days."
+            },
+            {
+              "id": "s6",
+              "say": "Now the dissolution events, § 801. One: in an at-will partnership, a partner's express will to withdraw. Two: in a term partnership, within ninety days after a death-type, bankruptcy-type, incapacity-type, or wrongful dissociation, at least half of the remaining partners vote to wind up; or all partners agree; or the term expires or the undertaking is done. Three: an event the agreement specifies."
+            },
+            {
+              "id": "s7",
+              "say": "Four: a court order on a partner's application, because the business is unlawful; its economic purpose is likely to be unreasonably frustrated; another partner's conduct makes it not reasonably practicable to carry on with him; or it's otherwise not reasonably practicable to carry on under the agreement. Five: a court order on a transferee's application, when equitable: after the term, if it was a term partnership when the interest was transferred or charged; or at any time, if at will."
+            },
+            {
+              "id": "s8",
+              "say": "The key limit. The agreement may modify events one through three, but NOT four or five, § 105(c)(11). You can't contract away a partner's or transferee's right to go to court."
+            },
+            {
+              "id": "s9",
+              "say": "The outline's exit checklist. Seven questions. One: UPA or RUPA? Two: at will or term, explicit or implied? Three: what event: express will, death, bankruptcy, expulsion, court order? Four: rightful or wrongful, checking the § 602(b) list? Five: Article 7 buyout or Article 8 winding up? Six: what does the partnership agreement say? It usually controls: Frank, G and S, Day. Seven: who can bind the firm afterward, and for how long?"
+            },
+            {
+              "id": "s10",
+              "say": "Recap. Buyout: greater of liquidation or going-concern value, less damages, plus interest, no goodwill deduction, within 120 days of demand. Two-year lingering power, cut off ninety days after a filed statement. Section 801 dissolution events; the agreement can't touch the judicial ones."
+            },
+            {
+              "id": "s11",
+              "ask": "What's the § 701 buyout price?",
+              "answer": "The amount distributable if assets were sold at the greater of liquidation or going-concern value without the partner, minus wrongful-dissociation damages, plus interest from dissociation.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "How long does a dissociated partner's lingering power last, and how is it cut off?",
+              "answer": "Two years, §§ 702 and 703, cut off by a filed statement of dissociation after ninety days, § 704.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "Which § 801 events can't the agreement modify?",
+              "answer": "Court-ordered dissolution on a partner's application or a transferee's application, § 105(c)(11).",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e07",
+          "title": "Winding up, and the cases: Creel, Prentiss, Disotell, Monin, and Pav-Saver",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The winding-up rules, then five cases on what happens after dissolution."
+            },
+            {
+              "id": "s2",
+              "say": "The rules, §§ 802 through 806. The partnership continues only to wind up. Partners have no actual authority for new business. Apparent authority may linger until a statement of dissolution, plus ninety days. The acts that bind are those appropriate for winding up, or ordinary acts with third parties lacking notice, § 804. A partner who knowingly binds the firm to new business is liable to the others, § 805. Winding up means concluding all unfinished business pending at dissolution, paying the debts, and distributing, § 806. And a wrongful dissociator can't participate in winding up."
+            },
+            {
+              "id": "s3",
+              "say": "Creel v. Lilly, Maryland, 1999. After a partner died, the survivors inventoried and valued the store, and paid his estate its share. The widow demanded a full liquidation sale. Held: no forced liquidation. Winding up isn't the same as a fire sale; a good-faith accounting and payment suffices. Why it matters: it marks the move from aggregate-theory dissolution to entity continuity, with Giles."
+            },
+            {
+              "id": "s4",
+              "say": "Prentiss v. Sheffel, Arizona Court of Appeals, 1973. Two majority partners froze out a minority partner in a shopping-center partnership. The court ordered a sale and let the majority bid. Held: allowed. No bad-faith plan was shown, and their bid raised the price, increasing the minority partner's share. Why it matters: how judicial sales work in winding up."
+            },
+            {
+              "id": "s5",
+              "say": "Disotell v. Stiltner, Alaska, 2004. A hotel partnership dissolved before earning any profit. The trial court let one partner buy the other out instead of selling the property. Held: a buyout instead of liquidation is allowed, but only at fair market value proven by evidence. And a partner must account for personal use of partnership property during winding up. Why it matters: the shift from forced liquidation to buyouts, now RUPA § 701."
+            },
+            {
+              "id": "s6",
+              "say": "Monin v. Monin, Kentucky Court of Appeals, 1989. After agreeing to auction the partnership's assets, including a milk-hauling contract, to his brother, Sonny kept competing for the contract himself and won it. Held: breach of fiduciary duty, sixty-four thousand dollars in damages. Duties continue until winding up is complete. Why it matters: dissolution doesn't free a partner to take the firm's key asset."
+            },
+            {
+              "id": "s7",
+              "say": "Pav-Saver v. Vasso, Illinois Appellate Court, 1986. A partner that contributed patents ended a partnership the agreement called \"permanent.\" Held: wrongful dissolution. The other partner may continue the business and keep using the patents, value the wrongdoer's interest without goodwill, and collect liquidated damages. Why it matters: the UPA's consequences for wrongful dissolution, and the lesson to plan for what happens to contributed property."
+            },
+            {
+              "id": "s8",
+              "say": "Who's liable? A catering partnership dissolves. During winding up, one partner signs a new two-year contract to cater a hotel's weddings. The hotel knows of the dissolution. Is the firm bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "No. New business isn't appropriate for winding up, and the hotel had notice, so there's no apparent authority either, § 804. If the firm somehow ends up bound, the partner who knowingly bound it to new business is liable to the others, § 805."
+            },
+            {
+              "id": "s10",
+              "say": "The traps. Trap one: winding up isn't a fire sale, Creel. Trap two: duties survive dissolution until winding up is done, Monin. Trap three: under the UPA, a wrongful dissolver's interest is valued without goodwill, Pav-Saver."
+            },
+            {
+              "id": "s11",
+              "say": "Recap. Winding up: finish pending business, pay debts, distribute; no new business. Creel: no forced fire sale. Prentiss: majority may bid at the judicial sale. Disotell: buyout at proven fair market value. Monin: duties continue through winding up. Pav-Saver: wrongful dissolution, continue with the patents, no goodwill."
+            },
+            {
+              "id": "s12",
+              "ask": "What did Creel v. Lilly hold about the widow's demand?",
+              "answer": "No forced liquidation; a good-faith accounting and payment of the estate's share suffices.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "In Monin, why was Sonny liable?",
+              "answer": "Fiduciary duties continue until winding up is complete, and he competed for the partnership's key asset after agreeing to the auction.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "What does § 805 do?",
+              "answer": "Makes a partner who knowingly binds the firm to new business after dissolution liable to the other partners.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e08",
+          "title": "Loss sharing: Kovacik v. Reed",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The facts, the statutory answer with the numbers, the Kovacik answer, why, and RUPA's rejection."
+            },
+            {
+              "id": "s2",
+              "say": "Kovacik v. Reed, California, 1957. Kovacik put up ten thousand dollars. Reed put in only unpaid labor. They agreed to split profits fifty-fifty, and never discussed losses. The venture lost eight thousand six hundred eighty dollars, and Kovacik sued Reed for half."
+            },
+            {
+              "id": "s3",
+              "say": "First, the statutory answer, under UPA § 18(a) and § 40(b) and (d). Losses are shared like profits, and capital is returned before profits. Do the math. Total loss, eight thousand six hundred eighty. Half each: four thousand three hundred forty. Kovacik's ten thousand came back as only one thousand three hundred twenty in assets. Under the statute, Reed pays in his four thousand three hundred forty share, so Kovacik gets five thousand six hundred sixty: the thirteen twenty plus Reed's forty-three forty. Kovacik's net loss is four thousand three hundred forty, and so is Reed's, out of pocket."
+            },
+            {
+              "id": "s4",
+              "say": "Now the holding. Reed owes nothing. Where one partner contributes money and the other only services, each loses his own contribution. In the court's words, upon loss of the money, the party who contributed it is not entitled to recover any part of it from the party who contributed only services. So Kovacik bears the full eight thousand six hundred eighty and gets the thirteen twenty. Reed's loss is his labor."
+            },
+            {
+              "id": "s5",
+              "say": "The rationale. Each lost his own capital: one money, one labor. And an equal profit split implies the parties valued their contributions equally."
+            },
+            {
+              "id": "s6",
+              "say": "The possible rules. Three. The capital partner bears all capital losses, Kovacik. Share capital losses like profits, the statute. Or share in the ratio of capital contributions. And a concern: the Kovacik rule may make the service partner too willing to take risks, since he can't lose money."
+            },
+            {
+              "id": "s7",
+              "say": "When Kovacik is not applied. If the service partner was paid a salary, or made any capital contribution, even a nominal one. And RUPA rejects Kovacik: the § 401 comment says the default loss rules apply even if a partner contributed no capital."
+            },
+            {
+              "id": "s8",
+              "say": "The professor's point. The parties probably wouldn't have agreed to equal loss sharing. But they probably wouldn't have agreed to zero loss for the service partner either, because losses often trace to the service partner's work, and Kovacik may encourage his risk-taking. A real bargain likely lands somewhere in the middle, and the hypothetical-bargain model doesn't say where. So the lesson: draft a loss clause."
+            },
+            {
+              "id": "s9",
+              "say": "Who's liable? Under RUPA, Mia contributes twenty thousand dollars; Noor contributes only work. Equal profit split, nothing said about losses. The business ends with four thousand dollars of assets and no debts. What does Noor owe Mia?",
+              "voice": "alt"
+            },
+            {
+              "id": "s10",
+              "say": "Under RUPA, Kovacik is rejected. Total loss: sixteen thousand. Shared equally: eight thousand each. Mia should end with twelve thousand: her twenty minus her eight-thousand share. Assets give her four thousand, so Noor pays in eight thousand. Under Kovacik, Noor would owe nothing."
+            },
+            {
+              "id": "s11",
+              "say": "Next. Same facts, but Noor put in one hundred dollars of capital. Does Kovacik apply even in a Kovacik jurisdiction?",
+              "voice": "alt"
+            },
+            {
+              "id": "s12",
+              "say": "No. Kovacik isn't applied if the service partner made any capital contribution, even nominal, or was paid a salary."
+            },
+            {
+              "id": "s13",
+              "say": "The traps. Trap one: Kovacik is an exception to the statute, and RUPA rejects it. Trap two: any capital or salary to the service partner takes it out of Kovacik. Trap three: do the math in steps: total loss, each share, then who pays whom."
+            },
+            {
+              "id": "s14",
+              "say": "Recap. Statute: losses like profits, so Reed would owe forty-three forty. Kovacik: money partner loses money, service partner loses labor, Reed owes nothing. Not applied with a salary or any capital. RUPA rejects it. Draft a loss clause."
+            },
+            {
+              "id": "s15",
+              "ask": "Under the statute, how much would Reed have owed Kovacik?",
+              "answer": "Four thousand three hundred forty dollars, half the eight thousand six hundred eighty loss.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "When does the Kovacik rule not apply?",
+              "answer": "When the service partner was paid a salary or made any capital contribution, even nominal; and RUPA rejects it.",
+              "pause": 8
+            },
+            {
+              "id": "s17",
+              "ask": "What's Kovacik's rationale?",
+              "answer": "Each lost his own contribution, money versus labor, and equal profit sharing implies equally valued contributions.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e09",
+          "title": "Buyout agreements, and G and S Investments v. Belman",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. What a buyout agreement is, the drafting checklist, typical provisions, purposes, funding, and G and S v. Belman."
+            },
+            {
+              "id": "s2",
+              "say": "What it is. An agreement that lets a partner exit for cash, payments, or assets, in exchange for his interest. It must be tailored to the business."
+            },
+            {
+              "id": "s3",
+              "say": "The drafting checklist, seven items. One: triggers, such as death, disability, retirement, divorce, bankruptcy, withdrawal, a creditor's seizure, or a proposed transfer. Two: obligation or option, who buys, the firm or the other investors, and what happens if someone refuses. Three: offer procedures, where the first mover sets the price; the outline notes that's a \"shotgun\" clause. Four: the treatment of contributed intellectual property. Five: the price method: book value, appraisal, a formula, or an annually agreed price. Six: payment: lump sum, or installments with interest. Seven: protection against partnership debts."
+            },
+            {
+              "id": "s4",
+              "say": "Typical provisions, five. One: a list of owners and their interests. Two: the firm's obligation to buy, or the owner's to sell. Three: the trigger events. Four: the price or formula. Five: the payment terms."
+            },
+            {
+              "id": "s5",
+              "say": "Purposes. An orderly transfer. Keeping control and choosing new owners. Passing the business to the right family members. And creating a market for inactive owners' interests."
+            },
+            {
+              "id": "s6",
+              "say": "Funding. Death: life insurance. Retirement: a pension or 401(k). Disability: disability insurance. Divorce: plan for it; the outline cites Alaska Plastics. Otherwise, a formula. And return of capital means the capital account balance plus unallocated profits."
+            },
+            {
+              "id": "s7",
+              "say": "G and S Investments v. Belman, Arizona Court of Appeals, 1984. A general partner's cocaine use made him erratic and harmful to the business, and then he died. The agreement let the survivors continue and buy his interest for his \"capital account\" plus average recent profits. Held: suing for dissolution didn't dissolve the partnership. And \"capital account\" means the book figure, which was negative here, not market value. So the estate got $4,867.57. Why it matters: buyout clauses are enforced as written, and it shows the danger of book-value formulas."
+            },
+            {
+              "id": "s8",
+              "say": "Recap. Tailor the agreement: triggers, obligation or option, procedures, IP, price, payment, debt protection. Fund it with insurance where you can. G and S: \"capital account\" means book value, enforced as written."
+            },
+            {
+              "id": "s9",
+              "ask": "Name four buyout triggers.",
+              "answer": "Any four: death, disability, retirement, divorce, bankruptcy, withdrawal, creditor seizure, a proposed transfer.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "In G and S v. Belman, what did \"capital account\" mean, and why did it matter?",
+              "answer": "The book figure, not market value; it was negative, so the estate got only $4,867.57.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "How is a death buyout typically funded?",
+              "answer": "Life insurance.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e10",
+          "title": "Limited partnerships, LLPs and LLLPs, and the four LP cases",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Unlimited liability as the baseline, how LPs work, the end of the control rule, LLPs and LLLPs, why limited liability spread in the 1980s, then Frigidaire and four supplemental cases."
+            },
+            {
+              "id": "s2",
+              "say": "The baseline. Unlimited liability: UPA § 15, joint and several for torts and joint for contracts; RUPA § 306(a), joint and several for all."
+            },
+            {
+              "id": "s3",
+              "say": "The limited partnership. General partners manage and have full liability. Limited partners have no daily role and no liability beyond their investment. Both own the firm and share profits. The old \"control rule,\" that a limited partner who participates in control loses the shield, was largely eliminated by ULPA 2001 § 303(a). A common structure: a corporation as the sole general partner, often for real estate."
+            },
+            {
+              "id": "s4",
+              "say": "An LLLP shields the general partners too. An LLP shields the general partners of an ordinary partnership by filing, RUPA §§ 306(c) and 901."
+            },
+            {
+              "id": "s5",
+              "say": "Why limited liability spread in the 1980s. The outline lists the trends: mega professional partnerships; the repeal of tax benefits for professional corporations; mass financial torts against lawyers and accountants; the Texas real estate crash; the savings and loan crisis; soaring insurance premiums; and the IRS allowing pass-through taxation for limited-liability entities."
+            },
+            {
+              "id": "s6",
+              "say": "Frigidaire Sales v. Union Properties, Washington, 1977. Two men were limited partners of a limited partnership and also ran its only general partner, a corporation. The partnership breached a contract with Frigidaire, which sued them personally. Held: not personally liable. They acted only as officers of the corporate general partner, and Frigidaire knew it was dealing with the corporation. The remedy for undercapitalization is veil piercing. Why it matters: a corporate general partner gives everyone in an LP limited liability."
+            },
+            {
+              "id": "s7",
+              "say": "Jerman v. O'Leary, Arizona Court of Appeals, 1985. General partners bought partnership land for themselves under a \"sole discretion\" clause, using an appraisal that ignored the land's favorable rezoning. Held: the clause allowed the purchase but didn't end their fiduciary duties. They had to pay fair value and disclose facts bearing on value. Remanded. Why it matters: courts may read fiduciary duties into permissive agreements. Contrast Sonet."
+            },
+            {
+              "id": "s8",
+              "say": "Sonet v. Plum Creek Timber, Delaware Chancery, 1998. A public LP's general partner proposed converting it into a real estate investment trust, and taking twenty-seven percent of the new shares. A unitholder alleged unfair self-dealing. Held: dismissed. Under Delaware law, a clear partnership agreement displaces the default fiduciary duties, and this one let the general partner propose a merger subject to a two-thirds unitholder vote. \"The ballot box, not the courthouse.\" Why it matters: Delaware's contract-first approach to LPs."
+            },
+            {
+              "id": "s9",
+              "say": "Cincinnati SMSA v. Cincinnati Bell Cellular Systems, Delaware, 1998. An LP agreement barred partners from offering \"cellular service,\" defined narrowly, but allowed other businesses. A partner started offering a newer phone service. Held: no breach. Courts won't use the implied covenant to expand a precise, unambiguous noncompete. Compare Nemec."
+            },
+            {
+              "id": "s10",
+              "say": "In re El Paso Pipeline Partners Derivative Litigation, Delaware Chancery, 2014. A parent company sold assets to the public partnership it controlled. The partnership agreement replaced fiduciary duties with approval by a conflicts committee acting in subjective good faith. Held: that contract standard governs. The committee wasn't liable for information it never had. In a later trial on a second sale, it was found to have breached. Why it matters: in Delaware alternative entities, investors may get only the contract's protections."
+            },
+            {
+              "id": "s11",
+              "say": "Who's liable? An LP's limited partner starts attending weekly management meetings and approving budgets. A creditor of the LP sues her personally. Under ULPA 2001?",
+              "voice": "alt"
+            },
+            {
+              "id": "s12",
+              "say": "Not liable. ULPA 2001 § 303(a) ends the control rule: a limited partner isn't liable solely by being or acting as a limited partner, even if she participates in management and control."
+            },
+            {
+              "id": "s13",
+              "say": "Next. The LP's only general partner is a thinly capitalized corporation run by the limited partners. A creditor wants the individuals.",
+              "voice": "alt"
+            },
+            {
+              "id": "s14",
+              "say": "Frigidaire: they're not liable for acting as officers of the corporate general partner when the creditor knew it dealt with the corporation. The creditor's remedy is to pierce the corporate general partner's veil."
+            },
+            {
+              "id": "s15",
+              "say": "The traps. Trap one: the old control rule is gone under ULPA 2001. Trap two: Arizona in Jerman reads duties into a permissive clause; Delaware in Sonet and El Paso lets the contract displace them. Trap three: the implied covenant won't expand a precise noncompete, Cincinnati SMSA."
+            },
+            {
+              "id": "s16",
+              "say": "Recap. LP: general partners manage and are liable; limited partners invest and are shielded. ULPA 2001 § 303(a) ends the control rule. LLP and LLLP shields by filing. Frigidaire: the corporate general partner. Jerman versus Sonet. Cincinnati SMSA. El Paso."
+            },
+            {
+              "id": "s17",
+              "ask": "What does ULPA 2001 § 303(a) do?",
+              "answer": "Ends the control rule: a limited partner isn't liable for the LP's obligations solely by being or acting as one, even if she participates in management and control.",
+              "pause": 8
+            },
+            {
+              "id": "s18",
+              "ask": "What's the remedy for a creditor of an LP with an undercapitalized corporate general partner, per Frigidaire?",
+              "answer": "Veil piercing of the corporate general partner.",
+              "pause": 8
+            },
+            {
+              "id": "s19",
+              "ask": "What phrase captures Sonet's holding?",
+              "answer": "\"The ballot box, not the courthouse\": the agreement's unitholder vote displaced default fiduciary duties.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e11",
+          "title": "What an LLC is, how it forms, and Water, Waste and Land",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Week 11 begins Part Three, LLCs. What an LLC is, the two formation requirements, the liability shield, the no-agency-by-status rule, and Water, Waste and Land v. Lanham on disclosing the company."
+            },
+            {
+              "id": "s2",
+              "say": "What an LLC is. It combines the corporation's limited liability with partnership-style, single-level, pass-through taxation, where losses pass through to members as incurred, and flexible management. Its owners are members. It may be member-managed, like a partnership, or manager-managed, like a corporation. Managers need not be members."
+            },
+            {
+              "id": "s3",
+              "say": "It's an entity distinct from its members, RULLCA § 108(a), with perpetual duration, § 108(c)."
+            },
+            {
+              "id": "s4",
+              "say": "Formation. Both required. One: one or more organizers deliver a certificate of organization to the Secretary of State for filing, § 201(a), stating the name, principal office, and registered agent, § 201(b). Two: the company is formed when the certificate becomes effective AND at least one person has become a member, § 201(d). Delaware calls the filing a certificate of formation. It's a brief formal document; the operating agreement supplies the deal, as Elf Atochem says."
+            },
+            {
+              "id": "s5",
+              "say": "The shield, § 304(a). A debt, obligation or other liability of the LLC is solely the company's. A member or manager is not personally liable for it solely by reason of being, or acting as, a member or manager. And § 304(b): failing to observe formalities is not a ground for owner liability."
+            },
+            {
+              "id": "s6",
+              "say": "No agency by status, § 301(a). A member is not an agent of the LLC solely by reason of being a member. That's the opposite of RUPA § 301, under which every partner is an agent of the partnership. A member's authority comes from agency law, actual and apparent authority, and from any statement of authority, § 302."
+            },
+            {
+              "id": "s7",
+              "say": "Now the key contract rule. An agent who negotiates a contract avoids becoming a party only by disclosing both: one, that he is acting for a principal; and two, the principal's identity. If the third party knows there is a principal but not who it is, the agent is ordinarily a party and personally liable. Whether the principal was disclosed is a question of fact. That's Day 1's Atlantic Salmon, applied to LLCs."
+            },
+            {
+              "id": "s8",
+              "say": "Water, Waste and Land v. Lanham, Colorado, 1998. Clark and Lanham were managers and members of Preferred Income Investors, LLC. Clark hired Westec for engineering work on a restaurant project, and gave Westec a business card showing only the letters \"P.I.I.\" and Lanham's address, with no sign that P.I.I. was an LLC. Westec did the work and wasn't paid: $9,183. The county court held Lanham and the company liable. The district court reversed, relying on Colorado's provision that the filed articles are notice of LLC status."
+            },
+            {
+              "id": "s9",
+              "say": "Held: reversed, and Lanham is personally liable. Under agency law, an agent is a party to a contract for a partially disclosed principal. The notice statute reaches only status-based liability. Reading it to give every third party constructive notice of an undisclosed principal would invite fraud, and statutes in derogation of the common law are strictly construed. The missing link: nobody ever said that P.I.I. meant Preferred Income Investors, LLC. Why it matters: forming an LLC isn't enough. The people who deal for it must identify the company. And the Act's requirement of \"LLC\" in the name points the same way."
+            },
+            {
+              "id": "s10",
+              "say": "Two analyses from the outline. One, silence: if Lanham had given no hint of any principal at all, his statutory argument would protect him even more, which shows it proves too much. The LLC would be an undisclosed principal, and the agent plainly a party. Two, a principal that wants anonymity: the agent must either disclose the principal, or get the third party's agreement that the agent is not a party."
+            },
+            {
+              "id": "s11",
+              "say": "Who's liable? A manager of \"Bluebird Bakery, LLC\" signs a flour contract as \"Jo Park, for Bluebird.\" The supplier thinks Bluebird is Jo's sole proprietorship. Bluebird defaults. Is Jo liable?",
+              "voice": "alt"
+            },
+            {
+              "id": "s12",
+              "say": "Probably not. She disclosed that she acted for a principal and named it, Bluebird. The question of fact is whether that was enough to identify the LLC. Including \"LLC\" would have settled it. Compare Lanham, where \"P.I.I.\" identified nothing."
+            },
+            {
+              "id": "s13",
+              "say": "The traps. Trap one: the LLC shield protects only against status-based liability; it doesn't protect an agent who failed to disclose. Trap two: a member isn't an agent by status, unlike a partner. Trap three: formation needs both the effective certificate and at least one member."
+            },
+            {
+              "id": "s14",
+              "say": "Recap. LLC: limited liability, pass-through tax, flexible management. Formed by an effective certificate of organization plus a member, § 201. Shield, § 304(a); formalities don't matter, § 304(b). No agency by status, § 301(a). Water, Waste and Land: disclose the principal and its identity, or be a party."
+            },
+            {
+              "id": "s15",
+              "ask": "What two things must both happen for an RULLCA LLC to be formed?",
+              "answer": "The certificate of organization becomes effective, and at least one person has become a member, § 201(d).",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "How does RULLCA § 301(a) differ from RUPA § 301?",
+              "answer": "A member isn't an agent of the LLC solely by being a member; every partner is an agent of the partnership.",
+              "pause": 8
+            },
+            {
+              "id": "s17",
+              "ask": "Why was Lanham personally liable?",
+              "answer": "He dealt for a partially disclosed principal without identifying the LLC; the notice statute only protects against status-based liability.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e12",
+          "title": "Defective formation: de facto LLC, LLC by estoppel, and Duray Development",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Two doctrines borrowed from corporate law, Duray Development v. Perrin, two analyses, and the MBCA's attempt to abolish both. Then the exam order for contract claims against LLC owners."
+            },
+            {
+              "id": "s2",
+              "say": "The de facto corporation doctrine. All four required. The incorporators one, proceeded in good faith; two, under a valid statute; three, for an authorized purpose; and four, executed and acknowledged articles. A de facto entity IS an entity against all the world, except the state."
+            },
+            {
+              "id": "s3",
+              "say": "Corporation by estoppel. A third party who dealt with a body as an entity, under its assumed name, is estopped to deny its existence in order to reach the individuals. It's an equitable remedy between the parties, and it doesn't create the entity."
+            },
+            {
+              "id": "s4",
+              "say": "Michigan applied both doctrines to LLCs, even though its LLC Act says exactly when an LLC comes into existence."
+            },
+            {
+              "id": "s5",
+              "say": "Duray Development v. Perrin, Michigan Court of Appeals, 2010. Duray hired Perrin and Perrin Excavating to excavate a subdivision. A month later the parties signed a superseding contract with Outlaw Excavating, LLC, which Perrin had just formed, and signed for. The state didn't endorse Outlaw's articles as filed until a month after that second contract. The work was late and poor. The trial court held Perrin personally liable for $96,367.68, because, it said, the Act superseded the de facto doctrine."
+            },
+            {
+              "id": "s6",
+              "say": "Held: reversed. One: the de facto corporation doctrine applies to LLCs. Perrin acted in good faith under a valid statute for a lawful purpose, and had signed articles, so Outlaw, not Perrin, is liable on the second contract. Two: LLC by estoppel also applies. Duray dealt only with Outlaw after the second contract, with bills and an insurance certificate, so it can't deny Outlaw's existence. Why it matters: a technically premature LLC can still shield its owner."
+            },
+            {
+              "id": "s7",
+              "say": "The exam trap. Perrin WAS personally a party to the first contract. He escaped only because the parties replaced it with a contract naming the LLC."
+            },
+            {
+              "id": "s8",
+              "say": "Analysis 1(a): if Duray's own owner told Perrin to put off forming the LLC, estoppel would likely bar Duray from denying the entity, but not a mechanic who never dealt with Perrin as an LLC. And with no good-faith attempt to organize, there's no de facto LLC. Analysis 1(b): if the lawyer stopped work after initial drafts, and nothing was filed until the project ended, the good-faith and executed-articles elements are doubtful, and estoppel turns on how the third party dealt with the business."
+            },
+            {
+              "id": "s9",
+              "say": "The policy note, MBCA § 2.04. The MBCA drafters tried to abolish both doctrines: everyone who purports to act for a corporation knowing there was no incorporation is jointly and severally liable. By negative inference, inactive investors and those unaware of the defect are not."
+            },
+            {
+              "id": "s10",
+              "say": "The outline's exam order for contract claims against LLC owners. One: did the owner sign or deal as an agent without identifying the LLC? Water, Waste and Land. Two: did the LLC exist yet, and if not, is there a de facto LLC or estoppel? Duray. Three: did the owner personally guarantee the debt? Four: is there a basis to pierce the veil? Tomorrow. And status alone never creates liability, § 304(a)."
+            },
+            {
+              "id": "s11",
+              "ask": "Name the four elements of a de facto corporation.",
+              "answer": "Good faith, a valid statute, an authorized purpose, and executed and acknowledged articles.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "How does corporation by estoppel differ from a de facto entity?",
+              "answer": "Estoppel is an equitable remedy between the parties that bars the third party from denying the entity; it doesn't create the entity. A de facto entity exists against all but the state.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "In Duray, on which contract was Perrin personally a party?",
+              "answer": "The first contract, which the parties replaced with one naming Outlaw Excavating, LLC.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e13",
+          "title": "The operating agreement: RULLCA § 105, Delaware's freedom of contract, and § 407 management defaults",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. What the operating agreement governs, what it can't do, what it can do if not manifestly unreasonable, Delaware's contrast, and the management defaults of § 407."
+            },
+            {
+              "id": "s2",
+              "say": "The rule, § 105. The operating agreement governs relations among the members and with the company, the rights and duties of managers, the company's activities, and how the agreement is amended, § 105(a)(1) through (4). Where the agreement is silent, the Act governs, § 105(b)."
+            },
+            {
+              "id": "s3",
+              "say": "What it may not do, § 105(c). Six items in the outline. One, (c)(5): alter or eliminate the duty of loyalty or care, except as § 105(d) allows. Two, (c)(6): eliminate the contractual obligation of good faith and fair dealing, though it may set standards that aren't manifestly unreasonable. Three, (c)(7): relieve a person from liability for bad faith, willful or intentional misconduct, or knowing violation of law. Four, (c)(8): unreasonably restrict information rights. Five, (c)(9): vary the judicial dissolution grounds of § 701(a)(4). Six, (c)(11): unreasonably restrict a member's right to sue under Article 8."
+            },
+            {
+              "id": "s4",
+              "say": "What it may do, if not manifestly unreasonable, § 105(d)(3). (A): alter or eliminate aspects of the duty of loyalty in § 409(b). (B): identify specific types or categories of activities that don't violate loyalty. (C): alter the duty of care, but not to authorize bad faith, willful misconduct, or knowing violations. (D): alter or eliminate any other fiduciary duty. And under § 105(d)(1)(A), it may set a method for disinterested, independent persons to authorize a conflicted transaction after full disclosure."
+            },
+            {
+              "id": "s5",
+              "say": "\"Manifestly unreasonable,\" § 105(e). It's a question of law, judged as of the time the term was adopted. A court may strike a term only if it is readily apparent that its objective is unreasonable, or that it's an unreasonable means to that objective."
+            },
+            {
+              "id": "s6",
+              "say": "Delaware's contrast, LLC Act § 18-1101(b). Delaware's policy is \"to give the maximum effect to the principle of freedom of contract and to the enforceability of limited liability company agreements.\" The Delaware LLC Act was modeled on its LP Act, and a member is treated much like a limited partner, Elf Atochem. It's a flexible statute of defaults, which members may change so long as they don't contravene a mandatory provision. And one protection can't be contracted away: the implied covenant of good faith and fair dealing, R and R Capital."
+            },
+            {
+              "id": "s7",
+              "say": "Management defaults, § 407. How chosen: member-managed is the default, unless the agreement expressly says \"manager-managed,\" \"managed by managers,\" or \"vested in managers,\" or words of similar import, § 407(a). In a manager-managed LLC, managers are chosen, and removable at any time without cause, by a majority of the members, § 407(c)(4)."
+            },
+            {
+              "id": "s8",
+              "say": "Ordinary matters. Member-managed: each member has equal rights, and differences are decided by a majority of the members, § 407(b)(2) and (3). Manager-managed: decided exclusively by the manager, or a majority of the managers, § 407(c)(1)."
+            },
+            {
+              "id": "s9",
+              "say": "Acts outside the ordinary course, and amending the agreement: all members, in both kinds, § 407(b)(4) and (c)(3)."
+            },
+            {
+              "id": "s10",
+              "say": "Fiduciary duties. Member-managed: members owe loyalty and care to the company and the other members, § 409(a). Manager-managed: managers owe them, and a member owes no duty solely by reason of being a member, § 409(i)(1) and (6)."
+            },
+            {
+              "id": "s11",
+              "say": "Pay and advances. In a member-managed LLC: no pay for services, except reasonable pay for winding up, § 407(h). An advance beyond agreed capital is a loan that bears interest, § 407(f) and (g). In a manager-managed LLC, set by the agreement."
+            },
+            {
+              "id": "s12",
+              "say": "Which rule? An LLC's operating agreement says nothing about management. A member signs a contract to sell the company's only building. Is that within her power, internally?",
+              "voice": "alt"
+            },
+            {
+              "id": "s13",
+              "say": "Silent agreement means member-managed, § 407(a). Selling the only building is outside the ordinary course, so it needs all the members, § 407(b)(4). And remember she isn't an agent just by being a member, § 301(a); look for actual or apparent authority as to the buyer."
+            },
+            {
+              "id": "s14",
+              "say": "Next. The agreement says: \"No member shall be liable for any act, including willful misconduct.\" Enforceable?",
+              "voice": "alt"
+            },
+            {
+              "id": "s15",
+              "say": "Not as to willful or intentional misconduct, bad faith, or knowing violations of law, § 105(c)(7). It can narrow duties under § 105(d), but not exculpate those."
+            },
+            {
+              "id": "s16",
+              "say": "Recap. The agreement governs; the Act fills gaps. Section 105(c): no eliminating loyalty, care or good faith, no exculpating bad faith or willful misconduct, no unreasonable limits on information or suits, and no changing judicial dissolution grounds. Section 105(d): narrow duties if not manifestly unreasonable. Delaware: maximum freedom of contract, except the implied covenant. Section 407: member-managed by default."
+            },
+            {
+              "id": "s17",
+              "ask": "What words opt an RULLCA LLC into manager management?",
+              "answer": "Express words that it is \"manager-managed,\" \"managed by managers,\" or \"vested in managers,\" or words of similar import, § 407(a).",
+              "pause": 8
+            },
+            {
+              "id": "s18",
+              "ask": "Can an RULLCA operating agreement vary the judicial dissolution grounds?",
+              "answer": "No, § 105(c)(9).",
+              "pause": 8
+            },
+            {
+              "id": "s19",
+              "ask": "What's the one thing a Delaware LLC agreement can't eliminate?",
+              "answer": "The implied covenant of good faith and fair dealing.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e14",
+          "title": "Money, transfers and suits; Elf Atochem; the implied covenant and Fisk Ventures",
+          "minutes": 7,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Distributions and their limits, transfers and charging orders, direct versus derivative suits, Elf Atochem, the implied covenant, and the first Fisk Ventures decision."
+            },
+            {
+              "id": "s2",
+              "say": "Distributions. Before dissolution, any distribution is in equal shares among members and dissociated members, § 404(a). Per capita, not by contribution, unless the agreement says otherwise. There's no right to an interim distribution unless the company decides to make one, and dissociation doesn't entitle a person to one, § 404(b)."
+            },
+            {
+              "id": "s3",
+              "say": "The limits, § 405(a). No distribution if, afterward, one, the company couldn't pay its debts as they come due, or two, its total assets would be less than its total liabilities. A member or manager who consents to an improper distribution in breach of § 409 is personally liable to the company for the excess, § 406."
+            },
+            {
+              "id": "s4",
+              "say": "Transfers. A transferee of a member's transferable interest gets only distributions, not management rights. And a creditor's charging order is a lien on the debtor-member's distributions, §§ 502 and 503."
+            },
+            {
+              "id": "s5",
+              "say": "Direct versus derivative. A claim for an injury to the LLC belongs to the LLC. The tests: one, who suffered the most immediate and direct injury, and two, to whom did the defendant's duty run? If the answer to either is the company, the suit is derivative. A direct action needs an actual or threatened injury not solely the result of an injury to the company, § 801(b). A derivative action needs a refused demand, or a showing that demand would be futile, § 802."
+            },
+            {
+              "id": "s6",
+              "say": "Elf Atochem North America v. Jaffari, Delaware, 1999. Elf, with thirty percent and a million dollars, and Jaffari's company Malek, Inc., with seventy percent and its maskant technology, formed Malek LLC, with Jaffari as manager. The LLC agreement, which the LLC itself never signed, sent every dispute to arbitration or court in California. Elf sued Jaffari in the Delaware Court of Chancery, individually and derivatively, for breach of fiduciary duty and other wrongs."
+            },
+            {
+              "id": "s7",
+              "say": "Held: dismissal affirmed. One: the LLC agreement binds the LLC even though it didn't sign it. Two: the Act doesn't forbid members from vesting exclusive jurisdiction in California arbitration, so the forum clauses govern derivative as well as direct claims. Members may contract around the Act's default grants of Chancery jurisdiction, §§ 18-110(a), 18-111 and 18-1001. Why it matters: it's the leading statement of Delaware's freedom-of-contract policy. The members' agreement controls, and calling a claim derivative doesn't escape it."
+            },
+            {
+              "id": "s8",
+              "say": "The outline's analyses. A total exculpation clause, relieving members of all liability \"regardless of any allegation of willfulness, intention, or gross negligence,\" would fail under RULLCA § 105(c)(7) for bad faith, willful misconduct, and knowing violations. Delaware's § 18-1101(e) lets an LLC agreement limit or eliminate liability for breach of duties, but not for a bad-faith violation of the implied covenant. And a party may accept an arbitration clause to get the deal done; Delaware sees no reason to stop sophisticated parties from choosing their forum."
+            },
+            {
+              "id": "s9",
+              "say": "The implied covenant, from Fisk Ventures. Every contract carries an implied covenant requiring a party to refrain from arbitrary or unreasonable conduct that prevents the other party from receiving the fruits of the bargain. Three limits, all apply. One: it fills a gap only where it's clear the parties would have agreed to the term had they thought to negotiate it. Two: it protects the spirit of what was actually bargained for. Three: it can't be invoked where the contract expressly covers the subject. And the mere exercise of contractual rights, without more, isn't a breach. Under RULLCA, the obligation is contractual and can't be eliminated, §§ 105(c)(6) and 409(d)."
+            },
+            {
+              "id": "s10",
+              "say": "Fisk Ventures v. Segal, Delaware Chancery, 2008. Segal founded Genitrix, LLC with patent rights, holding about fifty-five percent of Class A. Johnson and Fisk Ventures invested heavily, as Class B. The board needed seventy-five percent approval for most actions, so neither class could act alone. Class B held a Put Right to force the company to buy its interests at appraised value, paid in secured notes if large, and refused to waive it, although investors called it a deal killer. Class B also blocked Segal's financing plans. Genitrix ran out of cash. Fisk sought dissolution; Segal counterclaimed."
+            },
+            {
+              "id": "s11",
+              "say": "Held, in 2008: Segal's claims dismissed. The agreement gave each class rights, and didn't oblige one to accept the other's business judgment. Requiring seventy-five percent approval for financing implied a right to block, and exercising that contractual right is no breach of the agreement or of the implied covenant. The 2009 dissolution decision comes tomorrow."
+            },
+            {
+              "id": "s12",
+              "say": "The analyses. Veto power: each side wanted protection against the other; a tie-breaker, like an independent director, a buy-sell shotgun clause, or mediation or arbitration of deadlocks, would have avoided the stalemate. The Put Right: it gave Class B a guaranteed exit at appraised value, with priority over later investors, which is why new money insisted on its waiver and why Johnson wouldn't give it up. And could a court order more investment? No. No court can make members contribute capital they never promised. Compare McConnell and Racing Investment Fund, tomorrow."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. Distributions equal per capita by default, § 404, limited by the insolvency tests of § 405, with personal liability under § 406. Transferees get only distributions. Derivative if the injury or the duty runs to the company. Elf Atochem: the agreement binds the LLC and its forum clause covers derivative claims. The implied covenant fills gaps only. Fisk 2008: exercising a negotiated veto isn't a breach."
+            },
+            {
+              "id": "s14",
+              "ask": "How are interim LLC distributions shared by default under RULLCA?",
+              "answer": "In equal shares among members and dissociated members, per capita, § 404(a), and only if the company decides to make one.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "What two tests decide whether an LLC member's claim is derivative?",
+              "answer": "Who suffered the most immediate and direct injury, and to whom the defendant's duty ran. If either is the company, it's derivative.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "Why did Segal's implied covenant claim fail in 2008?",
+              "answer": "The agreement required seventy-five percent approval, which implied a right to block; exercising a contractual right isn't a breach, and the covenant can't override express terms.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d4-e15",
+          "title": "Day 4 cumulative quiz",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Day 4 quiz, reaching back across the course. Pause, answer, check."
+            },
+            {
+              "id": "s2",
+              "ask": "Under the UPA, what happens when a partner in an at-will partnership withdraws?",
+              "answer": "Rightful dissolution; any partner can force liquidation, § 38(1).",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "Which case is the source of the power-versus-right rule?",
+              "answer": "Collins v. Lewis.",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "Within how many days after another partner's death can a term partner leave without it being wrongful?",
+              "answer": "Ninety days.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "Under RUPA § 701, is goodwill deducted from a wrongful dissociator's buyout?",
+              "answer": "No. Damages are deducted, but there's no goodwill penalty.",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "Which case: survivors inventoried and paid the estate, and the widow wanted a fire sale?",
+              "answer": "Creel v. Lilly. No forced liquidation.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "In Kovacik, who bore the loss?",
+              "answer": "Kovacik, the money partner, bore the whole $8,680 cash loss; Reed lost only his labor.",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "Does RUPA follow Kovacik?",
+              "answer": "No. The § 401 comment applies the default loss rules even to a partner who contributed no capital.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "G and S v. Belman: what did the estate get, and why?",
+              "answer": "$4,867.57, because \"capital account\" meant the negative book figure.",
+              "pause": 10
+            },
+            {
+              "id": "s10",
+              "ask": "Name the case: limited partners running the corporate general partner weren't personally liable.",
+              "answer": "Frigidaire Sales v. Union Properties.",
+              "pause": 10
+            },
+            {
+              "id": "s11",
+              "ask": "Why was Lanham liable in Water, Waste and Land?",
+              "answer": "He never identified the LLC; an agent for a partially disclosed principal is a party.",
+              "pause": 10
+            },
+            {
+              "id": "s12",
+              "ask": "In a manager-managed RULLCA LLC, who decides ordinary matters?",
+              "answer": "The manager, or a majority of the managers, exclusively, § 407(c)(1).",
+              "pause": 10
+            },
+            {
+              "id": "s13",
+              "ask": "From Day 3: who stands first in the RUPA § 806 order?",
+              "answer": "Creditors, including partners who are creditors.",
+              "pause": 10
+            },
+            {
+              "id": "s14",
+              "ask": "From Day 2: what's the Restatement Third's word for the Second's non-agent independent contractor?",
+              "answer": "Nonagent service provider.",
+              "pause": 10
+            },
+            {
+              "id": "s15",
+              "say": "That's Day 4. Tomorrow, the last day: LLC veil piercing, fiduciary duties, capital and expulsion, dissolution, and then the full review of every test and list, and how to work the open-book short answer with the operating agreement."
             }
           ]
         }
