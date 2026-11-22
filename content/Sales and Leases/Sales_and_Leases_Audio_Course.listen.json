@@ -8,7 +8,7 @@
   {
    "day": 1,
    "title": "Foundations: which law governs, formation, § 2-207, the statute of frauds, good faith, and modification",
-   "minutes": 78,
+   "minutes": 79,
    "episodes": [
     {
      "id": "sl-d1-e00",
@@ -48,7 +48,7 @@
     {
      "id": "sl-d1-e01",
      "title": "The UCC, how to read it, and which law governs",
-     "minutes": 5,
+     "minutes": 6,
      "segments": [
       {
        "id": "s1",
@@ -76,42 +76,46 @@
       },
       {
        "id": "s7",
-       "say": "Then consult the aids. The Official Comments are the most important aid, but they are not law. If the comment and the text conflict, the text controls. Then case law, where other states' cases are persuasive. Then treatises, state legislative history, earlier drafts, and, as a last resort, a tie-breaking policy."
+       "say": "And keep the client's goals in view. Good drafting means understanding the deal, knowing the rules and the risk-allocation options, attention to detail, and concise, clear, simple language. The goal is an enforceable agreement that clearly reflects the deal. Sales law itself is broad: the buying and selling of goods by individuals, businesses, and others, a cumulative subject rather than one law."
       },
       {
        "id": "s8",
-       "say": "Now, which law governs. Four factors, in this order. One, the type of property: goods, real estate, services, intellectual property. Two, the nature of the rights transferred: a sale, a lease, a license, a lien, a gift. Three, the location of the parties: domestic or international, where the CISG may govern. Four, the parties' agreement on governing law."
+       "say": "Then consult the aids. The Official Comments are the most important aid, but they are not law. If the comment and the text conflict, the text controls. Then case law, where other states' cases are persuasive. Then treatises, state legislative history, earlier drafts, and, as a last resort, a tie-breaking policy."
       },
       {
        "id": "s9",
-       "say": "Put the first two together and you get the slide chart. A sale of goods: Article 2, or the CISG if international. A lease of goods: Article 2A. A security interest in goods: Article 9. A gift of goods: the common law. A bequest or devise: the law of wills."
+       "say": "Now, which law governs. Four factors, in this order. One, the type of property: goods, real estate, services, intellectual property. Two, the nature of the rights transferred: a sale, a lease, a license, a lien, a gift. Three, the location of the parties: domestic or international, where the CISG may govern. Four, the parties' agreement on governing law."
       },
       {
        "id": "s10",
-       "say": "The other columns of that chart: real property goes to real-property law. Securities go to Article 8, plus securities law, with Article 9 for security interests. Negotiable instruments go to Articles 3 and 4. Intellectual property goes to the common law and federal law. And controllable electronic records go to Article 12."
+       "say": "Put the first two together and you get the slide chart. A sale of goods: Article 2, or the CISG if international. A lease of goods: Article 2A. A security interest in goods: Article 9. A gift of goods: the common law. A bequest or devise: the law of wills."
       },
       {
        "id": "s11",
-       "say": "The trap. Students jump to Article 2 because the word sale appears. Run the factors in order. Is it goods? Is it really a sale, or a lease, or a loan in disguise? You will see the disguised loan in two episodes."
+       "say": "The other columns of that chart: real property goes to real-property law. Securities go to Article 8, plus securities law, with Article 9 for security interests. Negotiable instruments go to Articles 3 and 4. Intellectual property goes to the common law and federal law. And controllable electronic records go to Article 12."
       },
       {
        "id": "s12",
-       "say": "Recap. The UCC is a model code enacted state by state. Section 1-103(a) gives three purposes. Section 1-103(b) brings in the common law unless the Code displaces it. The comments help but the text controls. And four factors pick the governing law: type of property, nature of the rights, location of the parties, and their agreement."
+       "say": "The trap. Students jump to Article 2 because the word sale appears. Run the factors in order. Is it goods? Is it really a sale, or a lease, or a loan in disguise? You will see the disguised loan in two episodes."
       },
       {
        "id": "s13",
+       "say": "Recap. The UCC is a model code enacted state by state. Section 1-103(a) gives three purposes. Section 1-103(b) brings in the common law unless the Code displaces it. The comments help but the text controls. And four factors pick the governing law: type of property, nature of the rights, location of the parties, and their agreement."
+      },
+      {
+       "id": "s14",
        "ask": "What are the four factors that determine which law governs a transaction, in order?",
        "answer": "Type of property, nature of the rights transferred, location of the parties, and the parties' agreement on governing law.",
        "pause": 10
       },
       {
-       "id": "s14",
+       "id": "s15",
        "ask": "If an Official Comment conflicts with the text of a Code section, which controls?",
        "answer": "The text. The comments are the most important aid, but they are not law.",
        "pause": 8
       },
       {
-       "id": "s15",
+       "id": "s16",
        "ask": "Which section lets common-law doctrines like estoppel and fraud supplement the Code?",
        "answer": "Section 1-103(b), unless a particular Code provision displaces them.",
        "pause": 8
@@ -2535,7 +2539,7 @@
   {
    "day": 3,
    "title": "Disclaimers, remedy limits, parol evidence, assignment, termination, repudiation, excuse, and getting the goods",
-   "minutes": 85,
+   "minutes": 87,
    "episodes": [
     {
      "id": "sl-d3-e00",
@@ -3583,7 +3587,7 @@
     {
      "id": "sl-d3-e13",
      "title": "Impracticability and frustration: §§ 2-615 and 2-616, NIPSCO, and Problem 6-8",
-     "minutes": 4,
+     "minutes": 5,
      "segments": [
       {
        "id": "s1",
@@ -3599,7 +3603,7 @@
       },
       {
        "id": "s4",
-       "say": "Section 2-616, the buyer's response. On notice of a material delay or an allocation, the buyer may terminate, or take its quota. And if the buyer says nothing for 30 days, the contract lapses as to the affected deliveries."
+       "say": "Section 2-616, the buyer's response. On notice of a material delay or an allocation, the buyer may, by written notification, terminate, or take its available quota. And if the buyer fails to take the quota within a reasonable time, not exceeding 30 days, the contract lapses as to the affected deliveries."
       },
       {
        "id": "s5",
@@ -3627,13 +3631,13 @@
       },
       {
        "id": "s10",
-       "say": "Recap. Section 2-615: impracticability from a contingency whose non-occurrence was a basic assumption, or government regulation; allocate fairly and notify; cost increases alone don't count. Section 2-616: the buyer terminates or takes its quota; 30 days of silence lapses the affected deliveries. The buyer's excuse is frustration of purpose. NIPSCO: a buyer that misforecasts the market is not excused."
+       "say": "Recap. Section 2-615: impracticability from a contingency whose non-occurrence was a basic assumption, or government regulation; allocate fairly and notify; cost increases alone don't count. Section 2-616: the buyer terminates or takes its quota in writing; failing that within a reasonable time, at most 30 days, the affected deliveries lapse. The buyer's excuse is frustration of purpose. NIPSCO: a buyer that misforecasts the market is not excused."
       },
       {
        "id": "s11",
-       "ask": "Under § 2-616, what happens if the buyer doesn't respond within 30 days?",
-       "answer": "The contract lapses as to the affected deliveries.",
-       "pause": 7
+       "ask": "Under § 2-616, what happens if the buyer doesn't agree to take its quota within a reasonable time?",
+       "answer": "The contract lapses as to the affected deliveries. The reasonable time can't exceed 30 days.",
+       "pause": 8
       },
       {
        "id": "s12",
@@ -3735,7 +3739,7 @@
     {
      "id": "sl-d3-e15",
      "title": "Getting the goods: specific performance, replevin, and § 2-502, with Problems 7-1 to 7-3",
-     "minutes": 7,
+     "minutes": 8,
      "segments": [
       {
        "id": "s1",
@@ -3771,7 +3775,7 @@
       },
       {
        "id": "s9",
-       "say": "Problem 7-1. Goods aren't unique, but specific performance fits. Inability to cover is the key sign of other proper circumstances. Examples: a long-term output or requirements deal in a shortage; a component only this seller can make on time; a fungible commodity that cannot be found in time."
+       "say": "Problem 7-1. Goods aren't unique, but specific performance fits. Inability to cover is the key sign of other proper circumstances. Examples: a long-term output or requirements deal in a shortage; a component only this seller can make on time; a fungible commodity that cannot be found in time. Outside the class materials, comment 2 to § 2-716 and Laclede Gas versus Amoco are the usual support."
       },
       {
        "id": "s10",
@@ -4445,7 +4449,7 @@
       },
       {
        "id": "s3",
-       "say": "Section 2-602(1). Reject within a reasonable time after delivery or tender, and seasonably notify the seller. Late or no notice is acceptance, with liability for the price, though the claim for the nonconformity survives. And the reasonable time tracks the time reasonably needed to inspect, which depends on the goods' complexity."
+       "say": "Section 2-602(1). Reject within a reasonable time after delivery or tender, and seasonably notify the seller. Reasonable time and seasonably come from §§ 1-205 and 1-202. Late or no notice is acceptance, with liability for the price, though the claim for the nonconformity survives. And the reasonable time tracks the time reasonably needed to inspect, which depends on the goods' complexity."
       },
       {
        "id": "s4",
@@ -5337,7 +5341,7 @@
   {
    "day": 5,
    "title": "The seller's damages, Article 2A leases, and the full-course review",
-   "minutes": 101,
+   "minutes": 102,
    "episodes": [
     {
      "id": "sl-d5-e00",
@@ -5731,7 +5735,7 @@
     {
      "id": "sl-d5-e05",
      "title": "Prepaying buyers, casualty after breach, and the statute of limitations: §§ 2-718(2) to (4), 2-709(1)(a), 2-510(3), and 2-725",
-     "minutes": 6,
+     "minutes": 7,
      "segments": [
       {
        "id": "s1",
@@ -5767,38 +5771,42 @@
       },
       {
        "id": "s9",
-       "say": "The statute of limitations, § 2-725. Four years. The cause of action accrues when the breach occurs, regardless of the aggrieved party's knowledge. A warranty is breached on tender, unless it explicitly extends to future performance and discovery must await that performance. The parties may shorten the period to not less than one year, and can't extend it. The buyer's breach usually occurs when it fails to pay or wrongfully rejects. After a repudiation, the seller may wait a commercially reasonable time, and that time is uncertain, so sue within four years of the repudiation. And whether § 2-725 governs a secured seller's deficiency suit is split."
+       "say": "One housekeeping note: casebook pages 313 to 325, on risk of loss after a seller's breach, the statute of limitations, Mydlach, and Problems 7-29 and 7-30, are not assigned. The outline gives only the short limitations rule, and so do we."
       },
       {
        "id": "s10",
+       "say": "The statute of limitations, § 2-725. Four years. The cause of action accrues when the breach occurs, regardless of the aggrieved party's knowledge. A warranty is breached on tender, unless it explicitly extends to future performance and discovery must await that performance. The parties may shorten the period to not less than one year, and can't extend it. The buyer's breach usually occurs when it fails to pay or wrongfully rejects. After a repudiation, the seller may wait a commercially reasonable time, and that time is uncertain, so sue within four years of the repudiation. And whether § 2-725 governs a secured seller's deficiency suit is split."
+      },
+      {
+       "id": "s11",
        "ask": "A buyer pays $2,000 down on a $5,000 contract and then repudiates. There's no liquidated-damages clause, and the seller proves no damages. How much does the buyer get back?",
        "answer": "$1,500. The seller may keep the smaller of 20 percent of $5,000, which is $1,000, or $500. So it keeps $500 and returns $1,500.",
        "pause": 12
       },
       {
-       "id": "s11",
+       "id": "s12",
        "ask": "A warranty says: this roof will not leak for ten years. It leaks in year six. Has the four-year statute run?",
        "answer": "No. A warranty that explicitly extends to future performance accrues when the breach is or should have been discovered, so the claim accrues in year six.",
        "pause": 12
       },
       {
-       "id": "s12",
+       "id": "s13",
        "say": "Recap. A breaching buyer gets back payments above liquidated damages or, without them, above the smaller of 20 percent or $500, less proven damages. Lost conforming goods after risk passes: the buyer owes the price. Section 2-510(3): the buyer's breach before risk passes shifts uninsured loss for a commercially reasonable time. Section 2-725: four years from breach, on tender for warranties unless they explicitly extend to future performance; shortenable to one year, not extendable."
       },
       {
-       "id": "s13",
+       "id": "s14",
        "ask": "Can parties extend the § 2-725 limitations period?",
        "answer": "No. They may shorten it to not less than one year.",
        "pause": 6
       },
       {
-       "id": "s14",
+       "id": "s15",
        "ask": "When is a warranty breached under § 2-725?",
        "answer": "On tender, unless it explicitly extends to future performance and discovery must await that performance.",
        "pause": 8
       },
       {
-       "id": "s15",
+       "id": "s16",
        "ask": "What is the statutory retention under § 2-718(2)(b)?",
        "answer": "20 percent of the value of the buyer's total performance or $500, whichever is smaller.",
        "pause": 7
