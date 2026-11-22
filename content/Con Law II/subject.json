@@ -91,6 +91,13 @@
       ],
       "order": 1,
       "archived": true
+    },
+    "First_Amendment_Audio_Course.listen.json": {
+      "slug": "first-amendment-audio-course",
+      "title": "First Amendment Audio Course",
+      "type": "audio",
+      "description": "A five-day listening course on the whole outline, Weeks 1–16 (Chapters 1–14): each test counted out loud with its tier of scrutiny, every case told as a short story, hypotheticals and recall questions with pauses to answer, and a spaced review to open each day.",
+      "order": 15
     }
   }
 }

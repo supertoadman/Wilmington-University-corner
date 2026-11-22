@@ -1,0 +1,1255 @@
+{
+ "format": "listen/v1",
+ "id": "first-amendment-audio-course",
+ "title": "First Amendment Audio Course",
+ "course": "Con Law II",
+ "description": "A five-day spoken course on the whole First Amendment outline, Chapters 1–14, from Barnette and the Religion Clauses through the speech framework, unprotected categories, torts, commercial speech, content neutrality, expressive conduct, government speech, funding and forums, employees and schools, social media, elections, and association: every test counted out loud with its tier of scrutiny, every case told as a short story, hypotheticals and recall questions with pauses to answer, a spaced review to open each day, and a closing review with the order of analysis for speech and Religion Clauses problems.",
+ "days": [
+  {
+   "day": 1,
+   "title": "Foundations and the Religion Clauses",
+   "minutes": 67,
+   "episodes": [
+    {
+     "id": "fa-d1-e00",
+     "title": "Welcome: how this course works",
+     "minutes": 2,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Welcome to the First Amendment audio course. Over five days we will walk through every doctrine, every test, every tier of scrutiny, and every case in your First Amendment outline, in the order the course teaches it, Chapters 1 through 14."
+      },
+      {
+       "id": "s2",
+       "say": "Here is how each episode works. A roadmap. The test in plain English, then its elements counted out loud, and the level of scrutiny. Why the doctrine exists. How it evolved, old case to new case. Every case as a short story: facts, holding, the vote, the author, and the key dissent. Then hypotheticals for you to solve, the traps, a recap, and three recall questions."
+      },
+      {
+       "id": "s3",
+       "say": "When you hear a question, answer it out loud before the answer comes. Saying it out loud is what makes it stick. If the pause is too short, pause the player. That is not cheating. That is studying."
+      },
+      {
+       "id": "s4",
+       "say": "Every day after today opens with a short spaced review of what came before, and every day closes with a cumulative quiz."
+      },
+      {
+       "id": "s5",
+       "say": "The plan for the week. Today: the big picture of the First Amendment, compelled affirmation, coercion, and all of the Religion Clauses, Free Exercise and Establishment."
+      },
+      {
+       "id": "s6",
+       "say": "Day two: the speech framework. Compelled speech, content-based restrictions, the historically unprotected categories, overbreadth, incitement, fighting words, prior restraints, true threats, and speech integral to crime."
+      },
+      {
+       "id": "s7",
+       "say": "Day three: immoral speech, from Cohen and Pacifica through obscenity, child pornography, age-gating, and violent video games. Then torts involving speech, defamation above all. Then commercial speech, Central Hudson and Zauderer."
+      },
+      {
+       "id": "s8",
+       "say": "Day four: content neutrality and viewpoint, time, place, and manner rules, expressive conduct and flag burning, government speech, government funding, and forum doctrine."
+      },
+      {
+       "id": "s9",
+       "say": "Day five: government employees, public schools, social media, elections, the press, assembly, petition, association, and compelled speech again. Then a full review of every test, the order of analysis for a free-speech problem and for a Religion Clauses problem, and how to write your thirty-minute essay."
+      },
+      {
+       "id": "s10",
+       "say": "Your final is December 16. Thirty minutes of short essay, thirty multiple-choice questions in an hour, and a ninety-minute part. This course is built for all three. Let's begin."
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e01",
+     "title": "The big picture, and Brandeis in Whitney",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What the First Amendment contains, whom it binds, why it is not absolute, and the values passage that frames the whole course: Justice Brandeis concurring in Whitney versus California."
+      },
+      {
+       "id": "s2",
+       "say": "Start with the clauses. Count them. One, the Establishment Clause. Two, the Free Exercise Clause. Those two together are the Religion Clauses. Three, Free Speech. Four, Free Press, which the course treats as giving the press the same rights as everyone else. Five and six, Assembly and Petition, which largely overlap with speech."
+      },
+      {
+       "id": "s3",
+       "say": "Who is bound? The government. The Fourteenth Amendment incorporates the First Amendment against state and local governments. Cantwell is the case for Free Exercise. Private actors are not bound. A private employer, a private university, a private platform, none of them is the government. Many private universities adopt free-speech policies voluntarily, but that is a choice, not a constitutional command."
+      },
+      {
+       "id": "s4",
+       "say": "Next, the First Amendment is not absolute. Falsely shouting fire in a crowded theater can be punished. So can fraud. And religious practice, as opposed to religious belief, can collide with the law. Think peyote. Think homeschooling. The Court balances First Amendment values against serious harms."
+      },
+      {
+       "id": "s5",
+       "say": "The theme of the whole course is a phrase from Brandeis: freedom to think as you will and to speak as you think. And the habit the course wants from you: always ask why the Court adopted or rejected a rule."
+      },
+      {
+       "id": "s6",
+       "say": "Now Whitney versus California, 1927. Read it for values, not doctrine. The casebook leaves out the facts on purpose. Here is the gist, which Brandenburg supplies: Whitney sustained a conviction under California's Criminal Syndicalism Act, a statute much like the Ohio law you will meet in Brandenburg."
+      },
+      {
+       "id": "s7",
+       "say": "Your outline adds, beyond the casebook, that Charlotte Anita Whitney was convicted for helping organize the Communist Labor Party of California, which the state said advocated violent overthrow of the government. She attended its 1919 founding convention in Oakland."
+      },
+      {
+       "id": "s8",
+       "say": "The holding: conviction affirmed. The majority reasoned that, without more, advocating violent means to political and economic change is so dangerous that the state may outlaw it. Brandeis concurred in the result. And in 1969, Brandenburg overruled the majority."
+      },
+      {
+       "id": "s9",
+       "say": "So why read it? For the Brandeis concurrence. Five ideas. One: liberty is both an end in itself and a means to discovering political truth."
+      },
+      {
+       "id": "s10",
+       "say": "Two: the remedy for evil counsels is good ones. Counterspeech, not coerced silence. Keep that phrase. You will use it in essays about false speech, hate speech, and threats."
+      },
+      {
+       "id": "s11",
+       "say": "Three: public discussion is a political duty. An inert people is the greatest menace to freedom."
+      },
+      {
+       "id": "s12",
+       "say": "Four: fear breeds repression, repression breeds hate, and hate menaces stable government. Five: speech and assembly are guaranteed against the occasional tyranny of majorities."
+      },
+      {
+       "id": "s13",
+       "say": "And the casebook's gloss. Freedom to think unites all the clauses. No official church dictating belief. Protection of belief. And peaceful tools, speech, assembly, and petition, for changing policy."
+      },
+      {
+       "id": "s14",
+       "say": "The trap. Do not cite Whitney's majority as good law. It was overruled by Brandenburg. Cite Brandeis for values, and Brandenburg for the test."
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Six clauses, two religion clauses and four expressive ones. Incorporated against the states through the Fourteenth Amendment. Binds government, not private actors. Not absolute. And Brandeis: counterspeech, not enforced silence."
+      },
+      {
+       "id": "s16",
+       "ask": "Does the First Amendment bind a private university?",
+       "answer": "No. Private actors are not bound, though many private universities voluntarily adopt free-speech policies.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "What is Brandeis's remedy for evil counsels?",
+       "answer": "Good ones. Counterspeech, not coerced silence.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "Is the Whitney majority still good law?",
+       "answer": "No. Brandenburg overruled it in 1969.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e02",
+     "title": "Barnette: no compelled affirmation",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. One case, and it is a foundation for three later doctrines: compelled speech, coercion under the Religion Clauses, and the idea that rights do not depend on elections. West Virginia State Board of Education versus Barnette, 1943."
+      },
+      {
+       "id": "s2",
+       "say": "The rule in plain English. Government may not force anyone to affirm a belief. In Justice Jackson's words: no official, high or petty, can prescribe what shall be orthodox in politics, nationalism, religion, or other matters of opinion, or force citizens to confess by word or act their faith therein."
+      },
+      {
+       "id": "s3",
+       "say": "Barnette is a six to three decision by Justice Jackson. And it overruled a case only three years old: Minersville School District versus Gobitis, 1940. That is your evolution story. Gobitis deferred to legislatures and upheld a compelled flag salute. Barnette reversed course."
+      },
+      {
+       "id": "s4",
+       "say": "The facts. West Virginia required public school students to salute the flag and recite the Pledge. Refusal was insubordination. Jehovah's Witness children, who saw the flag as a graven image, were expelled and threatened with reformatories. Their parents were prosecuted. And attendance was compulsory, so there was no exit."
+      },
+      {
+       "id": "s5",
+       "say": "The holding: the compelled salute and pledge violate the First Amendment."
+      },
+      {
+       "id": "s6",
+       "say": "Now the reasoning, point by point. First, teaching versus compelling. The state may teach history and civics. It may acquaint students with the salute and its meaning. What it may not do is compel students to declare a belief."
+      },
+      {
+       "id": "s7",
+       "say": "Second, this is a speech case, not a religion case. The result does not depend on the children's religious views or their sincerity. A secular objector is equally protected."
+      },
+      {
+       "id": "s8",
+       "say": "Third, symbolic conduct counts. The salute is a form of utterance. Fourth, heightened protection. Speech and worship may be restricted only to prevent grave and immediate danger, not on a mere rational basis."
+      },
+      {
+       "id": "s9",
+       "say": "Fifth, it is counter-majoritarian. Fundamental rights depend on the outcome of no elections. That line rejects Gobitis's deference to legislatures."
+      },
+      {
+       "id": "s10",
+       "say": "Sixth, ends versus means. National unity may be pursued by persuasion and example, not compulsion. Coerced unity, Jackson wrote, achieves only the unanimity of the graveyard."
+      },
+      {
+       "id": "s11",
+       "say": "Seventh, no competing private rights were involved. It was only authority against the individual. And eighth, the wartime context. 1943, World War Two. The board had first required a stiff-arm salute that civic groups objected to as too much like Hitler's. Jackson reasoned that the nation was fighting to protect exactly these freedoms."
+      },
+      {
+       "id": "s12",
+       "say": "Why does the doctrine exist? Because compelling a person to profess a belief invades the sphere of intellect and spirit. Government can try to persuade you. It cannot make you say it."
+      },
+      {
+       "id": "s13",
+       "say": "Hypotheticals. Answer out loud."
+      },
+      {
+       "id": "s14",
+       "ask": "A public middle school teaches a unit on the history of the Pledge, explaining what it means. No student has to recite it. A parent objects that the unit itself violates Barnette. Does it?",
+       "answer": "No. Barnette lets the state teach and acquaint students with the salute and its meaning. It forbids compelling a declaration of belief, and no one is compelled here.",
+       "pause": 10
+      },
+      {
+       "id": "s15",
+       "ask": "A student who is an atheist, with no religious objection at all, refuses to recite the Pledge for political reasons and is suspended. Does Barnette protect the student?",
+       "answer": "Yes. Barnette is a speech case. The result does not depend on religious views or sincerity, so secular objectors are equally protected.",
+       "pause": 10
+      },
+      {
+       "id": "s16",
+       "say": "Now the stretch exercise in Chapter 1: standing for the anthem at graduation. A state university requires graduates to stand for the anthem. The ceremony is optional, and the diploma does not depend on it. A student wants to sit in protest of military policy."
+      },
+      {
+       "id": "s17",
+       "say": "What makes it like Barnette? A state actor. A patriotic ritual. Standing is a confession by act. And a political objection is protected just like a religious one."
+      },
+      {
+       "id": "s18",
+       "say": "What makes it unlike Barnette? Attendance is optional. The penalty is missing the ceremony, not expulsion. These are adults, not children. And standing is less than reciting a pledge."
+      },
+      {
+       "id": "s19",
+       "say": "The likely answer: close. But forcing a choice between a major life event and a compelled gesture still looks coercive. Mahmoud, which you will meet in a moment, rejected the just-go-elsewhere answer. And the policy gives no passive option inside the ceremony."
+      },
+      {
+       "id": "s20",
+       "say": "The traps. One: do not treat Barnette as a Free Exercise case. It is speech. Two: do not say Barnette bars schools from mentioning the flag. It bars compelled affirmation, not teaching."
+      },
+      {
+       "id": "s21",
+       "say": "Recap. Barnette, 1943, six to three, Jackson. Overruled Gobitis. No compelled affirmation of belief. Teaching is fine, compulsion is not. Secular objectors are protected. Rights depend on the outcome of no elections."
+      },
+      {
+       "id": "s22",
+       "ask": "What case did Barnette overrule?",
+       "answer": "Minersville School District versus Gobitis, 1940.",
+       "pause": 8
+      },
+      {
+       "id": "s23",
+       "ask": "Under Barnette, what may a public school do with the flag salute, and what may it not do?",
+       "answer": "It may teach history and civics and acquaint students with the salute and its meaning. It may not compel students to declare a belief.",
+       "pause": 8
+      },
+      {
+       "id": "s24",
+       "ask": "What standard did Barnette say governs restrictions on speech and worship?",
+       "answer": "They may be restricted only to prevent grave and immediate danger, not on a rational basis.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e03",
+     "title": "Kennedy v. Bremerton: the praying coach",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Kennedy versus Bremerton School District, 2022. It matters for three things: Free Exercise neutrality, the new history-and-tradition reading of the Establishment Clause, and what counts as coercion."
+      },
+      {
+       "id": "s2",
+       "say": "The rule in plain English. Disciplining a public employee's private prayer because it is religious triggers strict scrutiny. The Establishment Clause is read by history and tradition. The Lemon test and the endorsement test are abandoned. And the Establishment Clause bars coercion, which requires more than visible religious exercise."
+      },
+      {
+       "id": "s3",
+       "say": "Six to three, Justice Gorsuch."
+      },
+      {
+       "id": "s4",
+       "say": "The story. A high school football coach knelt at midfield after games to pray. At the district's request, he had stopped locker-room prayers and religious talks. Then he was disciplined for praying quietly after three games in October 2015. The district said it had to act to avoid coercing students, an Establishment Clause concern."
+      },
+      {
+       "id": "s5",
+       "say": "The holding: the district violated the coach's Free Exercise rights."
+      },
+      {
+       "id": "s6",
+       "say": "The reasoning in three steps. First, Free Exercise. The district admitted it acted partly because the conduct was religious. So the policy was not neutral. That triggers strict scrutiny, under the framework you will learn in the next episodes."
+      },
+      {
+       "id": "s7",
+       "say": "Second, the clauses are complementary. They share one sentence. The Establishment Clause does not automatically trump free exercise and free speech."
+      },
+      {
+       "id": "s8",
+       "say": "Third, no coercion. The prayer was brief, quiet, and personal. No students joined. There was no record evidence of pressure. High schoolers can tell the difference between permission and endorsement. And tolerating others' prayer is part of living in a pluralistic society. Treating any visible religious conduct by a teacher as coercive would itself be hostility to religion."
+      },
+      {
+       "id": "s9",
+       "say": "The evolution. The old Establishment Clause test was Lemon, along with the endorsement test, which asked whether a reasonable observer would think government endorsed religion. Kennedy abandons both. Now: history and tradition, and a coercion inquiry."
+      },
+      {
+       "id": "s10",
+       "say": "The dissent, Justice Sotomayor, joined by Breyer and Kagan. The majority misread the record. The coach had a long practice of demonstrative fifty-yard-line prayers. He invited others, and he had led students in prayer. And the Court overruled Lemon and applied what the dissent called a nearly toothless coercion test that ignores the pressures of school."
+      },
+      {
+       "id": "s11",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s12",
+       "ask": "A public school teacher bows her head and prays silently at her desk during lunch, alone. The principal disciplines her because, quote, religious displays look like school endorsement. What result under Kennedy?",
+       "answer": "The teacher likely wins. Discipline because the conduct is religious is not neutral and triggers strict scrutiny. And under Kennedy, quiet personal prayer with no pressure on students is not coercion, and the endorsement test is abandoned.",
+       "pause": 10
+      },
+      {
+       "id": "s13",
+       "ask": "A coach gathers the team at midfield, leads them in a spoken prayer, and benches players who leave. Is Kennedy's no-coercion reasoning likely to save that?",
+       "answer": "No. Kennedy turned on brief, quiet, personal prayer that no student was pressured to join. Leading students and penalizing those who leave is the kind of coercion the Establishment Clause still bars.",
+       "pause": 10
+      },
+      {
+       "id": "s14",
+       "say": "The traps. One: Kennedy is a Free Exercise win, not a holding that schools may sponsor prayer. School-sponsored prayer is still out, as you will hear in the Establishment Clause episode. Two: do not cite Lemon or the endorsement test as current law. Three: the dissent's factual account matters. On an essay, if the facts look like the dissent's version, argue coercion."
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Kennedy, 2022, six to three, Gorsuch. Discipline partly because the prayer was religious is not neutral, so strict scrutiny. The clauses are complementary. Lemon and endorsement are out; history, tradition, and coercion are in. Sotomayor dissented: the record showed demonstrative prayer and a nearly toothless coercion test."
+      },
+      {
+       "id": "s16",
+       "ask": "What replaced Lemon and the endorsement test in Kennedy?",
+       "answer": "A reading of the Establishment Clause by history and tradition, with a bar on coercion.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "Why was the district's policy not neutral in Kennedy?",
+       "answer": "The district admitted it acted partly because the coach's conduct was religious.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "Name three facts the majority relied on to find no coercion.",
+       "answer": "Any three of: the prayer was brief, quiet, and personal; no students joined; no record evidence of pressure; high schoolers can tell permission from endorsement.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e04",
+     "title": "Mahmoud v. Taylor: storybooks and opt-outs",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Mahmoud versus Taylor, 2025. Then the synthesis your outline draws between Kennedy and Mahmoud on coercion."
+      },
+      {
+       "id": "s2",
+       "say": "The rule in plain English. If a school policy substantially interferes with the religious development of a child, a Wisconsin versus Yoder type of burden, strict scrutiny applies even if the policy is neutral and generally applicable. And the inquiry is fact-intensive. Count the factors. One, the specific religious beliefs. Two, the nature of the curriculum. Three, the children's age. Four, the context."
+      },
+      {
+       "id": "s3",
+       "say": "Six to three, Justice Alito, in a preliminary injunction posture."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Montgomery County, Maryland, added five LGBTQ-inclusive storybooks to the kindergarten-through-fifth-grade English curriculum. Teachers had to use them, and they got guidance for the discussion, for example calling a student's objection hurtful. The board then rescinded notice and opt-outs for these books, while keeping other opt-outs, including the state-mandated sex-ed unit. Muslim, Catholic, and Orthodox parents sued."
+      },
+      {
+       "id": "s5",
+       "say": "The holding: the parents are likely to succeed. They are entitled to opt-outs."
+      },
+      {
+       "id": "s6",
+       "say": "The reasoning. First, the parental right. The religious education of children is protected religious exercise. It extends outside the home, citing Pierce versus Society of Sisters. And it would be an empty promise if it stopped at the public school door."
+      },
+      {
+       "id": "s7",
+       "say": "Second, Barnette recast. The majority read Barnette as an especially egregious example of direct coercion. Protection is not limited to compelled affirmation."
+      },
+      {
+       "id": "s8",
+       "say": "Third, the burden. The books are unmistakably normative. They are taught by trusted teachers, to young children, with correction of dissent. That is the same objective danger as Yoder."
+      },
+      {
+       "id": "s9",
+       "say": "Fourth, strict scrutiny fails. An undisrupted classroom is a compelling interest in general. But the board's many other opt-outs undercut its claim that opt-outs were infeasible. Its administrability problems were of its own design. And it cannot cure stigma by stigmatizing religious students."
+      },
+      {
+       "id": "s10",
+       "say": "Fifth, private school or homeschooling is no answer. That is costly, and these parents already fund the public schools."
+      },
+      {
+       "id": "s11",
+       "say": "Sixth, the limits the majority stressed. The parents seek to opt out of a particular requirement, not to micromanage the curriculum. Several states allow broad opt-outs without widespread problems. And the children's age is highly relevant. That is footnote eight, answering the dissent's comparison to the high schoolers in Kennedy."
+      },
+      {
+       "id": "s12",
+       "say": "The dissent: Justice Sotomayor, joined by Kagan and Jackson. Mere exposure to contrary ideas is not a burden. Barnette protects only against compelled declaration; it let schools acquaint students with the salute and let objectors stay passive. Kennedy held that exposure is not coercion. Yoder involved the survival of a whole community. And the majority's rule has no limiting principle; it will chill curricula and give parents a veto."
+      },
+      {
+       "id": "s13",
+       "say": "And the casebook's challenge. Would you also grant opt-outs from a curriculum that denigrates LGBTQ people? Rules must apply neutrally to similar facts, whichever side wins."
+      },
+      {
+       "id": "s14",
+       "say": "Now the synthesis: coercion in Kennedy versus Mahmoud. In Kennedy, the alleged coercer was a coach praying, and the alleged victims were high school students. In Mahmoud, the alleged coercers were teachers using the curriculum, and the victims were young children and their parents."
+      },
+      {
+       "id": "s15",
+       "say": "The majorities. Kennedy: no coercion, because the prayer was private and quiet, the students were older, and there was no evidence of pressure. Mahmoud: a burden, because the books were normative, the children young, the teachers trusted, there was correction, and attendance was mandatory."
+      },
+      {
+       "id": "s16",
+       "say": "The dissents flip it. Kennedy's dissent saw coercion: demonstrative prayer at a school event and a history of leading players. Mahmoud's dissent saw no coercion: mere exposure, no compelled declaration."
+      },
+      {
+       "id": "s17",
+       "say": "The key distinctions. The majority's: age; government instruction versus permitted private expression; and normative content versus passive observation. The dissent's: a government actor's religious exercise at an official event versus a secular curriculum that only exposes."
+      },
+      {
+       "id": "s18",
+       "say": "And the spectrum. Barnette, compelled affirmation, is the clearest coercion. Kennedy and Mahmoud fight over how far below that line coercion reaches."
+      },
+      {
+       "id": "s19",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s20",
+       "ask": "A district requires high school seniors to read a novel depicting a same-sex marriage, in a literature class, with no discussion guidance telling teachers to correct objections. Parents seek an opt-out under Mahmoud. What factors cut against them?",
+       "answer": "Age, since these are older students, which Mahmoud called highly relevant. Content that is descriptive literature rather than normative instruction. No correction of dissent. The district would argue this is mere exposure.",
+       "pause": 12
+      },
+      {
+       "id": "s21",
+       "ask": "Same as Mahmoud, but the district has no opt-outs for anything, not even sex ed. Do the parents lose strict scrutiny?",
+       "answer": "No. Mahmoud's rule applies strict scrutiny to a Yoder-type burden even if the policy is neutral and generally applicable. The other opt-outs helped the parents at the strict-scrutiny stage, but they are not required to trigger it.",
+       "pause": 10
+      },
+      {
+       "id": "s22",
+       "say": "The traps. One: Mahmoud does not let parents micromanage the curriculum. The majority stressed opting out of a particular requirement. Two: Mahmoud is a preliminary injunction ruling, likely to succeed. Three: age is the swing factor. Young children point to Mahmoud; high schoolers point to Kennedy."
+      },
+      {
+       "id": "s23",
+       "say": "Recap. Mahmoud, 2025, six to three, Alito. A substantial interference with a child's religious development, Yoder style, gets strict scrutiny even under a neutral, generally applicable policy. Factors: beliefs, curriculum, age, context. Strict scrutiny failed because of the other opt-outs. Sotomayor dissented: exposure is not coercion."
+      },
+      {
+       "id": "s24",
+       "ask": "Name the four factors Mahmoud says the inquiry turns on.",
+       "answer": "The specific beliefs, the nature of the curriculum, the children's age, and the context.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "Why did the board's interest in an undisrupted classroom fail strict scrutiny?",
+       "answer": "Its many other opt-outs undercut infeasibility, its administrability problems were of its own design, and it cannot cure stigma by stigmatizing religious students.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "According to the Mahmoud dissent, what does Barnette protect against?",
+       "answer": "Only compelled declaration of belief. Mere exposure to contrary ideas is not a burden.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e05",
+     "title": "The Free Exercise framework and Employment Division v. Smith",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The Free Exercise checklist, start to finish, and then the case that sets the baseline: Employment Division versus Smith, 1990."
+      },
+      {
+       "id": "s2",
+       "say": "Here is the checklist. Five steps, in order. Step one: is there a sincere religious practice that the government burdens?"
+      },
+      {
+       "id": "s3",
+       "say": "Step two: is the law neutral and generally applicable? It is not, if any of six things is true. One, it targets religion or is gerrymandered by exemptions: Lukumi. Two, it is applied with hostility: Masterpiece. Three, it has a discretionary exemption system: Fulton. Four, it treats any comparable secular activity better, judged by risk: Tandon. Five, it was admittedly motivated by the conduct's religious character: Kennedy. Six, it excludes religious entities from a public benefit: Carson."
+      },
+      {
+       "id": "s4",
+       "say": "Step three: if the law is neutral and generally applicable, there is no exemption. That is Smith. Unless Wrinkle One applies, parental religious education."
+      },
+      {
+       "id": "s5",
+       "say": "Step four: otherwise, strict scrutiny. An interest of the highest order, narrowly tailored, judged as to this particular exemption. The government almost always loses."
+      },
+      {
+       "id": "s6",
+       "say": "Step five, Wrinkle Two: government may disfavor religion only where necessary to avoid an Establishment Clause violation."
+      },
+      {
+       "id": "s7",
+       "say": "Say the tier structure out loud with me. Neutral and generally applicable: no exemption. Not neutral or not generally applicable: strict scrutiny."
+      },
+      {
+       "id": "s8",
+       "say": "Now Smith. Six to three, Justice Scalia. The rule: the Free Exercise Clause does not require exemptions from neutral, generally applicable laws that incidentally burden religion. Religious belief is absolutely protected. Religious conduct is protected only from laws that target it because it is religious."
+      },
+      {
+       "id": "s9",
+       "say": "The story. Oregon banned controlled substances, including peyote. Smith and Black, members of the Native American Church, used peyote in their rituals and sought an exemption. Held: no exemption."
+      },
+      {
+       "id": "s10",
+       "say": "What government may not do, according to Smith. Count them. One, regulate belief as such. Two, compel affirmation. Three, punish doctrines it thinks false. Four, impose special disabilities based on religious status. Five, take sides in religious disputes."
+      },
+      {
+       "id": "s11",
+       "say": "The support Smith cited. Reynolds, polygamy. Prince, child labor. Braunfeld, Sunday closing. Gillette, the draft. In each, religious conduct yielded to a general law."
+      },
+      {
+       "id": "s12",
+       "say": "Then Smith's hybrid-rights explanation. Past cases that granted exemptions, Scalia said, paired free exercise with another right: speech or press, or the parents' right to direct their children's education. That is Yoder. And Barnette, he said, is a speech case."
+      },
+      {
+       "id": "s13",
+       "say": "And the core reason. Strict scrutiny for every incidental burden would create, in Scalia's words, a private right to ignore generally applicable laws. A constitutional anomaly."
+      },
+      {
+       "id": "s14",
+       "say": "Why does the doctrine exist? Smith's answer: a society cannot let every citizen become a law unto himself. The critics' answer, which you will hear in Fulton, where the Court was asked to overrule Smith and declined: the rule gives too little protection to minority faiths. And Congress's answer was RFRA, which you will meet at the end of today."
+      },
+      {
+       "id": "s15",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s16",
+       "ask": "A state bans all use of alcohol by anyone under twenty-one, with no exceptions. A nineteen-year-old wants to drink communion wine. Strict scrutiny?",
+       "answer": "No. Under Smith, an across-the-board ban that is neutral and generally applicable requires no exemption, so long as no other neutrality problem appears.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "ask": "A city fines anyone who, quote, preaches a false religion. What is wrong with it?",
+       "answer": "It punishes doctrines the government thinks false and regulates belief as such. Smith lists both as forbidden; belief is absolutely protected.",
+       "pause": 10
+      },
+      {
+       "id": "s18",
+       "say": "The traps. One: Smith does not mean religion loses. It means neutral, generally applicable laws win. The real fight on an exam is step two, neutrality and general applicability. Two: Smith is still good law. Fulton declined to overrule it. Three: do not forget Wrinkle One, Yoder and Mahmoud, which escapes Smith."
+      },
+      {
+       "id": "s19",
+       "say": "Recap. Smith, 1990, six to three, Scalia. Peyote. No exemptions from neutral, generally applicable laws. Belief absolutely protected; conduct protected from targeting. Hybrid rights explain the old exemption cases. Strict scrutiny for every burden would be a constitutional anomaly."
+      },
+      {
+       "id": "s20",
+       "ask": "Under Smith, what protection does religious conduct get?",
+       "answer": "Protection only from laws that target it because it is religious. A neutral, generally applicable law that incidentally burdens it needs no exemption.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "What was Smith's hybrid-rights explanation for past exemptions?",
+       "answer": "They paired free exercise with another right, like speech or press, or parents' right to direct education, as in Yoder.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "What is the strict scrutiny test in the Free Exercise checklist?",
+       "answer": "An interest of the highest order, narrowly tailored, judged as to this particular exemption.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e06",
+     "title": "Failing neutrality: Lukumi and Masterpiece Cakeshop",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two ways a law fails neutrality. Gerrymandered exemptions, in Lukumi. And hostility in application, in Masterpiece Cakeshop."
+      },
+      {
+       "id": "s2",
+       "say": "Church of the Lukumi Babalu Aye versus City of Hialeah, 1993. Nine to nothing, Justice Kennedy."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. A law that burdens only religiously motivated conduct, as shown by exemptions that leave comparable secular conduct untouched, is not neutral or generally applicable, and it fails strict scrutiny."
+      },
+      {
+       "id": "s4",
+       "say": "The story. A Santeria church leased land in Hialeah. Animal sacrifice is part of Santeria worship. The city then passed emergency ordinances banning unnecessary or cruel animal killing, defined to exempt many secular killings. Held: not neutral, not generally applicable, and the ordinances fail strict scrutiny."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First: religious beliefs need not be acceptable, logical, consistent, or comprehensible to others."
+      },
+      {
+       "id": "s6",
+       "say": "Second, underinclusive for animal cruelty. Fishing, home pest extermination, euthanasia, medical research, poisoning, and hunting were all allowed. The only killing really banned was the religious one."
+      },
+      {
+       "id": "s7",
+       "say": "Third, underinclusive for public health. Hunters' carcasses and restaurant garbage posed the same risks, but went unregulated."
+      },
+      {
+       "id": "s8",
+       "say": "Fourth, the city said the secular killings were obviously justified. The Court called those claims ipse dixits, bare say-so. Society had imposed on Santeria worshippers what it would not impose on itself."
+      },
+      {
+       "id": "s9",
+       "say": "That last sentence is the key idea. When a law's burden falls only on the religious, its exemptions tell you its real object."
+      },
+      {
+       "id": "s10",
+       "say": "Now Masterpiece Cakeshop versus Colorado Civil Rights Commission, 2018. Seven to two, Justice Kennedy."
+      },
+      {
+       "id": "s11",
+       "say": "The rule. Even a neutral law must be applied neutrally. Official hostility to religion, or treating a religious objection worse than comparable objections, violates the Free Exercise Clause."
+      },
+      {
+       "id": "s12",
+       "say": "The story. In 2012, baker Jack Phillips refused to make a wedding cake for a same-sex couple because of his religious objections. The Colorado Commission found discrimination. Held: the Commission's order violated Free Exercise and was set aside."
+      },
+      {
+       "id": "s13",
+       "say": "The reasoning. First, it is narrow. The Court did not resolve the tension between antidiscrimination law and the First Amendment. States can generally protect gay persons' equal access to goods and services."
+      },
+      {
+       "id": "s14",
+       "say": "Second, hostility. Commissioners said Phillips could believe but could not act on his beliefs in business. One called religious justification one of the most despicable pieces of rhetoric, comparing it to defenses of slavery and the Holocaust. No one objected."
+      },
+      {
+       "id": "s15",
+       "say": "Third, disparate treatment. Three other bakers had refused to make cakes with messages disapproving of same-sex marriage. The Commission found that they acted lawfully. So a religious objection was treated worse than comparable secular objections."
+      },
+      {
+       "id": "s16",
+       "say": "Fourth, government cannot decide what is offensive, citing Barnette."
+      },
+      {
+       "id": "s17",
+       "say": "The dissent: Justices Ginsburg and Sotomayor."
+      },
+      {
+       "id": "s18",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s19",
+       "ask": "A county bans, quote, the ritual slaughter of animals for any purpose other than food, but allows slaughterhouses, hunting, and pest control. A religious group sacrifices animals in worship. Analyze.",
+       "answer": "Like Lukumi. The exemptions leave comparable secular killing untouched, so the law burdens only religious conduct. Not neutral or generally applicable, so strict scrutiny, which it likely fails because it is underinclusive for both cruelty and health.",
+       "pause": 12
+      },
+      {
+       "id": "s20",
+       "ask": "A licensing board applies a neutral rule against a religious florist. At the hearing, one member says, religion is just an excuse to discriminate, and nobody responds. The board previously excused a secular florist who refused a similar order. What doctrine helps the religious florist?",
+       "answer": "Masterpiece Cakeshop. A neutral law must be applied neutrally. Official hostility, and treating the religious objection worse than a comparable one, violate Free Exercise.",
+       "pause": 12
+      },
+      {
+       "id": "s21",
+       "say": "The traps. One: Masterpiece did not hold that religious businesses get exemptions from antidiscrimination laws. It is about the hostile process. Two: in Lukumi the Court applied strict scrutiny and the law failed it; do not stop at \"not neutral.\" Finish the analysis."
+      },
+      {
+       "id": "s22",
+       "say": "Recap. Lukumi, 1993, nine to nothing, Kennedy: gerrymandered exemptions, Santeria, underinclusive for both cruelty and health, ipse dixit. Masterpiece, 2018, seven to two, Kennedy: hostility in application and disparate treatment of the three other bakers. Narrow. Ginsburg and Sotomayor dissented."
+      },
+      {
+       "id": "s23",
+       "ask": "In Lukumi, which two government interests was the ordinance underinclusive for?",
+       "answer": "Preventing animal cruelty and protecting public health.",
+       "pause": 8
+      },
+      {
+       "id": "s24",
+       "ask": "What comparison showed disparate treatment in Masterpiece Cakeshop?",
+       "answer": "Three bakers who refused to make cakes with messages disapproving of same-sex marriage were found to have acted lawfully.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "Did Masterpiece resolve the conflict between antidiscrimination law and the First Amendment?",
+       "answer": "No. It was narrow, resting on official hostility in applying the law.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e07",
+     "title": "Failing general applicability: Fulton and Tandon",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two more ways a law fails. A discretionary exemption system, in Fulton. And favoring any comparable secular activity, in Tandon. Then the full synthesis table."
+      },
+      {
+       "id": "s2",
+       "say": "Fulton versus City of Philadelphia, 2021. Nine to nothing, Chief Justice Roberts."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. A formal system of discretionary, individualized exemptions makes a policy not generally applicable, even if no exemption has ever been granted. And strict scrutiny asks whether the government has a compelling interest in denying this particular claimant an exemption."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Philadelphia stopped referring foster children to Catholic Social Services, CSS, because CSS would not certify same-sex couples as foster parents. Held: the policy was not generally applicable, and it failed strict scrutiny. And the Court declined to overrule Smith."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. The contract gave the Commissioner sole discretion to grant exceptions. That invites the government to decide which reasons for not complying are worthy. Unused power still counts."
+      },
+      {
+       "id": "s6",
+       "say": "Then the interests, judged as to CSS. More foster parents? CSS adds them. Avoiding liability? Speculative. Equal treatment? Weighty, but undermined by the city's own exemption system."
+      },
+      {
+       "id": "s7",
+       "say": "Now Tandon versus Newsom, 2021. A five to four per curiam, on an emergency application."
+      },
+      {
+       "id": "s8",
+       "say": "The rule. A regulation triggers strict scrutiny whenever it treats any comparable secular activity more favorably than religious exercise. Comparability is judged by risk to the government's interest. And the government must show that the religious activity is riskier even with the same precautions."
+      },
+      {
+       "id": "s9",
+       "say": "The story. During COVID, California limited at-home gatherings, religious or secular, to three households. But salons, stores, theaters, and restaurants could exceed that. Held: injunction pending appeal granted."
+      },
+      {
+       "id": "s10",
+       "say": "The reasoning. First: it does not matter that some secular activities are treated as badly. One favored comparable secular activity is enough. Second, in the Court's words, the state cannot assume the worst when people go to worship but assume the best when people go to work."
+      },
+      {
+       "id": "s11",
+       "say": "Third, irreparable harm. Losing free exercise rights for even minimal periods of time is irreparable harm. And this was the fifth time the Court had summarily rejected the Ninth Circuit on California's COVID limits on worship."
+      },
+      {
+       "id": "s12",
+       "say": "The dissent: Justice Kagan, joined by Breyer and Sotomayor, with Chief Justice Roberts dissenting separately. The right comparator is at-home secular gatherings, which were treated identically. Comparing homes to stores is apples and watermelons. And the district court found homes riskier: longer social interactions, smaller and less-ventilated spaces, and less masking and distancing."
+      },
+      {
+       "id": "s13",
+       "say": "Now the synthesis: how a law fails neutrality or general applicability. Seven rows. Count with me."
+      },
+      {
+       "id": "s14",
+       "say": "One, gerrymandered exemptions: Lukumi, the animal-killing ban that exempted fishing, hunting, pest control, and euthanasia."
+      },
+      {
+       "id": "s15",
+       "say": "Two, hostility in application: Masterpiece, commissioners who disparaged religion, and comparable bakers treated better."
+      },
+      {
+       "id": "s16",
+       "say": "Three, a discretionary exemption system: Fulton, sole discretion to waive, and unused power still counts."
+      },
+      {
+       "id": "s17",
+       "say": "Four, a comparable secular activity favored: Tandon, salons, stores, and theaters favored over at-home worship."
+      },
+      {
+       "id": "s18",
+       "say": "Five, an admitted religious motive: Kennedy, discipline partly because the prayer was religious."
+      },
+      {
+       "id": "s19",
+       "say": "Six, exclusion from a public benefit: Trinity Lutheran, Espinoza, and Carson, benefits denied solely because of religious character."
+      },
+      {
+       "id": "s20",
+       "say": "And the contrast, seven: neutral and generally applicable. Smith, an across-the-board drug ban, and no exemption."
+      },
+      {
+       "id": "s21",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s22",
+       "ask": "A city requires all contractors to follow a nondiscrimination rule, but the city manager may waive it, quote, for good cause. She has never waived it. A religious contractor is denied a waiver. Generally applicable?",
+       "answer": "No. Under Fulton, a formal system of discretionary exemptions makes the policy not generally applicable even if no exemption has ever been granted. Strict scrutiny applies, asking whether the city has a compelling interest in denying this contractor an exemption.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "ask": "A county limits indoor worship to fifty people but lets indoor shopping malls hold two hundred. The county points out that movie theaters are also limited to fifty. Does that save the rule?",
+       "answer": "No. Under Tandon it does not matter that some secular activities are treated as badly. Favoring any comparable secular activity, judged by risk, triggers strict scrutiny, and the county must show worship is riskier even with the same precautions.",
+       "pause": 12
+      },
+      {
+       "id": "s24",
+       "say": "The traps. One: in Tandon, pick the comparator by risk, not by category. The dissent would compare homes to homes. The majority compares by risk to the interest. Two: Fulton did not overrule Smith. It found a way around it. Three: in Fulton, strict scrutiny is applied to this claimant, not to the policy in general."
+      },
+      {
+       "id": "s25",
+       "say": "Recap. Fulton, 2021, nine to nothing, Roberts: discretionary exemption system, even unused, means not generally applicable; interests judged as to CSS; Smith not overruled. Tandon, 2021, five to four per curiam: any comparable secular activity favored, judged by risk, means strict scrutiny. Kagan dissented: apples and watermelons."
+      },
+      {
+       "id": "s26",
+       "ask": "Why did Philadelphia's policy fail general applicability in Fulton?",
+       "answer": "The Commissioner had sole discretion to grant exceptions, a formal system of discretionary individualized exemptions, even though none had been granted.",
+       "pause": 8
+      },
+      {
+       "id": "s27",
+       "ask": "How is comparability judged under Tandon?",
+       "answer": "By risk to the government's interest. The government must show the religious activity is riskier even with the same precautions.",
+       "pause": 8
+      },
+      {
+       "id": "s28",
+       "ask": "Name the six ways a law fails neutrality or general applicability, with a case for each.",
+       "answer": "Gerrymandered exemptions, Lukumi. Hostility in application, Masterpiece. Discretionary exemption system, Fulton. Comparable secular activity favored, Tandon. Admitted religious motive, Kennedy. Exclusion from a public benefit, Trinity Lutheran, Espinoza, and Carson.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e08",
+     "title": "The two wrinkles: Yoder and Establishment Clause avoidance",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two exceptions to the ordinary Free Exercise framework. Wrinkle One escapes Smith. Wrinkle Two lets government disfavor religion, but only so far."
+      },
+      {
+       "id": "s2",
+       "say": "Wrinkle One: parental religious education. Strict scrutiny applies even to a generally applicable law if it interferes with parents' religious upbringing of their children. The cases: Wisconsin versus Yoder, and Mahmoud. In Mahmoud, the sex-ed opt-out also undercut general applicability, so the parents had two routes."
+      },
+      {
+       "id": "s3",
+       "say": "The Yoder facts, as Mahmoud recounts them. Wisconsin required school attendance until age sixteen. Amish parents refused to send their children to school after eighth grade. High school, they said, would expose their children to worldly influence and pull them away from the Amish community during the formative adolescent years. The Court held that applying the law to them violated their free exercise rights. That was 1972."
+      },
+      {
+       "id": "s4",
+       "say": "Notice the doctrinal puzzle. Smith treated Yoder as resting on a hybrid of free exercise and an unenumerated parental right. After Dobbs, the Court is wary of unenumerated rights. So in Mahmoud, it said little about the doctrinal basis. It just applied the Yoder burden."
+      },
+      {
+       "id": "s5",
+       "say": "Wrinkle Two: Establishment Clause avoidance. Government may disfavor religion when necessary to avoid an Establishment Clause violation. But not to separate church and state more strictly than the Constitution requires. That second half is Carson versus Makin."
+      },
+      {
+       "id": "s6",
+       "say": "Put it this way. If treating religion equally would actually violate the Establishment Clause, government may treat it worse. If equal treatment would be perfectly lawful, and the state just prefers more separation, that preference is not a compelling interest."
+      },
+      {
+       "id": "s7",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s8",
+       "ask": "A state bars parents from opting their children out of any part of the curriculum. Parents of eight-year-olds object, on religious grounds, to a unit that teaches children to correct classmates who express traditional religious views about marriage. The state says its rule is neutral and generally applicable. Does Smith end the case?",
+       "answer": "No. Wrinkle One. Under Yoder and Mahmoud, a substantial interference with the religious upbringing of children triggers strict scrutiny even under a neutral, generally applicable law. Young age and normative content with correction point toward a burden.",
+       "pause": 12
+      },
+      {
+       "id": "s9",
+       "ask": "A state says it must exclude religious schools from a program because it wants a higher wall between church and state than the federal Constitution requires. Is that a compelling interest?",
+       "answer": "No. Under Carson, an interest in separating church and state more strictly than the federal Constitution requires is not compelling.",
+       "pause": 10
+      },
+      {
+       "id": "s10",
+       "say": "Recap. Wrinkle One: parental religious education, Yoder and Mahmoud, strict scrutiny even for generally applicable laws. Wrinkle Two: government may disfavor religion only where necessary to avoid a real Establishment Clause violation, not for extra separation, per Carson."
+      },
+      {
+       "id": "s11",
+       "ask": "What did Wisconsin require, and what did the Amish parents refuse?",
+       "answer": "School attendance until sixteen. The Amish refused to send their children to school after eighth grade.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "Why did Mahmoud say little about the doctrinal basis of the parental right?",
+       "answer": "Smith had treated Yoder as resting on an unenumerated parental right, and after Dobbs the Court is wary of such rights.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "State Wrinkle Two in one sentence.",
+       "answer": "Government may disfavor religion only when necessary to avoid an Establishment Clause violation, not to separate church and state more strictly than the Constitution requires.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e09",
+     "title": "The Establishment Clause: schools and funding",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What the Establishment Clause clearly forbids, why public schools are policed most strictly, and the funding story from the Lemon era to required inclusion."
+      },
+      {
+       "id": "s2",
+       "say": "First, what is broadly agreed. Government cannot do five things. One, establish an official religion. Two, coerce belief. Three, give benefits, like tax exemptions, only to religious entities. Four, favor one sect. Five, use public schools to indoctrinate. No school prayer."
+      },
+      {
+       "id": "s3",
+       "say": "Public schools get the strictest policing, because they are uniquely coercive and children are impressionable. Five cases. Engel versus Vitale: nonmandatory prayer struck. Abington versus Schempp: Bible reading. Wallace versus Jaffree: a moment of silence for prayer. McCollum: religious instruction. Edwards versus Aguillard: special vigilance in K through 12."
+      },
+      {
+       "id": "s4",
+       "say": "But individual religious expression at school is still protected. That is Kennedy. So: school-sponsored religion, out. Private religious expression, protected."
+      },
+      {
+       "id": "s5",
+       "say": "Now funding. Three stages. Stage one, the old rule, now repudiated: in the Lemon era, government could exclude religious entities from funding to avoid the appearance of support."
+      },
+      {
+       "id": "s6",
+       "say": "Stage two, permitted inclusion: Zelman, 2002. Aid that reaches religious schools through parents' genuine, independent private choice is permissible. The facts: a state let parents choose to use school vouchers for tuition at parochial or nonsectarian private schools. Your outline adds, beyond the casebook, that it was Cleveland's voucher program."
+      },
+      {
+       "id": "s7",
+       "say": "Stage three, required inclusion: Trinity Lutheran in 2017, Espinoza in 2020, and Carson in 2022. If the state subsidizes private entities, it cannot exclude religious ones because they are religious. It may end the program instead."
+      },
+      {
+       "id": "s8",
+       "say": "Trinity Lutheran Church versus Comer, 2017. Missouri denied a playground-resurfacing grant to a church-run preschool solely because it was religious. Excluding otherwise eligible recipients for their religious character is, the Court said, odious to our Constitution."
+      },
+      {
+       "id": "s9",
+       "say": "Espinoza versus Montana Department of Revenue, 2020. Montana's no-aid provision cut religious schools out of a tax-credit scholarship program. The key line: a state need not subsidize private education. But once a state decides to do so, it cannot disqualify some private schools solely because they are religious."
+      },
+      {
+       "id": "s10",
+       "say": "And unemployment benefits. The same principle long barred states from withholding unemployment benefits from someone who lost a job for refusing to abandon the dictates of his faith. Carson cites those cases."
+      },
+      {
+       "id": "s11",
+       "say": "Now a phrase you must know: play in the joints. It has two meanings. Concept number one: government may accommodate religion beyond what Free Exercise requires, without violating the Establishment Clause. That one is alive. RFRA, RLUIPA, and Cutter."
+      },
+      {
+       "id": "s12",
+       "say": "Concept number two: government may decline to fund religious entities to avoid Establishment Clause concerns, even if funding would be lawful. That one is in retreat. The trilogy rejected it."
+      },
+      {
+       "id": "s13",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s14",
+       "ask": "A public high school principal opens graduation with a prayer over the loudspeaker. Students are told participation is voluntary. Constitutional?",
+       "answer": "No. Public schools are policed most strictly. Under Engel, even nonmandatory school-sponsored prayer violates the Establishment Clause.",
+       "pause": 10
+      },
+      {
+       "id": "s15",
+       "ask": "A state offers grants to private daycare centers for fire-safety upgrades, but excludes centers run by churches. What result?",
+       "answer": "Unconstitutional under Trinity Lutheran. Excluding otherwise eligible recipients solely because of religious character is odious to the Constitution. The state may end the program, but not exclude religious centers.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "say": "The traps. One: Zelman is permission; Trinity Lutheran, Espinoza, and Carson are requirement. Do not mix them up. Two: play in the joints means two different things. Accommodation is alive. Declining to fund is in retreat."
+      },
+      {
+       "id": "s17",
+       "say": "Recap. Five clear prohibitions. Schools are strictest: Engel, Schempp, Wallace, McCollum, Edwards. Funding: Lemon-era exclusion, repudiated; Zelman, private choice permitted; the trilogy, inclusion required."
+      },
+      {
+       "id": "s18",
+       "ask": "Name the three cases in the required-inclusion trilogy, with years.",
+       "answer": "Trinity Lutheran, 2017. Espinoza, 2020. Carson, 2022.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What made the voucher aid in Zelman permissible?",
+       "answer": "It reached religious schools only through parents' genuine, independent private choice.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "Which meaning of play in the joints is alive, and which is in retreat?",
+       "answer": "Alive: government may accommodate religion beyond what Free Exercise requires. In retreat: government may decline to fund religious entities to avoid Establishment Clause concerns.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e10",
+     "title": "Carson v. Makin, and religious charter schools",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Carson versus Makin, 2022, the last of the trilogy. Then the open question of religious charter schools."
+      },
+      {
+       "id": "s2",
+       "say": "The rule. Once a state chooses to subsidize private schooling, it cannot exclude schools because they are religious, even when the funds pay for religious instruction. And an interest in separating church and state more strictly than the federal Constitution requires is not compelling."
+      },
+      {
+       "id": "s3",
+       "say": "Six to three, Chief Justice Roberts."
+      },
+      {
+       "id": "s4",
+       "say": "The story. For families in districts with no public secondary school, Maine paid tuition at the public or approved private school of the parent's choice. But since 1981, only at nonsectarian schools. Two families chose accredited religious schools. Held: the exclusion violates Free Exercise."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, excluding religious entities from a generally available benefit penalizes free exercise. And under Zelman, including them would not violate the Establishment Clause. So Wrinkle Two does not help Maine."
+      },
+      {
+       "id": "s6",
+       "say": "Second, Maine argued this was a public education benefit. The Court said no. Participating private schools can be selective, often are not free, do not follow the state curriculum, need not hire certified teachers, and may be single-sex. That is not public education."
+      },
+      {
+       "id": "s7",
+       "say": "Third, the limits. States may keep their public schools strictly secular. And they need not fund private education at all."
+      },
+      {
+       "id": "s8",
+       "say": "Fourth, Maine's options. It could expand its public schools, add transportation, offer tutoring, remote learning, or partial attendance, or run boarding schools of its own. What it cannot do is exclude religious schools from the tuition benefit it chose to offer."
+      },
+      {
+       "id": "s9",
+       "say": "The dissent: Justice Breyer, joined by Kagan and Sotomayor, and the excerpt is Sotomayor's. The Court has gone from permitting states to decline to fund religion to requiring them to fund religious instruction. Play in the joints is nearly gone. Maine must now fund schools with discriminatory admissions. And Maine's choice was forced by geography."
+      },
+      {
+       "id": "s10",
+       "say": "Now the open question: religious charter schools. Here is the dilemma. If charter schools are public, a religious charter violates the Establishment Clause. If they are private, excluding religious schools violates Free Exercise under Carson."
+      },
+      {
+       "id": "s11",
+       "say": "In Oklahoma Statewide Charter School Board versus Drummond, 2025, Oklahoma argued its charters are public: state-created, funded, supervised, and open to all. The Court split four to four, with Justice Barrett recused. That left in place the state ruling barring St. Isidore's certification. Expect the issue to return."
+      },
+      {
+       "id": "s12",
+       "say": "Oklahoma, represented by former Solicitor General Greg Garre, argued that federal law and forty-five other states also define charter schools as public and nonsectarian, so a contrary ruling would upend charter-school laws nationwide. The likely split, judging from oral argument: Thomas, Alito, Gorsuch, and Kavanaugh, private. Roberts, Sotomayor, Kagan, and Jackson, public."
+      },
+      {
+       "id": "s13",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s14",
+       "ask": "A state pays tuition at any private high school for students in rural areas, but bars use of the money at schools that teach religion as true. The state says it is not excluding religious schools for their status, only for religious use. Does that distinction work after Carson?",
+       "answer": "No. Carson held a state cannot exclude schools because they are religious even when the funds pay for religious instruction.",
+       "pause": 12
+      },
+      {
+       "id": "s15",
+       "ask": "A state abolishes its private-school tuition program entirely, for everyone. Religious parents sue under Carson. What result?",
+       "answer": "They lose. States need not fund private education at all. Carson only forbids excluding religious schools from a benefit the state chose to offer.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "say": "Recap. Carson, 2022, six to three, Roberts. Maine's nonsectarian requirement violates Free Exercise, even for funds used for religious instruction. Not a public-education benefit. States can keep public schools secular or not fund at all. Sotomayor dissented. Religious charters: the four-to-four Drummond split left the question open."
+      },
+      {
+       "id": "s17",
+       "ask": "Why wasn't Maine's tuition program a public education benefit?",
+       "answer": "Participating private schools can be selective, often aren't free, don't follow the state curriculum, needn't hire certified teachers, and may be single-sex.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "What is the dilemma for religious charter schools?",
+       "answer": "If charters are public, a religious charter violates the Establishment Clause. If private, excluding religious ones violates Free Exercise.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "How did the Court decide Drummond, and what was the effect?",
+       "answer": "Four to four, Barrett recused, leaving in place the state ruling barring St. Isidore's certification.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e11",
+     "title": "RFRA, RLUIPA, and religious symbols",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Statutory protection after Smith, the cases on Congress's power and on accommodation's costs, and the rules for monuments and money. Then the world-religions stretch exercise."
+      },
+      {
+       "id": "s2",
+       "say": "RFRA, the Religious Freedom Restoration Act, 1993. Congress enacted it in response to Smith. The rule: a substantial burden on religious exercise requires an exemption unless the government satisfies strict scrutiny, even for neutral laws. But it is a statute, not constitutional law."
+      },
+      {
+       "id": "s3",
+       "say": "City of Boerne versus Flores, 1997. RFRA exceeds Congress's power as applied to state and local governments. It still binds the federal government. Your outline adds the facts, from beyond the casebook: a Catholic archbishop sought a permit to enlarge a church in Boerne, Texas. The city denied it under a historic-preservation ordinance, and he sued under RFRA."
+      },
+      {
+       "id": "s4",
+       "say": "RLUIPA, the narrower statute. It covers land use and institutionalized persons, and it binds the states. Cutter versus Wilkinson, 2005, unanimously upheld it. Accommodation beyond what Free Exercise requires is permissible. But courts must weigh burdens on nonbeneficiaries. Justice Ginsburg warned that at some point, accommodation may devolve into an unlawful fostering of religion. The facts, from beyond the casebook: Ohio prison inmates who practiced nonmainstream religions, such as Wicca and Asatru, claimed the prisons failed to accommodate their religious exercise."
+      },
+      {
+       "id": "s5",
+       "say": "Burwell versus Hobby Lobby, 2014. Five to four. RFRA exempted closely held for-profit corporations with religious owners from the Affordable Care Act's contraceptive mandate. The lesson: accommodation has costs to third parties. Hobby Lobby alone had ten thousand employees who lost coverage, and Justice Ginsburg read her dissent from the bench."
+      },
+      {
+       "id": "s6",
+       "say": "Now monuments and money. Longstanding religious displays and short legislative prayers are generally allowed on historical grounds. The Texas Capitol Ten Commandments monument was upheld five to four in 2005. That is Van Orden versus Perry; the outline supplies the name. The monument had stood for forty years, the challenger was a lawyer who walked past it, and the Court noted that its own courtroom shows the Ten Commandments."
+      },
+      {
+       "id": "s7",
+       "say": "Public schools are stricter, because students are impressionable. The circuits uphold In God We Trust on currency: Newdow versus Peterson. And lower courts allow Christmas carols in school concerts when music from other traditions is included."
+      },
+      {
+       "id": "s8",
+       "say": "Now the stretch exercise: a world-religions unit, a variant on Mahmoud. A tenth-grade unit has short readings from the Bible, the Quran, Buddhist texts, and secular humanist writings. Students compare traditions and write a reflection on meaning and morality. Some parents seek opt-outs."
+      },
+      {
+       "id": "s9",
+       "say": "The parents' argument. The Yoder and Mahmoud wrinkle applies strict scrutiny. Presenting rival moral answers pressures children. The reflection nears a Barnette-style declaration. And any other opt-outs defeat general applicability."
+      },
+      {
+       "id": "s10",
+       "say": "The district's argument. These are older students, like Kennedy. The unit is descriptive, not normative. There is no correction and no hurtful labels. It is mere exposure. It is neutral under Smith. And otherwise there is no limiting principle."
+      },
+      {
+       "id": "s11",
+       "say": "The likely answer. The district has the better case, given age and descriptive content, the very factors Mahmoud stressed. Unless the reflection requires students to adopt views, or the district grants other opt-outs."
+      },
+      {
+       "id": "s12",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s13",
+       "ask": "A federal agency enforces a neutral regulation that substantially burdens a church's practice. The church cannot win under Smith. Does it have another route?",
+       "answer": "Yes. RFRA, which binds the federal government after City of Boerne. A substantial burden requires an exemption unless the government satisfies strict scrutiny.",
+       "pause": 12
+      },
+      {
+       "id": "s14",
+       "ask": "A city applies a neutral zoning law to block a church expansion. The church sues under RFRA. What problem does it face, and what statute might help?",
+       "answer": "Under City of Boerne, RFRA does not apply to state and local governments. But RLUIPA covers land use and binds the states.",
+       "pause": 12
+      },
+      {
+       "id": "s15",
+       "say": "The traps. One: RFRA is a statute. A RFRA claim is not a constitutional claim. Two: RFRA binds only the federal government after Boerne. Three: accommodation is permitted, but Cutter requires weighing burdens on others, and Hobby Lobby shows the cost."
+      },
+      {
+       "id": "s16",
+       "say": "Recap. RFRA, 1993, restores strict scrutiny by statute; Boerne, 1997, limits it to the federal government. RLUIPA binds states for land use and prisoners; Cutter, 2005, unanimous, upheld it. Hobby Lobby, 2014, five to four. Longstanding displays like Van Orden are allowed; schools are stricter."
+      },
+      {
+       "id": "s17",
+       "ask": "What did City of Boerne v. Flores hold about RFRA?",
+       "answer": "RFRA exceeds Congress's power as to state and local governments, but it still binds the federal government.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "What warning did Justice Ginsburg give in Cutter?",
+       "answer": "That at some point, accommodation may devolve into an unlawful fostering of religion.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "Why was the Ten Commandments monument upheld in Van Orden?",
+       "answer": "Longstanding religious displays are generally allowed on historical grounds. It had stood for forty years.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d1-e12",
+     "title": "Day 1 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Let's close Day 1 with a cumulative quiz. Answer out loud before each answer comes."
+      },
+      {
+       "id": "s2",
+       "ask": "Which case overruled Gobitis, and in what year?",
+       "answer": "Barnette, 1943.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "In Kennedy versus Bremerton, which tests did the Court abandon for the Establishment Clause?",
+       "answer": "Lemon and the endorsement test.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "A state bans peyote for everyone, no exceptions. A religious user wants an exemption. Which case controls and what result?",
+       "answer": "Employment Division versus Smith. No exemption from a neutral, generally applicable law.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "What is the standard of review once a law is not neutral or not generally applicable?",
+       "answer": "Strict scrutiny: an interest of the highest order, narrowly tailored, judged as to this exemption.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "Which case says unused discretionary exemptions still defeat general applicability?",
+       "answer": "Fulton versus City of Philadelphia.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Which case says favoring any comparable secular activity triggers strict scrutiny?",
+       "answer": "Tandon versus Newsom.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "Masterpiece Cakeshop was decided by what vote and on what ground?",
+       "answer": "Seven to two, Kennedy. Official hostility in applying a neutral law.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "Under Mahmoud, why does the children's age matter?",
+       "answer": "Age is highly relevant to whether the curriculum burdens religious development. Young children are more susceptible, which distinguished the high schoolers in Kennedy.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "A state funds private schools but excludes religious ones because it wants extra separation of church and state. Result?",
+       "answer": "Unconstitutional under Carson. Extra separation is not a compelling interest, and the state cannot exclude religious schools from a benefit it chose to offer.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "Does RFRA bind a city?",
+       "answer": "No. Under City of Boerne it binds only the federal government. RLUIPA may apply for land use or prisoners.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "What are the five things Smith says government may never do regarding religion?",
+       "answer": "Regulate belief as such, compel affirmation, punish doctrines it thinks false, impose special disabilities based on religious status, and take sides in religious disputes.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "say": "That is Day 1. Tomorrow we open with a spaced review of today, and then we move into the Speech Clause. Well done."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
