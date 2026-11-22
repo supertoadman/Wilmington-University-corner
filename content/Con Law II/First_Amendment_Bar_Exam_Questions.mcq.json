@@ -2,7 +2,7 @@
  "schema": "mcq/v1",
  "id": "first-amendment-bar-exam-questions",
  "title": "First Amendment Bar Exam Questions",
- "description": "120 bar-style questions on all of Weeks 1–15 (Chapters 1–13), in four practice finals of 30, each sized like the final's 60-minute, 30-question multiple-choice part. Each practice final runs through the whole outline in order, and together they test every case and doctrine in it: Barnette, Kennedy, and Mahmoud; Smith and the ways a law fails neutrality, Carson and Establishment Clause funding, and RFRA; compelled speech, content-based restrictions, the unprotected categories, overbreadth, and vagueness; incitement, fighting words, hostile audiences, R.A.V., and prior restraints; true threats and speech integral to crime; obscenity, secondary effects, child pornography, age verification, and violent imagery; fraud, defamation, IIED, true information, and the right of publicity; Central Hudson and Zauderer; content and viewpoint discrimination, time, place, and manner rules, and expressive conduct; government speech and coercion; funding conditions and forum doctrine; employee and student speech; and social media and elections. Each question gives new facts and asks for the result, and the wrong choices give the right result for the wrong reason, apply the neighboring doctrine, or use the dissent's or a superseded view. Five choices each, and every choice is explained.",
+ "description": "128 bar-style questions on all of Weeks 1–16 (Chapters 1–14): in four practice finals of 30, each sized like the final's 60-minute, 30-question multiple-choice part, plus 8 extra questions. Each practice final runs through the whole outline in order, and together they test every case and doctrine in it: Barnette, Kennedy, and Mahmoud; Smith and the ways a law fails neutrality, Carson and Establishment Clause funding, and RFRA; compelled speech, content-based restrictions, the unprotected categories, overbreadth, and vagueness; incitement, fighting words, hostile audiences, R.A.V., and prior restraints; true threats and speech integral to crime; obscenity, secondary effects, child pornography, age verification, and violent imagery; fraud, defamation, IIED, true information, and the right of publicity; Central Hudson and Zauderer; content and viewpoint discrimination, time, place, and manner rules, and expressive conduct; government speech and coercion; funding conditions and forum doctrine; employee and student speech; social media and elections; and the press, assembly, and petition clauses, freedom of association (NAACP v. Alabama, First Choice, Roberts v. U.S. Jaycees, Boy Scouts of America v. Dale), and compelled speech again (Rumsfeld v. FAIR, 303 Creative). Each question gives new facts and asks for the result, and the wrong choices give the right result for the wrong reason, apply the neighboring doctrine, or use the dissent's or a superseded view. Five choices each, and every choice is explained.",
  "course": "Con Law II",
  "modeDefault": "study",
  "areas": [
@@ -41,28 +41,36 @@
   "Speech by Government Employees",
   "Speech in Public Schools",
   "Speech Involving Social Media",
-  "Speech Involving Elections"
+  "Speech Involving Elections",
+  "The Press, Assembly, and Petition Clauses",
+  "Freedom of Association",
+  "Compelled Speech, Again"
  ],
  "exams": [
   {
    "id": 1,
    "title": "Practice Final 1",
-   "description": "30 questions in outline order, Chapters 1–13. Allow about 60 minutes."
+   "description": "30 questions in outline order, Chapters 1–14. Allow about 60 minutes."
   },
   {
    "id": 2,
    "title": "Practice Final 2",
-   "description": "30 questions in outline order, Chapters 1–13. Allow about 60 minutes."
+   "description": "30 questions in outline order, Chapters 1–14. Allow about 60 minutes."
   },
   {
    "id": 3,
    "title": "Practice Final 3",
-   "description": "30 questions in outline order, Chapters 1–13. Allow about 60 minutes."
+   "description": "30 questions in outline order, Chapters 1–14. Allow about 60 minutes."
   },
   {
    "id": 4,
    "title": "Practice Final 4",
-   "description": "30 questions in outline order, Chapters 1–13. Allow about 60 minutes."
+   "description": "30 questions in outline order, Chapters 1–14. Allow about 60 minutes."
+  },
+  {
+   "id": 5,
+   "title": "Extra Questions",
+   "description": "8 more questions on Chapters 6–11, moved out of Practice Finals 1–4 so each final stays at 30 questions after Chapter 14 was added."
   }
  ],
  "questions": [
@@ -389,29 +397,6 @@
    "e": "Violent imagery is protected even for minors; a content-based ban on selling violent material to minors gets strict scrutiny and fails without proof of causation and tight tailoring (Brown v. Entertainment Merchants Association, following United States v. Stevens)."
   },
   {
-   "id": "1.15",
-   "exam": 1,
-   "area": "Defamation",
-   "tag": "Actual malice is not ill will",
-   "q": "A newspaper columnist who despises the state's attorney general writes that the attorney general \"took a $50,000 bribe\" to drop a case. The columnist honestly believed the claim, which came from a source who had been reliable for years, but it was false. At trial, the attorney general proves the columnist's intense personal hatred of him and that a more careful reporter would have called his office before publishing.\n\nCan the attorney general recover?",
-   "o": [
-    "Yes, because truth is a defense the columnist must prove, and he can't prove it.",
-    "Yes, because the columnist's hatred shows that he acted with malice.",
-    "Yes, because the columnist was negligent in failing to check with his office.",
-    "No, because he can't prove knowing or reckless falsity.",
-    "No, because criticism of public officials is absolutely protected."
-   ],
-   "a": 3,
-   "oe": [
-    "Sullivan rejected the common-law rule that put the burden of proving truth on the defendant, because forcing critics to guarantee truth leads to self-censorship.",
-    "\"Actual malice\" is a term of art meaning knowledge of falsity or reckless disregard of the truth. It has nothing to do with ill will.",
-    "Negligence suffices for a private plaintiff on a matter of public concern (Gertz), not for a public official suing over official conduct.",
-    "Correct. Under New York Times v. Sullivan, a public official must prove actual malice: knowledge of falsity or reckless disregard of whether the statement was false. An honest belief based on a reliable source isn't reckless, and neither hatred nor carelessness substitutes.",
-    "Only concurring Justices in Sullivan would have made criticism of officials absolutely immune. The Court adopted the actual-malice standard instead."
-   ],
-   "e": "A public official can't recover for a defamatory falsehood about his official conduct without proving actual malice, meaning knowledge of falsity or reckless disregard of whether it was false; actual malice isn't ill will (New York Times v. Sullivan)."
-  },
-  {
    "id": "1.16",
    "exam": 1,
    "area": "Defamation",
@@ -502,29 +487,6 @@
     "Central Hudson governs restrictions on commercial speech. Disclosures that require \"somewhat more information\" get Zauderer's more lenient test (Milavetz)."
    ],
    "e": "The government may require purely factual and uncontroversial information about the seller's own product or terms if the requirement is reasonably related to a substantial interest, such as preventing deception, and isn't unjustified or unduly burdensome (Zauderer; Milavetz)."
-  },
-  {
-   "id": "1.20",
-   "exam": 1,
-   "area": "Compelled Commercial Speech",
-   "tag": "Notice not about the speaker's own services",
-   "q": "A state requires licensed veterinary clinics that offer only spay and neuter surgery to post this notice in their waiting rooms: \"The state funds low-cost euthanasia for unwanted animals. Call the state pet hotline.\" Several clinics run by animal-welfare groups that oppose euthanasia object. The state responds that every word of the notice is true.\n\nWhat is the most likely result?",
-   "o": [
-    "Upheld, because the clinics remain free to post their own message disagreeing with the notice.",
-    "Upheld under Zauderer, because the notice is accurate and purely factual.",
-    "Upheld, because a state may require licensed professionals to convey its message as a condition of licensure.",
-    "Struck, because the notice isn't about the clinics' own services and takes a side on a contested issue.",
-    "Struck, because every compelled commercial disclosure must survive strict scrutiny."
-   ],
-   "a": 3,
-   "oe": [
-    "Being allowed to add a reply doesn't save a compelled message. That a seller may say more mattered only in cases where the disclosure first satisfied Zauderer.",
-    "Accuracy isn't enough. Under NIFLA, Zauderer covers only information about the speaker's own services, and not a notice that takes sides in a controversy.",
-    "The state may run its own campaign, but it \"cannot co-opt the licensed facilities to deliver its message\" (NIFLA).",
-    "Correct. Under National Institute of Family and Life Advocates v. Becerra, a required notice that doesn't concern the speaker's own services, or that addresses a controversial topic, falls outside Zauderer. Under heightened scrutiny, the state's own public-information campaign is an obvious alternative.",
-    "Most commercial disclosures get Zauderer's lenient test. NIFLA preserved health and safety warnings and factual disclosures about the seller's own products."
-   ],
-   "e": "Zauderer applies only to purely factual and uncontroversial disclosures about the speaker's own product or services. A notice about someone else's services or a contested topic gets heightened scrutiny, and even a Zauderer disclosure fails if unjustified or unduly burdensome (National Institute of Family and Life Advocates v. Becerra)."
   },
   {
    "id": "1.21",
@@ -756,6 +718,52 @@
    ],
    "e": "The government may not ban independent political expenditures by corporations. Only preventing quid pro quo corruption or its appearance suffices, which justifies limits on direct contributions but not expenditure bans; disclaimers and disclosure survive exacting scrutiny (Citizens United).",
    "fixed": true
+  },
+  {
+   "id": "1.31",
+   "exam": 1,
+   "area": "Freedom of Association",
+   "tag": "Compelled disclosure of a member list",
+   "q": "Westmoreland's attorney general opens an investigation into whether the Coalition for New Neighbors, a nonprofit that organizes rallies and lobbies for immigrant rights, broke the state's charitable-solicitation filing rules. She subpoenas the names and home addresses of all 4,000 of the Coalition's rank-and-file members. The Coalition produces its financial records and the names of its officers and paid staff, but refuses to produce the member list. It submits uncontroverted affidavits that members identified in past news reports lost their jobs and received threats. The state court holds the Coalition in contempt.\n\nOn review, what is the most likely result?",
+   "o": [
+    "The contempt order falls, but only because the subpoena demanded home addresses as well as the members' names.",
+    "The contempt order stands, because a group that must identify its officers and staff may equally be made to identify its members.",
+    "The contempt order stands, because the Coalition has no right to immunity from a state investigation into whether it obeyed state law.",
+    "The contempt order falls, because disclosure would likely deter joining, and the state hasn't justified that effect.",
+    "The contempt order stands, because the First Amendment's text doesn't mention association, so the right gets only rational-basis protection."
+   ],
+   "a": 3,
+   "oe": [
+    "The vice is exposing members' identities at all, which chills their association. Dropping the addresses wouldn't cure it.",
+    "The NAACP didn't object to naming its officers and employees; the Court protected its ordinary members. Officers and staff are publicly tied to the group in a way rank-and-file members are not.",
+    "The NAACP didn't claim immunity from investigation either. Its members' right to associate privately still required Alabama to justify the deterrent effect of disclosure, which it couldn't do.",
+    "Correct. Under NAACP v. Alabama, compelled disclosure of rank-and-file members can restrain freedom of association. Given the uncontroverted showing of reprisals, the state needed an overriding justification, and a filing-rules investigation that the group's financial records can serve doesn't supply one.",
+    "Association isn't in the text, but the Court treats expressive association as implicit in the rights the First Amendment protects, and burdens on it get the closest scrutiny, not rational-basis review."
+   ],
+   "e": "Compelled disclosure of a group's members can restrain freedom of association. When disclosure is likely to expose members to reprisal and deter joining, the state needs an overriding justification, and state action that may curtail association gets the closest scrutiny (NAACP v. Alabama)."
+  },
+  {
+   "id": "1.32",
+   "exam": 1,
+   "area": "Compelled Speech, Again",
+   "tag": "Custom creations vs. ordinary products",
+   "q": "Granite State's public accommodations law bars businesses open to the public from refusing service because of sexual orientation. Dana owns Paper & Ink, a shop that (1) sells boxed, pre-printed thank-you cards from a catalog and (2) designs custom wedding invitations with original artwork and verse she writes for each couple, marked with her studio's logo. Dana, who objects to same-sex marriage on religious grounds, refuses a same-sex couple's request for both. The state brings an enforcement action, and the parties agree that the custom invitations are Dana's original expression.\n\nUnder 303 Creative, what is the most likely result?",
+   "o": [
+    "The state may require her to sell the catalog cards on equal terms but likely may not compel the custom invitations.",
+    "Dana may refuse both, because every product a shop sells conveys the owner's views about the customers who buy it.",
+    "The state may require the custom invitations but not the catalog cards, because only the invitations concern a wedding.",
+    "The state may require both, because Dana sells to the public for profit and does so through a business she owns.",
+    "Dana may refuse both, because a sincere religious objection exempts a business from a public accommodations law."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Under 303 Creative, the state may not use its public accommodations law to compel Dana to create original expression she objects to. But states may require businesses to sell ordinary goods to everyone on the same terms, and selling a pre-printed card is conduct, not Dana's speech.",
+    "The Court stressed that innumerable goods and services implicate no First Amendment interest. Selling a catalog item isn't the seller's expression.",
+    "This reverses the line. The custom invitations are Dana's own speech, which can't be compelled; the catalog cards are ordinary merchandise that must be sold on equal terms.",
+    "303 Creative held that being paid and using the corporate form don't strip a speaker of protection. A speechwriter or a commissioned artist keeps the right to refuse to create a message.",
+    "303 Creative is a Free Speech Clause holding. A religious objection alone doesn't exempt anyone from a neutral and generally applicable law (Employment Division v. Smith), and Masterpiece Cakeshop described the general rule that such objections don't permit denying protected persons equal access to goods and services."
+   ],
+   "e": "A state may not apply a public accommodations law to compel a person to create speech she doesn't believe, even if she is paid and works through a company (303 Creative). States remain free to require that ordinary goods and services be sold to everyone on equal terms."
   },
   {
    "id": "2.1",
@@ -1011,29 +1019,6 @@
    "e": "The government can't shield adults from offensive content outside obscenity; it may shield children only without blocking adult access, since it may not reduce adults to reading what is fit for children (Bolger v. Youngs Drug Products)."
   },
   {
-   "id": "2.12",
-   "exam": 2,
-   "area": "Who Are We Protecting: Adults or Kids?",
-   "tag": "Broadcast indecency; context matters",
-   "q": "A commercial FM station broadcasts, at 3 p.m. on a weekday, a comedy routine that repeats a list of vulgar sexual words. After a parent driving with a young child complains, the FCC issues an order declaring the broadcast indecent but imposes no fine. The station argues that the routine isn't obscene and that profanity is protected speech.\n\nWhat is the most likely result?",
-   "o": [
-    "The order is set aside, because profanity is protected, and the routine isn't obscene.",
-    "The order is upheld, because indecent speech is an unprotected category.",
-    "The order is upheld, because broadcasting is uniquely accessible to children, and the time of day matters.",
-    "The order is set aside, because offended listeners can simply change the station.",
-    "The order is upheld, because the government may ban indecent speech in any medium that children can reach."
-   ],
-   "a": 2,
-   "oe": [
-    "Profanity is generally protected (Cohen), but FCC v. Pacifica is the narrow exception for broadcasts that reach children.",
-    "Speech that is indecent but not obscene is protected. Pacifica rested on the broadcast context, not a new unprotected category.",
-    "Correct. FCC v. Pacifica upheld an indecency order for an afternoon broadcast: radio is uniquely pervasive and accessible to children, reaches into the home, and can surprise unconsenting listeners. Under its nuisance rationale, context, including the time of day, is all-important.",
-    "Pacifica stressed that listeners tune in without warning and that children listen unsupervised, so changing the station after hearing the words doesn't solve the problem.",
-    "Pacifica is narrow. Bolger, Ashcroft v. ACLU, and Brown show that outside broadcasting the government can't cut off adult access to indecent material."
-   ],
-   "e": "The government may regulate a broadcast that is indecent but not obscene because broadcasting is uniquely pervasive and accessible to children; the holding is narrow and rests on a nuisance rationale in which time, content, and medium matter (FCC v. Pacifica)."
-  },
-  {
    "id": "2.13",
    "exam": 2,
    "area": "Protecting Kids: Age-Gating",
@@ -1147,29 +1132,6 @@
     "The state may set professional standards, but not by keeping the public in ignorance."
    ],
    "e": "Commercial speech is protected: a state may not completely suppress truthful information about lawful activity because it fears its effect, and listeners have a reciprocal right to receive it (Virginia Pharmacy Board). It gets less protection because it is verifiable and durable."
-  },
-  {
-   "id": "2.18",
-   "exam": 2,
-   "area": "Restrictions on Commercial Speech",
-   "tag": "Paternalism toward adults; regulate the product",
-   "q": "To discourage overeating, a state bans restaurants from advertising the prices of all-you-can-eat buffets. The state concedes that the ads are truthful and that a tax on buffets or a cap on serving sizes would reduce consumption just as well. It argues that because it could ban buffets outright, it may ban ads for them.\n\nWhat is the most likely result?",
-   "o": [
-    "Struck, because the ban rests on paternalism toward adults.",
-    "Upheld, because public health is a substantial interest, and the ban directly advances it.",
-    "Struck, because restaurants have an absolute right to advertise any lawful product.",
-    "Upheld, because the restaurants may still advertise their food without mentioning prices.",
-    "Upheld, because the power to ban a product includes the lesser power to ban advertising for it."
-   ],
-   "a": 0,
-   "oe": [
-    "Correct. Under 44 Liquormart v. Rhode Island, bans that keep adults \"in the dark\" for their own good rest on the offensive assumption that the public will respond irrationally to the truth. When taxes or direct regulation would work, the ban fails Central Hudson's fourth prong.",
-    "A substantial interest isn't enough. The ban must be no more extensive than necessary, and the state conceded that non-speech alternatives would work as well.",
-    "Commercial speech can be regulated under Central Hudson. This ban fails because of its paternalism and poor fit.",
-    "Leaving other speech open doesn't save a ban on truthful price information. 44 Liquormart struck a ban on price ads alone.",
-    "44 Liquormart rejected \"greater includes the lesser\": the Constitution presumes that regulating speech is more dangerous than regulating conduct."
-   ],
-   "e": "Paternalism toward adults doesn't justify suppressing truthful, non-misleading commercial speech; to reduce consumption, the government must regulate, tax, or ban the product, and the power to ban a product doesn't include the power to ban its ads (44 Liquormart)."
   },
   {
    "id": "2.19",
@@ -1446,6 +1408,52 @@
     "The First Amendment doesn't require including every candidate; opening debates to all would mean less speech, as when a public network canceled a debate after the lower-court ruling."
    ],
    "e": "Public broadcasters' editorial choices generally aren't subject to forum analysis, but a candidate debate is a nonpublic forum: a state station may exclude a candidate if the exclusion is reasonable and viewpoint neutral, such as for lack of public support (Arkansas Educational Television Commission v. Forbes)."
+  },
+  {
+   "id": "2.31",
+   "exam": 2,
+   "area": "Freedom of Association",
+   "tag": "Mainly commercial group; no serious burden",
+   "q": "The Merchants' Roundtable is a nonprofit membership group of local business owners. Its main activities are networking breakfasts, client-referral exchanges, and sales-skills workshops. It admits only men. The state supreme court holds that the state's public accommodations law covers the Roundtable and requires it to admit women. The Roundtable concedes that admitting women would not change any position it takes; its members simply prefer to meet with other men. It sues, claiming a violation of its freedom of association.\n\nWhat is the most likely result?",
+   "o": [
+    "The Roundtable wins, because public accommodations laws may protect only classes that receive heightened equal protection scrutiny.",
+    "The Roundtable wins, because freedom of association includes a freedom not to associate, and any forced inclusion of members fails strict scrutiny.",
+    "The Roundtable wins, because a court must accept a group's own account that excluding a class of members is part of its message.",
+    "The state wins, because public accommodations laws cover only commercial businesses and so never raise First Amendment issues.",
+    "The state wins, because the state's compelling interest in ending sex discrimination justifies any slight burden on the members' association."
+   ],
+   "a": 4,
+   "oe": [
+    "Dale observed that these laws have expanded beyond the classes that get heightened equal protection scrutiny, but it didn't forbid that. Sex discrimination is in any event the interest Roberts v. U.S. Jaycees called compelling.",
+    "Forced inclusion does burden association, but the right isn't absolute. In Roberts v. U.S. Jaycees a compelling interest unrelated to suppressing ideas justified admitting women where no serious burden on expression was shown.",
+    "Boy Scouts of America v. Dale defers to a group's account of its message, but the Roundtable claims no message that women's presence would affect. It concedes nothing it says would change.",
+    "Public accommodations laws now reach membership groups and can collide with expressive association (Boy Scouts of America v. Dale; Hurley). Coverage doesn't end the First Amendment inquiry.",
+    "Correct. As in Roberts v. U.S. Jaycees, the state's compelling interest in eradicating sex discrimination in public accommodations, unrelated to suppressing ideas, justifies requiring a group to admit women when it shows no serious burden on its expressive association. Under O'Connor's concurrence, a mainly commercial association like this one gets only minimal protection for its membership choices."
+   ],
+   "e": "A state may require a group to admit members it doesn't want when the law serves a compelling interest unrelated to suppressing ideas, by means not significantly more restrictive than necessary, and the group shows no serious burden on its expression (Roberts v. U.S. Jaycees). O'Connor's concurrence gives a predominantly commercial association only minimal protection for its choice of members."
+  },
+  {
+   "id": "2.32",
+   "exam": 2,
+   "area": "The Press, Assembly, and Petition Clauses",
+   "tag": "No special press right of access",
+   "q": "After reports of overcrowding at the Lakeland County jail, a TV station asks to bring cameras inside to film the cellblocks. The sheriff refuses. He offers the station's reporters the same monthly public tour any resident may take, on which cameras are not allowed. The station sues under the Press Clause, arguing that the press must have access to government institutions to inform the public about them.\n\nWhat is the most likely result?",
+   "o": [
+    "The station wins, because refusing the press entry is a prior restraint that carries a heavy presumption of invalidity.",
+    "The sheriff wins, because the press has no right to enter the jail beyond the public's, and there is no general right of access.",
+    "The sheriff wins, because a jail is a nonpublic forum, and any restriction on speech there is valid if it is reasonable.",
+    "The station wins, because the public has a constitutional right to enter jails, just as it has a right to attend criminal trials.",
+    "The station wins, because the Press Clause gives news organizations a right of access to government facilities that the public lacks."
+   ],
+   "a": 1,
+   "oe": [
+    "A prior restraint stops publication of information already in hand, as in the Pentagon Papers case. Declining to let a crew in to gather information isn't a restraint on publishing anything.",
+    "Correct. Under Houchins v. KQED, the media have no special right of access to a jail beyond the public's. The First Amendment generally gives no one a right of access to government facilities or records; access mostly depends on statutes such as FOIA laws.",
+    "The station isn't seeking to speak on government property; it wants entry to gather news. Forum doctrine doesn't create or answer a right of access, and Houchins resolves the claim on other grounds.",
+    "Criminal trials are the exception, because of their long tradition of openness. There is no comparable constitutional right of public access to jails.",
+    "The Court has long held that the press has no greater First Amendment rights than the public. Houchins v. KQED rejected exactly this claim."
+   ],
+   "e": "The press has no greater First Amendment rights than the general public, and the First Amendment generally gives no one a right of access to government facilities or records; criminal trials are the exception (Houchins v. KQED). Access otherwise depends on FOIA laws, which are not constitutionally required."
   },
   {
    "id": "3.1",
@@ -1771,29 +1779,6 @@
    "e": "A law requiring age verification to keep minors from speech obscene as to them gets intermediate scrutiny because its burden on adults is incidental, and Texas's law survives it (Free Speech Coalition v. Paxton; Ginsberg). Compare Ashcroft v. ACLU."
   },
   {
-   "id": "3.15",
-   "exam": 3,
-   "area": "Defamation",
-   "tag": "Private plaintiff, purely private concern",
-   "q": "A credit-reporting firm sends a confidential report to five of a roofing contractor's creditors falsely stating that the contractor has filed for bankruptcy. The contractor, a private business, sues and wins presumed and punitive damages without proving actual malice. On appeal, the firm argues that such damages always require actual malice.\n\nWhat is the most likely result?",
-   "o": [
-    "Reversed, because the contractor had to prove actual malice to recover anything at all.",
-    "Affirmed, because businesses have no First Amendment protection against defamation claims.",
-    "Reversed, because the First Amendment forbids strict liability for any defamatory statement.",
-    "Reversed, because presumed and punitive damages always require proof of actual malice.",
-    "Affirmed, because a confidential credit report sent to a few creditors concerns a purely private matter."
-   ],
-   "a": 4,
-   "oe": [
-    "Actual malice for any recovery applies to public officials and public figures, not to private businesses on private matters.",
-    "The issue is the speech, not the speaker's form. Purely private speech is \"not totally unprotected,\" just less protected.",
-    "Whether a state may impose strict liability for purely private speech remains an open question; Dun & Bradstreet didn't forbid it.",
-    "Gertz's rule covers private plaintiffs on matters of public concern. For purely private speech, presumed and punitive damages need no actual malice.",
-    "Correct. Under the Dun & Bradstreet plurality, when a private plaintiff sues over speech on a purely private matter, presumed and punitive damages may be awarded without actual malice. The state's interest is the same as in Gertz, but the First Amendment interest is weaker."
-   ],
-   "e": "When a private plaintiff sues over speech on a matter of purely private concern, presumed and punitive damages may be awarded without actual malice; whether strict liability is allowed remains open (Dun & Bradstreet v. Greenmoss Builders, plurality)."
-  },
-  {
    "id": "3.16",
    "exam": 3,
    "area": "Fraud",
@@ -2025,29 +2010,6 @@
    "e": "A student activity fund is a limited public forum; once a state opens one, it may not exclude speech unreasonably in light of the forum's purpose or discriminate by viewpoint, including against religious perspectives (Rosenberger v. Rector)."
   },
   {
-   "id": "3.26",
-   "exam": 3,
-   "area": "Speech on Government Property (Forum Doctrine)",
-   "tag": "Bus ads: excluding political ads",
-   "q": "A city transit agency sells advertising space inside its buses. Its written policy, adopted when the program began, accepts commercial ads but excludes all \"political or issue advocacy\" ads, citing revenue and a pleasant ride for a captive audience. A group whose ad urging a vote on a ballot measure was rejected sues.\n\nWhich is the city's strongest argument?",
-   "o": [
-    "The ads are government speech because they appear on city-owned buses that riders associate with the city.",
-    "Political speech gets less protection than commercial speech on government property.",
-    "The group can buy ads on private billboards, so it has adequate alternative channels.",
-    "Bus ad space is a traditional public forum, where content-based limits are permitted.",
-    "The space is a limited or nonpublic forum, and excluding all political ads is reasonable."
-   ],
-   "a": 4,
-   "oe": [
-    "Ads from many private advertisers, chosen by them, are their speech, much as Boston's flags were private in Shurtleff. The city's role looks like a forum provider's.",
-    "Political speech is at the core of the First Amendment. In a limited or nonpublic forum the question is whether the subject-matter line is reasonable.",
-    "Alternatives bear on reasonableness, but they aren't the core argument; the city must first establish the forum type and that the line is reasonable and viewpoint neutral.",
-    "Bus ad space isn't a traditional public forum, and even there content-based limits get strict scrutiny.",
-    "Correct. The city's best argument is that the space is a limited or nonpublic forum whose purpose is revenue and a pleasant ride for a captive audience, and that excluding all political ads is a reasonable, viewpoint-neutral subject-matter line. The challenger will say the city opened a designated forum and that \"political\" is vague enough to invite viewpoint-based enforcement."
-   ],
-   "e": "Outside traditional and designated public forums, government may draw reasonable, viewpoint-neutral subject-matter lines; viewpoint discrimination fails anywhere, and vague categories invite it (Perry Education Ass'n; stretch exercise)."
-  },
-  {
    "id": "3.27",
    "exam": 3,
    "area": "Speech by Government Employees",
@@ -2140,6 +2102,52 @@
    ],
    "e": "The First Amendment binds only the government: users have no First Amendment rights against private platforms, whose moderation is protected editorial judgment; a claim against the government requires showing that its coercion caused the takedown (Moody v. NetChoice; Murthy v. Missouri).",
    "fixed": true
+  },
+  {
+   "id": "3.31",
+   "exam": 3,
+   "area": "Freedom of Association",
+   "tag": "Deference to the group's account of its message",
+   "q": "Trailblazers, a private nonprofit outdoor-leadership group for teenagers, teaches self-reliance, sobriety, and respect for the law through its adult volunteer leaders. It removes volunteer leader Marco after he campaigns publicly, in his Trailblazers uniform, to legalize recreational marijuana, saying his advocacy contradicts the sobriety it teaches. A state public accommodations law that bars discrimination based on political activity is applied to order Marco's reinstatement. The state court finds Trailblazers' explanation inconsistent, since it allows leaders who drink alcohol off duty.\n\nWhat is the most likely result in the U.S. Supreme Court?",
+   "o": [
+    "Trailblazers wins, because courts defer to a group's account of its message, which keeping Marco would significantly affect.",
+    "The state wins, because Trailblazers is a youth recreation group, not an advocacy group, so it engages in no expressive association.",
+    "Trailblazers wins, because a public accommodations law may never be applied to a private nonprofit membership organization.",
+    "The state wins, because once the state shows a compelling interest in preventing discrimination, the inquiry is over.",
+    "The state wins, because Trailblazers tolerates leaders who drink, so the message it claims is internally inconsistent."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Under Boy Scouts of America v. Dale, a group that transmits a system of values engages in expressive association; courts accept its assertion of what it teaches; and forcing it to keep a leader whose visible advocacy contradicts that message significantly burdens its expression, which the state's interest doesn't justify.",
+    "Expressive association isn't reserved for advocacy groups. Dale held that an organization that instills values in young people through its leaders engages in expressive activity.",
+    "Public accommodations laws validly reach many nonprofit groups (Roberts v. U.S. Jaycees). They can't be applied when forced inclusion would significantly burden the group's message.",
+    "Roberts v. U.S. Jaycees recognized a compelling interest but also asked whether the burden on expression was serious. In Dale the significant burden on the group's message outweighed the state's interest.",
+    "Boy Scouts of America v. Dale rejected this kind of inquiry. Courts may not reject a group's expressed values because they find them unwise or internally inconsistent, and tolerating some dissent doesn't forfeit protection."
+   ],
+   "e": "Forced inclusion violates expressive association if the group engages in expression and the person's presence would significantly affect its ability to advocate its views; courts accept the group's own account of its message and may not second-guess it as inconsistent (Boy Scouts of America v. Dale)."
+  },
+  {
+   "id": "3.32",
+   "exam": 3,
+   "area": "Compelled Speech, Again",
+   "tag": "Equal-access funding condition regulates conduct",
+   "q": "A state conditions its research grants to private universities on giving recruiters from the state Department of Corrections the same access to campus career fairs and interview rooms that other employers get. Several universities object to the department's use of solitary confinement and want to keep its recruiters off campus. They sue, arguing that the condition compels them to speak, by sending students the department's interview schedules, and to associate with the department.\n\nWhat is the most likely result?",
+   "o": [
+    "The state wins, because private universities that accept state grants become state actors without First Amendment rights.",
+    "The universities win, because deciding which employers may recruit on campus is inherently expressive, like choosing a parade's units.",
+    "The universities win, because sending the department's schedules is compelled speech like the pledge in West Virginia State Board of Education v. Barnette.",
+    "The universities win, because the government may never condition funds on a recipient's giving up a First Amendment right.",
+    "The state wins, because the condition regulates conduct, the compelled speech is incidental, and recruiters don't become members."
+   ],
+   "a": 4,
+   "oe": [
+    "Accepting government funds doesn't make a private university a state actor or strip it of First Amendment rights. FAIR analyzed the law schools' rights and found them not violated.",
+    "FAIR distinguished a law school's recruiting services from a parade, a newsletter, or an editorial page. Allowing recruiters doesn't interfere with any message of the school, and no one would think it endorses them.",
+    "Rumsfeld v. Forum for Academic and Institutional Rights said that comparing a recruiting e-mail to a compelled pledge or the motto in Wooley trivializes those freedoms. The speech here is incidental to a conduct requirement.",
+    "A condition the government could impose directly isn't an unconstitutional condition. Because an equal-access requirement wouldn't violate the First Amendment if imposed directly, attaching it to funds is valid (Rumsfeld v. Forum for Academic and Institutional Rights).",
+    "Correct. Under Rumsfeld v. Forum for Academic and Institutional Rights, an equal-access requirement regulates what schools must do, not what they may say; any speech it requires is incidental; hosting recruiters isn't inherently expressive; and recruiters are outsiders, not members, so association isn't burdened. The universities remain free to criticize the department."
+   ],
+   "e": "A law that regulates conduct, such as requiring equal access for recruiters, doesn't compel speech merely because compliance involves incidental speech, and it doesn't burden association when the outsiders don't become members (Rumsfeld v. Forum for Academic and Institutional Rights). A funding condition the government could impose directly isn't an unconstitutional condition."
   },
   {
    "id": "4.1",
@@ -2533,29 +2541,6 @@
    "e": "A 30-day ban on targeted direct-mail solicitation of accident victims survives Central Hudson: substantial interests in privacy and the profession's reputation, study evidence of direct advancement, and a brief ban with ample alternatives (Florida Bar v. Went For It; Bates)."
   },
   {
-   "id": "4.18",
-   "exam": 4,
-   "area": "Compelled Commercial Speech",
-   "tag": "Accurate statutory label",
-   "q": "A federal statute requires firms, including law firms, that advertise help with debts through bankruptcy to state in their ads: \"We are a debt relief agency. We help people file for bankruptcy relief.\" A law firm objects that the label is confusing and that it prefers to call itself a law firm.\n\nWhat is the most likely result?",
-   "o": [
-    "Upheld under Zauderer, because the label is accurate and the firm may say more.",
-    "Struck, because forcing a firm to adopt a statutory label is compelled ideological speech.",
-    "Upheld, because ads for bankruptcy services are inherently misleading and therefore unprotected.",
-    "Struck, because the government may not dictate how lawyers describe themselves to clients.",
-    "Struck under Central Hudson, because the label isn't the narrowest way to prevent deception."
-   ],
-   "a": 0,
-   "oe": [
-    "Correct. Under Milavetz, Gallop & Milavetz v. United States, the disclosure shares Zauderer's features: it combats ads promising debt relief without mentioning bankruptcy, requires only an accurate statement of legal status, and doesn't stop the firm from saying more, including that it is a law firm. Nothing showed the label confuses.",
-    "Zauderer distinguishes factual commercial disclosures from Barnette- and Wooley-style ideological compulsion.",
-    "Ads that tend to mislead can be regulated, but they aren't wholly unprotected. The label is upheld under Zauderer, not because the ads lack protection.",
-    "The statutory label is accurate by definition, and Milavetz upheld requiring it.",
-    "Milavetz held that Zauderer, not Central Hudson, governs factual disclosures aimed at inherently misleading ads."
-   ],
-   "e": "Zauderer, not Central Hudson, governs factual disclosures aimed at inherently misleading commercial ads; an accurate statement of legal status that leaves the advertiser free to say more is valid (Milavetz, Gallop & Milavetz v. United States)."
-  },
-  {
    "id": "4.19",
    "exam": 4,
    "area": "Compelled Commercial Speech",
@@ -2717,29 +2702,6 @@
    "e": "A designated public forum gets traditional-public-forum rules (strict scrutiny for content- or viewpoint-based limits) while the government keeps it open, though it may close it; viewpoint discrimination fails in every forum (Perry Education Ass'n; Shurtleff v. City of Boston)."
   },
   {
-   "id": "4.26",
-   "exam": 4,
-   "area": "Government-Funded Speech",
-   "tag": "Opioid grants: inside or outside the program",
-   "q": "The Department of Health and Human Services gives grants to nonprofits to reduce opioid addiction. A condition requires recipients to refrain from advocating the legalization of heroin. One grantee also runs a separately funded policy shop that wants to advocate decriminalization with its own money.\n\nWhich fact would most likely decide whether the condition is valid?",
-   "o": [
-    "Whether the grantee accepted the funds voluntarily, knowing about the condition in advance.",
-    "Whether HHS reasonably believes that legalization would increase addiction and overdoses.",
-    "Whether the grantee is organized as a nonprofit corporation or as a for-profit company.",
-    "Whether the legalization of heroin is a matter of public concern on which people disagree.",
-    "Whether the condition is limited to the program or reaches the grantee's own money."
-   ],
-   "a": 4,
-   "oe": [
-    "Voluntary acceptance doesn't save a condition that leverages funds to regulate speech beyond the program (USAID I).",
-    "The government's belief explains its choice of message but doesn't permit regulating the grantee's privately funded speech.",
-    "Corporate form doesn't matter to the unconstitutional-conditions analysis.",
-    "Public concern is the key question for employee speech. In funding cases the question is whether the condition stays within the program.",
-    "Correct. If the condition only defines the program's anti-addiction message, it looks like Rust v. Sullivan, because advocating legalization with grant money would garble that message. If it bars advocacy with the grantee's own money and on its own time, it reaches outside the program, like USAID I."
-   ],
-   "e": "A funding condition that defines the program's message is valid (Rust v. Sullivan); one that reaches the grantee's speech outside the program, on its own time and dime, is an unconstitutional condition (Agency for International Development v. Alliance, USAID I; stretch exercise)."
-  },
-  {
    "id": "4.27",
    "exam": 4,
    "area": "Speech in Public Schools",
@@ -2830,6 +2792,236 @@
     "The influencer delivers the label in her own post. The state is compelling private speech, not speaking for itself."
    ],
    "e": "A required factual disclosure in paid commercial posts is reviewed under Zauderer; preventing deception is a substantial interest, but speaker-based thresholds (Sorrell v. IMS Health) and hypothetical harms (National Institute of Family and Life Advocates v. Becerra) give challengers arguments (stretch exercise)."
+  },
+  {
+   "id": "4.31",
+   "exam": 4,
+   "area": "Freedom of Association",
+   "tag": "Donor subpoena; present injury despite confidentiality",
+   "q": "Investigating whether a pro-life pregnancy center misled its clients, a state attorney general subpoenas the names, addresses, and employers of everyone who donated to the center in the past five years. He promises in writing to keep the list within his office. The center sues in federal court before any enforcement proceeding, alleging that several donors have stopped giving since the subpoena issued. The attorney general moves to dismiss for lack of standing, arguing that nothing has been made public and no one has been punished.\n\nHow should the court rule?",
+   "o": [
+    "Grant the motion, because the center may raise its First Amendment objection only after a court holds it in contempt.",
+    "Grant the motion, because the promise of confidentiality removes any chill, so the center has suffered no concrete injury.",
+    "Grant the motion, because the right of association protects a group's members, and donors are not members of the center.",
+    "Deny the motion, because a donor-information demand chills association now, even if only officials see it.",
+    "Deny the motion, because any subpoena issued to a religious organization violates the Free Exercise Clause."
+   ],
+   "a": 3,
+   "oe": [
+    "First Choice found a present, ongoing injury that supported standing before any enforcement. The group didn't have to wait to be held in contempt.",
+    "Americans for Prosperity Foundation v. Bonta found a similar promise of no moment: demands for private donor information chill association even when disclosure is only to government officials.",
+    "First Choice Women's Resource Centers v. Davenport treated deterring donors from associating with the group as an injury to the group's associational rights. Giving money to a cause is a way of associating with it.",
+    "Correct. In First Choice Women's Resource Centers v. Davenport, a unanimous Court held that a subpoena for a nonprofit's donor information caused a present First Amendment injury by discouraging donors from associating with it, building on NAACP v. Alabama and Americans for Prosperity Foundation v. Bonta.",
+    "The injury in First Choice was to freedom of association, which protects religious and secular groups alike. A subpoena to a religious group isn't automatically a free exercise violation."
+   ],
+   "e": "A government demand for a group's private donor information chills association and inflicts a present First Amendment injury, even if officials promise confidentiality (First Choice Women's Resource Centers v. Davenport, following NAACP v. Alabama and Americans for Prosperity Foundation v. Bonta)."
+  },
+  {
+   "id": "4.32",
+   "exam": 4,
+   "area": "The Press, Assembly, and Petition Clauses",
+   "tag": "Petition gets no more protection than speech",
+   "q": "Rhea writes to the governor urging her not to appoint Victor, a local lawyer, to a vacant judgeship. The letter falsely says that Victor took bribes from clients. Victor sues Rhea for libel. Rhea moves to dismiss, arguing that the Petition Clause makes statements in a petition to the government absolutely immune from defamation liability.\n\nWhat is the most likely result?",
+   "o": [
+    "The motion is granted, because United States v. Alvarez protects false statements of fact from liability.",
+    "The motion is granted, because the right to petition dates back to Magna Carta and so gets more protection than ordinary speech.",
+    "The motion is denied, because a petition gets no greater protection than other expression, so ordinary defamation rules apply.",
+    "The motion is granted, because a letter to a government official is always speech on a public concern that can't support a libel claim.",
+    "The motion is denied, because the Petition Clause protects only petitions signed by groups, not letters written by individuals."
+   ],
+   "a": 2,
+   "oe": [
+    "Alvarez rejected a category for false statements as such, but it left defamation, which causes legally cognizable harm, unprotected. Alvarez gives Rhea no immunity.",
+    "The Petition Clause has a long history, but McDonald v. Smith held there is no sound basis for giving statements in a petition greater protection than other expression.",
+    "Correct. Under McDonald v. Smith, the petition right is inseparable from speech, press, and assembly, and statements in a petition get no greater protection than other First Amendment expression. Rhea's letter is judged under ordinary defamation doctrine, including New York Times v. Sullivan's actual-malice rules if they apply.",
+    "Speech on public concern gets more protection in defamation law (for example, Gertz and Dun & Bradstreet on damages), but false statements of fact made with the required fault can still support liability.",
+    "Individuals as well as groups may petition the government. The flaw in Rhea's argument is the claimed immunity, not who signed the letter."
+   ],
+   "e": "The Petition Clause is largely encompassed by the Speech Clause: statements in a petition get no greater protection than other expression (McDonald v. Smith). The Court has noted the clauses might someday differ but has never identified such a case (Duryea v. Guarnieri)."
+  },
+  {
+   "id": "1.15",
+   "exam": 5,
+   "area": "Defamation",
+   "tag": "Actual malice is not ill will",
+   "q": "A newspaper columnist who despises the state's attorney general writes that the attorney general \"took a $50,000 bribe\" to drop a case. The columnist honestly believed the claim, which came from a source who had been reliable for years, but it was false. At trial, the attorney general proves the columnist's intense personal hatred of him and that a more careful reporter would have called his office before publishing.\n\nCan the attorney general recover?",
+   "o": [
+    "Yes, because truth is a defense the columnist must prove, and he can't prove it.",
+    "Yes, because the columnist's hatred shows that he acted with malice.",
+    "Yes, because the columnist was negligent in failing to check with his office.",
+    "No, because he can't prove knowing or reckless falsity.",
+    "No, because criticism of public officials is absolutely protected."
+   ],
+   "a": 3,
+   "oe": [
+    "Sullivan rejected the common-law rule that put the burden of proving truth on the defendant, because forcing critics to guarantee truth leads to self-censorship.",
+    "\"Actual malice\" is a term of art meaning knowledge of falsity or reckless disregard of the truth. It has nothing to do with ill will.",
+    "Negligence suffices for a private plaintiff on a matter of public concern (Gertz), not for a public official suing over official conduct.",
+    "Correct. Under New York Times v. Sullivan, a public official must prove actual malice: knowledge of falsity or reckless disregard of whether the statement was false. An honest belief based on a reliable source isn't reckless, and neither hatred nor carelessness substitutes.",
+    "Only concurring Justices in Sullivan would have made criticism of officials absolutely immune. The Court adopted the actual-malice standard instead."
+   ],
+   "e": "A public official can't recover for a defamatory falsehood about his official conduct without proving actual malice, meaning knowledge of falsity or reckless disregard of whether it was false; actual malice isn't ill will (New York Times v. Sullivan)."
+  },
+  {
+   "id": "1.20",
+   "exam": 5,
+   "area": "Compelled Commercial Speech",
+   "tag": "Notice not about the speaker's own services",
+   "q": "A state requires licensed veterinary clinics that offer only spay and neuter surgery to post this notice in their waiting rooms: \"The state funds low-cost euthanasia for unwanted animals. Call the state pet hotline.\" Several clinics run by animal-welfare groups that oppose euthanasia object. The state responds that every word of the notice is true.\n\nWhat is the most likely result?",
+   "o": [
+    "Upheld, because the clinics remain free to post their own message disagreeing with the notice.",
+    "Upheld under Zauderer, because the notice is accurate and purely factual.",
+    "Upheld, because a state may require licensed professionals to convey its message as a condition of licensure.",
+    "Struck, because the notice isn't about the clinics' own services and takes a side on a contested issue.",
+    "Struck, because every compelled commercial disclosure must survive strict scrutiny."
+   ],
+   "a": 3,
+   "oe": [
+    "Being allowed to add a reply doesn't save a compelled message. That a seller may say more mattered only in cases where the disclosure first satisfied Zauderer.",
+    "Accuracy isn't enough. Under NIFLA, Zauderer covers only information about the speaker's own services, and not a notice that takes sides in a controversy.",
+    "The state may run its own campaign, but it \"cannot co-opt the licensed facilities to deliver its message\" (NIFLA).",
+    "Correct. Under National Institute of Family and Life Advocates v. Becerra, a required notice that doesn't concern the speaker's own services, or that addresses a controversial topic, falls outside Zauderer. Under heightened scrutiny, the state's own public-information campaign is an obvious alternative.",
+    "Most commercial disclosures get Zauderer's lenient test. NIFLA preserved health and safety warnings and factual disclosures about the seller's own products."
+   ],
+   "e": "Zauderer applies only to purely factual and uncontroversial disclosures about the speaker's own product or services. A notice about someone else's services or a contested topic gets heightened scrutiny, and even a Zauderer disclosure fails if unjustified or unduly burdensome (National Institute of Family and Life Advocates v. Becerra)."
+  },
+  {
+   "id": "2.12",
+   "exam": 5,
+   "area": "Who Are We Protecting: Adults or Kids?",
+   "tag": "Broadcast indecency; context matters",
+   "q": "A commercial FM station broadcasts, at 3 p.m. on a weekday, a comedy routine that repeats a list of vulgar sexual words. After a parent driving with a young child complains, the FCC issues an order declaring the broadcast indecent but imposes no fine. The station argues that the routine isn't obscene and that profanity is protected speech.\n\nWhat is the most likely result?",
+   "o": [
+    "The order is set aside, because profanity is protected, and the routine isn't obscene.",
+    "The order is upheld, because indecent speech is an unprotected category.",
+    "The order is upheld, because broadcasting is uniquely accessible to children, and the time of day matters.",
+    "The order is set aside, because offended listeners can simply change the station.",
+    "The order is upheld, because the government may ban indecent speech in any medium that children can reach."
+   ],
+   "a": 2,
+   "oe": [
+    "Profanity is generally protected (Cohen), but FCC v. Pacifica is the narrow exception for broadcasts that reach children.",
+    "Speech that is indecent but not obscene is protected. Pacifica rested on the broadcast context, not a new unprotected category.",
+    "Correct. FCC v. Pacifica upheld an indecency order for an afternoon broadcast: radio is uniquely pervasive and accessible to children, reaches into the home, and can surprise unconsenting listeners. Under its nuisance rationale, context, including the time of day, is all-important.",
+    "Pacifica stressed that listeners tune in without warning and that children listen unsupervised, so changing the station after hearing the words doesn't solve the problem.",
+    "Pacifica is narrow. Bolger, Ashcroft v. ACLU, and Brown show that outside broadcasting the government can't cut off adult access to indecent material."
+   ],
+   "e": "The government may regulate a broadcast that is indecent but not obscene because broadcasting is uniquely pervasive and accessible to children; the holding is narrow and rests on a nuisance rationale in which time, content, and medium matter (FCC v. Pacifica)."
+  },
+  {
+   "id": "2.18",
+   "exam": 5,
+   "area": "Restrictions on Commercial Speech",
+   "tag": "Paternalism toward adults; regulate the product",
+   "q": "To discourage overeating, a state bans restaurants from advertising the prices of all-you-can-eat buffets. The state concedes that the ads are truthful and that a tax on buffets or a cap on serving sizes would reduce consumption just as well. It argues that because it could ban buffets outright, it may ban ads for them.\n\nWhat is the most likely result?",
+   "o": [
+    "Struck, because the ban rests on paternalism toward adults.",
+    "Upheld, because public health is a substantial interest, and the ban directly advances it.",
+    "Struck, because restaurants have an absolute right to advertise any lawful product.",
+    "Upheld, because the restaurants may still advertise their food without mentioning prices.",
+    "Upheld, because the power to ban a product includes the lesser power to ban advertising for it."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Under 44 Liquormart v. Rhode Island, bans that keep adults \"in the dark\" for their own good rest on the offensive assumption that the public will respond irrationally to the truth. When taxes or direct regulation would work, the ban fails Central Hudson's fourth prong.",
+    "A substantial interest isn't enough. The ban must be no more extensive than necessary, and the state conceded that non-speech alternatives would work as well.",
+    "Commercial speech can be regulated under Central Hudson. This ban fails because of its paternalism and poor fit.",
+    "Leaving other speech open doesn't save a ban on truthful price information. 44 Liquormart struck a ban on price ads alone.",
+    "44 Liquormart rejected \"greater includes the lesser\": the Constitution presumes that regulating speech is more dangerous than regulating conduct."
+   ],
+   "e": "Paternalism toward adults doesn't justify suppressing truthful, non-misleading commercial speech; to reduce consumption, the government must regulate, tax, or ban the product, and the power to ban a product doesn't include the power to ban its ads (44 Liquormart)."
+  },
+  {
+   "id": "3.15",
+   "exam": 5,
+   "area": "Defamation",
+   "tag": "Private plaintiff, purely private concern",
+   "q": "A credit-reporting firm sends a confidential report to five of a roofing contractor's creditors falsely stating that the contractor has filed for bankruptcy. The contractor, a private business, sues and wins presumed and punitive damages without proving actual malice. On appeal, the firm argues that such damages always require actual malice.\n\nWhat is the most likely result?",
+   "o": [
+    "Reversed, because the contractor had to prove actual malice to recover anything at all.",
+    "Affirmed, because businesses have no First Amendment protection against defamation claims.",
+    "Reversed, because the First Amendment forbids strict liability for any defamatory statement.",
+    "Reversed, because presumed and punitive damages always require proof of actual malice.",
+    "Affirmed, because a confidential credit report sent to a few creditors concerns a purely private matter."
+   ],
+   "a": 4,
+   "oe": [
+    "Actual malice for any recovery applies to public officials and public figures, not to private businesses on private matters.",
+    "The issue is the speech, not the speaker's form. Purely private speech is \"not totally unprotected,\" just less protected.",
+    "Whether a state may impose strict liability for purely private speech remains an open question; Dun & Bradstreet didn't forbid it.",
+    "Gertz's rule covers private plaintiffs on matters of public concern. For purely private speech, presumed and punitive damages need no actual malice.",
+    "Correct. Under the Dun & Bradstreet plurality, when a private plaintiff sues over speech on a purely private matter, presumed and punitive damages may be awarded without actual malice. The state's interest is the same as in Gertz, but the First Amendment interest is weaker."
+   ],
+   "e": "When a private plaintiff sues over speech on a matter of purely private concern, presumed and punitive damages may be awarded without actual malice; whether strict liability is allowed remains open (Dun & Bradstreet v. Greenmoss Builders, plurality)."
+  },
+  {
+   "id": "3.26",
+   "exam": 5,
+   "area": "Speech on Government Property (Forum Doctrine)",
+   "tag": "Bus ads: excluding political ads",
+   "q": "A city transit agency sells advertising space inside its buses. Its written policy, adopted when the program began, accepts commercial ads but excludes all \"political or issue advocacy\" ads, citing revenue and a pleasant ride for a captive audience. A group whose ad urging a vote on a ballot measure was rejected sues.\n\nWhich is the city's strongest argument?",
+   "o": [
+    "The ads are government speech because they appear on city-owned buses that riders associate with the city.",
+    "Political speech gets less protection than commercial speech on government property.",
+    "The group can buy ads on private billboards, so it has adequate alternative channels.",
+    "Bus ad space is a traditional public forum, where content-based limits are permitted.",
+    "The space is a limited or nonpublic forum, and excluding all political ads is reasonable."
+   ],
+   "a": 4,
+   "oe": [
+    "Ads from many private advertisers, chosen by them, are their speech, much as Boston's flags were private in Shurtleff. The city's role looks like a forum provider's.",
+    "Political speech is at the core of the First Amendment. In a limited or nonpublic forum the question is whether the subject-matter line is reasonable.",
+    "Alternatives bear on reasonableness, but they aren't the core argument; the city must first establish the forum type and that the line is reasonable and viewpoint neutral.",
+    "Bus ad space isn't a traditional public forum, and even there content-based limits get strict scrutiny.",
+    "Correct. The city's best argument is that the space is a limited or nonpublic forum whose purpose is revenue and a pleasant ride for a captive audience, and that excluding all political ads is a reasonable, viewpoint-neutral subject-matter line. The challenger will say the city opened a designated forum and that \"political\" is vague enough to invite viewpoint-based enforcement."
+   ],
+   "e": "Outside traditional and designated public forums, government may draw reasonable, viewpoint-neutral subject-matter lines; viewpoint discrimination fails anywhere, and vague categories invite it (Perry Education Ass'n; stretch exercise)."
+  },
+  {
+   "id": "4.18",
+   "exam": 5,
+   "area": "Compelled Commercial Speech",
+   "tag": "Accurate statutory label",
+   "q": "A federal statute requires firms, including law firms, that advertise help with debts through bankruptcy to state in their ads: \"We are a debt relief agency. We help people file for bankruptcy relief.\" A law firm objects that the label is confusing and that it prefers to call itself a law firm.\n\nWhat is the most likely result?",
+   "o": [
+    "Upheld under Zauderer, because the label is accurate and the firm may say more.",
+    "Struck, because forcing a firm to adopt a statutory label is compelled ideological speech.",
+    "Upheld, because ads for bankruptcy services are inherently misleading and therefore unprotected.",
+    "Struck, because the government may not dictate how lawyers describe themselves to clients.",
+    "Struck under Central Hudson, because the label isn't the narrowest way to prevent deception."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Under Milavetz, Gallop & Milavetz v. United States, the disclosure shares Zauderer's features: it combats ads promising debt relief without mentioning bankruptcy, requires only an accurate statement of legal status, and doesn't stop the firm from saying more, including that it is a law firm. Nothing showed the label confuses.",
+    "Zauderer distinguishes factual commercial disclosures from Barnette- and Wooley-style ideological compulsion.",
+    "Ads that tend to mislead can be regulated, but they aren't wholly unprotected. The label is upheld under Zauderer, not because the ads lack protection.",
+    "The statutory label is accurate by definition, and Milavetz upheld requiring it.",
+    "Milavetz held that Zauderer, not Central Hudson, governs factual disclosures aimed at inherently misleading ads."
+   ],
+   "e": "Zauderer, not Central Hudson, governs factual disclosures aimed at inherently misleading commercial ads; an accurate statement of legal status that leaves the advertiser free to say more is valid (Milavetz, Gallop & Milavetz v. United States)."
+  },
+  {
+   "id": "4.26",
+   "exam": 5,
+   "area": "Government-Funded Speech",
+   "tag": "Opioid grants: inside or outside the program",
+   "q": "The Department of Health and Human Services gives grants to nonprofits to reduce opioid addiction. A condition requires recipients to refrain from advocating the legalization of heroin. One grantee also runs a separately funded policy shop that wants to advocate decriminalization with its own money.\n\nWhich fact would most likely decide whether the condition is valid?",
+   "o": [
+    "Whether the grantee accepted the funds voluntarily, knowing about the condition in advance.",
+    "Whether HHS reasonably believes that legalization would increase addiction and overdoses.",
+    "Whether the grantee is organized as a nonprofit corporation or as a for-profit company.",
+    "Whether the legalization of heroin is a matter of public concern on which people disagree.",
+    "Whether the condition is limited to the program or reaches the grantee's own money."
+   ],
+   "a": 4,
+   "oe": [
+    "Voluntary acceptance doesn't save a condition that leverages funds to regulate speech beyond the program (USAID I).",
+    "The government's belief explains its choice of message but doesn't permit regulating the grantee's privately funded speech.",
+    "Corporate form doesn't matter to the unconstitutional-conditions analysis.",
+    "Public concern is the key question for employee speech. In funding cases the question is whether the condition stays within the program.",
+    "Correct. If the condition only defines the program's anti-addiction message, it looks like Rust v. Sullivan, because advocating legalization with grant money would garble that message. If it bars advocacy with the grantee's own money and on its own time, it reaches outside the program, like USAID I."
+   ],
+   "e": "A funding condition that defines the program's message is valid (Rust v. Sullivan); one that reaches the grantee's speech outside the program, on its own time and dime, is an unconstitutional condition (Agency for International Development v. Alliance, USAID I; stretch exercise)."
   }
  ]
 }
