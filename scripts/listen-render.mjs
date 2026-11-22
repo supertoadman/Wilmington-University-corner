@@ -10,10 +10,12 @@
 //   npm run listen:render -- Evidence --male    one subject folder; --male also renders the male setting
 //   npm run listen:render -- --dry              list what is missing without rendering
 //   npm run listen:render -- --limit 20         render only the first 20 missing lines (a trial)
+//   npm run listen:render -- --threads 6        use more CPU threads (default: half the cores, low priority)
 //
 // After it finishes, commit listen-audio/ and push: the build links each line to its file.
 
 import fs from 'node:fs';
+import os from 'node:os';
 import path from 'node:path';
 import { createRequire } from 'node:module';
 import { fileURLToPath, pathToFileURL } from 'node:url';
@@ -28,6 +30,9 @@ const dry = args.includes('--dry');
 const genders = args.includes('--male') ? ['female', 'male'] : ['female'];
 const limitAt = args.indexOf('--limit');
 const limit = limitAt >= 0 ? Number(args.splice(limitAt, 2)[1]) : Infinity;
+// Half the cores by default, at low priority: hours at full load can overheat a laptop.
+const threadsAt = args.indexOf('--threads');
+const threads = threadsAt >= 0 ? Math.max(1, Number(args.splice(threadsAt, 2)[1]) || 1) : Math.max(1, Math.floor(os.availableParallelism() / 2));
 const only = args.filter((a) => !a.startsWith('--'));
 
 async function load(name) {
@@ -38,7 +43,8 @@ async function load(name) {
     const base = path.join(path.resolve(dir), 'node_modules', name);
     const pkg = JSON.parse(fs.readFileSync(path.join(base, 'package.json'), 'utf8'));
     const exp = pkg.exports?.['.'] ?? pkg.exports;
-    const esm = exp?.node?.import || exp?.import || exp?.default?.import || pkg.module;
+    const pick = (x) => (typeof x === 'string' ? x : x?.default ?? x?.import);
+    const esm = [exp?.node?.import, exp?.import, exp?.default?.import, pkg.module].map(pick).find((x) => typeof x === 'string');
     const entry = esm ? path.join(base, esm) : createRequire(path.join(path.resolve(dir), 'package.json')).resolve(name);
     return import(pathToFileURL(entry).href);
   }
@@ -62,12 +68,19 @@ const seen = new Set();
 const todo = jobs.filter((j) => !seen.has(j.file) && seen.add(j.file)).slice(0, limit);
 if (dry || !todo.length) { console.log(`${todo.length} lines to render`); process.exit(0); }
 
+try { os.setPriority(os.constants.priority.PRIORITY_BELOW_NORMAL); } catch { /* not allowed */ }
 const { KokoroTTS } = await load('kokoro-js');
+// The model and tokenizer are loaded here (not with KokoroTTS.from_pretrained) to cap the threads.
+const { StyleTextToSpeech2Model, AutoTokenizer } = await load('@huggingface/transformers');
 const lame = await load('@breezystack/lamejs');
 const Mp3Encoder = lame.Mp3Encoder || lame.default?.Mp3Encoder;
 fs.mkdirSync(OUT, { recursive: true });
 console.log(`Loading Kokoro (${RENDER.dtype}; the first run downloads the model)…`);
-const tts = await KokoroTTS.from_pretrained(RENDER.model, { dtype: RENDER.dtype, device: 'cpu' });
+const tts = new KokoroTTS(
+  await StyleTextToSpeech2Model.from_pretrained(RENDER.model, { dtype: RENDER.dtype, device: 'cpu', session_options: { intraOpNumThreads: threads, interOpNumThreads: 1 } }),
+  await AutoTokenizer.from_pretrained(RENDER.model),
+);
+console.log(`Rendering on ${threads} thread${threads === 1 ? '' : 's'} (--threads N to change)`);
 
 const GAP = new Float32Array(Math.round(RENDER.rate * 0.18));   // between the sentences of one line
 function mp3(samples) {
