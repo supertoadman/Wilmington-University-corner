@@ -1,0 +1,868 @@
+{
+ "format": "listen/v1",
+ "id": "evidence-audio-course",
+ "title": "Evidence Audio Course",
+ "course": "Evidence",
+ "description": "A five-day spoken course that teaches the whole Evidence outline, Weeks 1-15, for listening: rules counted out element by element, every case as a short story, hypotheticals and recall questions with pauses to answer, and a spaced review at the start of each day. In progress.",
+ "days": [
+  {
+   "day": 1,
+   "title": "Foundations: the Rules, jury secrecy, relevance, 403, and the policy rules",
+   "minutes": 69,
+   "episodes": [
+    {
+     "id": "ev-d1-e00",
+     "title": "Welcome: how this course works",
+     "minutes": 2,
+     "segments": [
+      {
+       "say": "Welcome to the Evidence audio course. Over five days, we are going to walk through every rule, every element, every exception, and every case in your Evidence outline, in the order your course taught it."
+      },
+      {
+       "say": "Here is how each day works. Every day after today opens with a quick spaced review. I ask, you answer out loud, then I give the answer. Then we take one topic per episode. Each episode gives you a roadmap, the rule in plain English, the exact elements counted out, why the rule exists, the exceptions, the cases told as short stories, a few hypotheticals for you to solve, the traps, a recap, and three recall questions."
+      },
+      {
+       "say": "When you hear a question, answer it out loud before the answer comes. Saying it is what makes it stick. If the pause is too short, pause the player. That is not cheating. That is studying."
+      },
+      {
+       "say": "Here is the plan for the week. Today: the framework of the Federal Rules, jury secrecy under Rule 606(b), relevance, conditional relevance, Rule 403, and the policy rules, 407 through 411."
+      },
+      {
+       "say": "Day two: character evidence, 404(b), the sexual-assault propensity rules, habit, impeachment, and the rape shield."
+      },
+      {
+       "say": "Day three: competency and all of hearsay. The definition, the exclusions in 801(d), and the exceptions in 803, 804, and 807."
+      },
+      {
+       "say": "Day four: the Confrontation Clause, Bruton and completeness, the right to present a defense, and lay and expert opinion."
+      },
+      {
+       "say": "Day five: authentication, the best evidence rule, the privileges, and a full-course review, including the order of analysis for hearsay and Confrontation problems."
+      },
+      {
+       "say": "Your final is December tenth. Thirty multiple-choice questions, at least one short essay, and possibly questions where you work from the rule book. So we will learn the exact words of the rules, and we will learn how to run them in order. Let's begin."
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e01",
+     "title": "What evidence law does, and Rule 105",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Roadmap. What evidence law is for, how to read the Federal Rules, and one rule you will use in almost every answer: Rule 105, the limiting instruction."
+      },
+      {
+       "say": "Start with purpose. Evidence law limits what information juries hear and how they may use it. The class slides give five reasons. Time. Constitutional protection. Truthful outcomes. Public policy, which is where privileges come from. And relevance and reliability."
+      },
+      {
+       "say": "The Federal Rules of Evidence, which I will call the FRE, are a statute. They took effect July 1, 1975. In 2011 they were restyled, rewritten in plainer English, with no change in meaning. So when you read an old case quoting the old wording, the meaning is the same."
+      },
+      {
+       "say": "How do you interpret them? Read the text first, in light of legislative history. Your outline notes that legislative history, quote, on occasion may even override an apparently plain and unmistakable meaning."
+      },
+      {
+       "say": "Then the Advisory Committee Notes, the ACN. These are the drafters' explanations printed after each rule. Most courts give them weight. That is the view associated with Cleary. But Justice Scalia, concurring in Tome, said the notes bear no special authoritativeness. So: weight in most courts, but not binding law."
+      },
+      {
+       "say": "Now Rule 105. When evidence is admissible for one purpose or against one party, but not for another purpose or against another party, the court, on timely request, must restrict the evidence to its proper scope and instruct the jury."
+      },
+      {
+       "say": "Two things to notice. First, it is on timely request. The party has to ask. Second, once asked, it is mandatory. The court must give the instruction."
+      },
+      {
+       "say": "Why does this matter so much? Because evidence law is purpose-driven. The same words can be hearsay for one purpose and not hearsay for another. The same prior act can be barred propensity evidence and admissible proof of motive. Rule 105 is the tool that lets the evidence in for the good purpose and tells the jury to ignore the bad one."
+      },
+      {
+       "say": "The trap. Students treat a limiting instruction as a cure-all. It is not. In Rule 403 analysis, you ask how effective the instruction will be. And on day four you will meet Bruton, where the Supreme Court said that for one kind of evidence, no instruction is good enough."
+      },
+      {
+       "say": "Recap. Evidence law controls what the jury hears and how it uses it. The FRE are a statute from 1975, restyled in 2011 with no change in meaning. The Advisory Committee Notes carry weight in most courts, though Scalia said they bear no special authority. Rule 105: on timely request, the court must limit the evidence and instruct the jury."
+      },
+      {
+       "ask": "When did the Federal Rules of Evidence take effect, and what did the 2011 restyling change?",
+       "answer": "July 1, 1975. The 2011 restyling changed the wording but not the meaning.",
+       "pause": 8
+      },
+      {
+       "ask": "Under Rule 105, does the court give a limiting instruction on its own?",
+       "answer": "No. Only on timely request. But once a party asks, the court must give it.",
+       "pause": 8
+      },
+      {
+       "ask": "Which Justice said the Advisory Committee Notes bear no special authoritativeness, and in what case?",
+       "answer": "Justice Scalia, concurring in Tome.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e02",
+     "title": "Jury secrecy: Rule 606(b)",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 606(b), the no-impeachment rule. When can a juror testify about what happened in the jury room? Three barred categories, three exceptions, one constitutional exception, and three cases: Tanner, Peña-Rodriguez, and Warger."
+      },
+      {
+       "say": "Plain English first. After a verdict, jurors generally cannot be used to attack it by describing what went on inside deliberations. What goes on in the jury room stays in the jury room, with narrow exceptions for outside contamination."
+      },
+      {
+       "say": "The exact rule. Rule 606(b)(1). In an inquiry into the validity of a verdict, a juror may not testify about three things. First, any statement made or incident that occurred during deliberations. Second, the effect of anything on any juror's vote. Third, any juror's mental processes concerning the verdict. And the court may not receive a juror's affidavit or evidence of a juror's statement on these matters either. So you cannot get around the rule with paper."
+      },
+      {
+       "say": "Now the exceptions, Rule 606(b)(2). A juror may testify about three things. A, whether extraneous prejudicial information was improperly brought to the jury's attention. B, whether an outside influence was improperly brought to bear on any juror. And C, whether a mistake was made in entering the verdict on the verdict form."
+      },
+      {
+       "say": "Say them with me as a pair of threes. Barred: statements during deliberations, effect on the vote, mental processes. Allowed: extraneous prejudicial information, outside influence, a mistake on the form."
+      },
+      {
+       "say": "The key distinction is internal versus external. And here is the nuance your outline flags: internal versus external turns on the nature of the matter, not where it happened. A juror's incompetence, intoxication, or bias is internal, even if the drinking happened at lunch outside the courthouse. A newspaper article brought into the jury room is external, because the information came from outside."
+      },
+      {
+       "say": "Why have this rule at all? Tanner gives four rationales. Protecting jurors from harassment by losing parties. Frank deliberation, so jurors can speak freely. Finality of verdicts. And public trust in the jury system."
+      },
+      {
+       "say": "A side fact from the slides. Recording or observing federal jury deliberations is a crime under 18 U.S.C. section 1508. The class slide said section 1580. That is a typo. It is 1508."
+      },
+      {
+       "say": "Now the cases. First, Tanner v. United States, 1987. A mail-fraud trial. Jurors drank at lunch, smoked marijuana, used cocaine, and slept through afternoon sessions. After the verdict, two jurors came forward, one by sworn statement."
+      },
+      {
+       "say": "Held: Rule 606(b) bars the juror testimony, and that does not violate the Sixth Amendment right to a competent jury. Justice O'Connor wrote for a five to four Court. Her line: drugs and alcohol are no more an outside influence than a virus, poorly prepared food, or a lack of sleep. She also noted that Congress rejected a House version of the rule that would have allowed testimony about juror drunkenness. And she said the right to a competent jury is protected other ways: voir dire, observation of jurors during trial, juror reports before the verdict, and evidence from non-jurors. Justice Marshall dissented, reading the three barred categories as not reaching intoxication during trial."
+      },
+      {
+       "say": "Why Tanner matters: it is the baseline for 606(b), and it gives you the four rationales."
+      },
+      {
+       "say": "Second, Peña-Rodriguez v. Colorado, 2017. During deliberations a juror, a former police officer, said the defendant did it because he is Mexican and Mexican men take whatever they want. He also called an alibi witness an illegal."
+      },
+      {
+       "say": "Held, by Justice Kennedy for a five to three Court: where a juror makes a clear statement that indicates he or she relied on racial stereotypes or animus to convict a criminal defendant, the Sixth Amendment requires that the no-impeachment rule give way. And racial animus must have been a significant motivating factor in the juror's vote. Two dissents. Justice Thomas said the common-law rule was settled by 1868. Justice Alito said the Sixth Amendment does not rank biases, and there is no stopping point."
+      },
+      {
+       "say": "So this is the only constitutional exception to 606(b), and it has three elements, all required. One, a clear statement of racial bias. Two, in a criminal case. Three, relied on to convict. Your outline flags Problem I.1, the Cosby Show problem: coded remarks in a civil case. That is a hard fit, because it fails two elements. The remarks are not clear, and the case is civil."
+      },
+      {
+       "say": "Third, Warger v. Shauers, 2014. A note case. A motorcycle-accident suit. In voir dire, the foreperson said she could be fair. Then in deliberations she told the jury about her daughter's fatal crash and how a lawsuit would have ruined her daughter's life."
+      },
+      {
+       "say": "Held: Rule 606(b) bars juror testimony about deliberations even when it is offered to show that a juror lied during voir dire. And a juror's own personal experiences are not extraneous prejudicial information. They are part of what the juror brings into the room."
+      },
+      {
+       "say": "Warger also gives you the test for a new trial based on voir dire dishonesty. Two things. First, the juror failed to answer honestly a material question on voir dire. Second, a correct answer would have provided a valid basis for a challenge for cause. But you must prove it without the barred deliberation testimony. One more note. The class slides misprint the citation as 547 U.S. The right cite is 574 U.S. 40."
+      },
+      {
+       "say": "Hypothetical time."
+      },
+      {
+       "ask": "After a civil verdict, a juror says another juror looked up the plaintiff's criminal record on her phone during deliberations and shared it. Can the juror testify to that?",
+       "answer": "Yes. That is extraneous prejudicial information improperly brought to the jury's attention, an exception under Rule 606(b)(2)(A).",
+       "pause": 8
+      },
+      {
+       "ask": "After a criminal verdict, a juror reports that a fellow juror was drunk throughout trial. Can that juror's testimony be used to attack the verdict?",
+       "answer": "No. Under Tanner, intoxication is internal, not an outside influence. Rule 606(b) bars it, and that does not violate the Sixth Amendment.",
+       "pause": 8
+      },
+      {
+       "ask": "After a criminal conviction, a juror swears another juror said, I always vote to convict people of his race. Does 606(b) bar the testimony?",
+       "answer": "No. Under Peña-Rodriguez, a clear statement of racial animus relied on to convict in a criminal case requires the no-impeachment rule to give way under the Sixth Amendment.",
+       "pause": 8
+      },
+      {
+       "ask": "The jury meant to find for the defendant, but the foreperson checked the wrong box on the verdict form. Can a juror testify?",
+       "answer": "Yes. A mistake in entering the verdict on the form is an exception under Rule 606(b)(2)(C).",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: internal versus external is about the nature of the matter, not location. Two: a juror's own life experiences are not extraneous information, per Warger. Three: Peña-Rodriguez is criminal-only, racial, and must be a clear statement that was a significant motivating factor. Four: the bar covers affidavits too."
+      },
+      {
+       "say": "Recap. 606(b)(1) bars juror testimony on statements or incidents in deliberations, the effect on any vote, and mental processes. 606(b)(2) allows extraneous prejudicial information, outside influence, and a form mistake. Tanner: intoxication is internal. Peña-Rodriguez: clear racial bias relied on to convict in a criminal case overrides the rule. Warger: no deliberation testimony to prove voir dire lies."
+      },
+      {
+       "ask": "Name Tanner's four rationales for the no-impeachment rule.",
+       "answer": "Protecting jurors from harassment, frank deliberation, finality, and public trust.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the three required elements of the Peña-Rodriguez exception?",
+       "answer": "A clear statement of racial bias, in a criminal case, relied on to convict. Racial animus must be a significant motivating factor.",
+       "pause": 8
+      },
+      {
+       "ask": "What two things must a party show for a new trial based on a juror's voir dire dishonesty under Warger?",
+       "answer": "The juror failed to answer honestly a material voir dire question, and a correct answer would have supported a challenge for cause.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e03",
+     "title": "Relevance: Rules 401 and 402",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 401's two-part definition of relevance, Rule 402's admissibility rule, the very low threshold, where materiality comes from, how to test chains of inference, and United States v. James."
+      },
+      {
+       "say": "Plain English. Evidence is relevant if it moves the needle at all on a fact that matters to the case."
+      },
+      {
+       "say": "The exact rule. Rule 401. Evidence is relevant if two things are true. First, under 401(a), it has any tendency to make a fact more or less probable than it would be without the evidence. That is probativeness. Second, under 401(b), the fact is of consequence in determining the action. That is materiality."
+      },
+      {
+       "say": "Rule 402. Relevant evidence is admissible unless one of four sources provides otherwise: the United States Constitution, a federal statute, the Federal Rules of Evidence, or other rules prescribed by the Supreme Court. And irrelevant evidence is not admissible. Full stop, no exceptions."
+      },
+      {
+       "say": "Why such a low bar? Because the rules trust the jury to weigh evidence, and they leave the screening of dangerous evidence to other rules, especially 403. The Advisory Committee Note puts it perfectly: a brick is not a wall. Each piece of evidence need only be one brick. It does not have to prove the case."
+      },
+      {
+       "say": "So the threshold is minimal, far below a preponderance. And here is a nuance students miss. The fact does not have to be disputed. The Advisory Committee Note says so, and the Supreme Court relied on that in Old Chief. Whether a fact is disputed matters to 403 weighing, not to relevance."
+      },
+      {
+       "say": "Where does materiality come from? From the substantive law: the elements of the crime, the claim, or the defense. And a statute can make a probative fact immaterial. Montana v. Egelhoff: a state statute said voluntary intoxication may not be considered on mens rea. So evidence of intoxication, however probative, was immaterial. Another example, Wingate: ignorance is immaterial to a strict-liability offense, because knowledge is not an element."
+      },
+      {
+       "say": "Testing relevance. The slides say: state the chain of inferences and test each link. Show me the body. The passports drawer. Consenting to a polygraph. For each, you ask what inference you want the jury to draw, step by step, and whether each step holds. And at trial, the single objection irrelevant covers both probativeness and materiality."
+      },
+      {
+       "say": "The case. United States v. James, Ninth Circuit en banc, 1999. James's violent boyfriend, Ogden, had bragged to her about past stabbings and a knife robbery. James handed her daughter a gun, and the daughter killed Ogden. James was charged with aiding and abetting manslaughter and claimed self-defense. She testified about what Ogden had told her. The defense offered court records proving Ogden really did commit the robbery. The trial court excluded them because James never saw them. During deliberations, the jury asked whether Ogden's stories were fact or brag."
+      },
+      {
+       "say": "Held: reversed. The records were relevant to James's credibility about what Ogden had told her, even though she never saw them. Here is how the slides put it. The trial court asked whether the records were relevant to her state of mind. The en banc court asked whether they were relevant to her testimony about her state of mind. That is the difference. Judge Kleinfeld dissented: the records invited the jury to decide whether the victim deserved to die, a 403 problem."
+      },
+      {
+       "say": "Why James matters. Materiality turns on the elements, here her reasonable belief. And probativeness can run through credibility. Evidence that makes a witness's story more believable is relevant. A small note: the casebook caption misprints the reporter as F.2d. It is F.3d."
+      },
+      {
+       "ask": "A defendant charged with murder offers evidence that he was drunk, to negate intent, in a state with a statute barring consideration of voluntary intoxication on mens rea. Is the evidence relevant?",
+       "answer": "No. It may be probative, but the statute makes the fact immaterial, as in Montana v. Egelhoff.",
+       "pause": 8
+      },
+      {
+       "ask": "The defense says the government cannot offer evidence of a fact the defense has conceded, because an undisputed fact is irrelevant. Right?",
+       "answer": "No. Under the Advisory Committee Note to 401, relied on in Old Chief, the fact need not be disputed. A concession matters to 403 weighing, not to relevance.",
+       "pause": 8
+      },
+      {
+       "ask": "In a self-defense case, the defendant testifies that the victim bragged about past violence. She never saw the court records proving that violence. Are the records relevant?",
+       "answer": "Yes, under United States v. James. They corroborate her testimony about what the victim told her, so they are relevant to her credibility.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: relevance does not require that the evidence be sufficient or even strong. A brick is not a wall. Two: relevance does not require a disputed fact. Three: materiality comes from substantive law, so check the elements, and check for statutes like Egelhoff's. Four: irrelevant evidence is never admissible, but relevant evidence can still be excluded by another rule."
+      },
+      {
+       "say": "Recap. 401: any tendency to make a fact more or less probable, and the fact is of consequence. Probativeness and materiality. 402: relevant evidence is admissible unless the Constitution, a federal statute, the FRE, or Supreme Court rules say otherwise; irrelevant evidence is never admissible. James: relevance can run through a witness's credibility."
+      },
+      {
+       "ask": "What are the two parts of relevance under Rule 401, and their one-word names?",
+       "answer": "First, any tendency to make a fact more or less probable: probativeness. Second, the fact is of consequence in determining the action: materiality.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the four sources Rule 402 lists that can make relevant evidence inadmissible.",
+       "answer": "The Constitution, a federal statute, the Federal Rules of Evidence, and other Supreme Court rules.",
+       "pause": 8
+      },
+      {
+       "ask": "What quotation from the Advisory Committee Note captures how low the relevance threshold is?",
+       "answer": "A brick is not a wall.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e04",
+     "title": "Who decides: Rule 104(a) versus 104(b)",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Conditional relevance under Rule 104(b), the contrast with 104(a), the Huddleston standard, a list of who decides what, and Cox v. State."
+      },
+      {
+       "say": "Plain English. Some evidence is only relevant if some other fact is true. A threatening letter only matters if the defendant wrote it. A rumor only shows motive if the defendant heard it. Rule 104(b) handles that."
+      },
+      {
+       "say": "The exact rule. Rule 104(b). When the relevance of evidence depends on whether a fact exists, proof must be introduced sufficient to support a finding that the fact does exist. The court may admit the proposed evidence on the condition that the proof be introduced later."
+      },
+      {
+       "say": "The standard comes from Huddleston. The judge asks whether a jury could reasonably find the conditional fact by a preponderance. The judge does not weigh credibility. The jury decides."
+      },
+      {
+       "say": "Now the contrast, which is a favorite exam move. 104(a) versus 104(b)."
+      },
+      {
+       "say": "Under 104(a), the judge herself decides the preliminary question. The standard is a preponderance, and the proponent bears the burden. And here is a key detail: in deciding, the judge is not bound by the evidence rules, except those on privilege. So the judge can consider hearsay in deciding a 104(a) question."
+      },
+      {
+       "say": "What goes under 104(a)? A witness's qualification. Privilege. Hearsay foundations, such as a declarant's unavailability, and the conspiracy for a coconspirator statement under 801(d)(2)(E), which is Bourjaily. The Rule 702 requirements for experts. And the Rule 1004 conditions for excusing an original under the best evidence rule."
+      },
+      {
+       "say": "What goes under 104(b)? Evidence sufficient to support a finding, which is lower than the judge actually finding a preponderance. The judge asks only whether a jury could reasonably find the fact. The jury decides. The 104(b) list: other acts under Huddleston, personal knowledge under Rule 602, authentication under Rule 901, and the jury questions in Rule 1008."
+      },
+      {
+       "say": "Why the split? 104(b) questions are ordinary questions of fact that jurors are good at, like whether someone saw something or wrote something. 104(a) questions are about the legal rules of admissibility, and if jurors decided them, they would have already heard the evidence the rule was meant to keep out."
+      },
+      {
+       "say": "The slides make a broader point: nearly all relevance is conditional on something. A weapon bought the day before the killing is relevant, unless it was a candlestick during a citywide blackout, or one of hundreds of hunting rifles sold in hunting season. Sharp lawyers will identify the missing links."
+      },
+      {
+       "say": "The case. Cox v. State, Indiana, 1998. To show Cox's motive to kill Leonard, the State proved that at a bond hearing for Cox's friend, new molestation charges were announced and the friend's bond was not reduced. Cox objected that he did not know what happened at the hearing. So the evidence was relevant to motive only if he knew."
+      },
+      {
+       "say": "Held: admissible under 104(b). Cox was at the house of the friend's mother, who had attended the hearing, almost every day before and after it. So a jury could reasonably find he knew. Why it matters: Cox is the template for relevant only if the defendant knew. One more misprint note: the casebook caption misprints the citation as 606 N.E.2d 855, 1995. The right cite is 696 N.E.2d 853, 1998."
+      },
+      {
+       "say": "Quick check. Is a hearsay foundation a 104(a) or a 104(b) question?",
+       "voice": "alt"
+      },
+      {
+       "say": "104(a). The judge decides it herself by a preponderance. Hearsay foundations are about admissibility rules, not conditional relevance."
+      },
+      {
+       "ask": "The prosecution offers a letter and says the defendant wrote it. Who decides whether he wrote it, and by what standard?",
+       "answer": "Authentication is a 104(b) question. The judge asks only whether a jury could reasonably find he wrote it, and the jury decides.",
+       "pause": 8
+      },
+      {
+       "ask": "The judge must decide whether a hearsay declarant is unavailable. May the judge consider an inadmissible hearsay affidavit in deciding?",
+       "answer": "Yes. Under 104(a) the judge is not bound by the evidence rules except privilege.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness testifies to what she saw. The opponent says she lacked personal knowledge. Which subsection governs, and what is the test?",
+       "answer": "Rule 104(b), through Rule 602: evidence sufficient to support a finding that she had personal knowledge.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. Do not mix the standards. 104(a) is the judge finding a preponderance. 104(b) is the judge asking whether a jury could find a preponderance. Do not forget the privilege carve-out: even under 104(a), the judge is bound by privilege rules. And do not put coconspirator foundations under 104(b). Bourjaily put them under 104(a)."
+      },
+      {
+       "say": "Recap. 104(b): when relevance depends on a fact, there must be evidence sufficient to support a finding; the jury decides; Huddleston's standard. 104(a): the judge decides by a preponderance, not bound by evidence rules except privilege: qualification, privilege, hearsay foundations including Bourjaily, 702, and 1004. 104(b) list: other acts, personal knowledge, authentication, 1008. Cox: relevant only if the defendant knew."
+      },
+      {
+       "ask": "Name four matters decided under 104(a).",
+       "answer": "Any four of: a witness's qualification, privilege, hearsay foundations such as unavailability and the coconspirator conspiracy, the 702 expert requirements, and the 1004 conditions.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the four matters on the 104(b) list.",
+       "answer": "Other acts under Huddleston, personal knowledge under 602, authentication under 901, and the jury questions under 1008.",
+       "pause": 8
+      },
+      {
+       "ask": "What was the conditional fact in Cox v. State, and how was it shown?",
+       "answer": "Whether Cox knew what happened at his friend's bond hearing. He was at the house of the friend's mother, who attended, almost every day before and after it.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e05",
+     "title": "Rule 403: unfair prejudice",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 403's exact text and its six dangers, the pro-admission tilt, the definition of unfair prejudice, the three factors, its one exemption, the flight chain, the slide exercises, and three cases: Bocharski, Collins, and Old Chief."
+      },
+      {
+       "say": "Plain English. Even relevant evidence can be kept out when its risks substantially outweigh its value."
+      },
+      {
+       "say": "The exact rule. Rule 403. The court may exclude relevant evidence if its probative value is substantially outweighed by a danger of one or more of six things. Count them. One, unfair prejudice. Two, confusing the issues. Three, misleading the jury. Four, undue delay. Five, wasting time. Six, needlessly presenting cumulative evidence."
+      },
+      {
+       "say": "Notice the words may and substantially. Rule 403 is pro-admission. Exclusion only when the imbalance is substantial. And it is reviewed for abuse of discretion, then for harmlessness. Trial judges win most 403 appeals."
+      },
+      {
+       "say": "What is unfair prejudice? The Advisory Committee Note: an undue tendency to suggest decision on an improper basis, commonly, though not necessarily, an emotional one. That includes the propensity inference, from Old Chief, and overvaluation, from Collins, where jurors give evidence more weight than it deserves."
+      },
+      {
+       "say": "Three factors, weighed together. One, whether the fact is actually disputed. Two, the availability of other means of proof, which comes from the Advisory Committee Note. Three, the likely effectiveness of a limiting instruction."
+      },
+      {
+       "say": "The only exemption from 403: crimen falsi convictions under Rule 609(a)(2), crimes of dishonesty or false statement used to impeach. Those must be admitted with no balancing at all."
+      },
+      {
+       "say": "Now the flight chain from the slides, the four-link Myers chain. Evidence of flight works only if each link holds. Link one: behavior to flight. Did he really flee? Link two: flight to consciousness of guilt. Link three: consciousness of guilt to consciousness of guilt of the crime charged. Link four: to actual guilt. Each can fail. Race may weaken link two. The outline cites Gonzales Rose, and Commonwealth v. Warren, Massachusetts 2016, which said flight by Black men in Boston is not necessarily probative of guilt. And explaining flight can trap a defendant into revealing a prior record, as in Cutchall, or an uncharged crime, like Johnson's marijuana."
+      },
+      {
+       "say": "The slides' 403 exercises. The Godfather Part Two Pentangeli clip: mob associations versus Stone's deliberate allusion. Chauvin's computer animation: lifelike persuasion versus being less dramatic than the real video, and authentication may be the better objection. And spark-of-life photos showing a homicide victim alive: Minnesota allows them to humanize victims."
+      },
+      {
+       "say": "Now the cases. First, State v. Bocharski, Arizona, 2001. A stabbing murder. Six gruesome photographs, including autopsy photos of the opened skull with a rod through a wound. The defendant did not contest the fact, cause, or extent of the injuries."
+      },
+      {
+       "say": "Held: four photos were properly admitted. They bore on the disputed time of death and on wounds a juror had asked about. But the two autopsy photos had little tendency to prove any disputed issue and were introduced primarily to inflame the jury. Error, but harmless."
+      },
+      {
+       "say": "Why Bocharski matters: an undisputed fact shrinks probative value on the 403 scale without making the evidence irrelevant."
+      },
+      {
+       "say": "Second, People v. Collins, California, 1968. No one could identify the robbers. A math instructor multiplied probabilities that the prosecutor simply assumed. A partly yellow car, one in ten. A man with a mustache, one in four. An interracial couple in a car, one in a thousand. And so on, to get one in twelve million."
+      },
+      {
+       "say": "Held: reversed, for two reasons. One, there was no foundation: no evidence supported the numbers, and the factors were not independent. Two, the testimony distracted the jury with an impressive expert the defense could not refute. And even if the numbers were accepted, the figure did not show that this couple was guilty."
+      },
+      {
+       "say": "Why Collins matters: probability evidence is admissible when it is built on real data, like DNA. The problem, as the slides put it, was made up numbers and interrelated variables."
+      },
+      {
+       "say": "Third, the big one. Old Chief v. United States, 1997. Old Chief was charged with possessing a firearm after a felony conviction. He offered to stipulate to the prior-conviction element. The government refused and proved the record naming his prior crime: assault causing serious bodily injury."
+      },
+      {
+       "say": "Held, by Justice Souter for a five to four Court: abuse of discretion. The record was relevant. But when the only issue is the defendant's legal status, the name of the offense adds nothing and invites a propensity inference, so the court must accept the concession. Here is the balance. Ordinarily, the prosecution may prove its case its own way. Why? Narrative richness, the need for a morally reasonable verdict, and jurors' expectations about what proof looks like. Justice O'Connor dissented: the evidence was prejudicial, but not unfairly so."
+      },
+      {
+       "say": "Why Old Chief matters. Under 403, the court weighs evidentiary alternatives. And the holding is confined to status elements. Do not stretch Old Chief to let a defendant stipulate away the prosecution's narrative of the crime itself."
+      },
+      {
+       "say": "The outline's 403 analysis, five steps. One, probative value on a disputed fact, discounted for concessions and alternatives. Two, name the specific danger. Three, is probative value substantially outweighed? Four, less prejudicial alternatives and a Rule 105 instruction. Five, abuse of discretion and harmlessness."
+      },
+      {
+       "ask": "In a murder case where the defense concedes the cause of death, the prosecution offers a gory autopsy photo that shows nothing disputed. Is it irrelevant?",
+       "answer": "No. It is still relevant, but under Bocharski its probative value is small and it may be excluded under 403 as introduced primarily to inflame.",
+       "pause": 8
+      },
+      {
+       "ask": "A felon-in-possession defendant offers to stipulate he is a felon. The prior was a robbery. Must the court accept the stipulation?",
+       "answer": "Yes, under Old Chief. For a pure status element, the name of the offense adds nothing but a propensity risk, so refusing the stipulation is an abuse of discretion.",
+       "pause": 8
+      },
+      {
+       "ask": "In a robbery case, the defendant offers to stipulate that he was the robber who entered the bank, to keep out a vivid surveillance video. Does Old Chief require the court to accept?",
+       "answer": "No. Old Chief is confined to status elements. Ordinarily the prosecution may prove its case its own way, for narrative richness.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: 403 needs substantial outweighing, and the default is admission. Two: unfair prejudice means an improper basis for decision, not just evidence that hurts. Three: 609(a)(2) crimen falsi is the one category with no 403 balancing. Four: Old Chief is about status elements only."
+      },
+      {
+       "say": "Recap. 403: exclude if probative value is substantially outweighed by unfair prejudice, confusion, misleading the jury, undue delay, wasting time, or needless cumulation. Factors: disputed, alternatives, instruction. Bocharski: undisputed facts shrink probative value. Collins: made-up, dependent probabilities. Old Chief: accept a stipulation to status."
+      },
+      {
+       "ask": "Name Rule 403's six dangers.",
+       "answer": "Unfair prejudice, confusing the issues, misleading the jury, undue delay, wasting time, and needlessly presenting cumulative evidence.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the three 403 factors weighed together?",
+       "answer": "Whether the fact is actually disputed, the availability of other means of proof, and the likely effectiveness of a limiting instruction.",
+       "pause": 8
+      },
+      {
+       "ask": "What were Collins's two reasons for reversal?",
+       "answer": "No foundation for the numbers, which were also not independent; and the testimony distracted the jury with an impressive expert the defense could not refute.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e06",
+     "title": "Which scale? The balancing tests compared",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Roadmap. The rules use several different balancing tests. Exams love to swap them. This short episode puts them side by side."
+      },
+      {
+       "say": "First, standard 403. The opponent's burden. Exclude only if probative value is substantially outweighed. It tilts toward admission."
+      },
+      {
+       "say": "Second, straight balancing. Rule 609(a)(1)(B). A testifying criminal defendant's felony conviction comes in only if its probative value outweighs its prejudicial effect to that defendant. The proponent's burden, and ties exclude."
+      },
+      {
+       "say": "Third, reverse 403. Tilted against admission, with a heavy burden on the proponent. Three examples. Rule 609(b), convictions more than 10 years old: probative value must substantially outweigh prejudicial effect. Rule 412(b)(2), civil rape-shield evidence: probative value must substantially outweigh the danger of harm to any victim and of unfair prejudice to any party. And Rule 703, when the proponent wants to disclose an expert's otherwise-inadmissible bases to the jury."
+      },
+      {
+       "say": "Fourth, no balancing. Rule 609(a)(2), crimen falsi convictions. Automatic."
+      },
+      {
+       "say": "Fifth, Rule 107(a), illustrative aids. They get the 403 scale: is their utility substantially outweighed by the same dangers."
+      },
+      {
+       "say": "Sixth, comparative necessity, which is not a prejudice balance at all. Rule 807(a)(2): the statement must be more probative on the point than any other evidence the proponent can reasonably obtain."
+      },
+      {
+       "ask": "Which balancing test applies when the prosecution wants to impeach a testifying defendant with a five-year-old felony that is not a crime of dishonesty?",
+       "answer": "Rule 609(a)(1)(B): admitted only if probative value outweighs prejudicial effect to the defendant. Proponent's burden, ties exclude.",
+       "pause": 8
+      },
+      {
+       "ask": "Which test applies to a 15-year-old conviction?",
+       "answer": "Rule 609(b), a reverse 403: probative value, supported by specific facts and circumstances, must substantially outweigh prejudicial effect, plus written notice.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three reverse-403 rules.",
+       "answer": "Rule 609(b) for old convictions, Rule 412(b)(2) in civil rape-shield cases, and Rule 703 for disclosing inadmissible expert bases.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 403 tilts toward admission. 609(a)(1)(B) is straight balancing against the proponent. 609(b), 412(b)(2), and 703 are reverse 403. 609(a)(2) has no balancing. 107(a) uses the 403 scale. 807(a)(2) asks about comparative necessity."
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e07",
+     "title": "The policy rules and Rule 407: subsequent remedial measures",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The structure of Rules 407 through 411, the jury research on insurance, then Rule 407 in depth: its text, timing, third-party repairs, the if disputed nuance, strict liability, and opening the door."
+      },
+      {
+       "say": "Start with structure. Each of these rules reflects a judgment that the evidence fails 403 as a matter of law, and each serves a public policy. Here is the big contrast. Rules 407, 408, 409, and 411 bar only certain purposes. Rule 410 bars plea evidence for all purposes against the defendant, with two narrow exceptions."
+      },
+      {
+       "say": "Let me give you the map, rule by rule, the barred use and some permitted uses."
+      },
+      {
+       "say": "407, subsequent remedial measures. Barred: negligence, culpable conduct, a product or design defect, or a need for a warning. Permitted: impeachment, and, if disputed, ownership, control, or feasibility."
+      },
+      {
+       "say": "408, compromise. Barred: to prove or disprove the validity or amount of a disputed claim, or to impeach by a prior inconsistent statement or contradiction. Permitted: bias, negating a contention of undue delay, and proving obstruction."
+      },
+      {
+       "say": "409, medical expenses. Barred: an offer or payment, to prove liability. Everything else is permitted, and statements made along with the offer are not covered."
+      },
+      {
+       "say": "410, pleas. Barred: all uses against the defendant. Exceptions: 410(b)(1), completeness, and 410(b)(2), a perjury or false-statement prosecution."
+      },
+      {
+       "say": "411, liability insurance. Barred: to prove negligence or wrongful conduct. Permitted: bias, and agency, ownership, or control."
+      },
+      {
+       "say": "The jury research. Diamond and Vidmar's Arizona Jury Project found jurors discussed insurance in 85 percent of trials, mostly the plaintiff's coverage. Blindfolding jurors through limiting instructions often fails. Educating jurors may work better."
+      },
+      {
+       "say": "Now Rule 407. The exact text. When measures are taken that would have made an earlier injury or harm less likely to occur, evidence of the subsequent measures is not admissible to prove four things. One, negligence. Two, culpable conduct. Three, a defect in a product or its design. Four, a need for a warning or instruction. But the court may admit it for another purpose, such as impeachment or, if disputed, proving ownership, control, or the feasibility of precautionary measures."
+      },
+      {
+       "say": "Why? Two reasons from the structure. Policy: we do not want to discourage people from fixing hazards. And weak probative value: a repair does not mean the earlier condition was negligent."
+      },
+      {
+       "say": "Timing. The measure must come after the injury sued on. The Wolf Attack problem. A wolf attacks a beagle. The owner then chains the wolf. Later, the wolf mauls a child. In the beagle owner's suit, the chaining is barred, because it came after the beagle's injury. In the child's suit, it is not barred by 407, because the chaining came before the child's injury."
+      },
+      {
+       "say": "Third-party repairs. If someone other than the defendant made the repair, 407 generally does not apply, because the policy of encouraging the defendant's repairs is not in play. But the evidence is often weak under 403."
+      },
+      {
+       "say": "The phrase if disputed modifies all three permitted purposes: ownership, control, and feasibility. If the defendant concedes feasibility, you cannot use the repair to prove it."
+      },
+      {
+       "say": "Strict liability. Since the 1997 amendment, 407 covers product-defect and strict-liability cases. That is why the text says a defect in a product or its design, and a need for a warning."
+      },
+      {
+       "say": "Opening the door. A defendant who says the old design is still fine, or that a fix was impossible, invites impeachment with the repair. The outline gives two examples. The Grotto Pizza problem with its 55 dollar and 26 cent repair. And the wood-chipper defendant who touted identical machines still in use."
+      },
+      {
+       "ask": "A store installs a handrail on its stairs after the plaintiff falls. Plaintiff offers the handrail to prove negligence. Admissible?",
+       "answer": "No. Rule 407 bars subsequent remedial measures to prove negligence.",
+       "pause": 8
+      },
+      {
+       "ask": "Same case, but the store denies it controlled the stairway, saying the landlord did. Can the plaintiff now use the handrail?",
+       "answer": "Yes, to prove control, because control is disputed. It is a permitted purpose under 407, with a limiting instruction on request.",
+       "pause": 8
+      },
+      {
+       "ask": "After an accident, the city, not the defendant property owner, adds a warning sign. Does 407 bar it?",
+       "answer": "Generally no. Third-party measures are not covered by 407's policy. But it may be weak or excluded under 403.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant's engineer testifies that the old design was the safest possible and could not be improved. Can the plaintiff cross him with the post-accident redesign?",
+       "answer": "Yes. He opened the door. The redesign may be used to impeach.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: timing runs from the injury sued on. Two: if disputed attaches to ownership, control, and feasibility. Three: third-party repairs fall outside 407. Four: 407 covers products cases since 1997. Five: impeachment is permitted, but courts watch for parties using impeachment as a back door."
+      },
+      {
+       "say": "Recap. 407 bars measures taken after the injury to prove negligence, culpable conduct, a product or design defect, or a need for a warning. Permitted: impeachment, and, if disputed, ownership, control, or feasibility. 407, 408, 409, and 411 bar purposes. 410 bars everything against the defendant except completeness and perjury."
+      },
+      {
+       "ask": "Which policy rule bars evidence for all purposes against a particular person, and who?",
+       "answer": "Rule 410, against the defendant who pleaded or took part in plea discussions.",
+       "pause": 8
+      },
+      {
+       "ask": "List the four barred purposes under Rule 407.",
+       "answer": "Negligence, culpable conduct, a defect in a product or its design, and a need for a warning or instruction.",
+       "pause": 8
+      },
+      {
+       "ask": "In the Wolf Attack problem, why is the chaining barred in the beagle owner's suit but not the child's?",
+       "answer": "Timing is measured against the injury sued on. It came after the beagle's injury but before the child's.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e08",
+     "title": "Rules 408 and 409: compromise and medical expenses",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 408's two kinds of protected evidence, its two barred uses, its criminal-case exception, its permitted uses, Ramada v. Rauch, and Rule 409 with the famous apology contrast."
+      },
+      {
+       "say": "Plain English. Settlement talk stays out, so people can negotiate freely."
+      },
+      {
+       "say": "The exact rule. Rule 408(a). Two kinds of evidence. First, furnishing, promising, or offering, or accepting, promising to accept, or offering to accept, valuable consideration in compromising or attempting to compromise the claim. Second, conduct or a statement made during compromise negotiations about the claim."
+      },
+      {
+       "say": "That evidence is not admissible on behalf of any party for two purposes. One, to prove or disprove the validity or amount of a disputed claim. Two, to impeach by a prior inconsistent statement or a contradiction."
+      },
+      {
+       "say": "The exception in 408(a)(2). Statements made during negotiations are admissible in a criminal case when the negotiations related to a claim by a public office in the exercise of its regulatory, investigative, or enforcement authority. Think: what you told the SEC in civil settlement talks can be used against you in a later criminal case. Notice it is the statements, not the offer itself."
+      },
+      {
+       "say": "Rule 408(b). The court may admit the evidence for another purpose, such as proving a witness's bias or prejudice, negating a contention of undue delay, or proving an effort to obstruct a criminal investigation or prosecution."
+      },
+      {
+       "say": "The trigger. Rule 408 requires a claim that is disputed as to validity or amount. If the defendant says, I owe you the money, I just can't pay it all now, there is no dispute, and 408 does not apply."
+      },
+      {
+       "say": "Ramada v. Rauch. A report commissioned to support settlement talks, the Goldsmith report, counts as made during compromise negotiations. So it was protected. And the outline notes that courts may apply 408 to settlements with third parties."
+      },
+      {
+       "say": "Note on parties. 408 says on behalf of any party. So unlike 410, it protects both sides. Neither side can use the other's settlement offer, and neither can use its own."
+      },
+      {
+       "say": "Rule 409. Furnishing, promising to pay, or offering to pay medical, hospital, or similar expenses resulting from an injury is not admissible to prove liability for the injury. That is the whole rule. Narrow."
+      },
+      {
+       "say": "The slides' contrast between 409 and 408. At the accident scene: let me give you a bandaid, I'll cover your hospital bill. That offer is barred by 409. But I'm so sorry, it was my fault, is an admission. 409 does not cover statements accompanying the offer. Now move the same apology to a settlement meeting after a claim has been made. There, 408 bars it, because 408 covers statements in compromise negotiations."
+      },
+      {
+       "say": "Why the difference? An apology at the accident scene is not deterred by an evidence rule the speaker has never heard of. But negotiations after a claim need broad protection, because lawyers know the rules and need room to talk."
+      },
+      {
+       "ask": "After a dispute over whether a contract was breached, the defendant offers 10,000 dollars to settle. Plaintiff offers the offer to prove liability. Admissible?",
+       "answer": "No. Rule 408 bars a compromise offer to prove the validity of a disputed claim.",
+       "pause": 8
+      },
+      {
+       "ask": "In settlement talks over a disputed claim, the defendant says, honestly, we shipped late. At trial the defendant's witness testifies the shipment was on time. Can plaintiff impeach him with the settlement statement?",
+       "answer": "No. Rule 408 bars use to impeach by a prior inconsistent statement or contradiction.",
+       "pause": 8
+      },
+      {
+       "ask": "A driver says at the scene, I'll pay your medical bills, I wasn't paying attention. What comes in?",
+       "answer": "The offer to pay medical bills is barred by 409 to prove liability. The statement I wasn't paying attention is not covered by 409, so it comes in as an opposing party's statement.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness testifies for the defendant. The plaintiff shows the witness settled his own claim against the defendant on generous terms. Barred by 408?",
+       "answer": "No. Offered to show the witness's bias, which 408(b) permits.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: 408 needs a disputed claim, about validity or amount. Two: 408 bars impeachment by inconsistent statement or contradiction, but allows bias. Three: 408 applies on behalf of any party. Four: the criminal-case exception covers statements in negotiations with a public office exercising regulatory, investigative, or enforcement authority. Five: 409 covers only the offer to pay, not the accompanying statements."
+      },
+      {
+       "say": "Recap. 408 bars offers and negotiation conduct or statements to prove or disprove a disputed claim's validity or amount, or to impeach by inconsistency or contradiction; permits bias, negating undue delay, and obstruction; and lets negotiation statements with a public office into a criminal case. 409 bars offers to pay medical expenses to prove liability, but not accompanying statements."
+      },
+      {
+       "ask": "What are the two barred uses under Rule 408?",
+       "answer": "To prove or disprove the validity or amount of a disputed claim, and to impeach by a prior inconsistent statement or contradiction.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three permitted uses listed in 408(b).",
+       "answer": "A witness's bias or prejudice, negating a contention of undue delay, and proving an effort to obstruct a criminal investigation or prosecution.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Ramada v. Rauch hold about the Goldsmith report?",
+       "answer": "A report commissioned to support settlement talks counts as made during compromise negotiations, so 408 protects it.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e09",
+     "title": "Rules 410 and 411: pleas and insurance",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 410's four protected categories, its two exceptions, no impeachment use, waiver under Mezzanatto, who counts as the prosecutor, the reverse problem, United States v. Biaggi, then Rule 411 and the Claims Adjuster problem, and the policy-rule steps."
+      },
+      {
+       "say": "Plain English. If a defendant tries to plead, or negotiates with the prosecutor, and it falls through, the prosecution cannot use that against him."
+      },
+      {
+       "say": "The exact rule. Rule 410(a). In a civil or criminal case, evidence of four things is not admissible against the defendant who made the plea or participated in the plea discussions. One, a guilty plea that was later withdrawn. Two, a nolo contendere plea. Three, a statement made during a proceeding on either of those pleas under Federal Rule of Criminal Procedure 11 or a comparable state procedure. Four, a statement made during plea discussions with an attorney for the prosecuting authority if the discussions did not result in a guilty plea or resulted in a later-withdrawn guilty plea."
+      },
+      {
+       "say": "Rule 410(b). Two exceptions, for statements in categories three and four. First, in any proceeding in which another statement made during the same plea or plea discussions has been introduced, if in fairness the statements ought to be considered together. That is completeness. Second, in a criminal proceeding for perjury or false statement, if the defendant made the statement under oath, on the record, and with counsel present."
+      },
+      {
+       "say": "Why? To encourage plea bargaining, which the system depends on. If anything said in plea talks could be used at trial, no one would talk."
+      },
+      {
+       "say": "Nuances. First, no impeachment use. Congress removed an impeachment exception in 1975. So the defendant's plea statements cannot even be used to impeach him, unless he has waived the protection."
+      },
+      {
+       "say": "Second, waiver. United States v. Mezzanatto, 1995. As a condition of plea discussions, the defendant agreed his statements could be used to impeach him if he testified inconsistently at trial. Held: a defendant may knowingly and voluntarily waive Rule 410's protection. The Court said a criminal defendant may knowingly and voluntarily waive many of the most fundamental protections afforded by the Constitution. Several circuits extend such waivers to use in the government's case-in-chief, so in some circuits, as the outline puts it, Rule 410 has been absolutely waived."
+      },
+      {
+       "say": "Third, who is on the other side of the table. The rule covers discussions with an attorney for the prosecuting authority, or the prosecutor's designated agents. Not police. But some courts protect a defendant's actual, reasonable expectation that he was negotiating a plea. That is Robertson, Fifth Circuit, 1978."
+      },
+      {
+       "say": "Fourth, the reverse problem. The text bars only use against the defendant. But courts generally also bar a defendant's use of the prosecutor's plea offer. That is Problem 2.8. Why? Admitting it would chill offers."
+      },
+      {
+       "say": "The case. United States v. Biaggi, Second Circuit, 1990. The Wedtech scandal. The government offered CEO Mariotta immunity in exchange for information about others' wrongdoing. Mariotta said he knew of none, and the offer was withdrawn. At trial, he offered the episode as consciousness of innocence. The trial court excluded it."
+      },
+      {
+       "say": "Held: reversed. Rejecting immunity strongly suggests innocence, because an innocent person has nothing to trade. Rejecting a plea to a lesser charge may be only a gamble. And because the government was allowed to prove consciousness of guilt, cash withdrawn for gold bars after witnesses pleaded, fairness required admitting his evidence of innocence. And 410 protects the defendant, not the government."
+      },
+      {
+       "say": "Why Biaggi matters: probative value depends on what the defendant turned down. And on retrial, his dark alley remark comes in under 410(b)(1), completeness. That is Problem 2.9."
+      },
+      {
+       "say": "Now Rule 411. Evidence that a person was or was not insured against liability is not admissible to prove whether the person acted negligently or otherwise wrongfully. But the court may admit it for another purpose, such as proving a witness's bias or prejudice, or proving agency, ownership, or control."
+      },
+      {
+       "say": "Problem 2.5, the Claims Adjuster, Lacher v. Anderson. The insurer's adjuster who took the plaintiff's statement did not testify. Offering insurance to show the bias of a non-witness is a stretch. The slides say exclusion was right under 411, or failing that, under 403."
+      },
+      {
+       "say": "The outline's policy-rule steps. One, match the evidence to its rule: a repair, a compromise, payment of expenses, plea material, or insurance. Two, check the trigger. 407: after the injury. 408: a claim disputed as to validity or amount. 410: a plea, or talks with a prosecutor. Three, name the purpose: the barred use, or a permitted one actually in issue. 407's ownership, control, and feasibility only if disputed; bias under 408 and 411. Four, check who it is offered against. 410 protects only the defendant who pleaded or negotiated; 408 applies on behalf of any party. Five, then 403 and a 105 instruction."
+      },
+      {
+       "ask": "A defendant tells a detective, not a prosecutor, I'll plead if you drop the gun charge, and confesses. Does 410 bar the confession?",
+       "answer": "Generally no. 410 covers discussions with an attorney for the prosecuting authority, not police, though some courts protect an actual, reasonable expectation of negotiating a plea, as in Robertson.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant signed a proffer agreement allowing impeachment use. At trial he testifies inconsistently. Can the prosecution use his plea statements to impeach?",
+       "answer": "Yes. Under Mezzanatto, the waiver is valid if knowing and voluntary.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant wants to show the jury that the prosecutor offered him a plea to a misdemeanor, to show the government's case is weak. Allowed?",
+       "answer": "Courts generally say no, even though the text bars only use against the defendant, because admitting offers would chill them. That is Problem 2.8.",
+       "pause": 8
+      },
+      {
+       "ask": "In a car-crash case, the plaintiff wants to show the defendant has a large liability policy. Admissible to show negligence? What about to show the defendant owned the car, if ownership is denied?",
+       "answer": "Not to show negligence, under 411. But yes to show ownership, a permitted purpose.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: 410 protects only the defendant, and only against him. Two: no impeachment exception. Three: only talks with prosecutors, not police. Four: the perjury exception needs oath, record, and counsel, all three. Five: a waiver can strip 410's protection. Six: 411 allows bias and agency, ownership, or control."
+      },
+      {
+       "say": "Recap. 410(a) bars, against the defendant, withdrawn guilty pleas, nolo pleas, statements in the plea proceedings, and statements in failed plea talks with a prosecutor. 410(b): completeness, and perjury under oath, on the record, with counsel. Mezzanatto: waivable. Biaggi: rejecting immunity shows innocence; 410 protects the defendant. 411 bars insurance to prove fault but allows bias, agency, ownership, or control."
+      },
+      {
+       "ask": "List the four categories Rule 410(a) protects.",
+       "answer": "A later-withdrawn guilty plea, a nolo contendere plea, statements in a Rule 11 or comparable state proceeding on either, and statements in plea discussions with a prosecuting attorney that did not produce a guilty plea or produced one later withdrawn.",
+       "pause": 8
+      },
+      {
+       "ask": "What three conditions does 410(b)(2)'s perjury exception require?",
+       "answer": "The statement was made under oath, on the record, and with counsel present.",
+       "pause": 8
+      },
+      {
+       "ask": "Why did Biaggi treat rejecting immunity differently from rejecting a plea to a lesser charge?",
+       "answer": "Rejecting immunity strongly suggests innocence, since an innocent person has nothing to trade. Rejecting a plea may be only a gamble.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d1-e10",
+     "title": "Day 1 closing quiz",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Let's close out day one with a cumulative quiz. Answer out loud."
+      },
+      {
+       "ask": "What is the difference between probativeness and materiality?",
+       "answer": "Probativeness is any tendency to make a fact more or less probable. Materiality is whether that fact is of consequence to the action.",
+       "pause": 8
+      },
+      {
+       "ask": "A juror testifies after a verdict that the bailiff told the jury the defendant had confessed. Barred by 606(b)?",
+       "answer": "No. That is an outside influence and extraneous prejudicial information, both exceptions.",
+       "pause": 8
+      },
+      {
+       "ask": "What standard does a judge use under 104(b), and who ultimately decides?",
+       "answer": "Whether a jury could reasonably find the conditional fact by a preponderance. The jury decides.",
+       "pause": 8
+      },
+      {
+       "ask": "Under Bourjaily, is the coconspirator foundation a 104(a) or 104(b) question?",
+       "answer": "104(a). The judge decides by a preponderance.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the only category of evidence exempt from 403 balancing?",
+       "answer": "Crimen falsi convictions under 609(a)(2).",
+       "pause": 8
+      },
+      {
+       "ask": "Which party has the burden under ordinary 403, and which way does it tilt?",
+       "answer": "The opponent, and it tilts toward admission.",
+       "pause": 8
+      },
+      {
+       "ask": "Old Chief: why must the court accept a stipulation to a prior felony in a felon-in-possession case?",
+       "answer": "For a pure status element, the name of the offense adds nothing but invites a propensity inference. The holding is confined to status elements.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the four links in the Myers flight chain.",
+       "answer": "Behavior to flight; flight to consciousness of guilt; to consciousness of guilt of the crime charged; to actual guilt.",
+       "pause": 8
+      },
+      {
+       "ask": "Under 407, which permitted purposes must be disputed?",
+       "answer": "Ownership, control, and feasibility of precautions.",
+       "pause": 8
+      },
+      {
+       "ask": "Does 408 apply when the defendant admits owing the debt and only negotiates a payment schedule?",
+       "answer": "No. 408 requires a claim disputed as to validity or amount.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the 408(a)(2) criminal-case exception.",
+       "answer": "Statements made during compromise negotiations are admissible in a criminal case when the negotiations related to a claim by a public office exercising regulatory, investigative, or enforcement authority.",
+       "pause": 8
+      },
+      {
+       "ask": "Does Rule 410 allow impeachment use of plea statements?",
+       "answer": "No. Congress removed impeachment use in 1975, though a defendant can waive the protection under Mezzanatto.",
+       "pause": 8
+      },
+      {
+       "ask": "Under Rule 411, list the permitted purposes.",
+       "answer": "Bias or prejudice, and agency, ownership, or control.",
+       "pause": 8
+      },
+      {
+       "ask": "What was the en banc court's key reframing in United States v. James?",
+       "answer": "The question was not whether the records were relevant to her state of mind, but whether they were relevant to her testimony about her state of mind, that is, her credibility.",
+       "pause": 8
+      },
+      {
+       "say": "That's day one. Tomorrow we start with a review of today, then character evidence. Good work."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
