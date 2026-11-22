@@ -1759,6 +1759,1110 @@
      ]
     }
    ]
+  },
+  {
+   "day": 3,
+   "title": "Competency and hearsay: the definition, 801(d), 804, 803, and 807",
+   "minutes": 78,
+   "episodes": [
+    {
+     "id": "ev-d3-e00",
+     "title": "Spaced review of Days 1 and 2",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Day three. Hearsay day. First, rapid recall from the last two days."
+      },
+      {
+       "ask": "What standard governs other-act evidence under Huddleston?",
+       "answer": "104(b): whether a jury could reasonably find by a preponderance that the act occurred.",
+       "pause": 8
+      },
+      {
+       "ask": "Trenkler's identity standard?",
+       "answer": "Characteristics sufficiently idiosyncratic to permit an inference of pattern, not prosaic commonalities.",
+       "pause": 8
+      },
+      {
+       "ask": "When can the prosecution offer the defendant's violent character in a criminal case without the defendant offering his own?",
+       "answer": "When the defendant offers the alleged victim's violent character under 404(a)(2)(B). Then the prosecution may offer the defendant's same trait.",
+       "pause": 8
+      },
+      {
+       "ask": "Habit: three qualities.",
+       "answer": "Specific, regular, and semi-automatic.",
+       "pause": 8
+      },
+      {
+       "ask": "Michelson: what can a prosecutor ask a defendant's reputation witness?",
+       "answer": "Have you heard questions about relevant specific acts, with a good-faith basis, and the examiner is stuck with the answer.",
+       "pause": 8
+      },
+      {
+       "ask": "608(b): questions or extrinsic proof?",
+       "answer": "Questions on cross only, if probative of truthfulness. No extrinsic proof.",
+       "pause": 8
+      },
+      {
+       "ask": "609(a)(2): which crimes, and what test?",
+       "answer": "Crimes whose elements required proving or admitting a dishonest act or false statement. Must be admitted, no balancing.",
+       "pause": 8
+      },
+      {
+       "ask": "Name 412's three criminal exceptions.",
+       "answer": "Another source of semen, injury, or physical evidence; specific instances with the accused; and constitutionally required evidence.",
+       "pause": 8
+      },
+      {
+       "ask": "Rule 403's six dangers.",
+       "answer": "Unfair prejudice, confusing the issues, misleading the jury, undue delay, wasting time, needless cumulative evidence.",
+       "pause": 8
+      },
+      {
+       "ask": "Peña-Rodriguez's three elements.",
+       "answer": "Clear racial bias, in a criminal case, relied on to convict.",
+       "pause": 8
+      },
+      {
+       "say": "Good. Now competency, then hearsay."
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e01",
+     "title": "Competency: Rules 601 to 603, 605, and 606(a)",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Roadmap. Who may testify. Rules 601, 602, 603, 605, and 606(a), the history, child witnesses, and how competency relates to hearsay."
+      },
+      {
+       "say": "Rule 601: every person is competent to be a witness unless the rules provide otherwise. But in a civil case, state law governs the witness's competency regarding a claim or defense for which state law supplies the rule of decision."
+      },
+      {
+       "say": "Rule 602: a witness may testify to a matter only if evidence is introduced sufficient to support a finding that the witness has personal knowledge of the matter. That is a 104(b) question. And the personal-knowledge rule does not apply to an expert's opinion under Rule 703."
+      },
+      {
+       "say": "Rule 603: before testifying, a witness must give an oath or affirmation to testify truthfully."
+      },
+      {
+       "say": "And two people may not testify. Rule 605: the presiding judge. Rule 606(a): a juror, before the other jurors at the trial."
+      },
+      {
+       "say": "History. The old rules barred parties, spouses, interested persons, felons, atheists, and non-white persons. All gone. Today competency mostly concerns young children. The questions: can the child perceive and remember, communicate, understand the duty to tell the truth, and answer on cross? And 18 U.S.C. section 3509(c) presumes children competent."
+      },
+      {
+       "say": "The slides tie it together. Competency asks whether this witness can be tested by cross. Hearsay asks whether this statement can be."
+      },
+      {
+       "ask": "A witness testifies to what she heard was going on next door, but never saw or heard it herself. What's the objection?",
+       "answer": "Lack of personal knowledge under Rule 602.",
+       "pause": 8
+      },
+      {
+       "ask": "In a federal diversity case on a state-law claim, which law governs witness competency?",
+       "answer": "State law, under Rule 601.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 601: everyone is competent, with state law governing in civil cases where state law supplies the rule of decision. 602: personal knowledge, sufficient to support a finding, not required for expert opinion. 603: oath or affirmation. 605: not the judge. 606(a): not a juror at the trial."
+      },
+      {
+       "ask": "Which rule exempts experts from personal knowledge?",
+       "answer": "Rule 703, noted in Rule 602.",
+       "pause": 8
+      },
+      {
+       "ask": "What does 18 U.S.C. section 3509(c) do?",
+       "answer": "It presumes children competent.",
+       "pause": 8
+      },
+      {
+       "ask": "Competency versus hearsay, in the slides' words?",
+       "answer": "Competency asks whether this witness can be tested by cross. Hearsay asks whether this statement can be.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e02",
+     "title": "The definition of hearsay",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Rules 801(a), 801(c), and 802 word for word, the four testimonial capacities, why purpose controls, and the categories of not-hearsay."
+      },
+      {
+       "say": "The exact rules. Rule 801(a): statement means a person's oral assertion, written assertion, or nonverbal conduct, if the person intended it as an assertion."
+      },
+      {
+       "say": "Rule 801(c): hearsay means a statement that, two things. First, the declarant does not make while testifying at the current trial or hearing. Second, a party offers in evidence to prove the truth of the matter asserted in the statement."
+      },
+      {
+       "say": "Rule 802: hearsay is not admissible unless any of the following provides otherwise: a federal statute, these rules, or other rules prescribed by the Supreme Court."
+      },
+      {
+       "say": "Why exclude hearsay? The four testimonial capacities. Perception, memory, narration, and sincerity. Did she see it right? Does she remember it right? Is she saying what she means? Is she telling the truth? Cross-examination tests all four in a live witness. Hearsay leaves the declarant's capacities untested. The founding example: Sir Walter Raleigh's trial, convicted on Cobham's confession without being able to confront Cobham."
+      },
+      {
+       "say": "A trap right away. A witness repeating her own earlier words is still hearsay. If the witness says on the stand, I told my sister the light was red, and it is offered to prove the light was red, that earlier statement was not made while testifying at the current trial. Hearsay."
+      },
+      {
+       "say": "The golden rule from the slides: you can never answer the question, is this hearsay, without knowing the proponent's purpose."
+      },
+      {
+       "say": "Now the categories that are not hearsay, because they are not offered for their truth."
+      },
+      {
+       "say": "One, effect on the listener. Words offered to show notice, motive, or reasonable fear. The slides' example: Shelley Winters's marriage demand in A Place in the Sun, offered for its effect on the man who heard it, to show his motive. Or a complaint to a supervisor, offered to show the employer had notice."
+      },
+      {
+       "say": "Two, verbal acts. Words that have legal effect themselves: the words of a contract, threats, defamation. We care that they were said, not whether they are true."
+      },
+      {
+       "say": "Three, nonassertive conduct. Conduct not intended as an assertion. Santiago failing to pack. The sea captain who inspected a ship and then sailed on it with his family. The paramedics' silence. These are offered to prove what the actor believed, but the actor did not intend to assert anything, so under 801(a), there is no statement."
+      },
+      {
+       "say": "Four, involuntary exclamations. Ouch is not an assertion."
+      },
+      {
+       "say": "Five, words offered as circumstantial evidence of knowledge. A child's accurate description of the defendant's room. Drug recipes showing know-how."
+      },
+      {
+       "say": "Six, machine output. A machine is not a person, so it cannot make a statement."
+      },
+      {
+       "say": "Now the flip side. Conduct intended as an assertion is a statement. Pointing at a fleeing car, which says, that one. Or Minister Gummer eating beef for the press, which said, British beef is safe. And an implied or indirect assertion, offered for the belief behind it, if the speaker intended to communicate that belief, is hearsay. The outline's example: planning my retirement home, offered to show the speaker was not suicidal."
+      },
+      {
+       "say": "Two more basics. Rule 805: hearsay within hearsay is admissible only if each layer fits an exception. And the two justifications behind every exception, per the slides: necessity and trustworthiness."
+      },
+      {
+       "ask": "In a contract case, the plaintiff testifies the defendant said, I accept your offer. Hearsay?",
+       "answer": "No. Words of acceptance are a verbal act with legal effect, not offered for their truth.",
+       "pause": 8
+      },
+      {
+       "ask": "To show the defendant had reason to fear the victim, the defendant testifies that a friend told him the victim carried a gun. Hearsay?",
+       "answer": "No, if offered for its effect on the listener, to show the defendant's reasonable fear, not that the victim actually carried a gun.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness testifies, I told the officer the car was speeding, offered to prove the car was speeding. Hearsay?",
+       "answer": "Yes. Repeating her own out-of-court statement is still hearsay.",
+       "pause": 8
+      },
+      {
+       "ask": "At a lineup, the victim points to the defendant. Is that pointing a statement?",
+       "answer": "Yes. Conduct intended as an assertion is a statement under 801(a). Whether it is hearsay depends on purpose, and an identification may fall under 801(d)(1)(C).",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: purpose controls. Always name the purpose. Two: the declarant's intent to assert controls whether conduct is a statement. Three: a witness's own prior statement can be hearsay. Four: machine output is not hearsay, but a human-entered record is."
+      },
+      {
+       "say": "Recap. 801(a): a person's oral, written, or nonverbal assertion, intended as an assertion. 801(c): not made while testifying, offered for its truth. 802: inadmissible unless a statute, the rules, or Supreme Court rules provide otherwise. Not hearsay: effect on the listener, verbal acts, nonassertive conduct, involuntary exclamations, circumstantial proof of knowledge, machine output."
+      },
+      {
+       "ask": "Name the four testimonial capacities.",
+       "answer": "Perception, memory, narration, and sincerity.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the two justifications behind every hearsay exception?",
+       "answer": "Necessity and trustworthiness.",
+       "pause": 8
+      },
+      {
+       "ask": "What does Rule 805 require?",
+       "answer": "Each layer of hearsay within hearsay must fit an exception.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e03",
+     "title": "Implied assertions: Wright v. Tatham, Bridges, and Zenni",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Roadmap. Three note cases that show how the common law and the Federal Rules handle implied assertions and circumstantial knowledge."
+      },
+      {
+       "say": "Wright v. Doe d. Tatham, England, 1837. To prove a testator was sane, the will's supporters offered letters written to him by acquaintances, who addressed him as a man of normal understanding."
+      },
+      {
+       "say": "Held: excluded. The letters were treated as the writers' implied statements that he was sane, and so as hearsay."
+      },
+      {
+       "say": "Why it matters: this is the common-law view of implied assertions. And the Federal Rules reject it. Rule 801(a) defines a statement by the declarant's intent to assert. The letter writers did not intend to assert, he is sane."
+      },
+      {
+       "say": "United States v. Zenni, Eastern District of Kentucky, 1980. While agents searched premises for illegal bookmaking, they answered the phone. Unknown callers gave instructions for placing bets."
+      },
+      {
+       "say": "Held: not hearsay under the Federal Rules. The callers did not intend to assert that the premises were a betting operation, so their words were not offered for the truth of anything they asserted. Why it matters: Zenni is the Federal Rules' answer to Wright v. Tatham. Implied assertions are not statements."
+      },
+      {
+       "say": "Bridges v. State, Wisconsin, 1945. A seven-year-old said a stranger in a soldier's uniform took her to his room in a boarding house and assaulted her. Hours later she described the house and the room in detail to her mother and police. The details matched the defendant's room."
+      },
+      {
+       "say": "Held: admissible. The descriptions were offered as circumstantial evidence of what she knew, not to prove what the room looked like. Why it matters: words can prove knowledge the declarant could only have gained by being there. The words are true or false, it doesn't matter; what matters is that she knew details she could only know from being in that room."
+      },
+      {
+       "ask": "A caller to a suspected drug house asks, can I get two bags tonight? Offered to show the house sold drugs. Hearsay under the FRE?",
+       "answer": "No, under the Zenni approach. The caller did not intend to assert that the house sold drugs, so it is not a statement offered for its truth.",
+       "pause": 8
+      },
+      {
+       "ask": "Did the Federal Rules adopt or reject the Wright v. Tatham view of implied assertions?",
+       "answer": "Rejected. 801(a) defines a statement by the declarant's intent to assert.",
+       "pause": 8
+      },
+      {
+       "ask": "Why was the child's description in Bridges not hearsay?",
+       "answer": "It was circumstantial evidence of her knowledge of the room, which she could only have gained by being there, not offered for the truth of the description.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e04",
+     "title": "Opposing party's statements: Rule 801(d)(2)",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. The five kinds of opposing-party statements, the bootstrapping rule, the 2024 successor sentence, no personal knowledge requirement, adoption by silence and the Miranda cases, and Mahlandt."
+      },
+      {
+       "say": "Plain English. Anything a party said can be used against that party. Plus statements the party adopted, authorized, or that its agents or coconspirators made."
+      },
+      {
+       "say": "The exact rule. Rule 801(d)(2). A statement is not hearsay if it is offered against an opposing party and is one of five things."
+      },
+      {
+       "say": "A: made by the party in an individual or representative capacity."
+      },
+      {
+       "say": "B: one the party manifested that it adopted or believed to be true."
+      },
+      {
+       "say": "C: made by a person whom the party authorized to make a statement on the subject."
+      },
+      {
+       "say": "D: made by the party's agent or employee on a matter within the scope of that relationship and while it existed."
+      },
+      {
+       "say": "E: made by the party's coconspirator during and in furtherance of the conspiracy."
+      },
+      {
+       "say": "Then the bootstrapping sentence. The statement must be considered, but does not by itself establish the declarant's authority under C, the existence or scope of the relationship under D, or the existence of the conspiracy or participation in it under E."
+      },
+      {
+       "say": "And the 2024 successor sentence. If a party's claim, defense, or potential liability is directly derived from a declarant or the declarant's principal, a statement that would be admissible against the declarant or the principal under this rule is also admissible against the party."
+      },
+      {
+       "say": "The successor sentence explained, from the 2024 Advisory Committee Note. A party who stands in the shoes of a declarant or the declarant's principal gets no better position on hearsay than they had. An estate suing on the decedent's claim takes the decedent's statements. So do an assignee, and a trustee pursuing the debtor's claims. But the sentence does not reach a statement made after the rights or obligations were transferred, or one admissible against an agent but not against the principal, such as one made after the employment ended."
+      },
+      {
+       "say": "Nuances. No personal knowledge requirement, and no against-interest requirement. That is Mahlandt. Opinions are fine. The justification is the adversary system: a party cannot complain she was unable to cross-examine herself."
+      },
+      {
+       "say": "Adoption by silence. Four elements, all required. One, the party heard and understood the statement. Two, the party was free to respond. Three, the circumstances naturally called for a denial. Four, the party did not deny."
+      },
+      {
+       "say": "And the constitutional limits on silence. Doyle v. Ohio, 1976. Defendants who stayed silent after Miranda warnings were cross-examined at trial about why they had not told police their exculpatory story. Held: using post-Miranda silence to impeach violates due process. Silence after the warnings is insolubly ambiguous, and the warnings implicitly promise silence will carry no penalty. So it is likely not usable as an adoption either. But pre-arrest and pre-Miranda silence may be used to impeach: Jenkins, and Fletcher v. Weir. And non-custodial silence may be used substantively: Salinas, a plurality."
+      },
+      {
+       "say": "Related Week 7 reading. Statements taken in violation of Miranda, Harris v. New York, 1971, or of the Sixth Amendment right to counsel, Kansas v. Ventris, 2009, may impeach a testifying defendant, even though they are inadmissible substantively. And post-Miranda silence may not be used as substantive evidence either, such as to prove sanity: Wainwright v. Greenfield, 1986."
+      },
+      {
+       "say": "The case. Mahlandt v. Wild Canid Survival and Research Center, Eighth Circuit, 1978. No one saw how a child was hurt near a chained wolf named Sophie. Poos, the Center's director of education, left a note saying Sophie bit a child, and told the president so. Board minutes later referred to the incident of Sophie biting the child."
+      },
+      {
+       "say": "Held: personal knowledge is not required under 801(d)(2). Poos's statements came in against Poos under A, and against the Center under D, as an agent's statements within the scope of his employment. The board minutes came in against the Center, but not against Poos. Why it matters: admissibility under 801(d)(2) is party-specific. And statements within an organization, like a note to the boss, count."
+      },
+      {
+       "ask": "The defendant's truck driver, while on the job, tells a police officer at the scene, I was going too fast. Admissible against the trucking company?",
+       "answer": "Yes, under 801(d)(2)(D): an employee's statement on a matter within the scope of employment while it existed.",
+       "pause": 8
+      },
+      {
+       "ask": "The same driver says it a week after being fired. Admissible against the company?",
+       "answer": "No, not under D. The relationship no longer existed.",
+       "pause": 8
+      },
+      {
+       "ask": "At a party, someone says to the defendant, you stole that car, didn't you? The defendant laughs and walks away. Adoptive admission?",
+       "answer": "Possibly, under 801(d)(2)(B), if he heard and understood, was free to respond, the circumstances naturally called for denial, and he did not deny.",
+       "pause": 8
+      },
+      {
+       "ask": "After Miranda warnings, the defendant says nothing when an officer accuses him. Can the prosecution use his silence?",
+       "answer": "No. Under Doyle, post-Miranda silence may not be used to impeach, and likely not as an adoption.",
+       "pause": 8
+      },
+      {
+       "ask": "The executor of an estate sues on the decedent's contract claim. Before death, the decedent said, I never delivered the goods. Admissible against the estate?",
+       "answer": "Yes, under the 2024 successor sentence. The estate's claim is directly derived from the declarant.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: 801(d)(2) statements must be offered against the party who made them. You cannot offer your own statement. Two: no personal knowledge or against-interest requirement. Three: the statement alone cannot establish authority, agency, or conspiracy. Four: agency statements must be made while the relationship existed. Five: Doyle bars post-Miranda silence."
+      },
+      {
+       "say": "Recap. 801(d)(2): A party's own statement; B adopted; C authorized; D agent or employee within scope while employed; E coconspirator during and in furtherance. The statement is considered but not sufficient alone. 2024: successors take the declarant's statements. Mahlandt: no personal knowledge needed; admissibility is party-specific."
+      },
+      {
+       "ask": "Name the five types of opposing-party statements.",
+       "answer": "Party's own; adopted; authorized; agent or employee within scope while the relationship existed; coconspirator during and in furtherance.",
+       "pause": 8
+      },
+      {
+       "ask": "Four elements of adoption by silence?",
+       "answer": "Heard and understood, free to respond, circumstances naturally called for denial, and no denial.",
+       "pause": 8
+      },
+      {
+       "ask": "In Mahlandt, against whom were the board minutes admissible?",
+       "answer": "Against the Center, but not against Poos.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e05",
+     "title": "Coconspirator statements and Bourjaily",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Roadmap. The coconspirator rule in detail, Bourjaily, and the 1997 amendment."
+      },
+      {
+       "say": "For a coconspirator statement under 801(d)(2)(E), the judge must find, by a preponderance under 104(a), three things. One, a conspiracy existed that included the declarant and the defendant. Two, the statement was made during the conspiracy. Three, it was in furtherance of the conspiracy."
+      },
+      {
+       "say": "The judge may consider the statement itself, but needs some independent evidence. That is Bourjaily plus the 1997 amendment, which added the sentence that the statement alone does not establish the conspiracy."
+      },
+      {
+       "say": "No conspiracy charge is needed. A joint venture suffices. And confessions to police almost never qualify, because confessing to police is not in furtherance of the conspiracy."
+      },
+      {
+       "say": "The case. Bourjaily v. United States, 1987. Lonardo's recorded calls with an FBI informant described a gentleman friend who would buy cocaine. Bourjaily took delivery, with 20,000 dollars in his car."
+      },
+      {
+       "say": "Held: preliminary facts under 801(d)(2)(E) are decided under 104(a) by a preponderance, and the court may consider the statements themselves. That displaced the old Glasser bootstrapping bar, which had required independent evidence. Justice Blackmun dissented: the exemption rests on agency, which should require independent proof."
+      },
+      {
+       "say": "Why Bourjaily matters: 104(a), not 104(b) conditional relevance, governs hearsay foundations."
+      },
+      {
+       "ask": "After arrest, a coconspirator tells police, my partner planned it all. Admissible against the partner under 801(d)(2)(E)?",
+       "answer": "No. A confession to police is not during and in furtherance of the conspiracy.",
+       "pause": 8
+      },
+      {
+       "ask": "One drug dealer tells another, the boss will pay you Friday, during an ongoing operation. Can the judge consider that statement in deciding whether the boss was part of the conspiracy?",
+       "answer": "Yes, under Bourjaily, but after the 1997 amendment, the statement alone is not enough. There must be some independent evidence.",
+       "pause": 8
+      },
+      {
+       "ask": "Must the defendant be charged with conspiracy for 801(d)(2)(E) to apply?",
+       "answer": "No. No conspiracy charge is needed; a joint venture suffices.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. The judge decides conspiracy, during, and in furtherance by a preponderance under 104(a), may consider the statement, but needs some independent evidence. Bourjaily displaced Glasser's bootstrapping bar. Confessions to police almost never qualify."
+      },
+      {
+       "ask": "What case did Bourjaily displace, and on what point?",
+       "answer": "Glasser, which barred bootstrapping by considering the statement itself.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Bourjaily take delivery with?",
+       "answer": "20,000 dollars in his car.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e06",
+     "title": "Prior statements of a testifying witness: 801(d)(1), 613, and 612",
+     "minutes": 11,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 801(d)(1) A, B, and C, Rule 613(a) and (b), the December 2026 amendment, impeachment versus substantive use, three cases, Barrett, Tome, and Owens, and Rule 612 on refreshing memory."
+      },
+      {
+       "say": "The exact rule. Rule 801(d)(1). A statement is not hearsay if the declarant testifies and is subject to cross-examination about a prior statement, and the statement is one of three things."
+      },
+      {
+       "say": "A: is inconsistent with the declarant's testimony and was given under penalty of perjury at a trial, hearing, or other proceeding, or in a deposition."
+      },
+      {
+       "say": "B: is consistent with the declarant's testimony and is offered, one, to rebut an express or implied charge that the declarant recently fabricated it or acted from a recent improper influence or motive in so testifying; or two, to rehabilitate the declarant's credibility as a witness when attacked on another ground."
+      },
+      {
+       "say": "C: identifies a person as someone the declarant perceived earlier."
+      },
+      {
+       "say": "Now the important amendment. Rule 801(d)(1)(A) changes on December 1, 2026, nine days before your final on December 10. The Supreme Court adopted the amendment on April 8, 2026. Unless Congress acts, it governs proceedings commenced after December 1, 2026, and, as far as just and practicable, pending ones. The new text of A simply says: is inconsistent with the declarant's testimony. The requirement that the statement was given under penalty of perjury at a proceeding or deposition is gone."
+      },
+      {
+       "say": "The effect, per the Committee Note. A prior inconsistent statement of a witness who testifies and is subject to cross about it is substantive evidence even if unsworn. So no limiting instruction is needed, and inconsistent and consistent statements are treated alike. The Committee reasoned that delayed cross under oath allays the hearsay concerns, and that the old rule was unduly narrow, of use mainly to prosecutors with grand jury testimony. Unchanged: 613(b) still governs extrinsic proof. 403 handles difficulties of proof. And the rule governs admissibility, not sufficiency."
+      },
+      {
+       "say": "For the exam. Fisher, 2022, and the Class 12 and 13 slides teach the old rule. Ask Professor Hornzell which version the final uses. Until then, for an unsworn prior inconsistent statement, give both results. Under the old rule: impeachment only. Under the amended rule: substantive evidence."
+      },
+      {
+       "say": "Now Rule 613. 613(a): when examining a witness about the witness's prior statement, a party need not show it or disclose its contents to the witness. But the party must, on request, show it or disclose its contents to an adverse party's attorney."
+      },
+      {
+       "say": "613(b), as amended in 2024: unless the court orders otherwise, extrinsic evidence of a witness's prior inconsistent statement may not be admitted until after the witness is given an opportunity to explain or deny the statement and an adverse party is given an opportunity to examine the witness about it. This does not apply to an opposing party's statement under 801(d)(2)."
+      },
+      {
+       "say": "The core contrast: 613 impeaches; 801(d)(1)(A) is substantive. Under the old rule, an unsworn statement to police is impeachment only, so counsel may not argue it as proof. That's from the slides, citing Troisi. Extrinsic proof of an inconsistent statement is allowed under 613(b) on a non-collateral point. Under the 2026 amendment, that statement would also come in substantively."
+      },
+      {
+       "say": "Case one. United States v. Barrett, First Circuit, 1976. Witness Adams testified that Barrett admitted taking part in a stamp theft. Barrett offered two witnesses who heard Adams say later that he knew Barrett was not involved."
+      },
+      {
+       "say": "Held: exclusion was error. The statements were admissible to impeach Adams as inconsistent under 613, not for their truth. Their vagueness went to weight. Why it matters: inconsistent statements impeach even when they cannot come in substantively. And note: Barrett let the 613(b) foundation come at any time. Since December 1, 2024, it must come first, unless the court orders otherwise."
+      },
+      {
+       "say": "Case two. Tome v. United States, 1995. The defense claimed a six-year-old fabricated abuse allegations against her father so she could stay with her mother. The prosecution offered six witnesses who recounted her later statements describing the abuse."
+      },
+      {
+       "say": "Held, by Justice Kennedy, five to four: 801(d)(1)(B) admits consistent statements only if made before the alleged motive to fabricate arose. Why it matters: post-motive repetition does not rebut a charge of fabrication. Repeating a lie doesn't make it true. And the 2014 amendment added B(ii), rehabilitation on other grounds, such as a charge of faulty memory."
+      },
+      {
+       "say": "Case three. United States v. Owens, 1988. A beaten prison counselor identified Owens from a photo array. At trial, he could not remember seeing his attacker."
+      },
+      {
+       "say": "Held: neither the Confrontation Clause nor 801(d)(1)(C) was violated. The Clause guarantees, quote, an opportunity for effective cross-examination, not cross-examination that is effective in whatever way, and to whatever extent, the defense might wish. That quotes Delaware v. Fensterer. Why it matters: memory loss does not make a testifying witness unavailable for cross. And C admits an identification even if the witness now cannot remember, or misidentifies in court."
+      },
+      {
+       "say": "Now Rule 612 versus 803(5). Anything may refresh memory: a document, a photo, a song. The witness reads silently and then testifies from memory. And the adverse party may inspect the writing, cross on it, and introduce relevant parts. A recorded recollection, by contrast, comes in for its truth only with the 803(5) foundation, which we'll cover soon."
+      },
+      {
+       "say": "Rule 612 gives those options for a writing used to refresh while testifying, and for one used before testifying if the court decides justice requires it. In a criminal case, 18 U.S.C. section 3500 controls where it applies. The court cuts unrelated matter after reviewing in camera. If a writing is withheld, the court may issue any appropriate order. If the prosecution does not comply in a criminal case, the court must strike the testimony or, if justice so requires, declare a mistrial."
+      },
+      {
+       "ask": "At trial, a witness says the light was green. Last year, in a sworn deposition, he said it was red. Under the rule in effect before December 2026, can the deposition be used to prove the light was red?",
+       "answer": "Yes. It is inconsistent, given under penalty of perjury in a deposition, and he testifies subject to cross, so 801(d)(1)(A) makes it substantive.",
+       "pause": 8
+      },
+      {
+       "ask": "Same, but his earlier statement was an unsworn statement to a police officer. Give both results.",
+       "answer": "Under the old rule, impeachment only under 613, not substantive. Under the amendment effective December 1, 2026, it is substantive evidence because the witness testifies and is subject to cross.",
+       "pause": 8
+      },
+      {
+       "ask": "The defense says the witness made up her story after she was promised leniency in March. The prosecution offers her consistent statement from April. Admissible under 801(d)(1)(B)(i)?",
+       "answer": "No. Under Tome, the consistent statement must predate the alleged motive.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness identified the defendant at a lineup but now testifies she cannot remember the attacker. Can the lineup identification come in?",
+       "answer": "Yes, under 801(d)(1)(C) and Owens. Memory loss does not make her unavailable for cross.",
+       "pause": 8
+      },
+      {
+       "ask": "A party wants to prove a witness's prior inconsistent statement with another witness. Under 613(b) after 2024, what must happen first?",
+       "answer": "Unless the court orders otherwise, the witness must first be given a chance to explain or deny it, and the adverse party a chance to examine the witness about it.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: under the old rule, 801(d)(1)(A) requires the prior statement to be under penalty of perjury at a proceeding or deposition. A police interview fails. Two: the amendment, effective December 1, 2026, removes that requirement. Give both results. Three: Tome's pre-motive requirement for B(i). Four: 613(b) foundation now comes first. Five: 613(b) does not apply to opposing-party statements."
+      },
+      {
+       "say": "Recap. 801(d)(1)(A): inconsistent, and under the pre-2026 rule, sworn at a proceeding or deposition. B: consistent, to rebut recent fabrication or improper motive, if pre-motive under Tome, or to rehabilitate on another ground. C: identification. 613(a): need not show the witness; must show opposing counsel on request. 613(b): extrinsic proof after a chance to explain or deny. Barrett, Tome, Owens. 612: refreshing memory."
+      },
+      {
+       "ask": "What three things are listed in 801(d)(1)?",
+       "answer": "A, prior inconsistent statements; B, prior consistent statements to rebut fabrication or rehabilitate; C, prior identifications.",
+       "pause": 8
+      },
+      {
+       "ask": "What quotation from Owens, borrowed from Fensterer, describes the right to cross?",
+       "answer": "An opportunity for effective cross-examination, not cross-examination that is effective in whatever way, and to whatever extent, the defense might wish.",
+       "pause": 8
+      },
+      {
+       "ask": "Under 612, when may an adverse party inspect a writing used to refresh memory before testifying?",
+       "answer": "If the court decides justice requires it. For a writing used while testifying, the adverse party is entitled to it.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e07",
+     "title": "Unavailability and former testimony: Rules 804(a) and 804(b)(1)",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. The five grounds of unavailability, the procurement exception, the former-testimony exception, Volland-Golden, and Salerno with DiNapoli."
+      },
+      {
+       "say": "Rule 804 exceptions require that the declarant be unavailable. So first, prove unavailability under 804(a). Five grounds. The declarant: one, is exempted from testifying by a court ruling on privilege. Two, refuses to testify despite a court order. Three, testifies to not remembering the subject matter. Four, cannot be present or testify because of death or a then-existing infirmity, physical illness, or mental illness. Five, is absent and the proponent has not been able, by process or other reasonable means, to procure the declarant's attendance, or, for the exceptions in (b)(2), (3), and (4), the declarant's attendance or testimony."
+      },
+      {
+       "say": "The catch. A declarant is not unavailable if the statement's proponent procured or wrongfully caused the unavailability in order to prevent the declarant from attending or testifying."
+      },
+      {
+       "say": "Notice ground three. A witness who testifies to not remembering is unavailable for 804. But under Owens, a witness with memory loss is still available for cross under 801(d)(1). Different purposes."
+      },
+      {
+       "say": "Now 804(b)(1), former testimony. Testimony that was given as a witness at a trial, hearing, or lawful deposition, whether given during the current proceeding or a different one, and is now offered against a party who had, or, in a civil case, whose predecessor in interest had, an opportunity and similar motive to develop it by direct, cross-, or redirect examination."
+      },
+      {
+       "say": "Case. Volland-Golden v. City of Chicago, Northern District of Illinois, 2015. Volland was acquitted of resisting and battering two officers. He then sued them under section 1983 and died. His sister, continuing the suit, offered his testimony from the criminal trial."
+      },
+      {
+       "say": "Held: admissible. The State was the officers' predecessor in interest, sharing a similar stake. And the State had a similar motive to discredit Volland: the same events and issues, a similar strategy, and even higher criminal stakes. Why it matters: predecessor in interest applies only in civil cases, and asks about shared stakes and motive."
+      },
+      {
+       "say": "Cited in Volland-Golden: United States v. Salerno, 1992, and United States v. DiNapoli, Second Circuit en banc, 1993. Grand jury witnesses who had testified favorably to the defendants invoked the Fifth Amendment at trial. The defense offered their grand jury testimony under 804(b)(1)."
+      },
+      {
+       "say": "Held: Salerno: the similar-motive requirement applies to the government too. There is no adversarial fairness shortcut. DiNapoli, on remand: similar motive means a substantially similar interest at a similar stage, and the prosecutors lacked it at the grand jury."
+      },
+      {
+       "ask": "A witness who testified at a preliminary hearing, and was cross-examined by the defendant, has since died. The prosecution offers the testimony at trial. Admissible under the hearsay rules?",
+       "answer": "Yes, under 804(b)(1). He is unavailable by death, and the defendant had an opportunity and similar motive to cross.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant offers grand jury testimony favorable to him from a witness who now takes the Fifth. The government objects it had no similar motive at the grand jury. Who wins under Salerno and DiNapoli?",
+       "answer": "Likely the government. Similar motive applies to the government too, and DiNapoli found prosecutors lacked a substantially similar motive at the grand jury stage.",
+       "pause": 8
+      },
+      {
+       "ask": "The prosecution sends its key witness on a long vacation abroad so he cannot testify, then offers his former testimony. Is he unavailable?",
+       "answer": "No. A proponent who procured the unavailability to prevent testimony cannot claim it.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 804(a): privilege, refusal despite order, lack of memory, death or illness, absence despite process or reasonable means; not if the proponent procured it. 804(b)(1): former testimony against a party, or in civil cases a predecessor in interest, with an opportunity and similar motive. Volland-Golden: the State as predecessor. Salerno and DiNapoli: similar motive binds the government."
+      },
+      {
+       "ask": "Name the five grounds of unavailability.",
+       "answer": "Privilege, refusal despite a court order, lack of memory, death or infirmity, and absence despite process or other reasonable means.",
+       "pause": 8
+      },
+      {
+       "ask": "Does predecessor in interest apply in criminal cases?",
+       "answer": "No. Only in civil cases.",
+       "pause": 8
+      },
+      {
+       "ask": "What did DiNapoli say similar motive means?",
+       "answer": "A substantially similar interest at a similar stage.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e08",
+     "title": "Dying declarations, statements against interest, forfeiture, and Rule 806",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. 804(b)(2), (3), and (6), the 2024 corroboration amendment, Rule 806, and three cases: Shepard, Williamson, and Gray."
+      },
+      {
+       "say": "804(b)(2), the dying declaration. Four elements. One, in a prosecution for homicide or in a civil case. Two, a statement the declarant made while believing the declarant's death to be imminent. Three, about its cause or circumstances. Four, the declarant is unavailable. Notice: the declarant need not actually die, but must be unavailable. And not in non-homicide criminal cases."
+      },
+      {
+       "say": "804(b)(3), the statement against interest. A statement that a reasonable person in the declarant's position would have made only if the person believed it to be true because, when made, it was so contrary to the declarant's proprietary or pecuniary interest, or had so great a tendency to invalidate the declarant's claim against someone else or to expose the declarant to civil or criminal liability. And in a criminal case, if offered as one that tends to expose the declarant to criminal liability, it must be supported by corroborating circumstances that clearly indicate its trustworthiness, after considering the totality of circumstances under which it was made and any evidence that supports or undermines it. That last clause came in 2024."
+      },
+      {
+       "say": "The 2024 Advisory Committee Note on corroboration. The court must weigh both the circumstances of the statement, such as timing, spontaneity, and the declarant's likely motives, and any evidence supporting or undermining it, such as evidence placing a third-party confessor near the crime. Independent evidence is relevant but not necessarily dispositive."
+      },
+      {
+       "say": "The slides' subjective versus objective contrast. Dying declarations and excited utterances look to the declarant's actual state of mind. Statements against interest use a reasonable person."
+      },
+      {
+       "say": "804(b)(6), forfeiture by wrongdoing. A statement offered against a party that wrongfully caused, or acquiesced in wrongfully causing, the declarant's unavailability as a witness, and did so intending that result."
+      },
+      {
+       "say": "United States v. Gray, Fourth Circuit, 2005. The defendant killed her husband a week before he was to testify against her on assault charges. In her later insurance-fraud trial, she forfeited her hearsay objection to his statements. Notice: forfeiture applied even in a different trial. The proponent proves the wrongdoing and the intent by a preponderance under 104(a), per the 1997 Advisory Committee Note."
+      },
+      {
+       "say": "Rule 806. Once a hearsay statement, or a statement under 801(d)(2)(C), (D), or (E), has been admitted, the declarant's credibility may be attacked, and then supported, by any evidence that would be admissible if the declarant had testified. And the 613(b) foundation is not required, because the declarant isn't there to explain or deny."
+      },
+      {
+       "say": "Case one. Shepard v. United States, 1933. Two days after collapsing, Mrs. Shepard told her nurse, Dr. Shepard has poisoned me. She improved, relapsed, and died weeks later."
+      },
+      {
+       "say": "Held: not a dying declaration. She lacked a settled hopeless expectation of imminent death. Nor was it admissible as state of mind, because it looked backward to another person's act. Why it matters: the foundation for imminent death must be shown, and 803(3) excludes backward-looking memory."
+      },
+      {
+       "say": "Case two. Williamson v. United States, 1994. Harris was arrested with 19 kilograms of cocaine. He told an agent it belonged to Williamson. Harris refused to testify at Williamson's trial."
+      },
+      {
+       "say": "Held: 804(b)(3) admits only those individual remarks that are themselves self-inculpatory. Collateral statements within a broader confession are not admissible. Harris's admission that he knew of the cocaine qualified. His statements blaming Williamson did not. Remanded. Why it matters: accomplice statements that shift blame get special suspicion."
+      },
+      {
+       "ask": "A shooting victim, bleeding heavily, says, I'm dying, Joe shot me, then recovers but moves abroad and cannot be found. In Joe's attempted-murder prosecution, is it a dying declaration?",
+       "answer": "No. 804(b)(2) applies only in homicide prosecutions or civil cases. Attempted murder is not a homicide prosecution. Consider an excited utterance instead.",
+       "pause": 8
+      },
+      {
+       "ask": "Same statement, the victim dies, homicide prosecution. Admissible?",
+       "answer": "Yes, if he believed death was imminent, the statement concerns its cause, and he is unavailable by death.",
+       "pause": 8
+      },
+      {
+       "ask": "An accomplice tells police, I drove the car, but Mike did the shooting. Under Williamson, what comes in against Mike?",
+       "answer": "Only the self-inculpatory part, I drove the car, and only if it is relevant. The part blaming Mike is collateral and not admissible under 804(b)(3).",
+       "pause": 8
+      },
+      {
+       "ask": "A third party confesses to the crime a defendant is charged with. The defendant offers it under 804(b)(3). What extra requirement applies?",
+       "answer": "In a criminal case, corroborating circumstances clearly indicating trustworthiness, considering the totality of circumstances and any evidence supporting or undermining it.",
+       "pause": 8
+      },
+      {
+       "ask": "A defendant has her husband killed to stop him testifying. What happens to her hearsay objection to his statements?",
+       "answer": "She forfeits it under 804(b)(6), if the wrongdoing and intent are proved by a preponderance.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: dying declarations only in homicide or civil cases. Two: settled hopeless expectation of imminent death. Three: 804(b)(3) is judged by a reasonable person. Four: only the self-inculpatory parts under Williamson. Five: corroboration in criminal cases applies to statements offered by either side. Six: forfeiture requires intent to cause unavailability."
+      },
+      {
+       "say": "Recap. 804(b)(2): homicide or civil, believing death imminent, about cause or circumstances. 804(b)(3): so contrary to interest a reasonable person would only say it if true, plus corroboration in criminal cases. 804(b)(6): wrongdoing intending unavailability. 806: attack the declarant as if a witness. Shepard, Williamson, Gray."
+      },
+      {
+       "ask": "Name the three interests in 804(b)(3).",
+       "answer": "Pecuniary or proprietary interest, invalidating the declarant's claim against someone else, and exposure to civil or criminal liability.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Mrs. Shepard lack?",
+       "answer": "A settled hopeless expectation of imminent death.",
+       "pause": 8
+      },
+      {
+       "ask": "Under Rule 806, is the 613(b) foundation needed to impeach a hearsay declarant?",
+       "answer": "No.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e09",
+     "title": "803(1) to (3): present sense impression, excited utterance, and state of mind",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. The first three 803 exceptions, which apply whether or not the declarant is available, the personal knowledge requirement, Judge Posner's doubts, the Hillmon doctrine, and Pheaster."
+      },
+      {
+       "say": "803(1), present sense impression. A statement describing or explaining an event or condition, made while or immediately after the declarant perceived it. The rationale: no time to fabricate."
+      },
+      {
+       "say": "803(2), excited utterance. A statement relating to a startling event or condition, made while the declarant was under the stress of excitement that it caused. The rationale: stress stills reflection. Contrast the two: 803(1) requires describing and timing; 803(2) requires only relating to, but requires stress."
+      },
+      {
+       "say": "Personal knowledge applies to declarants. The Advisory Committee Note says so, and the slides use a clip from The Graduate."
+      },
+      {
+       "say": "Judge Posner's critique. In United States v. Boyce, Seventh Circuit, 2014, concurring, he doubted both 803(1) and 803(2). Most lies are spontaneous, so lack of time to reflect does not guarantee truth. And excitement impairs perception."
+      },
+      {
+       "say": "803(3), then-existing mental, emotional, or physical condition. A statement of the declarant's then-existing state of mind, such as motive, intent, or plan, or emotional, sensory, or physical condition, such as mental feeling, pain, or bodily health. But not including a statement of memory or belief to prove the fact remembered or believed, unless it relates to the validity or terms of the declarant's will."
+      },
+      {
+       "say": "So: I am afraid, I intend to go to Denver, my back hurts, these are in. I remember that he hit me, offered to prove he hit me, is out. The exception: statements of memory about one's own will."
+      },
+      {
+       "say": "The Hillmon doctrine. A statement of the declarant's own intent may prove that the declarant later acted on it. Using it to prove another person's conduct is contested."
+      },
+      {
+       "say": "Mutual Life Insurance Company v. Hillmon, 1892. The insurers claimed the body was not Hillmon but a man named Walters. They offered Walters's letters saying he expected to leave Wichita with a certain Mr. Hillmon."
+      },
+      {
+       "say": "Held: the letters were admissible to show that Walters intended to go, and to go with Hillmon, which made it more probable that he did both. Why it matters: it is the source of the state-of-mind-to-prove-conduct rule, and of its third-party problem. As the slides put it, the letter could show Walters went. But showing that Hillmon went depends on Walters's memory of Hillmon's plan. That is a backward-looking memory, which 803(3) excludes."
+      },
+      {
+       "say": "United States v. Pheaster, Ninth Circuit, 1976, Fisher Problem 7.32. Before he disappeared from a restaurant parking lot, Larry Adell told his date and a friend he was going to meet Angelo there to pick up marijuana. Angelo Inciso was charged with kidnapping him."
+      },
+      {
+       "say": "Held: the Ninth Circuit admitted the statements under Hillmon, including to show that Inciso was there, despite the House report's view that 803(3) proves only the declarant's own conduct. Why it matters: it's the third-party Hillmon problem. Some courts require independent evidence of the other person's involvement."
+      },
+      {
+       "ask": "A bystander says, as a car speeds by, look at that car, it must be going ninety. Which exception?",
+       "answer": "Present sense impression, 803(1). It describes an event while the declarant perceived it. It might also be an excited utterance if startling.",
+       "pause": 8
+      },
+      {
+       "ask": "Ten minutes after a crash, a shaking victim screams, the truck ran the red light! Which exception?",
+       "answer": "Excited utterance, 803(2), if still under the stress of the startling event.",
+       "pause": 8
+      },
+      {
+       "ask": "A woman says, I'm afraid of my husband because he beat me last week. Offered to prove he beat her. Admissible under 803(3)?",
+       "answer": "The fear is admissible as her then-existing state of mind, if relevant. But because he beat me is memory offered to prove the fact remembered, which 803(3) excludes.",
+       "pause": 8
+      },
+      {
+       "ask": "A murder victim said that morning, I'm going to meet Tom at the park tonight. Offered to prove the victim went to the park. Admissible?",
+       "answer": "Yes, under Hillmon and 803(3), to prove the victim's intent and that he acted on it. Using it to prove Tom went is the contested third-party problem; some courts require independent evidence.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: 803(1) needs contemporaneity; 803(2) needs stress. Two: personal knowledge still applies. Three: 803(3) excludes memory or belief to prove the fact remembered, except about the declarant's will. Four: Hillmon for third parties is contested."
+      },
+      {
+       "say": "Recap. 803(1): describing an event while or immediately after perceiving it. 803(2): relating to a startling event under its stress. 803(3): then-existing state of mind or condition, not memory or belief except about a will. Hillmon: intent proves conduct. Pheaster: the third-party problem."
+      },
+      {
+       "ask": "What is the 803(3) exception to the memory-or-belief bar?",
+       "answer": "Statements relating to the validity or terms of the declarant's will.",
+       "pause": 8
+      },
+      {
+       "ask": "What were Judge Posner's two objections in Boyce?",
+       "answer": "Most lies are spontaneous, and excitement impairs perception.",
+       "pause": 8
+      },
+      {
+       "ask": "What made the third-party use of Hillmon problematic, according to the slides?",
+       "answer": "Showing that Hillmon went depends on Walters's memory of Hillmon's plan, which is backward-looking.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e10",
+     "title": "803(4) and 803(5): medical statements and recorded recollection",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. Statements for medical diagnosis or treatment, the identity question and State v. Smith of Iowa, then recorded recollection, its four-part foundation, and Johnson v. State."
+      },
+      {
+       "say": "803(4). A statement that is made for, and is reasonably pertinent to, medical diagnosis or treatment, and that describes medical history, past or present symptoms or sensations, their inception, or their general cause."
+      },
+      {
+       "say": "Notice it covers past symptoms and their general cause, which 803(3) would not, because 803(3) is limited to a then-existing condition."
+      },
+      {
+       "say": "Identity. Fault and identity are ordinarily not pertinent. The car hit me, yes. The car that ran the red light hit me, the fault part, no. But some courts admit the identity of a household child abuser, because it bears on treatment and safety. The proponent must show how identity affected treatment."
+      },
+      {
+       "say": "State v. Smith, Iowa, 2016. A domestic-assault victim told an emergency room nurse and doctor that her child's father had assaulted her. She then planned to recant. The State relied on those statements under 803(4)."
+      },
+      {
+       "say": "Held: reversed. Identity can be pertinent in domestic-violence cases, but the State never showed why the identity mattered or how it affected treatment. The dissent would have adopted a categorical rule. Why it matters: pertinence requires foundation testimony."
+      },
+      {
+       "say": "803(5), recorded recollection. A record that is on a matter the witness once knew about but now cannot recall well enough to testify fully and accurately; was made or adopted by the witness when the matter was fresh in the witness's memory; and accurately reflects the witness's knowledge. If admitted, the record may be read into evidence, but may be received as an exhibit only if offered by an adverse party."
+      },
+      {
+       "say": "The foundation, four elements, all required, from Johnson. One, firsthand knowledge. Two, made or adopted when fresh. Three, insufficient present memory. Four, the witness vouches for the record's accuracy."
+      },
+      {
+       "say": "Johnson v. State, Texas Court of Criminal Appeals, 1998. A witness told police the night of a murder that Little Arnold did it. At trial he refused even to give his name and said he remembered nothing."
+      },
+      {
+       "say": "Held: his statement was inadmissible as a recorded recollection, because he never vouched for its accuracy. Why it matters: a hostile, disowning witness cannot lay the 803(5) foundation."
+      },
+      {
+       "say": "Contrast with 612 from earlier. Refreshing memory: anything can be used, it is not evidence, and the witness testifies from revived memory. Recorded recollection: the witness's memory is not revived, so the record itself is read in as evidence."
+      },
+      {
+       "ask": "A patient tells an ER doctor, I was hit by a car while crossing, and the driver was drunk. What's admissible under 803(4)?",
+       "answer": "I was hit by a car while crossing, as the general cause. That the driver was drunk is fault, ordinarily not pertinent.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness wrote down a license plate the day of the crime. At trial she can't remember it, but says, I wrote it down right after, and I'm sure I got it right. Can the note come in?",
+       "answer": "Yes, under 803(5). Firsthand knowledge, made when fresh, insufficient present memory, and she vouches for it. It is read into evidence, not received as an exhibit unless the adverse party offers it.",
+       "pause": 8
+      },
+      {
+       "ask": "Same witness says she doesn't remember writing the note and has no idea if it's accurate. 803(5)?",
+       "answer": "No. Under Johnson, without vouching for accuracy, the foundation fails.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 803(4): made for and reasonably pertinent to diagnosis or treatment; history, symptoms, inception, general cause; identity only with a foundation showing pertinence, per State v. Smith. 803(5): once knew, cannot now recall fully, made or adopted when fresh, accurately reflects knowledge; read in, exhibit only if the adverse party offers it. Johnson: must vouch."
+      },
+      {
+       "ask": "List the four 803(5) foundation elements.",
+       "answer": "Firsthand knowledge, made when fresh, insufficient present memory, and the witness vouches for accuracy.",
+       "pause": 8
+      },
+      {
+       "ask": "Who can make a recorded recollection an exhibit?",
+       "answer": "Only an adverse party.",
+       "pause": 8
+      },
+      {
+       "ask": "What did the State fail to show in State v. Smith of Iowa?",
+       "answer": "Why the assailant's identity mattered or how it affected treatment.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e11",
+     "title": "Business and public records: 803(6) to (10)",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The business-records exception's five elements, absence of entries, public records and their criminal-case limits, absence of a public record, then Palmer v. Hoffman, Johnson v. Lutz, and Beech Aircraft."
+      },
+      {
+       "say": "803(6), records of a regularly conducted activity. Five elements, all required. A: the record was made at or near the time by, or from information transmitted by, someone with knowledge. B: it was kept in the course of a regularly conducted activity of a business, organization, occupation, or calling. C: making the record was a regular practice of that activity. D: all these conditions are shown by the testimony of the custodian or another qualified witness, or by a certification complying with Rule 902(11) or 902(12). E: the opponent does not show that the source of information or the method or circumstances of preparation indicate a lack of trustworthiness. Since 2014, that is the opponent's burden."
+      },
+      {
+       "say": "803(7): absence of a record of a regularly conducted activity, to prove the matter did not occur, if a record would regularly have been kept."
+      },
+      {
+       "say": "803(8), public records. A record or statement of a public office if it sets out three things. (A)(i): the office's activities. (A)(ii): a matter observed while under a legal duty to report, but not including, in a criminal case, a matter observed by law-enforcement personnel. (A)(iii): in a civil case, or against the government in a criminal case, factual findings from a legally authorized investigation. And (B): the opponent does not show that the source of information or other circumstances indicate a lack of trustworthiness."
+      },
+      {
+       "say": "803(10): absence of a public record, shown by testimony or a certification, and in a criminal case, a notice-and-demand procedure applies."
+      },
+      {
+       "say": "Nuances. Business records must be made in the regular course by people with a business duty. Litigation-driven reports are suspect, under Palmer and 803(6)(E). And police reports offered against a criminal defendant cannot evade 803(8)'s limits by being called business records."
+      },
+      {
+       "say": "Palmer v. Hoffman, 1943. A railroad offered its engineer's post-accident statement as a business record. The engineer had died before trial."
+      },
+      {
+       "say": "Held: excluded. Accident reports prepared for litigation are not made in the regular course of railroading. They are, in the Court's words, calculated for use essentially in the court, not in the business. Why it matters: Palmer is the ancestor of 803(6)(E)'s untrustworthiness clause."
+      },
+      {
+       "say": "Johnson v. Lutz, New York, 1930. A police accident report, made in the regular course, included a bystander's account of how the collision happened."
+      },
+      {
+       "say": "Held: excluded. The business-records statute covers statements only by people under a business duty to report, and the bystander had none. Why it matters: each layer needs its own exception under 805. The informant must be part of the business."
+      },
+      {
+       "say": "Beech Aircraft Corp. v. Rainey, 1988, supplemental reading. After a Navy training plane crashed, killing both pilots, a JAG investigation report concluded the most probable cause was pilot error."
+      },
+      {
+       "say": "Held: 803(8)'s factual findings include opinions and conclusions based on a factual investigation, subject to the rule's trustworthiness check. The syllabus skips it, but the Class 14 and 15 slides mention it."
+      },
+      {
+       "ask": "A hospital record says the patient told the nurse, I fell off a ladder. Admissible for the cause of injury?",
+       "answer": "Two layers. The record itself is a business record under 803(6). The patient's statement needs its own exception, here 803(4), medical diagnosis or treatment.",
+       "pause": 8
+      },
+      {
+       "ask": "A police report records a bystander's statement that the blue car ran the light. Offered in a civil case. Admissible?",
+       "answer": "The bystander layer fails, under Johnson v. Lutz, because the bystander had no business duty. Each layer needs an exception.",
+       "pause": 8
+      },
+      {
+       "ask": "In a criminal case, the prosecution offers a police officer's report of what he saw at the scene. Admissible under 803(8)?",
+       "answer": "No. 803(8)(A)(ii) excludes matters observed by law-enforcement personnel in a criminal case. And the prosecution cannot evade that by calling it a business record.",
+       "pause": 8
+      },
+      {
+       "ask": "A company's internal accident report, prepared by its lawyer after a lawsuit was threatened, is offered by the company. What's the problem?",
+       "answer": "Under Palmer and 803(6)(E), a report prepared for litigation may show a lack of trustworthiness. The opponent bears that burden.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: the opponent bears the untrustworthiness burden since 2014. Two: every person in the chain must have a business duty, or the outsider's layer needs its own exception. Three: 803(8)(A)(ii)'s law-enforcement bar and (A)(iii)'s against-the-government limit in criminal cases. Four: findings include opinions and conclusions under Beech."
+      },
+      {
+       "say": "Recap. 803(6): at or near the time by someone with knowledge; regular course; regular practice; shown by custodian or certification; opponent fails to show untrustworthiness. 803(8): office activities; matters observed under duty, minus law enforcement in criminal cases; factual findings in civil cases or against the government. Palmer, Johnson v. Lutz, Beech Aircraft."
+      },
+      {
+       "ask": "List the five elements of 803(6).",
+       "answer": "Made at or near the time by or from someone with knowledge; kept in the course of a regularly conducted activity; regular practice to make it; shown by a custodian, qualified witness, or certification; and the opponent does not show untrustworthiness.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the three categories in 803(8)(A)?",
+       "answer": "The office's activities; matters observed under a legal duty to report, except law-enforcement observations in criminal cases; and factual findings from a legally authorized investigation, in civil cases or against the government in criminal cases.",
+       "pause": 8
+      },
+      {
+       "ask": "Palmer's famous phrase?",
+       "answer": "Calculated for use essentially in the court, not in the business.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e12",
+     "title": "The residual exception: Rule 807, and the hearsay steps",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 807's two requirements and notice, the 2019 near-miss change, Dallas County, Laster, and the outline's eight hearsay steps."
+      },
+      {
+       "say": "The exact rule. Rule 807(a): a hearsay statement is not excluded by the rule against hearsay, even if not admissible under 803 or 804, if two things. One, the statement is supported by sufficient guarantees of trustworthiness, after considering the totality of circumstances under which it was made and evidence, if any, corroborating the statement. Two, it is more probative on the point for which it is offered than any other evidence that the proponent can obtain through reasonable efforts."
+      },
+      {
+       "say": "807(b): notice. The statement is admissible only if the proponent gives an adverse party reasonable notice of the intent to offer it, including its substance and the declarant's name, so the party has a fair opportunity to meet it. The notice must be in writing before trial, or during trial if the court, for good cause, excuses a lack of earlier notice."
+      },
+      {
+       "say": "The 2019 amendment ended the near-miss debate. A statement that narrowly misses another exception may still be considered under 807. Contrast the Laster dissent, which would have said near misses are out. Courts use 807 rarely."
+      },
+      {
+       "say": "Dallas County v. Commercial Union Assurance Co., Fifth Circuit, 1961. A courthouse tower collapsed. To show that char in the tower came from an old fire, not lightning, the insurer offered a 1901 newspaper report of a fire during construction."
+      },
+      {
+       "say": "Held: admissible, because necessary, since there were no living witnesses, and trustworthy, since the reporter had no motive to lie, and the report was public and easily corrected. Why it matters: Dallas County is the model for 807. Today the article might come in as an ancient document under 803(16), which covers documents prepared before January 1, 1998."
+      },
+      {
+       "say": "United States v. Laster, Sixth Circuit, 2001. A chemical company's sales records were offered after its sole owner died. They failed 803(6) because the investigating detective was not a qualified witness."
+      },
+      {
+       "say": "Held: admissible under the residual exception. The near miss did not bar it. Why it matters: near misses may be salvaged under 807."
+      },
+      {
+       "say": "Now the outline's hearsay steps. Eight of them. Memorize the order."
+      },
+      {
+       "say": "One. Is it a statement under 801(a)? A person's assertion, or conduct intended as one?"
+      },
+      {
+       "say": "Two. Is it offered for its truth? Name the proponent's purpose. Verbal acts, effect on the listener, and circumstantial proof of knowledge are not hearsay."
+      },
+      {
+       "say": "Three. Layers. Split a multi-level statement and give each layer its own route under 805. An outsider with no business duty is a separate layer in a business record, under Johnson v. Lutz."
+      },
+      {
+       "say": "Four. 801(d) exclusions. An opposing party's statement, offered against that party, or a testifying witness's prior statement."
+      },
+      {
+       "say": "Five. Exceptions. 803, where availability is immaterial. 804, where you prove 804(a) unavailability first. 807 last, with written notice."
+      },
+      {
+       "say": "Six. The proponent proves the foundation to the judge under 104(a)."
+      },
+      {
+       "say": "Seven. 403, a 105 instruction for limited use, and 806 attacks on the declarant."
+      },
+      {
+       "say": "Eight. Against a criminal defendant, run the Confrontation Clause separately. That's day four."
+      },
+      {
+       "ask": "A 1950 diary entry by a now-dead farmer describes a flood. No other evidence exists. What routes might work?",
+       "answer": "The ancient-documents exception under 803(16), since it was prepared before January 1, 1998, if authenticated. Failing that, 807, as in Dallas County, with notice.",
+       "pause": 8
+      },
+      {
+       "ask": "A record narrowly misses 803(6) because no qualified witness is available. Can 807 still be used after 2019?",
+       "answer": "Yes. A near miss may be considered, as in Laster.",
+       "pause": 8
+      },
+      {
+       "ask": "What must 807 notice include?",
+       "answer": "The statement's substance and the declarant's name, in writing before trial or during trial for good cause.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 807: sufficient guarantees of trustworthiness considering the totality of circumstances and corroboration; more probative than any other reasonably obtainable evidence; written notice with substance and declarant's name. Near misses allowed since 2019. Dallas County and Laster. The eight hearsay steps."
+      },
+      {
+       "ask": "Give the eight hearsay steps in order, briefly.",
+       "answer": "Statement; offered for truth; layers; 801(d) exclusions; 803, 804 with unavailability, then 807; foundation under 104(a); 403, 105, and 806; then Confrontation against a criminal defendant.",
+       "pause": 8
+      },
+      {
+       "ask": "Why was the 1901 newspaper trustworthy in Dallas County?",
+       "answer": "No motive to lie, and it was public and easily corrected.",
+       "pause": 8
+      },
+      {
+       "ask": "What's the cutoff date for ancient documents under 803(16)?",
+       "answer": "Prepared before January 1, 1998.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d3-e13",
+     "title": "Day 3 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Cumulative quiz. Days one through three."
+      },
+      {
+       "ask": "The defendant's own statement, offered by the defendant. Is it an opposing party's statement?",
+       "answer": "No. 801(d)(2) applies only when offered against the party who made it.",
+       "pause": 8
+      },
+      {
+       "ask": "Under 801(d)(2)(E), can the court rely on the statement alone to find the conspiracy?",
+       "answer": "No. It must consider the statement, but it does not by itself establish the conspiracy.",
+       "pause": 8
+      },
+      {
+       "ask": "What timing requirement does Tome impose?",
+       "answer": "Consistent statements under 801(d)(1)(B)(i) must predate the alleged motive to fabricate.",
+       "pause": 8
+      },
+      {
+       "ask": "What happens to 801(d)(1)(A) on December 1, 2026?",
+       "answer": "The requirement that the inconsistent statement was given under penalty of perjury at a proceeding or deposition is removed. Any inconsistent statement of a testifying witness subject to cross becomes substantive.",
+       "pause": 8
+      },
+      {
+       "ask": "A declarant says, I'm going to kill my boss. Offered to prove she later did. Which exception?",
+       "answer": "803(3), then-existing intent, under the Hillmon doctrine.",
+       "pause": 8
+      },
+      {
+       "ask": "Dying declarations: which cases?",
+       "answer": "Homicide prosecutions and civil cases.",
+       "pause": 8
+      },
+      {
+       "ask": "Williamson: what parts of a confession are admissible under 804(b)(3)?",
+       "answer": "Only the individual remarks that are themselves self-inculpatory.",
+       "pause": 8
+      },
+      {
+       "ask": "Recorded recollection: can it become an exhibit if the proponent offers it?",
+       "answer": "No. It may be read in, but received as an exhibit only if offered by an adverse party.",
+       "pause": 8
+      },
+      {
+       "ask": "What shifted in 803(6)(E) in 2014?",
+       "answer": "The opponent now bears the burden of showing lack of trustworthiness.",
+       "pause": 8
+      },
+      {
+       "ask": "In a criminal case, can the prosecution use a police officer's observations through 803(8)?",
+       "answer": "No. 803(8)(A)(ii) excludes matters observed by law-enforcement personnel in a criminal case.",
+       "pause": 8
+      },
+      {
+       "ask": "From day two: Abel's holding?",
+       "answer": "Bias is never collateral and may be proved extrinsically. 608(b) bars extrinsic evidence only when its sole purpose is to prove character for truthfulness.",
+       "pause": 8
+      },
+      {
+       "ask": "From day one: Old Chief's three reasons the prosecution ordinarily gets to prove its case its own way.",
+       "answer": "Narrative richness, a morally reasonable verdict, and jurors' expectations.",
+       "pause": 8
+      },
+      {
+       "ask": "From day two: Luce.",
+       "answer": "A defendant must testify to preserve a challenge to an in limine 609 ruling.",
+       "pause": 8
+      },
+      {
+       "say": "That's day three, the hardest day. Tomorrow: the Confrontation Clause, Bruton, the right to present a defense, and opinion testimony."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
