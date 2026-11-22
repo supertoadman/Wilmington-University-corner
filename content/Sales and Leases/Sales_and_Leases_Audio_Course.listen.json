@@ -3743,6 +3743,1384 @@
      ]
     }
    ]
+  },
+  {
+   "day": 4,
+   "title": "The buyer's remedies: getting the goods, cover and market damages, rejection, cure, acceptance, revocation, and privity",
+   "minutes": 88,
+   "episodes": [
+    {
+     "id": "sl-d4-e00",
+     "title": "Spaced review of Days 1 to 3",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Day 4. Review first. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "Under § 2-207(2), when do additional terms become part of a contract between merchants?",
+       "answer": "Unless the offer expressly limits acceptance to its terms, they materially alter it, or objection is given within a reasonable time.",
+       "pause": 10
+      },
+      {
+       "id": "s3",
+       "ask": "What are the elements of the merchant's confirmation exception?",
+       "answer": "An oral deal between merchants, a confirmation sent within a reasonable time that is sufficient against the sender, received with reason to know its contents, and no written objection within 10 days.",
+       "pause": 12
+      },
+      {
+       "id": "s4",
+       "ask": "What is the Orange and Rockland lesson?",
+       "answer": "Unreasonably disproportionate is a limit separate from good faith; a requirements buyer can't speculate on the market.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "In a non-shipment sale by a non-merchant, when does risk pass?",
+       "answer": "On tender, § 2-509(3).",
+       "pause": 6
+      },
+      {
+       "id": "s6",
+       "ask": "How do you disclaim fitness?",
+       "answer": "In a conspicuous writing; it need not mention fitness. Or as is, examination, or trade practice.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "What did Razor call the two concentric walls?",
+       "answer": "Failure of essential purpose for the limited remedy, and unconscionability for the consequential exclusion, tested separately.",
+       "pause": 9
+      },
+      {
+       "id": "s8",
+       "ask": "Does usage of trade come in against a complete and exclusive writing?",
+       "answer": "Yes. Course of dealing, usage of trade, and course of performance may supplement even a complete writing.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "What does § 9-406(d) do?",
+       "answer": "Makes a ban on assigning a right to payment ineffective, and the assignment is not a breach.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "In PDM v. Brookhaven, what was wrong with the demand?",
+       "answer": "It sought more than adequate assurance: a personal guarantee, escrow financing, or an interest in Brookhaven. Section 2-609 doesn't let a party redraft the contract.",
+       "pause": 10
+      },
+      {
+       "id": "s11",
+       "ask": "Does increased cost alone excuse a seller under § 2-615?",
+       "answer": "No, comment 4.",
+       "pause": 6
+      },
+      {
+       "id": "s12",
+       "say": "Good. Today is the buyer's side of the remedies, Weeks 8 through 10. From here on the outline rests on the casebook and statutes, since the class slides end at Week 8. And the problem answers are worked from the text, not the professor's answers."
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e01",
+     "title": "The buyer's remedies roadmap: § 2-711",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The threshold questions you ask before remedies, the goal of every remedy, and the four buyer situations."
+      },
+      {
+       "id": "s2",
+       "say": "Before you reach remedies, four threshold questions. One, what are the contract's terms: the agreement, plus course of performance, course of dealing, usage of trade, plus gap fillers? Two, who breached? Disputes often slide into breach. Say a buyer demands assurance, the seller is silent, and the buyer cancels. If the buyer had no reasonable grounds for insecurity, the seller's silence is no repudiation, and the buyer's cancellation is the breach. Three, is the failure excused? Four, are remedies limited?"
+      },
+      {
+       "id": "s3",
+       "say": "The seller's basic duty: deliver goods that conform to the contract, § 2-301."
+      },
+      {
+       "id": "s4",
+       "say": "The goal of every remedy: the expectation interest. Put the aggrieved party in as good a position as if the other had fully performed, § 1-305(a). Punitive damages are generally unavailable, § 1-305. A breach is not a moral wrong. And the good-faith duty in § 1-304 is not an independent obligation."
+      },
+      {
+       "id": "s5",
+       "say": "Remedies turn on two things: what the breach was, and who has the goods."
+      },
+      {
+       "id": "s6",
+       "say": "The four situations."
+      },
+      {
+       "id": "s7",
+       "say": "One. The seller repudiates or never tenders. The buyer can get the goods by court order and pay the price, plus delay damages. Or it can cancel, recover any price paid, and take cover or market damages. Sections 2-711, 2-502, 2-716, 2-712, 2-713, and 2-715."
+      },
+      {
+       "id": "s8",
+       "say": "Two. A nonconforming tender or goods. The buyer can reject, cancel, recover the price, and take cover or market damages. Or it can accept and take value-difference damages. Sections 2-601, 2-711, 2-714, and 2-715."
+      },
+      {
+       "id": "s9",
+       "say": "Three. A hidden defect discovered after acceptance. Revoke acceptance if the limits are met, then proceed as if rejected. Sections 2-608 and 2-711."
+      },
+      {
+       "id": "s10",
+       "say": "Four. Conforming goods, but the ancillary services, like installation or repair, are missing or poor. Damages for that harm. Article 2 has no specific rule, but it doesn't preclude common-law remedies, § 1-103."
+      },
+      {
+       "id": "s11",
+       "say": "The rule, § 2-711. It is the roadmap for a seller's repudiation, failure to deliver, a rightful rejection, or a justified revocation, and it is an incomplete list. The buyer may cancel, recover the price paid, and then cover under § 2-712 or take market damages under § 2-713. Or, where allowed, obtain the goods under § 2-502 or § 2-716. All damages carry § 2-715 incidental and consequential damages, less expenses saved."
+      },
+      {
+       "id": "s12",
+       "ask": "A buyer demands assurance with no reasonable grounds. The seller ignores it. The buyer cancels and buys elsewhere. Who breached?",
+       "answer": "The buyer. Without reasonable grounds, the demand was unjustified, the seller's silence was not a repudiation, and the buyer's cancellation was the breach.",
+       "pause": 12
+      },
+      {
+       "id": "s13",
+       "say": "Recap. Ask the threshold questions first: terms, who breached, excuse, limits. The goal is the expectancy under § 1-305(a), with no punitive damages. Then sort by the breach and who has the goods. Section 2-711 is the buyer's roadmap."
+      },
+      {
+       "id": "s14",
+       "ask": "What are the four threshold questions before remedies?",
+       "answer": "What are the terms, who breached, is the failure excused, and are remedies limited?",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "What two facts drive the choice of remedy?",
+       "answer": "What the breach was, and who has the goods.",
+       "pause": 6
+      },
+      {
+       "id": "s16",
+       "ask": "Are punitive damages available for breach under the UCC?",
+       "answer": "Generally no, § 1-305.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e02",
+     "title": "Getting the goods: specific performance, replevin, and § 2-502, with Problems 7-1 to 7-3",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Three ways to force the goods out of the seller, what identification means, and three problems."
+      },
+      {
+       "id": "s2",
+       "say": "First, all three need a court order. None allows self-help. Contrast a secured party, who may repossess without breach of the peace under § 9-609."
+      },
+      {
+       "id": "s3",
+       "say": "One. Specific performance, § 2-716(1) and (2). It may be decreed where the goods are unique or in other proper circumstances. The word may keeps the remedy discretionary, so the common-law limits presumably remain: damages are inadequate; the order is not unduly hard to enforce; and there is no undue hardship, unfairness, or harm to the public interest. The goods need not be identified. And the decree may include terms on price, damages, or other relief."
+      },
+      {
+       "id": "s4",
+       "say": "Two. Replevin, § 2-716(3). A legal right, not equitable, so there is no judicial discretion. It requires goods identified to the contract, and either: after reasonable effort the buyer cannot cover, or circumstances reasonably indicate the effort would be unavailing; or the goods were shipped under reservation and satisfaction of the security interest has been made or tendered. And for personal, family, or household goods, the right vests when the buyer acquires a special property, even if the seller hadn't yet repudiated."
+      },
+      {
+       "id": "s5",
+       "say": "Three. Recovering identified goods, § 2-502. A buyer who has paid part or all of the price for goods in which it has a special property may, on making and keeping good a tender of any unpaid balance, recover them in two cases. (a), the goods are bought for personal, family, or household purposes, and the seller repudiates or fails to deliver. (b), in all cases, the seller becomes insolvent within ten days after receiving the first installment of the price. And if the buyer made the identification, the goods must conform, § 2-502(3)."
+      },
+      {
+       "id": "s6",
+       "say": "Identification, § 2-501. The moment the buyer begins to acquire property rights in specific goods, usually when the seller indicates which goods will fill this contract. For existing identified goods, it happens when the contract is made. For future goods, when they are shipped, marked, or otherwise designated by the seller."
+      },
+      {
+       "id": "s7",
+       "say": "The key point. Absent § 2-502, § 2-716, or an Article 9 security interest, the buyer cannot force the goods out of the seller. Prepaying alone gives no right to the goods. And a buyer who gets the goods still owes any unpaid price, but may recover damages for the delay."
+      },
+      {
+       "id": "s8",
+       "say": "The comparison. Specific performance: no identification needed, no prepayment needed, limited to unique goods or other proper circumstances, and discretionary. Replevin: identified goods needed, no prepayment unless shipped under reservation, and limited to inability to cover or the reservation ground. Section 2-502: identified goods and prepayment, part or all, needed, and limited to consumer goods with repudiation or nondelivery, or the seller's insolvency within 10 days after the first installment."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 7-1. Goods aren't unique, but specific performance fits. Inability to cover is the key sign of other proper circumstances. Examples: a long-term output or requirements deal in a shortage; a component only this seller can make on time; a fungible commodity that cannot be found in time."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 7-2. A clause making specific performance available. Helpful, not binding. Section 2-716(1) says may, and the remedy is the court's. The clause is evidence that damages are inadequate. Draft recitals of why cover is hard, and add a backup like liquidated damages or an Article 9 security interest."
+      },
+      {
+       "id": "s11",
+       "say": "Problem 7-3(A). A $5,000 car. Vary whether the buyer paid $1,000 or nothing, and whether it's for family or business. A specific existing car is identified at contracting. Paid, and family use: yes, under § 2-502(1)(a), on tender of the balance. Paid, and business use: § 2-502 only if the seller became insolvent within 10 days after the payment; otherwise § 2-716. No payment, either use: § 2-502 is out; only § 2-716. What do you need to know? Is the car unique, can the buyer cover, and is the seller insolvent?"
+      },
+      {
+       "id": "s12",
+       "say": "Problem 7-3(B)(1). Award plaques, nothing made yet. No goods exist, so nothing is identified: no replevin, and no § 2-502, which also fails because they are business goods. Specific performance is unlikely: others can engrave plaques, and an order to manufacture is hard to supervise. Cover plus damages."
+      },
+      {
+       "id": "s13",
+       "say": "(B)(2). Plaques partly made. Partly made plaques may be otherwise designated and so identified, opening replevin under § 2-716(3) if the buyer can't cover. The ceremony deadline helps. But ordering the seller to finish pushes back toward specific performance."
+      },
+      {
+       "id": "s14",
+       "say": "Problem 7-3(C), not assigned. A builder prepaid, the beams are segregated, and the seller was already insolvent. Prepaid and identified, but not consumer goods, so only § 2-502(1)(b). The seller was already insolvent, so did it become insolvent within 10 days? Argue the literal reading against the protective purpose. The fallback, § 2-716, is weak if steel can be bought elsewhere."
+      },
+      {
+       "id": "s15",
+       "ask": "A consumer prepays $500 toward a specific sofa in the showroom, tagged with her name. The store refuses to deliver, though it's solvent. Can she get the sofa?",
+       "answer": "Yes, under § 2-502(1)(a): consumer goods, identified, partly paid, and the seller failed to deliver, on tender of the balance.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "A business prepays for a generic machine part the seller hasn't set aside. The seller refuses to deliver. Replevin?",
+       "answer": "No. Replevin requires identified goods. The buyer must cover, or seek specific performance if the part is unique or it can't cover.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "say": "The trap. Prepaying alone gives no right to the goods."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Specific performance: unique or other proper circumstances, discretionary, no identification needed. Replevin: identified goods plus inability to cover, a legal right. Section 2-502: prepaid identified goods, with consumer nondelivery or the seller's insolvency within 10 days."
+      },
+      {
+       "id": "s19",
+       "ask": "When are existing goods identified?",
+       "answer": "When the contract is made, § 2-501.",
+       "pause": 6
+      },
+      {
+       "id": "s20",
+       "ask": "Is replevin discretionary?",
+       "answer": "No. It is a legal right, unlike specific performance.",
+       "pause": 6
+      },
+      {
+       "id": "s21",
+       "ask": "What is the key sign of other proper circumstances for specific performance?",
+       "answer": "Inability to cover.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e03",
+     "title": "Cancellation, cover, and market damages: §§ 2-712 and 2-713",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Cancelling carefully, the refund, the two formulas, which way they run, the State Street Motors example, and the limits on cover."
+      },
+      {
+       "id": "s2",
+       "say": "Cancellation, § 2-106(3) and (4): the aggrieved party ends the contract for the other's breach. The buyer's duty to perform is discharged, and it keeps its damages claim. No procedure and no notice are prescribed. But word it carefully: don't imply a discharge or waiver, § 1-306. And see § 2-720: cancellation language does not renounce a claim for antecedent breach unless a contrary intention clearly appears."
+      },
+      {
+       "id": "s3",
+       "say": "Refund first. A buyer that didn't receive the goods recovers any price paid, § 2-711(1), even with no other damages."
+      },
+      {
+       "id": "s4",
+       "say": "Cover, § 2-712. The buyer may cover by making, in good faith and without unreasonable delay, any reasonable purchase of goods in substitution for those due. Damages: cost of cover minus the contract price, plus incidental, plus consequential, minus expenses saved. And failure to cover does not bar other remedies, § 2-712(3)."
+      },
+      {
+       "id": "s5",
+       "say": "Market damages, § 2-713. Only if the buyer has not covered, comment 5. A purchase that doesn't qualify as cover doesn't count. Damages: the market price at the time the buyer learned of the breach, minus the contract price, plus incidental, plus consequential, minus expenses saved. The market price is taken at the place for tender, or at the place of arrival after rejection on arrival or revocation."
+      },
+      {
+       "id": "s6",
+       "say": "Direction matters. Both formulas are substitute minus contract, never the reverse. The buyer accepted the risk that the market would fall; the seller took the risk that it would rise. If the difference is zero or negative, there's no direct-damage award, but incidental and consequential damages may still be available."
+      },
+      {
+       "id": "s7",
+       "say": "The worked example. State Street Motors, a $40,000 car, $1,000 down. The seller breaches. If the market or cover price is $42,000, the buyer recovers the $1,000 refund plus $2,000. Check it: the buyer ends up with the car for a net $40,000, which is $1,000 plus $42,000 minus the $1,000 refund minus the $2,000 damages. Exactly the expectancy. If the market is $40,000 or less, the buyer gets only the refund, plus any incidental or consequential loss."
+      },
+      {
+       "id": "s8",
+       "say": "The limits on cover. Good faith stops overpaying with someone else's money. The buyer need not make herculean efforts to find the lowest price, but the seller shouldn't pay for a markup when goods were readily available for much less. Without unreasonable delay stops the buyer from playing the market at the seller's expense. And reasonable substitute stops upgrades. Some difference in quality is fine, especially if identical goods aren't available, but the seller doesn't pay for a significant or unnecessary upgrade."
+      },
+      {
+       "id": "s9",
+       "say": "Two open questions in the text. One, covering with the breaching seller: is the higher price a cover, or an agreed modification with no breach? And if the buyer refuses that offer, did it fail to mitigate? Two, covering by making the goods itself: how is the cost measured?"
+      },
+      {
+       "id": "s10",
+       "say": "Why cover anyway? The buyer may need the goods. And consequential damages are limited to losses that could not reasonably be prevented by cover or otherwise, § 2-715(2)(a)."
+      },
+      {
+       "id": "s11",
+       "say": "Quick check. The contract price is $10,000. The seller repudiates. The buyer covers at $9,000. What are the cover damages?",
+       "voice": "alt"
+      },
+      {
+       "id": "s12",
+       "say": "None. Cover minus contract is negative. The buyer gets any refund, plus incidental and consequential damages, less expenses saved. And having covered, it can't switch to the market formula to do better."
+      },
+      {
+       "id": "s13",
+       "say": "Recap. Cancel carefully, without waiving claims. Refund first. Cover: cost of cover minus contract, if in good faith, without unreasonable delay, and a reasonable substitute. Market: market when the buyer learned of the breach minus contract, only if no cover. Both run substitute minus contract."
+      },
+      {
+       "id": "s14",
+       "ask": "State the cover formula.",
+       "answer": "Cost of cover minus contract price, plus incidental and consequential, minus expenses saved, § 2-712.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "When can a buyer use § 2-713 market damages?",
+       "answer": "Only if it hasn't covered; a purchase that isn't a proper cover doesn't count.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "What three limits police cover?",
+       "answer": "Good faith, without unreasonable delay, and a reasonable substitute.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e04",
+     "title": "Time and place of market price, expenses saved, and the unassigned Problems 7-5, 7-8, and 7-9",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Where and when you measure the market, the split on timing after repudiation, § 2-723 and § 2-724, and expenses saved."
+      },
+      {
+       "id": "s2",
+       "say": "Place. The place for tender comes from the agreement plus the gap fillers. F.O.B. seller's city means that city. F.O.B. destination means the destination."
+      },
+      {
+       "id": "s3",
+       "say": "Time after repudiation is contested. The buyer may wait a commercially reasonable time, or treat the repudiation as a breach at once, § 2-610. So when did it learn of the breach? Courts differ. One view: the date of tender under the contract, Hess Energy versus Lightning Oil, Fourth Circuit 2003. Another: a commercially reasonable time after repudiation, Cosden Oil versus Karl O. Helm, Fifth Circuit 1984. Both are cited only. And outside the class materials, a third reading uses the date the buyer learned of the repudiation."
+      },
+      {
+       "id": "s4",
+       "say": "Shipment contracts add a wrinkle. The seller may breach days before the buyer learns the goods won't arrive. Which date controls is unclear. Read § 2-723."
+      },
+      {
+       "id": "s5",
+       "say": "Section 2-723(1): if an action based on repudiation comes to trial before the time for performance, mainly in long-term supply contracts, use the price when the aggrieved party learned of the repudiation."
+      },
+      {
+       "id": "s6",
+       "say": "Sections 2-723(2) and (3), and § 2-724: if the price at the right time or place isn't readily available, use a reasonable substitute time or place, with adjustments for transport costs, on fair notice to the other side. And published market quotations are admissible."
+      },
+      {
+       "id": "s7",
+       "say": "Expenses saved. Both formulas deduct costs the buyer avoided, so damages match the expectancy. Example: the buyer of $100,000 of equipment would have spent $1,000 modifying its facility. The seller repudiates first, and the buyer doesn't cover, or buys goods needing no modification. Deduct the $1,000."
+      },
+      {
+       "id": "s8",
+       "say": "Three unassigned problems, briefly. Problem 7-5: a buyer that makes several purchases must show which ones replaced the breached contract. Blue Sky needed 200,000 gallons but bought 600,000. The earliest purchases best satisfy without unreasonable delay: 100,000 at $5.20 and 100,000 at $5.40, for $60,000 over contract. And whether fuel delivered in Atlanta substitutes for Chicago fuel depends on whether Blue Sky can use it the same way."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 7-8: a ten-year gravel contract, repudiated in year 5. If trial is in year 7, § 2-723(1) applies to the performance not yet due. If trial comes after the term has run, § 2-723(1) doesn't apply."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 7-9: a builder on a cost-plus contract covers at $90,000 instead of $70,000 and passes the cost to the developer. Compare KGM Harvesting versus Fresh Network, California 1995, cited only. Outside the class materials, KGM allowed cover damages even though the buyer passed the increase along."
+      },
+      {
+       "id": "s11",
+       "ask": "A buyer's contract is F.O.B. seller's city, Denver. The seller repudiates. The buyer, in Boston, does not cover. Where is the market price measured?",
+       "answer": "In Denver, the place for tender under F.O.B. seller's city, § 2-713.",
+       "pause": 10
+      },
+      {
+       "id": "s12",
+       "say": "Recap. Place: the place for tender. Time: when the buyer learned of the breach, which after repudiation is split among tender date, a commercially reasonable time, and the learning date. Section 2-723(1): trial before performance uses the price when the buyer learned of the repudiation. Deduct expenses saved."
+      },
+      {
+       "id": "s13",
+       "ask": "Name the two cited cases on timing after repudiation and their rules.",
+       "answer": "Hess Energy v. Lightning Oil, the date of tender; Cosden Oil v. Karl O. Helm, a commercially reasonable time after repudiation.",
+       "pause": 10
+      },
+      {
+       "id": "s14",
+       "ask": "What does § 2-724 make admissible?",
+       "answer": "Published market quotations.",
+       "pause": 6
+      },
+      {
+       "id": "s15",
+       "ask": "Why deduct expenses saved?",
+       "answer": "So damages match the expectancy, not exceed it.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e05",
+     "title": "Incidental and consequential damages, § 2-715, and Problems 7-4, 7-6, and 7-7",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The two kinds of extra damages, the four limits on consequential damages, and three number problems."
+      },
+      {
+       "id": "s2",
+       "say": "Incidental, § 2-715(1). Expenses from the breach itself: inspection, receipt, transport, and care of rightfully rejected goods; commercially reasonable cover costs, like travel to a supplier; and other reasonable expense from delay or breach. The test: caused by the breach and reasonably incurred. No foreseeability test. Example: the cost of traveling to check out a substitute supplier."
+      },
+      {
+       "id": "s3",
+       "say": "Consequential, § 2-715(2). (a), loss from general or particular needs the seller had reason to know of at contracting, that could not reasonably be prevented by cover or otherwise. (b), injury to person or property proximately resulting from breach of warranty. Four limits. One, caused by the breach. Two, foreseeable: reason to know at contracting. Three, not reasonably avoidable. Four, proved with reasonable certainty, comment 4 and § 1-103(b). Example: lost business while a mill waits for a crankshaft."
+      },
+      {
+       "id": "s4",
+       "say": "Problem 7-4. A $40,000 car. The buyer covers with a $42,000 car that has heated seats and a moon roof, but lacks a $500 entertainment system. Refund the $1,000 down payment. Start at $42,000 minus $40,000, which is $2,000. Then adjust. Same make and model is likely a reasonable substitute, but subtract the value of the extras and add $500 for the missing system. Other facts to find: was an identical car available, did the price reflect the extras, how long was the search, and can the system be added later?"
+      },
+      {
+       "id": "s5",
+       "say": "Problem 7-6(A). Ten desks, $5,000, F.O.B. Phoenix, $100 down, freight about $500. The seller repudiates on May 20. The buyer covers with metal desks, bigger, for $6,000 delivered. The seller's offer of a different model at $800 was itself a repudiation, and declining it isn't a failure to mitigate. The buyer's letter saying cancel and refund doesn't waive damages. Refund $100. Cover: $6,000 minus $5,000 is $1,000, minus the $500 freight saved, which leaves $500, if the metal desks are a reasonable substitute, the upgrade fight. Plus search costs as incidental damages. Wages and lost sales are consequential, so test them for reason to know, avoidability, and certainty."
+      },
+      {
+       "id": "s6",
+       "say": "Problem 7-6(B). Cover for $4,000. No cover damages; the buyer is better off on price. It still gets the $100 refund, plus incidental and consequential damages, less expenses saved. Having covered, it can't switch to § 2-713, unless the desks aren't a true substitute."
+      },
+      {
+       "id": "s7",
+       "say": "Problem 7-6(C), not assigned. No purchase; the expansion was dropped because of the economy. Use § 2-713 at Phoenix when the buyer learned of the breach. Freight cancels out, since both prices are at Phoenix. No consequential damages: the economy, not the breach, caused the loss. And the seller argues § 1-305 limits a buyer that never wanted the desks."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 7-7, the lobster problem. Five thousand pounds of lobster at $10 a pound, $50,000, F.O.B. Bar Harbor, for July 1. The seller repudiates June 1. The buyer buys prime rib on June 15. Bar Harbor prices: June 1, $12; June 15, $13; July 1, $14."
+      },
+      {
+       "id": "s9",
+       "say": "Prime rib isn't a reasonable substitute, so there's no cover; use § 2-713. The place for tender is Bar Harbor, so Long Island prices are out. The time depends on the rule. Learned of the repudiation, June 1: $2 times 5,000, $10,000. A commercially reasonable time, June 15: $3 times 5,000, $15,000. The performance date, July 1: $4 times 5,000, $20,000. The $2,000 freight isn't deducted on this reasoning, because the Bar Harbor market price also excludes freight. The seller will argue it's an expense saved."
+      },
+      {
+       "id": "s10",
+       "ask": "A buyer's machine is delivered late; the buyer had told the seller at contracting that each day of delay costs it $1,000 in lost production, and no substitute was available. Are those losses recoverable?",
+       "answer": "Yes, as consequential damages, if caused by the breach, foreseeable because the seller had reason to know, not reasonably avoidable, and proved with reasonable certainty.",
+       "pause": 12
+      },
+      {
+       "id": "s11",
+       "say": "Recap. Incidental: caused by the breach and reasonably incurred, no foreseeability. Consequential: caused, foreseeable at contracting, not reasonably avoidable, proved with reasonable certainty. And in the problems: adjust for upgrades, deduct freight saved when the measuring prices differ in freight, and pick the market date the jurisdiction uses."
+      },
+      {
+       "id": "s12",
+       "ask": "State the four limits on consequential damages.",
+       "answer": "Caused by the breach, foreseeable at contracting, not reasonably avoidable by cover or otherwise, and proved with reasonable certainty.",
+       "pause": 9
+      },
+      {
+       "id": "s13",
+       "ask": "Does incidental damage require foreseeability?",
+       "answer": "No. Only that it was caused by the breach and reasonably incurred.",
+       "pause": 7
+      },
+      {
+       "id": "s14",
+       "ask": "In Problem 7-7, why is the prime rib not cover?",
+       "answer": "It isn't a reasonable substitute for lobster.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e06",
+     "title": "When the formula overcompensates: Problem 7-10",
+     "minutes": 3,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Formulas versus the expectancy, the broker problem, and the split."
+      },
+      {
+       "id": "s2",
+       "say": "The formulas sometimes conflict with § 1-305(a). Treat them as tools for reaching the expectancy. Two fact patterns recur: a buyer that passes its extra cost to someone else, Problem 7-9, and a buyer with a fixed-price resale, Problem 7-10."
+      },
+      {
+       "id": "s3",
+       "say": "Problem 7-10(A). A broker buys 100,000 units at $2.50 F.O.B. New Orleans, with a resale contracted at $2.70. The market rises to $4.50 in New Orleans and $4.70 in St. Louis. The seller breaches, and the broker's customer holds the broker liable."
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-713 gives $4.50 minus $2.50, $2 times 100,000, $200,000. The broker's real loss is its liability to the customer, $4.70 minus $2.70, $2 times 100,000, $200,000, plus its lost profit: $270,000 minus $250,000 minus $5,000 minus $500, which is $14,500. So about $214,500, if the resale was foreseeable and cover impossible. A broker's resale is plainly foreseeable. But don't stack market damages on top of the same liability."
+      },
+      {
+       "id": "s5",
+       "say": "Problem 7-10(B). The customer waives its claims. Now the broker's real loss is $14,500, but the formula says $200,000. Split. H-W-H Cattle and Allied Canners on one side; TexPar and Tongish on the other; all cited only. Outside the class materials, the first pair caps recovery near actual loss under § 1-305; the second allows the market measure, on the view that it keeps the market incentive and prevents a windfall to the breaching seller. Check the opinions before relying on that."
+      },
+      {
+       "id": "s6",
+       "say": "Problem 7-10(C). The broker would have burned the oil itself. No resale to compare, so the market differential is the measure, with any consequential loss. The buyer's use, not a resale, was the expectancy."
+      },
+      {
+       "id": "s7",
+       "ask": "A buyer with a fixed-price resale contract sues for market damages that far exceed what it would have earned on the resale, and its customer has released it. What's the seller's argument?",
+       "answer": "Section 1-305(a): remedies put the buyer only in as good a position as performance, so recovery should be capped near the actual lost profit, the H-W-H Cattle and Allied Canners view.",
+       "pause": 12
+      },
+      {
+       "id": "s8",
+       "say": "Recap. Formulas serve the expectancy. A broker's liability to its customer and its lost profit are its real loss; don't stack. When the customer waives, courts split between actual loss and the market measure."
+      },
+      {
+       "id": "s9",
+       "ask": "What is the broker's lost profit in Problem 7-10(A)?",
+       "answer": "$14,500.",
+       "pause": 6
+      },
+      {
+       "id": "s10",
+       "ask": "Which cases cap recovery near actual loss?",
+       "answer": "H-W-H Cattle and Allied Canners.",
+       "pause": 6
+      },
+      {
+       "id": "s11",
+       "ask": "Which cases allow the market measure?",
+       "answer": "TexPar and Tongish.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e07",
+     "title": "Rejection: perfect tender, its limits, commercial units, and installment contracts, with Problem 7-11",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The buyer's choice, the perfect-tender rule and its four limits, commercial units, § 2-612, and the tomato problem."
+      },
+      {
+       "id": "s2",
+       "say": "After a tender the buyer must accept or reject. It can't do both, § 2-607(2), and can't do neither, § 2-606(1)(b), though it may accept some and reject the rest. Rejection is a refusal of the seller's tender. It is not a rescission or repudiation of the contract."
+      },
+      {
+       "id": "s3",
+       "say": "Two separate questions. One, did the buyer have the right to reject, meaning was the tender nonconforming? Two, was the rejection effective, meaning timely, with clear notice? A rejection can be effective even if it isn't rightful."
+      },
+      {
+       "id": "s4",
+       "say": "Perfect tender, § 2-601. Subject to § 2-612 and to agreed limits under §§ 2-718 and 2-719, if the goods or the tender fail in any respect to conform, the buyer may (a) reject the whole, (b) accept the whole, or (c) accept any commercial unit or units and reject the rest."
+      },
+      {
+       "id": "s5",
+       "say": "The limits on perfect tender. Agreement: the parties may limit rejection, say to major defects; but courts may be reluctant to read an exclusive liquidated-damages term as removing the right to reject, and may apply it only to accepted goods. Trade terms and good faith: course of performance, course of dealing, usage of trade, and § 1-304 good faith can bar rejection for minor defects. Shipment contracts: under § 2-504, a failure to make a proper carriage contract or to notify is a ground for rejection only if material delay or loss ensues. And installment contracts."
+      },
+      {
+       "id": "s6",
+       "say": "Commercial units, § 2-105(6). Partial rejection must follow units. A buyer of three laptops may keep two and reject one. It can't reject one laptop's hard drive, or one shoe of a pair."
+      },
+      {
+       "id": "s7",
+       "say": "Installment contracts, § 2-612. One requiring or authorizing delivery in separate lots to be separately accepted, even if it says each delivery is a separate contract. Note: agreeing to pay in installments doesn't make an installment contract; delivery in separate lots does."
+      },
+      {
+       "id": "s8",
+       "say": "The rules. Reject an installment only if one, the nonconformity substantially impairs the value of that installment, and two, it cannot be cured, or it's a defect in required documents. If the seller gives adequate assurance of cure, the buyer must accept, unless § 2-612(3) applies. Cancel the whole only if a nonconformity in one or more installments substantially impairs the value of the whole contract. And the buyer reinstates the contract if it accepts a nonconforming installment without seasonably notifying of cancellation, sues only on past installments, or demands future performance."
+      },
+      {
+       "id": "s9",
+       "say": "Substantial impairment is undefined. Some courts borrow the material-breach factors of Restatement Second § 241: the benefit lost, the adequacy of compensation, forfeiture, the likelihood of cure, and good faith. It's judged by the normal and specifically known purposes of the contract, comment 4, so a brief delay can qualify if the seller knows it'll cause serious trouble. The parties may define it or remove it."
+      },
+      {
+       "id": "s10",
+       "say": "Why a higher bar? Two rationales: preserving an ongoing relationship, and stopping a buyer on the wrong side of a market shift from getting picky to escape the deal."
+      },
+      {
+       "id": "s11",
+       "say": "Problem 7-11. A thousand bushels of Early Girl tomatoes, F.O.B. seller, ship by July 15."
+      },
+      {
+       "id": "s12",
+       "say": "(A)(1): 990 bushels on time. May reject all. Any shortfall fails to conform, absent a trade term or bad faith."
+      },
+      {
+       "id": "s13",
+       "say": "(A)(2): 10 bushels of the wrong variety. May reject all, same reason."
+      },
+      {
+       "id": "s14",
+       "say": "(A)(3): all shipped July 16. May reject. A late shipment is a nonconforming tender. Section 2-504's materiality limit covers carrier arrangements and notice, not a missed shipment date."
+      },
+      {
+       "id": "s15",
+       "say": "(A)(4): shipped July 14, but with a bad instruction to the carrier, arriving 4 days late. That's an improper carriage contract under § 2-504. Reject only if material delay or loss ensues. Four days is likely material for a perishable crop."
+      },
+      {
+       "id": "s16",
+       "say": "(B)(1): 50 bushels are rotten. Keep 950? Yes, if a bushel is a commercial unit."
+      },
+      {
+       "id": "s17",
+       "say": "(B)(2): keep only 500 good bushels? Yes on the text. Once the tender fails, the buyer may accept any commercial units and reject the rest. Good faith is the only check."
+      },
+      {
+       "id": "s18",
+       "say": "(C)(1): make it an installment contract. The first load is 10 short, or 10 rotten, or 1 day late. Under § 2-612(2), rejecting needs substantial impairment of that installment plus no cure. Ten percent short or rotten is curable, so the buyer must accept with adequate assurance. One day late is unlikely to impair."
+      },
+      {
+       "id": "s19",
+       "say": "(C)(2): a string of problems, then 10 wrong bushels in load 5. Reject load 5 and cancel? Rejecting load 5 alone is hard; 10 percent is curable. Cancelling needs substantial impairment of the whole, based on the pattern. Accepting earlier bad loads without notifying of cancellation reinstates the contract, § 2-612(3). Cancelling on this record is risky. A § 2-609 demand is the safer step."
+      },
+      {
+       "id": "s20",
+       "say": "Problems 7-12 and 7-15, not assigned, are drafting points. A seller wants a materiality standard, a cure right, and short inspection and notice periods. A buyer of custom cranes wants clear inspection on each delivery, the right to reject each crane without proving impairment, and enough time. Cover what § 2-612 would otherwise control."
+      },
+      {
+       "id": "s21",
+       "ask": "A single-delivery contract for 1,000 widgets. The seller delivers 999, and the trade has no tolerance. Can the buyer reject?",
+       "answer": "Yes. Under perfect tender, § 2-601, any failure to conform lets the buyer reject, absent a trade term or bad faith. The seller may have a right to cure.",
+       "pause": 11
+      },
+      {
+       "id": "s22",
+       "ask": "Same, but the contract calls for ten monthly deliveries of 100, and one shipment is 1 short.",
+       "answer": "Probably not. Under § 2-612(2), the buyer may reject an installment only if the defect substantially impairs that installment and can't be cured.",
+       "pause": 11
+      },
+      {
+       "id": "s23",
+       "say": "Recap. Perfect tender, limited by agreement, trade terms and good faith, § 2-504, and installment contracts. Partial rejection follows commercial units. Section 2-612: reject an installment only for substantial impairment that can't be cured; cancel the whole only for substantial impairment of the whole; and accepting without notice reinstates."
+      },
+      {
+       "id": "s24",
+       "ask": "What makes a contract an installment contract?",
+       "answer": "Delivery in separate lots to be separately accepted, not payment in installments.",
+       "pause": 7
+      },
+      {
+       "id": "s25",
+       "ask": "Under § 2-612(3), name two ways a buyer reinstates the contract.",
+       "answer": "Accepting a nonconforming installment without seasonably notifying of cancellation, suing only on past installments, or demanding future performance.",
+       "pause": 9
+      },
+      {
+       "id": "s26",
+       "ask": "Can a buyer reject one shoe of a pair?",
+       "answer": "No. Partial rejection must follow commercial units.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e08",
+     "title": "Making rejection effective: §§ 2-602 and 2-605, and the Problem 7-13 matrix",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What a buyer must do and avoid, timing and notice, the duty to particularize, the two-by-two matrix, and Problem 7-14."
+      },
+      {
+       "id": "s2",
+       "say": "Article 2 says more about what isn't effective than what is. The buyer must avoid anything that counts as acceptance under § 2-606: saying it will keep the goods despite the nonconformity, or acting inconsistently with the seller's ownership. Merely taking possession to inspect isn't acceptance, § 2-513. Reselling generally is."
+      },
+      {
+       "id": "s3",
+       "say": "Section 2-602(1). Reject within a reasonable time after delivery or tender, and seasonably notify the seller. Late or no notice is acceptance, with liability for the price, though the claim for the nonconformity survives. And the reasonable time tracks the time reasonably needed to inspect, which depends on the goods' complexity."
+      },
+      {
+       "id": "s4",
+       "say": "Failure to particularize, § 2-605(1). If the buyer fails to state a particular defect that's ascertainable by reasonable inspection, it can't rely on that defect to justify rejection or establish breach in two cases. (a), where the seller could have cured had it been stated seasonably. (b), between merchants, when the seller after rejection has made a written request for a full and final written statement of all defects. The rejection stays effective, but it may become wrongful, turning the seller's breach into the buyer's."
+      },
+      {
+       "id": "s5",
+       "say": "Now the Problem 7-13 matrix. Two questions: did the buyer have a right to reject, and was its notice timely?"
+      },
+      {
+       "id": "s6",
+       "say": "Right to reject, timely notice. Rightful and effective. No acceptance. The seller breached, and the buyer gets § 2-711 remedies. Unless § 2-605 bars the defect; then it's effective but wrongful, and the buyer breached."
+      },
+      {
+       "id": "s7",
+       "say": "Right to reject, untimely notice. Ineffective, so the goods are accepted. The buyer owes the price. But the seller still breached, so the buyer has § 2-714 damages if it gives § 2-607(3)(a) notice."
+      },
+      {
+       "id": "s8",
+       "say": "No right to reject, timely notice. Wrongful but effective. No acceptance. The buyer breached, and the seller has § 2-703 remedies."
+      },
+      {
+       "id": "s9",
+       "say": "No right to reject, untimely notice. Accepted. No seller breach. The buyer owes the price."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 7-14 drills the upper-left box. A buyer with a right to reject gives timely notice but doesn't name a defect reasonable inspection would have found. Under § 2-605(1), it can't rely on that defect where the seller could have cured, or, between merchants, after the seller's written request. The rejection stays effective, so the buyer still hasn't accepted. But if no stated defect justifies it, the rejection is wrongful, and the buyer is the breaching party. The lesson: name every defect you know of when you reject."
+      },
+      {
+       "id": "s11",
+       "ask": "A merchant buyer rejects a shipment, saying only: not acceptable. The seller writes asking for a full and final written statement of defects. The buyer never answers. At trial the buyer points to a defect it knew of. Can it rely on it?",
+       "answer": "No. Between merchants, after the seller's written request, § 2-605(1)(b) bars reliance on unstated defects ascertainable by reasonable inspection. The rejection stays effective but becomes wrongful.",
+       "pause": 14
+      },
+      {
+       "id": "s12",
+       "ask": "A buyer receives nonconforming goods and waits four months before saying anything. What is its position?",
+       "answer": "The rejection is ineffective, so it accepted and owes the price. It can still recover § 2-714 damages if it gives § 2-607(3)(a) notice within a reasonable time.",
+       "pause": 12
+      },
+      {
+       "id": "s13",
+       "say": "Recap. Avoid acceptance. Reject within a reasonable time with seasonable notice. Particularize defects, or lose them where the seller could have cured or after a merchant's written request. And run the matrix: right to reject and timely notice, rightful and effective; right but late, accepted with damages; no right but timely, wrongful but effective; no right and late, accepted, no breach."
+      },
+      {
+       "id": "s14",
+       "ask": "Is reselling rejected goods generally acceptance?",
+       "answer": "Yes, generally.",
+       "pause": 5
+      },
+      {
+       "id": "s15",
+       "ask": "What two situations trigger § 2-605(1)?",
+       "answer": "The seller could have cured had the defect been stated seasonably; or, between merchants, the seller made a written request for a full and final statement of defects.",
+       "pause": 10
+      },
+      {
+       "id": "s16",
+       "ask": "A buyer with no right to reject gives timely notice. Effective?",
+       "answer": "Yes, effective but wrongful. The buyer breached.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e09",
+     "title": "Cure: § 2-508 and Problems 7-16 to 7-19",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The two cure rights, what cure is and isn't, and the car-trouble problems."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-508(1). If the rejected tender was nonconforming and the time for performance hasn't expired, the seller may seasonably notify the buyer of its intent to cure and then make a conforming delivery within the contract time."
+      },
+      {
+       "id": "s3",
+       "say": "Section 2-508(2). If the seller had reasonable grounds to believe the tender would be acceptable, with or without a money allowance, it may, on seasonable notice, have a further reasonable time to substitute a conforming tender."
+      },
+      {
+       "id": "s4",
+       "say": "It's a one-way right. Section 2-508 gives the seller a right to cure and imposes no duty. The buyer can't force a cure under § 2-508, though if the breach is a failure to repair, specific performance under § 2-716 might be available. And the contract can expand or limit cure."
+      },
+      {
+       "id": "s5",
+       "say": "What counts as cure? Something that negates the breach and puts the buyer where proper performance would have. Repair or replacement, depending on the breach. A cure that doesn't conform is no cure. And late delivery can't be cured. Unless the seller can reverse time, the buyer can only waive or settle."
+      },
+      {
+       "id": "s6",
+       "say": "After a cure, the buyer may still claim damages for the delay, §§ 2-714(1) and (3) and 2-715. And if a buyer refuses a cure the seller had a right to make, the result is unclear, perhaps a waiver of the curable breach."
+      },
+      {
+       "id": "s7",
+       "say": "Problem 7-16. A clause giving the buyer a right to demand cure. The buyer wants it, because Article 2 gives none, and custom equipment can't easily be replaced. The seller resists an open-ended duty, but would welcome it as an exclusive remedy limiting damages, § 2-719."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 7-17. Reasonable grounds to think the tender acceptable. The household example: a buyer orders a washer, and the store delivers the newer model with better features at the same price, reasonably expecting the buyer to be pleased. The buyer rejects. The seller gets a further reasonable time to bring the model ordered. A past course of accepting similar substitutes also supports it."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 7-18. Barbara's new car."
+      },
+      {
+       "id": "s10",
+       "say": "(A): the mirror falls off; the dealer will reattach it. Cure. A trivial defect fully fixed by repair."
+      },
+      {
+       "id": "s11",
+       "say": "(B)(1): a new starter the next day, no charge. Cure."
+      },
+      {
+       "id": "s12",
+       "say": "(B)(2): three business days, unless Barbara pays for express shipping. Still likely cure within a further reasonable time, and she need not pay for express. See Travelers versus Maho, cited only."
+      },
+      {
+       "id": "s13",
+       "say": "(C): salvaged parts for a new car's exhaust. Likely no cure. Used parts on a new car don't conform. Compare Bowen and Zabriskie with Wilson versus Scampoli, all cited only. Outside the class materials, Zabriskie is the shaken-faith case, and Wilson allowed a seller to try a minor repair."
+      },
+      {
+       "id": "s14",
+       "say": "(D): repeated electrical failures; the dealer offers more repair; Barbara wants a new car. After repeated failed attempts, the seller's offer is likely not cure. She can't force a new car, but she can reject or revoke and get her money back with damages."
+      },
+      {
+       "id": "s15",
+       "say": "Problem 7-19, not assigned. Late bolts can't be cured, but an installment needs substantial impairment. A replacement the next morning likely must be accepted under § 2-612(2). A pattern can justify cancelling the whole. The drafting answer: cure at the buyer's option plus a defined termination trigger."
+      },
+      {
+       "id": "s16",
+       "ask": "A contract calls for delivery by June 30. On June 10 the seller delivers defective goods, and the buyer rejects. On June 12 the seller says it will deliver conforming goods by June 25. Must the buyer accept them?",
+       "answer": "Yes. Under § 2-508(1), the time for performance hasn't expired, the seller seasonably notified, and it may cure within the contract time.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "ask": "Same, but the original delivery date was June 10, so the time has passed. When can the seller still cure?",
+       "answer": "Only under § 2-508(2), if it had reasonable grounds to believe the tender would be acceptable, and then for a further reasonable time on seasonable notice.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "say": "The trap. Cure is a seller's right, not a buyer's."
+      },
+      {
+       "id": "s19",
+       "say": "Recap. Cure within the contract time under § 2-508(1), or a further reasonable time under (2) if the seller reasonably thought the tender acceptable. One-way. Must conform. Late delivery can't be cured. Damages for delay survive."
+      },
+      {
+       "id": "s20",
+       "ask": "Can a buyer force a seller to cure under § 2-508?",
+       "answer": "No. It is a seller's right, not a duty.",
+       "pause": 6
+      },
+      {
+       "id": "s21",
+       "ask": "In Problem 7-18(C), why is the salvaged exhaust likely not cure?",
+       "answer": "Used parts on a new car don't conform, and a cure that doesn't conform is no cure.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "Can late delivery be cured?",
+       "answer": "No. The buyer can only waive or settle.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e10",
+     "title": "Care of rejected goods, using them after rejection, and Johannsen, with Problem 7-20",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The buyer's duties as a bailee, the merchant buyer's extra duties, the buyer's lien, post-rejection use, and the Johannsen factors."
+      },
+      {
+       "id": "s2",
+       "say": "The buyer in possession is essentially a bailee, § 2-401(4). It must hold the goods with reasonable care for a time sufficient for the seller to remove them, § 2-602(2)(b)."
+      },
+      {
+       "id": "s3",
+       "say": "The merchant buyer, § 2-603. When the seller has no agent or place of business at the market of rejection, the merchant buyer must follow the seller's reasonable instructions, and absent instructions, make reasonable efforts to sell goods that are perishable or decline rapidly in value."
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-604: if the seller gives no instructions, the buyer may store, reship, or sell the goods for the seller's account, and remit the proceeds less expenses."
+      },
+      {
+       "id": "s5",
+       "say": "The security interest, § 2-711(3). A buyer that paid any of the price, or incurred expenses on the goods, has a lien. It may hold the goods and resell them under § 2-706. But the lien doesn't secure cover or market damages, consequential damages, or some incidental damages."
+      },
+      {
+       "id": "s6",
+       "say": "These sections appear limited to rightfully rejected goods. But a wrongful rejecter should still take reasonable care, and its resale would probably be an acceptance."
+      },
+      {
+       "id": "s7",
+       "say": "Using the goods after rejection. Use beyond those rights risks being treated as acceptance, comment 4 to § 2-606, or as conversion. Don't run rejected resin through production. But unavoidable use is fine: the buyer can walk on rejected carpet over a weekend. And the evolving majority: use that is reasonable and necessary under the circumstances is neither acceptance nor conversion. The typical case is a consumer who must keep using a car or mobile home because the seller won't take it back."
+      },
+      {
+       "id": "s8",
+       "say": "Johannsen versus Minnesota Valley Ford Tractor, Minnesota 1981, a note case. Held: the reasonableness of the buyer's continued use is a jury question on all the facts. Five factors. One, the seller's instructions after revocation. Two, the buyer's economic and other hardship if use stopped. Three, whether use was a reasonable way to mitigate damages. Four, prejudice to the seller. Five, the seller's bad faith. Why it matters: it's the checklist to run whenever a buyer keeps using goods it rejected or revoked."
+      },
+      {
+       "id": "s9",
+       "say": "After a rightful rejection, the buyer stands as if the seller never delivered: a refund of the price paid, cover or market damages under § 2-711, and incidental and consequential damages under § 2-715."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 7-20. Bancroft keeps a scratched laptop and uses it on a trip. Installing software after seeing the scratch risks acceptance under § 2-606(1)(c). For the use after rejection, apply Johannsen. Against Bancroft: the seller said send it back, and the use was avoidable if another laptop could be found. For Bancroft: the seller first refused to replace it, and the trip was close. The outcome is fact-dependent."
+      },
+      {
+       "id": "s11",
+       "ask": "A farmer rejects a defective tractor in the middle of harvest. The dealer refuses to take it back or lend a replacement, and the farmer keeps using it for two weeks to bring in the crop. Has he accepted?",
+       "answer": "Probably not under the evolving majority and Johannsen: the use was reasonable and necessary given his hardship, the dealer's refusal, and mitigation, though the dealer may get an offset for the value of the use.",
+       "pause": 14
+      },
+      {
+       "id": "s12",
+       "say": "Recap. Hold with reasonable care. Merchant buyers follow reasonable instructions and sell perishables. The buyer has a lien for payments and expenses. Reasonable, necessary use isn't acceptance, judged by Johannsen's five factors."
+      },
+      {
+       "id": "s13",
+       "ask": "Name the five Johannsen factors.",
+       "answer": "The seller's instructions, the buyer's hardship, whether use was reasonable mitigation, prejudice to the seller, and the seller's bad faith.",
+       "pause": 10
+      },
+      {
+       "id": "s14",
+       "ask": "What does the § 2-711(3) lien secure?",
+       "answer": "Payments made and expenses incurred on the goods, not cover, market, or consequential damages.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "When must a merchant buyer sell rejected perishables?",
+       "answer": "When the seller has no agent or place of business at the market and gives no instructions, § 2-603.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e11",
+     "title": "Acceptance and notice of breach: §§ 2-606 and 2-607, and Problems 7-21 and 7-22",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The three ways to accept, six consequences, the notice requirement and its purposes, and two problems."
+      },
+      {
+       "id": "s2",
+       "say": "Acceptance, § 2-606(1). The buyer accepts when, after a reasonable opportunity to inspect, it (a) signifies that the goods conform, or that it will keep them despite nonconformity; (b) fails to make an effective rejection; or (c) does any act inconsistent with the seller's ownership."
+      },
+      {
+       "id": "s3",
+       "say": "Six consequences. One, the buyer owes the price, § 2-607(1). Two, it must notify of breach within a reasonable time or be barred from any remedy, § 2-607(3)(a). Three, it bears the burden of proving breach, § 2-607(4). After rejection, by contrast, the burden falls on whoever sues. Four, it loses the right to reject, § 2-607(2). Five, it loses the right to cancel and to cover or market damages, unless it revokes; an installment contract may differ. Six, it gains value-difference damages plus incidental and consequential, §§ 2-714 and 2-715."
+      },
+      {
+       "id": "s4",
+       "say": "Losing the right to reject means the buyer can't force goods back on the seller to escape a falling market."
+      },
+      {
+       "id": "s5",
+       "say": "Notice of breach. Its purposes, from Aqualon versus MAC Equipment, Fourth Circuit 1998, quoted in the casebook. One, prevent surprise and let the seller recommend how to fix the problem. Two, let the seller investigate and prepare. Three, open the way to settlement. Four, protect against stale claims. And, from Hebron versus American Isuzu, it lets the seller preserve rights against its own supplier."
+      },
+      {
+       "id": "s6",
+       "say": "Because losing all remedies is draconian, courts are lenient. But many hold that some pre-suit notice is required; filing a complaint generally isn't enough. A reasonable time is a fact question, citing Golden versus Den-Mat. For content, see comment 4 to § 2-607."
+      },
+      {
+       "id": "s7",
+       "say": "Don't confuse two sections. Section 2-605 applies to rejected goods. Section 2-607(3)(a) applies to accepted goods. And the parties may fix a reasonable time for notice, §§ 1-205(b) and 1-302. Whether they could dispense with notice altogether is an open question."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 7-21. A baker's replacement parts, promised by April 4, haven't come. The trick: nothing was accepted, so § 2-607(3)(a) doesn't apply. No notice is required for nondelivery. Still, tell the supplier about the mounting loss, demand delivery, and start looking for cover, which protects consequential damages."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 7-22. A notice clause for kitchen appliances. Set a specific period running from when the buyer discovers or should discover the defect, say 30 days, and state how to give notice. Keep it reasonable: § 1-302(b) bars manifestly unreasonable time limits, and a clause that cuts off hidden-defect claims risks §§ 2-302 and 2-719. Be more generous to consumers than to restaurants."
+      },
+      {
+       "id": "s10",
+       "ask": "A buyer accepts a machine, discovers a defect, and without telling the seller, files suit eight months later. The seller moves to dismiss. What's the seller's argument?",
+       "answer": "Section 2-607(3)(a): an accepting buyer must notify of breach within a reasonable time or be barred from any remedy, and many courts hold filing suit isn't enough notice.",
+       "pause": 12
+      },
+      {
+       "id": "s11",
+       "say": "Recap. Acceptance by signifying, failing to reject, or acting inconsistently with the seller's ownership. Then: owe the price, give notice or lose all remedies, carry the burden, lose rejection and cover or market damages unless you revoke, and gain § 2-714 damages. Notice under § 2-607(3)(a) applies only to accepted goods."
+      },
+      {
+       "id": "s12",
+       "ask": "List the Aqualon purposes of notice.",
+       "answer": "Prevent surprise and let the seller suggest a fix, let it investigate and prepare, open the way to settlement, and protect against stale claims.",
+       "pause": 10
+      },
+      {
+       "id": "s13",
+       "ask": "Must a buyer give § 2-607(3)(a) notice for nondelivery?",
+       "answer": "No. It applies only to accepted goods.",
+       "pause": 7
+      },
+      {
+       "id": "s14",
+       "ask": "After acceptance, who bears the burden of proving breach?",
+       "answer": "The buyer, § 2-607(4).",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e12",
+     "title": "Damages for accepted goods: §§ 2-714 and 2-717, and Problems 7-23 to 7-25",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The three parts of § 2-714, deducting from the price, repair cost as a proxy, and the tomato and rail-car numbers."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-714. (1): for any nonconforming tender, like late or short delivery, the loss resulting in the ordinary course of events, determined in any reasonable manner. (2): for breach of warranty, the value of the goods as warranted minus their value as accepted, at the time and place of acceptance, unless special circumstances show proximate damages of a different amount. (3): incidental and consequential damages in a proper case."
+      },
+      {
+       "id": "s3",
+       "say": "Section 2-717. On notifying the seller, the buyer may deduct all or part of its damages from any part of the price still due under the same contract."
+      },
+      {
+       "id": "s4",
+       "say": "The contract price plays no part in the § 2-714(2) formula. A buyer that struck a bad bargain keeps its bad bargain; one that struck a good bargain keeps that too."
+      },
+      {
+       "id": "s5",
+       "say": "Repair cost is a common proxy for the value difference, not the statutory test. The text asks whether repair cost or replacement cost better measures the lost expectancy. Where repair costs more than the drop in value, the seller argues for the smaller figure. If repair leaves the goods worth less, the buyer adds the leftover loss."
+      },
+      {
+       "id": "s6",
+       "say": "And consequential damages carry the same four limits and can far exceed the price."
+      },
+      {
+       "id": "s7",
+       "say": "Problem 7-23, not assigned. (A): number 1 tomatoes contracted at $10; number 2 tendered; at acceptance, number 1 is worth $9 and number 2 is worth $7. Damages: $9 minus $7, $2 times 10,000, $20,000 to deduct. The $10 contract price isn't used. (B): number 1 worth $12, number 2 worth $9. $3 times 10,000, $30,000."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 7-24(A). Five hundred rail cars at $20,000 each. Repair costs $10,000, and repaired value is $19,000. The railroad claims $11,000 a car. That's right only if the cars as delivered were worth $9,000; it's using repair cost as a proxy for value lost. The seller answers that § 2-714(2) measures value, not cost. If delivered value was $15,000, damages are $5,000 a car. Spending $10,000 on a $5,000 problem doesn't raise the measure, unless special circumstances apply."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 7-24(B). Repair $10,000, repaired value $22,000. The railroad comes out ahead of what was promised: $22,000 against $20,000. Subtract the $2,000 betterment: $8,000."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 7-25(A), not assigned. Add up the excess cost of replacement boards, the cost of installing them, repair of computers already sold, shipping, and disposal, then test each for foreseeability and proof. Future repairs on the remaining 3,000 computers raise a certainty problem."
+      },
+      {
+       "id": "s11",
+       "ask": "A buyer pays $5,000 for a machine warranted to be worth $8,000 in that condition. As delivered it is worth $6,000. What are the § 2-714(2) damages?",
+       "answer": "$2,000. Value as warranted, $8,000, minus value as accepted, $6,000. The contract price doesn't enter the formula.",
+       "pause": 12
+      },
+      {
+       "id": "s12",
+       "say": "Recap. Section 2-714(1): loss in the ordinary course. Section 2-714(2): value as warranted minus value as accepted, at the time and place of acceptance. Section 2-717: deduct from the price still due, on notice. Repair cost is a proxy, not the test; subtract betterment."
+      },
+      {
+       "id": "s13",
+       "ask": "Does the contract price enter the § 2-714(2) formula?",
+       "answer": "No.",
+       "pause": 5
+      },
+      {
+       "id": "s14",
+       "ask": "Where and when are values measured under § 2-714(2)?",
+       "answer": "At the time and place of acceptance.",
+       "pause": 6
+      },
+      {
+       "id": "s15",
+       "ask": "In Problem 7-24(B), why subtract $2,000?",
+       "answer": "The repaired cars are worth more than promised, so the betterment is deducted.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e13",
+     "title": "Revocation of acceptance: § 2-608 and Problems 7-26 to 7-28",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The elements, the timing, rejection versus revocation, cure after revocation, and the bullet-machine problem."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-608(1). The buyer may revoke acceptance of a lot or commercial unit whose nonconformity substantially impairs its value to him, if he accepted it (a) on the reasonable assumption that the nonconformity would be cured, and it hasn't been seasonably cured; or (b) without discovery of the nonconformity, if his acceptance was reasonably induced either by the difficulty of discovery or by the seller's assurances."
+      },
+      {
+       "id": "s3",
+       "say": "Section 2-608(2). Revocation must occur within a reasonable time after the buyer discovers or should have discovered the ground, and before any substantial change in the condition of the goods not caused by their own defects. It's not effective until the buyer notifies the seller."
+      },
+      {
+       "id": "s4",
+       "say": "Rejection versus revocation. Standard: rejection, any nonconformity; revocation, substantial impairment of value to him. Compared with § 2-612, which lacks to him; whether that changes the test is an open question. Timing: rejection, a reasonable time after tender, shorter; revocation, a reasonable time after discovery, apparently longer, comment 4. Notice content: rejection, § 2-605 can bar unstated defects; revocation, no specific content required, comment 5. Wrongful but effective? Rejection, yes. Revocation, no such thing; a revocation works only if it's both justified and properly notified, comment 5 to § 2-709. Effect: rejection is not an acceptance; revocation undoes the acceptance, and is not a cancellation, comment 1."
+      },
+      {
+       "id": "s5",
+       "say": "After a justified, effective revocation, the buyer doesn't owe the price, may cancel, and has every remedy of a buyer that rightfully rejected, § 2-711(1). It also has the same rights and duties for goods in its possession, including the § 2-711(3) lien, § 2-608(3)."
+      },
+      {
+       "id": "s6",
+       "say": "Cure after revocation is unsettled. The syllogism says yes: same rights and duties as rejection, and rejection allows cure. The answer says no: § 2-608(3) speaks of duties with regard to the goods, not the seller's performance; and after a § 2-608(1)(a) revocation, cure already had its chance, though a (1)(b) revocation may be different. Lile versus Kiesel, Indiana 2007, cited only, held no right to cure after revocation."
+      },
+      {
+       "id": "s7",
+       "say": "Problem 7-26, not assigned. (A): shirt fabric discolors; 45 of 100 bolts were used. Revoke for the unused bolts. For the 45 used, the change came from the defect only if discoloration is the defect, not from the cutting and sewing. Commercial units help. (B): a motorcycle burns up. The defect caused the change, so that bar doesn't apply. Revocation mostly adds the refund; the injury is consequential. (C): a promised fuel-line repair never made. That's § 2-608(1)(a). (D): repeated leaks; the roof would have to be sawn off. Each failed repair strengthens substantial impairment, and refusing a major repair is reasonable. (E): assorted-color binders, and replacements never come. The defect was easy to see, so (1)(b) fails; (1)(a) fits."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 7-27, Steelsmith and Ballistics. Was the machine accepted? Likely yes. A two-hour test, a request for a little more time, then a month's use with the problem known by June 21: § 2-606(1)(a) through (c). So rejection is too late, and revocation is the question."
+      },
+      {
+       "id": "s9",
+       "say": "Can Ballistics revoke? Probably yes. Forty instead of fifty bullets a minute is substantial impairment to a buyer needing that rate. Acceptance was induced by the difficulty of discovery: a two-hour test didn't show it, and even its engineers couldn't find the cause. Notice on July 1 is within a reasonable time after discovery, and the notice needs no particular content."
+      },
+      {
+       "id": "s10",
+       "say": "Must it accept repair? Unsettled. Section 2-508(1) is out, since the time for performance has passed. Section 2-508(2) needs reasonable grounds to think the tender acceptable. Lile says no cure after revocation; the syllogism says otherwise. If a court finds a cure right, refusing repair may be Ballistics' breach."
+      },
+      {
+       "id": "s11",
+       "say": "Use until September 1? Reasonable and necessary under the Johannsen factors: it keeps production going and mitigates. Expect an offset for the value of the use."
+      },
+      {
+       "id": "s12",
+       "say": "The result. If revocation stands: Ballistics owes no balance, recovers its $125,000 down payment, and takes cover: $750,000 minus $500,000, which is $250,000, if Epoch's machine is a reasonable substitute and not an upgrade. It holds a § 2-711(3) lien on the machine for the money it paid. If revocation fails: it owes the $375,000 balance, less § 2-714(2) damages for a machine making 40 a minute instead of 50, deducted under § 2-717."
+      },
+      {
+       "id": "s13",
+       "say": "Problem 7-28, Standard Plywood, not assigned. Usage of trade may decide whether 90 sheets per pallet conforms. Forty-five pallets instead of 50 is a shortfall, and inspection was wrongly refused. Selling for $80 and the 24-day delay raise acceptance and § 2-604 issues."
+      },
+      {
+       "id": "s14",
+       "ask": "A buyer accepts a car, and three months later discovers a hidden transmission defect that makes it unreliable. It notifies the dealer at once. Can it revoke?",
+       "answer": "Yes, if the defect substantially impairs the car's value to the buyer and acceptance was reasonably induced by the difficulty of discovery, § 2-608(1)(b), with notice within a reasonable time after discovery.",
+       "pause": 12
+      },
+      {
+       "id": "s15",
+       "ask": "A buyer revokes acceptance because of a small cosmetic scratch. Is the revocation effective?",
+       "answer": "No. Revocation requires substantial impairment, and there is no wrongful-but-effective revocation. The buyer remains bound and has only § 2-714 damages.",
+       "pause": 11
+      },
+      {
+       "id": "s16",
+       "say": "Recap. Revoke for substantial impairment of value to the buyer, when acceptance rested on a reasonable assumption of cure, or was induced by difficulty of discovery or the seller's assurances. Within a reasonable time after discovery, before a substantial change not caused by the defect, with notice. No wrongful-but-effective revocation. Then the buyer has a rejecting buyer's remedies. Cure after revocation is unsettled; Lile says no."
+      },
+      {
+       "id": "s17",
+       "ask": "Give the two grounds for revocation under § 2-608(1).",
+       "answer": "Acceptance on the reasonable assumption of cure that hasn't seasonably come; or acceptance without discovery, induced by difficulty of discovery or the seller's assurances.",
+       "pause": 10
+      },
+      {
+       "id": "s18",
+       "ask": "What does Lile v. Kiesel hold?",
+       "answer": "No right to cure after revocation.",
+       "pause": 6
+      },
+      {
+       "id": "s19",
+       "ask": "In Problem 7-27, what's Ballistics' cover recovery if revocation stands?",
+       "answer": "$250,000, the $750,000 cover minus the $500,000 contract price, plus return of its $125,000 down payment.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e14",
+     "title": "Privity and remote sellers: § 2-318, Hyundai v. Goodin, and Problems 7-31 and 7-32",
+     "minutes": 10,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Vertical and horizontal privity, the three alternatives in detail, the Goodin case, who is a seller, Amazon, and two problems."
+      },
+      {
+       "id": "s2",
+       "say": "A contract claim normally needs privity. Vertical privity: a buyer in the chain of title suing a seller further up the chain, like a consumer against a manufacturer. Horizontal privity: a non-buyer outside the chain, injured by the goods. Vertical privity exists only between immediate links. A buyer who didn't buy directly from a seller is remote."
+      },
+      {
+       "id": "s3",
+       "say": "First ask whether the remote seller made any warranty to this buyer. An express warranty under § 2-313? An implied warranty under § 2-314? Or a warranty to the distributor or retailer that extends to the buyer?"
+      },
+      {
+       "id": "s4",
+       "say": "Article 2 barely addresses privity. Section 2-318 offers three alternatives, and comment 3 leaves room for case law on the distributive chain."
+      },
+      {
+       "id": "s5",
+       "say": "Alternative A, the majority. Who: natural persons in the buyer's family or household, or guests in the buyer's home. Injury: in person. Vertical privity: silent, left to case law."
+      },
+      {
+       "id": "s6",
+       "say": "Alternative B. Who: any natural person reasonably expected to use, consume, or be affected. Injury: in person. Vertical privity: implicitly abolished."
+      },
+      {
+       "id": "s7",
+       "say": "Alternative C. Who: any person reasonably expected to use, consume, or be affected. Injury: injured, and some states include property or economic loss. Vertical privity: eliminated."
+      },
+      {
+       "id": "s8",
+       "say": "A seller can't exclude § 2-318's reach. But disclaimers and remedy limits that bind the buyer bind the beneficiaries too, comment 1."
+      },
+      {
+       "id": "s9",
+       "say": "Hyundai Motor America versus Goodin, Indiana 2005, a main case. Sandra Goodin bought a new Hyundai Sonata from a dealer, with a 5-year, 60,000-mile manufacturer warranty. Brake trouble began almost at once, and eight months of repairs didn't fix it. Her lawyer sought a refund. She sued Hyundai under the Magnuson-Moss Warranty Act. The jury found for Hyundai on express warranty but for Goodin on the implied warranty of merchantability, and awarded $3,000. The Court of Appeals reversed for lack of privity, feeling bound by a footnote in Martin Rispens."
+      },
+      {
+       "id": "s10",
+       "say": "Held: Indiana doesn't require vertical privity between a consumer and a manufacturer for breach of the implied warranty of merchantability, even for economic loss. The footnote was dicta. Alternative A speaks only to horizontal privity and leaves vertical privity to the courts. And privity's freedom-of-contract rationale has, in the court's words, eroded to the point of invisibility for many consumer goods. Goods reach consumers through intermediaries. Warranties are marketing tools. Consumers expect merchantability. The law spreads the cost of lemons across all buyers. And a disclaimer in the dealer's buyer's order would otherwise leave her with no remedy. The privity bar began as a limit on tort claims, in Winterbottom, and was undercut by MacPherson and Henningsen."
+      },
+      {
+       "id": "s11",
+       "say": "Why it matters. The modern consumer rule, though courts remain divided. Its limits: it speaks to a consumer against a manufacturer, for goods subject to Magnuson-Moss. And damages are usually the § 2-714(2) value difference."
+      },
+      {
+       "id": "s12",
+       "say": "After Goodin. Express warranty: even privity states may not require privity. A manufacturer shouldn't escape its public claims because the buyer bought through a dealer. Open questions when privity falls away: can a remote buyer reject or revoke and get a refund from the manufacturer, and of which price? May it recover cover or market damages? Must notice go to the manufacturer, or is notice to the retailer enough? Are consequential damages tested by what the manufacturer or the retailer knew? When does the limitations period start? Which state's law applies when only one has abolished privity? Does a distributor owe the same duty?"
+      },
+      {
+       "id": "s13",
+       "say": "Only sellers make implied warranties. A seller is one who sells or contracts to sell, § 2-103(1)(d), and a sale passes title, § 2-106(1). Auctioneers, brokers, and other agents without title almost always aren't sellers."
+      },
+      {
+       "id": "s14",
+       "say": "Amazon. For third-party vendors' goods, courts have held Amazon isn't a seller and makes no warranty, despite listing, payment processing, storage, and shipping. And the § 2-403(2) entrustment argument fails for three reasons: Amazon may never possess the goods, and the vendor's identity is disclosed; an entrustee isn't necessarily the seller; and Amazon's terms disclaim implied warranties anyway."
+      },
+      {
+       "id": "s15",
+       "say": "Problem 7-31. A copier. The manufacturer warrants it for 3 years from purchase and sold it June 1, 2021. The distributor disclaimed all warranties and sold it December 1, 2021. The retailer warrants it for 1 year and sold it to the buyer April 1, 2022."
+      },
+      {
+       "id": "s16",
+       "say": "(A)(1): privity is abolished; the copier fails November 1, 2022. The retailer is liable on its 1-year warranty, through April 1, 2023, and on merchantability unless disclaimed. The manufacturer is liable on its express and implied warranties if they reach the buyer; whether a warranty on order forms the buyer never saw extends to it is a real issue. The distributor isn't liable: its disclaimer works and binds those below it."
+      },
+      {
+       "id": "s17",
+       "say": "(A)(2): it fails November 1, 2023. The retailer's 1-year warranty has expired. The implied warranty requires a defect at tender, and the four years haven't run. The manufacturer's 3 years still runs on either reading of date of purchase."
+      },
+      {
+       "id": "s18",
+       "say": "(A)(3): it fails November 1, 2024. The manufacturer covers it only if purchase means the buyer's purchase, running to April 1, 2025, not the distributor's, which ended June 1, 2024. Implied warranties remain only if the defect existed at tender and suit is timely under § 2-725."
+      },
+      {
+       "id": "s19",
+       "say": "(B): privity not abolished. The implied claim runs only against the retailer. An express claim against the manufacturer may survive, though this warranty wasn't a public statement. And the retailer has no recourse past the distributor's disclaimer: the gap privity creates."
+      },
+      {
+       "id": "s20",
+       "say": "(C): a fire destroys the vice president's home, with no one injured. The VP isn't the buyer, so this is horizontal. Alternative A: no. The VP isn't family, household, or a guest of a corporate buyer, and wasn't injured in person. Alternative B: no; it's property loss only. Alternative C: yes, where injured includes property, against the retailer, and the manufacturer, since vertical privity is gone. The distributor is still protected by its disclaimer. And tort remains."
+      },
+      {
+       "id": "s21",
+       "say": "Problem 7-32. A homeowner and a renovator, in a privity state. Make the homeowner a party in privity with the appliance seller: have the homeowner buy directly, or have the renovator buy as the homeowner's agent. Or have the renovator assign its warranty rights to the homeowner under § 2-210, and get the seller to name the homeowner an intended beneficiary. The renovation contract alone can't bind the seller. And add the renovator's own express warranty."
+      },
+      {
+       "id": "s22",
+       "ask": "In an Alternative A state, a buyer's houseguest is burned when a defective space heater explodes. Can the guest sue the retailer for breach of warranty?",
+       "answer": "Yes. A guest in the buyer's home, injured in person, is covered by Alternative A.",
+       "pause": 10
+      },
+      {
+       "id": "s23",
+       "ask": "In the same state, a neighbor's house burns because of the same heater, but no one is hurt. Can the neighbor sue in warranty?",
+       "answer": "No under Alternative A. The neighbor isn't family, household, or a guest, and wasn't injured in person. Tort remains.",
+       "pause": 11
+      },
+      {
+       "id": "s24",
+       "say": "Recap. Vertical privity runs up the chain; horizontal reaches non-buyers. Alternative A: family, household, guests, personal injury. B: any natural person reasonably expected, personal injury. C: any person, and some states include property. Goodin: no vertical privity for a consumer's merchantability claim against a manufacturer. Only sellers warrant, and Amazon generally isn't one for third-party goods."
+      },
+      {
+       "id": "s25",
+       "ask": "In Goodin, what did the jury find, and what did the Indiana Supreme Court hold?",
+       "answer": "For Hyundai on express warranty, for Goodin on implied merchantability, $3,000. The court held no vertical privity is required for a consumer's implied-warranty claim against a manufacturer, even for economic loss.",
+       "pause": 12
+      },
+      {
+       "id": "s26",
+       "ask": "Does a disclaimer binding the buyer bind a § 2-318 beneficiary?",
+       "answer": "Yes, comment 1. But the seller can't exclude § 2-318's reach.",
+       "pause": 8
+      },
+      {
+       "id": "s27",
+       "ask": "Name the three reasons the entrustment argument against Amazon fails.",
+       "answer": "Amazon may never possess the goods and the vendor is disclosed; an entrustee isn't necessarily the seller; and Amazon's terms disclaim implied warranties.",
+       "pause": 10
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e15",
+     "title": "Day 4 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Cumulative quiz, Days 1 to 4."
+      },
+      {
+       "id": "s2",
+       "ask": "Name the three ways a buyer can get the goods themselves.",
+       "answer": "Specific performance and replevin under § 2-716, and recovery of identified prepaid goods under § 2-502.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "A buyer covers at a lower price than the contract. Can it use market damages instead?",
+       "answer": "No. Having covered, it can't switch to § 2-713, unless the purchase wasn't a true substitute.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "Market damages under § 2-713 are measured when and where?",
+       "answer": "When the buyer learned of the breach, at the place for tender, or the place of arrival after rejection on arrival or revocation.",
+       "pause": 9
+      },
+      {
+       "id": "s5",
+       "ask": "In an installment contract, when can a buyer cancel the whole?",
+       "answer": "When a nonconformity in one or more installments substantially impairs the value of the whole contract, § 2-612(3).",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "A buyer with a right to reject gives late notice. Result?",
+       "answer": "Ineffective rejection, so acceptance. It owes the price but has § 2-714 damages with timely § 2-607(3)(a) notice.",
+       "pause": 9
+      },
+      {
+       "id": "s7",
+       "ask": "What two kinds of cure does § 2-508 allow?",
+       "answer": "Within the contract time on seasonable notice; or a further reasonable time if the seller reasonably believed the tender would be acceptable.",
+       "pause": 9
+      },
+      {
+       "id": "s8",
+       "ask": "State the § 2-714(2) formula.",
+       "answer": "Value as warranted minus value as accepted, at the time and place of acceptance, unless special circumstances show different proximate damages.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "Is there such a thing as a wrongful but effective revocation?",
+       "answer": "No. Revocation must be justified and properly notified.",
+       "pause": 6
+      },
+      {
+       "id": "s10",
+       "ask": "Under Alternative B, who is protected?",
+       "answer": "Any natural person reasonably expected to use, consume, or be affected, who is injured in person.",
+       "pause": 7
+      },
+      {
+       "id": "s11",
+       "ask": "From Day 3: what makes a consequential-damages exclusion for consumer personal injury suspect?",
+       "answer": "It is prima facie unconscionable, § 2-719(3).",
+       "pause": 7
+      },
+      {
+       "id": "s12",
+       "ask": "From Day 2: who gives the warranty of non-infringement?",
+       "answer": "A merchant regularly dealing in goods of the kind, unless the buyer furnished specifications.",
+       "pause": 7
+      },
+      {
+       "id": "s13",
+       "ask": "From Day 1: in Casazza, did promissory estoppel save the buyer?",
+       "answer": "No. His reliance wasn't the kind that makes refusal a fraud.",
+       "pause": 6
+      },
+      {
+       "id": "s14",
+       "say": "That's Day 4. Tomorrow, the last day: the seller's remedies, leases, and the full review."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
