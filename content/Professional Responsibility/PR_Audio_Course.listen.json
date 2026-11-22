@@ -2368,6 +2368,869 @@
      ]
     }
    ]
+  },
+  {
+   "day": 3,
+   "title": "Conflicts of interest",
+   "minutes": 72,
+   "episodes": [
+    {
+     "id": "pr-d3-e01",
+     "title": "Spaced review of Days 1 and 2",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Welcome to Day 3, conflicts of interest, the heart of the exam. First, five minutes of recall from Days 1 and 2."
+      },
+      {
+       "ask": "Name the three 1.6(a) gateways for revealing information.",
+       "answer": "Informed consent, implied authorization, or a 1.6(b) exception.",
+       "pause": 6
+      },
+      {
+       "ask": "Every 1.6(b) exception is limited in three ways. What are they?",
+       "answer": "Minimum information, minimum people, specific purpose. And all are permissive.",
+       "pause": 6
+      },
+      {
+       "ask": "Which 1.6(b) exceptions require that the client used the lawyer's services?",
+       "answer": "(b)(2) and (b)(3), the financial crime-or-fraud exceptions.",
+       "pause": 6
+      },
+      {
+       "ask": "Can an online review trigger the self-defense exception?",
+       "answer": "No. Opinion 496.",
+       "pause": 6
+      },
+      {
+       "ask": "Which rule overrides confidentiality before a tribunal?",
+       "answer": "3.3, under 3.3(c).",
+       "pause": 6
+      },
+      {
+       "ask": "Is a pre-existing document privileged once sent to a lawyer?",
+       "answer": "No. The request for advice may be. The document is confidential.",
+       "pause": 6
+      },
+      {
+       "ask": "Does the privilege survive death?",
+       "answer": "Yes, Swidler and Berlin.",
+       "pause": 6
+      },
+      {
+       "ask": "What did Blanton versus Womancare decide?",
+       "answer": "Binding arbitration waives trial, so it is the client's decision.",
+       "pause": 6
+      },
+      {
+       "ask": "An uncommunicated change of mind: does it revoke actual authority?",
+       "answer": "No.",
+       "pause": 6
+      },
+      {
+       "ask": "Which contingent fees are banned outright?",
+       "answer": "Domestic relations fees contingent on divorce, alimony, support, or property settlement; and criminal defense fees.",
+       "pause": 6
+      },
+      {
+       "ask": "What formality does 1.8(a) require for a business deal with a client, and what formality does 1.5(e) require for fee division?",
+       "answer": "1.8(a) requires the client's informed consent in a writing signed by the client. 1.5(e) requires the client's agreement confirmed in writing.",
+       "pause": 6
+      },
+      {
+       "ask": "A mixed check with fee and client money goes where?",
+       "answer": "Into trust. Then move your share once it clears.",
+       "pause": 6
+      },
+      {
+       "ask": "What does 1.4(a)(1) require for a settlement offer?",
+       "answer": "Promptly convey it, unless the client already said how to handle it.",
+       "pause": 6
+      },
+      {
+       "say": "Good. Today: the three kinds of conflicts, every paragraph of 1.8, the concurrent client rule in 1.7, former and prospective clients under 1.9 and 1.18, imputation and screening under 1.10, and consent."
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e02",
+     "title": "Conflicts overview, and financial assistance under 1.8(e)",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The three kinds of conflicts, three observations that run through Chapter 22, then 1.8(e), financial assistance to litigation clients."
+      },
+      {
+       "say": "The recurring hypothetical: Ron Rainmaker's firm represents Mojo, and Petrified Petroleum comes calling. Keep that picture in mind."
+      },
+      {
+       "say": "Three kinds of conflicts. One, personal interest: the lawyer's own interests against a client's, under 1.8 and 1.7(a)(2). Two, whom you know, which is loyalty: ongoing relationships with clients that tempt you to favor one over another, governed by the concurrent client rule, 1.7(a). Three, what you know, which is confidentiality: information you might share with, or use for, another client to the original client's disadvantage, governed by the successive or former client rule, 1.9 and 1.18(c). A class quiz question: a client's duty to the lawyer versus the legal system is not one of the categories."
+      },
+      {
+       "say": "Three observations. First, a continuum: conflicting interests run from hardly any conflict to zero-sum opposition, and many are mild enough to need nothing beyond decency and common sense. Second, no harm required: a serious conflict breaches the duty by its mere existence and potential to harm. The most common consequence is disqualification, an order to get out and stay out before harm occurs. Conflicts can also bring discipline, with no harm needed; fee forfeiture and disgorgement of fees paid during the conflict; and damages for actual harm. Third, two kinds of rules: bright-line rules that forbid arrangements or require formal steps, which is most of 1.8, and general standards with a fuzzier threshold, like 1.7(a)(2)'s significant risk of material limitation."
+      },
+      {
+       "say": "Now Rule 1.8(e). A lawyer shall not provide financial assistance to a client in connection with pending or contemplated litigation, with three exceptions, any one suffices."
+      },
+      {
+       "say": "Exception one: the lawyer may advance court costs and expenses of litigation, and repayment may be contingent on the outcome. Exception two: the lawyer may pay court costs and expenses of litigation for an indigent client. Exception three, the 2020 humanitarian exception: when representing an indigent client pro bono, through the lawyer's firm, a nonprofit legal services or public interest organization, or a law school clinical or pro bono program, the lawyer may give modest gifts for food, rent, transportation, medicine, and other basic living expenses. Three conditions, all required. (i) The lawyer does not promise, assure, or imply them before retention or as an inducement to continue. (ii) The lawyer does not seek or accept reimbursement from the client, a relative, or anyone affiliated with the client. (iii) The lawyer does not publicize or advertise a willingness to give them to prospective clients."
+      },
+      {
+       "say": "The ban reaches almost any assistance: a loan, a guarantee, or a gift. Three implicit exceptions. One, delaying or discounting your fee, or working pro bono. Two, a contingent fee. Three, assistance to non-litigation clients or to non-clients, because the Rule covers only pending or contemplated litigation."
+      },
+      {
+       "say": "Why the rule exists: so lawyers do not buy cases, and so the lawyer does not acquire too great a financial stake in the litigation."
+      },
+      {
+       "say": "A class quiz question: lending a litigation client money for living expenses is prohibited, whatever the collateral. A lien on the client's car does not help."
+      },
+      {
+       "ask": "A lawyer represents a paying personal-injury client who is behind on rent. The lawyer lends her two thousand dollars, secured by her car, to be repaid from the recovery. Permitted?",
+       "answer": "No. 1.8(e) bars financial assistance to a litigation client except costs and expenses. Living-expense loans are barred, whatever the collateral. The humanitarian exception applies only to indigent pro bono clients, and only for gifts, not loans.",
+       "pause": 12
+      },
+      {
+       "ask": "A legal aid lawyer representing an indigent tenant pro bono buys her a bus pass and groceries, never mentioned them before retention, and will not seek repayment. Permitted?",
+       "answer": "Yes, under the 1.8(e)(3) humanitarian exception, as long as the lawyer did not promise them as an inducement and does not advertise a willingness to give them.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer advances fifteen thousand dollars in expert fees for a non-indigent client, with repayment only if they win. Permitted?",
+       "answer": "Yes. 1.8(e)(1) allows advancing litigation costs and expenses, with repayment contingent on the outcome.",
+       "pause": 10
+      },
+      {
+       "ask": "A transactional lawyer lends money to a client for whom he is negotiating a lease, with no litigation in sight. Does 1.8(e) apply?",
+       "answer": "No. 1.8(e) covers only pending or contemplated litigation. But the loan is a business transaction, so 1.8(a) applies.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. Three kinds of conflicts: personal interest, whom you know, what you know. Conflicts need no harm. 1.8(e) bars financial help for litigation clients except advancing costs, contingent repayment, paying an indigent client's costs, and modest humanitarian gifts for indigent pro bono clients under three conditions."
+      },
+      {
+       "ask": "What are the three kinds of conflicts?",
+       "answer": "Personal interest; whom you know, which is loyalty under 1.7; and what you know, which is confidentiality under 1.9 and 1.18.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three express exceptions in 1.8(e).",
+       "answer": "Advancing costs and expenses with contingent repayment; paying costs for an indigent client; and modest living-expense gifts for an indigent pro bono client.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the three conditions on humanitarian gifts?",
+       "answer": "No promise before retention or as an inducement, no reimbursement sought, and no advertising the willingness to give them.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e03",
+     "title": "Gifts, literary rights, proprietary interests, and business deals: 1.8(c), (d), (i), and (a)",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. Four bright-line rules. Gifts and bequests under 1.8(c), literary and media rights under 1.8(d), proprietary interests in the litigation under 1.8(i), and the big one, business transactions with clients under 1.8(a)."
+      },
+      {
+       "say": "Rule 1.8(c). Two prohibitions, either is barred. A lawyer shall not, one, solicit any substantial gift from a client, including a testamentary gift. Or two, prepare on behalf of a client an instrument giving the lawyer or a person related to the lawyer any substantial gift, unless the lawyer or other recipient is related to the client. Related means a spouse, child, grandchild, parent, grandparent, or other relative or individual with whom the lawyer or the client maintains a close familial relationship."
+      },
+      {
+       "say": "So another lawyer must draft it. Accepting a modest unsolicited gift, like a hundred dollar bottle of wine, is fine. The class quiz: drafting a will leaving the lawyer expensive paintings is maybe. It depends on whether lawyer and client are closely enough related."
+      },
+      {
+       "say": "Rule 1.8(d). Before the representation ends, a lawyer shall not make or negotiate an agreement giving the lawyer literary or media rights to a portrayal or account based in substantial part on information relating to the representation. Note the timing: before the conclusion of the representation. After it ends, it is a different question. The class quiz: taking all media and literary rights to the litigation violates 1.8(d). A discounted fee, a contingent fee, or the client's own bank loan does not."
+      },
+      {
+       "say": "Rule 1.8(i). A lawyer shall not acquire a proprietary interest in the cause of action or subject matter of litigation the lawyer is conducting for a client, except two things. One, a lien authorized by law to secure the lawyer's fee or expenses. Two, a reasonable contingent fee in a civil case. Example: no ownership stake in the disputed parcel you are litigating over."
+      },
+      {
+       "say": "Now Rule 1.8(a). A lawyer shall not enter into a business transaction with a client, or knowingly acquire an ownership, possessory, security, or other pecuniary interest adverse to a client, unless three requirements are met, all required."
+      },
+      {
+       "say": "One, the transaction and terms are fair and reasonable to the client, and are fully disclosed and transmitted in writing in a manner that can be reasonably understood by the client. Two, the client is advised in writing of the desirability of seeking, and is given a reasonable opportunity to seek, the advice of independent legal counsel on the transaction. Three, the client gives informed consent, in a writing signed by the client, to the essential terms of the transaction and the lawyer's role in it, including whether the lawyer is representing the client in the transaction."
+      },
+      {
+       "say": "Let me count them once more, with a memory hook: fair and in writing; advise counsel in writing; consent signed by the client. Three writings, and the last one is signed by the client."
+      },
+      {
+       "say": "The scope is sweeping: any business transaction with a client, or any acquisition of an interest adverse to a client. A lien on the client's property is the classic example. Loans, investing in the client's restaurant, taking stock as a fee."
+      },
+      {
+       "say": "Three recognized exclusions. One, an ordinary fee agreement paid in money; 1.5 governs instead. Two, an attorney's lien or security interest in the litigation claim or its proceeds, which many states exempt; some exempt it only to secure a contingent fee and require 1.8(a) to secure an hourly or flat fee. Three, standard commercial transactions for products or services the client generally markets to others, Comment 1. Buying a car from a client car dealer at the sticker price is fine."
+      },
+      {
+       "say": "A class quiz question: a contractual lien on the client's home, property other than the recovery, to secure the fee, is a business transaction under 1.8(a), Comment 16. Allowed only if fair and reasonable, with written advice to seek counsel, and informed consent in a signed writing."
+      },
+      {
+       "say": "Fairness alone is never enough. Miss any formal requirement and you face discipline, and the transaction is subject to rescission and restitution, even if it was completely fair. And a class quiz question: a lawyer who takes the client's business opportunity for herself breaches her fiduciary duty and forfeits her fees. That is Meinhard versus Salmon again."
+      },
+      {
+       "ask": "A lawyer drafts her elderly client's will, which leaves the lawyer a valuable painting. The client suggested it, unprompted. The lawyer is not related to the client. Permitted?",
+       "answer": "No. Under 1.8(c), she may not prepare an instrument giving herself a substantial gift unless she is related to the client. Another lawyer must draft it. That the client suggested it does not matter.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer helps a client start a restaurant and takes a ten percent ownership stake as his fee. He explains the terms orally, and the deal is fair. The client signs nothing. Problem?",
+       "answer": "Yes. Taking stock as a fee is a business transaction under 1.8(a). He needed the terms in writing, written advice to seek independent counsel with a reasonable opportunity, and the client's informed consent in a signed writing. Fairness alone does not cure it, and the deal is subject to rescission.",
+       "pause": 12
+      },
+      {
+       "ask": "During a high-profile murder trial, the defendant offers his lawyer the book rights to his story in lieu of a fee. May the lawyer accept?",
+       "answer": "Not before the representation ends. 1.8(d) bars making or negotiating literary or media rights agreements based substantially on information relating to the representation. And separately, 1.5(d)(2) bars contingent criminal fees.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer representing a client in a quiet-title action buys an interest in the disputed land from the client. Permitted?",
+       "answer": "No. 1.8(i) bars acquiring a proprietary interest in the subject matter of the litigation, except a lien authorized by law or a reasonable civil contingent fee.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. 1.8(a) needs all three formalities, and fairness alone fails. Unsolicited modest gifts are fine. Literary rights are barred only before the representation ends. And a lien on the home is a 1.8(a) transaction."
+      },
+      {
+       "say": "Recap. 1.8(c): don't solicit substantial gifts, and don't draft instruments giving yourself one unless related. 1.8(d): no media rights before the end. 1.8(i): no proprietary interest except liens and civil contingent fees. 1.8(a): fair and in writing, written advice to get counsel, and signed informed consent including the lawyer's role."
+      },
+      {
+       "ask": "Name the three requirements of 1.8(a).",
+       "answer": "Fair and reasonable terms fully disclosed in writing; written advice to seek independent counsel with a reasonable opportunity; and informed consent in a writing signed by the client to the essential terms and the lawyer's role.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the two exceptions in 1.8(i)?",
+       "answer": "A lien authorized by law for fees or expenses, and a reasonable contingent fee in a civil case.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three exclusions from 1.8(a).",
+       "answer": "Ordinary money fee agreements; liens on the litigation claim or proceeds in many states; and standard commercial transactions the client markets to others.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e04",
+     "title": "The rest of 1.8, imputation under 1.8(k), and personal-interest conflicts under 1.7(a)(2)",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. The remaining 1.8 paragraphs: (b), (f), (g), (h), (j), and (k). Then personal-interest conflicts under 1.7(a)(2), including relationships with opposing counsel and Opinion 494."
+      },
+      {
+       "say": "1.8(b): no using information relating to a current client's representation to the client's disadvantage without informed consent. 1.8(f): third-party payors need the client's informed consent, no interference with judgment, and confidentiality protected. 1.8(h): prospective malpractice limits require independent representation; settling a malpractice claim with an unrepresented client requires written advice to seek counsel and a reasonable opportunity. 1.8(j): no sexual relations with a client unless a consensual relationship predated the representation."
+      },
+      {
+       "say": "1.8(g), aggregate settlements. A lawyer who represents two or more clients shall not participate in making an aggregate settlement of their claims, or, in a criminal case, an aggregated agreement as to guilty or nolo pleas, unless each client gives informed consent, in a writing signed by the client. The disclosure must include the existence and nature of all the claims or pleas involved and the participation of each person in the settlement. Majority approval does not count. Each client decides for herself."
+      },
+      {
+       "say": "1.8(k): prohibitions (a) through (i) are imputed to every lawyer in the firm. Paragraph (j) is personal and not imputed. So if your partner could not enter a business deal with the client, neither can you without complying with 1.8(a)."
+      },
+      {
+       "say": "Now personal-interest conflicts under 1.7(a)(2). The test is predictive: a significant risk that the representation will be materially limited by a personal interest of the lawyer, judged before anything bad happens, and even if nothing ever does. Consent cures it if it is consentable under 1.7(b)."
+      },
+      {
+       "say": "Relationships with opposing counsel or parties, ABA Opinion 494. Three tiers. One, intimate and close family relationships almost always create a conflict. Two, friendships may, depending on their nature and strength. Three, acquaintances are unlikely to. Even when no conflict arises, the connection may matter enough to disclose under 1.4. Err on the side of disclosure and consent."
+      },
+      {
+       "say": "Lawyers related by blood or marriage on opposite sides, 1.7 Comment 11. Each needs the client's informed consent, and the conflict is not imputed to their firms."
+      },
+      {
+       "say": "Other personal interests: a lawyer negotiating for a job with the opponent's firm, Comment 10; a defense lawyer angling for a prosecutor job, or running for district attorney and calling his own client a monster; and a lawyer's own exposure for the conduct at issue."
+      },
+      {
+       "say": "Class quiz questions. A mere acquaintance with the opposing party generally requires no action, so accept without disclosing. An ex-spouse on the other side is a close personal relationship, a 1.7(a)(2) conflict: notify the client and proceed only with its informed consent, confirmed in writing. The ex-spouse is not the one who consents."
+      },
+      {
+       "say": "Imputation: personal-interest conflicts under 1.7(a)(2) generally are not imputed unless other firm lawyers are similarly affected, under 1.10(a)(1)."
+      },
+      {
+       "ask": "A lawyer represents four plaintiffs injured by the same product. The defendant offers a lump sum to settle all four. Three want to accept; one does not. The retainer said majority rules. May the lawyer accept for all four?",
+       "answer": "No. 1.8(g) requires each client's informed consent in a writing signed by the client, after disclosure of all claims and each person's share. Majority approval does not count, and an advance majority-rules agreement does not substitute.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer is defending a client in a case against a large firm. Midway, he interviews for a job at that firm. Conflict?",
+       "answer": "Yes, a personal-interest conflict under 1.7(a)(2), per Comment 10. There is a significant risk his representation will be materially limited. He needs the client's informed consent, confirmed in writing, or must stop the job talks or withdraw.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer's partner wants to buy a client's business. The lawyer is not involved. Does 1.8(a) apply to the partner?",
+       "answer": "Yes. Under 1.8(k), 1.8(a) is imputed to every lawyer in the firm, so the partner must comply with all three 1.8(a) requirements.",
+       "pause": 12
+      },
+      {
+       "ask": "Opposing counsel in a case is the lawyer's spouse. What is required?",
+       "answer": "Each lawyer needs his or her own client's informed consent under 1.7(a)(2) and Comment 11. The conflict is not imputed to their firms.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Aggregate settlements need each client's signed writing; majority rules fails. 1.8(a) through (i) are imputed; (j) is not. Acquaintance requires nothing. An ex-spouse requires the client's consent, not the ex-spouse's."
+      },
+      {
+       "say": "Recap. 1.8(g): each client signs after full disclosure. 1.8(k): (a) through (i) imputed. 1.7(a)(2) personal-interest conflicts turn on significant risk of material limitation; close relationships almost always count, friendships maybe, acquaintances rarely; and they are generally not imputed."
+      },
+      {
+       "ask": "What must be disclosed for an aggregate settlement?",
+       "answer": "The existence and nature of all the claims or pleas, and each person's participation in the settlement.",
+       "pause": 8
+      },
+      {
+       "ask": "Which 1.8 prohibition is not imputed?",
+       "answer": "1.8(j), sexual relations.",
+       "pause": 8
+      },
+      {
+       "ask": "Under Opinion 494, which relationships almost always create a conflict?",
+       "answer": "Intimate and close family relationships.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e05",
+     "title": "The concurrent client rule: Rule 1.7 and direct adversity",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The text of 1.7(a) and (b), direct adversity, unrelated matters, economic competitors, conflicts discovered midstream, and the line between current and former clients, with the hot-potato rule."
+      },
+      {
+       "say": "Rule 1.7(a). A lawyer shall not represent a client if the representation involves a concurrent conflict of interest. A concurrent conflict exists in either of two situations. One, the representation of one client will be directly adverse to another client. Two, there is a significant risk that the representation of one or more clients will be materially limited by the lawyer's responsibilities to another client, a former client, or a third person, or by a personal interest of the lawyer."
+      },
+      {
+       "say": "Rule 1.7(b). Notwithstanding a concurrent conflict, a lawyer may represent a client if four requirements are met, all required. One, the lawyer reasonably believes that the lawyer will be able to provide competent and diligent representation to each affected client. Two, the representation is not prohibited by law. Three, the representation does not involve the assertion of a claim by one client against another client represented by the lawyer in the same litigation or other proceeding before a tribunal. Four, each affected client gives informed consent, confirmed in writing."
+      },
+      {
+       "say": "Say them with me: reasonable belief; not prohibited by law; not the same litigation against each other; and informed consent, confirmed in writing, from each affected client."
+      },
+      {
+       "say": "Why the rule exists: loyalty. A client is entitled to a lawyer who will not turn on it, in any matter, while the relationship lasts."
+      },
+      {
+       "say": "Direct adversity, 1.7(a)(1). The classic example: representing one current client in litigation or negotiation against another current client represented by other counsel. Forbidden without both clients' informed consent, confirmed in writing."
+      },
+      {
+       "say": "Unrelated matters still count. Because the rule rests on loyalty, the adversity need not be in the same or a related matter, and no confidential information need be at risk. Suing a current closing client in a tort case is a conflict."
+      },
+      {
+       "say": "Directly adverse means head-on, nose-to-nose adversity in the same litigation or transaction. It also covers cross-examining a current client as an adverse witness and serving a third-party subpoena on a current client. But economic competitors are not directly adverse, Comment 6. Representing Bullseye and Wal-Mark, each sued by its own employees, is fine."
+      },
+      {
+       "say": "New matters: before taking one, ask whether the new client would be directly adverse to a current client. If so, decline unless both properly consent. The class quiz: decline the engagement unless both Opal and Nona waive. And if a concurrent conflict is discovered after both engagements are underway, withdraw as soon as possible, probably from both."
+      },
+      {
+       "say": "Current or former? The line matters. You may never be adverse to a current client without consent, but you may be adverse to a former client in any matter where you cannot use its confidential information against it. When an engagement's endpoint is unclear, the client may still be current."
+      },
+      {
+       "say": "The hot-potato rule. You may not drop a current client like a hot potato to turn it into a former client so you can take a matter against it for a client you like better. Violating it is not a 1.7 violation, so no discipline. The consequence is disqualification from the new engagement."
+      },
+      {
+       "ask": "A firm does occasional real estate closings for a hardware store, the most recent last month. A new client wants to sue the store for a slip-and-fall. The matters are unrelated. May the firm take it?",
+       "answer": "Not without consent. The store is likely a current client, and suing a current client is direct adversity under 1.7(a)(1), even in an unrelated matter. Both clients must give informed consent, confirmed in writing, and the 1.7(b) conditions must be met.",
+       "pause": 12
+      },
+      {
+       "ask": "A firm represents a small client in a minor matter. A wealthy new client wants to sue the small client, so the firm sends the small client a termination letter and then takes the new matter. Consequence?",
+       "answer": "The hot-potato rule. The firm cannot drop a current client to make it a former one. The likely consequence is disqualification from the new engagement, not discipline under 1.7.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer represents two competing coffee chains in separate, unrelated lease negotiations. Conflict?",
+       "answer": "No. Economic competition is not direct adversity, Comment 6.",
+       "pause": 10
+      },
+      {
+       "ask": "In a trial for Client A, the lawyer must cross-examine Client B, a current client in an unrelated matter, as an adverse witness. Conflict?",
+       "answer": "Yes. Cross-examining a current client as an adverse witness is direct adversity.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Unrelated matters still count for current clients. Competitors are not adverse. Dropping a client does not cure the conflict. And each affected client must consent."
+      },
+      {
+       "say": "Recap. 1.7(a): direct adversity, or significant risk of material limitation. 1.7(b): reasonable belief in competent and diligent representation; not prohibited by law; no claim between clients in the same proceeding; informed consent confirmed in writing from each."
+      },
+      {
+       "ask": "Name the four requirements of 1.7(b).",
+       "answer": "Reasonable belief in competent and diligent representation of each client; not prohibited by law; no claim by one client against another in the same proceeding; and each affected client's informed consent, confirmed in writing.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the consequence of violating the hot-potato rule?",
+       "answer": "Disqualification from the new engagement.",
+       "pause": 8
+      },
+      {
+       "ask": "Is serving a third-party subpoena on a current client direct adversity?",
+       "answer": "Yes.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e06",
+     "title": "Material limitation, positional conflicts, and joint representation",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The two kinds of material-limitation conflicts, positional conflicts and Comment 24, joint representation, co-defendants, forming a business, divorcing spouses, and what to do once you have a concurrent conflict."
+      },
+      {
+       "say": "Material limitation, 1.7(a)(2), comes in two rough categories, treated the same. One, currently indirect conflicts: adversity is not nose-to-nose in the same matter but is serious now. Weigh how the indirectly affected client will be affected and how adverse the effects are likely to be."
+      },
+      {
+       "say": "Positional conflicts are in this category: inconsistent positions on an issue of law or fact for two clients in different cases. They usually need no consent, unless, in the words of Comment 24, there is a significant risk that a lawyer's action on behalf of one client will materially limit the lawyer's effectiveness in representing another client in a different case; for example, when a decision favoring one client will create a precedent likely to seriously weaken the position taken on behalf of the other client. Opposite positions on the same ordinance in the same court qualify. And even a positional conflict that needs no consent can hurt client relations."
+      },
+      {
+       "say": "Two, possible future conflicts: adversity is insignificant now, but there is a reasonable possibility it will become serious or direct later. If so, you must not proceed unless you inform all affected clients and get their informed consent, confirmed in writing, up front, or else represent only one."
+      },
+      {
+       "say": "Joint representation is the most common possible future conflict. Joint clients' interests can almost always diverge, which requires disclosure and every joint client's informed consent, confirmed in writing, at the outset. If the conflict becomes actual later, more steps are needed."
+      },
+      {
+       "say": "Driver and passenger. The classic conflict is the passenger's possible claim against the driver; there could be a conflict if the evidence leads the passenger to want a cross-claim. Co-defendants: once the facts give one defendant reason to blame the other, the clients are actually adverse, and the lawyer should withdraw from both. 1.9 then bars staying on for either against the other. In criminal cases, ordinarily decline to represent more than one co-defendant, Comment 23."
+      },
+      {
+       "say": "Forming a business for several clients is permitted with each client's informed consent, confirmed in writing, about the conflicts and the lawyer's inability to advocate for any one of them, Comment 28. Scriveners, documenting a deal the clients already struck, and aggregate settlements under 1.8(g) raise their own issues."
+      },
+      {
+       "say": "Divorcing spouses in a contested proceeding: representing both is a nonconsentable direct conflict under 1.7(b)(3). The clients' satisfaction is irrelevant."
+      },
+      {
+       "say": "Once you have a concurrent conflict, four points. One, you must abstain or withdraw, or obtain all affected clients' informed consent, confirmed in writing, better signed by each, if the conflict is consentable and the clients agree. Two, otherwise discipline and disqualification can follow; the conflict exists as soon as interests conflict or a significant risk arises, with no harm required. Three, if the conflict caused actual harm, tort damages are available. Four, many jurisdictions treat fees incurred under a serious unwaived conflict as unearned and forfeited."
+      },
+      {
+       "ask": "A lawyer argues in one appeal that a statute of limitations is tolled by fraudulent concealment, and in an unrelated case in a different state argues for the opposite reading for another client. Consent needed?",
+       "answer": "Usually not. A positional conflict needs no consent unless there is a significant risk a ruling for one client will create precedent seriously weakening the other's position, as with opposite positions on the same ordinance in the same court.",
+       "pause": 12
+      },
+      {
+       "ask": "A husband and wife want one lawyer for their contested divorce, to save money. Both sign consents. Permitted?",
+       "answer": "No. It is nonconsentable under 1.7(b)(3): a claim by one client against another in the same proceeding before a tribunal.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer represents two co-defendants charged with robbery. Discovery shows one may blame the other. What now?",
+       "answer": "The clients are now actually adverse. The lawyer should withdraw from both, and 1.9 bars staying on for either against the other. In criminal cases, joint representation should ordinarily be declined in the first place.",
+       "pause": 12
+      },
+      {
+       "ask": "A driver and her passenger, both injured by a third driver, want one lawyer. What must the lawyer do at the outset?",
+       "answer": "Explain the possible future conflict, especially the passenger's potential claim against the driver, and get both clients' informed consent, confirmed in writing, up front.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. Positional conflicts usually need no consent. Contested divorces are nonconsentable. Joint representation needs consent at the outset. And conflicts need no harm."
+      },
+      {
+       "say": "Recap. Material limitation covers currently indirect conflicts, including positional conflicts under Comment 24, and possible future conflicts, including joint representation. Same-proceeding claims between clients are nonconsentable. Once conflicted: withdraw, or get informed consent, confirmed in writing."
+      },
+      {
+       "ask": "When does a positional conflict require consent?",
+       "answer": "When there is a significant risk that action for one client will materially limit effectiveness for the other, for example a precedent likely to seriously weaken the other's position.",
+       "pause": 8
+      },
+      {
+       "ask": "Should a lawyer ordinarily represent multiple criminal co-defendants?",
+       "answer": "No. Comment 23 says ordinarily decline.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the four consequences of an unwaived concurrent conflict.",
+       "answer": "Discipline, disqualification, damages for any actual harm, and fee forfeiture. And you must withdraw unless proper consent is obtained.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e07",
+     "title": "Former and prospective clients: Rules 1.9 and 1.18(c)",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. The three paragraphs of 1.9, the prospective-client rule in 1.18(c), the practical paraphrase, the substantial relationship test and playbook information, consequences, Westinghouse versus Kerr-McGee, and Morrison Knudsen."
+      },
+      {
+       "say": "Rule 1.9(a). A lawyer who has formerly represented a client in a matter shall not thereafter represent another person if three elements are present. One, in the same or a substantially related matter. Two, in which that person's interests are materially adverse to the interests of the former client. Three, unless the former client gives informed consent, confirmed in writing. So: same or substantially related, materially adverse, no consent."
+      },
+      {
+       "say": "Rule 1.9(b), the moving lawyer. A lawyer shall not knowingly represent a person in the same or a substantially related matter in which a firm with which the lawyer formerly was associated had previously represented a client, (1) whose interests are materially adverse to that person, and (2) about whom the lawyer had acquired information protected by 1.6 and 1.9(c) that is material to the matter, unless the former client gives informed consent, confirmed in writing. The key: the lawyer must have personally acquired material information."
+      },
+      {
+       "say": "Rule 1.9(c). A lawyer who has formerly represented a client, or whose present or former firm has, shall not thereafter (1) use information relating to the representation to the former client's disadvantage, except as the Rules permit or when the information has become generally known; or (2) reveal information relating to the representation except as the Rules permit."
+      },
+      {
+       "say": "The point of 1.9: the old engagement and the new one must not involve the same dispute or deal, or a substantively similar one, where the new client's interests are materially adverse to the former client's. Unrelated later matters are fine."
+      },
+      {
+       "say": "Prospective clients, 1.18(c). Similar language: a lawyer subject to 1.18(b) shall not represent a client with interests materially adverse to those of a prospective client in the same or a substantially related matter. But the bar applies only if the lawyer received information that could be significantly harmful to the prospective client in the matter. That makes the protection a little narrower than for former clients. And current clients get the broadest protection, because the concurrent client rule forbids adversity in any respect."
+      },
+      {
+       "say": "A practical paraphrase of the successive client rule. When a lawyer owes a duty of confidentiality to anyone, a prospective, current, or former client, or someone else, the lawyer must not take on or continue an engagement in which the lawyer might reasonably be able to use that confidential information against the person to whom the duty is owed."
+      },
+      {
+       "say": "The substantial relationship test. It is used mostly in discipline and civil disqualification proceedings. Two methods, often mixed. One, the person seeking protection describes in general terms the confidential information actually confided, or discloses specific confidences under seal or in camera. Two, without revealing anything, it describes the earlier engagement from the outside, and the court infers what confidential information was likely imparted, compares it with what is likely to matter in the new engagement, also viewed from the outside, and asks whether the two are substantially related. Do not confuse a substantial relationship between matters with how substantial the lawyer-client relationship was."
+      },
+      {
+       "say": "Playbook information: general information about how a client operates, its plays, is confidential, but ordinarily is not enough to create a substantial relationship, unless it is so voluminous, detailed, or specifically applicable that it creates a substantial unfair advantage."
+      },
+      {
+       "say": "Consequences of violating the successive client rule. One, discipline under 1.9(a) or 1.18, limited to information received from a former or prospective client. Two, disqualification reaches more broadly in most states: it is also available when a lawyer holds substantially related confidential information from anyone to whom the lawyer assumed a duty of confidentiality outside a client relationship. Morrison Knudsen versus Hancock Rothert and Bunshoft, California Court of Appeal, 1999: disqualified lawyers had acquired a duty to a third party because their client in the old engagement had assumed one. Three, fee forfeiture for a substantial, serious conflict, with possible disgorgement. Four, damages or restitution only if the conflict actually caused compensable harm or an ill-gotten gain, like insider trading on the former client's information. No use or harm is required for disqualification."
+      },
+      {
+       "say": "Westinghouse Electric versus Kerr-McGee, Seventh Circuit, 1978. A law firm representing a petroleum industry trade association gathered confidential information from member oil companies, promising to keep it confidential, while another office of the firm represented Westinghouse in an antitrust suit against some of those same companies. The firm was disqualified. By promising confidentiality, it had assumed a duty to the member companies, which the court described as an implied attorney-client relationship. The lesson: a duty of confidentiality, and the disqualification that protects it, can arise without a full client relationship. The casebook agrees with the result but not the implied-representation reasoning: only one duty was assumed."
+      },
+      {
+       "ask": "A lawyer represented a company in negotiating a supply contract two years ago. Now a new client wants to sue the company for breaching that same contract. The company refuses consent. May the lawyer take the case?",
+       "answer": "No. Same matter, materially adverse, no consent. 1.9(a) bars it.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer defended a hospital in a malpractice case five years ago. Now a patient wants her to sue the same hospital over an unrelated billing dispute. May she?",
+       "answer": "Yes, unless the matters are substantially related or she would use the hospital's confidential information against it. Unrelated later matters are fine under 1.9, and general playbook knowledge ordinarily does not create a substantial relationship.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer spent fifteen minutes with a prospective client who disclosed only her name and that she had a contract dispute with a supplier. He did not take the case. Can he now represent the supplier against her in that dispute?",
+       "answer": "Likely yes. 1.18(c) bars it only if he received information that could be significantly harmful to her in the matter. Her name and the bare nature of the dispute likely are not.",
+       "pause": 12
+      },
+      {
+       "ask": "At her old firm, a lawyer never worked on, or learned anything about, the firm's representation of Acme. At her new firm, may she represent a client suing Acme in a substantially related matter?",
+       "answer": "Yes. Under 1.9(b), she is barred only if she personally acquired material confidential information. A purely imputed conflict at her old firm does not follow her.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. 1.18(c) requires significantly harmful information; 1.9(a) does not. Disqualification can protect non-clients, as in Westinghouse. And playbook knowledge alone is usually not enough."
+      },
+      {
+       "say": "Recap. 1.9(a): same or substantially related, materially adverse, unless the former client consents in confirmed writing. 1.9(b): moving lawyers carry only what they personally learned. 1.9(c): no use to the disadvantage unless generally known, and no revealing. 1.18(c): adds the significantly harmful requirement."
+      },
+      {
+       "ask": "What are the elements of 1.9(a)?",
+       "answer": "Same or substantially related matter, interests materially adverse to the former client, and no informed consent confirmed in writing.",
+       "pause": 8
+      },
+      {
+       "ask": "What does 1.18(c) require that 1.9(a) does not?",
+       "answer": "That the lawyer received information that could be significantly harmful to the prospective client in the matter.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Westinghouse versus Kerr-McGee hold?",
+       "answer": "A firm that promised confidentiality to trade-association members was disqualified from suing them, even without a full client relationship.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e08",
+     "title": "Imputation: Rule 1.10",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The general imputation rule in 1.10(a), its two exceptions, 1.10(b) when a lawyer leaves, 1.10(c) waiver, and the three situational-fact rebuttals."
+      },
+      {
+       "say": "Rule 1.10(a). While lawyers are associated in a firm, none of them shall knowingly represent a client when any one of them practicing alone would be prohibited from doing so by 1.7 or 1.9, unless one of two exceptions applies."
+      },
+      {
+       "say": "Exception (a)(1): the prohibition is based on a personal interest of the disqualified lawyer and does not present a significant risk of materially limiting the representation by the remaining lawyers."
+      },
+      {
+       "say": "Exception (a)(2): the prohibition is based on 1.9(a) or (b) and arises out of the disqualified lawyer's association with a prior firm, and three conditions are met, all required. (i) The disqualified lawyer is timely screened from any participation in the matter and is apportioned no part of the fee. (ii) Written notice is promptly given to any affected former client, describing the screening procedures, stating the firm's and the screened lawyer's compliance, stating that review may be available before a tribunal, and agreeing to respond promptly to written inquiries or objections. (iii) Certifications of compliance are provided by the screened lawyer and by a partner of the firm, at reasonable intervals on the former client's written request, and when the screening ends."
+      },
+      {
+       "say": "So the lateral screen: screen plus no fee share, written notice, and certifications. Three parts."
+      },
+      {
+       "say": "Rule 1.10(b). When a lawyer has left a firm, the firm may represent a person materially adverse to a client the departed lawyer represented and the firm no longer represents, unless both of these are true. One, the matter is the same or substantially related. Two, a lawyer remaining in the firm has material information protected by 1.6 and 1.9(c)."
+      },
+      {
+       "say": "1.10(c): an imputed disqualification may be waived by the affected client under the conditions of 1.7. And 1.10(d): government lawyers' firms are governed by 1.11, which we reach tomorrow."
+      },
+      {
+       "say": "The general rule. If any lawyer in a practice organization has a conflict, every lawyer and the organization itself is deemed to have it. In most situations the presumption is conclusive. It applies across offices and states. In the class quiz, Keisha, Chrissy, Victor in Garden, and Abigail in Keystone are all conflicted."
+      },
+      {
+       "say": "Rebuttable presumptions. In defined situations, the firm may rebut imputation, and other lawyers may proceed without client consent, as long as the personally disqualified lawyer stays out. Most states apply the same exceptions to disqualification."
+      },
+      {
+       "say": "Situational rebuttal one: personal interest under 1.10(a)(1). It is narrower than it sounds, because most personal-interest conflicts are conclusively imputed by 1.8(k). The ones that are not imputed are sex with a client, 1.8(j), and 1.7(a)(2) personal-interest conflicts. The class quiz: Amir's religious objection to suing the church is not imputed if he does no work on the matter and his beliefs create no significant risk of limiting Leona's representation, 1.10 Comment 3."
+      },
+      {
+       "say": "Situational rebuttal two: the mobile lawyer's actual knowledge, 1.9(b). A lawyer who changes jobs brings to, and imputes within, the new firm only confidential information the lawyer personally knew. It has no effect on concurrent conflicts. The class quiz: Lulu, whose conflict was purely imputed at her old firm and who acquired no material information about the adverse party, needs no screen, 1.9(b) Comment 5."
+      },
+      {
+       "say": "Situational rebuttal three: everyone who knew has left, 1.10(b). Every lawyer exposed to the client's information must have left, and no trace of it, paper or digital, may remain. It applies only to successive conflicts, never concurrent ones."
+      },
+      {
+       "ask": "A lawyer at Firm A worked extensively on Client X's defense in a fraud suit. She moves to Firm B, which represents the plaintiff in that same suit. X refuses consent. Can Firm B continue?",
+       "answer": "Yes, if Firm B timely screens her and gives her no part of the fee, promptly gives X written notice with the required contents, and provides certifications of compliance. That is 1.10(a)(2). Otherwise her conflict is imputed to all of Firm B.",
+       "pause": 12
+      },
+      {
+       "ask": "A partner in a firm's Chicago office represents a bank in a loan matter. A partner in the firm's Miami office, who has never heard of the bank, wants to sue it for a new client. Allowed without consent?",
+       "answer": "No. Imputation under 1.10(a) runs across offices and states, and a concurrent conflict cannot be screened. Both clients must consent.",
+       "pause": 12
+      },
+      {
+       "ask": "All the lawyers who represented Client Y have left the firm, and no files remain. The firm now wants to sue Y in a substantially related matter. Allowed?",
+       "answer": "Yes, under 1.10(b), because no remaining lawyer has material confidential information, and Y is a former client of the firm.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer's spouse is the CEO of a company the firm wants to sue. The lawyer will do no work on the matter. Is his conflict imputed?",
+       "answer": "Probably not. It is a personal-interest conflict, and under 1.10(a)(1) it is not imputed if it presents no significant risk of materially limiting the other lawyers.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Screens never cure concurrent conflicts. A lateral screen needs notice and certifications, not just a wall. 1.10(b) needs everyone who knew to be gone. And 1.8(k), not 1.10, imputes most 1.8 conflicts."
+      },
+      {
+       "say": "Recap. 1.10(a): one lawyer's 1.7 or 1.9 conflict is everyone's, except non-risky personal-interest conflicts and lateral 1.9 conflicts with a screen, no fee share, notice, and certifications. 1.10(b): departed lawyers' conflicts end when no one remaining knows. 1.10(c): waiver under 1.7."
+      },
+      {
+       "ask": "What three things does the 1.10(a)(2) lateral screen require?",
+       "answer": "A timely screen with no part of the fee; prompt written notice to the former client; and certifications of compliance.",
+       "pause": 8
+      },
+      {
+       "ask": "Does a screen ever cure a concurrent conflict?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "When does 1.10(b) let a firm take a matter against a departed lawyer's former client?",
+       "answer": "Unless the matter is the same or substantially related and a remaining lawyer has material confidential information.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e09",
+     "title": "Ethical screens, and prospective clients under 1.18(d)",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. What a screen is, its six features, the only four successive-conflict situations a screen alone cures, and the prospective-client screen in 1.18(d)."
+      },
+      {
+       "say": "What a screen is, 1.0(k): timely isolation of a lawyer from any participation in a matter, through procedures reasonably adequate to protect the information. It restricts confidential information to a lawyer or a small group and keeps it from everyone else. Most conflicts cannot be cured by a screen, and a screen never cures a concurrent conflict."
+      },
+      {
+       "say": "Six common features, from 1.0 Comments 8 through 10, all expected. One, the screened lawyer's written undertaking not to communicate about the matter or touch its files. Two, written notice and instructions to all other firm personnel forbidding communication with the screened lawyer about it. Three, denial of access to files and information, paper and electronic. Four, periodic reminders to everyone. Five, no share of the fee where a Rule requires it: 1.10(a)(2), 1.11, 1.12, and 1.18(d). Six, timeliness: in place as soon as practical once the firm knows or reasonably should know a screen is needed."
+      },
+      {
+       "say": "Only four successive-conflict situations can be cured by a screen alone. One, nonlawyer staff exposed to confidential information, 1.10 Comment 4. Two, a lawyer exposed to the information before becoming a lawyer, for example as a paralegal or law clerk, also Comment 4. Three, a lateral lawyer's actual knowledge from a prior firm, under 1.10(a)(2), with notice and certifications. Four, a prospective client's information, under 1.18(d)(2)."
+      },
+      {
+       "say": "Now 1.18(d) in full. When a lawyer has received disqualifying information from a prospective client, representation of the adverse client is still permissible in either of two ways. One, both the affected client and the prospective client give informed consent, confirmed in writing. Or two, three conditions are met, all required. The lawyer who received the information took reasonable measures to avoid exposure to more disqualifying information than was reasonably necessary to determine whether to represent the prospective client; the disqualified lawyer is timely screened from any participation and apportioned no part of the fee; and written notice is promptly given to the prospective client."
+      },
+      {
+       "say": "This is why intake should be limited to what you need for a conflict check and a decision. The limit is what lets the firm screen. And government lawyers under 1.11 and former judges and neutrals under 1.12 have their own screening rules, tomorrow."
+      },
+      {
+       "ask": "A paralegal worked on Client Z's case at her old firm. She joins a firm suing Z in the same matter. Is her knowledge imputed to the new firm?",
+       "answer": "It can be cured by screening her. Under 1.10 Comment 4, nonlawyer staff exposed to confidential information can be screened.",
+       "pause": 12
+      },
+      {
+       "ask": "A prospective client spent two hours telling a firm partner every detail of her divorce, including hidden assets, though ten minutes would have revealed the conflict. The husband's lawyer is at the same firm. Can the firm screen the partner and keep the husband?",
+       "answer": "Probably not. 1.18(d)(2) requires that the lawyer took reasonable measures to avoid more disqualifying information than reasonably necessary. Two hours of detail fails that. The firm needs both clients' informed consent, confirmed in writing, or must decline.",
+       "pause": 12
+      },
+      {
+       "ask": "A firm sets up a screen for a lateral partner two months after she arrives and after she has already discussed the matter at a team meeting. Effective?",
+       "answer": "No. A screen must be timely, in place as soon as practical once the need is known, and she already participated.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. A screen is timely isolation through reasonably adequate procedures: written undertaking, notice to staff, file lockout, reminders, no fee share, and timeliness. Screens alone cure only four successive-conflict situations: staff, pre-lawyer exposure, lateral lawyers, and prospective clients who were properly limited."
+      },
+      {
+       "ask": "What are the two routes under 1.18(d)?",
+       "answer": "Informed consent confirmed in writing from both clients, or limited intake plus a timely screen with no fee share and prompt written notice to the prospective client.",
+       "pause": 8
+      },
+      {
+       "ask": "Name four of the six features of a screen.",
+       "answer": "Written undertaking; notice to other personnel; denial of file access; periodic reminders; no fee share where required; and timeliness.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the four situations a screen alone can cure.",
+       "answer": "Nonlawyer staff, pre-lawyer exposure, a lateral lawyer's knowledge under 1.10(a)(2), and properly limited prospective-client information under 1.18(d).",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e10",
+     "title": "Consent, advance waivers, Sheppard Mullin, and conflict checks",
+     "minutes": 10,
+     "segments": [
+      {
+       "say": "Roadmap. Abstaining versus withdrawing, the four nonconsentable conflicts, what makes consent informed, joint-representation disclosures, advance waivers, the form of consent, Sheppard Mullin versus J-M Manufacturing, conflict-check systems, and the six-step conflicts analysis."
+      },
+      {
+       "say": "Abstain or withdraw. No conflict, no consequences. But you can abstain only from an engagement you never took on. Once the prospective client reasonably believes you are his lawyer, you are, and a conflicted engagement then requires withdrawal, likely from every engagement creating the conflict, unless all affected clients give informed consent, confirmed in writing."
+      },
+      {
+       "say": "Two ways to proceed with a conflict. One, rebut imputation and staff the matter with lawyers who are not personally disqualified. Two, if the conflict is consentable, obtain all affected clients' informed consent in the required form and substance."
+      },
+      {
+       "say": "The four nonconsentable conflicts, any one suffices. One, the representation is prohibited by law, 1.7(b)(2). Two, it is one of the personal-interest conflicts 1.8 forbids outright. Three, it involves a claim by one client against another client the lawyer represents in the same proceeding before a tribunal, 1.7(b)(3). Four, the lawyer does not reasonably believe the lawyer can provide competent and diligent representation to each affected client, 1.7(b)(1). That belief must be subjectively held and objectively reasonable. If no reasonable client would consent, the conflict is nonconsentable."
+      },
+      {
+       "say": "Class quiz applications. Co-defendants Maru and Neo blame each other and have incompatible defenses, so Oscar cannot reasonably represent both, under 1.7(b)(1) and Comment 23. A braking discrepancy and different injuries between two clients from one accident need evaluation but do not automatically bar Shiva from representing both; with informed consent, confirmed in writing, and 1.7(b) satisfied, she may."
+      },
+      {
+       "say": "What makes consent informed. An enforceable waiver should, and arguably must, disclose four things. One, the facts and circumstances giving rise to the situation, 1.0 Comment 6. Two, the material risks of the proposed course, 1.0(e). Three, the reasonably available alternatives, including the client's absolute right to refuse consent. Four, the client's right to seek independent advice and take the time needed. The casebook recommends always advising independent counsel."
+      },
+      {
+       "say": "Joint representation disclosures. Jointly represented clients have no privilege against one another and, in most states, no confidentiality against one another. Say so up front, and say what happens if interests diverge: the lawyer may have to withdraw from both. The class quiz: Amity cannot give informed consent to a joint estate plan without learning of Buzz's child. Chuck must first get Buzz's authorization to disclose, and if Buzz insists on secrecy, withdraw from both rather than finish the wills while withholding material information, Comments 18, 19, and 31."
+      },
+      {
+       "say": "Advance waivers, 1.7 Comment 22. The effectiveness of such waivers is generally determined by the extent to which the client reasonably understands the material risks that the waiver entails. That usually requires describing the kind of conflict that later materializes. A specific, explained waiver is more likely to work than an open-ended one, and no advance waiver can authorize a future nonconsentable conflict."
+      },
+      {
+       "say": "When interests later diverge, the initial consent does not cover new antagonism. Continuing for one of two doctors requires both doctors' informed consent, confirmed in writing, plus compliance with duties to the departing client, Comment 29 and 1.9. Cleo, representing her own client's litigation opponent on conflicting positions about the same trade dress, should withdraw from both. And every affected client consents: Nicole may represent Orin against current firm client Morris, even in an unrelated transaction, only if both Morris and Orin consent, confirmed in writing."
+      },
+      {
+       "say": "The form of consent. Most states require informed consent confirmed in writing; a few require a writing signed by the client, which is the better practice everywhere. Silence is not consent. 1.0 Comment 7: obtaining informed consent will usually require an affirmative response, and a lawyer may not assume consent from silence. And disclosure comes first. Consent given before the disclosure and explanation is no consent at all."
+      },
+      {
+       "say": "Sheppard Mullin versus J-M Manufacturing, California, 2018. Sheppard, Mullin, Richter and Hampton took on J-M in a qui tam suit under an engagement letter with a broad advance waiver, without telling J-M that the firm was then also representing one of the public entities suing J-M, in unrelated matters. The court held the advance waiver did not cover a known, existing conflict the firm failed to disclose, so J-M's consent was not informed and the engagement agreement was unenforceable. The firm could at most seek quantum meruit fees, depending on the seriousness of the violation. The lesson: informed consent requires disclosing conflicts you know about, and boilerplate cannot waive what was not explained. The casebook notes an amicus brief arguing that big firms demand such waivers on a take-it-or-leave-it basis."
+      },
+      {
+       "say": "Seeing conflicts coming. Practice organizations must maintain policies, procedures, and systems to recognize and respond to conflicts before agreeing to a new engagement. A conflicts database tracks every interaction that may have created duties to anyone: clients, prospective clients, adverse parties, co-parties, and people promised confidentiality. Run the check before receiving more than the minimum information, 1.18(d)(2), and update it when parties are added, firms merge, or lawyers join, 1.6(b)(7). 5.1(a) makes partners responsible for having such a system."
+      },
+      {
+       "say": "Finally, the conflicts analysis in order. Six steps. One, identify every person to whom duties are owed: current, former, and prospective clients, and non-clients promised confidentiality. Two, classify the conflict: personal interest, concurrent, or successive. Three, impute it across the firm under 1.10(a) and 1.8(k), then ask whether imputation can be rebutted by situational facts or a screen. Four, ask whether it is consentable. Five, get informed consent from every affected client in the required form, or abstain or withdraw under 1.16(a)(1). Six, name the consequences: disqualification, discipline, fee forfeiture, damages."
+      },
+      {
+       "ask": "A firm's engagement letter says the client waives all future conflicts of any kind. Two years later, the firm sues the client for another client in a matter substantially related to its work for the client. Is the advance waiver effective?",
+       "answer": "Almost certainly not. Under Comment 22, an open-ended waiver works only to the extent the client reasonably understood the material risks, and it cannot authorize a conflict that is nonconsentable or materially limits the representation. Here the firm would be using related confidences against its own client.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer sends a client a conflict waiver letter and asks her to reply if she objects. She never replies. Consent?",
+       "answer": "No. Silence is not consent. Informed consent usually requires an affirmative response, confirmed in writing.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer representing two spouses in estate planning learns from the husband that he has a child from an affair, and he wants it kept from his wife. What should the lawyer do?",
+       "answer": "Ask the husband to authorize disclosure. If he refuses, withdraw from both rather than finish plans while withholding material information from the wife.",
+       "pause": 12
+      },
+      {
+       "ask": "A firm knows it represents a city in unrelated matters when it takes on a company the city is suing. It relies on a boilerplate advance waiver and says nothing. Effect?",
+       "answer": "Sheppard Mullin: consent was not informed, the engagement agreement is unenforceable, and the firm is limited at most to quantum meruit.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Advance waivers must be specific and understood. Known conflicts must be disclosed. Silence is not consent. Consent before disclosure is no consent. And the lawyer's reasonable belief in competent representation is objective too."
+      },
+      {
+       "say": "Recap. Nonconsentable: prohibited by law, outright 1.8 bans, same-proceeding claims between clients, and no reasonable belief in competent and diligent representation. Informed consent discloses facts, risks, alternatives, and the right to independent advice. Six steps: identify, classify, impute, consentable, consent or withdraw, consequences."
+      },
+      {
+       "ask": "Name the four nonconsentable conflicts.",
+       "answer": "Prohibited by law; outright 1.8 prohibitions; claims between the lawyer's clients in the same proceeding; and no reasonable belief in competent and diligent representation of each client.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Sheppard Mullin hold?",
+       "answer": "A boilerplate advance waiver did not cover a known existing conflict the firm failed to disclose, so the engagement agreement was unenforceable.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the six steps of conflicts analysis?",
+       "answer": "Identify who is owed duties; classify the conflict; impute and test rebuttal; check consentability; get proper consent or withdraw; name the consequences.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d3-e11",
+     "title": "Day 3 cumulative quiz",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "The Day 3 cumulative quiz, mixing today with earlier days. Answer out loud."
+      },
+      {
+       "ask": "May a lawyer lend a litigation client money for rent?",
+       "answer": "No, unless the client is indigent and pro bono, and then only as a modest gift, not a loan.",
+       "pause": 8
+      },
+      {
+       "ask": "What three writings does 1.8(a) need?",
+       "answer": "Terms in writing, written advice to seek independent counsel, and the client's signed informed consent.",
+       "pause": 8
+      },
+      {
+       "ask": "May a lawyer accept a modest, unsolicited holiday gift from a client?",
+       "answer": "Yes.",
+       "pause": 8
+      },
+      {
+       "ask": "Aggregate settlement: does majority approval bind the dissenter?",
+       "answer": "No. Each client must give informed consent in a signed writing.",
+       "pause": 8
+      },
+      {
+       "ask": "Is a 1.8(a) prohibition imputed to partners?",
+       "answer": "Yes, under 1.8(k).",
+       "pause": 8
+      },
+      {
+       "ask": "Can a lawyer sue a current client in an unrelated matter with no confidential information at risk?",
+       "answer": "Not without both clients' informed consent, confirmed in writing.",
+       "pause": 8
+      },
+      {
+       "ask": "Is a contested divorce representation of both spouses consentable?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "What extra element does 1.18(c) add?",
+       "answer": "Information that could be significantly harmful.",
+       "pause": 8
+      },
+      {
+       "ask": "Can a screen cure a concurrent conflict?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "What does the lateral screen require besides the wall?",
+       "answer": "No fee share, written notice to the former client, and certifications.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the hot-potato rule's consequence?",
+       "answer": "Disqualification.",
+       "pause": 8
+      },
+      {
+       "ask": "Which 1.6(b) exception lets firms share information to check conflicts on a lateral hire?",
+       "answer": "(b)(7).",
+       "pause": 8
+      },
+      {
+       "ask": "Does a conflict require harm before a court will disqualify?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "say": "That's Day 3. Tomorrow, Day 4: government lawyers, the revolving door, prosecutors, the lawyer as counselor and neutral, evidence, the limits on advocacy, and candor to the tribunal. Another heavy day. Sleep on conflicts tonight."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
