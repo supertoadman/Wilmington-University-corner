@@ -1246,6 +1246,1291 @@
      ]
     }
    ]
+  },
+  {
+   "day": 2,
+   "title": "Warranties, gap fillers, quantity and price, delivery, and risk of loss",
+   "minutes": 79,
+   "episodes": [
+    {
+     "id": "sl-d2-e00",
+     "title": "Spaced review of Day 1",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Welcome back. Before anything new, five minutes on Day 1. Answer each out loud before the answer plays."
+      },
+      {
+       "id": "s2",
+       "ask": "What are the three exclusions from the definition of goods?",
+       "answer": "The money in which the price is to be paid, investment securities, and things in action.",
+       "pause": 10
+      },
+      {
+       "id": "s3",
+       "ask": "Timber to be cut by the buyer: goods or not, and under what section?",
+       "answer": "Goods, § 2-107(2). Timber and crops are goods whoever severs them.",
+       "pause": 9
+      },
+      {
+       "id": "s4",
+       "ask": "Under the 2022 amendments, name two groups of provisions that still apply when goods do not predominate.",
+       "answer": "The warranties, tender and risk of loss, acceptance, rejection and cure, and buyer's remedies for nondelivery or nonconforming goods.",
+       "pause": 10
+      },
+      {
+       "id": "s5",
+       "ask": "A seller ships nonconforming goods in response to a prompt-shipment order without any note. What has it done?",
+       "answer": "Accepted and breached at the same time, § 2-206(1)(b).",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "Give the five elements of a firm offer.",
+       "answer": "An offer, by a merchant, in a signed record, that by its terms assures it will be held open, irrevocable for the stated or a reasonable time, never more than three months.",
+       "pause": 12
+      },
+      {
+       "id": "s7",
+       "ask": "State the three subsections of § 2-207 in one sentence each.",
+       "answer": "(1) An expression of acceptance with extra terms still accepts unless expressly conditional. (2) Additional terms are proposals; between merchants they come in unless the offer limits acceptance, they materially alter, or there is objection. (3) If writings fail but conduct shows a contract, its terms are those the writings agree on plus gap fillers.",
+       "pause": 16
+      },
+      {
+       "id": "s8",
+       "ask": "What two things must a § 2-201(1) record do?",
+       "answer": "Be sufficient to indicate a contract for sale, and be signed by the party against whom enforcement is sought. And it is enforceable only up to the quantity shown.",
+       "pause": 10
+      },
+      {
+       "id": "s9",
+       "ask": "What sank Casazza's part-performance argument?",
+       "answer": "Accepting the navigation software was not accepting the boat; they were not one commercial unit.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "What is the § 1-303(e) hierarchy?",
+       "answer": "Express terms, course of performance, course of dealing, usage of trade.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "What is the rule from Market Street?",
+       "answer": "After contracting, deliberately exploiting your partner's oversight about its contract rights, when you could correct it at no cost, is bad faith.",
+       "pause": 10
+      },
+      {
+       "id": "s12",
+       "ask": "Under § 2-209, what does a modification need, and what limits it?",
+       "answer": "No consideration. It must be in good faith, and it must clear the statute of frauds as modified and any NOM clause.",
+       "pause": 10
+      },
+      {
+       "id": "s13",
+       "say": "Good. On to warranties."
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e01",
+     "title": "Express warranties: § 2-313, and fact versus puffing",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The three ways to make an express warranty, what is not a warranty, the factors that separate a fact from puffing, and Problem 3-6."
+      },
+      {
+       "id": "s2",
+       "say": "The rule, § 2-313. An express warranty is created by three things. (a), an affirmation of fact or promise made by the seller to the buyer that relates to the goods. (b), a description of the goods. And (c), a sample or model. Each must become part of the basis of the bargain. Then the goods must conform to the affirmation, the description, or the sample."
+      },
+      {
+       "id": "s3",
+       "say": "Two things you do not need. No formal words like warrant or guarantee. And no specific intent to make a warranty."
+      },
+      {
+       "id": "s4",
+       "say": "What is not a warranty: an affirmation merely of the value of the goods, or a statement purporting to be merely the seller's opinion or commendation of the goods. That is puffing."
+      },
+      {
+       "id": "s5",
+       "say": "Why the rule? Section 2-313 rejects caveat emptor, let the buyer beware. It turns many representations, which used to be a tort question, into contract warranties."
+      },
+      {
+       "id": "s6",
+       "say": "One timing point from comment 7. Statements made after the deal, say at delivery, can still be warranties. They operate as modifications, and modifications need no consideration."
+      },
+      {
+       "id": "s7",
+       "say": "How do you tell a warranty from puffing? The outline gives pairs. Points toward an express warranty: an affirmation of fact, a promise, a description; specific and measurable; unequivocal; reasonable to rely on; made in response to the buyer's inquiry; and written. Points toward puffing: an affirmation of value, an opinion, praise; general and immeasurable; equivocal, hedged, conditional; not reasonable to rely on; freely volunteered; and oral. The written-versus-oral point is not decisive. Oral statements can be warranties."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 3-6. Let's run the statements."
+      },
+      {
+       "id": "s9",
+       "say": "Looks good on you. And: a beautiful painting by a talented artist. Puffing."
+      },
+      {
+       "id": "s10",
+       "say": "A Queen Anne desk. A Ming vase. An antique table. Warranties, because they are descriptions. The open question is whether Queen Anne means the period or only the style."
+      },
+      {
+       "id": "s11",
+       "say": "A consumer seller says the used washer works great. A close call, citing Petti. Is that a statement of present condition, a fact, or a casual opinion?"
+      },
+      {
+       "id": "s12",
+       "say": "The ball David Ortiz hit for a grand slam in Game 2 of the 2013 World Series. A warranty: specific and verifiable."
+      },
+      {
+       "id": "s13",
+       "say": "Replacement parts are readily available. Likely a warranty: specific and measurable."
+      },
+      {
+       "id": "s14",
+       "say": "The safest car in its class. Split. Superlative puffery, or measurable by crash ratings?"
+      },
+      {
+       "id": "s15",
+       "say": "A used yacht is seaworthy. Split. The problem cites Keith versus Buchanan, a warranty, against Sessa versus Riegle, cited only. Outside the class materials, in Keith a sales brochure called a 41-foot sailboat seaworthy; it was not; and the court found an express warranty with no proof of reliance needed. Sessa involved a statement about a racehorse's soundness."
+      },
+      {
+       "id": "s16",
+       "ask": "A used-car dealer says: this engine was rebuilt last month. Then: you'll love driving it. Which is a warranty?",
+       "answer": "The rebuilt-last-month statement is an affirmation of fact, specific and verifiable, so it is a warranty. You'll love driving it is puffing.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "say": "The trap. The word warranty is not required, and the seller's lack of intent is no defense."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Express warranties come from (a) an affirmation of fact or promise, (b) a description, or (c) a sample or model, each part of the basis of the bargain. Value statements and opinions are puffing. The factors: specific, measurable, unequivocal, reasonable to rely on, made in response to an inquiry."
+      },
+      {
+       "id": "s19",
+       "ask": "Name the three sources of an express warranty under § 2-313.",
+       "answer": "An affirmation of fact or promise relating to the goods, a description of the goods, and a sample or model.",
+       "pause": 9
+      },
+      {
+       "id": "s20",
+       "ask": "Is a statement at delivery, after the contract was made, capable of being a warranty?",
+       "answer": "Yes, under comment 7, as a modification needing no consideration.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "Must the seller use the word warrant?",
+       "answer": "No. No formal words or specific intent are needed.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e02",
+     "title": "Basis of the bargain: Rogath v. Siebenmann and Problem 3-7",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What basis of the bargain means, the three judicial approaches, the nine factors, the Francis Bacon painting, and the HVAC problem."
+      },
+      {
+       "id": "s2",
+       "say": "Comment 3 to § 2-313: no particular reliance on the affirmation need be shown. Affirmations made during the bargain are regarded as part of the description of the goods, unless clear affirmative proof takes them out."
+      },
+      {
+       "id": "s3",
+       "say": "Courts split three ways. Some require reliance. Some require none. And some use a rebuttable presumption. Two settled points: a warranty in the written contract needs no proof of reliance, and owner's manuals and package inserts can count even if read after the sale."
+      },
+      {
+       "id": "s4",
+       "say": "The outline gives nine factors. The statement is plain and unambiguous. It is of objective importance to the buyer. It is not easily checked by the buyer. The seller is more expert. The buyer relied at least in part. Nothing suggested the seller wasn't serious. Nothing put the buyer on guard. The remedy is fair to the seller. And the price supports the claim."
+      },
+      {
+       "id": "s5",
+       "say": "Now Rogath versus Siebenmann, Second Circuit, 1997."
+      },
+      {
+       "id": "s6",
+       "say": "Siebenmann sold Rogath a Self Portrait attributed to Francis Bacon, for $570,000. The bill of sale warranted three things: that he was the sole owner, that the painting was authentic, and that he knew of no challenge to its authenticity. In fact, the Marlborough Fine Art gallery in London had already told him it doubted the work."
+      },
+      {
+       "id": "s7",
+       "say": "Rogath resold the painting for $950,000. That buyer learned of the doubts and demanded a refund, which Rogath paid. Rogath then sued. Siebenmann claimed he had told Rogath about the Marlborough controversy before the sale. And Rogath had also heard doubts from a Tate Gallery curator."
+      },
+      {
+       "id": "s8",
+       "say": "Held: the trial court's summary judgment for Rogath was vacated and the case remanded. The question is not whether the buyer believed the warranted facts, but whether he bought the seller's promise. Here is the rule. A buyer who closes knowing facts, disclosed by the seller, that make the warranty false, waives the breach unless he expressly preserves his rights. But knowledge from a third party, or common knowledge, does not bar recovery, because the buyer may have bought the warranty as insurance. So the key fact was whether Siebenmann himself told Rogath. That was disputed, so the case needed a trial."
+      },
+      {
+       "id": "s9",
+       "say": "Why it matters. Basis of the bargain is not a strict reliance test. An express warranty allocates risk, and the source of the buyer's knowledge decides the case."
+      },
+      {
+       "id": "s10",
+       "ask": "A seller warrants a used truck has never been in a flood. Before closing, the buyer's mechanic tells the buyer he suspects flood damage. The buyer closes anyway. The truck was flooded. Can the buyer sue?",
+       "answer": "Yes, under Rogath. Knowledge from a third party does not bar recovery; the buyer may have bought the warranty as insurance. Only the seller's own disclosure, without a reservation of rights, would waive the breach.",
+       "pause": 15
+      },
+      {
+       "id": "s11",
+       "say": "Problem 3-7, the HVAC system, heating, ventilation, and air conditioning. The sales rep says: 300,000 BTU per hour, British thermal units. That is a warranty. The rep says: you'll be very happy. Puffing. The brochure says: under 100 decibels. A warranty, even though the buyer only skimmed it. The owner's manual says: free of defects for one year. Likely a warranty: a post-sale term, and a promise of future performance."
+      },
+      {
+       "id": "s12",
+       "say": "And the tobacco ads slide. Specific health claims, like immediate relief in cases of asthma, or 20,679 physicians say Luckies are less irritating, look like facts. It's toasted is puffery."
+      },
+      {
+       "id": "s13",
+       "say": "The trap. Rogath is about whose knowledge. Seller-disclosed facts: waiver unless rights reserved. Third-party facts: no bar."
+      },
+      {
+       "id": "s14",
+       "say": "Recap. Comment 3 says no particular reliance need be shown; courts split among reliance, no reliance, and a presumption. Rogath: the buyer must have bought the seller's promise; seller-disclosed falsity waives the breach unless rights are preserved; third-party knowledge does not."
+      },
+      {
+       "id": "s15",
+       "ask": "In Rogath, what had the Marlborough gallery told Siebenmann?",
+       "answer": "That it doubted the painting was authentic.",
+       "pause": 7
+      },
+      {
+       "id": "s16",
+       "ask": "What are the three judicial approaches to basis of the bargain?",
+       "answer": "Reliance required, no reliance required, and a rebuttable presumption of reliance.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "In Problem 3-7, is the owner's manual's free of defects for one year likely a warranty?",
+       "answer": "Likely yes, as a post-sale term and a promise of future performance.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e03",
+     "title": "Gap fillers and the implied warranties at a glance",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. How gap fillers work, the list of key gap fillers, Problem 3-8, the four implied warranties side by side, and the cumulation rule of § 2-317."
+      },
+      {
+       "id": "s2",
+       "say": "How gap fillers work. Open terms do not defeat a contract if the parties intended to contract and there is a reasonably certain basis for a remedy, § 2-204(3). Usage of trade and course of dealing fill some gaps. The UCC's gap fillers fill the rest. And the corollary: no gap, no gap filler."
+      },
+      {
+       "id": "s3",
+       "say": "The key gap fillers. Warranties: § 2-312 title, § 2-313 express, § 2-314 merchantability, § 2-315 fitness. Though strictly, express warranties are not gap fillers; § 2-313 gives the rules for creating them. Price, § 2-305. Output and requirements, § 2-306. Price payable in money or otherwise, § 2-304. Single lot, § 2-307. Place, § 2-308. Time, § 2-309. Time of payment, § 2-310. Cooperation, § 2-311. The tender and payment conditions, §§ 2-507 and 2-511. And payment before inspection, § 2-512."
+      },
+      {
+       "id": "s4",
+       "say": "Problem 3-8. (A): a signed deal for a skid loader, silent on delivery. It is enforceable, and § 2-308 puts delivery at the seller's place of business. So the buyer breached by refusing to pick it up. (B): add a history of the seller delivering. Now the course of dealing fills the term, there is no gap for § 2-308, and the seller breached by not delivering."
+      },
+      {
+       "id": "s5",
+       "say": "Now the implied warranties at a glance. Four of them."
+      },
+      {
+       "id": "s6",
+       "say": "Merchantability, § 2-314. Who makes it: a merchant with respect to goods of that kind. Trigger: a sale by such a merchant, including food served for value. Promise: the goods are merchantable, fit for ordinary purposes. Disclaimer: § 2-316, mentioning merchantability, and conspicuous if written."
+      },
+      {
+       "id": "s7",
+       "say": "Fitness for a particular purpose, § 2-315. Who makes it: any seller, though usually merchants in practice. Trigger: the seller has reason to know the buyer's particular purpose and its reliance on the seller's skill, and the buyer actually relies. Promise: fit for the buyer's particular purpose. Disclaimer: § 2-316, in a conspicuous writing."
+      },
+      {
+       "id": "s8",
+       "say": "Title, § 2-312(1). Who makes it: every seller. Trigger: every contract for sale. Promise: good title, rightful transfer, and no liens the buyer doesn't know about. Disclaimer: only by specific language or circumstances, under § 2-312(2). As is does not work."
+      },
+      {
+       "id": "s9",
+       "say": "Non-infringement, § 2-312(3). Who makes it: a merchant regularly dealing in goods of the kind. Trigger: every such sale, unless the buyer furnished specifications, in which case the buyer must hold the seller harmless. Promise: free of rightful third-party infringement claims. Disclaimer: unless otherwise agreed."
+      },
+      {
+       "id": "s10",
+       "say": "The camera example. A scratched lens breaches § 2-314. A battery that won't last the four hours the buyer said it needed breaches § 2-315. A stolen camera breaches § 2-312. And other implied warranties can arise from course of dealing or usage of trade, § 2-314(3)."
+      },
+      {
+       "id": "s11",
+       "say": "Cumulation, § 2-317. Warranties are construed as consistent and cumulative where reasonable. If not, the parties' intention controls, with three rules of thumb. (a), exact or technical specifications displace an inconsistent sample or general description. (b), a sample from an existing bulk displaces inconsistent general language of description. (c), express warranties displace inconsistent implied warranties, other than fitness for a particular purpose."
+      },
+      {
+       "id": "s12",
+       "ask": "A contract describes yarn by a precise technical specification, and the seller also showed a general sample that differs slightly. The goods match the specification but not the sample. Breach?",
+       "answer": "Probably not. Under § 2-317(a), exact or technical specifications displace an inconsistent sample.",
+       "pause": 12
+      },
+      {
+       "id": "s13",
+       "say": "The trap. Express warranties displace inconsistent implied ones, except fitness. Fitness survives."
+      },
+      {
+       "id": "s14",
+       "say": "Recap. No gap, no gap filler. Problem 3-8: silent delivery means the seller's place under § 2-308, unless a course of dealing fills the gap. Four implied warranties: merchantability by merchants, fitness by any seller, title by every seller, non-infringement by merchants regularly dealing. And § 2-317: specs over samples, bulk samples over general description, express over implied except fitness."
+      },
+      {
+       "id": "s15",
+       "ask": "Under § 2-308, where is delivery if the contract is silent?",
+       "answer": "The seller's place of business, or residence if it has none; or, for identified goods both parties knew at contracting were elsewhere, that place.",
+       "pause": 10
+      },
+      {
+       "id": "s16",
+       "ask": "Who gives the warranty of title?",
+       "answer": "Every seller, § 2-312(1).",
+       "pause": 6
+      },
+      {
+       "id": "s17",
+       "ask": "Which implied warranty is not displaced by an inconsistent express warranty?",
+       "answer": "Fitness for a particular purpose, § 2-317(c).",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e04",
+     "title": "Merchantability: § 2-314, who is a merchant, Problems 3-9 and 3-10, and Webster",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The six standards of merchantability, why it is strict liability, who counts as a merchant, used goods, the privity alternatives in § 2-318, and two problems."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-314(2). Goods to be merchantable must at least do six things. (a), pass without objection in the trade under the contract description. (b), in the case of fungible goods, be of fair average quality within the description. (c), be fit for the ordinary purposes for which such goods are used. That is the most important one. (d), run, within the variations the agreement permits, of even kind, quality, and quantity within each unit and among all units. (e), be adequately contained, packaged, and labeled as the agreement may require. And (f), conform to the promises or affirmations of fact made on the container or label."
+      },
+      {
+       "id": "s3",
+       "say": "Examples: detergent must clean, not damage the fabric or the washer, and match its label. A pencil must write and erase with ordinary effort."
+      },
+      {
+       "id": "s4",
+       "say": "It is strict liability. Usually there must be a defect at the time of sale, or a failure to give proper instructions. The seller's lack of knowledge is no defense. It is not negligence-based."
+      },
+      {
+       "id": "s5",
+       "say": "Who is a merchant? Section 2-104(1): one who deals in goods of the kind; or who by occupation holds itself out as having knowledge or skill about the practices or goods involved; or to whom such skill may be attributed because it employs an agent or broker who holds itself out that way. For § 2-314, the narrow, goods sense applies: you must be a merchant in goods of that kind. Isolated sellers are not merchants, though comment 3 says they must still disclose known hidden defects."
+      },
+      {
+       "id": "s6",
+       "say": "Used goods: the warranty applies, but only to the quality appropriate for used goods."
+      },
+      {
+       "id": "s7",
+       "say": "Privity, a preview. Section 2-318 has three alternatives; each state picks one. Alternative A: the buyer's family, household, and guests in the home, injured in person. Alternative B: any natural person who may reasonably be expected to use, consume, or be affected by the goods, injured in person. Alternative C: any person who may reasonably be expected to be affected, and injured, which is not limited to personal injury. And the seller cannot exclude § 2-318's coverage. We return to privity on Day 4."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 3-9: does this seller make the merchantability warranty?"
+      },
+      {
+       "id": "s9",
+       "say": "An accountant who makes stained-glass baubles and sells them at a semi-annual craft fair. Likely yes. She regularly makes and sells goods of that kind; the day job is not decisive."
+      },
+      {
+       "id": "s10",
+       "say": "A rental company that sells its oldest fleet cars every four months. Likely yes. Regular, recurring used-car sales."
+      },
+      {
+       "id": "s11",
+       "say": "A contractor whose work is 60 percent services and 40 percent materials, where clients pick the materials. A hybrid. The warranty rules still apply to the goods, and it is likely a merchant in what it regularly supplies."
+      },
+      {
+       "id": "s12",
+       "say": "A decorator paid a finder's fee by the client. No. The decorator is not the seller."
+      },
+      {
+       "id": "s13",
+       "say": "Problem 3-10: is there a breach?"
+      },
+      {
+       "id": "s14",
+       "say": "A new mower fails on its fourth use. Likely yes. Early failure is circumstantial proof of a defect at the time of sale, unless there was misuse."
+      },
+      {
+       "id": "s15",
+       "say": "A bone in a salmon fillet. It depends on the approach. The problem cites Webster, no breach, against Mexicali Rose and Schafer. Outside the class materials, these are usually called the foreign-natural test, Webster, and the reasonable-expectation test, Schafer. A fillet sold as boneless is the stronger claim under the reasonable-expectation test."
+      },
+      {
+       "id": "s16",
+       "say": "Yarn whose color varies across five dye lots. Likely not a breach if within trade-usage variations, § 2-314(2)(d)."
+      },
+      {
+       "id": "s17",
+       "say": "A car that meets all safety rules but rates low in crash tests. Likely not. Merchantability needs minimal safety, not top safety. It might be different under fitness if the buyer had stated a particular safety need."
+      },
+      {
+       "id": "s18",
+       "say": "Webster versus Blue Ship Tea Room, Massachusetts, 1964, is cited only. The casebook gives no facts. Outside the class materials: a diner ordered fish chowder at a Boston restaurant, a fish bone lodged in her throat, and a jury found for her on merchantability. The appeals court reversed. Bones are natural to New England fish chowder and to be expected, so the chowder was fit for its ordinary purpose."
+      },
+      {
+       "id": "s19",
+       "ask": "A dentist sells her used office car to a neighbor. The transmission fails a week later. Did she make a warranty of merchantability?",
+       "answer": "No. She is not a merchant in cars. An isolated seller makes no merchantability warranty, though under comment 3 she must disclose known hidden defects.",
+       "pause": 12
+      },
+      {
+       "id": "s20",
+       "ask": "A hardware store sells a ladder that collapses under normal use. The store had no idea of the defect. Is lack of knowledge a defense?",
+       "answer": "No. Merchantability is strict liability; the ladder was not fit for its ordinary purpose, § 2-314(2)(c).",
+       "pause": 10
+      },
+      {
+       "id": "s21",
+       "say": "The trap. Merchantability needs a merchant with respect to goods of that kind. Fitness does not need a merchant at all."
+      },
+      {
+       "id": "s22",
+       "say": "Recap. Six standards, with fitness for ordinary purposes the most important. Strict liability. A merchant in goods of the kind. Used goods get a used-goods standard. Problem 3-9: regular sellers are merchants; finders are not sellers. Problem 3-10: early failure proves defect; the fish-bone split; trade variations; minimal safety."
+      },
+      {
+       "id": "s23",
+       "ask": "Name the six merchantability standards.",
+       "answer": "Pass without objection in the trade; fair average quality if fungible; fit for ordinary purposes; even kind, quality, and quantity; adequately contained, packaged, and labeled; and conform to promises on the label.",
+       "pause": 14
+      },
+      {
+       "id": "s24",
+       "ask": "What did the court hold in Webster, per the outside-the-materials note?",
+       "answer": "No breach. Bones are natural to New England fish chowder and to be expected.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "Under § 2-318 Alternative A, who is protected?",
+       "answer": "The buyer's family, household, and guests in the home, who are injured in person.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e05",
+     "title": "Fitness for a particular purpose: § 2-315 and Ingram River",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Four elements, particular versus ordinary, the barge case, and how to disclaim."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-315. Four elements. One, the seller has reason to know the buyer's purpose. Two, the buyer has a particular purpose, not an ordinary one. Three, the seller has reason to know the buyer is relying on its skill or judgment to select or furnish suitable goods. Four, the buyer actually relies."
+      },
+      {
+       "id": "s3",
+       "say": "Two notes. The seller need not be a merchant. And the reliance need not be reasonable; it must be actual."
+      },
+      {
+       "id": "s4",
+       "say": "Particular versus ordinary, comment 2: shoes for walking are an ordinary purpose; shoes for mountain climbing are particular. But the use need not be unique, only different from the customary use."
+      },
+      {
+       "id": "s5",
+       "say": "Ingram River Equipment versus Pott Industries, Eighth Circuit, 1987, a note case. Ingram bought four tank barges with heating coils from the builder, Pott, to haul heavy petroleum products on the Mississippi and heat them so they would unload in cold weather. Pott argued: carrying and heating heavy oil is the ordinary use of coil-equipped barges. We have built more than 30 for exactly that. So no fitness warranty arose."
+      },
+      {
+       "id": "s6",
+       "say": "Held: a fitness warranty could arise. The buyer's use need not be unique. The question is whether it is sufficiently different from the customary use of the goods. That depends on whether the goods are tank barges, used for many cargoes, or heating-coil barges. It is like buying climbing shoes at a general shoe store versus a climbing store. A fact question, and the finding for Ingram stood."
+      },
+      {
+       "id": "s7",
+       "say": "Why it matters. It draws the line between § 2-315, particular purpose, and § 2-314, ordinary purpose."
+      },
+      {
+       "id": "s8",
+       "say": "When is there no reliance? When the buyer gives precise specifications, or insists on a particular brand."
+      },
+      {
+       "id": "s9",
+       "say": "Disclaiming fitness: it must be in writing and conspicuous. It need not mention fitness. For example: there are no warranties which extend beyond the description on the face hereof. And as is also works."
+      },
+      {
+       "id": "s10",
+       "ask": "A buyer tells a paint store clerk: I need paint for a boat hull that sits in salt water. Pick one for me. The clerk picks a house paint, which peels off in a month. What warranty?",
+       "answer": "Fitness for a particular purpose. The seller had reason to know the particular purpose and the reliance, and the buyer actually relied.",
+       "pause": 12
+      },
+      {
+       "id": "s11",
+       "ask": "Same, but the buyer says: give me five gallons of Brand X exterior, item number 1234.",
+       "answer": "No fitness warranty. A buyer who insists on a brand or gives precise specifications is not relying on the seller's judgment. Merchantability may still apply.",
+       "pause": 12
+      },
+      {
+       "id": "s12",
+       "say": "The trap. Fitness disclaimers need a conspicuous writing but no magic word. Merchantability disclaimers need the word merchantability but may be oral."
+      },
+      {
+       "id": "s13",
+       "say": "Recap. Section 2-315: reason to know the particular purpose, reason to know of reliance, and actual reliance. Any seller. Ingram River: the use need only differ from the customary use. No reliance with specs or a brand. Disclaim in a conspicuous writing."
+      },
+      {
+       "id": "s14",
+       "ask": "Must the seller be a merchant to give the fitness warranty?",
+       "answer": "No. Any seller can.",
+       "pause": 6
+      },
+      {
+       "id": "s15",
+       "ask": "What did Ingram River say about whether the use must be unique?",
+       "answer": "It need not be unique, only sufficiently different from the customary use of the goods.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "Give a sentence that disclaims fitness without using the word.",
+       "answer": "There are no warranties which extend beyond the description on the face hereof.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e06",
+     "title": "Title and the power to transfer: §§ 2-312 and 2-403, entrustment, and infringement",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The three-step title approach, voidable versus void title, entrustment, the definition of purchase, and infringement claims."
+      },
+      {
+       "id": "s2",
+       "say": "The approach. One, what rights did the seller purport to transfer? That is § 2-403. Two, did the buyer actually get good title? That is § 2-312. Three, if not, there is a breach. And most courts say a colorable third-party claim breaches the warranty even if the title later proves good. The buyer should not have to litigate to protect its title, comment 1."
+      },
+      {
+       "id": "s3",
+       "say": "Section 2-403(1). A purchaser gets the title its transferor had or had power to transfer. A buyer of a limited interest gets only that interest. A transferor with voidable title can pass good title to a good-faith purchaser for value. Voidable title arises from fraud, a dishonored check, deception about identity, a cash sale, or larcenous fraud. But a thief has void title, and passes nothing."
+      },
+      {
+       "id": "s4",
+       "say": "Entrustment, § 2-403(2) and (3). Entrusting goods to a merchant who deals in goods of that kind gives the merchant power to transfer all of the entruster's rights to a buyer in ordinary course. The classic: you leave your watch at a jeweler for repair, the jeweler sells it to a customer, and the customer keeps it."
+      },
+      {
+       "id": "s5",
+       "say": "Purchase is defined broadly, § 1-201(b)(29): sale, lease, pledge, security interest, gift, or any other voluntary transaction creating an interest in property."
+      },
+      {
+       "id": "s6",
+       "say": "Infringement claims under § 2-312(3): the claim must cast a substantial shadow on the buyer's use. The buyer need not prove the claim valid, only that it is substantial and reasonably likely to bring litigation."
+      },
+      {
+       "id": "s7",
+       "ask": "A thief steals a bike and sells it to a good-faith buyer for value. The owner finds it. Who gets the bike?",
+       "answer": "The owner. A thief has void title and passes nothing, even to a good-faith purchaser. The buyer's remedy is against the thief for breach of the title warranty.",
+       "pause": 12
+      },
+      {
+       "id": "s8",
+       "ask": "A fraudster buys a bike from the owner with a check that bounces, then sells it to a good-faith purchaser for value. Who gets it?",
+       "answer": "The good-faith purchaser. The fraudster had voidable title, which can pass good title to a good-faith purchaser for value under § 2-403(1).",
+       "pause": 12
+      },
+      {
+       "id": "s9",
+       "ask": "An owner leaves a guitar at a music store that sells guitars, for repair. The store sells it to a customer in ordinary course. Who wins?",
+       "answer": "The customer. Entrustment to a merchant who deals in goods of the kind lets it transfer the entruster's rights to a buyer in ordinary course, § 2-403(2).",
+       "pause": 12
+      },
+      {
+       "id": "s10",
+       "say": "The trap. Void versus voidable. Theft is void. Fraud, a bad check, or identity deception is voidable."
+      },
+      {
+       "id": "s11",
+       "say": "Recap. Section 2-403: you get what your transferor had, but voidable title can pass good title to a good-faith purchaser for value; void title passes nothing; entrustment to a merchant in goods of the kind empowers a sale to a buyer in ordinary course. Section 2-312: a colorable claim breaches; as is does not disclaim title; infringement claims must cast a substantial shadow."
+      },
+      {
+       "id": "s12",
+       "ask": "Name three sources of voidable title.",
+       "answer": "Fraud, a dishonored check, deception about identity, a cash sale, or larcenous fraud.",
+       "pause": 9
+      },
+      {
+       "id": "s13",
+       "ask": "Under most courts, does a colorable but ultimately invalid third-party claim breach the title warranty?",
+       "answer": "Yes. The buyer should not have to litigate to protect its title, comment 1.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "Does purchase include a gift?",
+       "answer": "Yes, § 1-201(b)(29).",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e07",
+     "title": "Output and requirements: § 2-306, Orange and Rockland, and Problems 4-1 and 4-2",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The quantity rule for output and requirements contracts, its two limits, the Hess oil case, and two problems."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-306(1). A term measuring quantity by the seller's output or the buyer's requirements means the actual output or requirements that occur in good faith. Except that no quantity unreasonably disproportionate to any stated estimate may be tendered or demanded. If there is no estimate, the benchmark is any normal or otherwise comparable prior output or requirements. Section 2-306(2): a lawful agreement for exclusive dealing imposes, unless otherwise agreed, a duty of best efforts on both sides, the seller to supply and the buyer to promote."
+      },
+      {
+       "id": "s3",
+       "say": "Strictly, § 2-306 is not a gap filler. It interprets a quantity term the parties chose. And it has two limits. One, good faith. Two, no quantity unreasonably disproportionate, judged by the parties' expectations and the degree of risk."
+      },
+      {
+       "id": "s4",
+       "say": "Comment 2's guidance. A shutdown for lack of orders can be in good faith. A shutdown merely to curtail losses is not. A sudden expansion of the plant is not covered. And a market price far above the contract price signals opportunism. For decreases, courts split: some apply only good faith, others apply both tests."
+      },
+      {
+       "id": "s5",
+       "say": "Orange and Rockland Utilities versus Amerada Hess, New York Appellate Division, 1977, a note case. A requirements contract for oil, with stated estimates based on the buyer's plans to burn the oil to make electricity for its customers. The buyer then doubled its requirements, seeking the extra oil in order to sell the additional quantity in the market. Outside the class materials, the contract price was fixed, oil's market price had risen far above it, and Hess refused to supply the excess."
+      },
+      {
+       "id": "s6",
+       "say": "Held: unreasonably disproportionate is a limit separate from good faith. It applies even where a party acts in complete good faith. It is judged by the parties' expectations, using five factors. One, the size of the excess over the estimate. Two, the seller's ability to foresee it. Three, the gap between the market and contract prices. Four, whether the market rise was fortuitous. Five, the reason for the increase. The doubling was unreasonably disproportionate."
+      },
+      {
+       "id": "s7",
+       "say": "Why it matters. A requirements buyer cannot use the contract to speculate on the market."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 4-1. (a): a fixed quantity, 50,000 square feet a year. The buyer cannot cut to 20,000 without the seller's assent. Fixed quantity means the demand risk is the buyer's. (b): requirements, no estimate. The buyer's orders go 25,000, then 32,500, then 35,000, then jump to 60,000, its plant capacity, when the market rises to $1.15. The seller can resist that as disproportionate and opportunistic. (c): the buyer drops to 5,000 in a recession, when the market is 90 cents. The seller argues disproportion and that the buyer is buying elsewhere; but a genuine lack of orders may be good faith."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 4-2, where prior requirements were 90,000 then 100,000, asks you to build two examples. Good faith but disproportionate: the buyer honestly lands a huge new customer and needs 400,000. Proportionate but bad faith: the buyer orders a normal 110,000 to resell at a higher market price, or orders only 85,000 because it is secretly buying cheaper elsewhere."
+      },
+      {
+       "id": "s10",
+       "ask": "A requirements buyer with a stated estimate of 1,000 units honestly gains a giant new customer and demands 5,000 when the market price is double the contract price. Can the seller refuse the excess?",
+       "answer": "Likely yes. Even in complete good faith, a quantity unreasonably disproportionate to the stated estimate cannot be demanded, § 2-306(1) and Orange and Rockland.",
+       "pause": 13
+      },
+      {
+       "id": "s11",
+       "say": "The trap. Two separate limits. A buyer can be in good faith and still demand a disproportionate quantity, or ask for a normal quantity in bad faith."
+      },
+      {
+       "id": "s12",
+       "say": "Recap. Section 2-306: actual output or requirements in good faith, and not unreasonably disproportionate to an estimate or normal prior quantities. Exclusive dealing implies best efforts. Orange and Rockland: disproportion is separate from good faith, with five factors."
+      },
+      {
+       "id": "s13",
+       "ask": "List the Orange and Rockland factors.",
+       "answer": "Size of the excess over the estimate, the seller's ability to foresee it, the market-versus-contract price gap, whether the market rise was fortuitous, and the reason for the increase.",
+       "pause": 12
+      },
+      {
+       "id": "s14",
+       "ask": "Under comment 2, is a shutdown merely to curtail losses in good faith?",
+       "answer": "No. A shutdown for lack of orders can be; one merely to curtail losses is not.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "What does exclusive dealing imply under § 2-306(2)?",
+       "answer": "Best efforts by the seller to supply and the buyer to promote, unless otherwise agreed.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e08",
+     "title": "Open price: § 2-305, Mathis v. Exxon, and Problem 4-3",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Four subsections of § 2-305, the comment 3 safe harbor, the Exxon dealer case and the majority that rejects it, and three price puzzles."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-305(1). If the parties intend to contract without settling the price, the price is a reasonable price at the time for delivery in three cases. (a), nothing is said about price. (b), the price is left to be agreed and they fail to agree. (c), the price is to be fixed by an agreed market or other standard set by a third person, and it is not so set."
+      },
+      {
+       "id": "s3",
+       "say": "Subsection (2): a price to be fixed by the seller or the buyer means a price for him to fix in good faith. Subsection (3): if a price left to be fixed otherwise than by agreement fails to be fixed through one party's fault, the other may treat the contract as cancelled or fix a reasonable price himself. Subsection (4): if the parties intended not to be bound unless the price is fixed or agreed, and it is not, there is no contract. The buyer returns any goods, and the seller returns any payment."
+      },
+      {
+       "id": "s4",
+       "say": "Comment 3 gives a safe harbor: in the normal case, a posted price or a market price satisfies good faith."
+      },
+      {
+       "id": "s5",
+       "say": "Mathis versus Exxon, Fifth Circuit, 2002, a note case that has its own slides, so treat it like a main case. Exxon franchise dealers had to buy a minimum amount of gas each month at a price Exxon set, the dealer tank wagon price. The dealers claimed Exxon set that price to squeeze them out, so it could replace them with company-run stations."
+      },
+      {
+       "id": "s6",
+       "say": "Their evidence: Exxon planned to convert stations to company stores. The price exceeded the wholesale, or rack, price plus delivery. After 1994 Exxon barred dealers from buying cheaper gas from jobbers. And many dealers became unprofitable. Exxon's reply: its price was within the range competitors charged."
+      },
+      {
+       "id": "s7",
+       "say": "Held: the jury's bad-faith finding was upheld. Good faith under § 2-305(2) has a subjective and an objective part. Comment 3's posted-price safe harbor covers only the normal case, and an intent to drive the buyer out of business takes the case outside it, even when the price is in the competitive range."
+      },
+      {
+       "id": "s8",
+       "say": "The split. The majority rejects Mathis. Shell versus HRN, Texas 2004, and Autry versus BP, Eleventh Circuit 2009, hold that a commercially reasonable, non-discriminatory price is in good faith regardless of motive, for the sake of certainty."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 4-3. A thousand sacks; on February 1 the market is $7."
+      },
+      {
+       "id": "s10",
+       "say": "(a). Price to be agreed at delivery. The seller demands $15. The market is $12. The buyer covers at $13. There is a contract, because the parties intended to be bound. The price is a reasonable price, about $12. The seller breached by demanding $15, and the buyer recovers its cover difference."
+      },
+      {
+       "id": "s11",
+       "say": "(b). The price is the Chicago Board price on March 15, but the board is closed that day. The March 13 price was $12. The buyer buys elsewhere at $11. The agreed standard failed, so the price is a reasonable price, about $12. The contract exists, and the buyer's rejection is likely a breach."
+      },
+      {
+       "id": "s12",
+       "say": "(c). The price is to be set by a third party both agree on, and the buyer refuses to name anyone. The market is $13. The failure is the buyer's fault, so under § 2-305(3) the seller may cancel, or fix a reasonable price, about $13, and sue."
+      },
+      {
+       "id": "s13",
+       "ask": "A supplier with the right to set price charges a dealer exactly the posted market price, but internal emails show it wants to drive the dealer out. Under the majority view, is that good faith?",
+       "answer": "Yes, under Shell v. HRN and Autry v. BP: a commercially reasonable, non-discriminatory price is in good faith regardless of motive. Under Mathis, the motive could make it bad faith.",
+       "pause": 14
+      },
+      {
+       "id": "s14",
+       "say": "The trap. Section 2-305(4): if the parties intended not to be bound without an agreed price, there is no contract at all. Look for that intent before applying the reasonable-price rule."
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Section 2-305: a reasonable price at the time for delivery if nothing is said, they fail to agree, or the standard fails; a party-set price must be in good faith; a party at fault for the failure lets the other cancel or set a reasonable price; and intent not to be bound means no contract. Mathis: motive can defeat the safe harbor. The majority, HRN and Autry: it cannot."
+      },
+      {
+       "id": "s16",
+       "ask": "What did the Mathis dealers claim Exxon was trying to do?",
+       "answer": "Squeeze them out with its set price so it could replace them with company-run stations.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "Under § 2-305(3), what can the innocent party do if the other party's fault prevents fixing the price?",
+       "answer": "Treat the contract as cancelled or fix a reasonable price itself.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "What is the comment 3 safe harbor?",
+       "answer": "In the normal case, a posted or market price satisfies good faith.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e09",
+     "title": "Delivery and payment: the core obligations, tender, and Problem 4-4",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Who owes what, the tender conditions, shipment under reservation, the seller's tender under § 2-503, the delivery gap fillers, the shipping terms, and the wheat problem."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-301: the seller must transfer and deliver conforming goods; the buyer must accept and pay."
+      },
+      {
+       "id": "s3",
+       "say": "Section 2-507(1): the seller's tender is a condition to the buyer's duty to accept and, unless otherwise agreed, to pay. Section 2-507(2): if payment is due on delivery, the buyer's right to keep the goods is conditional on paying."
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-511: the buyer's tender of payment is a condition to the seller's duty to deliver. Any means current in the ordinary course of business works, unless the seller demands legal tender and gives the buyer reasonable time to get it. And payment by check is conditional: it is defeated if the check is dishonored."
+      },
+      {
+       "id": "s5",
+       "say": "So tenders are concurrent conditions unless otherwise agreed. The problems assume the seller tenders first."
+      },
+      {
+       "id": "s6",
+       "say": "Shipment under reservation, § 2-505(1): the seller gets the documents of title from the carrier and holds them until paid, in effect keeping a security interest. It does not take away the buyer's right to inspect before payment under § 2-310(b)."
+      },
+      {
+       "id": "s7",
+       "say": "Seller's tender, § 2-503(1): the seller must put and hold conforming goods at the buyer's disposition and give any notice reasonably necessary for the buyer to take delivery. Tender must be at a reasonable hour, and the goods kept available for the period reasonably necessary for the buyer to take possession. And the buyer must furnish facilities reasonably suited to receiving the goods."
+      },
+      {
+       "id": "s8",
+       "say": "The defaults, unless otherwise agreed. Conforming means in accordance with the obligations under the contract, § 2-106(2). All goods in a single delivery, and payment due on that tender, § 2-307. Place: the seller's place of business, or residence; but if identified goods are known by both at contracting to be elsewhere, that place, § 2-308. Time: a reasonable time, § 2-309(1). Payment: due at the time and place the buyer receives the goods, and no credit is presumed, § 2-310(a). And cooperation: if one party fails to cooperate seasonably, the other is excused for resulting delay, and may proceed reasonably or treat the failure as a breach, § 2-311(3)."
+      },
+      {
+       "id": "s9",
+       "say": "Shipping terms: F.O.B., free on board, and F.A.S., free alongside, § 2-319. C.I.F., cost, insurance, and freight, and C. and F., cost and freight, § 2-320. The slide says 2-329, but it is § 2-320. And ex-ship, § 2-322."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 4-4. A hundred bushels at $4. The seller tenders first."
+      },
+      {
+       "id": "s11",
+       "say": "Only 95 bushels, plus a broken loading auger. Not a proper tender: the quantity is nonconforming, because all goods are due in a single lot. Whether the auger matters turns on who must load, a trade-usage question. The seller may cure."
+      },
+      {
+       "id": "s12",
+       "say": "Moldy wheat. Not a proper tender. Nonconforming goods."
+      },
+      {
+       "id": "s13",
+       "say": "Pick it up within 2 hours or I sell it. Probably not proper. The seller must hold the goods for the period reasonably necessary."
+      },
+      {
+       "id": "s14",
+       "say": "Pick up at a warehouse 300 miles away. Proper only if both parties knew at contracting that the identified goods were there, § 2-308(b)."
+      },
+      {
+       "id": "s15",
+       "say": "The buyer brings a small truck and wants half now, half tomorrow. The seller's tender is fine. It is a single lot, and the buyer must furnish suitable facilities."
+      },
+      {
+       "id": "s16",
+       "say": "The seller arrives at the buyer's farm on time, but the buyer's bins aren't ready. The seller's tender is fine. The buyer failed to cooperate, and the seller is excused for the delay, § 2-311(3)."
+      },
+      {
+       "id": "s17",
+       "ask": "A contract says nothing about payment terms. The buyer receives the goods and says: I'll pay in 60 days. Is that allowed?",
+       "answer": "No. Under § 2-310(a), payment is due at the time and place the buyer receives the goods. No credit is presumed.",
+       "pause": 10
+      },
+      {
+       "id": "s18",
+       "say": "The trap. Payment by check is conditional. If the check bounces, the seller's rights revive, which sets up reclamation under § 2-507 on Day 5."
+      },
+      {
+       "id": "s19",
+       "say": "Recap. The seller tenders conforming goods; the buyer accepts and pays; tenders are concurrent conditions. Tender under § 2-503: hold at the buyer's disposition, with notice, at a reasonable hour, for a reasonable period. Defaults: single lot, seller's place, reasonable time, payment on receipt, cooperation excuses delay."
+      },
+      {
+       "id": "s20",
+       "ask": "What is the default place of delivery?",
+       "answer": "The seller's place of business, or residence; or the place identified goods were known by both at contracting to be, § 2-308.",
+       "pause": 9
+      },
+      {
+       "id": "s21",
+       "ask": "Is a check an absolute payment?",
+       "answer": "No. It is conditional, defeated by dishonor, § 2-511.",
+       "pause": 7
+      },
+      {
+       "id": "s22",
+       "ask": "What does shipment under reservation do?",
+       "answer": "The seller holds the documents of title until paid, in effect retaining a security interest, § 2-505(1). It doesn't remove the buyer's right to inspect before payment.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e10",
+     "title": "Inspection, acceptance, and rejection: the first pass, and Problem 4-5",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The right to inspect, payment before inspection, when acceptance happens, what follows from accepting versus rejecting, perfect tender, installment contracts, and cure. Day 4 goes deep on each; today is the map."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-513. Unless otherwise agreed, the buyer may inspect before payment or acceptance, at any reasonable place, time, and manner. For shipped goods, that can be after arrival. The buyer bears the cost of inspection, but recovers it if the goods are nonconforming and rejected. No inspection before payment under C.O.D., cash on delivery, or payment-against-documents terms."
+      },
+      {
+       "id": "s3",
+       "say": "Three distinctions. Accepting goods is not accepting an offer. Possession is not acceptance, because the buyer may be inspecting. And payment is not acceptance, § 2-512(2)."
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-512: if the buyer agreed to pay before inspection, a nonconformity does not excuse payment, unless it appears without inspection, or there is fraud that would justify enjoining a letter of credit."
+      },
+      {
+       "id": "s5",
+       "say": "Acceptance, § 2-606: the buyer accepts when, after a reasonable chance to inspect, it signifies acceptance, fails to make an effective rejection, or does any act inconsistent with the seller's ownership. Accepting part of a commercial unit accepts the whole unit."
+      },
+      {
+       "id": "s6",
+       "say": "Now the contrast. If the buyer accepts: it can't reject later, § 2-607(2). It must pay the contract price, § 2-607(1). The burden of proving nonconformity shifts to it, § 2-607(4). It must notify of breach within a reasonable time or be barred, § 2-607(3)(a). And it has only a small window to revoke, where the nonconformity substantially impairs value, § 2-608."
+      },
+      {
+       "id": "s7",
+       "say": "If the buyer rejects: it must reject within a reasonable time with seasonable notice, § 2-602(1). It may not exercise ownership, § 2-602(2)(a). If in possession, it must hold with reasonable care for the seller, § 2-602(2)(b). A merchant buyer must follow the seller's reasonable instructions and sell perishables, § 2-603, and may store, reship, or resell, § 2-604. And it must state curable defects or lose them, § 2-605."
+      },
+      {
+       "id": "s8",
+       "say": "Effective versus rightful. Rejecting conforming goods can be effective but wrongful; that is the buyer's breach, § 2-703. Rejecting nonconforming goods is rightful; the buyer has remedies, §§ 2-601 and 2-711."
+      },
+      {
+       "id": "s9",
+       "say": "Perfect tender, § 2-601: if the goods or the tender fail in any respect to conform, the buyer may reject all, accept all, or accept any commercial units and reject the rest. Installment contracts, § 2-612: the buyer may reject an installment only if the nonconformity substantially impairs that installment and can't be cured; and there is a breach of the whole only if the whole contract's value is substantially impaired. Cure, § 2-508: the seller may cure within the contract time on seasonable notice, or get a further reasonable time if it reasonably thought the tender would be acceptable."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 4-5. (a): the seller demands payment before inspection. The buyer is right to refuse; it may inspect first unless otherwise agreed. (b): the buyer wants a two-week lab test for genetically modified organisms, GMO. That is reasonable only if GMO-free is a contract term and the test is a reasonable manner and time. The buyer may hold the wheat for testing without accepting. The buyer pays the test costs unless the wheat fails and is rejected. Best practice: agree on a protocol in advance."
+      },
+      {
+       "id": "s11",
+       "ask": "Buyer pays for goods on arrival, then inspects the next morning and finds defects. Seller says: you paid, so you accepted. Who is right?",
+       "answer": "Buyer. Payment is not acceptance, § 2-512(2), and the buyer had a right to a reasonable inspection first.",
+       "pause": 10
+      },
+      {
+       "id": "s12",
+       "say": "The trap. Effective and rightful are different questions. A buyer can effectively reject conforming goods, and then it is the one in breach."
+      },
+      {
+       "id": "s13",
+       "say": "Recap. Inspect before paying unless otherwise agreed or C.O.D. Possession and payment are not acceptance. Acceptance under § 2-606 by signifying, failing to reject, or acting inconsistently with the seller's ownership. Accepting triggers price, notice, burden, and only revocation. Rejecting triggers timely notice, care, and particularizing defects."
+      },
+      {
+       "id": "s14",
+       "ask": "What are the three ways a buyer accepts under § 2-606?",
+       "answer": "Signifying acceptance after a reasonable chance to inspect, failing to make an effective rejection, or doing an act inconsistent with the seller's ownership.",
+       "pause": 10
+      },
+      {
+       "id": "s15",
+       "ask": "After acceptance, who bears the burden of proving a breach?",
+       "answer": "The buyer, § 2-607(4).",
+       "pause": 6
+      },
+      {
+       "id": "s16",
+       "ask": "Under § 2-513, who pays for inspection?",
+       "answer": "The buyer, but it recovers the cost if the goods are nonconforming and rejected.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e11",
+     "title": "Risk of loss: the principles, the decision tree, and Problem 4-6",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What risk of loss is, the three principles, what happens when goods are destroyed, the seven-step decision tree, and the merchant split in Problem 4-6."
+      },
+      {
+       "id": "s2",
+       "say": "Risk of loss is about who bears a casualty to the goods: fire, theft, flood. It is not the same as performance or breach. And it is not tied to title."
+      },
+      {
+       "id": "s3",
+       "say": "Three principles. Risk goes to the party who controls the goods, best able to avoid loss. To the party most likely insured, comment 3 to § 2-509. And to the party in breach, § 2-510."
+      },
+      {
+       "id": "s4",
+       "say": "What happens when goods are destroyed? If the seller bears the risk: for unique or identified goods, the seller may be excused, § 2-613; for fungible goods, the seller must still tender. If the buyer bears the risk: the buyer must pay, § 2-709(1)(a)."
+      },
+      {
+       "id": "s5",
+       "say": "The sequence. One, what is the seller's tender obligation, under §§ 2-307 to 2-309, 2-503, and 2-504? Two, has anyone breached, sending you to § 2-510 rather than § 2-509? Three, apply the right rule: carrier, bailee, seller's tender with the merchant split, or other agreement."
+      },
+      {
+       "id": "s6",
+       "say": "Now the decision tree. Seven steps. Say them with me."
+      },
+      {
+       "id": "s7",
+       "say": "One. Agreement on risk? Follow it, § 2-509(4). And in a sale on approval, risk stays with the seller until acceptance, § 2-327."
+      },
+      {
+       "id": "s8",
+       "say": "Two. Seller in breach? A nonconforming tender leaves risk with the seller until cure or acceptance, § 2-510(1). And on a rightful revocation, the buyer may treat the risk as the seller's from the beginning, to the extent of the buyer's insurance gap, § 2-510(2)."
+      },
+      {
+       "id": "s9",
+       "say": "Three. Buyer in breach, for example by repudiating, as to identified conforming goods? Risk is on the buyer for a commercially reasonable time, to the extent of the seller's insurance gap, § 2-510(3)."
+      },
+      {
+       "id": "s10",
+       "say": "Four. Carrier, shipment contract, which is presumed. Risk passes on due delivery to the carrier, § 2-509(1)(a)."
+      },
+      {
+       "id": "s11",
+       "say": "Five. Carrier, destination contract. Risk passes when the goods are duly tendered at the destination, § 2-509(1)(b)."
+      },
+      {
+       "id": "s12",
+       "say": "Six. Bailee, goods not moved. Risk passes on the buyer's receipt of a negotiable document of title, on the bailee's acknowledgment of the buyer's right, or a reasonable time after a non-negotiable document or delivery order, § 2-509(2)."
+      },
+      {
+       "id": "s13",
+       "say": "Seven. Everything else, where the seller delivers or the buyer picks up. A merchant seller: risk passes on the buyer's receipt, physical possession. A non-merchant seller: risk passes on tender, § 2-509(3)."
+      },
+      {
+       "id": "s14",
+       "say": "Why the merchant split? Comment 3. A merchant seller still controls the goods and can insure them, so risk stays with it, even if the buyer has paid."
+      },
+      {
+       "id": "s15",
+       "say": "Problem 4-6, non-shipment contracts."
+      },
+      {
+       "id": "s16",
+       "say": "(a). The seller drives the wheat in its own truck, and the truck burns on the way. The seller's own truck is not a carrier, so § 2-509(3) applies. Merchant seller: no receipt, so seller's risk. Non-merchant seller: risk passes on completion of tender, which never happened, so seller's risk. Seller bears it either way. And because the wheat is fungible, the seller must re-tender."
+      },
+      {
+       "id": "s17",
+       "say": "(b). The seller says: ready for pickup. A fire destroys the wheat before the buyer arrives. Merchant seller: the seller bears the loss, because there was no receipt. Non-merchant: the buyer bears it, because tender was complete. Merchant status decides the case."
+      },
+      {
+       "id": "s18",
+       "ask": "A furniture store tells a customer, your paid-for sofa is ready for pickup. That night the store burns. Who bears the loss?",
+       "answer": "The store. A merchant seller keeps the risk until the buyer's receipt, § 2-509(3), even though the buyer paid.",
+       "pause": 12
+      },
+      {
+       "id": "s19",
+       "ask": "A neighbor sells his used sofa, tells the buyer it's ready, and leaves it in the open garage. That night it is stolen. Who bears the loss?",
+       "answer": "The buyer, if the neighbor duly tendered. A non-merchant seller passes the risk on tender, § 2-509(3).",
+       "pause": 12
+      },
+      {
+       "id": "s20",
+       "say": "The trap. The seller's own truck is not a carrier. Title has nothing to do with risk."
+      },
+      {
+       "id": "s21",
+       "say": "Recap. Risk follows control, insurance, and breach. The tree: agreement, seller's breach, buyer's breach, shipment contract, destination contract, bailee, and everything else with the merchant split: merchant on receipt, non-merchant on tender."
+      },
+      {
+       "id": "s22",
+       "ask": "Run the seven-step risk-of-loss tree.",
+       "answer": "Agreement; seller in breach, § 2-510(1) and (2); buyer in breach, § 2-510(3); shipment contract, on delivery to the carrier; destination contract, on tender at the destination; bailee, § 2-509(2); otherwise merchant on receipt, non-merchant on tender.",
+       "pause": 15
+      },
+      {
+       "id": "s23",
+       "ask": "In a sale on approval, when does risk pass?",
+       "answer": "On acceptance, § 2-327.",
+       "pause": 6
+      },
+      {
+       "id": "s24",
+       "ask": "Why does a merchant seller keep risk until receipt?",
+       "answer": "It still controls the goods and is likely insured, comment 3.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e12",
+     "title": "Shipment versus destination, § 2-504, Problem 4-7, Windows v. Jordan Panel, and bailees",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The two kinds of carrier contracts, the presumption, the seller's shipping duties, the trade terms, the custom-windows problem, and goods held by a warehouse."
+      },
+      {
+       "id": "s2",
+       "say": "A shipment contract, the norm: risk passes when the goods are duly delivered to the carrier. The buyer bears transit loss, and sues the carrier or claims on its insurance. Signals: F.O.B. seller's city; ship to; C.I.F. or C. and F. Title passes at shipment, § 2-401(2)(a)."
+      },
+      {
+       "id": "s3",
+       "say": "A destination contract: risk passes when the goods are duly tendered at the destination. The seller bears transit loss. Signals: F.O.B. buyer's city; the seller expressly agrees to deliver at a place; ex-ship. Title passes on tender at the destination."
+      },
+      {
+       "id": "s4",
+       "say": "The presumption: a shipment contract, unless the seller expressly took responsibility during transit. Naming a destination, or paying the freight, does not make it a destination contract."
+      },
+      {
+       "id": "s5",
+       "say": "The seller's duties in a shipment contract, § 2-504. (a), put the goods in the carrier's possession and make a reasonable contract for their transportation. (b), obtain and promptly deliver any documents needed. (c), promptly notify the buyer of the shipment. And the limit: failure on (a) or (c) is a ground for rejection only if material delay or loss results."
+      },
+      {
+       "id": "s6",
+       "say": "The terms. C.I.F. means the price includes cost, insurance, and freight. The seller ships, insures, and tenders the documents; the buyer pays against documents, with no inspection first. It is still a shipment contract. C. and F. is the same minus insurance. F.A.S. means deliver alongside the vessel."
+      },
+      {
+       "id": "s7",
+       "say": "A buyer bearing transit risk is not helpless. It can sue the carrier, § 2-722 and Article 7, or claim on its insurance. And the seller keeps an insurable interest while it has title, § 2-501."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 4-7. Custom windows shipped from South Dakota to New York."
+      },
+      {
+       "id": "s9",
+       "say": "(a). The contract says delivered to the site. The windows are properly packaged and destroyed in transit. The buyer bears the loss. It is a shipment contract, as in Windows versus Jordan Panel."
+      },
+      {
+       "id": "s10",
+       "say": "(b). The contract says delivered at the site. Arguably the seller bears it, as a destination contract."
+      },
+      {
+       "id": "s11",
+       "say": "(c). How do you make it a destination contract? Say F.O.B. buyer's site, or: the seller bears the risk until tender at the site."
+      },
+      {
+       "id": "s12",
+       "say": "(d)(1). The windows were improperly packaged, and the packaging caused the damage. The seller bears it. An improper shipment caused the loss, §§ 2-504 and 2-510(1)."
+      },
+      {
+       "id": "s13",
+       "say": "(d)(2). The damage was caused by the carrier's fault, and on the slide, the windows were properly packaged. The buyer bears it. Risk already passed; sue the carrier. And even with bad packaging, there is no shift unless the packaging caused the loss."
+      },
+      {
+       "id": "s14",
+       "say": "Windows, Incorporated versus Jordan Panel Systems, Second Circuit, 1999, is cited only, behind this problem. The casebook gives the facts: a South Dakota seller of custom windows, a contract to ship them properly crated and delivered to the buyer's New York construction site, and damage in transit. Outside the class materials, the carrier's truck had an accident, the buyer refused to pay, and the seller sued for the price. The court held for the seller. Delivered to did not create a destination contract, so risk passed on delivery to the carrier. And even if the packing was inadequate, the accident, not the packing, caused the loss."
+      },
+      {
+       "id": "s15",
+       "say": "Goods held by a bailee, like a warehouse, and not moved. Tender under § 2-503(4): give the buyer a negotiable document of title, or get the bailee's acknowledgment of the buyer's right. A non-negotiable document or delivery order works unless the buyer seasonably objects, and the risk stays on the seller until the buyer has a reasonable time to present it."
+      },
+      {
+       "id": "s16",
+       "say": "Insurable interest, § 2-501: the buyer gets one on identification of the goods. The seller keeps one while it has title or a security interest."
+      },
+      {
+       "id": "s17",
+       "ask": "A seller in Ohio ships goods to a buyer in Texas. The contract says: ship to buyer's Dallas warehouse; seller pays freight. The goods are lost in transit through no one's fault. Who bears the loss?",
+       "answer": "The buyer. It is presumed a shipment contract; naming a destination or paying freight doesn't change that. Risk passed on due delivery to the carrier, § 2-509(1)(a).",
+       "pause": 13
+      },
+      {
+       "id": "s18",
+       "ask": "Same, but the seller never notified the buyer of the shipment, and the loss had nothing to do with that.",
+       "answer": "Still the buyer. Failure to notify under § 2-504(c) justifies rejection only if material delay or loss results, and the loss wasn't caused by it.",
+       "pause": 12
+      },
+      {
+       "id": "s19",
+       "say": "The trap. Shipment is presumed. Ship to, delivered to, and paying freight are all still shipment contracts. You need F.O.B. destination or an express assumption of transit risk."
+      },
+      {
+       "id": "s20",
+       "say": "Recap. Shipment contracts pass risk on delivery to the carrier; destination contracts on tender at the destination; shipment is presumed. Section 2-504: proper carriage contract, documents, notice; failures on (a) or (c) count only if material delay or loss results. Windows v. Jordan Panel: delivered to was a shipment contract, and the accident, not the packing, caused the loss."
+      },
+      {
+       "id": "s21",
+       "ask": "Name the three § 2-504 duties of a seller in a shipment contract.",
+       "answer": "Put the goods in the carrier's possession under a reasonable transport contract, obtain and deliver needed documents, and promptly notify the buyer.",
+       "pause": 10
+      },
+      {
+       "id": "s22",
+       "ask": "Is a C.I.F. contract a shipment or destination contract?",
+       "answer": "A shipment contract.",
+       "pause": 6
+      },
+      {
+       "id": "s23",
+       "ask": "When does a buyer get an insurable interest?",
+       "answer": "On identification of the goods, § 2-501.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d2-e13",
+     "title": "Day 2 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Cumulative quiz, Days 1 and 2. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "A seller says: this is the finest wine in the region. Warranty or puffing?",
+       "answer": "Puffing. It is commendation, general and immeasurable.",
+       "pause": 7
+      },
+      {
+       "id": "s3",
+       "ask": "In Rogath, if the buyer learned of the doubts only from a Tate curator, is he barred?",
+       "answer": "No. Knowledge from a third party doesn't bar recovery; he may have bought the warranty as insurance.",
+       "pause": 9
+      },
+      {
+       "id": "s4",
+       "ask": "What is the most important merchantability standard?",
+       "answer": "Fit for the ordinary purposes for which such goods are used, § 2-314(2)(c).",
+       "pause": 7
+      },
+      {
+       "id": "s5",
+       "ask": "A buyer gives the seller precise specifications. Is there a fitness warranty?",
+       "answer": "Generally no, because the buyer isn't relying on the seller's skill.",
+       "pause": 7
+      },
+      {
+       "id": "s6",
+       "ask": "Can as is disclaim the warranty of title?",
+       "answer": "No. Title needs specific language or circumstances, § 2-312(2).",
+       "pause": 7
+      },
+      {
+       "id": "s7",
+       "ask": "An owner's car is stolen and sold to a good-faith buyer. Who wins?",
+       "answer": "The owner. A thief has void title.",
+       "pause": 6
+      },
+      {
+       "id": "s8",
+       "ask": "What did the court hold in Orange and Rockland?",
+       "answer": "That unreasonably disproportionate is a limit separate from good faith, and doubling the requirements to resell oil was unreasonably disproportionate.",
+       "pause": 9
+      },
+      {
+       "id": "s9",
+       "ask": "What is the majority rule against Mathis?",
+       "answer": "A commercially reasonable, non-discriminatory price is in good faith regardless of motive, Shell v. HRN and Autry v. BP.",
+       "pause": 9
+      },
+      {
+       "id": "s10",
+       "ask": "The contract is silent on delivery time. When must the seller deliver?",
+       "answer": "Within a reasonable time, § 2-309(1).",
+       "pause": 6
+      },
+      {
+       "id": "s11",
+       "ask": "A merchant seller in a shipment contract delivers goods to the carrier; they are lost in transit. Who bears the loss?",
+       "answer": "The buyer. In a shipment contract risk passes on delivery to the carrier, regardless of merchant status.",
+       "pause": 9
+      },
+      {
+       "id": "s12",
+       "ask": "A seller tenders nonconforming goods; while the buyer is deciding, a fire destroys them. Who bears the loss?",
+       "answer": "The seller. A nonconforming tender leaves risk on the seller until cure or acceptance, § 2-510(1).",
+       "pause": 9
+      },
+      {
+       "id": "s13",
+       "ask": "From Day 1: what two things must a firm offer be in, and by whom?",
+       "answer": "In a signed record, by a merchant.",
+       "pause": 6
+      },
+      {
+       "id": "s14",
+       "ask": "From Day 1: in Daitom, what was the knock-out rule's source?",
+       "answer": "Comment 6 to § 2-207.",
+       "pause": 6
+      },
+      {
+       "id": "s15",
+       "say": "That's Day 2. Tomorrow: disclaimers, remedy limits, parol evidence, assignment, termination, repudiation, and excuse."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
