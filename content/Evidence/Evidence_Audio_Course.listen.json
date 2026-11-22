@@ -3,7 +3,7 @@
  "id": "evidence-audio-course",
  "title": "Evidence Audio Course",
  "course": "Evidence",
- "description": "A five-day spoken course that teaches the whole Evidence outline, Weeks 1-15, for listening: rules counted out element by element, every case as a short story, hypotheticals and recall questions with pauses to answer, and a spaced review at the start of each day. In progress.",
+ "description": "A five-day spoken course on the whole Evidence outline, Weeks 1-15, from 606(b) and relevance through hearsay, Confrontation, experts, authentication, best evidence, and privileges: rules counted out element by element, every case told as a short story, hypotheticals and recall questions with pauses to answer, a spaced review to open each day, and a closing full-course review with the order of analysis for hearsay and Confrontation. Coverage: all 35 outline sections, every case, and every rule number the outline cites, including the Dec. 1, 2026 change to Rule 801(d)(1)(A).",
  "days": [
   {
    "day": 1,
@@ -2378,7 +2378,7 @@
        "say": "804(b)(3), the statement against interest. A statement that a reasonable person in the declarant's position would have made only if the person believed it to be true because, when made, it was so contrary to the declarant's proprietary or pecuniary interest, or had so great a tendency to invalidate the declarant's claim against someone else or to expose the declarant to civil or criminal liability. And in a criminal case, if offered as one that tends to expose the declarant to criminal liability, it must be supported by corroborating circumstances that clearly indicate its trustworthiness, after considering the totality of circumstances under which it was made and any evidence that supports or undermines it. That last clause came in 2024."
       },
       {
-       "say": "The 2024 Advisory Committee Note on corroboration. The court must weigh both the circumstances of the statement, such as timing, spontaneity, and the declarant's likely motives, and any evidence supporting or undermining it, such as evidence placing a third-party confessor near the crime. Independent evidence is relevant but not necessarily dispositive."
+       "say": "That corroboration requirement is Rule 804(b)(3)(B). The 2024 Advisory Committee Note explains it. The court must weigh both the circumstances of the statement, such as timing, spontaneity, and the declarant's likely motives, and any evidence supporting or undermining it, such as evidence placing a third-party confessor near the crime. Independent evidence is relevant but not necessarily dispositive."
       },
       {
        "say": "The slides' subjective versus objective contrast. Dying declarations and excited utterances look to the declarant's actual state of mind. Statements against interest use a reasonable person."
@@ -3732,6 +3732,1099 @@
       },
       {
        "say": "That's day four. Tomorrow: authentication, best evidence, privileges, and the full-course review."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "title": "Authentication, best evidence, privileges, and the full-course review",
+   "minutes": 74,
+   "episodes": [
+    {
+     "id": "ev-d5-e00",
+     "title": "Spaced review of Days 1 to 4",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Final day. Rapid recall across the whole course."
+      },
+      {
+       "ask": "The Crawford rule.",
+       "answer": "Testimonial statements of an absent witness come in only if the declarant is unavailable and the defendant had a prior opportunity to cross-examine.",
+       "pause": 8
+      },
+      {
+       "ask": "Primary-purpose test from Davis and Hammon.",
+       "answer": "Nontestimonial if the objective primary purpose is to meet an ongoing emergency; testimonial if there is no emergency and the purpose is to prove past events for prosecution.",
+       "pause": 8
+      },
+      {
+       "ask": "Bruton in one sentence.",
+       "answer": "At a joint trial, a nontestifying codefendant's testimonial confession that facially incriminates the defendant violates the Clause even with a limiting instruction.",
+       "pause": 8
+      },
+      {
+       "ask": "The five Daubert factors.",
+       "answer": "Testing, peer review and publication, error rate, standards, and general acceptance.",
+       "pause": 8
+      },
+      {
+       "ask": "704(b).",
+       "answer": "In a criminal case, an expert may not opine on whether the defendant had a mental state that is an element of the crime or a defense.",
+       "pause": 8
+      },
+      {
+       "ask": "Tome.",
+       "answer": "Prior consistent statements offered to rebut fabrication must predate the motive.",
+       "pause": 8
+      },
+      {
+       "ask": "803(6) burden on trustworthiness.",
+       "answer": "The opponent must show lack of trustworthiness.",
+       "pause": 8
+      },
+      {
+       "ask": "Rule 412's civil test.",
+       "answer": "Probative value must substantially outweigh the danger of harm to any victim and unfair prejudice to any party.",
+       "pause": 8
+      },
+      {
+       "ask": "Rule 407's permitted purposes.",
+       "answer": "Impeachment, and, if disputed, ownership, control, or feasibility.",
+       "pause": 8
+      },
+      {
+       "ask": "Peña-Rodriguez.",
+       "answer": "A juror's clear statement of racial animus relied on to convict a criminal defendant overrides 606(b).",
+       "pause": 8
+      },
+      {
+       "say": "Good. On to authentication."
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e01",
+     "title": "Authentication: Rules 901 and 902",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 901(a)'s standard, the nine 901(b) examples, self-authentication under 902, chain of custody, texts and posts, photos and videos, and four cases: Stelmokas, Benton, Luke, and Oreckinto."
+      },
+      {
+       "say": "Plain English. Before an exhibit comes in, someone has to show it is what the proponent says it is."
+      },
+      {
+       "say": "The exact rule. Rule 901(a): to satisfy the requirement of authenticating or identifying an item of evidence, the proponent must produce evidence sufficient to support a finding that the item is what the proponent claims it is."
+      },
+      {
+       "say": "The standard is conditional relevance, 104(b) and Huddleston. The judge asks only whether a reasonable jury could find the item authentic. The jury decides, and the opponent may still contest authenticity before the jury. And authentication is only the first gate. The exhibit may still fail on hearsay, the best evidence rule, or 403."
+      },
+      {
+       "say": "Rule 901(b) gives examples, and it says they are not a complete list. Nine. One, testimony of a witness with knowledge that an item is what it is claimed to be. Two, a nonexpert's opinion that handwriting is genuine, based on familiarity not acquired for the current litigation. Three, a comparison with an authenticated specimen by an expert witness or the trier of fact. Four, distinctive characteristics, the appearance, contents, substance, internal patterns, taken together with all the circumstances. Five, voice identification by anyone who has heard the voice at any time. Six, for a telephone conversation, a call to the number assigned, plus circumstances such as self-identification. Seven, public records. Eight, ancient documents: in a condition that creates no suspicion about authenticity, in a place where, if authentic, it would likely be, and at least 20 years old when offered. Nine, a process or system shown to produce an accurate result."
+      },
+      {
+       "say": "Notice the contrast in two and five. Lay handwriting familiarity must not be acquired for the litigation. Voice identification may be based on hearing the voice at any time, even for the litigation."
+      },
+      {
+       "say": "Rule 902, self-authenticating items. They need no extrinsic evidence of authenticity, though the opponent may still dispute them. The outline's list: sealed or certified public documents, certified copies of public records, official publications, newspapers and periodicals, trade inscriptions and labels, notarized documents, commercial paper, and certified business records and electronic records under 902(11) through (14), with advance notice."
+      },
+      {
+       "say": "Chain of custody. A unique item can be identified by a witness who recognizes it. A fungible item, like white powder, needs a chain from seizure to court. The chain need not be perfect, and gaps usually go to weight."
+      },
+      {
+       "say": "Texts, posts, and emails. Prove the author, not just the device, through content, timing, and context."
+      },
+      {
+       "say": "Photos and videos. Two routes. Pictorial testimony: a witness testifies that the image fairly and accurately shows what the witness saw. Or, with no eyewitness, the silent witness route: the proponent shows the recording process is accurate, under 901(b)(9)."
+      },
+      {
+       "say": "Case one. United States v. Stelmokas, Third Circuit, 1996. In a denaturalization case, the government proved the defendant's wartime service in a Nazi-organized Lithuanian unit, largely through archival documents from Vilnius and Germany. He argued there was no chain of custody, and that Soviet sources were suspect."
+      },
+      {
+       "say": "Held: the documents were authentic ancient documents under 901(b)(8). No suspicious condition, found where such records would likely be, and more than 20 years old. Consistent records in scattered archives made a frame-up implausible. No strict chain of custody is required. Why it matters: authentication and hearsay are separate hurdles. Since 2017 the ancient-documents hearsay exception, 803(16), covers only documents prepared before January 1, 1998. But 901(b)(8)'s 20-year authentication rule is unchanged."
+      },
+      {
+       "say": "Case two. State v. Benton, South Carolina Court of Appeals, 2021. The State offered text messages from Benton's phone and messages from a Facebook account in his name. He argued others had his phone at the relevant times."
+      },
+      {
+       "say": "Held: ownership of the device alone is not enough to authenticate texts or posts. But the texts were authenticated circumstantially under 901(b)(4). During the same period, the phone carried Benton's steady, intimate texts with his girlfriend, alongside messages in the planning window. Any error as to the Facebook messages was harmless. Why it matters: prove the author, not the device."
+      },
+      {
+       "say": "Case three. State v. Luke, Hawaii Court of Appeals, 2020. A homeowner's continuously recording security system, installed and serviced by a company, captured a burglary he did not witness. The trial court excluded the videos because he lacked firsthand knowledge of the events and technical knowledge of the system."
+      },
+      {
+       "say": "Held: error. Under a flexible silent-witness approach, the owner's testimony as a regular user supported a finding that the video was what it purported to be. His testimony covered installation and service history, no problems, how he could tell a camera was down, the same-day download, and exact copies. His lack of firsthand or technical knowledge went to weight. Why it matters: when no one saw what the camera recorded, a regular user can usually lay the 901(b)(9) foundation."
+      },
+      {
+       "say": "Case four. United States v. Oreckinto, District of Connecticut, 2017. A detective found internet images of a SouthPole hooded sweatshirt through a Google search, to compare with the lettering on a burglar's sweatshirt in surveillance video. He could not identify the websites."
+      },
+      {
+       "say": "Held: admissible. The kind and amount of authentication required depends on what the proponent claims the exhibit is. Offered only to show what that commercially available sweatshirt looks like, the images needed no testimony from the manufacturer or the websites. Internet evidence needs no heightened standard. Why it matters: the proponent's claim about the exhibit defines how much authentication is needed."
+      },
+      {
+       "ask": "A detective learned a suspect's voice by listening to wiretaps during the investigation. Can he identify the voice on a recording?",
+       "answer": "Yes. Under 901(b)(5), voice identification can be based on hearing the voice at any time, even for the litigation.",
+       "pause": 8
+      },
+      {
+       "ask": "A lay witness became familiar with the defendant's handwriting by studying samples for trial. Can she authenticate the signature?",
+       "answer": "No. Under 901(b)(2), lay familiarity must not have been acquired for the current litigation. An expert or the jury could compare under 901(b)(3).",
+       "pause": 8
+      },
+      {
+       "ask": "The prosecution offers bags of white powder seized from a car. What foundation is needed?",
+       "answer": "A chain of custody from seizure to court, since it is fungible. Gaps usually go to weight.",
+       "pause": 8
+      },
+      {
+       "ask": "A text message comes from a phone registered to the defendant. Is that alone enough?",
+       "answer": "No, under Benton. Prove the author through content, timing, and context, not just the device.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: the standard is 104(b), sufficient to support a finding. Two: authentication does not overcome hearsay or best evidence. Three: ancient-document authentication is 20 years; the hearsay exception is pre-1998 documents. Four: 902 items still can be disputed."
+      },
+      {
+       "say": "Recap. 901(a): evidence sufficient to support a finding that the item is what it is claimed to be. 901(b)'s nine examples. 902 self-authentication. Chain of custody for fungibles. Prove the author. Pictorial testimony or silent witness. Stelmokas, Benton, Luke, Oreckinto."
+      },
+      {
+       "ask": "What are the three requirements for an ancient document under 901(b)(8)?",
+       "answer": "No suspicious condition, found where it would likely be, and at least 20 years old.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Luke allow a regular user to do?",
+       "answer": "Lay the silent-witness foundation under 901(b)(9) for a security video he did not witness.",
+       "pause": 8
+      },
+      {
+       "ask": "Oreckinto's lesson?",
+       "answer": "The kind and amount of authentication depends on what the proponent claims the exhibit is.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e02",
+     "title": "The best evidence rule: Rules 1001 to 1008",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 1002, when it applies, what counts as an original, duplicates under 1003, the four excuses in 1004, the other routes in 1005 through 1007, the allocation in 1008, summaries under 1006, illustrative aids under 107, Seiler v. Lucasfilm, and the Meyers and Bennett contrast."
+      },
+      {
+       "say": "The exact rule. Rule 1002: an original writing, recording, or photograph is required in order to prove its content, unless these rules or a federal statute provides otherwise."
+      },
+      {
+       "say": "When does it apply? Only to writings, recordings, and photographs, and only when a party proves their content. Two situations. One, when the writing itself is at issue: libel, copyright, the terms of a contract or a will. Two, when the event is proved through the recording, such as the bank tape after the eyewitnesses have died. A teller may testify from memory about a robbery even though a tape exists. And objects, like the knife in the robber's sock, are not covered."
+      },
+      {
+       "say": "Original is broad. Any counterpart intended to have the same effect. Any accurate printout of electronically stored information. And for a photo, the negative or a print from it."
+      },
+      {
+       "say": "Rule 1003, duplicates. A duplicate, made by an accurate mechanical or electronic process, not by hand, is admissible to the same extent as the original, unless a genuine question is raised about the original's authenticity, or the circumstances make it unfair to admit the duplicate."
+      },
+      {
+       "say": "Rule 1004, other evidence of content. Four excuses, any one suffices. (a) all the originals are lost or destroyed, and not by the proponent acting in bad faith. (b) an original cannot be obtained by any available judicial process. (c) the party against whom the original would be offered had control of it, was at that time put on notice, by pleadings or otherwise, that the original would be a subject of proof, and fails to produce it at the trial or hearing. (d) the writing, recording, or photograph is not closely related to a controlling issue."
+      },
+      {
+       "say": "Other routes. Rule 1005: certified copies of public records. Rule 1006: summaries. Rule 1007: the content may be proved by the testimony, deposition, or written statement of the party against whom it is offered."
+      },
+      {
+       "say": "Rule 1008, who decides. The court decides the 1004 conditions under 104(a). But the jury decides three questions: whether an asserted writing ever existed, whether another one produced at trial is the original, and whether other evidence of content accurately reflects the content."
+      },
+      {
+       "say": "Rule 1006 as amended 2024. The court may admit as evidence a summary, chart, or calculation offered to prove the content of voluminous admissible writings, recordings, or photographs that cannot be conveniently examined in court, whether or not they have been introduced. It is substantive evidence, and the court may not tell the jury otherwise, per the note. The proponent must make the underlying originals or duplicates available at a reasonable time and place. And the summary must pass 403."
+      },
+      {
+       "say": "Rule 107, added 2024. A chart that only helps the jury follow other evidence is an illustrative aid. It's allowed if its utility is not substantially outweighed by the 403 dangers. It is not evidence, and it is kept out of the jury room unless all parties consent or the court, for good cause, orders otherwise. Contrast: 1006 summary, substantive evidence. 107 aid, not evidence."
+      },
+      {
+       "say": "The case. Seiler v. Lucasfilm, Ninth Circuit, 1986. An artist claimed the Imperial Walkers in The Empire Strikes Back copied his Garthian Striders. He could produce no drawing from before the film, only reconstructions made years later. The district court found he lost or destroyed the originals in bad faith."
+      },
+      {
+       "say": "Held: drawings are writings under Rule 1001. The contents were at issue in a copyright case. And because the originals were lost in bad faith, 1004(a) did not excuse their absence. The reconstructions were excluded, and summary judgment was affirmed. Why it matters: the rule guards against fraud and faulty memory exactly where a work's precise content decides the case."
+      },
+      {
+       "say": "The Meyers and Bennett contrast. Testimony about an event that was also recorded is not proof of content. A witness may testify from memory to what was said under oath without the transcript. That's Meyers. But testimony about what a GPS device's stored data showed is proof of a recording's content, and requires the original or a 1004 excuse. That's United States v. Bennett."
+      },
+      {
+       "say": "The outline's authentication and best evidence steps. One, what does the proponent claim the exhibit is? Two, which 901(b) route, or is it self-authenticating under 902? Three, is the party proving the content of a writing, recording, or photograph? If so, an original or duplicate, a 1004 excuse, or 1005 through 1007. Four, 1008 allocates disputes. Five, then hearsay and 403."
+      },
+      {
+       "ask": "A bank robbery was recorded on video. An eyewitness teller testifies to what she saw. Best evidence objection?",
+       "answer": "No. She is testifying from memory about the event, not proving the content of the recording.",
+       "pause": 8
+      },
+      {
+       "ask": "In a contract dispute over the price term, a party testifies from memory about what the contract said. The original exists and is in his files. Objection?",
+       "answer": "Yes. He is proving the content of a writing, so Rule 1002 requires the original unless an exception applies.",
+       "pause": 8
+      },
+      {
+       "ask": "The original letter was accidentally destroyed in a flood. Can a witness testify to its contents?",
+       "answer": "Yes. 1004(a): lost or destroyed, not by the proponent in bad faith.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness testifies about where the defendant was, based on reading the GPS device's data. Best evidence issue?",
+       "answer": "Yes, under Bennett. That is proof of a recording's content, requiring the original or a 1004 excuse.",
+       "pause": 8
+      },
+      {
+       "ask": "Who decides whether a writing ever existed?",
+       "answer": "The jury, under 1008.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: the rule applies only to proving content. Two: objects are not covered. Three: duplicates are usually fine. Four: bad-faith loss defeats 1004(a). Five: a 1006 summary is evidence; a 107 aid is not."
+      },
+      {
+       "say": "Recap. 1002: original required to prove content. Original includes counterparts, accurate printouts, negatives. 1003: duplicates unless genuine authenticity question or unfair. 1004: lost or destroyed without bad faith, unobtainable by process, opponent's control after notice, or not closely related to a controlling issue. 1005, 1006, 1007. 1008: the court decides 1004; the jury decides existence, which is original, and accuracy. Seiler."
+      },
+      {
+       "ask": "List the four 1004 excuses.",
+       "answer": "Lost or destroyed without the proponent's bad faith; unobtainable by judicial process; the opponent controlled it, was on notice, and fails to produce it; and not closely related to a controlling issue.",
+       "pause": 8
+      },
+      {
+       "ask": "What three questions does 1008 give the jury?",
+       "answer": "Whether the writing ever existed, whether another one produced is the original, and whether other evidence of content is accurate.",
+       "pause": 8
+      },
+      {
+       "ask": "Why were Seiler's reconstructions excluded?",
+       "answer": "The originals were lost or destroyed in bad faith, so 1004(a) did not excuse them, and content was at issue in a copyright case.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e03",
+     "title": "Rule 501 and recognizing privileges: Jaffee v. Redmond",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 501, the history of the proposed privilege rules, proposed 506 and 511, Jaffee v. Redmond, and what happens when a defendant's constitutional need collides with a privilege."
+      },
+      {
+       "say": "The exact rule. Rule 501: the common law, as interpreted by United States courts in the light of reason and experience, governs a claim of privilege unless the Constitution, a federal statute, or rules prescribed by the Supreme Court provide otherwise. But in a civil case, state law governs privilege regarding a claim or defense for which state law supplies the rule of decision."
+      },
+      {
+       "say": "So, two questions. Federal question or criminal case: federal common law. Civil case on a state-law claim, like diversity: state privilege law."
+      },
+      {
+       "say": "History. Congress replaced the 13 proposed privilege rules, which included nine specific privileges, with the single Rule 501. The proposed rules, 503 lawyer-client, 504 psychotherapist, 505 spousal, 506 clergy, and 511 waiver, were never enacted, but remain respected statements of the common law. Privileges exclude reliable evidence to serve outside goals, so they are strictly construed. And there is no federal physician-patient privilege."
+      },
+      {
+       "say": "Proposed 506: a person may refuse to disclose, and may prevent a clergy member from disclosing, a confidential communication made to the clergy member as a spiritual adviser. Proposed 511: a holder waives a privilege by voluntarily disclosing, or consenting to disclosure of, any significant part of the matter, unless that disclosure is itself privileged."
+      },
+      {
+       "say": "Jaffee v. Redmond, 1996. In a civil-rights suit over a fatal police shooting, the officer and her licensed clinical social worker refused to produce notes of about 50 counseling sessions. The jury was told it could presume the notes were unfavorable."
+      },
+      {
+       "say": "Held: under 501's reason and experience, confidential communications between a licensed psychotherapist and a patient in the course of diagnosis or treatment are privileged, and the privilege covers licensed clinical social workers."
+      },
+      {
+       "say": "The reasoning. Reason: effective therapy depends on confidence, mental health is a public good, and the evidentiary cost is small, because the statements would otherwise not be made. Experience: all 50 states and D.C. recognize it. No case-by-case balancing: an uncertain privilege, the Court said, is little better than no privilege at all. Justice Scalia dissented: there is no privilege for parents, siblings, best friends and bartenders."
+      },
+      {
+       "say": "Why Jaffee matters. It's the template for recognizing a new privilege, and the rejection of ad hoc balancing that returns in Swidler and Berlin."
+      },
+      {
+       "say": "Collision with a defendant's constitutional need. Because privileges exclude reliable evidence on purpose, reliability alone cannot defeat them. Courts weigh the defendant's need against the privilege. The lawyer-client privilege usually holds. Some courts make the psychotherapist privilege yield. A witness's Fifth Amendment privilege almost always prevails."
+      },
+      {
+       "ask": "In a federal diversity case for breach of contract, which privilege law governs?",
+       "answer": "State law, because state law supplies the rule of decision.",
+       "pause": 8
+      },
+      {
+       "ask": "In a federal criminal case, a defendant asks for a doctor's notes of a patient's statements. Is there a federal physician-patient privilege?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "A federal court is asked to balance a patient's privacy against a litigant's need for therapy notes, case by case. Does Jaffee allow that?",
+       "answer": "No. Jaffee rejected case-by-case balancing.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 501: federal common law in light of reason and experience; state law for state-law claims in civil cases. Proposed rules never enacted but respected. No federal physician-patient privilege. Jaffee: psychotherapist privilege, including licensed clinical social workers, no balancing."
+      },
+      {
+       "ask": "What two grounds did Jaffee use to recognize the privilege?",
+       "answer": "Reason, meaning confidence is essential to therapy and the evidentiary cost is small; and experience, meaning all 50 states and D.C. recognize it.",
+       "pause": 8
+      },
+      {
+       "ask": "What does proposed Rule 511 say about waiver?",
+       "answer": "A holder waives by voluntarily disclosing or consenting to disclosure of any significant part of the matter, unless that disclosure is itself privileged.",
+       "pause": 8
+      },
+      {
+       "ask": "Which privilege almost always prevails over a defendant's need?",
+       "answer": "A witness's Fifth Amendment privilege.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e04",
+     "title": "The lawyer-client privilege: elements, Gionis, fees and identity",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Roadmap. The four common elements, Upjohn's communications-not-facts rule, prospective clients, People v. Gionis, and fees and identity."
+      },
+      {
+       "say": "The common elements, from proposed Rule 503. Four of them. One, the privilege is the client's, and only the client may waive it. Two, it protects communications made to facilitate professional legal services, not a lawyer acting as a friend, a lobbyist, or a business agent. Three, only confidential communications: the client intends confidentiality, and precautions bear on reasonableness. Four, only communications, not the underlying facts. That's Upjohn Co. v. United States, 1981, cited in Swidler, in Rakes, and in the Fisher note. A client cannot refuse to state a fact just because he told it to his lawyer."
+      },
+      {
+       "say": "And prospective clients are covered, even if the lawyer declines the case."
+      },
+      {
+       "say": "People v. Gionis, California, 1995, a syllabus skip but in the outline. A lawyer friend made clear he would not represent Gionis in his divorce, then visited as a friend. Gionis said it would be easy to pay someone to take care of his wife. His wife was later attacked."
+      },
+      {
+       "say": "Held: not privileged. Discussing legal matters with a lawyer is not enough. The client must consult the lawyer in his professional capacity, and statements made after the lawyer clearly refused to act are not privileged. The party claiming the privilege bears the burden. Why it matters: whether a consultation is professional is a question of fact."
+      },
+      {
+       "say": "Fees and identity. Neither the fee arrangement nor the client's identity is ordinarily privileged. They are facts, not confidential communications. The narrow exception applies only when revealing them would itself disclose a confidential communication. The example is the Baird case, where naming the clients would tie them to admissions about unpaid taxes."
+      },
+      {
+       "ask": "A client tells his lawyer, I ran the red light. At deposition, he's asked, did you run the red light? Can he refuse on privilege grounds?",
+       "answer": "No. The privilege protects the communication, not the underlying fact, under Upjohn.",
+       "pause": 8
+      },
+      {
+       "ask": "A person consults a lawyer about a lawsuit, and the lawyer declines the case. Privileged?",
+       "answer": "Yes. Prospective clients are covered.",
+       "pause": 8
+      },
+      {
+       "ask": "The lawyer says, I won't represent you, and then they chat as friends about the case. Privileged?",
+       "answer": "No, under Gionis. After the lawyer clearly refused, the consultation was not professional.",
+       "pause": 8
+      },
+      {
+       "ask": "A grand jury asks a lawyer who paid his fees. Privileged?",
+       "answer": "Ordinarily no. Fees and identity are facts, unless revealing them would itself disclose a confidential communication, as in Baird.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. Four elements: the client holds it; professional legal services; confidential; communications, not facts. Prospective clients covered. Gionis: professional capacity required; the claimant bears the burden. Fees and identity are not privileged, except under Baird's narrow exception."
+      },
+      {
+       "ask": "Who holds the lawyer-client privilege?",
+       "answer": "The client. Only the client may waive it.",
+       "pause": 8
+      },
+      {
+       "ask": "What does Upjohn stand for in this outline?",
+       "answer": "The privilege protects communications, not underlying facts.",
+       "pause": 8
+      },
+      {
+       "ask": "Who bears the burden of establishing the privilege?",
+       "answer": "The party claiming it.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e05",
+     "title": "Waiver and Rule 502",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 502's subsections, (a) through (g), and Williams v. District of Columbia."
+      },
+      {
+       "say": "502(b), inadvertent disclosure. A disclosure in a federal proceeding does not waive the privilege if three things, all required. One, the disclosure is inadvertent. Two, the holder took reasonable steps to prevent disclosure. Three, the holder promptly took reasonable steps to rectify the error."
+      },
+      {
+       "say": "502(a), scope of an intentional waiver. A waiver extends to undisclosed material only if the waiver is intentional, the disclosed and undisclosed communications concern the same subject matter, and they ought in fairness to be considered together."
+      },
+      {
+       "say": "502(c): a disclosure in a state proceeding is no waiver in a federal proceeding if it would not be a waiver under Rule 502, or under the law of the state where it occurred."
+      },
+      {
+       "say": "502(d): a federal court order that disclosure is not a waiver binds all other federal and state proceedings."
+      },
+      {
+       "say": "502(e): an agreement on the effect of disclosure binds only the parties, unless it is put into a court order."
+      },
+      {
+       "say": "502(f): the rule applies in state proceedings, and even if state law provides the rule of decision."
+      },
+      {
+       "say": "502(g): it covers the attorney-client privilege and work-product protection."
+      },
+      {
+       "say": "Williams v. District of Columbia, D.D.C., 2011. The District produced a privileged email inside a 104-page packet, sent one clawback letter months later, and then did nothing for years, until the plaintiff listed the email as a trial exhibit."
+      },
+      {
+       "say": "Held: waived. The holder bears the burden on each 502(b) element. Unsworn assertions that a paralegal reviewed the documents did not show reasonable steps to prevent disclosure. And one letter followed by years of silence was not prompt, reasonable rectification. Why it matters: document the review process, and follow up."
+      },
+      {
+       "ask": "A firm accidentally produces a privileged memo, had a careful documented review, and demands it back the next day. Waived?",
+       "answer": "No, under 502(b). Inadvertent, reasonable steps to prevent, and prompt reasonable steps to rectify.",
+       "pause": 8
+      },
+      {
+       "ask": "The parties sign a clawback agreement but never ask the court to enter it. Does it bind a third party in another case?",
+       "answer": "No. Under 502(e), it binds only the parties unless put into a court order. A 502(d) order would bind all proceedings.",
+       "pause": 8
+      },
+      {
+       "ask": "A party intentionally discloses one privileged email to gain an advantage. Does the waiver reach other emails on the same subject?",
+       "answer": "Only if they concern the same subject matter and in fairness ought to be considered together, under 502(a).",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 502(b): inadvertent, reasonable prevention, prompt rectification. 502(a): intentional waiver extends only to the same subject matter in fairness. 502(c) state disclosures, 502(d) court orders bind everyone, 502(e) agreements bind only parties, 502(f) applies in state proceedings, 502(g) attorney-client and work product. Williams: waived."
+      },
+      {
+       "ask": "Why did the District lose in Williams?",
+       "answer": "It did not show reasonable steps to prevent disclosure, and one letter followed by years of silence was not prompt rectification.",
+       "pause": 8
+      },
+      {
+       "ask": "What does 502(d) do?",
+       "answer": "A federal court order that disclosure is not a waiver binds all other federal and state proceedings.",
+       "pause": 8
+      },
+      {
+       "ask": "What two protections does 502 cover?",
+       "answer": "The attorney-client privilege and work-product protection.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e06",
+     "title": "Duration, crime-fraud, government lawyers, and self-incrimination",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Swidler and Berlin on death, Zolin on crime-fraud, the government-lawyer cases, Fisher and Doe on documents and the Fifth Amendment, and the privilege steps."
+      },
+      {
+       "say": "Swidler and Berlin v. United States, 1998. Deputy White House Counsel Vincent Foster consulted a lawyer, who took notes. Nine days later Foster died by suicide. The Independent Counsel subpoenaed the notes, and the D.C. Circuit allowed balancing after death in criminal cases."
+      },
+      {
+       "say": "Held: reversed. The privilege survives the client's death. Clients care about reputation, civil liability, and harm to family after death. The testamentary exception carries out the client's wishes, rather than showing the privilege ends. The privilege applies the same way in criminal and civil cases. And posthumous balancing would add the uncertainty Jaffee rejected. Justice O'Connor dissented: she would allow disclosure of necessary facts unavailable elsewhere. The casebook caption misprints 524 U.S. 390; it's 399. Why it matters: under federal law, the privilege does not die with the client, and there is no case-by-case balancing."
+      },
+      {
+       "say": "United States v. Zolin, 1989. The IRS sought sealed tapes of conversations involving Church of Scientology lawyers, invoked the crime-fraud exception, and offered lawfully obtained partial transcripts."
+      },
+      {
+       "say": "Held: a court may review allegedly privileged communications in camera to decide whether the crime-fraud exception applies. Before doing so, the judge should require a showing of a factual basis adequate to support a good faith belief by a reasonable person that review may reveal evidence establishing the exception. That is a lower showing than needed to defeat the privilege. And the showing may rest on any lawfully obtained evidence not adjudicated privileged. The casebook caption misprints 494 U.S.; it's 491."
+      },
+      {
+       "say": "Why Zolin matters. It's the two-step crime-fraud procedure. Step one, the threshold showing to get in camera review. Step two, the court decides whether the exception applies. And the exception reaches advice sought for future wrongdoing. Past crimes stay protected."
+      },
+      {
+       "say": "Government lawyers. In re Grand Jury Investigation, the Rowland case, Second Circuit, 2005, a syllabus skip itself. It upheld the Connecticut governor's office's privilege for communications with its official counsel against a federal grand jury subpoena, refusing to abrogate it just because the investigation was criminal. The court acknowledged conflict with Ryan, from the Seventh Circuit, and tension with the Eighth and D.C. Circuits, the Lindsey case. Problem 12.9 asks who controls the privilege if a later governor waives over the ex-governor's objection. Rowland reserved the question. Compare Kitzhaber, Ninth Circuit, 2016."
+      },
+      {
+       "say": "Self-incrimination. Fisher v. United States, 1976, and United States v. Doe, 1984. Four points. One, the lawyer-client privilege protects communications, not underlying facts or preexisting documents just handed to a lawyer. Two, the client's Fifth Amendment privilege does not protect documents in the lawyer's hands, because the client is not the one compelled. Three, if the documents would have been protected in the client's hands, and were given to the lawyer in confidence to get legal advice, the lawyer-client privilege protects them in the lawyer's hands. Four, the Fifth Amendment protects only against compelled, testimonial self-incrimination."
+      },
+      {
+       "say": "The outline's privilege steps, seven. One, which law governs under 501: state law for state-law claims in civil cases. Two, which privilege, and who holds it. Three, a communication, not a fact, confidential, made to obtain professional services. Four, waiver: voluntary disclosure by the holder, 502(b) for inadvertence, 502(a) for scope, 502(d) orders. Five, exceptions: crime-fraud under Zolin, and testamentary. Death does not end it, under Swidler. Six, identity and fees. Seven, no ad hoc balancing, under Jaffee."
+      },
+      {
+       "ask": "A client tells his lawyer he committed a burglary last year and asks for defense advice. Crime-fraud?",
+       "answer": "No. The crime-fraud exception reaches advice sought for future wrongdoing. Past crimes stay protected.",
+       "pause": 8
+      },
+      {
+       "ask": "A client asks his lawyer how to structure transactions to hide money from creditors he is about to defraud. The government wants in camera review. What must it show first?",
+       "answer": "Under Zolin, a factual basis adequate to support a good faith belief by a reasonable person that in camera review may reveal evidence establishing the exception.",
+       "pause": 8
+      },
+      {
+       "ask": "After a client dies, a prosecutor argues the need for the lawyer's notes outweighs the privilege. Result?",
+       "answer": "Under Swidler and Berlin, the privilege survives death, and there is no case-by-case balancing.",
+       "pause": 8
+      },
+      {
+       "ask": "A client hands her lawyer preexisting business records that are not protected by her Fifth Amendment privilege. Can the lawyer refuse a subpoena?",
+       "answer": "No. Under Fisher, preexisting documents not protected in the client's hands are not protected by giving them to a lawyer.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. Swidler: survives death, no balancing. Zolin: in camera review on a good-faith-belief showing; future wrongdoing only. Rowland: government lawyers' privilege upheld against a grand jury, a circuit split with Ryan and Lindsey. Fisher and Doe: four points on documents and the Fifth Amendment. Seven privilege steps."
+      },
+      {
+       "ask": "What three reasons did Swidler give for the privilege surviving death?",
+       "answer": "Clients care about reputation, civil liability, and harm to family after death.",
+       "pause": 8
+      },
+      {
+       "ask": "In Zolin, what may the threshold showing rest on?",
+       "answer": "Any lawfully obtained evidence not adjudicated privileged.",
+       "pause": 8
+      },
+      {
+       "ask": "Why doesn't the client's Fifth Amendment privilege protect documents in the lawyer's hands?",
+       "answer": "Because the client is not the one compelled.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e07",
+     "title": "The spousal testimonial privilege: Trammel",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Roadmap. Trammel, the scope of the testimonial privilege, state variation, and proposed Rule 505."
+      },
+      {
+       "say": "Trammel v. United States, 1980. Trammel's wife was arrested with heroin, cooperated under a grant of use immunity, and testified against him about his heroin importing. The court excluded confidential marital communications, but let her testify to acts she observed and statements made in front of others. Trammel invoked Hawkins v. United States, 1958, which let either spouse bar adverse spousal testimony."
+      },
+      {
+       "say": "Held: affirmed, and Hawkins modified. The witness-spouse alone holds the privilege to refuse to testify adversely. She may be neither compelled to testify nor foreclosed from testifying. Why? When one spouse is willing to testify, there is probably little marital harmony left to preserve. And testifying after immunity and promises of leniency is not involuntary."
+      },
+      {
+       "say": "Why Trammel matters. The federal rule: the witness-spouse decides. The defendant cannot block a willing spouse, and the spouse may still refuse."
+      },
+      {
+       "say": "Scope, three elements, all required. One, a valid marriage when the privilege is claimed. Two, in federal court, only in criminal cases, including the grand jury, in which a spouse is the defendant. Three, only adverse testimony, including acts observed. And most courts deny it when one spouse is charged with a crime against the other or against a child of either."
+      },
+      {
+       "say": "States vary. Most follow Trammel. A few let the defendant bar the testimony. Washington is one, which is how Michael Crawford kept his wife off the stand. That is why Sylvia Crawford did not testify in Crawford v. Washington."
+      },
+      {
+       "say": "Proposed FRE 505 would have codified Hawkins, giving the privilege to the defendant-spouse, which Trammel rejected. It excepted crimes against the spouse or a child of either, in 505(c)(1). It limited the privilege to events during the marriage, in 505(c)(2). And it recognized no privilege for marital confidences, which survives anyway at federal common law."
+      },
+      {
+       "ask": "A wife wants to testify against her husband in his federal drug trial. He objects under the spousal privilege. Result?",
+       "answer": "She may testify. Under Trammel, the witness-spouse alone holds the privilege.",
+       "pause": 8
+      },
+      {
+       "ask": "A husband is called to testify against his wife in a federal civil case. Can he invoke the testimonial privilege?",
+       "answer": "No. In federal court the testimonial privilege applies only in criminal cases in which a spouse is the defendant.",
+       "pause": 8
+      },
+      {
+       "ask": "The couple divorced before trial. Can the ex-wife invoke the testimonial privilege?",
+       "answer": "No. It requires a valid marriage when the privilege is claimed.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. Trammel: the witness-spouse holds the privilege. Scope: valid marriage at the time of the claim, criminal cases where a spouse is the defendant, adverse testimony including observed acts. Usually no privilege for crimes against the spouse or a child. Proposed 505 would have given it to the defendant."
+      },
+      {
+       "ask": "What case did Trammel modify?",
+       "answer": "Hawkins v. United States, 1958.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three scope elements of the spousal testimonial privilege.",
+       "answer": "A valid marriage when claimed; a federal criminal case, including the grand jury, with a spouse as defendant; and adverse testimony, including observed acts.",
+       "pause": 8
+      },
+      {
+       "ask": "Which state's rule let Michael Crawford keep his wife off the stand?",
+       "answer": "Washington.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e08",
+     "title": "The marital confidences privilege, Rakes, and a parent-child privilege",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. The confidences privilege's three elements and exceptions, United States v. Rakes, In re Grand Jury Proceedings on parent-child, and the familial privilege steps."
+      },
+      {
+       "say": "Elements, three. One, a communication, not observations of the other spouse's conduct. Two, made in confidence. That's presumed, but third parties or monitored systems defeat it. Three, during a valid marriage."
+      },
+      {
+       "say": "Features. Either spouse may refuse to disclose, and may prevent the other from disclosing. It survives divorce. It applies in civil and criminal cases. And it applies even if neither spouse is a party."
+      },
+      {
+       "say": "Exceptions. Communications about joint ongoing or future crimes. And crimes against the spouse or a child of either."
+      },
+      {
+       "say": "Contrast the two marital privileges. Testimonial: held by the witness-spouse, criminal cases only, requires a marriage when claimed, covers all adverse testimony including acts. Confidences: held by both, civil and criminal, requires a marriage when the communication was made, survives divorce, covers only confidential communications."
+      },
+      {
+       "say": "United States v. Rakes, First Circuit, 1998. Rakes was charged with perjury for telling grand juries he sold his liquor store voluntarily. He moved to suppress conversations with his then-wife about the threats that forced the sale. They had since divorced."
+      },
+      {
+       "say": "Held: the conversations were confidential marital communications made during the marriage. Divorce and the presence of infant children did not matter, and there is no general exception for financial matters. Any crime-fraud style exception requires the holder's wrongful complicity, and extortion victims are not participants in the crime. And telling a creditor the facts did not waive the privilege for the conversations. Why it matters: the privilege covers communications, not facts, and the joint-crime exception requires culpable participation by the holder."
+      },
+      {
+       "say": "A parent-child privilege? In re Grand Jury Proceedings, Third Circuit, 1997. Grand juries subpoenaed a father to testify about conversations with his adult son, and a teenage daughter to testify in an investigation of her father."
+      },
+      {
+       "say": "Held: no parent-child privilege. Almost every court rejects it, and only four states protect such communications. It did not exist at common law. A testimonial privilege is not essential to the relationship, and children are unlikely to know the law. Any such privilege should come from Congress. A partial dissent would protect a child's confidential request for parental advice. Why it matters: it's the counterexample to Jaffee. Without a consensus in experience, no new privilege."
+      },
+      {
+       "say": "The outline's familial privilege steps. One, a valid marriage: when the privilege is claimed, for the testimonial privilege; when the communication was made, for confidences. Two, the testimonial privilege: a criminal case, a spouse is the defendant, adverse testimony, and the witness-spouse decides. Three, confidences: a confidential communication during the marriage, held by both spouses, surviving divorce, with exceptions for joint crimes, which require complicity under Rakes, and crimes against family members. Four, no federal parent-child privilege."
+      },
+      {
+       "ask": "During their marriage, a husband whispered to his wife, alone, that he embezzled from his employer. They later divorced. In his trial, can the ex-wife testify to it?",
+       "answer": "The husband can invoke the marital confidences privilege. It survives divorce, and either spouse may prevent disclosure. Unless an exception applies, such as a joint crime.",
+       "pause": 8
+      },
+      {
+       "ask": "A wife saw her husband hide stolen goods in the garage. Is that covered by the confidences privilege?",
+       "answer": "No. Observations of conduct are not communications. It could be covered by the testimonial privilege, if she chooses to refuse, in a criminal case against him while married.",
+       "pause": 8
+      },
+      {
+       "ask": "A husband told his wife in confidence that he planned a robbery and asked her to drive. She agreed and drove. Privileged?",
+       "answer": "No. Communications about joint ongoing or future crimes are excepted, and she was a culpable participant.",
+       "pause": 8
+      },
+      {
+       "ask": "A teenager confides a crime to her mother. In federal court, can the mother refuse to testify?",
+       "answer": "No. There is no federal parent-child privilege, per In re Grand Jury Proceedings.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. Confidences: a communication, in confidence, during a valid marriage; held by both; survives divorce; civil and criminal; exceptions for joint crimes and crimes against family. Rakes: extortion victims are not complicit; divorce doesn't matter. No federal parent-child privilege."
+      },
+      {
+       "ask": "What three elements make up the marital confidences privilege?",
+       "answer": "A communication, made in confidence, during a valid marriage.",
+       "pause": 8
+      },
+      {
+       "ask": "How many states protect parent-child communications according to In re Grand Jury Proceedings?",
+       "answer": "Only four.",
+       "pause": 8
+      },
+      {
+       "ask": "Why weren't the Rakes conversations within the joint-crime exception?",
+       "answer": "The holder had to be a culpable participant, and extortion victims are not participants in the crime.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e09",
+     "title": "Full-course review: every rule list and test",
+     "minutes": 10,
+     "segments": [
+      {
+       "say": "Now the full-course review. I'll run through every list and test in outline order. Answer each one out loud. This is the whole course in twenty minutes."
+      },
+      {
+       "ask": "606(b)(1)'s three barred subjects and 606(b)(2)'s three exceptions.",
+       "answer": "Barred: statements or incidents in deliberations, effect on any vote, mental processes. Exceptions: extraneous prejudicial information, outside influence, a mistake on the verdict form.",
+       "pause": 8
+      },
+      {
+       "ask": "The Warger two-part test for voir dire dishonesty.",
+       "answer": "The juror failed to answer honestly a material voir dire question, and a correct answer would have supported a challenge for cause.",
+       "pause": 8
+      },
+      {
+       "ask": "401's two parts.",
+       "answer": "Any tendency to make a fact more or less probable; the fact is of consequence.",
+       "pause": 8
+      },
+      {
+       "ask": "104(a) list.",
+       "answer": "Qualification, privilege, hearsay foundations including the conspiracy under Bourjaily, the 702 requirements, and the 1004 conditions.",
+       "pause": 8
+      },
+      {
+       "ask": "104(b) list.",
+       "answer": "Other acts, personal knowledge, authentication, and the 1008 jury questions.",
+       "pause": 8
+      },
+      {
+       "ask": "403's three factors.",
+       "answer": "Whether the fact is disputed, other means of proof, and the effectiveness of a limiting instruction.",
+       "pause": 8
+      },
+      {
+       "ask": "The outline's five-step 403 analysis.",
+       "answer": "Probative value on a disputed fact, discounted; the specific danger; substantially outweighed; alternatives and a 105 instruction; abuse of discretion and harmlessness.",
+       "pause": 8
+      },
+      {
+       "ask": "The five policy-rule steps.",
+       "answer": "Match the evidence to its rule; check the trigger; name the purpose; check who it is offered against; then 403 and a 105 instruction.",
+       "pause": 8
+      },
+      {
+       "ask": "Rule 410(a)'s four categories.",
+       "answer": "Withdrawn guilty pleas, nolo pleas, statements in plea proceedings, and statements in failed plea talks with a prosecutor.",
+       "pause": 8
+      },
+      {
+       "ask": "The nine 404(b)(2) purposes.",
+       "answer": "Motive, opportunity, intent, preparation, plan, knowledge, identity, absence of mistake, lack of accident.",
+       "pause": 8
+      },
+      {
+       "ask": "Guardia's 413 threshold.",
+       "answer": "Accused of sexual assault, evidence of another sexual assault, relevant. Then normal 403.",
+       "pause": 8
+      },
+      {
+       "ask": "404(a)(2)'s three criminal exceptions.",
+       "answer": "A, the defendant's pertinent trait; B, the victim's pertinent trait, opening the defendant's same trait; C, the victim's peacefulness in homicide to rebut first-aggressor evidence.",
+       "pause": 8
+      },
+      {
+       "ask": "Where is character an essential element under 405(b)?",
+       "answer": "Entrapment, truth in defamation, negligent entrustment, custody, and sexually-violent-person commitment.",
+       "pause": 8
+      },
+      {
+       "ask": "The six character steps.",
+       "answer": "Offered for propensity? A propensity route through 404(a)(2) or 413 to 415? Form under 405; 404(b) purposes and Huddleston; truthfulness under 607 to 609; habit under 406.",
+       "pause": 8
+      },
+      {
+       "ask": "The five 608(b) limits.",
+       "answer": "Probative of truthfulness, no extrinsic proof, 403, good-faith basis, 611(a) protection from harassment.",
+       "pause": 8
+      },
+      {
+       "ask": "609's four-row chart.",
+       "answer": "Dishonesty, any witness: admitted, no balancing. Felony, non-defendant: 403. Felony, defendant: probative value must outweigh prejudice. Over ten years: substantially outweigh plus notice.",
+       "pause": 8
+      },
+      {
+       "ask": "The five Gordon factors.",
+       "answer": "Nature of the crime, recency and later history, similarity, importance of the defendant's testimony, centrality of credibility.",
+       "pause": 8
+      },
+      {
+       "ask": "The five impeachment steps.",
+       "answer": "Name the theory; form-of-proof limits; extrinsic evidence allowed; attack before rehabilitation; 403, 611(a), and 412.",
+       "pause": 8
+      },
+      {
+       "ask": "Adoption by silence, four elements.",
+       "answer": "Heard and understood, free to respond, circumstances called for denial, no denial.",
+       "pause": 8
+      },
+      {
+       "ask": "801(d)(1)'s three kinds of prior statements.",
+       "answer": "Inconsistent, under the pre-2026 rule sworn at a proceeding or deposition; consistent, to rebut fabrication pre-motive or to rehabilitate; and identification.",
+       "pause": 8
+      },
+      {
+       "ask": "803(6)'s five elements.",
+       "answer": "At or near the time by someone with knowledge; regular course; regular practice; custodian or certification; opponent fails to show untrustworthiness.",
+       "pause": 8
+      },
+      {
+       "ask": "803(5)'s four foundation elements.",
+       "answer": "Firsthand knowledge, made when fresh, insufficient memory, vouching.",
+       "pause": 8
+      },
+      {
+       "ask": "Bryant's four factors.",
+       "answer": "Location, purposes of declarant and interrogators, medical condition, formality.",
+       "pause": 8
+      },
+      {
+       "ask": "Bruton's seven prosecution options.",
+       "answer": "Sever, separate juries, codefendant testifies, prior cross-examined testimony, redact, bench trial, statement admissible against both.",
+       "pause": 8
+      },
+      {
+       "ask": "701's three elements.",
+       "answer": "Rationally based on perception, helpful, not based on specialized knowledge.",
+       "pause": 8
+      },
+      {
+       "ask": "702's four requirements.",
+       "answer": "Helpful specialized knowledge, sufficient facts or data, reliable methods, reliable application, each more likely than not.",
+       "pause": 8
+      },
+      {
+       "ask": "The three permissible expert bases.",
+       "answer": "Personal observation, facts made known at the hearing, and facts made known before the hearing that experts reasonably rely on.",
+       "pause": 8
+      },
+      {
+       "ask": "The six expert steps.",
+       "answer": "Qualified; helpful and not a legal conclusion, vouching, or 704(b) opinion; sufficient basis under 703; reliable methods reliably applied; 403; confrontation for basis evidence.",
+       "pause": 8
+      },
+      {
+       "ask": "901(b)(8) ancient documents, three requirements.",
+       "answer": "No suspicious condition, found where likely, at least 20 years old.",
+       "pause": 8
+      },
+      {
+       "ask": "1004's four excuses.",
+       "answer": "Lost or destroyed without bad faith; unobtainable by process; opponent's control after notice; not closely related to a controlling issue.",
+       "pause": 8
+      },
+      {
+       "ask": "502(b)'s three elements.",
+       "answer": "Inadvertent, reasonable steps to prevent, prompt reasonable steps to rectify.",
+       "pause": 8
+      },
+      {
+       "ask": "The four lawyer-client elements.",
+       "answer": "The client holds it; professional legal services; confidential; communications not facts.",
+       "pause": 8
+      },
+      {
+       "ask": "The seven privilege steps.",
+       "answer": "Which law under 501; which privilege and holder; communication, confidential, professional; waiver; exceptions; identity and fees; no balancing.",
+       "pause": 8
+      },
+      {
+       "ask": "The four familial privilege steps.",
+       "answer": "Valid marriage at the right time; testimonial privilege elements with the witness-spouse deciding; confidences held by both, surviving divorce, with exceptions; no parent-child privilege.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e10",
+     "title": "The order of analysis for hearsay and Confrontation, and how this exam tests",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Now the two orders of analysis you must run on autopilot. First hearsay, then Confrontation. Then a word on the exam."
+      },
+      {
+       "say": "Hearsay, eight steps. Say them with me."
+      },
+      {
+       "say": "One. Is there a statement? A person's oral or written assertion, or conduct intended as an assertion. Machine output, involuntary exclamations, and nonassertive conduct are not statements."
+      },
+      {
+       "say": "Two. Is it offered for its truth? Name the proponent's purpose. If it's offered for effect on the listener, as a verbal act, or as circumstantial proof of knowledge, it's not hearsay. Stop, but consider a 105 instruction."
+      },
+      {
+       "say": "Three. Layers. Split it. Each layer needs its own route, under 805."
+      },
+      {
+       "say": "Four. Exclusions in 801(d). Is it an opposing party's statement, offered against that party? Is it a testifying witness's prior statement: inconsistent, consistent, or an identification? Remember the December 2026 change to 801(d)(1)(A), and give both answers for an unsworn inconsistent statement."
+      },
+      {
+       "say": "Five. Exceptions. 803 first, because availability does not matter. Then 804, after proving 804(a) unavailability. Then 807, last, with written notice."
+      },
+      {
+       "say": "Six. The foundation is proved to the judge under 104(a), by a preponderance."
+      },
+      {
+       "say": "Seven. 403, a 105 instruction for limited use, and 806 attacks on the declarant's credibility."
+      },
+      {
+       "say": "Eight. If offered against a criminal defendant, run the Confrontation Clause separately."
+      },
+      {
+       "say": "Now Confrontation, six steps."
+      },
+      {
+       "say": "One. Is it a criminal case, and is the evidence offered by the prosecution against the accused?"
+      },
+      {
+       "say": "Two. Is the statement offered for its truth? Remember Smith v. Arizona: an expert's basis is offered for its truth if the opinion depends on its truth."
+      },
+      {
+       "say": "Three. Does the declarant testify and submit to cross at trial? If yes, the Clause is satisfied, under Green and Owens, even with memory loss."
+      },
+      {
+       "say": "Four. Is the statement testimonial? Emergency or past events, under Davis, Hammon, and Bryant. Formality. Audience: police or non-police, under Clark. The declarant's age."
+      },
+      {
+       "say": "Five. If testimonial, is the declarant unavailable and did the defendant have a prior opportunity to cross? Or did the defendant forfeit the right by wrongdoing intended to prevent testimony, under Giles?"
+      },
+      {
+       "say": "Six. Then the hearsay rules, separately. And at a joint trial, check Bruton."
+      },
+      {
+       "say": "So if a statement passes the hearsay rules, am I done?",
+       "voice": "alt"
+      },
+      {
+       "say": "No. Against a criminal defendant, hearsay and confrontation are two separate gates. Passing one says nothing about the other. Crawford itself was a statement against penal interest that still violated the Clause."
+      },
+      {
+       "say": "How this exam tests. Your final has 30 multiple-choice questions, at least one short essay, and possibly questions where you work from the rule text. Three strategies."
+      },
+      {
+       "say": "First, on multiple choice, identify the purpose and the proponent before anything else. Many wrong answers apply the right rule to the wrong purpose, or the wrong balancing test. Ask: which scale? 403, 609(a)(1)(B), reverse 403, or none?"
+      },
+      {
+       "say": "Second, on the essay, use the step lists. Name the rule, count out the elements, apply each to the facts, and name the counterargument. The outline's tip boxes are the skeletons: 403 analysis, policy-rule steps, character steps, impeachment, hearsay, confrontation, opinion, experts, authentication and best evidence, and privileges."
+      },
+      {
+       "say": "Third, on rule-text questions, read the exact words. The distinctions that matter are textual: may versus must, outweighs versus substantially outweighs, against the defendant versus on behalf of any party, while employed, during and in furtherance, made while or immediately after. And remember the recent amendments: 106 in 2023, 702 in 2023, 613(b) in 2024, 801(d)(2)'s successor sentence in 2024, 804(b)(3)'s corroboration in 2024, 1006 and 107 in 2024, and 801(d)(1)(A) on December 1, 2026. Ask Professor Hornzell which version of 801(d)(1)(A) the final uses."
+      },
+      {
+       "ask": "One last application. A prosecution witness told a detective at the stationhouse, unsworn, that the defendant had the gun. At trial, the witness testifies the defendant never had a gun, and is cross-examined. Walk the analysis.",
+       "answer": "It is hearsay if offered for truth. Under the pre-2026 rule, 801(d)(1)(A) fails because it was not sworn at a proceeding, so it is impeachment only under 613, after a chance to explain or deny under 613(b). Under the December 2026 amendment, it is substantive. Confrontation is satisfied because the declarant testifies and is cross-examined.",
+       "pause": 8
+      },
+      {
+       "ask": "Another. A 911 caller says, he just shot my brother and he's running toward the school, and then cannot be found for trial. Walk both analyses.",
+       "answer": "Hearsay: likely an excited utterance under 803(2), or a present sense impression under 803(1); availability doesn't matter. Confrontation: nontestimonial, because the primary purpose was to meet an ongoing emergency, with an armed shooter at large threatening the public, under Davis and Bryant. So it comes in.",
+       "pause": 12
+      }
+     ]
+    },
+    {
+     "id": "ev-d5-e11",
+     "title": "Final cumulative quiz",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "The final quiz. Every part of the course. Take your time."
+      },
+      {
+       "ask": "Tanner versus Peña-Rodriguez, in one sentence.",
+       "answer": "Tanner: intoxication is internal and barred by 606(b). Peña-Rodriguez: clear racial bias relied on to convict a criminal defendant overrides 606(b).",
+       "pause": 8
+      },
+      {
+       "ask": "What did James hold about relevance?",
+       "answer": "Evidence corroborating a witness's account is relevant to her credibility, even if she never saw it.",
+       "pause": 8
+      },
+      {
+       "ask": "Old Chief or not: a defendant stipulates he was the one who fired the shot, to keep out graphic video. Must the court accept?",
+       "answer": "No. Old Chief is confined to status elements.",
+       "pause": 8
+      },
+      {
+       "ask": "408 versus 409 on apologies.",
+       "answer": "409 bars only the offer to pay medical expenses, not the accompanying apology. 408 bars statements made in compromise negotiations over a disputed claim.",
+       "pause": 8
+      },
+      {
+       "ask": "Biaggi: why was the rejected immunity offer admissible?",
+       "answer": "Rejecting immunity strongly suggests innocence, the government had proved consciousness of guilt, and 410 protects the defendant, not the government.",
+       "pause": 8
+      },
+      {
+       "ask": "Zackowitz versus preparation.",
+       "answer": "The arsenal kept at home proved only character. Weapons bought after the insult would have shown preparation.",
+       "pause": 8
+      },
+      {
+       "ask": "Brides in the Bath.",
+       "answer": "The doctrine of chances: multiple similar deaths rebut accident and show design.",
+       "pause": 8
+      },
+      {
+       "ask": "Mound.",
+       "answer": "413 does not violate due process because the evidence must pass 403.",
+       "pause": 8
+      },
+      {
+       "ask": "Weil v. Seltzer.",
+       "answer": "Deliberate, varying deception of patients was not habit; it might fit 404(b).",
+       "pause": 8
+      },
+      {
+       "ask": "Whitmore.",
+       "answer": "608(b) bars extrinsic proof, not questions; a good-faith basis is enough to ask.",
+       "pause": 8
+      },
+      {
+       "ask": "Brewer: why didn't 609(b) apply?",
+       "answer": "Release, including from reconfinement for a parole violation, was within ten years.",
+       "pause": 8
+      },
+      {
+       "ask": "Olden: what form of bias?",
+       "answer": "The complainant's motive to invent a rape claim to explain to her live-in partner why she was getting out of another man's car.",
+       "pause": 8
+      },
+      {
+       "ask": "Mahlandt.",
+       "answer": "No personal knowledge requirement under 801(d)(2), and admissibility is party-specific.",
+       "pause": 8
+      },
+      {
+       "ask": "Doyle.",
+       "answer": "Post-Miranda silence may not be used to impeach.",
+       "pause": 8
+      },
+      {
+       "ask": "Barrett.",
+       "answer": "Prior inconsistent statements may impeach even if they cannot come in for their truth.",
+       "pause": 8
+      },
+      {
+       "ask": "Williamson.",
+       "answer": "Only self-inculpatory remarks qualify under 804(b)(3); blame-shifting collateral statements do not.",
+       "pause": 8
+      },
+      {
+       "ask": "Shepard.",
+       "answer": "No settled hopeless expectation of death, so no dying declaration; and backward-looking statements are not state of mind.",
+       "pause": 8
+      },
+      {
+       "ask": "Palmer v. Hoffman.",
+       "answer": "Accident reports prepared for litigation are not regular-course business records.",
+       "pause": 8
+      },
+      {
+       "ask": "Dallas County.",
+       "answer": "A 1901 newspaper report was admissible because necessary and trustworthy, the model for 807.",
+       "pause": 8
+      },
+      {
+       "ask": "Melendez-Diaz and Bullcoming.",
+       "answer": "Lab certificates are testimonial, and a surrogate analyst cannot satisfy the Clause.",
+       "pause": 8
+      },
+      {
+       "ask": "Gray versus Samia.",
+       "answer": "Gray: obvious redactions like deleted violate Bruton. Samia: a natural neutral descriptor does not.",
+       "pause": 8
+      },
+      {
+       "ask": "Holmes.",
+       "answer": "Excluding third-party-guilt evidence based only on the strength of the prosecution's case is arbitrary.",
+       "pause": 8
+      },
+      {
+       "ask": "Joiner.",
+       "answer": "Too great an analytical gap between data and opinion justifies exclusion; review for abuse of discretion.",
+       "pause": 8
+      },
+      {
+       "ask": "Seiler.",
+       "answer": "Drawings are writings; the originals were lost in bad faith, so reconstructions were excluded.",
+       "pause": 8
+      },
+      {
+       "ask": "Jaffee.",
+       "answer": "Psychotherapist privilege, including licensed clinical social workers, with no balancing.",
+       "pause": 8
+      },
+      {
+       "ask": "Trammel.",
+       "answer": "The witness-spouse alone holds the adverse spousal testimony privilege.",
+       "pause": 8
+      },
+      {
+       "ask": "Rakes.",
+       "answer": "Marital confidences survive divorce; the joint-crime exception needs the holder's culpable participation.",
+       "pause": 8
+      },
+      {
+       "say": "That's the course. Five days, every rule, every case, every list. Run the step lists on the exam, read the rule text carefully, and give both answers on 801(d)(1)(A) until you know which version applies. Good luck on December tenth."
       }
      ]
     }
