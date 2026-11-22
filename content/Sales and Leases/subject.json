@@ -6,15 +6,26 @@
   "order": 4,
   "refs": { "statutes": "sales-and-leases-statutory-supplement", "outline": "sales-and-leases-outline" },
   "documents": {
-    "Sales_and_Leases_Week10_Condensed_Outline.docx": {
+    "Sales_and_Leases_Outline.docx": {
       "slug": "sales-and-leases-outline",
       "title": "Sales and Leases Outline",
       "type": "outline",
       "theme": "structured",
       "outsideColor": "64748B",
-      "description": "Condensed outline of Weeks 1–14 for the final exam. 35 sections. Sections I–XVI cover Weeks 1–8: the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse. Sections XVII–XXXV follow the syllabus through Week 14: buyer's remedies, rejection, cure, acceptance and revocation, privity, seller's remedies, Article 2A leases and finance leases, and final-exam checklists, with every assigned problem worked. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides. Slides on file end at Week 8, so later sections rest on the casebook and statutes.",
+      "description": "Final-exam outline of every syllabus week, 1–14 (Sepinuck Chs. 1–7, 9 and 11; the syllabus ends with the Week 14 review lecture and lists no Week 15). 35 sections, each labeled with the syllabus week of its reading: the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, termination, insecurity and repudiation, excuse, buyer's remedies, rejection, cure, acceptance and revocation, privity, seller's remedies, Article 2A leases and finance leases, and final-exam checklists. Every assigned casebook problem is worked and opens from the reference popup. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides.",
       "tags": ["UCC Article 2", "UCC Article 2A", "outline", "sales", "leases", "warranties", "remedies", "Weeks 1–14"],
       "order": 1
+    },
+    "Sales_and_Leases_Week10_Condensed_Outline.docx": {
+      "archived": true,
+      "slug": "sales-and-leases-week10-outline",
+      "title": "Sales and Leases Outline (Week 10 Version)",
+      "type": "outline",
+      "theme": "structured",
+      "outsideColor": "64748B",
+      "description": "Earlier version, replaced by the Sales and Leases Outline. Condensed outline of Weeks 1–14 for the final exam. 35 sections. Sections I–XVI cover Weeks 1–8: the UCC and governing law, formation and § 2-207, the statute of frauds and unconscionability, good faith and modification, express and implied warranties, quantity and price, delivery and risk of loss, disclaimers, remedy limits, the parol evidence rule, assignment, termination, insecurity and repudiation, and excuse. Sections XVII–XXXV follow the syllabus through Week 14: buyer's remedies, rejection, cure, acceptance and revocation, privity, seller's remedies, Article 2A leases and finance leases, and final-exam checklists, with every assigned problem worked. Case boxes mark main, note, and cited-only cases with their casebook pages and class slides. Slides on file end at Week 8, so later sections rest on the casebook and statutes.",
+      "tags": ["UCC Article 2", "UCC Article 2A", "outline", "sales", "leases", "warranties", "remedies", "Weeks 1–14"],
+      "order": 8
     },
     "Sales_and_Leases_Bar_Questions.html": {
       "slug": "sales-and-leases-bar-questions",
@@ -29,7 +40,7 @@
       "slug": "sales-and-leases-practice-exams",
       "title": "Sales and Leases Practice Exams",
       "type": "practice",
-      "description": "58 cumulative practice exams (870 questions) for the final, covering all of Weeks 1–14 and all 35 sections of the course outline, from which law governs and the battle of the forms through warranties, risk of loss, buyer's and seller's remedies, privity, and leases under Article 2A. Each exam follows Professor Richardson's sample-exam format: 15 stand-alone, five-choice questions that mix rule questions (“Which of the following is NOT…”) with short hypos asking who wins and why, plus “None of the above” and “All of the above” choices that are sometimes the answer. Every exam samples the whole course, and about 40% of the questions come from the Weeks 8–14 remedies and lease units, including integrated hypos and damages calculations. Every choice has its own explanation. Use Study mode to check answers as you go, or Exam mode to grade a full exam, and pick a topic to drill one outline section by week.",
+      "description": "29 practice finals (870 questions), each the size of the final's 60-minute multiple-choice part: 30 questions, split into two 15-question exams (Exams 1 and 2 are Final 1, and so on). Together they cover all of syllabus Weeks 1–14 and all 35 sections of the course outline, from which law governs and the battle of the forms through warranties, risk of loss, buyer's and seller's remedies, privity, and leases under Article 2A. Each exam follows Professor Richardson's sample-exam format: 15 stand-alone, five-choice questions that mix rule questions (“Which of the following is NOT…”) with short hypos asking who wins and why, plus “None of the above” and “All of the above” choices that are sometimes the answer. Each exam runs through the whole course in outline order, and about 40% of the questions come from the Weeks 8–14 remedies and lease units, including integrated hypos and damages calculations. Every choice has its own explanation. Use Study mode to check answers as you go, or Exam mode to grade a full exam, and pick a topic to drill one outline section by week.",
       "tags": ["UCC Article 2", "MCQ", "practice exam", "Final exam"],
       "questions": 870,
       "order": 3
@@ -43,10 +54,12 @@
       "order": 5
     },
     "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
+      "archived": true,
       "publish": false,
       "description": "Full-length source outline for Weeks 1–8, kept off the public site. Use it as the reference when making questions, flowcharts, and flashcards for this subject."
     },
     "Sales_and_Leases_Week10_Comprehensive_Outline.pdf": {
+      "archived": true,
       "publish": false,
       "description": "PDF copy of the comprehensive outline, kept off the public site."
     },
