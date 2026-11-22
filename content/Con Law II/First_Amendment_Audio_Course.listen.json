@@ -1250,6 +1250,1464 @@
      ]
     }
    ]
+  },
+  {
+   "day": 2,
+   "title": "The speech framework, incitement, threats, and speech integral to crime",
+   "minutes": 77,
+   "episodes": [
+    {
+     "id": "fa-d2-e00",
+     "title": "Spaced review of Day 1",
+     "minutes": 3,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Welcome to Day 2. We start, as always, with a spaced review. I ask, you answer out loud, then I give the answer. Ready."
+      },
+      {
+       "id": "s2",
+       "ask": "What did Barnette hold, and what case did it overrule?",
+       "answer": "Government may not compel anyone to affirm a belief. It overruled Gobitis.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "Under Smith, does a neutral, generally applicable law that burdens religious practice require an exemption?",
+       "answer": "No. No exemption, unless the parental religious education wrinkle applies.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "Name the six ways a law fails neutrality or general applicability.",
+       "answer": "Gerrymandered exemptions, Lukumi. Hostility, Masterpiece. Discretionary exemptions, Fulton. Comparable secular activity favored, Tandon. Admitted religious motive, Kennedy. Exclusion from a public benefit, the Carson trilogy.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "What test governs the Establishment Clause after Kennedy versus Bremerton?",
+       "answer": "History and tradition, plus a bar on coercion. Lemon and the endorsement test are abandoned.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "What is the Yoder wrinkle?",
+       "answer": "Strict scrutiny applies even to a generally applicable law that substantially interferes with parents' religious upbringing of their children. Yoder and Mahmoud.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "In Fulton, against what is strict scrutiny measured?",
+       "answer": "Whether the government has a compelling interest in denying this claimant an exemption.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "Is an interest in separating church and state more strictly than the Constitution requires compelling?",
+       "answer": "No. Carson versus Makin.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "Which statute binds the federal government to strict scrutiny of substantial religious burdens, and which binds the states for land use and prisoners?",
+       "answer": "RFRA binds the federal government. RLUIPA binds the states.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "say": "Good. On to the Speech Clause."
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e01",
+     "title": "The Speech Clause: big picture and the speech checklist",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Six principles that run through every speech case, the three types of rules and their tiers of scrutiny, and the seven-step speech checklist you will use on every problem."
+      },
+      {
+       "id": "s2",
+       "say": "The six principles. One: speech is broad. Words, images in books, film, websites, and social media, and symbolic acts: armbands, flags, crosses, parades, picketing."
+      },
+      {
+       "id": "s3",
+       "say": "Two: compelled speech is almost never okay. The right to speak includes the right not to speak. Commercial speech is the main exception, in Chapter 8."
+      },
+      {
+       "id": "s4",
+       "say": "Three: content-based restrictions get strict scrutiny. They are presumptively invalid. Content-neutral rules are treated more leniently, in Chapter 9."
+      },
+      {
+       "id": "s5",
+       "say": "Four: false, heinous, and harmful speech is often protected. Why? Distrust. Officials and courts cannot be trusted to separate truth from falsity, or heinous ideas from merely unpopular ones."
+      },
+      {
+       "id": "s6",
+       "say": "Five: bright lines over standards. The same distrust. The Court refuses to expand the historical unprotected categories."
+      },
+      {
+       "id": "s7",
+       "say": "Six: worry about chilling. Fear of liability causes self-censorship. Two doctrines counter it: overbreadth, and mens rea requirements."
+      },
+      {
+       "id": "s8",
+       "say": "Now the three types of rules. A content-based rule: speeches about sports teams are prohibited. Strict scrutiny."
+      },
+      {
+       "id": "s9",
+       "say": "A viewpoint-based rule, the worst form: banning pro-legalization publications, or rejecting a vanity plate reading FCANCER while allowing other vanity plates. The cancer survivor won that case in 2024. Strict scrutiny."
+      },
+      {
+       "id": "s10",
+       "say": "A content-neutral rule, a time, place, or manner rule: no blasting speeches from ten p.m. to six a.m. Intermediate scrutiny, in Chapter 9."
+      },
+      {
+       "id": "s11",
+       "say": "The unprotected categories are exceptions to the ban on content-based rules. If speech falls in one, the government can regulate it because of its content."
+      },
+      {
+       "id": "s12",
+       "say": "Now the speech checklist. Seven steps. Count them. One: is there government action? Two: is it speech, including symbolic conduct? Three: is it compelled speech?"
+      },
+      {
+       "id": "s13",
+       "say": "Four: is the rule content-based, viewpoint-based, or content-neutral? Five: does the speech fall in a historical unprotected category, defined narrowly?"
+      },
+      {
+       "id": "s14",
+       "say": "Six: if the rule is content-based and the speech is not unprotected, strict scrutiny. A compelling interest. Actually necessary. And the least restrictive means. Always ask: would counterspeech do?"
+      },
+      {
+       "id": "s15",
+       "say": "Seven: facial attacks. Overbreadth, and vagueness, which you will meet in Chapter 5."
+      },
+      {
+       "id": "s16",
+       "say": "Quick check. What is the tier for a viewpoint-based rule?",
+       "voice": "alt"
+      },
+      {
+       "id": "s17",
+       "say": "Strict scrutiny, and it is the worst form of content discrimination."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Speech is broad. Compelled speech is almost never allowed. Content-based means strict scrutiny; content-neutral means intermediate. The Court distrusts government, prefers bright lines, refuses new categories, and worries about chilling."
+      },
+      {
+       "id": "s19",
+       "ask": "Give the seven steps of the speech checklist.",
+       "answer": "Government action. Speech. Compelled speech. Content-based, viewpoint-based, or neutral. Unprotected category. Strict scrutiny if content-based and protected. Facial attacks: overbreadth and vagueness.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What are the three parts of strict scrutiny in the speech checklist?",
+       "answer": "A compelling interest, actually necessary, and the least restrictive means, including asking whether counterspeech would do.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "What tier applies to a content-neutral time, place, or manner rule?",
+       "answer": "Intermediate scrutiny.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e02",
+     "title": "Compelled speech: Wooley v. Maynard",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The second pillar of compelled speech after Barnette: Wooley versus Maynard, 1977."
+      },
+      {
+       "id": "s2",
+       "say": "Start with Barnette, from Chapter 1. Government may pursue unity by persuasion and example, not by compelling people to affirm beliefs."
+      },
+      {
+       "id": "s3",
+       "say": "Wooley's rule. The state may not require a person to display its ideological message on private property for the public to see. The right to speak and the right not to speak are complementary parts of freedom of mind."
+      },
+      {
+       "id": "s4",
+       "say": "Six to three, Chief Justice Burger."
+      },
+      {
+       "id": "s5",
+       "say": "The story. New Hampshire required its motto, Live Free or Die, on passenger license plates, and made covering it a crime. The Maynards, Jehovah's Witnesses, covered it and were fined. Held: the requirement is unconstitutional."
+      },
+      {
+       "id": "s6",
+       "say": "The reasoning. First, passive display counts. Carrying a motto is less than saluting a flag. But the difference is one of degree. The car becomes a mobile billboard, and driving is a virtual necessity."
+      },
+      {
+       "id": "s7",
+       "say": "Second, majority approval of the message is irrelevant."
+      },
+      {
+       "id": "s8",
+       "say": "Third, the interests fail. Vehicle identification can be achieved by plate numbers, so the motto is not narrowly tailored to that. And promoting state pride and history is an ideological interest. It cannot outweigh a person's right not to be the courier of the state's message."
+      },
+      {
+       "id": "s9",
+       "say": "Fourth, footnote fifteen. In God We Trust on currency is distinguishable. Currency is carried privately and is not associated with the bearer."
+      },
+      {
+       "id": "s10",
+       "say": "Fifth: religious plaintiffs, but a speech rationale that protects any objector. Just like Barnette."
+      },
+      {
+       "id": "s11",
+       "say": "The dissent: White, Blackmun, and Rehnquist. They disagreed only on whether the plate is the government's own speech, a topic for Day 4. And a note: compelled commercial disclosures, like nutrition labels and drug side effects, are allowed. That is Chapter 8."
+      },
+      {
+       "id": "s12",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s13",
+       "ask": "A state requires every car to display a bumper sticker reading, Support Our Troops. A driver who opposes the war covers it. Can the state fine her?",
+       "answer": "No. Under Wooley, the state may not make a person display its ideological message on private property for the public to see.",
+       "pause": 10
+      },
+      {
+       "id": "s14",
+       "ask": "A driver objects to carrying coins stamped In God We Trust. Does Wooley help?",
+       "answer": "No. Footnote fifteen distinguishes currency: it is carried privately and not associated with the bearer.",
+       "pause": 10
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Wooley, 1977, six to three, Burger. Live Free or Die. Passive display counts; the car is a mobile billboard. Plate numbers serve identification. State pride is ideological. Currency is different."
+      },
+      {
+       "id": "s16",
+       "ask": "What two interests did New Hampshire offer in Wooley, and why did each fail?",
+       "answer": "Vehicle identification, which plate numbers achieve, so not narrowly tailored. Promoting state pride and history, an ideological interest that cannot outweigh the right not to carry the message.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "What did the Wooley dissent disagree about?",
+       "answer": "Only whether the plate is the government's own speech.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "Why is In God We Trust on currency different from the license plate?",
+       "answer": "Currency is carried privately and is not associated with the bearer.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e03",
+     "title": "Content-based restrictions: Collin v. Smith and Hudnut",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two Seventh Circuit cases that show how far the ban on content-based rules reaches. Nazis in Skokie. And an antipornography ordinance in Indianapolis."
+      },
+      {
+       "id": "s2",
+       "say": "Collin versus Smith, Seventh Circuit, 1978. Three to nothing in relevant part, Judge Pell. Cert denied."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Government may not ban a peaceful demonstration because of its message, even one that deeply offends or traumatizes listeners. Listener protection is allowed only for intrusions into the home, or on a truly captive audience."
+      },
+      {
+       "id": "s4",
+       "say": "The story. A Nazi party planned a thirty-minute sidewalk march with uniforms, swastikas, and placards in Skokie, Illinois, home to thousands of Holocaust survivors. The village passed ordinances to block it. Held: the ordinances are unconstitutional."
+      },
+      {
+       "id": "s5",
+       "say": "The details. The permit request: thirty to fifty uniformed demonstrators, marching single file on the sidewalk for about half an hour, with placards like Free Speech for White America, and no speeches or handbills. The party was represented by David Goldberger, a Jewish ACLU lawyer."
+      },
+      {
+       "id": "s6",
+       "say": "The reasoning. First, judges may not engage in ideological tyranny any more than legislators. Protecting unpopular minorities is what distinguishes the United States from the Third Reich."
+      },
+      {
+       "id": "s7",
+       "say": "Second, uniforms, flags, placards, and marching are symbolic speech and assembly. A peaceful demonstration near government is speech in its classic form, citing Edwards versus South Carolina."
+      },
+      {
+       "id": "s8",
+       "say": "Third, this was content-based, not a time, place, or manner rule. The village objected to who was marching, not when, where, or how."
+      },
+      {
+       "id": "s9",
+       "say": "Fourth, government has no power to restrict expression because of its content, citing Mosley. And debate must be uninhibited, robust, and wide-open, citing New York Times versus Sullivan."
+      },
+      {
+       "id": "s10",
+       "say": "Fifth, the recognized exceptions, from Chief Justice Burger concurring in Mosley: obscenity, fighting words, and libel within constitutional limits. Plus, in very narrow circumstances, imminent danger of a grave substantive evil, citing Brandenburg and Terminiello."
+      },
+      {
+       "id": "s11",
+       "say": "Sixth, psychic trauma. It is indistinguishable from speech that stirs anger, which is a high purpose of speech, per Terminiello. The shock flows from the ideas themselves, per Street."
+      },
+      {
+       "id": "s12",
+       "say": "Seventh, no captive audience. Residents could avoid Village Hall for half an hour."
+      },
+      {
+       "id": "s13",
+       "say": "Now American Booksellers Association versus Hudnut, Seventh Circuit, 1985. Three to nothing, Judge Easterbrook."
+      },
+      {
+       "id": "s14",
+       "say": "The rule. Government may not favor one viewpoint and silence the other, even when it is right that the disfavored speech causes real social harm."
+      },
+      {
+       "id": "s15",
+       "say": "The story. Indianapolis banned sexually explicit material depicting women as subordinate, for example as enjoying humiliation. Held: unconstitutional viewpoint discrimination."
+      },
+      {
+       "id": "s16",
+       "say": "The reasoning. Explicit material treating women as equals was lawful. Material treating them as subordinate was banned, regardless of literary, artistic, or political value. That is a viewpoint line."
+      },
+      {
+       "id": "s17",
+       "say": "Here is the striking move. The court accepted that such depictions perpetuate subordination. But that only shows the power of speech, as with Hitler, communism, religion, and television. Seditious libel is protected unless the danger is grave and imminent."
+      },
+      {
+       "id": "s18",
+       "say": "Otherwise, government becomes, in Easterbrook's words, the great censor and director of which thoughts are good for us. The rationale could not be limited to sex discrimination. And free speech has been an ally of those seeking change."
+      },
+      {
+       "id": "s19",
+       "say": "The breadth. The plaintiffs' materials ran from hard-core films to Yeats's poem Leda and the Swan, and the works of Joyce, Lawrence, and Cleland. It was unclear how the city would treat Ulysses or the Iliad. Feminist and civil rights groups filed amicus briefs on both sides."
+      },
+      {
+       "id": "s20",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s21",
+       "ask": "A town bans any march displaying symbols of a group that committed genocide, citing the trauma to survivors who live there. The march is peaceful, on public sidewalks, and the town expects no violence. Constitutional?",
+       "answer": "No. Under Collin versus Smith, that is content-based. Psychic trauma is not a basis to ban peaceful speech, and residents are not a captive audience. With no expected violence, it falls outside incitement and fighting words.",
+       "pause": 12
+      },
+      {
+       "id": "s22",
+       "ask": "A city bans video games depicting women as servile, but allows those depicting women as equals. The city has good evidence the servile ones cause harm. Does the evidence save the law?",
+       "answer": "No. Under Hudnut, government may not favor one viewpoint even if the disfavored speech causes real harm. That only shows the power of speech.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "say": "The trap. Students call Collin a time, place, and manner case. It is not. The village objected to the message, not the manner. Always ask: why does the government object?"
+      },
+      {
+       "id": "s24",
+       "say": "Recap. Collin, 1978: Skokie, no ban on a peaceful demonstration because of its message, trauma is no exception, no captive audience. Hudnut, 1985, Easterbrook: viewpoint discrimination is forbidden even if the speech harms."
+      },
+      {
+       "id": "s25",
+       "ask": "In Collin, when is listener protection allowed?",
+       "answer": "Only for intrusions into the home or on a truly captive audience.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "What viewpoint line did the Hudnut ordinance draw?",
+       "answer": "It banned explicit material depicting women as subordinate, while material treating women as equals was lawful.",
+       "pause": 8
+      },
+      {
+       "id": "s27",
+       "ask": "Under the Mosley concurrence cited in Collin, what are the recognized exceptions?",
+       "answer": "Obscenity, fighting words, libel within constitutional limits, and in very narrow circumstances imminent danger of a grave substantive evil.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e04",
+     "title": "Stevens and the historically unprotected categories",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. United States versus Stevens, 2010, the case that says no new categories. Then the full list of the categories that do exist."
+      },
+      {
+       "id": "s2",
+       "say": "The rule. Content-based restrictions are presumptively invalid unless the speech falls within a historically recognized unprotected category. And courts may not create new categories by balancing the speech's value against its costs."
+      },
+      {
+       "id": "s3",
+       "say": "Eight to one, Chief Justice Roberts."
+      },
+      {
+       "id": "s4",
+       "say": "The story. A federal statute, 18 U.S.C. § 48, criminalized commercially creating, selling, or possessing depictions of animals being intentionally maimed, mutilated, tortured, wounded, or killed, where that conduct is illegal. There was an exception for works with serious value. Congress aimed it at crush videos. But Stevens was convicted for selling dogfighting videos. Held: substantially overbroad and facially invalid."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning, part one: no categorical balancing. The government proposed a test that weighs the value of the speech against its social costs. The Court called it startling and dangerous. The First Amendment itself already reflects the people's cost-benefit judgment. When earlier cases called unprotected speech low-value, that was a description, not a test. And there is no tradition of banning depictions of animal cruelty."
+      },
+      {
+       "id": "s6",
+       "say": "Part two: overbreadth. Read by its text, the law requires no cruelty at all. It reaches hunting videos sold where hunting is restricted. The exceptions clause does not cover them. The lawful applications dwarf the crush and dogfight market."
+      },
+      {
+       "id": "s7",
+       "say": "Part three: the government promised to prosecute only extreme cruelty. That does not help. The First Amendment, Roberts wrote, does not leave us at the mercy of noblesse oblige."
+      },
+      {
+       "id": "s8",
+       "say": "Left open: a statute limited to crush videos, or to extreme cruelty."
+      },
+      {
+       "id": "s9",
+       "say": "The dissent: Justice Alito, who would have read the statute narrowly."
+      },
+      {
+       "id": "s10",
+       "say": "Now the list of historically unprotected categories. Nine, plus two the Court refused. One, incitement: Brandenburg, 1969. Two, fighting words: Chaplinsky, 1942. Three, a grave and imminent threat the government may prevent: Near, 1931, and New York Times versus United States, 1971. Those three are Chapter 4."
+      },
+      {
+       "id": "s11",
+       "say": "Four, true threats: Watts versus United States, 1969. Five, speech integral to criminal conduct: Giboney, 1949. Those are Chapter 5."
+      },
+      {
+       "id": "s12",
+       "say": "Six, child pornography: New York versus Ferber, 1982. Seven, obscenity: Miller versus California, 1973. Chapter 6. Eight, defamation in certain circumstances: the New York Times versus Sullivan line, Chapter 7. Nine, fraud: Virginia Board of Pharmacy, 1976."
+      },
+      {
+       "id": "s13",
+       "say": "And refused: depictions of animal cruelty, in Stevens, and false statements as such, in Alvarez."
+      },
+      {
+       "id": "s14",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s15",
+       "ask": "Congress bans the sale of videos showing, quote, the humiliation of the elderly, arguing such videos have minimal value and serious harms. What does Stevens say?",
+       "answer": "Content-based and presumptively invalid. There is no historical category for it, and courts may not create one by balancing value against harm. It must survive strict scrutiny.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "say": "The trap. Do not argue that speech is unprotected because it is worthless. Low value is a description of existing categories, not a test for new ones."
+      },
+      {
+       "id": "s17",
+       "say": "Recap. Stevens, 2010, eight to one, Roberts. No categorical balancing; no new categories. Section 48 was substantially overbroad because it reached hunting videos. No noblesse oblige. Alito dissented."
+      },
+      {
+       "id": "s18",
+       "ask": "Why did the Court reject categorical balancing in Stevens?",
+       "answer": "The First Amendment already reflects the people's cost-benefit judgment. Calling categories low-value is descriptive, not a test.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What lawful material did Section 48 reach that made it overbroad?",
+       "answer": "Hunting videos sold where hunting is restricted. The statute required no cruelty.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "Name the two categories the Court refused to recognize.",
+       "answer": "Depictions of animal cruelty, in Stevens, and false statements as such, in Alvarez.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e05",
+     "title": "False statements: United States v. Alvarez",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Is lying protected? United States versus Alvarez, 2012. And a lesson about pluralities."
+      },
+      {
+       "id": "s2",
+       "say": "The rule. There is no general First Amendment exception for false statements. A content-based ban on lies must be actually necessary. And the ordinary remedy for false speech is true speech."
+      },
+      {
+       "id": "s3",
+       "say": "The vote. Six to three, but no majority opinion. Justice Kennedy wrote a plurality, joined by Roberts, Ginsburg, and Sotomayor. Breyer and Kagan concurred in the judgment, applying intermediate scrutiny. Alito, Scalia, and Thomas dissented."
+      },
+      {
+       "id": "s4",
+       "say": "What does that mean? A plurality means fewer than five Justices joined the reasoning, so it is usually not binding. Concurring in the judgment means agreeing only with the result."
+      },
+      {
+       "id": "s5",
+       "say": "The story. Alvarez falsely claimed at a public meeting that he had received the Medal of Honor. That violated the Stolen Valor Act. He sought no material gain. Lying was his habit. He also falsely claimed he had played for the Detroit Red Wings and had married a starlet from Mexico. Held: the Act is unconstitutional."
+      },
+      {
+       "id": "s6",
+       "say": "The reasoning. First, the cases saying falsehood has no value all involved a legally cognizable harm: defamation, fraud. This Act targeted falsity and nothing more."
+      },
+      {
+       "id": "s7",
+       "say": "Second, breadth. It reached lies anywhere, even whispered at home. Upholding it would let government compile a list of subjects about which lies are crimes."
+      },
+      {
+       "id": "s8",
+       "say": "Third, the interest. Protecting the Medal's integrity is compelling. It has been awarded only 3,476 times, so the interest is beyond question. But there was no evidence of dilution. And counterspeech worked. Alvarez was publicly exposed and ridiculed. The Act was not actually necessary."
+      },
+      {
+       "id": "s9",
+       "say": "Fourth, the marketplace of ideas: Holmes, dissenting in Abrams."
+      },
+      {
+       "id": "s10",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s11",
+       "ask": "A state makes it a crime to falsely claim a college degree, anywhere, for any reason. A man lies about his degree at a dinner party. Constitutional after Alvarez?",
+       "answer": "Likely not. It targets falsity and nothing more, with no legally cognizable harm, and reaches lies anywhere. Counterspeech is the ordinary remedy, so the ban is not actually necessary.",
+       "pause": 12
+      },
+      {
+       "id": "s12",
+       "ask": "A man falsely claims a medical degree to get hired as a doctor and collects a salary. Does Alvarez protect him?",
+       "answer": "No. That is fraud, a lie tied to a legally cognizable harm and material gain, which is a historically unprotected category.",
+       "pause": 10
+      },
+      {
+       "id": "s13",
+       "say": "The trap. Alvarez's reasoning is a plurality. On an exam, say so. And note that two Justices would apply intermediate scrutiny to false statements."
+      },
+      {
+       "id": "s14",
+       "say": "Recap. Alvarez, 2012. Kennedy plurality; Breyer and Kagan in the judgment, intermediate scrutiny; Alito, Scalia, and Thomas dissenting. No general exception for lies. Falsity and nothing more is protected. The remedy for false speech is true speech."
+      },
+      {
+       "id": "s15",
+       "ask": "What distinguished defamation and fraud from Alvarez's lie?",
+       "answer": "They involve legally cognizable harm. The Stolen Valor Act targeted falsity and nothing more.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "What is a plurality opinion, and is it binding?",
+       "answer": "An opinion whose reasoning fewer than five Justices joined. It is usually not binding.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "Why was the Stolen Valor Act not actually necessary?",
+       "answer": "There was no evidence the Medal was diluted, and counterspeech worked: Alvarez was exposed and ridiculed.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e06",
+     "title": "Overbreadth and construction: United States v. Hansen",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The overbreadth doctrine, constitutional avoidance, and United States versus Hansen, 2023. Then the Stevens-Hansen comparison and the dogfight-video stretch exercise."
+      },
+      {
+       "id": "s2",
+       "say": "The rule, in plain English. A law is facially invalid for overbreadth only if it prohibits a substantial amount of protected speech relative to its plainly legitimate sweep. Count the requirements. One, substantial protected speech. Two, measured against the law's legitimate sweep. Three, the unconstitutional applications must be realistic, not fanciful. Four, the ratio must be lopsided. And before any of that, courts first construe the statute, adopting any fairly possible constitutional reading."
+      },
+      {
+       "id": "s3",
+       "say": "Seven to two, Justice Barrett."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Hansen defrauded noncitizens with a fake adult-adoption path to citizenship. He was convicted under a law barring anyone from encouraging or inducing illegal immigration. He argued the law was overbroad because it reached advocacy. Held: not overbroad."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, overbreadth is unusual. It lets a litigant whose own speech is unprotected assert other people's rights. And it invalidates a law that has lawful applications. It is justified by chilling concerns, but it is strong medicine."
+      },
+      {
+       "id": "s6",
+       "say": "Second, encourage and induce are criminal-law terms of art. They cover only intentional solicitation and facilitation of specific unlawful acts. Advocacy is out."
+      },
+      {
+       "id": "s7",
+       "say": "Third, constitutional avoidance, the Ashwander principle. If a statute can fairly be read two ways, choose the constitutional reading. Courts seek harmony, not constitutional collision. But the canon does not override clear text."
+      },
+      {
+       "id": "s8",
+       "say": "The dissent: Jackson and Sotomayor. And the contrast: an ordinary facial challenge, outside the First Amendment, requires showing no valid applications at all. That is Salerno."
+      },
+      {
+       "id": "s9",
+       "say": "Now Stevens versus Hansen. Construction: Stevens used ordinary meaning, with no cruelty requirement. Hansen used terms of art, solicitation and facilitation. Protected applications: in Stevens, hunting videos, realistic and numerous. In Hansen, advocacy was excluded, and the remaining concerns were fanciful. Result: Stevens, a lopsided ratio, facially invalid. Hansen, no lopsided ratio, upheld."
+      },
+      {
+       "id": "s10",
+       "say": "Now the stretch exercise: a ban on sales of actual illegal dogfight videos. The threshold: videos are speech, per Stevens, and the ban turns on subject matter. So it is content-based and presumptively invalid."
+      },
+      {
+       "id": "s11",
+       "say": "The defense. Unlike Section 48, it is narrow, the very question Stevens left open. It fits an existing category, speech integral to crime: like Ferber, the market drives the crime. Alternatively, it survives strict scrutiny by targeting the commercial incentive. And it should be read narrowly, per Hansen."
+      },
+      {
+       "id": "s12",
+       "say": "The challenge. Stevens refused to make cruelty depictions unprotected, and Ferber rests on harm to children. Illegal where? Stevens's own videos included footage from Japan. It sweeps in journalism and exposés. And there is a less restrictive alternative: prosecute the fights, per Alvarez."
+      },
+      {
+       "id": "s13",
+       "say": "The likely answer: defensible if narrowly drafted and tied to the underlying crime. Your outline adds, beyond the casebook, that Congress's 2010 crush-video law was limited to obscene videos, tying it to an existing category."
+      },
+      {
+       "id": "s14",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s15",
+       "ask": "A law makes it a crime to, quote, aid or abet a violation of the drug laws. A defendant who sold heroin argues it is overbroad because a newspaper editorial urging legalization might count. What result?",
+       "answer": "Likely upheld. Read as a criminal term of art, as in Hansen, aiding and abetting covers only intentional facilitation of specific unlawful acts, not abstract advocacy. The feared applications are fanciful, so there is no lopsided ratio.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "A defendant whose own speech is clearly unprotected brings an overbreadth challenge. Does he have standing to argue about other people's speech?",
+       "answer": "Yes. That is what makes overbreadth unusual: a litigant whose own speech is unprotected may assert others' rights, because of chilling concerns.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "say": "Recap. Overbreadth: substantial protected speech relative to legitimate sweep; realistic applications; a lopsided ratio. Construe first; avoid constitutional collision. Hansen, 2023, seven to two, Barrett: encourage and induce mean solicitation and facilitation. Jackson and Sotomayor dissented."
+      },
+      {
+       "id": "s18",
+       "ask": "What two features make overbreadth unusual?",
+       "answer": "It lets a litigant whose own speech is unprotected assert others' rights, and it invalidates a law that has lawful applications.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What is the Ashwander principle?",
+       "answer": "Constitutional avoidance. If a statute can fairly be read two ways, choose the constitutional reading, though the canon does not override clear text.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "How does an ordinary facial challenge under Salerno differ from overbreadth?",
+       "answer": "Salerno requires showing no valid applications. Overbreadth requires only a substantial amount of protected speech relative to the law's legitimate sweep.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e07",
+     "title": "Incitement: Terminiello and Brandenburg",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The incitement category. Terminiello, then Brandenburg, then the history of the tests, then the courthouse livestream."
+      },
+      {
+       "id": "s2",
+       "say": "First, a reading tip from your outline. Start with the challenged law and how it was construed, then the facts. Terminiello's facts sounded like incitement. But the jury instruction swept in protected speech."
+      },
+      {
+       "id": "s3",
+       "say": "And a note on the chapter. It covers three unprotected categories, all defined very narrowly by Justices across the spectrum. And every case in the chapter rejected the argument that the speech was unprotected. Know why."
+      },
+      {
+       "id": "s4",
+       "say": "Terminiello versus City of Chicago, 1949. Five to four, Justice Douglas."
+      },
+      {
+       "id": "s5",
+       "say": "The rule. Speech may not be punished for stirring anger, inviting dispute, or creating unrest. It must pose a clear and present danger of a serious evil far above public inconvenience or annoyance."
+      },
+      {
+       "id": "s6",
+       "say": "The story. A suspended priest gave a hate-filled speech to a packed auditorium, with protesters outside, and violence was a real risk. The jury was told that breach of the peace included speech that stirs the public to anger, invites dispute, brings about a condition of unrest, or creates a disturbance. Held: conviction reversed."
+      },
+      {
+       "id": "s7",
+       "say": "The reasoning. Speech may best serve its purpose when it induces unrest or stirs people to anger. The alternative is standardized ideas."
+      },
+      {
+       "id": "s8",
+       "say": "The dissent: Vinson, Frankfurter, Jackson, and Burton. Their point was only that counsel had failed to object to the instruction."
+      },
+      {
+       "id": "s9",
+       "say": "Now Brandenburg versus Ohio, 1969. Nine to nothing, per curiam. It overruled Whitney versus California."
+      },
+      {
+       "id": "s10",
+       "say": "The test. Count the elements. Advocacy of force or law violation may be punished only if it is, one, directed to inciting or producing, two, imminent, three, lawless action, and four, is likely to produce such action. All four are required."
+      },
+      {
+       "id": "s11",
+       "say": "Put it in three words: intent, imminence, likelihood."
+      },
+      {
+       "id": "s12",
+       "say": "The story. A Ku Klux Klan leader invited a reporter to film a rally on a farm. Hooded figures, some armed, burned a cross. He warned of possible revengeance against the government and announced a march on Congress. Only Klan members and journalists were present. He was convicted under Ohio's criminal syndicalism law, which punished advocating violence and assembling to advocate it. Held: the statute is unconstitutional."
+      },
+      {
+       "id": "s13",
+       "say": "The reasoning. Abstract teaching of the moral propriety, or even the necessity, of force is different from preparing a group for violent action and steeling it to such action. And Ohio's law punished mere advocacy, with no intent, imminence, or likelihood requirement."
+      },
+      {
+       "id": "s14",
+       "say": "The concurrences. Justices Black and Douglas would expressly reject the clear and present danger test, which had been used to affirm the convictions of World War One dissidents: Abrams, Schaefer, Pierce. Douglas quotes Holmes in Gitlow: every idea is an incitement."
+      },
+      {
+       "id": "s15",
+       "say": "Now the evolution, in three eras. Era one, 1919 to 1927: Abrams, Schaefer, Pierce, and Whitney. Clear and present danger, or bad tendency, used to punish dissident advocacy."
+      },
+      {
+       "id": "s16",
+       "say": "Era two, 1949 to 1951: Terminiello, and Dennis. Clear and present danger of a serious evil."
+      },
+      {
+       "id": "s17",
+       "say": "Era three, 1969 to now: Brandenburg. Intent, imminence, and likelihood. It replaced the older test in practice."
+      },
+      {
+       "id": "s18",
+       "say": "Now the stretch exercise: the courthouse livestream. An activist livestreams outside a courthouse: we need to shut this courthouse down today. Viewers push barricades. The activist adds: I'm not telling anyone to hurt anybody. But history remembers people who act. Ten minutes later a group breaks through and damages the entrance."
+      },
+      {
+       "id": "s19",
+       "say": "The government's argument. Imminence: today, a crowd at the target, ten minutes. A concrete call to action. Urging escalation after seeing the pushing supports intent. And likelihood, shown by an agitated crowd already pressing forward."
+      },
+      {
+       "id": "s20",
+       "say": "The activist's argument. Core criticism of government. Shut it down is common, conditional protest rhetoric. An explicit disclaimer of violence. Much of the audience was online. And punishing speakers for volatile listeners risks a heckler's-veto effect."
+      },
+      {
+       "id": "s21",
+       "say": "The likely answer: close, and it turns on intent. The statement after the pushing is the government's best evidence, and a properly instructed jury could convict. Your outline adds, beyond the casebook, that Hess versus Indiana, 1973, and NAACP versus Claiborne Hardware, 1982, support the activist on imminence and intent."
+      },
+      {
+       "id": "s22",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s23",
+       "ask": "At a rally, a speaker tells a crowd that the government is illegitimate and that someday, armed revolution will be necessary. Brandenburg?",
+       "answer": "Protected. Abstract advocacy of the necessity of force, with no imminence. Brandenburg distinguishes abstract teaching from preparing a group for violent action.",
+       "pause": 12
+      },
+      {
+       "id": "s24",
+       "ask": "A speaker standing outside a store with an angry crowd points at the door and shouts, break the windows and take everything, now. The crowd does it. Brandenburg?",
+       "answer": "Unprotected incitement. Directed to producing imminent lawless action and likely to produce it. All four elements are met.",
+       "pause": 12
+      },
+      {
+       "id": "s25",
+       "ask": "A law punishes any speech that, quote, tends to cause disorder. Valid?",
+       "answer": "No. Like the instruction in Terminiello and the statute in Brandenburg, it reaches speech that merely angers or advocates, with no intent, imminence, or likelihood requirement.",
+       "pause": 10
+      },
+      {
+       "id": "s26",
+       "say": "The traps. One: do not apply clear and present danger as the current test. Brandenburg is the test. Two: likelihood alone is not enough. The speaker must intend imminent lawless action. Three: read the law and the instruction first, as Terminiello teaches."
+      },
+      {
+       "id": "s27",
+       "say": "Recap. Terminiello, 1949, five to four, Douglas: speech that stirs anger is protected; the instruction swept too broadly. Brandenburg, 1969, nine to nothing per curiam, overruled Whitney: directed to inciting, imminent, lawless action, likely. Three eras: bad tendency, clear and present danger, Brandenburg."
+      },
+      {
+       "id": "s28",
+       "ask": "State the four elements of the Brandenburg test.",
+       "answer": "Directed to inciting or producing, imminent, lawless action, and likely to produce it.",
+       "pause": 8
+      },
+      {
+       "id": "s29",
+       "ask": "What was wrong with the jury instruction in Terminiello?",
+       "answer": "It defined breach of the peace to include speech that stirs anger, invites dispute, or creates unrest, sweeping in protected speech.",
+       "pause": 8
+      },
+      {
+       "id": "s30",
+       "ask": "Which Justices in Brandenburg would expressly reject clear and present danger?",
+       "answer": "Black and Douglas.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e08",
+     "title": "Fighting words, hostile audiences, hate speech, and R.A.V.",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Fighting words, the heckler's veto, hate speech, R.A.V. versus City of St. Paul, and Professor Klein's own note on Chaplinsky."
+      },
+      {
+       "id": "s2",
+       "say": "Fighting words, from Chaplinsky. Personal insults so offensive they are likely to provoke the listener to attack the speaker immediately. Note: the Court has not upheld a restriction on this theory since 1942."
+      },
+      {
+       "id": "s3",
+       "say": "Your outline adds Chaplinsky's facts, from beyond the casebook. Walter Chaplinsky, a Jehovah's Witness distributing literature on a public street in Rochester, New Hampshire, called a city marshal a God damned racketeer and a damned Fascist. The Court upheld his conviction under a state law against offensive words addressed to others in public."
+      },
+      {
+       "id": "s4",
+       "say": "Cohen versus California, 1971. A jacket reading Fuck the Draft, worn in a courthouse hallway, was not fighting words. No one present could reasonably see it as a direct personal insult, and there was no realistic prospect of violence. You will hear Cohen's profanity point on Day 3."
+      },
+      {
+       "id": "s5",
+       "say": "No heckler's veto. Cox versus Louisiana, 1965, and Edwards versus South Carolina, 1963. Peaceful civil rights protesters cannot be convicted because a hostile crowd might become violent, when police can control the crowd."
+      },
+      {
+       "id": "s6",
+       "say": "And the police could. In Cox, a hostile crowd of one hundred to three hundred was separated from the student protesters by seventy-five to eighty armed police. In Edwards, police protection was at all times sufficient, and the City Manager admitted he could have brought more officers."
+      },
+      {
+       "id": "s7",
+       "say": "Hate speech is generally protected. In Collin, the village conceded it expected no violence. That took the case outside both Brandenburg and Chaplinsky."
+      },
+      {
+       "id": "s8",
+       "say": "Now R.A.V. versus City of St. Paul, 1992. Nine to nothing on the judgment, Justice Scalia."
+      },
+      {
+       "id": "s9",
+       "say": "The rule. Government may ban an entire unprotected category because of what makes it proscribable. But it may not single out a subset based on topic or viewpoint."
+      },
+      {
+       "id": "s10",
+       "say": "The story. Teenagers burned a cross in a Black family's fenced yard. St. Paul's ordinance banned symbols that arouse anger on the basis of race, color, creed, religion, or gender. The state court construed it to reach only fighting words. Held: facially unconstitutional."
+      },
+      {
+       "id": "s11",
+       "say": "The reasoning. Unprotected categories are not invisible to the Constitution. For example, government may ban libel, but not only libel critical of the government."
+      },
+      {
+       "id": "s12",
+       "say": "And the ordinance was underinclusive. It did not reach fighting words based on political affiliation, union membership, or sexual orientation. It picked topics."
+      },
+      {
+       "id": "s13",
+       "say": "So the city could have banned all fighting words?",
+       "voice": "alt"
+      },
+      {
+       "id": "s14",
+       "say": "Yes. What it could not do was ban only the fighting words on disfavored topics."
+      },
+      {
+       "id": "s15",
+       "say": "Now the Harvard note, 1993, written by your casebook's coauthor, Klein. The argument: Chaplinsky should be overruled rather than expanded. It rewards the undesirable response of fighting, unlike fleeing a false cry of fire. And it gives police discretion to punish minorities and critics."
+      },
+      {
+       "id": "s16",
+       "say": "The critique the note answers. Scholars faulted Chaplinsky for assuming a white male fight response. Women and outnumbered minorities may flee or submit instead. Professor Kathleen Sullivan would extend the doctrine to words that cause fright or flight; otherwise, she said, there is more license to insult Mother Teresa than Sean Penn. The note's answer: abolish the doctrine rather than expand it."
+      },
+      {
+       "id": "s17",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s18",
+       "ask": "A city bans fighting words, quote, directed at a person because of his political party. A man screams a face-to-face partisan insult and is charged. The city argues fighting words are unprotected anyway. What result?",
+       "answer": "Unconstitutional under R.A.V. Government may ban all fighting words, but not single out a topic-based subset like political affiliation.",
+       "pause": 12
+      },
+      {
+       "id": "s19",
+       "ask": "Peaceful protesters march past a hostile crowd. The police chief, who has enough officers to keep order, arrests the protesters to prevent a fight. Lawful?",
+       "answer": "No. No heckler's veto. Under Cox and Edwards, peaceful speakers cannot be punished because a hostile audience might react violently when police can control the crowd.",
+       "pause": 12
+      },
+      {
+       "id": "s20",
+       "ask": "A protester holds a sign reading, the mayor is a crook, in a city square. The mayor, passing by, is furious. Fighting words?",
+       "answer": "No. It is not a face-to-face personal insult likely to provoke an immediate attack, and like Cohen there is no realistic prospect of violence.",
+       "pause": 10
+      },
+      {
+       "id": "s21",
+       "say": "The traps. One: in R.A.V., the problem is not that fighting words are protected. It is the content-based subset. Two: hate speech is not a category. Three: before calling something fighting words, ask whether it is a direct personal insult likely to provoke immediate violence."
+      },
+      {
+       "id": "s22",
+       "say": "Recap. Fighting words, Chaplinsky, nothing upheld since 1942. Cohen: no personal insult. No heckler's veto: Cox and Edwards. Hate speech protected. R.A.V., 1992, Scalia: no topic or viewpoint subsets within a category. Klein's note: overrule Chaplinsky."
+      },
+      {
+       "id": "s23",
+       "ask": "Define fighting words.",
+       "answer": "Personal insults so offensive they are likely to provoke the listener to attack the speaker immediately.",
+       "pause": 8
+      },
+      {
+       "id": "s24",
+       "ask": "Why was the St. Paul ordinance unconstitutional even though fighting words are unprotected?",
+       "answer": "It singled out a subset by topic, race, color, creed, religion, or gender, and left out others like political affiliation.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "What two problems does the Klein note find in Chaplinsky?",
+       "answer": "It rewards the undesirable response of fighting, and it gives police discretion to punish minorities and critics.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e09",
+     "title": "Prior restraints: Near and the Pentagon Papers",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The prior restraint checklist, Near versus Minnesota, New York Times versus United States, and the synthesis of why every unprotected-category argument in Chapter 4 failed."
+      },
+      {
+       "id": "s2",
+       "say": "The prior restraint checklist. Ask: is the government stopping speech before it occurs, by injunction or licensing, rather than punishing it afterward? If so, the restraint carries a heavy presumption of invalidity, and the government bears a heavy burden. The only recognized exception is Near's wartime dictum: troop locations, transport sailing dates. The Court has never actually applied it."
+      },
+      {
+       "id": "s3",
+       "say": "Near versus Minnesota ex rel. Olson, 1931. The rule: a prior restraint on publication is presumptively unconstitutional. The protection is not absolutely unlimited, but the limitation has been recognized only in exceptional cases."
+      },
+      {
+       "id": "s4",
+       "say": "The story. A state statute allowed the suppression of an offending newspaper or periodical. Minnesota courts enjoined The Saturday Press and its owner, J. M. Near, from continuing to publish articles criticizing local law enforcement as corrupt and inefficient. Held: reversed. The Framers especially opposed prior restraints."
+      },
+      {
+       "id": "s5",
+       "say": "The dictum. Protection is not absolute. In wartime, the government might prevent publication of the number and location of troops, or the sailing dates of transports."
+      },
+      {
+       "id": "s6",
+       "say": "Now New York Times Company versus United States, 1971, the Pentagon Papers case. Six to three, per curiam. Do not confuse it with New York Times versus Sullivan, the defamation case."
+      },
+      {
+       "id": "s7",
+       "say": "The rule. A prior restraint comes with a heavy presumption against validity, citing Bantam Books and Near. A general claim of harm to national security did not carry the government's heavy burden."
+      },
+      {
+       "id": "s8",
+       "say": "The story. Daniel Ellsberg leaked a classified study of the Vietnam War showing the government knew the war likely could not be won and misled the public. The Nixon Administration sought to enjoin the Times and the Post. Publication was restrained for fifteen days. Held: injunctions denied."
+      },
+      {
+       "id": "s9",
+       "say": "The timeline. The Times published on June 13, 1971. A temporary restraining order followed June 15. The Second Circuit enjoined the Times, while the D.C. courts refused to enjoin the Post. The Court granted cert June 25, staying publication, heard argument June 26, and ruled June 30."
+      },
+      {
+       "id": "s10",
+       "say": "Justice Black, with Douglas. Every moment of restraint was a flagrant violation. The press serves the governed, not the governors. And security is a vague generality that cannot override the First Amendment."
+      },
+      {
+       "id": "s11",
+       "say": "The dissent: Burger, Harlan, and Blackmun. The issues were hard and the decision too rushed."
+      },
+      {
+       "id": "s12",
+       "say": "The briefs. The government argued that a real likelihood of grave danger suffices, and that the President is best placed to judge it. It argued Near's examples were merely illustrative, and that punishment after publication would be meaningless because the harm would already be done."
+      },
+      {
+       "id": "s13",
+       "say": "The ACLU argued for a two-part test. The information must fall into one of a few narrow categories: tactical military operations, weapons designs, and codes. And it must not bear on public policy decisions. Even plans like the Bay of Pigs would stay protected. President Kennedy later told the Times that more coverage would have saved us from a colossal mistake. And the ACLU noted that twelve of the nineteen federal judges who had reviewed the papers rejected the government's harm claims."
+      },
+      {
+       "id": "s14",
+       "say": "Why are prior restraints worse than punishment? Thomas Emerson, quoted by the ACLU. They bring a wider range of expression under scrutiny. They shut off speech before it happens. They are imposed by a stroke of the pen, without the safeguards of criminal process. They allow less public criticism. And they drive toward excess."
+      },
+      {
+       "id": "s15",
+       "say": "The aftermath. The Court has never upheld such a restraint. Marchetti and Snepp rested on CIA secrecy agreements. In Snepp the book's proceeds went to the government, and the Court never decided whether publication could be enjoined. The Progressive's H-bomb article was enjoined, but the case was abandoned before appeal."
+      },
+      {
+       "id": "s16",
+       "say": "Now the synthesis: why each unprotected-category argument failed. Terminiello, incitement: the law reached speech that merely angered, with no imminence. Brandenburg, incitement: it punished mere advocacy, with no intent, imminence, or likelihood."
+      },
+      {
+       "id": "s17",
+       "say": "Cohen, fighting words: no direct personal insult, and no realistic violence. Cox and Edwards, hostile audience: police could control the crowd. Collin, incitement and fighting words: the village conceded it expected no violence."
+      },
+      {
+       "id": "s18",
+       "say": "R.A.V., fighting words assumed: it banned only a topic-based subset. Near and the Pentagon Papers, national security: the heavy presumption was not overcome."
+      },
+      {
+       "id": "s19",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s20",
+       "ask": "A court enjoins a newspaper from publishing a leaked memo showing that a cabinet officer lied to Congress, on the ground that it would embarrass the government abroad. Valid?",
+       "answer": "No. A prior restraint carries a heavy presumption of invalidity. A general claim of harm to national security did not carry the burden in the Pentagon Papers case, and embarrassment is far weaker.",
+       "pause": 12
+      },
+      {
+       "id": "s21",
+       "ask": "During a war, a newspaper plans to print the sailing date and route of a troop transport next week. Can the government enjoin it?",
+       "answer": "Possibly. That is Near's wartime dictum, the only recognized exception, though the Court has never actually applied it.",
+       "pause": 12
+      },
+      {
+       "id": "s22",
+       "say": "Recap. Prior restraint: heavy presumption, heavy burden. Near, 1931: The Saturday Press; wartime dictum on troops and sailing dates. Pentagon Papers, 1971, six to three per curiam: national security generalities did not suffice. The Court has never upheld such a restraint."
+      },
+      {
+       "id": "s23",
+       "ask": "What is a prior restraint?",
+       "answer": "Government stopping speech before it occurs, by injunction or licensing, rather than punishing it afterward.",
+       "pause": 8
+      },
+      {
+       "id": "s24",
+       "ask": "What is the only recognized exception to the bar on prior restraints?",
+       "answer": "Near's wartime dictum, like the number and location of troops or transport sailing dates, never actually applied.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "Give three of Emerson's reasons why prior restraints are worse.",
+       "answer": "Any three: a wider range of expression under scrutiny; shut off speech before it happens; imposed by a stroke of the pen without criminal-process safeguards; less public criticism; drive toward excess.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e10",
+     "title": "True threats: Counterman v. Colorado",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The theme of Chapter 5, mens rea as speech protection. Then Counterman versus Colorado, 2023, and its three-way split."
+      },
+      {
+       "id": "s2",
+       "say": "The theme. The Court often forbids penalizing speech unless the speaker had a culpable mental state. That gives honest speakers breathing room, at the cost of letting some unprotected speech go unpunished. Three examples. Brandenburg requires intent. Counterman requires at least recklessness. Williams requires belief and intent."
+      },
+      {
+       "id": "s3",
+       "say": "The Counterman rule, in two parts. Part one, the objective definition. A true threat is a serious expression conveying that the speaker means to commit unlawful violence, judged by how a reasonable recipient would understand it."
+      },
+      {
+       "id": "s4",
+       "say": "Part two, the subjective element. The First Amendment also requires proof that the speaker was at least reckless: that he consciously disregarded a substantial and unjustifiable risk that his words would be viewed as threatening."
+      },
+      {
+       "id": "s5",
+       "say": "Seven to two on the judgment, Justice Kagan."
+      },
+      {
+       "id": "s6",
+       "say": "The story. Counterman sent hundreds of Facebook messages over two years to a musician he had never met. When she blocked him, he created new accounts. Some messages suggested surveillance or harm. One said simply: Die. She feared for her life and canceled performances. He was convicted under Colorado's stalking law, which applied a purely objective test. Held: vacated and remanded."
+      },
+      {
+       "id": "s7",
+       "say": "The statute. Colorado barred repeated communications made in a manner that would cause a reasonable person to suffer serious emotional distress, and that did so. The only evidence was his messages."
+      },
+      {
+       "id": "s8",
+       "say": "The reasoning. First, true means not a jest or hyperbole. I'll kill you if you leave dirty dishes in the sink is not a threat."
+      },
+      {
+       "id": "s9",
+       "say": "Second, why a subjective element at all? Because speakers unsure of the line, fearful of error or of litigation costs, will self-censor protected speech."
+      },
+      {
+       "id": "s10",
+       "say": "Third, why recklessness, and not purpose or knowledge? It balances chilling against the real harms of threats. Reckless speakers consciously accept a substantial risk of serious harm."
+      },
+      {
+       "id": "s11",
+       "say": "Now the three-way split. The majority: Kagan, Roberts, Alito, Kavanaugh, and Jackson. Recklessness, because it balances chilling against harm to victims."
+      },
+      {
+       "id": "s12",
+       "say": "The concurrence: Sotomayor, joined in part by Gorsuch. Intent. Online speech lacks context. Juries' norms and stereotypes vary. And incitement, the closest cousin, requires intent."
+      },
+      {
+       "id": "s13",
+       "say": "The dissent: Barrett and Thomas. Objective only. Other categories use objective tests. The category is already narrow and context-sensitive. Let legislatures calibrate."
+      },
+      {
+       "id": "s14",
+       "say": "Barrett's guardrails. True threats are already narrow. The speaker must express an intent to commit unlawful violence against a particular person or group, judged by a reasonable listener who knows the whole context: tone, audience, medium, the broader exchange. And Sotomayor added that online speech lacks contextual clues, and that racial and cultural stereotypes can shape what a jury sees as dangerous."
+      },
+      {
+       "id": "s15",
+       "say": "So the evolution here?",
+       "voice": "alt"
+      },
+      {
+       "id": "s16",
+       "say": "Watts versus United States, 1969, set up the category. Counterman, 2023, added the recklessness requirement on top of the objective test."
+      },
+      {
+       "id": "s17",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s18",
+       "ask": "A man posts to his ex-girlfriend, I know where you sleep, and you won't see next week. He testifies he meant it as a dark joke and never thought she would take it seriously. The jury is told to convict if a reasonable person would see a threat. Valid conviction?",
+       "answer": "No. Under Counterman, the jury must also find at least recklessness: that he consciously disregarded a substantial risk that his words would be viewed as threatening. A purely objective instruction is not enough.",
+       "pause": 12
+      },
+      {
+       "id": "s19",
+       "ask": "At a political rally, a protester shouts, if they draft me, the first man I'll get in my sights is the President. The crowd laughs. True threat?",
+       "answer": "Likely not. True threats exclude jest and political hyperbole, judged in context by a reasonable recipient.",
+       "pause": 10
+      },
+      {
+       "id": "s20",
+       "ask": "Under Counterman, must the prosecution prove the speaker intended to threaten?",
+       "answer": "No. Recklessness suffices. Intent was the concurrence's view.",
+       "pause": 10
+      },
+      {
+       "id": "s21",
+       "say": "The traps. One: Counterman did not adopt intent. That was Sotomayor. Two: the objective part still matters; the words must be a serious expression of intent to commit unlawful violence. Three: recklessness means conscious disregard of a substantial and unjustifiable risk, not mere carelessness."
+      },
+      {
+       "id": "s22",
+       "say": "Recap. Counterman, 2023, seven to two, Kagan. True threat: a serious expression of intent to commit unlawful violence, by a reasonable recipient's understanding, plus at least recklessness. Sotomayor wanted intent. Barrett and Thomas wanted an objective test."
+      },
+      {
+       "id": "s23",
+       "ask": "What mental state does Counterman require for a true threat?",
+       "answer": "At least recklessness: conscious disregard of a substantial and unjustifiable risk that the words would be viewed as threatening.",
+       "pause": 8
+      },
+      {
+       "id": "s24",
+       "ask": "Why did the majority choose recklessness rather than intent?",
+       "answer": "It balances chilling against the real harms of threats. Reckless speakers consciously accept a substantial risk of serious harm.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "Who dissented in Counterman, and what did they want?",
+       "answer": "Barrett and Thomas. A purely objective test.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e11",
+     "title": "Speech integral to crime: United States v. Williams and vagueness",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What speech integral to crime covers. Then United States versus Williams, 2008, and the difference between vagueness and overbreadth."
+      },
+      {
+       "id": "s2",
+       "say": "Speech integral to crime is unprotected, whether written or spoken. Three kinds. One: speech that is the crime. Your money or your life. Two: offers or solicitations of illegal acts. I'll sell you heroin. I want to hire a prostitute. Three: speech that helps commit or conceal a crime. I'll tell you when the coast is clear. Think conspiracy, aiding and abetting."
+      },
+      {
+       "id": "s3",
+       "say": "But abstract advocacy of illegality stays protected. Cocaine should be legal. And the hard cases: general-audience how-to material. Novels are protected. Bomb manuals? Hold that thought."
+      },
+      {
+       "id": "s4",
+       "say": "Williams. Seven to two, Justice Scalia."
+      },
+      {
+       "id": "s5",
+       "say": "The rule, in two parts. First: offers to provide and requests to obtain contraband are categorically unprotected, citing Giboney and Pittsburgh Press. Second: a law is void for vagueness only if it fails to give fair notice or invites seriously discriminatory enforcement. Not merely because close cases exist."
+      },
+      {
+       "id": "s6",
+       "say": "The story. A federal law criminalized pandering or soliciting child pornography: offers or requests concerning material the defendant believes, or intends another to believe, is child pornography. Held: constitutional and not vague."
+      },
+      {
+       "id": "s7",
+       "say": "The reasoning. First, solicitation, conspiracy, and incitement laws have always criminalized speech intended to induce crime. Such offers have no social value."
+      },
+      {
+       "id": "s8",
+       "say": "Second, the word promotes does not reach child pornography should be legal, or even I encourage you to obtain it. It means recommending a particular item with intent to initiate a transfer. That distinguishes abstract advocacy, Brandenburg and Claiborne Hardware."
+      },
+      {
+       "id": "s9",
+       "say": "Third, vagueness comes from the Due Process Clause. It concerns indeterminacy about what fact must be proved, words like annoying or indecent. It is not about difficulty proving a fact; that is handled by the reasonable-doubt standard. And belief and intent are true-or-false facts."
+      },
+      {
+       "id": "s10",
+       "say": "The vagueness standard. Two prongs. A law is void if, one, it fails to give a person of ordinary intelligence fair notice of what is prohibited, or two, it is so standardless that it invites seriously discriminatory enforcement. Either prong suffices. In First Amendment cases, the Court relaxes the rule that someone whose own conduct is clearly covered cannot complain of vagueness as to others. Still, perfect clarity has never been required."
+      },
+      {
+       "id": "s11",
+       "say": "The dissent: Souter and Ginsburg. Statute-specific. There was no dispute that speech integral to crime is unprotected."
+      },
+      {
+       "id": "s12",
+       "say": "Now vagueness versus overbreadth, side by side. The complaint: vagueness says the law is unclear; overbreadth says the law reaches too much protected speech. The source: vagueness, Due Process; overbreadth, the First Amendment. Whose speech: vagueness, mainly the litigant's own, as in Holder versus Humanitarian Law Project, which your casebook calls Rights. Overbreadth: third parties', as in Stevens and Hansen. The shared goal: preventing chilling."
+      },
+      {
+       "id": "s13",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s14",
+       "ask": "A man posts online, I have pictures of exactly what you want, message me for a price, believing the pictures are child pornography. They turn out to be fake. Can he be convicted under the Williams statute?",
+       "answer": "Yes. The statute reaches offers of material the defendant believes is child pornography. Offers to provide contraband are categorically unprotected.",
+       "pause": 10
+      },
+      {
+       "id": "s15",
+       "ask": "A city bans, quote, annoying conduct on sidewalks. Which doctrine attacks it best, and why?",
+       "answer": "Vagueness, under the Due Process Clause. Annoying is indeterminate about what fact must be proved, so it fails to give fair notice and invites discriminatory enforcement.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "A blogger writes that drug laws are unjust and people should ignore them. Speech integral to crime?",
+       "answer": "No. Abstract advocacy of illegality stays protected.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "say": "Recap. Speech integral to crime: speech that is the crime, offers and solicitations, and help committing or concealing. Williams, 2008, seven to two, Scalia: offers and requests for contraband are unprotected; promotes means a particular item with intent to transfer. Vagueness is Due Process: fair notice and discriminatory enforcement."
+      },
+      {
+       "id": "s18",
+       "ask": "What are the two prongs of the vagueness standard?",
+       "answer": "Failure to give a person of ordinary intelligence fair notice, or being so standardless that it invites seriously discriminatory enforcement.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What is the difference between indeterminacy and difficulty of proof, for vagueness?",
+       "answer": "Vagueness concerns indeterminacy about what fact must be proved. Difficulty proving a fact is handled by the reasonable-doubt standard.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "Vagueness and overbreadth: which comes from Due Process, and which mainly protects third parties?",
+       "answer": "Vagueness comes from Due Process. Overbreadth protects third parties' speech.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e12",
+     "title": "Aiding crime and AI speech: Rice v. Paladin and Garcia v. Character Technologies",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Publishing as aiding and abetting, in Rice versus Paladin. The bomb-manual stretch. And the newest case in the chapter, Garcia versus Character Technologies, on whether a chatbot's output is speech."
+      },
+      {
+       "id": "s2",
+       "say": "Rice versus Paladin Enterprises, Fourth Circuit, 1997. Three to nothing, Judge Luttig."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Speech, even publishing, that aids and abets a crime is unprotected where the publisher intended to assist criminals and the material was used exactly as intended."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Paladin published Hit Man, a detailed manual for contract killers. A man named Perry used it to murder three people. And Paladin stipulated that it intended to assist murderers and knew the book would be used, upon receipt, for murder. Perry also followed another Paladin book, How to Make a Disposable Silencer, and Paladin stipulated that it assisted Perry in these very murders. Held: the First Amendment does not bar the victims' families' aiding-and-abetting suit."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, copycat cases differ. Readers misuse novels and films, but publishers do not intend to assist crime. Major networks, newspapers, and publishers filed as amici warning that no expression would be safe. The court answered that copycat cases involve misuse, not use precisely as intended."
+      },
+      {
+       "id": "s6",
+       "say": "Second, evidence of intent will almost never exist apart from stipulations like these. Third, news reporting is never a basis for liability."
+      },
+      {
+       "id": "s7",
+       "say": "Fourth, not all manuals. The stipulations, the detailed instructions, the exhortation to murder, and the lack of any legitimate purpose made the case unique."
+      },
+      {
+       "id": "s8",
+       "say": "Now the stretch: a bomb manual without stipulations. For the prosecution: aiding and abetting is speech integral to crime; publishers are not exempt, per Paladin; this is operational know-how, not ideas; and the harm is catastrophic."
+      },
+      {
+       "id": "s9",
+       "say": "Against: no extrinsic evidence of intent. Legitimate audiences, like engineers, researchers, journalists, and novelists. General publication is not a one-to-one offer like Williams. And Stevens bars creating categories by balancing."
+      },
+      {
+       "id": "s10",
+       "say": "What the government should prove. Four things. Specific intent to facilitate a crime, as in Brandenburg, not Counterman's recklessness. Evidence beyond the text itself. Actual use in a crime. And narrow construction, per Hansen. Your outline adds, beyond the casebook, that 18 U.S.C. § 842(p) takes this intent-based approach."
+      },
+      {
+       "id": "s11",
+       "say": "Now Garcia versus Character Technologies, Middle District of Florida, 2025. Judge Conway, a preliminary ruling."
+      },
+      {
+       "id": "s12",
+       "say": "The rule. A distributor may assert its users' right to receive speech. But output counts as speech only if it is expressive. And the court was not prepared to hold that chatbot output is speech."
+      },
+      {
+       "id": "s13",
+       "say": "The story. This is the first wrongful-death suit against an AI chatbot company. A fourteen-year-old, Sewell Setzer the Third, whom the casebook spells Seltzer, died by suicide after heavy use of Character.AI. The complaint alleges an anthropomorphized, manipulative design marketed to children. Held, preliminarily: dismissal on First Amendment grounds denied."
+      },
+      {
+       "id": "s14",
+       "say": "The allegations. Chatbot characters sent him romantic messages and urged him to stay loyal. When he expressed suicidal thoughts, the system steered back to the subject instead of activating safeguards. He died immediately after a character told him to come home. The company allegedly worked in partnership with Google."
+      },
+      {
+       "id": "s15",
+       "say": "The reasoning. The court relied on Justice Barrett's concurrence in Moody versus NetChoice. An algorithm carrying out a human's expressive choice may be speech. But when owners hand the reins to a large language model, it is unclear any person made an expressive choice."
+      },
+      {
+       "id": "s16",
+       "say": "Why did the companies rely on their users' rights instead of their own? Three reasons. Claiming the output as the company's own expression would mean owning its words and the liability for them. It would admit deliberate design, which, like Paladin's stipulations, would help prove intent. And it would reinforce the product-design framing. Your outline adds, beyond the casebook, that it would also undercut Section 230 immunity for third-party content."
+      },
+      {
+       "id": "s17",
+       "say": "And weak analogies. The defendants compared the characters to non-player characters in video games and to other users on social media, both of which get First Amendment protection. The court found that they do not meaningfully advance those analogies."
+      },
+      {
+       "id": "s18",
+       "say": "Finally, the casebook's study tips. Learn case names as shorthand for doctrines: under Chaplinsky, the Brandenburg rule, Giboney and its progeny, under Counterman. Know the most recent case on each doctrine, since the Court refines and sometimes overrules its earlier cases. And in practice, cite binding precedent: your circuit and the Supreme Court in federal court, or the state's high and appellate courts in state court. Other decisions are only persuasive. Failing to cite binding precedent can be a professional-responsibility violation."
+      },
+      {
+       "id": "s19",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s20",
+       "ask": "A thriller novel describes, in detail, how its villain poisons a city's water. A reader copies the method. The victims sue the publisher under Paladin. What result?",
+       "answer": "The publisher wins. Copycat cases involve misuse, not use precisely as intended, and there is no evidence the publisher intended to assist crime.",
+       "pause": 12
+      },
+      {
+       "id": "s21",
+       "ask": "A website sells a guide to breaking into cars, advertised, for thieves who want to steal without getting caught, and the seller emails buyers asking which cars they plan to hit. Closer to Paladin?",
+       "answer": "Yes. The advertising and the follow-up are evidence of intent to assist crime beyond the text itself, which is what Paladin's stipulations supplied. It looks like aiding and abetting, speech integral to crime.",
+       "pause": 12
+      },
+      {
+       "id": "s22",
+       "say": "Recap. Paladin, 1997, Luttig: aiding and abetting is unprotected where the publisher intended to assist and the book was used as intended; the stipulations made it unique. Garcia, 2025: users' right to receive, but no holding yet that chatbot output is speech; Barrett's NetChoice concurrence."
+      },
+      {
+       "id": "s23",
+       "ask": "What made Rice versus Paladin unique?",
+       "answer": "The stipulations of intent, the detailed instructions, the exhortation to murder, and the lack of any legitimate purpose.",
+       "pause": 8
+      },
+      {
+       "id": "s24",
+       "ask": "In Garcia, why was the court not prepared to call chatbot output speech?",
+       "answer": "Output is speech only if expressive. Under Barrett's NetChoice concurrence, when owners hand the reins to an LLM, it is unclear any person made an expressive choice.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "What four things should the government prove to punish a bomb manual without stipulations?",
+       "answer": "Specific intent to facilitate a crime, evidence beyond the text, actual use in a crime, and narrow construction.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d2-e13",
+     "title": "Day 2 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Close out Day 2. Cumulative quiz, so expect a Day 1 question or two. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "A city bans all speeches about professional sports. Content-based or content-neutral, and what tier?",
+       "answer": "Content-based, subject matter. Strict scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "What did Wooley hold?",
+       "answer": "The state may not require a person to display its ideological message on private property for the public to see.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "Why did Section 48 fail in Stevens?",
+       "answer": "It was substantially overbroad, reaching hunting videos, and the Court refused to create a new category by balancing.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "What did the Alvarez plurality say is the remedy for false speech?",
+       "answer": "True speech. Counterspeech.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "State the Brandenburg test.",
+       "answer": "Advocacy is punishable only if directed to inciting or producing imminent lawless action and likely to produce it.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Can a city ban only those fighting words that target race or religion?",
+       "answer": "No. R.A.V. forbids singling out a topic-based subset of an unprotected category.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "What is the presumption for a prior restraint, and who bears the burden?",
+       "answer": "A heavy presumption of invalidity. The government bears a heavy burden.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "What mental state does a true threat require, and from what case?",
+       "answer": "At least recklessness, from Counterman.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "Is an offer to sell child pornography protected speech?",
+       "answer": "No. Offers to provide contraband are categorically unprotected, under Williams.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "When does overbreadth invalidate a law?",
+       "answer": "When it prohibits a substantial amount of protected speech relative to its plainly legitimate sweep, with realistic applications and a lopsided ratio.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "From Day 1: what did Tandon hold?",
+       "answer": "Treating any comparable secular activity more favorably than religious exercise, judged by risk, triggers strict scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "From Day 1: what is the holding of Carson versus Makin?",
+       "answer": "Once a state subsidizes private schooling, it cannot exclude schools because they are religious, even if the funds pay for religious instruction.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "say": "That is Day 2. Tomorrow: immoral speech, torts involving speech, and commercial speech."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
