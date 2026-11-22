@@ -1184,6 +1184,888 @@
           ]
         }
       ]
+    },
+    {
+      "day": 2,
+      "title": "Tort liability, scope of employment, and the agent's fiduciary duties",
+      "minutes": 52,
+      "episodes": [
+        {
+          "id": "ap-d2-e00",
+          "title": "Spaced review of Day 1",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Day 2. Before anything new, a five-minute spaced review of yesterday. Pause, answer out loud, then listen."
+            },
+            {
+              "id": "s2",
+              "ask": "Three elements of agency?",
+              "answer": "The principal's assent that the agent act on its behalf, subject to its control, and the agent's consent. Restatement Third § 1.01.",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "Name the four steps of the authority analysis, in order.",
+              "answer": "Actual, express then implied; apparent; ratification; operation of law, meaning inherent authority and estoppel.",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "What made the church bound in Mill Street?",
+              "answer": "Bill's implied actual authority to hire Sam, from past practice and the job's necessity.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "What must apparent authority always trace to?",
+              "answer": "A manifestation by the principal to the third party, never the agent's own say-so.",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "Watteau v. Fenwick: which kind of liability, and what replaces it in the Restatement Third?",
+              "answer": "Inherent agency power over an undisclosed principal; replaced by Restatement Third § 2.06.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "Four requirements for ratification?",
+              "answer": "Knowledge of material facts, acceptance of the entire transaction, capacity, and an act done or purportedly done on the principal's behalf.",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "What does estoppel give the third party, compared with apparent authority?",
+              "answer": "A remedy for its detrimental reliance, not a binding contract.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "Who is liable on a contract for a partially disclosed principal?",
+              "answer": "The agent, as a party, with the principal. Restatement Third § 6.02; Atlantic Salmon.",
+              "pause": 10
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e01",
+          "title": "The tort framework: direct and vicarious liability",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Today's first rule is the master framework for tort liability: the agent's own liability, the principal's direct liability, and the principal's vicarious liability. Then the Restatement Second's version and a flowchart."
+            },
+            {
+              "id": "s2",
+              "say": "Start with the agent. The agent is always liable for its own torts. Restatement Third § 7.01. Following orders is no defense."
+            },
+            {
+              "id": "s3",
+              "say": "Now the principal. Two kinds of liability. Direct, and vicarious. Direct liability is for the principal's own wrong. Vicarious liability is for the agent's wrong, imputed to the principal."
+            },
+            {
+              "id": "s4",
+              "say": "Direct liability, § 7.03(1). Three routes. One, (a): the agent acted with actual authority, or the principal ratified, and the conduct is tortious, or would be if the principal did it. Two, (b): the principal was negligent in selecting, training, retaining, supervising or controlling the agent. That's § 7.05. Three, (c): the principal delegated a nondelegable duty of care. That's § 7.06."
+            },
+            {
+              "id": "s5",
+              "say": "Vicarious liability, § 7.03(2). Two routes. One, (a): an employee's tort within the scope of employment. That is respondeat superior, § 7.07. Two, (b): an agent's tort committed with apparent authority, § 7.08."
+            },
+            {
+              "id": "s6",
+              "say": "The Restatement Second's version is § 219(2). A master is not liable for a servant's torts outside the scope of employment, unless one: the master intended the conduct; two: the master was negligent or reckless; three: the master violated a non-delegable duty; or four: the servant purported to act for the principal and there was reliance on apparent authority, or the servant was aided by the agency relation."
+            },
+            {
+              "id": "s7",
+              "say": "The outline's flowchart. Four questions in order. One: is A P's agent? Two: is P directly liable? Three: is A an employee, a servant? Four: was the tort within the scope? Then check apparent agency and the independent contractor exceptions."
+            },
+            {
+              "id": "s8",
+              "say": "Recap. The agent is always liable, § 7.01. Direct liability, § 7.03(1): authorized or ratified torts, negligent selection or supervision under § 7.05, nondelegable duties under § 7.06. Vicarious liability, § 7.03(2): employees within scope under § 7.07, and apparent authority under § 7.08."
+            },
+            {
+              "id": "s9",
+              "ask": "Is \"I was following orders\" a defense for an agent who commits a tort?",
+              "answer": "No. The agent is always liable for its own torts, Restatement Third § 7.01.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "What are the three routes to a principal's direct liability under § 7.03(1)?",
+              "answer": "Authorized or ratified tortious conduct; negligent selection, training, retention, supervision or control, § 7.05; and delegation of a nondelegable duty, § 7.06.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "What are the two routes to vicarious liability under § 7.03(2)?",
+              "answer": "An employee's tort within the scope of employment, § 7.07; and an agent's tort committed with apparent authority, § 7.08.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e02",
+          "title": "Respondeat superior, and employee versus independent contractor",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. What respondeat superior means and why we have it. Then the line between employees and independent contractors, in both Restatements, and the ten factors of Restatement Second § 220(2)."
+            },
+            {
+              "id": "s2",
+              "say": "Respondeat superior means \"let the master answer.\" Historically it was a master-servant doctrine. A servant works for the master subject to the master's control, or right to control, over physical conduct. And master and servant are jointly and severally liable for torts within the scope."
+            },
+            {
+              "id": "s3",
+              "say": "Why have it? Five rationales. One: control. Two: risk spreading and insurance. Three: safety incentives. Four: enterprise liability, the idea from Bushey that a business should answer for risks \"characteristic of its activities.\" Five: the principal vouches for its agents, from Kidd. And note what kind of liability it is: strict liability, without fault. Kerl says so."
+            },
+            {
+              "id": "s4",
+              "say": "Now the categories. The Restatement Second, from 1958, and the Restatement Third, from 2006, use different words. High control over physical conduct: the Second says servant, meaning the master controls or has the right to control physical conduct. The Third says employee, meaning the principal controls or has the right to control the manner and means of the work. Same test, new words."
+            },
+            {
+              "id": "s5",
+              "say": "A fiduciary agent with autonomy, like a broker, an outside lawyer, or a factor: the Second called that an agent independent contractor. The Third calls it a nonemployee agent. It can bind the principal, but it controls its own work."
+            },
+            {
+              "id": "s6",
+              "say": "No fiduciary status, full autonomy, like a builder or a taxi: the Second called it a non-agent independent contractor. The Third calls it a nonagent service provider."
+            },
+            {
+              "id": "s7",
+              "say": "Why the change? The Second's \"independent contractor\" was a catch-all bucket. It mixed agents, like an outside lawyer, with non-agents, like an independent taxi. The Third dropped the term as \"equivocal in meaning and confusing.\" Its focus is two questions. Is there agency, meaning consent plus control, which brings fiduciary duties? And is there manner-and-means control, which brings vicarious liability?"
+            },
+            {
+              "id": "s8",
+              "say": "The Restatement Second § 220(2) factors. These are weighed together. Ten of them. (a) the extent of control over details. (b) whether the worker is in a distinct occupation or business. (c) whether the work is usually done under direction, or by an unsupervised specialist. (d) skill. (e) who supplies the tools and the workplace. (f) the length of employment. (g) whether paid by the time or by the job. (h) whether the work is part of the employer's regular business. (i) what the parties believe. (j) whether the principal is in business."
+            },
+            {
+              "id": "s9",
+              "say": "Two rules about using them. The right to control matters, not actual control. And contract labels and disclaimers are informative, not dispositive."
+            },
+            {
+              "id": "s10",
+              "say": "Recap. Respondeat superior is strict, vicarious liability for employees within scope, justified by control, risk spreading, safety, enterprise liability and vouching. Servant becomes employee; agent independent contractor becomes nonemployee agent; non-agent independent contractor becomes nonagent service provider. Ten factors in § 220(2), weighed together."
+            },
+            {
+              "id": "s11",
+              "ask": "What is the Restatement Third's test for an employee?",
+              "answer": "The principal controls or has the right to control the manner and means of the agent's work.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "Why did the Restatement Third drop the term independent contractor?",
+              "answer": "It was a confusing catch-all mixing agents, like an outside lawyer, with non-agents, like a taxi; the Third called it equivocal in meaning and confusing.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "Name five of the ten § 220(2) factors.",
+              "answer": "Any five of: control over details; distinct occupation; done under direction or by a specialist; skill; who supplies tools and workplace; length of employment; paid by time or by job; part of the regular business; the parties' belief; whether the principal is in business.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e03",
+          "title": "The gas station pair: Humble Oil and Hoover v. Sun Oil",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Two gas station cases that come out opposite ways. Learn them as a pair."
+            },
+            {
+              "id": "s2",
+              "say": "Humble Oil and Refining v. Martin, Texas, 1949. A car left for service at a Humble-owned gas station rolled away and struck a father and his two daughters. The operator ran the station under a \"commission agency\" contract that called him independent."
+            },
+            {
+              "id": "s3",
+              "say": "Held: Humble is liable. The operator was its servant. Look at the control facts. Humble owned the station and the products. It set the hours. It paid most of the utilities. It could end the deal at will. And it could assign him \"other duties.\" Why it matters: labels don't control. An oil company that keeps the right to control daily operations answers for the station's negligence."
+            },
+            {
+              "id": "s4",
+              "say": "Hoover v. Sun Oil, Delaware, 1965. A fire broke out while an attendant at a Sunoco-branded station filled a customer's car. Sun owned the station and leased it to the dealer, supplied the products, trained the dealer, and visited weekly with suggestions."
+            },
+            {
+              "id": "s5",
+              "say": "Held: Sun isn't liable. The dealer was an independent contractor. He set his own hours, hired and paid his staff, bore profit and loss, and could ignore Sun's advice. Control over results isn't control over daily details. Why it matters: it's the counterpart to Humble. Branding and advice don't make a dealer a servant."
+            },
+            {
+              "id": "s6",
+              "say": "Say the contrast in one line. Humble set the hours and could fire at will: servant. Sun gave advice the dealer could ignore, and the dealer bore profit and loss: independent contractor."
+            },
+            {
+              "id": "s7",
+              "ask": "In Humble Oil, name three facts that made the operator a servant.",
+              "answer": "Any three: Humble owned the station and products, set the hours, paid most utilities, could end the deal at will, could assign other duties.",
+              "pause": 8
+            },
+            {
+              "id": "s8",
+              "ask": "In Hoover, who set the hours and hired the staff?",
+              "answer": "The dealer, who also bore profit and loss and could ignore Sun's advice.",
+              "pause": 8
+            },
+            {
+              "id": "s9",
+              "ask": "What does the Humble and Hoover pair teach?",
+              "answer": "Labels don't control; the right to control daily operations does. Control over results or advice isn't control over details.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e04",
+          "title": "Franchising: Murphy, Parker, Kerl, and Miller",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. How franchising works, the majority rule from Kerl, and four cases: Murphy, Parker v. Domino's, Kerl, and Miller v. McDonald's."
+            },
+            {
+              "id": "s2",
+              "say": "The model. The franchisor builds a brand and a system. The franchisee pays to operate an independent business using the franchisor's intellectual property and model. The franchisee keeps the profits. The franchisor gets upfront fees and royalties."
+            },
+            {
+              "id": "s3",
+              "say": "The problem. Vicarious liability is, in Kerl's words, \"conceptually difficult to adapt to the franchising context,\" and courts apply it inconsistently, as the Monts case noted."
+            },
+            {
+              "id": "s4",
+              "say": "The majority rule, from Kerl. A franchisor is vicariously liable only if it controls, or has the right to control, the daily operation of the specific aspect of the franchisee's business that caused the harm. And quality or trademark standards are not control."
+            },
+            {
+              "id": "s5",
+              "say": "Notice the word \"specific.\" The question is not whether the franchisor controls a lot. It's whether it controls the very thing that hurt the plaintiff."
+            },
+            {
+              "id": "s6",
+              "say": "Murphy v. Holiday Inns, Virginia, 1975. A guest slipped on water from an air conditioner at a franchised Holiday Inn and sued the franchisor. Held: no agency. The license's rules, building plans, signs, fees, inspections, aimed at system-wide uniformity. Holiday Inns had no control over daily maintenance, rates, hiring, wages, or supervision. Why it matters: brand standards aren't control of day-to-day operations. That's the basic franchise rule."
+            },
+            {
+              "id": "s7",
+              "say": "Parker v. Domino's Pizza, Florida District Court of Appeal, 1993. A franchisee's delivery driver caused a crash. The franchise agreement and a manual the court called a \"veritable bible\" controlled nearly every detail, from recipes and delivery to hiring advice and audits. Held: summary judgment for Domino's reversed. A jury must decide whether Domino's had the right to control the franchisee's means of operation. Why it matters: it's the counterpoint to Murphy. Pervasive operational control can make a franchisor a principal."
+            },
+            {
+              "id": "s8",
+              "say": "Kerl v. Rasmussen, Wisconsin, 2004. An Arby's franchisee hired a work-release inmate. He left work and shot his ex-girlfriend and her fiancé. The victims sued Arby's for the franchisee's negligent supervision. Held: Arby's isn't liable. A franchisor is vicariously liable only if it controls, or may control, the daily operation of the specific aspect that caused the harm, and Arby's had no say over hiring or supervision. Why it matters: it states today's majority test, and explains why the rationales for vicarious liability weaken for franchisors."
+            },
+            {
+              "id": "s9",
+              "say": "Miller v. McDonald's, Oregon Court of Appeals, 1997. A customer bit into a sapphire in a Big Mac at a franchised McDonald's. McDonald's dictated exact food-handling methods. Everything the customer saw said McDonald's, and she chose it for its reputation."
+            },
+            {
+              "id": "s10",
+              "say": "Held: jury questions on both theories. Actual agency, because McDonald's controlled the food handling that caused the injury. And apparent agency under Restatement Second § 267, because uniform branding held the franchisee out as McDonald's, and she relied. Why it matters: it shows both routes to franchisor tort liability."
+            },
+            {
+              "id": "s11",
+              "say": "Who's liable? A customer is burned by coffee at a franchised café. The franchise manual sets the exact brewing temperature, the cup, and the lid, and requires inspections of the brewing station. The franchisor says it never runs daily operations. Can the customer reach the franchisor?",
+              "voice": "alt"
+            },
+            {
+              "id": "s12",
+              "say": "Under Kerl, ask about the specific aspect that caused the harm. Here the franchisor controlled the brewing temperature and equipment, the exact thing that hurt her, like food handling in Miller. That's a strong case for vicarious liability. Add apparent agency under § 267 if the branding held the café out and she relied on it."
+            },
+            {
+              "id": "s13",
+              "say": "Next. Same café, but the customer slips on a wet floor. The manual says nothing about floors or cleaning, and the franchisee hires and supervises its own staff.",
+              "voice": "alt"
+            },
+            {
+              "id": "s14",
+              "say": "Likely no franchisor liability. That's Murphy and Kerl: no control over daily maintenance or staff, and brand standards aren't control. The apparent agency theory is weaker, because it needs reliance on the brand."
+            },
+            {
+              "id": "s15",
+              "say": "The traps. Trap one: counting how much the franchisor controls in general. The test is the specific aspect that caused the harm. Trap two: forgetting the apparent agency route under § 267. Trap three: treating trademark and quality standards as control. They aren't."
+            },
+            {
+              "id": "s16",
+              "say": "Recap. Kerl's majority test: control of the daily operation of the specific aspect that caused the harm. Murphy: brand standards aren't control. Parker: a veritable bible of control goes to a jury. Miller: both actual agency and apparent agency."
+            },
+            {
+              "id": "s17",
+              "ask": "State the majority franchise test from Kerl.",
+              "answer": "A franchisor is vicariously liable only if it controls or has the right to control the daily operation of the specific aspect of the franchisee's business that caused the harm.",
+              "pause": 8
+            },
+            {
+              "id": "s18",
+              "ask": "What two theories went to the jury in Miller v. McDonald's?",
+              "answer": "Actual agency, from control of food handling, and apparent agency under Restatement Second § 267, from uniform branding and reliance.",
+              "pause": 8
+            },
+            {
+              "id": "s19",
+              "ask": "Why was Arby's not liable in Kerl?",
+              "answer": "It had no control over the franchisee's hiring or supervision, the aspect that caused the harm.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e05",
+          "title": "Scope of employment: the Second's § 228 and § 229, and the Third's § 7.07",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The Restatement Second's four-part scope test, its ten factors for unauthorized acts, forbidden and criminal acts, then the Restatement Third's simpler test, and the policy of the lowest-cost avoider."
+            },
+            {
+              "id": "s2",
+              "say": "Restatement Second § 228. Conduct is within the scope of employment only if all four hold. (a) it is of the kind he is employed to perform. (b) it occurs substantially within the authorized time and space limits. That's where frolic versus detour lives: a small detour stays in scope, a frolic of his own leaves it. (c) it is actuated, at least in part, by a purpose to serve the master. (d) if force is used, the use of force is not unexpectable by the master."
+            },
+            {
+              "id": "s3",
+              "say": "And the flip side. Conduct is outside the scope if it is different in kind, far beyond the time or space limits, or too little actuated by a purpose to serve."
+            },
+            {
+              "id": "s4",
+              "say": "Restatement Second § 229, for acts that were unauthorized but similar or incidental to authorized ones. Ten factors, weighed together. (a) whether commonly done by such servants. (b) the time, place and purpose. (c) prior relations between master and servant. (d) whether the work is apportioned among servants. (e) whether outside the enterprise or not entrusted to any servant. (f) the master's reason to expect it. (g) similarity to authorized acts. (h) whether the master furnished the instrumentality. (i) departure from normal methods. (j) whether it is seriously criminal."
+            },
+            {
+              "id": "s5",
+              "say": "Two more Second rules. Forbidden acts, § 230, and consciously tortious or criminal acts, § 231, can still be within scope. But serious crimes usually are not."
+            },
+            {
+              "id": "s6",
+              "say": "Now the Restatement Third, § 7.07. An employee acts within scope when performing assigned work, or a course of conduct subject to the employer's control. The employee is outside the scope only when engaged in an independent course of conduct not intended by the employee to serve any purpose of the employer."
+            },
+            {
+              "id": "s7",
+              "say": "Notice the difference. The Second asks, \"Was he at least partly serving the master, within time and space?\" The Third asks, \"Was this an independent course of conduct serving no purpose of the employer at all?\" The Third fixes the Second's ill-fitting time-and-space test for professionals, who don't work set hours in set places. Under the Third, an employee is someone the employer controls in manner and means; gratuitous work is no defense; intentional torts can be within scope; but crimes may signal a departure."
+            },
+            {
+              "id": "s8",
+              "say": "The policy the outline calls \"a better standard.\" Ask who could prevent the loss at lowest cost. The goal is to minimize the sum of accident losses and precaution costs. Should either party anticipate precautions? Could either take cost-effective ones? If both could, who can do it at the lowest cost?"
+            },
+            {
+              "id": "s9",
+              "say": "Recap. Section 228: kind of work, time and space, purpose to serve, force not unexpectable. Section 229: ten factors for unauthorized acts. Sections 230 and 231: forbidden and even tortious acts can be in scope. Section 7.07: outside only for an independent course of conduct serving no employer purpose."
+            },
+            {
+              "id": "s10",
+              "ask": "What are the four parts of Restatement Second § 228?",
+              "answer": "(a) the kind of work employed to perform; (b) substantially within authorized time and space limits; (c) actuated at least in part by a purpose to serve the master; (d) any force not unexpectable.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "Under Restatement Third § 7.07, when is an employee outside the scope?",
+              "answer": "Only when engaged in an independent course of conduct not intended to serve any purpose of the employer.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "Can a forbidden act be within the scope of employment?",
+              "answer": "Yes. Restatement Second § 230. Consciously tortious acts can be too, § 231, though serious crimes usually are not.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e06",
+          "title": "Scope cases: Brill, Bushey, Manning, Lamkin, and Arguello",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Five cases, each a different lesson on scope. Brill, outside. Bushey, inside on enterprise risk. Manning and Lamkin, intentional torts inside. Arguello, statutory claims and owned versus branded outlets."
+            },
+            {
+              "id": "s2",
+              "say": "Brill v. Davajon, Illinois Appellate Court, 1964. A Checker cab driver, against explicit company rules, pushed a stalled car for a dollar, and caused a collision. Held: Checker isn't liable. Pushing the car for his own dollar was a departure from the employer's business. Why it matters: a personal side errand breaks scope under the purpose prong of § 228."
+            },
+            {
+              "id": "s3",
+              "say": "Ira S. Bushey and Sons v. United States, Second Circuit, 1968, Judge Friendly. A drunk Coast Guard sailor, returning to his ship at night, turned wheels that flooded a private drydock, which sank with the ship. Held: the government is liable. The sailor, Lane, had no purpose to serve his employer. But an enterprise must answer for risks \"characteristic of its activities.\" Sailors drinking, and crew crossing the drydock, were foreseeable. A purely personal act, like shooting his wife's lover, would not be. Why it matters: it's the enterprise-risk alternative to the Second's motive test."
+            },
+            {
+              "id": "s4",
+              "say": "Manning v. Grimsley, First Circuit, 1981. An Orioles pitcher, heckled nonstop while warming up, threw a ball at the hecklers and hit a fan. Held: the battery claim against the club goes to the jury. An employer is liable for an employee's assault that responds to the plaintiff's conduct presently interfering with his ability to do the job. Why it matters: intentional torts can be within scope, § 228(1)(d)."
+            },
+            {
+              "id": "s5",
+              "say": "Lamkin v. Brooks, Louisiana, 1986. A town police officer was dispatched to a complaint just outside town. A drunk man threatened him. The officer came back and punched him, breaking his face. Held: the town is vicariously liable, though its insurer isn't, because of an intentional-acts exclusion. The attack was closely connected in time, place and causation to his police duties, not a purely personal matter. Why it matters: employment-rooted violence falls within scope."
+            },
+            {
+              "id": "s6",
+              "say": "Arguello v. Conoco, Fifth Circuit, 2000. Minority customers sued Conoco under civil rights laws for racist abuse by a clerk at a Conoco-owned store, and by staff at independently owned, Conoco-branded stations. Held: the branded stations weren't agents; Conoco had no control of their daily operations or staff. But the company clerk's abuse during a sale could be within scope; that's a jury question. And merely counseling the clerk afterward wasn't ratification. Why it matters: agency and scope rules apply to statutory claims, and owned and branded outlets differ."
+            },
+            {
+              "id": "s7",
+              "say": "The outline's exam tip. Run both tests in every scope answer: the Second's § 228, kind, time and space, purpose, force; and the Third's § 7.07, an independent course of conduct serving no employer purpose. Then argue the analogies. Brill: a detour for his own dollar, outside. Bushey: a risk characteristic of the enterprise, inside. Manning: response to present interference, inside. Lamkin: employment-rooted violence, inside. And Clover v. Snowbird: a deviation that isn't a total abandonment stays inside."
+            },
+            {
+              "id": "s8",
+              "say": "Who's liable? A delivery driver, on his route, stops at a bar for an hour, then heads back to the route and crashes. The employer says he was on a frolic. Is the employer liable?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "Under § 228, the question is time and space and purpose. The crash happened after he'd resumed the route, serving the employer again. A deviation that isn't a total abandonment stays inside, as in Clover v. Snowbird. Under § 7.07, driving the route is assigned work, not an independent course of conduct. Likely within scope. Had he crashed driving to the bar across town, the frolic argument is much stronger."
+            },
+            {
+              "id": "s10",
+              "say": "Next. A bouncer, after a customer insults him on the street the next day, punches him. Employer liable?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "Probably not. Next day, off the premises, a purely personal grudge. Under § 7.07 it's an independent course of conduct serving no employer purpose. Contrast Manning, where the heckling presently interfered with his job, and Lamkin, where the violence was rooted in the duties."
+            },
+            {
+              "id": "s12",
+              "say": "The traps. Trap one: thinking any intentional tort is outside scope. Manning and Lamkin say no. Trap two: forgetting Bushey's alternative: no motive to serve, but a characteristic risk. Trap three: in Arguello, an owned outlet and a branded outlet get different answers."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. Brill: own errand, outside. Bushey: characteristic risk, inside. Manning: response to present interference, inside. Lamkin: rooted in duties, inside. Arguello: owned store's clerk possibly inside; branded stations not agents; counseling isn't ratification."
+            },
+            {
+              "id": "s14",
+              "ask": "Why was the Coast Guard liable in Bushey even though the sailor had no purpose to serve it?",
+              "answer": "Enterprise liability: the enterprise answers for risks characteristic of its activities, and sailors' drinking and crossing the drydock were foreseeable.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "In Manning v. Grimsley, what made the pitcher's battery possibly within scope?",
+              "answer": "It responded to the hecklers' conduct presently interfering with his ability to do his job.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "In Arguello, why weren't the branded stations Conoco's agents?",
+              "answer": "Conoco had no control over their daily operations or staff.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e07",
+          "title": "Torts of independent contractors: the exceptions, Majestic, Anderson, and Kleeman",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The general rule of non-liability for independent contractors, its five exceptions, and three cases."
+            },
+            {
+              "id": "s2",
+              "say": "The rule. Generally a principal is not liable for an independent contractor's torts, because it has no right to control the work."
+            },
+            {
+              "id": "s3",
+              "say": "The exceptions. Five. One: the principal retained control over the work. Two: the principal negligently selected an incompetent contractor; that's direct liability. Three: inherently dangerous work, meaning a peculiar risk unless special precautions are taken, Restatement of Torts § 416. Four: ultrahazardous or abnormally dangerous activity, which brings strict liability, § 520 and Second § 427A. Five: a nondelegable duty, one so important to the community that it can't be transferred."
+            },
+            {
+              "id": "s4",
+              "say": "Majestic Realty Associates v. Toti Contracting, New Jersey, 1959. A parking authority hired a contractor to demolish buildings in a busy downtown. The crane operator knocked a wall onto the neighbor's roof. His words: \"I goofed.\" Held: the authority may be liable. Demolition in a built-up area is inherently dangerous work requiring special precautions. That's an exception to non-liability, alongside retained control and hiring an incompetent contractor. Why it matters: the hirer who chooses dangerous work bears the risk."
+            },
+            {
+              "id": "s5",
+              "say": "Anderson v. Marathon Petroleum, Seventh Circuit, 1986, Judge Posner. A contractor's employee sandblasted Marathon's tanks for years with an inadequate hood and died of silicosis. Marathon knew and did nothing. Held: Marathon isn't liable. Sandblasting with proper equipment isn't abnormally dangerous. And a contractor's own employees are covered by exclusive workers' comp, which the principal already pays for through the contract price. Why it matters: it explains the policy of the independent contractor rule, and why the contractor's own workers are treated differently from neighbors."
+            },
+            {
+              "id": "s6",
+              "say": "Kleeman v. Rheingold, New York, 1993. A lawyer sent malpractice papers to a process-service company days before the statute of limitations ran. The server botched service, and the claim was lost. The client sued the lawyer. Held: the lawyer can be liable. A lawyer's duty to serve process properly is nondelegable, so hiring an independent server doesn't shift responsibility. Why it matters: some duties are too important to delegate. Restatement Third § 7.06."
+            },
+            {
+              "id": "s7",
+              "say": "Who's liable? A city hires a fireworks company for its July 4th show. A shell misfires into the crowd. The city says the company was an independent contractor. Liable?",
+              "voice": "alt"
+            },
+            {
+              "id": "s8",
+              "say": "Likely yes. Fireworks displays raise inherently dangerous or abnormally dangerous activity arguments, exceptions three and four, so the city can't hide behind the contractor's independence. Check also whether the city negligently selected the company."
+            },
+            {
+              "id": "s9",
+              "say": "Next. A homeowner hires a painter, a skilled independent business, who drops a ladder on a passerby. Liable?",
+              "voice": "alt"
+            },
+            {
+              "id": "s10",
+              "say": "Generally no. Painting isn't inherently dangerous in the Majestic sense, the homeowner didn't control the work, and nothing suggests negligent selection. The painter is liable for his own tort."
+            },
+            {
+              "id": "s11",
+              "say": "The traps. Trap one: Anderson. The contractor's own employee is different from a neighbor, because workers' comp covers him and the principal paid for it in the price. Trap two: negligent selection is direct liability, not vicarious. Trap three: a nondelegable duty, like Kleeman's, can't be shed by hiring someone competent."
+            },
+            {
+              "id": "s12",
+              "say": "Recap. No liability for independent contractors, except retained control, negligent selection, inherently dangerous work, abnormally dangerous activity, and nondelegable duties. Majestic: demolition downtown. Anderson: sandblasting, workers' comp. Kleeman: a lawyer's duty to serve process."
+            },
+            {
+              "id": "s13",
+              "ask": "Name the five exceptions to non-liability for independent contractors.",
+              "answer": "Retained control; negligent selection of an incompetent contractor; inherently dangerous work; abnormally dangerous activity; and nondelegable duties.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "Why did Posner reject liability for the contractor's employee in Anderson?",
+              "answer": "Sandblasting with proper equipment isn't abnormally dangerous, and the contractor's employees get exclusive workers' comp that the principal pays for through the contract price.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "What was nondelegable in Kleeman?",
+              "answer": "The lawyer's duty to serve process properly.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e08",
+          "title": "The agent's fiduciary duties: the five duties",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The fiduciary standard, then the agent's five duties: care, obedience, accounting, loyalty with its five parts, and disclosure. Then consent, and what the agent may do after the agency ends."
+            },
+            {
+              "id": "s2",
+              "say": "The standard, from Wolf v. Superior Court. A fiduciary must act with the utmost good faith for the other's benefit, and may take no advantage relating to the other's interest without knowledge and consent. And the agent's general duty, Restatement Third § 8.01, Second §§ 13 and 387: to act loyally for the principal's benefit in all matters connected with the agency."
+            },
+            {
+              "id": "s3",
+              "say": "Duty one, care. Reasonable care, on a sliding scale by skill and specialized knowledge, and it may vary with compensation. Restatement Third § 8.08. Under Second § 379, a paid agent meets the local standard plus any special skill he has; a gratuitous agent is held to a lower standard."
+            },
+            {
+              "id": "s4",
+              "say": "Duty two, obedience. Obey all reasonable, lawful directions. Act only within actual authority. And the agent is liable for losses from a breach. Section 8.09; Second §§ 383 and 385."
+            },
+            {
+              "id": "s5",
+              "say": "Duty three, accounting. Don't make the principal's property appear to be the agent's own. Don't commingle. Keep and render accounts. Second §§ 382 and 398."
+            },
+            {
+              "id": "s6",
+              "say": "Duty four, loyalty. Five parts, all required. One: no profit from the position; the agent must account for profits, § 8.02, Second § 388. Two: act solely for the principal's benefit. Three: don't deal with the principal as, or on behalf of, an adverse party, § 8.03. Four: don't compete about the subject matter of the agency during the agency. Preparing to compete is fine, if not otherwise wrongful, § 8.04. Five: don't use the principal's property or confidential information, § 8.05."
+            },
+            {
+              "id": "s7",
+              "say": "Duty five, disclosure. Use reasonable effort to provide facts the agent knows or should know, when the principal would want them or they're material, unless a superior duty to someone else forbids. Section 8.11; Second § 381."
+            },
+            {
+              "id": "s8",
+              "say": "Consent cures. Under § 8.06, the principal's consent excuses conduct that would otherwise breach loyalty if, all four, the agent acts in good faith, discloses all material facts, deals fairly, and the consent covers a specific act or type of act."
+            },
+            {
+              "id": "s9",
+              "say": "After the agency ends, Second § 396. The former agent may compete, and may use general knowledge and customer names he remembers. But not trade secrets, written lists, or confidential information. And watch Restatement Third § 8.05, Illustration 7: even memorized lists can breach."
+            },
+            {
+              "id": "s10",
+              "say": "Why fiduciary duties? Because delegation gives the agent power over the principal's interests that the principal can't monitor all the time. The duties fill the gap no contract can fully cover."
+            },
+            {
+              "id": "s11",
+              "say": "Recap. Wolf: utmost good faith. Five duties: care, obedience, accounting, loyalty, disclosure. Loyalty's five parts: no profit from position, solely for the principal, no adverse dealing, no competing during the agency, no use of property or confidential information. Consent cures under § 8.06. After termination: compete freely, but no trade secrets or confidential lists."
+            },
+            {
+              "id": "s12",
+              "ask": "Name the five parts of the duty of loyalty.",
+              "answer": "No profit from the position, § 8.02; act solely for the principal; no dealing as an adverse party, § 8.03; no competing during the agency, § 8.04; no use of the principal's property or confidential information, § 8.05.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "What four conditions make a principal's consent effective under § 8.06?",
+              "answer": "The agent acts in good faith, discloses all material facts, deals fairly, and the consent covers a specific act or type of act.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "After leaving, can a former agent use customer names he remembers?",
+              "answer": "Under Restatement Second § 396, yes, but not trade secrets, written lists, or confidential information. Restatement Third § 8.05 Illustration 7 says even memorized lists can breach.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e09",
+          "title": "Loyalty cases: Reading v. Regem, General Automotive v. Singer, and Rash",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Three loyalty cases. Reading: profit from position. Singer: the agent can't decide which opportunities belong to the principal. Rash: undisclosed self-dealing."
+            },
+            {
+              "id": "s2",
+              "say": "Reading v. Regem, King's Bench, 1948. A British Army sergeant took about twenty thousand pounds to ride, in uniform, on smugglers' trucks, so police wouldn't stop them. The army seized the money. Held: the Crown keeps it. A servant who uses his position, or the employer's assets, as the real cause of a gain must account for it, even if the employer lost nothing. Why it matters: loyalty means no profiting from one's position, and the remedy is disgorgement, not damages."
+            },
+            {
+              "id": "s3",
+              "say": "General Automotive Manufacturing v. Singer, Wisconsin, 1963. A machine shop's general manager secretly sent orders he thought the shop couldn't fill to other shops, and kept the markup: $64,088. Held: he must disgorge the profits. As a fiduciary he had to disclose the orders and let the company decide what to do with them. Why it matters: the agent can't decide for himself which opportunities belong to the principal. Disclosure is required."
+            },
+            {
+              "id": "s4",
+              "say": "Rash v. J.V. Intermediate, Tenth Circuit, 2007. A division manager secretly owned a scaffolding company that won over a million dollars of subcontracts he helped award, even after his employer started its own scaffolding business. Held: breach of fiduciary duty as a matter of law. An agent must disclose matters affecting the principal's business, and can't contract with it through his own company without its full knowledge. Why it matters: undisclosed self-dealing is a loyalty breach, and a fiduciary claim works even after the employment contract lapsed."
+            },
+            {
+              "id": "s5",
+              "say": "Who's liable? A purchasing agent for a hotel chain takes a vacation paid for by a linen supplier, then keeps buying from that supplier at fair prices. The hotel lost nothing. Must she account for the vacation?",
+              "voice": "alt"
+            },
+            {
+              "id": "s6",
+              "say": "Yes. Reading v. Regem: profit from the position must be accounted for even if the principal lost nothing. Fair prices don't cure an undisclosed benefit; consent would require full disclosure under § 8.06."
+            },
+            {
+              "id": "s7",
+              "say": "Next. A sales manager gets an order too big for his company's plant, and without telling anyone, passes it to a friend's company for a finder's fee. Breach?",
+              "voice": "alt"
+            },
+            {
+              "id": "s8",
+              "say": "Yes, General Automotive v. Singer. He had to disclose the order and let the company decide. He doesn't get to decide on his own that the company couldn't fill it."
+            },
+            {
+              "id": "s9",
+              "say": "The traps. Trap one: the principal's lack of loss is no defense to disgorgement. Trap two: \"the company couldn't have done it anyway\" doesn't excuse non-disclosure. Trap three: a lapsed employment contract doesn't end a fiduciary claim, Rash."
+            },
+            {
+              "id": "s10",
+              "say": "Recap. Reading: account for gains from your position. Singer: disclose; the principal decides. Rash: undisclosed self-dealing is a breach as a matter of law."
+            },
+            {
+              "id": "s11",
+              "ask": "What remedy did the Crown get in Reading v. Regem, and did it need to show a loss?",
+              "answer": "Disgorgement of the sergeant's gains; no loss needed.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "What was the manager's mistake in General Automotive v. Singer?",
+              "answer": "He decided for himself the shop couldn't fill the orders and kept the profit, instead of disclosing and letting the company decide.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "In Rash, what did the manager fail to disclose?",
+              "answer": "That he secretly owned the scaffolding company winning subcontracts he helped award.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e10",
+          "title": "Grabbing and leaving: Bancroft-Whitney, Town and Country, and Corroon and Black",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The outline's three-bucket method for grabbing-and-leaving facts, then three cases."
+            },
+            {
+              "id": "s2",
+              "say": "The method. Sort the conduct into three buckets. Bucket one: permitted preparation while still employed, like forming the entity, leasing space, lining up financing. Bucket two: breaches during the agency, like soliciting co-workers or customers for the new venture, misleading the boss, handing over salary lists or confidential data, diverting opportunities. Bucket three: after leaving, free competition, except trade secrets and confidential lists. Then the remedies: disgorgement, damages, an injunction, and liability of the new employer that cooperated."
+            },
+            {
+              "id": "s3",
+              "say": "Bancroft-Whitney v. Glen, California, 1966. A law publisher's president, while still in office, helped a competitor recruit his top editors. He misled his boss about the raid, handed over salary information, and chose whom to hire and what to offer them. Held: breach as a matter of law, and the competitor is liable too. Preparing to compete is allowed, but the nature of the preparations matters. Why it matters: it's the leading grabbing-and-leaving case. Plan your exit, but don't use your position to raid the principal's staff."
+            },
+            {
+              "id": "s4",
+              "say": "Town and Country House and Home Service v. Newbery, New York, 1958. Employees of a house-cleaning service left to form a competitor, and solicited only their old employer's customers, whose names it had found through costly cold calls. Held: the former employer gets an injunction against soliciting those customers, and damages. But the ex-employees may otherwise compete. The customer list was a trade secret. Why it matters: after leaving you may compete, but not exploit confidential customer lists."
+            },
+            {
+              "id": "s5",
+              "say": "Corroon and Black-Rutters and Roberts v. Hosch, Wisconsin, 1982. An insurance agent whose non-compete had expired took clients to a competitor, using his old agency's widely accessible customer and expiration lists. Held: no liability. The lists weren't trade secrets under the six-factor Restatement test, and all the factors must favor secrecy. Insurance buyers shop around. Why it matters: without a non-compete or real secrecy, a departing agent may solicit former clients. Contrast Town and Country."
+            },
+            {
+              "id": "s6",
+              "say": "Who's liable? An employee, while still employed, forms an LLC and signs a lease for a competing shop. She also emails her employer's client list to her personal account and tells two co-workers, \"Come with me; I'll match your pay.\" Which acts breach?",
+              "voice": "alt"
+            },
+            {
+              "id": "s7",
+              "say": "Forming the LLC and leasing space: permitted preparation. Emailing the client list: a breach, use of confidential information. Recruiting co-workers while still employed: a breach, as in Bancroft-Whitney. And if her new venture's backer helped, it may be liable too."
+            },
+            {
+              "id": "s8",
+              "say": "Next. After she leaves, she calls customers whose names she remembers from years of work, and the customer names are widely known in the industry. Breach?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "Likely not, under Second § 396 and Corroon and Black: she may compete and use general knowledge and remembered names, and the names aren't trade secrets. Flag the Restatement Third § 8.05 Illustration 7 point that memorized lists can breach, if the list was truly confidential, as in Town and Country."
+            },
+            {
+              "id": "s10",
+              "say": "The traps. Trap one: preparation isn't automatically fine. Bancroft-Whitney says the nature of the preparations matters. Trap two: a customer list is protected only if it's really secret, Town and Country versus Corroon and Black. Trap three: the new employer that cooperates can be liable too."
+            },
+            {
+              "id": "s11",
+              "say": "Recap. Three buckets: preparation, breaches during, free competition after. Bancroft-Whitney: no raiding while in office. Town and Country: no exploiting a secret customer list. Corroon and Black: widely accessible lists aren't secrets."
+            },
+            {
+              "id": "s12",
+              "ask": "What are the three buckets for grabbing-and-leaving conduct?",
+              "answer": "Permitted preparation while employed; breaches during the agency; and free competition after leaving, except trade secrets and confidential lists.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "Why was there no liability in Corroon and Black?",
+              "answer": "The lists weren't trade secrets under the six-factor test, all of which must favor secrecy, and the non-compete had expired.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "Who besides the president was liable in Bancroft-Whitney?",
+              "answer": "The competitor that recruited the editors.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e11",
+          "title": "Remedies, fiduciary versus contract claims, and the principal's duties",
+          "minutes": 2,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Remedies for an agent's breach, why lawyers plead fiduciary claims, and what the principal owes the agent."
+            },
+            {
+              "id": "s2",
+              "say": "The remedies. Contract actions. Tort actions. Actions for secret profits, meaning disgorgement. An accounting. A constructive trust. Withholding compensation for intentional breaches. An injunction. And a wide range of other equitable remedies, Second §§ 399 through 404."
+            },
+            {
+              "id": "s3",
+              "say": "Fiduciary versus contract claims. A fiduciary breach may be easier to prove, because the duties are open-ended and you don't need to prove a loss. And it yields bigger remedies: tort damages, punitive damages, disgorgement. Contract clauses handle the same risks in advance: full-time or best-efforts clauses, conflict disclosure, non-competes."
+            },
+            {
+              "id": "s4",
+              "say": "Now the principal's duties to the agent. They are contractual, not fiduciary. Six of them. One: the contract's terms plus good faith and fair dealing. Two: reasonable compensation, if compensation was contemplated. Three: reimbursement of expenses. Four: indemnify the agent for losses from carrying out the principal's instructions. Five: cooperation. Six: non-interference. Restatement Third §§ 8.14 and 8.15, which include warning the agent of known risks."
+            },
+            {
+              "id": "s5",
+              "say": "The contrast to remember. The agent owes the principal fiduciary duties. The principal owes the agent only contractual duties."
+            },
+            {
+              "id": "s6",
+              "ask": "Name four remedies for an agent's fiduciary breach.",
+              "answer": "Any four: contract or tort actions; disgorgement of secret profits; an accounting; a constructive trust; withholding compensation for intentional breach; an injunction; other equitable remedies.",
+              "pause": 8
+            },
+            {
+              "id": "s7",
+              "ask": "Are the principal's duties to the agent fiduciary?",
+              "answer": "No, contractual: contract terms with good faith, reasonable compensation, reimbursement, indemnity, cooperation, and non-interference, Restatement Third §§ 8.14 and 8.15.",
+              "pause": 8
+            },
+            {
+              "id": "s8",
+              "ask": "Why might a plaintiff plead a fiduciary claim instead of contract?",
+              "answer": "It can be easier to prove, with open-ended duties and no need to prove loss, and it yields bigger remedies like punitive damages and disgorgement.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d2-e12",
+          "title": "Day 2 cumulative quiz",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Day 2 quiz, reaching back to Day 1. Pause, answer, check."
+            },
+            {
+              "id": "s2",
+              "ask": "Under the Restatement Third, which section makes a principal directly liable for negligent supervision?",
+              "answer": "Section 7.05, through § 7.03(1)(b).",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "What's the Restatement Third's word for the Second's \"servant\"?",
+              "answer": "Employee: the principal controls or has the right to control the manner and means of the work.",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "Humble Oil or Hoover: which station operator was an independent contractor?",
+              "answer": "Hoover's dealer, for Sun Oil. He set his own hours, hired staff, bore profit and loss.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "Parker v. Domino's: why did the case go to a jury?",
+              "answer": "A pervasive manual, a veritable bible, could give Domino's the right to control the franchisee's means of operation.",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "A cab driver pushes a stalled car for a dollar, against the rules. Which case and which result?",
+              "answer": "Brill v. Davajon. Outside the scope; a personal errand.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "Which case gives the enterprise-risk test, and who wrote it?",
+              "answer": "Ira S. Bushey and Sons v. United States, Judge Friendly.",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "Why was the town liable but not its insurer in Lamkin?",
+              "answer": "The punch was rooted in his police duties, so within scope; but the insurer had an intentional-acts exclusion.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "Majestic Realty: which exception?",
+              "answer": "Inherently dangerous work: demolition in a built-up area.",
+              "pause": 10
+            },
+            {
+              "id": "s10",
+              "ask": "Which duty does a principal owe an agent who suffers loss carrying out instructions?",
+              "answer": "Indemnity.",
+              "pause": 10
+            },
+            {
+              "id": "s11",
+              "ask": "What makes preparing to compete a breach, per Bancroft-Whitney?",
+              "answer": "The nature of the preparations: using his position to raid staff, misleading the boss, handing over salary information.",
+              "pause": 10
+            },
+            {
+              "id": "s12",
+              "ask": "From Day 1: an agent signs for a company that doesn't exist. Who's bound?",
+              "answer": "The agent, as a party, Restatement Third § 6.04, as in Atlantic Salmon.",
+              "pause": 10
+            },
+            {
+              "id": "s13",
+              "ask": "From Day 1: in Kidd v. Edison, what principle did Learned Hand state?",
+              "answer": "Choosing an agent vouches for him; uncommunicated, unusual limits don't bind third parties.",
+              "pause": 10
+            },
+            {
+              "id": "s14",
+              "say": "That's Day 2, and the end of pure agency law. Tomorrow we turn to partnerships: choosing an entity, forming a partnership, property, and who gets to decide."
+            }
+          ]
+        }
+      ]
     }
   ]
 }
