@@ -3,7 +3,7 @@
  "id": "first-amendment-audio-course",
  "title": "First Amendment Audio Course",
  "course": "Con Law II",
- "description": "A five-day spoken course on the whole First Amendment outline, Chapters 1–14, from Barnette and the Religion Clauses through the speech framework, unprotected categories, torts, commercial speech, content neutrality, expressive conduct, government speech, funding and forums, employees and schools, social media, elections, and association: every test counted out loud with its tier of scrutiny, every case told as a short story, hypotheticals and recall questions with pauses to answer, a spaced review to open each day, and a closing review with the order of analysis for speech and Religion Clauses problems.",
+ "description": "A five-day spoken course on the whole First Amendment outline, Chapters 1–14, from Barnette and the Religion Clauses through the speech framework, unprotected categories, torts, commercial speech, content neutrality, expressive conduct, government speech, funding and forums, employees and schools, social media, elections, and association: every test counted out loud with its tier of scrutiny, every case told as a short story, hypotheticals and recall questions with pauses to answer, a spaced review to open each day, and a closing review with the order of analysis for speech and Religion Clauses problems. Coverage: all 14 chapters, every outline section, synthesis table, and stretch exercise, and all 138 cases the outline names, through Chiles v. Salazar and First Choice v. Davenport (2026).",
  "days": [
   {
    "day": 1,
@@ -120,7 +120,7 @@
       },
       {
        "id": "s15",
-       "say": "Recap. Six clauses, two religion clauses and four expressive ones. Incorporated against the states through the Fourteenth Amendment. Binds government, not private actors. Not absolute. And Brandeis: counterspeech, not enforced silence."
+       "say": "Recap. Six clauses, two religion clauses and four expressive ones. Incorporated against the states through the Fourteenth Amendment. Binds government, not private actors. Not absolute. And Brandeis: counterspeech, not coerced silence."
       },
       {
        "id": "s16",
@@ -6330,6 +6330,1753 @@
       {
        "id": "s15",
        "say": "That is Day 4. Tomorrow: employees, schools, social media, elections, association, and the full review. One more day."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "title": "Employees, schools, social media, elections, association, and the full review",
+   "minutes": 112,
+   "episodes": [
+    {
+     "id": "fa-d5-e00",
+     "title": "Spaced review of Days 1 to 4",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Welcome to Day 5, the last day. Spaced review first. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "What is Wrinkle Two in the Free Exercise checklist?",
+       "answer": "Government may disfavor religion only where necessary to avoid an Establishment Clause violation, not to separate church and state more strictly than the Constitution requires.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "Under R.A.V., may a city ban only fighting words based on race?",
+       "answer": "No. It may ban all fighting words, but not a subset chosen by topic or viewpoint.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "What is the only recognized exception to the bar on prior restraints?",
+       "answer": "Near's wartime dictum, like troop locations or transport sailing dates, never actually applied.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "What did Ferber hold, and what did Free Speech Coalition refuse to extend?",
+       "answer": "Child pornography made with real children is unprotected even if not obscene. Free Speech Coalition refused to extend that to virtual images or adult look-alikes.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "What did Dun and Bradstreet hold?",
+       "answer": "For a private plaintiff on a matter of purely private concern, presumed and punitive damages are allowed without actual malice.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "What did Sorrell say about a state that finds speech too persuasive?",
+       "answer": "That does not permit it to quiet the speech. Content- and speaker-based burdens on commercial speech get heightened scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "State the Ward test.",
+       "answer": "If content neutral, the rule must be narrowly tailored to serve a significant interest and leave open ample alternative channels. Narrowly tailored means not substantially broader than necessary.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "What are the three Shurtleff factors?",
+       "answer": "History of the expression, public perception of who is speaking, and the government's active control over the content.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "Rust or Velazquez: a program paying lawyers to represent private clients against the government?",
+       "answer": "Velazquez. The lawyers' speech is private, not government speech.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "What standard applies in a nonpublic forum?",
+       "answer": "Restrictions must be reasonable and not an effort to suppress disfavored views. Subject-matter and speaker-identity distinctions are allowed.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "say": "Good. Today, the last four chapters' worth of doctrine, and then we put the whole course together."
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e01",
+     "title": "Government employees: Pickering and Garcetti v. Ceballos",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Chapter 12. Why the Court balances here, the Pickering test as refined by Garcetti, Pickering itself, and Garcetti versus Ceballos."
+      },
+      {
+       "id": "s2",
+       "say": "The big picture. Two more nonregulatory capacities: the government as employer, and as school administrator. They overlap, because public-school teachers are government employees. Pickering itself involved a teacher. Employees and public-school students have First Amendment rights, but more limited ones than the general public's. And in both contexts the Court uses balancing tests that weigh the government's legitimate interests."
+      },
+      {
+       "id": "s3",
+       "say": "Why balancing here? When the government acts as regulator, the Court rejects ad hoc balancing. Stevens called a cost-benefit test for new unprotected categories startling and dangerous, and the Court prefers bright lines. But as employer or school administrator, the government often has legitimate reasons to restrict speech that are hard to catalog. The casebook suspects there is no better alternative to balancing."
+      },
+      {
+       "id": "s4",
+       "say": "The Pickering test, as refined by Garcetti. Balance the interests of the employee, as a citizen, in commenting upon matters of public concern, and the interest of the state, as an employer, in promoting the efficiency of the public services it performs through its employees."
+      },
+      {
+       "id": "s5",
+       "say": "Two steps. Step one: did the employee speak as a citizen on a matter of public concern? If not, for example if the employee spoke pursuant to official duties, there is no First Amendment claim. The speech is effectively the government's, and it controls its message."
+      },
+      {
+       "id": "s6",
+       "say": "Step two: if so, did the government have an adequate justification for treating the employee differently from any other member of the public?"
+      },
+      {
+       "id": "s7",
+       "say": "Pickering versus Board of Education, 1968. A teacher fired for a letter to the editor criticizing the school board's handling of the budget won. The letter was on a matter of public concern, and it did not impede classroom performance or school operations. And teachers are, in the Court's words, most likely to have informed and definite opinions about school funding."
+      },
+      {
+       "id": "s8",
+       "say": "Adequate justifications at step two. The Court has not given a full list. Examples: speech that is false, or that discloses confidential information, even though the government could not punish a member of the public for the same speech. Efficiency and integrity in official duties. Discipline in public service. And a stronger showing may be needed the more the speech involves public concern."
+      },
+      {
+       "id": "s9",
+       "say": "Garcetti versus Ceballos, 2006. Five to four, Justice Kennedy. Stevens, Souter, Ginsburg, and Breyer dissented."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. When public employees make statements pursuant to their official duties, the employees are not speaking as citizens for First Amendment purposes, and the Constitution does not insulate their communications from employer discipline."
+      },
+      {
+       "id": "s11",
+       "say": "The story. Ceballos, a deputy district attorney, a calendar deputy, wrote an internal memo to his supervisors concluding that a search-warrant affidavit contained serious misrepresentations, and recommending how to handle the case. After heated exchanges, he suffered retaliation; the casebook says he was eventually fired, because his supervisors disagreed. Held: no First Amendment violation."
+      },
+      {
+       "id": "s12",
+       "say": "What was not dispositive. That he spoke inside the office rather than publicly. And that the memo concerned the subject matter of his job. Some workplace and job-related expression is protected."
+      },
+      {
+       "id": "s13",
+       "say": "What was controlling. He wrote the memo as part of his duties, advising his supervisor on a pending case. When he went to work and performed the tasks he was paid to perform, he acted as an employee, and supervisors may evaluate that work."
+      },
+      {
+       "id": "s14",
+       "say": "Values on both sides. Employees remain citizens, and the public benefits from their informed views. But the First Amendment does not constitutionalize the employee grievance."
+      },
+      {
+       "id": "s15",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s16",
+       "ask": "A public hospital nurse writes an op-ed in the local paper, on her own time, criticizing the hospital's understaffing as dangerous to patients. She is fired. Step one?",
+       "answer": "She spoke as a citizen on a matter of public concern. Writing op-eds is not part of her job, and patient safety at a public hospital is of public concern. So the hospital must show an adequate justification at step two, as in Pickering.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "ask": "A city building inspector writes an official report, as his job requires, saying a developer's project violates code. His boss, a friend of the developer, demotes him. First Amendment claim?",
+       "answer": "No. Under Garcetti, the report was made pursuant to his official duties, so he did not speak as a citizen. Other laws may protect him, but not the First Amendment.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "say": "The trap. Garcetti does not turn on whether the speech was inside the office, or about the job. It turns on whether the speech was itself part of the employee's official duties."
+      },
+      {
+       "id": "s19",
+       "say": "Recap. Balancing because the employer's interests are hard to catalog. Step one: citizen speech on public concern, not official duties. Step two: adequate justification. Pickering, 1968: teacher's letter protected. Garcetti, 2006, five to four, Kennedy: speech pursuant to official duties is not citizen speech; no constitutionalizing the employee grievance."
+      },
+      {
+       "id": "s20",
+       "ask": "State the two steps of the Pickering test as refined by Garcetti.",
+       "answer": "One, did the employee speak as a citizen on a matter of public concern? Two, if so, did the government have an adequate justification for treating the employee differently from a member of the public?",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "What two facts did Garcetti say were not dispositive?",
+       "answer": "That he spoke inside the office, and that the memo concerned the subject matter of his job.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "Why does the Court balance in employee cases, but not when the government regulates?",
+       "answer": "As employer, the government has legitimate reasons to restrict speech that are hard to catalog, and the casebook suspects there is no better alternative.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e02",
+     "title": "Testimony as citizen speech: Lane v. Franks",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. One case that narrows Garcetti. Lane versus Franks, 2014. Nine to nothing, Justice Sotomayor."
+      },
+      {
+       "id": "s2",
+       "say": "The rule. Truthful sworn testimony, compelled by subpoena, outside the scope of an employee's ordinary job duties, is speech as a citizen, even if it concerns information learned on the job. The key line: the critical question under Garcetti is whether the speech at issue is itself ordinarily within the scope of an employee's duties, not whether it merely concerns those duties."
+      },
+      {
+       "id": "s3",
+       "say": "The story. Lane, a state-agency employee, testified under subpoena at criminal trials about corruption and misuse of state funds in a public program he worked in. Testifying was not part of his ordinary job. He was fired. Held: the firing violated the First Amendment, reversing the Eleventh Circuit, which had read Garcetti far too broadly."
+      },
+      {
+       "id": "s4",
+       "say": "Step one: citizen speech on a matter of public concern. Unlike Garcetti's internal memo, the testimony was not part of his paid tasks. And corruption and misuse of public funds are obviously of significant public concern."
+      },
+      {
+       "id": "s5",
+       "say": "Why employee speech has special value. Employees are often in the best position to know what ails the agencies for which they work. Federal corruption prosecutions, more than a thousand a year, depend on government employees' testimony. A contrary rule would force witnesses to choose between truthful testimony and their jobs."
+      },
+      {
+       "id": "s6",
+       "say": "Step two: the employer's side was entirely empty. There was no evidence the testimony was false, or that Lane unnecessarily disclosed sensitive, confidential, or privileged information."
+      },
+      {
+       "id": "s7",
+       "say": "Now the evolution in one line. Pickering protected citizen speech and balanced. Garcetti carved out speech pursuant to official duties. Lane narrowed Garcetti: concerning the job is not the same as being the job."
+      },
+      {
+       "id": "s8",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s9",
+       "ask": "A police officer's job includes testifying at trials about arrests he made. He testifies at one such trial, truthfully, in a way that embarrasses the chief, and is disciplined. Lane or Garcetti?",
+       "answer": "Closer to Garcetti. Lane protected testimony outside the scope of the employee's ordinary duties. Here testifying is itself ordinarily within his duties, so it is likely not citizen speech.",
+       "pause": 12
+      },
+      {
+       "id": "s10",
+       "say": "Recap. Lane, 2014, unanimous, Sotomayor: subpoenaed testimony outside ordinary duties is citizen speech even if learned on the job. The question is whether the speech is itself within the duties, not whether it concerns them. The employer's side was entirely empty."
+      },
+      {
+       "id": "s11",
+       "ask": "What is the critical question under Garcetti, according to Lane?",
+       "answer": "Whether the speech is itself ordinarily within the scope of the employee's duties, not whether it merely concerns those duties.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "Why was the employer's side entirely empty in Lane?",
+       "answer": "No evidence the testimony was false, or that Lane unnecessarily disclosed sensitive, confidential, or privileged information.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "Why does employee speech have special value, according to Lane?",
+       "answer": "Employees are often in the best position to know what ails their agencies, and corruption prosecutions depend on their testimony.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e03",
+     "title": "Public schools: the principles and Tinker v. Des Moines",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The principles of student speech, the four special characteristics of schools, the recognized categories, and Tinker."
+      },
+      {
+       "id": "s2",
+       "say": "The principles. There is no single test. Students do not shed their constitutional rights to freedom of speech or expression at the schoolhouse gate. That is Tinker. But the First Amendment applies in light of the special characteristics of the school environment. That is Hazelwood. And these rules cover public schools, including public universities, not private ones."
+      },
+      {
+       "id": "s3",
+       "say": "The four special characteristics. One, in loco parentis. For minors, K through 12, administrators stand in for parents when parents cannot protect, guide, and discipline. Two, preventing disruption: speech that materially disrupts classwork or involves substantial disorder, from Tinker. Three, protecting other students: speech that invades the rights of others, like bullying. Four, the school's imprimatur: speech others may reasonably perceive as bearing the imprimatur of the school, like a school newspaper, an assembly, or a play. That is Hazelwood."
+      },
+      {
+       "id": "s4",
+       "say": "The categories the Court has recognized, as Mahanoy lists them. One, indecent, lewd, or vulgar speech at a school assembly. Two, speech promoting illegal drug use on a class trip. Three, speech bearing the school's imprimatur. Plus Tinker's substantial-disruption and rights-of-others standard."
+      },
+      {
+       "id": "s5",
+       "say": "Tinker versus Des Moines Independent Community School District, 1969. Seven to two, Justice Fortas. Black and Harlan dissented."
+      },
+      {
+       "id": "s6",
+       "say": "The rule. Schools may restrict student expression only if they can show it would materially and substantially interfere with schoolwork and discipline, or invade the rights of others. Undifferentiated fear or apprehension of disturbance is not enough. And officials may not suppress an opinion merely to avoid the discomfort and unpleasantness that always accompany an unpopular viewpoint."
+      },
+      {
+       "id": "s7",
+       "say": "The story. In December 1965, John Tinker, fifteen, Christopher Eckhardt, sixteen, and Mary Beth Tinker, thirteen, wore black armbands to school to protest the Vietnam War and support a truce. The principals learned of the plan and adopted a policy suspending any student who would not remove an armband. They were suspended until after New Year's. Held: the suspensions violated the First Amendment."
+      },
+      {
+       "id": "s8",
+       "say": "The reasoning. First, symbolic speech closely akin to pure speech. A silent, passive expression of opinion, with no disorder. Not about hair, skirts, or aggressive conduct."
+      },
+      {
+       "id": "s9",
+       "say": "Second, no evidence of interference with schoolwork or other students' rights, and nothing that could reasonably forecast substantial disruption. The armbands caused discussion outside class, not disorder."
+      },
+      {
+       "id": "s10",
+       "say": "Third, any deviating word may start an argument or cause a disturbance. But the Constitution says we must take that risk, citing Terminiello. This hazardous freedom is the basis of national strength."
+      },
+      {
+       "id": "s11",
+       "say": "Fourth, state-operated schools may not be enclaves of totalitarianism. Students are not closed-circuit recipients of only that which the state chooses to communicate."
+      },
+      {
+       "id": "s12",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s13",
+       "ask": "A middle school bans T-shirts supporting either candidate in the upcoming election, because the principal worries about arguments. There have been no incidents. Valid under Tinker?",
+       "answer": "No. Undifferentiated fear of disturbance is not enough. The school must show the shirts would materially and substantially disrupt schoolwork or invade others' rights, or reasonably forecast that.",
+       "pause": 12
+      },
+      {
+       "id": "s14",
+       "ask": "A student repeatedly posts insults on another student's locker targeting her disability, and she stops coming to school. Can the school discipline him under Tinker?",
+       "answer": "Yes. Speech that invades the rights of others, like bullying, may be restricted under Tinker.",
+       "pause": 12
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Rights at the schoolhouse gate, but in light of the school's special characteristics: in loco parentis, disruption, rights of others, imprimatur. Tinker, 1969, seven to two, Fortas: material and substantial interference or invading others' rights; undifferentiated fear is not enough; no enclaves of totalitarianism."
+      },
+      {
+       "id": "s16",
+       "ask": "State the Tinker standard.",
+       "answer": "A school may restrict student expression only if it would materially and substantially interfere with schoolwork and discipline, or invade the rights of others.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "Name the four special characteristics of schools.",
+       "answer": "In loco parentis, preventing disruption, protecting other students, and the school's imprimatur.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "Name the three categories the Court has recognized beyond Tinker, as Mahanoy lists them.",
+       "answer": "Indecent, lewd, or vulgar speech at a school assembly; speech promoting illegal drug use on a class trip; and speech bearing the school's imprimatur.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e04",
+     "title": "School-sponsored and off-campus speech: Hazelwood and Mahanoy",
+     "minutes": 10,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Hazelwood versus Kuhlmeier, the school newspaper. Mahanoy versus B.L., the cheerleader's Snapchat. Then the synthesis and two stretch exercises."
+      },
+      {
+       "id": "s2",
+       "say": "Hazelwood School District versus Kuhlmeier, 1988. Six to three, Justice White. Brennan, Marshall, and Blackmun dissented."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Educators may exercise editorial control over the style and content of student speech in school-sponsored expressive activities, so long as their actions are reasonably related to legitimate pedagogical concerns."
+      },
+      {
+       "id": "s4",
+       "say": "The contrast to remember. Tinker asks whether a school must tolerate personal expression. Hazelwood asks whether it must affirmatively promote student speech that bears its imprimatur."
+      },
+      {
+       "id": "s5",
+       "say": "The story. Spectrum, the Hazelwood East newspaper, was written and edited by the Journalism Two class, for grades and credit. The teacher controlled nearly everything, and the principal reviewed each issue. More than forty-five hundred copies went to students, staff, and the community. The principal deleted two pages, including articles about students' pregnancies. Held: no First Amendment violation."
+      },
+      {
+       "id": "s6",
+       "say": "Curricular activities. School-sponsored publications, plays, and other activities that students, parents, and the public might reasonably see as the school's, supervised by faculty and designed to teach. The school may make sure students learn the lesson, protect immature audiences, and avoid having individual views attributed to it."
+      },
+      {
+       "id": "s7",
+       "say": "What the school may refuse to sponsor. Speech that is ungrammatical, poorly written, inadequately researched, biased, vulgar, or unsuitable for immature audiences. Speech that might seem to advocate drug or alcohol use or irresponsible sex. Or anything associating the school with a non-neutral position on political controversy."
+      },
+      {
+       "id": "s8",
+       "say": "A prior case. A student could be disciplined for a sexually explicit, but not obscene, speech at a school assembly, because the school could disassociate itself from vulgarity. The casebook does not name it; your outline does: Bethel School District versus Fraser, 1986."
+      },
+      {
+       "id": "s9",
+       "say": "Applied. The principal reasonably feared the pregnant students could be identified. The boyfriends and parents discussed in the articles had not consented or been able to respond. And frank talk about sexual histories and birth control was inappropriate for fourteen-year-old freshmen and their younger siblings."
+      },
+      {
+       "id": "s10",
+       "say": "Footnote seven: the Court did not decide whether the same deference applies at colleges and universities."
+      },
+      {
+       "id": "s11",
+       "say": "And a casebook aside. Private schools are not bound by the First Amendment, but many protect student speech. In 1989 Georgetown forced The Hoya to cancel an issue with an abortion-rights rally ad. The Hoya and The Voice, edited by Professor Klein's husband Craig, struck, and Georgetown backed down."
+      },
+      {
+       "id": "s12",
+       "say": "Now Mahanoy Area School District versus B.L., 2021. Eight to one, Justice Breyer. Alito, with Gorsuch, concurred. Justice Thomas dissented."
+      },
+      {
+       "id": "s13",
+       "say": "The rule. Schools have less latitude to regulate off-campus speech, but their special interests do not always disappear off campus. There is no bright line between on-campus and off-campus speech. Future cases will decide where, when, and how location matters."
+      },
+      {
+       "id": "s14",
+       "say": "The story. After failing to make varsity cheerleading, while an incoming freshman did, B.L., a high school student, posted a Snapchat story on a weekend from the Cocoa Hut convenience store. It was visible to her roughly two hundred fifty friends for twenty-four hours: a photo with middle fingers raised, captioned with four profane rejections of school, softball, cheer, and everything. A second post complained about JV. Screenshots spread. Some cheerleaders were visibly upset, and it came up in an Algebra class. The coaches suspended her from JV cheer for a year for profanity connected to an extracurricular activity. Held: the suspension violated the First Amendment."
+      },
+      {
+       "id": "s15",
+       "say": "Off-campus interests that may remain significant. Serious or severe bullying or harassment targeting individuals. Threats aimed at teachers or students. Failure to follow rules on lessons, papers, computers, or online school activities. And breaches of school security devices."
+      },
+      {
+       "id": "s16",
+       "say": "Three features of off-campus speech that reduce the school's leeway. One: the school rarely stands in loco parentis; off campus is normally the parents' responsibility. Two: regulating both off-campus and on-campus speech covers a student's whole twenty-four-hour day, so courts should be more skeptical; for political or religious speech, the school has a heavy burden. Three: schools themselves have an interest in protecting unpopular expression. They are the nurseries of democracy."
+      },
+      {
+       "id": "s17",
+       "say": "Applied. Her speech was criticism of a community she belonged to, not fighting words, Chaplinsky, and not obscene, Cohen. It was posted off campus, after hours, on a personal phone, to private friends, without naming the school or targeting anyone."
+      },
+      {
+       "id": "s18",
+       "say": "The school's interests fail. One, teaching good manners is weak off campus, with no evidence of any general effort to police off-campus vulgarity. Two, no substantial disruption: five to ten minutes of an Algebra class for a couple of days, and some upset teammates. Three, team morale: only generalized negativity, which is undifferentiated fear."
+      },
+      {
+       "id": "s19",
+       "say": "And Breyer's line: sometimes it is necessary to protect the superfluous in order to preserve the necessary."
+      },
+      {
+       "id": "s20",
+       "say": "The synthesis: employees and students. Pickering, 1968, a teacher's letter on the school budget: protected, citizen speech on public concern, no disruption. Garcetti, 2006, a prosecutor's internal memo: unprotected, pursuant to official duties. Lane, 2014, subpoenaed trial testimony on corruption: protected, outside ordinary duties, employer's side empty. Tinker, 1969, black armbands: protected, no substantial disruption. Hazelwood, 1988, school newspaper articles: restriction okay, school-sponsored, legitimate pedagogical concerns. Mahanoy, 2021, an off-campus vulgar Snapchat: protected, reduced off-campus leeway, no disruption."
+      },
+      {
+       "id": "s21",
+       "say": "Now the stretch: campus protests. At a public university, students do four things. One, silently hold signs saying Stop Israel's genocide in Gaza outside a building. Two, chant the slogan. Three, chant Zionists deserve to die. Four, silently hold that sign in a common space inside the building."
+      },
+      {
+       "id": "s22",
+       "say": "The framework. University students are adults, so in loco parentis carries little weight, and outdoor campus spaces may resemble public forums. The silent signs, one, look like Tinker's armbands: protected absent substantial disruption. Chanting, two, adds noise, which content-neutral time, place, and manner rules may limit if they leave alternatives. Zionists deserve to die, three, raises true threats under Counterman, incitement under Brandenburg, and invasion of other students' rights. And the indoor sign, four, removes the noise but moves the speech into a space with stronger claims to protect other students and the educational environment."
+      },
+      {
+       "id": "s23",
+       "say": "The second stretch: school library books. Crookshanks versus Elizabeth School District, District of Colorado, 2025. The district permanently removed nineteen books, including The Kite Runner and The Bluest Eye, from school libraries. The court granted a preliminary injunction. Students have a right to receive information. Library curation is not government speech; no one thinks a library endorses Mein Kampf, and the Eighth Circuit and the Northern District of Florida agreed in 2024. A library book does not bear the school's imprimatur the way a journalism-class newspaper does. And removal to promote the board's conservative values, based on viewpoints about race, sexual orientation, and gender identity, is not reasonably related to legitimate pedagogical concerns under Hazelwood."
+      },
+      {
+       "id": "s24",
+       "say": "Arguing for the district. Library selection is inherently curatorial and pedagogical; a school chooses what to offer minors, which is closer to Hazelwood than Tinker. Libraries are part of the educational program, and age-appropriateness is a legitimate concern. And use Mahmoud: if the Montgomery County board could choose to integrate LGBTQ-friendly books into the curriculum, a board should equally be able to choose which books to remove. The slides ask whether you are convinced by Crookshanks."
+      },
+      {
+       "id": "s25",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s26",
+       "ask": "A high school principal removes a student's editorial from the journalism class's official newspaper because it criticizes the principal's dress code. Hazelwood or Tinker?",
+       "answer": "Hazelwood, because it is school-sponsored speech bearing the school's imprimatur. The question is whether the removal is reasonably related to legitimate pedagogical concerns. Removing it only for criticizing the principal looks hard to justify that way.",
+       "pause": 12
+      },
+      {
+       "id": "s27",
+       "ask": "On a Saturday, from home, a student posts a direct threat to shoot a named teacher. The school suspends him. Does Mahanoy protect him?",
+       "answer": "No. Mahanoy said threats aimed at teachers or students are an off-campus interest that may remain significant.",
+       "pause": 12
+      },
+      {
+       "id": "s28",
+       "say": "Recap. Hazelwood, 1988, White: school-sponsored speech, legitimate pedagogical concerns; tolerate versus promote. Fraser: vulgar assembly speech. Mahanoy, 2021, Breyer: less latitude off campus; three reasons; no disruption; protect the superfluous."
+      },
+      {
+       "id": "s29",
+       "ask": "What is the Hazelwood standard?",
+       "answer": "Educators may control the style and content of school-sponsored expressive activities so long as their actions are reasonably related to legitimate pedagogical concerns.",
+       "pause": 8
+      },
+      {
+       "id": "s30",
+       "ask": "Give Mahanoy's three features of off-campus speech that reduce a school's leeway.",
+       "answer": "The school rarely stands in loco parentis; regulating off-campus speech covers the student's whole day; and schools have an interest in protecting unpopular expression as nurseries of democracy.",
+       "pause": 8
+      },
+      {
+       "id": "s31",
+       "ask": "Why did the school's disruption argument fail in Mahanoy?",
+       "answer": "The only effect was five to ten minutes of an Algebra class for a couple of days and some upset teammates, which is not substantial disruption.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e05",
+     "title": "Social media: the three actors, Packingham, and Lindke v. Freed",
+     "minutes": 9,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Chapter 13. Why social media cases are different, the social media checklist, Packingham, and Lindke."
+      },
+      {
+       "id": "s2",
+       "say": "The big picture. Chapter 13 covers two special categories of speech, rather than more government capacities. Social media cases add a third actor. Earlier cases had two, the government and the private speaker. Social media cases may involve, one, the individual user; two, the private platform hosting the speech, like Facebook or YouTube; and three, the government. Users and platforms both have First Amendment rights against the government. And because the technology is new and evolving, the Court has been careful not to announce sweeping rules."
+      },
+      {
+       "id": "s3",
+       "say": "The social media checklist. Six steps. One: identify the three actors and whose rights are at stake. Two: government restricting a user's access. Packingham: the Internet is a vital forum, and overbroad bans fail even intermediate scrutiny."
+      },
+      {
+       "id": "s4",
+       "say": "Three: an official blocking a user. Is it state action? Lindke: actual authority to speak for the state, plus purporting to use it, post by post. Four: government regulating platforms' content moderation. NetChoice: curation is protected editorial judgment, and rebalancing the speech market is not a valid interest."
+      },
+      {
+       "id": "s5",
+       "say": "Five: government pressuring platforms. Coercion violates the First Amendment, per Vullo, but users must show the government, not the platform's own choice, caused the takedown, per Murthy. Six: users have no First Amendment rights against private platforms."
+      },
+      {
+       "id": "s6",
+       "say": "Packingham versus North Carolina, 2017. Eight to nothing on the bottom line, Justice Kennedy. Gorsuch was recused. Alito, with Roberts and Thomas, concurred in the judgment."
+      },
+      {
+       "id": "s7",
+       "say": "The rule. Internet access is protected by the First Amendment, because it is so important for speech. Cyberspace, especially social media, is today's most important place for the exchange of views, akin to streets and parks. A law broadly barring registered sex offenders from social media fails even intermediate scrutiny. And the Court declined to decide what standard applies to restrictions on Internet access."
+      },
+      {
+       "id": "s8",
+       "say": "The story. North Carolina made it a felony for a registered sex offender to access a commercial social networking site that he knows permits minors to become members. About twenty thousand people were covered, and over one thousand prosecuted. Lester Packingham, who at twenty-one had sex with a thirteen-year-old and registered as a sex offender, posted on Facebook after a traffic ticket was dismissed: Man God is Good! Praise be to GOD, WOW! Thanks JESUS! He was convicted, though he never contacted a minor or did anything illicit online. Held: the law violates the First Amendment."
+      },
+      {
+       "id": "s9",
+       "say": "The reasoning. First, vast democratic forums. Seven in ten American adults use social media, and Facebook had one point seven nine billion users. People use it to debate religion and politics, find jobs, and petition elected officials. All fifty governors and nearly every member of Congress have accounts."
+      },
+      {
+       "id": "s10",
+       "say": "Second, caution. The Internet is so new, so protean, and so far reaching that what courts say today may be obsolete tomorrow. So the Court must be careful before suggesting it gives scant protection to access."
+      },
+      {
+       "id": "s11",
+       "say": "Third, tailoring fails. Protecting children from sexual abuse is compelling, and states may pass specific, narrowly tailored laws barring conduct that often presages a crime, like contacting a minor or gathering information about a minor online. But this law, with one broad stroke, cuts off the principal sources for news, job ads, and speaking and listening in the modern public square."
+      },
+      {
+       "id": "s12",
+       "say": "Lindke versus Freed, 2024. Nine to nothing, Justice Barrett. Remanded to apply the new framework."
+      },
+      {
+       "id": "s13",
+       "say": "The rule, on state action. A public official's social-media activity is attributable to the state only if the official, one, possessed actual authority to speak on the state's behalf on that matter, and two, purported to exercise that authority when speaking on social media. Both are required. And appearance and function matter only at step two; they cannot make up for a lack of authority at step one."
+      },
+      {
+       "id": "s14",
+       "say": "The story. James Freed converted his personal Facebook profile into a public page, category public figure, before becoming city manager of Port Huron, Michigan. He then added a photo with a city lapel pin, his title, and the city's website and email. He posted mostly about family, his daughter, his dog Winston, Bible verses, but also about city work: leaf pickup, a housing survey, the fire chief's press releases, COVID-19 policies. Kevin Lindke criticized the city's pandemic response in comments. Freed deleted them and then blocked him. Lindke sued, calling the page a public forum and the deletions viewpoint discrimination. Held: vacated and remanded."
+      },
+      {
+       "id": "s15",
+       "say": "Why it matters. The First Amendment binds only the government. If Freed acted privately, he was exercising his own First Amendment rights, editorial control over his own page, not violating Lindke's. Officials do not relinquish their rights, citing Garcetti and Lane."
+      },
+      {
+       "id": "s16",
+       "say": "Step one, actual authority. It must be real, not a mirage, and it must cover the matter in question. If public health is not in the city manager's portfolio, a post about restaurant health violations is not state action. Authority can come from statutes, ordinances, regulations, or a well-settled custom and usage. Misusing real power is still state action, but one must have the power first."
+      },
+      {
+       "id": "s17",
+       "say": "Step two, purporting to use it. Context matters. A school board president announcing a policy change at a board meeting acts officially; saying the same thing at a backyard barbecue does not. A personal page label or disclaimer earns a heavy, rebuttable presumption that posts are personal. A City of Port Huron page, or an account passed between officeholders, is official."
+      },
+      {
+       "id": "s18",
+       "say": "Mixed-use pages: classify post by post, focusing on content and function. A mayor suspending parking rules, pursuant to Municipal Ordinance 22.1, only on Facebook, is plainly official. Merely sharing a link to the city's announcement is likely private. Using government staff to post points toward official."
+      },
+      {
+       "id": "s19",
+       "say": "And technology matters. Deleting a comment implicates only that post. But blocking is page-wide, so it implicates every post Lindke wanted to comment on. Officials who mix personal and official posts expose themselves to more liability."
+      },
+      {
+       "id": "s20",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s21",
+       "ask": "A state legislature bans anyone convicted of any felony from using any social media site. Analyze under Packingham.",
+       "answer": "Likely unconstitutional. Social media is the modern public square, and a ban cutting off all of it with one broad stroke fails even intermediate scrutiny. A narrow law aimed at specific conduct that presages a crime might survive.",
+       "pause": 12
+      },
+      {
+       "id": "s22",
+       "ask": "A county sheriff, on a page labeled personal, posts photos of his fishing trips and, once, his own opinion of a ballot measure. He blocks a critic. State action under Lindke?",
+       "answer": "Likely not. There is a heavy presumption that posts on a page labeled personal are personal, and an opinion on a ballot measure is not an exercise of actual authority to speak for the state. Without both steps, there is no state action.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "say": "Recap. Three actors: user, platform, government. Packingham, 2017, Kennedy: social media is the modern public square; the ban fails even intermediate scrutiny; standard undecided. Lindke, 2024, Barrett, unanimous: state action requires actual authority plus purporting to use it, post by post."
+      },
+      {
+       "id": "s24",
+       "ask": "What are the two Lindke steps for state action on social media?",
+       "answer": "The official possessed actual authority to speak for the state on the matter, and purported to exercise it when posting.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "What standard did Packingham apply?",
+       "answer": "It declined to decide, holding the law failed even intermediate scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "Why does blocking create more liability than deleting a comment under Lindke?",
+       "answer": "Deleting implicates only that post, but blocking is page-wide and implicates every post, including official ones.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e06",
+     "title": "Platforms: Moody v. NetChoice and Murthy v. Missouri",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Government regulating platforms, in Moody versus NetChoice. Government pressuring platforms, in Murthy versus Missouri."
+      },
+      {
+       "id": "s2",
+       "say": "Moody versus NetChoice, 2024. Nine to nothing on the bottom line, Justice Kagan. Justice Jackson joined in part. Thomas, Alito, and Gorsuch concurred in the judgment."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. When platforms curate their feeds, deciding what third-party speech to display and how, by removing, ranking, and labeling content, they engage in expressive activity protected by the First Amendment, like newspapers and TV stations exercising editorial judgment. The government may not interfere with that curation to advance its own vision of ideological balance. The Court remanded on the demanding facial-challenge standard, and it left open algorithms that simply follow user preferences, in footnote seven."
+      },
+      {
+       "id": "s4",
+       "say": "The story. In 2021, Florida and Texas passed laws restricting large platforms' content moderation and requiring individualized explanations when posts were removed or altered. Texas barred platforms from censoring, meaning blocking, removing, demonetizing, de-boosting, and so on, a user's expression based on its viewpoint. NetChoice, a trade association including Facebook and YouTube, brought facial challenges. The Eleventh Circuit upheld an injunction against Florida's law; the Fifth Circuit reversed one against Texas's. Held: both vacated and remanded, with guidance that the Fifth Circuit's approach was wrong."
+      },
+      {
+       "id": "s5",
+       "say": "The precedents on editorial choice. Miami Herald versus Tornillo, 1974: no forced right of reply in a newspaper. PG and E, 1986: a utility cannot be forced to include a consumer group's views in its newsletter. Turner One, 1994: cable operators' channel selection is expressive, though must-carry was later upheld in Turner Two to save local broadcasting. And Hurley, 1995: parade organizers cannot be forced to include a group's message."
+      },
+      {
+       "id": "s6",
+       "say": "The principle. Ordering a party to host others' speech implicates the First Amendment if, though only if, the party is engaged in its own expressive activity that the mandate would alter. Presenting a curated compilation of others' speech counts."
+      },
+      {
+       "id": "s7",
+       "say": "Applied to Texas. Platforms could not disfavor posts supporting Nazi ideology or terrorism, espousing racism or anti-Semitism, glorifying rape, encouraging teen suicide, discouraging vaccines, or advancing false claims of election fraud. That profoundly alters their choices about which views to convey."
+      },
+      {
+       "id": "s8",
+       "say": "Not a defense: that platforms carry most posts, because excluding select categories is an editorial choice too. Or that no one would attribute a single post to the platform, because protection never hinged on the risk of misattribution."
+      },
+      {
+       "id": "s9",
+       "say": "And the interest fails even intermediate scrutiny under O'Brien. Texas wanted to correct the mix of speech; the Governor spoke of a dangerous movement to silence conservatives. That interest is related to suppressing expression, and it is not valid. In Kagan's words, few dangers are greater than letting government change private speech to achieve its own conception of speech nirvana."
+      },
+      {
+       "id": "s10",
+       "say": "The discussion question. Given platforms' power over billions of users' speech, should government be able to regulate private censorship? Or is second-guessing private editorial choices too dangerous?"
+      },
+      {
+       "id": "s11",
+       "say": "Murthy versus Missouri, 2024. Described in the casebook commentary, not excerpted."
+      },
+      {
+       "id": "s12",
+       "say": "The rule. Users have no First Amendment rights against platforms' own moderation. To sue the government, a user must show that government coercion, not the platform's independent editorial decision, caused the content to be taken down or obscured."
+      },
+      {
+       "id": "s13",
+       "say": "The story. Social-media users alleged that Biden Administration officials pressured platforms into deleting posts, for example posts questioning COVID-19 vaccine efficacy. Held: no standing. The platforms had been removing such posts independently, even before the alleged pressure."
+      },
+      {
+       "id": "s14",
+       "say": "Put Vullo and Murthy together. Vullo says coercing third parties to suppress speech violates the First Amendment. Murthy says the plaintiff must show the coercion, not the platform's own choice, caused the takedown."
+      },
+      {
+       "id": "s15",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s16",
+       "ask": "A state requires every large platform to carry every post by a political candidate, unaltered and unranked. Analyze after NetChoice.",
+       "answer": "The platforms' curation is protected editorial judgment, and forcing them to host speech they would remove or demote alters their expressive activity. A state interest in rebalancing speech is related to suppressing expression and is invalid even under intermediate scrutiny.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "ask": "A user's post is removed by a platform. She sues the platform under the First Amendment. What result?",
+       "answer": "She loses. Users have no First Amendment rights against private platforms. She could sue the government only by showing government coercion caused the removal, per Murthy.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "say": "Recap. NetChoice, 2024, Kagan: curation is protected editorial judgment, like Tornillo, PG and E, Turner, and Hurley; no speech nirvana; remanded on the facial standard; footnote seven left open. Murthy, 2024: no standing without showing government coercion caused the takedown."
+      },
+      {
+       "id": "s19",
+       "ask": "According to NetChoice, when does an order to host others' speech implicate the First Amendment?",
+       "answer": "If, though only if, the party is engaged in its own expressive activity that the mandate would alter, including presenting a curated compilation of others' speech.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "Why did Texas's interest fail in NetChoice?",
+       "answer": "Correcting the mix of speech is related to suppressing expression and is not a valid interest, even under intermediate scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "Why did the plaintiffs lose in Murthy?",
+       "answer": "No standing. The platforms had removed such posts independently, even before the alleged pressure.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e07",
+     "title": "Elections: Arkansas Educational Television Commission v. Forbes and Citizens United",
+     "minutes": 10,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two elections cases. A debate exclusion, in Forbes. Corporate independent expenditures, in Citizens United. Then the Chapter 13 synthesis and the influencer stretch."
+      },
+      {
+       "id": "s2",
+       "say": "Arkansas Educational Television Commission versus Forbes, 1998. Six to three, Justice Kennedy. Stevens, Souter, and Ginsburg dissented, worrying the staff had too much discretion, but not disputing the reasoning below."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Public and private broadcasters generally have broad editorial discretion, not subject to forum analysis. A candidate debate is the narrow exception. It is a nonpublic forum, so a state-owned station may exclude a candidate only if the exclusion is viewpoint neutral and reasonable. And excluding a candidate for lack of public support passes."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Arkansas's state-owned public TV network excluded independent candidate Ralph Forbes from a televised congressional debate because he had little support in the polls. Held: no First Amendment violation."
+      },
+      {
+       "id": "s5",
+       "say": "Why debates differ. Two reasons. One, by design a debate is a forum for the candidates' political speech, with views implicitly theirs, not the broadcaster's, unlike a talk show host. Two, debates are of exceptional significance in elections, often the only time public attention focuses in depth on the race."
+      },
+      {
+       "id": "s6",
+       "say": "Nonpublic, not designated. A designated forum requires general access for a class of speakers. AETC made candidate-by-candidate decisions among those running for the seat. That is selective access."
+      },
+      {
+       "id": "s7",
+       "say": "Opening debates to all would mean less speech. More than nineteen candidates were on some state ballots in recent presidential elections. And after the lower court's ruling, Nebraska's public network canceled a 1996 Senate debate."
+      },
+      {
+       "id": "s8",
+       "say": "Reasonable and viewpoint neutral. The jury found no objection to Forbes's views. His own objective lack of support, not his platform, was the criterion. An unconventional candidate could have broad support, and a conventional one might have little. AETC excluded him because the voters lacked interest in his candidacy, not because AETC itself did."
+      },
+      {
+       "id": "s9",
+       "say": "Citizens United versus Federal Election Commission, 2010. On expenditures, five to four, Justice Kennedy, joined by Roberts, Scalia, Alito, and Thomas. A different majority, including Stevens, Ginsburg, Breyer, and Sotomayor, upheld disclosure. The casebook calls that vote five to four, but the reported vote was eight to one, with Thomas dissenting. Justice Stevens dissented on expenditures, joined by Ginsburg, Breyer, and Sotomayor."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. The government may not ban independent expenditures by corporations, including nonprofits, from general treasury funds for political speech. Laws burdening political speech get strict scrutiny. The only sufficient interest is preventing quid pro quo corruption or its appearance, which justifies limits on direct contributions but not on independent expenditures. And disclaimer and disclosure requirements survive exacting scrutiny: a substantial relation to a sufficiently important interest, like informing voters."
+      },
+      {
+       "id": "s11",
+       "say": "The story. The Bipartisan Campaign Reform Act of 2002, BCRA, barred corporations from using general treasury funds for express advocacy, or for electioneering communications naming a federal candidate within thirty days of a primary or sixty days of a general election. Corporations could speak only through PACs funded by shareholder and employee donations. Citizens United, a nonprofit corporation, wanted to air Hillary, a film critical of Hillary Clinton, and ads for it. Held: the expenditure ban is unconstitutional. Austin, 1990, and part of McConnell, 2003, are overruled."
+      },
+      {
+       "id": "s12",
+       "say": "The reasoning. First, classic examples of censorship. The law would make it a felony for the Sierra Club, the NRA, or the ACLU to urge votes for or against a candidate in the pre-election window."
+      },
+      {
+       "id": "s13",
+       "say": "Second, PACs are not a substitute. A PAC is a separate association, expensive, and heavily regulated. Fewer than two thousand of millions of corporations have one."
+      },
+      {
+       "id": "s14",
+       "say": "Third, Buckley versus Valeo, 1976, upheld limits on direct contributions, because of the risk of quid pro quo, but struck limits on independent expenditures."
+      },
+      {
+       "id": "s15",
+       "say": "Fourth, Austin's antidistortion rationale is rejected. It would let government ban political speech just because the speaker took the corporate form, muffling the voices that best represent the most significant segments of the economy."
+      },
+      {
+       "id": "s16",
+       "say": "Fifth, disclosure upheld. Ads must state who is responsible and that no candidate authorized them. Anyone spending over ten thousand dollars a year on electioneering communications must file with the FEC. Disclosure imposes no ceiling on speech. And as-applied challenges remain if disclosure would expose contributors to threats, harassment, or reprisals."
+      },
+      {
+       "id": "s17",
+       "say": "The dissent, Justice Stevens. The dispute is about how, not whether, Citizens United could speak: through its multimillion-dollar PAC, or outside the thirty-day window. Corporations cannot vote or run for office, and Congress has limited corporate election spending since the Tillman Act of 1907. And corruption runs along a spectrum: the difference between selling a vote and selling access is a matter of degree, not kind. Politicians know who spends on their behalf."
+      },
+      {
+       "id": "s18",
+       "say": "The aftermath. SpeechNow.org versus FEC, D.C. Circuit en banc, 2010, barred caps on contributions to independent-expenditure committees, super PACs. Outside spending in federal elections rose from five hundred seventy-four million dollars in 2008 to nearly four and a half billion in 2024."
+      },
+      {
+       "id": "s19",
+       "say": "Now the Chapter 13 synthesis. Packingham, government versus user: Internet access protected, overbroad ban fails, standard undecided. Lindke, official versus user: state action only with actual authority plus purporting to use it. NetChoice, government versus platform: content moderation is protected editorial judgment. Murthy, user versus government via platform: must show government coercion caused the takedown. Vullo, government versus third parties: coercing others to suppress speech violates the First Amendment. Forbes, state TV versus candidate: a debate is a nonpublic forum, and a reasonable, viewpoint-neutral exclusion is okay. Citizens United, government versus corporate speakers: the expenditure ban struck, disclosure upheld."
+      },
+      {
+       "id": "s20",
+       "say": "The stretch: influencer AI-filter disclosures. A state requires social media influencers with over one million followers to disclose when they use filters or AI to alter their appearance in paid posts promoting beauty products. The influencers say it compels speech and singles out a category of speakers. The state says it requires factual disclosures to keep consumers, especially teenagers, from being misled. What level of scrutiny? Does it matter that the rule covers only paid endorsements?"
+      },
+      {
+       "id": "s21",
+       "say": "For the state. Paid promotions are commercial speech, and the disclosure is purely factual and uncontroversial, whether the image was altered, and about the advertised product's effect. So Zauderer applies. Preventing deception is the classic substantial interest, per Zauderer and Milavetz, and a short label is unlikely to drown out the ad, per NIFLA and CTIA. Limiting it to paid endorsements helps keep it commercial."
+      },
+      {
+       "id": "s22",
+       "say": "For the influencers. The million-follower threshold is speaker based, as in Sorrell, so it is underinclusive if the goal is preventing deception. Personal posts mixed with promotion may be noncommercial. And the state must show the harm is real, not purely hypothetical, per NIFLA."
+      },
+      {
+       "id": "s23",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s24",
+       "ask": "A state public TV station invites only the two major-party candidates to a debate, and excludes a third-party candidate who is polling at two percent. The station has no objection to her views. Valid?",
+       "answer": "Likely yes, under Forbes. The debate is a nonpublic forum, and exclusion based on an objective lack of public support is reasonable and viewpoint neutral.",
+       "pause": 12
+      },
+      {
+       "id": "s25",
+       "ask": "Congress bars nonprofit corporations from spending their own funds on ads opposing a candidate in the sixty days before an election. Valid after Citizens United?",
+       "answer": "No. Banning independent expenditures for political speech gets strict scrutiny, and the only sufficient interest, quid pro quo corruption, does not justify limits on independent expenditures.",
+       "pause": 12
+      },
+      {
+       "id": "s26",
+       "ask": "Same Congress requires the ads to state who paid for them. Valid?",
+       "answer": "Yes. Disclaimer and disclosure requirements survive exacting scrutiny, a substantial relation to the important interest in informing voters, subject to as-applied challenges for threats or reprisals.",
+       "pause": 10
+      },
+      {
+       "id": "s27",
+       "say": "Recap. Forbes, 1998, Kennedy: a debate is a nonpublic forum; lack of support is a reasonable, viewpoint-neutral criterion. Citizens United, 2010, Kennedy: no ban on corporate independent expenditures; only quid pro quo corruption suffices; Austin overruled; disclosure upheld under exacting scrutiny. Stevens: selling access is a matter of degree."
+      },
+      {
+       "id": "s28",
+       "ask": "Why is a candidate debate a nonpublic rather than a designated forum?",
+       "answer": "A designated forum requires general access for a class of speakers. AETC made candidate-by-candidate decisions, which is selective access.",
+       "pause": 8
+      },
+      {
+       "id": "s29",
+       "ask": "What is the only interest that justifies limits on political spending under Citizens United?",
+       "answer": "Preventing quid pro quo corruption or its appearance, which justifies limits on direct contributions but not independent expenditures.",
+       "pause": 8
+      },
+      {
+       "id": "s30",
+       "ask": "What standard governs disclosure requirements under Citizens United?",
+       "answer": "Exacting scrutiny: a substantial relation to a sufficiently important interest, such as informing voters.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e08",
+     "title": "The Press, Assembly, and Petition Clauses",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Chapter 14 returns to the text. Three clauses, four cases: Houchins, De Jonge, McDonald, and Duryea."
+      },
+      {
+       "id": "s2",
+       "say": "The big picture. Besides speech and religion, the First Amendment protects, one, the freedom of the press; two, the right peaceably to assemble; and three, the right to petition the government for a redress of grievances. The Court treats all three as largely subsumed by its broad free speech doctrine, so few cases turn on them. Freedom of expression is the umbrella term. And a fourth freedom, association, is not in the text at all, but the Court treats it as implicit in the others, because speech is more powerful from a group than from one person."
+      },
+      {
+       "id": "s3",
+       "say": "The rules. Press: members of the press have no greater First Amendment rights than the general public. And neither the press nor the public has a general constitutional right of access to government facilities or records. The exception is access to criminal trials, which have a long tradition of openness."
+      },
+      {
+       "id": "s4",
+       "say": "Assembly: the right to gather peaceably is incorporated against the states and is cognate to speech, so restrictions on protests are usually challenged under both clauses. Only peaceable assemblies are protected."
+      },
+      {
+       "id": "s5",
+       "say": "Petition: the Court treats the Petition Clause as largely encompassed by the Speech Clause."
+      },
+      {
+       "id": "s6",
+       "say": "Why no special press rights? It is hard to say who counts as the press, with bloggers today, and earlier too. And the general speech doctrine already protects the press broadly. Two examples: the near-impossible burden for prior restraints, in the Pentagon Papers case, where the Times and the Post were the defendants; and the actual-malice standard, developed in press cases but protecting everyone."
+      },
+      {
+       "id": "s7",
+       "say": "Access to information depends mostly on federal and state Freedom of Information Acts. They promote good government, but they are not constitutionally required."
+      },
+      {
+       "id": "s8",
+       "say": "Assembly is the only First Amendment right that takes more than one person. Common examples: demonstrations, parades, and picket lines. The rationale: speech is more powerful from an assembled group."
+      },
+      {
+       "id": "s9",
+       "say": "Peaceably. The casebook notes that disputes over the federal response to recent immigration protests have turned on whether protests were peaceful or violent. Speech doctrine also limits suppressing a crowd to prevent violence when police can handle isolated incidents. Arresting rock-throwers is less restrictive than tear-gassing a mostly peaceful crowd. A Chicago federal judge enjoined excessive force against protesters and journalists as chilling First Amendment rights."
+      },
+      {
+       "id": "s10",
+       "say": "Petition's history. Magna Carta, 1215. The English Bill of Rights, 1689. The Declaration of Independence's complaint that repeated petitions to the King went unanswered. And the 1790 antislavery petition to the First Congress, from the Pennsylvania abolition society headed by Benjamin Franklin."
+      },
+      {
+       "id": "s11",
+       "say": "Now the four cases, each described in the casebook text. Houchins versus KQED, 1978. The First Amendment gave the press no right to enter a jail to film. The media have no special right of access to the jail beyond what the public generally has."
+      },
+      {
+       "id": "s12",
+       "say": "De Jonge versus Oregon, 1937. The right of peaceable assembly is incorporated against the states through the Fourteenth Amendment. It is cognate to, meaning related to, free speech and free press, and equally fundamental."
+      },
+      {
+       "id": "s13",
+       "say": "McDonald versus Smith, 1985. The Petition Clause springs from the same ideals as speech, press, and assembly, and the rights are inseparable. Statements in a petition to the President get no greater protection than other expression."
+      },
+      {
+       "id": "s14",
+       "say": "Duryea versus Guarnieri, 2011. Courts should not presume the Speech and Petition Clauses are always equivalent; special Petition Clause concerns might someday call for distinct analysis. But the Court has never identified such a case, so for now, treat petition rights as encompassed by speech rights."
+      },
+      {
+       "id": "s15",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s16",
+       "ask": "A television network demands access to film inside a state prison, a place the public is not allowed. Does the Press Clause give it access?",
+       "answer": "No. Under Houchins, the press has no special right of access beyond what the public has, and there is no general constitutional right of access to government facilities. Criminal trials are the exception.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "ask": "A man writes a letter to the President falsely accusing a rival of crimes, and is sued for libel. Does the Petition Clause give him extra protection?",
+       "answer": "No. Under McDonald versus Smith, statements in a petition to the President get no greater protection than other expression. Ordinary defamation rules apply.",
+       "pause": 10
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Press: no greater rights than the public; no general right of access; criminal trials excepted. Houchins. Assembly: incorporated and cognate to speech; only peaceable assemblies. De Jonge. Petition: encompassed by speech. McDonald and Duryea."
+      },
+      {
+       "id": "s19",
+       "ask": "What is the one exception to the rule that there is no constitutional right of access to government facilities or records?",
+       "answer": "Access to criminal trials, which have a long tradition of openness.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What did De Jonge versus Oregon hold?",
+       "answer": "The right of peaceable assembly is incorporated against the states and is cognate to free speech and press, and equally fundamental.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "What did Duryea add about the Petition Clause?",
+       "answer": "Courts shouldn't presume Speech and Petition are always equivalent, but the Court has never identified a case calling for distinct analysis, so treat petition as encompassed by speech.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e09",
+     "title": "Freedom of association: NAACP v. Alabama, First Choice, and Bonta",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The association and compelled-speech checklist, the rule of expressive association, and the disclosure line of cases."
+      },
+      {
+       "id": "s2",
+       "say": "The checklist. Five steps. One: is the group engaged in expressive association, meaning speech, assembly, petition, or religion? A group formed only to sell cars, run a medical practice, or play soccer is not protected."
+      },
+      {
+       "id": "s3",
+       "say": "Two: how does the law burden it? Three ways. a, directly, by outlawing the group or punishing members. b, indirectly, by compelling disclosure of members or donors who need anonymity: NAACP versus Alabama, and First Choice. Or c, by forcing the group to accept members it does not want: Roberts and Dale."
+      },
+      {
+       "id": "s4",
+       "say": "Three: apply strict scrutiny. A compelling interest, unrelated to suppressing ideas, that cannot be achieved through means significantly less restrictive of association. Under the modern cases the group usually wins if forced inclusion would significantly affect its message, and the Court defers to the group's own account of that message, per Dale."
+      },
+      {
+       "id": "s5",
+       "say": "Four: for a public accommodations law applied to a business, is the business being made to create speech, which is protected under 303 Creative? Or only to sell goods or provide conduct on equal terms, which is regulable?"
+      },
+      {
+       "id": "s6",
+       "say": "Five: is the law really a regulation of conduct with only incidental effects on speech, and are outsiders being added as members, or just given access? That is FAIR."
+      },
+      {
+       "id": "s7",
+       "say": "The rule. The First Amendment protects expressive association: the right to associate in order to engage in activities the First Amendment protects, speech, assembly, petition, and the exercise of religion. It is not in the text, but it is implicit in those rights. Government burdens on expressive association get strict scrutiny. And freedom of association presupposes a freedom not to associate."
+      },
+      {
+       "id": "s8",
+       "say": "The government can burden association in three ways, and any one suffices. One, by penalizing membership in a disfavored group, or withholding benefits because of it. Two, by requiring disclosure of the members of a group seeking anonymity. Three, by interfering with the group's internal affairs, especially forcing it to accept members it does not want."
+      },
+      {
+       "id": "s9",
+       "say": "Two notes. Association is broader than assembly. Membership in the ACLU counts even if you never attend a meeting. That is from Klein's slide. And only expressive association counts. Doctors forming a medical practice, or a group formed to sell cars or play soccer, probably are not protected."
+      },
+      {
+       "id": "s10",
+       "say": "NAACP versus Alabama, 1958. Unanimous, Justice Harlan."
+      },
+      {
+       "id": "s11",
+       "say": "The rule. Compelled disclosure of a group's rank-and-file membership can be an effective restraint on freedom of association. When disclosure is likely to expose members to reprisal and so deter joining, the state needs an overriding, controlling justification, and state action that may curtail association gets the closest scrutiny."
+      },
+      {
+       "id": "s12",
+       "say": "The story. In 1956, Alabama's attorney general sued to stop the NAACP, then active in the Montgomery bus boycott, from operating in the state, and subpoenaed the names and addresses of all its Alabama members and agents. The NAACP produced other records but refused the membership lists. It was held in civil contempt and fined one hundred thousand dollars. Held: reversed. Alabama had not justified the deterrent effect of disclosure."
+      },
+      {
+       "id": "s13",
+       "say": "The reasoning. First, group advocacy. Advocacy, especially of controversial views, is enhanced by group association. The beliefs may be political, economic, religious, or cultural."
+      },
+      {
+       "id": "s14",
+       "say": "Second, privacy in association can be indispensable, particularly for groups with dissident beliefs. The NAACP's uncontroverted showing that past exposure had brought economic reprisal, job loss, threats of physical coercion, and public hostility made the chilling effect plain."
+      },
+      {
+       "id": "s15",
+       "say": "Third, the limits. The NAACP did not claim immunity from investigation, and it did not object to naming its officers and employees. It asserted only its ordinary members' rights."
+      },
+      {
+       "id": "s16",
+       "say": "First Choice Women's Resource Centers versus Davenport, 2026. Nine to nothing, Justice Gorsuch, decided on Article Three standing."
+      },
+      {
+       "id": "s17",
+       "say": "The rule. NAACP versus Alabama is alive and well. A government demand for a group's donor information chills association and inflicts a present First Amendment injury, even if officials promise to keep the information confidential. And every First Amendment right carries a corresponding right to associate."
+      },
+      {
+       "id": "s18",
+       "say": "The story. New Jersey's attorney general, investigating whether First Choice, a nonprofit religious pregnancy-counseling organization, gave false or misleading information about abortion, subpoenaed documents showing its donors' names, phone numbers, addresses, and employers. Held: First Choice had standing. The subpoena injured it by deterring donors from associating with it."
+      },
+      {
+       "id": "s19",
+       "say": "Gorsuch's list of ways government can infringe association. Forcing a group to accept members it does not want. Denying benefits because of the group's message. Punishing people for their affiliations. And compelling disclosure of affiliations."
+      },
+      {
+       "id": "s20",
+       "say": "And the bridge. The casebook notes that the accept-members-it-does-not-want strand usually arises when the government enforces a public accommodations law. And under current doctrine the group very likely wins if admitting members would interfere with its message."
+      },
+      {
+       "id": "s21",
+       "say": "Americans for Prosperity Foundation versus Bonta, 2021, described in First Choice. California's demand for charities' donor information violated the First Amendment even though the attorney general promised to keep it from the public. Demands for private donor information chill association even when disclosure is only to government officials."
+      },
+      {
+       "id": "s22",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s23",
+       "ask": "A state requires every advocacy nonprofit to file a confidential list of its donors with the attorney general, promising not to release it. A nonprofit refuses. Analyze.",
+       "answer": "Under Bonta and First Choice, demands for private donor information chill association even if disclosed only to government officials, and the demand itself is a present injury. The state needs a justification that survives the closest scrutiny.",
+       "pause": 12
+      },
+      {
+       "id": "s24",
+       "ask": "A city requires a car dealership to disclose the names of its customers. The dealership claims freedom of association. Does it have a strong claim?",
+       "answer": "No. A group formed to sell cars is not engaged in expressive association, so it is not protected by that right.",
+       "pause": 10
+      },
+      {
+       "id": "s25",
+       "say": "Recap. Expressive association: implicit, strict scrutiny, includes the freedom not to associate. Three burdens: penalizing membership, compelled disclosure, interfering with internal affairs. NAACP versus Alabama, 1958, Harlan: disclosure of members exposed them to reprisal. First Choice, 2026, Gorsuch: donor demands are a present injury even if confidential. Bonta, 2021: same, even if disclosed only to officials."
+      },
+      {
+       "id": "s26",
+       "ask": "Name the three ways government can burden expressive association.",
+       "answer": "Penalizing membership or withholding benefits because of it; requiring disclosure of members of a group seeking anonymity; interfering with internal affairs, especially forcing it to accept unwanted members.",
+       "pause": 8
+      },
+      {
+       "id": "s27",
+       "ask": "What limits did the NAACP accept in NAACP versus Alabama?",
+       "answer": "It did not claim immunity from investigation and did not object to naming its officers and employees. It asserted only its ordinary members' rights.",
+       "pause": 8
+      },
+      {
+       "id": "s28",
+       "ask": "What did First Choice hold about confidentiality promises?",
+       "answer": "A donor demand chills association and inflicts a present injury even if officials promise to keep the information confidential.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e10",
+     "title": "Forced membership: Roberts v. U.S. Jaycees, Hurley, and Boy Scouts of America v. Dale",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Three cases about forcing a group to include people or messages it does not want. The state wins in Roberts. The group wins in Hurley and Dale."
+      },
+      {
+       "id": "s2",
+       "say": "Roberts versus U.S. Jaycees, 1984. Unanimous on the bottom line, Justice Brennan. O'Connor and Rehnquist concurred in the judgment in relevant part. Chief Justice Burger and Justice Blackmun were recused."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Forcing a group to accept unwanted members intrudes on its internal affairs, but the right of expressive association is not absolute. An infringement is justified by three things, all required. One, a compelling state interest. Two, unrelated to the suppression of ideas. Three, that cannot be achieved through means significantly less restrictive of association. Minnesota's interest in eradicating sex discrimination in public accommodations qualified, and the Jaycees showed no serious burden on the male members' expressive association."
+      },
+      {
+       "id": "s4",
+       "say": "The story. The Jaycees, founded in 1920 as the Junior Chamber of Commerce, limited regular membership to men aged eighteen to thirty-five. Members took courses in public speaking and personal finance, and joined charity, sports, and public-health programs. When the Minneapolis and St. Paul chapters admitted women, the national group moved to revoke their charters. The Minnesota Supreme Court held the Jaycees a place of public accommodation under the state Human Rights Act, which bars sex discrimination. Held: applying the Act did not violate the First Amendment."
+      },
+      {
+       "id": "s5",
+       "say": "Public accommodations history. State laws predated the federal Civil Rights Act of 1875. After the Court struck that Act in the Civil Rights Cases, 1883, more states adopted them, and they were the main protection for disadvantaged groups until Congress returned to the field in 1957. Minnesota added sex in 1973."
+      },
+      {
+       "id": "s6",
+       "say": "O'Connor's concurrence, now the influential view. The Court should first ask whether the group is an expressive association at all. A group engaged predominantly in protected expression gets strong protection, for both its message and its choice of members. A commercial association gets only rational-basis review of its membership; a shopkeeper has no right to deal only with one sex. And the Jaycees, a chamber of commerce that practices solicitation and management, was mainly commercial."
+      },
+      {
+       "id": "s7",
+       "say": "Why it matters now. The casebook, quoting the Free Speech Center, says Dale reinvigorated expressive association and implicitly rejected Brennan's approach in favor of O'Connor's. So the threshold no-serious-burden finding is what kept Roberts good law."
+      },
+      {
+       "id": "s8",
+       "say": "Hurley versus Irish-American Gay, Lesbian and Bisexual Group of Boston, 1995. Unanimous. Described in the casebook commentary and Klein's slides."
+      },
+      {
+       "id": "s9",
+       "say": "The rule. A parade is expression, and a speaker's choice not to propound a particular point of view is presumed to be beyond the government's power to control. Massachusetts could not use its public accommodations law to make the private organizers of Boston's St. Patrick's Day parade include a group marching under a gay-pride banner."
+      },
+      {
+       "id": "s10",
+       "say": "Boy Scouts of America versus Dale, 2000. Five to four, Chief Justice Rehnquist, joined by O'Connor, Scalia, Kennedy, and Thomas. Stevens, Souter, Ginsburg, and Breyer dissented."
+      },
+      {
+       "id": "s11",
+       "say": "The rule. Forced inclusion of an unwanted person violates expressive association if three things are true, all required. One, the group engages in expressive association. It need not be an advocacy group; transmitting a system of values counts. Two, the person's presence would significantly affect the group's ability to advocate its viewpoints, a question on which courts accept the group's own account of its message. Three, the state's interest does not justify so severe an intrusion. New Jersey could not make the Boy Scouts readmit an assistant scoutmaster who was a gay rights activist."
+      },
+      {
+       "id": "s12",
+       "say": "The story. James Dale, a former Eagle Scout and assistant scoutmaster, had his adult membership revoked when the Boy Scouts learned he was gay and a gay rights activist. The New Jersey Supreme Court held the state's public accommodations law required his readmission. Held: that application violated the Scouts' right of expressive association."
+      },
+      {
+       "id": "s13",
+       "say": "The reasoning. First, deference. The Scouts said homosexual conduct conflicts with being morally straight and clean. The Court accepted that assertion without further inquiry and rejected the state court's finding that the policy contradicted the Scouts' own goals. Courts may not reject a group's values as unwise, irrational, or internally inconsistent. A group need not trumpet its views, and tolerating internal dissent does not forfeit protection."
+      },
+      {
+       "id": "s14",
+       "say": "Second, the Hurley parallel. The parade was not about sexual orientation either, but the organizers could still exclude a contingent. Likewise the Scouts may choose to send one message and not another."
+      },
+      {
+       "id": "s15",
+       "say": "Third, public accommodations laws have expanded, from inns, trains, restaurants, and hotels to membership groups like the Scouts, and to more protected classes, beyond those that get heightened equal protection scrutiny. So conflicts with association have grown. Roberts was distinguished because the Jaycees showed no serious burden."
+      },
+      {
+       "id": "s16",
+       "say": "Fourth, Stevens's dissent stressed changing public attitudes toward homosexuality. The majority answered that growing acceptance of an idea is all the more reason to protect those who disagree."
+      },
+      {
+       "id": "s17",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s18",
+       "ask": "A state requires a private business-networking club, whose activities are mostly sales leads and management training, to admit women. The club claims expressive association. What does Roberts suggest?",
+       "answer": "The state likely wins. Under O'Connor's view the club is mainly commercial, so it gets little protection for its membership choices, and as in Roberts, the compelling interest in ending sex discrimination, with no serious burden on expression, justifies the law.",
+       "pause": 12
+      },
+      {
+       "id": "s19",
+       "ask": "A religious student group whose stated mission is promoting its faith's teachings is ordered by a state law to accept as a leader someone who publicly campaigns against those teachings. What does Dale suggest?",
+       "answer": "The group likely wins. It is an expressive association, and courts accept its own account that the person's presence would significantly affect its message. The state's interest likely does not justify so severe an intrusion.",
+       "pause": 12
+      },
+      {
+       "id": "s20",
+       "say": "Recap. Roberts, 1984, Brennan: compelling interest, unrelated to ideas, no significantly less restrictive means; the Jaycees showed no serious burden; O'Connor's commercial-versus-expressive threshold now dominates. Hurley, 1995, unanimous: a parade is expression. Dale, 2000, five to four, Rehnquist: expressive group, significant effect on its message as it describes it, intrusion not justified."
+      },
+      {
+       "id": "s21",
+       "ask": "State the Roberts test for justifying an infringement on expressive association.",
+       "answer": "A compelling state interest, unrelated to the suppression of ideas, that cannot be achieved through means significantly less restrictive of association.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "What was O'Connor's threshold question in Roberts?",
+       "answer": "Whether the group is an expressive association at all. A predominantly expressive group gets strong protection, a commercial one only rational basis for its membership.",
+       "pause": 8
+      },
+      {
+       "id": "s23",
+       "ask": "State the three elements of a Dale claim.",
+       "answer": "The group engages in expressive association, the person's presence would significantly affect its ability to advocate its viewpoints as the group describes them, and the state's interest does not justify so severe an intrusion.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e11",
+     "title": "Compelled speech, again: Rumsfeld v. FAIR and 303 Creative v. Elenis",
+     "minutes": 11,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The compelled-speech rule as the course ends it. Then FAIR, where the government wins, 303 Creative, where the designer wins, the synthesis, and the wedding photographer."
+      },
+      {
+       "id": "s2",
+       "say": "The rule. Outside the commercial-speech context, government almost never may compel private speech. It may not make a person speak its preferred message: Barnette, Wooley, NIFLA. Or force a speaker to include others' ideas in its own expression: Hurley. But a law that regulates conduct with only incidental effects on speech, or that gives outsiders access without making them members, does not compel speech or association. That is FAIR."
+      },
+      {
+       "id": "s3",
+       "say": "Rumsfeld versus Forum for Academic and Institutional Rights, 2006. Unanimous, Chief Justice Roberts. Justice Alito was recused."
+      },
+      {
+       "id": "s4",
+       "say": "The rule. Because Congress could impose the Solomon Amendment's equal-access requirement directly, conditioning federal funds on it is not an unconstitutional condition. And the law regulates conduct, not speech, for three reasons. One, any compelled speech, like sending a scheduling e-mail for the military recruiter, is merely incidental to the conduct regulation. Two, hosting recruiters is not inherently expressive like a parade, so it does not interfere with the schools' message, and nobody would think the schools endorse the recruiters. Three, it does not burden association, because recruiters are outsiders on campus briefly, not members of the school."
+      },
+      {
+       "id": "s5",
+       "say": "The story. Law schools that opposed Don't Ask, Don't Tell, which required discharging service members who said they were gay, barred military recruiters under their nondiscrimination policies. Congress responded with the Solomon Amendment. If any part of a university denied military recruiters access equal to other recruiters, the whole university lost certain federal funds. FAIR, an association of law schools and faculties, sued, and the Third Circuit ordered a preliminary injunction. Held: reversed. No First Amendment violation."
+      },
+      {
+       "id": "s6",
+       "say": "The reasoning. The schools remain free to speak. They may say whatever they like about the military's policy while keeping their funds, and students and faculty may associate to protest. Comparing a recruiting e-mail to a compelled pledge or a compelled Live Free or Die plate, the Court said, trivializes the freedoms protected in Barnette and Wooley. And contrast Dale: the Solomon Amendment does not force a school to accept members it does not want."
+      },
+      {
+       "id": "s7",
+       "say": "303 Creative versus Elenis, 2023. Six to three, Justice Gorsuch, joined by Chief Justice Roberts and Justices Thomas, Alito, Kavanaugh, and Barrett. Justice Sotomayor dissented, joined by Kagan and Jackson."
+      },
+      {
+       "id": "s8",
+       "say": "The rule. A state may not apply its public accommodations law to compel a person to create speech she does not believe. Where the parties stipulated that custom wedding websites are original, expressive, pure speech, Colorado could not force Lorie Smith to design sites celebrating same-sex weddings. Being paid, and working through a company she alone owns, does not change that. Public accommodations laws remain valid across a vast array of ordinary goods and services. But when one collides with the Constitution, the Constitution prevails."
+      },
+      {
+       "id": "s9",
+       "say": "The story. Smith's business, 303 Creative, offers website and graphic design. She planned to add wedding websites telling each couple's story, with her company's name on every site. She will serve customers of any sexual orientation, but she will not create content that contradicts her religious belief that marriage is between one man and one woman, whoever orders it. Colorado's anti-discrimination law forbids businesses open to the public from discriminating by sexual orientation. Held: applying the law to compel her speech violates the Free Speech Clause."
+      },
+      {
+       "id": "s10",
+       "say": "The lineage Gorsuch traced: Brandeis in Whitney, speech as an end and a means; Barnette's fixed star; Wooley; NIFLA; Hurley; Dale; Snyder; Counterman; and the Skokie march. A commitment to speech for only some messages and some speakers is no commitment at all."
+      },
+      {
+       "id": "s11",
+       "say": "The compelling interest is acknowledged. States have a compelling interest in eliminating discrimination in public accommodations, per Roberts versus U.S. Jaycees, and protecting gay persons is unexceptional, per Masterpiece Cakeshop. But Hurley and Dale show such laws cannot be applied to compel expression."
+      },
+      {
+       "id": "s12",
+       "say": "Sotomayor's dissent. For the first time, the Court gives a business open to the public a constitutional right to refuse service to a protected class. The law targets the conduct of discrimination, not speech, and discrimination has never been protected expression. She quoted Masterpiece Cakeshop's general rule that religious and philosophical objections do not let businesses deny protected persons equal access under neutral and generally applicable public accommodations laws."
+      },
+      {
+       "id": "s13",
+       "say": "The casebook's questions. What exactly is the holding? Could a state make a baker sell an undecorated wedding cake to a same-sex couple, and how is that different from a custom website? The answer in your outline: the opinion rests on the stipulation that every website is the designer's own expressive creation. Selling an off-the-shelf product on equal terms is ordinary conduct."
+      },
+      {
+       "id": "s14",
+       "say": "The synthesis: association and compelled speech. NAACP versus Alabama, 1958: demanded member names; the group wins unanimously; reprisal, chill, no controlling justification. First Choice, 2026: subpoenaed donor information; standing, nine to nothing; donor demands chill even if confidential. Roberts, 1984: required admitting women; the state wins; compelling interest, no serious burden."
+      },
+      {
+       "id": "s15",
+       "say": "Hurley, 1995: required a parade to include a contingent; the organizers win unanimously; a parade is expression. Dale, 2000: required readmitting the assistant scoutmaster; the group wins five to four; significant burden on its message as it describes it. FAIR, 2006: equal access for recruiters; the government wins unanimously; conduct, incidental speech, recruiters are not members. 303 Creative, 2023: required a designer to make same-sex wedding websites; the designer wins six to three; compelled creation of pure speech; pay and corporate form are irrelevant."
+      },
+      {
+       "id": "s16",
+       "say": "The pattern. Compelled disclosure and compelled membership or message usually lose for the government under strict scrutiny. Compelled access, or ordinary conduct with incidental speech effects, usually wins: FAIR, and selling ordinary goods on equal terms. And threshold questions decide most cases. Is the group expressive, or mainly commercial, per O'Connor in Roberts? Is the regulated activity speech or conduct?"
+      },
+      {
+       "id": "s17",
+       "say": "The stretch: the wedding photographer. After 303 Creative, a district court ruled largely for a wedding photographer who challenged New York's public accommodations law, holding wedding photography expressive and that New York could not compel her to create content celebrating same-sex weddings. Does that follow directly from 303 Creative, and what is the counterargument?"
+      },
+      {
+       "id": "s18",
+       "say": "Where is the line? A stationer printing invitations, for same-sex or interracial couples. A hair stylist. A make-up artist. A florist. A caterer. A limo driver. Ask how much each creates an original, customized message the creator is identified with, like the photographer, the designer, perhaps the stationer, versus providing a service or product that is ordinary conduct, like the limo driver or the caterer. Then ask how to weigh First Amendment values against the state's interest in preventing discrimination."
+      },
+      {
+       "id": "s19",
+       "say": "Barnette's limit. Justice Jackson stressed that the Barnette children's freedom did not collide with anyone else's rights; they only wanted to stand silently. In 303 Creative, the speaker's right was set against customers' interest in equal service. Should that distinction matter?"
+      },
+      {
+       "id": "s20",
+       "say": "And test your principles by swapping facts. Imagine a designer who refuses to create racist or homophobic content, or a stylist who refuses a customer wearing a shirt with racist slogans. Does your view of when businesses must serve everyone change?"
+      },
+      {
+       "id": "s21",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s22",
+       "ask": "A state requires a public university that accepts state funds to let every lawful employer, including one the faculty dislikes, use its career-fair tables on equal terms. The faculty claims compelled speech. Likely result?",
+       "answer": "Government likely wins, like FAIR. Equal access regulates conduct, any speech is incidental, hosting recruiters is not inherently expressive, and the employers are outsiders, not members.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "ask": "A bakery that sells standard, undecorated cakes from a display case refuses to sell one to a same-sex couple, citing 303 Creative. Likely result?",
+       "answer": "The state likely wins. 303 Creative rested on the stipulation that each custom website was the designer's own expressive creation. Selling an off-the-shelf product on equal terms is ordinary conduct that a public accommodations law can regulate.",
+       "pause": 12
+      },
+      {
+       "id": "s24",
+       "say": "Recap. FAIR, 2006, Roberts, unanimous: equal access is conduct; speech incidental; recruiters are not members; comparing it to Barnette trivializes Barnette. 303 Creative, 2023, Gorsuch, six to three: no compelling a person to create pure speech; the stipulation matters; Sotomayor dissented. The pattern: disclosure and forced message or membership lose; access and conduct win."
+      },
+      {
+       "id": "s25",
+       "ask": "Give FAIR's three reasons the Solomon Amendment regulates conduct, not speech.",
+       "answer": "Any compelled speech is merely incidental; hosting recruiters is not inherently expressive and no one would think the schools endorse them; and recruiters are outsiders, not members, so association is not burdened.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "What stipulation was central to 303 Creative?",
+       "answer": "That custom wedding websites are original, expressive pure speech, each the designer's own creation.",
+       "pause": 8
+      },
+      {
+       "id": "s27",
+       "ask": "What was Sotomayor's main argument in the 303 Creative dissent?",
+       "answer": "For the first time the Court gives a business open to the public a right to refuse service to a protected class; the law targets the conduct of discrimination, not speech.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e12",
+     "title": "Full review, part 1: every Religion Clauses test",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The full-course review begins. This episode: every Religion Clauses rule, in one pass. Then the speech tests. Then the order of analysis and the essay. Answer the questions out loud as we go."
+      },
+      {
+       "id": "s2",
+       "say": "Start with the foundation. Barnette: no compelled affirmation of belief, by word or act. Teach, do not compel. A speech case, protecting secular objectors too. Overruled Gobitis."
+      },
+      {
+       "id": "s3",
+       "say": "Free Exercise, the baseline. Smith: no exemption from a neutral, generally applicable law. Belief is absolutely protected; conduct is protected from targeting."
+      },
+      {
+       "id": "s4",
+       "say": "Not neutral or not generally applicable, six ways. Gerrymandered exemptions, Lukumi. Hostility in application, Masterpiece. A discretionary exemption system, Fulton, even if unused. Any comparable secular activity treated better, judged by risk, Tandon. An admitted religious motive, Kennedy. Exclusion from a public benefit because of religious character, Trinity Lutheran, Espinoza, and Carson."
+      },
+      {
+       "id": "s5",
+       "say": "Then strict scrutiny: an interest of the highest order, narrowly tailored, judged as to this exemption. The government almost always loses."
+      },
+      {
+       "id": "s6",
+       "say": "Wrinkle One: a substantial interference with parents' religious upbringing of their children gets strict scrutiny even under a neutral, generally applicable law. Yoder and Mahmoud. Factors: the beliefs, the curriculum, the children's age, the context."
+      },
+      {
+       "id": "s7",
+       "say": "Wrinkle Two: government may disfavor religion only when necessary to avoid an Establishment Clause violation, not for extra separation. Carson."
+      },
+      {
+       "id": "s8",
+       "say": "The Establishment Clause. After Kennedy, history and tradition, and a bar on coercion. Lemon and endorsement are gone. What is forbidden: an official religion, coercing belief, benefits only to religious entities, favoring one sect, and indoctrinating in public schools. School-sponsored prayer is out: Engel, Schempp, Wallace, McCollum, Edwards. Private religious expression is protected: Kennedy."
+      },
+      {
+       "id": "s9",
+       "say": "Funding. Zelman permits aid through genuine, independent private choice. The trilogy requires inclusion once the state subsidizes private entities. A state may end the program, or keep public schools secular."
+      },
+      {
+       "id": "s10",
+       "say": "Statutes. RFRA restores strict scrutiny for substantial burdens, against the federal government only after Boerne. RLUIPA binds the states for land use and prisoners, upheld in Cutter. Hobby Lobby shows accommodation's costs to third parties. And longstanding displays and short legislative prayers are generally allowed on history, like Van Orden."
+      },
+      {
+       "id": "s11",
+       "say": "Now test yourself."
+      },
+      {
+       "id": "s12",
+       "ask": "A county gives grants for roof repairs to all nonprofits except churches. What result, and why?",
+       "answer": "Unconstitutional under the Trinity Lutheran line. Excluding otherwise eligible recipients because of religious character triggers strict scrutiny, and an interest in extra separation is not compelling.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "A state bans door-to-door solicitation but exempts girl scout cookie sales and political canvassing. A religious group is cited. Which Religion Clauses doctrine helps it?",
+       "answer": "Tandon and Lukumi. Favoring comparable secular activity, judged by risk, or gerrymandered exemptions, defeats general applicability, so strict scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "In Mahmoud, the dissent said Barnette protects only what?",
+       "answer": "Against compelled declaration of belief. Mere exposure is not a burden.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "A public school teacher leads her third-grade class in a daily prayer. Is Kennedy versus Bremerton a defense?",
+       "answer": "No. Kennedy protected brief, quiet, personal prayer with no student pressure. A teacher leading young students in prayer is school-sponsored coercion.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "What does Hobby Lobby illustrate?",
+       "answer": "Accommodation under RFRA has costs to third parties, like employees who lost contraceptive coverage.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e13",
+     "title": "Full review, part 2: every free speech test",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Every free speech test in the course, in the order you would meet them on a problem."
+      },
+      {
+       "id": "s2",
+       "say": "The tiers. Content based: strict scrutiny, meaning a compelling interest, actually necessary, by the least restrictive means. Viewpoint based: strict scrutiny, even inside an unprotected category. Content neutral: intermediate scrutiny."
+      },
+      {
+       "id": "s3",
+       "say": "Two intermediate tests to keep straight. Ward, for time, place, and manner: narrowly tailored to a significant interest, ample alternative channels, and narrowly tailored means not substantially broader than necessary. O'Brien, for expressive conduct: an important or substantial interest, unrelated to suppressing expression, with an incidental restriction no greater than essential. And Paxton's version: important interests, unrelated to suppressing speech, not burdening substantially more speech than necessary."
+      },
+      {
+       "id": "s4",
+       "say": "Compelled speech. Barnette, Wooley, NIFLA, Hurley, 303 Creative. Outside commercial speech, almost never allowed. But FAIR: conduct with incidental speech, or access without membership, is not compelled speech."
+      },
+      {
+       "id": "s5",
+       "say": "The unprotected categories, narrowly defined. Incitement: Brandenburg, directed to inciting imminent lawless action and likely to produce it. Fighting words: Chaplinsky, personal insults likely to provoke immediate attack, nothing upheld since 1942, and no topic subsets, per R.A.V. No heckler's veto: Cox and Edwards."
+      },
+      {
+       "id": "s6",
+       "say": "True threats: a serious expression of intent to commit unlawful violence, plus at least recklessness, Counterman. Speech integral to crime: the crime itself, offers and solicitations, aiding and concealing, Williams and Paladin. Obscenity: Miller's three prongs. Child pornography: Ferber, real children only, not Free Speech Coalition's virtual images. Defamation within the Sullivan limits. Fraud. And no new categories: Stevens and Alvarez, and Brown for violence."
+      },
+      {
+       "id": "s7",
+       "say": "Facial attacks. Overbreadth: substantial protected speech relative to the legitimate sweep, realistic applications, a lopsided ratio, after construing the statute, Stevens versus Hansen. Vagueness: Due Process, fair notice or seriously discriminatory enforcement, Williams. Prior restraints: a heavy presumption, Near and the Pentagon Papers."
+      },
+      {
+       "id": "s8",
+       "say": "Immoral speech. No shielding adults except obscenity: Bolger and Cohen. Pacifica's narrow broadcast exception. Renton's secondary effects for adult businesses. Kids: Ginsberg and Paxton for material obscene to minors, but Brown for violence, and Ashcroft Two's filters under strict scrutiny."
+      },
+      {
+       "id": "s9",
+       "say": "Speech torts. The six-row table: public official, Sullivan, actual malice; public figure, Butts, actual malice; private plaintiff, public concern, Gertz, negligence for liability, actual malice for presumed or punitive; private concern, Dun and Bradstreet, presumed and punitive without actual malice, strict liability open. IIED: Hustler, false fact plus actual malice; Snyder, public concern in a public place. Truth lawfully obtained: Florida Star and Bartnicki. Zacchini: the entire act."
+      },
+      {
+       "id": "s10",
+       "say": "Commercial speech. Restrictions: Central Hudson's four prongs, with no paternalism toward adults, 44 Liquormart, tailoring for kids, Lorillard, heightened scrutiny for content- and speaker-based burdens, Sorrell, and the rare upheld rule, Florida Bar. Disclosures: Zauderer, purely factual and uncontroversial, about the seller's own product, reasonably related to a substantial interest, not unjustified or unduly burdensome, with NIFLA's limits and CTIA's health and safety."
+      },
+      {
+       "id": "s11",
+       "say": "Government capacities. Government speech: Shurtleff's history, perception, and control, with Summum, Walker, Tam, and the limit in Vullo. Funding: Rust defines the program; Velazquez and USAID One forbid reaching beyond it or capturing private speech. Forums: traditional, designated, limited, nonpublic, with Perry, ISKCON, Rosenberger, and no forum for government speech, Walker. Employees: Pickering, Garcetti, Lane. Schools: Tinker, Fraser, Hazelwood, Mahanoy."
+      },
+      {
+       "id": "s12",
+       "say": "New frontiers. Social media: Packingham, Lindke, NetChoice, Murthy. Elections: Forbes and Citizens United. The press, assembly, and petition: no special rights, De Jonge, Houchins, McDonald, Duryea. Association: NAACP, First Choice, Bonta, Roberts, Hurley, Dale."
+      },
+      {
+       "id": "s13",
+       "say": "Test yourself."
+      },
+      {
+       "id": "s14",
+       "ask": "A city bans signs on public sidewalks criticizing the police. Name the forum, the type of rule, and the tier.",
+       "answer": "A traditional public forum. A viewpoint-based rule. Strict scrutiny, and it almost certainly fails.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "A man posts online, I'm going to kill my boss tomorrow, and testifies he was venting and gave no thought to how it would be read. Is a conviction on an objective standard valid?",
+       "answer": "No. Counterman requires at least recklessness: conscious disregard of a substantial risk the words would be seen as threatening.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "A state requires grocery stores to post signs urging customers to vote yes on a ballot measure. Which test, and what result?",
+       "answer": "Not Zauderer, because it is not factual information about the seller's own product and takes a side on a controversy. Compelled speech under Barnette, Wooley, and NIFLA, so heightened scrutiny, which it likely fails.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "A school district fires a teacher for a private Facebook post criticizing the governor's tax plan. Which test?",
+       "answer": "Pickering as refined by Garcetti. She spoke as a citizen on a matter of public concern, so the district needs an adequate justification.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "A public university's student-activity fee funds all student groups except those with a socialist perspective. Which case?",
+       "answer": "Rosenberger. A limited public forum, and excluding a viewpoint fails.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e14",
+     "title": "The order of analysis, and how to write the thirty-minute essay",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The master order of analysis for a free-speech problem. The master order for a Religion Clauses problem. And how to write your thirty-minute short essay."
+      },
+      {
+       "id": "s2",
+       "say": "The free-speech order of analysis. It is the speech checklist, with the later chapters slotted in. Ten steps. Count them."
+      },
+      {
+       "id": "s3",
+       "say": "Step one: government action. Is the actor the government? Private platforms, private universities, and private employers are not bound. For an official's social media, apply Lindke: actual authority, and purporting to use it."
+      },
+      {
+       "id": "s4",
+       "say": "Step two: what capacity? Regulator, or one of the nonregulatory capacities: speaker, funder, property owner, employer, school. If the government is speaking, Shurtleff's three factors. If funding, Rust versus Velazquez and USAID One. If property, identify the forum. If employer, Pickering and Garcetti. If school, Tinker, Hazelwood, Mahanoy."
+      },
+      {
+       "id": "s5",
+       "say": "Step three: is it speech? Words, images, and expressive conduct, meaning intent to convey a message likely to be understood. If the law regulates conduct with only incidental effects, think O'Brien or FAIR."
+      },
+      {
+       "id": "s6",
+       "say": "Step four: is it compelled speech? Barnette and Wooley; for commercial disclosures, Zauderer; for forced inclusion, Hurley, Dale, and 303 Creative."
+      },
+      {
+       "id": "s7",
+       "say": "Step five: classify the rule. Quote the specific words that make it content based or viewpoint based. Content neutral, content based, or viewpoint based. Remember Mosley, Vidal, Chiles, and Eichman's lesson that facially neutral words can reveal concern with the message."
+      },
+      {
+       "id": "s8",
+       "say": "Step six: is the speech in an unprotected category, defined narrowly? Incitement, fighting words, true threats, speech integral to crime, obscenity, child pornography, defamation within limits, fraud. And remember R.A.V.: no subsets within a category. And Stevens: no new categories."
+      },
+      {
+       "id": "s9",
+       "say": "Step seven: is it a special category with its own test? Commercial speech, Central Hudson. Immoral speech aimed at kids, Ginsberg and Paxton, or Brown. Adult businesses, Renton. A speech tort, the Sullivan line. Elections, Citizens United."
+      },
+      {
+       "id": "s10",
+       "say": "Step eight: apply the tier. Strict scrutiny for content- or viewpoint-based rules: compelling interest, actually necessary, least restrictive means, and ask whether counterspeech would do. Intermediate for neutral rules: Ward or O'Brien."
+      },
+      {
+       "id": "s11",
+       "say": "Step nine: facial attacks. Overbreadth, after construing the statute, Hansen. Vagueness, Williams. And prior restraint, if the government acts before the speech."
+      },
+      {
+       "id": "s12",
+       "say": "Step ten: the bottom line, and why. And in the courtroom spirit of Professor Klein's practice tip: where the doctrinal box is unclear, argue that your side wins under any characterization."
+      },
+      {
+       "id": "s13",
+       "say": "Now the Religion Clauses order of analysis. Seven steps."
+      },
+      {
+       "id": "s14",
+       "say": "Step one: identify the clause. Is the claimant asking for an exemption or equal treatment, Free Exercise? Or attacking government support for religion, Establishment? Many problems raise both, like Kennedy and Carson. Remember the clauses are complementary."
+      },
+      {
+       "id": "s15",
+       "say": "Step two, Free Exercise: is there a sincere religious practice the government burdens? Beliefs need not be logical or comprehensible to others, per Lukumi."
+      },
+      {
+       "id": "s16",
+       "say": "Step three: is the law neutral and generally applicable? Run all six ways it can fail: Lukumi, Masterpiece, Fulton, Tandon, Kennedy, and the Carson trilogy."
+      },
+      {
+       "id": "s17",
+       "say": "Step four: if neutral and generally applicable, Smith says no exemption, unless Wrinkle One applies: a Yoder or Mahmoud burden on the religious upbringing of children."
+      },
+      {
+       "id": "s18",
+       "say": "Step five: otherwise, strict scrutiny, judged as to this claimant, per Fulton. And ask whether the government's defense is Wrinkle Two: is disfavoring religion actually necessary to avoid an Establishment Clause violation, or is it just extra separation, which Carson rejects?"
+      },
+      {
+       "id": "s19",
+       "say": "Step six, Establishment: apply history and tradition, and coercion, from Kennedy. In public schools, apply the strict line of Engel through Edwards, while protecting private religious expression. For funding, Zelman's private choice, and the trilogy's required inclusion. For displays, Van Orden's history."
+      },
+      {
+       "id": "s20",
+       "say": "Step seven: statutes. If the federal government is the actor, consider RFRA. If a state, for land use or prisoners, RLUIPA. And then, for any speech overlay, Barnette: compelled affirmation is a speech problem, protecting secular objectors too."
+      },
+      {
+       "id": "s21",
+       "say": "Now the thirty-minute short essay. Here is a method that uses only what this course has taught you."
+      },
+      {
+       "id": "s22",
+       "say": "Minute zero to five: read the facts twice, and outline. Name every actor, mark the government action, and underline the words of the challenged rule. The outline tip says to quote the specific words that make a law content based or viewpoint based. Do it on the page."
+      },
+      {
+       "id": "s23",
+       "say": "Minutes five to twenty-five: write issue by issue, in the order of analysis. For each issue, name the doctrine using the case as shorthand, the way the casebook advises: under Brandenburg, under Counterman, the Central Hudson test. State the test, elements counted. Then apply it to the facts, element by element."
+      },
+      {
+       "id": "s24",
+       "say": "Use the most recent case on each doctrine. The casebook stresses it: the Court refines and sometimes overrules earlier cases. So cite Kennedy, not Lemon. Paxton alongside Ashcroft Two. Counterman for threats. Chiles and Vidal for viewpoint. Lindke for officials online. First Choice for donor demands."
+      },
+      {
+       "id": "s25",
+       "say": "Argue both sides on the close issues. The stretch exercises all model this: the government's best argument, the challenger's best argument, then the likely answer and why. Use the analogies and distinctions from the synthesis tables. Like Kennedy, unlike Mahmoud, because of age. Like Shurtleff, unlike Walker, because of control."
+      },
+      {
+       "id": "s26",
+       "say": "Minutes twenty-five to thirty: conclude each issue, and check for a missed issue. The usual misses: a facial attack, overbreadth or vagueness; a prior restraint; a compelled-speech angle; a forum question; a Religion Clauses overlay; or a dissent's argument you can use for the other side."
+      },
+      {
+       "id": "s27",
+       "say": "Three final tips. One: always state the tier of scrutiny, and why it applies. Two: always say why the Court adopted the rule; the course asks you to know the reasons, like breathing space, chilling, distrust of government, and counterspeech. Three: if a fact pattern mirrors a dissent's version of the facts, as in Kennedy, say so and argue it."
+      },
+      {
+       "id": "s28",
+       "ask": "What is the first step in any free-speech analysis?",
+       "answer": "Government action. Private actors are not bound.",
+       "pause": 8
+      },
+      {
+       "id": "s29",
+       "ask": "On a Religion Clauses problem, what do you do after finding the law is neutral and generally applicable?",
+       "answer": "Apply Smith, no exemption, unless Wrinkle One, a Yoder or Mahmoud burden on children's religious upbringing, triggers strict scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s30",
+       "ask": "What does the casebook say about which case to cite for a doctrine?",
+       "answer": "Know and cite the most recent case on each doctrine, since the Court refines and sometimes overrules earlier cases.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d5-e15",
+     "title": "Final cumulative quiz",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "The final cumulative quiz. Twenty questions, every chapter. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "What phrase from Brandeis's Whitney concurrence names the remedy for bad speech?",
+       "answer": "The remedy for evil counsels is good ones. Counterspeech, not coerced silence.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "A state lets its health director grant individual exemptions from a vaccination rule for, quote, good reason. It denies a religious exemption. What case, and what scrutiny?",
+       "answer": "Fulton. A discretionary exemption system defeats general applicability, so strict scrutiny, judged as to this claimant.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "A state bans any lie about one's military record, anywhere. Valid?",
+       "answer": "No, under Alvarez. There is no general exception for false statements; it targets falsity and nothing more.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "A law bans encouraging illegal entry. A defendant who ran a fraudulent scheme argues it is overbroad because of advocacy. Which case, and what result?",
+       "answer": "Hansen. Encourage is a criminal-law term of art meaning solicitation and facilitation, so there is no lopsided ratio. Not overbroad.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "Under Brandenburg, is advocating violent revolution someday protected?",
+       "answer": "Yes. Abstract advocacy without imminence is protected.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "What does Hustler v. Falwell require of a public figure suing for IIED?",
+       "answer": "A false statement of fact made with actual malice.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "Name the Central Hudson prong most often failed in the cases.",
+       "answer": "Prong four, not more extensive than necessary, as in Central Hudson, 44 Liquormart, and Lorillard.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "What does Zauderer allow?",
+       "answer": "Required disclosure of purely factual and uncontroversial information about the seller's own terms, reasonably related to a substantial interest, and not unjustified or unduly burdensome.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "A city requires a permit for any parade, with denial only for specific, objective reasons subject to judicial review. Valid?",
+       "answer": "Yes, under Thomas versus Chicago Park District, as a content-neutral permit scheme with adequate standards.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "Why was the federal flag statute in Eichman not content neutral?",
+       "answer": "Its verbs connote disrespect, and its exemption for disposing of worn or soiled flags reveals concern with the flag's symbolic value.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "Is a city's choice of monuments for its park government speech?",
+       "answer": "Yes. Pleasant Grove City versus Summum.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "Can the government condition a grant on the recipient adopting its policy on a public issue?",
+       "answer": "No. USAID One. That defines the recipient, not the program.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "In which forum may government draw distinctions by subject matter and speaker identity, so long as reasonable and not suppressing views?",
+       "answer": "A nonpublic forum. Perry.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "A deputy district attorney writes an internal memo as part of his job and is disciplined. Protected?",
+       "answer": "No. Garcetti: speech pursuant to official duties is not citizen speech.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "Under Tinker, is undifferentiated fear of disturbance enough to restrict student speech?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "A city manager blocks a critic on a page labeled personal that he uses to post about his family. State action?",
+       "answer": "Likely not under Lindke. He must have actual authority to speak for the city on the matter and purport to use it, and a personal label creates a heavy presumption the posts are personal.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "Does a state's ban on platforms removing posts based on viewpoint survive NetChoice?",
+       "answer": "No. Curation is protected editorial judgment, and rebalancing the speech market is not a valid interest.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What is the only interest that justifies limits on campaign contributions under Citizens United?",
+       "answer": "Preventing quid pro quo corruption or its appearance.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "Do the press have greater rights of access to a jail than the public?",
+       "answer": "No. Houchins versus KQED.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "Why did the Jaycees lose but the Boy Scouts win?",
+       "answer": "The Jaycees showed no serious burden on their expression and were mainly commercial. In Dale, the Scouts were an expressive association, and readmitting Dale would significantly affect their message as they described it.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "say": "That is the course. Five days, fourteen chapters, every test and every case in your outline. Before December 16, replay any episode whose recall questions you missed, and run the two orders of analysis out loud once more. You are ready. Good luck on the final."
       }
      ]
     }
