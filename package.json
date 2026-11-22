@@ -10,7 +10,8 @@
     "dev:games": "node scripts/build.mjs --games && node scripts/serve.mjs",
     "icons": "node scripts/icons/build.mjs",
     "check": "node scripts/templates/check.mjs",
-    "templates": "node scripts/templates/build-templates.mjs"
+    "templates": "node scripts/templates/build-templates.mjs",
+    "listen:render": "node scripts/listen-render.mjs"
   },
   "author": "",
   "license": "UNLICENSED",

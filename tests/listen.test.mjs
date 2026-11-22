@@ -7,9 +7,9 @@ import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { buildQueue, courseQueue, courseResume, daysOf, speechChunks, speakable, resumeAt, readSettings, groupsOf, areaOf, minutesOf } from '../src/assets/listen-queue.js';
+import { buildQueue, courseQueue, courseResume, daysOf, speechChunks, speakable, resumeAt, readSettings, groupsOf, areaOf, minutesOf, recordingFor, silenceWav } from '../src/assets/listen-queue.js';
 import { forEar, rankVoices, pickVoices, genderOf, citeNumber } from '../src/assets/listen-voice.js';
-import { normalizeListen, readListen } from '../scripts/lib/listen.mjs';
+import { normalizeListen, readListen, recFile, renderJobs, attachRecordings } from '../scripts/lib/listen.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -152,7 +152,7 @@ test('an audio course plays episode by episode, asks with a pause, then the answ
   assert.equal(s.gender, 'male');
   assert.deepEqual(s.audio.ev, { key: 'd1-b', seg: 's0', done: ['d1-a'] });
   assert.equal(readSettings({}).gender, 'female');
-  assert.equal(readSettings({}).rate, 0.95);
+  assert.equal(readSettings({}).rate, 0.9);
   assert.equal(readSettings({}).mode, 'course');
 });
 
@@ -199,7 +199,7 @@ test('saved settings and position are checked, and a stale position starts over'
   assert.equal(s.rate, 1.5);
   assert.deepEqual(s.skipAreas, ['Hearsay']);
   assert.equal(readSettings({ pause: 7, rate: 9 }).pause, 6);
-  assert.equal(readSettings('nonsense').rate, 0.95);
+  assert.equal(readSettings('nonsense').rate, 0.9);
   assert.deepEqual(groupsOf(DATA.questions, (x) => areaOf(x.topic)), [{ name: 'Relevance', count: 1 }, { name: 'Hearsay', count: 1 }]);
   assert.ok(minutesOf(q) >= 1);
 });
@@ -215,6 +215,10 @@ test('the build writes a Listen page and its data for a course with an outline, 
     fs.writeFileSync(path.join(dir, 'Deck.cards.json'), JSON.stringify({ schema: 'cards/v1', id: 'deck', title: 'Deck', description: 'x', topics: ['Formation'], cards: [{ id: 'c1', topic: 'Formation', front: 'What is an offer?', back: 'A manifestation of willingness.' }] }));
     fs.writeFileSync(path.join(dir, 'Sample_Outline.html'), '<title>Sample Outline</title><body><h2>I. Formation</h2><p>An offer is a manifestation.</p><h3>Cases</h3><p>Lucy v. Zehmer.</p><h2>II. Defenses</h2><p>Mistake.</p></body>');
     fs.copyFileSync(path.join(ROOT, 'docs/templates/sample.listen.json'), path.join(dir, 'Course.listen.json'));
+    // One recorded line (scripts/listen-render.mjs writes these to listen-audio/, beside content/).
+    fs.mkdirSync(path.join(tmp, 'listen-audio'));
+    const recorded = recFile('af_nicole', 'Welcome to Day 1. Today is about relevance, the first gate every piece of evidence has to pass.');
+    fs.writeFileSync(path.join(tmp, 'listen-audio', recorded), 'mp3');
     fs.writeFileSync(path.join(dir, 'Old.listen.json'), JSON.stringify({ format: 'listen/v1', id: 'old', title: 'Old', days: [{ day: 1, title: 'x', episodes: [{ id: 'o', title: 'o', segments: [{ say: 'old' }] }] }] }));
     fs.writeFileSync(path.join(dir, 'subject.json'), JSON.stringify({ title: 'Sample Course', refs: { outline: 'sample-outline' }, documents: { 'Old.mcq.json': { archived: true }, 'Old.listen.json': { archived: true } } }));
     const dist = path.join(tmp, 'dist');
@@ -228,12 +232,44 @@ test('the build writes a Listen page and its data for a course with an outline, 
     assert.ok(fs.existsSync(path.join(dist, 'play/data/sample-course/current.json')), 'questions come from play/data');
     assert.deepEqual(data.audio.map((c) => c.id), ['evidence-sample-audio'], 'archived audio courses are left out');
     assert.equal(data.audio[0].days[0].episodes[0].segments[0].id, 'intro');
+    assert.deepEqual(data.audio[0].days[0].episodes[0].segments[0].rec, { af_nicole: recorded }, 'a recorded line is linked');
+    assert.equal(data.audio[0].days[0].episodes[0].segments[1].rec, undefined, 'a line without a file is not');
+    assert.ok(fs.existsSync(path.join(dist, 'listen/sample-course/audio', recorded)), 'and its file is published');
     const page = read('listen/sample-course/index.html');
     assert.match(page, /Play/);
+    assert.match(page, /recorded in natural Kokoro voices/);
     assert.match(page, /value="course" data-ls-mode checked/, 'the audio course is the default mode');
     assert.match(page, /Female voice[\s\S]*Male voice/);
     assert.doesNotMatch(read('subjects/sample-course/index.html'), /listen\.json|Evidence in Two Days/, 'the audio course is not listed as a document');
     assert.match(read('subjects/sample-course/index.html'), /href="\.\.\/\.\.\/listen\/sample-course\/"[^>]*>[\s\S]*?Listen \(hands-free\)/);
     assert.match(read('sitemap.xml'), /listen\/sample-course\//);
   } finally { fs.rmSync(tmp, { recursive: true, force: true }); }
+});
+
+test('recorded lines: one file per line and voice, linked when it exists, played when the voice is left on best', () => {
+  const sample = normalizeListen(readListen(fs.readFileSync(path.join(ROOT, 'docs/templates/sample.listen.json'), 'utf8'))).course;
+  assert.equal(recFile('af_nicole', 'Rule 803(2).'), recFile('af_nicole', 'Rule 803(2).'));
+  assert.notEqual(recFile('af_nicole', 'Rule 803(2).'), recFile('am_michael', 'Rule 803(2).'));
+  assert.match(recFile('af_nicole', 'x'), /^af_nicole-[0-9a-f]{16}\.mp3$/);
+  const jobs = renderJobs(sample);
+  // 8 say lines + 3 asks (question and answer each) = 14 lines; the one alt line is Michael's.
+  assert.equal(jobs.length, 14);
+  assert.deepEqual(jobs.filter((j) => j.voice === 'am_michael').map((j) => j.text), ['So a photo of the intersection is relevant even if it only helps a little?']);
+  assert.equal(renderJobs(sample, ['female', 'male']).length, 28);
+  const all = new Set(jobs.map((j) => j.file));
+  const { course, files } = attachRecordings(sample, (f) => all.has(f));
+  assert.equal(files.length, 14);
+  const ask = course.days[0].episodes[0].segments.find((x) => x.ask);
+  assert.ok(ask.rec.af_nicole && ask.answerRec.af_nicole);
+  const q = courseQueue(course);
+  const first = q[0].segments[0];
+  const alt = q[0].segments.find((x) => x.role === 'alt');
+  assert.equal(recordingFor(first), first.rec.af_nicole);
+  assert.equal(recordingFor(alt), alt.rec.am_michael, 'an alt line plays the other voice');
+  assert.equal(recordingFor(first, { voice: 'Samantha' }), null, 'a browser voice picked by name is used instead');
+  assert.equal(recordingFor(first, { gender: 'male' }), null, 'the male setting needs its own recordings');
+  assert.equal(recordingFor(q[0].segments.find((x) => x.role === 'answer')), ask.answerRec.af_nicole);
+  const w = silenceWav(1000);
+  assert.equal(w.length, 44 + 16000);
+  assert.equal(String.fromCharCode(...w.slice(8, 12)), 'WAVE');
 });

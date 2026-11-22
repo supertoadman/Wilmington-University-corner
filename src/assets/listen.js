@@ -9,10 +9,12 @@
 // the choices and runs the player: Play/Pause, Back, Skip, episode steps, speed, pause length and
 // voice, a transcript of what is being read, and the place saved per course in localStorage
 // ("listen:<course>"). It holds a screen wake lock while playing where the browser allows (most
-// phones stop speech when the screen locks), and answers the keyboard and headset buttons. Nothing
+// phones stop speech when the screen locks), and answers the keyboard and headset buttons. An audio
+// course's recorded lines (Kokoro MP3s, scripts/listen-render.mjs) play through one <audio> element,
+// the pauses as silence through the same element, so phones keep going with the screen off. Nothing
 // is graded or recorded. Text from the data is set with textContent, never parsed as HTML.
 
-import { buildQueue, courseQueue, courseResume, daysOf, speechChunks, resumeAt, readSettings, groupsOf, areaOf, minutesOf, PAUSES, RATES } from './listen-queue.js';
+import { buildQueue, courseQueue, courseResume, daysOf, speechChunks, resumeAt, readSettings, groupsOf, areaOf, minutesOf, recordingFor, silenceWav, PAUSES, RATES, REC_SPEED } from './listen-queue.js';
 import { rankVoices, pickVoices } from './listen-voice.js';
 
 const host = document.querySelector('[data-listen]');
@@ -144,8 +146,9 @@ if (host) {
       const parts = [counts.outline && `${counts.outline} outline sections`, counts.card && `${counts.card} flashcards`, counts.question && `${counts.question.toLocaleString('en-US')} questions`].filter(Boolean);
       $('[data-ls-total]').textContent = queue.length ? `${parts.join(', ')}: about ${fmtMinutes(minutesOf(queue, st.rate))} of listening.` : 'Nothing is picked. Tick at least one kind and topic above.';
     }
-    $('[data-ls-play]').disabled = !queue.length || !synth;
+    $('[data-ls-play]').disabled = !queue.length || (!synth && !recordedNow());
     drawDays();
+    drawVoices();
     paint();
   }
   const fmtMinutes = (m) => (m < 60 ? `${Math.max(1, m)} minutes` : `${Math.floor(m / 60)} h ${m % 60} min`);
@@ -228,7 +231,7 @@ if (host) {
     const allDone = queue.length && queue.every((x) => done.has(x.key));
     cont.textContent = !it ? 'Nothing to play' : allDone && idx === 0 && seg === 0 ? 'Play again from Day 1'
       : idx === 0 && seg === 0 && !done.size ? `Start Day 1: ${it.title}` : `Continue: Day ${it.day}, ${it.title}`;
-    cont.disabled = !it || !synth;
+    cont.disabled = !it || (!synth && !recordedNow());
   }
   host.addEventListener('click', (e) => {
     const b = e.target.closest('[data-ls-ep]');
@@ -250,9 +253,9 @@ if (host) {
   // Voice, speed and pauses
   // ---------------------------------------------------------------------------
   const rate = $('[data-ls-rate]');
-  for (const r of RATES) rate.append(new Option(r === 0.95 ? 'Relaxed (0.95×)' : r === 1 ? 'Normal (1×)' : `${r}×`, String(r)));
+  for (const r of RATES) rate.append(new Option(r === 0.9 ? 'Relaxed (0.9×)' : r === 1 ? 'Normal (1×)' : `${r}×`, String(r)));
   rate.value = String(st.rate);
-  rate.addEventListener('change', () => { st.rate = Number(rate.value); save(); rebuild(); });
+  rate.addEventListener('change', () => { st.rate = Number(rate.value); save(); rebuild(); audioEl.playbackRate = st.rate / REC_SPEED; });
   const pause = $('[data-ls-pause]');
   for (const p of PAUSES) pause.append(new Option(`${p} seconds`, String(p)));
   pause.value = String(st.pause);
@@ -268,18 +271,24 @@ if (host) {
     picked = pickVoices(voices, { gender: st.gender, name: st.voice, lang });
     const auto = pickVoices(voices, { gender: st.gender, lang }).main;
     const word = st.gender === 'male' ? 'male' : 'female';
-    voiceSel.replaceChildren(new Option(auto ? `Best ${word} voice: ${auto.name}` : `Best ${word} voice`, ''),
+    const rec = recordedNow();
+    voiceSel.replaceChildren(new Option(rec ? `Best ${word} voice: ${st.gender === 'male' ? 'Michael' : 'Nicole'} (recorded)` : auto ? `Best ${word} voice: ${auto.name}` : `Best ${word} voice`, ''),
       ...rankVoices(voices, st.gender, lang).map((v) => new Option(`${v.name} (${v.lang})`, v.name)));
     voiceSel.value = voices.some((v) => v.name === st.voice) ? st.voice : '';
   }
-  voiceSel.addEventListener('change', () => { st.voice = voiceSel.value; save(); drawVoices(); });
+  voiceSel.addEventListener('change', () => { st.voice = voiceSel.value; save(); drawVoices(); restartIfPlaying(() => {}); });
   $$('[data-ls-gender]').forEach((r) => r.addEventListener('change', () => {
     if (!r.checked) return;
     st.gender = r.value;
     st.voice = '';
     save();
     drawVoices();
+    restartIfPlaying(() => {});
   }));
+  /** True when the audio course has recorded lines for the current gender setting. */
+  function recordedNow() {
+    return isCourse() && queue.some((it) => it.segments.some((x) => recordingFor(x, { gender: st.gender })));
+  }
   drawVoices();
   if (synth) synth.addEventListener?.('voiceschanged', drawVoices);
   // Some browsers fill the list late without firing voiceschanged.
@@ -290,11 +299,22 @@ if (host) {
   // out, then the next segment, then the next item. Pause cancels speech; Play starts the segment
   // over. An audio course stops at the end of each day.
   // ---------------------------------------------------------------------------
-  let playing = false, current = null, timer = null, watchdog = null, waitTick = null, lock = null;
+  let playing = false, current = null, timer = null, watchdog = null, waitTick = null, lock = null, token = 0, onAudio = false;
+  const audioEl = $('[data-ls-audio]');
+  const silences = new Map();
+  const silence = (ms) => {
+    const k = Math.round(ms / 100) * 100;
+    if (!silences.has(k)) silences.set(k, URL.createObjectURL(new Blob([silenceWav(k)], { type: 'audio/wav' })));
+    return silences.get(k);
+  };
+  const recUrl = (file) => new URL(`audio/${file}`, location.href).href;
   const stopSound = () => {
     clearTimeout(timer); clearTimeout(watchdog); clearInterval(waitTick);
     timer = watchdog = waitTick = null;
     current = null;
+    token++;
+    audioEl.onended = audioEl.onerror = null;
+    try { audioEl.pause(); } catch { /* not playing */ }
     try { synth?.cancel(); } catch { /* nothing to cancel */ }
     $('[data-ls-wait]').hidden = true;
   };
@@ -314,6 +334,10 @@ if (host) {
     if (!s) { nextItem(); return; }
     if (isCourse()) remember();
     paint();
+    const file = isCourse() ? recordingFor(s, { gender: st.gender, voice: st.voice }) : null;
+    onAudio = !!file || (s.role === 'pause' && onAudio);
+    if (file) { playFile(file, s); return; }
+    if (!synth) { wait(s.pause); return; }
     const chunks = speechChunks(s.say);
     // The other voice for "alt" lines; with only one voice to hand, the same voice pitched apart.
     const alt = s.voice === 'alt';
@@ -338,6 +362,20 @@ if (host) {
     };
     next();
   }
+  /** One recorded line, then its pause. The next recorded line is fetched meanwhile. */
+  function playFile(file, s) {
+    const mine = token;
+    const live = () => playing && mine === token;
+    audioEl.onended = () => { if (live()) wait(s.pause); };
+    audioEl.onerror = () => { if (!live()) return; // A missing file: read this line with the browser's voice.
+      if (synth) { onAudio = false; s.rec = null; speakSegment(); } else wait(s.pause); };
+    audioEl.src = recUrl(file);
+    audioEl.playbackRate = st.rate / REC_SPEED;
+    audioEl.play().catch((e) => { if (live() && e?.name === 'NotAllowedError') pauseIt(); });
+    const nextSeg = queue[idx]?.segments[seg + 1] || queue[idx + 1]?.segments[0];
+    const nextFile = nextSeg && recordingFor(nextSeg, { gender: st.gender, voice: st.voice });
+    if (nextFile) fetch(recUrl(nextFile), { priority: 'low' }).catch(() => {});
+  }
   function wait(ms) {
     if (!playing) return;
     const box = $('[data-ls-wait]');
@@ -350,7 +388,18 @@ if (host) {
       say();
       waitTick = setInterval(say, 250);
     }
-    timer = setTimeout(() => { clearInterval(waitTick); box.hidden = true; afterSegment(); }, ms);
+    const done = () => { clearTimeout(timer); clearInterval(waitTick); box.hidden = true; afterSegment(); };
+    // Between recorded lines, the pause plays as silence, so a phone with its screen off keeps going.
+    if (onAudio && ms >= 200) {
+      const mine = token;
+      audioEl.onended = () => { if (playing && mine === token) done(); };
+      audioEl.onerror = audioEl.onended;
+      audioEl.src = silence(ms);
+      audioEl.playbackRate = 1;
+      audioEl.play().catch(() => { if (playing && mine === token) timer = setTimeout(done, ms); });
+      return;
+    }
+    timer = setTimeout(done, ms);
   }
   function afterSegment() {
     if (!playing) return;
@@ -392,8 +441,10 @@ if (host) {
   }
 
   function play() {
-    if (!synth || !queue.length) return;
+    if ((!synth && !recordedNow()) || !queue.length) return;
     if (idx >= queue.length) idx = 0;
+    // Start the audio element inside the press, so phones let it play the recordings later.
+    if (recordedNow()) { audioEl.src = silence(100); audioEl.play().catch(() => {}); }
     playing = true;
     paintPlay();
     acquire();
@@ -457,6 +508,7 @@ if (host) {
     const b = $('[data-ls-play]');
     b.textContent = playing ? 'Pause' : idx > 0 || seg > 0 ? (isCourse() ? 'Continue' : 'Resume') : 'Play';
     b.setAttribute('aria-pressed', String(playing));
+    try { if (navigator.mediaSession) navigator.mediaSession.playbackState = playing ? 'playing' : 'paused'; } catch { /* not supported */ }
     host.classList.toggle('ls-playing', playing);
   }
   let shownKey = null;

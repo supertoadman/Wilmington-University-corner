@@ -107,3 +107,65 @@ export function listenSummary(course) {
     ...course.days.map((d) => `  Day ${d.day}: ${d.title} (${d.episodes.length} episodes, ${Math.round(segmentMinutes(d.episodes.flatMap((e) => e.segments)))} min)`),
   ];
 }
+
+// ---------------------------------------------------------------------------
+// Recorded audio (scripts/listen-render.mjs). Each spoken line of a course is rendered once with
+// Kokoro to listen-audio/<voice>-<hash>.mp3, the hash taken from the model, voice, speed and the
+// text as it is spoken, so editing a script re-renders only the lines that changed. The build
+// links each segment to its files (`rec`, and `answerRec` for an ask's answer) when they exist;
+// a line without a file is read by the browser's voice.
+// ---------------------------------------------------------------------------
+import { createHash } from 'node:crypto';
+import { speakable, REC_VOICES as QUEUE_VOICES, REC_SPEED } from '../../src/assets/listen-queue.js';
+
+export const RENDER = { model: 'onnx-community/Kokoro-82M-v1.0-ONNX', dtype: 'fp32', speed: REC_SPEED, kbps: 24, rate: 24000 };
+/** The recorded voices: the main and the other ("alt") voice for each gender setting (shared with the player). */
+export const REC_VOICES = QUEUE_VOICES;
+
+/** The file name of one line in one voice. */
+export function recFile(voice, text) {
+  const h = createHash('sha1').update(`${RENDER.model}|${voice}|${RENDER.speed}|${speakable(text)}`).digest('hex').slice(0, 16);
+  return `${voice}-${h}.mp3`;
+}
+
+/** The spoken lines of a checked course: [{ text, alt }] (an ask gives two: the question and the answer). */
+export function courseLines(course) {
+  const out = [];
+  for (const d of course.days) for (const e of d.episodes) for (const s of e.segments) {
+    if (s.ask) out.push({ text: s.ask, alt: s.voice === 'alt' }, { text: s.answer, alt: false });
+    else if (s.say) out.push({ text: s.say, alt: s.voice === 'alt' });
+  }
+  return out;
+}
+
+/** The files to render for `genders`: [{ file, voice, text }], each once. */
+export function renderJobs(course, genders = ['female']) {
+  const jobs = new Map();
+  for (const g of genders) for (const l of courseLines(course)) {
+    const voice = l.alt ? REC_VOICES[g].alt : REC_VOICES[g].main;
+    const file = recFile(voice, l.text);
+    if (!jobs.has(file)) jobs.set(file, { file, voice, text: l.text });
+  }
+  return [...jobs.values()];
+}
+
+/**
+ * The course with each segment's recorded files attached, where `has(file)` says they exist:
+ * `rec: { <voice>: file }` for a say or an ask's question, `answerRec` for its answer.
+ */
+export function attachRecordings(course, has) {
+  const voices = [...new Set(Object.values(REC_VOICES).flatMap((v) => [v.main, v.alt]))];
+  const recs = (text) => {
+    const r = {};
+    for (const v of voices) { const f = recFile(v, text); if (has(f)) r[v] = f; }
+    return Object.keys(r).length ? r : undefined;
+  };
+  const files = new Set();
+  const days = course.days.map((d) => ({ ...d, episodes: d.episodes.map((e) => ({ ...e, segments: e.segments.map((s) => {
+    const rec = s.ask ? recs(s.ask) : s.say ? recs(s.say) : undefined;
+    const answerRec = s.ask ? recs(s.answer) : undefined;
+    for (const r of [rec, answerRec]) if (r) for (const f of Object.values(r)) files.add(f);
+    return { ...s, ...(rec ? { rec } : {}), ...(answerRec ? { answerRec } : {}) };
+  }) })) }));
+  return { course: { ...course, days }, files: [...files] };
+}

@@ -665,10 +665,11 @@ export function listen(ctx, s) {
     </fieldset>
     <div class="ls-settings">
       <label class="ls-field ls-field-voice"><span>Voice to use</span><select data-ls-voice><option value="">Best voice</option></select></label>
+      <audio data-ls-audio preload="auto" hidden></audio>
       <label class="ls-field"><span>Speed</span><select data-ls-rate></select></label>
       <label class="ls-field"><span data-ls-pause-label>Pause to think</span><select data-ls-pause></select></label>
     </div>
-    <p class="ls-hint">For the most natural voices, use Microsoft Edge on a computer, or download an “Enhanced” or “Premium” voice in your phone's settings (iPhone: Settings &gt; Accessibility &gt; Spoken Content &gt; Voices). Most phones stop reading when the screen locks, so this page keeps the screen awake while it plays.</p>
+    <p class="ls-hint">${audio.some((c) => c.recorded) ? 'The audio course is recorded in natural Kokoro voices (Nicole, with Michael as the second voice), and it keeps playing with the screen off on most phones. Everything else is read by your browser\'s voice: for the most natural ones, use Microsoft Edge on a computer.' : 'For the most natural voices, use Microsoft Edge on a computer, or download an “Enhanced” or “Premium” voice in your phone\'s settings (iPhone: Settings &gt; Accessibility &gt; Spoken Content &gt; Voices).'} Browser voices stop on most phones when the screen locks, so this page keeps the screen awake while it plays.</p>
     <p class="ls-total" data-ls-total aria-live="polite">Loading…</p>
   </form>
   <section class="ls-now" aria-labelledby="ls-title">

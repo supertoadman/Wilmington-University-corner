@@ -59,3 +59,13 @@ The build reads it with `JSON.parse` only. Check it with `npm run check -- "cont
 - A day plays straight through; the player stops at the end of each day.
 - `npm run check` warns about empty episodes (they are left out) and errors on missing ids,
   duplicate episode ids and segments that are none of the four kinds.
+
+## Recorded audio
+
+The player reads each line with recorded Kokoro speech when there is a file for it, and with the
+browser's voice when there isn't. `npm run listen:render` (scripts/listen-render.mjs, local only)
+renders every line to `listen-audio/<voice>-<hash>.mp3`: Nicole (`af_nicole`) for narration, Michael
+(`am_michael`) for `"voice": "alt"` lines, at speed 0.9. The hash covers the spoken text, so after
+editing a course, run it again: only new or changed lines are rendered. Commit `listen-audio/` with
+the script change so lines don't fall back to the browser voice. It renders about three times faster
+than real time on a 6-core CPU and the files take about 11 MB per hour of audio.
