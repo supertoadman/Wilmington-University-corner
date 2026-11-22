@@ -3,7 +3,7 @@
  "id": "pr-audio-course",
  "title": "Professional Responsibility Audio Course",
  "course": "Professional Responsibility",
- "description": "Five-day, listen-anywhere course on the whole Professional Responsibility outline (Chs. 1–25 and the Model Rules), with spaced review, worked hypos and recall questions.",
+ "description": "Five-day audio course on the whole Professional Responsibility outline (Chs. 1–25 and the Model Rules), in outline order, with spaced review, worked hypos, recall questions, and a final review of every test and list. Coverage: all 47 outline sections and 118 subsections, every Model Rule and Comment the outline cites, and all its cases and ABA opinions.",
  "days": [
   {
    "day": 1,
@@ -4184,6 +4184,1275 @@
       },
       {
        "say": "That's Day 4. Tomorrow, the final day: law firms and supervision, organizational clients and the 1.13 reporting ladder, public service, duties to third parties, represented and unrepresented persons, client wrongdoing, threats and reporting, restrictions on practice, advertising and solicitation, discrimination under 8.4(g), and then the full review and test strategy."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "title": "Firms and organizations, public service, third parties, advertising, 8.4(g), and the final review",
+   "minutes": 120,
+   "episodes": [
+    {
+     "id": "pr-d5-e01",
+     "title": "Spaced review of Days 1 to 4",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Welcome to Day 5, the last day. Rapid recall first, across all four days."
+      },
+      {
+       "ask": "What are the three kinds of conflicts?",
+       "answer": "Personal interest, concurrent client, and successive client.",
+       "pause": 6
+      },
+      {
+       "ask": "Which conflicts can never be consented to?",
+       "answer": "Prohibited by law; outright 1.8 bans; claims between your clients in the same proceeding; and no reasonable belief you can represent each competently and diligently.",
+       "pause": 6
+      },
+      {
+       "ask": "What does 3.8(d) require that Brady does not?",
+       "answer": "Disclosure of everything that tends to negate guilt or mitigate, with no materiality limit.",
+       "pause": 6
+      },
+      {
+       "ask": "What three things trigger the duty to correct under 3.3?",
+       "answer": "Your own false statement of material fact or law; material evidence offered by you, your client, or your witness that you learn is false; and anyone's crime or fraud related to the proceeding.",
+       "pause": 6
+      },
+      {
+       "ask": "In what order are remedial measures taken?",
+       "answer": "Remonstrate, withdraw, then disclose what is reasonably necessary.",
+       "pause": 6
+      },
+      {
+       "ask": "May a lawyer refuse to offer a criminal defendant's testimony she reasonably believes is false?",
+       "answer": "No. Only knowledge changes the analysis for the defendant's own testimony.",
+       "pause": 6
+      },
+      {
+       "ask": "Under 1.11(a), whose consent lets a former government lawyer work on her old matter?",
+       "answer": "The appropriate government agency, confirmed in writing.",
+       "pause": 6
+      },
+      {
+       "ask": "What is the only Model Rule duty for an inadvertently sent document?",
+       "answer": "Promptly notify the sender.",
+       "pause": 6
+      },
+      {
+       "ask": "Name the three 3.7 exceptions.",
+       "answer": "Uncontested issue, value of legal services in the case, and substantial hardship.",
+       "pause": 6
+      },
+      {
+       "ask": "Which 1.6(b) exceptions require use of the lawyer's services?",
+       "answer": "(b)(2) and (b)(3).",
+       "pause": 6
+      },
+      {
+       "ask": "What does a contingent fee agreement require?",
+       "answer": "A writing signed by the client stating the method and percentages, deductible expenses, whether deducted before or after the fee, and expenses owed regardless; plus a written closing statement.",
+       "pause": 6
+      },
+      {
+       "ask": "Is a reasonable belief enough for 1.14(b) protective action?",
+       "answer": "Yes. The lawyer must reasonably believe all three conditions.",
+       "pause": 6
+      },
+      {
+       "say": "Today: firms and supervision, organizational clients and the 1.13 ladder, public service, duties to third parties, advertising and solicitation, 8.4(g), and then the full review of every test and list, plus strategy for ninety questions in three hours."
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e02",
+     "title": "Responsibility within a firm: Rules 5.1, 5.2, and 5.3",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Any organization offering legal services is a firm. The organization never shields you. Then 5.2 for subordinates, the two kinds of oversight, 5.1 and 5.3 side by side, and the duty to be supervised."
+      },
+      {
+       "say": "Any organization offering legal services is a law firm, 1.0(c): partnerships, professional corporations, solos, legal services organizations, and corporate or government legal departments. The casebook calls them practice organizations. And the organization never shields you. Each lawyer has a nondelegable, personal duty to comply with the Rules and other law. Agents are personally liable for their own torts within the scope of the agency, and no one goes to prison for you."
+      },
+      {
+       "say": "Rule 5.2. (a) A lawyer is bound by the Rules notwithstanding that the lawyer acted at the direction of another person. (b) A subordinate lawyer does not violate the Rules by acting in accordance with a supervisory lawyer's reasonable resolution of an arguable question of professional duty. The exception is extremely narrow. It applies only when it was genuinely unclear how to comply and the supervisor's instruction was a reasonable way to comply. It excuses discipline, not necessarily tort liability. And it never covers clear violations: Kodak-Berkey, and Renaldo's buried adverse authority."
+      },
+      {
+       "say": "Two kinds of oversight. One, managerial authority: indirect, general authority over the firm's professional work or a part of it, like a practice-group leader or an office's managing partner, covering both lawyers and staff. Two, supervisory authority: day-to-day responsibility for specific people's work. A lawyer may have either, both, or neither."
+      },
+      {
+       "say": "Now 5.1 and 5.3 side by side, three paragraphs each. Paragraph (a), manage. Under 5.1(a), partners and lawyers with comparable managerial authority shall make reasonable efforts to ensure the firm has measures giving reasonable assurance that all lawyers conform to the Rules: a conflicts-check system, calendaring, trust-account controls. No harm is needed for a violation. 5.3(a) is the same for measures giving reasonable assurance that nonlawyers' conduct is compatible with the lawyers' professional obligations: policies so staff don't do what lawyers can't."
+      },
+      {
+       "say": "Paragraph (b), supervise. 5.1(b): a lawyer with direct supervisory authority over another lawyer shall make reasonable efforts to ensure that lawyer conforms to the Rules. 5.3(b): a lawyer with direct supervisory authority over a nonlawyer shall make reasonable efforts to ensure the person's conduct is compatible with the lawyer's obligations. That includes outside vendors, investigators, outsourcing, cloud services, and AI tools: select, instruct, and oversee."
+      },
+      {
+       "say": "Paragraph (c), vicarious discipline. A lawyer is responsible for another lawyer's violation, under 5.1(c), or for a nonlawyer's conduct that would violate the Rules if a lawyer did it, under 5.3(c), in either of two situations. One, the lawyer orders it, or, with knowledge of the specific conduct, ratifies it. Two, the lawyer is a partner, manager, or direct supervisor who knows of the conduct at a time when its consequences can be avoided or mitigated and fails to take reasonable remedial action."
+      },
+      {
+       "say": "It is not respondeat superior. Discipline requires your own failure: inadequate measures, inadequate supervision, ordering or ratifying, or failing to mitigate what you know. If reasonable measures existed and you neither ordered, ratified, nor could mitigate, you are not responsible. Other consequences of failing to manage or supervise: civil liability, court sanctions, since Rule 11(c)(1) holds the firm jointly responsible, and fee consequences. And causing a subordinate to violate a Rule is the supervisor's own violation too, under 8.4(a)."
+      },
+      {
+       "say": "The duty to be supervised is not a separate duty but a feature of competence and care. A subordinate must get the support needed to do the job competently. Ask, insist, and if necessary go elsewhere for help. I asked and asked is no defense, and a looming deadline requires protective action."
+      },
+      {
+       "ask": "A firm's managing partner never set up any conflict-checking system. An associate unknowingly takes a matter adverse to a current client. Is the managing partner subject to discipline even though she did not know about the matter?",
+       "answer": "Yes, under 5.1(a). Partners and managers must make reasonable efforts to have measures giving reasonable assurance of compliance. No knowledge or harm is needed for that violation.",
+       "pause": 12
+      },
+      {
+       "ask": "A firm has excellent procedures. A paralegal, against them, secretly contacts a represented opposing party. The supervising lawyer learns of it only after the case ends, when nothing can be mitigated. Is the lawyer responsible?",
+       "answer": "No. 5.3(c) requires ordering or ratifying the conduct, or knowing of it when its consequences could be avoided or mitigated. Reasonable measures existed. It is not respondeat superior.",
+       "pause": 12
+      },
+      {
+       "ask": "A supervising partner learns that an associate just filed a brief with a fabricated quote, and the hearing is tomorrow. She does nothing. Responsible?",
+       "answer": "Yes. Under 5.1(c)(2), she knows of the conduct when its consequences can be mitigated, and fails to take reasonable remedial action.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 5.2(a): orders don't excuse; 5.2(b): reasonable resolution of an arguable question only. 5.1 and 5.3: managers ensure measures, supervisors make reasonable efforts, and vicarious discipline only for ordering, ratifying, or failing to mitigate known conduct."
+      },
+      {
+       "ask": "What two situations make a lawyer responsible for another's violation under 5.1(c)?",
+       "answer": "Ordering it, or ratifying it with knowledge; or being a partner, manager, or supervisor who knows of it when it can be avoided or mitigated and failing to act.",
+       "pause": 8
+      },
+      {
+       "ask": "Does 5.3 cover AI tools and outside vendors?",
+       "answer": "Yes: select, instruct, and oversee.",
+       "pause": 8
+      },
+      {
+       "ask": "Is 5.1 a respondeat superior rule?",
+       "answer": "No. Discipline requires the lawyer's own failure.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e03",
+     "title": "Duties to the firm, changing jobs, selling a practice, and law-related services",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. Loyalty to the firm, changing jobs and taking clients, the four requirements to sell a practice under 1.17, and law-related services under 5.7."
+      },
+      {
+       "say": "Lawyers owe their firms a duty of loyalty much like the fiduciary duty owed to clients, and owe each other a duty to be forthright and honest. No exploiting your firm position for personal benefit beyond the firm's regular rewards, no interfering with the firm's business, and no appropriating practice opportunities that belong to the firm. That is Meinhard versus Salmon again. Violations can bring discipline, civil liability, and very likely employment consequences."
+      },
+      {
+       "say": "Changing jobs. You keep your duties to every client you served. If you leave current clients behind, you have all the duties of a withdrawing lawyer: notice, a smooth transition, and tribunal permission where required. Once you leave, every client you served there is your former client for the rest of your career, under 1.9."
+      },
+      {
+       "say": "Taking clients with you. Both the departing lawyer and the firm must tell clients of material changes, including the departure of a lawyer with substantial responsibility for their matter, under 1.4, and clients decide who will represent them. Despite the duty of loyalty to the firm, the departing lawyer may generally tell clients of the impending departure and their right to choose counsel. Timing and content vary by jurisdiction. Conflicts follow the mobile lawyer only as far as actual knowledge goes, 1.9(b), screens may protect the new firm, 1.10(a)(2), and 1.6(b)(7) permits limited disclosures to detect conflicts. Noncompetes are barred by 5.6(a), except retirement benefits."
+      },
+      {
+       "say": "Rule 1.17, sale of a law practice. A lawyer or firm may sell or buy a law practice, or an area of practice, including good will, if four requirements are met, all required. (a) The seller ceases to engage in the private practice of law, or in the area of practice sold, in the geographic area or the jurisdiction where the practice was conducted; a state chooses which. (b) The entire practice, or the entire area of practice, is sold to one or more lawyers or firms. (c) The seller gives each client written notice of three things: the proposed sale; the client's right to retain other counsel or take possession of the file; and the fact that the client's consent to the transfer of the file will be presumed if the client does not act or object within ninety days of receiving notice. A client who cannot be given notice may be transferred only by court order, with in camera disclosure limited to what is necessary. (d) The fees charged clients are not increased by reason of the sale."
+      },
+      {
+       "say": "Why entire: so less lucrative clients are not left stranded while the profitable matters are sold, Comment 6. A good-faith offering of the whole practice satisfies it even if some clients choose other counsel, Comment 2. Ceasing practice does not bar taking a government, legal services, or in-house job, Comment 3. The purchaser must honor existing fee and scope arrangements, Comment 10, and client autonomy, including the right to discharge, survives the sale. Payments: the purchase price of a deceased, disabled, or disappeared lawyer's practice may be paid to the estate, 5.4(a)(2); paying for a practice is an exception to the referral-payment ban, 7.2(b)(3); and restrictions in a practice-sale agreement do not violate 5.6."
+      },
+      {
+       "say": "Rule 5.7, law-related services. (a) A lawyer is subject to the Rules when providing law-related services in either of two ways. One, by the lawyer in circumstances not distinct from the lawyer's legal services to clients. Two, by an entity the lawyer controls, alone or with others, if the lawyer fails to take reasonable measures to assure that a person obtaining the services knows they are not legal services and that the protections of the client-lawyer relationship do not exist. (b) Law-related services are services that might reasonably be performed in conjunction with, and in substance are related to, legal services, and that are not prohibited as unauthorized practice when provided by a nonlawyer."
+      },
+      {
+       "say": "Examples: title insurance, financial planning, accounting, lobbying, tax preparation, real estate consulting. The burden is on the lawyer to show reasonable measures were taken, and sophisticated users may need less explanation. And referring a client to the lawyer's own law-related business is a 1.8(a) transaction, Comment 5."
+      },
+      {
+       "ask": "A retiring estate lawyer sells only her wealthy estate clients' files to another firm, stops estate work in town, and keeps practicing family law. Did she comply?",
+       "answer": "She may sell an entire area of practice and keep practicing in other areas, but she must sell the entire area, not just the lucrative clients. Selling only the wealthy clients' files fails 1.17(b). She also must give the written notices and not let fees rise.",
+       "pause": 12
+      },
+      {
+       "ask": "Notified of a practice sale, a client does nothing for ninety-one days. Status of her file?",
+       "answer": "Her consent to the transfer is presumed under 1.17(c)(3), since she did not object or act within ninety days.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer owns a title insurance agency in the same office suite and lets clients assume the agency's staff are his legal team. Do the Rules apply to the agency's services?",
+       "answer": "Yes. Under 5.7(a), he is subject to the Rules if the services are not distinct from his legal services, or if he fails to take reasonable measures to assure customers know they are not legal services.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. Loyalty to the firm, no stealing its opportunities; departing lawyers may tell clients; clients choose. 1.17: cease practice in the area, sell it entire, give written notice with the ninety-day presumption, and don't raise fees. 5.7: the Rules follow law-related services unless distinct and clearly disclaimed."
+      },
+      {
+       "ask": "Name the four requirements of 1.17.",
+       "answer": "The seller ceases practice in the area and place; the entire practice or area is sold; written notice to each client of the sale, the right to other counsel or the file, and the ninety-day presumption; and no fee increase because of the sale.",
+       "pause": 8
+      },
+      {
+       "ask": "When is a client's consent to a file transfer presumed?",
+       "answer": "If the client doesn't act or object within ninety days of receiving notice.",
+       "pause": 8
+      },
+      {
+       "ask": "Give three examples of law-related services.",
+       "answer": "Title insurance, financial planning, accounting, lobbying, tax preparation, real estate consulting.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e04",
+     "title": "Organizational clients: Rule 1.13(a), (f), and (g), and Upjohn",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The entity is the client, confidentiality and privilege belong to the entity, dual representation under 1.13(g), Upjohn versus United States, the Upjohn warning with its triggers, form, and consequences, and corporate civil wars. Ron Rainmaker's longtime client Ted Tech, a serial entrepreneur, shows how easily the lines blur between a founder and his companies."
+      },
+      {
+       "say": "Rule 1.13(a): a lawyer employed or retained by an organization represents the organization acting through its duly authorized constituents. 1.13(f): in dealing with directors, officers, employees, members, shareholders, or other constituents, a lawyer shall explain the identity of the client when the lawyer knows or reasonably should know that the organization's interests are adverse to those of the constituents. 1.13(g): a lawyer representing an organization may also represent any of its constituents, subject to 1.7. If the organization's consent is required, it must be given by an appropriate official other than the individual to be represented, or by the shareholders."
+      },
+      {
+       "say": "Duties run exclusively to the organization. Confidentiality and privilege belong to the organization. Communications with constituents acting for it are confidential and can be privileged, but the organization alone holds and controls the privilege. You may disclose its information to a constituent, or anyone, only as the organization permits. Dual representation is allowed if you address the conflicts it creates. And at organizational formation, be clear about who your clients are and who they aren't. Founders often assume the lawyer represents them all."
+      },
+      {
+       "say": "Upjohn Company versus United States, 1981. Upjohn's general counsel investigated possibly illegal payments to foreign officials by sending questionnaires to managers and interviewing employees. The IRS summoned the questionnaires and interview notes. The Supreme Court held the attorney-client privilege covered communications from employees at all levels, made at the direction of superiors so counsel could advise the corporation, about matters within their duties. It rejected the narrow control-group test. The notes were also protected work product. Because the privilege belongs to the corporation, counsel who interviews employees must warn them that counsel represents only the company, and that the company may waive the privilege and share what they say. That warning bears the case's name."
+      },
+      {
+       "say": "The duties toward non-client constituents. 4.3 applies, three parts: don't state or imply you are disinterested; correct any misunderstanding of your role; and when interests conflict or may conflict, give no legal advice except to get a lawyer. And 1.13(f) adds a duty to speak up whenever you know or reasonably should know the organization's interests are adverse to the constituent's, even if the constituent shows no confusion."
+      },
+      {
+       "say": "Three typical divergences, any one triggers concern. The constituent, one, is harming the company for personal benefit, like embezzlement or theft; two, is causing the company to violate the law, like dangerous products, environmental harm, regulatory violations, fraud, or antitrust; or three, has personal difficulties, like depression, addiction, or illness, that interfere with the job."
+      },
+      {
+       "say": "What the warning says: tailored to the circumstances, but always that you represent the company only, not the constituent, plus the implications: the conversation may be privileged, but the privilege is the company's, which may waive it and share what the constituent says, including with the government. When: at the start of any conversation where you expect the constituent may be engaged in conduct contrary to the organization's interests. If a surprise comes up mid-conversation, stop and clarify your role at that moment. Form: no formal requirements, so oral is allowed, but in an investigation give it in writing and let the constituent review it and ask questions first."
+      },
+      {
+       "say": "Consequences of a late or missing warning: discipline under 1.13(f) and 4.3; an implied duty of confidentiality to the constituent that conflicts with your duties to tell the company, forcing withdrawal or disqualification, potentially of the whole in-house department; damages if you disclose; exclusion of improperly obtained information in later litigation; and undoing decisions the constituent made on your forbidden advice."
+      },
+      {
+       "say": "Corporate civil wars. First ask whether you have a conflict. If you represent only the organization, competing instructions from warring factions do not create one; you have a single client. If you also represent a warring constituent, in anything, or have personal ties strong enough to create a significant risk of material limitation, you do. Be transparent with every faction that has a colorable claim to direct the company, limit yourself to issues proper for the organization's lawyer, and keep asking whether the organization would be no worse off if you withdrew."
+      },
+      {
+       "ask": "Company counsel is about to interview a sales manager suspected of bribing a customer's purchasing agent. What must she say at the start, and why?",
+       "answer": "The Upjohn warning: she represents the company only, not him; the conversation may be privileged, but the privilege belongs to the company, which may waive it and share what he says, including with the government. 1.13(f) requires explaining the client's identity because she reasonably should know of the adversity.",
+       "pause": 12
+      },
+      {
+       "ask": "A corporation's lawyer is asked to also represent its CEO personally in a related shareholder suit. Who gives the corporation's consent?",
+       "answer": "An appropriate official other than the CEO, or the shareholders, under 1.13(g), and the 1.7 requirements must be met.",
+       "pause": 12
+      },
+      {
+       "ask": "Mid-interview, a junior employee unexpectedly admits to falsifying test data and asks, will you keep this between us? What should counsel do?",
+       "answer": "Stop and clarify her role: she represents the company only, cannot keep it confidential from the company, and the company controls the privilege. She should give no advice except that he may want his own lawyer.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 1.13(a): the entity is the client. 1.13(f): explain who the client is when interests are adverse. 1.13(g): dual representation with consent from someone other than the constituent. Upjohn: privilege covers employees at all levels and belongs to the company, hence the warning."
+      },
+      {
+       "ask": "What did Upjohn reject?",
+       "answer": "The narrow control-group test for the corporate privilege.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three typical divergences that trigger an Upjohn warning.",
+       "answer": "The constituent harming the company for personal benefit; causing the company to violate the law; or personal difficulties interfering with the job.",
+       "pause": 8
+      },
+      {
+       "ask": "Must the Upjohn warning be in writing?",
+       "answer": "No, but in an investigation it should be.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e05",
+     "title": "The 1.13 reporting ladder: up and out",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Reporting up under 1.13(b), reporting out under 1.13(c), the exclusion in 1.13(d), the discharge rule in 1.13(e), and how 1.13(c) compares with 1.6(b)."
+      },
+      {
+       "say": "Rule 1.13(b), reporting up. If a lawyer for an organization knows that an officer, employee, or other associated person is engaged in action, intends to act, or refuses to act in a matter related to the representation that is, one, a violation of a legal obligation to the organization, or a violation of law that reasonably might be imputed to it, and two, likely to result in substantial injury to the organization, then the lawyer shall proceed as is reasonably necessary in the best interest of the organization. Unless the lawyer reasonably believes it is not necessary, the lawyer shall refer the matter to higher authority, including, if warranted, the highest authority that can act for the organization."
+      },
+      {
+       "say": "Count the trigger: knows; a violation of a duty to the organization or of law imputable to it; related to the representation; likely to cause substantial injury to the organization. Then: shall act in its best interest, and ordinarily report up. Level by level: to the constituent's boss, then the next level, up to the board if warranted. A rogue officer's demand for silence does not control. Failing to report up is disciplinable and, if it harms the organization, actionable as malpractice or breach of fiduciary duty, and the damages can be substantial."
+      },
+      {
+       "say": "Rule 1.13(c), reporting out. Except as provided in (d), if two conditions are met, both required. One, despite the lawyer's efforts under (b), the highest authority that can act for the organization insists on, or fails to address in a timely and appropriate manner, an action or refusal to act that is clearly a violation of law. Two, the lawyer reasonably believes the violation is reasonably certain to result in substantial injury to the organization. Then the lawyer may reveal information relating to the representation, whether or not 1.6 permits it, but only if and to the extent the lawyer reasonably believes necessary to prevent substantial injury to the organization."
+      },
+      {
+       "say": "Note the escalation in the standard. Reporting up: a violation likely to cause substantial injury. Reporting out: the highest authority fails to act on a clear violation reasonably certain to cause substantial injury. And reporting up is must; reporting out is may."
+      },
+      {
+       "say": "Rule 1.13(d). Paragraph (c) does not apply to information relating to the lawyer's representation of the organization, either one, to investigate an alleged violation of law, or two, to defend the organization or a constituent against a claim arising out of an alleged violation of law. So the investigating or defending lawyer cannot report out."
+      },
+      {
+       "say": "Rule 1.13(e). A lawyer who reasonably believes she was discharged because of actions under (b) or (c), or who withdraws in circumstances requiring or permitting such action, shall proceed as reasonably necessary to assure that the highest authority is informed of the discharge or withdrawal. In-house counsel who must withdraw may have to quit, and 1.13(e) makes sure the board hears why."
+      },
+      {
+       "say": "Minimum disclosure: report out as little, to as few, as will address the problem the organization refused to fix. Overreporting destroys the exception and invites discipline and liability."
+      },
+      {
+       "say": "Compared with 1.6(b)(2) and (b)(3): 1.13(c) does not require that the lawyer's services were used. But it protects only against injury to the organization, and only after reporting up all the way."
+      },
+      {
+       "ask": "In-house counsel learns that a plant manager is dumping toxins in violation of federal law, which will likely bring huge fines on the company. The manager says, keep this quiet. What must counsel do?",
+       "answer": "Report up under 1.13(b): proceed in the organization's best interest and refer the matter to higher authority, up to the board if warranted. The manager's demand for silence does not control.",
+       "pause": 12
+      },
+      {
+       "ask": "Counsel reports all the way to the board, which refuses to stop a clear violation reasonably certain to cause the company substantial injury. May counsel go to regulators, though her services were never used?",
+       "answer": "Yes, under 1.13(c), she may reveal information to the extent reasonably necessary to prevent substantial injury to the organization, whether or not 1.6 permits it. Unless she was retained to investigate or defend the violation, under 1.13(d).",
+       "pause": 12
+      },
+      {
+       "ask": "Outside counsel hired specifically to defend the company in an SEC investigation learns of the underlying fraud. May she report out under 1.13(c)?",
+       "answer": "No. 1.13(d) excludes lawyers retained to investigate or defend an alleged violation of law.",
+       "pause": 10
+      },
+      {
+       "ask": "A general counsel is fired because she reported a violation to the board's audit committee. What must she do?",
+       "answer": "Under 1.13(e), take reasonably necessary steps to assure the highest authority is informed of her discharge.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. The 1.13 ladder: know of a violation likely to substantially injure the organization; must report up, level by level, to the highest authority if warranted; if the highest authority fails to act on a clear violation reasonably certain to substantially injure the organization, may report out, minimally; not for lawyers hired to investigate or defend; and if fired or withdrawing, make sure the board knows."
+      },
+      {
+       "ask": "Is reporting up mandatory or permissive? Reporting out?",
+       "answer": "Reporting up is mandatory. Reporting out is permissive.",
+       "pause": 8
+      },
+      {
+       "ask": "Who is excluded from reporting out?",
+       "answer": "Lawyers retained to investigate an alleged violation or to defend against a claim arising from it.",
+       "pause": 8
+      },
+      {
+       "ask": "How does 1.13(c) differ from 1.6(b)(2)?",
+       "answer": "It doesn't require that the lawyer's services were used, but it protects only the organization and only after reporting up all the way.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e06",
+     "title": "Public service: Rules 6.1 through 6.5",
+     "minutes": 10,
+     "segments": [
+      {
+       "say": "Roadmap. Pro bono under 6.1, the only purely aspirational rule; accepting appointments under 6.2; legal services organizations under 6.3; law reform under 6.4; and limited legal services programs under 6.5. The casebook has no chapter on these, so this follows the Rules and Comments."
+      },
+      {
+       "say": "Rule 6.1. Every lawyer has a professional responsibility to provide legal services to those unable to pay, and should aspire to render at least fifty hours of pro bono publico service a year. In doing so, the lawyer should, (a), provide a substantial majority of the fifty hours without fee or expectation of fee to, one, persons of limited means, or two, charitable, religious, civic, community, governmental, and educational organizations in matters designed primarily to address the needs of persons of limited means. And, (b), provide any additional services through, one, free or substantially reduced-fee services to individuals, groups, or organizations seeking to secure or protect civil rights, civil liberties, or public rights, or to charitable and similar organizations in matters furthering their purposes, where standard fees would significantly deplete their resources or be otherwise inappropriate; two, substantially reduced-fee services to persons of limited means; or three, activities improving the law, the legal system, or the legal profession. A lawyer should also voluntarily contribute financial support to organizations that provide legal services to persons of limited means."
+      },
+      {
+       "say": "Aspirational, not enforceable. It says should, and the responsibility is not intended to be enforced through disciplinary process, Comment 12. It is an MPRE favorite precisely because it is the one Rule with no discipline behind it."
+      },
+      {
+       "say": "Intent matters, Comment 4. Services count only if rendered without fee or expectation of fee, so an uncollected fee is not pro bono. But an award of statutory attorney's fees in a case originally accepted pro bono does not disqualify it, and lawyers who receive such fees are encouraged to contribute a portion to organizations serving persons of limited means."
+      },
+      {
+       "say": "Who qualifies, Comment 3: persons eligible for Legal Services Corporation programs, and those slightly above the guidelines who still cannot afford counsel. Examples under (b)(1), Comment 6: First Amendment claims, Title VII claims, environmental protection claims. Under (b)(2), Comment 7: judicare programs and court appointments paid well below the usual rate. Under (b)(3), Comment 8: bar committees, legal services boards, Law Day, teaching CLE, mediation, and arbitration. When pro bono is not feasible, Comment 9, a lawyer may discharge the responsibility by financial support. Firms should enable and encourage pro bono, Comment 11. And government lawyers barred from outside practice may meet it through (b) activities, Comment 5."
+      },
+      {
+       "say": "Rule 6.2. A lawyer shall not seek to avoid appointment by a tribunal to represent a person except for good cause, such as any one of three. (a) Representing the client is likely to result in violation of the Rules or other law. (b) Representing the client is likely to result in an unreasonable financial burden on the lawyer. (c) The client or the cause is so repugnant to the lawyer as to be likely to impair the client-lawyer relationship or the lawyer's ability to represent the client."
+      },
+      {
+       "say": "Good cause, not distaste. A lawyer is ordinarily free to decline a client whose character or cause is repugnant, but an appointment is different. Good cause exists if the lawyer could not handle the matter competently, if an improper conflict would result, or if the case would be unjustly burdensome. Repugnance must be strong enough to impair the representation. And appointed counsel owes everything retained counsel owes: loyalty, confidentiality, and the same limits. Appointment itself creates the relationship, and the court controls withdrawal and substitution."
+      },
+      {
+       "say": "Rule 6.3. A lawyer may serve as a director, officer, or member of a legal services organization, apart from the lawyer's firm, even though it serves persons with interests adverse to the lawyer's clients. The lawyer shall not knowingly participate in a decision or action of the organization, (a), if participating would be incompatible with the lawyer's obligations to a client under 1.7; or (b), where the decision or action could have a material adverse effect on the representation of a client of the organization whose interests are adverse to a client of the lawyer. Board service does not make the organization's clients the lawyer's clients, but she must recuse from those decisions."
+      },
+      {
+       "say": "Rule 6.4. A lawyer may serve as a director, officer, or member of an organization involved in reform of the law or its administration even though the reform may affect a client's interests. When the lawyer knows that a client's interests may be materially benefitted by a decision in which the lawyer participates, the lawyer shall disclose that fact, but need not identify the client. Lawyers in law reform organizations generally do not represent the organization; otherwise an antitrust litigator might be disqualified from helping revise the antitrust rules."
+      },
+      {
+       "say": "Rule 6.5. (a) A lawyer who, under the auspices of a program sponsored by a nonprofit organization or court, provides short-term limited legal services to a client without expectation by either that the lawyer will provide continuing representation in the matter, one, is subject to 1.7 and 1.9(a) only if the lawyer knows the representation involves a conflict of interest; and two, is subject to 1.10 only if the lawyer knows another lawyer in the lawyer's firm is disqualified by 1.7 or 1.9(a) in the matter. (b) Except as provided in (a)(2), 1.10 is inapplicable."
+      },
+      {
+       "say": "Why relax conflicts: hotlines, advice-only clinics, and court help desks cannot run systematic conflict checks, and the limited nature of the service reduces the risk. The other Rules, including 1.6 and 1.9(c), still apply. Limited scope still needs informed consent under 1.2(c). If short-term limited representation would not be reasonable, the lawyer may give advice but must also advise of the need for further help. And if the lawyer goes on to represent the client on an ongoing basis, 1.7, 1.9(a), and 1.10 apply in full."
+      },
+      {
+       "say": "The exam tip. 6.1 is the only purely aspirational Rule: should, fifty hours, no discipline. 6.2 is mandatory, shall not seek to avoid, but lists good causes. 6.3 and 6.4 permit board service, with recusal under 6.3 or disclosure without naming the client under 6.4. 6.5 relaxes conflicts only for short-term limited services and only when the lawyer does not know of a conflict."
+      },
+      {
+       "ask": "A lawyer performs no pro bono work all year. Subject to discipline?",
+       "answer": "No. 6.1 is aspirational and not enforced through discipline.",
+       "pause": 12
+      },
+      {
+       "ask": "A judge appoints a lawyer to defend an indigent client accused of a crime the lawyer finds distasteful but not so repugnant that it would impair her representation. May she seek to avoid it?",
+       "answer": "No. 6.2 allows avoiding an appointment only for good cause, and distaste alone is not enough. Repugnance must be likely to impair the relationship or representation.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer volunteers at a court help desk, giving a tenant brief advice. Later it turns out the lawyer's firm represents the landlord. The lawyer did not know. Violation?",
+       "answer": "No. Under 6.5, 1.7 and 1.10 apply only if the lawyer knows of the conflict. If she continues representing the tenant beyond the limited service, the full conflict rules apply.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer on a bar law-reform committee votes on a rule change that would materially help one of her clients. What must she do?",
+       "answer": "Under 6.4, disclose that a client may be materially benefited, but she need not name the client.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 6.1: aspire to fifty hours, a substantial majority free to persons of limited means, no discipline. 6.2: don't seek to avoid appointments without good cause. 6.3: board service with recusal. 6.4: law-reform service with disclosure, no name needed. 6.5: conflicts rules apply to short-term limited services only on knowledge."
+      },
+      {
+       "ask": "Which is the only Model Rule that is purely aspirational?",
+       "answer": "6.1, pro bono.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three good causes under 6.2.",
+       "answer": "Likely violation of the Rules or law; unreasonable financial burden; or repugnance so strong it would likely impair the relationship or the representation.",
+       "pause": 8
+      },
+      {
+       "ask": "Does an uncollected fee count as pro bono?",
+       "answer": "No. Only services rendered without fee or expectation of fee count.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e07",
+     "title": "Truthfulness in statements to others: Rule 4.1",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. The text of 4.1, the five elements of a false statement of material fact, negotiation puffing, knowledge, half-truths, and failure to disclose under 4.1(b)."
+      },
+      {
+       "say": "Rule 4.1. In the course of representing a client, a lawyer shall not knowingly, (a), make a false statement of material fact or law to a third person; or (b), fail to disclose a material fact when disclosure is necessary to avoid assisting a criminal or fraudulent act by a client, unless disclosure is prohibited by Rule 1.6."
+      },
+      {
+       "say": "Scope: statements by a lawyer, or on a lawyer's behalf, to a third person, not a client, since 1.4 protects clients, in the course of representing a client. Consequences beyond discipline: tort or criminal liability, and rescission of any agreement the misrepresentation procured."
+      },
+      {
+       "say": "A false statement of material fact has five elements, all required. One, a statement, by any means, oral, written, or by context, including adopting another's statement you know is false. Two, material. Three, factual, meaning provably true or false, not opinion or position. Four, false: if a reasonable recipient would be misled into understanding it as a statement of a fact the speaker knows is false, it is a misrepresentation. Five, made knowingly."
+      },
+      {
+       "say": "Negotiation, 4.1 Comment 2. By convention, some statements are not taken as statements of fact: estimates of price or value; a party's intentions as to an acceptable settlement, like my client won't take less than five hundred thousand; and the existence of an undisclosed principal, unless nondisclosure would be fraud. This puffing or posturing is fine. But we have another offer at five hundred thousand, if false, is not."
+      },
+      {
+       "say": "Knowledge. Negligent or innocent misstatements cannot support discipline under 4.1(a), but knowing or negligent misrepresentation can support tort liability, and even an innocent one can support rescission or a contract defense. Half-truths and strategic ambiguity violate 4.1(a): once you speak, do not leave a misleading impression."
+      },
+      {
+       "say": "Failure to disclose. You must disclose an undisclosed material fact in only two situations. One, you said something that makes the omission misleading, under 4.1(a). Two, disclosure is necessary to avoid assisting a client's crime or fraud, under 4.1(b)."
+      },
+      {
+       "say": "The 4.1(b) twist. If the client won't allow the disclosure, withdraw, with leave where required, and you must make it unless 1.6 prohibits it. Because a permissive exception, 1.6(b)(2) or (b)(3), means 1.6 does not prohibit disclosure, 4.1(b) turns that may into a must."
+      },
+      {
+       "say": "Problem 10's setup: Maya, assisting partner Ron Rainmaker on an acquisition, learns facts the other side doesn't know. Silence is generally fine. Affirmative misstatements, misleading half-truths, and silence that assists the client's fraud are not."
+      },
+      {
+       "ask": "In settlement talks, a plaintiff's lawyer says, my client won't take a penny less than two hundred thousand, though the client authorized accepting one fifty. Violation?",
+       "answer": "No. A party's intentions as to an acceptable settlement are, by convention, not statements of material fact under Comment 2.",
+       "pause": 12
+      },
+      {
+       "ask": "A seller's lawyer says, the building passed its last inspection, knowing it passed only after a failed inspection the buyer doesn't know about, and that the failed items were never fixed. Violation?",
+       "answer": "Yes. A literally true half-truth that leaves a misleading impression is a false statement under 4.1(a).",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer learns mid-deal that his client has been using closing documents the lawyer prepared to defraud the buyer. The client refuses to let him say anything. What now?",
+       "answer": "He must withdraw. Because his services were used, 1.6(b)(2) and (b)(3) permit disclosure, so 1.6 does not prohibit it, and 4.1(b) requires disclosing the material fact if necessary to avoid assisting the fraud.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer stays silent about a fact the other side never asked about and that the lawyer never mentioned. No client fraud is involved. Violation?",
+       "answer": "No. There is no general duty to disclose to opposing parties. Only a misleading statement or 4.1(b) triggers a duty.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 4.1(a): no knowing false statement of material fact or law to third persons; puffing on value and settlement intentions is fine; half-truths are not. 4.1(b): disclose a material fact when needed to avoid assisting a client's crime or fraud, unless 1.6 prohibits it, which it does not when a 1.6(b) exception applies."
+      },
+      {
+       "ask": "Name the five elements of a false statement under 4.1(a).",
+       "answer": "A statement, material, factual, false or misleading, and made knowingly.",
+       "pause": 8
+      },
+      {
+       "ask": "Which negotiation statements are not statements of fact?",
+       "answer": "Estimates of price or value, intentions as to an acceptable settlement, and the existence of an undisclosed principal unless that would be fraud.",
+       "pause": 8
+      },
+      {
+       "ask": "How does 4.1(b) turn may into must?",
+       "answer": "When a 1.6(b) exception permits disclosure, 1.6 does not prohibit it, so disclosure necessary to avoid assisting the client's crime or fraud becomes mandatory.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e08",
+     "title": "Represented persons: the no-contact rule, Rule 4.2",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The text of 4.2, who must follow it, who is protected, including the three categories of organizational constituents, in the matter, knowledge, communication, five permitted communications, and consequences."
+      },
+      {
+       "say": "Rule 4.2. In representing a client, a lawyer shall not communicate about the subject of the representation with a person the lawyer knows to be represented by another lawyer in the matter, unless the lawyer has the consent of the other lawyer or is authorized to do so by law or a court order. First, know which world you are in: represented, 4.2, or unrepresented, 4.3."
+      },
+      {
+       "say": "Who must follow it: a lawyer, including people acting at the lawyer's direction or on the lawyer's behalf, investigators and paralegals, under 8.4(a) and 5.3. It applies even if the represented person starts the conversation or consents, Comment 3. Only the lawyer can consent."
+      },
+      {
+       "say": "Who is protected: a person who has retained counsel in the matter, and, when an organization is represented in the matter, three categories of constituents under Comment 7, any one suffices. One, a constituent who supervises, directs, or regularly consults with the organization's lawyer about the matter. Two, one who has authority to obligate the organization about the matter. Three, one whose act or omission in the matter may be imputed to the organization for civil or criminal liability. Former constituents are not protected, and a constituent with personal counsel needs only that counsel's consent. State variations differ."
+      },
+      {
+       "say": "In the matter. An organization with an in-house legal department is not necessarily represented in the matter you are investigating, Problem 11B and Jorgenson versus Taco Bell. And United States versus Talao, Ninth Circuit, 2000: a protected employee who wants to talk without company counsel present, to report the employer's wrongdoing, presents a different case."
+      },
+      {
+       "say": "Knowledge: actual knowledge, but willful blindness counts the same, Global-Tech Appliances versus SEB, and Comment 8. If unsure, ask. The better practice is to ask a pro se litigant who may be ghost-advised, ABA Opinion 15-472. A witness who honestly says no lawyers when an in-house lawyer has secretly been involved does not put you in violation."
+      },
+      {
+       "say": "Communication. Investigation without communicating, watching in public or reading public posts, does not violate the Rule. Getting behind privacy settings with a friend request, or through someone else's account, raises the communication question, In re Robertelli, New Jersey, 2020."
+      },
+      {
+       "say": "Five permitted communications, any one suffices. One, with opposing counsel's consent; get it clearly, preferably in writing. Two, not about the subject of the representation, like the weather or an unrelated matter. Three, as a party: a lawyer who is a party may talk to the other party, and parties may always talk to each other directly; the lawyer may advise the client about such talks, Comment 4. Four, with someone you also represent or are asked to represent, like a person seeking a second opinion. Five, authorized by law or court order: statutory pre-filing investigations by government lawyers, subject to McDade; communications with represented government agencies or officials on policy issues; and court-approved notices in class actions."
+      },
+      {
+       "say": "Consequences: discipline, as in In re Howes, New Mexico, 1997. Information-protective remedies: disqualification, exclusion of the improperly obtained evidence, and monetary sanctions. Decision-protective remedies: rescission of agreements and relief from judgments or orders obtained through the forbidden contact."
+      },
+      {
+       "ask": "An opposing party, who has a lawyer, calls the plaintiff's lawyer directly and says, I fired nobody, but I want to settle without my lawyer. Let's talk. May the plaintiff's lawyer discuss settlement?",
+       "answer": "No. 4.2 applies even if the represented person starts the conversation and consents. Only the other lawyer can consent.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer suing a corporation wants to interview a current warehouse worker whose negligence caused the accident. The corporation has counsel in the case. May she, without consent?",
+       "answer": "No. The worker's act may be imputed to the corporation for liability, so he is a protected constituent under Comment 7. A former employee would not be protected.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer tells his client, the opposing party, that she may call the other side directly to talk settlement, and suggests points to raise. Permitted?",
+       "answer": "Yes. Parties may communicate directly with each other, and the lawyer may advise the client about it, Comment 4.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer reviews an opposing party's public social media posts. Violation of 4.2?",
+       "answer": "No. Viewing public information is not communication. Sending a friend request to get behind privacy settings would raise the question.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 4.2: no communication about the subject with a person known to be represented in the matter, without that lawyer's consent or legal authorization. It binds agents, can't be waived by the represented person, protects three categories of current constituents, and allows five kinds of contact."
+      },
+      {
+       "ask": "Can a represented person consent to direct contact by the opposing lawyer?",
+       "answer": "No. Only that person's lawyer can.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three protected categories of organizational constituents.",
+       "answer": "Those who supervise, direct, or regularly consult with the organization's lawyer about the matter; those who can obligate the organization; and those whose conduct may be imputed to it.",
+       "pause": 8
+      },
+      {
+       "ask": "Are former employees protected by 4.2?",
+       "answer": "No.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e09",
+     "title": "Unrepresented persons, and a client's wrongdoing: 4.3, 3.4(f), and 1.2(d)",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The four do's and don'ts for unrepresented persons, what you may do, then 1.2(d), knowledge and willful blindness, compliance versus evasion, testing the law and Walker, and the five client-wrongdoing situations."
+      },
+      {
+       "say": "Four things you must or must not do with unrepresented persons, from 4.3 and 3.4(f). One, you must not state or imply that you are disinterested. Two, when you know or reasonably should know the person misunderstands your role, for whatever reason, you must make reasonable efforts to correct it. Three, if the person's interests are or have a reasonable possibility of being in conflict with your client's, you must not give legal advice other than the advice to secure counsel. Four, you must not ask a non-client to refrain from voluntarily giving relevant information to another party, unless the person is the client's relative, employee, or agent and you reasonably believe the person's interests won't be adversely affected."
+      },
+      {
+       "say": "What you may do: answer factual questions, give information, negotiate, and advocate for your client, truthfully, as long as none of it is dressed up as advice. The line often turns on word choice. The law requires you to sign this, is advice. My client won't settle unless you sign this, is position. Reasonable possibility of conflict and knows or reasonably should know set a low threshold; when in doubt, assume the interests conflict. Company counsel must give constituents the reminder under 1.13(f). Consequences: discipline, plus disqualification, evidentiary and monetary sanctions, rescission of agreements unfairly induced, and Rule 60(b) relief."
+      },
+      {
+       "say": "Rule 1.2(d). A lawyer shall not counsel a client to engage, or assist a client, in conduct that the lawyer knows is criminal or fraudulent, but may discuss the legal consequences of any proposed course of conduct and may counsel or assist a client to make a good-faith effort to determine the validity, scope, meaning, or application of the law."
+      },
+      {
+       "say": "Knowledge is actual knowledge, which may be inferred from circumstances, including willful blindness, or conscious avoidance: failing to learn what you consciously suspected and could have discovered with reasonable effort."
+      },
+      {
+       "say": "Compliance advice versus evasion advice. Advising how close a client can get to a legal line without crossing it is proper. Advising how not to get caught, or how likely enforcement is, is counseling the client to break the law. Testing the law: advice about testing a statute or regulation by disobeying it can be proper, 1.2 Comment 12. But never counsel disobeying a court order, even one you think is unconstitutional; that is not a defense to contempt, Walker versus City of Birmingham."
+      },
+      {
+       "say": "Five situations. One, the client proposes something unlawful. You must not counsel or assist; you may, should, and likely must explain the consequences under 1.2(d) and 1.4(a)(5); and you may give extra-legal advice about whether it's wise under 2.1. Never keep the client happy by blessing unlawful conduct. Two, the client persists without telling you, or despite your advice. Silence does not absolve you; the Comments suggest you must speak up. If the client keeps using your services in the unlawful conduct after the 1.4(a)(5) talk, you must decline or withdraw under 1.16(a)(4)."
+      },
+      {
+       "say": "Three, the client persists but isn't using your services. You may, and generally should, withdraw under 1.16(b), subject to tribunal permission. Four, the client used your services in past unlawful conduct. You may, and generally should, withdraw under 1.16(b)(2) and (3); you must if the client intends to keep using your services or your work implicates you; consider a noisy withdrawal. Five, you suspect but don't know. The 2023 amendment to 1.16(a) creates a duty to inquire into and assess the facts, scaled to the circumstances. Whether or not required, you should investigate to confirm or allay suspicions."
+      },
+      {
+       "say": "Vicarious liability: willful blindness or assistance can make you criminally liable as an aider and abettor, 18 U.S.C. section 2, or a conspirator, Model Penal Code section 5.03, and civilly liable to third parties under standards that vary by state."
+      },
+      {
+       "ask": "Negotiating with an unrepresented tenant, the landlord's lawyer says, under the law, you have to move out within ten days. Violation?",
+       "answer": "Yes, likely. That is legal advice to an unrepresented person whose interests conflict with the client's, barred by 4.3. Saying my client will file for eviction unless you leave in ten days would be a statement of position.",
+       "pause": 12
+      },
+      {
+       "ask": "A client asks, how often does the EPA actually inspect plants like mine? I'm thinking of skipping the required filters. What may the lawyer say?",
+       "answer": "He may explain the law and the legal consequences of skipping the filters, and give moral and practical advice under 2.1. He may not advise on the likelihood of getting caught to help the client violate the law, which is counseling under 1.2(d).",
+       "pause": 12
+      },
+      {
+       "ask": "A client wants to violate a court injunction he thinks is unconstitutional, to test it. May the lawyer advise him to disobey?",
+       "answer": "No. Under Walker versus City of Birmingham, unconstitutionality is not a defense to contempt for disobeying a court order. He should challenge it in court.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 4.3: don't imply disinterest, correct misunderstandings, no advice except get a lawyer; 3.4(f): only client agents may be asked not to talk. 1.2(d): never counsel or assist known crime or fraud, but you may explain consequences and help test the law in good faith."
+      },
+      {
+       "ask": "What is willful blindness?",
+       "answer": "Failing to learn what you consciously suspected and could have discovered with reasonable effort.",
+       "pause": 8
+      },
+      {
+       "ask": "What may a lawyer always do under 1.2(d)?",
+       "answer": "Discuss the legal consequences of any proposed conduct, and help the client make a good-faith effort to determine the validity, scope, meaning, or application of the law.",
+       "pause": 8
+      },
+      {
+       "ask": "What must a lawyer do if the client keeps using the lawyer's services for a fraud after the 1.4(a)(5) talk?",
+       "answer": "Decline or withdraw under 1.16(a)(4).",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e10",
+     "title": "Abusive tactics, threats, and reporting misconduct: 4.4(a) and 8.3",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. The four elements of 4.4(a), its contrast with 8.4(g), the First Amendment, threats under ABA Opinion 92-363 and the five never-okay threats, Rule 408, Flatley versus Mauro, then 8.3 again with In re Riehlmann."
+      },
+      {
+       "say": "Rule 4.4(a). In representing a client, a lawyer shall not use means that have no substantial purpose other than to embarrass, delay, or burden a third person, or use methods of obtaining evidence that violate the legal rights of such a person. Four elements, all required. One, in representing a client, not grocery shopping. Two, a third person, meaning anyone but your client. Three, means: actual speech or conduct, which violates the Rule when undertaken with the bad purpose, even if it doesn't succeed. Four, no substantial purpose other than to embarrass, delay, or burden. Some embarrassment and burden are unavoidable; the Rule reaches only what is not reasonably necessary."
+      },
+      {
+       "say": "Contrast 8.4(g), which reaches harassment or discrimination on a protected basis in any conduct related to the practice of law, whether or not you are representing a client. Most conduct violating 4.4(a) violates other Rules too and supports sanctions. And the First Amendment: no formal consequences may rest on protected speech, but the case law is confused and courts read lawyers' speech rights narrowly. One example the outline marks as outside the class materials: United States versus Wunsch, Ninth Circuit, 1996, held a local rule against offensive personality too vague to punish a lawyer's sexist letter to a prosecutor."
+      },
+      {
+       "say": "Threats. The old Model Code rule, DR 7-105(A), still followed in a significant minority of states, barred threatening criminal charges solely to gain advantage in a civil matter. The Model Rules dropped it as redundant. Under ABA Opinion 92-363, a lawyer may threaten to bring, or agree not to bring, criminal or quasi-criminal charges to gain advantage in a civil dispute if three conditions are met, all required. One, the charge is related to the civil claim. Two, the lawyer has a well-founded belief that both the civil claim and the criminal charges are warranted by law and fact. Three, the lawyer does not attempt to exert or suggest improper influence over the criminal process."
+      },
+      {
+       "say": "Never okay, anywhere. Five kinds of threat are extortionate. One, threats to make charges unrelated to, or to disclose embarrassing facts not genuinely relevant to, the civil dispute. Two, threats to make charges with no substantial basis in fact or law, 3.1 and 8.4(d). Three, threats to engage in lawful conduct you don't actually intend to pursue, 4.1(a). Four, threats based on improperly influencing officials, or suggesting you can, 8.4(e). Five, threats to commit violence or other illegal acts. These are torts and potentially crimes even when the threatened disclosures are true, and violate 4.4(a) and often 8.4(b)."
+      },
+      {
+       "say": "Evidence Rule 408 is no shield: an extortionate threat couched as a settlement demand is admissible to prove the threat itself, under 408(b), and the victim can always report it. Practical tiers: threatening civil claims your client colorably has is the essence of a demand letter. Threatening to report opposing counsel's ethics violation to gain an advantage: don't, because in 8.3 states you must report it anyway, so it cannot be a bargaining chip. Anything else, think twice. And presenting charges without threatening first: under the majority view, you may present a charge you could properly threaten, but not one you couldn't."
+      },
+      {
+       "say": "Flatley versus Mauro, California, 2006. A lawyer demanded a seven-figure settlement from Michael Flatley, of Riverdance, to resolve a sexual assault claim, warning that otherwise an investigation would expose immigration, Social Security, and tax matters to any and all appropriate authorities, and that press releases would go to media worldwide. The court held the demand was criminal extortion as a matter of law. Flatley sued for civil extortion and defamation; Mauro was suspended for a year in Illinois and paid Flatley four hundred thousand dollars. The model of a forbidden threat: unrelated charges and disclosures used as leverage."
+      },
+      {
+       "say": "Rule 8.3, again. Four elements: you know, by actual knowledge or willful blindness; another lawyer, any other lawyer, including opposing counsel; committed a violation that raises a substantial question as to that lawyer's honesty, trustworthiness, or fitness; then you shall inform the appropriate professional authority, the disciplinary agency, not the lawyer's boss. Two exceptions: 1.6 information, and information gained in an approved lawyers assistance program. 8.3(b) imposes the same duty for judges' serious violations."
+      },
+      {
+       "say": "The Chapter 16 review: the client's no-objection removes the confidentiality bar, so knowing of opposing counsel's extortionate threat that raises a substantial question about his honesty and doing nothing violates 8.3. And In re Riehlmann, Louisiana, 2005: a lawyer who waited years to report a friend's confession that, as a prosecutor, he had suppressed exculpatory evidence was disciplined."
+      },
+      {
+       "ask": "A client's former business partner embezzled from their company. The client's lawyer writes, repay the four hundred thousand dollars or my client will report your embezzlement to the district attorney. The lawyer believes both claims are well founded and suggests no influence over prosecutors. Permitted under the Model Rules?",
+       "answer": "Yes, under ABA Opinion 92-363: the criminal charge is related to the civil claim, both are well founded, and there is no suggestion of improper influence. Some states still bar it under the old Code rule.",
+       "pause": 12
+      },
+      {
+       "ask": "In a contract dispute, a lawyer writes, pay up, or we'll tell the IRS about your unreported cash income. Permitted?",
+       "answer": "No. The tax charge is unrelated to the contract claim. Threatening unrelated charges is extortionate, as in Flatley versus Mauro.",
+       "pause": 12
+      },
+      {
+       "ask": "Opposing counsel commits a serious ethics violation. A lawyer offers to stay silent about it if the other side settles. Proper?",
+       "answer": "No. If the violation raises a substantial question of honesty or fitness, 8.3 requires reporting it, so it cannot be a bargaining chip.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 4.4(a): in representing a client, no means with no substantial purpose other than to embarrass, delay, or burden. Threats of related, well-founded criminal charges without improper influence are allowed under Opinion 92-363; unrelated, baseless, bluffing, influence-based, or violent threats never. 8.3: report known violations raising substantial questions, to the disciplinary authority."
+      },
+      {
+       "ask": "Name the three conditions of Opinion 92-363.",
+       "answer": "The criminal charge is related to the civil claim; both are well founded in law and fact; and no attempt to exert or suggest improper influence over the criminal process.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Flatley versus Mauro hold?",
+       "answer": "A settlement demand threatening unrelated disclosures to authorities and the press was criminal extortion as a matter of law.",
+       "pause": 8
+      },
+      {
+       "ask": "What happened in In re Riehlmann?",
+       "answer": "A lawyer who waited years to report a friend's confession of suppressing exculpatory evidence as a prosecutor was disciplined.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e11",
+     "title": "Restricting future practice: Rule 5.6",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. The two prohibitions of 5.6, settlement restrictions and why they're banned, employment and partnership restrictions, their exceptions, and Howard versus Babcock."
+      },
+      {
+       "say": "Rule 5.6. A lawyer shall not participate in offering or making either of two things. (a) A partnership, shareholders, operating, employment, or other similar agreement that restricts the right of a lawyer to practice after termination of the relationship, except an agreement concerning benefits upon retirement. (b) An agreement in which a restriction on the lawyer's right to practice is part of the settlement of a client controversy."
+      },
+      {
+       "say": "Settlement restrictions, 5.6(b). Elements: shall not, mandatory; participate in offering or making, so defense counsel who proposes it and plaintiff's counsel who accepts it both violate; an agreement that is part of the settlement of a client controversy; containing a restriction on the lawyer's right to practice, like plaintiff's counsel will never sue H2Whoa again, or won't use what was learned in discovery against it in future cases. That is Frank and Happy's H2Whoa contamination case."
+      },
+      {
+       "say": "Why it's forbidden: it pits the lawyer's interests against the client's, since there is a premium for the lawyer's promise; it deprives future clients of the most knowledgeable counsel; and it lets defendants buy off the lawyers who know where the bodies are. Consequences: discipline; breach of fiduciary duty and restitution of the lawyer's ill-gotten gains to the client; and the restriction is usually unenforceable as against public policy. Confidentiality terms that don't restrict practice are generally allowed, though increasingly controversial."
+      },
+      {
+       "say": "Employment and partnership restrictions, 5.6(a). It bars covenants not to compete for clients after leaving a firm, because clients must be free to choose counsel, Comment 1. Two exceptions: restrictions tied to retirement benefits, and restrictions in the sale of a law practice under 1.17. Consequences: discipline, and the restriction is voidable, with amounts paid or withheld recoverable as unjust enrichment. Courts split on financial disincentives."
+      },
+      {
+       "say": "Howard versus Babcock, California, 1993. A law firm partnership agreement reduced the withdrawal benefits of partners who left and competed with the firm in the same area. The California Supreme Court held that an agreement imposing a reasonable cost on departing partners who compete is not void per se and may be enforced. That is the minority view. Compare Moskowitz versus Jacobson Holman, Eastern District of Virginia, 2015. And, a note the outline marks as outside the class materials: most courts, for example Cohen versus Lord, Day and Lord, New York 1989, treat financial penalties for competing as unenforceable restrictions on practice. Clawbacks of bar-exam or moving expenses from short-tenure hires are a different, rarer issue."
+      },
+      {
+       "ask": "Settling a product case, the defendant offers a bonus if plaintiff's counsel agrees never to represent anyone else against the company. Plaintiff's counsel refuses. Has defense counsel violated anything?",
+       "answer": "Yes. 5.6(b) bars participating in offering such an agreement, not just making it. The offer itself violates the Rule.",
+       "pause": 12
+      },
+      {
+       "ask": "A firm's partnership agreement says departing partners lose retirement benefits if they compete, but the clause applies only to partners who leave at retirement age to collect those benefits. Permitted?",
+       "answer": "Yes. 5.6(a) excepts agreements concerning benefits upon retirement.",
+       "pause": 12
+      },
+      {
+       "ask": "A settlement requires the plaintiff and her lawyer to keep the settlement amount confidential. Does that violate 5.6(b)?",
+       "answer": "Generally no. Confidentiality terms that don't restrict practice are generally allowed.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 5.6(a): no post-departure practice restrictions, except retirement benefits and practice sales. 5.6(b): no practice restrictions in settlements, and both offering and accepting violate it. Howard versus Babcock is the minority view allowing a reasonable cost on competing departing partners."
+      },
+      {
+       "ask": "What are the exceptions to 5.6(a)?",
+       "answer": "Retirement benefits, and restrictions in the sale of a practice under 1.17.",
+       "pause": 8
+      },
+      {
+       "ask": "Why is 5.6(b) forbidden?",
+       "answer": "It pits lawyer against client, deprives future clients of knowledgeable counsel, and lets defendants buy off informed lawyers.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Howard versus Babcock hold?",
+       "answer": "A reasonable cost imposed on departing partners who compete is not void per se and may be enforced.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e12",
+     "title": "Advertising: the constitutional frame, Bates, Zauderer, and Rules 7.1 and 7.2",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. Bates and Central Hudson, antitrust, Ibanez and Pape, Zauderer, then 7.1 on false or misleading communications and 7.2 on media, paying for recommendations, specialists, and contact information."
+      },
+      {
+       "say": "Bates versus State Bar of Arizona, 1977. Two lawyers running a low-cost legal clinic advertised routine services, such as uncontested divorces and simple bankruptcies, at stated fees, in violation of Arizona's ban on lawyer advertising. The Court held a blanket ban on truthful advertising of routine legal services and prices violates the First Amendment. States may still regulate false, deceptive, or misleading advertising and in-person solicitation. It began the modern regime, in which 7.1 targets only false or misleading communications."
+      },
+      {
+       "say": "Truthful lawyer advertising is commercial speech. Regulation gets intermediate scrutiny under Central Hudson: the state must prove the rule, one, serves a substantial state interest; two, directly advances it; and three, is no more extensive than necessary. Antitrust may also limit a self-regulating bar's anticompetitive rules: North Carolina State Board of Dental Examiners versus FTC, and Goldfarb. States still regulate aggressively. Florida disciplined Sylvia Ibanez for truthfully listing her CPA and CFP credentials, until the Supreme Court reversed. And Florida found a pit bull and 1-800-PIT-BULL misleading, Florida Bar versus Pape."
+      },
+      {
+       "say": "Zauderer versus Office of Disciplinary Counsel, 1985, an assigned main case. An Ohio lawyer ran a newspaper ad aimed at women injured by the Dalkon Shield IUD. It included a drawing of the device, said he was handling such cases, and stated that cases were taken on a contingent-fee basis and, if there is no recovery, no legal fees are owed by our clients. Ohio disciplined him for soliciting through the ad, giving legal advice in it, using an illustration, and omitting that clients might owe costs. Three holdings. One, a state may not discipline a lawyer for truthful, nondeceptive printed advertising giving accurate information about potential clients' legal rights. Two, the ban on illustrations, Ohio's dignity rule, was unconstitutional: an accurate drawing isn't misleading, and the state showed no substantial interest it advanced. Three, but the state may require disclosure that clients may be liable for significant litigation costs even if they lose. A disclosure requirement is valid if reasonably related to preventing deception and not unjustified or unduly burdensome, so the no-legal-fees ad without that disclosure was misleading. That is why no fee unless we win ads must disclose costs."
+      },
+      {
+       "say": "Rule 7.1. A lawyer shall not make a false or misleading communication about the lawyer or the lawyer's services. A communication is false or misleading if it either, one, contains a material misrepresentation of fact or law, or two, omits a fact necessary to make the statement considered as a whole not materially misleading. Every communication counts: ads, websites, social media, business cards, letterhead, and firm names."
+      },
+      {
+       "say": "Categories states condemn, Comment 3. One, truthful reports of past results or testimonials that create unjustified expectations of similar results without reference to each case's facts: he got me ONE MILLION DOLLARS, and he can do that for you, too. Two, unsubstantiated comparisons with other lawyers' services or fees, if specific enough to suggest they can be substantiated, like the lowest cost for a will in Yoknapatawpha County, as opposed to puffery, like don't settle for less than the best. Three, claims of expertise or specialization, governed by 7.2(c). Some states ban testimonials, dramatizations, or superlatives outright; such categorical bans are constitutionally vulnerable. Paid spokespersons usually need a visible disclaimer. And misleading by implication: a firm name implying a partnership that doesn't exist, or ads implying you can achieve results by means that violate the law, 8.4(e)."
+      },
+      {
+       "say": "Rule 7.2. (a) A lawyer may communicate information about the lawyer's services through any media. (b) No giving anything of value for recommending the lawyer's services, with the five exceptions from Day 2: advertising costs; legal service plans and not-for-profit or qualified referral services; buying a practice; non-exclusive, disclosed reciprocal referral agreements; and nominal thank-you gifts. It bars capping and running: paying EMTs, hospital staff, tow-truck drivers, funeral directors, or anyone else to steer clients."
+      },
+      {
+       "say": "7.2(c), specialists. Do not state or imply certification as a specialist unless two conditions are met, both required: one, the lawyer has been certified by an organization approved by a state authority or accredited by the ABA; and two, the certifying organization is clearly named. Saying you concentrate in or focus on an area is fine if true. 7.2(d): every communication must include the name and contact information of at least one lawyer or firm responsible for its content."
+      },
+      {
+       "ask": "A lawyer's ad says, no fee unless we win, but his contingent fee agreements make clients pay costs regardless of outcome. Problem?",
+       "answer": "Yes. Under Zauderer and 7.1, omitting that clients may owe significant costs even if they lose makes the ad misleading.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer's website says, board certified in family law, but does not name the certifying body, which is ABA-accredited. Violation?",
+       "answer": "Yes. 7.2(c) requires that the certifying organization be clearly named.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer pays a tow-truck driver fifty dollars for every accident victim he refers. Permitted?",
+       "answer": "No. That is giving something of value for a recommendation, barred by 7.2(b). It is running, and no exception applies.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer's TV ad says, we're the best injury lawyers in town. Misleading?",
+       "answer": "Generally no. That is puffery, not a comparison specific enough to suggest it can be substantiated.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. Bates protects truthful advertising; Central Hudson sets intermediate scrutiny; Zauderer protects accurate targeted ads and illustrations but allows compelled cost disclosures. 7.1: no material misrepresentations or misleading omissions. 7.2: any media; no paying for recommendations except five; specialist claims need a certified, named organization; and include a responsible lawyer's contact information."
+      },
+      {
+       "ask": "What three things must a state prove under Central Hudson?",
+       "answer": "A substantial interest, that the rule directly advances it, and that it is no more extensive than necessary.",
+       "pause": 8
+      },
+      {
+       "ask": "What were Zauderer's three holdings?",
+       "answer": "Truthful ads about legal rights are protected; the illustration ban was unconstitutional; but the state may require disclosure that clients may owe costs even if they lose.",
+       "pause": 8
+      },
+      {
+       "ask": "What two conditions does 7.2(c) require for a specialist claim?",
+       "answer": "Certification by an organization approved by a state authority or ABA-accredited, and the organization clearly named.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e13",
+     "title": "Solicitation and pay to play: Rules 7.3 and 7.6",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The definition of solicitation, the live-contact ban and its three exceptions, the two bars that apply to every solicitation, why live contact is different, targeted letters, and political contributions under 7.6."
+      },
+      {
+       "say": "Rule 7.3(a). Solicitation is a communication initiated by or on behalf of a lawyer, directed to a specific person the lawyer knows or reasonably should know needs legal services in a particular matter, that offers, or reasonably can be understood as offering, to provide legal services for that matter. So a general ad is not solicitation. A message to a specific person known to need help in a particular matter is."
+      },
+      {
+       "say": "7.3(b). A lawyer shall not solicit professional employment by live person-to-person contact when a significant motive is the lawyer's or firm's pecuniary gain, unless the contact is with any one of three. One, a lawyer. Two, a person who has a family, close personal, or prior business or professional relationship with the lawyer or firm. Three, a person who routinely uses for business purposes the type of legal services offered."
+      },
+      {
+       "say": "7.3(c). Even when (b) doesn't bar it, a lawyer shall not solicit if either, one, the target has made known to the lawyer a desire not to be solicited, or two, the solicitation involves coercion, duress, or harassment. 7.3(d): the Rule doesn't prohibit communications authorized by law or ordered by a court. 7.3(e): a lawyer may participate in a prepaid or group legal service plan, operated by an organization the lawyer doesn't own or direct, that uses live contact to enroll members who aren't known to need legal services in a particular matter."
+      },
+      {
+       "say": "Why live contact is different. A person who just learned of a criminal charge or a loved one's death or injury is distressed and vulnerable, less able to exercise independent judgment, and more subject to a trained advocate's undue influence. Live person-to-person means in person, face-to-face, live telephone, and real-time visual or auditory contact. Not letters, email, texts, or chat-room messages the recipient can ignore, Comment 2."
+      },
+      {
+       "say": "Targeted letters and emails are generally allowed under 7.3, but remain subject to 7.1 and 7.3(c). Notes the outline marks as outside the class materials: the Supreme Court protected targeted letters in Shapero versus Kentucky Bar Association, 1988, but upheld a thirty-day ban on letters to accident victims in Florida Bar versus Went For It, 1995; and it upheld discipline for in-person solicitation for profit in Ohralik versus Ohio State Bar, 1978, but protected nonprofit civil-rights solicitation in In re Primus, 1978."
+      },
+      {
+       "say": "No pecuniary motive, no (b) problem: pro bono or nonprofit outreach is not barred by 7.3(b), though (c) still applies. A permissible solicitation can still be false or misleading under 7.1. Consequences: discipline, and in some states unenforceable fee agreements, fee forfeiture, or criminal barratry or runner statutes."
+      },
+      {
+       "say": "Rule 7.6, pay to play. A lawyer or law firm shall not accept a government legal engagement or an appointment by a judge if the lawyer or firm makes a political contribution or solicits political contributions for the purpose of obtaining or being considered for that type of legal engagement or appointment. Lawyers may participate fully in politics, Comment 1. The Rule reaches only contributions that would not have been made but for the desire to be considered, Comment 5. Government legal engagement means work a public official can award. Appointment by a judge includes referees, special masters, receivers, guardians, and similar posts, but not substantially uncompensated services, engagements made on the merits after a request for proposals or other process free of political influence, or appointments made on a rotational basis from a list compiled without regard to contributions, Comment 3. The ban covers PACs and entities the lawyer or firm controls, Comment 4."
+      },
+      {
+       "ask": "A lawyer visits a hospital and, at the bedside, offers to represent an accident victim he has never met. Permitted?",
+       "answer": "No. Live person-to-person solicitation for pecuniary gain of a stranger is barred by 7.3(b).",
+       "pause": 12
+      },
+      {
+       "ask": "The day after a crash, a lawyer emails a victim offering representation. The email is truthful. Permitted under the Model Rules?",
+       "answer": "Yes, generally. Email is not live person-to-person contact, so 7.3(b) doesn't apply, but it must not be false or misleading and must respect 7.3(c). Some states impose waiting periods.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer calls the general counsel of a corporation that routinely hires outside litigators, offering her services for a pending case. Permitted?",
+       "answer": "Yes. 7.3(b)(3) allows live contact with a person who routinely uses the type of legal services offered for business purposes. And a general counsel is also a lawyer, 7.3(b)(1).",
+       "pause": 12
+      },
+      {
+       "ask": "A civil-rights nonprofit lawyer approaches protesters in person to offer free representation. Barred by 7.3(b)?",
+       "answer": "No. There is no pecuniary motive, so 7.3(b) doesn't apply, though 7.3(c) still does.",
+       "pause": 10
+      },
+      {
+       "ask": "A firm donates to a county executive's campaign so it will be considered for county bond work it would not otherwise have supported. Then it accepts the work. Violation?",
+       "answer": "Yes, 7.6: accepting a government legal engagement after a contribution made for the purpose of being considered for it.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. Solicitation is a targeted offer to a specific person known to need help in a matter. 7.3(b): no live, for-profit solicitation except of lawyers, family, close friends, prior clients or professional contacts, or routine business users. 7.3(c): never after a do-not-solicit request, and never with coercion, duress, or harassment. 7.6: no government work or judicial appointments after contributions made to get them."
+      },
+      {
+       "ask": "Name the three 7.3(b) exceptions.",
+       "answer": "Lawyers; persons with a family, close personal, or prior business or professional relationship; and persons who routinely use the service for business.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the two absolute bars in 7.3(c)?",
+       "answer": "The person has made known a desire not to be solicited, or the solicitation involves coercion, duress, or harassment.",
+       "pause": 8
+      },
+      {
+       "ask": "Is a text message live person-to-person contact?",
+       "answer": "No.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e14",
+     "title": "Harassment and discrimination: Rule 8.4(g)",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Why the Rule exists, its text, the four elements, its limits and carve-outs, why it's controversial, Stropnicky versus Nathanson, and the 8.4(g) versus 4.4(a) trap."
+      },
+      {
+       "say": "Why it exists. Good intentions get us only part of the way; people believe they are free of bias when they aren't. The ABA adopted 8.4(g) in 2016 to educate the bar and act against the invidious discrimination some colleagues still face. Goal B of the syllabus: a justice system that provides equal access and eliminates harassment, bias, discrimination, and racism in the law."
+      },
+      {
+       "say": "Rule 8.4(g). It is professional misconduct to engage in conduct that the lawyer knows or reasonably should know is harassment or discrimination on the basis of race, sex, religion, national origin, ethnicity, disability, age, sexual orientation, gender identity, marital status, or socioeconomic status in conduct related to the practice of law. This paragraph does not limit the ability of a lawyer to accept, decline, or withdraw from a representation in accordance with Rule 1.16. This paragraph does not preclude legitimate advice or advocacy consistent with these Rules."
+      },
+      {
+       "say": "Eleven protected categories. Race, sex, religion, national origin, ethnicity, disability, age, sexual orientation, gender identity, marital status, and socioeconomic status."
+      },
+      {
+       "say": "Four elements, all required. One, harassment or discrimination, defined by general anti-discrimination law and by Comment 3: discrimination includes harmful verbal or physical conduct that manifests bias or prejudice; harassment includes sexual harassment and derogatory or demeaning verbal or physical conduct; sexual harassment includes unwelcome sexual advances, requests for sexual favors, and other unwelcome verbal or physical conduct of a sexual nature. Two, on the basis of a protected category: only the eleven. Pure rudeness may still violate 4.4(a) or 8.4(d), but not (g). Three, knows or reasonably should know: an objective standard. Not knowing your joke was demeaning is no defense if a reasonable lawyer would have known. Four, in conduct related to the practice of law, Comment 4: much wider than client work. Representing clients; interacting with witnesses, coworkers, court personnel, lawyers, and others while engaged in the practice of law; operating or managing a firm; and participating in bar association, business, or social activities connected with the practice of law."
+      },
+      {
+       "say": "Limits. One, accepting, declining, or withdrawing under 1.16 is not limited: if 1.16 allows it, 8.4(g) probably doesn't forbid it, but other anti-discrimination law may. Two, legitimate advice or advocacy consistent with the Rules and the First Amendment is protected, even if others find the ideas discriminatory or hateful. Three, conduct to promote diversity, equity, and inclusion, permitted by other law, does not violate the Rule. Four, other carve-outs: a trial judge's finding of discriminatory peremptory challenges, a Batson violation, does not alone establish a violation; limiting your practice by subject matter or to underserved populations is allowed; and charging reasonable, lawful fees is not discrimination."
+      },
+      {
+       "say": "Why it's controversial. Adoption is thin: only a few states adopted it verbatim, though about half have some prohibition on discriminatory conduct, usually through a Comment treating discrimination as prejudicial to the administration of justice, 8.4(d). Delaware's 8.4 has no paragraph (g). Free speech and vagueness challenges: a federal court enjoined Pennsylvania's version as vague and overbroad, Greenberg versus Haggerty, 2020, but the Third Circuit reversed for lack of standing without reaching the merits, Greenberg versus Lehocky, 2023. Other law already applies: Title VII covers professional partnerships, Price Waterhouse versus Hopkins; and a firm and its partner paid compensatory and punitive damages for the partner's serial harassment of subordinates, Weeks versus Baker and McKenzie, California Court of Appeal, 1998. And the Supreme Court's limits on race-conscious admissions, Students for Fair Admissions, 2023, bear on what permitted by other law means for diversity programs."
+      },
+      {
+       "say": "Stropnicky versus Nathanson, Massachusetts Commission Against Discrimination, 1997. A divorce lawyer who represented only wives, as a matter of principle, refused to take a husband as a client. The Commission found that refusing him because of his sex violated the state public-accommodations law. The lesson: 8.4(g) doesn't limit declining under 1.16, but general anti-discrimination law may still forbid refusing clients because of a protected trait. Contrast limiting a practice to underserved populations or a subject matter, which Comment 5 allows."
+      },
+      {
+       "say": "The trap: 8.4(g) versus 4.4(a). 4.4(a) needs a client representation and means with no substantial purpose other than to embarrass, delay, or burden, aimed at a third person. 8.4(g) needs a protected basis but reaches any conduct related to the practice of law: a firm party, a bar dinner, how you treat staff. And it requires only that you reasonably should have known the conduct was harassment or discrimination."
+      },
+      {
+       "ask": "At a firm holiday party, a partner repeatedly makes demeaning jokes about an associate's religion. No client is involved. Which rule, 4.4(a) or 8.4(g)?",
+       "answer": "8.4(g). A firm social event is conduct related to the practice of law, religion is protected, and he reasonably should have known it was harassment. 4.4(a) doesn't fit because he was not representing a client.",
+       "pause": 12
+      },
+      {
+       "ask": "In a deposition, a lawyer is relentlessly rude and insulting to an opposing witness, but nothing is tied to a protected trait. Which rule?",
+       "answer": "Not 8.4(g), because there is no protected basis. Possibly 4.4(a), if the conduct had no substantial purpose other than to embarrass or burden, and 8.4(d).",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer limits her practice to representing low-income tenants. Does that violate 8.4(g)?",
+       "answer": "No. Limiting practice to underserved populations is allowed, Comment 5.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 8.4(g): harassment or discrimination on one of eleven bases, that you know or reasonably should know of, in conduct related to the practice of law. It doesn't limit 1.16 decisions or legitimate advocacy, and allows diversity efforts permitted by law. Delaware has no 8.4(g)."
+      },
+      {
+       "ask": "What is the mental state in 8.4(g)?",
+       "answer": "Knows or reasonably should know.",
+       "pause": 8
+      },
+      {
+       "ask": "Name five of the eleven protected categories.",
+       "answer": "Race, sex, religion, national origin, ethnicity, disability, age, sexual orientation, gender identity, marital status, socioeconomic status.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Stropnicky versus Nathanson hold?",
+       "answer": "A divorce lawyer's refusal to represent a husband because of his sex violated the state public-accommodations law.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e15",
+     "title": "Final review, part one: every test and list",
+     "minutes": 11,
+     "segments": [
+      {
+       "say": "This is the full review. Every multi-part test and list in the course, one after another. Say each list out loud before the answer plays. If you miss one, that is your study target for tomorrow."
+      },
+      {
+       "ask": "The concurrent-conflict waiver: what four requirements does 1.7(b) impose?",
+       "answer": "Reasonable belief in competent and diligent representation of each client; not prohibited by law; no claim by one client against another in the same proceeding; and informed consent, confirmed in writing, from each affected client.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the four nonconsentable conflicts.",
+       "answer": "Prohibited by law; outright 1.8 bans; same-proceeding claims between clients; and no reasonable belief in competent and diligent representation.",
+       "pause": 10
+      },
+      {
+       "ask": "Name 1.8's specific prohibitions, paragraph by paragraph, from (a) to (j).",
+       "answer": "(a) business deals and adverse interests, unless fair and in writing, written advice to get counsel, and signed consent. (b) using a client's information to its disadvantage. (c) soliciting or drafting substantial gifts to yourself, unless related. (d) literary or media rights before the end. (e) financial assistance, except costs, indigent costs, and humanitarian gifts. (f) third-party payment, unless consent, independence, and confidentiality. (g) aggregate settlements, unless each client signs. (h) prospective malpractice limits, unless independently represented, and settling claims without written advice. (i) proprietary interests in litigation, except liens and civil contingent fees. (j) sex with a client, unless the relationship predated. And (k): (a) through (i) are imputed, (j) is not.",
+       "pause": 12
+      },
+      {
+       "ask": "Name the seven 1.6(b) exceptions.",
+       "answer": "One, reasonably certain death or substantial bodily harm. Two, preventing a client's crime or fraud causing substantial financial injury, using your services. Three, preventing, mitigating, or rectifying that injury. Four, ethics advice. Five, claims and defenses in controversies with the client, defending yourself, or responding to allegations. Six, other law or court order. Seven, conflict checks on lateral moves or firm changes.",
+       "pause": 12
+      },
+      {
+       "ask": "Walk the 1.13 reporting ladder.",
+       "answer": "Know of a violation of a duty to the organization, or of law imputable to it, likely to cause it substantial injury: must act in its best interest and report up, to the highest authority if warranted. If the highest authority fails to address a clear violation reasonably certain to cause substantial injury: may report out, minimally, whether or not 1.6 permits. Not for lawyers hired to investigate or defend. If fired or withdrawing over it: make sure the board knows.",
+       "pause": 10
+      },
+      {
+       "ask": "The 1.5(c) contingent-fee writing: what must it state, and what comes at the end?",
+       "answer": "In a writing signed by the client: the method and percentages for settlement, trial, or appeal; litigation and other expenses to be deducted; whether deducted before or after the fee; and expenses owed regardless of outcome. At the end, a written closing statement of the outcome, remittance, and calculation.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the two banned contingent fees.",
+       "answer": "Domestic relations fees contingent on divorce or on alimony, support, or a property settlement; and criminal defense.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the three conditions of 1.5(e) fee division.",
+       "answer": "Proportion to services or joint responsibility; the client agrees to the arrangement, including shares, confirmed in writing; and a reasonable total fee.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the four 1.16(a) mandatory and seven 1.16(b) permissive withdrawal grounds.",
+       "answer": "Must: violation of Rules or law; impairment; discharge; persisting crime-or-fraud use of services after discussion. May: no material adverse effect; client persists in a course reasonably believed criminal or fraudulent; client used services for crime or fraud; repugnance or fundamental disagreement; unfulfilled obligation after warning; unreasonable financial burden or unreasonable difficulty; other good cause.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the three 1.8(a) requirements and the three requirements of the 1.10(a)(2) lateral screen.",
+       "answer": "1.8(a): fair terms in writing, written advice to seek counsel, signed informed consent including the lawyer's role. Lateral screen: timely screen with no fee share, prompt written notice to the former client, certifications of compliance.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the four 5.5(c) temporary practice categories.",
+       "answer": "With actively participating local counsel; related to a tribunal proceeding you're or expect to be authorized in; related to ADR from your home practice without needing pro hac vice; and otherwise related to your home practice.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the seven paragraphs of 8.4.",
+       "answer": "Violating or assisting or acting through another; criminal acts reflecting on fitness; dishonesty; prejudice to justice; implying improper influence; assisting a judge's violation; harassment or discrimination.",
+       "pause": 10
+      },
+      {
+       "ask": "Name Strickland's two prongs and Cronic's two presumptions.",
+       "answer": "Strickland: deficiency and prejudice. Cronic: counsel absent at a critical stage, or no meaningful adversarial testing.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the four 1.16(d) exit duties.",
+       "answer": "Reasonable notice, time to get other counsel, surrender papers and property, refund unearned fees and expenses.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the 1.14(b) conditions and the five Comment 13 factors.",
+       "answer": "Conditions: decision-making limitations, risk of substantial harm, inability to act in one's own interest. Factors: articulated reasoning, variability of state of mind, appreciation of fairness, consistency with long-term values, and whether supports could help.",
+       "pause": 10
+      },
+      {
+       "ask": "The Togstad-safe letter has five parts. Name them.",
+       "answer": "No services; no advice on the merits; urge other counsel promptly; warn about limitations periods; in writing.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the four sources of authority, and the 3Cs.",
+       "answer": "Actual, implied, apparent, ratification. Check with the client, clarify the implications, confirm in writing.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the 3.8 paragraphs (a) through (h) in a few words each.",
+       "answer": "(a) no charges known to lack probable cause; (b) assure right to counsel; (c) no waivers from unrepresented accused; (d) disclose exculpatory and mitigating information; (e) lawyer subpoenas only if unprivileged, essential, no alternative; (f) no condemning publicity; (g) new, credible, material evidence of innocence: disclose, and in your jurisdiction tell the defendant and investigate; (h) clear and convincing evidence in your jurisdiction: seek to remedy.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the three 3.7 exceptions and three 3.4(e) bans.",
+       "answer": "3.7: uncontested issue, value of legal services, substantial hardship. 3.4(e): alluding to irrelevant or unsupported matters, asserting personal knowledge, stating personal opinions on justness, credibility, culpability, or guilt.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the 3.3 remedial steps, in order, and when the duty ends.",
+       "answer": "Remonstrate, withdraw, disclose what's reasonably necessary. It ends at the conclusion of the proceeding, when judgment is affirmed or review time passes.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the 7.3(b) exceptions and the 7.2(b) exceptions.",
+       "answer": "7.3(b): lawyers; family, close personal, or prior professional relationships; routine business users. 7.2(b): ad costs; legal service plans and qualified referral services; buying a practice; non-exclusive, disclosed reciprocal referrals; nominal thank-you gifts.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the four requirements to sell a practice.",
+       "answer": "Cease practice in the area and place; sell the entire practice or area; written notice with the ninety-day presumption; no fee increase.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the four 5.4(a) exceptions.",
+       "answer": "Payments to a deceased lawyer's estate; buying a dead, disabled, or disappeared lawyer's practice; employee compensation and retirement plans; court-awarded fees shared with a nonprofit that employed, retained, or recommended the lawyer.",
+       "pause": 10
+      },
+      {
+       "ask": "Name the three conditions of Opinion 92-363 on threatening criminal charges.",
+       "answer": "Related to the civil claim; both well founded; no improper influence suggested.",
+       "pause": 10
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e16",
+     "title": "Final review, part two: mental states, numbers, consents, and last-minute traps",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Part two of the review: the cross-course tables. Mental states, numbers, who consents, and the last-minute traps."
+      },
+      {
+       "say": "Mental states. Knows, meaning actual knowledge, inferable, with willful blindness counting: 1.2(d), 3.3(a), 3.4(c), 4.1, 4.2, 5.1(c), 8.1(a), 8.3, 1.11(c), and 3.8(g) and (h). Reasonably should know: 1.13(f), 2.3(b), 2.4(b), 3.6(a), 4.3, 4.4(b), 7.3(a), and 8.4(g). Reasonably believes: 1.6(b), reasonably believes necessary; 1.7(b)(1); 1.13(c)(2); 1.14(b); 3.3(a)(3), may refuse evidence reasonably believed false; 3.4(f)(2); and 3.8(e). And no mental state, strict: 1.15 commingling and recordkeeping; 1.5(c) writing requirements; 1.8(a) formalities; and 1.8(j)."
+      },
+      {
+       "say": "Numbers worth memorizing. Five years: trust records kept after the representation ends; Delaware, five years after the events recorded. Two thousand dollars: Delaware's cap on the lawyer's own funds in trust for bank charges. Fifty hours: aspirational annual pro bono. Ninety days: presumed consent to file transfer after notice of a practice sale. Three: kinds of conflicts. Four: fiduciary duties; client decisions under 1.2(a); nonconsentable conflicts. Seven: 1.6(b) exceptions; 1.16(b) grounds to withdraw; situations that rebut imputation. Eight: 1.5(a) fee factors; 3.8 paragraphs."
+      },
+      {
+       "say": "Who must consent. Concurrent conflict: each affected client. Former-client conflict: the former client. Prospective-client conflict under 1.18(d)(1): both the affected client and the prospective client. Former government lawyer, or a current government lawyer's prior private matter: the appropriate government agency. Former judge, clerk, or neutral: all parties to the proceeding. Organization and constituent jointly represented: an official other than the constituent, or the shareholders. Aggregate settlement: each client, in a signed writing. Third-party payor: the client, not the payor. Imputed conflict waiver: the affected client, under 1.7's conditions."
+      },
+      {
+       "say": "Last-minute traps. One: discipline needs a Rule; disqualification doesn't. Hot-potato violations, conflicts with non-clients owed confidentiality, and playbook disputes are fought through disqualification, not discipline. Two: may isn't must. Every 1.6(b) exception is permissive, but 4.1(b), 3.3(c), and court orders can make disclosure mandatory. Three: consent form matters. Confirmed in writing, signed by the client, and independently represented are different requirements. Four: prosecutors are lawyers first. 3.8 adds to, never subtracts from, 3.3, 3.4, 3.6, 4.1, and 4.2. Five: Delaware differs, with no 8.4(g) and its own 1.15 details. The final tests the ABA text unless a question says otherwise."
+      },
+      {
+       "ask": "Which mental state applies to 4.3, unrepresented persons?",
+       "answer": "Reasonably should know.",
+       "pause": 8
+      },
+      {
+       "ask": "Which mental state applies to 4.2, represented persons?",
+       "answer": "Knows, including willful blindness.",
+       "pause": 8
+      },
+      {
+       "ask": "Is commingling a strict-liability violation?",
+       "answer": "Yes. No mental state or loss is required.",
+       "pause": 8
+      },
+      {
+       "ask": "Who consents for a former mediator to take a side?",
+       "answer": "All parties to the proceeding.",
+       "pause": 8
+      },
+      {
+       "ask": "Who consents when a third party pays the fee?",
+       "answer": "The client, not the payor.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the formality for 1.8(h)(1)?",
+       "answer": "The client must be independently represented.",
+       "pause": 8
+      },
+      {
+       "ask": "How many days for presumed consent in a practice sale?",
+       "answer": "Ninety.",
+       "pause": 8
+      },
+      {
+       "ask": "Does a hot-potato violation lead to discipline?",
+       "answer": "No, to disqualification.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d5-e17",
+     "title": "Answering strategy for ninety questions in three hours, and the final quiz",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Last episode. Strategy, then a final quiz."
+      },
+      {
+       "say": "The math. Ninety questions in one hundred eighty minutes is two minutes a question. Aim for a first pass at about a minute and a half each, which finishes in about two hours and fifteen minutes, leaving time to return to the questions you marked."
+      },
+      {
+       "say": "Step one on every question: read the call of the question first. Is it asking whether the lawyer is subject to discipline, whether the conduct is proper, what the lawyer must do, what she may do, or what is most likely to happen? Must, may, and should are different questions, and so are discipline, disqualification, and liability. Many wrong answers state a true rule that answers a different question."
+      },
+      {
+       "say": "Step two: identify the rule. Run the short version of the checklist. Who is the client? Is it a confidentiality question, a conflict, candor, authority, money, or advocacy? Name the Rule number in your head."
+      },
+      {
+       "say": "Step three: find the trigger word in the facts. Knows versus reasonably should know. Current versus former client. Signed by the client versus confirmed in writing. Before or after the representation ends. In the same proceeding or a different one. A tribunal or a negotiation. Live contact or a letter. The answer usually turns on one of these."
+      },
+      {
+       "say": "Step four: eliminate. Cross out answers that rely on the wrong mental state, the wrong consent form, or that make a permissive rule mandatory. Be suspicious of answers that say a client's consent cures something that cannot be consented to: sex with a client, banned contingent fees, nonlawyer ownership, same-proceeding claims between clients. Be suspicious of answers that excuse a lawyer because no one was harmed, because a supervisor ordered it, or because the lawyer meant well. Discipline needs no harm, orders don't excuse clear violations, and motive is no defense."
+      },
+      {
+       "say": "Step five: when two answers both look right, pick the one that tracks the Rule's actual text and the Comments, not a policy argument. The exam tests the ABA Model Rules as written."
+      },
+      {
+       "say": "Mark and move. If a question takes more than two and a half minutes, choose your best answer, mark it, and move on. Don't leave anything blank. On review, change an answer only if you find a specific reason, a word you misread or a rule you misapplied, not a vague feeling."
+      },
+      {
+       "say": "And the classic close calls, to watch for. 1.6(b)(2) versus 1.13(c): the first needs your services, the second needs reporting up first. 3.3 versus 4.1: the tribunal overrides confidentiality; third persons don't. 1.9 versus 1.18: prospective clients need significantly harmful information. 1.10 screens versus 1.11 screens: lateral private lawyers need certifications to the former client; former government lawyers notify the agency. 4.2 versus 4.3: represented versus unrepresented. 4.4(a) versus 8.4(g): client representation and bad purpose versus a protected basis in any practice-related conduct. 1.5(b) versus 1.5(c): preferably in writing versus signed by the client."
+      },
+      {
+       "say": "Now, the final quiz. Twelve questions across all five days."
+      },
+      {
+       "ask": "A lawyer's client tells her that her ex-lawyer stole from her. Must the lawyer report it under 8.3 without the client's consent?",
+       "answer": "No. It is 1.6 information, and 8.3 does not require revealing it.",
+       "pause": 8
+      },
+      {
+       "ask": "A paralegal emails the represented opposing party at the lawyer's direction. Which rules?",
+       "answer": "4.2, and 8.4(a) for violating the Rules through the acts of another, and 5.3.",
+       "pause": 8
+      },
+      {
+       "ask": "A lawyer advances court costs for a non-indigent client, repayable only if they win. Proper?",
+       "answer": "Yes, under 1.8(e)(1).",
+       "pause": 8
+      },
+      {
+       "ask": "A law firm's partner represents Client A; another partner wants to sue A for a new client in an unrelated matter. Can a screen cure it?",
+       "answer": "No. It is a concurrent conflict, imputed under 1.10(a), and screens never cure concurrent conflicts. Both clients must consent.",
+       "pause": 8
+      },
+      {
+       "ask": "A former government lawyer handled a specific contract dispute for the agency. Her new firm wants to take the other side. What does the firm need?",
+       "answer": "A timely screen with no fee share for her, and prompt written notice to the agency, under 1.11(b).",
+       "pause": 8
+      },
+      {
+       "ask": "A prosecutor learns of clear and convincing evidence that a man convicted in another state is innocent. What must she do?",
+       "answer": "Disclose it to an appropriate court or authority under 3.8(g)(1). The duty to seek to remedy applies only to convictions in her own jurisdiction.",
+       "pause": 8
+      },
+      {
+       "ask": "Must a lawyer disclose controlling adverse authority that opposing counsel already cited?",
+       "answer": "No. 3.3(a)(2) applies only to authority not disclosed by opposing counsel.",
+       "pause": 8
+      },
+      {
+       "ask": "A client says she will lie on the stand in her civil case. The lawyer knows it. What must he do?",
+       "answer": "Remonstrate and refuse to offer the false testimony. If she lies anyway, take remedial measures, up to disclosure to the tribunal.",
+       "pause": 8
+      },
+      {
+       "ask": "A lawyer emails a stranger who was just in a car accident offering representation. Barred by 7.3(b)?",
+       "answer": "No. Email is not live person-to-person contact. It must be truthful and respect 7.3(c).",
+       "pause": 8
+      },
+      {
+       "ask": "A partner pressures associates into rounding up their hours. Which rules does an associate who complies violate?",
+       "answer": "8.4(c) dishonesty, 1.5(a) unreasonable fees, and 5.2(a) means orders are no excuse.",
+       "pause": 8
+      },
+      {
+       "ask": "A client refuses to let her lawyer disclose that she is using the lawyer's closing documents to defraud a buyer. What two things must the lawyer do?",
+       "answer": "Withdraw under 1.16(a), and disclose the material fact if necessary to avoid assisting the fraud, under 4.1(b), because 1.6(b)(2) and (b)(3) permit it.",
+       "pause": 8
+      },
+      {
+       "ask": "Does 6.1 carry discipline?",
+       "answer": "No. It is aspirational.",
+       "pause": 8
+      },
+      {
+       "say": "That is the end of the course. Five days: regulating lawyers and the relationship, confidentiality and money, conflicts, government lawyers and advocacy, and firms, third parties, advertising, and review. Play the review episodes again the night before the exam. Read every call of the question. Name the rule. Find the trigger word. And trust your preparation. Good luck on December fourteenth."
       }
      ]
     }
