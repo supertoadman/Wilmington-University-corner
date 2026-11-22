@@ -2531,6 +2531,1218 @@
      ]
     }
    ]
+  },
+  {
+   "day": 3,
+   "title": "Disclaimers, remedy limits, parol evidence, assignment, termination, repudiation, and excuse",
+   "minutes": 73,
+   "episodes": [
+    {
+     "id": "sl-d3-e00",
+     "title": "Spaced review of Days 1 and 2",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Welcome to Day 3. Five minutes of review first. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "What makes the Code's battle-of-the-forms rule different from the common law's?",
+       "answer": "Section 2-207 abolishes the mirror-image and last-shot rules. An expression of acceptance with different terms still forms a contract unless expressly conditional.",
+       "pause": 10
+      },
+      {
+       "id": "s3",
+       "ask": "Name the four § 2-201 exceptions with their sections.",
+       "answer": "Merchant's confirmation, (2); specially manufactured goods, (3)(a); admission, (3)(b); part performance, (3)(c).",
+       "pause": 10
+      },
+      {
+       "id": "s4",
+       "ask": "What are the two halves of good faith?",
+       "answer": "Honesty in fact and observance of reasonable commercial standards of fair dealing.",
+       "pause": 7
+      },
+      {
+       "id": "s5",
+       "ask": "In Roth Steel, what did Sharon threaten?",
+       "answer": "To stop selling Roth any steel in the second half of 1973 unless Roth paid more.",
+       "pause": 7
+      },
+      {
+       "id": "s6",
+       "ask": "Name the three ways to create an express warranty.",
+       "answer": "An affirmation of fact or promise, a description, and a sample or model, each part of the basis of the bargain.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Under Rogath, when does a buyer's knowledge waive a warranty?",
+       "answer": "When the seller disclosed the facts making it false and the buyer closes without expressly preserving its rights.",
+       "pause": 9
+      },
+      {
+       "id": "s8",
+       "ask": "What four elements make a fitness warranty?",
+       "answer": "Seller has reason to know the particular purpose, the purpose is particular, seller has reason to know of reliance, and the buyer actually relies.",
+       "pause": 10
+      },
+      {
+       "id": "s9",
+       "ask": "What is entrustment?",
+       "answer": "Entrusting goods to a merchant who deals in goods of that kind gives it power to transfer all the entruster's rights to a buyer in ordinary course, § 2-403(2).",
+       "pause": 9
+      },
+      {
+       "id": "s10",
+       "ask": "What are the two limits in § 2-306?",
+       "answer": "Good faith, and no quantity unreasonably disproportionate to a stated estimate or normal prior quantities.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "A merchant seller tells the buyer the goods are ready. They burn before pickup. Who bears the loss?",
+       "answer": "The seller. A merchant's risk passes only on the buyer's receipt.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "What is the presumption about carrier contracts?",
+       "answer": "A shipment contract, unless the seller expressly took responsibility in transit.",
+       "pause": 7
+      },
+      {
+       "id": "s13",
+       "say": "Now, disclaimers."
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e01",
+     "title": "Varying the Code: § 1-302 and Problem 5-1",
+     "minutes": 3,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Freedom of contract under the Code, its limits, and the provisions you cannot vary."
+      },
+      {
+       "id": "s2",
+       "say": "Section 1-302. The parties may vary the effect of UCC provisions by agreement, with exceptions. One, the obligations of good faith, diligence, reasonableness, and care cannot be disclaimed. But the parties may determine the standards for measuring them, if not manifestly unreasonable. And where the Code requires action within a reasonable time, the parties may fix a specific time, if not manifestly unreasonable. Two, some provisions cannot be varied at all."
+      },
+      {
+       "id": "s3",
+       "say": "Which ones? Problem 5-1(b) lists them: § 2-302, unconscionability. Section 2-102, scope. Sections 2-204 to 2-207, formation. Section 2-403, the rights of third-party purchasers. And comment 1 adds § 2-201, the statute of frauds."
+      },
+      {
+       "id": "s4",
+       "say": "Problem 5-1(a) is a drafting exercise. A buyer wants a good-faith standard for a fuel price the seller sets. Tie the price to an objective index, or to the seller's lowest price to similar customers. Or simply use an index price instead. The seller, for its part, wants to limit the buyer's requirements. Use a stated estimate with a minimum and maximum, define requirements as fuel actually consumed by the existing fleet, and require notice of changes."
+      },
+      {
+       "id": "s5",
+       "ask": "A contract says the buyer must reject within one hour of delivery of a complex machine. Is that enforceable?",
+       "answer": "Probably not. Parties may fix a reasonable time, but not one that is manifestly unreasonable, § 1-302(b). One hour for a complex machine likely is.",
+       "pause": 12
+      },
+      {
+       "id": "s6",
+       "say": "Recap. You can vary most of the Code. You cannot disclaim good faith, diligence, reasonableness, or care, but you can set standards that are not manifestly unreasonable. And you cannot vary unconscionability, scope, formation, third-party purchasers' rights, or the statute of frauds."
+      },
+      {
+       "id": "s7",
+       "ask": "Name the provisions Problem 5-1(b) says cannot be varied.",
+       "answer": "Section 2-302, § 2-102, §§ 2-204 to 2-207, and § 2-403, plus § 2-201 under comment 1.",
+       "pause": 10
+      },
+      {
+       "id": "s8",
+       "ask": "Can parties set the standard for good faith?",
+       "answer": "Yes, if the standard is not manifestly unreasonable.",
+       "pause": 6
+      },
+      {
+       "id": "s9",
+       "ask": "How would a buyer police a seller-set fuel price?",
+       "answer": "Tie it to an objective index or to the seller's lowest price to similar customers.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e02",
+     "title": "Warranty disclaimers: § 2-316 and Problems 5-3, 5-4, and 5-5",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. How to disclaim each warranty, what conspicuous means, two threshold questions, the continuum of protection, and three problems."
+      },
+      {
+       "id": "s2",
+       "say": "Take each warranty in turn."
+      },
+      {
+       "id": "s3",
+       "say": "Express warranties. Nearly impossible to disclaim if they are part of the basis of the bargain. Under § 2-316(1), words creating a warranty and words negating it are read consistently where reasonable; where they can't be reconciled, the negation is inoperative. The seller's real defense is the parol evidence rule, which we reach later today."
+      },
+      {
+       "id": "s4",
+       "say": "Merchantability, § 2-316(2). No writing needed; oral is fine. If written, it must be conspicuous. And it must mention merchantability."
+      },
+      {
+       "id": "s5",
+       "say": "Fitness, § 2-316(2). It must be in writing and conspicuous. But it need not mention fitness. There are no warranties which extend beyond the description on the face hereof is enough."
+      },
+      {
+       "id": "s6",
+       "say": "All implied warranties, § 2-316(3). Three routes. (a), expressions like as is or with all faults. (b), examination. If the buyer examined the goods, or refused to examine after the seller demanded, there is no implied warranty as to defects an examination ought to have revealed. Only those defects. (c), course of dealing, course of performance, or usage of trade."
+      },
+      {
+       "id": "s7",
+       "say": "Title. Section 2-316 doesn't apply. Title is disclaimed only by specific language or by circumstances, like a sheriff's sale or an executor's sale, under § 2-312(2). As is fails. No writing, no conspicuousness requirement, but specific language."
+      },
+      {
+       "id": "s8",
+       "say": "Conspicuous, § 1-201(b)(10): so written that a reasonable person against whom it operates ought to have noticed it. Capitals, larger type, contrasting type or color. And it is a question for the court."
+      },
+      {
+       "id": "s9",
+       "say": "Before you apply § 2-316, ask two threshold questions. One, did the implied warranty arise at all? Two, is the disclaimer part of the contract? A disclaimer in a later form is a material alteration under § 2-207, so it is usually not part of the deal."
+      },
+      {
+       "id": "s10",
+       "say": "The continuum of protection. At the freedom-of-contract end: specially made commercial goods. Then merchant-to-merchant commercial goods. Then used goods. And at the paternalism end: prepackaged new consumer goods."
+      },
+      {
+       "id": "s11",
+       "say": "Problem 5-3 asks for every way to disclaim fitness. A conspicuous writing, which need not say fitness. No warranties beyond the face hereof. As is or with all faults. The buyer's examination, or refusal after the seller's demand. And course of dealing, course of performance, or usage of trade."
+      },
+      {
+       "id": "s12",
+       "say": "Problem 5-4. A fisherman buys an engine for his boat. The disclaimer is on the back of a delivery receipt. Both implied warranties arose: the dealer is a merchant, and the buyer gave the boat's specs and relied on the dealer's recommendation, which is fitness. A post-sale receipt term is likely not part of the contract, under §§ 2-207 and 2-209. If it is, it mentions merchantability and covers all implied warranties, but is it conspicuous on the back of a receipt? If the buyer is a consumer, additional terms are mere proposals, and consumer law may void the disclaimer. And if the dealer were not a merchant, there would be no merchantability warranty at all, though fitness could still arise."
+      },
+      {
+       "id": "s13",
+       "say": "Problem 5-5, title. When does a buyer accept an express title disclaimer? When provenance is uncertain and the price reflects the risk, like a quitclaim-style deal at an estate or liquidation sale. And circumstances alone can disclaim: storage-unit auctions, executor, trustee, or police auctions, and lien sales."
+      },
+      {
+       "id": "s14",
+       "ask": "A merchant's signed contract says in bold capitals: SELLER DISCLAIMS ALL IMPLIED WARRANTIES OF FITNESS. Does it disclaim merchantability?",
+       "answer": "No. A merchantability disclaimer must mention merchantability, § 2-316(2). This one only reaches fitness.",
+       "pause": 10
+      },
+      {
+       "id": "s15",
+       "ask": "A car dealer says orally at the lot: no warranty of merchantability on this one. The buyer signs a contract that says nothing about warranties. Is merchantability disclaimed?",
+       "answer": "It can be. A merchantability disclaimer may be oral if it mentions merchantability, but watch the parol evidence rule if the writing is final.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "A buyer inspects a used tractor and misses a cracked block a reasonable inspection would have found. Is there an implied warranty as to the crack?",
+       "answer": "No, under § 2-316(3)(b). Examination removes implied warranties as to defects an examination ought to have revealed.",
+       "pause": 11
+      },
+      {
+       "id": "s17",
+       "say": "The traps. Merchantability: the magic word, writing optional. Fitness: a conspicuous writing, no magic word. As is works for both implied warranties but not for title. And always check that the disclaimer is part of the contract."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Express warranties are nearly impossible to disclaim; the seller's defense is the parol evidence rule. Merchantability: mention it, conspicuous if written. Fitness: conspicuous writing. All implied: as is, examination, or trade practice. Title: specific language or circumstances."
+      },
+      {
+       "id": "s19",
+       "ask": "What does conspicuous mean?",
+       "answer": "Written so a reasonable person against whom it operates ought to have noticed it, decided by the court.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What are the two threshold questions before § 2-316?",
+       "answer": "Did the implied warranty arise, and is the disclaimer part of the contract?",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "Name two circumstances that disclaim title without words.",
+       "answer": "A sheriff's or executor's sale, storage-unit auctions, police auctions, lien sales.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e03",
+     "title": "Remedies: the framework and the damage types",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The four elements of a claim, disclaimers versus remedy limits, the damage types, and the table of breaches and remedies. Days 4 and 5 go deep; this is the map."
+      },
+      {
+       "id": "s2",
+       "say": "The framework: contract, breach, damages, causation. A disclaimer removes the breach, because there is no warranty to breach. A remedy limitation limits damages after a breach: liquidated damages, a limited remedy, or a consequential-damages exclusion. And always ask two things: what happened to the goods, and how are damages calculated?"
+      },
+      {
+       "id": "s3",
+       "say": "The damage types. Compensatory. Incidental, § 2-715(1): the reasonable costs of responding to the breach, like inspection, transport, storage, and arranging cover. Consequential, § 2-715(2): losses from the buyer's requirements and needs that the seller had reason to know at contracting and that the buyer couldn't reasonably prevent, plus injury to person or property from a breach of warranty. Examples: lost profits from a production shutdown, or a fire caused by a defective oven. And liquidated, § 2-718."
+      },
+      {
+       "id": "s4",
+       "say": "The table. Say it as five breaches."
+      },
+      {
+       "id": "s5",
+       "say": "The seller repudiates or doesn't deliver. The buyer cancels, recovers the price paid, and gets market minus contract, § 2-713, or cover minus contract, § 2-712, plus incidental and consequential. Specific performance only rarely, § 2-716."
+      },
+      {
+       "id": "s6",
+       "say": "The seller tenders nonconforming goods. The buyer rejects, and it is the same as nondelivery. Or the buyer accepts, pays the price, and recovers value as warranted minus value as accepted, § 2-714(2), plus incidental and consequential."
+      },
+      {
+       "id": "s7",
+       "say": "The buyer revokes acceptance. Cancel, recover the price, take cover or market damages, plus incidental and consequential."
+      },
+      {
+       "id": "s8",
+       "say": "The buyer repudiates or wrongfully rejects. The seller withholds or stops delivery, cancels, and recovers resale minus contract, § 2-706, or contract minus market, § 2-708(1), or lost profit, § 2-708(2), plus incidental. A prepaying buyer gets restitution less the seller's damages, § 2-718(2)."
+      },
+      {
+       "id": "s9",
+       "say": "The buyer accepts but doesn't pay. The seller recovers the price, § 2-709, plus incidental. And rarely, it may reclaim the goods, §§ 2-507(2) and 2-702(2)."
+      },
+      {
+       "id": "s10",
+       "say": "Remedy limitations: ask two questions. One, is it part of the agreement? Two, is it enforceable? And limitations are never implied."
+      },
+      {
+       "id": "s11",
+       "ask": "A buyer's claim for lost profits from a factory shutdown: incidental or consequential?",
+       "answer": "Consequential, § 2-715(2).",
+       "pause": 6
+      },
+      {
+       "id": "s12",
+       "say": "Recap. A disclaimer kills the breach; a limitation shrinks the damages. Incidental damages are costs of responding to the breach. Consequential damages are foreseeable losses the buyer couldn't prevent, plus injury to person or property. The buyer's remedies turn on whether it rejected, accepted, or revoked; the seller's on who has the goods."
+      },
+      {
+       "id": "s13",
+       "ask": "What is the buyer's measure if it accepts nonconforming goods?",
+       "answer": "Value as warranted minus value as accepted, § 2-714(2), plus incidental and consequential.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "What are the seller's three damage measures when the buyer repudiates?",
+       "answer": "Resale, § 2-706; market, § 2-708(1); and lost profit, § 2-708(2); each plus incidental.",
+       "pause": 9
+      },
+      {
+       "id": "s15",
+       "ask": "What two questions do you ask about a remedy limitation?",
+       "answer": "Is it part of the agreement, and is it enforceable?",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e04",
+     "title": "Liquidated damages: § 2-718(1), Problem 5-6, and Problem 5-9",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The three-part reasonableness test, penalties, down payments, the oven problem, and how liquidated damages differ from remedy limitations."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-718(1). Damages may be liquidated in the agreement, but only at an amount reasonable in light of three things. One, the anticipated or actual harm caused by the breach. Two, the difficulty of proving loss. Three, the inconvenience or infeasibility of otherwise obtaining an adequate remedy. An unreasonably large amount is void as a penalty."
+      },
+      {
+       "id": "s3",
+       "say": "Two more points. The clause need not be conspicuous. And down-payment forfeitures are often enforced. Without a liquidated-damages term, a breaching buyer recovers its payments above the smaller of 20 percent of the price or $500, under § 2-718(2). Day 5 covers that."
+      },
+      {
+       "id": "s4",
+       "say": "Why the word or in anticipated or actual harm? It lets a clause survive if it was reasonable when made, even if the actual harm turns out different."
+      },
+      {
+       "id": "s5",
+       "say": "Problem 5-6. An oven contract with liquidated damages of $1,000 a day. The seller is 30 days late, so the clause says $30,000. The buyer's actual lost profit is $2,500. Is the clause enforceable? Likely yes. The anticipated-or-actual wording lets a clause that was reasonable when made survive. It was negotiated by merchants, based on profit discussions, the harm was hard to prove, and time was of the essence. The seller's argument: a twelvefold gap makes it a penalty."
+      },
+      {
+       "id": "s6",
+       "say": "Problem 5-9, liquidated damages versus a limitation. Liquidated damages fix the damages in advance, higher or lower than actual, and are tested for reasonableness, or penalty. A limitation eliminates or caps categories of damages; the buyer still proves its actual loss; and it is tested by failure of essential purpose and unconscionability."
+      },
+      {
+       "id": "s7",
+       "ask": "A contract sets liquidated damages of $50,000 for a one-day delay on a $60,000 sale, with no reason to expect serious harm and easily provable losses. Enforceable?",
+       "answer": "No. That amount is unreasonably large in light of the anticipated or actual harm, the difficulty of proof is low, and so it is a void penalty under § 2-718(1).",
+       "pause": 12
+      },
+      {
+       "id": "s8",
+       "say": "Recap. Liquidated damages are reasonable in light of anticipated or actual harm, difficulty of proof, and inconvenience of other remedies; otherwise a penalty. The or lets a clause reasonable when made survive. Limitations are tested differently, by failure of essential purpose and unconscionability."
+      },
+      {
+       "id": "s9",
+       "ask": "State the three § 2-718(1) factors.",
+       "answer": "Anticipated or actual harm, difficulty of proving loss, and inconvenience or infeasibility of another adequate remedy.",
+       "pause": 9
+      },
+      {
+       "id": "s10",
+       "ask": "Must a liquidated-damages clause be conspicuous?",
+       "answer": "No.",
+       "pause": 5
+      },
+      {
+       "id": "s11",
+       "ask": "In Problem 5-6, what is the seller's best argument?",
+       "answer": "That the twelvefold gap between $30,000 and the $2,500 actual loss makes the clause a penalty.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e05",
+     "title": "Limited remedies and consequential exclusions: § 2-719, Problem 5-7, and Razor v. Hyundai",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What § 2-719 permits, exclusive versus optional remedies, failure of essential purpose, consequential-damages exclusions, and the two concentric walls of Razor."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-719(1). The parties may substitute or limit remedies: repair or replace, return and refund, caps. But an agreed remedy is optional unless expressly agreed to be exclusive."
+      },
+      {
+       "id": "s3",
+       "say": "Section 2-719(2). If an exclusive or limited remedy fails of its essential purpose, the normal UCC remedies return."
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-719(3). Consequential damages may be limited or excluded unless the limitation is unconscionable. Limiting consequential damages for injury to the person in the case of consumer goods is prima facie unconscionable. Limiting them where the loss is commercial is not."
+      },
+      {
+       "id": "s5",
+       "say": "Like liquidated damages, a limitation need not be conspicuous. And personal injury isn't defined in Article 2; other law supplies it. One more point: a seller can sidestep § 2-719(3) entirely by validly disclaiming warranties, because then there's no breach."
+      },
+      {
+       "id": "s6",
+       "say": "Problem 5-7, failure of essential purpose. Three examples. A Circuit City store credit, when the retailer goes bankrupt and the credit is worthless. A repair-or-replace remedy that never fixes the defect. And replacement parts when the whole machine is destroyed."
+      },
+      {
+       "id": "s7",
+       "say": "Now Razor versus Hyundai Motor America, Illinois, 2006."
+      },
+      {
+       "id": "s8",
+       "say": "A consumer bought a new Hyundai Sonata. Hyundai's written warranty limited her remedy to repair or replacement, and separately excluded incidental and consequential damages. The car had a no-start problem that numerous repairs never fixed. The jury found the repair remedy failed of its essential purpose, and awarded $5,000 for lost value plus $3,500 for inconvenience and loss of use. The warranty and its exclusion were in the owner's manual in the glove box. She never saw them until after she signed and drove off."
+      },
+      {
+       "id": "s9",
+       "say": "Held, two parts. First, the independent approach, the majority, associated with Chatlos. The failure of the repair remedy does not automatically void the consequential-damages exclusion. The exclusion stands unless it is unconscionable under § 2-719(3). Two concentric walls. The court rejected the dependent approach of Adams versus J.I. Case, a tractor stuck in the repair shop for over a year, because that approach would make exclusions meaningless."
+      },
+      {
+       "id": "s10",
+       "say": "Second, this exclusion was unconscionable. A preprinted consumer form with no bargaining power. And, decisively, it wasn't available to her before she signed. Clear capital letters don't matter if she couldn't see it. Remanded for a new trial on § 2-714(2) damages."
+      },
+      {
+       "id": "s11",
+       "say": "Why it matters. It shows the two separate tests in § 2-719: failure of essential purpose for the limited remedy, and unconscionability for the consequential exclusion. A dissent argued the ruling burdens manufacturers and discourages written warranties."
+      },
+      {
+       "id": "s12",
+       "ask": "A commercial buyer's contract limits remedies to repair or replace and excludes consequential damages. Repairs fail for a year, and the buyer loses $200,000 in profits. Under Razor's independent approach, can it recover the lost profits?",
+       "answer": "Not automatically. The failed repair remedy lets the buyer use the normal remedies, but the consequential exclusion stands unless unconscionable. Excluding commercial losses between merchants is generally not unconscionable.",
+       "pause": 15
+      },
+      {
+       "id": "s13",
+       "ask": "A consumer's toaster has a consequential exclusion, and it catches fire and burns her hand. Is the exclusion enforceable as to the injury?",
+       "answer": "Prima facie unconscionable. Limiting consequential damages for personal injury from consumer goods is prima facie unconscionable, § 2-719(3).",
+       "pause": 12
+      },
+      {
+       "id": "s14",
+       "say": "The traps. An agreed remedy is optional unless expressly exclusive. And failure of essential purpose and unconscionability are separate tests aimed at separate clauses."
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Section 2-719: parties may limit remedies; exclusive only if expressly so; failure of essential purpose brings back the Code remedies; consequential exclusions stand unless unconscionable, prima facie so for consumer personal injury. Razor: the independent, two-walls approach, but this exclusion fell because she never saw it before signing."
+      },
+      {
+       "id": "s16",
+       "ask": "What is the dependent approach, and which case represents it?",
+       "answer": "The view that failure of the limited remedy also voids the consequential exclusion, Adams v. J.I. Case. Razor rejected it.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "ask": "Why was the exclusion unconscionable in Razor?",
+       "answer": "A preprinted consumer form with no bargaining power, and it wasn't available to her before she signed.",
+       "pause": 9
+      },
+      {
+       "id": "s18",
+       "ask": "Give two examples of failure of essential purpose from Problem 5-7.",
+       "answer": "A store credit from a bankrupt retailer, repair that never fixes the defect, and replacement parts when the machine is destroyed.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e06",
+     "title": "The parol evidence rule: § 2-202 and the Problem 5-10 chart",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The rule, how it differs from the statute of frauds and the merger and NOM clauses, what it never bars, classifying the writing and the evidence, and the chart."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-202. Terms in a record the parties intended as a final expression of their agreement, as to the terms it includes, may not be contradicted by evidence of any prior agreement or of a contemporaneous oral agreement. But they may be explained or supplemented by (a), course of dealing, usage of trade, or course of performance, and (b), evidence of consistent additional terms, unless the court finds the record was also intended as a complete and exclusive statement of the terms."
+      },
+      {
+       "id": "s3",
+       "say": "Keep four things apart. The parol evidence rule is about admissibility of evidence about terms. The statute of frauds is about enforceability. A merger clause addresses prior and contemporaneous agreements. A NOM clause addresses future modifications."
+      },
+      {
+       "id": "s4",
+       "say": "The analysis. One, what extrinsic evidence is offered? Two, for what purpose? The rule applies only to evidence of an alleged term of the agreement. It does not reach evidence of a separate agreement, evidence offered for interpretation, a later modification, a formation defect like fraud, mistake, or duress, or a condition precedent."
+      },
+      {
+       "id": "s5",
+       "say": "Classify the writing. Unfinished, a tentative draft: the rule doesn't apply. Final, a partial integration, which states its terms definitively but not the whole deal: no contradiction, but consistent additional terms come in. Complete and exclusive, a full integration: no contradiction and no supplementation, except course of dealing, usage of trade, and course of performance."
+      },
+      {
+       "id": "s6",
+       "say": "Classify the evidence: explanatory, supplemental, or contradictory. Some courts require ambiguity before admitting explanatory evidence, but not for course of dealing, usage, or performance, comment 1(c). Tests for contradiction: it directly negates a term; it lacks reasonable harmony; or the parties would certainly have included it in the writing, comment 3. Versus supplementary, if it might naturally be omitted, Restatement Second § 216."
+      },
+      {
+       "id": "s7",
+       "say": "Now the Problem 5-10 chart. Two columns: final, meaning partial, and complete and exclusive."
+      },
+      {
+       "id": "s8",
+       "say": "Supplementary evidence. Oral prior, oral contemporaneous, and written prior: admissible if the writing is only final; inadmissible if complete and exclusive. Written contemporaneous: admissible if final; and if complete and exclusive, not applicable, because a contemporaneous writing is treated as part of the record. Trade practice, meaning usage of trade, course of dealing, or course of performance: admissible in both columns."
+      },
+      {
+       "id": "s9",
+       "say": "Contradictory evidence. Oral prior, oral contemporaneous, and written prior: inadmissible in both columns. Written contemporaneous: admissible against a final writing, and not applicable for complete and exclusive. And contradictory trade practice: governed by § 2-202(a) and § 1-303(e), so express terms prevail."
+      },
+      {
+       "id": "s10",
+       "say": "Two last points. A merger clause is evidence of full integration, probative but not conclusive. And getting evidence in doesn't make the fact-finder believe it."
+      },
+      {
+       "id": "s11",
+       "ask": "A final but not complete writing for a sale of lumber says nothing about delivery. The buyer offers evidence of a prior oral agreement that the seller would deliver. Admissible?",
+       "answer": "Yes. A consistent additional term may supplement a final writing that is not complete and exclusive, § 2-202(b).",
+       "pause": 12
+      },
+      {
+       "id": "s12",
+       "ask": "Same writing, but it says buyer will pick up. Buyer offers the same prior oral delivery agreement.",
+       "answer": "Inadmissible. It contradicts a term of a final writing, § 2-202.",
+       "pause": 10
+      },
+      {
+       "id": "s13",
+       "ask": "The writing is complete and exclusive. The seller offers proof that the buyer fraudulently induced the deal. Barred?",
+       "answer": "No. The parol evidence rule never bars evidence of fraud, a formation defect.",
+       "pause": 9
+      },
+      {
+       "id": "s14",
+       "say": "The trap. The rule bars prior agreements and contemporaneous oral agreements. It never bars later modifications."
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Section 2-202: a final writing can't be contradicted by prior or contemporaneous oral agreements, but can be explained or supplemented by trade practice and consistent additional terms, unless it is complete and exclusive. The rule never reaches separate agreements, interpretation, later modifications, fraud, mistake, duress, or conditions precedent."
+      },
+      {
+       "id": "s16",
+       "ask": "What evidence may supplement even a complete and exclusive writing?",
+       "answer": "Course of dealing, usage of trade, and course of performance.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "State the comment 3 test for when a term would contradict rather than supplement.",
+       "answer": "If the parties would certainly have included it in the writing.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "Does the parol evidence rule decide enforceability or admissibility?",
+       "answer": "Admissibility. The statute of frauds decides enforceability.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e07",
+     "title": "Merger clauses and the used car: Problems 5-11, 5-12, and 5-13",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Four clauses graded, the fiber-supplier problem, and the case where parol evidence meets § 2-316(1)."
+      },
+      {
+       "id": "s2",
+       "say": "Problem 5-11 grades four clauses."
+      },
+      {
+       "id": "s3",
+       "say": "One. This represents the final agreement. Only a partial integration. Not a true merger clause."
+      },
+      {
+       "id": "s4",
+       "say": "Two. This is the complete and exclusive statement of the terms, and there are no other agreements. Best, because it tracks § 2-202(b)."
+      },
+      {
+       "id": "s5",
+       "say": "Three. This supersedes all prior agreements, written or oral. Helpful, but it misses contemporaneous terms. Pair it with number two."
+      },
+      {
+       "id": "s6",
+       "say": "Four. This may not be modified except by a signed writing. That is a NOM clause. It is about future changes, not a merger clause."
+      },
+      {
+       "id": "s7",
+       "say": "Problem 5-12. A fiber supplier, and both forms say complete and exclusive. (a): a usage of trade that a supplier sells for the carpet style's market life. Admissible. Usage of trade supplements even complete records, unless carefully negated. (b): the same term from prior oral discussions. Inadmissible, because the writing is a full integration. (c)(1): usage of trade to explain the phrase support the integration of all materials. Admissible. (c)(2): prior talks to explain it. It depends; some courts require ambiguity first."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 5-13, the used car. The salesperson says: never been in an accident. And: we'll fix it within 30 days. The buyer signs a writing saying AS IS, no warranty, express or implied."
+      },
+      {
+       "id": "s9",
+       "say": "The oral statements are express warranties. Section 2-316(1) would make the disclaimer inoperative as to them. But § 2-316(1) is expressly subject to § 2-202. So if the writing is final on warranties, the prior oral contradictory warranties are excluded, and the disclaimer stands. And as is kills the implied warranties."
+      },
+      {
+       "id": "s10",
+       "say": "The buyer's best routes. Fraud, which the parol evidence rule doesn't bar. Or argue the writing wasn't final, being a consumer form."
+      },
+      {
+       "id": "s11",
+       "ask": "A buyer of a used truck signs a final writing that says as is, no express warranties. Earlier the seller said: new brakes last week. The brakes were not new. Can the buyer prove the statement as a warranty?",
+       "answer": "Probably not, if the writing is final on warranties. Section 2-316(1) is subject to § 2-202, so the prior oral warranty contradicting the writing is excluded. The buyer should plead fraud, which the rule doesn't bar.",
+       "pause": 15
+      },
+      {
+       "id": "s12",
+       "say": "The trap. Students think § 2-316(1) always saves express warranties. It does, unless the parol evidence rule keeps the warranty out first."
+      },
+      {
+       "id": "s13",
+       "say": "Recap. The best merger clause says complete and exclusive statement, no other agreements; supersedes all prior agreements misses contemporaneous ones; a NOM clause is about the future. Usage of trade supplements even complete writings. And in Problem 5-13 the as is writing wins unless the buyer proves fraud or that the writing wasn't final."
+      },
+      {
+       "id": "s14",
+       "ask": "Which Problem 5-11 clause best tracks § 2-202(b)?",
+       "answer": "This is the complete and exclusive statement of the terms; there are no other agreements.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "Is a NOM clause a merger clause?",
+       "answer": "No. A NOM clause concerns future modifications. A merger clause concerns prior and contemporaneous agreements.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "What is the buyer's best theory in Problem 5-13?",
+       "answer": "Fraud, which the parol evidence rule doesn't bar, or that the writing wasn't final.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e08",
+     "title": "Assignment and delegation: § 2-210 and Problems 6-1 and 6-2",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Rights are assigned; duties are delegated. The structure of § 2-210, the rules for each, reading prohibition clauses, § 9-406(d), and two problems."
+      },
+      {
+       "id": "s2",
+       "say": "The structure. Subsections (1) and (6), delegation. Subsections (2) and (3), assignment. Subsection (4), reading prohibition language. Subsection (5), what an assignment of the contract transfers."
+      },
+      {
+       "id": "s3",
+       "say": "Delegation, § 2-210(1). A party may perform its duty through a delegate unless otherwise agreed, or unless the other party has a substantial interest in having the original promisor perform. And delegation never relieves the delegating party of its duty or its liability for breach."
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-210(6): the other party may treat any delegating assignment as creating reasonable grounds for insecurity, and may demand assurances from the assignee, under § 2-609."
+      },
+      {
+       "id": "s5",
+       "say": "Assignment, § 2-210(2). All rights are assignable except where the assignment would materially change the other party's duty, materially increase its burden or risk, or materially impair its chance of obtaining return performance. And two rights are assignable despite a contrary agreement: a right to damages for breach of the whole contract, and a right arising out of the assignor's due performance of its entire obligation."
+      },
+      {
+       "id": "s6",
+       "say": "Section 2-210(4): a clause prohibiting assignment of the contract bars only delegation, not assignment of rights. A clause saying a party may not assign its rights may only make an assignment a breach. To make an assignment ineffective, say: any attempted assignment is void."
+      },
+      {
+       "id": "s7",
+       "say": "And § 9-406(d): a term prohibiting assignment of a right to payment, an account, is ineffective. And assigning it is not a breach."
+      },
+      {
+       "id": "s8",
+       "say": "Section 2-210(5): an assignment of the contract, or of all my rights under the contract, is an assignment of rights plus a delegation of duties. The assignee's acceptance is a promise to perform, enforceable by the assignor or by the other party."
+      },
+      {
+       "id": "s9",
+       "say": "And the assignee steps into the assignor's shoes. Once notified, the obligor must pay the assignee, but it keeps its defenses."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 6-1 is a grid. With no prohibition: the buyer may assign its right to the goods unless it materially changes the seller's duty, burden, risk, or chance of return performance, § 2-210(2). The seller may assign its right to payment, which rarely affects the buyer. The buyer may delegate its duty to pay, and the seller may delegate its duty to deliver, unless the other party has a substantial interest in original performance, § 2-210(1)."
+      },
+      {
+       "id": "s11",
+       "say": "With a contract prohibition: the buyer's assignment of its right to the goods is not permitted, except a claim for breach of the whole, or after the buyer fully performed. The seller's assignment of its right to payment is permitted, under §§ 2-210(2) and (3) and 9-406. And delegation by either side is not permitted."
+      },
+      {
+       "id": "s12",
+       "say": "Problem 6-2, 100 steel I-beams for $20,000. (a): the seller assigns its rights to a bank. After notice, the buyer must pay the bank, keeping its defenses. (b): the contract says assignment is prohibited and void. Still effective for the right to payment, under § 9-406(d). (c): the seller assigns the contract to a manufacturer. That is an assignment plus a delegation. Standard beams mean no substantial interest in who makes them. So the buyer must accept the manufacturer's conforming goods and pay the manufacturer. The seller stays liable. And the buyer may demand assurances."
+      },
+      {
+       "id": "s13",
+       "ask": "A contract says: neither party may assign this contract. The seller assigns its right to payment to a lender. Effective?",
+       "answer": "Yes. Under § 2-210(4), a ban on assigning the contract bars only delegation, and under § 9-406(d), a ban on assigning a right to payment is ineffective anyway.",
+       "pause": 12
+      },
+      {
+       "id": "s14",
+       "ask": "A buyer hired a famous sculptor to carve a custom statue. The sculptor delegates the carving to an unknown apprentice. Must the buyer accept?",
+       "answer": "No. The buyer has a substantial interest in having the original promisor perform, § 2-210(1).",
+       "pause": 10
+      },
+      {
+       "id": "s15",
+       "say": "The trap. Delegation never frees the delegator. The original party remains liable."
+      },
+      {
+       "id": "s16",
+       "say": "Recap. Delegate unless agreed otherwise or the other side has a substantial interest; the delegator stays liable; delegation is grounds for insecurity. Assign unless it materially changes duty, burden, risk, or chance of return performance. A ban on assigning the contract bars only delegation. Say void to make an assignment ineffective. And § 9-406(d) overrides bans on assigning payment rights."
+      },
+      {
+       "id": "s17",
+       "ask": "What does an assignment of the contract transfer under § 2-210(5)?",
+       "answer": "Rights plus a delegation of duties, and the assignee's acceptance is a promise to perform.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "Which two rights are assignable despite a contrary agreement?",
+       "answer": "A right to damages for breach of the whole contract, and a right arising from the assignor's full performance.",
+       "pause": 9
+      },
+      {
+       "id": "s19",
+       "ask": "After notice of assignment, whom must the obligor pay, and what does it keep?",
+       "answer": "The assignee, and it keeps its defenses.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e09",
+     "title": "Termination versus cancellation: §§ 2-106 and 2-309, and Santa Fe v. Home Depot",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two words that sound alike, the indefinite-term rule, and the shutter case."
+      },
+      {
+       "id": "s2",
+       "say": "Cancellation, § 2-106(4): ending the contract because of the other party's breach. The canceling party keeps its remedies for breach."
+      },
+      {
+       "id": "s3",
+       "say": "Termination, § 2-106(3): ending it for a reason other than breach, under a power from the agreement or the law. Executory duties are discharged, but rights based on prior breach or performance survive."
+      },
+      {
+       "id": "s4",
+       "say": "Termination is typical where there's a long gap before performance, or in indefinite-duration supply deals. It may also occur at an agreed time or event."
+      },
+      {
+       "id": "s5",
+       "say": "Section 2-309(2) and (3). An indefinite contract for successive performances lasts a reasonable time, but either party may terminate at any time. Termination requires reasonable notification, meaning enough time for the other to find substitutes, unless termination is on an agreed event. And an agreement waiving notice is invalid if its operation would be unconscionable. Good faith applies, but no reason is needed."
+      },
+      {
+       "id": "s6",
+       "say": "Santa Fe Custom Shutters and Doors versus Home Depot, New Mexico Court of Appeals, 2005, a note case. A shutter manufacturer supplied Home Depot under an indefinite, at-will arrangement. Relying on it, and on Home Depot's alleged promises of a profitable partnership and professional marketing, the manufacturer made enormous up-front investments and took on debt to expand production. Home Depot terminated before the investment paid off. The trial court awarded five years of lost profits. The manufacturer argued that good faith barred the termination."
+      },
+      {
+       "id": "s7",
+       "say": "Held: good faith applies to termination, but doesn't override § 2-309(2)'s right to end an indefinite contract at any time. So the five-year lost-profits award was error. No good reason is required, and the contract needn't have run a reasonable time first. As the court put it, the essence of the at-will doctrine is the right to cease doing business without liability for future profits. What claims remained? Fraud in the inducement, breaches before termination, and unreasonable notice."
+      },
+      {
+       "id": "s8",
+       "say": "Why it matters. Good faith can't contradict an express or statutory right. And termination isn't breach; the duty is reasonable notice."
+      },
+      {
+       "id": "s9",
+       "ask": "A distributor has supplied a retailer for ten years under no fixed term. The distributor emails: we stop shipping tomorrow. The retailer needs three months to find a substitute. What can the retailer recover?",
+       "answer": "Not lost future profits for the relationship, under Santa Fe. But it can claim for unreasonable notice, since § 2-309(3) requires reasonable notification, enough time to find substitutes.",
+       "pause": 14
+      },
+      {
+       "id": "s10",
+       "say": "Recap. Cancellation is for breach and keeps remedies; termination is not for breach and discharges executory duties. Under § 2-309, indefinite contracts can be terminated at any time with reasonable notice. Santa Fe: good faith doesn't require a reason or create liability for future profits."
+      },
+      {
+       "id": "s11",
+       "ask": "Define cancellation and termination under § 2-106.",
+       "answer": "Cancellation ends the contract for the other's breach; termination ends it for a reason other than breach under a power from agreement or law.",
+       "pause": 9
+      },
+      {
+       "id": "s12",
+       "ask": "What remained in Santa Fe after the lost-profits award fell?",
+       "answer": "Fraud in the inducement, breaches before termination, and unreasonable notice.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "Is a waiver of termination notice valid?",
+       "answer": "Not if its operation would be unconscionable, § 2-309(3).",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e10",
+     "title": "Insecurity and adequate assurance: § 2-609, Top of Iowa, PDM, and Problems 6-3 and 6-4",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The rule, three questions, a four-step flowchart, the hedge-to-arrive corn case, its contrast PDM, and two problems."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-609. If reasonable grounds for insecurity arise about the other party's performance, a party may demand adequate assurance in writing, and, if commercially reasonable, suspend its own performance until it gets it. Between merchants, the reasonableness of grounds and the adequacy of any assurance are judged by commercial standards. And failure to provide adequate assurance within a reasonable time, not exceeding 30 days, after receiving a justified demand is a repudiation. The aggrieved party may then cancel and pursue its remedies, §§ 2-610, 2-703(f), and 2-711(1)."
+      },
+      {
+       "id": "s3",
+       "say": "Three questions. One, were there reasonable grounds for insecurity? Two, were the assurances requested reasonable? Three, was the response adequate?"
+      },
+      {
+       "id": "s4",
+       "say": "Notes. Grounds are objective and need not relate to this contract, for example the party is late on other accounts, or market conditions. Delegation is a statutory ground, § 2-210(6). Adequacy depends on the party's reputation and the facts, comment 4. Contract clauses can define adequacy reasonably, but arbitrary standards are ineffective, comment 6. And § 2-609 is optional: it is not a precondition to suing."
+      },
+      {
+       "id": "s5",
+       "say": "The flowchart. One, reasonable grounds? If no, the request itself could be a repudiation. Two, if yes: a demand in writing, or an electronic record? If no, there's no right to suspend. Three, if yes: does the demand seek only adequate assurance? If no, demanding more than adequate can be a repudiation, and there's no right to suspend. Four, if yes: the party may suspend performance without breaching until adequate assurance arrives."
+      },
+      {
+       "id": "s6",
+       "say": "Top of Iowa Cooperative versus Sime Farms, Iowa, 2000. Farmer Sime signed hedge-to-arrive corn contracts with its grain co-op for 60,000 bushels. The co-op hedged each contract by selling futures, paying margin as prices rose. Sime kept rolling, postponing delivery, and sold its 1995 crop elsewhere at high cash prices."
+      },
+      {
+       "id": "s7",
+       "say": "By spring 1996 the market had inverted. Rolling to December would cost about $1.30 a bushel, and Sime had no corn to deliver in July. Sime told the manager he'd get back to the co-op, but never did. That same month the Iowa Attorney General said some of these contracts might be illegal."
+      },
+      {
+       "id": "s8",
+       "say": "The co-op wrote demanding two things as assurance: payment of margins, or a letter of credit, and a signed promise to deliver. Refusal would be treated as repudiation. Sime's lawyer replied that the contracts were illegal and refused."
+      },
+      {
+       "id": "s9",
+       "say": "Held: the jury verdict for the co-op was affirmed. First, reasonable grounds are judged objectively by commercial standards, and need not come from the other party's own conduct. The inverted market, the Attorney General's statement, and Sime's silence were enough. Second, the demand was not unreasonable as a matter of law. All demands for adequate assurance call for more than was originally promised. And asking for more isn't itself a repudiation, under comment 2 to § 2-610."
+      },
+      {
+       "id": "s10",
+       "say": "The contrast, PDM versus Brookhaven, Seventh Circuit, 1976, a note case where the casebook quotes a concurrence. PDM would have been assured only by Betke's personal guarantee, escrow financing, or buying an interest in Brookhaven. Those demands were more than adequate assurance as a matter of law. Section 2-609 doesn't let a party redraft the contract. Outside the class materials, PDM was building a water-storage tank for Brookhaven and acted on reports that Brookhaven's financing might fall through."
+      },
+      {
+       "id": "s11",
+       "say": "Problem 6-3. Custom goods, payment 15 days after each delivery. The buyer's credit is downgraded, it is paying others late, and it changed banks."
+      },
+      {
+       "id": "s12",
+       "say": "(a): don't demand cash on delivery. Section 2-702(1) allows that only if the buyer is insolvent. Unilaterally changing the credit terms risks a repudiation. Use § 2-609."
+      },
+      {
+       "id": "s13",
+       "say": "(b): the seller demands a letter of credit and withholds delivery, and the buyer only professes it can pay. The grounds are reasonable. A letter of credit is a common assurance, as in Top of Iowa, but insisting only on it may be too much. A bare promise from a shaky buyer is likely inadequate. But real proof of solvency may be adequate, and then the seller's continued withholding becomes the breach."
+      },
+      {
+       "id": "s14",
+       "say": "(c): the demand letter. List the specific grounds. Ask for adequate assurance with several options: a letter of credit, a guaranty, payment in advance or on delivery, and say other assurances might also be adequate. Reserve the right to suspend. And set a deadline within 30 days."
+      },
+      {
+       "id": "s15",
+       "say": "Problem 6-4. Big Discount's one-sided clauses. A clause letting Big Discount demand whatever assurances it deems appropriate, whenever it wants, sets an arbitrary standard, so it is ineffective, under comment 6, § 1-302(b), and compare § 1-309. And barring the supplier from ever demanding assurance is vulnerable as unconscionable given Big Discount's take-it-or-leave-it market power."
+      },
+      {
+       "id": "s16",
+       "ask": "A buyer hears an unverified rumor at a trade show that its supplier might be in trouble, and immediately writes: give us a personal guarantee from your CEO and escrow the next shipment's cost, or we treat the contract as repudiated. The supplier refuses. Who is in breach?",
+       "answer": "Likely the buyer. A rumor may not be reasonable grounds, and demanding a personal guarantee and escrow, like PDM, is more than adequate assurance. An excessive demand can itself be a repudiation.",
+       "pause": 15
+      },
+      {
+       "id": "s17",
+       "say": "The traps. The demand must be in writing. And never treat silence as repudiation unless the demand was justified."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Section 2-609: reasonable grounds, a written demand for adequate assurance, suspend if commercially reasonable, and failure to respond within a reasonable time not over 30 days is repudiation. Top of Iowa: grounds need not come from the other party's conduct, and asking for more than originally promised is normal. PDM: demands that redraft the contract are too much."
+      },
+      {
+       "id": "s19",
+       "ask": "What three facts gave the co-op reasonable grounds in Top of Iowa?",
+       "answer": "The inverted market, the Attorney General's statement, and Sime's silence.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What is the outer time limit to respond to a justified demand?",
+       "answer": "A reasonable time not exceeding 30 days.",
+       "pause": 7
+      },
+      {
+       "id": "s21",
+       "ask": "Is § 2-609 a precondition to suing for repudiation?",
+       "answer": "No. It is optional.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e11",
+     "title": "Repudiation and retraction: §§ 2-610 and 2-611, and Problem 6-5",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What repudiation is, the aggrieved party's options, retraction, the game of chicken, and the valve problem."
+      },
+      {
+       "id": "s2",
+       "say": "Repudiation is not a failure to perform when due; that's breach. Repudiation is signaling, before performance is due, that you won't perform, by words or acts. It also results from failing to answer a justified § 2-609 demand, and from making an unjustified or excessive demand. But demanding more than the contract gives is not by itself a repudiation, unless you condition your performance on it, comment 2."
+      },
+      {
+       "id": "s3",
+       "say": "Section 2-610. If the repudiation substantially impairs the contract's value to the other party, the aggrieved party may suspend its own performance and either (a), await performance for a commercially reasonable time, or (b), resort to any remedy immediately."
+      },
+      {
+       "id": "s4",
+       "say": "Retraction, § 2-611. The repudiating party may retract until its next performance is due, unless the aggrieved party has (1) canceled, (2) materially changed position, or (3) otherwise indicated that it considers the repudiation final. The retraction must include any assurance justifiably demanded under § 2-609. And it reinstates the contract, with due excuse and allowance for any delay."
+      },
+      {
+       "id": "s5",
+       "say": "The game of chicken. If you call it a repudiation and cancel, but a court disagrees, you may be the one in breach."
+      },
+      {
+       "id": "s6",
+       "say": "Problem 6-5. Ace emails: the first valve installment will be late; we expect you will cover the extra expenses; we'll catch up by the second installment."
+      },
+      {
+       "id": "s7",
+       "say": "That is a definite repudiation of installment 1. The demand for costs isn't a repudiation unless Ace conditions its performance on it. And canceling the whole contract requires substantial impairment of the whole, under §§ 2-610 and 2-612. The buyer's real motive, needing only half the valves, is not a valid reason."
+      },
+      {
+       "id": "s8",
+       "say": "The advice. Don't cancel yet. Send a § 2-609 demand: perform at the contract price and give a catch-up schedule. Reserve rights. Suspend payments. If Ace conditions performance on extra money, or gives no adequate assurance, that's a repudiation. Then cancel, recover the 25 percent advance, and cover."
+      },
+      {
+       "id": "s9",
+       "ask": "A seller writes on March 1: we will not deliver on June 1. On March 10, before the buyer has done anything, the seller writes: never mind, we'll deliver as agreed. Is the contract back on?",
+       "answer": "Yes. A retraction before the next performance is due reinstates the contract, unless the buyer had canceled, materially changed position, or indicated the repudiation was final, § 2-611.",
+       "pause": 12
+      },
+      {
+       "id": "s10",
+       "ask": "Same, but on March 5 the buyer signed a substitute contract with another supplier.",
+       "answer": "The retraction fails. The buyer materially changed position, so the seller remains in breach.",
+       "pause": 10
+      },
+      {
+       "id": "s11",
+       "say": "Recap. Repudiation is an advance refusal, by words or acts, or by failing to answer a justified demand, or making an excessive one. Section 2-610: if it substantially impairs value, await for a commercially reasonable time or resort to remedies. Section 2-611: retraction until next performance is due, unless the other side canceled, changed position, or said the repudiation was final."
+      },
+      {
+       "id": "s12",
+       "ask": "What three things cut off the right to retract?",
+       "answer": "The aggrieved party canceled, materially changed position, or indicated it considers the repudiation final.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "Is demanding more than the contract gives a repudiation?",
+       "answer": "Not by itself, unless you condition your performance on it, § 2-610 comment 2.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "In Problem 6-5, what should the buyer do first?",
+       "answer": "Send a § 2-609 demand, reserve rights, and suspend payments, rather than cancel.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e12",
+     "title": "Excuse: the map, casualty to identified goods under § 2-613, substituted performance under § 2-614, and Problem 6-6",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Defenses at formation versus after, the Restatement-to-UCC map, § 2-613's three elements, § 2-614, and the Picasso etching."
+      },
+      {
+       "id": "s2",
+       "say": "Defenses existing at formation: incapacity, fraud, mistake, duress, illegality and public policy, unconscionability, and the statute of frauds. Arising after formation: death of a party, impracticability or impossibility, frustration of purpose, intervening illegality, and failure of a condition."
+      },
+      {
+       "id": "s3",
+       "say": "The map from the Restatement Second to the UCC. Casualty to identified goods: Restatement § 263, UCC § 2-613. Obstruction of the delivery method: Restatement § 270, UCC § 2-614(1). Obstruction of the payment method: no Restatement rule, UCC § 2-614(2). Damage to production facilities or interference with tender: Restatement § 261, UCC § 2-615 for the seller and § 2-616 for the buyer. Death of a party: Restatement § 262, and no UCC rule. Intervening illegality: Restatement § 264, and no UCC rule."
+      },
+      {
+       "id": "s4",
+       "say": "The themes. Contracts allocate risk, so excuse is applied sparingly. Foreseeability matters most, but isn't decisive. All of these yield to contrary agreement, like force majeure clauses. And keep this straight: excuse decides who pays damages; risk of loss decides who absorbs the goods' value."
+      },
+      {
+       "id": "s5",
+       "say": "Section 2-613, casualty to identified goods. Three elements, all required. One, the goods were identified when the contract was made. Two, they were destroyed without fault of either party, and negligence counts as fault. Three, before risk of loss passed to the buyer."
+      },
+      {
+       "id": "s6",
+       "say": "The results. A total loss: the contract is avoided. A partial loss or deterioration: the buyer may inspect and either avoid the contract or accept the goods with a price allowance, but with no further claim against the seller. And for fungible goods: no excuse."
+      },
+      {
+       "id": "s7",
+       "say": "Section 2-614, substituted performance. Subsection (1): if the agreed loading or unloading facilities, the agreed type of carrier, or the agreed manner of delivery becomes commercially impracticable without fault, but a commercially reasonable substitute is available, the substitute must be tendered and accepted. Subsection (2): if the agreed payment method fails because of governmental regulation, the seller may withhold delivery unless the buyer provides a substantially equivalent method of payment."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 6-6."
+      },
+      {
+       "id": "s9",
+       "say": "(a). An art dealer's Picasso etching burns overnight before the buyer's pickup. A merchant seller, so risk had not passed: no receipt. Identified goods, total loss, so the contract is avoided, if there was no fault. If the fire came from a neglected coffee pot, that is negligence, so the seller breaches. If lightning, the seller is excused."
+      },
+      {
+       "id": "s10",
+       "say": "(b). The etching was stolen, and the true owner reclaims it. Not a casualty. It is a title failure, so the seller breaches. No § 2-613 excuse."
+      },
+      {
+       "id": "s11",
+       "say": "(c). Print number 10 is water-damaged, and the seller has number 12. If the contract was for number 10 specifically, § 2-613(b) applies: the buyer avoids or accepts with an allowance. If the prints are interchangeable, the seller must deliver number 12."
+      },
+      {
+       "id": "s12",
+       "say": "(d). The buyer's options under § 2-613. Total loss: the contract is avoided, and the buyer gets a refund. Partial: inspect, then avoid, or accept with an allowance."
+      },
+      {
+       "id": "s13",
+       "ask": "A farmer contracts to sell 500 bushels of corn, not from any particular field. A flood destroys his whole crop. Is he excused under § 2-613?",
+       "answer": "No. The goods were not identified when the contract was made; corn is fungible, so he must still deliver or pay damages.",
+       "pause": 12
+      },
+      {
+       "id": "s14",
+       "say": "Recap. Excuse is narrow and yields to agreement. Section 2-613: identified at contracting, destroyed without fault, before risk passed; total loss avoids the contract; partial loss lets the buyer avoid or accept with an allowance. Section 2-614: a commercially reasonable substitute for failed delivery facilities must be tendered and accepted, and failed government-blocked payment needs a substantially equivalent substitute."
+      },
+      {
+       "id": "s15",
+       "ask": "Name the three elements of § 2-613.",
+       "answer": "Goods identified when the contract was made, destroyed without fault of either party, before risk of loss passed.",
+       "pause": 9
+      },
+      {
+       "id": "s16",
+       "ask": "Does negligence count as fault under § 2-613?",
+       "answer": "Yes.",
+       "pause": 5
+      },
+      {
+       "id": "s17",
+       "ask": "A stolen painting is reclaimed by its true owner. Does § 2-613 excuse the seller?",
+       "answer": "No. That is a title failure, not a casualty, so the seller breaches.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e13",
+     "title": "Impracticability and frustration: §§ 2-615 and 2-616, NIPSCO, and Problem 6-8",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The seller's impracticability defense, allocation, the buyer's options, the buyer's frustration defense, and the coal contract."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-615, for the seller. Delay or non-delivery isn't a breach if performance as agreed became impracticable because of the occurrence of a contingency whose non-occurrence was a basic assumption of the contract. Or because of good-faith compliance with a governmental regulation. Two duties come with it. If the seller's capacity is only partly affected, it must allocate production fairly among its customers. And it must seasonably notify buyers."
+      },
+      {
+       "id": "s3",
+       "say": "What qualifies? Increased cost alone, or market swings, don't excuse, comment 4. War, embargo, crop failure, or the shutdown of a major source of supply can."
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-616, the buyer's response. On notice of a material delay or an allocation, the buyer may terminate, or take its quota. And if the buyer says nothing for 30 days, the contract lapses as to the affected deliveries."
+      },
+      {
+       "id": "s5",
+       "say": "Now the buyer's excuse. The buyer uses common-law frustration of purpose, through § 1-103(b) and Restatement Second § 265. And comment 9 to § 2-615 says a supply contract tied to a specific construction venture may excuse the buyer."
+      },
+      {
+       "id": "s6",
+       "say": "NIPSCO versus Carbon County Coal, Seventh Circuit, 1986, Judge Posner, a note case. A fixed-price contract, there with a price floor and escalation, assigns the risk of market increases to the seller and the risk of decreases to the buyer. A buyer that misforecasts the market has only himself to blame, and can't walk away when costs drop steeply. Outside the class materials, NIPSCO was an Indiana electric utility locked into a 20-year coal contract, and regulators wouldn't let it pass fuel costs through when cheaper power was available."
+      },
+      {
+       "id": "s7",
+       "say": "Problem 6-8. (a): the town cancels the sewer project, and the fittings the buyer ordered have no other use. Frustration of purpose is likely, a shared basic assumption, comment 9. (b): the buyer's bank is seized and its account frozen. Not excused. Under § 2-614(2), the buyer must provide a substantially equivalent payment method."
+      },
+      {
+       "id": "s8",
+       "ask": "A seller's costs triple because of a general rise in raw-material prices. It wants out of a fixed-price contract. Excused under § 2-615?",
+       "answer": "No. Increased cost alone doesn't excuse, comment 4. The fixed price allocated that risk to the seller.",
+       "pause": 11
+      },
+      {
+       "id": "s9",
+       "ask": "An embargo cuts a seller's supply in half. It has three customers. What must it do?",
+       "answer": "Allocate its available supply fairly among its customers and seasonably notify them, § 2-615. Each buyer may then terminate or take its quota, § 2-616.",
+       "pause": 12
+      },
+      {
+       "id": "s10",
+       "say": "Recap. Section 2-615: impracticability from a contingency whose non-occurrence was a basic assumption, or government regulation; allocate fairly and notify; cost increases alone don't count. Section 2-616: the buyer terminates or takes its quota; 30 days of silence lapses the affected deliveries. The buyer's excuse is frustration of purpose. NIPSCO: a buyer that misforecasts the market is not excused."
+      },
+      {
+       "id": "s11",
+       "ask": "Under § 2-616, what happens if the buyer doesn't respond within 30 days?",
+       "answer": "The contract lapses as to the affected deliveries.",
+       "pause": 7
+      },
+      {
+       "id": "s12",
+       "ask": "What doctrine gives a buyer an excuse, and through which section?",
+       "answer": "Frustration of purpose at common law, through § 1-103(b).",
+       "pause": 7
+      },
+      {
+       "id": "s13",
+       "ask": "Why couldn't NIPSCO walk away?",
+       "answer": "A fixed-price contract assigns the risk of market decreases to the buyer; a buyer that misforecasts has only himself to blame.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d3-e14",
+     "title": "Day 3 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Cumulative quiz on Days 1 through 3."
+      },
+      {
+       "id": "s2",
+       "ask": "To disclaim merchantability in writing, what two things are required?",
+       "answer": "It must mention merchantability and be conspicuous.",
+       "pause": 7
+      },
+      {
+       "id": "s3",
+       "ask": "Does as is disclaim express warranties?",
+       "answer": "No. Express warranties are nearly impossible to disclaim; § 2-316(3) as is reaches implied warranties.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "Under Razor's independent approach, does a failed repair remedy void the consequential exclusion?",
+       "answer": "No. The exclusion stands unless unconscionable under § 2-719(3).",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "Is a limitation of consequential damages for personal injury from consumer goods enforceable?",
+       "answer": "Prima facie unconscionable, § 2-719(3).",
+       "pause": 7
+      },
+      {
+       "id": "s6",
+       "ask": "A final writing is silent on a term. A consistent prior oral agreement covers it. Admissible?",
+       "answer": "Yes, unless the writing is complete and exclusive.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Does the parol evidence rule bar evidence of a later oral modification?",
+       "answer": "No. It only covers prior and contemporaneous agreements.",
+       "pause": 7
+      },
+      {
+       "id": "s8",
+       "ask": "A ban on assigning the contract. What does it bar?",
+       "answer": "Only delegation of duties, not assignment of rights, § 2-210(4).",
+       "pause": 7
+      },
+      {
+       "id": "s9",
+       "ask": "In Santa Fe, was Home Depot liable for five years of lost profits?",
+       "answer": "No. Good faith doesn't override the § 2-309 right to terminate an indefinite contract on reasonable notice.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "In Top of Iowa, was demanding margin payments and a signed promise to deliver too much?",
+       "answer": "No. All demands call for more than originally promised; it was not unreasonable as a matter of law.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "Until when may a repudiating party retract?",
+       "answer": "Until its next performance is due, unless the other side canceled, materially changed position, or indicated it considers the repudiation final.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "Identified goods destroyed by lightning before risk passes. Result?",
+       "answer": "The contract is avoided under § 2-613.",
+       "pause": 7
+      },
+      {
+       "id": "s13",
+       "ask": "From Day 2: who bears transit loss in a C.I.F. contract?",
+       "answer": "The buyer. C.I.F. is a shipment contract.",
+       "pause": 7
+      },
+      {
+       "id": "s14",
+       "ask": "From Day 1: what is the statute-of-frauds threshold?",
+       "answer": "A price of $500 or more.",
+       "pause": 5
+      },
+      {
+       "id": "s15",
+       "say": "That's Day 3, and that completes the first half of the course. Tomorrow, the buyer's remedies in depth."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
