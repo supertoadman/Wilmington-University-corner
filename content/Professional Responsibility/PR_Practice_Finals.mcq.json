@@ -2,7 +2,7 @@
  "schema": "mcq/v1",
  "id": "pr-practice-finals",
  "title": "Professional Responsibility Practice Finals",
- "description": "2 practice finals of 90 questions each (180 questions), sized like the real final (closed book, 90 multiple-choice questions in 180 minutes) and covering Weeks 1–15 in outline order: regulating lawyers, the client-lawyer relationship, confidentiality, fiduciary duty and authority, fees and client funds, conflicts, government lawyers and prosecutors, advocacy, firms and organizational clients, public service, duties to third parties, advertising, and MR 8.4(g). New MPRE-style fact patterns with five choices; every choice is explained, and every Model Rule cite opens the rule text.",
+ "description": "3 practice finals of 90 questions each (270 questions), sized like the real final (closed book, 90 multiple-choice questions in 180 minutes) and covering Weeks 1–15 in outline order: regulating lawyers, the client-lawyer relationship, confidentiality, fiduciary duty and authority, fees and client funds, conflicts, government lawyers and prosecutors, advocacy, firms and organizational clients, public service, duties to third parties, advertising, and MR 8.4(g). New MPRE-style fact patterns with five choices; every choice is explained, and every Model Rule cite opens the rule text.",
  "course": "Professional Responsibility",
  "modeDefault": "exam",
  "areas": [
@@ -62,6 +62,11 @@
   {
    "id": 2,
    "title": "Final 2",
+   "description": "90 questions in outline order, Weeks 1–15 (Burk Chs. 1–25 and the Model Rules)."
+  },
+  {
+   "id": 3,
+   "title": "Final 3",
    "description": "90 questions in outline order, Weeks 1–15 (Burk Chs. 1–25 and the Model Rules)."
   }
  ],
@@ -4205,6 +4210,2076 @@
     "Discriminatory strikes can be the basis for discipline if the Rule's elements are proved; the finding alone just isn't enough."
    ],
    "e": "Rule 8.4(g) bars knowing (or reasonably-should-know) harassment or discrimination on listed bases in conduct related to practice; Comment [5] says a trial judge's finding of discriminatory peremptory strikes doesn't alone establish a violation."
+  },
+  {
+   "id": "3.1",
+   "exam": 3,
+   "area": "Sources of Law and the Model Rules",
+   "tag": "Scope [21]: the Comments and the Rule text",
+   "q": "Lawyer Ada's conduct seems permitted by the text of Rule 1.8(e), but a Comment to the Rule, read literally, suggests otherwise. Which statement best describes how the Model Rules treat the Comments?",
+   "o": [
+    "The Comments guide interpretation, but the text of each Rule is authoritative.",
+    "The Comments control whenever they conflict with the text, because they reflect the drafters' latest views.",
+    "The Comments have no legal significance at all and may be ignored in disciplinary proceedings.",
+    "The Comments bind lawyers only in the states that have expressly adopted each Comment by statute.",
+    "The Comments are binding rules of their own, and violating one is an independent ground for discipline."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Scope [21] says each Comment explains and illustrates the meaning and purpose of its Rule and that \"the Comments are intended as guides to interpretation, but the text of each Rule is authoritative.\" The Comments matter a great deal (exam questions often turn on them), but they don't override the Rule's text, such as Rule 1.8(e).",
+    "Scope [21] says the opposite: the Rule text is authoritative, and the Comments are guides to interpreting it.",
+    "Too strong. The Comments are guides to interpretation and courts and disciplinary authorities rely on them heavily.",
+    "States adopt rules through their courts, often with the Comments; but the Scope's point is about the relationship between Comments and text.",
+    "Discipline rests on the Rules; Comments explain them but don't add separate obligations (Scope [14], [21])."
+   ],
+   "e": "Under the Scope, the Rules are rules of reason; \"shall\" and \"shall not\" define disciplinary obligations, \"may\" grants discretion, and the Comments guide interpretation while the Rule text is authoritative (Scope [14], [21])."
+  },
+  {
+   "id": "3.2",
+   "exam": 3,
+   "area": "Bar Admission and Discipline (MR 8.1, 8.2, 8.4)",
+   "tag": "MR 8.4(c): dishonesty outside practice",
+   "q": "Lawyer Bram wants to break his apartment lease early. He gives his landlord a forged letter from a doctor saying that he must move for medical reasons. The landlord releases him. Bram's conduct had nothing to do with any client. Is Bram subject to discipline?",
+   "o": [
+    "No, because the Rules govern a lawyer's conduct only when he is representing a client.",
+    "No, because the landlord suffered no real loss from releasing Bram from the lease.",
+    "Yes, because dishonesty and deceit violate the Rules even outside the practice of law.",
+    "Yes, but only if Bram is convicted of forgery in a criminal court.",
+    "No, because a lease dispute is a private contract matter for the civil courts."
+   ],
+   "a": 2,
+   "oe": [
+    "Several provisions, including Rule 8.4(b) and (c), reach a lawyer's private conduct.",
+    "Rule 8.4(c) doesn't require that the deceived person suffer a loss.",
+    "Correct. Rule 8.4(c) makes it misconduct to \"engage in conduct involving dishonesty, fraud, deceit or misrepresentation,\" with no requirement that the conduct occur in practice. A forged letter used to deceive a landlord qualifies, and may also be a crime under Rule 8.4(b).",
+    "A conviction might support Rule 8.4(b), but Rule 8.4(c) applies to the dishonest conduct itself, conviction or not.",
+    "Civil remedies may exist too, but they don't displace discipline for dishonesty under Rule 8.4(c)."
+   ],
+   "e": "Rule 8.4(c) bars conduct involving dishonesty, fraud, deceit or misrepresentation, in or out of practice; Rule 8.4(b) separately covers criminal acts reflecting adversely on fitness."
+  },
+  {
+   "id": "3.3",
+   "exam": 3,
+   "area": "Bar Admission and Discipline (MR 8.1, 8.2, 8.4)",
+   "tag": "MR 8.4(a): violating the Rules through another",
+   "q": "Lawyer Cleo knows the opposing party in her case is represented by counsel. She asks her investigator to strike up a conversation with the party at a bar, steer the talk to the lawsuit, and secretly record what the party says. Is Cleo subject to discipline?",
+   "o": [
+    "Yes, because a lawyer may not violate the Rules through the acts of another.",
+    "No, because the investigator, not Cleo, communicated with the represented party.",
+    "No, because Rule 4.2 applies only to communications by lawyers.",
+    "Yes, but only if the recording is later offered in evidence.",
+    "No, because recording a conversation in a public bar is lawful."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 8.4(a) makes it misconduct to violate the Rules \"knowingly assist or induce another to do so, or do so through the acts of another.\" Cleo couldn't contact the represented party herself under Rule 4.2, so she can't do it through her investigator. Rule 5.3(c)(1) also makes her responsible for conduct she orders.",
+    "Rule 8.4(a) forbids doing through another what the lawyer can't do herself.",
+    "Rule 4.2 governs the lawyer, and Rule 8.4(a) and Rule 5.3(c) extend it to agents she directs.",
+    "The violation is directing the forbidden contact; whether the recording is used doesn't matter.",
+    "The legality of the recording isn't the issue; the contact with a represented person about the matter is."
+   ],
+   "e": "Rule 8.4(a): it is misconduct to violate the Rules, attempt to, knowingly assist or induce another to, or do so through the acts of another; Rule 5.3(c) makes a lawyer responsible for nonlawyer conduct she orders."
+  },
+  {
+   "id": "3.4",
+   "exam": 3,
+   "area": "Where You May Practice (MR 5.5, 8.5)",
+   "tag": "MR 5.5(c)(2): anticipated proceeding",
+   "q": "Lawyer Dev, admitted only in Ohio, is retained by an Ohio client to file a lawsuit in Indiana state court. Before filing, Dev spends two weeks in Indiana interviewing witnesses and preparing the complaint, expecting to seek pro hac vice admission when he files. Is Dev engaged in unauthorized practice in Indiana?",
+   "o": [
+    "No, because it is temporary work for a proceeding where he expects admission.",
+    "Yes, because he hasn't yet been admitted pro hac vice in Indiana.",
+    "Yes, because a lawyer may do pretrial work in another state only with local counsel.",
+    "No, because all litigation work is governed by the tribunal's rules, not by Rule 5.5.",
+    "No, because a lawyer may practice in any state for up to a month a year."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 5.5(c)(2) permits temporary services that \"are in or reasonably related to a pending or potential proceeding before a tribunal in this or another jurisdiction, if the lawyer, or a person the lawyer is assisting, is authorized by law or order to appear in such proceeding or reasonably expects to be so authorized.\" Comment [10] covers pre-filing preparation such as witness interviews.",
+    "Rule 5.5(c)(2) covers lawyers who \"reasonably expect\" to be authorized, so preparation before admission is protected.",
+    "Association with local counsel is Rule 5.5(c)(1), an alternative; Rule 5.5(c)(2) independently covers Dev.",
+    "Rule 5.5 governs practice in the jurisdiction; Rule 5.5(c)(2) is what permits Dev's work.",
+    "There's no fixed-day allowance; temporary practice is allowed only within the Rule 5.5(c) safe harbors."
+   ],
+   "e": "Rule 5.5(c)(2) protects temporary work in or reasonably related to a pending or potential proceeding where the lawyer is, or reasonably expects to be, authorized to appear, including pre-filing preparation (Comment [10])."
+  },
+  {
+   "id": "3.5",
+   "exam": 3,
+   "area": "Where You May Practice (MR 5.5, 8.5)",
+   "tag": "MR 8.5(b)(2): predominant effect",
+   "q": "Lawyer Ezra, admitted in both Maryland and Virginia, works from his Maryland office on a contract negotiation for a Virginia company. The deal concerns a Virginia factory and its Virginia workers, and nothing is pending before any tribunal. Maryland and Virginia rules differ on a confidentiality question that arises. Which jurisdiction's rules govern Ezra's conduct?",
+   "o": [
+    "Virginia's, if the predominant effect of the conduct is in Virginia.",
+    "Maryland's, because his conduct occurred in his Maryland office.",
+    "Both states' rules, so he must follow whichever is stricter on each point.",
+    "The ABA Model Rules, because the states' rules conflict.",
+    "Virginia's, because the client is a Virginia company."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 8.5(b)(2) applies, for conduct not in connection with a matter before a tribunal, \"the rules of the jurisdiction in which the lawyer's conduct occurred, or, if the predominant effect of the conduct is in a different jurisdiction, the rules of that jurisdiction.\" Ezra is also protected if he reasonably believes the predominant effect is where his conduct conforms.",
+    "The place of conduct is the default, but Rule 8.5(b)(2) shifts to the place of predominant effect when that is elsewhere.",
+    "Rule 8.5(b) picks one set of rules so that a lawyer isn't subject to conflicting obligations (Comment [3]).",
+    "The Model Rules don't apply of their own force; Rule 8.5(b) chooses between the states' rules.",
+    "The client's location isn't the test; the predominant effect of the conduct is."
+   ],
+   "e": "Rule 8.5(b): (1) conduct in a matter before a tribunal follows the tribunal's rules; (2) other conduct follows the rules where it occurred or, if its predominant effect is elsewhere, there, with a safe harbor for a reasonable belief about predominant effect."
+  },
+  {
+   "id": "3.6",
+   "exam": 3,
+   "area": "Consequences: Civil Liability, Sanctions, and Other Law",
+   "tag": "Fee forfeiture for serious breach",
+   "q": "Lawyer Fern represented Client Gus in a business sale while secretly representing the buyer too. The sale closed on fair terms, and Gus can't prove he lost money. Gus sues to recover the $60,000 fee he paid Fern. What is the most likely result?",
+   "o": [
+    "Fern may be ordered to forfeit some or all of her fee for the serious breach of loyalty.",
+    "Gus recovers nothing, because he can't prove that the conflict caused him any loss.",
+    "Gus recovers nothing, because the Rules don't create civil remedies.",
+    "Gus recovers three times the fee as a statutory penalty for the conflict.",
+    "Gus recovers the fee only if Fern is first disciplined for violating Rule 1.7."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Burk Ch. 3.B describes fee forfeiture as a civil consequence for a lawyer's clear and serious violation of duty, such as an undisclosed conflict; many courts allow it without proof that the client suffered other damages, because it vindicates the duty of loyalty.",
+    "Fee forfeiture doesn't depend on proof of consequential damages; that is what distinguishes it from a malpractice claim.",
+    "The Rules don't create a cause of action, but courts impose forfeiture under fiduciary law, using the Rules as the standard.",
+    "There's no general treble-fee penalty; forfeiture is equitable and up to the full fee.",
+    "Civil fee forfeiture doesn't wait on discipline."
+   ],
+   "e": "Consequences of misconduct include discipline, malpractice damages, disqualification, court sanctions, and fee forfeiture or reduction for clear and serious breaches of duty (often without proof of other damages)."
+  },
+  {
+   "id": "3.7",
+   "exam": 3,
+   "area": "Consequences: Civil Liability, Sanctions, and Other Law",
+   "tag": "28 U.S.C. § 1927",
+   "q": "In a federal case, Lawyer Hugo files a dozen repetitive motions raising issues the court has already decided, forcing the other side to respond to each. The court finds his conduct unreasonable and vexatious. Under 28 U.S.C. § 1927, what may the court do?",
+   "o": [
+    "Order Hugo's client, but not Hugo, to pay the other side's fees.",
+    "Disbar Hugo from practicing before the federal courts nationwide.",
+    "Nothing, unless the motions were signed in violation of Rule 11.",
+    "Order Hugo to pay all fees the other side incurred in the entire case.",
+    "Order Hugo personally to pay the excess costs and fees his conduct caused."
+   ],
+   "a": 4,
+   "oe": [
+    "Section 1927 runs against the attorney personally; other tools may reach the party.",
+    "Section 1927 is a fee-shifting sanction; it doesn't authorize disbarment.",
+    "Section 1927 is an independent basis for sanctions, separate from FRCP 11.",
+    "Section 1927 reaches only the excess costs caused by the vexatious multiplication, not the whole case.",
+    "Correct. Section 1927 lets a federal court require an attorney who \"multiplies the proceedings in any case unreasonably and vexatiously\" to satisfy personally the excess costs, expenses and attorney's fees reasonably incurred because of that conduct. It is one of the court-sanction tools Burk Ch. 3.C describes."
+   ],
+   "e": "Court sanctions include FRCP 11 (baseless filings), 28 U.S.C. § 1927 (personal liability for excess costs from unreasonably and vexatiously multiplying proceedings), discovery sanctions, and inherent power; they are separate from discipline under Rules 3.1, 3.2 and 3.4."
+  },
+  {
+   "id": "3.8",
+   "exam": 3,
+   "area": "Why Smart People Do Stupid Things (Ch. 4)",
+   "tag": "When you mess up, 'fess up",
+   "q": "At a hearing last week, Lawyer Ivy told the judge that her client had paid all past-due rent. Reviewing the file afterward, she realizes she misread the ledger and the statement was false. The judge relied on it in denying an eviction. What should Ivy do?",
+   "o": [
+    "Say nothing, because she believed the statement was true when she made it.",
+    "Wait to see whether opposing counsel discovers the error before saying anything.",
+    "Tell her client about the error but leave it to the client whether to correct it.",
+    "Promptly correct the false statement to the court, even though it hurts her client.",
+    "Withdraw from the case, which removes any obligation to correct the record."
+   ],
+   "a": 3,
+   "oe": [
+    "Her good faith when she spoke doesn't excuse silence now; Rule 3.3(a)(1) requires correcting a material false statement she made.",
+    "The duty to correct doesn't depend on the opponent; delay compounds the problem.",
+    "She must tell her client (Rule 1.4), but the duty to correct her own statement to the tribunal is hers, not the client's to waive.",
+    "Correct. Rule 3.3(a)(1) requires a lawyer to correct a false statement of material fact or law previously made to the tribunal. Burk Ch. 4.B advises that when you find you've crossed a line, you should own the error promptly; covering it up turns an honest mistake into dishonesty.",
+    "Withdrawal doesn't satisfy the duty to correct a false statement already made to the court."
+   ],
+   "e": "A lawyer who discovers she has made a false statement of material fact or law to a tribunal must correct it (Rule 3.3(a)(1)); Burk Ch. 4 urges owning mistakes promptly rather than letting cognitive dissonance lead to a cover-up."
+  },
+  {
+   "id": "3.9",
+   "exam": 3,
+   "area": "Key Definitions (MR 1.0)",
+   "tag": "MR 1.0(c): a corporate law department is a firm",
+   "q": "Lawyers Jan and Kit both work in the 20-lawyer legal department of Lumen Corp. Jan has a conflict that would bar her from a particular matter. For purposes of imputation under Rule 1.10, are Jan and Kit lawyers in the same \"firm\"?",
+   "o": [
+    "No, because only private law partnerships and professional corporations are firms.",
+    "No, because in-house lawyers have only one client, so imputation never matters.",
+    "Yes, but only if the legal department shares fees with outside counsel.",
+    "Yes, because \"firm\" includes the lawyers in an organization's legal department.",
+    "No, unless the lawyers hold themselves out to the public as a firm."
+   ],
+   "a": 3,
+   "oe": [
+    "Rule 1.0(c) expressly includes corporate legal departments and legal services organizations.",
+    "In-house lawyers may represent affiliates or constituents, and Rule 1.0(c) treats their department as a firm.",
+    "Fee sharing isn't part of the definition in Rule 1.0(c).",
+    "Correct. Rule 1.0(c) defines \"firm\" or \"law firm\" to include \"lawyers employed in a legal services organization or the legal department of a corporation or other organization.\" Rule 1.0, Comments [2]–[4] add that whether lawyers form a firm depends on the facts, but a corporate law department is expressly included.",
+    "Holding out matters for some arrangements, such as office-sharing lawyers (Comment [2]), but a legal department is a firm by definition."
+   ],
+   "e": "\"Firm\" (Rule 1.0(c)) includes law partnerships, professional corporations, sole proprietorships, legal services organizations and corporate legal departments; lawyers who only share offices may be a firm if they hold themselves out as one (Comment [2])."
+  },
+  {
+   "id": "3.10",
+   "exam": 3,
+   "area": "Competence and Diligence (MR 1.1, 1.3)",
+   "tag": "MR 1.1, Comment [8]: technology competence",
+   "q": "Lawyer Lou takes on a commercial case involving millions of emails. He has never handled electronic discovery, doesn't understand how the client's email system stores data, and tells the client he \"doesn't do computers.\" He plans to wing it. Is Lou subject to discipline?",
+   "o": [
+    "No, because technology is a matter for vendors and staff, not a lawyer's competence.",
+    "No, because a lawyer's competence is measured only by his knowledge of substantive law.",
+    "Yes, and he must decline the case because he lacks prior e-discovery experience.",
+    "No, unless the client is harmed by a discovery sanction caused by his ignorance.",
+    "Yes, unless he learns enough about e-discovery or associates with someone who knows it."
+   ],
+   "a": 4,
+   "oe": [
+    "Comment [8] makes understanding relevant technology part of a lawyer's own competence; he may use vendors but must supervise them (Rule 5.3).",
+    "Rule 1.1 requires knowledge, skill, thoroughness and preparation, including relevant technology.",
+    "He needn't decline; Comment [2] allows him to acquire competence or associate with someone who has it.",
+    "Discipline under Rule 1.1 doesn't depend on actual harm.",
+    "Correct. Rule 1.1, Comment [8] says competence includes keeping abreast of \"the benefits and risks associated with relevant technology.\" Comment [2] lets a lawyer become competent through study or by associating a lawyer of established competence. Winging a large e-discovery case without either is incompetence."
+   ],
+   "e": "Competence (Rule 1.1) includes understanding the benefits and risks of relevant technology (Comment [8]); a lawyer can reach competence by study or by associating an experienced lawyer (Comment [2])."
+  },
+  {
+   "id": "3.11",
+   "exam": 3,
+   "area": "The Civil Duty of Care and Effective Assistance",
+   "tag": "Missouri v. Frye: lapsed plea offer",
+   "q": "The prosecutor sends defense lawyer Mia a written plea offer: plead to a misdemeanor and serve 90 days, open for two weeks. Mia forgets to tell her client, the offer lapses, and the client later pleads guilty to a felony and receives three years. Which statement is correct?",
+   "o": [
+    "There is no Sixth Amendment issue, because the client later pleaded guilty voluntarily.",
+    "Mia acted properly, because the decision whether to accept a plea belongs to the lawyer.",
+    "Prejudice is presumed, so the conviction must be vacated without further showing.",
+    "Mia's failure to convey the offer was deficient performance under Missouri v. Frye.",
+    "Mia's conduct is deficient only if the plea offer was made orally rather than in writing."
+   ],
+   "a": 3,
+   "oe": [
+    "Frye holds that the right to effective counsel extends to plea bargaining, including lapsed offers.",
+    "The plea decision belongs to the client (Rule 1.2(a)); he can't make it if he isn't told.",
+    "Frye requires a showing of a reasonable probability that the defendant would have accepted the offer and that it would have been entered.",
+    "Correct. In Missouri v. Frye the Court held that defense counsel generally must communicate formal plea offers from the prosecution; letting one lapse without telling the client is deficient performance. To show prejudice, the defendant must show a reasonable probability he would have accepted it and that it would have been entered. Rule 1.4(a)(1) requires the same communication.",
+    "Frye concerned a formal written offer, and Rule 1.4 requires communicating offers whatever their form."
+   ],
+   "e": "Missouri v. Frye and Lafler v. Cooper extend Strickland to plea bargaining: counsel must communicate formal offers and advise competently about them, and prejudice requires a reasonable probability the defendant would have accepted the offer and that it would have been entered."
+  },
+  {
+   "id": "3.12",
+   "exam": 3,
+   "area": "Forming the Relationship and Identifying the Client",
+   "tag": "MR 1.18(b): using a prospective client's information",
+   "q": "Investor Nora consults Lawyer Otto about buying a shopping center and reveals her maximum price and financing plans. Otto decides not to take the matter and declines in writing. A month later, Otto's other client, Pax, asks Otto to help him bid on the same shopping center. Otto knows Nora's information would help Pax bid. Which statement is correct?",
+   "o": [
+    "Otto may use Nora's information, because she never became his client.",
+    "Otto may help Pax and use the information, because he declined Nora's matter in writing.",
+    "Otto must reveal Nora's information to Pax, because Pax is his current client and is owed candor.",
+    "Otto may represent Pax only if Nora is notified after the bidding ends.",
+    "Otto may not use or reveal Nora's information, and may be barred from helping Pax."
+   ],
+   "a": 4,
+   "oe": [
+    "Rule 1.18(b) protects prospective clients' information even when no relationship forms.",
+    "Declining in writing ends the relationship but not the duty under Rule 1.18(b).",
+    "A lawyer's duty to inform a client (Rule 1.4) doesn't override another person's protected information.",
+    "Notice after the fact doesn't satisfy Rule 1.18(d), which requires informed consent or a timely screen with prompt written notice.",
+    "Correct. Rule 1.18(b) says a lawyer who has learned information from a prospective client \"shall not use or reveal that information,\" except as Rule 1.9 would permit for a former client. Rule 1.18(c) also bars representing a client with materially adverse interests in the same matter if the information could be significantly harmful to the prospective client, unless Rule 1.18(d) is satisfied."
+   ],
+   "e": "Rule 1.18: a prospective client's information may not be used or revealed (b); a lawyer who received significantly harmful information may not oppose her in the same or a substantially related matter (c), unless both consent in writing or the lawyer limited his exposure and is screened (d)."
+  },
+  {
+   "id": "3.13",
+   "exam": 3,
+   "area": "Forming the Relationship and Identifying the Client",
+   "tag": "Identifying the client: a relative requests services",
+   "q": "Son Quill calls Lawyer Ruth and asks her to prepare a new will for his mother, Sena, who is competent. Quill says he'll pay, and asks Ruth to send him drafts and to make him the main beneficiary. Who is Ruth's client, and what follows?",
+   "o": [
+    "Quill is the client, because he hired and is paying Ruth.",
+    "Quill and Sena are joint clients, so Ruth must share all drafts with both.",
+    "Sena is the client, so Ruth must take instructions from her and protect her confidences.",
+    "Sena is the client, but Ruth must follow Quill's instructions because he pays the fee.",
+    "Ruth may not draft the will at all, because a relative arranged the representation."
+   ],
+   "a": 2,
+   "oe": [
+    "Payment doesn't make the payor the client; the person whose legal interests are represented is the client (Rule 1.8(f)).",
+    "Their interests may diverge (Quill wants to be the main beneficiary), and Sena hasn't agreed to a joint representation.",
+    "Correct. The client is the person whose will it is. Rule 1.14, Comment [6] says when a family member seeks a lawyer's services on behalf of someone, the lawyer should identify the client and establish an ordinary relationship with that person. Quill's payment is allowed only under Rule 1.8(f) (Sena's informed consent, no interference, confidentiality protected).",
+    "Rule 5.4(c) and Rule 1.8(f)(2) bar the payor from directing the lawyer's judgment.",
+    "A relative may arrange and pay for representation if Rule 1.8(f) is followed; Ruth just has to identify and serve the real client."
+   ],
+   "e": "Identify the client first: the person whose legal interests are at stake, not necessarily whoever calls or pays (Rule 1.8(f); Rule 1.14, Comment [6]); keep the relative out of confidential communications unless the client consents."
+  },
+  {
+   "id": "3.14",
+   "exam": 3,
+   "area": "Scope of the Engagement and Duties to Non-Clients",
+   "tag": "Disclaiming duties: the non-engagement letter",
+   "q": "After a 30-minute consultation, Lawyer Sid decides not to take Tula's wrongful-termination case. Which step would best protect Sid against a later claim that he represented her?",
+   "o": [
+    "Tell Tula orally that she probably has no case, so she won't waste time pursuing it.",
+    "Send Tula a prompt letter saying he won't represent her and that deadlines may apply.",
+    "Say nothing further, because a lawyer-client relationship never forms without a signed agreement.",
+    "Keep her file in case she calls back, so the information is available.",
+    "Refer her to another lawyer and promise to supervise that lawyer's work on the case."
+   ],
+   "a": 1,
+   "oe": [
+    "Giving a merits opinion is exactly what created liability in Togstad; it invites reliance.",
+    "Correct. Burk Ch. 9.C recommends a written non-engagement (declination) letter that makes clear the lawyer isn't representing the person, takes no position on the merits, and warns that limitations periods may bar her claim, so she should promptly consult other counsel. That dispels any reasonable belief in a relationship (Togstad).",
+    "Relationships can be implied from conduct and reliance; silence leaves the risk in place.",
+    "Keeping the file doesn't clarify the relationship and creates a Rule 1.18 confidentiality burden; a declination letter is the protective step.",
+    "Promising supervision would create the very responsibility he is trying to disclaim."
+   ],
+   "e": "To avoid an implied relationship, decline clearly and in writing, express no opinion on the merits, and flag limitations periods (non-engagement letters, Burk Ch. 9.C; Togstad)."
+  },
+  {
+   "id": "3.15",
+   "exam": 3,
+   "area": "Scope of the Engagement and Duties to Non-Clients",
+   "tag": "No duty of care to the adverse party",
+   "q": "Lawyer Uri represents the seller of a house. The unrepresented buyer asks Uri to review the purchase contract \"to make sure it's fair to me.\" Uri says he represents only the seller and can't advise the buyer. The buyer later loses money because a clause favored the seller. Is Uri liable to the buyer for negligence?",
+   "o": [
+    "Yes, because a lawyer who drafts a contract owes a duty of care to every party who signs it.",
+    "Yes, because the buyer asked Uri for help and relied on the contract he drafted.",
+    "No, but only because the buyer signed without reading the contract carefully.",
+    "Generally no, because a lawyer owes no duty of care to the client's adversary in a transaction.",
+    "Yes, because Rule 4.3 required Uri to advise the buyer about unfair clauses."
+   ],
+   "a": 3,
+   "oe": [
+    "Drafting for one side doesn't create a duty of care to the other side; duties to non-clients are limited.",
+    "Uri expressly refused to advise the buyer, so reliance on him would not be reasonable.",
+    "The buyer's care isn't the reason; the reason is that no duty runs to the adverse party.",
+    "Correct. Burk Ch. 9.B explains that a lawyer generally owes no duty of care to the opposing party in a transaction, because such a duty would conflict with the duty to the client; Uri also properly disclaimed any role under Rule 4.3. He would still be liable for fraud or misrepresentation (Rule 4.1), but none occurred.",
+    "Rule 4.3 forbids giving legal advice (other than to get a lawyer) to an unrepresented person with adverse interests."
+   ],
+   "e": "Lawyers generally owe no duty of care to their client's adversaries; duties to non-clients arise in limited settings (intended beneficiaries, invited reliance), and lawyers remain liable for fraud and misrepresentation (Rule 4.1)."
+  },
+  {
+   "id": "3.16",
+   "exam": 3,
+   "area": "Clients with Decision-Making Limitations (MR 1.14)",
+   "tag": "MR 1.14, Comment [16]: opposing guardianship",
+   "q": "Client Vada, 80, has some decision-making limitations. Her nephew petitions the court to appoint him as her guardian. Vada opposes the petition and asks her lawyer, Wes, to fight it. Wes privately thinks a guardian might help her. What must Wes do?",
+   "o": [
+    "Support the petition, because he reasonably believes a guardian is in her best interest.",
+    "Withdraw, because he disagrees with his client about her own capacity.",
+    "Tell the court privately that he thinks his client needs a guardian.",
+    "Remain neutral, because a lawyer for a client with limitations acts as guardian ad litem.",
+    "Advocate for Vada's position against the guardianship, not for the appointment."
+   ],
+   "a": 4,
+   "oe": [
+    "Comment [16] forbids advocating for an appointment the client opposes.",
+    "Disagreement isn't a reason to abandon her; the Rule tells him to advocate her position.",
+    "That would be advocating against his client and revealing information without authority (Rule 1.6).",
+    "Wes is Vada's lawyer, not a guardian ad litem; Comment [10] warns against confusing the two roles.",
+    "Correct. Rule 1.14, Comment [16] says if another person has petitioned for a guardianship and the client opposes it, the lawyer may not advocate for the appointment, and a lawyer representing the respondent in a guardianship proceeding must advocate for the client's expressed position. Comment [12] adds that in capacity litigation the lawyer should advocate the client's expressed position."
+   ],
+   "e": "A lawyer for a client with decision-making limitations advocates the client's expressed position in capacity proceedings and may not seek a guardianship the client opposes (Rule 1.14, Comments [12], [16])."
+  },
+  {
+   "id": "3.17",
+   "exam": 3,
+   "area": "Declining and Terminating the Representation (MR 1.16)",
+   "tag": "MR 1.16(b)(4): fundamental disagreement",
+   "q": "Lawyer Xia represents a landlord in a commercial lease dispute. The landlord insists on a lawful but scorched-earth strategy that Xia finds deeply objectionable, refusing every reasonable settlement in order to drive the tenant out of business. Withdrawal would cause some delay. May Xia withdraw?",
+   "o": [
+    "No, because the strategy is lawful, so she must carry out her client's objectives.",
+    "Yes, because she may withdraw from action she considers repugnant.",
+    "No, because withdrawal would have some adverse effect on the client.",
+    "Yes, and she must, because pursuing a scorched-earth strategy violates the Rules.",
+    "Yes, but only if the landlord consents to her withdrawal in writing."
+   ],
+   "a": 1,
+   "oe": [
+    "Rule 1.16(b)(4) allows withdrawal even from lawful action the lawyer finds repugnant or fundamentally disagrees with.",
+    "Correct. Rule 1.16(b)(4) permits withdrawal when \"the client insists upon taking action that the lawyer considers repugnant or with which the lawyer has a fundamental disagreement.\" She must still comply with any tribunal-permission requirement (Rule 1.16(c)) and protect the client's interests on exit (Rule 1.16(d)).",
+    "Material adverse effect matters only under Rule 1.16(b)(1); Rule 1.16(b)(4) is a separate ground.",
+    "A lawful but harsh strategy isn't a Rules violation; withdrawal here is permissive, not mandatory.",
+    "Permissive withdrawal doesn't require the client's consent."
+   ],
+   "e": "Rule 1.16(b)(4) permits withdrawal when the client insists on action the lawyer considers repugnant or fundamentally disagrees with, subject to Rule 1.16(c) and (d)."
+  },
+  {
+   "id": "3.18",
+   "exam": 3,
+   "area": "Declining and Terminating the Representation (MR 1.16)",
+   "tag": "Noisy withdrawal: disaffirming work product",
+   "q": "Lawyer Yuri drafted an opinion letter that his client gave to a lender. Yuri now learns that the client lied to him about key facts in the letter and is using it to obtain loans fraudulently. Yuri withdraws. What else may he do, consistent with the Model Rules?",
+   "o": [
+    "Give notice of withdrawal and disaffirm the opinion letter.",
+    "Nothing, because once he withdraws his duties end and Rule 1.6 forbids any signal.",
+    "Publicly announce that his former client is a fraud.",
+    "Keep quietly working for the client to make sure the loans are repaid.",
+    "Sue the client for damages before taking any other step."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.2, Comment [10] and Rule 4.1, Comment [3] say that when withdrawal alone is insufficient, the lawyer may need to give notice of the fact of withdrawal and to disaffirm any opinion, document or affirmation. Rule 1.6(b)(2)–(3) may also permit disclosure, since the client used his services.",
+    "The Comments recognize \"noisy withdrawal\": disaffirming the lawyer's own work product is permitted so he doesn't keep assisting the fraud.",
+    "Disclosure must be limited to what is reasonably necessary; a public announcement goes far beyond disaffirming his letter.",
+    "Continuing would assist the fraud (Rule 1.2(d)), and Rule 1.16(a)(4) requires withdrawal.",
+    "A lawsuit doesn't address his own continuing assistance through the letter, which is the urgent problem."
+   ],
+   "e": "When a client uses the lawyer's work to commit fraud, the lawyer must withdraw (Rule 1.16(a)(4)) and may give notice of withdrawal and disaffirm the work product (\"noisy withdrawal,\" Rule 1.2, Comment [10]; Rule 4.1, Comment [3]), and may disclose under Rule 1.6(b)(2)–(3)."
+  },
+  {
+   "id": "3.19",
+   "exam": 3,
+   "area": "Declining and Terminating the Representation (MR 1.16)",
+   "tag": "MR 1.16(a), Comment [1]: duty to inquire",
+   "q": "A new client asks Lawyer Zane to set up a chain of offshore companies and move several million dollars through them quickly, and won't say where the money came from or why speed matters. Under the 2023 amendments to the Model Rules, what must Zane do before accepting?",
+   "o": [
+    "Accept the matter, because a lawyer has no duty to investigate a client's purposes.",
+    "Report the client to law enforcement before deciding anything.",
+    "Decline automatically, because any offshore transaction is presumptively criminal.",
+    "Accept the matter, but require the client to sign a statement that the money is legitimate.",
+    "Inquire into and assess the facts to decide whether he may accept the matter."
+   ],
+   "a": 4,
+   "oe": [
+    "The 2023 amendment to Rule 1.16(a) imposes a risk-based duty to inquire and assess.",
+    "No Rule 1.6(b) exception applies to suspicions alone; the duty is to inquire and assess, then decline if necessary.",
+    "Offshore structures can be lawful; the Rule calls for a risk-based inquiry, not automatic refusal.",
+    "A signed statement doesn't substitute for the inquiry and assessment the Rule requires when red flags appear.",
+    "Correct. Rule 1.16(a), as amended in 2023, requires a lawyer to \"inquire into and assess the facts and circumstances of each representation to determine whether the lawyer may accept or continue the representation.\" Rule 1.16, Comment [1] says the level of inquiry depends on the risk the client seeks to use the lawyer's services for a crime or fraud."
+   ],
+   "e": "Rule 1.16(a) (2023) requires inquiring into and assessing the facts of each representation, scaled to risk (Comment [1]); a lawyer must decline or withdraw if the client seeks to use or persists in using his services for a crime or fraud (Rule 1.16(a)(4))."
+  },
+  {
+   "id": "3.20",
+   "exam": 3,
+   "area": "The Duty of Confidentiality (MR 1.6(a), (c))",
+   "tag": "MR 1.6, Comment [5]: implied authorization",
+   "q": "Lawyer Abby, negotiating a contract for her client, tells the other side that her client can close by June 1, a fact the client told her and wants to close on. She also discusses the client's matter with two associates in her firm who are helping her. The client never expressly authorized either disclosure. Has Abby violated Rule 1.6?",
+   "o": [
+    "Yes, because every disclosure of client information requires the client's express consent.",
+    "Yes, as to the closing date, but not as to the associates in her own firm.",
+    "No, because both disclosures were impliedly authorized to carry out the representation.",
+    "Yes, as to the associates, because they never met the client.",
+    "No, but only because the closing date isn't confidential information."
+   ],
+   "a": 2,
+   "oe": [
+    "Rule 1.6(a) has three routes to disclosure: informed consent, implied authorization, and the Rule 1.6(b) exceptions.",
+    "Telling the other side a fact the client wants used to close the deal is impliedly authorized too (Comment [5]).",
+    "Correct. Rule 1.6(a) permits disclosure \"impliedly authorized in order to carry out the representation.\" Rule 1.6, Comment [5] gives examples: a lawyer may disclose information that facilitates a satisfactory conclusion of a matter, and lawyers in a firm may disclose client information to each other unless the client has instructed otherwise.",
+    "Comment [5] permits lawyers in a firm to share client information with each other unless the client has instructed otherwise.",
+    "The closing date is information relating to the representation; the disclosure is proper because it is impliedly authorized."
+   ],
+   "e": "Rule 1.6(a) permits disclosure with the client's informed consent, when impliedly authorized to carry out the representation (Comment [5]: facilitating the matter, sharing within the firm), or under a Rule 1.6(b) exception."
+  },
+  {
+   "id": "3.21",
+   "exam": 3,
+   "area": "The Duty of Confidentiality (MR 1.6(a), (c))",
+   "tag": "MR 1.6, Comment [19]: client-chosen security measures",
+   "q": "Client Bell, in a bitter custody fight, tells Lawyer Cyd that her ex-husband can read her work email and asks Cyd to communicate only through an encrypted app. Cyd keeps emailing her work account because it's convenient. Is Cyd subject to discipline?",
+   "o": [
+    "Yes, because he must take reasonable precautions against a risk he knows of.",
+    "No, because a lawyer may always use ordinary email to communicate with clients.",
+    "No, because only the client is responsible for the security of her own email account.",
+    "Yes, because Rule 1.6 requires encryption of every client communication.",
+    "No, unless the ex-husband actually reads one of the emails."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.6, Comment [19] says that when transmitting communications, a lawyer must take reasonable precautions to prevent the information from reaching unintended recipients, and that a client may require special security measures. Knowing the ex-husband can read the account, emailing it isn't a reasonable effort under Rule 1.6(c).",
+    "Ordinary email is usually reasonable, but not when the lawyer knows it is likely to be read by an adverse person (Comment [19]).",
+    "The lawyer's duty under Rule 1.6(c) includes choosing a reasonable means of communication when he knows of a risk.",
+    "No rule requires encryption in all cases; the duty is reasonable precautions in light of the risk and the client's instructions.",
+    "The duty is to take reasonable precautions; a breach isn't required for a violation."
+   ],
+   "e": "Rule 1.6(c) and Comments [18]–[19] require reasonable precautions in storing and transmitting client information, scaled to sensitivity and risk; a client may require special security measures or consent to less secure means."
+  },
+  {
+   "id": "3.22",
+   "exam": 3,
+   "area": "Confidentiality, Privilege, and Work Product",
+   "tag": "Work product: fact vs. opinion",
+   "q": "In a product-liability case, the defense seeks (1) the plaintiff's lawyer's notes summarizing a witness interview, including her thoughts on the witness's credibility and her trial strategy, and (2) photographs the lawyer's investigator took of the accident scene, which has since been repaved. Which is the defense most likely to obtain?",
+   "o": [
+    "Both, because work product protection disappears once litigation begins.",
+    "Neither, because all work product is absolutely immune from discovery.",
+    "The photographs, on a showing of substantial need.",
+    "The notes, because a witness interview is a fact, not a mental impression.",
+    "Both, because they're not attorney-client communications, so nothing protects them."
+   ],
+   "a": 2,
+   "oe": [
+    "Work product protection exists precisely for materials prepared in anticipation of litigation.",
+    "Only opinion work product is nearly absolute; fact work product yields to substantial need and hardship.",
+    "Correct. Under the work-product doctrine (from the Supreme Court's Hickman decision, now FRCP 26(b)(3)), materials prepared in anticipation of litigation are protected; ordinary (fact) work product can be obtained on a showing of substantial need and inability to obtain the equivalent without undue hardship, as with photos of a scene that no longer exists. Opinion work product (mental impressions, conclusions, strategy) gets near-absolute protection. Rule 1.6 protects both outside court.",
+    "Notes containing the lawyer's assessments and strategy are opinion work product, the most protected kind.",
+    "The privilege covers client communications; work product is a separate doctrine protecting trial preparation."
+   ],
+   "e": "Work product (Hickman; FRCP 26(b)(3)) protects materials prepared in anticipation of litigation: fact work product yields to substantial need and undue hardship; opinion work product is nearly absolute; Rule 1.6 confidentiality is broader than both."
+  },
+  {
+   "id": "3.23",
+   "exam": 3,
+   "area": "Exceptions to Confidentiality (MR 1.6(b))",
+   "tag": "MR 1.6(b)(5), Comment [10]: responding to accusations",
+   "q": "The SEC tells Lawyer Dana that it is investigating whether she helped her former client mislead investors. No charges have been filed. To show she was misled by the client too, Dana wants to give the SEC the client's emails that lied to her. May she?",
+   "o": [
+    "No, because she must wait until formal charges are filed against her.",
+    "Yes, as far as reasonably necessary to respond, without waiting for charges.",
+    "No, because a lawyer may never reveal a client's information to a government agency.",
+    "Yes, and she may also reveal the client's unrelated private affairs to show his bad character.",
+    "No, unless the former client first consents in writing."
+   ],
+   "a": 1,
+   "oe": [
+    "Comment [10] says the lawyer may respond as soon as an assertion of complicity is made.",
+    "Correct. Rule 1.6(b)(5) permits disclosure \"to respond to allegations in any proceeding concerning the lawyer's representation of the client.\" Rule 1.6, Comment [10] says the lawyer need not wait for formal charges: the right to respond arises when an assertion of complicity has been made, though disclosure is limited to what is reasonably necessary (Comment [16]).",
+    "Rule 1.6(b)(5) and (b)(6) both allow disclosure to government in proper cases.",
+    "Disclosure is limited to what is reasonably necessary to respond (Comment [16]); unrelated affairs are outside that.",
+    "The self-defense exception in Rule 1.6(b)(5) exists precisely because the client won't consent."
+   ],
+   "e": "Rule 1.6(b)(5) lets a lawyer reveal what is reasonably necessary to establish a claim or defense against the client, defend charges based on conduct involving the client, or respond to allegations about the representation, without waiting for formal charges (Comment [10])."
+  },
+  {
+   "id": "3.24",
+   "exam": 3,
+   "area": "Exceptions to Confidentiality (MR 1.6(b))",
+   "tag": "MR 1.6(b)(7): conflict checks for a lateral move",
+   "q": "Partner Eli is negotiating to join Firm Fable. To check for conflicts, Fable asks him for a list of his current clients and the general nature of each matter. One of his clients is a public company considering a secret takeover bid that hasn't been announced. What may Eli disclose?",
+   "o": [
+    "Nothing, because client identities are confidential and can't be revealed for any reason.",
+    "Everything about every matter, because Fable needs complete information to check conflicts.",
+    "Basic client identities and matter descriptions, but not the secret takeover plan.",
+    "The takeover plan, because it is exactly the kind of matter that might create a conflict.",
+    "Only what each client has consented to in writing after a full explanation."
+   ],
+   "a": 2,
+   "oe": [
+    "Rule 1.6(b)(7) permits limited disclosures for conflict checking.",
+    "Disclosure is limited to what is needed to check conflicts and must not prejudice the client (Rule 1.6, Comments [13]–[14]).",
+    "Correct. Rule 1.6(b)(7) permits disclosure \"to detect and resolve conflicts of interest arising from the lawyer's change of employment,\" but only if it won't compromise the attorney-client privilege or otherwise prejudice the client. Rule 1.6, Comment [13] says disclosure ordinarily includes only the identity of the persons and entities and a brief summary of the matter, and gives an unannounced corporate takeover as an example of information that shouldn't be revealed.",
+    "Rule 1.6, Comment [13] identifies an unannounced takeover as information whose disclosure would prejudice the client.",
+    "Consent is always an option, but Rule 1.6(b)(7) allows limited disclosures without it."
+   ],
+   "e": "Rule 1.6(b)(7) permits limited disclosures (client identity, brief summary) to detect and resolve conflicts from a lawyer's move or a firm merger, but not information that would compromise privilege or prejudice the client (Comments [13]–[14])."
+  },
+  {
+   "id": "3.25",
+   "exam": 3,
+   "area": "Exceptions to Confidentiality (MR 1.6(b))",
+   "tag": "Reasonable belief judged when made: McClure",
+   "q": "Defense lawyer Gail's client, charged with killing a woman, tells her things suggesting that two missing children may be alive at certain locations. Gail anonymously tells police where to look. The children turn out to have been dead for days. The client later claims Gail breached confidentiality and was ineffective. Which statement best reflects how McClure v. Thompson analyzed similar facts?",
+   "o": [
+    "Disclosure was improper, because the children were already dead, so no harm could be prevented.",
+    "Disclosure was improper, because the client never consented to it.",
+    "Disclosure was required, because the Rules mandate disclosure to save a life.",
+    "Disclosure was proper only because it was anonymous.",
+    "Disclosure is judged by what the lawyer reasonably believed when she made it."
+   ],
+   "a": 4,
+   "oe": [
+    "The test looks to the lawyer's reasonable belief when she acted, not to facts learned later.",
+    "The bodily-harm exception exists precisely for situations without client consent.",
+    "Rule 1.6(b)(1) is permissive; McClure asked whether disclosure was permissible and reasonable, not mandatory.",
+    "Anonymity may limit harm to the client, but the justification is the lawyer's reasonable belief that disclosure was necessary.",
+    "Correct. In McClure, the Ninth Circuit judged the lawyer's disclosure by whether he reasonably believed, at the time, that it was necessary to prevent death or substantial bodily harm, in light of what he knew then. The exception now in Rule 1.6(b)(1) turns on reasonable belief, not hindsight."
+   ],
+   "e": "The Rule 1.6(b) exceptions turn on what the lawyer reasonably believes necessary at the time (McClure); disclosure must be no greater than reasonably necessary (Comment [16])."
+  },
+  {
+   "id": "3.26",
+   "exam": 3,
+   "area": "When Disclosure Becomes Mandatory; Hard Cases",
+   "tag": "MR 3.3(c), Comment [13]: duration of the duty to correct",
+   "q": "Lawyer Hal's client won a civil case two years ago; the judgment was affirmed, and the time for any further review has run. Hal now learns, for the first time, that his client lied in his deposition testimony that was read at trial. The client refuses to correct it. Must Hal disclose the perjury to the court?",
+   "o": [
+    "No, because the duty to correct ends when the proceeding concludes, so Rule 1.6 governs now.",
+    "Yes, because the duty of candor to the tribunal never expires.",
+    "Yes, because perjury is a crime, and Rule 1.6 never protects information about crimes.",
+    "No, because a lawyer never has to disclose a client's perjury.",
+    "Yes, but only to opposing counsel, who may then decide whether to reopen the judgment."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 3.3(c) says the duties in paragraphs (a) and (b) \"continue to the conclusion of the proceeding,\" and Rule 3.3, Comment [13] says a proceeding has concluded when a final judgment has been affirmed on appeal or the time for review has passed. After that, Hal's obligations are governed by Rule 1.6, and no exception requires disclosure.",
+    "Rule 3.3(c) limits the duty to the conclusion of the proceeding.",
+    "Rule 1.6 protects information about past crimes unless an exception applies; none requires disclosure here.",
+    "Too broad. During the proceeding, Rule 3.3(a)(3) and (c) require remedial measures, including disclosure if necessary.",
+    "No rule requires disclosure to the opponent; after the proceeding ends, Rule 1.6 governs."
+   ],
+   "e": "The Rule 3.3 duties to remedy false evidence override Rule 1.6 but last only until the proceeding concludes (Rule 3.3(c), Comment [13]); afterward, Rule 1.6 controls."
+  },
+  {
+   "id": "3.27",
+   "exam": 3,
+   "area": "The Lawyer as Fiduciary (Ch. 5)",
+   "tag": "The fiduciary standard: Meinhard",
+   "q": "In Meinhard v. Salmon, Judge Cardozo described the duty a fiduciary owes as \"the punctilio of an honor the most sensitive.\" How does Burk apply that standard to lawyers?",
+   "o": [
+    "A lawyer must win for the client by any means the law doesn't expressly forbid.",
+    "A lawyer must balance her own interests equally against the client's interests.",
+    "A lawyer must be honest with the client, but may otherwise act like any arm's-length contracting party.",
+    "A lawyer must put the client's interests in the engagement ahead of her own.",
+    "A lawyer owes fiduciary duties only after the client pays a retainer."
+   ],
+   "a": 3,
+   "oe": [
+    "Fiduciary loyalty doesn't mean winning at all costs; the lawyer remains bound by the law and the Rules (Rule 1.2(d), Rule 3.3).",
+    "Equal balancing is the opposite of the fiduciary standard, which puts the client's interests first within the engagement.",
+    "Meinhard's point is that a fiduciary owes more than the honesty of an arm's-length party.",
+    "Correct. Burk Ch. 5 uses Meinhard to describe the fiduciary relationship: \"not honesty alone\" but undivided loyalty, so a lawyer may not use the relationship to benefit herself at the client's expense and must disclose what the client would want to know. The conflict rules, such as Rules 1.7 and 1.8, carry out that loyalty.",
+    "Fiduciary duties arise from the relationship itself, not from payment."
+   ],
+   "e": "Lawyers are fiduciaries held to Meinhard's \"punctilio of an honor the most sensitive\": loyalty, care, confidentiality and candor, analyzed separately, with the client's interests in the engagement ahead of the lawyer's own."
+  },
+  {
+   "id": "3.28",
+   "exam": 3,
+   "area": "The Lawyer as Fiduciary (Ch. 5)",
+   "tag": "Which fiduciary duty: care vs. loyalty",
+   "q": "Lawyer Ivo, swamped with work, forgets to file a client's appeal on time, and the appeal is lost. Ivo gained nothing from the mistake and had no conflicting interest. Which fiduciary duty did Ivo most clearly breach?",
+   "o": [
+    "The duty of loyalty, because any harm to a client betrays the lawyer's loyalty.",
+    "The duty of confidentiality, because he failed to protect the client's legal position.",
+    "The duty of care, because he failed to act with competence and diligence.",
+    "The duty of candor, because the client wasn't told the deadline was coming.",
+    "No fiduciary duty, because a missed deadline is only a malpractice issue."
+   ],
+   "a": 2,
+   "oe": [
+    "Loyalty concerns conflicting interests and self-dealing; careless work without a conflict is a care problem.",
+    "Confidentiality concerns information relating to the representation (Rule 1.6), not missed deadlines.",
+    "Correct. A missed deadline with no self-interest is a failure of care (competence and diligence, Rules 1.1 and 1.3), not loyalty. Burk Ch. 5 urges analyzing each fiduciary duty separately so that the right rule and the right remedy are identified. He also must tell the client (Rule 1.4).",
+    "Candor matters now that he must tell the client of the error, but the lost appeal itself is a failure of care.",
+    "Care is itself a fiduciary duty, enforced through malpractice and through Rules 1.1 and 1.3."
+   ],
+   "e": "Analyze each fiduciary duty separately: loyalty (conflicts, self-dealing; Rules 1.7–1.8), care (competence and diligence; Rules 1.1, 1.3), confidentiality (Rule 1.6), candor (Rule 1.4)."
+  },
+  {
+   "id": "3.29",
+   "exam": 3,
+   "area": "Candor to the Client (MR 1.4)",
+   "tag": "MR 1.4(b): explaining enough to decide",
+   "q": "Defense lawyer Jade tells her client, Kurt, \"The state is offering two years if you plead. Let me know by Friday.\" Kurt, who has never been in court, asks what happens if he goes to trial. Jade says, \"That's up to you.\" What does Rule 1.4 require of Jade?",
+   "o": [
+    "Explain the likely outcomes and risks of trial and of the plea so that Kurt can decide.",
+    "Nothing more, because she has communicated the offer as Rule 1.4(a)(1) requires.",
+    "Decide for Kurt, because he lacks the experience to make the choice.",
+    "Tell Kurt she can't advise him, because advice might pressure his decision.",
+    "Have Kurt sign a form acknowledging that the decision is his alone."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.4(b) requires a lawyer to \"explain a matter to the extent reasonably necessary to permit the client to make informed decisions regarding the representation.\" Rule 1.4, Comment [5] says the client should have sufficient information to participate intelligently in decisions such as whether to accept a plea, including the probable outcome at trial.",
+    "Communicating the offer is necessary but not enough; Rule 1.4(b) requires explaining it so the client can decide.",
+    "The plea decision belongs to the client under Rule 1.2(a); her job is to equip him to make it.",
+    "Rule 2.1 requires candid advice; refusing to advise isn't neutrality, it's a failure to communicate.",
+    "A signed acknowledgment doesn't supply the explanation Rule 1.4(b) requires."
+   ],
+   "e": "Rule 1.4(b): explain matters to the extent reasonably necessary for informed decisions, such as the risks of trial versus a plea (Comment [5]); the client decides under Rule 1.2(a) with the lawyer's candid advice (Rule 2.1)."
+  },
+  {
+   "id": "3.30",
+   "exam": 3,
+   "area": "Candor to the Client (MR 1.4)",
+   "tag": "MR 1.4, Comment [6]: communicating with an organizational client",
+   "q": "Lawyer Lev represents Moss Corp. in a major lawsuit. A settlement offer arrives that, if accepted, would require Moss to change its business practices. Lev tells only a junior paralegal in Moss's legal department, who doesn't pass it on. Has Lev satisfied Rule 1.4?",
+   "o": [
+    "No, because he must communicate with appropriate officials of the organization.",
+    "Yes, because telling any employee of an organization is telling the organization.",
+    "Yes, because Moss is responsible for routing communications inside its own company.",
+    "No, because only the board of directors may receive settlement offers.",
+    "Yes, if Lev also mailed the offer to Moss's general business address."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.4, Comment [6] says that when the client is an organization, ordinarily the lawyer should address communications to the appropriate officials of the organization. Rule 1.13(a) says the organization acts through its duly authorized constituents. A junior paralegal isn't the right person for a major settlement offer.",
+    "Comment [6] requires communicating with appropriate officials, not just any employee.",
+    "The lawyer has the duty to communicate effectively with someone authorized to act.",
+    "The appropriate official depends on the matter; it may be the general counsel or another officer, not necessarily the board.",
+    "Mailing it to a general address isn't communicating with an appropriate official."
+   ],
+   "e": "Rule 1.4 applies to organizational clients through their authorized constituents: the lawyer should communicate with appropriate officials (Rule 1.4, Comment [6]; Rule 1.13(a))."
+  },
+  {
+   "id": "3.31",
+   "exam": 3,
+   "area": "The Lawyer as Agent: Authority (Ch. 6; MR 1.2(a))",
+   "tag": "Implied authority over procedural means",
+   "q": "Opposing counsel asks Lawyer Nell for a two-week extension to answer interrogatories. Granting it won't prejudice Nell's client, Orion Corp., and is customary. Nell grants it without first asking Orion. Was that proper?",
+   "o": [
+    "No, because a lawyer must get the client's approval for every decision in the case.",
+    "No, because granting an extension waives the client's right to a speedy resolution.",
+    "Yes, because routine procedural decisions are within the lawyer's implied authority.",
+    "Yes, but only because Orion is an organization rather than an individual.",
+    "No, because only the court may grant an extension of a discovery deadline."
+   ],
+   "a": 2,
+   "oe": [
+    "Rule 1.2(a) reserves objectives and a few key decisions to the client; routine means are for the lawyer, after consultation where appropriate (Rule 1.4(a)(2)).",
+    "A short, non-prejudicial extension is a routine courtesy, not a waiver of a client right.",
+    "Correct. Rule 1.2(a) lets a lawyer \"take such action on behalf of the client as is impliedly authorized to carry out the representation.\" Rule 1.2, Comment [2] says clients normally defer to the lawyer on technical and tactical matters, and professional courtesies like reasonable extensions are among them.",
+    "The type of client doesn't matter; the decision is a routine means within the lawyer's implied authority.",
+    "Parties routinely stipulate to discovery extensions; court approval depends on local rules, not on Rule 1.2."
+   ],
+   "e": "Lawyers have implied authority for routine procedural and tactical decisions (Rule 1.2(a), Comment [2]), while the client decides objectives and reserved matters like settlement and, in criminal cases, the plea, jury waiver and testifying."
+  },
+  {
+   "id": "3.32",
+   "exam": 3,
+   "area": "The Lawyer as Agent: Authority (Ch. 6; MR 1.2(a))",
+   "tag": "Binding arbitration is the client's decision: Blanton",
+   "q": "Without asking her client, Lawyer Pia agrees with opposing counsel to submit the client's medical-malpractice claim to binding arbitration, which waives a jury trial and limits appeal. The arbitrator rules against the client. The client says she never agreed. Is the client likely bound?",
+   "o": [
+    "Yes, because choosing the forum is a tactical decision for the lawyer.",
+    "Yes, because opposing counsel reasonably relied on Pia's authority to agree.",
+    "No, but only because the arbitrator ruled against the client.",
+    "Yes, unless the client objects in writing within ten days of learning of the agreement.",
+    "No, because agreeing to binding arbitration requires the client's own consent."
+   ],
+   "a": 4,
+   "oe": [
+    "Blanton treats binding arbitration as a substantial right, like settlement, not a tactical matter.",
+    "Apparent authority must be traceable to the client; mere retention doesn't create authority to arbitrate (Blanton).",
+    "The outcome is irrelevant; the agreement itself required the client's consent.",
+    "There's no such deadline; the question is authority, which Pia lacked.",
+    "Correct. In Blanton v. Womancare, the California Supreme Court held that an attorney has no implied or apparent authority, merely by virtue of the retention, to agree to binding arbitration, which gives up the client's right to a trial and to meaningful review. That decision is like settlement, reserved to the client (Rule 1.2(a))."
+   ],
+   "e": "Decisions that give up substantial rights or set the outcome (settlement, binding arbitration, high-low agreements) belong to the client (Rule 1.2(a); Blanton); lawyers can't make them on implied authority."
+  },
+  {
+   "id": "3.33",
+   "exam": 3,
+   "area": "Fee Arrangements and Their Formalities (MR 1.5(b), (c))",
+   "tag": "MR 1.5(b): an oral hourly fee",
+   "q": "Lawyer Quinn agrees to represent a new client in a contract dispute at $300 an hour, explains the rate and what the work will include in their first meeting, and starts work. Nothing is put in writing. Is Quinn subject to discipline?",
+   "o": [
+    "Yes, because every fee agreement must be in a writing signed by the client.",
+    "Yes, because a new client must receive the fee terms in writing within ten days.",
+    "No, because fee terms needn't be communicated at all to a new client.",
+    "No, because the Rule only prefers a writing for an hourly fee; it doesn't require one.",
+    "Yes, because without a writing, the fee is presumptively unreasonable."
+   ],
+   "a": 3,
+   "oe": [
+    "Signed writings are required for contingent fees under Rule 1.5(c), not for ordinary hourly fees.",
+    "Rule 1.5(b) has no ten-day writing requirement; it says \"preferably in writing.\"",
+    "Rule 1.5(b) requires communicating scope and rate to a new client, before or within a reasonable time after starting.",
+    "Correct. Rule 1.5(b) requires communicating \"the scope of the representation and the basis or rate of the fee and expenses\" to the client, \"preferably in writing.\" A written agreement is required only in specific settings, such as contingent fees (Rule 1.5(c)) and fee divisions (Rule 1.5(e)). A writing is still wise to avoid disputes.",
+    "There's no such presumption; reasonableness is judged by the Rule 1.5(a) factors."
+   ],
+   "e": "Rule 1.5(b): scope and fee basis must be communicated, preferably in writing; signed writings are required for contingent fees (Rule 1.5(c)), and client agreement confirmed in writing for fee divisions between firms (Rule 1.5(e))."
+  },
+  {
+   "id": "3.34",
+   "exam": 3,
+   "area": "Fee Arrangements and Their Formalities (MR 1.5(b), (c))",
+   "tag": "MR 1.5(c): liability for expenses",
+   "q": "Lawyer Rita's contingent-fee agreement, signed by her client, states the percentage and that expenses are deducted after the fee is calculated. It says nothing about whether the client must repay expenses if the case is lost. What does Rule 1.5(c) require?",
+   "o": [
+    "Nothing more, because the agreement states the percentage and the order of deduction.",
+    "The agreement must say that the lawyer will absorb all expenses if the case is lost.",
+    "The agreement must be approved by a court before expenses can be charged.",
+    "It must clearly state any expenses the client owes whether or not she wins.",
+    "Nothing, because expenses are governed by Rule 1.15, not Rule 1.5."
+   ],
+   "a": 3,
+   "oe": [
+    "Rule 1.5(c) also requires notice of expenses the client must pay win or lose.",
+    "Rule 1.8(e)(1) lets repayment be contingent on the outcome, but the Rule doesn't require the lawyer to absorb expenses; it requires clear notice of the arrangement.",
+    "No court approval is required for a contingent-fee agreement under Rule 1.5(c).",
+    "Correct. Rule 1.5(c) requires the contingent-fee agreement to \"clearly notify the client of any expenses for which the client will be liable whether or not the client is the prevailing party.\" Rita's agreement is missing that term.",
+    "Rule 1.5(c) expressly addresses how expenses are treated in a contingent-fee agreement."
+   ],
+   "e": "Rule 1.5(c): a contingent-fee agreement must be in a writing signed by the client, state the method (percentages, expenses deducted and whether before or after the fee), and clearly notify the client of expenses owed win or lose."
+  },
+  {
+   "id": "3.35",
+   "exam": 3,
+   "area": "Limits on Fees, Retainers, and Fee Sharing (MR 1.5(a), (d), (e); 5.4; 7.2(b))",
+   "tag": "MR 1.5(a): weighing the reasonableness factors",
+   "q": "Lawyer Sam charges a client $15,000 for drafting a simple, one-page residential lease. Sam spent an hour on it, the work required no special skill, and nothing about the matter was novel, urgent, or risky. The client agreed to the fee in advance. Is the fee proper?",
+   "o": [
+    "Yes, because the client agreed to the fee in advance.",
+    "No, because it's unreasonable under Rule 1.5(a), agreement or not.",
+    "Yes, because a lawyer may charge whatever the market will bear.",
+    "No, because flat fees are improper for transactional work like drafting leases.",
+    "Yes, if Sam's hourly rate for complex litigation would justify the amount."
+   ],
+   "a": 1,
+   "oe": [
+    "Agreement is relevant but doesn't cure an unreasonable fee; Rule 1.5(a) applies to agreed fees too.",
+    "Correct. Rule 1.5(a) forbids an unreasonable fee and lists factors weighed together, including the time and labor required, the novelty and difficulty of the questions, the skill required, the fee customarily charged in the locality, and the results obtained. Client agreement doesn't make an excessive fee reasonable.",
+    "Rule 1.5(a) caps fees at what is reasonable in light of its factors.",
+    "Flat fees are permitted; this one is simply unreasonable in amount.",
+    "The fee must be reasonable for this work, judged by time, skill, difficulty and custom for this matter."
+   ],
+   "e": "Rule 1.5(a): a fee may not be unreasonable, judged by weighing factors such as time and labor, novelty and difficulty, skill, preclusion of other work, customary fees, amount involved and results, time limits, the relationship, the lawyer's experience, and whether the fee is fixed or contingent."
+  },
+  {
+   "id": "3.36",
+   "exam": 3,
+   "area": "Limits on Fees, Retainers, and Fee Sharing (MR 1.5(a), (d), (e); 5.4; 7.2(b))",
+   "tag": "MR 1.5(e), Comment [7]: joint responsibility",
+   "q": "Lawyer Tia refers a client to Lawyer Una in another firm and takes 40 percent of the fee while doing little work. The client agrees in writing to the split. Tia says she has \"assumed joint responsibility.\" What does joint responsibility require under Rule 1.5(e)?",
+   "o": [
+    "Only that Tia refer the client and remain available to answer questions.",
+    "That Tia perform at least 40 percent of the work on the case.",
+    "That Tia guarantee the outcome of the case to the client she referred.",
+    "Nothing beyond the client's written agreement to the division of the fee.",
+    "Responsibility for the whole case, as if the lawyers were partners."
+   ],
+   "a": 4,
+   "oe": [
+    "Mere availability isn't joint responsibility; Comment [7] requires financial and ethical responsibility like a partner's.",
+    "Proportional work is the other route under Rule 1.5(e)(1); joint responsibility lets the split differ from the work.",
+    "No lawyer guarantees outcomes; joint responsibility means answering for the representation as a partner would.",
+    "Client agreement is a separate requirement under Rule 1.5(e)(2); joint responsibility under Rule 1.5(e)(1) is also needed absent proportional work.",
+    "Correct. Rule 1.5, Comment [7] says joint responsibility \"entails financial and ethical responsibility for the representation as if the lawyers were associated in a partnership.\" With that responsibility, Tia may take a share not proportional to her work, if the client agrees confirmed in writing and the total fee is reasonable (Rule 1.5(e))."
+   ],
+   "e": "Rule 1.5(e)(1) is satisfied by a division in proportion to services or by each lawyer assuming joint responsibility, meaning financial and ethical responsibility as if partners (Comment [7]); the client must agree to each share, confirmed in writing, and the total must be reasonable."
+  },
+  {
+   "id": "3.37",
+   "exam": 3,
+   "area": "Limits on Fees, Retainers, and Fee Sharing (MR 1.5(a), (d), (e); 5.4; 7.2(b))",
+   "tag": "MR 5.4(a)(1): payments to a deceased lawyer's estate",
+   "q": "Lawyer Vik's partner, Wren, has died. Their partnership agreement provides that the firm will pay Wren's estate a share of the firm's profits for three years. Wren's heirs, who aren't lawyers, will receive the money. Is the arrangement proper?",
+   "o": [
+    "No, because the heirs are nonlawyers, and a lawyer may never share fees with nonlawyers.",
+    "Yes, because a firm may agree to pay a deceased lawyer's estate over a reasonable period.",
+    "No, unless the estate sells Wren's interest under the sale-of-practice rule.",
+    "Yes, but only if the payments are limited to fees Wren personally earned before death.",
+    "No, because profit sharing with nonlawyers is allowed only for current employees."
+   ],
+   "a": 1,
+   "oe": [
+    "Rule 5.4(a)(1) expressly allows payments to a deceased lawyer's estate or specified persons.",
+    "Correct. Rule 5.4(a)(1) permits \"an agreement by a lawyer with the lawyer's firm, partner, or associate\" providing \"for the payment of money, over a reasonable period of time after the lawyer's death, to the lawyer's estate or to one or more specified persons.\" It is an exception to the ban on sharing fees with nonlawyers.",
+    "A sale under Rule 1.17 is a separate exception (Rule 5.4(a)(2)); payments to the estate under Rule 5.4(a)(1) need no sale.",
+    "Rule 5.4(a)(1) isn't limited to fees Wren earned; it allows payments over a reasonable period under the agreement.",
+    "Rule 5.4(a)(3) covers employees' plans; Rule 5.4(a)(1) separately covers a deceased lawyer's estate."
+   ],
+   "e": "Rule 5.4(a) exceptions: (1) payments over a reasonable period to a deceased lawyer's estate or named persons, (2) the purchase price of a practice (Rule 1.17), (3) nonlawyer employees in compensation or retirement plans based on profit sharing, and (4) court-awarded fees shared with a nonprofit that employed or recommended the lawyer."
+  },
+  {
+   "id": "3.38",
+   "exam": 3,
+   "area": "Safeguarding Client Property (MR 1.15; Delaware Rule 1.15)",
+   "tag": "MR 1.15(a): where the trust account must be",
+   "q": "Lawyer Xena practices only from her office in Delaware. Her favorite bank is across the state line in Pennsylvania, so she keeps her client trust account there. None of her clients has consented to that arrangement. Is Xena complying with Rule 1.15?",
+   "o": [
+    "Yes, because a lawyer may keep her trust account at any federally insured bank.",
+    "No, because it must be in the state where her office is, absent client consent.",
+    "Yes, so long as the account is clearly labeled as a client trust account.",
+    "No, because a lawyer may never keep client funds outside the state where she is admitted.",
+    "Yes, because Delaware and Pennsylvania are neighboring states."
+   ],
+   "a": 1,
+   "oe": [
+    "Federal insurance doesn't satisfy the location requirement in Rule 1.15(a).",
+    "Correct. Rule 1.15(a) requires client funds to be \"kept in a separate account maintained in the state where the lawyer's office is situated, or elsewhere with the consent of the client or third person.\" Delaware's Rule 1.15 likewise ties the account to practice in Delaware.",
+    "Proper labeling is required, but the account must also be in the right state absent client consent.",
+    "Rule 1.15(a) allows another location \"with the consent of the client or third person.\"",
+    "Proximity isn't the test; the account must be where the office is, or elsewhere with consent."
+   ],
+   "e": "Rule 1.15(a): keep client and third-party funds in a separate account in the state where the lawyer's office is situated (or elsewhere with consent), safeguard other property, and keep complete records for five years."
+  },
+  {
+   "id": "3.39",
+   "exam": 3,
+   "area": "Safeguarding Client Property (MR 1.15; Delaware Rule 1.15)",
+   "tag": "MR 1.15(d): prompt delivery and accounting",
+   "q": "Lawyer Yan collects a $20,000 judgment for Client Zoe and deposits it in his trust account. Yan's fee is undisputed. He waits four months to tell Zoe that the money has arrived, and doesn't send her share until she calls asking about it. Is Yan subject to discipline?",
+   "o": [
+    "Yes, because he must promptly notify Zoe and deliver her funds.",
+    "No, because the money was safe in his trust account the whole time.",
+    "No, because a lawyer may hold client funds until the client asks for them.",
+    "Yes, but only if Yan earned interest on the money while he held it.",
+    "No, because the judgment was in Zoe's favor, so she suffered no harm."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.15(d) requires that \"upon receiving funds or other property in which a client or third person has an interest, a lawyer shall promptly notify the client or third person\" and \"promptly deliver\" the funds the client is entitled to receive, and, on request, promptly render a full accounting.",
+    "Safekeeping is one duty; prompt notice and delivery under Rule 1.15(d) are others.",
+    "Rule 1.15(d) requires prompt notice and delivery without waiting for a request.",
+    "The violation is the delay; earning interest would add other problems, but isn't required for this one.",
+    "Discipline under Rule 1.15(d) doesn't depend on harm."
+   ],
+   "e": "Rule 1.15(d): on receiving funds or property in which a client or third person has an interest, promptly notify them, promptly deliver what they're entitled to, and on request promptly give a full accounting."
+  },
+  {
+   "id": "3.40",
+   "exam": 3,
+   "area": "Conflicts Overview and Personal-Interest Conflicts (MR 1.8, 1.7(a)(2))",
+   "tag": "MR 1.8(a): security interest adverse to the client",
+   "q": "Client Ava can't pay Lawyer Ben's past-due fees in a long divorce case. Ben asks Ava to give him a mortgage on her house to secure the $40,000 she owes. Ava, eager to keep Ben on the case, signs the mortgage the same day, without any written disclosure or advice to consult another lawyer. Is Ben subject to discipline?",
+   "o": [
+    "No, because a lawyer may always take security for fees the client already owes.",
+    "No, because a lien to secure fees is expressly permitted by Rule 1.8(i).",
+    "Yes, because a mortgage securing his fee is an interest adverse to her.",
+    "Yes, because a lawyer may never take an interest in a client's property for any reason.",
+    "No, because Ava signed the mortgage, which is all that informed consent requires."
+   ],
+   "a": 2,
+   "oe": [
+    "Securing fees with client property is permitted only if Rule 1.8(a)'s requirements are met.",
+    "Rule 1.8(i) permits liens authorized by law on the litigation recovery; a contractual mortgage on the client's house is governed by Rule 1.8(a).",
+    "Correct. Rule 1.8(a) covers knowingly acquiring \"an ownership, possessory, security or other pecuniary interest adverse to a client,\" and a mortgage securing the lawyer's fee is a security interest adverse to the client. Ben needed fair terms disclosed in writing, written advice to seek independent counsel with a reasonable opportunity to do so, and Ava's informed consent in a signed writing.",
+    "Too strong. Rule 1.8(a) permits such interests with fair terms, written advice and signed consent.",
+    "A signature without written disclosure and advice to seek counsel doesn't satisfy Rule 1.8(a)(1)–(3)."
+   ],
+   "e": "Rule 1.8(a) reaches business transactions with clients and knowingly acquiring ownership, possessory, security or other pecuniary interests adverse to a client, such as a mortgage securing fees; its three requirements (fair terms in writing, written advice to seek counsel, signed consent) all apply."
+  },
+  {
+   "id": "3.41",
+   "exam": 3,
+   "area": "Conflicts Overview and Personal-Interest Conflicts (MR 1.8, 1.7(a)(2))",
+   "tag": "MR 1.8(e)(2): indigent client's costs",
+   "q": "Lawyer Cam represents Dell, who is indigent, in a civil-rights suit. Cam pays $2,500 in filing fees and deposition transcript costs and tells Dell that she will never have to repay them, win or lose. Is Cam's conduct proper?",
+   "o": [
+    "No, because a lawyer may advance litigation costs only if repayment depends on the outcome.",
+    "No, because paying a client's costs is financial assistance that Rule 1.8(e) forbids.",
+    "Yes, but only if Cam is representing Dell pro bono.",
+    "Yes, because for an indigent client a lawyer may pay costs outright.",
+    "Yes, and Cam could also pay Dell's rent while the suit is pending."
+   ],
+   "a": 3,
+   "oe": [
+    "That's Rule 1.8(e)(1) for any client; Rule 1.8(e)(2) lets the lawyer simply pay the costs for an indigent client.",
+    "Rule 1.8(e) forbids financial assistance generally, but its exceptions cover litigation costs.",
+    "The pro bono condition belongs to Rule 1.8(e)(3)'s humanitarian gifts for living expenses; Rule 1.8(e)(2) covers costs for any indigent client.",
+    "Correct. Rule 1.8(e)(2) provides that \"a lawyer representing an indigent client may pay court costs and expenses of litigation on behalf of the client.\" Unlike Rule 1.8(e)(1), no repayment is required at all.",
+    "Rent is a living expense, allowed only as a modest gift under Rule 1.8(e)(3) to an indigent client represented pro bono, with its conditions."
+   ],
+   "e": "Rule 1.8(e) bars financial assistance in litigation except (1) advancing costs with repayment contingent on outcome, (2) paying costs for an indigent client, and (3) modest gifts for basic living expenses to an indigent client represented pro bono."
+  },
+  {
+   "id": "3.42",
+   "exam": 3,
+   "area": "Conflicts Overview and Personal-Interest Conflicts (MR 1.8, 1.7(a)(2))",
+   "tag": "MR 1.8(b): use of information that doesn't disadvantage the client",
+   "q": "While representing Client Ezra in buying a lakeside lot for a vacation home, Lawyer Fay learns that a large resort will soon be built nearby. Ezra has bought the only lot he wanted. Fay, without Ezra's consent, buys a different lot far down the lake that Ezra never considered. Ezra is not harmed. Is Fay subject to discipline under Rule 1.8(b)?",
+   "o": [
+    "Yes, because a lawyer may never use information learned in a representation for personal gain.",
+    "Yes, because Fay was required to tell Ezra about her purchase first.",
+    "No, because information about the resort wasn't confidential once it was rumored.",
+    "Yes, unless Fay pays Ezra part of any profit she makes on the lot.",
+    "No, because the Rule forbids using client information only to the client's disadvantage."
+   ],
+   "a": 4,
+   "oe": [
+    "Comment [5] says the Rule doesn't prohibit uses that don't disadvantage the client.",
+    "Rule 1.8(b) has no disclosure requirement for uses that don't disadvantage the client.",
+    "It is still information relating to the representation; the reason there's no violation is that Ezra isn't disadvantaged.",
+    "Sharing profits isn't required when the use doesn't disadvantage the client.",
+    "Correct. Rule 1.8(b) says a lawyer \"shall not use information relating to representation of a client to the disadvantage of the client unless the client gives informed consent.\" Rule 1.8, Comment [5] adds that the Rule doesn't prohibit uses that don't disadvantage the client, though using information to compete with the client for the same property would."
+   ],
+   "e": "Rule 1.8(b) bars using client information to the client's disadvantage without informed consent (for example, competing with the client for property it wants); uses that don't disadvantage the client aren't forbidden (Comment [5]), but revealing information is still governed by Rule 1.6."
+  },
+  {
+   "id": "3.43",
+   "exam": 3,
+   "area": "Conflicts Overview and Personal-Interest Conflicts (MR 1.8, 1.7(a)(2))",
+   "tag": "MR 1.7(a)(2): the lawyer's own financial interest",
+   "q": "Lawyer Gil owns a large block of stock in Hydra Inc. A new client asks Gil to sue Hydra for patent infringement, a suit that could cost Hydra millions and lower its stock price. Gil hasn't mentioned the stock. Which statement is correct?",
+   "o": [
+    "There is no conflict, because Hydra isn't Gil's client.",
+    "Gil has a personal-interest conflict requiring the client's informed consent.",
+    "There is a nonconsentable conflict, because a lawyer may never sue a company he owns stock in.",
+    "There is no conflict, so long as Gil sells his Hydra stock after the case ends.",
+    "The conflict is cured if Gil promises not to let the stock affect his work."
+   ],
+   "a": 1,
+   "oe": [
+    "Personal-interest conflicts under Rule 1.7(a)(2) don't require that the adverse party be a client.",
+    "Correct. Rule 1.7(a)(2) creates a conflict when there is a significant risk the representation will be materially limited by \"a personal interest of the lawyer.\" A substantial stake in the adverse party is such an interest (Rule 1.7, Comment [10]). It is consentable under Rule 1.7(b) if Gil reasonably believes he can represent the client competently and diligently.",
+    "The conflict is consentable under Rule 1.7(b) if the reasonable-belief test is met; it isn't barred outright.",
+    "Selling later doesn't remove the risk during the representation; a sale before starting might.",
+    "A promise isn't informed consent; the client must be told and consent in writing."
+   ],
+   "e": "A lawyer's own interests (finances, relationships, beliefs) create a Rule 1.7(a)(2) conflict when there's a significant risk they will materially limit the representation; it needs the Rule 1.7(b) conditions, including informed consent confirmed in writing."
+  },
+  {
+   "id": "3.44",
+   "exam": 3,
+   "area": "Concurrent Clients: The Concurrent Client Rule (MR 1.7)",
+   "tag": "MR 1.7, Comment [6]: cross-examining a current client",
+   "q": "Lawyer Ike defends a contractor in a construction-defect trial. The plaintiff calls an expert, Jun, whom Ike's firm currently represents in an unrelated tax matter. Ike will need to cross-examine Jun aggressively and attack her credibility. Which statement is correct?",
+   "o": [
+    "There's no conflict, because Jun isn't a party to the construction case.",
+    "Ike has a conflict, because cross-examining a current client is ordinarily direct adversity.",
+    "There's no conflict, because the tax matter is unrelated to the construction case.",
+    "There's no conflict if another lawyer in Ike's firm handles Jun's tax matter.",
+    "Ike must simply avoid asking Jun any hard questions."
+   ],
+   "a": 1,
+   "oe": [
+    "Comment [6] recognizes that cross-examining a current client who is only a witness can be direct adversity.",
+    "Correct. Rule 1.7, Comment [6] says direct adversity may arise when a lawyer must cross-examine a client who appears as a witness in a lawsuit involving another client, as when the testimony will be damaging to the client represented in the lawsuit. Ike needs both clients' informed consent, confirmed in writing, if the conflict is consentable.",
+    "Unrelatedness matters for former clients (Rule 1.9(a)); for current clients, direct adversity in any matter is a conflict.",
+    "The conflict is imputed to every lawyer in the firm (Rule 1.10(a)).",
+    "Pulling punches for Jun would materially limit his representation of the contractor, which is itself a Rule 1.7(a)(2) conflict."
+   ],
+   "e": "Direct adversity includes suing a current client and cross-examining one as an adverse witness (Rule 1.7, Comment [6]); pulling punches to avoid it would be a material limitation."
+  },
+  {
+   "id": "3.45",
+   "exam": 3,
+   "area": "Concurrent Clients: The Concurrent Client Rule (MR 1.7)",
+   "tag": "MR 1.7, Comment [7]: transactional direct adversity",
+   "q": "Lawyer Kim represents Lark Co. in an ongoing trademark dispute. Mesa Inc. asks Kim to represent it in negotiating to buy Lark's warehouse, in a deal where Lark has its own transactional counsel. The deal is unrelated to the trademark dispute. May Kim represent Mesa without Lark's consent?",
+   "o": [
+    "Yes, because direct adversity arises only in litigation.",
+    "Yes, because Lark has its own transactional counsel representing it in the deal.",
+    "Yes, because the deal and the trademark dispute are unrelated.",
+    "No, because a lawyer may never represent anyone in a transaction with a current client.",
+    "No, because negotiating against a current client is direct adversity."
+   ],
+   "a": 4,
+   "oe": [
+    "Comment [7] confirms direct adversity can arise in transactions.",
+    "Lark's having other counsel doesn't change that Kim would be negotiating against her own current client.",
+    "For current clients, relatedness doesn't matter; direct adversity on any matter is a conflict.",
+    "It's consentable with both clients' informed consent, confirmed in writing (Rule 1.7(b)).",
+    "Correct. Rule 1.7, Comment [7] says directly adverse conflicts can also arise in transactional matters: a lawyer asked to represent the buyer of a business in negotiations with a seller the lawyer represents in another, unrelated matter can't do so without the informed consent of each client."
+   ],
+   "e": "Direct adversity under Rule 1.7(a)(1) includes negotiating against a current client in an unrelated transaction (Comment [7]); it is consentable under Rule 1.7(b)."
+  },
+  {
+   "id": "3.46",
+   "exam": 3,
+   "area": "Concurrent Clients: The Concurrent Client Rule (MR 1.7)",
+   "tag": "MR 1.7, Comment [9]: duties to others",
+   "q": "Lawyer Nia serves as trustee of her late uncle's trust. A client asks Nia to sue the trust's main beneficiary, her cousin, in an unrelated property dispute. As trustee, Nia owes the cousin fiduciary duties. Which statement best describes the situation?",
+   "o": [
+    "There's no conflict, because the cousin isn't Nia's client.",
+    "There's no conflict, because the property dispute has nothing to do with the trust.",
+    "There's a conflict that only the cousin can waive, because he is the beneficiary.",
+    "There's a conflict, but it is cured if Nia resigns as trustee after the suit is over.",
+    "Nia's trustee duties may materially limit her work, a Rule 1.7(a)(2) conflict."
+   ],
+   "a": 4,
+   "oe": [
+    "Rule 1.7(a)(2) reaches duties to third persons, including beneficiaries Nia serves as trustee.",
+    "A trustee's duties of loyalty to a beneficiary may still limit her willingness to press a claim against that beneficiary.",
+    "The client being represented must consent; the trustee's duties are what create the risk.",
+    "Resigning later doesn't address the risk during the representation.",
+    "Correct. Rule 1.7(a)(2) covers a significant risk that the representation will be materially limited by the lawyer's \"responsibilities to another client, a former client or a third person.\" Rule 1.7, Comment [9] names \"fiduciary duties arising from a lawyer's service as a trustee, executor or corporate director.\" Nia needs to assess the risk and, if consentable, get informed consent confirmed in writing."
+   ],
+   "e": "Material-limitation conflicts can come from duties to third persons, such as a lawyer's service as trustee, executor or corporate director (Rule 1.7, Comment [9]), as well as from other clients, former clients and the lawyer's own interests."
+  },
+  {
+   "id": "3.47",
+   "exam": 3,
+   "area": "Concurrent Clients: The Concurrent Client Rule (MR 1.7)",
+   "tag": "MR 1.7, Comment [4]: conflict arising during the representation",
+   "q": "Lawyer Ora represents two co-defendants, a store and its manager, in a slip-and-fall suit. Discovery reveals the manager ignored company safety rules, and the store now wants to blame the manager. The store won't consent to Ora continuing for both. What must Ora do?",
+   "o": [
+    "Continue for both, because the conflict wasn't foreseeable when she took the case.",
+    "Withdraw from at least one representation, and possibly both, under Rule 1.16.",
+    "Continue for the store only, because the store is the more important client.",
+    "Ask the court to decide which client she should keep.",
+    "Continue for both, but stop sharing information between them."
+   ],
+   "a": 1,
+   "oe": [
+    "Unforeseeability doesn't permit continuing; she must get consent or withdraw.",
+    "Correct. Rule 1.7, Comment [4] says if a conflict arises after representation has been undertaken, the lawyer ordinarily must withdraw unless she has the informed consent of each client. Whether she may continue for one depends on her duties to the former client under Rule 1.9 (the same matter and adverse interests usually bar continuing for either without consent).",
+    "Continuing for one against the other in the same matter raises Rule 1.9(a) and needs the dropped client's informed consent.",
+    "The court may rule on withdrawal, but Rule 1.7 and Rule 1.9 frame what she may do; she can't simply choose based on a ruling.",
+    "Splitting information doesn't cure the conflict; their positions are now directly opposed."
+   ],
+   "e": "When a conflict arises midstream, the lawyer ordinarily must withdraw unless each affected client gives informed consent (Rule 1.7, Comment [4]); continuing for one against the other is limited by Rule 1.9."
+  },
+  {
+   "id": "3.48",
+   "exam": 3,
+   "area": "Former and Prospective Clients: The Successive Client Rule (MR 1.9, 1.18(c))",
+   "tag": "MR 1.9, Comment [1]: attacking one's own work",
+   "q": "Three years ago, Lawyer Pete drafted a franchise agreement for Quill Foods, then stopped representing Quill. Now a franchisee asks Pete to sue Quill to rescind that same agreement, arguing that clauses Pete drafted are unenforceable. Quill objects. May Pete take the case?",
+   "o": [
+    "Yes, because three years have passed since the representation ended.",
+    "Yes, because Pete can rely only on the contract's public text, not confidences.",
+    "Yes, if Pete screens himself from his own firm's files on the matter.",
+    "No, because a lawyer may never sue a former client.",
+    "No, because undoing a contract he drafted for Quill is the same matter."
+   ],
+   "a": 4,
+   "oe": [
+    "Time doesn't change that it is the same matter.",
+    "Rule 1.9(a) bars switching sides in the same matter, whether or not confidences would be used.",
+    "Pete is personally disqualified; screening protects firms, not the lawyer who did the work.",
+    "Too broad; Rule 1.9(a) applies only to the same or substantially related matters.",
+    "Correct. Rule 1.9(a) bars materially adverse representation in the same or a substantially related matter without the former client's informed consent, confirmed in writing. Rule 1.9, Comment [1] gives this example: a lawyer could not properly seek to rescind, on behalf of a new client, a contract drafted on behalf of the former client."
+   ],
+   "e": "A lawyer can't attack his own work for a former client (Rule 1.9, Comment [1]): seeking to rescind a contract he drafted is the same matter, barred without the former client's informed consent, confirmed in writing."
+  },
+  {
+   "id": "3.49",
+   "exam": 3,
+   "area": "Former and Prospective Clients: The Successive Client Rule (MR 1.9, 1.18(c))",
+   "tag": "MR 1.18(c): information not significantly harmful",
+   "q": "Rex calls Lawyer Sue for five minutes about suing his landlord. Following her firm's policy, Sue asks only for the parties' names and the general nature of the dispute, then says she can't take the case. Later the landlord asks Sue to defend it in that very suit. Is Sue barred?",
+   "o": [
+    "Yes, because anyone who consults a lawyer about a matter bars her from the other side.",
+    "No, because she received no information that could be significantly harmful to Rex.",
+    "Yes, unless Rex gives informed consent, confirmed in writing.",
+    "No, because a prospective client is owed no duties at all.",
+    "No, but only if her firm screens her from the landlord's case."
+   ],
+   "a": 1,
+   "oe": [
+    "Rule 1.18(c) disqualifies only when the lawyer received significantly harmful information.",
+    "Correct. Rule 1.18(c) bars a lawyer from representing a client adverse to a prospective client in the same or a substantially related matter only \"if the lawyer received information from the prospective client that could be significantly harmful to that person.\" Names and the general nature of the dispute, gathered under a policy limiting intake (Rule 1.18, Comment [4]), aren't that kind of information.",
+    "Consent under Rule 1.18(d)(1) is needed only if Rule 1.18(c) would otherwise disqualify her.",
+    "Prospective clients are owed confidentiality under Rule 1.18(b) and conflict protection under Rule 1.18(c).",
+    "Screening matters when a lawyer is disqualified; Sue isn't."
+   ],
+   "e": "Rule 1.18(c) disqualifies a lawyer only if the prospective client's information could be significantly harmful; limiting intake to what's needed for a conflict check (Comment [4]) protects the firm's ability to represent others."
+  },
+  {
+   "id": "3.50",
+   "exam": 3,
+   "area": "Former and Prospective Clients: The Successive Client Rule (MR 1.9, 1.18(c))",
+   "tag": "MR 1.9(a): former client's consent",
+   "q": "Lawyer Tom once represented Uma in a partnership dispute with Vic. Now Vic asks Tom to represent him in a related dispute against Uma. Tom explains the situation to Uma, who is unbothered and agrees in an email that Tom may represent Vic. Tom reasonably believes he can do so without using Uma's confidences. May Tom represent Vic?",
+   "o": [
+    "No, because a lawyer may never take a matter adverse to a former client in a related dispute.",
+    "No, because the consent must be in a writing signed by the former client.",
+    "Yes, and Tom may now use Uma's confidences to help Vic.",
+    "Yes, without any consent, because Tom reasonably believes he can avoid using her confidences.",
+    "Yes, because the former client gave informed consent, confirmed in writing."
+   ],
+   "a": 4,
+   "oe": [
+    "Rule 1.9(a) permits it with the former client's informed consent, confirmed in writing.",
+    "Rule 1.9(a) requires only \"confirmed in writing,\" which an email satisfies.",
+    "Consent to the representation doesn't waive Rule 1.9(c), which still bars using or revealing her information.",
+    "A reasonable belief isn't enough; Rule 1.9(a) requires the former client's consent.",
+    "Correct. Rule 1.9(a) bars the representation \"unless the former client gives informed consent, confirmed in writing.\" Uma's email after Tom's explanation is informed consent confirmed in writing (Rule 1.0(b), (e)). Tom still may not use or reveal her information under Rule 1.9(c)."
+   ],
+   "e": "A Rule 1.9(a) former-client conflict is cured by the former client's informed consent, confirmed in writing; Rule 1.9(c) continues to bar using or revealing her information."
+  },
+  {
+   "id": "3.51",
+   "exam": 3,
+   "area": "Imputation and Screening (MR 1.10, 1.0(k))",
+   "tag": "MR 1.0(k), Comment [10]: a timely screen",
+   "q": "Lateral Lawyer Wil joins Firm Xeno, which represents the plaintiff in a case Wil worked on for the defendant at his old firm. For two months no one checks, and Wil has lunch with the plaintiff's trial team twice, discussing the case. Xeno then sets up a screen and sends notice to the defendant. Is the screen likely to prevent imputation?",
+   "o": [
+    "No, because the screen came too late to protect the information.",
+    "Yes, because the firm gave the defendant written notice of the screen.",
+    "Yes, because Rule 1.10(a)(2) imposes no deadline for setting up a screen.",
+    "Yes, if Wil now certifies that he won't discuss the case again.",
+    "No, because a screen never works for a lawyer who worked on the same case."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.10(a)(2) requires that the lateral be \"timely screened.\" Rule 1.0, Comment [10] says screening measures must be implemented as soon as practical after a lawyer or firm knows or reasonably should know there is a need for screening. A screen set up after Wil discussed the case can't protect the defendant's information.",
+    "Notice is required but doesn't cure an untimely screen.",
+    "\"Timely\" is part of the Rule, and Comment [10] explains what it means.",
+    "Certifications are part of a proper screen, but they can't undo disclosures already made.",
+    "Under the Model Rules, Rule 1.10(a)(2) allows screening even then; this screen fails because it came too late."
+   ],
+   "e": "\"Screened\" (Rule 1.0(k)) means timely isolation of a lawyer from a matter by reasonably adequate procedures (Comments [8]–[10]); a screen erected after the lawyer has already shared information can't prevent imputation."
+  },
+  {
+   "id": "3.52",
+   "exam": 3,
+   "area": "Imputation and Screening (MR 1.10, 1.0(k))",
+   "tag": "MR 1.10, Comment [4]: work done before becoming a lawyer",
+   "q": "As a law student, Yara worked as a summer law clerk for a firm defending Zinc Co. in a pending lawsuit. After graduating and passing the bar, she joins the firm representing the plaintiff in the same suit. Is her new firm disqualified?",
+   "o": [
+    "No, if she is screened, because the work predates her becoming a lawyer.",
+    "Yes, because her conflict is imputed to her new firm like any lawyer's conflict.",
+    "No, and she may work on the case herself, because she wasn't a lawyer at the time.",
+    "Yes, unless Zinc gives informed consent, confirmed in writing.",
+    "No, because law students owe no confidentiality to the firms they work for."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.10, Comment [4] says Rule 1.10(a) doesn't prohibit representation if the lawyer is prohibited from acting because of events before the person became a lawyer, \"for example, work that the person did as a law student.\" Such persons ordinarily must be screened from personal participation in the matter.",
+    "Comment [4] treats conflicts from pre-admission work like nonlawyer conflicts: not imputed if screened.",
+    "She is personally barred from switching sides in the same case; only the firm escapes imputation if she is screened.",
+    "Consent isn't required when the firm can rely on Comment [4] and a screen.",
+    "Law clerks must protect client information; that is why screening is required."
+   ],
+   "e": "Under Rule 1.10, Comment [4], conflicts of nonlawyers and of lawyers based on pre-admission work (such as law-student clerking) aren't imputed if the person is screened, though the person herself can't work on the matter."
+  },
+  {
+   "id": "3.53",
+   "exam": 3,
+   "area": "Imputation and Screening (MR 1.10, 1.0(k))",
+   "tag": "MR 1.10(b): when a remaining lawyer has the information",
+   "q": "Partner Ada represented Client Beck in a dispute with Coral Inc., with help from associate Dot. Ada then left the firm, taking Beck as a client. Dot stayed and still remembers Beck's confidential settlement strategy. Coral now asks the firm to sue Beck in a substantially related matter. May the firm take the case?",
+   "o": [
+    "Yes, because Ada, the lawyer who represented Beck, has left the firm.",
+    "Yes, if the firm screens Dot from the new case.",
+    "No, because a firm may never be adverse to a client of a lawyer who left.",
+    "No, because Dot still has Beck's material information.",
+    "Yes, because Beck is now Ada's client, not the firm's."
+   ],
+   "a": 3,
+   "oe": [
+    "Rule 1.10(b) still bars the firm when a remaining lawyer, like Dot, has material protected information.",
+    "Rule 1.10(b) doesn't provide a screening cure; it is satisfied only if no remaining lawyer has the information.",
+    "Too broad; Rule 1.10(b) permits it unless both of its conditions are met.",
+    "Correct. Rule 1.10(b) lets a firm be adverse to a client of a departed lawyer unless \"(1) the matter is the same or substantially related to that in which the formerly associated lawyer represented the client; and (2) any lawyer remaining in the firm has information protected by Rules 1.6 and 1.9(c) that is material to the matter.\" Both are true here.",
+    "Beck is a former client of the firm whose information Dot holds; Rule 1.10(b) protects him."
+   ],
+   "e": "Rule 1.10(b): after a lawyer leaves, her old firm may oppose her client unless the matter is the same or substantially related and a remaining lawyer has material information protected by Rules 1.6 and 1.9(c) (both needed to disqualify)."
+  },
+  {
+   "id": "3.54",
+   "exam": 3,
+   "area": "Addressing Conflicts: Abstention, Consent, and Conflict Checks",
+   "tag": "MR 1.7, Comment [18]: what informed consent requires",
+   "q": "Lawyer Eve is asked to represent two small-business owners jointly in forming a company. To obtain valid informed consent to the joint representation, which of the following should Eve explain?",
+   "o": [
+    "Only that she will charge each owner half her usual fee.",
+    "Nothing, because joint representation of business partners isn't a conflict.",
+    "Only that either owner may fire her at any time for any reason.",
+    "Only that she will draft the company documents in plain English.",
+    "Its effects on loyalty, confidentiality between them, and privilege."
+   ],
+   "a": 4,
+   "oe": [
+    "Fee terms must be communicated (Rule 1.5(b)), but they don't supply the information informed consent to a conflict requires.",
+    "Joint representation of parties whose interests may diverge is a Rule 1.7(a)(2) situation requiring informed consent.",
+    "The right to discharge is true but doesn't explain the risks of the joint representation.",
+    "Clear drafting is good practice but irrelevant to informed consent to the conflict.",
+    "Correct. Rule 1.7, Comment [18] says informed consent requires that each affected client be aware of the relevant circumstances and of the material and reasonably foreseeable ways the conflict could adversely affect that client's interests. In a joint representation that includes the implications for loyalty, confidentiality and the attorney-client privilege and the advantages and risks involved (see Comments [29]–[32])."
+   ],
+   "e": "Informed consent to a conflict requires explaining the material and reasonably foreseeable risks (Rule 1.0(e); Rule 1.7, Comment [18]); for joint clients, explain effects on loyalty, information-sharing, privilege, and what happens if a dispute arises (Comments [29]–[32])."
+  },
+  {
+   "id": "3.55",
+   "exam": 3,
+   "area": "Addressing Conflicts: Abstention, Consent, and Conflict Checks",
+   "tag": "MR 1.7(b)(2): prohibited by law",
+   "q": "In a state whose law forbids one lawyer from representing more than one defendant in a capital case, Lawyer Finn is asked to represent two co-defendants facing the death penalty. Both give informed consent, confirmed in writing, and Finn reasonably believes he can represent both. May he?",
+   "o": [
+    "Yes, because both clients gave informed consent, confirmed in writing.",
+    "No, because the representation is prohibited by law, so consent can't cure the conflict.",
+    "Yes, because Finn reasonably believes he can represent both competently.",
+    "Yes, if the court approves the joint representation after a hearing.",
+    "No, but only because co-defendants always have nonconsentable conflicts."
+   ],
+   "a": 1,
+   "oe": [
+    "Consent is only one condition; Rule 1.7(b)(2) separately requires that the representation not be prohibited by law.",
+    "Correct. Rule 1.7(b)(2) requires that \"the representation is not prohibited by law.\" Rule 1.7, Comment [16] gives this very example: some states' substantive law provides that the same lawyer may not represent more than one defendant in a capital case, even with the clients' consent.",
+    "The reasonable-belief test of Rule 1.7(b)(1) doesn't override a legal prohibition.",
+    "A court can't approve what the state's law forbids.",
+    "Co-defendant representation is ordinarily inadvisable (Comment [23]) but not always barred; here it's barred because the law prohibits it."
+   ],
+   "e": "A conflict is nonconsentable if the representation is prohibited by law (Rule 1.7(b)(2); Comment [16]), involves claims between clients in the same litigation (Rule 1.7(b)(3)), or fails the reasonable-belief test (Rule 1.7(b)(1))."
+  },
+  {
+   "id": "3.56",
+   "exam": 3,
+   "area": "Addressing Conflicts: Abstention, Consent, and Conflict Checks",
+   "tag": "MR 1.0(b), MR 1.7, Comment [20]: timing of the writing",
+   "q": "Lawyer Gwen explains a conflict in a phone call and her client consents orally. Gwen is about to leave for a two-week trial and doesn't send any confirming writing until she returns, three weeks later. Was the consent \"confirmed in writing\"?",
+   "o": [
+    "Yes, because the Rules set no deadline for confirming an oral consent.",
+    "Probably not, because it had to be sent promptly or within a reasonable time.",
+    "Yes, because the oral consent was itself informed, so the writing is a formality.",
+    "No, because consent to a conflict must always be given in a writing signed by the client.",
+    "Yes, if the client doesn't object after receiving the late email."
+   ],
+   "a": 1,
+   "oe": [
+    "Rule 1.0(b) requires prompt transmission or, if infeasible, transmission within a reasonable time.",
+    "Correct. Rule 1.0(b) says confirmed in writing means informed consent given in writing or \"a writing that a lawyer promptly transmits\" confirming oral consent, and \"if it is not feasible to obtain or transmit the writing at the time the person gives informed consent, then the lawyer must obtain or transmit it within a reasonable time thereafter.\" Nothing made a prompt email infeasible here. Rule 1.7, Comment [20] repeats the point.",
+    "The writing requirement is part of the Rule; Comment [20] explains that it impresses on clients the seriousness of the decision.",
+    "A signed writing is required only where a Rule says so (e.g., Rule 1.8(a)); \"confirmed in writing\" can be the lawyer's prompt writing.",
+    "The client's silence doesn't fix an unreasonable delay in confirming."
+   ],
+   "e": "\"Confirmed in writing\" (Rule 1.0(b)) allows a lawyer's writing promptly sent after oral consent, or within a reasonable time if prompt transmission isn't feasible; Rule 1.7, Comment [20] explains why the writing matters."
+  },
+  {
+   "id": "3.57",
+   "exam": 3,
+   "area": "The Government Lawyer's Client, Conflicts, and Extra Duties",
+   "tag": "McDade: federal lawyers and state ethics rules",
+   "q": "Assistant U.S. Attorney Hal, admitted in Texas, prosecutes cases in federal court in Texas. He argues that as a federal employee he is bound only by Justice Department policies, not by Texas's rules of professional conduct. Under the McDade Amendment, is Hal right?",
+   "o": [
+    "Yes, because federal law preempts state regulation of federal employees' conduct.",
+    "No, because federal lawyers follow the ethics rules where they practice.",
+    "Yes, but only while he is appearing in federal court.",
+    "No, but only because he is admitted in Texas; unadmitted federal lawyers are exempt.",
+    "Yes, because prosecutors are governed only by Rule 3.8, not the other Rules."
+   ],
+   "a": 1,
+   "oe": [
+    "Congress chose the opposite in § 530B, subjecting federal government lawyers to state ethics rules.",
+    "Correct. The McDade Amendment, 28 U.S.C. § 530B, makes attorneys for the federal government subject to state laws and rules governing attorneys in each state where they engage in their duties, to the same extent as other attorneys there. Rule 8.5(a) also subjects Hal to Texas discipline.",
+    "Section 530B applies where the federal lawyer engages in his duties, including in federal court.",
+    "Section 530B applies to federal government attorneys in each state where they practice.",
+    "Rule 3.8 adds duties for prosecutors; all the other Rules still apply to them."
+   ],
+   "e": "Government lawyers are bound by the Rules plus extra duties; the McDade Amendment (28 U.S.C. § 530B) subjects federal government attorneys to the ethics rules of the states where they practice."
+  },
+  {
+   "id": "3.58",
+   "exam": 3,
+   "area": "The Revolving Door (MR 1.11, 1.12)",
+   "tag": "MR 1.12(a), Comment [1]: former judge on a multimember court",
+   "q": "Judge Ina served on a seven-judge appellate court and left to join a private firm. A client asks her to argue a case now pending in that court. Ina didn't sit on the case or work on it in any way, though she was on the court when it was filed. May Ina represent the client?",
+   "o": [
+    "Yes, because she didn't participate personally and substantially in the matter.",
+    "No, because a former judge may never appear in a case filed while she was on the court.",
+    "No, unless all parties give informed consent, confirmed in writing.",
+    "Yes, but only after a two-year cooling-off period.",
+    "No, because her former colleagues will be biased in her favor."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.12(a) bars a former judge from a matter in which she participated \"personally and substantially.\" Rule 1.12, Comment [1] says a judge who was a member of a multimember court and later practices law is not prohibited from representing a client in a matter pending in the court but in which the former judge did not participate.",
+    "Comment [1] permits it when she didn't participate in the matter.",
+    "Consent is needed only for matters in which she participated personally and substantially.",
+    "The Model Rules impose no fixed cooling-off period on former judges; the test is personal and substantial participation.",
+    "Any appearance concern is for the court and the Code of Judicial Conduct; Rule 1.12(a) doesn't bar her."
+   ],
+   "e": "Rule 1.12(a) bars former judges, arbitrators, mediators, neutrals and law clerks only from matters in which they participated personally and substantially; membership on a court where a matter was pending isn't enough (Comment [1])."
+  },
+  {
+   "id": "3.59",
+   "exam": 3,
+   "area": "The Revolving Door (MR 1.11, 1.12)",
+   "tag": "MR 1.11(e): rulemaking isn't a \"matter\"",
+   "q": "As a lawyer at a state agency, Jax helped draft general regulations on how all restaurants must store food. He has since entered private practice. A restaurant chain asks him to challenge how the agency is applying those regulations to its kitchens. Is Jax barred by Rule 1.11(a)?",
+   "o": [
+    "No, because general rulemaking isn't a \"matter\" with specific parties.",
+    "Yes, because he worked personally and substantially on the regulations at issue.",
+    "Yes, unless the agency gives informed consent, confirmed in writing.",
+    "Yes, because a former government lawyer may never oppose his former agency.",
+    "No, but only if his new firm screens him from the case."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 1.11(e) defines \"matter\" as a judicial or other proceeding, application, contract, claim, investigation, charge or similar \"particular matter involving a specific party or parties.\" Drafting regulations of general application isn't a particular matter involving specific parties. Jax may represent the chain, subject to Rule 1.11(c) if he has confidential government information about it.",
+    "Personal and substantial participation matters only if the work was on a \"matter\" with specific parties, which general rulemaking isn't.",
+    "Consent is needed only if Rule 1.11(a) applies, and it doesn't here.",
+    "Rule 1.11(a) bars only matters in which he participated personally and substantially.",
+    "Screening matters when the lawyer is disqualified; Jax isn't."
+   ],
+   "e": "Under Rule 1.11(e), a \"matter\" involves specific parties (proceedings, contracts, claims, investigations); general rulemaking or policy work doesn't trigger Rule 1.11(a), though Rule 1.11(c) still protects confidential government information."
+  },
+  {
+   "id": "3.60",
+   "exam": 3,
+   "area": "Special Duties of Prosecutors (MR 3.8)",
+   "tag": "MR 3.8(e): subpoenaing a defense lawyer",
+   "q": "Prosecutor Kai wants to subpoena defense lawyer Lia to a grand jury to testify about the fees her client paid her, hoping to trace drug proceeds. The fee information isn't privileged, but Kai could get the same records from the client's bank. May Kai subpoena Lia?",
+   "o": [
+    "Yes, because fee information isn't protected by the attorney-client privilege.",
+    "Yes, because a grand jury may subpoena anyone with relevant information.",
+    "No, because there is another feasible way to obtain the information.",
+    "No, because a prosecutor may never subpoena a defense lawyer about a client.",
+    "Yes, if Kai first notifies Lia's client of the subpoena."
+   ],
+   "a": 2,
+   "oe": [
+    "Non-privilege is only one of three conditions in Rule 3.8(e).",
+    "Rule 3.8(e) limits prosecutors' use of subpoenas to lawyers about their clients, beyond general grand-jury power.",
+    "Correct. Rule 3.8(e) bars a prosecutor from subpoenaing a lawyer to present evidence about a past or present client unless the prosecutor reasonably believes (all required): (1) the information isn't protected by privilege; (2) it is essential to the successful completion of an ongoing investigation or prosecution; and (3) there is no other feasible alternative to obtain it. The bank records are a feasible alternative.",
+    "Rule 3.8(e) permits it when all three conditions are met.",
+    "Notice isn't one of the Rule's conditions."
+   ],
+   "e": "Rule 3.8(e): a prosecutor may subpoena a lawyer about a client only on a reasonable belief that (1) the information isn't privileged, (2) it is essential to an ongoing investigation or prosecution, and (3) there's no other feasible alternative."
+  },
+  {
+   "id": "3.61",
+   "exam": 3,
+   "area": "Special Duties of Prosecutors (MR 3.8)",
+   "tag": "MR 3.8(a): probable cause",
+   "q": "Prosecutor Mo's office is under public pressure to charge someone in a high-profile arson. Mo believes the evidence against the leading suspect falls short of probable cause, but files charges anyway, reasoning that a grand jury or judge can sort it out. Is Mo subject to discipline?",
+   "o": [
+    "No, because the grand jury or judge will decide whether probable cause exists.",
+    "No, because charging decisions are within prosecutorial discretion.",
+    "Yes, because he brought a charge he knew lacked probable cause.",
+    "Yes, but only if the defendant is ultimately acquitted.",
+    "No, because public pressure is a legitimate factor in charging decisions."
+   ],
+   "a": 2,
+   "oe": [
+    "Rule 3.8(a) places the duty on the prosecutor himself, independent of later screening.",
+    "Discretion operates above the probable-cause floor; Rule 3.8(a) forbids charges the prosecutor knows lack it.",
+    "Correct. Rule 3.8(a) requires the prosecutor to \"refrain from prosecuting a charge that the prosecutor knows is not supported by probable cause.\" Mo's belief that the evidence falls short is that knowledge; leaving it to others to screen doesn't excuse him. Berger v. United States describes the prosecutor's interest as justice, not winning.",
+    "The violation is bringing the charge knowing it lacks probable cause, whatever the outcome.",
+    "Public pressure doesn't lower the probable-cause requirement in Rule 3.8(a)."
+   ],
+   "e": "Rule 3.8(a): a prosecutor must refrain from prosecuting a charge he knows isn't supported by probable cause; Berger v. United States frames the prosecutor's duty as seeking justice, not victory."
+  },
+  {
+   "id": "3.62",
+   "exam": 3,
+   "area": "The Lawyer as Counselor and Neutral (MR 2.1, 2.3, 2.4, 3.9)",
+   "tag": "MR 2.3(b): evaluation likely to harm the client",
+   "q": "Seller Ann asks her lawyer, Bo, to prepare an evaluation of her company's legal liabilities for a prospective buyer. Bo knows his candid evaluation will reveal pending claims likely to lower the price significantly. What must Bo do before giving the buyer the evaluation?",
+   "o": [
+    "Nothing, because the evaluation was Ann's idea and is for her benefit.",
+    "Shade the evaluation to protect Ann, since she is his client.",
+    "Refuse, because a lawyer may never give a third person an evaluation of his client.",
+    "Give the evaluation, but only after the buyer agrees to keep it confidential.",
+    "Obtain Ann's informed consent, because it is likely to hurt her interests."
+   ],
+   "a": 4,
+   "oe": [
+    "Even when the client requests it, Rule 2.3(b) requires informed consent when the evaluation is likely to harm her materially.",
+    "A shaded evaluation given to a third person who will rely on it would be a misrepresentation under Rule 4.1(a).",
+    "Rule 2.3(a) expressly permits evaluations for third persons.",
+    "A confidentiality promise from the buyer doesn't substitute for the client's informed consent under Rule 2.3(b).",
+    "Correct. Rule 2.3(a) permits an evaluation for the use of someone other than the client if it is compatible with the lawyer's relationship with the client. Rule 2.3(b) adds that when the lawyer knows or reasonably should know the evaluation is likely to affect the client's interests materially and adversely, he may not provide it unless the client gives informed consent. Rule 2.3(c) keeps other information protected by Rule 1.6."
+   ],
+   "e": "Rule 2.3: a lawyer may evaluate a client's matter for a third person's use if compatible with the relationship; if the evaluation is likely to affect the client materially and adversely, the client's informed consent is required, and other information stays protected by Rule 1.6."
+  },
+  {
+   "id": "3.63",
+   "exam": 3,
+   "area": "Gathering and Handling Evidence (MR 3.4, 4.4)",
+   "tag": "MR 3.4(a): destroying documents before a subpoena",
+   "q": "Client Cal tells Lawyer Dee that a former employee is about to sue the company, and that he plans to shred internal memos about the employee's firing \"before anyone asks for them.\" No suit or subpoena has been served yet. What should Dee do?",
+   "o": [
+    "Help Cal shred the memos, because no suit or subpoena has been served yet.",
+    "Say nothing, because the decision whether to keep company records belongs to the client.",
+    "Report Cal to the court, because he has disclosed a plan to destroy evidence.",
+    "Tell Cal not to destroy them, because a suit is reasonably anticipated.",
+    "Advise Cal to shred only the memos that hurt the company and keep the rest."
+   ],
+   "a": 3,
+   "oe": [
+    "The duty to preserve arises when litigation is reasonably anticipated, not only on service.",
+    "Dee must not acquiesce in spoliation; she must explain the limits (Rule 1.4(a)(5)) and advise preservation.",
+    "No proceeding is pending, and the first step is to advise against it; disclosure duties under Rule 3.3 arise in proceedings before a tribunal.",
+    "Correct. Rule 3.4(a) forbids unlawfully obstructing another party's access to evidence or destroying material having potential evidentiary value, and counseling or assisting another to do so. Rule 3.4, Comment [2] notes that the duty can arise before a proceeding is commenced; once litigation is reasonably anticipated, destroying relevant memos is spoliation. Dee must not assist (Rule 1.2(d)) and should advise preservation.",
+    "Selective destruction of harmful evidence is exactly what Rule 3.4(a) forbids."
+   ],
+   "e": "Rule 3.4(a) bars unlawfully obstructing access to, altering, destroying or concealing evidence, and counseling or assisting anyone to do so; the duty to preserve can arise once litigation is reasonably anticipated."
+  },
+  {
+   "id": "3.64",
+   "exam": 3,
+   "area": "Gathering and Handling Evidence (MR 3.4, 4.4)",
+   "tag": "MR 4.4(b), Comment [2]: metadata",
+   "q": "Opposing counsel emails Lawyer Eli a draft settlement agreement. Eli opens the file's tracked-changes history and sees the other side's internal comments about how much more they would pay. Eli reasonably concludes the metadata was sent by mistake. What does Rule 4.4(b) require?",
+   "o": [
+    "Nothing, because metadata is never covered by Rule 4.4(b).",
+    "Use the comments in negotiation, because the other side waived any protection.",
+    "Report opposing counsel to the bar for failing to scrub the metadata.",
+    "Promptly notify the sender that he received the embedded information.",
+    "Delete the file and tell no one, so that there is no record he saw it."
+   ],
+   "a": 3,
+   "oe": [
+    "Comment [2] expressly includes metadata when the lawyer knows or reasonably should know it was sent by mistake.",
+    "Waiver is a question of other law; Rule 4.4(b) requires notice to the sender regardless.",
+    "A careless failure to scrub metadata doesn't raise the substantial question of honesty or fitness that triggers Rule 8.3(a).",
+    "Correct. Rule 4.4, Comment [2] says that for purposes of Rule 4.4(b), \"document or electronically stored information\" includes embedded data commonly called metadata, which is subject to the Rule only if the receiving lawyer knows or reasonably should know it was inadvertently sent. Then Rule 4.4(b) requires prompt notice to the sender; other law governs whether he may use it.",
+    "Deleting may be wise, but the Rule requires prompt notice to the sender."
+   ],
+   "e": "Rule 4.4(b) covers documents and ESI, including metadata, that the lawyer knows or reasonably should know were inadvertently sent; the duty is prompt notice to the sender (Comments [2]–[3])."
+  },
+  {
+   "id": "3.65",
+   "exam": 3,
+   "area": "Limits on Advocacy (MR 3.1, 3.2, 3.4(e), 3.5, 3.6, 3.7, 8.2)",
+   "tag": "MR 3.6(c): right of reply",
+   "q": "The opposing party in a contract case holds a press conference accusing Lawyer Fay's client of fraud, and the story runs on every local station. Fay responds with a short statement that her client denies the accusations and looks forward to proving them false in court. Is Fay's statement proper?",
+   "o": [
+    "No, because a lawyer may never comment on a pending case to the press.",
+    "Yes, and she may also release the opposing party's confidential settlement offers to rebut the accusation.",
+    "No, because only the opposing party's lawyer may be disciplined for the press conference.",
+    "Yes, but only if the case is a criminal prosecution.",
+    "Yes, because a lawyer may reply to recent adverse publicity not started by her or her client."
+   ],
+   "a": 4,
+   "oe": [
+    "Rule 3.6 limits only statements with a substantial likelihood of material prejudice and has safe harbors and a right of reply.",
+    "A reply must be limited to what is necessary to mitigate the publicity, and settlement offers are often inadmissible.",
+    "The question is whether Fay's own statement is proper, and Rule 3.6(c) permits it.",
+    "Rule 3.6 applies to civil and criminal matters alike.",
+    "Correct. Rule 3.6(c) lets a lawyer make \"a statement that a reasonable lawyer would believe is required to protect a client from the substantial undue prejudicial effect of recent publicity not initiated by the lawyer or the lawyer's client,\" limited to information necessary to mitigate it. A brief denial fits, and also fits Rule 3.6(b)(1)."
+   ],
+   "e": "Rule 3.6(c) permits a limited reply needed to protect a client from substantial undue prejudice from recent publicity not initiated by the lawyer or client; Rule 3.6(b) lists other safe statements."
+  },
+  {
+   "id": "3.66",
+   "exam": 3,
+   "area": "Limits on Advocacy (MR 3.1, 3.2, 3.4(e), 3.5, 3.6, 3.7, 8.2)",
+   "tag": "MR 3.7(a)(2): testimony about legal services",
+   "q": "Lawyer Gus represented Client Hal in a contract case and won a fee award under a fee-shifting clause. At the hearing on the amount of fees, Gus will testify about his hours and rates while also arguing for the award. May Gus act as both advocate and witness?",
+   "o": [
+    "No, because a lawyer may never testify in a case he is trying.",
+    "Yes, but only if the opposing party consents in writing.",
+    "Yes, because testimony about the nature and value of legal services is an exception.",
+    "No, unless Hal shows that disqualifying Gus would cause substantial hardship.",
+    "Yes, because Rule 3.7 applies only to jury trials."
+   ],
+   "a": 2,
+   "oe": [
+    "Rule 3.7(a) has three exceptions, including testimony about the nature and value of legal services.",
+    "Consent of the opposing party isn't part of Rule 3.7(a)'s exceptions.",
+    "Correct. Rule 3.7(a)(2) permits a lawyer to act as advocate at a trial in which he is likely to be a necessary witness when \"the testimony relates to the nature and value of legal services rendered in the case.\" Rule 3.7, Comment [3] explains that letting the lawyer testify avoids a second trial with new counsel, and the judge has firsthand knowledge of the services.",
+    "Substantial hardship is a separate exception under Rule 3.7(a)(3); Gus already qualifies under Rule 3.7(a)(2).",
+    "Rule 3.7 isn't limited to jury trials, though the risk of confusion is greatest there."
+   ],
+   "e": "Rule 3.7(a)'s exceptions (any one suffices): (1) uncontested issue, (2) nature and value of the lawyer's services in the case, (3) substantial hardship to the client from disqualification."
+  },
+  {
+   "id": "3.67",
+   "exam": 3,
+   "area": "Candor to the Tribunal (MR 3.3)",
+   "tag": "Witness preparation vs. coaching",
+   "q": "Preparing a witness for a deposition in a car-accident case, Lawyer Ike reviews the witness's prior statement with her, explains how depositions work, and suggests she answer only the question asked. He also tells her, \"It would really help if you remembered that the light was red,\" though she has said she didn't see the light. Which of Ike's actions was improper?",
+   "o": [
+    "Reviewing her prior statement with her before the deposition.",
+    "Explaining how depositions work and what to expect.",
+    "Advising her to answer only the question asked.",
+    "Suggesting what she should \"remember\" about the light.",
+    "All of these, because a lawyer may not discuss testimony with a witness before she testifies."
+   ],
+   "a": 3,
+   "oe": [
+    "Refreshing a witness's memory with her own prior statement is ordinary, proper preparation.",
+    "Explaining procedure helps a witness testify accurately and is proper.",
+    "Advising concise, responsive answers is standard and proper preparation.",
+    "Correct. Preparing a witness (reviewing prior statements, explaining procedure, advising brief answers) is proper. Suggesting testimony the witness doesn't believe is true is counseling or assisting a witness to testify falsely, which Rule 3.4(b) forbids, and offering it would violate Rule 3.3(a)(3).",
+    "Lawyers may prepare witnesses; only shaping false testimony is forbidden."
+   ],
+   "e": "Witness preparation (reviewing statements, explaining procedure, practicing questions) is proper; suggesting testimony the witness doesn't believe true violates Rule 3.4(b) and, if offered, Rule 3.3(a)(3)."
+  },
+  {
+   "id": "3.68",
+   "exam": 3,
+   "area": "Candor to the Tribunal (MR 3.3)",
+   "tag": "MR 3.3, Comment [6]: client announces intent to lie",
+   "q": "On the eve of trial in a civil fraud case, Client Jo tells Lawyer Kit that she will testify she never received a key email, though she showed Kit the email last week. What should Kit do first?",
+   "o": [
+    "Call Jo and let her testify, because the decision whether to testify belongs to the client.",
+    "Immediately tell the court, before trial begins, that Jo intends to commit perjury.",
+    "Let Jo testify in narrative form without questions.",
+    "Try to talk Jo out of it, and refuse to offer the false testimony.",
+    "Withdraw immediately without saying anything to Jo."
+   ],
+   "a": 3,
+   "oe": [
+    "In a civil case Kit may not offer testimony he knows is false (Rule 3.3(a)(3)); the client's choice doesn't override it.",
+    "Comment [6] directs the lawyer first to remonstrate; disclosure is a remedial step after false evidence is offered and other measures fail.",
+    "The narrative approach is a response some jurisdictions allow in criminal cases; in a civil case Kit simply must not offer the false testimony.",
+    "Correct. Rule 3.3, Comment [6] says that when a client intends to testify falsely, the lawyer should seek to persuade the client not to; if the persuasion is ineffective and the lawyer continues the representation, the lawyer must refuse to offer the false evidence. Rule 3.3(a)(3) forbids offering evidence the lawyer knows is false, and in a civil case Kit may decline to call Jo on that point.",
+    "Withdrawal may become necessary, but the first step is to persuade Jo not to lie."
+   ],
+   "e": "When a client says she will testify falsely, remonstrate first (Rule 3.3, Comment [6]); if she persists, refuse to offer the false evidence (Rule 3.3(a)(3)) and consider withdrawal; if it's offered anyway, take remedial measures."
+  },
+  {
+   "id": "3.69",
+   "exam": 3,
+   "area": "Candor to the Tribunal (MR 3.3)",
+   "tag": "MR 3.3(a)(1): false statement of law",
+   "q": "In a brief, Lawyer Leo writes that a state supreme court case \"squarely holds\" that oral contracts for land are enforceable. Leo has read the case and knows it holds the opposite. Is Leo subject to discipline?",
+   "o": [
+    "No, because it's the judge's job to read the cases cited in a brief.",
+    "No, because advocates may characterize precedent in the light most favorable to their client.",
+    "Yes, but only if the court relies on the miscited case in its ruling.",
+    "Yes, because a lawyer may not knowingly make a false statement of law to a tribunal.",
+    "No, unless opposing counsel points out the error in response."
+   ],
+   "a": 3,
+   "oe": [
+    "The lawyer may not knowingly misstate the law, whatever the court's ability to check.",
+    "Advocates may argue a case's significance, but not misstate what it holds.",
+    "Rule 3.3(a)(1) doesn't require reliance; the knowing misstatement is the violation.",
+    "Correct. Rule 3.3(a)(1) forbids knowingly making \"a false statement of fact or law to a tribunal.\" Misdescribing a holding the lawyer knows says the opposite is a false statement of law. Rule 3.3, Comment [4] says legal argument based on a knowingly false representation of law constitutes dishonesty toward the tribunal.",
+    "The violation doesn't depend on whether the opponent catches it."
+   ],
+   "e": "Rule 3.3(a)(1) forbids knowingly false statements of fact or law to a tribunal and requires correcting material false statements previously made; misstating a holding is a false statement of law (Rule 3.3, Comment [4])."
+  },
+  {
+   "id": "3.70",
+   "exam": 3,
+   "area": "Responsibility Within a Practice Organization (MR 5.1–5.3)",
+   "tag": "MR 5.1(b): direct supervisor's reasonable efforts",
+   "q": "Partner Mae directly supervises first-year associate Ned on a complex litigation matter. Mae gives Ned no guidance on discovery obligations and never reviews his responses, though she knows he has never handled discovery. Ned submits responses that omit required documents. Is Mae subject to discipline?",
+   "o": [
+    "No, because she neither ordered nor knew of Ned's deficient responses.",
+    "No, because only Ned signed the discovery responses.",
+    "Yes, because a direct supervisor must make reasonable supervisory efforts.",
+    "Yes, because a supervisor is automatically responsible for every mistake her associates make.",
+    "No, because Rule 5.1 applies only to managing partners, not to supervising partners."
+   ],
+   "a": 2,
+   "oe": [
+    "Those are the Rule 5.1(c) routes to responsibility for Ned's violation; Rule 5.1(b) is Mae's own duty to supervise.",
+    "Signing allocates responsibility for the filing, but Mae's supervisory duty under Rule 5.1(b) is independent.",
+    "Correct. Rule 5.1(b) requires a lawyer \"having direct supervisory authority over another lawyer\" to \"make reasonable efforts to ensure that the other lawyer conforms to the Rules of Professional Conduct.\" Leaving an inexperienced associate unsupervised on discovery isn't a reasonable effort. This is Mae's own violation, separate from Rule 5.1(c).",
+    "There's no strict liability; the problem is Mae's failure to make reasonable supervisory efforts.",
+    "Rule 5.1(b) applies to any lawyer with direct supervisory authority."
+   ],
+   "e": "Rule 5.1(b): a lawyer with direct supervisory authority must make reasonable efforts to ensure the supervised lawyer conforms to the Rules; Rule 5.1(c) adds responsibility for the other's violation if she orders, ratifies, or knowingly fails to remediate it."
+  },
+  {
+   "id": "3.71",
+   "exam": 3,
+   "area": "Responsibility Within a Practice Organization (MR 5.1–5.3)",
+   "tag": "MR 5.3(c)(1): ordering a nonlawyer's misconduct",
+   "q": "Lawyer Ola tells her investigator to call a represented opposing party and pretend to be a customer-satisfaction surveyor in order to get admissions about the accident. The investigator does so. Which statement is correct?",
+   "o": [
+    "Only the investigator is responsible, because he made the call.",
+    "Ola is responsible, because she ordered the investigator's misconduct.",
+    "No one is responsible, because investigators aren't bound by the Rules.",
+    "Ola is responsible only if the investigator is also a licensed lawyer.",
+    "Ola is responsible only if the admissions are later used at trial."
+   ],
+   "a": 1,
+   "oe": [
+    "Rule 5.3(c)(1) makes the lawyer responsible for conduct she orders.",
+    "Correct. Rule 5.3(c)(1) makes a lawyer responsible for a nonlawyer's conduct that would violate the Rules if engaged in by a lawyer if \"the lawyer orders or, with the knowledge of the specific conduct, ratifies the conduct involved.\" The call violates Rule 4.2 and involves deceit under Rule 8.4(c); Rule 8.4(a) also bars violating the Rules through another.",
+    "That is why Rule 5.3 and Rule 8.4(a) place responsibility on the lawyer.",
+    "Rule 5.3 governs nonlawyer assistants; licensing isn't required for Ola's responsibility.",
+    "The violation is ordering the contact; use of the admissions doesn't matter."
+   ],
+   "e": "Rule 5.3(c): a lawyer answers for a nonlawyer's conduct that would violate the Rules if (1) she orders or knowingly ratifies it, or (2) as a manager or supervisor she knows of it in time to avoid or mitigate it and fails to act."
+  },
+  {
+   "id": "3.72",
+   "exam": 3,
+   "area": "Duties to the Firm, Changing Jobs, and Selling a Practice (MR 1.17, 5.7)",
+   "tag": "MR 1.17(b): selling one area of practice",
+   "q": "Lawyer Pat has a practice in both personal-injury law and estate planning. She wants to sell just her estate-planning practice, all of it, to another lawyer, and keep doing personal-injury work in the same city. Which statement is correct under the Model Rules?",
+   "o": [
+    "She may not, because a lawyer may sell her practice only if she leaves practice entirely.",
+    "She may sell only the estate-planning clients she chooses, keeping the most lucrative ones.",
+    "She may sell the entire estate-planning area if she stops practicing in that area.",
+    "She may sell it, and continue doing estate planning for a few favored clients.",
+    "She may not, because a law practice can be sold only to a firm, not an individual lawyer."
+   ],
+   "a": 2,
+   "oe": [
+    "Rule 1.17 allows selling an area of practice if the seller stops practicing in that area.",
+    "Rule 1.17(b) requires selling the entire area of practice; she can't cherry-pick.",
+    "Correct. Rule 1.17 permits the sale of \"a law practice, or an area of law practice,\" if, among other things, the seller ceases to engage in the private practice of law, or in the area of practice sold, in the geographic area or jurisdiction (Rule 1.17(a)), and the entire area of practice is sold (Rule 1.17(b)), with client notice under Rule 1.17(c).",
+    "She must cease practicing in the area sold (Rule 1.17(a)).",
+    "Rule 1.17(b) allows sale to one or more lawyers or law firms."
+   ],
+   "e": "Rule 1.17: a lawyer may sell a practice or an area of practice if she stops practicing (in that area) in the jurisdiction or geographic area, sells the entire practice or area to one or more lawyers or firms, gives clients the required written notice, and fees aren't increased because of the sale."
+  },
+  {
+   "id": "3.73",
+   "exam": 3,
+   "area": "Duties to the Firm, Changing Jobs, and Selling a Practice (MR 1.17, 5.7)",
+   "tag": "MR 5.4(c): payor directing the lawyer",
+   "q": "A labor union pays Lawyer Quin to represent its members in workplace grievances. The union president tells Quin he must not raise a particular argument for a member, because it would embarrass the union, even though the argument would help the member. What should Quin do?",
+   "o": [
+    "Follow the union president's instruction, because the union pays for the representation.",
+    "Drop the argument but tell the member about the union's instruction afterward.",
+    "Withdraw immediately, because union-paid representation is always a conflict.",
+    "Ask the union president to put the instruction in writing before following it.",
+    "Raise the argument if it is in the member's interest, because a payor may not direct his judgment."
+   ],
+   "a": 4,
+   "oe": [
+    "Payment doesn't entitle the payor to direct the lawyer's judgment (Rule 5.4(c)).",
+    "Disclosing after the fact doesn't cure letting the payor control his judgment.",
+    "Third-party payment is permitted under Rule 1.8(f); only interference is forbidden.",
+    "A written instruction is still an improper attempt to direct his judgment.",
+    "Correct. Rule 5.4(c) says a lawyer \"shall not permit a person who recommends, employs, or pays the lawyer to render legal services for another to direct or regulate the lawyer's professional judgment in rendering such legal services.\" Rule 1.8(f)(2) likewise forbids interference by a third-party payor. If the union's interests conflict with the member's, Quin must address the conflict under Rule 1.7."
+   ],
+   "e": "Rule 5.4(c) bars letting a person who recommends, employs or pays the lawyer direct or regulate the lawyer's judgment for another; Rule 1.8(f) sets the conditions for third-party payment."
+  },
+  {
+   "id": "3.74",
+   "exam": 3,
+   "area": "Representing Organizations and Their Constituents (MR 1.13)",
+   "tag": "Upjohn: whose privilege is it?",
+   "q": "Outside counsel for Rho Corp. gave employee Sol a proper Upjohn warning and then interviewed him about suspected price-fixing. Sol made damaging admissions. Rho now wants to give the interview notes to the government to earn cooperation credit. Sol objects that his statements are privileged. Who decides?",
+   "o": [
+    "Rho, because the privilege for the interview belongs to the company, not the employee.",
+    "Sol, because he is the person who made the statements.",
+    "Sol and Rho jointly, so either may block disclosure.",
+    "The government, because price-fixing is a crime that defeats any privilege.",
+    "No one, because statements by employees to company counsel are never privileged."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Under Upjohn Co. v. United States, communications between company counsel and employees about matters within their duties, made to secure legal advice for the company, are privileged, but the privilege belongs to the company. The Upjohn warning told Sol exactly that: counsel represents the company, which may waive the privilege and disclose what he says (Rule 1.13(f)).",
+    "The privilege belongs to the client, Rho; Sol was a constituent, not a client.",
+    "Unless counsel also represented Sol, he has no privilege to assert.",
+    "The crime-fraud exception applies to communications in furtherance of a crime, not to an internal investigation of past conduct.",
+    "Upjohn held that such statements can be privileged for the company."
+   ],
+   "e": "Under Upjohn, employee communications with company counsel for the company's legal advice are privileged for the company, which alone may waive it; the Upjohn warning (Rule 1.13(f)) tells the employee so."
+  },
+  {
+   "id": "3.75",
+   "exam": 3,
+   "area": "Representing Organizations and Their Constituents (MR 1.13)",
+   "tag": "Forming an organization: who is the client?",
+   "q": "Three friends ask Lawyer Tess to form a corporation for their new restaurant. They disagree about how much stock each should get and who will manage the business. Tess forms the company for them. Which statement best describes the identity of Tess's clients?",
+   "o": [
+    "Tess represents only the corporation, because that is what she was asked to form.",
+    "Tess represents whichever founder first contacted her.",
+    "Tess should decide and tell them whom she represents.",
+    "Tess represents no one, because she was hired only to file paperwork.",
+    "Tess represents each founder individually, and can favor none of them."
+   ],
+   "a": 2,
+   "oe": [
+    "Before formation there is no entity to direct her, and the founders may reasonably believe she represents them; she must clarify.",
+    "Who called first doesn't settle whom she represents; that depends on the agreement and the founders' reasonable expectations.",
+    "Correct. Burk Ch. 23.A explains that organizational formation is a common trap: before the entity exists, the lawyer may be representing the founders jointly (a Rule 1.7 joint representation with its consent and information-sharing issues) or the entity-to-be. The lawyer should decide, explain it to everyone in writing, and address the founders' conflicting interests in stock and control.",
+    "Forming a corporation is legal work; she represents someone, and must say whom.",
+    "Representing each individually with conflicting interests in stock and control would be a Rule 1.7 problem; she must define the engagement."
+   ],
+   "e": "In forming an organization, the lawyer must identify and explain whether she represents the founders jointly or the entity-to-be, and handle the founders' conflicting interests under Rule 1.7 (Burk Ch. 23.A)."
+  },
+  {
+   "id": "3.76",
+   "exam": 3,
+   "area": "Representing Organizations and Their Constituents (MR 1.13)",
+   "tag": "MR 1.13(b): knowledge is required",
+   "q": "In-house lawyer Uma hears an unconfirmed rumor that a sales manager may be offering kickbacks. She has no other information, and her quick check finds nothing. Must she report the matter to the board under Rule 1.13(b)?",
+   "o": [
+    "Yes, because Rule 1.13(b) requires reporting any suspected wrongdoing to the board.",
+    "No, because Rule 1.13(b) requires knowledge, not suspicion.",
+    "Yes, because in-house lawyers must report every rumor of misconduct to the highest authority.",
+    "No, because Rule 1.13 applies only to outside counsel, not to in-house lawyers.",
+    "No, and she may not mention the rumor to anyone in the company."
+   ],
+   "a": 1,
+   "oe": [
+    "Rule 1.13(b) is triggered by knowledge, not suspicion.",
+    "Correct. Rule 1.13(b) applies when a lawyer \"knows\" that a constituent is acting, intends to act, or refuses to act in a way that violates a legal obligation or law and is likely to result in substantial injury. A rumor that her check didn't confirm isn't knowledge (Rule 1.0(f)), though she may and often should investigate further and may report up anyway.",
+    "Nothing requires reporting unconfirmed rumors; Rule 1.13(b) turns on knowledge and likely substantial injury.",
+    "Rule 1.13 applies to all lawyers representing organizations.",
+    "She may raise concerns within the organization, which is her client; Rule 1.6 doesn't bar internal reporting."
+   ],
+   "e": "Rule 1.13(b) requires reporting up when the lawyer knows (Rule 1.0(f)) of a constituent's violation likely to cause the organization substantial injury; suspicion alone doesn't trigger the duty, though investigating and reporting up are often wise."
+  },
+  {
+   "id": "3.77",
+   "exam": 3,
+   "area": "Pro Bono, Appointments, and Public-Service Organizations (MR 6.1–6.5)",
+   "tag": "MR 6.1: aspirational pro bono",
+   "q": "Lawyer Vic, a busy litigator, did no pro bono work last year and made no financial contribution to legal services organizations. A colleague says Vic is subject to discipline under Rule 6.1. Is the colleague right?",
+   "o": [
+    "Yes, because every lawyer must provide at least 50 hours of pro bono service a year.",
+    "Yes, unless Vic made an equivalent financial contribution to legal aid.",
+    "No, because Rule 6.1 isn't enforced through discipline.",
+    "No, because pro bono duties apply only to lawyers in public-interest practice.",
+    "Yes, but only if a court has appointed him and he refused."
+   ],
+   "a": 2,
+   "oe": [
+    "Fifty hours is an aspiration (\"should aspire\"), not a disciplinary requirement.",
+    "Financial support is an additional way to meet the aspiration, but nothing in Rule 6.1 is enforced by discipline.",
+    "Correct. Rule 6.1 says every lawyer \"has a professional responsibility to provide legal services to those unable to pay\" and \"should aspire\" to at least 50 hours a year, mostly for persons of limited means or organizations serving them. Rule 6.1, Comment [12] says the responsibility \"is not intended to be enforced through disciplinary process.\"",
+    "Rule 6.1 applies to every lawyer; it just isn't disciplinary.",
+    "Refusing an appointment without good cause is governed by Rule 6.2, not Rule 6.1."
+   ],
+   "e": "Rule 6.1: every lawyer should aspire to 50 hours of pro bono a year, a substantial majority for persons of limited means or organizations serving them, plus financial support; it isn't enforced by discipline (Comment [12]), unlike Rule 6.2 on appointments."
+  },
+  {
+   "id": "3.78",
+   "exam": 3,
+   "area": "Truthfulness in Statements to Others (MR 4.1)",
+   "tag": "MR 4.1(a): false statement of law",
+   "q": "Negotiating with an unrepresented claimant, Lawyer Wyn says, \"The statute of limitations on your claim ran last month, so you should take whatever we offer.\" Wyn knows the limitations period has another year to run. Is Wyn subject to discipline?",
+   "o": [
+    "No, because Rule 4.1 covers only false statements of fact, not law.",
+    "No, because negotiating statements are puffery that no one takes literally.",
+    "No, because the claimant could have checked the law herself.",
+    "Yes, but only if the claimant settles because of the statement.",
+    "Yes, because he knowingly made a false statement of law to a third person."
+   ],
+   "a": 4,
+   "oe": [
+    "Rule 4.1(a) covers false statements of \"material fact or law.\"",
+    "Comment [2] treats estimates of value and settlement intentions as puffery; a specific false statement about the law isn't.",
+    "The listener's ability to verify doesn't excuse a knowing falsehood.",
+    "Rule 4.1(a) doesn't require reliance or harm.",
+    "Correct. Rule 4.1(a) forbids knowingly making \"a false statement of material fact or law to a third person.\" Misstating the limitations period is a false statement of law. Because the claimant is unrepresented, the statement also amounts to improper legal advice under Rule 4.3."
+   ],
+   "e": "Rule 4.1(a) bars knowingly false statements of material fact or law to third persons; to an unrepresented person, statements about the law can also be forbidden legal advice under Rule 4.3."
+  },
+  {
+   "id": "3.79",
+   "exam": 3,
+   "area": "Truthfulness in Statements to Others (MR 4.1)",
+   "tag": "MR 4.1(b), Comment [3]: when disclosure becomes mandatory",
+   "q": "Lawyer Xu represents a seller in an ongoing deal. Xu learns that his client gave the buyer financial statements, using a closing checklist Xu prepared, that the client knows are falsified. The client refuses to correct them, and withdrawing alone won't stop the buyer from relying on the false statements at a closing Xu has scheduled. What must Xu do?",
+   "o": [
+    "Withdraw quietly and say nothing, because Rule 1.6 always forbids disclosure to the other side.",
+    "Go forward with the closing, because the client is responsible for its own statements.",
+    "Disclose the fraud to the whole industry, so others aren't harmed later.",
+    "Disclose what is necessary to avoid assisting the fraud, because Rule 1.6 permits it here.",
+    "Disclose only if the buyer asks him directly whether the statements are accurate."
+   ],
+   "a": 3,
+   "oe": [
+    "Rule 1.6(b)(2) permits disclosure here, and when withdrawal won't avoid assisting, Rule 4.1(b) requires it.",
+    "Going forward would be assisting a fraud he knows of, violating Rule 1.2(d) and Rule 4.1(b).",
+    "Disclosure is limited to what is necessary to avoid assisting the fraud (Rule 1.6, Comment [16]).",
+    "Correct. Rule 4.1(b) forbids failing to disclose a material fact when disclosure is necessary to avoid assisting a client's crime or fraud, unless Rule 1.6 prohibits it. Because the client used Xu's services, Rule 1.6(b)(2) permits disclosure, so Rule 4.1(b) makes it mandatory. Rule 4.1, Comment [3] says that if the lawyer can avoid assisting only by disclosing, he is required to do so, unless Rule 1.6 prohibits it.",
+    "The duty in Rule 4.1(b) doesn't wait for a question."
+   ],
+   "e": "Rule 4.1(b) turns permitted disclosure into required disclosure: when disclosure is necessary to avoid assisting a client's crime or fraud and Rule 1.6 permits it (e.g., Rule 1.6(b)(2)), the lawyer must disclose (Comment [3])."
+  },
+  {
+   "id": "3.80",
+   "exam": 3,
+   "area": "Represented Persons: The No-Contact Rule (MR 4.2)",
+   "tag": "MR 4.2, Comment [8]: knowing a person is represented",
+   "q": "Lawyer Yolanda is about to sue a contractor. The contractor's website says, \"All legal inquiries go to our counsel, Zane Law,\" and a letter from Zane Law on this very dispute is in Yolanda's file. Yolanda calls the contractor's owner directly, telling herself she has no \"official\" confirmation that he is represented in this matter. Is Yolanda subject to discipline?",
+   "o": [
+    "No, because she never received formal notice that the contractor was represented.",
+    "No, because Rule 4.2 applies only after a lawsuit has been filed.",
+    "Yes, because a lawyer must always ask counsel's permission before contacting any business.",
+    "Yes, because knowledge that a person is represented may be inferred from the circumstances.",
+    "No, because the owner, rather than the company, is the person she called."
+   ],
+   "a": 3,
+   "oe": [
+    "Comment [8] says knowledge may be inferred from circumstances; formal notice isn't required.",
+    "Rule 4.2 applies to any matter in which the person is represented, before or after suit.",
+    "Too broad; the Rule applies only to persons the lawyer knows are represented in the matter.",
+    "Correct. Rule 4.2 applies when the lawyer \"knows\" the person is represented in the matter. Rule 4.2, Comment [8] says actual knowledge may be inferred from the circumstances and a lawyer can't evade the requirement of obtaining counsel's consent by closing her eyes to the obvious.",
+    "The owner of a represented company is a protected constituent under Rule 4.2, Comment [7]."
+   ],
+   "e": "Rule 4.2's \"knows\" is actual knowledge, which may be inferred from circumstances; a lawyer can't avoid the no-contact rule by ignoring the obvious (Comment [8])."
+  },
+  {
+   "id": "3.81",
+   "exam": 3,
+   "area": "Represented Persons: The No-Contact Rule (MR 4.2)",
+   "tag": "MR 4.2, Comment [4]: matters outside the representation",
+   "q": "Lawyer Abe is suing Bea's company in a contract dispute; Bea and her company are represented by counsel. Abe and Bea are also on the board of a local charity, and at a board meeting Abe talks with Bea about the charity's fundraising plans. Has Abe violated Rule 4.2?",
+   "o": [
+    "No, because the Rule bars only communications about the subject of the representation.",
+    "Yes, because a lawyer may not speak at all with a represented opposing party.",
+    "Yes, unless Bea's lawyer was present at the board meeting.",
+    "No, because charity board meetings are exempt from the Rules.",
+    "No, because Bea is a constituent, not the represented company itself."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Rule 4.2 bars communicating \"about the subject of the representation\" with a represented person. Rule 4.2, Comment [4] says the Rule doesn't prohibit communication with a represented person concerning matters outside the representation. Abe must not steer the talk to the contract dispute.",
+    "Comment [4] permits communications about matters outside the representation.",
+    "Counsel's presence matters only for communications about the subject of the representation.",
+    "There's no such exemption; the conversation is permitted because it's about an unrelated subject.",
+    "Bea is likely a protected constituent (Comment [7]); the talk is permitted only because it's unrelated."
+   ],
+   "e": "Rule 4.2 bars communications about the subject of the representation; talk with a represented person about unrelated matters is permitted (Comment [4])."
+  },
+  {
+   "id": "3.82",
+   "exam": 3,
+   "area": "Unrepresented Persons (MR 4.3, 3.4(f))",
+   "tag": "MR 3.4(f): asking a client's employee not to talk",
+   "q": "Lawyer Cyd represents Delta Co. in a wrongful-death suit. The plaintiff's lawyer wants to interview Delta's warehouse workers, who aren't represented and aren't protected constituents under Rule 4.2. Cyd asks the workers not to talk to the plaintiff's lawyer voluntarily. Cyd reasonably believes the workers won't be harmed by declining. Is Cyd's request proper?",
+   "o": [
+    "No, because a lawyer may never ask anyone to refrain from giving information to the other side.",
+    "Yes, and she may also tell them to refuse to answer if subpoenaed.",
+    "No, because the workers are unrepresented, so Rule 4.3 forbids any request.",
+    "Yes, because she may ask a client's employees not to volunteer information if they won't be harmed.",
+    "Yes, even if declining would expose the workers to liability."
+   ],
+   "a": 3,
+   "oe": [
+    "Rule 3.4(f) makes an exception for the client's relatives, employees and agents.",
+    "Asking them to defy a subpoena would obstruct access to evidence under Rule 3.4(a); Rule 3.4(f) concerns only voluntary cooperation.",
+    "Rule 4.3 governs giving legal advice and clarifying role; Rule 3.4(f) specifically permits this request.",
+    "Correct. Rule 3.4(f) forbids asking a person other than a client to refrain from voluntarily giving relevant information to another party unless \"(1) the person is a relative or an employee or other agent of a client; and (2) the lawyer reasonably believes that the person's interests will not be adversely affected by refraining.\" Both conditions are met.",
+    "The exception requires a reasonable belief that the workers' interests won't be adversely affected."
+   ],
+   "e": "Rule 3.4(f) bars asking non-clients to refrain from voluntarily giving relevant information to another party, except a client's relatives, employees or agents whose interests won't be adversely affected; subpoenas must still be obeyed."
+  },
+  {
+   "id": "3.83",
+   "exam": 3,
+   "area": "Involvement in a Client's Wrongdoing (MR 1.2(d))",
+   "tag": "Compliance advice vs. evasion advice",
+   "q": "Client Eve, a factory owner, asks Lawyer Fin two things: (1) what level of emissions the factory may lawfully release under its permit, and (2) how often regulators actually inspect, so she can decide whether exceeding the limit is worth the risk. How should Fin respond?",
+   "o": [
+    "Answer both, because a lawyer may always discuss the consequences of a proposed course of conduct.",
+    "Answer neither, because discussing emissions limits might help her violate them.",
+    "Answer the first question, but not help her weigh the odds of getting caught breaking the law.",
+    "Answer both, but only if Eve promises not to exceed the limit.",
+    "Report Eve to the regulators, because she proposed violating her permit."
+   ],
+   "a": 2,
+   "oe": [
+    "Explaining consequences is permitted, but using enforcement odds to help plan a violation is counseling it.",
+    "Explaining the lawful limits is core compliance advice that Rule 1.2(d) permits.",
+    "Correct. Rule 1.2(d) lets a lawyer discuss the legal consequences of a proposed course of conduct and advise on how to comply. Burk Ch. 13 distinguishes compliance advice (how close to the line you may lawfully go) from evasion advice (how likely you are to be caught), which counsels the client to violate the law.",
+    "A promise doesn't make evasion advice proper; the content of the advice is the problem.",
+    "Nothing in Rule 1.6(b) covers a proposal the lawyer refuses to assist; disclosure would violate Rule 1.6(a)."
+   ],
+   "e": "Under Rule 1.2(d) a lawyer may explain the law and the consequences of proposed conduct and help the client comply, but may not counsel or assist violations, including by advising on the odds of detection (Burk Ch. 13)."
+  },
+  {
+   "id": "3.84",
+   "exam": 3,
+   "area": "Involvement in a Client's Wrongdoing (MR 1.2(d))",
+   "tag": "Vicarious liability for a client's wrongdoing",
+   "q": "Lawyer Gia knowingly drafts sham invoices that her client uses to defraud an insurer. Apart from discipline, what liability does Gia most likely face?",
+   "o": [
+    "Criminal liability as an aider and abettor or conspirator, and civil liability to the victim.",
+    "None, because a lawyer acting for a client is immune from liability for the client's acts.",
+    "Only discipline, because criminal law doesn't apply to lawyers acting in a professional role.",
+    "Only civil liability to her own client for getting it into trouble.",
+    "Liability only if the client is first convicted of the fraud."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Burk Ch. 13.B explains that a lawyer who knowingly assists a client's crime or fraud can be criminally liable as an aider and abettor (18 U.S.C. § 2) or conspirator, and civilly liable to the victim for aiding and abetting fraud or similar torts. Rule 1.2(d) is violated as well.",
+    "There's no such immunity for knowingly assisting a crime or fraud.",
+    "Lawyers are subject to the criminal law like anyone else.",
+    "Her greatest exposure is to the victim and to prosecution, not to the client who directed the fraud.",
+    "An accomplice can be prosecuted or sued whether or not the principal is convicted."
+   ],
+   "e": "Knowingly assisting a client's crime or fraud violates Rule 1.2(d) and can bring criminal liability (aiding and abetting, conspiracy) and civil liability to victims (Burk Ch. 13.B)."
+  },
+  {
+   "id": "3.85",
+   "exam": 3,
+   "area": "Abusive Tactics, Threats, and Reporting Misconduct (MR 4.4(a), 8.3)",
+   "tag": "MR 8.3, Comment [3]: substantial question",
+   "q": "Lawyer Hal learns that opposing counsel, a careful practitioner, missed a single filing deadline by one day because of an honest calendaring mistake, and promptly fixed it. Must Hal report the mistake to the disciplinary authority?",
+   "o": [
+    "Yes, because a lawyer must report every violation of the Rules he knows about.",
+    "Yes, because missing a deadline violates the duty of diligence in Rule 1.3.",
+    "No, because a lawyer never has to report a lawyer on the other side of a case.",
+    "No, because this lapse raises no substantial question of fitness.",
+    "No, unless the mistake caused Hal's client to lose money."
+   ],
+   "a": 3,
+   "oe": [
+    "Rule 8.3(a) is limited to violations raising a substantial question as to honesty, trustworthiness or fitness.",
+    "Even if a single lapse were a technical Rule 1.3 issue, it doesn't raise a substantial question of fitness.",
+    "Rule 8.3(a) applies to any other lawyer, including opposing counsel.",
+    "Correct. Rule 8.3(a) requires reporting only a violation \"that raises a substantial question as to that lawyer's honesty, trustworthiness or fitness as a lawyer in other respects.\" Rule 8.3, Comment [3] says the Rule limits reporting to offenses a self-regulating profession must vigorously try to prevent; \"substantial\" refers to the seriousness of the offense, not the amount of evidence.",
+    "Harm to Hal's client isn't the test; the seriousness of the violation is."
+   ],
+   "e": "Rule 8.3(a) requires reporting only known violations raising a substantial question as to another lawyer's honesty, trustworthiness or fitness; \"substantial\" refers to the seriousness of the offense (Comment [3])."
+  },
+  {
+   "id": "3.86",
+   "exam": 3,
+   "area": "Abusive Tactics, Threats, and Reporting Misconduct (MR 4.4(a), 8.3)",
+   "tag": "MR 4.4(a): methods that violate legal rights",
+   "q": "Lawyer Ira, in a state that requires all parties' consent to record phone calls, secretly records his calls with the opposing party's former employee to gather evidence for a lawsuit. Which rule most directly prohibits Ira's method?",
+   "o": [
+    "Rule 4.2, because the former employee is represented by the company's lawyer.",
+    "Rule 4.4(a), which bars methods that violate others' legal rights.",
+    "Rule 3.4(f), because Ira asked the former employee to keep their calls secret.",
+    "Rule 4.3, because Ira gave the former employee legal advice.",
+    "Rule 1.6, because the recordings contain confidential information."
+   ],
+   "a": 1,
+   "oe": [
+    "Former employees generally aren't protected by Rule 4.2 (Comment [7]); the problem is the illegal recording.",
+    "Correct. Rule 4.4(a) forbids a lawyer, in representing a client, to \"use methods of obtaining evidence that violate the legal rights of such a person.\" Recording in violation of an all-party-consent law is such a method, and may also be a crime reflecting on fitness under Rule 8.4(b).",
+    "Nothing suggests he asked anyone to withhold information; the problem is the unlawful method of gathering it.",
+    "Nothing suggests he gave legal advice; the issue is how he obtained evidence.",
+    "Rule 1.6 protects client information; it doesn't govern how Ira gathers evidence from third persons."
+   ],
+   "e": "Rule 4.4(a) bars, in representing a client, means with no substantial purpose other than to embarrass, delay or burden a third person, and methods of obtaining evidence that violate a person's legal rights."
+  },
+  {
+   "id": "3.87",
+   "exam": 3,
+   "area": "Restricting Future Practice (MR 5.6)",
+   "tag": "MR 5.6(b): confidentiality vs. practice restrictions",
+   "q": "Settling a sexual-harassment claim, the employer proposes two terms: (1) the plaintiff and her lawyer, Jan, must keep the settlement amount confidential; and (2) Jan must agree never to represent other employees against the company. Which term may Jan agree to?",
+   "o": [
+    "Both terms, because the client wants the settlement and the decision to settle is hers.",
+    "Neither term, because any settlement condition that limits a lawyer violates Rule 5.6(b).",
+    "The confidentiality term only.",
+    "The practice restriction only, because confidentiality terms are against public policy.",
+    "Both terms, if the restriction on representing others lasts no more than two years."
+   ],
+   "a": 2,
+   "oe": [
+    "The client decides whether to settle, but Rule 5.6(b) bars Jan from agreeing to the practice restriction.",
+    "Rule 5.6(b) targets restrictions on the right to practice; a confidentiality term about the settlement isn't one.",
+    "Correct. Rule 5.6(b) forbids an agreement \"in which a restriction on the lawyer's right to practice is part of the settlement of a client controversy,\" so Jan can't agree to the second term. A confidentiality term restricts disclosure, not practice; Jan must still protect the information under Rule 1.6, but she remains free to represent others (Burk Ch. 17).",
+    "This reverses the rule; the practice restriction is the forbidden term.",
+    "Rule 5.6(b) has no reasonable-duration exception."
+   ],
+   "e": "Rule 5.6(b) bars settlement terms restricting the lawyer's right to practice (e.g., promising not to sue the defendant for others); ordinary confidentiality terms about the settlement aren't practice restrictions."
+  },
+  {
+   "id": "3.88",
+   "exam": 3,
+   "area": "Advertising and Solicitation (MR 7.1–7.3, 7.6)",
+   "tag": "MR 7.1, Comment [7]: firm names implying a partnership",
+   "q": "Solo practitioners Kay and Lu share an office suite and a receptionist but have separate practices, clients, and finances. They put \"Kay & Lu, Attorneys at Law\" on the door and their joint letterhead. Is that proper?",
+   "o": [
+    "Yes, because both names are accurate and they really do share an office.",
+    "No, because the name implies a partnership that doesn't exist.",
+    "Yes, if they add the word \"Attorneys\" so readers know they're lawyers.",
+    "No, because lawyers may never share office space without forming a firm.",
+    "Yes, because firm names are governed only by state business-name statutes."
+   ],
+   "a": 1,
+   "oe": [
+    "Each name is accurate, but together they imply a firm that doesn't exist, which Comment [7] calls misleading.",
+    "Correct. Rule 7.1 forbids false or misleading communications about a lawyer's services, and Rule 7.1, Comment [7] says lawyers may not imply or hold themselves out as practicing together in one firm when they are not a firm.",
+    "The word \"Attorneys\" doesn't cure the implication of a partnership.",
+    "Sharing space is allowed; they just can't hold themselves out as a firm.",
+    "Rule 7.1 governs whether a firm name is misleading."
+   ],
+   "e": "Firm names and letterhead are communications under Rule 7.1; lawyers who share offices but aren't a firm may not use a name implying they practice together (Comment [7]); trade names are allowed if not misleading."
+  },
+  {
+   "id": "3.89",
+   "exam": 3,
+   "area": "Advertising and Solicitation (MR 7.1–7.3, 7.6)",
+   "tag": "MR 7.2(c): claiming to be a specialist",
+   "q": "Lawyer Max's ads say \"Certified Specialist in Family Law.\" Max has handled family cases for 20 years but has never been certified by any organization. Is the ad proper?",
+   "o": [
+    "Yes, because 20 years of family-law experience makes the statement truthful.",
+    "No, because he isn't certified by an approved organization.",
+    "Yes, if the ad also says Max practices mainly in family law.",
+    "No, because a lawyer may never mention a field of practice in an ad.",
+    "Yes, because \"specialist\" is puffery that consumers don't take literally."
+   ],
+   "a": 1,
+   "oe": [
+    "Experience doesn't make a claim of certification true; Rule 7.2(c) requires actual certification by an approved organization.",
+    "Correct. Rule 7.2(c) forbids stating or implying that a lawyer is certified as a specialist in a particular field of law unless the lawyer has been certified by an organization approved by an appropriate authority of the state or the ABA, and the name of the certifying organization is clearly identified in the communication.",
+    "A lawyer may say he practices in or focuses on a field (Rule 7.2, Comment [9]); he may not claim certification he doesn't have.",
+    "Lawyers may communicate the fields in which they practice; only false certification claims are barred.",
+    "\"Certified Specialist\" is a specific factual claim, and Rule 7.2(c) regulates it."
+   ],
+   "e": "Lawyers may say they practice in or focus on a field, but under Rule 7.2(c) may claim certification as a specialist only if certified by an approved organization that the communication clearly identifies."
+  },
+  {
+   "id": "3.90",
+   "exam": 3,
+   "area": "Avoiding Invidious Discrimination (MR 8.4(g))",
+   "tag": "MR 8.4(g): \"reasonably should know\"",
+   "q": "During a deposition, Lawyer Ned repeatedly refers to the opposing party's lawyer, a woman, as \"sweetheart\" and comments on her appearance, despite her objections. Ned says he meant it as friendly banter and didn't realize it was demeaning. Is Ned subject to discipline under Rule 8.4(g)?",
+   "o": [
+    "No, because he didn't intend his remarks to be demeaning.",
+    "No, because Rule 8.4(g) protects only clients, not opposing counsel.",
+    "Yes, because he reasonably should have known it was harassment.",
+    "No, because remarks during a deposition aren't made in court.",
+    "Yes, but only if the opposing lawyer's client loses the case as a result."
+   ],
+   "a": 2,
+   "oe": [
+    "The standard includes \"reasonably should know,\" an objective test (Rule 1.0(j)); intent isn't required.",
+    "Comment [4] includes interacting with lawyers, witnesses and others while engaged in the practice of law.",
+    "Correct. Rule 8.4(g) forbids conduct the lawyer \"knows or reasonably should know is harassment or discrimination\" on listed bases, including sex, in conduct related to the practice of law. Rule 8.4, Comment [3] says harassment includes derogatory or demeaning verbal conduct. Ned's subjective intent doesn't control, and a deposition is practice of law (Comment [4]).",
+    "Depositions are part of representing clients, which is conduct related to the practice of law.",
+    "Rule 8.4(g) doesn't depend on any effect on the case."
+   ],
+   "e": "Rule 8.4(g) uses a \"knows or reasonably should know\" standard (Rule 1.0(j)); harassment includes derogatory or demeaning verbal conduct (Comment [3]), and conduct related to practice includes dealing with opposing counsel (Comment [4])."
   }
  ]
 }
