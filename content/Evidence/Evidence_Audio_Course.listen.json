@@ -2863,6 +2863,879 @@
      ]
     }
    ]
+  },
+  {
+   "day": 4,
+   "title": "Confrontation, Bruton, the right to a defense, and opinion testimony",
+   "minutes": 66,
+   "episodes": [
+    {
+     "id": "ev-d4-e00",
+     "title": "Spaced review of Days 1 to 3",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Day four. Rapid recall first, mostly hearsay, with some earlier days mixed in."
+      },
+      {
+       "ask": "Definition of hearsay under 801(c).",
+       "answer": "A statement the declarant does not make while testifying at the current trial or hearing, offered to prove the truth of the matter asserted.",
+       "pause": 8
+      },
+      {
+       "ask": "Three categories of not-hearsay because not offered for truth.",
+       "answer": "Any three of: effect on the listener, verbal acts, circumstantial evidence of knowledge. Also nonassertive conduct, involuntary exclamations, and machine output are not statements at all.",
+       "pause": 8
+      },
+      {
+       "ask": "Five grounds of 804(a) unavailability.",
+       "answer": "Privilege, refusal despite order, lack of memory, death or infirmity, absence despite process or reasonable means.",
+       "pause": 8
+      },
+      {
+       "ask": "803(1) versus 803(2).",
+       "answer": "803(1): describing an event while or immediately after perceiving it. 803(2): relating to a startling event while under its stress.",
+       "pause": 8
+      },
+      {
+       "ask": "The 803(5) foundation.",
+       "answer": "Firsthand knowledge, made when fresh, insufficient present memory, and the witness vouches for accuracy.",
+       "pause": 8
+      },
+      {
+       "ask": "Johnson v. Lutz.",
+       "answer": "A bystander with no business duty is a separate layer in a business record and needs his own exception.",
+       "pause": 8
+      },
+      {
+       "ask": "Rule 807's two requirements.",
+       "answer": "Sufficient guarantees of trustworthiness, considering the totality of circumstances and corroboration; and more probative than any other evidence reasonably obtainable. Plus written notice.",
+       "pause": 8
+      },
+      {
+       "ask": "Bourjaily.",
+       "answer": "Coconspirator foundations are decided under 104(a) by a preponderance, and the court may consider the statement itself.",
+       "pause": 8
+      },
+      {
+       "ask": "From day two: 609(b)'s test.",
+       "answer": "Over ten years from the later of conviction or release: probative value, supported by specific facts and circumstances, must substantially outweigh prejudicial effect, with written notice.",
+       "pause": 8
+      },
+      {
+       "ask": "From day one: Rule 105.",
+       "answer": "On timely request, the court must restrict evidence to its proper scope and instruct the jury.",
+       "pause": 8
+      },
+      {
+       "say": "Good. Now the Confrontation Clause."
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e01",
+     "title": "The Confrontation Clause and Crawford",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. The Sixth Amendment text, the old Roberts test, Mattox and Green, the Crawford rule and its exceptions, what testimonial means, and the Crawford case itself."
+      },
+      {
+       "say": "The text. The Sixth Amendment guarantees the accused the right to be confronted with the witnesses against him. Two features. It protects only criminal defendants. And evidence must survive both the hearsay rules and the Clause, separately."
+      },
+      {
+       "say": "History in three steps. Step one: Mattox v. United States, 1895. Before Mattox's murder retrial, two prosecution witnesses who had testified and been cross-examined at the first trial died. The government read their former testimony."
+      },
+      {
+       "say": "Held: no confrontation violation. The Clause's primary purpose is to prevent depositions or ex parte affidavits being used in place of cross-examination, and Mattox had cross-examined these witnesses. General rules, the Court said, must occasionally give way to considerations of public policy and the necessities of the case. Why it matters: Mattox is the ancestor of Crawford's rule. Testimonial hearsay is admissible if the declarant is unavailable and the defendant had a prior opportunity to cross-examine."
+      },
+      {
+       "say": "Step two: California v. Green, 1970. A juvenile named Green as his marijuana supplier at a preliminary hearing, under oath and cross-examined by Green's lawyer, then turned evasive at trial. Held: no Confrontation violation. When the declarant testifies at trial and can be cross-examined, his prior statements may be used. Confrontation is satisfied when the declarant takes the stand."
+      },
+      {
+       "say": "Step three: Ohio v. Roberts, 1980. The prosecution read a witness's preliminary-hearing testimony after she could not be found for trial. Held: admissible. Under Roberts, hearsay of an unavailable declarant satisfied the Clause if it bore adequate indicia of reliability, shown by a firmly rooted hearsay exception or particularized guarantees of trustworthiness. Roberts was overruled for testimonial statements by Crawford."
+      },
+      {
+       "say": "Now the modern rule. Crawford v. Washington, 2004. Testimonial statements of a witness absent from trial are admissible only if two things. One, the declarant is unavailable. Two, the defendant had a prior opportunity to cross-examine."
+      },
+      {
+       "say": "What the Clause does not bar. Statements the declarant is cross-examined about at trial. Statements not offered for their truth. Statements admissible under forfeiture by wrongdoing, which is Giles. And perhaps dying declarations. And nontestimonial statements are governed only by the hearsay rules. That is Whorton v. Bockting, 2007."
+      },
+      {
+       "say": "What is testimonial? Ex parte in-court testimony and its functional equivalents, like affidavits and custodial examinations. Formalized materials. Prior testimony. Statements made for use at trial. And police interrogations. Nontestimonial: casual remarks to acquaintances, statements in furtherance of a conspiracy, and most business records."
+      },
+      {
+       "say": "The Crawford case. Sylvia Crawford gave a recorded, Mirandized stationhouse statement that undercut her husband's self-defense claim. She did not testify at trial because of the marital privilege. The State offered her statement as a statement against penal interest."
+      },
+      {
+       "say": "Held: reversed, and Roberts overruled as to testimonial statements. Justice Scalia wrote that reliability is amorphous. His famous line: dispensing with confrontation because testimony is obviously reliable is akin to dispensing with jury trial because a defendant is obviously guilty."
+      },
+      {
+       "say": "Why it matters, per the slides. Police investigation produces testimonial evidence. The biggest effect is in domestic-violence cases, where victims report and then refuse to testify. And critics doubt the historical testimonial line."
+      },
+      {
+       "ask": "A murder victim's sworn affidavit to police, taken a week before she was killed, is offered against the defendant. She never was cross-examined. Admissible under the Clause, absent forfeiture?",
+       "answer": "No. It is testimonial, and there was no prior opportunity to cross-examine.",
+       "pause": 8
+      },
+      {
+       "ask": "A declarant who made a stationhouse statement testifies at trial and answers questions on cross. Does the Clause bar the prior statement?",
+       "answer": "No. Under Green and Crawford, when the declarant testifies and is cross-examined at trial, the Clause is satisfied.",
+       "pause": 8
+      },
+      {
+       "ask": "A casual remark to a friend, unreliable, is admitted under a hearsay exception against the defendant. Confrontation problem?",
+       "answer": "No. It is nontestimonial, and under Whorton v. Bockting, the Clause offers no protection against nontestimonial statements, even unreliable ones.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: hearsay admissibility does not satisfy the Clause; run both. Two: the Clause protects only criminal defendants against prosecution evidence. Three: statements not offered for truth do not implicate it. Four: Roberts is dead for testimonial statements."
+      },
+      {
+       "say": "Recap. Crawford: testimonial statements of an absent witness require unavailability and a prior opportunity to cross. Not barred: cross-examined at trial, not for truth, forfeiture, perhaps dying declarations. Nontestimonial: only hearsay rules, per Whorton. Mattox is the ancestor; Green says testifying cures; Roberts is overruled."
+      },
+      {
+       "ask": "State the Crawford rule.",
+       "answer": "Testimonial statements of a witness absent from trial are admissible only if the declarant is unavailable and the defendant had a prior opportunity to cross-examine.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Roberts require?",
+       "answer": "Unavailability and adequate indicia of reliability, shown by a firmly rooted exception or particularized guarantees of trustworthiness.",
+       "pause": 8
+      },
+      {
+       "ask": "Why didn't Sylvia Crawford testify?",
+       "answer": "The marital privilege.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e02",
+     "title": "What is testimonial: Davis, Hammon, Bryant, Clark, and Giles",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The primary-purpose test from Davis and Hammon, the ongoing-emergency factors from Bryant, statements to non-police in Clark, and forfeiture in Giles."
+      },
+      {
+       "say": "Davis v. Washington and Hammon v. Indiana, 2006. The rule: statements in police interrogation are nontestimonial when made under circumstances objectively indicating that the primary purpose is to enable police to meet an ongoing emergency. They are testimonial when there is no ongoing emergency and the primary purpose is to establish or prove past events potentially relevant to later criminal prosecution."
+      },
+      {
+       "say": "The facts. Davis: McCottry's 911 call during an assault. He's here jumpin' on me again. Then, he's runnin' now. Hammon: Amy Hammon's statement and affidavit to officers who had separated her from her husband after the incident."
+      },
+      {
+       "say": "Held: McCottry's statements describing an ongoing emergency were nontestimonial. Hammon's account of past events, with no emergency, was testimonial. And a call can become testimonial once the emergency ends. The slides' exercise: when did McCottry's call cross the line? Think about he's runnin' now, and the questions that followed about who he was."
+      },
+      {
+       "say": "Michigan v. Bryant, 2011. Police found Covington mortally shot at a gas station. He said Rick shot him, at Rick's house. The shooter was at large."
+      },
+      {
+       "say": "Held, by Justice Sotomayor, six to two: nontestimonial. The objective primary purpose was to meet an ongoing emergency to the public. Justice Scalia, dissenting, called the majority's account transparently false and the test a return to Roberts. Why it matters: emergencies can extend to the public, and courts consider both the declarant and the interrogator."
+      },
+      {
+       "say": "Bryant's factors. The emergency depends on the threat. A gun and a shooter at large threaten the public, unlike a domestic assault by fists. Courts consider four things, judged objectively. One, the location. Two, the declarant's and interrogators' purposes. Three, the declarant's medical condition. Four, formality."
+      },
+      {
+       "say": "Ohio v. Clark, 2015. A three-year-old told his preschool teachers, who were mandatory reporters, that Dee had injured him. He was found incompetent to testify. The statements came in under a state child-hearsay rule."
+      },
+      {
+       "say": "Held, by Justice Alito: nontestimonial. Neither the child nor the teachers had the primary purpose of assisting a prosecution. The teachers were addressing an emergency, and reporting duties did not make them police agents. Clark's definition: testimonial means made with the primary purpose of assisting in a prosecution. Statements to non-police are much less likely to be testimonial, and very young children's statements rarely are. And primary purpose is necessary but not always sufficient: dying declarations and forfeiture remain."
+      },
+      {
+       "say": "Why Clark matters. Child-abuse defendants may be worse off than under Roberts, which at least required reliability."
+      },
+      {
+       "say": "Giles v. California, 2008. Giles shot his former girlfriend, who weeks earlier had told police he had choked and threatened her. The state courts admitted her statements on the theory that killing her forfeited his confrontation right."
+      },
+      {
+       "say": "Held: vacated. Forfeiture by wrongdoing applies only if the defendant intended to prevent the witness from testifying. An abusive relationship meant to isolate the victim from police may show that intent. Why it matters: it matches 804(b)(6)'s intending that result."
+      },
+      {
+       "say": "And Whorton v. Bockting, 2007. A state prisoner sought to apply Crawford retroactively on habeas. Held: Crawford is not retroactive, and the Clause offers no protection against nontestimonial statements, even unreliable ones."
+      },
+      {
+       "ask": "A woman calls 911 screaming, he has a knife, he's in the kitchen. Testimonial?",
+       "answer": "No. The primary purpose is to meet an ongoing emergency, as in Davis.",
+       "pause": 8
+      },
+      {
+       "ask": "An hour after an assault, with the husband restrained in another room, an officer asks the wife to describe what happened, and she signs an affidavit. Testimonial?",
+       "answer": "Yes. No ongoing emergency, and the primary purpose is to prove past events, as in Hammon.",
+       "pause": 8
+      },
+      {
+       "ask": "A four-year-old tells her daycare teacher that her uncle hurt her. The teacher is a mandatory reporter. Testimonial?",
+       "answer": "Very likely not, under Clark. Statements to non-police, by very young children, addressing an emergency, rarely are.",
+       "pause": 8
+      },
+      {
+       "ask": "A defendant murders his wife in a fit of rage, not to stop her testifying. Has he forfeited his confrontation right to her earlier police statements?",
+       "answer": "No. Under Giles, forfeiture requires intent to prevent the witness from testifying.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: the test is objective primary purpose. Two: an emergency call can turn testimonial when the emergency ends. Three: emergencies can extend to the public, per Bryant. Four: teachers with reporting duties are not police agents, per Clark. Five: forfeiture requires intent, per Giles."
+      },
+      {
+       "say": "Recap. Davis: ongoing emergency means nontestimonial. Hammon: past events with no emergency means testimonial. Bryant: public emergency, with location, purposes, medical condition, and formality. Clark: primary purpose of assisting a prosecution; non-police and young children rarely testimonial. Giles: forfeiture requires intent. Whorton: not retroactive, no protection for nontestimonial statements."
+      },
+      {
+       "ask": "What are the four Bryant factors?",
+       "answer": "Location, the declarant's and interrogators' purposes, the declarant's medical condition, and formality.",
+       "pause": 8
+      },
+      {
+       "ask": "What was said in McCottry's 911 call?",
+       "answer": "He's here jumpin' on me again, and then, he's runnin' now.",
+       "pause": 8
+      },
+      {
+       "ask": "Clark's definition of testimonial?",
+       "answer": "Made with the primary purpose of assisting in a prosecution.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e03",
+     "title": "Forensic reports: Melendez-Diaz, Bullcoming, Williams, and Smith v. Arizona",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. Lab reports and the Confrontation Clause. Four cases, then the confrontation steps."
+      },
+      {
+       "say": "Melendez-Diaz v. Massachusetts, 2009. Notarized certificates said seized powder was cocaine. No analyst testified. Held, five to four: a violation. The certificates were plainly affidavits."
+      },
+      {
+       "say": "Bullcoming v. New Mexico, 2011. A blood-alcohol report was introduced through a different analyst who had not performed or observed the test. Held, five to four: a violation. Surrogate testimony cannot substitute for the certifying analyst."
+      },
+      {
+       "say": "Why they matter: forensic analysts are witnesses. The slides add: a year after Melendez-Diaz, the Boston Globe exposed a rogue analyst at the very lab involved in the case."
+      },
+      {
+       "say": "Williams v. Illinois, 2012. A state expert testified that a DNA profile produced by an outside lab matched Williams, relying on the lab's report, which was never admitted. Held: no violation, but with no majority rationale. A plurality said the report was basis evidence not offered for its truth, and was not testimonial."
+      },
+      {
+       "say": "Smith v. Arizona, 2024. A substitute expert who did no testing related the absent analyst's notes and report, and gave his own opinion that the seized items were drugs. Held, by Justice Kagan: when an expert conveys an absent analyst's statements in support of his opinion, and the statements provide that support only if true, then the statements come into evidence for their truth. Whether the statements were testimonial was remanded."
+      },
+      {
+       "say": "Why Smith matters. The Williams not-for-its-truth basis theory is dead. But the testimonial definition remains unsettled. So for forensic reports, you now ask two questions. Is the absent analyst's statement offered for its truth, which it is if the opinion depends on it? And is it testimonial, which is separate?"
+      },
+      {
+       "say": "The outline's confrontation steps, six. One: is this a criminal case, and prosecution evidence? Two: is it offered for its truth, including as an expert's basis? Three: does the declarant testify and submit to cross? Four: is the statement testimonial? Look at emergency, formality, audience, and the declarant's age. Five: if testimonial, is there unavailability plus a prior opportunity to cross, or forfeiture with intent? Six: then the hearsay rules, separately."
+      },
+      {
+       "ask": "The prosecution introduces a sworn lab certificate stating the substance was heroin, without calling the analyst. Violation?",
+       "answer": "Yes, under Melendez-Diaz. The certificate is testimonial, an affidavit.",
+       "pause": 8
+      },
+      {
+       "ask": "The prosecution calls a supervisor who did not perform or observe the test to read the analyst's report. Enough?",
+       "answer": "No. Under Bullcoming, a surrogate analyst cannot satisfy the Clause.",
+       "pause": 8
+      },
+      {
+       "ask": "An expert testifies, based on an absent analyst's notes, that the substance is meth, and the opinion is valid only if the notes are true. Are the notes offered for their truth?",
+       "answer": "Yes, under Smith v. Arizona. Whether they are testimonial is a separate question.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. Melendez-Diaz: lab certificates are testimonial. Bullcoming: no surrogate analysts. Williams: fractured, plurality's basis theory. Smith v. Arizona: basis statements that support an opinion only if true are offered for their truth; testimonial status remains open. Six confrontation steps."
+      },
+      {
+       "ask": "What part of Williams did Smith v. Arizona reject?",
+       "answer": "The plurality's theory that basis evidence is not offered for its truth.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Smith leave open?",
+       "answer": "Whether the absent analyst's statements were testimonial.",
+       "pause": 8
+      },
+      {
+       "ask": "Recite the six confrontation steps.",
+       "answer": "Criminal case and prosecution evidence; offered for truth, including as basis; does the declarant testify and submit to cross; is it testimonial; if so, unavailability plus prior cross, or forfeiture with intent; then hearsay rules separately.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e04",
+     "title": "The rule of completeness: Rule 106",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 106 as amended in 2023, the gun example, its limits, and United States v. Williams of the Second Circuit."
+      },
+      {
+       "say": "The exact rule. Rule 106, as amended 2023. If a party introduces all or part of a statement, an adverse party may require the introduction, at that time, of any other part, or any other statement, that in fairness ought to be considered at the same time. The adverse party may do so over a hearsay objection. And it now covers oral statements."
+      },
+      {
+       "say": "Why the amendment? It resolved a circuit split over hearsay objections. A party who creates a misimpression cannot exclude the correction as hearsay."
+      },
+      {
+       "say": "The Advisory Committee's example. A murder defendant told police he owned the gun, but had sold it months earlier. The prosecution cannot offer only the ownership half. The completing statement comes in for context when that is enough, and for its truth when it corrects the misimpression only if true, as with the sale."
+      },
+      {
+       "say": "Fisher, 2022, prints the old text, which was limited to writings and recorded statements."
+      },
+      {
+       "say": "Limits. The rule stays narrow: the completing statement must actually correct a misimpression. A prior denial of guilt does not come in merely because it contradicts a later admission. That is United States v. Williams, Second Circuit, 2019, cited in the Advisory Committee Note. An unrecorded statement needs admissible proof that it was made, and 403 still applies. The amendment displaces the common-law rule. And the court may still allow completion later than at that time."
+      },
+      {
+       "ask": "The prosecution plays part of the defendant's interview: yes, I was at the bank. It omits the next sentence: but I left before the robbery started. Can the defense require the rest now, over a hearsay objection?",
+       "answer": "Yes, under Rule 106 as amended. The omitted part corrects a misimpression, so it comes in, and for its truth if needed.",
+       "pause": 8
+      },
+      {
+       "ask": "The prosecution offers the defendant's confession. The defense wants to offer his denial from a day earlier under 106. Admissible?",
+       "answer": "Not merely because it contradicts the admission. Under Williams, 106 requires that it correct a misimpression created by the portion introduced.",
+       "pause": 8
+      },
+      {
+       "ask": "Does Rule 106 now cover an unrecorded oral statement?",
+       "answer": "Yes, since 2023, but the party needs admissible proof that it was made, and 403 applies.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 106: when a party introduces part of a statement, the adversary may require any other part or statement that in fairness ought to be considered at the same time, over a hearsay objection, including oral statements. Context or truth as needed. Must correct a misimpression, per Williams."
+      },
+      {
+       "ask": "What circuit split did the 2023 amendment resolve?",
+       "answer": "Whether a completing statement could be excluded as hearsay. Now it cannot be.",
+       "pause": 8
+      },
+      {
+       "ask": "What old limit did the 2023 amendment remove?",
+       "answer": "The limitation to writings and recorded statements.",
+       "pause": 8
+      },
+      {
+       "ask": "Can the court allow completion later than at that time?",
+       "answer": "Yes.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e05",
+     "title": "Bruton and redaction",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. The Bruton rule, its limits, the prosecutors' seven options, redaction under Richardson, Gray, and Samia, and harmless error."
+      },
+      {
+       "say": "The rule. Bruton v. United States, 1968. At a joint trial, admitting a nontestifying codefendant's confession that facially incriminates the defendant violates the Confrontation Clause, even with a clear limiting instruction. Two limits. The statement must be inadmissible against the defendant, from footnote 3. And, after Crawford, it must be testimonial."
+      },
+      {
+       "say": "The Bruton case. A postal inspector testified that codefendant Evans confessed that he and Bruton robbed a post office. Evans did not testify. The jury was clearly instructed to disregard the confession as to Bruton."
+      },
+      {
+       "say": "Held: reversed, and Delli Paoli overruled. The Court said: the risk that the jury will not, or cannot, follow instructions is so great, and the consequences of failure so vital to the defendant, that the practical and human limitations of the jury system cannot be ignored. Why it matters: Bruton is a narrow exception to the presumption that juries follow instructions."
+      },
+      {
+       "say": "The prosecutors' options, from the slides. Any one suffices. Count seven. One, sever. Two, use separate juries. Three, have the confessing codefendant testify. Four, use prior cross-examined testimony. Five, redact. Six, try the case to the bench. Seven, use a statement admissible against both. For example, a nontestimonial coconspirator statement raises no Bruton problem. The slides' example is the Dog O' War letter, Problem 8.8."
+      },
+      {
+       "say": "Redaction, three cases."
+      },
+      {
+       "say": "Richardson v. Marsh, 1987. A nontestifying codefendant's confession was redacted to remove every reference to Marsh, but Marsh's own testimony linked her to the conversation it described. Held: no Bruton violation. A confession redacted to omit any reference to the defendant, and to her existence, may be admitted with a limiting instruction, even if other evidence links the defendant to it."
+      },
+      {
+       "say": "Gray v. Maryland, 1998. Bell's confession was read with the word deleted in place of Gray's name. Me, deleted, deleted, and a few other guys. Then the prosecutor asked whether police arrested Gray after the confession. Held, by Justice Breyer, five to four: obvious redactions fall within Bruton as a class. Jurors will infer the blank is the defendant, the blank draws attention, and it points directly at someone. Justice Scalia dissented: it was not facially incriminating. The test from Gray: ask whether the redacted statement would point at the defendant even were the confession the very first item introduced at trial."
+      },
+      {
+       "say": "Samia v. United States, 2023, supplemental reading. A nontestifying codefendant's confession was introduced with the defendant's name replaced by a neutral descriptor, the other person he was with, with a limiting instruction. Held, by Justice Thomas, six to three: no Confrontation Clause violation. Gray is limited to obvious redactions that are directly accusatory. Justice Kagan dissented: form over substance."
+      },
+      {
+       "say": "So: removing all reference, permitted, per Richardson. An obvious blank, deleted, or a symbol, not permitted, per Gray. A natural neutral phrase like the other person, permitted, per Samia. And harmless-error review applies, per Harrington."
+      },
+      {
+       "ask": "At a joint trial, a nontestifying codefendant's stationhouse confession says, Joe and I did the robbery. The jury is told to consider it only against the codefendant. Valid?",
+       "answer": "No. That is Bruton: a facially incriminating, testimonial confession of a nontestifying codefendant, and an instruction does not cure it.",
+       "pause": 8
+      },
+      {
+       "ask": "Same confession redacted to say, blank and I did the robbery. Valid?",
+       "answer": "No, under Gray. An obvious blank falls within Bruton.",
+       "pause": 8
+      },
+      {
+       "ask": "Redacted to say, me and another guy I was with did the robbery. Valid?",
+       "answer": "Yes, under Samia, with a limiting instruction. A natural neutral descriptor is permitted.",
+       "pause": 8
+      },
+      {
+       "ask": "The codefendant testifies at trial and is cross-examined. Bruton problem?",
+       "answer": "No. Having the confessing codefendant testify is one of the options that solves Bruton.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. Bruton: a nontestifying codefendant's facially incriminating confession at a joint trial violates confrontation despite an instruction; it must be inadmissible against the defendant and testimonial. Seven options: sever, separate juries, codefendant testifies, prior cross-examined testimony, redact, bench trial, statement admissible against both. Richardson: full redaction is fine. Gray: obvious blanks are not. Samia: neutral descriptors are fine."
+      },
+      {
+       "ask": "Name the seven prosecution options.",
+       "answer": "Sever, separate juries, have the codefendant testify, use prior cross-examined testimony, redact, try to the bench, or use a statement admissible against both.",
+       "pause": 8
+      },
+      {
+       "ask": "What case did Bruton overrule?",
+       "answer": "Delli Paoli.",
+       "pause": 8
+      },
+      {
+       "ask": "Gray's test?",
+       "answer": "Whether the redacted statement would point at the defendant even were the confession the very first item introduced at trial.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e06",
+     "title": "The right to present a defense: Chambers and Holmes",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. The constitutional sources, the two tests, Chambers v. Mississippi, and Holmes v. South Carolina."
+      },
+      {
+       "say": "The Sixth Amendment guarantees compulsory process for obtaining witnesses in the defendant's favor. And the Constitution guarantees, in the words of Crane v. Kentucky, 1986, a meaningful opportunity to present a complete defense, whether through due process, compulsory process, or confrontation. But a defendant must still comply with established rules of evidence."
+      },
+      {
+       "say": "Two tests. First, Chambers's critical-and-trustworthy test, for valid rules applied mechanistically to unusual facts. Second, the arbitrariness test of Washington v. Texas, 1967, Rock v. Arkansas, 1987, and Holmes v. South Carolina, 2006, for rules, or constructions of rules, that are arbitrary or disproportionate to their purposes."
+      },
+      {
+       "say": "Chambers v. Mississippi, 1973. Chambers was accused of killing a Woodville police officer. He called McDonald, who had confessed in a sworn statement and orally to three friends, but then repudiated. Mississippi's voucher rule barred Chambers from cross-examining McDonald, since Chambers had called him. And the hearsay rule, with no penal-interest exception, excluded the three oral confessions."
+      },
+      {
+       "say": "Held: reversed, by Justice Powell, eight to one. The two rulings together denied due process. The confessions were spontaneous, made to close friends shortly after the crime, corroborated, against interest, and McDonald was available to the State for cross. The Court said the hearsay rule may not be applied mechanistically to defeat the ends of justice. But it also said it established no new principles of constitutional law."
+      },
+      {
+       "say": "Why Chambers matters. Under today's 804(b)(3), the confessions would not have qualified, because McDonald was available. That's from the slides. Green v. Georgia, 1979, extended the principle to a single hearsay ruling. And Holmes struck a rule that judged defense evidence only by the strength of the prosecution's case."
+      },
+      {
+       "say": "Holmes v. South Carolina, 2006. Facing strong forensic evidence in a murder prosecution, the defendant offered evidence that another man committed the crime. South Carolina excluded third-party-guilt evidence whenever the prosecution's forensic case was strong."
+      },
+      {
+       "say": "Held: reversed, by Justice Alito, unanimous. Judging defense evidence only by the strength of the prosecution's case is arbitrary and denies a meaningful opportunity to present a complete defense. But ordinary rules excluding third-party-guilt evidence that raises only a bare suspicion remain valid."
+      },
+      {
+       "say": "Why Holmes matters. It's on the arbitrariness line with Washington v. Texas and Rock. Contrast Scheffer, where a per se polygraph ban was upheld, and Egelhoff, where the voluntary-intoxication statute was upheld."
+      },
+      {
+       "ask": "A state court excludes a defense witness's testimony about a third party's reliable, corroborated confession under a mechanically applied hearsay rule, and also bars cross of the confessor. Which case?",
+       "answer": "Chambers v. Mississippi. Critical and trustworthy evidence, mechanistically excluded, denies due process.",
+       "pause": 8
+      },
+      {
+       "ask": "A state rule excludes all defense evidence of third-party guilt whenever the prosecution's DNA evidence is strong. Constitutional?",
+       "answer": "No, under Holmes. Judging defense evidence by the strength of the prosecution's case is arbitrary.",
+       "pause": 8
+      },
+      {
+       "ask": "Can a defendant always present any evidence he wants under Chambers?",
+       "answer": "No. He must still comply with established rules of evidence. Chambers announced no new principles, and rules like Scheffer's polygraph ban have been upheld.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. Crane: a meaningful opportunity to present a complete defense. Chambers: critical and trustworthy evidence cannot be excluded mechanistically. Arbitrariness line: Washington v. Texas, Rock, Holmes. Contrast Scheffer and Egelhoff."
+      },
+      {
+       "ask": "What two rulings combined in Chambers?",
+       "answer": "The voucher rule barring cross of McDonald, and the hearsay rule excluding his three oral confessions.",
+       "pause": 8
+      },
+      {
+       "ask": "Why wouldn't Chambers's evidence fit 804(b)(3) today?",
+       "answer": "McDonald was available, and 804 requires unavailability.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Green v. Georgia do?",
+       "answer": "Extended the Chambers principle to a single hearsay ruling.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e07",
+     "title": "Lay opinion: Rule 701",
+     "minutes": 2,
+     "segments": [
+      {
+       "say": "Roadmap. The three elements of Rule 701, examples, and the expert-in-lay-clothing problem."
+      },
+      {
+       "say": "Rule 701: if a witness is not testifying as an expert, testimony in the form of an opinion is limited to one that is, three things, all required. (a) rationally based on the witness's perception. (b) helpful to clearly understanding the witness's testimony or to determining a fact in issue. (c) not based on scientific, technical, or other specialized knowledge within the scope of Rule 702."
+      },
+      {
+       "say": "Ordinary inferences are lay opinion. Appearance. Age. Emotional state. Speed. Intoxication, with a foundation. Identity. And the identity of a familiar substance, per the 2000 Advisory Committee Note."
+      },
+      {
+       "say": "Element (c) stops what courts call an expert in lay witness clothing from evading Rule 702 and the expert disclosure rules. A business owner may give opinions based on particularized knowledge of the business, but not specialized expertise."
+      },
+      {
+       "ask": "A witness testifies, he looked drunk; he was slurring and stumbling. Lay opinion?",
+       "answer": "Yes. Rationally based on perception, helpful, and not specialized.",
+       "pause": 8
+      },
+      {
+       "ask": "A police officer, not qualified as an expert, testifies that the way the defendant used coded words showed he was a drug dealer, based on his training. Proper lay opinion?",
+       "answer": "No. It is based on specialized knowledge under 701(c), so it must meet 702.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 701: rationally based on perception, helpful, not based on specialized knowledge. Ordinary inferences come in; experts in lay clothing do not."
+      },
+      {
+       "ask": "Name the three elements of 701.",
+       "answer": "Rationally based on perception; helpful; not based on scientific, technical, or other specialized knowledge.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e08",
+     "title": "Expert testimony: qualification, helpfulness, and Rule 704",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 702 as amended in 2023, Rule 704(a) and (b), the three limits on experts, and three cases: Hygh, Diaz, and Batangan."
+      },
+      {
+       "say": "The exact rule. Rule 702, as amended 2023. A witness who is qualified as an expert by knowledge, skill, experience, training, or education may testify in the form of an opinion or otherwise if the proponent demonstrates to the court that it is more likely than not that four things are true. (a) the expert's scientific, technical, or other specialized knowledge will help the trier of fact to understand the evidence or to determine a fact in issue. (b) the testimony is based on sufficient facts or data. (c) the testimony is the product of reliable principles and methods. (d) the expert's opinion reflects a reliable application of the principles and methods to the facts of the case."
+      },
+      {
+       "say": "Rule 704(a): an opinion is not objectionable just because it embraces an ultimate issue. 704(b): in a criminal case, an expert witness must not state an opinion about whether the defendant did or did not have a mental state or condition that constitutes an element of the crime charged or of a defense. Those matters are for the trier of fact alone."
+      },
+      {
+       "say": "Qualification is topic-specific, and experience can qualify. Helpfulness fails on matters of common knowledge, such as whether Match and Macho sound alike. But not on technical ones, such as the slip resistance of wet tile, or how all-white ads communicate to Black viewers."
+      },
+      {
+       "say": "Three limits on experts. One, they may not instruct on the law or tell the jury what result to reach, per Hygh. Two, they may not opine on a criminal defendant's own mens rea, per 704(b), though Diaz v. United States, 2024, allows opinions about most people in the defendant's position. Three, they may not vouch for a witness's credibility, though they may explain behavior that seems inconsistent with abuse, per Batangan and Nimely."
+      },
+      {
+       "say": "Hygh v. Jacobs, Second Circuit, 1992. An excessive-force suit. The plaintiff's police-practices expert said a flashlight blow to the head was deadly physical force that was not justified, not warranted, and totally improper, and he defined deadly force himself."
+      },
+      {
+       "say": "Held: expert testimony stating legal conclusions must be excluded. It instructs the jury on law and tells it what result to reach. Harmless here. The Class 19 slide misprints the cite as 916 F.2d; it's 961. Why it matters: 704(a) does not admit opinions that merely announce the verdict."
+      },
+      {
+       "say": "Diaz v. United States, 2024, supplemental reading. A drug-courier prosecution. A government expert testified that most couriers know they are carrying drugs. Held: Rule 704(b) bars only an opinion about whether the particular defendant had the required mental state. Testimony about most people in the defendant's position is allowed. Compare Problem 9.10: an opinion that this defendant's purchases showed intent to manufacture is barred."
+      },
+      {
+       "say": "State v. Batangan, Hawaii, 1990. A psychologist who met a child complainant once implicitly told the jury she was truthful and had been abused. Held: inadmissible. Jurors judge credibility. An expert may explain seemingly bizarre behavior, such as delayed reporting and recantation, but may not give a conclusory opinion that abuse occurred or that the child is believable. Why it matters: it's the line between behavioral context and vouching."
+      },
+      {
+       "say": "The outline's opinion steps. One, lay or expert: is it specialized? Two, for lay: perception, helpfulness, not specialized. Three, for expert: qualified for this opinion, helpful, no legal conclusions, no 704(b) mental-state opinion, no vouching. Four, basis and reliability under 702(b) through (d) and 703. Five, 403."
+      },
+      {
+       "ask": "In a criminal case, a defense psychiatrist testifies, the defendant could not form the intent to kill. Allowed?",
+       "answer": "No. 704(b) bars an opinion on whether the defendant had the mental state that is an element.",
+       "pause": 8
+      },
+      {
+       "ask": "A government expert testifies, couriers carrying this quantity almost always know what they are carrying. Allowed?",
+       "answer": "Yes, under Diaz. It is about most people in the defendant's position, not this defendant.",
+       "pause": 8
+      },
+      {
+       "ask": "An expert in a civil-rights case testifies, the officer's force was excessive under the Fourth Amendment. Allowed?",
+       "answer": "No, under Hygh. That is a legal conclusion telling the jury what result to reach.",
+       "pause": 8
+      },
+      {
+       "ask": "In a child-abuse case, an expert testifies that delayed reporting is common among abused children. Allowed?",
+       "answer": "Yes. Under Batangan, an expert may explain seemingly bizarre behavior, but may not say the child is truthful.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 702: qualified, and more likely than not: helpful, sufficient facts or data, reliable methods, reliable application. 704(a): ultimate issues are fine. 704(b): no opinion on a criminal defendant's mental state element. Hygh: no legal conclusions. Diaz: most people is fine. Batangan: no vouching."
+      },
+      {
+       "ask": "List 702's four requirements after qualification.",
+       "answer": "Helpful specialized knowledge; sufficient facts or data; reliable principles and methods; reliable application to the facts.",
+       "pause": 8
+      },
+      {
+       "ask": "What five ways can an expert be qualified?",
+       "answer": "Knowledge, skill, experience, training, or education.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Hygh's expert say about the flashlight blow?",
+       "answer": "That it was deadly physical force, not justified, not warranted, and totally improper.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e09",
+     "title": "Eyewitness-identification experts: State v. Guilbert",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Roadmap. What the science of eyewitness memory shows, and Guilbert."
+      },
+      {
+       "say": "Courts now accept findings many jurors would not expect. Confidence and accuracy are at best weakly correlated. Weapon focus and high stress impair perception and memory. Cross-racial identifications are less accurate. Memory fades within hours. Procedures that are not double-blind and sequential are less reliable. Postevent information inflates confidence. And witnesses can unconsciously transfer a face from another setting. Cross-examination exposes lies better than sincere mistakes. And a cautionary instruction comes too late and says too little."
+      },
+      {
+       "say": "State v. Guilbert, Connecticut, 2012. Five eyewitnesses identified Guilbert as the shooter in a bar and, minutes later, in a double murder. Four knew him well. The fifth, a stranger who had stood shoulder to shoulder with the bar shooter, picked him after seeing his photo in a newspaper ten days later. The trial court excluded the defense's eyewitness expert as common knowledge."
+      },
+      {
+       "say": "Held: overruling earlier Connecticut cases, expert testimony on the fallibility of eyewitness identification is admissible when it would help the jury, subject to the usual qualification, relevance, and reliability screening. The expert may describe general factors relevant to the identification, but may not opine on whether a particular eyewitness is accurate. Exclusion was an abuse of discretion only as to the stranger, and harmless given strong corroboration. A concurrence would let trial courts weigh corroboration in deciding whether the testimony is needed."
+      },
+      {
+       "say": "Why it matters. There's a near-national consensus: 44 states, D.C., and at least ten circuits. And like Batangan, the expert explains counterintuitive phenomena but does not vouch for or against a witness."
+      },
+      {
+       "ask": "Can an eyewitness expert testify, this eyewitness is mistaken?",
+       "answer": "No. Under Guilbert, the expert may describe general factors but may not opine on a particular eyewitness's accuracy.",
+       "pause": 8
+      },
+      {
+       "ask": "Why was exclusion of the expert in Guilbert an abuse of discretion only as to one witness?",
+       "answer": "The other four knew Guilbert well. Only the stranger's identification raised the issues the expert would address, and that error was harmless given strong corroboration.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. Confidence and accuracy are weakly correlated; weapon focus, stress, cross-racial identification, fading memory, non-blind procedures, postevent information, and unconscious transference all matter. Guilbert: general factors yes, verdict on a witness no."
+      },
+      {
+       "ask": "Name four eyewitness findings the outline lists.",
+       "answer": "Any four of: weak confidence-accuracy correlation, weapon focus and stress, cross-racial inaccuracy, memory fading within hours, non-double-blind and non-sequential procedures, postevent information inflating confidence, unconscious transference.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e10",
+     "title": "Bases of expert opinion: Rules 703 and 705",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 703's text, the three permissible bases, the disclosure rule, Rule 705, In re Melton, and the confrontation overlay."
+      },
+      {
+       "say": "The exact rule. Rule 703: an expert may base an opinion on facts or data in the case that the expert has been made aware of or personally observed. If experts in the particular field would reasonably rely on those kinds of facts or data in forming an opinion, they need not be admissible for the opinion to be admitted. But if the facts or data would otherwise be inadmissible, the proponent may disclose them to the jury only if their probative value in helping the jury evaluate the opinion substantially outweighs their prejudicial effect."
+      },
+      {
+       "say": "Rule 705: unless the court orders otherwise, an expert may state an opinion and give the reasons for it without first testifying to the underlying facts or data. But the expert may be required to disclose them on cross-examination."
+      },
+      {
+       "say": "Three permissible bases, from the Advisory Committee Note to 703. Any one suffices. One, facts the expert personally observed. Two, facts made known at the hearing, such as by watching the trial, or a hypothetical question whose assumed facts the evidence could support. Three, facts made known before the hearing, including inadmissible hearsay, if experts in the field reasonably rely on that kind of data. And Rule 602's personal knowledge requirement does not apply to experts."
+      },
+      {
+       "say": "Key points. Reliance does not make the underlying facts admissible. Only the opinion comes in. The 2000 amendment's reverse-403 test creates a presumption against disclosure by the proponent, with a limiting instruction if the facts are disclosed. The opponent may bring them out on cross under 705. The expert must apply the discipline's methods, not act as a conduit for others' statements. And reliance makes hearsay substantive only through its own exception, such as 803(18), learned treatises, which are read in but not received as exhibits, or 803(4)."
+      },
+      {
+       "say": "In a criminal case, basis evidence the expert relies on for its truth is offered for its truth, so the Confrontation Clause applies to an absent analyst's statements. That's Smith v. Arizona, 2024, rejecting the Williams plurality."
+      },
+      {
+       "say": "In re Melton, D.C., 1991. A civil-commitment proceeding. Two psychiatrists' opinion that Melton endangered others rested almost entirely on his mother's report that he punched her. She did not testify. The doctors told the jury what she said, with a limiting instruction."
+      },
+      {
+       "say": "Held: psychiatrists reasonably rely on reports from family members. Where else would the doctor go for such information? The question is what experts in the discipline reasonably rely on, not what the judge would. But disclosure is harder. Labels cannot perform juridical alchemy, because a jury cannot use the punch to evaluate the opinion without believing it happened."
+      },
+      {
+       "say": "Why it matters. Under today's 703, the weighing test usually favors the opponent, so the proponent often must present the opinion without its factual foundation."
+      },
+      {
+       "ask": "A doctor bases an opinion on a nurse's hearsay notes, which doctors routinely rely on. Can the opinion come in?",
+       "answer": "Yes, under 703, if experts in the field reasonably rely on that kind of data. The notes themselves need not be admissible.",
+       "pause": 8
+      },
+      {
+       "ask": "Can the proponent read those inadmissible notes to the jury on direct?",
+       "answer": "Only if their probative value in helping the jury evaluate the opinion substantially outweighs their prejudicial effect. A presumption against disclosure.",
+       "pause": 8
+      },
+      {
+       "ask": "Can the opponent bring out the notes on cross?",
+       "answer": "Yes, under 705.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 703: reasonable reliance allows inadmissible bases; disclosure by the proponent only under a reverse 403. 705: opinion first, bases on cross. Three bases: personal observation, facts at the hearing, facts before the hearing reasonably relied on. Melton: reliance is judged by the discipline; disclosure is harder."
+      },
+      {
+       "ask": "What are the three permissible bases under the 703 note?",
+       "answer": "Personal observation; facts made known at the hearing, including hypotheticals; facts made known before the hearing that experts reasonably rely on.",
+       "pause": 8
+      },
+      {
+       "ask": "What famous phrase does Melton use about disclosure?",
+       "answer": "Labels cannot perform juridical alchemy.",
+       "pause": 8
+      },
+      {
+       "ask": "How are learned treatises received under 803(18)?",
+       "answer": "Read into evidence, but not received as exhibits.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e11",
+     "title": "Reliability: Frye, Daubert, Joiner, Kumho Tire, and the 2023 amendment",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. The general-acceptance test, the Daubert factors, the analytical gap, the extension to all experts, the 2023 amendment, and forensic science."
+      },
+      {
+       "say": "Frye v. United States, D.C. Circuit, 1923. The defense offered a scientist to testify about a systolic blood pressure deception test, a crude forerunner of the polygraph. Held: excluded. The thing from which the deduction is made must be sufficiently established to have gained general acceptance in the particular field in which it belongs. The casebook caption misprints it as 203 Fed.; it's 293 F. Why it matters: this is the general-acceptance test. It still governs in a handful of states, and its rejection of lie detection survives almost everywhere."
+      },
+      {
+       "say": "Daubert v. Merrell Dow Pharmaceuticals, 1993. Plaintiffs claimed the drug Bendectin caused birth defects. More than 30 published epidemiological studies found no link. The plaintiffs' experts relied on animal and test-tube studies, chemical-structure comparisons, and unpublished reanalysis. The lower courts applied Frye."
+      },
+      {
+       "say": "Held: Frye did not survive the Federal Rules. But the trial judge is a gatekeeper who must ensure scientific testimony is relevant and reliable, as a 104(a) question. Five non-exclusive factors, weighed together. One, whether the theory can be and has been tested. Two, peer review and publication. Three, the known or potential error rate. Four, standards controlling the technique. Five, general acceptance. The focus is on principles and methodology, not conclusions, and the testimony must fit the issue. Shaky but admissible evidence is met by cross-examination, contrary evidence, and instructions. Chief Justice Rehnquist objected that judges would become amateur scientists. The casebook caption misprints the year as 1995; it's 1993."
+      },
+      {
+       "say": "Why Daubert matters. The factors drive most questions on scientific evidence. And here's the irony: the Court thought it was loosening the standard, but studies show exclusions rose afterward."
+      },
+      {
+       "say": "General Electric v. Joiner, 1997. An electrician's experts linked his PCB exposure to his small-cell lung cancer by extrapolating from studies of infant mice and from epidemiological studies that did not support the conclusion. Held: conclusions and methodology are not entirely distinct from one another. A court need not admit opinion evidence connected to existing data only by the ipse dixit of the expert, when there is too great an analytical gap between the data and the opinion proffered. And rulings are reviewed for abuse of discretion."
+      },
+      {
+       "say": "Kumho Tire v. Carmichael, 1999. A tire-failure expert used a visual and tactile method to conclude that a worn, twice-punctured tire failed from a defect. The Eleventh Circuit held Daubert applies only to scientific testimony. Held: reversed. The gatekeeping duty applies to all expert testimony: scientific, technical, or other specialized knowledge. The judge may use the Daubert factors where they are reasonable measures of reliability, and has the same latitude in deciding how to test reliability as in deciding whether it exists, with abuse-of-discretion review. The question is specific: whether this method could reliably tell abuse from defect on this tire. Exclusion was within the court's discretion. Why it matters: it ended the workaround of admitting weak fields, such as handwriting comparison in Starzecpyzel, as non-scientific skills outside Daubert."
+      },
+      {
+       "say": "The rules today. Rule 702(b) through (d), added in 2000, codify Daubert and Kumho. Since the 2023 amendment, the proponent must show each element to the court by a preponderance, under 104(a), and each opinion must stay within what a reliable application supports."
+      },
+      {
+       "say": "The 2023 Advisory Committee Note. Decisions treating the sufficiency of an expert's basis, or the application of the method, as questions of weight are, quote, an incorrect application of Rules 702 and 104(a). Once the court finds the requirements met, remaining attacks go to weight, such as an expert who has not read every study. The proponent need not prove the expert correct, only reliable. Experts on contested facts may both testify, because the jury resolves the facts. The test is help, not appreciably help. Forensic experts should avoid claims of absolute certainty for a subjective method, and the judge should, where possible, receive an error-rate estimate. Fisher, 2022, predates the amendment."
+      },
+      {
+       "say": "Forensic sciences. Under Frye, handwriting, fingerprint, fiber, and ballistics evidence passed easily, because the relevant community was the practitioners. The 2009 National Academy of Sciences report found that, apart from nuclear DNA, most fields lack standardized protocols, error rates, and criteria for a match. The 2016 PCAST report, from the President's Council of Advisors on Science and Technology, required empirical error rates for foundational validity, which maps to 702(c), and examiner proficiency for validity as applied, which maps to 702(d). It found bitemarks not valid and firearms short of validity. Courts usually admit forensic testimony with limits, no claims of certainty or a zero error rate, and class associations like consistent with for hair and fiber, rather than exclude it. Though bitemark evidence is being pushed out. Polygraph evidence is still excluded almost everywhere, and United States v. Scheffer upheld a per se ban."
+      },
+      {
+       "say": "The outline's expert steps, six. One, qualified for this opinion. Two, helpful, not a legal conclusion under Hygh, not vouching under Batangan and Guilbert, not a 704(b) mental-state opinion. Three, sufficient facts or data of a kind experts reasonably rely on under 703, not a conduit, and the reverse-403 test before the proponent discloses inadmissible bases. Four, reliable methods reliably applied: the Daubert factors as they fit, Kumho, Joiner's analytical gap, each shown by a preponderance. Five, 403. Six, in a criminal case, confrontation for basis evidence, under Smith v. Arizona."
+      },
+      {
+       "ask": "A trial court admits an expert, saying any gaps in the expert's data go to weight, not admissibility. After 2023, is that right?",
+       "answer": "No. The 2023 Note says treating sufficiency of basis or application as weight is an incorrect application of 702 and 104(a). The proponent must show each element by a preponderance.",
+       "pause": 8
+      },
+      {
+       "ask": "A non-scientific expert, a handwriting examiner, says Daubert doesn't apply to him. Right?",
+       "answer": "No. Under Kumho, gatekeeping applies to all expert testimony, including technical and other specialized knowledge.",
+       "pause": 8
+      },
+      {
+       "ask": "An expert's data shows a weak association, but he concludes certain causation. What objection?",
+       "answer": "Joiner's analytical gap: an opinion connected to the data only by the expert's ipse dixit.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the five Daubert factors.",
+       "answer": "Testability; peer review and publication; known or potential error rate; standards controlling the technique; and general acceptance.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: Frye is not the federal standard. Two: Daubert focuses on methodology, but Joiner says conclusions and methodology are not entirely distinct. Three: Kumho extends Daubert to all experts. Four: the proponent bears a preponderance burden on each element, decided by the judge. Five: review is for abuse of discretion."
+      },
+      {
+       "say": "Recap. Frye: general acceptance. Daubert: gatekeeping under 104(a), five factors, fit. Joiner: analytical gap and abuse-of-discretion review. Kumho: all experts. 2023: each element by a preponderance; basis and application are not just weight. NAS 2009 and PCAST 2016 on forensics. Scheffer: polygraph bans upheld."
+      },
+      {
+       "ask": "What did the 2016 PCAST report find about bitemarks and firearms?",
+       "answer": "Bitemarks not valid; firearms short of validity.",
+       "pause": 8
+      },
+      {
+       "ask": "What test did Frye announce?",
+       "answer": "General acceptance in the particular field in which it belongs.",
+       "pause": 8
+      },
+      {
+       "ask": "What case is the outline's example of weak-field workaround that Kumho ended?",
+       "answer": "Starzecpyzel, admitting handwriting comparison as a non-scientific skill.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d4-e12",
+     "title": "Day 4 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Cumulative quiz, days one through four."
+      },
+      {
+       "ask": "Name the categories Crawford says the Clause does not bar.",
+       "answer": "Statements the declarant is cross-examined about at trial, statements not offered for their truth, statements admissible under forfeiture by wrongdoing, and perhaps dying declarations.",
+       "pause": 8
+      },
+      {
+       "ask": "Davis versus Hammon in one line each.",
+       "answer": "Davis: statements to meet an ongoing emergency are nontestimonial. Hammon: an account of past events with no emergency is testimonial.",
+       "pause": 8
+      },
+      {
+       "ask": "Does the Confrontation Clause apply to a civil plaintiff?",
+       "answer": "No. It protects only the accused in criminal cases.",
+       "pause": 8
+      },
+      {
+       "ask": "After Samia, is a neutral descriptor like the other person permissible?",
+       "answer": "Yes, with a limiting instruction. Obvious blanks remain barred under Gray.",
+       "pause": 8
+      },
+      {
+       "ask": "Under Rule 106, can the completing part come in over a hearsay objection?",
+       "answer": "Yes, since 2023.",
+       "pause": 8
+      },
+      {
+       "ask": "What test did Chambers use?",
+       "answer": "Whether critical and trustworthy defense evidence was excluded by mechanistic application of evidence rules.",
+       "pause": 8
+      },
+      {
+       "ask": "704(b): does it apply in civil cases?",
+       "answer": "No. Only in criminal cases, and only to the defendant's mental state that is an element.",
+       "pause": 8
+      },
+      {
+       "ask": "Who decides whether an expert's method is reliable, and by what standard?",
+       "answer": "The judge, under 104(a), by a preponderance.",
+       "pause": 8
+      },
+      {
+       "ask": "From day three: Owens.",
+       "answer": "A witness's memory loss does not make him unavailable for cross, so the Clause and 801(d)(1)(C) are satisfied.",
+       "pause": 8
+      },
+      {
+       "ask": "From day three: what was Volland-Golden's predecessor in interest?",
+       "answer": "The State, in the earlier criminal case, for the officers.",
+       "pause": 8
+      },
+      {
+       "ask": "From day two: Olden v. Kentucky.",
+       "answer": "The Confrontation Clause protected cross to show the complainant's motive to lie, a prototypical form of bias, so excluding evidence of her cohabitation was reversible.",
+       "pause": 8
+      },
+      {
+       "ask": "From day one: Bocharski.",
+       "answer": "An undisputed fact shrinks probative value on the 403 scale, without making the evidence irrelevant.",
+       "pause": 8
+      },
+      {
+       "say": "That's day four. Tomorrow: authentication, best evidence, privileges, and the full-course review."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
