@@ -3,7 +3,7 @@
  "id": "agency-and-partnership-practice-finals",
  "title": "Agency & Partnership Practice Finals",
  "course": "Agency & Partnership",
- "description": "2 practice finals (60 questions), each 30 five-choice questions sized like the final's 60-minute multiple-choice part and running through the Weeks 1–14 outline in order: creating an agency, authority, ratification and estoppel, tort liability, agents' duties, partnership formation, property, management and duties, grabbing and leaving, dissolution under the UPA and RUPA, Kovacik, buyouts, LPs and LLPs, and the LLC weeks (formation, the operating agreement, veil piercing, fiduciary duties, capital and expulsion, and dissolution). Professor Richardson's format: stand-alone questions mixing rule questions (\"Which of the following is NOT…\") with short who-wins hypos, plus \"None of the above,\" \"All of the above\" and combination choices. Every choice is explained. Use Exam mode to take a final under time and grade it, or Study mode to check each answer.",
+ "description": "3 practice finals (90 questions), each 30 five-choice questions sized like the final's 60-minute multiple-choice part and running through the Weeks 1–14 outline in order: creating an agency, authority, ratification and estoppel, tort liability, agents' duties, partnership formation, property, management and duties, grabbing and leaving, dissolution under the UPA and RUPA, Kovacik, buyouts, LPs and LLPs, and the LLC weeks (formation, the operating agreement, veil piercing, fiduciary duties, capital and expulsion, and dissolution). Professor Richardson's format: stand-alone questions mixing rule questions (\"Which of the following is NOT…\") with short who-wins hypos, plus \"None of the above,\" \"All of the above\" and combination choices. Every choice is explained. Use Exam mode to take a final under time and grade it, or Study mode to check each answer.",
  "modeDefault": "exam",
  "areas": [
   "Creating the Agency Relationship",
@@ -36,6 +36,11 @@
   {
    "id": 2,
    "title": "Practice Final 2",
+   "description": "30 questions · 60 minutes"
+  },
+  {
+   "id": 3,
+   "title": "Practice Final 3",
    "description": "30 questions · 60 minutes"
   }
  ],
@@ -1416,6 +1421,693 @@
    ],
    "e": "Delaware courts dissolve an LLC under § 18-802 when, weighed together, (1) the members are deadlocked, (2) the agreement gives no way around it, and (3) there is effectively no business to run; none is required or dispositive (Fisk Ventures).",
    "fixed": true
+  },
+  {
+   "id": "3.01",
+   "exam": 3,
+   "area": "Creating the Agency Relationship",
+   "tag": "Agent for some purposes",
+   "q": "What principle does Rose v. Giamatti illustrate?",
+   "o": [
+    "One can be an agent for some purposes but not others.",
+    "The Commissioner was MLB's agent for every purpose, because MLB appointed him.",
+    "Agency requires a written contract between principal and agent.",
+    "Arbitrators are always agents of the parties who appoint them.",
+    "None of the above."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. The clubs had given the Commissioner exclusive, independent disciplinary authority they could not control, like an arbitrator, so he was not MLB's agent for discipline.",
+    "Appointment alone did not make him an agent for discipline.",
+    "No writing is required to create agency.",
+    "The court reasoned the opposite: independent authority is inconsistent with agency.",
+    "A is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.02",
+   "exam": 3,
+   "area": "Creating the Agency Relationship",
+   "tag": "Members of an unincorporated association (Karl Rove)",
+   "q": "The Ridge Runners, an unincorporated hiking club, has no assets. At a meeting, members Ana and Ben vote to rent a mountain lodge for the club's retreat and direct the treasurer to sign the rental contract; member Cal votes no; member Dee is absent. The club cannot pay the $8,000 rent. Under Karl Rove & Co. v. Thornburgh, who is personally liable to the lodge?",
+   "o": [
+    "Every member of the club, because members of an unincorporated association are always liable for its debts.",
+    "Ana, Ben, and Cal, because each attended the meeting where the contract was approved.",
+    "Only the treasurer, because she signed the contract.",
+    "No one, because an association with no assets cannot enter a binding contract.",
+    "Ana and Ben, because they authorized the contract, and the treasurer signed it as their agent."
+   ],
+   "a": 4,
+   "oe": [
+    "Membership alone is not the test. A member is bound by contracts he authorized, assented to, or ratified.",
+    "Attending a meeting and voting no is not authorizing, assenting to, or ratifying the contract.",
+    "The treasurer may also be liable as a party, but Ana and Ben are bound because the treasurer acted as their agent.",
+    "Lack of assets does not void the contract; it means the lodge will look to those who authorized it.",
+    "Correct. A member of an unincorporated association is personally bound by contracts that he authorizes, assents to, or ratifies, personally or through an agent (Karl Rove & Co. v. Thornburgh). Cal objected and Dee took no part."
+   ]
+  },
+  {
+   "id": "3.03",
+   "exam": 3,
+   "area": "Contract Liability of Principal: Authority",
+   "tag": "Which route needs a change of position",
+   "q": "Under which theory does a principal's liability to a third party depend on the third party's detrimental change of position in reliance?",
+   "o": [
+    "Estoppel.",
+    "Express actual authority.",
+    "Implied actual authority.",
+    "Ratification.",
+    "None of the above."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Estoppel requires the third party's justifiable, detrimental change of position, and it compensates the reliance loss (R3d § 2.05; Hoddeson).",
+    "Actual authority depends on the agent's understanding; the third party's reliance is irrelevant.",
+    "Also measured from the agent's perspective.",
+    "Ratification depends on the principal's later affirmance, not on the third party's reliance.",
+    "A is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.04",
+   "exam": 3,
+   "area": "Contract Liability of Principal: Authority",
+   "tag": "R3d § 2.06",
+   "q": "The Restatement (Third) of Agency abandons inherent agency power. Under § 2.06, which of the following statements is true of an undisclosed principal?",
+   "o": [
+    "It is liable to a third party who justifiably relies to its detriment on an unauthorized agent's conduct if the principal, on notice of that conduct, failed to take reasonable steps to notify the third party of the facts.",
+    "It may not rely on instructions that reduce the agent's authority below what the third party would assume if the principal were disclosed.",
+    "It is liable only if the third party knew the principal's identity.",
+    "A and B.",
+    "A, B and C."
+   ],
+   "a": 3,
+   "oe": [
+    "True (§ 2.06(1)).",
+    "True (§ 2.06(2)).",
+    "False. By definition, the third party does not know the undisclosed principal's identity.",
+    "Correct. These are the narrower, estoppel-like replacements for Watteau's rule.",
+    "C is wrong."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.05",
+   "exam": 3,
+   "area": "Contract Liability of Principal: Authority",
+   "tag": "Too late to ratify",
+   "q": "Without authority, Ward signs a contract on behalf of his employer, Hollis Corp., to sell a used forklift to Kemp for $9,000. Kemp learns that Ward lacked authority and, before Hollis says anything, writes to Hollis withdrawing from the deal. Hollis then announces that it ratifies the sale. Which of the following statements is true?",
+   "o": [
+    "Hollis's ratification binds Kemp, because ratification relates back to the moment Ward signed the contract.",
+    "Hollis's ratification binds Kemp, because a principal may ratify its agent's act at any time.",
+    "Hollis's ratification binds Kemp only if Hollis ratified in writing.",
+    "Hollis's ratification binds Kemp, because Kemp had no right to withdraw from a signed contract.",
+    "None of the above."
+   ],
+   "a": 4,
+   "oe": [
+    "Relation back does not apply once the third party has withdrawn. Ratification is not effective if it comes after the third party's manifestation of intent to withdraw (R3d § 4.05).",
+    "There are limits on timing: a third party's withdrawal before ratification, or a material change in circumstances, cuts off the power to ratify (§ 4.05).",
+    "The form of ratification is not the problem. Even a written ratification comes too late after Kemp withdrew.",
+    "Until Hollis ratified, there was no binding contract on Hollis's side, so Kemp was free to withdraw.",
+    "Correct. Ratification is not effective when, before it occurs, the third party has manifested its intent to withdraw (R3d § 4.05). Kemp withdrew first, so Hollis's later ratification cannot bind him."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.06",
+   "exam": 3,
+   "area": "Contract Liability of Principal: Authority",
+   "tag": "Lind's commission",
+   "q": "In Lind v. Schenley Industries, why was the company bound to Kaufman's promise of a 1% commission?",
+   "o": [
+    "Kaufman had actual authority to set salesmen's pay.",
+    "Lind relied on Kaufman's own statements that he could set pay.",
+    "It held Kaufman out as Lind's boss on pay.",
+    "The company ratified the promise by paying commissions.",
+    "None of the above."
+   ],
+   "a": 2,
+   "oe": [
+    "Only the president could set pay; Kaufman lacked actual authority.",
+    "An agent's own statements cannot create apparent authority.",
+    "Correct. The vice president sent Lind to Kaufman about salary. The principal's manifestation through the position it gave Kaufman made Lind's belief reasonable.",
+    "The case rested on apparent (and inherent) authority, not ratification.",
+    "C is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.07",
+   "exam": 3,
+   "area": "Tort Liability of Principal",
+   "tag": "Torts committed with apparent authority",
+   "q": "A bank's loan officer, using the bank's letterhead and sitting in his bank office, persuades a customer to buy a \"bank-guaranteed\" certificate that does not exist and keeps the money. Under the Restatement (Third) of Agency, the bank's liability to the customer is best based on:",
+   "o": [
+    "No theory, because fraud for one's own benefit is always outside the scope of employment.",
+    "Vicarious liability, because the officer committed the tort with apparent authority.",
+    "Negligent supervision only.",
+    "Ratification, which is required before a principal is liable for an agent's fraud.",
+    "None of the above."
+   ],
+   "a": 1,
+   "oe": [
+    "Scope of employment is not the only route. A tort committed with apparent authority makes the principal liable even if the agent served only himself.",
+    "Correct. R3d § 7.08: a principal is vicariously liable for an agent's tort when actions taken by the agent with apparent authority constitute the tort, as with fraud or misrepresentation that the third party believes is the principal's own dealing.",
+    "Direct liability for negligent supervision is possible if facts show it, but it is not needed when the agent acted with apparent authority.",
+    "Ratification is one basis for liability, not a prerequisite.",
+    "B is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.08",
+   "exam": 3,
+   "area": "Tort Liability of Principal",
+   "tag": "A nondelegable duty",
+   "q": "On the last day before the statute of limitations runs, attorney Nash hires a courier service to file a client's complaint. The courier arrives after the clerk's office closes, and the claim is lost. The client sues Nash, who argues that the courier was an independent contractor. Which of the following statements is most accurate?",
+   "o": [
+    "Nash is not liable, because a principal is never liable for the negligence of an independent contractor.",
+    "Nash may be liable, because his duty to the client is nondelegable.",
+    "Nash may be liable only if he controlled the details of how the courier drove to the courthouse.",
+    "Nash is not liable, because he chose a reputable courier service.",
+    "The client's only claim is against the courier service."
+   ],
+   "a": 1,
+   "oe": [
+    "The general rule has exceptions, and a nondelegable duty is one of them.",
+    "Correct. As in Kleeman v. Rheingold, some duties are so important that the person who owes them cannot escape responsibility by hiring an independent contractor (R3d § 7.06). A lawyer's duty to see that the client's action is properly commenced is one of them.",
+    "Retained control is a separate exception. Liability for a nondelegable duty does not depend on it.",
+    "Careful selection defeats a claim of negligent selection, but not liability for breach of a nondelegable duty.",
+    "The client may sue the courier, but Nash remains answerable for his nondelegable duty."
+   ]
+  },
+  {
+   "id": "3.09",
+   "exam": 3,
+   "area": "Tort Liability of Principal",
+   "tag": "Assault within scope",
+   "q": "Under Manning v. Grimsley, when may an employer be liable for an employee's assault?",
+   "o": [
+    "Never, because assault is an intentional tort.",
+    "When it answers present interference with the work.",
+    "Only if the employer ordered the assault.",
+    "Only if the assault happens on the employer's premises.",
+    "None of the above."
+   ],
+   "a": 1,
+   "oe": [
+    "Intentional torts can be within scope.",
+    "Correct. The pitcher threw at hecklers who were interfering with his warm-up, so the battery claim against the club went to the jury.",
+    "An order is not required.",
+    "Location alone is not the test.",
+    "B is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.10",
+   "exam": 3,
+   "area": "Fiduciary Duties Between Agent and Principal",
+   "tag": "Leaving without a non-compete (Corroon & Black)",
+   "q": "Mara sells insurance for Harbor Agency. Her non-compete expired years ago. Harbor's customer and policy-expiration lists are kept in an unlocked file that any employee may consult, and insurance buyers in town routinely compare agencies at renewal. Mara quits, joins a competitor, and calls the Harbor customers she remembers. Which of the following statements is most accurate?",
+   "o": [
+    "Mara is liable, because a departing agent may never solicit her former principal's customers.",
+    "Mara is liable, because customer lists are always trade secrets.",
+    "Mara is not liable, because Harbor's lists were not trade secrets and nothing else bars her from competing.",
+    "Mara is not liable, because an agent's fiduciary duties end the moment she quits, so she may use anything she learned on the job.",
+    "Mara is liable only if she calls more than half of Harbor's customers."
+   ],
+   "a": 2,
+   "oe": [
+    "After leaving, an agent may compete and may solicit customers, so long as she does not use trade secrets or confidential information.",
+    "Whether a list is a trade secret depends on the circumstances. Lists open to every employee, of customers who shop around anyway, may not qualify.",
+    "Correct. As in Corroon & Black-Rutters & Roberts v. Hosch, widely accessible lists of insurance buyers who shop around are not trade secrets, and without a non-compete a departing agent may solicit former clients.",
+    "Some obligations survive: she still may not use trade secrets or confidential information after leaving (R2d § 396; R3d § 8.05).",
+    "No numerical rule decides the question; the issue is whether she used protected information."
+   ]
+  },
+  {
+   "id": "3.11",
+   "exam": 3,
+   "area": "Partnership Basics and Formation",
+   "tag": "Owner-physicians as employees (Clackamas)",
+   "q": "A federal statute covers only employers with 15 or more employees. A medical practice has 13 staff members and four physician-owners who manage the practice, hire and fire staff, set its rules, and share its profits and losses. Under Clackamas Gastroenterology Associates, P.C. v. Wells, how should a court decide whether the physicians count as employees?",
+   "o": [
+    "By applying the common-law control test, guided by the EEOC's factors.",
+    "By asking whether the physicians receive salaries, since anyone on a payroll is an employee.",
+    "By looking at the physicians' titles, such as \"shareholder\" or \"director.\"",
+    "By deferring to how the practice is organized under state law, because state-law form controls federal coverage.",
+    "None of the above."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Clackamas adopted the common-law control test, guided by the EEOC's six factors. Owners who run the business and share its profits and losses look like employers, not employees.",
+    "Receiving a salary is one fact, but the test turns on control over the organization.",
+    "Titles are not decisive; the inquiry looks at control.",
+    "Clackamas looked past the corporate form to the actual relationship.",
+    "A is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.12",
+   "exam": 3,
+   "area": "Partnership Basics and Formation",
+   "tag": "Who can be a partner",
+   "q": "Under the RUPA (1997), which of the following may be a partner in a general partnership?",
+   "o": [
+    "A limited liability company.",
+    "A trust.",
+    "Another general partnership.",
+    "A and C.",
+    "A, B and C."
+   ],
+   "a": 4,
+   "oe": [
+    "True. A partnership is an association of two or more \"persons,\" and the definition of person includes entities such as corporations and LLCs.",
+    "True. A trust (acting through its trustee) is also a person that may be a partner.",
+    "True. A partnership is itself a person and may be a partner in another partnership.",
+    "Incomplete. A trust may also be a partner.",
+    "Correct. Natural persons, corporations, LLCs, trusts, and other partnerships are all \"persons\" that may associate as partners."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.13",
+   "exam": 3,
+   "area": "Partners' Economic Rights and Property",
+   "tag": "Exhaustion and its exceptions",
+   "q": "A supplier wins a $70,000 judgment against both a RUPA partnership and its partner, Gail. The partnership still has a bank account and equipment. The supplier wants to levy at once on Gail's vacation house. Under RUPA § 307(d), which of the following statements is true?",
+   "o": [
+    "The supplier may levy on Gail's house first, because partners are jointly and severally liable for partnership debts.",
+    "The supplier generally must first exhaust partnership assets, unless an exception applies.",
+    "The supplier may never reach Gail's personal assets, because only the partnership owes the debt.",
+    "The supplier may levy on Gail's house only if Gail personally signed the supply contract.",
+    "None of the above."
+   ],
+   "a": 1,
+   "oe": [
+    "Joint and several liability makes Gail liable, but the exhaustion rule governs the order of collection.",
+    "Correct. A judgment against a partner based on a partnership obligation generally may not be satisfied from the partner's assets until a judgment against the partnership has gone unsatisfied (§ 307(d)). Exceptions include the partnership's bankruptcy, the partner's agreement, a court order where partnership assets are clearly insufficient or exhaustion would be excessively burdensome, and liability imposed on the partner independently of the partnership.",
+    "Partners are personally liable for partnership obligations (§ 306(a)); the exhaustion rule only sets the order.",
+    "Liability for partnership obligations does not depend on which partner signed.",
+    "B is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.14",
+   "exam": 3,
+   "area": "Management and Authority",
+   "tag": "RNR's two-step test",
+   "q": "In RNR Investments Ltd. Partnership v. Peoples First Community Bank, the court asked two questions to decide whether a general partner's loan bound the partnership. What were they?",
+   "o": [
+    "Whether the bank read the partnership agreement, and whether the limited partners consented to the loan.",
+    "Was the act apparently in the ordinary course, and did the bank know or have notice of the limit?",
+    "Whether the loan was in writing, and whether it was recorded.",
+    "Whether the general partner was negligent, and whether the bank was negligent.",
+    "None of the above."
+   ],
+   "a": 1,
+   "oe": [
+    "A third party has no duty to read the agreement.",
+    "Correct. That two-step test applies ULPA § 402 and RUPA § 301. The bank had no duty to read the partnership agreement.",
+    "Neither question matters under § 301 or § 402.",
+    "Authority, not negligence, is the issue.",
+    "B is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.15",
+   "exam": 3,
+   "area": "Partners' Fiduciary Duties",
+   "tag": "No freeze-out by incorporation (Second Measure)",
+   "q": "Kai and Liv orally agree to build a data-analytics business as equal partners. After a year, Liv changes the passwords, locks Kai out, incorporates the business in her own name, and raises money from investors. Kai sues. Which of the following statements is true?",
+   "o": [
+    "Kai has no claim, because an oral partnership agreement is unenforceable.",
+    "Kai has no claim, because Liv was free to dissolve an at-will partnership at any time.",
+    "Kai's claims may proceed, because Liv cannot dissolve in order to take the business.",
+    "Kai's only remedy is to start a competing business of his own.",
+    "None of the above."
+   ],
+   "a": 2,
+   "oe": [
+    "Partnerships need no writing; they arise from conduct (RUPA § 202(a)).",
+    "A partner may dissolve an at-will partnership, but may not use dissolution to take the business without accounting to her partner.",
+    "Correct. In Second Measure v. Kim, the court let the claims go forward: partners' duties continue through winding up, and a partner cannot dissolve in order to appropriate the business (compare Page v. Page).",
+    "Kai has claims for breach of fiduciary duty and an accounting.",
+    "C is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.16",
+   "exam": 3,
+   "area": "Grabbing and Leaving; Expulsion",
+   "tag": "Leaving partners: permitted steps",
+   "q": "Several partners of a law firm decide to leave and form a new firm. Which of the following is permitted while they are still partners?",
+   "o": [
+    "Giving their new firm a confidential memo listing the old firm's salaries and billing rates.",
+    "Preparing client letters on the old firm's letterhead and racing to sign up clients the moment they give notice.",
+    "Denying their plans when a partner asks them directly.",
+    "Planning the move together with the other departing partners.",
+    "None of the above."
+   ],
+   "a": 3,
+   "oe": [
+    "A breach in Gibbs: using confidential information for a head start.",
+    "A breach in Meehan: unfairly obtaining client consents.",
+    "A breach in Meehan v. Shaughnessy.",
+    "Correct. In Gibbs v. Breed, Abbott & Morgan, planning the departure together (and taking duplicate desk files) was not a breach.",
+    "D is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.17",
+   "exam": 3,
+   "area": "Dissociation and Dissolution",
+   "tag": "Judicial dissolution grounds",
+   "q": "Under the RUPA, which of the following is NOT a ground for a court to order dissolution on a partner's application?",
+   "o": [
+    "The economic purpose of the partnership is likely to be unreasonably frustrated.",
+    "Another partner's conduct makes it not reasonably practicable to carry on the business in partnership with that partner.",
+    "It is not otherwise reasonably practicable to carry on the business in conformity with the partnership agreement.",
+    "The partnership had an unprofitable year.",
+    "None of the above."
+   ],
+   "a": 3,
+   "oe": [
+    "A § 801 ground.",
+    "A § 801 ground.",
+    "A § 801 ground.",
+    "Correct: NOT a ground. A single bad year does not frustrate the economic purpose or make the business impracticable to continue.",
+    "D is not a ground."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.18",
+   "exam": 3,
+   "area": "Dissociation and Dissolution",
+   "tag": "Insiders bidding at a judicial sale (Prentiss)",
+   "q": "Two majority partners in a shopping-center partnership exclude the minority partner from management. A court orders the partnership dissolved and its property sold. The majority partners want to bid at the sale. Under Prentiss v. Sheffel, which of the following statements is true?",
+   "o": [
+    "They may never bid, because a fiduciary may not buy partnership property at a sale it helped cause.",
+    "They may bid only if the minority partner consents.",
+    "They may bid only if they first pay the minority partner damages for the exclusion.",
+    "They may bid, but they must pay at least twice the appraised value of the property.",
+    "They may bid, absent a showing of a bad-faith plan to freeze out the minority partner."
+   ],
+   "a": 4,
+   "oe": [
+    "Prentiss rejected a flat bar. Partners' bids can help the minority by raising the price.",
+    "Prentiss allowed the bid without the minority partner's consent.",
+    "Nothing in Prentiss conditioned the bid on paying damages.",
+    "There is no such rule. The sale price is set by the bidding.",
+    "Correct. In Prentiss, the court let the majority partners bid at the judicial sale because there was no showing that they excluded the minority partner in bad faith to grab the property, and their bid increased the minority partner's share."
+   ]
+  },
+  {
+   "id": "3.19",
+   "exam": 3,
+   "area": "Loss Sharing: Kovacik v. Reed",
+   "tag": "The professor's critique of Kovacik",
+   "q": "Which of the following best reflects the course's critique of Kovacik v. Reed?",
+   "o": [
+    "The capital partner should always bear every loss, because he had more to lose.",
+    "Kovacik is plainly right, because a partner's services, unlike money, cannot lose value in a failed venture.",
+    "A real bargain would likely fall between equal sharing and zero loss for the service partner.",
+    "The RUPA codified the Kovacik rule.",
+    "None of the above."
+   ],
+   "a": 2,
+   "oe": [
+    "That is the Kovacik result itself, which the critique questions.",
+    "The service partner's labor is exactly what Kovacik treats as lost.",
+    "Correct. The hypothetical-bargain model suggests a middle ground without saying where it lies. Since losses often trace to the service partner's work, and Kovacik may encourage his risk-taking, the capital partner would likely insist on some loss sharing.",
+    "The comment to RUPA § 401 rejects Kovacik.",
+    "C is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.20",
+   "exam": 3,
+   "area": "Buyout Agreements",
+   "tag": "Capital account formula",
+   "q": "A buyout agreement pays a deceased partner's estate the partner's \"capital account.\" Following G & S Investments v. Belman, how is that term generally read?",
+   "o": [
+    "As the fair market value of the partner's share of the business.",
+    "As the value of the partner's share if the whole business were sold as a going concern.",
+    "As the book figure for the partner's capital account on the partnership's books.",
+    "As whatever amount a court finds fair at the time of death.",
+    "None of the above."
+   ],
+   "a": 2,
+   "oe": [
+    "Belman rejected a market-value reading. The term has a settled accounting meaning.",
+    "Going-concern value is the RUPA § 701 default for buyouts, not the meaning of \"capital account\" in an agreement.",
+    "Correct. Capital accounts are kept at book value, not market value. In Belman the figure was negative, so the estate received only $4,867.57, which shows the danger of book-value formulas.",
+    "Courts enforce buyout clauses as written. They do not substitute a fairness figure.",
+    "C is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.21",
+   "exam": 3,
+   "area": "Limited Partnerships, LLPs and LLLPs",
+   "tag": "ULPA (2001) control rule",
+   "q": "Under the Uniform Limited Partnership Act (ULPA) (2001), what happens to a limited partner who takes part in managing the limited partnership's business?",
+   "o": [
+    "The limited partner keeps the liability shield; the old control rule was largely eliminated (§ 303(a)).",
+    "The limited partner automatically becomes a general partner for all purposes.",
+    "The limited partner becomes liable for all partnership debts incurred after their first management decision.",
+    "The limited partner loses the shield only if they also contributed services rather than cash.",
+    "None of the above."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. Under earlier limited partnership acts, a limited partner who participated in control could be liable like a general partner. ULPA (2001) § 303(a) dropped that rule, so a limited partner is not liable for the partnership's obligations solely because they take part in management.",
+    "No act ever made participation convert a limited partner into a general partner for all purposes, and ULPA (2001) removed even the narrower control rule.",
+    "This overstates even the old control rule, which reached only creditors who reasonably believed the limited partner was a general partner.",
+    "The type of contribution has nothing to do with the limited partner's shield.",
+    "A is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.22",
+   "exam": 3,
+   "area": "Forming an LLC",
+   "tag": "Formation, entity status and agency of members",
+   "q": "Under RULLCA, which of the following statements is NOT correct?",
+   "o": [
+    "A member is an agent of the LLC for carrying on its activities in the ordinary course.",
+    "An LLC is an entity distinct from its members.",
+    "An LLC is formed when its certificate of organization becomes effective and at least one person has become a member.",
+    "A member is not personally liable for the LLC's debts solely by reason of being a member.",
+    "Failing to observe formalities is not a ground for imposing liability on a member for the LLC's debts."
+   ],
+   "a": 0,
+   "oe": [
+    "This is the incorrect statement, so it is the answer. A member is not an agent of the LLC solely by reason of being a member (§ 301(a)). That is the RUPA rule for partners (RUPA § 301), which RULLCA rejects.",
+    "Correctly stated (§ 108(a)).",
+    "Correctly stated (§ 201(d)).",
+    "Correctly stated (§ 304(a)).",
+    "Correctly stated (§ 304(b))."
+   ],
+   "e": "Under RULLCA an LLC is a distinct entity formed on an effective certificate plus a member (§§ 108, 201); members are shielded from its debts (§ 304) and are not its agents merely as members (§ 301)."
+  },
+  {
+   "id": "3.23",
+   "exam": 3,
+   "area": "The Operating Agreement",
+   "tag": "What an operating agreement can't do",
+   "q": "The operating agreement of a member-managed LLC under the RULLCA provides: \"No member may apply to a court to dissolve the company for any reason.\" Two members later use their control to divert company business to their own firm, directly harming the third member, Ula. Which of the following statements is true?",
+   "o": [
+    "Ula may not seek judicial dissolution, because she agreed to the clause.",
+    "Ula may seek judicial dissolution, but only if all the members consent.",
+    "Ula may seek judicial dissolution only if the company's business is unlawful.",
+    "Ula may apply for judicial dissolution; the clause is unenforceable.",
+    "None of the above."
+   ],
+   "a": 3,
+   "oe": [
+    "The operating agreement may not vary the grounds for judicial dissolution (RULLCA § 105(c)(9)).",
+    "A court-ordered dissolution does not require the other members' consent.",
+    "Unlawful business is one ground, but not the only one.",
+    "Correct. The operating agreement cannot vary the court's power to dissolve (§ 105(c)), and a court may dissolve the company when those in control have acted in a manner that is oppressive and directly harmful to the applicant (§ 701(a)(4)(C)(ii)); the court may also order a lesser remedy.",
+    "D is correct."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.24",
+   "exam": 3,
+   "area": "The Operating Agreement",
+   "tag": "Direct vs. derivative claims (§§ 801–802)",
+   "q": "Mira is one of four members of Copper Kettle, LLC, a member-managed LLC under RULLCA. Another member, Bex, diverts the company's catering contracts to her own business, and the company's profits fall, reducing every member's distributions equally. Mira sues Bex in her own name for the drop in her distributions. Which of the following statements is most accurate?",
+   "o": [
+    "Mira must sue derivatively, because only the company suffered the injury.",
+    "Mira may sue directly, because her own distributions fell.",
+    "Mira may not sue at all, because only the LLC may sue a member.",
+    "Mira may sue directly, because members of a member-managed LLC are partners.",
+    "Mira must sue derivatively, but she needs no demand because Bex is a member."
+   ],
+   "a": 0,
+   "oe": [
+    "Correct. The company suffered the immediate injury and Bex's duty ran to it, so the claim is derivative (casebook pp. 514–515; RULLCA § 801(b)). Mira may bring it for the company under § 802 after a demand is refused or shown to be futile.",
+    "A direct action requires an injury that is not solely the result of an injury to the company (RULLCA § 801(b)); a drop in distributions shared by every member is the company's injury passed through.",
+    "Members may sue in the company's right through a derivative action (§ 802), and directly when they suffer a separate injury (§ 801).",
+    "An LLC member is not a partner, and status does not decide whether a claim is direct or derivative; the nature of the injury does.",
+    "A derivative action requires that a demand be refused or that a demand would not likely succeed (§ 802); Bex's status as a member does not excuse that step."
+   ],
+   "e": "A member sues directly only for an injury not solely resulting from the company's injury (RULLCA § 801(b)); otherwise the claim is derivative and needs a refused or futile demand (§ 802)."
+  },
+  {
+   "id": "3.25",
+   "exam": 3,
+   "area": "Piercing the LLC Veil",
+   "tag": "Limited partners, control and corporate GPs",
+   "q": "Harbor View, L.P., formed under ULPA (2001), has one general partner, Harbor GP, Inc., a thinly capitalized corporation. Limited partner Sol attends weekly management meetings and votes on major decisions. The LP defaults on a construction loan. Which of the following statements is true?",
+   "o": [
+    "Sol is not liable for the LP's debts solely because he takes part in management and control.",
+    "The lender may try to pierce the veil of Harbor GP, Inc. to reach its shareholders.",
+    "Sol is liable as a general partner, because he took part in control of the business.",
+    "A and B.",
+    "None of the above."
+   ],
+   "a": 3,
+   "oe": [
+    "True. ULPA (2001) § 303(a) shields a limited partner even if it participates in management and control, ending the old control rule.",
+    "True. A corporation may serve as general partner, and creditors' remedy against an undercapitalized corporate general partner is to pierce its veil (Frigidaire Sales; the casebook note on veil piercing in LPs).",
+    "False. That was the control rule of ULPA (1916) and, with safe harbors, ULPA (1976); ULPA (2001) § 303(a) abolished it.",
+    "Correct. Under ULPA (2001) § 303(a) Sol keeps his shield despite participating in control, and the lender's route to more money is piercing the corporate general partner.",
+    "Incorrect, because A and B are both true."
+   ],
+   "e": "ULPA (2001) § 303(a) shields limited partners even if they participate in control; a creditor of an LP with a corporate general partner must pierce that corporation's veil (Frigidaire Sales).",
+   "fixed": true
+  },
+  {
+   "id": "3.26",
+   "exam": 3,
+   "area": "LLC Fiduciary Duties",
+   "tag": "What the operating agreement may do with duties (§ 105)",
+   "q": "Under RULLCA § 105, which of the following provisions may an operating agreement NOT validly include?",
+   "o": [
+    "A list of specific types of activities that do not violate the duty of loyalty, if not manifestly unreasonable.",
+    "A provision that eliminates every member's duty of loyalty to the company.",
+    "A method for disinterested, independent persons to authorize a conflicted transaction after full disclosure.",
+    "A standard, not manifestly unreasonable, for measuring the obligation of good faith and fair dealing.",
+    "A provision altering the duty of care, short of authorizing bad faith or knowing violations of law."
+   ],
+   "a": 1,
+   "oe": [
+    "Permitted (§ 105(d)(3)(B)).",
+    "Correct: not permitted. The agreement may not alter or eliminate the duty of loyalty except as § 105(d) allows (§ 105(c)(5)); it may narrow aspects of it, but not abolish it.",
+    "Permitted (§ 105(d)(1)(A)).",
+    "Permitted. The obligation itself cannot be eliminated, but standards for it may be set if not manifestly unreasonable (§ 105(c)(6)).",
+    "Permitted (§ 105(d)(3)(C))."
+   ],
+   "e": "A RULLCA operating agreement may narrow loyalty and alter care if not manifestly unreasonable, but may not eliminate loyalty, care or good faith, or exonerate bad faith (§ 105(c)–(d))."
+  },
+  {
+   "id": "3.27",
+   "exam": 3,
+   "area": "LLC Fiduciary Duties",
+   "tag": "Adverse dealing; fairness defense and ratification (§ 409)",
+   "q": "Pax, a member of Hilltop Bakery, LLC, a member-managed LLC under RULLCA, sells the company a used oven he owns for $4,000 without telling the other members. The price turns out to be fair market value. Another member sues Pax for breach of the duty of loyalty. Which of the following statements is true?",
+   "o": [
+    "Pax breached the duty of loyalty, and fairness is no defense.",
+    "The sale is valid only if a majority of the other members later ratify it.",
+    "Pax may defend by showing that the sale was fair to the company.",
+    "Pax owed no duty, because members of an LLC are not fiduciaries.",
+    "Pax breached the duty of care, because he acted for his own benefit."
+   ],
+   "a": 2,
+   "oe": [
+    "Dealing with the company as an adverse party implicates § 409(b)(2), but fairness to the company is a defense to that claim (§ 409(g)).",
+    "Ratification of a specific act that would otherwise breach the duty of loyalty requires all the members, after full disclosure (§ 409(f)), not a majority; and here fairness supplies a defense anyway.",
+    "Correct. In a member-managed LLC, members owe a duty to refrain from dealing with the company as an adverse party (§ 409(b)(2)), and it is a defense that the transaction was fair to the company (§ 409(g)).",
+    "Members of a member-managed LLC owe loyalty and care (§ 409(a)).",
+    "The duty of care is breached only by gross negligence, recklessness, willful misconduct or knowing violation of law (§ 409(c)); furthering one's own interest is not by itself a breach (§ 409(e))."
+   ],
+   "e": "A member-manager who deals with the LLC as an adverse party may defend by proving fairness (RULLCA § 409(b)(2), (g)); ratification instead requires all members after full disclosure (§ 409(f))."
+  },
+  {
+   "id": "3.28",
+   "exam": 3,
+   "area": "Additional Capital and Expulsion",
+   "tag": "No expulsion without a contractual or legal basis",
+   "q": "Four members form Ridgeback Energy, LLC, a Delaware LLC. The operating agreement lets the members remove the manager but says nothing about removing a member. When a financing deal that member Ezra promised to deliver collapses, the other three send him a letter declaring that he is \"removed from the company\" and that his 20% interest is forfeited. Under Walker v. Resource Development Co., what is the effect of the letter?",
+   "o": [
+    "Ezra is removed, because members may expel a member who fails to deliver what he promised.",
+    "Ezra is removed, because a court of equity will uphold a removal the equities support.",
+    "Ezra remains a member, but only until the others pay him the fair value of his interest.",
+    "Ezra remains a member, because nothing in the agreement or the law let them remove him.",
+    "Ezra is removed as a manager, which also ends his membership interest."
+   ],
+   "a": 3,
+   "oe": [
+    "No such default power exists. In Walker the members' disappointment over failed financing was the real reason for removal, and it gave them no authority to strip his interest.",
+    "Walker rejected the argument that equity (or DLLCA § 18-1104) supplies a power to remove a member when the agreement is silent.",
+    "No forced buyout arose; the letter simply had no effect on Ezra's membership.",
+    "Correct. LLC members' rights begin and typically end with the operating agreement; this one allowed removal of a manager but not a member, and Delaware law supplied no power to expel him (Walker).",
+    "Removal as manager is without prejudice to a person's ownership rights; Ezra was not even the manager here."
+   ],
+   "e": "Absent a provision in the operating agreement or the statute, members of a Delaware LLC cannot unilaterally expel another member and forfeit his interest (Walker)."
+  },
+  {
+   "id": "3.29",
+   "exam": 3,
+   "area": "LLC Dissolution",
+   "tag": "LLC judicial dissolution",
+   "q": "Under RULLCA § 701(a)(4), on a member's application, on which grounds may a court dissolve an LLC?",
+   "o": [
+    "The conduct of all or substantially all of the company's activities is unlawful.",
+    "It is not reasonably practicable to carry on the company's activities in conformity with the certificate of organization and the operating agreement.",
+    "Those in control of the company have acted in a manner that is oppressive and directly harmful to the applicant.",
+    "A and B.",
+    "A, B and C."
+   ],
+   "a": 4,
+   "oe": [
+    "A ground.",
+    "A ground.",
+    "A ground. In an oppression case the court may order a remedy other than dissolution (§ 701(b)).",
+    "Incomplete. Oppression by those in control is also a ground.",
+    "Correct. All three are grounds, and the operating agreement may not vary them (§ 105). Oppression is a ground that RUPA § 801(4) does not list."
+   ],
+   "fixed": true
+  },
+  {
+   "id": "3.30",
+   "exam": 3,
+   "area": "LLC Dissolution",
+   "tag": "Practicability judged after expulsion",
+   "q": "Two companies each own 50% of Signal Bridge, LLC, which earns steady fees under a supply contract. One owner's principal, Ty, commingles the LLC's funds with his own firm's and freezes its bank account. A court expels Ty's company as a member, and the other owner continues to run the business, but the court also orders the LLC dissolved once the supply contract ends. Under Dunbar Group v. Tignor, how should the appellate court rule?",
+   "o": [
+    "Affirm both rulings, because Ty's misconduct justified both expulsion and dissolution.",
+    "Reverse both rulings, because an LLC member can be expelled only under the agreement.",
+    "Affirm the dissolution, because any 50/50 LLC dissolves once a member is expelled.",
+    "Reverse the expulsion, because dissolution is the only remedy for a deadlocked 50/50 LLC.",
+    "Affirm the expulsion, but reverse the dissolution, because the business can continue."
+   ],
+   "a": 4,
+   "oe": [
+    "Misconduct supported expulsion, but dissolution requires that present circumstances make it not reasonably practicable to continue, judged after the expulsion.",
+    "The statute provides for judicial expulsion of a member for misconduct of this kind (compare RULLCA § 602(6)), and Dunbar Group affirmed it.",
+    "A member's expulsion does not dissolve an LLC; the court must find a dissolution ground.",
+    "Expulsion was a proper remedy, and the court affirmed it; nothing required dissolution instead.",
+    "Correct. Once Ty's company was expelled and became a passive investor, the record did not show it was not reasonably practicable to carry on the business, and the order to keep operating showed it could continue (Dunbar Group)."
+   ],
+   "e": "Judicial dissolution requires that it be not reasonably practicable to carry on the business, judged after any expulsion that cures the problem (Dunbar Group)."
   }
  ]
 }
