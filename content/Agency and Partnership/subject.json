@@ -1,20 +1,31 @@
 {
   "title": "Agency & Partnership",
-  "description": "Business Associations, Weeks 1–8 (Bainbridge, Park & Rodrigues, 6th ed.). Covers creating an agency, actual and apparent authority, ratification and estoppel, a principal's tort liability, agents' fiduciary duties, choosing an entity, partnership formation under the UPA and RUPA, partners' rights, authority and duties, dissociation and dissolution, loss sharing, buyout agreements, limited partnerships, and LLCs.",
+  "description": "Business Associations, Weeks 1–14 (Bainbridge, Park & Rodrigues, 6th ed.), for the Dec 15 final. Covers creating an agency, actual and apparent authority, ratification and estoppel, a principal's tort liability, agents' fiduciary duties, choosing an entity, partnership formation under the UPA and RUPA, partners' rights, authority and duties, grabbing and leaving, dissociation and dissolution, loss sharing, buyout agreements, limited partnerships and LLPs, and LLCs: formation, the operating agreement, veil piercing, fiduciary duties, additional capital, expulsion and dissolution.",
   "icon": "statue-angel-gabriel",
   "accent": "#2d4e88",
   "order": 5,
   "refs": { "outline": "agency-and-partnership-outline" },
   "documents": {
-    "Agency_and_Partnership_Condensed_Outline.docx": {
+    "Agency_and_Partnership_Outline.docx": {
       "slug": "agency-and-partnership-outline",
       "title": "Agency & Partnership Outline",
       "type": "outline",
       "theme": "structured",
       "outsideColor": "64748B",
+      "description": "Condensed exam outline of Weeks 1–14 on the Fall 2026 syllabus (Bainbridge pp. 1–200, 231–416 and 509–624), in syllabus order with each section labeled by its week. Part I covers agency: creating the relationship, authority, ratification and estoppel, tort liability, and agents' fiduciary duties. Part II covers partnerships: choosing an entity, formation, property, management, partners' fiduciary duties, grabbing and leaving and expulsion (Week 9), dissociation and dissolution under the UPA and RUPA, Kovacik loss sharing, buyout agreements, and limited partnerships, LLPs and LLLPs (Week 10). Part III covers LLCs: formation and defective formation, the operating agreement and the implied covenant (Week 11), veil piercing and fiduciary duties (Week 12), additional capital, expulsion and dissolution (Week 13), and a final-review chart comparing the entities with a checklist for using the operating agreement on the open-book part (Week 14). Rule and tip boxes throughout, and a card for every assigned case with its casebook page and class.",
+      "tags": ["agency", "partnership", "RUPA", "RULLCA", "Restatement of Agency", "LLC", "outline", "Weeks 1–14"],
+      "order": 1
+    },
+    "Agency_and_Partnership_Condensed_Outline.docx": {
+      "slug": "agency-and-partnership-outline-weeks-1-8",
+      "archived": true,
+      "title": "Agency & Partnership Outline (Weeks 1–8)",
+      "type": "outline",
+      "theme": "structured",
+      "outsideColor": "64748B",
       "description": "Condensed exam outline of Weeks 1–8, built from the Class 1–8 slides, the casebook, and the 2026 statutory supplement. Part I covers agency: creating the relationship, contract liability and authority, tort liability, and fiduciary duties. Part II covers business entities: choosing an entity, partnership formation, economic rights and property, management and authority, partners' fiduciary duties, dissociation and dissolution, Kovacik loss sharing, buyout agreements, limited partnerships, and LLCs. Rule and tip boxes throughout, and a card for every case (62 main cases plus slide references and supplemental readings).",
       "tags": ["agency", "partnership", "RUPA", "Restatement of Agency", "LLC", "outline", "Weeks 1–8"],
-      "order": 1
+      "order": 1.9
     },
     "Agency_and_Partnership_Bar_Questions.html": {
       "slug": "agency-and-partnership-bar-questions",
