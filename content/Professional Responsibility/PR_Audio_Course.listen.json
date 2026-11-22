@@ -1223,6 +1223,1151 @@
      ]
     }
    ]
+  },
+  {
+   "day": 2,
+   "title": "Confidentiality, fiduciary duty and authority, fees and client funds",
+   "minutes": 102,
+   "episodes": [
+    {
+     "id": "pr-d2-e01",
+     "title": "Spaced review of Day 1",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Welcome to Day 2. We start, as every day will, with five minutes of rapid recall from what came before. Answer out loud before the answer plays."
+      },
+      {
+       "ask": "Does a Model Rule violation create a cause of action for malpractice?",
+       "answer": "No. Scope paragraph 20: no cause of action and no presumption of breach. The Rules are evidence of the standard of care.",
+       "pause": 6
+      },
+      {
+       "ask": "Under Rule 8.1, what must an applicant never do, and what may she decline to do?",
+       "answer": "Never knowingly make a false statement of material fact or ignore a lawful demand. She may decline to reveal information protected by 1.6.",
+       "pause": 6
+      },
+      {
+       "ask": "Does 8.4(b) require a criminal conviction?",
+       "answer": "No. Only a criminal act reflecting adversely on honesty, trustworthiness, or fitness.",
+       "pause": 6
+      },
+      {
+       "ask": "Name the four 5.5(c) safe harbors in two words each.",
+       "answer": "Local counsel; tribunal-related; ADR-related; home practice.",
+       "pause": 6
+      },
+      {
+       "ask": "For a matter pending before a tribunal, whose conduct rules apply under 8.5(b)?",
+       "answer": "The rules of the jurisdiction where the tribunal sits, unless its rules provide otherwise.",
+       "pause": 6
+      },
+      {
+       "ask": "What does fiduciary breach require that negligence requires but fiduciary breach does not?",
+       "answer": "Negligence requires causation and economic loss. Fiduciary breach needs neither negligence nor loss.",
+       "pause": 6
+      },
+      {
+       "ask": "What are the three elements of the duty to report under 8.3(a)?",
+       "answer": "Knowledge of another lawyer's violation, which raises a substantial question about honesty, trustworthiness, or fitness. Then report to the appropriate professional authority.",
+       "pause": 6
+      },
+      {
+       "ask": "Is silence consent?",
+       "answer": "No. Informed consent usually requires an affirmative response.",
+       "pause": 6
+      },
+      {
+       "ask": "Cronic presumes prejudice in which two situations?",
+       "answer": "Counsel absent at a critical stage, or no meaningful adversarial testing at all.",
+       "pause": 6
+      },
+      {
+       "ask": "Which two duties stop at scope, and which two do not?",
+       "answer": "Care and candor stop at scope. Loyalty and confidentiality do not.",
+       "pause": 6
+      },
+      {
+       "ask": "A prospective malpractice waiver versus settling an existing claim: what does each require?",
+       "answer": "A prospective limit requires actual independent representation. Settling a claim requires written advice to seek counsel and a reasonable opportunity to do so.",
+       "pause": 6
+      },
+      {
+       "ask": "What are the three conditions for 1.14(b) protective action?",
+       "answer": "Decision-making limitations, risk of substantial harm, and inability to act adequately in one's own interest.",
+       "pause": 6
+      },
+      {
+       "ask": "Name the four 1.16(a) mandatory withdrawal grounds.",
+       "answer": "The representation will violate the Rules or law; impairment; discharge; and the client using or persisting in using the lawyer's services for crime or fraud after the limits are discussed.",
+       "pause": 6
+      },
+      {
+       "say": "Good. Today is Part Three, confidentiality, Part Four, agency and fiduciary duty, and Part Five, fees and client funds. Confidentiality is one of the most heavily tested topics on the exam, so we take it slowly."
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e02",
+     "title": "The duty of confidentiality: Rule 1.6(a) and (c)",
+     "minutes": 10,
+     "segments": [
+      {
+       "say": "Roadmap. Three questions, in order, all required, before you ever look for an exception. One, to whom is the duty owed? Two, what information does it cover? Three, what does it require? Only then, is there an exception."
+      },
+      {
+       "say": "To whom. Current clients, under 1.6(a) and 1.8(b). Former clients, under 1.9(c): the duty survives termination, and time, truth, and a memoir are not exceptions. Prospective clients, under 1.18(b): only information learned from the prospective client."
+      },
+      {
+       "say": "The rule, 1.6(a), in its words. A lawyer shall not reveal information relating to the representation of a client unless the client gives informed consent, the disclosure is impliedly authorized in order to carry out the representation, or the disclosure is permitted by paragraph (b). So three gateways: informed consent, implied authorization, or a (b) exception."
+      },
+      {
+       "say": "What information is covered? It is incredibly broad. Information from any source: witnesses, documents, your own research. The client's identity and the fact of representation. Even public records. Filings at the clerk's office are not generally known, so you cannot confirm them to a reporter. Say, I can't discuss client matters, and don't lie."
+      },
+      {
+       "say": "Now three limits on what counts at all. These are limits, not exceptions. One, for prospective clients, only what they told you. Two, relating to means obtained in connection with. What Ron learned from his client Petrified belongs to Petrified, even though it is relevant to his other client Mojo. Loyalty to one client never licenses breaching duties to another. Three, generally known information, under 1.9(c)(1) and ABA Opinion 479. Generally known means widely recognized by members of the public in the relevant geographic area, or in the client's industry. That is much more than one disclosure or a public record. Information that takes more than minimal effort to find is not generally known. A front-page headline in a major paper is. Something buried in a ninety-page land-records filing is not."
+      },
+      {
+       "say": "The trap: use versus reveal for former clients. 1.9(c)(1) lets you use generally known information to a former client's disadvantage. But 1.9(c)(2) still bars revealing it except as the Rules permit. Generally known is not a general disclosure license. Some states, like New York, exclude generally known information from the duty entirely, but not the Model Rules."
+      },
+      {
+       "say": "What does the duty require? Three things. First, no voluntary disclosure, except to the client or its agent, or to people in your firm who need to know. Voluntary is the key word. Confidentiality yields to legal compulsion, subpoenas and discovery. But privilege and work product must be asserted in good faith. Appeal where warranted; you need not defy a final order."
+      },
+      {
+       "say": "Second, no use to the client's disadvantage, under 1.8(b), 1.9(c)(1), and 1.18(b). Wrongful profit that does not hurt the client, insider trading on a deal, is not a confidentiality-Rule violation, but brings disgorgement and criminal liability. General knowledge, research, and forms may be reused, 1.8 Comment 5. Client-specific facts may not."
+      },
+      {
+       "say": "Third, reasonable safeguards, 1.6(c). Make reasonable efforts to prevent inadvertent or unauthorized disclosure of, or access to, client information. Comment 18 factors, five, weighed together. One, the sensitivity of the information. Two, the likelihood of disclosure without more safeguards. Three, the cost of more safeguards. Four, the difficulty of implementing them. Five, the extent to which they would hurt the lawyer's ability to represent clients. Reasonableness, not perfection. Being mugged while carrying a locked briefcase is not a violation. Comment 19, transmission: take reasonable precautions against unintended recipients. Special security is not required if the method carries a reasonable expectation of privacy, but sensitive matters may warrant more."
+      },
+      {
+       "say": "In practice: no talk in elevators, lobbies, rideshares, or restaurants. No valet with files in the car. Lock up market-moving material. A screen guard where others can see your laptop. Electronic safeguards scaled to sensitivity, per Opinion 477R."
+      },
+      {
+       "say": "Slide applications. Problem 8A-8, Frank finds proof the wife cheated. Tell supervising partner Sally? Yes, she needs to know. Tell an associate not on the case? No, no need to know. Use it as settlement leverage with opposing counsel? No, not without the client's informed consent, and gratuitous use of irrelevant embarrassing facts risks 4.4(a). Produce it in response to the wife's document request? Yes, that is compelled disclosure. Discuss with classmates at a bar? Only as a hypothetical with no reasonable likelihood the listener could identify the client or situation, Comment 4."
+      },
+      {
+       "say": "Problem 8A-10. Tipping a friend that the property is for sale breaches 1.6. Reusing the partner's rejection-and-counteroffer form, customized, is fine; that is general knowledge. Making his own offer on the client's preferred terms uses the client's information to its disadvantage, 1.8(b), and is a 1.8(a) business deal."
+      },
+      {
+       "say": "Problem 8A-11. Files locked in the trunk during a quick stop: reasonable. Left visible on the passenger seat: riskier. A stolen laptop is not a violation if the safeguards were reasonable, encryption and a password. Market-moving IPO drafts left on a desk overnight are not reasonable; in Problem 5D-3, the partner is not being a neat freak. A cross outline on a desk inside a secure DA's office is closer to reasonable."
+      },
+      {
+       "say": "Problem 5D-2, gossip at the reunion. The classmate breached 1.6 by sharing a client's STD story, even without a name, if the client is identifiable. Danielle should speak up, but 8.3 applies only if she knows of a violation raising a substantial question about fitness."
+      },
+      {
+       "say": "Consequences, by act. Voluntary disclosure: discipline under 1.6(a), 1.9(c), or 1.18(b), and civil damages or restitution. Use to the client's disadvantage: discipline under 1.8(b), 1.9(c), or 1.18(b), and damages or restitution. Wrongful profit with no disadvantage: no confidentiality Rule, but disgorgement. General expertise harming no one: nothing."
+      },
+      {
+       "say": "When the duty ends. Any one of three. One, the client's informed waiver. Two, the information becomes generally known, for use, and in some states for disclosure. Three, death, in about half the states, at least in part, mostly for disputes among heirs. But the federal privilege survives death, which is Swidler and Berlin."
+      },
+      {
+       "ask": "A reporter calls a lawyer: I saw the complaint your client filed at the courthouse yesterday. Can you confirm you represent her and what the suit is about? What should the lawyer say?",
+       "answer": "I can't discuss client matters. The identity of the client and the filing are information relating to the representation, and a public court filing is not generally known. And he must not lie.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer represented a company in a merger. Afterward, he buys the target's stock on what he learned, before the announcement. The client is not hurt. Which consequence fits?",
+       "answer": "No confidentiality-Rule violation for use, since there is no disadvantage to the client, but disgorgement of the profit and criminal insider-trading liability. And misconduct rules like 8.4(b) may apply.",
+       "pause": 12
+      },
+      {
+       "ask": "A former client's bankruptcy was front-page news in the city's major paper. May her former lawyer use that fact against her for a new client? May he tell others about it?",
+       "answer": "He may use it under 1.9(c)(1), because it is generally known. But under 1.9(c)(2) he may not reveal it except as the Rules permit.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. Public record does not mean generally known. Use and reveal are different. Confidentiality yields to compulsion, but you must assert privilege first. And safeguards need be reasonable, not perfect."
+      },
+      {
+       "say": "Recap. 1.6(a) bars revealing information relating to the representation unless consent, implied authorization, or a (b) exception. It covers information from any source, including identity and public records. It bars use to the client's disadvantage, and 1.6(c) requires reasonable safeguards, weighed by sensitivity, likelihood, cost, difficulty, and impact."
+      },
+      {
+       "ask": "Name the three gateways in 1.6(a).",
+       "answer": "Informed consent, implied authorization to carry out the representation, and a paragraph (b) exception.",
+       "pause": 8
+      },
+      {
+       "ask": "Define generally known under Opinion 479.",
+       "answer": "Widely recognized by members of the public in the relevant geographic area or the client's industry. Not merely available in a public record.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the five Comment 18 factors for safeguards.",
+       "answer": "Sensitivity, likelihood of disclosure, cost, difficulty of implementing, and the effect on the lawyer's ability to represent clients.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e03",
+     "title": "Confidentiality, privilege, and work product",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. Three different protections that students blur together: the ethical duty of confidentiality, the attorney-client privilege, and work product. We compare them, take Swidler and Berlin, then classify nine items from Problem 8A-12."
+      },
+      {
+       "say": "Compare them on five points. What it covers. Confidentiality covers everything obtained in connection with the representation, unless generally known. Privilege covers communications in confidence between lawyer and client for legal advice. Work product, under Federal Rule 26(b)(3), covers documents and things prepared in anticipation of litigation by or for a party or its representative."
+      },
+      {
+       "say": "When it applies. Confidentiality, all the time. Privilege and work product, where evidence rules apply."
+      },
+      {
+       "say": "Effect. Confidentiality bars voluntary disclosure and use, but yields to compulsion. Privilege gives immunity from compelled disclosure. Work product is qualified: it yields to substantial need plus undue hardship. Mental impressions are almost never discoverable. And a witness can always get her own statement."
+      },
+      {
+       "say": "Waiver. Confidentiality: client consent, or becoming generally known. Privilege: one authorized disclosure generally waives it for all purposes. Work product: the lawyer holds it, but the client can require waiver. Holder: the client for confidentiality and privilege; the attorney for work product."
+      },
+      {
+       "say": "Privilege elements, three, all required. One, an attorney-client relationship existed at the time. Two, the communication was confidential and not shared with third parties. Three, it was made to obtain or give legal advice. Even a minor voluntary disclosure ends privilege for all purposes. The joint-defense, or common-interest, doctrine lets co-defendants share privileged information without waiver. Work product applies whether or not shared with the client, and necessity can overcome it."
+      },
+      {
+       "say": "Consulting firm counsel. Some courts deny privilege to internal consultations, Bank Brussels Lambert versus Credit Lyonnais. Newer state supreme court decisions protect consultations with designated firm counsel: RFF Family Partnership versus Burns and Levinson, and St. Simons Waterfront versus Hunter Maclean."
+      },
+      {
+       "say": "The case. Swidler and Berlin versus United States, 1998. The independent counsel subpoenaed a lawyer's notes of a meeting with deputy White House counsel Vince Foster shortly before Foster's suicide. The Supreme Court held the attorney-client privilege survives the client's death, even in a criminal investigation. Contrast the ethical duty of confidentiality, which about half the states end, at least in part, at death."
+      },
+      {
+       "say": "Problem 8A-12. Classify each item: confidential, privileged, work product. Try them with me. A, press clippings on public reaction to the client's project: confidential, yes; privileged, no; work product only if gathered in anticipation of litigation. B, a prosecutor's notes of a witness interview: confidential, not privileged, work product, yes, as mental impressions. C, the DA investigator's notes of the interview: confidential, not privileged, work product, yes, prepared by a party's representative. D, the witness's signed statement: confidential, not privileged, work product, but the witness can get her own statement."
+      },
+      {
+       "say": "E, the defense lawyer saw the client arrive with a bloody shirt: confidential, but not privileged, because it is an observation, not a communication. Not work product. F, an employee-to-employee business email: confidential once counsel has it, not privileged, not work product. G, the same email sent to Frank for advice on suing: confidential; the transmittal request may be privileged, but the pre-existing email is not; possibly work product, since litigation is anticipated. H, Maya's research memo for the partner on a deal clause: confidential, arguably privileged as legal advice in the making, not work product because there is no litigation. I, the memo sent to the client: confidential and privileged, legal advice communicated in confidence, not work product."
+      },
+      {
+       "ask": "A client hands her lawyer a pre-existing internal company email and asks, can we sue over this? Is the email now privileged?",
+       "answer": "No. A pre-existing document does not become privileged by being sent to counsel. The cover request for advice may be privileged, and the email is confidential.",
+       "pause": 10
+      },
+      {
+       "ask": "A client tells his lawyer something in confidence, then repeats it to his golf partner. Is it still privileged? Still confidential?",
+       "answer": "Privilege is likely waived by the voluntary disclosure to a third party. The lawyer's ethical duty of confidentiality continues unless the information becomes generally known.",
+       "pause": 10
+      },
+      {
+       "ask": "The client has died. A prosecutor subpoenas her lawyer's notes of a privileged conversation. Result under federal law?",
+       "answer": "The privilege survives death, per Swidler and Berlin, so the notes are protected.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Observations are confidential but not privileged. A deal memo is not work product. Witness interview notes are work product, not privileged. And confidentiality yields to compulsion while privilege resists it."
+      },
+      {
+       "say": "Recap. Confidentiality is the broad ethical duty. Privilege protects confidential lawyer-client communications for legal advice, and one disclosure waives it. Work product is qualified protection for litigation materials, held by the lawyer."
+      },
+      {
+       "ask": "What are the three elements of the attorney-client privilege?",
+       "answer": "A lawyer-client relationship at the time, a confidential communication not shared with third parties, made to get or give legal advice.",
+       "pause": 8
+      },
+      {
+       "ask": "What overcomes ordinary work product?",
+       "answer": "Substantial need plus undue hardship. Mental impressions are almost never discoverable.",
+       "pause": 8
+      },
+      {
+       "ask": "Who holds work product protection?",
+       "answer": "The attorney, though the client can require waiver.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e04",
+     "title": "The 1.6(b) exceptions, part one: framing and harm prevention",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. The framing principles that apply to every exception, consent and implied authorization, then exceptions (b)(1), (b)(2), and (b)(3)."
+      },
+      {
+       "say": "Framing principle one. Break information into its smallest units. Check whether each unit is confidential at all before hunting for an exception. And not confidential means only may, not should."
+      },
+      {
+       "say": "Framing principle two. Every 1.6(b) exception is permissive. It covers disclosure only, not use. And it applies only to the extent the lawyer reasonably believes necessary. Three limits, all required: the minimum information, to the minimum people, for the specific purpose. Exceeding any of the three is a violation. Reasonably believes is a subjective belief that is also objectively reasonable."
+      },
+      {
+       "say": "Consent and implied authorization. Express informed consent needs no particular form, though you should confirm significant consents in writing. Implied authorization covers need-to-know sharing with the firm team and facts in a filed complaint, Comment 5. But it does not override an express client restriction. Problem 8B-1: briefing a firm colleague helping review documents is implied. Revealing where the bodies are, after explaining the goodwill and the incriminating effect and getting the client's agreement, is informed consent. Previewing the client's anticipated testimony in an opening statement is implied, though it is wise to walk the client through it."
+      },
+      {
+       "say": "Exceptions also live outside 1.6: 1.13(c), 1.14(c), 3.3(c), and 4.1(b). And states vary on 1.6(b) more than on any other provision."
+      },
+      {
+       "say": "Now the rule. Under 1.6(b), a lawyer may reveal information to the extent the lawyer reasonably believes necessary, in seven situations. Any one suffices. Here is the full list, then we take each in turn. One, to prevent reasonably certain death or substantial bodily harm. Two, to prevent the client from committing a crime or fraud reasonably certain to cause substantial financial injury, in furtherance of which the client has used or is using the lawyer's services. Three, to prevent, mitigate, or rectify substantial financial injury from such a crime or fraud, in furtherance of which the client has used the lawyer's services. Four, to secure legal advice about the lawyer's compliance with the Rules. Five, the self-defense and fee-claim exception. Six, to comply with other law or a court order. Seven, to detect and resolve conflicts from a change of employment or firm composition."
+      },
+      {
+       "say": "Exception (b)(1), death or substantial bodily harm. Reasonably certain means imminent, or a present and substantial threat, Comment 6. It is not limited to client crimes: for example a victim who will die without aid. Venting, I'll wring her neck, does not qualify. A gun plus a threat does. Try to dissuade the client first if that is safe. There is no Model Rule duty to warn, though some states impose one. And it does not apply once the harm is complete."
+      },
+      {
+       "say": "Problem 8B-2 applications. I choked her, she wasn't moving: you may call 911, since aid may still prevent death. A visibly drunk client about to drive 45 minutes, after you tried to dissuade him: you may call the troopers. Lead in a city's water causing neurological harm to children: (b)(1) can apply, but a newspaper reporter is not the minimum audience. In-house counsel should report up under 1.13(b), then out to health regulators under 1.13(c), to the extent necessary."
+      },
+      {
+       "say": "Exception (b)(2), preventing a client's financial crime or fraud. Elements: the client's crime or fraud; reasonably certain to cause substantial injury to another's financial interests or property; and the client has used or is using the lawyer's services in furtherance. The lawyer need not have knowingly assisted."
+      },
+      {
+       "say": "Exception (b)(3), mitigating or rectifying. It reaches completed frauds, but still requires use of your services. Pre-retention crimes, or crimes committed without your services, never qualify, for example an old embezzlement. And defending the past crime is not use of your services in furtherance."
+      },
+      {
+       "say": "The contrast between (b)(2) and (b)(3). (b)(2) is forward-looking: to prevent. Has used or is using. (b)(3) is backward-looking too: to prevent, mitigate, or rectify. Has used. Both require the lawyer's services. And (b)(1) requires nothing about the client or the lawyer's services, just reasonably certain death or substantial bodily harm."
+      },
+      {
+       "ask": "A client tells his lawyer he plans to kill his business partner tonight. He has a gun and the partner's address. The lawyer tries to talk him down and fails. May the lawyer call the police? Must she?",
+       "answer": "She may, under 1.6(b)(1): reasonably certain death, and she may reveal only what is reasonably necessary to prevent it. She is not required to under the Model Rules, though some states impose a duty.",
+       "pause": 12
+      },
+      {
+       "ask": "A client tells her new lawyer that five years ago, before hiring him, she embezzled from her employer. She wants him to defend her. May the lawyer disclose to the employer under 1.6(b)(3)?",
+       "answer": "No. (b)(3) requires that the client used the lawyer's services in furtherance of the crime. A pre-retention crime never qualifies, and defending it is not use.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer prepares loan documents. He later learns the client used them to defraud a lender out of millions, and the fraud is ongoing. May he disclose?",
+       "answer": "Yes. Under 1.6(b)(2) to prevent continuing injury, and (b)(3) to mitigate or rectify, because the client used his services. Disclosure is limited to what is reasonably necessary. He must also withdraw under 1.16(a), and 4.1(b) may make disclosure mandatory if needed to avoid assisting.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. Every exception is may, not must. Minimum information, minimum people, specific purpose. (b)(2) and (b)(3) need the lawyer's services. And (b)(1) is forward-looking: once the harm is complete, it is gone."
+      },
+      {
+       "say": "Recap. Break information into units; check confidentiality first. Exceptions are permissive, disclosure only, and limited to what is reasonably necessary. (b)(1): reasonably certain death or substantial bodily harm, any source. (b)(2): prevent a client crime or fraud using your services, causing substantial financial injury. (b)(3): prevent, mitigate, or rectify the injury from such a crime or fraud."
+      },
+      {
+       "ask": "What three limits apply to every 1.6(b) disclosure?",
+       "answer": "Minimum information, to the minimum people, for the specific purpose.",
+       "pause": 8
+      },
+      {
+       "ask": "What does reasonably certain mean under (b)(1)?",
+       "answer": "Imminent, or a present and substantial threat.",
+       "pause": 8
+      },
+      {
+       "ask": "Does (b)(1) require that the threat come from the client?",
+       "answer": "No. It is not limited to client crimes.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e05",
+     "title": "The 1.6(b) exceptions, part two: advice, self-defense, law, and conflicts",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Exceptions (b)(4), seeking ethics advice; (b)(5), claims and defenses; (b)(6), other law and court orders; and (b)(7), conflict checking when lawyers move."
+      },
+      {
+       "say": "Exception (b)(4): to secure legal advice about the lawyer's compliance with the Rules. To keep it privileged, retain the adviser as your counsel. You must be the client, asking on your own behalf. Hallway chats, a retired aunt, or an uninvolved partner likely are not privileged. A no-names hypothetical avoids disclosure altogether."
+      },
+      {
+       "say": "Problem 8B-4, Gina Grayhair. A retired, inactive-status aunt: likely not privileged. An office suite-mate with her own practice: probably not either. A short email confirming she'll act as your lawyer for this limited purpose, and paying her rate helps, makes it privileged. The senior partner on the case is part of the team, so that is implied authorization. For the uninvolved litigation chair, disclosure within the firm is permitted, but privilege depends on the state's firm-counsel rule."
+      },
+      {
+       "say": "Exception (b)(5) has three branches. One, to establish a claim or defense for the lawyer in a controversy with the client, like a fee dispute. Two, to defend against a criminal charge or civil claim against the lawyer based on conduct in which the client was involved. Three, to respond to allegations in any proceeding concerning the lawyer's representation of the client."
+      },
+      {
+       "say": "Limits on (b)(5). Minimum relevant information only: the negotiation file, yes; an irrelevant ten-year-old fraud judgment, no. Comment 10: you may respond to an assertion of complicity before any proceeding is filed. But not for online reviews. ABA Opinion 496 says give a neutral, non-disclosing reply."
+      },
+      {
+       "say": "Problem 8B-5, Bonnie Badmouth. In fee arbitration, emails showing she approved the tasks: OK. Trust records and emails sent to the bar's disciplinary inquiry: OK. Answering Dan's fraud accusation with Bonnie's documents that formed the basis for your statements: OK. But Bonnie's ten-year-old fraud judgment: not OK. Telling Carla at church about Bonnie's dementia: not OK, no proceeding and gratuitous. I can't discuss Bonnie's affairs, but what she said isn't true: risky, since even a denial reveals something. I can't discuss client matters: the safe line."
+      },
+      {
+       "say": "Exception (b)(6): to comply with other law or a court order. Assert privilege, seek review, then comply with a binding order; seek sealing or in camera review. Other law includes discovery under Federal Rules 26 through 37, mandatory disclosures, and subpoenas."
+      },
+      {
+       "say": "Problem 8B-6. Assets are not privileged communications, so labeling secret offshore money in your trust account privileged on a court-mandated asset form was improper. Once ordered, you must comply even over the client's objection, under 1.6(b)(6), 3.3, and 3.4(c), and consider withdrawal. Filing the trade-secret description after seeking, but not getting, a stay is proper."
+      },
+      {
+       "say": "Exception (b)(7): to detect and resolve conflicts arising from the lawyer's change of employment or changes in a firm's composition or ownership. Two limits. Only limited information, identities and the general nature of matters. And not if it would compromise privilege or otherwise prejudice the client, for example an unannounced takeover, Comment 13."
+      },
+      {
+       "ask": "A former client posts a one-star online review saying the lawyer lost her case through laziness. May the lawyer reply with details of the client's own lies that sank the case?",
+       "answer": "No. Under ABA Opinion 496, 1.6(b)(5) does not cover online reviews. A neutral, non-disclosing reply is the limit.",
+       "pause": 12
+      },
+      {
+       "ask": "A client refuses to pay a fee, and the lawyer sues. May she reveal the client's instructions and emails approving the work? May she reveal an unrelated affair the client mentioned?",
+       "answer": "She may reveal what is reasonably necessary to establish her fee claim, like the approval emails, under (b)(5). The affair is irrelevant, and revealing it exceeds the minimum necessary.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer is moving to a new firm and wants to run a conflict check. What may she disclose?",
+       "answer": "Under (b)(7), limited information, like client identities and the general nature of matters, and only if it would not compromise privilege or prejudice the client.",
+       "pause": 10
+      },
+      {
+       "ask": "A court orders a lawyer to disclose a client's whereabouts after the lawyer asserted privilege and lost on appeal. The client objects. What now?",
+       "answer": "Comply with the final order under 1.6(b)(6), disclosing only what the order requires, and seek sealing where appropriate. Confidentiality yields to a binding order.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. Ethics advice is only privileged if you actually retain the adviser as your lawyer. Online reviews are not proceedings. Even a denial can reveal. And (b)(7) yields to prejudice."
+      },
+      {
+       "say": "Recap. (b)(4): advice on your own compliance. (b)(5): fee claims, defending yourself, and responding to allegations about the representation, minimum relevant information only. (b)(6): other law or court order, after asserting privilege. (b)(7): conflict checks on lateral moves, limited and non-prejudicial."
+      },
+      {
+       "ask": "Name all seven 1.6(b) exceptions in order.",
+       "answer": "Death or bodily harm; preventing client financial crime or fraud using your services; preventing, mitigating, or rectifying its injury; ethics advice; claims and defenses; other law or court order; conflict checks on lateral moves.",
+       "pause": 8
+      },
+      {
+       "ask": "What did ABA Opinion 496 say about online reviews?",
+       "answer": "1.6(b)(5) does not authorize revealing confidences to respond. Give a neutral, non-disclosing reply.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the safe line when asked about a client's affairs?",
+       "answer": "I can't discuss client matters.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e06",
+     "title": "When disclosure becomes mandatory, and the hard cases",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The rules that turn may into must, the disclosure map of must not, may, and must, honesty plus confidentiality, and the hard cases: a miscarriage of justice, kidnapped children, McClure versus Thompson, and the Buried Bodies Case."
+      },
+      {
+       "say": "Four places disclosure becomes mandatory or overrides 1.6. One, 4.1(b): you must disclose a material fact when necessary to avoid assisting a client's crime or fraud, unless 1.6 prohibits it. Because 1.6(b)(2) and (b)(3) permit disclosure when your services were used, 4.1(b) turns that permission into a duty. Two, 1.13(b), report up: an organization's lawyer who knows of a constituent's violation likely to cause the organization substantial injury must act in its best interest, ordinarily reporting to higher authority, up to the board."
+      },
+      {
+       "say": "Three, 1.13(c), report out. If the highest authority fails to address a clear violation reasonably certain to cause substantial injury to the organization, the lawyer may reveal information, even if 1.6 would not permit it, to the extent necessary. Unlike 1.6(b)(2), this does not require use of the lawyer's services. And 1.13(d) excludes lawyers hired to investigate or defend the violation. Four, 3.3: no false statements to a tribunal, disclosure of directly adverse controlling authority, and remedial measures for false evidence, even if compliance requires disclosing 1.6 information, under 3.3(c)."
+      },
+      {
+       "say": "And remember: 8.1 and 8.3 never require revealing confidences."
+      },
+      {
+       "say": "Honesty and confidentiality together. When asked about a confidential plan, will you move to dismiss, decline to answer, and don't lie. That is 4.1(a), 8.4(c), and In re Pressly. I can't discuss that satisfies both duties."
+      },
+      {
+       "say": "The disclosure map. Must not: anything relating to the representation, from any source, including identity and public records, unless consent, implied authorization, or an exception applies. May: 1.6(b)(1) through (7); 1.13(c), report out; 1.14(c), protective action. Always to the minimum extent necessary. Must: 4.1(b), to avoid assisting a crime or fraud, when 1.6 permits it; 3.3, false evidence or statements to a tribunal, even over 1.6; 1.13(b), report up, inside the entity; and complying with a final court order. Never required: 8.1 and 8.3 reports that would reveal 1.6 information, and 8.3 reports of lawyers assistance program information."
+      },
+      {
+       "say": "Hard case 8C-1, a miscarriage of justice. Another man is imprisoned for the client's crime. Imprisonment is not death or bodily harm, and there is no wrongful-conviction exception, so urge the client to come forward. What could change the answer: the client's death, in some states, or an approaching execution, which is arguably reasonably certain death."
+      },
+      {
+       "say": "Hard case 8C-2, kidnapped children. If they may be alive, 1.6(b)(1) permits disclosing the location, limited to what is necessary. That is McClure versus Thompson."
+      },
+      {
+       "say": "McClure versus Thompson, Ninth Circuit, 2003. A defense lawyer, believing two missing children might still be alive, revealed to police where his client said the bodies could be found. They were dead. The client later claimed ineffective assistance. The court held the disclosure was permissible if the lawyer reasonably believed it was necessary to prevent death or serious bodily harm, judged by what he knew then, after reasonable inquiry. The lesson: (b)(1) looks forward to preventing harm, and requires a reasonable belief and the minimum disclosure. It does not apply once the harm is complete."
+      },
+      {
+       "say": "The Buried Bodies Case, Lake Pleasant, New York, in the 1970s, from the Week 3 handout. Defense lawyers who knew where two missing girls' bodies were stayed silent even when the families begged them. They were ostracized locally and lionized by the defense bar. Contrast Problem 8B-1(b), where the client consented to disclosure. One note the outline marks as outside the class materials, so verify it: a criminal charge against lawyer Frank Belge for failing to report the bodies was dismissed on privilege grounds."
+      },
+      {
+       "ask": "A lawyer learns his client, now serving a short sentence for a different crime, committed a robbery for which an innocent man is serving ten years. May the lawyer disclose?",
+       "answer": "Not under the Model Rules. Imprisonment is not death or substantial bodily harm, and there is no wrongful-conviction exception. He should urge the client to come forward.",
+       "pause": 12
+      },
+      {
+       "ask": "Opposing counsel asks a lawyer in negotiations, does your client have any other offers? The client has none, and has told the lawyer to keep that confidential. What may the lawyer say?",
+       "answer": "He may decline to answer, I can't discuss that. He may not lie and claim other offers, because that is a false statement of material fact under 4.1(a) and dishonesty under 8.4(c).",
+       "pause": 12
+      },
+      {
+       "ask": "A corporation's general counsel learns the CFO is cooking the books in a way that will clearly injure the company. She reports to the CEO and then the board. The board refuses to act. What may she do?",
+       "answer": "She may report out under 1.13(c), revealing information to the extent reasonably necessary to prevent substantial injury to the organization, even if 1.6 would not permit it, and even though her services were not used. Unless she was hired to investigate or defend the violation.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. Mandatory disclosure under 4.1(b) depends on 1.6 permitting it. 3.3 overrides 1.6. 1.13(c) does not need use of the lawyer's services. And no exception covers an innocent person's imprisonment."
+      },
+      {
+       "say": "Recap. Must not is the default. May: the seven 1.6(b) exceptions, 1.13(c), and 1.14(c). Must: 4.1(b), 3.3, 1.13(b), and final court orders. Never required: 8.1 and 8.3 disclosures of confidences. Decline to answer, but never lie."
+      },
+      {
+       "ask": "Which rule turns a 1.6(b)(2) permission into a duty?",
+       "answer": "4.1(b): disclose a material fact when necessary to avoid assisting a client's crime or fraud, unless 1.6 prohibits it.",
+       "pause": 8
+      },
+      {
+       "ask": "What did McClure versus Thompson hold?",
+       "answer": "Disclosure to prevent death is permissible if the lawyer reasonably believed it necessary, judged by what he knew then, after reasonable inquiry.",
+       "pause": 8
+      },
+      {
+       "ask": "Which disclosure rule overrides 1.6 entirely?",
+       "answer": "3.3, candor to the tribunal, under 3.3(c). And 1.13(c) permits reporting out even where 1.6 would not.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e07",
+     "title": "The lawyer as fiduciary",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. How someone becomes a fiduciary, Meinhard versus Salmon, the four-question fiduciary analysis, the four duties, why conflicts need no harm, and the ban on sexual relations with clients in 1.8(j)."
+      },
+      {
+       "say": "The theme quote, from Meinhard versus Salmon: not honesty alone, but the punctilio of an honor the most sensitive."
+      },
+      {
+       "say": "Becoming a fiduciary. By status: lawyers, always, to clients, everywhere; agents, trustees, guardians, directors, general partners, doctors, clergy. By circumstance: someone reposes special trust and the fiduciary accepts it, like a neighbor given signature authority over an elderly friend's accounts. Some states call this a confidential relationship, sometimes treated as less than a full fiduciary one. It arises when the beneficiary offers, and the fiduciary accepts, trust because of any one of three things. One, the special nature of the relationship. Two, the fiduciary's special skills. Three, the beneficiary's entrusting of secret or confidential information."
+      },
+      {
+       "say": "Scope is limited by beneficiary, meaning identified persons, and by subject matter, meaning the engagement. Self-dealing claims: in many states the burden shifts to the fiduciary to prove fairness, and enhanced remedies, disgorgement and punitive damages, are available. Expect a higher standard even when you were not acting as a lawyer."
+      },
+      {
+       "say": "Meinhard versus Salmon, New York, 1928, Chief Judge Cardozo. Salmon managed a hotel lease in a joint venture with Meinhard. Near the end of the lease, the landlord offered Salmon alone a much larger redevelopment deal, which he took without telling Meinhard. Salmon breached his fiduciary duty by appropriating an opportunity that arose from the venture, and Meinhard got a share. It is the classic statement of the duty of loyalty, which lawyers owe clients, and firms. A fiduciary may not take an opportunity that belongs to the beneficiary."
+      },
+      {
+       "say": "The four-question fiduciary analysis, from the slides. One, obligation: what is it, and to whom? Two, breach: was it breached? Three, harm: what harm did or could the breach cause, and to whom? Four, consequences: the Very Bad Thing. Nora Neighbor, Problem 5B-1: a situational fiduciary who invested Dale's savings in her spouse's start-up is self-dealing. Expect the burden to shift to her, with disgorgement and punitive damages possible, and discipline under 8.4(c), even though she was never Dale's lawyer."
+      },
+      {
+       "say": "The four duties. Analyze each separately, in this order. Loyalty: treat clients at least as well as you'd treat yourself; no adversity in any matter, even beyond scope; no self-benefit beyond reasonable compensation. Enforced by disqualification and disgorgement, and discipline only through a specific Rule, 1.7 through 1.10. Care: the reasonably careful and prudent lawyer. Some cases demand all the skill, care and diligence at the fiduciary's disposal, FDIC versus Stahl; others treat care as non-fiduciary, Tante versus Herring. Use your state's formulation. Enforced by negligence. Confidentiality: don't disclose, don't use to the client's disadvantage, protect it, and it survives the engagement. Enforced by 1.6, 1.8(b), 1.9(c), and 1.18(b). Candor: tell the client what is material, under 1.4."
+      },
+      {
+       "say": "The trap: conflicts need no harm. A conflict of interest is the opportunity and temptation to be disloyal. It has consequences, mainly disqualification, even if you never act on it. There is no general loyalty Rule: due process requires discipline to rest on a specific Rule, like 1.7, 1.8, or 1.9. Civil claims and disqualification need no such Rule. And competent work never excuses a secret conflicting interest."
+      },
+      {
+       "say": "Sexual relations with clients, 1.8(j). No sexual relations with a client unless a consensual sexual relationship existed when the client-lawyer relationship began, for example a spouse. The client's consent or a signed waiver does not cure it. And it is not imputed to the firm, under 1.8(k). Why: confiding breeds vulnerability, dependence, and undue influence, so the party with clear judgment carries the constraint. It is most common in family law."
+      },
+      {
+       "ask": "A divorce lawyer begins a consensual sexual relationship with his client midway through the case. She signs a written waiver saying she was not pressured. Violation?",
+       "answer": "Yes, under 1.8(j). Only a consensual relationship that existed before the representation began is allowed. Consent and waivers do not cure it.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer's partner is dating a client the partner does not represent; the lawyer does. Is the partner's relationship imputed to the lawyer?",
+       "answer": "No. 1.8(k) does not impute 1.8(j) to other lawyers in the firm.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer secretly owns part of the company his client is negotiating with, but negotiates an excellent deal for the client. The client finds out. Any claim, though the deal was good?",
+       "answer": "Yes, breach of the fiduciary duty of loyalty. Conflicts need no harm, competent work does not excuse a secret conflicting interest, and remedies include fee forfeiture and disgorgement. Discipline rests on a specific Rule, here 1.7(a)(2) and possibly 1.8(a).",
+       "pause": 12
+      },
+      {
+       "say": "Recap. Fiduciaries arise by status or by accepted trust. Loyalty, care, confidentiality, candor, analyzed separately. Self-dealing shifts the burden. Conflicts need no harm. And 1.8(j) bans new sexual relationships with clients, unwaivable and not imputed."
+      },
+      {
+       "ask": "What did Meinhard versus Salmon hold?",
+       "answer": "A joint venturer breached his fiduciary duty by taking for himself an opportunity that arose from the venture.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the four-question fiduciary analysis.",
+       "answer": "Obligation and to whom, breach, harm, and consequences.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the one exception to 1.8(j)?",
+       "answer": "A consensual sexual relationship that existed when the client-lawyer relationship began.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e08",
+     "title": "Candor to the client: Rule 1.4",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The five duties of 1.4(a), the explanation duty in 1.4(b), materiality, disclosing your own mistakes under Opinion 18-481, delaying bad news, and the problems: deBilder's missing clause and Dan Distraught."
+      },
+      {
+       "say": "Rule 1.4(a). A lawyer shall do five things, all required. One, promptly inform the client of any decision or circumstance requiring the client's informed consent. So settlement offers and plea offers must be conveyed unless the client has already said how to handle them. Two, reasonably consult with the client about the means of pursuing the client's objectives. Three, keep the client reasonably informed about the status of the matter. Four, promptly comply with reasonable requests for information. Five, consult with the client about any relevant limitation on the lawyer's conduct when the lawyer knows the client expects help the Rules or other law do not permit, for example backdating a document."
+      },
+      {
+       "say": "Rule 1.4(b). Explain a matter to the extent reasonably necessary to permit the client to make informed decisions."
+      },
+      {
+       "say": "Materiality. What this client, or a reasonable client, would find significant to the engagement. Candor is limited to scope, so private facts unrelated to the work, a lawyer's marriage or sexual orientation, are not material. The client's reaction is a business risk, not a candor duty."
+      },
+      {
+       "say": "Your own mistakes, ABA Opinion 18-481. Disclose if material, meaning reasonably likely to harm or prejudice a client, or of a nature that would reasonably cause a client to consider terminating the representation even in the absence of harm. Disclose promptly, before any harm occurs. You may consult firm counsel and the insurer first, but do not let that delay the disclosure. And the don't-wanna test: the more you don't want to disclose it, the more likely it is material."
+      },
+      {
+       "say": "Delaying bad news, Comment 7. You may delay transmitting information when the client is likely to react imprudently to immediate disclosure, for example a psychiatric diagnosis. You may never withhold to serve your own or another's interest. That frames Problem 8A-8(e), Frank's worry that news of the wife's affair would devastate the husband. The affair is also irrelevant to the divorce, so it may not be within the scope of candor at all."
+      },
+      {
+       "say": "Disclose more than the minimum. We do the minimum the law requires is not a slogan for your website. Agree early on what this client wants to hear and how often. Use ticklers for periodic updates even when little is happening. Consider no-charge entries for short status messages. The consequences of silence: discipline, damages for avoidable losses, and a cover-up theory that turns an innocent mistake into punitive damages. Conversations that begin, why didn't you tell me, rarely end well."
+      },
+      {
+       "say": "Problem 5D-5, deBilder's missing acceleration clause. An errant keystroke deleted the clause from a 2.4 million dollar installment note. That is material, reasonably likely to harm the client if the buyer defaults, so it must be disclosed promptly, however crusty the client. First tell your boss, who may need to notify firm management and the malpractice carrier. Then tell the client, with a proposed fix, like negotiating an amendment, and no charge for the fix."
+      },
+      {
+       "say": "Problem 7B-1, Dan Distraught. Candor includes realistic expectations. Explain, with compassion, that a civil lawyer cannot put the boy in prison or on a sex-offender registry; that is the prosecutor's call. Explain what a civil claim can do. Make it right, with friends from work, calls for a 1.2(d) and 1.4(a)(5) conversation about limits. If a threat becomes reasonably certain bodily harm, 1.6(b)(1) is available."
+      },
+      {
+       "say": "And Rule 2.1, the advisor. Exercise independent judgment and give candid advice. You may refer to moral, economic, social, and political factors, not just law. The client still decides objectives."
+      },
+      {
+       "ask": "Opposing counsel makes a settlement offer of fifty thousand dollars. The lawyer thinks it is insulting and that the client would never take it, so he rejects it without telling her. Violation?",
+       "answer": "Yes, 1.4(a)(1). Settlement offers must be promptly conveyed, unless the client has already said how to handle offers like this one. And settling is the client's decision under 1.2(a).",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer misses a deadline for a jury demand, but the judge still allows a jury. No harm resulted. Must she tell the client?",
+       "answer": "Likely yes, if it is the kind of error that would reasonably cause a client to consider terminating the representation even without harm, under Opinion 18-481. Disclose promptly. She may first consult firm counsel and her insurer.",
+       "pause": 12
+      },
+      {
+       "ask": "A client asks his lawyer to backdate a contract. What does 1.4 require?",
+       "answer": "1.4(a)(5): consult with the client about the limits on the lawyer's conduct, explaining that the Rules and the law do not permit it. And 1.2(d) bars assisting.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Withholding to protect yourself is never allowed. Delay is only for the client's own sake. And private facts outside scope are not material."
+      },
+      {
+       "say": "Recap. 1.4(a): inform of decisions needing consent, consult on means, keep informed, answer requests, and explain limits. 1.4(b): explain enough for informed decisions. Disclose material mistakes promptly. Delay only when the client would react imprudently."
+      },
+      {
+       "ask": "Name the five duties in 1.4(a).",
+       "answer": "Inform of decisions needing informed consent, consult on means, keep reasonably informed, comply with reasonable requests for information, and consult about limits on the lawyer's conduct.",
+       "pause": 8
+      },
+      {
+       "ask": "When is a lawyer's own error material under Opinion 18-481?",
+       "answer": "When reasonably likely to harm or prejudice the client, or when it would reasonably cause the client to consider terminating the representation even without harm.",
+       "pause": 8
+      },
+      {
+       "ask": "When may a lawyer delay telling a client something?",
+       "answer": "When the client is likely to react imprudently to immediate disclosure. Never to serve the lawyer's or another's interest.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e09",
+     "title": "The lawyer as agent: authority and Rule 1.2(a)",
+     "minutes": 11,
+     "segments": [
+      {
+       "say": "Roadmap. Agency formation, the four sources of authority, equal dignities, the 3Cs, consequences of exceeding authority, ratification problems, the non-offer offer, objectives versus means under 1.2(a), and Blanton versus Womancare."
+      },
+      {
+       "say": "Fiduciary law governs lawyer and client. Agency adds the lawyer's power to change the client's legal relations with third parties. Formation, Restatement Third of Agency section 1.01: the principal manifests assent that the agent act on the principal's behalf and subject to its control, and the agent consents. If you are someone's lawyer, you are their agent. Authorized contracts bind the client, and for the agent's torts both principal and agent can be liable."
+      },
+      {
+       "say": "The Homeowners problem. Honest Abe did nothing, and they lost the foreclosure despite winning defenses. Careless decisions about means bind the client, so there is no automatic do-over. The remedy is against the lawyer. Otherwise third parties could not rely on agents, and debtors would hire lawyers to fail on purpose."
+      },
+      {
+       "say": "The book's three questions, all required. One, what kind of authority, from what facts? Two, what is its scope? Three, if exceeded, what are the consequences, and who bears them?"
+      },
+      {
+       "say": "Four sources of authority. One, actual, section 2.01. The agent reasonably believes, in accordance with the principal's manifestations to the agent, that the principal wants it done. Not less than twenty-five thousand authorizes thirty thousand, and buyer's remorse does not undo the deal. An uncommunicated change of mind does not revoke authority. A communicated revocation, a voicemail heard before acting, ends it."
+      },
+      {
+       "say": "Two, implied authority, section 2.01 Comment b and 1.2(a). What is necessary, usual, and proper to accomplish an express grant. It is a form of actual authority, and it is the source of control over means: filing, scheduling extensions, recording the deed."
+      },
+      {
+       "say": "Three, apparent authority, section 2.03. A third party reasonably believes the actor has authority, and the belief is traceable to the principal's manifestations. Hiring a lawyer alone creates no apparent authority to settle. The lawyer's own claims never count: I'm her lawyer, aren't I? But the client telling opposing counsel, whatever my lawyer agrees to is fine, does create it, even against a private floor."
+      },
+      {
+       "say": "Four, ratification, sections 4.01, 4.05, and 4.07. Affirmance after the fact, by words or by conduct, like keeping the benefits, depositing the check. You must ratify the whole act, 4.07, and before the third party withdraws, 4.05. Never plan on it: you have already violated 1.2(a), and ratification does not erase the ethics violation."
+      },
+      {
+       "say": "Equal dignities, Agency section 3.02. If the law requires a signed writing for the act, like certain land conveyances, oral authority to sign as agent is not enough. Do not extend this to ordinary instructions."
+      },
+      {
+       "say": "The thirteen words in section 2.01: in accordance with the principal's manifestations to the agent. Problem 6A-2(c): Payne's change of heart, told only to her spouse and minister, does not revoke Frank's authority, so the twenty-five thousand dollar deal binds her. 6A-2(d): her call to Frank the night before does revoke it. 6A-2(a): Frank's firm earning more, for less work, on a quick contingent settlement creates no authority to accept against her instructions, and that incentive is itself a personal-interest pressure."
+      },
+      {
+       "say": "The 3Cs for ambiguous authority, like, I guess you could take 150 thousand. Maybe. One, check with the client. Two, clarify the implications: finality, no day in court, the net after fees. Three, confirm in writing, and consider a signature, to avoid a swearing contest."
+      },
+      {
+       "say": "Consequences of exceeding authority. Discipline under 1.2(a), for failing to abide by the client's decision; a false claim of authority also violates 4.1(a) and 8.4(c). Undoing the act: rescission, quiet title, reinstatement under Federal Rule 60, usually after litigating authority. Liability to the client: an unreasonable belief in authority breaches care, and the client recovers the cost of cleanup. Liability to the opponent: signing implies a warranty of authority; claiming authority you know you lack is fraud, and the firm is liable by respondeat superior. Misrepresentation in tort and breach of warranty of authority in contract carry different damages measures."
+      },
+      {
+       "say": "What the opponent does next: walk away, which does not excuse your ethics violation, or try to enforce the deal, often by motion in the pending case, Kokkonen versus Guardian Life. Either way, expect your client to sue you, fire you, and dispute your fees. The relationship can be saved only with informed consent, preferably in writing, and that is unlikely. Opposing counsel may have to report you under 8.3."
+      },
+      {
+       "say": "Ratification outcomes, Problem 6A-4. A: she grumbles have it your way, signs, then fires Frank. Ratified and bound. B: she refuses, the defense withdraws, then she wants the deal. Too late, section 4.05. C: she X's out the agreement but deposits the check as a down payment. Conduct ratifies, and she cannot take the benefit while rejecting the rest, section 4.07, so the settlement is likely enforceable."
+      },
+      {
+       "say": "Negotiating safely: the non-offer offer. My own view is X. My client wants more, but I'd recommend X if your side would. Report it to the client, who decides."
+      },
+      {
+       "say": "Now Rule 1.2(a). A lawyer shall abide by a client's decisions concerning the objectives of representation and, as required by Rule 1.4, shall consult with the client as to the means by which they are to be pursued, and may take action impliedly authorized to carry out the representation. Four decisions are reserved to the client. One, whether to settle. And in a criminal case, two, the plea to be entered; three, whether to waive a jury trial; and four, whether to testify."
+      },
+      {
+       "say": "Client decides, the objectives: settle or not, and material settlement terms like gag or confidentiality clauses; binding arbitration, because it waives trial; high-low agreements, because they set the outcome; the plea; jury waiver; testifying; and whether to appeal. The four listed decisions are examples. Anything that is a fundamental right or the end result the client hired you for belongs to the client."
+      },
+      {
+       "say": "Lawyer decides, after consulting, the means: claims and theories to plead; discovery; which witnesses; the defense theory at trial; nonbinding mediation, but consult; and professional courtesies such as a harmless extension. You needn't be a mad dog. Consultation is required only for material means. In practice clients have strong input, since they can fire you."
+      },
+      {
+       "say": "No end-runs. An advance blanket grant of settlement authority, settle for any amount the lawyer considers reasonable, is void. But specific advance authority, accept anything over seventy thousand, is fine, subject to revocation and changed circumstances, Comment 3. Fee terms that penalize the client's decision are void or unconscionable: hourly fees that kick in if the client rejects a recommended settlement, or retroactive conversion to hourly. Ordinary deposits for real next steps are fine, but coercive timing is suspect."
+      },
+      {
+       "say": "Appointed criminal counsel may make means decisions over objection and need not present a baseless theory. The client's right to discharge appointed counsel is limited, 1.16 Comment 5. The client still controls the plea, jury, and testimony. 1.2(b): representation, including by appointment, is not an endorsement of the client's views. 1.2(d): do not counsel or assist conduct you know is criminal or fraudulent, but you may discuss the legal consequences and help the client determine what the law requires."
+      },
+      {
+       "say": "Blanton versus Womancare, California, 1985. Without the client's consent, and against her instructions, her lawyer stipulated to binding arbitration of her medical malpractice claim. The stipulation did not bind her. Agreeing to binding arbitration surrenders the right to trial, a substantial right that requires the client's authority. It is an objectives decision. A lawyer's authority over procedure does not reach choices that waive a client's fundamental rights."
+      },
+      {
+       "ask": "A client tells her lawyer, settle for no less than one hundred thousand dollars. That night she tells her sister she has changed her mind and wants trial. The next morning the lawyer accepts one hundred ten thousand. Is she bound?",
+       "answer": "Yes. An uncommunicated change of mind does not revoke actual authority, which is judged by the principal's manifestations to the agent.",
+       "pause": 12
+      },
+      {
+       "ask": "A client never discussed settlement with his lawyer. The lawyer tells opposing counsel, I'm his lawyer, so I can accept this. Opposing counsel agrees. Is the client bound by apparent authority?",
+       "answer": "No. Apparent authority must be traceable to the principal's manifestations. Hiring a lawyer alone creates no apparent authority to settle, and the lawyer's own claims never count.",
+       "pause": 12
+      },
+      {
+       "ask": "Defense counsel in a criminal case decides not to call a witness the client wants called, after consulting him. The client also wants to testify; counsel thinks it unwise. Who decides each?",
+       "answer": "Which witnesses to call is a means decision for the lawyer after consultation. Whether to testify belongs to the client.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer stipulates to binding arbitration without asking the client. Binding?",
+       "answer": "No, under Blanton versus Womancare. Binding arbitration waives trial, a substantial right, so it is the client's decision.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Blanket advance settlement authority is void; specific authority is fine. Apparent authority never comes from the lawyer's own words. Ratification does not erase the 1.2(a) violation. And deciding to appeal is the client's."
+      },
+      {
+       "say": "Recap. Four sources: actual, implied, apparent, ratification. 3Cs: check, clarify, confirm. 1.2(a): client decides objectives, including settlement, plea, jury waiver, testifying, and appeal; lawyer decides means after consulting."
+      },
+      {
+       "ask": "Name the four decisions 1.2(a) expressly reserves to the client.",
+       "answer": "Whether to settle, and in a criminal case, the plea, whether to waive a jury, and whether to testify.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the 3Cs for ambiguous authority?",
+       "answer": "Check with the client, clarify the implications, confirm in writing.",
+       "pause": 8
+      },
+      {
+       "ask": "What does section 4.07 require for ratification?",
+       "answer": "You must ratify the whole act, not just the beneficial part.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e10",
+     "title": "Fee arrangements and their formalities: Rule 1.5(b) and (c)",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Fees versus expenses, communicating the fee under 1.5(b), the strict contingent-fee writing under 1.5(c), the types of fee arrangements, Comments 4 and 5, and contingent-fee math."
+      },
+      {
+       "say": "Fees versus expenses. Fees pay for professional services. Expenses are out-of-pocket costs specific to this matter, never rent or general salaries. In-house charges, like copying or research, must reflect actual cost or a reasonable amount agreed in advance. A markup disclosed only on the invoice does not count, 1.5 Comment 1."
+      },
+      {
+       "say": "Rule 1.5(b). The scope of the representation and the basis or rate of the fee and expenses for which the client will be responsible shall be communicated to the client, preferably in writing, before or within a reasonable time after commencing the representation, except when the lawyer will charge a regularly represented client on the same basis or rate. Any change in the basis or rate must also be communicated, a long-time client's rate increase too. Best practice, Comment 2: a writing signed by the client. Notice the formality level: preferably in writing. Not required."
+      },
+      {
+       "say": "Rule 1.5(c), contingent fees. Much stricter. A contingent fee agreement must be in a writing signed by the client, and must state four things, all required. One, the method of determining the fee, including the percentage or percentages that accrue to the lawyer in the event of settlement, trial, or appeal. Two, the litigation and other expenses to be deducted from the recovery. Three, whether those expenses are deducted before or after the contingent fee is calculated. Four, any expenses for which the client will be liable whether or not the client is the prevailing party. And at the end, the lawyer must give a written closing statement stating the outcome, the remittance to the client, and the method of its determination."
+      },
+      {
+       "say": "Two traps. A signature does not cure missing terms. And the lawyer's own email plus the client's sounds good is not a writing signed by the client. Also, any contingent component of a hybrid fee, a success bonus, a reverse contingency, or shares payable on sale, needs the client's signed writing."
+      },
+      {
+       "say": "The arrangements. Flat: a sum certain for defined tasks. Say when, and which portions, are earned if the engagement ends early, Comment 4. It rewards efficiency, but risks curtailed effort when the money runs out. Hourly: hours times each timekeeper's rate, billed in tenths. Scalable, but rewards inefficiency. Losing does not erase a reasonable hourly fee. Billing work not done is fraud, mail or wire fraud federally. Contingent: a percentage of the recovery, in a signed writing. It can pit lawyer against client when a trial would cost the firm more than it gains. Hybrid: any mix within 1.5's limits, with contingent parts in a signed writing. Salary: associates and in-house lawyers draw a salary; owners share fee revenue less overhead and reserves."
+      },
+      {
+       "say": "Comment 5: no terms that might induce the lawyer to curtail services or act against the client. Do not cap services at a stated amount when more work is foreseeable unless you explain the situation, or else the client must bargain mid-matter. Defining services by the client's ability to pay is fine. Do not run up hourly fees with wasteful procedures."
+      },
+      {
+       "say": "Comment 4: you may require advance payment but must return any unearned part under 1.16(d). You may take property as a fee, like an ownership interest, but not a proprietary interest in the litigation's subject under 1.8(i), and it may trigger 1.8(a)."
+      },
+      {
+       "say": "Contingent-fee math. A one million dollar recovery, one hundred thousand dollars in costs, a thirty percent fee. Costs first, which is more common and favors the client: nine hundred thousand times thirty percent is a two hundred seventy thousand dollar fee, so the client nets six hundred thirty thousand. Fee first: a three hundred thousand dollar fee, then seven hundred thousand minus one hundred thousand in costs, so the client nets six hundred thousand. That thirty thousand dollar difference is why 1.5(c) requires stating whether expenses come out before or after the fee."
+      },
+      {
+       "say": "After a loss, the client owes whatever costs the agreement says are owed regardless of outcome, plus possibly the opponent's taxable costs. No fee unless we win can mislead under 7.1 if clients still owe costs. 1.8(e)(1) lets lawyers make repayment of costs contingent on the outcome."
+      },
+      {
+       "ask": "A lawyer and client agree orally on a one-third contingent fee. The lawyer emails a summary and the client replies, sounds good. The case settles. Is the agreement compliant?",
+       "answer": "No. 1.5(c) requires a writing signed by the client. The lawyer's email plus the client's reply is not a writing signed by the client. The agreed fee is unenforceable, leaving quantum meruit at most.",
+       "pause": 12
+      },
+      {
+       "ask": "A long-time client has always paid four hundred dollars an hour. The lawyer raises the rate to four fifty for a new matter of the same kind. Must she tell the client?",
+       "answer": "Yes. Under 1.5(b), any change in the basis or rate must be communicated, even to a regularly represented client.",
+       "pause": 12
+      },
+      {
+       "ask": "Thirty percent contingency, costs come off first, a two hundred thousand dollar settlement, twenty thousand in costs. What is the fee, and what does the client net?",
+       "answer": "The base is one hundred eighty thousand; the fee is fifty-four thousand; the client nets one hundred twenty-six thousand.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 1.5(b): scope and basis or rate, preferably in writing, including changes. 1.5(c): a writing signed by the client, stating the method and percentages, deductible expenses, whether before or after the fee, and expenses owed regardless of outcome, plus a written closing statement."
+      },
+      {
+       "ask": "What four things must a contingent fee agreement state?",
+       "answer": "The method and percentages for settlement, trial, or appeal; the expenses to be deducted; whether they are deducted before or after the fee; and any expenses the client owes regardless of outcome.",
+       "pause": 8
+      },
+      {
+       "ask": "What must the lawyer give the client at the end of a contingent matter?",
+       "answer": "A written closing statement showing the outcome, the remittance to the client, and how it was calculated.",
+       "pause": 8
+      },
+      {
+       "ask": "Does 1.5(b) require a writing?",
+       "answer": "No. Preferably in writing.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e11",
+     "title": "Limits on fees: reasonableness, banned contingencies, retainers",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The eight 1.5(a) reasonableness factors, statutory caps and Goldfarb, the two banned contingent fees in 1.5(d), consequences and recovery, discharged lawyers, and retainers."
+      },
+      {
+       "say": "Rule 1.5(a). A lawyer shall not make an agreement for, charge, or collect an unreasonable fee or an unreasonable amount for expenses. The violation is complete on agreeing or charging, even without collecting."
+      },
+      {
+       "say": "Eight factors, weighed together, and none alone decides. One, the time and labor required, the novelty and difficulty of the questions, and the skill requisite. Two, the likelihood, if apparent to the client, that the engagement will preclude other work. Three, the fee customarily charged in the locality. Four, the amount involved and the results obtained. Five, time limitations imposed by the client or the circumstances. Six, the nature and length of the professional relationship. Seven, the experience, reputation, and ability of the lawyer. Eight, whether the fee is fixed or contingent. And note what is not a factor: the client's ability to pay."
+      },
+      {
+       "say": "Judge fees as of the agreement, accounting for the risk assumed. A quick one hundred fifty thousand dollar settlement a week after a thirty-three percent agreement does not make the fee unreasonable. Rush premiums agreed in advance are fine, factors two and five. Different rates for different work are fine."
+      },
+      {
+       "say": "Statutory caps bind: workers' comp, medical malpractice, Social Security, probate, and the FTCA's twenty-five percent. And Goldfarb versus Virginia State Bar: bar minimum-fee schedules violated antitrust law. That is different from lawful statutory caps."
+      },
+      {
+       "say": "Rule 1.5(d), prohibited contingent fees. Two, and either is barred. One, in a domestic relations matter, any fee contingent on securing a divorce, or on the amount of alimony or support, or property settlement in lieu thereof. Two, a contingent fee for representing a defendant in a criminal case. Signatures and reasonableness do not cure either."
+      },
+      {
+       "say": "The book calls both anachronisms, but they are still the law. Civil plaintiff contingencies are fine. Comment 6: a contingent fee to collect post-judgment arrears of support, alimony, or other financial orders is allowed. The rationales: the domestic ban avoids discouraging reconciliation, McCarthy versus Santangelo, the state does not favor divorces. The criminal ban guards against corrupting justice, Peyton versus Margiotti."
+      },
+      {
+       "say": "Consequences. A prohibited fee is voidable, a defense to collection, and subject to disgorgement. Lying about services rendered is fraud or theft, mail fraud in federal cases. A formal defect, like no signed writing: the agreed fee is unenforceable, leaving quantum meruit at most, usually a lodestar at a reasonable rate, often far below the contract, with contingent fees usually eliminated. Some states allow nothing."
+      },
+      {
+       "say": "Discharged lawyers. The client may fire you anytime but owes for services, usually quantum meruit capped at the contract price. For a contingent fee, payable only if the contingency occurs. Fee terms that unduly burden discharge are void."
+      },
+      {
+       "say": "Retainers. Two kinds. A true, or classic, retainer buys the lawyer's availability. It is the lawyer's money, earned when paid, and goes in the operating account. It is rare, and some states ban it, ABA Opinion 505. An advance, or security deposit, pays future fees and costs, evergreen or wasting. It is the client's money until earned. It goes in trust under 1.15(c), and you refund the unearned balance under 1.16(d)."
+      },
+      {
+       "say": "Labels do not control. Calling an advance for future work nonrefundable does not make it earned on receipt. States that allow true retainers often require a writing signed by the client stating with particularity what is being paid for, when it is earned, and whether it is refundable. With an evergreen deposit, the client tops it back up after each draw."
+      },
+      {
+       "ask": "A divorce lawyer agrees to take ten percent of whatever property settlement she wins, in a signed writing. Permitted?",
+       "answer": "No. 1.5(d)(1) bars a fee contingent on the amount of a property settlement in lieu of support in a domestic relations matter. Signing does not cure it.",
+       "pause": 12
+      },
+      {
+       "ask": "After the divorce decree, the ex-husband stops paying ordered support. The ex-wife hires a lawyer to collect the arrears for one third of what is collected. Permitted?",
+       "answer": "Yes. 1.5 Comment 6 allows a contingent fee to collect post-judgment support arrears.",
+       "pause": 12
+      },
+      {
+       "ask": "A criminal defense lawyer agrees to a twenty-five thousand dollar fee plus a twenty-five thousand dollar bonus if the client is acquitted. Permitted?",
+       "answer": "No. The bonus is a contingent fee for representing a criminal defendant, barred by 1.5(d)(2).",
+       "pause": 12
+      },
+      {
+       "ask": "A client pays a twenty thousand dollar nonrefundable retainer for a matter the lawyer will bill hourly against it. The lawyer deposits it in operating. After two thousand dollars of work, the client fires him. What happens?",
+       "answer": "The label does not control. This is an advance for future fees, the client's money until earned. It belonged in trust, so depositing it in operating is commingling, and he must refund the unearned eighteen thousand under 1.16(d).",
+       "pause": 12
+      },
+      {
+       "say": "Traps. Ability to pay is not a factor. Reasonableness is judged at the time of agreement. The criminal and domestic bans are absolute. Post-judgment support collection is the exception. And nonrefundable labels do not make advance fees earned."
+      },
+      {
+       "say": "Recap. 1.5(a): no unreasonable fee, eight factors, the violation complete on agreeing or charging. 1.5(d): no domestic contingency on divorce, alimony, support, or property settlement, and no criminal-defense contingency. True retainers buy availability; advances belong in trust."
+      },
+      {
+       "ask": "Name five of the eight 1.5(a) factors.",
+       "answer": "Time, labor, novelty, and skill; preclusion of other work; customary local fee; amount involved and results; time limits; the relationship's nature and length; the lawyer's experience and reputation; fixed or contingent.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the two prohibited contingent fees?",
+       "answer": "In domestic relations, on securing a divorce or the amount of alimony, support, or a property settlement; and for defending a criminal case.",
+       "pause": 8
+      },
+      {
+       "ask": "What is a true retainer, and where does it go?",
+       "answer": "Payment for the lawyer's availability, earned when paid, so it goes in the operating account.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e12",
+     "title": "Fee sharing, referral payments, and professional independence",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. What sharing means, dividing fees between firms under 1.5(e), paying for recommendations under 7.2(b), and professional independence under 5.4, plus the paralegal-bonus trap."
+      },
+      {
+       "say": "Sharing means payment measured by fees a client paid, or by the profit on them. Paying rent or a loan out of fee revenue is not sharing. Within a firm, you share on any terms, without telling the client, unless a lawyer is screened."
+      },
+      {
+       "say": "Rule 1.5(e). A division of a fee between lawyers not in the same firm is allowed only if three conditions are met, all required. One, the division is in proportion to the services each lawyer performs, or each lawyer assumes joint responsibility for the representation. Two, the client agrees to the arrangement, including the share each lawyer will receive, and the agreement is confirmed in writing. Three, the total fee is reasonable."
+      },
+      {
+       "say": "This authorizes co-counseling, not pure referral fees. A few states allow pure referral fees; most do not. Joint responsibility, Comment 7, means financial and ethical responsibility as if the lawyers were partners, an unconditional guarantee, usually without insurance coverage."
+      },
+      {
+       "say": "Rule 7.2(b). Do not give anything of value to anyone for recommending your services, except five things, any one suffices. One, the reasonable costs of permitted advertising. Two, the usual charges of a legal service plan or a not-for-profit or qualified lawyer referral service. Three, paying for a law practice under 1.17. Four, a reciprocal referral agreement with another lawyer or a nonlawyer professional, if, (i), it is not exclusive, and (ii), the client is informed of its existence and nature. Five, nominal gifts as thanks, neither intended nor reasonably expected as compensation."
+      },
+      {
+       "say": "Rule 5.4, professional independence. Paragraph (a): no sharing legal fees with a nonlawyer, except four situations. One, payments over time after a lawyer's death to the lawyer's estate or designated persons. Two, the purchase price of a deceased, disabled, or disappeared lawyer's practice under 1.17. Three, nonlawyer employees in a compensation or retirement plan, even one based on profit-sharing. Four, court-awarded fees shared with a nonprofit that employed, retained, or recommended the lawyer in the matter."
+      },
+      {
+       "say": "Paragraph (b): no partnership with a nonlawyer if any of its activities are the practice of law. Paragraph (c): no letting whoever recommends, employs, or pays the lawyer direct or regulate the lawyer's professional judgment. Paragraph (d): no practicing in a for-profit professional corporation or association if any one of three is true. One, a nonlawyer owns any interest, except a lawyer's estate representative briefly. Two, a nonlawyer is a director or officer. Three, a nonlawyer has the right to direct or control a lawyer's professional judgment."
+      },
+      {
+       "say": "Client consent does not change 5.4. Why the rule exists: independent judgment, though the book calls it hard to justify apart from guild protection, and D.C. and others are experimenting with nonlawyer ownership."
+      },
+      {
+       "say": "The trap: paralegal bonuses and referral fees. A case-specific bonus to a paralegal, ten percent of the fee, or even a flat five thousand dollars, for bringing in a client violates both 5.4(a) and 7.2(b). A general profit-sharing retirement plan is fine. And a lawyer who refers a case, does no work, and takes no joint responsibility cannot be paid a share, even with the client's oral consent."
+      },
+      {
+       "ask": "Lawyer A refers a personal-injury client to Lawyer B in another firm. A will do no work, but agrees in writing to assume joint responsibility. The client agrees in writing to a split of one third to A and two thirds to B. The total fee is reasonable. Permitted?",
+       "answer": "Yes, under 1.5(e). Joint responsibility substitutes for proportionality, the client agreed to the shares, confirmed in writing, and the total is reasonable.",
+       "pause": 12
+      },
+      {
+       "ask": "A firm pays its paralegal a five hundred dollar bonus for each new client she brings in. Permitted?",
+       "answer": "No. A case-specific payment for bringing in clients is giving something of value for a recommendation under 7.2(b), and is fee sharing with a nonlawyer under 5.4(a).",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer and an accountant agree to refer clients to each other. The agreement is not exclusive, and the lawyer tells each referred client about it. Permitted?",
+       "answer": "Yes. 7.2(b)(4) allows non-exclusive reciprocal referral agreements when clients are informed of their existence and nature.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer forms a professional corporation in which his nonlawyer spouse is the secretary. Problem?",
+       "answer": "Yes. Under 5.4(d)(2), a lawyer may not practice in a for-profit professional corporation in which a nonlawyer is a director or officer.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 1.5(e): proportional work or joint responsibility, the client's agreement to the shares confirmed in writing, and a reasonable total. 7.2(b): no paying for recommendations except ads, referral services, buying a practice, informed non-exclusive reciprocal deals, and nominal thanks. 5.4: no fee sharing with nonlawyers, no partnership with them in law practice, no outside control of judgment, no nonlawyer ownership or office in a firm."
+      },
+      {
+       "ask": "Name the three conditions of 1.5(e).",
+       "answer": "Proportion to services or joint responsibility; the client's agreement, including each share, confirmed in writing; and a reasonable total fee.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the four 5.4(a) exceptions.",
+       "answer": "Death payments to the estate; buying a dead, disabled, or disappeared lawyer's practice; employee compensation or retirement plans; and court-awarded fees shared with a nonprofit that employed, retained, or recommended the lawyer.",
+       "pause": 8
+      },
+      {
+       "ask": "What two conditions does a reciprocal referral agreement need?",
+       "answer": "It is not exclusive, and the client is informed of its existence and nature.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e13",
+     "title": "Safeguarding client property: Rule 1.15",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. The three trust duties, the five paragraphs of 1.15, the situation rules from commingling to IOLTA, Delaware's rule, and three worked allocations."
+      },
+      {
+       "say": "Property includes money, the client's, unearned fees, or a third party's, plus documents and physical evidence. The fiduciary standard is being more than ordinarily careful. Green money, in operating, is yours to spend. Red money, in trust, is theirs to safeguard. A segregation failure is a disciplinary violation by itself, but civil liability usually requires a monetary loss."
+      },
+      {
+       "say": "Three duties, all required. One, safeguard. Two, segregate. Three, account. Substantial compliance is hardly ever enough. The duties are nondelegable: you may use staff but keep full disciplinary and financial responsibility, even for a trusted bookkeeper's unforeseeable theft. Delegate; don't abdicate. Trust, but verify. And two kinds of accounts: the operating account, the lawyer's money, and the client trust account, everyone else's."
+      },
+      {
+       "say": "Rule 1.15. Paragraph (a): hold others' property separate from your own. Funds go in a separate account in the state where your office is, or elsewhere only with consent. Other property must be identified and safeguarded with the care required of a professional fiduciary, Comment 1. Bearer bonds are cash and belong in a safe or safe-deposit box. Keep complete records for five years after the representation ends."
+      },
+      {
+       "say": "Paragraph (b): your own funds may go in trust only to pay bank charges. Paragraph (c): advance fees and expenses go in trust, withdrawn only as fees are earned or expenses incurred. Paragraph (d): promptly notify anyone with an interest when you receive funds, promptly deliver what they are entitled to, and on request promptly render a full accounting. Paragraph (e): keep disputed property separate until the dispute is resolved, and promptly distribute the undisputed part."
+      },
+      {
+       "say": "The situation rules. Commingling is a violation by itself, even if temporary, quickly fixed, and every dollar is there. No loss required. An advance deposited in operating for convenience is commingling. A pooled trust account with several clients' funds is fine, with separate ledgers. Only mixing your money with theirs is barred. Your money in trust: only enough for bank charges. Top off the tank, don't overfill it. No overdraft cushions."
+      },
+      {
+       "say": "When fees become earned, move them promptly to operating. Too early is misappropriation. Too late is commingling. Define earned in the agreement. We'll put it back never cures an early withdrawal. A mixed check, fee plus client money: deposit in trust, wait until it clears, then promptly move your share and pay the client. Never deposit it in operating."
+      },
+      {
+       "say": "Check clearing. Provisional credit can be charged back. The retainer scam: a fake cashier's check, then an urgent refund wire funded with other clients' money. Disburse only against good funds: cash, a cleared check, or a cashier's check confirmed with the bank. Paying from trust: pay a client's expenses from that client's funds only. Never pay your own bills, like bar dues, from trust."
+      },
+      {
+       "say": "Disputed funds, 1.15(e). Hold only the disputed amount and distribute the rest. No self-help, and no holding undisputed money to coerce payment or a release, Comment 3. Suggest arbitration. A dispute between the client and a third party, like a medical lien, may call for interpleader, Comment 4. Notice, 1.15(d): promptly notify anyone with a colorable claim, not just the undisputed owner. An accounting on request covers the required records, but do not reveal other clients' information in it."
+      },
+      {
+       "say": "Interest, or IOLTA. Nominal or short-term pooled funds go to the state IOLTA program, which funds legal services for the poor or a client-protection fund. Large or long-term deposits go in a separate account earning interest for the client."
+      },
+      {
+       "say": "Delaware Rule 1.15(a). The account is designated solely for funds held in connection with the practice of law in Delaware. The lawyer's own funds for bank charges may not exceed two thousand dollars and must be separately accounted for. Records are kept five years after the events they record."
+      },
+      {
+       "say": "Records: client ledgers, journals, and monthly reconciliation. Imperfect records are a violation even if every dollar is present; that is the Al Capone problem. And trust overdrafts are reported to the bar."
+      },
+      {
+       "say": "Worked allocation one, the class example. Thirty percent contingency, costs off the top, a one hundred thousand dollar settlement, ten thousand in costs. The lawyer's share is ten thousand in costs plus thirty percent of ninety thousand, a twenty-seven thousand dollar fee, so thirty-seven thousand. The client gets sixty-three thousand. Deposit the whole check in trust, send the closing statement, giving a chance to object, then move the thirty-seven thousand to operating."
+      },
+      {
+       "say": "Worked allocation two, a dispute on exit. Ten thousand in trust. You bill four thousand. The client disputes one thousand and fires you. Take three thousand, hold one thousand, refund six thousand now."
+      },
+      {
+       "say": "Worked allocation three, integrated. Twenty-five percent after costs, a one hundred thousand dollar settlement, four thousand in costs. The fee base is ninety-six thousand, so the fee is twenty-four thousand. If the client disputes six thousand of the fee: eighteen thousand in fee plus four thousand in costs to operating, six thousand held in trust, seventy-two thousand to the client now, with a closing statement."
+      },
+      {
+       "ask": "A lawyer deposits a client's settlement check in the firm's operating account for one day, then moves the full amount to trust. Nothing is lost. Violation?",
+       "answer": "Yes. Commingling is a violation by itself, even if temporary and quickly fixed, with no loss.",
+       "pause": 12
+      },
+      {
+       "ask": "A settlement of fifty thousand dollars arrives. The lawyer claims a fifteen thousand dollar fee; the client says the fee should be ten. What must the lawyer do?",
+       "answer": "Deposit it in trust, promptly distribute the undisputed thirty-five thousand to the client, take the undisputed ten thousand fee, and hold only the disputed five thousand in trust until resolved. No self-help.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer keeps five thousand dollars of her own money in the trust account as a cushion against overdrafts. Permitted under the Model Rules?",
+       "answer": "No. 1.15(b) allows the lawyer's own funds only in an amount necessary to pay bank charges. No overdraft cushions.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer's long-trusted bookkeeper secretly steals from the trust account. The lawyer never reconciled the account. Is the lawyer responsible?",
+       "answer": "Yes. Trust duties are nondelegable, and failing to reconcile is a failure to safeguard and account. Delegate, don't abdicate.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Commingling needs no loss. Mixed checks go into trust. Disburse only against good funds. Hold only the disputed portion."
+      },
+      {
+       "say": "Recap. Safeguard, segregate, account. 1.15(a) separate account and five-year records; (b) own money only for bank charges; (c) advances in trust until earned; (d) prompt notice, delivery, and accounting; (e) hold disputed amounts, distribute the rest."
+      },
+      {
+       "ask": "What are the three trust-account duties?",
+       "answer": "Safeguard, segregate, and account.",
+       "pause": 8
+      },
+      {
+       "ask": "Is withdrawing a fee early, intending to put it back, a violation?",
+       "answer": "Yes. Too early is misappropriation, and we'll put it back never cures it.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the Delaware cap on the lawyer's own funds in trust for bank charges?",
+       "answer": "Two thousand dollars, separately accounted for.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d2-e14",
+     "title": "The formality ladder, and the Day 2 cumulative quiz",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Before the quiz, one master list that ties Days 1 and 2 to Day 3: the formality ladder. What each consent must look like. Listen to it as a ladder, from loosest to strictest."
+      },
+      {
+       "say": "Rung one, informed consent in any form: disclosing confidences, 1.6(a); scope limits, 1.2(c); third-party payment, 1.8(f); and evaluations that may hurt the client, 2.3(b). Confirm significant ones in writing anyway."
+      },
+      {
+       "say": "Rung two, preferably in writing: the fee's scope and basis or rate, 1.5(b)."
+      },
+      {
+       "say": "Rung three, confirmed in writing, where the lawyer's own confirming writing is enough: fee division between firms, 1.5(e); concurrent-conflict waivers, 1.7(b)(4); former-client waivers, 1.9(a) and (b); prospective-client consents, 1.18(d)(1); government-agency consents, 1.11(a) and (d); and former-neutral consents, 1.12(a)."
+      },
+      {
+       "say": "Rung four, written notice: to the prospective client when screening, 1.18(d)(2)(ii); to the former client, 1.10(a)(2)(ii); to the government agency, 1.11(b)(2); to the parties and tribunal, 1.12(c)(2); and to clients when selling a practice, 1.17(c)."
+      },
+      {
+       "say": "Rung five, written advice plus a reasonable opportunity to get counsel: settling a malpractice claim with an unrepresented client, 1.8(h)(2), and part of 1.8(a)(2)."
+      },
+      {
+       "say": "Rung six, a writing signed by the client: contingent fees, including any contingent component, 1.5(c); business deals with clients, 1.8(a)(3); and aggregate settlements, 1.8(g). In some states, true retainers."
+      },
+      {
+       "say": "Rung seven, the client independently represented: prospective malpractice-liability limits, 1.8(h)(1)."
+      },
+      {
+       "say": "And off the ladder, things that cannot be consented away: same-litigation claims between clients, 1.7(b)(3); sex with a client, 1.8(j); 1.5(d) fees; nonlawyer ownership, 5.4; blanket settlement authority; a proprietary interest in the litigation beyond a lien or a civil contingent fee, 1.8(i); literary rights during the engagement, 1.8(d); and financial assistance outside 1.8(e)'s exceptions."
+      },
+      {
+       "say": "Now the Day 2 cumulative quiz."
+      },
+      {
+       "ask": "Is a client's identity confidential under 1.6?",
+       "answer": "Yes. Identity and the fact of representation are information relating to the representation.",
+       "pause": 8
+      },
+      {
+       "ask": "Does a public court record count as generally known?",
+       "answer": "No. Generally known means widely recognized, not merely available in a public record.",
+       "pause": 8
+      },
+      {
+       "ask": "A lawyer sees his client's bloody shirt. Privileged?",
+       "answer": "No, it is an observation, not a communication. It is confidential.",
+       "pause": 8
+      },
+      {
+       "ask": "Which 1.6(b) exceptions require use of the lawyer's services?",
+       "answer": "(b)(2) and (b)(3).",
+       "pause": 8
+      },
+      {
+       "ask": "May a lawyer reveal confidences to rebut an online review?",
+       "answer": "No. Opinion 496: give a neutral, non-disclosing reply.",
+       "pause": 8
+      },
+      {
+       "ask": "When must a lawyer disclose to avoid assisting a client's fraud?",
+       "answer": "Under 4.1(b), when disclosure of a material fact is necessary to avoid assisting, unless 1.6 prohibits it.",
+       "pause": 8
+      },
+      {
+       "ask": "Who decides whether to appeal?",
+       "answer": "The client.",
+       "pause": 8
+      },
+      {
+       "ask": "Does hiring a lawyer give the lawyer apparent authority to settle?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "What formality does a contingent fee need?",
+       "answer": "A writing signed by the client, with the four required terms.",
+       "pause": 8
+      },
+      {
+       "ask": "May a criminal defense lawyer take a bonus for acquittal?",
+       "answer": "No. 1.5(d)(2).",
+       "pause": 8
+      },
+      {
+       "ask": "Fee division between firms needs the client's agreement in what form?",
+       "answer": "Confirmed in writing, including the share each lawyer receives.",
+       "pause": 8
+      },
+      {
+       "ask": "What happens to the disputed portion of funds in trust?",
+       "answer": "It stays in trust until resolved; the undisputed portion is distributed promptly.",
+       "pause": 8
+      },
+      {
+       "ask": "Can a client waive the 1.8(j) ban with a signed consent?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "say": "That's Day 2. Tomorrow is the heaviest day: conflicts of interest. Personal-interest conflicts under 1.8, concurrent clients under 1.7, former and prospective clients under 1.9 and 1.18, imputation and screening under 1.10, and consent. Rest well."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
