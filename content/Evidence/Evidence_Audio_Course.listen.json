@@ -863,6 +863,902 @@
      ]
     }
    ]
+  },
+  {
+   "day": 2,
+   "title": "Character evidence, habit, impeachment, and the rape shield",
+   "minutes": 68,
+   "episodes": [
+    {
+     "id": "ev-d2-e00",
+     "title": "Spaced review of Day 1",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Welcome to day two. Before anything new, five minutes of rapid recall from yesterday. Answer out loud, fast."
+      },
+      {
+       "ask": "Rule 606(b)(1) bars juror testimony on three things. Name them.",
+       "answer": "Statements or incidents during deliberations, the effect of anything on any juror's vote, and any juror's mental processes concerning the verdict.",
+       "pause": 8
+      },
+      {
+       "ask": "And the three exceptions in 606(b)(2)?",
+       "answer": "Extraneous prejudicial information, an outside influence, and a mistake in entering the verdict on the form.",
+       "pause": 8
+      },
+      {
+       "ask": "Tanner in one sentence.",
+       "answer": "Juror intoxication is internal, so 606(b) bars testimony about it, and that does not violate the Sixth Amendment.",
+       "pause": 8
+      },
+      {
+       "ask": "Rule 401's two parts?",
+       "answer": "Any tendency to make a fact more or less probable, and the fact is of consequence. Probativeness and materiality.",
+       "pause": 8
+      },
+      {
+       "ask": "104(a) versus 104(b): who decides and by what standard?",
+       "answer": "Under 104(a) the judge decides by a preponderance, not bound by the evidence rules except privilege. Under 104(b), the judge asks whether a jury could reasonably find the fact by a preponderance, and the jury decides.",
+       "pause": 8
+      },
+      {
+       "ask": "Rule 403's tilt and burden?",
+       "answer": "It tilts toward admission. The opponent must show probative value is substantially outweighed.",
+       "pause": 8
+      },
+      {
+       "ask": "Old Chief's holding, and its limit?",
+       "answer": "When the only issue is legal status, the court must accept a stipulation rather than the named prior offense. Limited to status elements.",
+       "pause": 8
+      },
+      {
+       "ask": "Which policy rules bar only purposes, and which bars all uses against one person?",
+       "answer": "407, 408, 409, and 411 bar purposes. 410 bars all uses against the defendant who pleaded or negotiated, except completeness and perjury.",
+       "pause": 8
+      },
+      {
+       "ask": "Rule 408's trigger?",
+       "answer": "A claim disputed as to validity or amount.",
+       "pause": 8
+      },
+      {
+       "ask": "I'm so sorry, it was my fault, at the accident scene, with an offer to pay the hospital bill. What comes in?",
+       "answer": "The apology comes in. 409 bars only the offer to pay medical expenses.",
+       "pause": 8
+      },
+      {
+       "say": "Good. Now character evidence."
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e01",
+     "title": "The propensity ban: Rule 404",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 404's general ban, the 404(b) other-acts rule, its permitted purposes, the notice requirement, why propensity is banned, why the purposes are not exceptions, the Huddleston four steps, and People v. Zackowitz."
+      },
+      {
+       "say": "Plain English. You cannot prove someone did something this time because of the kind of person they are, or because they did something like it before."
+      },
+      {
+       "say": "The exact rules. Rule 404(a)(1): evidence of a person's character or character trait is not admissible to prove that on a particular occasion the person acted in accordance with the character or trait."
+      },
+      {
+       "say": "Rule 404(b)(1): evidence of any other crime, wrong, or act is not admissible to prove a person's character in order to show that on a particular occasion the person acted in accordance with the character."
+      },
+      {
+       "say": "Rule 404(b)(2): this evidence may be admissible for another purpose. The list: motive, opportunity, intent, preparation, plan, knowledge, identity, absence of mistake, or lack of accident. Nine. Say them again: motive, opportunity, intent, preparation, plan, knowledge, identity, absence of mistake, lack of accident."
+      },
+      {
+       "say": "Rule 404(b)(3): in a criminal case, the prosecutor must provide reasonable notice of any such evidence it intends to offer, so the defendant has a fair opportunity to meet it. The notice must articulate the permitted purpose and the reasoning that supports the purpose. It must be in writing, before trial, or during trial if the court, for good cause, excuses pretrial notice."
+      },
+      {
+       "say": "Why ban propensity? Here is the surprise. Propensity evidence is relevant. People who did something before are somewhat more likely to do it again. It is barred for policy reasons. The slides give two: jurors overweight it, and jurors may punish a bad person regardless of whether he is guilty this time. And notice: 404 applies in both civil and criminal cases."
+      },
+      {
+       "say": "The key conceptual point. The 404(b)(2) purposes are not exceptions. The slides and State v. Kirsch say so. They are non-character routes. You use the other act without going through the person's character. The true exceptions, where propensity reasoning is allowed, are 404(a)(2), 404(a)(3), and Rules 413 through 415."
+      },
+      {
+       "say": "And 404(b)(2) never compels admission. It says may be admissible. Rule 403 still applies."
+      },
+      {
+       "say": "The Huddleston four steps for any other-act evidence. One, a proper purpose. Two, relevance, with the other act proved under 104(b): a jury could reasonably find it occurred by a preponderance. Three, Rule 403. Four, a Rule 105 limiting instruction on request."
+      },
+      {
+       "say": "And one nuance. An acquittal of the other act does not bar its use. That is Dowling. Why? An acquittal means not proved beyond a reasonable doubt. The 104(b) standard is much lower."
+      },
+      {
+       "say": "The case. People v. Zackowitz, New York, 1930, Judge Cardozo. A man insulted Zackowitz's wife. Zackowitz threatened to come back and bump them all off, went home, returned, and shot the man. At trial, the district attorney showed the jury three other pistols and a tear-gas gun Zackowitz kept at home, to show he was a desperate type of criminal."
+      },
+      {
+       "say": "Held: reversed. The weapons proved only character, that he was the kind of man who keeps a small arsenal. If he had bought the weapons after the insult, that would have been different: preparation. The dissent saw the weapons as relevant to his ability to carry out the threat."
+      },
+      {
+       "say": "Why Zackowitz matters. It is the propensity box. And the slides add a contrast: weapons found at the scene would come in, to place him there, with a 105 instruction."
+      },
+      {
+       "ask": "In a burglary prosecution, the prosecutor offers the defendant's two prior burglary convictions to show he is a burglar. Admissible?",
+       "answer": "No. That is propensity, barred by 404(b)(1).",
+       "pause": 8
+      },
+      {
+       "ask": "In a murder by poison, the prosecutor offers evidence that the defendant bought the poison a week before. Is that a 404(b) problem?",
+       "answer": "It is admissible for a non-character purpose: preparation and opportunity. It does not depend on character at all.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant was acquitted of an earlier assault. Can the prosecution still offer that assault under 404(b) for intent?",
+       "answer": "Yes. Under Dowling, an acquittal does not bar use, because 104(b) sufficiency is a lower standard than proof beyond a reasonable doubt.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: do not call the 404(b)(2) purposes exceptions. They are non-propensity routes. Two: admission is never automatic; 403 applies. Three: notice is required only in criminal cases, and only from the prosecutor, in writing, with the purpose and reasoning. Four: 404 applies in civil cases too."
+      },
+      {
+       "say": "Recap. 404(a)(1) bans character to show action in conformity. 404(b)(1) bans other acts to show character and conformity. 404(b)(2) allows other purposes: motive, opportunity, intent, preparation, plan, knowledge, identity, absence of mistake, lack of accident. 404(b)(3) requires written notice from the prosecutor. Huddleston steps: proper purpose, 104(b) sufficiency, 403, a 105 instruction. Zackowitz: the arsenal proved only character."
+      },
+      {
+       "ask": "Name the nine purposes listed in 404(b)(2).",
+       "answer": "Motive, opportunity, intent, preparation, plan, knowledge, identity, absence of mistake, and lack of accident.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the Huddleston four steps?",
+       "answer": "A proper purpose; relevance with the other act shown under 104(b); 403; and a 105 instruction on request.",
+       "pause": 8
+      },
+      {
+       "ask": "What would have made the weapons in Zackowitz admissible?",
+       "answer": "If he had bought them after the insult, showing preparation. Or weapons found at the scene, to place him there.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e02",
+     "title": "404(b) in action: identity, plan, motive, and the doctrine of chances",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. How each major 404(b) route works, and five cases: Trenkler for identity, Stevens for reverse 404(b), Brides in the Bath for the doctrine of chances, Kirsch for plan and motive, and Huddleston for the standard of proof. Then rap lyrics."
+      },
+      {
+       "say": "Identity first. When the other crime is offered to prove identity, it must share characteristics sufficiently idiosyncratic to permit an inference of pattern. Prosaic commonalities are not enough. That is from Trenkler. The slides put it vividly: identity evidence says, this crime could not likely be anyone else's. Not, this is the defendant's type of crime."
+      },
+      {
+       "say": "United States v. Trenkler, First Circuit, 1995. To prove Trenkler built a fatal remote-controlled car bomb in Roslindale, the government proved he built a 1986 bomb in Quincy. The similarities: both remote-controlled, both radio-activated, both placed under vehicles, both made of hobby-store parts with similar circuitry and distinctive wiring, and both built to help a friend. A database showed few similar devices."
+      },
+      {
+       "say": "Held: admissible to prove identity. The similarities were idiosyncratic enough. And under 403, the Quincy bomb had hurt no one, so a limiting instruction sufficed. The dissent said the database was skewed, and that a noise simulator is not dynamite, meaning the earlier device was not really comparable."
+      },
+      {
+       "say": "Reverse 404(b). Sometimes the defendant offers another person's other crime to show the defendant is not the culprit. United States v. Stevens, Third Circuit, 1991. Stevens was identified by two robbery victims at Fort Dix. He offered a victim of a similar nearby robbery who said Stevens was not his robber."
+      },
+      {
+       "say": "Held: reversed. Reverse 404(b) evidence offered by a defendant need only be similar enough under 401 to suggest that one person committed both crimes, then pass 403. Not the strict signature standard. The court also noted that cross-racial identifications are less reliable. Why it matters: defendants face a lower bar for other-crimes evidence that points away from them, because the prejudice concern, convicting a defendant for his character, is absent."
+      },
+      {
+       "say": "Plan. Plan requires that the acts be parts of one overall scheme, not a mere pattern. And motive that is just a desire to commit this kind of crime is propensity. Both points come from State v. Kirsch."
+      },
+      {
+       "say": "State v. Kirsch, New Hampshire, 1995, a note case. A child-sexual-assault prosecution in a state without Rules 413 through 415. The State offered the defendant's other molestations of young church members."
+      },
+      {
+       "say": "Held: inadmissible. Three lines to remember. The desire to have sex with young girls is proof of propensity, not motive. Intent shown by how he selected victims is indistinguishable from propensity. And a pattern or systematic course of conduct is insufficient to establish a plan. Why it matters: it is a rare court openly saying that the 404(b)(2) purposes are not exceptions to the propensity bar. The syllabus said skip it, and it was not a main case in the slides, but it states the theory cleanly."
+      },
+      {
+       "say": "The doctrine of chances. Rex v. Smith, the Brides in the Bath case, England, 1915. George Joseph Smith's wife was found drowned in her bath after making a will in his favor. He said, wasn't it a jolly good job I got her to make her will. Two later wives died in their baths the same way."
+      },
+      {
+       "say": "Held: evidence of the other deaths was admissible to rebut accident and show design. Why it matters: this is the doctrine of chances under 404(b)(2)'s absence of mistake or lack of accident. Many accidents are objectively improbable. The slides note two views. One says it avoids character: we are not saying he is a murderer by nature; we are saying three bath drownings by coincidence is wildly unlikely. The other says it still runs through propensity. Know both."
+      },
+      {
+       "say": "Huddleston v. United States, 1988, the standard of proof. To prove Huddleston knew the Memorex videotapes he sold were stolen, the government proved he had also sold 38 new televisions at 28 dollars each, without a bill of sale, and had offered large quantities of appliances."
+      },
+      {
+       "say": "Held: the court need not find by a preponderance that the other act occurred. It asks under 104(b) whether a jury could reasonably find it. Here it could. Why it matters: that standard is borrowed for Rules 413 through 415, and for prior false accusations in rape-shield cases."
+      },
+      {
+       "say": "Rap lyrics. Without a specific link to the crime, lyrics invite a violent-character inference. State v. Skinner, New Jersey, 2014. California, Louisiana, and Maryland have statutes restricting creative-expression evidence. And Bey-Cousin v. Powell, Eastern District of Pennsylvania, 2021, presumes that artists tell stories."
+      },
+      {
+       "ask": "Two robberies share these features: both at gas stations, both at night, both with a handgun. Offered to prove identity. Enough?",
+       "answer": "No. Those are prosaic commonalities, not idiosyncratic features permitting an inference of pattern, under Trenkler.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant wants to show a similar robbery was committed nearby by someone else, and that victim says it wasn't him. What standard applies?",
+       "answer": "Reverse 404(b) under Stevens: only ordinary 401 similarity enough to suggest one person did both, then 403.",
+       "pause": 8
+      },
+      {
+       "ask": "Three of a defendant's business partners died in boating accidents after naming him beneficiary. In the fourth death, he claims accident. Which 404(b) theory?",
+       "answer": "The doctrine of chances, to show absence of mistake or lack of accident, as in the Brides in the Bath case.",
+       "pause": 8
+      },
+      {
+       "ask": "The prosecution says the defendant's prior molestations show his motive, his desire for young victims. Under Kirsch, is that a valid motive purpose?",
+       "answer": "No. A desire to commit this kind of crime is propensity, not motive.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: identity needs a signature, not a type. Two: plan needs one overall scheme, not a pattern. Three: motive cannot be just a desire to commit this kind of crime. Four: reverse 404(b) gets a lower similarity bar. Five: the Huddleston standard is 104(b), not a preponderance finding by the judge."
+      },
+      {
+       "say": "Recap. Trenkler: idiosyncratic features prove identity. Stevens: reverse 404(b) needs only 401 similarity, then 403. Kirsch: desire is propensity, and a pattern is not a plan. Brides in the Bath: the doctrine of chances rebuts accident. Huddleston: other acts are proved under 104(b). Skinner: lyrics need a specific link."
+      },
+      {
+       "ask": "In Trenkler, what features linked the two bombs?",
+       "answer": "Both remote-controlled and radio-activated, placed under vehicles, made of hobby-store parts with similar circuitry and distinctive wiring, and built to help a friend.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Huddleston sell, and what did the other-act evidence show?",
+       "answer": "Stolen Memorex videotapes. His sales of 38 new televisions at 28 dollars each without a bill of sale showed he knew the goods were stolen.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the two views of the doctrine of chances?",
+       "answer": "One says it avoids character by relying on the objective improbability of many accidents. The other says it still runs through propensity.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e03",
+     "title": "Sexual-assault propensity: Rules 413 to 415",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. The text of 413, 414, and 415, the notice rule, their history, the standard of proof, how 403 still applies, Carroll v. Trump, the critiques, and two cases: Guardia and Mound."
+      },
+      {
+       "say": "Plain English. In sexual-assault and child-molestation cases, the propensity ban is lifted. The jury may hear that the defendant did it before, and may use it for propensity."
+      },
+      {
+       "say": "The exact rules. Rule 413(a): in a criminal case in which a defendant is accused of a sexual assault, the court may admit evidence that the defendant committed any other sexual assault. The evidence may be considered on any matter to which it is relevant. That last clause is what permits propensity. Rule 414(a): the same, for child molestation. Rule 415(a): the same in civil cases involving a claim for relief based on sexual assault or child molestation."
+      },
+      {
+       "say": "Notice. The proponent must disclose the evidence, including witnesses' statements or a summary of expected testimony, at least 15 days before trial, or at a later time the court allows for good cause."
+      },
+      {
+       "say": "History. These are true exceptions allowing propensity reasoning. Congress enacted them in 1994, over the Judicial Conference's opposition. No conviction is required. The standard of proof is presumably Huddleston's 104(b) standard, as Representative Molinari indicated. And Rule 403 still applies with its normal balance, per Guardia. Due-process challenges have failed, per Mound."
+      },
+      {
+       "say": "Civil cases. In Carroll v. Trump, Southern District of New York, 2023, from a Class 7 slide, Judge Kaplan relied on Rule 415 to admit two other women's accounts and the Access Hollywood tape, offered expressly to show Mr. Trump's propensity for such behavior."
+      },
+      {
+       "say": "The critiques, from Lannan and Baker. Sex offenders are not shown to reoffend more. Bureau of Justice Statistics figures: 7.7 percent rearrested for sexual assault within three years, versus about 60 percent for property and drug offenders. Juries overweight priors. And police round up the usual suspects."
+      },
+      {
+       "say": "First case. United States v. Guardia, Tenth Circuit, 1998. A gynecologist was charged with abusing two patients during exams. The government offered four other women under 413. The trial court excluded them under 403."
+      },
+      {
+       "say": "Held: affirmed. Guardia gives the threshold for 413, three elements, all required. One, the defendant is accused of a sexual assault. Two, the evidence is of another sexual assault. Three, it is relevant. Then 403 applies normally. Courts may not treat propensity as inherently too prejudicial, because Congress chose to allow it. But here, the disputes over medical propriety would turn a trial of two incidents into a trial of six, confusing the jury. So exclusion was within discretion. Why it matters: 413 does not displace 403."
+      },
+      {
+       "say": "Second case. United States v. Mound, Eighth Circuit, 1998, rehearing en banc denied. Mound argued 413 violates due process by letting juries convict for who he is."
+      },
+      {
+       "say": "Held: rejected. Because 413 evidence must still pass 403, it is not fundamentally unfair. Judge Morris Sheppard Arnold, dissenting from denial of rehearing en banc, said the long common-law tradition against propensity evidence suggests it reflects fundamental conceptions of justice. Why it matters: no court has struck down 413 or 414."
+      },
+      {
+       "ask": "A defendant charged with rape has a prior uncharged sexual assault. The prosecution offers it simply to show he has a propensity to commit sexual assault. Admissible?",
+       "answer": "Yes, under Rule 413, subject to 403, with 15 days' notice. No conviction is required.",
+       "pause": 8
+      },
+      {
+       "ask": "In a civil suit for sexual assault, the plaintiff offers evidence the defendant assaulted another woman. Which rule?",
+       "answer": "Rule 415, which applies 413's approach in civil cases, as in Carroll v. Trump.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant argues that 413 evidence is always too prejudicial under 403 because it is propensity. Under Guardia, how should the court respond?",
+       "answer": "The court may not treat propensity as inherently too prejudicial. It applies 403 normally, weighing the specific dangers, such as confusion.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: 413 through 415 are true exceptions, unlike 404(b). Two: 403 still applies. Three: no conviction needed; the standard is presumably Huddleston's. Four: the notice period is 15 days. Five: these rules are limited to sexual assault and child molestation."
+      },
+      {
+       "say": "Recap. 413 criminal sexual assault, 414 child molestation, 415 civil. Other assaults may be considered on any matter, including propensity. 15 days' notice. Enacted 1994 over the Judicial Conference's opposition. Guardia: three-part threshold, then normal 403. Mound: no due-process violation."
+      },
+      {
+       "ask": "What are Guardia's three threshold requirements for 413 evidence?",
+       "answer": "The defendant is accused of sexual assault, the evidence is of another sexual assault, and it is relevant.",
+       "pause": 8
+      },
+      {
+       "ask": "How many days' notice do Rules 413 through 415 require?",
+       "answer": "At least 15 days before trial, or later for good cause.",
+       "pause": 8
+      },
+      {
+       "ask": "Why did the Guardia trial court exclude the four other women?",
+       "answer": "Disputes over medical propriety would turn a trial of two incidents into six, confusing the jury under 403.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e04",
+     "title": "Character of the defendant and the victim: Rules 404(a)(2) and 405",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. The criminal-case exceptions in 404(a)(2), A, B, and C, 404(a)(3), the methods of proof in 405, the have you heard cross, essential-element character, and Michelson."
+      },
+      {
+       "say": "Plain English. In a criminal case, the defendant may open the door to character. The defendant can show his own good character, or the victim's bad character. Once he does, the prosecution can respond."
+      },
+      {
+       "say": "The exact rule. Rule 404(a)(2), in a criminal case. Three exceptions."
+      },
+      {
+       "say": "A. A defendant may offer evidence of the defendant's pertinent trait, and if the evidence is admitted, the prosecutor may offer evidence to rebut it."
+      },
+      {
+       "say": "B. Subject to the limitations in Rule 412, a defendant may offer evidence of an alleged victim's pertinent trait, and if the evidence is admitted, the prosecutor may offer evidence to rebut it, and offer evidence of the defendant's same trait. Notice that last part. Attack the victim's violent character, and the prosecution can show your violent character."
+      },
+      {
+       "say": "C. In a homicide case, the prosecutor may offer evidence of the alleged victim's trait of peacefulness to rebut evidence that the victim was the first aggressor. Notice: this is triggered by any evidence that the victim was the first aggressor, not just character evidence."
+      },
+      {
+       "say": "And 404(a)(3): evidence of a witness's character may be admitted under Rules 607, 608, and 609."
+      },
+      {
+       "say": "Why? The mercy rule. A criminal defendant, facing the state's power, gets to put his good name before the jury. But only the accused opens the door, and only in criminal cases."
+      },
+      {
+       "say": "Now Rule 405, methods of proof. 405(a): when evidence of a character trait is admissible, it may be proved by testimony about the person's reputation or by testimony in the form of an opinion. On cross-examination of the character witness, the court may allow an inquiry into relevant specific instances of the person's conduct."
+      },
+      {
+       "say": "So, on direct, reputation or opinion only. On cross, have you heard or do you know questions about specific acts, which test the witness's basis. Two limits from Michelson: the examiner needs a good-faith basis, and the examiner is stuck with the answer. No extrinsic proof of the act."
+      },
+      {
+       "say": "405(b): when a person's character or character trait is an essential element of a charge, claim, or defense, it may also be proved by relevant specific instances of the person's conduct."
+      },
+      {
+       "say": "405(b) is narrow. Character is an element in entrapment, where predisposition is at issue. In truth as a defense to defamation, when the statement was about character. In negligent entrustment. In child custody. And in sexually-violent-person commitment. But here is the trap: character is not an element of self-defense. The issue is the defendant's reasonable fear. So a victim's specific violent acts are not admissible under 405(b) to prove the victim's character. They might come in another way, for example to show what the defendant knew and feared, but not as character proof."
+      },
+      {
+       "say": "Another trap, Problem 3.16. A defendant who testifies, I wouldn't shoot anybody, makes herself a character witness, and may be crossed on past shootings."
+      },
+      {
+       "say": "The case. Michelson v. United States, 1948. A bribery defendant called five reputation witnesses. The prosecutor asked four of them whether they had heard of Michelson's 1920 arrest for receiving stolen goods."
+      },
+      {
+       "say": "Held: proper. A defendant who puts his reputation in issue opens it to cross-examination testing what the witness has heard. In the Court's words, it is not the man that he is, but the name that he has, that is at issue. The prosecutor had a good-faith basis, and the judge instructed the jury properly. Justice Rutledge dissented: the question itself plants the fact in the jury's mind."
+      },
+      {
+       "say": "Why Michelson matters: it is the 405(a) cross-examination rule. Back then, only reputation was allowed. Today opinion testimony is also allowed, so the question can be, do you know."
+      },
+      {
+       "ask": "In an assault case, the defendant calls a witness to testify that the defendant has a reputation as peaceful. Proper? And can the prosecution respond?",
+       "answer": "Proper under 404(a)(2)(A), in reputation form under 405(a). The prosecution may rebut with reputation or opinion and may cross with have you heard questions with a good-faith basis.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant claims self-defense and offers testimony that the victim had a reputation for violence. What can the prosecution now offer?",
+       "answer": "Rebuttal of the victim's trait, and evidence of the defendant's same trait, violence, under 404(a)(2)(B).",
+       "pause": 8
+      },
+      {
+       "ask": "In a homicide case, the defendant offers an eyewitness who says the victim swung first. No character evidence. Can the prosecutor offer the victim's peacefulness?",
+       "answer": "Yes. Under 404(a)(2)(C), any evidence that the victim was the first aggressor opens the door to the victim's peacefulness in a homicide case.",
+       "pause": 8
+      },
+      {
+       "ask": "In a self-defense case, the defendant wants to prove three specific prior fights the victim started, to prove the victim's violent character. Admissible under 405(b)?",
+       "answer": "No. Character is not an essential element of self-defense, so specific acts are not allowed under 405(b) to prove the victim's character.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: only the accused opens the door, and only in criminal cases. Two: direct is reputation or opinion only. Three: specific acts only on cross, with a good-faith basis, and the examiner takes the answer. Four: 404(a)(2)(B) opens the defendant's same trait. Five: 404(a)(2)(C) is homicide only, and triggered by any first-aggressor evidence. Six: character is not an element of self-defense."
+      },
+      {
+       "say": "Recap. 404(a)(2)(A): the defendant's own pertinent trait. (B): the victim's pertinent trait, subject to 412, opening the defendant's same trait. (C): homicide, victim's peacefulness to rebut first-aggressor evidence. 405(a): reputation or opinion; specific instances on cross. 405(b): specific instances when character is an essential element. Michelson: have you heard questions are proper."
+      },
+      {
+       "ask": "List the five examples where character is an essential element under 405(b).",
+       "answer": "Entrapment predisposition, truth as a defense to defamation, negligent entrustment, custody, and sexually-violent-person commitment.",
+       "pause": 8
+      },
+      {
+       "ask": "What two limits does Michelson put on have you heard questions?",
+       "answer": "A good-faith basis, and the examiner is stuck with the answer, with no extrinsic proof. Plus a proper instruction.",
+       "pause": 8
+      },
+      {
+       "ask": "Quote Michelson's line about reputation.",
+       "answer": "It is not the man that he is, but the name that he has.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e05",
+     "title": "Habit and routine practice: Rule 406",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 406, what makes something habit rather than character, Halloran, Weil v. Seltzer, and the outline's character steps."
+      },
+      {
+       "say": "The exact rule. Rule 406: evidence of a person's habit or an organization's routine practice may be admitted to prove that on a particular occasion the person or organization acted in accordance with the habit or routine practice. The court may admit this evidence regardless of whether it is corroborated or whether there was an eyewitness."
+      },
+      {
+       "say": "Notice what that means. Habit is the one place you may reason from past behavior to conduct on this occasion. So the line between habit and character is critical."
+      },
+      {
+       "say": "Definition. Habit is a regular, specific, semi-automatic response to a specific recurring situation. Buckling a seatbelt every time you get in the car. The phrase: predictable and predictive."
+      },
+      {
+       "say": "Three things, all needed. Specific. Regular. Semi-automatic."
+      },
+      {
+       "say": "Occasional conduct is not enough. The outline's example is Halloran, testimony that a mechanic regularly heated Freon cans with an immersion coil. The point: the conduct must be regular, not occasional, to be habit."
+      },
+      {
+       "say": "And deliberate, morally charged conduct is usually character. Weil v. Seltzer, D.C. Circuit, 1989, a note case and a Fisher problem. An allergist treated a patient for over 20 years with pills he called antihistamines that were really prednisone, a steroid. Eight other long-term patients got the same treatment and the same description."
+      },
+      {
+       "say": "Held: the other patients' testimony was not habit evidence under 406. It was deliberate deception that varied by patient, and eight patients out of a large practice is not regular. It might fit 404(b), for example to show plan or intent. Why it matters: deliberate, morally charged conduct rarely qualifies as habit."
+      },
+      {
+       "say": "Why does the law trust habit but not character? Character is general, like being careful or honest. Habit is a specific, almost reflexive response, so it predicts behavior far better and invites less moral judgment."
+      },
+      {
+       "ask": "A witness will testify the decedent always, every day for years, stopped and looked both ways at a particular railroad crossing. Habit?",
+       "answer": "Yes. A specific, regular, semi-automatic response to a recurring situation. Admissible under 406.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness will testify the plaintiff is a careful driver. Habit?",
+       "answer": "No. That is a general character trait, barred by 404(a)(1) in a civil case.",
+       "pause": 8
+      },
+      {
+       "ask": "A doctor allegedly lied to many patients about their medication, varying the story for each. Habit?",
+       "answer": "No, under Weil v. Seltzer. Deliberate, varying, morally charged conduct is character, though it might come in under 404(b).",
+       "pause": 8
+      },
+      {
+       "say": "The outline's character steps, six of them. Step one: is it offered to show action in character? If not, 404 does not apply, though 403 does. Step two: a propensity route exists only through 404(a)(2) in a criminal case once the accused opens the door, or 413 through 415 in sex cases. Step three: form. Reputation or opinion under 405(a). Specific acts only on cross of a character witness, or when character is an essential element under 405(b). Step four: under 404(b)(2), state the non-propensity chain inference by inference. MIMIC, motive, intent, absence of mistake, identity, common plan, is a memory aid, but the rule's list is longer and not exhaustive. Then Huddleston: proper purpose, 104(b) sufficiency, 403, a 105 instruction on request. In a criminal case, the prosecutor owes written notice under 404(b)(3). Step five: a witness's truthfulness goes to 607 through 609, not 404. Step six: habit under 406 is not character. Is the response specific, regular, and semi-automatic?"
+      },
+      {
+       "say": "Recap. Rule 406: habit or routine practice may prove conduct on a particular occasion, with or without corroboration or an eyewitness. Specific, regular, semi-automatic. Halloran: occasional is not regular. Weil: deliberate, morally charged conduct is character."
+      },
+      {
+       "ask": "What three qualities make conduct a habit?",
+       "answer": "Specific, regular, and semi-automatic: a response to a specific recurring situation.",
+       "pause": 8
+      },
+      {
+       "ask": "Does habit evidence need corroboration or an eyewitness under 406?",
+       "answer": "No. It is admissible regardless of corroboration or an eyewitness.",
+       "pause": 8
+      },
+      {
+       "ask": "What does MIMIC stand for, and what's the caveat?",
+       "answer": "Motive, intent, absence of mistake, identity, common plan. It is a memory aid; the rule's list is longer and not exhaustive.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e06",
+     "title": "The modes of impeachment",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 607, the two families of impeachment, Rule 610 on religion, and the critical question of when extrinsic evidence is allowed."
+      },
+      {
+       "say": "Rule 607: any party, including the party that called the witness, may attack the witness's credibility. The old voucher rule, that you vouch for your own witness and cannot impeach him, is gone."
+      },
+      {
+       "say": "Two families, from the slides. Family one: the witness is lying now. That covers contradiction, prior inconsistent statements, bias, and capacity. Family two: the witness is a liar. That covers 608(a) reputation and opinion, 608(b) specific acts, and 609 convictions."
+      },
+      {
+       "say": "Bias is never collateral, and may be proved extrinsically. That is Abel. Rule 610: evidence of a witness's religious beliefs or opinions is not admissible to attack or support the witness's credibility."
+      },
+      {
+       "say": "Now extrinsic evidence. Extrinsic means evidence other than the witness's own answers on cross: another witness, or a document. Mode by mode."
+      },
+      {
+       "say": "Bias and capacity: may be proved extrinsically. 608(b) specific acts: may not; cross only. A 609 conviction: may be proved extrinsically, by the record. A contradiction or an inconsistent statement on a collateral matter, one relevant only to contradict the witness, usually may not. Under the common-law collateral-matter principle, the witness's answer on such a point stands."
+      },
+      {
+       "say": "And a fine point: 608(b)'s bar on extrinsic evidence is absolute only when the sole purpose is to attack character for truthfulness. That comes from the Advisory Committee Note and Abel. If the evidence also shows bias, it can come in for bias."
+      },
+      {
+       "ask": "A defense witness denies on cross that he is being paid by the defendant. Can the prosecution call another witness to prove the payments?",
+       "answer": "Yes. Bias is never collateral and may be proved extrinsically.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness says she wore a red coat on the day she saw the robbery. The opponent wants to call a witness to prove it was blue, solely to show she is wrong. Allowed?",
+       "answer": "Usually not. That is contradiction on a collateral matter, relevant only to contradict, so her answer stands.",
+       "pause": 8
+      },
+      {
+       "ask": "May a party impeach its own witness?",
+       "answer": "Yes. Under Rule 607, any party, including the party that called the witness, may attack credibility.",
+       "pause": 8
+      },
+      {
+       "say": "Recap. 607: any party may impeach. Two families: lying now, meaning contradiction, inconsistency, bias, capacity; and a liar, meaning 608(a), 608(b), and 609. 610 bars religion. Extrinsic proof: yes for bias, capacity, and 609; no for 608(b) and collateral contradictions."
+      },
+      {
+       "ask": "Name the four modes in the witness is lying now family.",
+       "answer": "Contradiction, prior inconsistent statement, bias, and capacity.",
+       "pause": 8
+      },
+      {
+       "ask": "Which impeachment mode is never collateral?",
+       "answer": "Bias.",
+       "pause": 8
+      },
+      {
+       "ask": "Which rule bars attacking credibility with religious beliefs?",
+       "answer": "Rule 610.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e07",
+     "title": "Character for truthfulness: Rule 608",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 608(a) and (b) word for word, the five limits on 608(b), rehabilitation, and two cases: Whitmore and Abel."
+      },
+      {
+       "say": "The exact rule. Rule 608(a): a witness's credibility may be attacked or supported by testimony about the witness's reputation for having a character for truthfulness or untruthfulness, or by testimony in the form of an opinion about that character. But evidence of truthful character is admissible only after the witness's character for truthfulness has been attacked."
+      },
+      {
+       "say": "Rule 608(b): except for a criminal conviction under Rule 609, extrinsic evidence is not admissible to prove specific instances of a witness's conduct in order to attack or support the witness's character for truthfulness. But the court may, on cross-examination, allow them to be inquired into if they are probative of the character for truthfulness or untruthfulness of, one, the witness, or two, another witness whose character the witness being cross-examined has testified about."
+      },
+      {
+       "say": "Scope. 608 applies in civil and criminal cases, to every witness, and either side may start the attack."
+      },
+      {
+       "say": "Five limits on 608(b), all required. One: the act must be probative of truthfulness. Ask about the lie, not the underlying misconduct. Two: no extrinsic proof. Take the answer. Three: 403 discretion. Four: a good-faith basis, from Whitmore. Five: protection from harassment under Rule 611(a). And extrinsic evidence offered for another purpose, such as bias, is governed by 401 through 403 instead."
+      },
+      {
+       "say": "Rehabilitation. You may support truthful character only after an attack on character for truthfulness. Any one of three suffices. One, 608 opinion or reputation evidence of untruthfulness. Two, 608(b) acts. Three, 609 convictions. But bias is not such an attack, per the Advisory Committee Note. And a single contradiction usually is not, per Problems 4.6 and 4.7."
+      },
+      {
+       "say": "First case. United States v. Whitmore, D.C. Circuit, 2004. A gun case resting on one officer, Officer Soto. The defense offered three witnesses to testify to Soto's bad reputation for truthfulness and their opinion that he was untruthful. It also sought to cross Soto about lying regarding his suspended driver's license and about unpaid child support."
+      },
+      {
+       "say": "Held, in two parts. Excluding the 608(a) witnesses was within the judge's discretion, because their information was too remote or too narrow. But barring the 608(b) cross was an abuse of discretion. The questioner needs only a good-faith basis, not admissible proof, and lying about the license is probative of untruthfulness. And the error was not harmless, since the case rested on Soto."
+      },
+      {
+       "say": "Why Whitmore matters. 608(b) bars extrinsic proof, not questions."
+      },
+      {
+       "say": "Second case. United States v. Abel, 1984. A defense witness denied on cross that he and the defendant belonged to a secret prison gang whose members were sworn to lie, steal, or kill for one another. The prosecution then called a witness to prove the membership."
+      },
+      {
+       "say": "Held, by then-Justice Rehnquist for a unanimous Court: admissible. The membership showed bias, as well as untruthful character. Bias is not character evidence, is never collateral, and may be proved extrinsically."
+      },
+      {
+       "say": "Why Abel matters. Rule 608(b) bars extrinsic evidence only when its sole purpose is to prove character for truthfulness. Evidence admissible for one purpose is not excluded because it would be barred for another. That is Rule 105 again."
+      },
+      {
+       "ask": "On cross, a lawyer asks a witness, isn't it true you lied on your job application? The witness denies it. Can the lawyer now offer the application?",
+       "answer": "No. 608(b) bars extrinsic evidence of specific acts to attack truthfulness. The lawyer is stuck with the answer.",
+       "pause": 8
+      },
+      {
+       "ask": "On cross, can a lawyer ask a witness about a past assault, to show untruthfulness?",
+       "answer": "No. An assault is not probative of truthfulness. 608(b) reaches only acts probative of truthfulness or untruthfulness.",
+       "pause": 8
+      },
+      {
+       "ask": "After opposing counsel shows a witness is the defendant's cousin, may the defendant call a witness to testify to the cousin's truthful character?",
+       "answer": "No. Bias is not an attack on character for truthfulness, so rehabilitation under 608(a) is not triggered.",
+       "pause": 8
+      },
+      {
+       "ask": "A witness denies on cross that he and the defendant belong to a gang sworn to lie for each other. Can the prosecution prove membership extrinsically?",
+       "answer": "Yes, under Abel. It shows bias, which is never collateral.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: 608(b) is cross-only, with no extrinsic proof, but questions are allowed with a good-faith basis. Two: ask about the lie, not the misconduct. Three: truthful-character support only after an attack on character for truthfulness, not after bias. Four: 608(b) does not bar extrinsic evidence that also proves bias."
+      },
+      {
+       "say": "Recap. 608(a): reputation or opinion on truthfulness; support only after attack. 608(b): specific acts on cross only, if probative of truthfulness, no extrinsic proof except 609 convictions. Five limits: probative of truthfulness, no extrinsic proof, 403, good faith, 611(a). Whitmore: questions with a good-faith basis are allowed. Abel: bias may be proved extrinsically."
+      },
+      {
+       "ask": "What are the three kinds of attack that trigger rehabilitation with truthful character?",
+       "answer": "608 opinion or reputation, 608(b) acts, or 609 convictions.",
+       "pause": 8
+      },
+      {
+       "ask": "Under 608(b)(2), whose truthfulness can you ask a character witness about?",
+       "answer": "Another witness whose character the witness being cross-examined has testified about.",
+       "pause": 8
+      },
+      {
+       "ask": "What were the two holdings in Whitmore?",
+       "answer": "Excluding the 608(a) witnesses was within discretion; barring the 608(b) cross about lying regarding his license was an abuse of discretion.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e08",
+     "title": "Impeachment by conviction: Rule 609",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 609's three tracks, the ten-year rule, pardons, juvenile adjudications, appeals, the comparison chart, crimen falsi, preservation under Luce and Ohler, and Brewer with the five Gordon factors."
+      },
+      {
+       "say": "Plain English. A witness's criminal record can be used to suggest the witness is not believable, with different tests depending on the crime and the witness."
+      },
+      {
+       "say": "The exact rule. Rule 609(a). To attack a witness's character for truthfulness by evidence of a criminal conviction, two tracks."
+      },
+      {
+       "say": "Track one, 609(a)(1), for a crime punishable by death or by imprisonment for more than one year in the convicting jurisdiction. That is, felonies. Two sub-rules. (A): the evidence must be admitted, subject to Rule 403, in a civil case or in a criminal case in which the witness is not a defendant. (B): the evidence must be admitted in a criminal case in which the witness is a defendant, if the probative value of the evidence outweighs its prejudicial effect to that defendant."
+      },
+      {
+       "say": "Track two, 609(a)(2), for any crime regardless of the punishment: the evidence must be admitted if the court can readily determine that establishing the elements of the crime required proving, or the witness's admitting, a dishonest act or false statement."
+      },
+      {
+       "say": "Let me give you the comparison chart in words. Dishonesty or false statement, any punishment: must be admitted, no 403. Felony, any witness except a criminal defendant: 403, excluded only if substantially outweighed. Felony, the criminal defendant: admitted only if probative value outweighs prejudicial effect. More than 10 years old, from the later of conviction or release: probative value must substantially outweigh prejudice, plus written notice."
+      },
+      {
+       "say": "Now 609(b), the ten-year limit. If more than 10 years have passed since the witness's conviction or release from confinement for it, whichever is later, the evidence is admissible only if its probative value, supported by specific facts and circumstances, substantially outweighs its prejudicial effect, and the proponent gives the adverse party reasonable written notice of the intent to use it."
+      },
+      {
+       "say": "609(c): a pardon, annulment, certificate of rehabilitation, or equivalent procedure bars use if it was based on a finding of rehabilitation and the person has not been convicted of a later felony, or if it was based on a finding of innocence."
+      },
+      {
+       "say": "609(d): juvenile adjudications are admissible only in a criminal case, only against a witness other than the defendant, only if an adult's conviction for that offense would be admissible to attack the adult's credibility, and only if admitting it is necessary to fairly determine guilt or innocence. Four onlys."
+      },
+      {
+       "say": "609(e): a conviction is admissible even if an appeal is pending. And evidence of the pendency is also admissible."
+      },
+      {
+       "say": "Nuances. What counts for the felony track is the maximum punishment, not the sentence imposed. Larceny, robbery, and drug crimes are generally not crimen falsi. The court looks at the elements, and if needed, the indictment, admitted facts, or jury instructions. That comes from the 2006 Advisory Committee Note. And 609(b)'s ten-year rule applies to crimen falsi too."
+      },
+      {
+       "say": "Preservation. Luce v. United States, 1984. After the court ruled in limine that his prior conviction could be used to impeach him, the defendant did not testify. Held: to preserve a challenge to an in limine 609 ruling, the defendant must testify. Otherwise the harm is wholly speculative."
+      },
+      {
+       "say": "Ohler v. United States, 2000. After an in limine ruling admitting her prior drug conviction, the defendant disclosed it herself on direct, to remove the sting. Held, by Chief Justice Rehnquist, five to four, Justice Souter dissenting: a defendant who preemptively introduces her own conviction on direct may not challenge its admission on appeal."
+      },
+      {
+       "say": "Put Luce and Ohler together: a defendant preserves a 609 objection only by testifying and letting the prosecution elicit the conviction."
+      },
+      {
+       "say": "The main case. United States v. Brewer, Eastern District of Tennessee, 1978. Charged with kidnapping and transporting a stolen car, Brewer sought to bar impeachment with a 1960 kidnapping conviction and three 1968 Ohio convictions, for rape and two assaults."
+      },
+      {
+       "say": "Held: 609(b) did not apply. The ten years run from the later of conviction or release, and he was released within ten years, including release from reconfinement for a parole violation on the kidnapping. So the court applied 609(a)(1)(B), using the Gordon factors. The kidnapping conviction was excluded: identical to the charged crime, and overkill. The other three were admitted."
+      },
+      {
+       "say": "The five Gordon factors. One, the nature of the crime; violence says little about veracity. Two, its recency and the witness's later history. Three, similarity to the charged crime, which weighs against admission. Four, the importance of the defendant's testimony, which weighs against admission. Five, the centrality of credibility, which weighs for admission."
+      },
+      {
+       "ask": "A civil plaintiff testifies. The defense wants to impeach her with a two-year-old felony assault conviction. Which test?",
+       "answer": "609(a)(1)(A): must be admitted, subject to 403.",
+       "pause": 8
+      },
+      {
+       "ask": "A criminal defendant testifies. The prosecution offers a three-year-old misdemeanor perjury conviction. Which test?",
+       "answer": "609(a)(2): perjury requires proving a false statement, so it must be admitted with no balancing.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant was convicted of a felony 14 years ago and released 8 years ago. Does 609(b) apply?",
+       "answer": "No. Ten years runs from the later of conviction or release, so only 8 years have passed. Use 609(a).",
+       "pause": 8
+      },
+      {
+       "ask": "A defendant charged with robbery has a prior robbery conviction. Which Gordon factor weighs most heavily against admission?",
+       "answer": "Similarity to the charged crime, which invites a propensity inference.",
+       "pause": 8
+      },
+      {
+       "ask": "The court rules in limine that the defendant's prior can be used. The defendant decides not to testify. Can he appeal the ruling?",
+       "answer": "No. Under Luce, he must testify to preserve the challenge.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: maximum punishment, not the sentence imposed. Two: robbery, larceny, and drug crimes are generally not crimen falsi. Three: the clock runs from the later of conviction or release. Four: 609(b) applies to crimen falsi too. Five: the defendant track is straight balancing, with ties excluding. Six: juvenile adjudications never against the defendant."
+      },
+      {
+       "say": "Recap. 609(a)(1)(A): felonies against non-defendant witnesses, subject to 403. 609(a)(1)(B): felonies against a testifying defendant, if probative value outweighs prejudice to the defendant. 609(a)(2): dishonesty crimes, must be admitted. 609(b): over ten years, reverse 403 plus notice. 609(c) pardons, 609(d) juveniles, 609(e) appeals. Luce and Ohler on preservation. Brewer and the Gordon factors."
+      },
+      {
+       "ask": "Name the five Gordon factors.",
+       "answer": "The nature of the crime; its recency and the witness's later history; similarity to the charged crime; the importance of the defendant's testimony; and the centrality of credibility.",
+       "pause": 8
+      },
+      {
+       "ask": "State the four limits on juvenile adjudications under 609(d).",
+       "answer": "Only in a criminal case, only against a witness other than the defendant, only if an adult conviction would be admissible, and only if necessary to fairly determine guilt or innocence.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Ohler hold?",
+       "answer": "A defendant who preemptively introduces her own conviction on direct cannot challenge its admission on appeal.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e09",
+     "title": "The rape shield: Rule 412",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. Rule 412's general bar, the three criminal exceptions, the civil test, the procedure, why the rule exists, prior false accusations, the asymmetry with 413 through 415, Olden v. Kentucky, and the impeachment steps."
+      },
+      {
+       "say": "Plain English. In sexual-misconduct cases, a victim's other sexual behavior and sexual predisposition stay out, with narrow exceptions."
+      },
+      {
+       "say": "The exact rule. Rule 412(a): in a civil or criminal proceeding involving alleged sexual misconduct, evidence offered to prove that a victim engaged in other sexual behavior, or offered to prove a victim's sexual predisposition, is not admissible."
+      },
+      {
+       "say": "412(b)(1), criminal cases. The court may admit three things. A: evidence of specific instances of a victim's sexual behavior, if offered to prove that someone other than the defendant was the source of semen, injury, or other physical evidence. B: evidence of specific instances of a victim's sexual behavior with respect to the person accused of the sexual misconduct, if offered by the defendant to prove consent, or if offered by the prosecutor. C: evidence whose exclusion would violate the defendant's constitutional rights."
+      },
+      {
+       "say": "412(b)(2), civil cases. The court may admit evidence offered to prove a victim's sexual behavior or sexual predisposition if its probative value substantially outweighs the danger of harm to any victim and of unfair prejudice to any party. That is the reverse 403 from day one. And the court may admit evidence of a victim's reputation only if the victim has placed it in controversy."
+      },
+      {
+       "say": "412(c), procedure. A party intending to offer such evidence must file a motion at least 14 days before trial, specifically describing the evidence and stating its purpose, serve it on all parties, and notify the victim. Before admitting the evidence, the court must conduct an in camera hearing, and the motion and record are sealed. Fourteen days for 412; fifteen days for 413 through 415. Watch that."
+      },
+      {
+       "say": "Why the rule? The slides explain the common law. It let defendants argue that past consent meant present consent, through the analogue of 404(a)(2)(B). And that unchastity showed untruthfulness, through the analogue of 608(b). Wigmore urged suspicion of complainants. Colb's response: once a woman swears she did not consent, her history has no real predictive force."
+      },
+      {
+       "say": "Prior false accusations. A prior false accusation of rape is not sexual behavior, so 412 does not reach it. The threshold is whether a jury could find the accusation was false. That is State v. Smith, Louisiana, 1999, which borrows the Huddleston standard. But ordinary 403 and 608(b) limits still apply."
+      },
+      {
+       "say": "The asymmetry with 413 through 415, from the slides. Why can the defendant's past sexual conduct come in while the victim's is shielded? The shield protects reporting and privacy, interests a past offender lacks. And a victim's history cuts both ways, while a defendant's prior rapes cut one way."
+      },
+      {
+       "say": "The case. Olden v. Kentucky, 1988. Olden claimed the complainant consented and that she invented the rape story to explain to Russell, her live-in partner, why she was getting out of another man's car. The trial court barred all evidence that she and Russell lived together."
+      },
+      {
+       "say": "Held: reversed, per curiam. The Confrontation Clause protects cross-examination designed to show a prototypical form of bias. Her testimony was central, and it was corroborated only by Russell, whose own bias the evidence would also show."
+      },
+      {
+       "say": "Why Olden matters: it is the model for 412(b)(1)(C). Exclusion that cuts off proof of bias violates the Constitution."
+      },
+      {
+       "say": "The outline's impeachment steps, five. One, name the theory: bias, contradiction, inconsistency, 608(a), 608(b), or 609. Two, apply its form-of-proof limits: opinion or reputation, cross only, or a record of conviction. Three, is extrinsic evidence allowed? Bias and non-collateral matters, yes; 608(b) character, no. Four, has character been attacked before rehabilitation? Five, 403, 611(a), and, in sex cases, 412."
+      },
+      {
+       "ask": "In a rape prosecution, the defendant offers evidence that the victim had sex with another man the same night, to explain the source of semen. Admissible?",
+       "answer": "Potentially yes, under 412(b)(1)(A), after a 14-day motion and in camera hearing.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant offers evidence of the victim's prior consensual sex with him, to prove consent. Admissible?",
+       "answer": "Potentially yes, under 412(b)(1)(B): specific instances with the accused, offered by the defendant to prove consent.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant offers evidence the victim falsely accused another man of rape last year. Does 412 bar it?",
+       "answer": "No. A prior false accusation is not sexual behavior. The threshold is whether a jury could find it false, and 403 and 608(b) still apply.",
+       "pause": 8
+      },
+      {
+       "ask": "In a civil sexual-harassment suit, the defense offers evidence of the plaintiff's sexual history. What test?",
+       "answer": "412(b)(2): probative value must substantially outweigh harm to any victim and unfair prejudice to any party. Reputation only if the victim placed it in controversy.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. One: 412 covers civil and criminal cases. Two: criminal exceptions are three specific ones; civil is a reverse-403 balance. Three: 14 days' notice, in camera, sealed. Four: prior false accusations are outside 412. Five: the constitutional exception tracks Olden, bias."
+      },
+      {
+       "say": "Recap. 412(a) bars a victim's other sexual behavior and sexual predisposition. 412(b)(1): source of physical evidence, prior acts with the accused, and constitutional rights. 412(b)(2): civil reverse 403. 412(c): 14-day motion, in camera, sealed. Olden: bias cross is constitutionally protected."
+      },
+      {
+       "ask": "What are the three criminal exceptions in 412(b)(1)?",
+       "answer": "Someone else as the source of semen, injury, or physical evidence; specific instances with the accused, offered by the defendant for consent or by the prosecutor; and evidence whose exclusion would violate the defendant's constitutional rights.",
+       "pause": 8
+      },
+      {
+       "ask": "When can a victim's reputation come in under 412 in a civil case?",
+       "answer": "Only if the victim has placed it in controversy.",
+       "pause": 8
+      },
+      {
+       "ask": "What theory of bias did Olden want to show?",
+       "answer": "That the complainant invented the rape to explain to her live-in partner, Russell, why she was getting out of another man's car.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "ev-d2-e10",
+     "title": "Day 2 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Cumulative quiz, days one and two. Out loud."
+      },
+      {
+       "ask": "What makes the 404(b)(2) purposes different from true exceptions?",
+       "answer": "They are non-character routes, not exceptions to the propensity ban. The true exceptions are 404(a)(2), 404(a)(3), and 413 through 415.",
+       "pause": 8
+      },
+      {
+       "ask": "Who must give notice under 404(b)(3), and what must it say?",
+       "answer": "The prosecutor in a criminal case, in writing, articulating the permitted purpose and the reasoning that supports it.",
+       "pause": 8
+      },
+      {
+       "ask": "Under Huddleston, who decides whether the other act happened?",
+       "answer": "The jury. The judge asks only whether a jury could reasonably find it by a preponderance, under 104(b).",
+       "pause": 8
+      },
+      {
+       "ask": "Stevens: what's the standard for reverse 404(b)?",
+       "answer": "Ordinary 401 similarity enough to suggest one person committed both, then 403.",
+       "pause": 8
+      },
+      {
+       "ask": "The defendant in a fraud case calls a witness to say he is honest. Specific acts on direct?",
+       "answer": "No. Only reputation or opinion on direct under 405(a). Specific acts only on cross.",
+       "pause": 8
+      },
+      {
+       "ask": "Which of these can be proved extrinsically: bias, a 608(b) lie, a 609 conviction?",
+       "answer": "Bias and the 609 conviction. Not the 608(b) lie.",
+       "pause": 8
+      },
+      {
+       "ask": "A testifying criminal defendant's six-year-old felony burglary conviction. Test?",
+       "answer": "609(a)(1)(B): probative value must outweigh prejudicial effect to the defendant.",
+       "pause": 8
+      },
+      {
+       "ask": "Ten-year clock under 609(b) runs from what?",
+       "answer": "The later of conviction or release from confinement for it.",
+       "pause": 8
+      },
+      {
+       "ask": "Notice periods: 412 versus 413 through 415?",
+       "answer": "412 requires a motion at least 14 days before trial. 413 through 415 require disclosure at least 15 days before trial.",
+       "pause": 8
+      },
+      {
+       "ask": "A testifying witness is impeached only with bias. Can the other side call a character witness to say he is truthful?",
+       "answer": "No. Bias is not an attack on character for truthfulness.",
+       "pause": 8
+      },
+      {
+       "ask": "From day one: what did Collins teach about probability evidence?",
+       "answer": "It needs real data and independent factors. Made-up numbers and interrelated variables fail.",
+       "pause": 8
+      },
+      {
+       "ask": "From day one: Rule 410 protects statements in plea talks with whom?",
+       "answer": "An attorney for the prosecuting authority, not police.",
+       "pause": 8
+      },
+      {
+       "say": "That's day two. Tomorrow, hearsay. The biggest day of the course. Rest up."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
