@@ -3231,6 +3231,963 @@
      ]
     }
    ]
+  },
+  {
+   "day": 4,
+   "title": "Government lawyers, prosecutors, and ethics in advocacy",
+   "minutes": 83,
+   "episodes": [
+    {
+     "id": "pr-d4-e01",
+     "title": "Spaced review of Days 1 to 3",
+     "minutes": 3,
+     "segments": [
+      {
+       "say": "Welcome to Day 4. Rapid recall first, weighted toward conflicts from yesterday."
+      },
+      {
+       "ask": "What are the two kinds of concurrent conflict in 1.7(a)?",
+       "answer": "Direct adversity, and a significant risk of material limitation.",
+       "pause": 6
+      },
+      {
+       "ask": "Name the four requirements of 1.7(b).",
+       "answer": "Reasonable belief in competent and diligent representation; not prohibited by law; no claim between clients in the same proceeding; informed consent, confirmed in writing, from each affected client.",
+       "pause": 6
+      },
+      {
+       "ask": "What three writings does 1.8(a) require?",
+       "answer": "Fair terms disclosed in writing; written advice to seek independent counsel; and informed consent in a writing signed by the client, including the lawyer's role.",
+       "pause": 6
+      },
+      {
+       "ask": "Which 1.8 rule is not imputed?",
+       "answer": "1.8(j).",
+       "pause": 6
+      },
+      {
+       "ask": "What does 1.9(b) carry with a moving lawyer?",
+       "answer": "Only material confidential information the lawyer personally acquired.",
+       "pause": 6
+      },
+      {
+       "ask": "What extra element does 1.18(c) require?",
+       "answer": "Information that could be significantly harmful to the prospective client.",
+       "pause": 6
+      },
+      {
+       "ask": "What three parts make up the lateral screen in 1.10(a)(2)?",
+       "answer": "A timely screen with no fee share, prompt written notice to the former client, and certifications of compliance.",
+       "pause": 6
+      },
+      {
+       "ask": "What did Sheppard Mullin hold?",
+       "answer": "A boilerplate advance waiver did not cover a known, undisclosed existing conflict, so the engagement agreement was unenforceable.",
+       "pause": 6
+      },
+      {
+       "ask": "May a lawyer reveal confidences to prevent a client's fraud that does not involve the lawyer's services?",
+       "answer": "Not under 1.6(b)(2) or (b)(3), which require the lawyer's services. Unless (b)(1) applies, no.",
+       "pause": 6
+      },
+      {
+       "ask": "What two duties stop at scope?",
+       "answer": "Care and candor.",
+       "pause": 6
+      },
+      {
+       "ask": "May a client fire a lawyer without cause?",
+       "answer": "Yes, anytime, though the court may need to approve substitution and fees earned are owed.",
+       "pause": 6
+      },
+      {
+       "ask": "Who decides whether to accept a plea?",
+       "answer": "The client.",
+       "pause": 6
+      },
+      {
+       "say": "Today, Part Seven, government lawyers, and Part Eight, ethics in advocacy, including the heavily tested candor to the tribunal."
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e02",
+     "title": "The government lawyer's client and duties",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. Same rules with a few twists, where government lawyers may practice, identifying the government client, conflicts within government, and duties outside the Rules."
+      },
+      {
+       "say": "Government lawyers follow the same Rules as everyone else, plus three things. One, obligations outside the Rules that apply because they are government employees. Two, recurring situations that make the general Rules hard to apply. Three, two Rules that apply only to them: 1.11, conflicts for current and former government lawyers, and 3.8, prosecutors."
+      },
+      {
+       "say": "Where they may practice. State and local government lawyers need a license where they practice, like anyone else. The federal government requires a license in at least one state or D.C., and by statute, 28 U.S.C. section 517, a federal lawyer may appear in any state or federal court nationwide. Federal lawyers still follow the conduct rules of the jurisdiction or court where they appear, under the McDade Amendment, section 530B. With no tribunal involved, the rules of the licensing jurisdiction generally govern."
+      },
+      {
+       "say": "Identifying the client. Often it is clear: a specific state, county, city, or agency. Sometimes the lawyer represents an interest or function of government, nominally represents the agency head while really representing the agency, or personally represents an employee, but only to protect the employer's interests too. The law that creates the entity defines it: constitutions, statutes, and regulations identify the client and the official empowered to direct counsel. The Rules will not tell you who calls the shots."
+      },
+      {
+       "say": "Prosecutors represent the sovereign: the State, or the People. Not the district attorney personally, not the victim, not the investigating officer; those are witnesses. The victim's own private lawyer represents the victim."
+      },
+      {
+       "say": "Defending government actors. Governments act only through people, so suits often name employees. In an official-capacity suit, the true client is the agency, and the named official is its procedural representative. When a government lawyer represents an employee personally, for example a Bivens damages claim against a federal officer, the employee is a full client owed every duty, yet the lawyer represents her only to serve the government's interests too. Conflicts can develop midstream, so disclose and get informed consents from everyone at the outset."
+      },
+      {
+       "say": "Conflicts within government. Are two agencies one client? Sometimes substantive law says whether agencies are distinct enough to be different clients, so one government law office can represent one against the other. Sometimes officials agree which lawyers handle each side, and written informed consents resolve any lingering concern. Absent agreement, infer the client from reasonable expectations, weighing three factors. One, how the government client is legally defined and funded. Two, whether it has independent legal authority over the matter. Three, the extent to which the matter has broader implications for the government. Resolve doubt in favor of detailed written disclosures and consents all around. And even when two entities are not the same client, 1.7(a)(2) still bars a significant risk of material limitation."
+      },
+      {
+       "say": "Duties outside the Rules. Leaders of government law offices and courts often expect a higher standard of government lawyers. Specific laws apply that do not bind private lawyers: conflict-of-interest statutes, ethics-in-government laws, codes of conduct, personnel rules, and gift rules that often bar even shared meals from people with business before the agency. The class quiz: may Patty accept Derrick's offer? Maybe: besides the Rules, she must check the gift laws and other government ethics rules."
+      },
+      {
+       "ask": "A crime victim tells the assistant district attorney, you're my lawyer, so do what I say about the plea deal. Is she right?",
+       "answer": "No. The prosecutor represents the sovereign, the State or the People. The victim is a witness. Her own private lawyer would represent her.",
+       "pause": 10
+      },
+      {
+       "ask": "A city attorney defends the police chief, named in his official capacity. Who is the real client?",
+       "answer": "The city, or the agency. The named official is its procedural representative.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. Same Rules plus government-specific law and 1.11 and 3.8. Federal lawyers can appear anywhere under section 517 but follow local conduct rules under McDade. Prosecutors represent the sovereign. Official-capacity suits: the agency is the client."
+      },
+      {
+       "ask": "What statute lets federal lawyers appear in any court nationwide?",
+       "answer": "28 U.S.C. section 517.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three factors for deciding whether two agencies are one client.",
+       "answer": "How each is legally defined and funded, whether it has independent legal authority over the matter, and how broad the government-wide implications are.",
+       "pause": 8
+      },
+      {
+       "ask": "Who is the client of a prosecutor?",
+       "answer": "The sovereign: the State or the People.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e03",
+     "title": "The revolving door: Rule 1.11(a) through (c), and the four levels",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. 1.11 covers anyone who served as a public officer or employee. Concurrent conflicts are not imputed in government. Then the former government lawyer rules in 1.11(a), (b), (c), the definition of matter in (e), and the four levels of prior government involvement."
+      },
+      {
+       "say": "Two preliminaries. 1.11 covers service as any public officer or employee, not only as a practicing lawyer. And concurrent conflicts are not imputed in government. An individual government lawyer may not take part in a matter adverse to her own current client, but others in her office may. 1.10 does not apply to them, per 1.10(d). 1.11 does."
+      },
+      {
+       "say": "Rule 1.11(a). A lawyer who formerly served as a public officer or employee, one, is subject to 1.9(c), so she may not use or reveal the government's information. And two, shall not otherwise represent a client in connection with a matter in which the lawyer participated personally and substantially as a public officer or employee, unless the appropriate government agency gives its informed consent, confirmed in writing."
+      },
+      {
+       "say": "Notice what is missing from 1.11(a). There is no requirement that the new client be adverse to the government. It bars switching sides, and more: even working on the same side, for a private client, in a matter you handled personally and substantially in government."
+      },
+      {
+       "say": "Rule 1.11(b). When a lawyer is disqualified under (a), no lawyer in her firm may knowingly undertake or continue the matter unless two requirements are met, both required. One, the disqualified lawyer is timely screened from any participation and apportioned no part of the fee. Two, written notice is promptly given to the appropriate government agency to enable it to ascertain compliance."
+      },
+      {
+       "say": "Rule 1.11(c). A lawyer having information she knows is confidential government information about a person, acquired as a public officer or employee, may not represent a private client whose interests are adverse to that person in a matter in which the information could be used to that person's material disadvantage. The firm may proceed only if the disqualified lawyer is timely screened and apportioned no part of the fee. No notice requirement."
+      },
+      {
+       "say": "Rule 1.11(e), matter. It includes, one, any judicial or other proceeding, application, request for a ruling or other determination, contract, claim, controversy, investigation, charge, accusation, arrest, or other particular matter involving a specific party or parties; and two, any other matter covered by the agency's conflict rules. Key point: rulemaking, which involves no specific parties, is usually not a matter."
+      },
+      {
+       "say": "Now the four levels of prior government involvement. Level one: she participated personally and substantially in the same matter, the narrow 1.11(e) matter involving specific parties. The bar applies even if the private client's interests are not adverse to the government. Response: she is personally out unless the agency gives informed consent, confirmed in writing. The firm may proceed with a timely screen, no fee share, and prompt written notice to the agency. More measures are probably needed to make the screen effective."
+      },
+      {
+       "say": "Level two: no personal and substantial participation, but she has confidential government information about a third party. That means information obtained under governmental authority that the government is prohibited by law from disclosing or has a privilege not to disclose, and that is not otherwise public, like the fact that someone was secretly investigated, or a sealed indictment. It must concern a third party adverse to the new client and be usable to that party's material disadvantage. Response: she is personally disqualified; the firm may proceed with a timely screen and no fee share, under 1.11(c). No notice requirement."
+      },
+      {
+       "say": "Level three: she participated only in something that is not a matter, like rulemaking, or knows ordinary confidential information that is not confidential government information. A major departure from private-sector rules: no one is disqualified and no screen is required, though some firms screen anyway. She still may not use the information to the former government client's disadvantage or disclose it, under 1.9(c), and if she cannot work on the matter without doing so, she must stay out."
+      },
+      {
+       "say": "Level four: no involvement and no confidential information. Same as the regular rules. No conflict; nothing required."
+      },
+      {
+       "say": "No cooling-off period. The Model Rules turn on personal and substantial participation, not time. The class quiz: a former prosecutor is disqualified only if she participated personally and substantially in the prosecution. Adina, personally disqualified under 1.11(a)(2), must be screened, with no fee share and written notice to the Department of Labor, before her new firm can keep the wage-and-hour case. And Praveen's nonpublic Medicare data about Dr. Hildenbrant is confidential government information under 1.11(c): he should have been disqualified and screened, and he certainly could not use or share it."
+      },
+      {
+       "ask": "As an EPA lawyer, Dana personally and substantially handled an enforcement action against Acme. Now in private practice, Acme wants to hire her to defend it in the same action. Acme is the side she opposed. Can she take it?",
+       "answer": "Not without the EPA's informed consent, confirmed in writing, under 1.11(a)(2). Her firm may take it if she is timely screened, gets no part of the fee, and the agency gets prompt written notice.",
+       "pause": 12
+      },
+      {
+       "ask": "As a Labor Department lawyer, Ben drafted a general regulation on overtime. Now in private practice, a client wants him to challenge that regulation's application in a lawsuit. Disqualified?",
+       "answer": "No. Rulemaking is not a matter under 1.11(e), because it involves no specific parties. He must not use or reveal confidential information under 1.9(c).",
+       "pause": 12
+      },
+      {
+       "ask": "At the U.S. Attorney's office, Carla saw a sealed file revealing that a businessman was under secret investigation. She never worked on it. In private practice, a client wants to sue that businessman. What result?",
+       "answer": "That is confidential government information under 1.11(c). She is personally disqualified if it could be used to his material disadvantage. Her firm may proceed with a timely screen and no fee share.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. No adversity is required under 1.11(a). There is no cooling-off period. Rulemaking is not a matter. And 1.11(c) screens need no notice."
+      },
+      {
+       "say": "Recap. 1.11(a): former government lawyers are bound by 1.9(c), and are out of any matter they handled personally and substantially unless the agency consents in confirmed writing. 1.11(b): the firm may proceed with a screen, no fee share, and written notice to the agency. 1.11(c): confidential government information about a third party disqualifies personally; screen and no fee share."
+      },
+      {
+       "ask": "What does 1.11(a)(2) require, and what does it not require?",
+       "answer": "Personal and substantial participation in the same matter, unless the agency consents in confirmed writing. It does not require adversity to the government.",
+       "pause": 8
+      },
+      {
+       "ask": "Define confidential government information.",
+       "answer": "Information obtained under governmental authority that the government is prohibited from disclosing or has a privilege not to disclose, and that is not otherwise public.",
+       "pause": 8
+      },
+      {
+       "ask": "Is there a cooling-off period under the Model Rules?",
+       "answer": "No.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e04",
+     "title": "Current government lawyers and former neutrals: 1.11(d) and 1.12",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. 1.11(d) for lawyers now in government, then 1.12 for former judges, arbitrators, mediators, other neutrals, and law clerks."
+      },
+      {
+       "say": "Rule 1.11(d). A lawyer currently serving as a public officer or employee, one, is subject to 1.7 and 1.9. And two, shall not do either of two things. (i) Participate in a matter in which the lawyer participated personally and substantially while in private practice or nongovernmental employment, unless the agency gives informed consent, confirmed in writing. (ii) Negotiate for private employment with any person who is involved as a party or as lawyer for a party in a matter in which the lawyer is participating personally and substantially. Except that a law clerk to a judge, adjudicative officer, or arbitrator may negotiate as 1.12(b) allows."
+      },
+      {
+       "say": "Why (d)(2)(i) bars even helping the former client. 1.9(a) bars only adversity to a former client, but 1.11(d)(2)(i) bars participation altogether, to guard against using government power for the special benefit of the former client. And why revolving door: many lawyers cycle in and out of government, some more than once."
+      },
+      {
+       "say": "Rule 1.12(a). Except as stated in (d), a lawyer shall not represent anyone in connection with a matter in which the lawyer participated personally and substantially as a judge or other adjudicative officer, a law clerk to one, or an arbitrator, mediator, or other third-party neutral, unless all parties to the proceeding give informed consent, confirmed in writing. Notice: all parties consent, not just the agency."
+      },
+      {
+       "say": "1.12(b). A judge, adjudicative officer, arbitrator, mediator, or other neutral shall not negotiate for employment with any party or lawyer for a party in a matter in which the neutral is participating personally and substantially. A law clerk may, but only after notifying the judge or other adjudicative officer."
+      },
+      {
+       "say": "1.12(c). If a lawyer is disqualified by (a), the firm may proceed only if two requirements are met. One, the disqualified lawyer is timely screened and apportioned no part of the fee. Two, written notice is promptly given to the parties and any appropriate tribunal."
+      },
+      {
+       "say": "1.12(d). A partisan arbitrator on a multimember panel may later represent that party."
+      },
+      {
+       "say": "Compare the consent and notice targets. Former government lawyer: the agency consents, and the agency gets notice. Former neutral: all parties consent, and the parties and the tribunal get notice."
+      },
+      {
+       "ask": "A lawyer represented a developer in a zoning dispute, then joined the city attorney's office. The dispute is still going, and she wants to help the city in it. May she?",
+       "answer": "Not unless the city gives informed consent, confirmed in writing. 1.11(d)(2)(i) bars participating in a matter she handled personally and substantially in private practice. And 1.9 applies too.",
+       "pause": 12
+      },
+      {
+       "ask": "A law clerk working on a case wants to interview with a firm appearing in that case. May she?",
+       "answer": "Yes, under 1.12(b), but only after notifying her judge.",
+       "pause": 12
+      },
+      {
+       "ask": "A retired judge who presided over a case joins a firm that represents one party in a later phase of that same case. Can the firm continue?",
+       "answer": "The judge is personally disqualified unless all parties consent in confirmed writing. The firm may continue if the judge is timely screened, gets no part of the fee, and written notice goes promptly to the parties and the tribunal.",
+       "pause": 12
+      },
+      {
+       "ask": "A government lawyer handling an investigation of a company begins job talks with the company's outside counsel. Permitted?",
+       "answer": "No. 1.11(d)(2)(ii) bars negotiating for private employment with a party or a party's lawyer in a matter she is handling personally and substantially.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 1.11(d): current government lawyers are bound by 1.7 and 1.9, may not work on matters they handled in private practice without agency consent, and may not negotiate for jobs with parties or their lawyers. 1.12: former neutrals are out unless all parties consent; firms screen with notice to parties and tribunal; clerks may job-hunt after telling the judge; partisan arbitrators may later represent their party."
+      },
+      {
+       "ask": "Who must consent for a former mediator to represent a party in the same matter?",
+       "answer": "All parties to the proceeding, confirmed in writing.",
+       "pause": 8
+      },
+      {
+       "ask": "What must a law clerk do before negotiating for a job with a firm in a pending case?",
+       "answer": "Notify the judge.",
+       "pause": 8
+      },
+      {
+       "ask": "Why does 1.11(d)(2)(i) bar even helping a former client?",
+       "answer": "To prevent using government power for the special benefit of the former client.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e05",
+     "title": "Special duties of prosecutors: Rule 3.8",
+     "minutes": 10,
+     "segments": [
+      {
+       "say": "Roadmap. Every paragraph of 3.8, (a) through (h), then Brady and Berger. Each paragraph marks a point in the criminal process where a prosecutor must favor justice over merely winning."
+      },
+      {
+       "say": "The theme, from Berger versus United States: a prosecutor may strike hard blows, but is not at liberty to strike foul ones."
+      },
+      {
+       "say": "The prosecutor in a criminal case shall do eight things. Paragraph (a): refrain from prosecuting a charge that the prosecutor knows is not supported by probable cause. Probable cause is a floor, not a target, and the Rule is violated only when the prosecutor knows probable cause is lacking."
+      },
+      {
+       "say": "Paragraph (b): make reasonable efforts to assure that the accused has been advised of the right to, and the procedure for obtaining, counsel and has been given reasonable opportunity to obtain counsel. The prosecutor cannot sit idly by if the court fails to advise the accused. The class quiz: gently remind the judge that the defendant was not advised of the right to counsel and that her finances should be assessed for appointed counsel."
+      },
+      {
+       "say": "Paragraph (c): not seek to obtain from an unrepresented accused a waiver of important pretrial rights, such as the right to a preliminary hearing. It does not apply to an accused appearing pro se with the tribunal's approval, and it does not forbid lawful questioning of an uncharged suspect who has knowingly waived counsel and silence, Comment 2."
+      },
+      {
+       "say": "Paragraph (d): make timely disclosure to the defense of all evidence or information known to the prosecutor that tends to negate the guilt of the accused or mitigates the offense, and, in connection with sentencing, disclose to the defense and to the tribunal all unprivileged mitigating information known to the prosecutor, unless relieved by a protective order. This is broader than the Constitution. Brady and Giglio require disclosing material exculpatory and impeachment evidence as due process, but the Constitution requires less for impeachment evidence before a plea, United States versus Ruiz, and limits mandated disclosure of impeachment material, Strickler versus Greene. 3.8(d) has no materiality limit. Everything that tends to negate guilt or mitigate, timely."
+      },
+      {
+       "say": "Paragraph (e): not subpoena a lawyer in a grand jury or other criminal proceeding to present evidence about a past or present client unless the prosecutor reasonably believes three things, all required. One, the information sought is not protected from disclosure by any applicable privilege. Two, the evidence sought is essential to the successful completion of an ongoing investigation or prosecution. Three, there is no other feasible alternative to obtain the information. Unprivileged, essential, no alternative."
+      },
+      {
+       "say": "Paragraph (f): except for statements necessary to inform the public of the nature and extent of the prosecutor's action that serve a legitimate law enforcement purpose, refrain from extrajudicial comments that have a substantial likelihood of heightening public condemnation of the accused, and exercise reasonable care to prevent investigators, police, and others assisting the prosecutor from making statements the prosecutor could not make under 3.6 or this Rule. No perp-walk commentary."
+      },
+      {
+       "say": "Paragraph (g): when the prosecutor knows of new, credible, and material evidence creating a reasonable likelihood that a convicted defendant did not commit the offense, (1) promptly disclose it to an appropriate court or authority; and (2) if the conviction was obtained in the prosecutor's jurisdiction, (i) promptly disclose it to the defendant unless a court authorizes delay, and (ii) undertake further investigation, or make reasonable efforts to cause an investigation, to determine whether the defendant was convicted of an offense he did not commit."
+      },
+      {
+       "say": "Paragraph (h): when the prosecutor knows of clear and convincing evidence establishing that a defendant in the prosecutor's jurisdiction was convicted of an offense the defendant did not commit, seek to remedy the conviction."
+      },
+      {
+       "say": "Definitions for (g). Credible means a reasonable factfinder could believe it. Material means it creates a reasonable likelihood the defendant did not commit the offense, so it must bear on guilt. Impeachment or mitigation evidence is covered by 3.8(d) instead, except impeachment so devastating that it meets the standard."
+      },
+      {
+       "say": "The grid, by what the prosecutor knows and where the conviction was. New, credible, material evidence, conviction in the prosecutor's own jurisdiction: disclose to a court or authority, disclose to the defendant unless a court authorizes delay, and investigate or cause an investigation. Same evidence, conviction elsewhere: only disclose to an appropriate court or authority. Clear and convincing evidence of innocence, own jurisdiction: seek to remedy the conviction, plus the (g) duties. Clear and convincing, conviction elsewhere: only (g)(1) disclosure."
+      },
+      {
+       "say": "The class quiz: evidence that is new, credible, and material but not clear and convincing, in his own jurisdiction, triggers (g)(2): disclose to Norman and investigate, plus (g)(1) disclosure to a court or authority. The duty to seek to remedy requires clear and convincing evidence in the prosecutor's jurisdiction."
+      },
+      {
+       "say": "Truthfulness binds prosecutors too. Police may use some deception in interrogation, Frazier versus Cupp, but prosecutors may not lie to a suspect about the evidence, under 4.1(a) and 8.4(c)."
+      },
+      {
+       "say": "Brady versus Maryland, 1963. The prosecution withheld a co-defendant's statement admitting that he, not Brady, did the actual killing. The Court held that suppressing evidence favorable to an accused that is material to guilt or punishment violates due process, whatever the prosecutor's good or bad faith. It is the constitutional floor that 3.8(d) builds on. Giglio versus United States, 1972, extends it to impeachment evidence, like a promise of leniency to a key witness, and United States versus Bagley, 1985, defines materiality as a reasonable probability of a different result. 3.8(d) has no materiality limit."
+      },
+      {
+       "say": "Berger versus United States, 1935. A federal prosecutor misstated facts, put words in witnesses' mouths, and made improper insinuations in a counterfeiting trial. The misconduct required a new trial. The prosecutor represents a sovereign whose interest in a criminal prosecution is not that it shall win a case, but that justice shall be done. He may strike hard blows, but is not at liberty to strike foul ones. It is the source of the higher standard courts expect of government lawyers."
+      },
+      {
+       "ask": "A prosecutor has a witness statement that slightly undercuts the victim's identification but would not, in her view, change the outcome. Must she disclose it?",
+       "answer": "Yes, under 3.8(d). The Rule has no materiality limit: anything that tends to negate guilt must be timely disclosed, even if Brady might not require it.",
+       "pause": 12
+      },
+      {
+       "ask": "A prosecutor learns of credible new DNA evidence creating a reasonable likelihood that a man her own office convicted is innocent. It is not yet clear and convincing. What must she do?",
+       "answer": "Under 3.8(g), promptly disclose it to an appropriate court or authority, promptly disclose it to the defendant unless a court authorizes delay, and investigate or cause an investigation. Seeking to remedy the conviction under (h) requires clear and convincing evidence.",
+       "pause": 12
+      },
+      {
+       "ask": "A prosecutor wants to subpoena a target's former lawyer to the grand jury about the target's payment of fees. The same records are available from the bank. Permitted?",
+       "answer": "No. 3.8(e) requires a reasonable belief that the information is unprivileged, essential, and has no other feasible source. The bank is a feasible alternative.",
+       "pause": 12
+      },
+      {
+       "ask": "At arraignment, the judge forgets to advise an unrepresented defendant of her right to counsel. What should the prosecutor do?",
+       "answer": "Gently remind the judge, under 3.8(b): reasonable efforts to assure the accused is advised of the right to counsel.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. 3.8(a) needs knowledge that probable cause is lacking. 3.8(d) is broader than Brady. Remedying a conviction under (h) requires clear and convincing evidence and the prosecutor's own jurisdiction. Police may deceive; prosecutors may not lie."
+      },
+      {
+       "say": "Recap. 3.8: (a) no charges known to lack probable cause; (b) assure the right to counsel; (c) no waivers from unrepresented accused; (d) disclose all exculpatory and mitigating information; (e) subpoena lawyers only if unprivileged, essential, and no alternative; (f) no condemning publicity; (g) new, credible, material evidence of innocence: disclose, and if your jurisdiction, tell the defendant and investigate; (h) clear and convincing evidence in your jurisdiction: seek to remedy."
+      },
+      {
+       "ask": "How does 3.8(d) differ from Brady?",
+       "answer": "3.8(d) has no materiality limit. It covers everything that tends to negate guilt or mitigate.",
+       "pause": 8
+      },
+      {
+       "ask": "What three beliefs must a prosecutor hold to subpoena a lawyer about a client?",
+       "answer": "The information is unprivileged, essential to an ongoing investigation or prosecution, and there is no other feasible way to get it.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Berger versus United States say?",
+       "answer": "The sovereign's interest is not that it win, but that justice be done. Hard blows, not foul ones.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e06",
+     "title": "The lawyer as counselor and neutral: 2.1, 2.3, 2.4, and 3.9",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. The advisor rule, evaluations for third persons, the lawyer as third-party neutral, and the advocate in nonadjudicative proceedings."
+      },
+      {
+       "say": "Rule 2.1. In representing a client, a lawyer shall exercise independent professional judgment and render candid advice. In rendering advice, a lawyer may refer not only to law but to other considerations such as moral, economic, social, and political factors that may be relevant to the client's situation. Shall exercise independent judgment and give candid advice. May refer to non-legal factors. Comment 1: do not soften advice because the client won't like it. Comment 2: purely technical legal advice can be inadequate. When a client proposes something unlawful, 2.1 is the license for extra-legal advice about whether it is wise. The client still decides objectives."
+      },
+      {
+       "say": "Rule 2.3. Paragraph (a): a lawyer may evaluate a matter affecting a client for someone other than the client if the lawyer reasonably believes the evaluation is compatible with other aspects of the relationship. Paragraph (b): when the lawyer knows or reasonably should know the evaluation is likely to affect the client's interests materially and adversely, the lawyer shall not provide it unless the client gives informed consent. Paragraph (c): except as disclosure is authorized in connection with the report, information relating to the evaluation is otherwise protected by 1.6."
+      },
+      {
+       "say": "Examples: a title opinion for a purchaser, an opinion letter for a lender, an audit-response letter. Whether the lawyer owes the third person a legal duty is a question of other law, Comment 3, and the casebook treats such reliance as one way to assume a duty of care to a non-client. Distinguish an evaluation from investigating a non-client, for example the vendor's title for the purchaser, Comment 2."
+      },
+      {
+       "say": "Rule 2.4. Paragraph (a): a lawyer is a third-party neutral when helping two or more non-clients resolve a dispute or other matter, as arbitrator, mediator, or similar. Paragraph (b): the neutral shall inform unrepresented parties that the lawyer is not representing them, and when the lawyer knows or reasonably should know a party does not understand the role, shall explain the difference between a neutral and a lawyer who represents a client. Later representing a party in the same matter is governed by 1.12. And lawyers representing clients in ADR follow the Rules: candor under 3.3 in binding arbitration, which is a tribunal; otherwise 4.1, Comment 5."
+      },
+      {
+       "say": "Rule 3.9. A lawyer representing a client before a legislative body or administrative agency in a nonadjudicative proceeding, like lobbying, rulemaking, or hearings, shall do two things, both required. One, disclose that the appearance is in a representative capacity. Two, conform to 3.3(a) through (c), 3.4(a) through (c), and 3.5. It applies to official hearings or meetings where the lawyer presents evidence or argument, not to bilateral negotiations with the government, Comment 3."
+      },
+      {
+       "ask": "A company's lawyer is asked by a bank to write an opinion letter about the company's legal standing, for the bank's loan decision. The lawyer knows the honest opinion will hurt the company's chances. May he give it?",
+       "answer": "Only with the company's informed consent, under 2.3(b), because he knows the evaluation is likely to affect the client's interests materially and adversely.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer mediating a dispute between two unrepresented neighbors notices one thinks she is his lawyer. What must he do?",
+       "answer": "Under 2.4(b), explain the difference between a neutral and a lawyer who represents a client, and that he is not representing her.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer testifies for a trade association at a legislative committee hearing on a bill. What must she do?",
+       "answer": "Under 3.9, disclose that she appears in a representative capacity, and comply with 3.3(a) through (c), 3.4(a) through (c), and 3.5.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 2.1: independent judgment and candid advice, with moral and other factors allowed. 2.3: evaluations for others if compatible, with informed consent when likely to hurt the client, and 1.6 otherwise. 2.4: neutrals must tell unrepresented parties they are not their lawyer. 3.9: disclose the representative capacity and follow core candor and fairness rules."
+      },
+      {
+       "ask": "What may a lawyer refer to under 2.1 besides law?",
+       "answer": "Moral, economic, social, and political factors.",
+       "pause": 8
+      },
+      {
+       "ask": "Is binding arbitration a tribunal for purposes of 3.3?",
+       "answer": "Yes.",
+       "pause": 8
+      },
+      {
+       "ask": "What two things does 3.9 require?",
+       "answer": "Disclose the representative capacity, and conform to 3.3(a) to (c), 3.4(a) to (c), and 3.5.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e07",
+     "title": "Gathering and handling evidence: 3.4 and 4.4(a)",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The officer of the court, investigating lawfully under 4.4(a), discovery conduct under 3.4(c) and (d), retaining and handling evidence under 3.4(a), (b), and (f), litigation holds and Zubulake, and evidence handed to you."
+      },
+      {
+       "say": "Being an officer of the court brings three ideas into play. One, advocacy may draw extra scrutiny. Two, courts expect behavior beyond the minimum demands of the Rules. Three, loyalty to the client is constrained by enforceable duties owed to the court and the legal system."
+      },
+      {
+       "say": "Investigate lawfully. 4.4(a): in representing a client, a lawyer shall not use methods of obtaining evidence that violate the legal rights of a third person, like trespass, wiretapping, or intrusion into seclusion. The class quiz: an investigator videotaping a supposedly housebound plaintiff from a public street probably does not violate 4.4(a), unless local law forbids it. The lawyer answers for an investigator's unlawful methods under 5.3 and 8.4(a). Prosecutors may not lie to a suspect about the evidence, saying the video shows you in the bank when it is impossible to tell. And a prosecutor threatening to circulate humiliating photographs of a minor to coerce cooperation uses means with no substantial purpose other than to embarrass, violating 4.4(a)."
+      },
+      {
+       "say": "Discovery conduct, 3.4(c) and (d). A lawyer shall not, (c), knowingly disobey an obligation under the rules of a tribunal, except for an open refusal based on an assertion that no valid obligation exists. Or, (d), in pretrial procedure, make a frivolous discovery request or fail to make reasonably diligent effort to comply with a legally proper discovery request by an opposing party. Discovery misconduct is a disciplinary violation as well as sanctionable."
+      },
+      {
+       "say": "Class quiz applications. Openly refusing to produce the secret soda formula on the ground that no valid obligation exists is not a 3.4(c) violation, though contempt or sanctions may follow so the issue can be reviewed. But citing an unpublished opinion in violation of the court's rule violates 3.4(c), even though the brief candidly called it unpublished."
+      },
+      {
+       "say": "Retaining and handling evidence. A lawyer shall not, 3.4(a), unlawfully obstruct another party's access to evidence, or unlawfully alter, destroy, or conceal a document or other material having potential evidentiary value, or counsel or assist another to do so. 3.4(b): falsify evidence, counsel or assist a witness to testify falsely, or offer an inducement to a witness that is prohibited by law. 3.4(f): request a person other than a client to refrain from voluntarily giving relevant information to another party, unless two conditions are met: the person is a relative, employee, or other agent of the client, and the lawyer reasonably believes the person's interests will not be adversely affected."
+      },
+      {
+       "say": "Two words in 3.4(a) matter. Unlawfully: lawyers lawfully withhold all the time, through proper discovery objections, instructions not to answer privileged questions, and advising a client not to talk to police. Potential: the material need not be admissible or requested; it need only be relevant to or potentially useful in a pending or reasonably foreseeable proceeding."
+      },
+      {
+       "say": "Consequences for the client: monetary sanctions, then evidentiary or terminating sanctions after an order compelling discovery; and for lost material that should have been preserved, remedial measures even without bad faith, like failing to halt automatic deletion. Counsel's own duty: many courts impose personal obligations on lawyers for their clients' preservation and production. Become actively involved immediately on retention, and circulate a litigation hold to everyone who may have relevant material."
+      },
+      {
+       "say": "Zubulake versus UBS Warburg, Southern District of New York, 2004, Judge Scheindlin. In an employment discrimination suit, UBS employees deleted relevant emails and failed to produce others despite counsel's instructions to preserve them. The court held counsel must issue a litigation hold, communicate with key players, and monitor compliance, and it gave an adverse-inference instruction for the lost emails. Preservation is not the client's job alone."
+      },
+      {
+       "say": "Evidence handed to you. You may not conceal, destroy, or alter it, or counsel anyone else to. The class quiz: driving the client's bloody knife to another town and throwing it in a dumpster is unlawful concealment and destruction, a clear 3.4(a) violation and likely obstruction, and no proceeding need be pending. A note the outline marks as outside the class materials, so verify it: many courts hold a lawyer who takes possession of physical evidence of a crime may keep it a reasonable time for examination, but must then turn it over to the authorities."
+      },
+      {
+       "ask": "A company's in-house lawyer, anticipating a lawsuit, tells IT to keep the automatic ninety-day email deletion running because it is standard practice. Problem?",
+       "answer": "Yes. Once litigation is reasonably foreseeable, material of potential evidentiary value must be preserved. Under Zubulake, counsel must issue and monitor a litigation hold. Letting deletion continue risks 3.4(a) and sanctions, even without bad faith.",
+       "pause": 12
+      },
+      {
+       "ask": "A defense lawyer asks her client's employee, and separately a neutral eyewitness, not to talk to the plaintiff's lawyer. Permitted?",
+       "answer": "As to the employee, yes, if she reasonably believes his interests won't be harmed, under 3.4(f). As to the neutral eyewitness, no.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer believes a discovery order is invalid and openly tells the court she will not comply so she can seek review. Violation of 3.4(c)?",
+       "answer": "No. An open refusal based on an assertion that no valid obligation exists is excepted, though she may face contempt or sanctions.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 4.4(a): no evidence-gathering that violates third persons' rights. 3.4(a): no unlawful obstruction, alteration, destruction, or concealment of potential evidence. 3.4(b): no falsifying or prohibited inducements. 3.4(c): obey tribunal rules except open refusal. 3.4(d): no frivolous discovery, and diligent compliance. 3.4(f): only client agents may be asked not to talk, and only if not harmed."
+      },
+      {
+       "ask": "What does Zubulake require of counsel?",
+       "answer": "Issue a litigation hold, communicate with key players, and monitor compliance.",
+       "pause": 8
+      },
+      {
+       "ask": "What are the two conditions in 3.4(f)?",
+       "answer": "The person is a relative, employee, or agent of the client, and the lawyer reasonably believes the person's interests won't be adversely affected.",
+       "pause": 8
+      },
+      {
+       "ask": "Does 3.4(a) require that a proceeding be pending?",
+       "answer": "No. Potential evidence for a pending or reasonably foreseeable proceeding is covered.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e08",
+     "title": "Inadvertent documents, decorum, and criticizing judges: 4.4(b), 3.5, and 8.2",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. What to do with an inadvertently sent document under 4.4(b) and Federal Rule 26(b)(5)(B), the four paragraphs of 3.5, and statements about judges under 8.2."
+      },
+      {
+       "say": "Rule 4.4(b). A lawyer who receives a document or electronically stored information relating to the representation of the lawyer's client and knows or reasonably should know that it was inadvertently sent shall promptly notify the sender. That is the whole Model Rule duty. Whether to return it, stop reading, or delete it is left to other law and professional judgment, Comments 2 and 3. Metadata is covered: track-changes comments in produced files trigger only the duty to notify."
+      },
+      {
+       "say": "Federal Rule 26(b)(5)(B) adds duties in federal civil cases. Once notified of a privilege claim, the receiving party must promptly return, sequester, or destroy the material, not use or disclose it until the claim is resolved, and may present it to the court under seal. Both may apply. The ABA's views have evolved from return it unread to just notify, and states vary widely; some stricter states disqualify counsel who exploit privileged material."
+      },
+      {
+       "say": "The class quiz: opposing counsel's email to his client, sent to you by mistake, Dear Cynthia. Promptly notify the sender, and do not contact his represented client, 4.2. And protect your own documents: know what metadata your software embeds, and scrub documents before they leave the firm."
+      },
+      {
+       "say": "Rule 3.5. A lawyer shall not do any of four things. (a) Seek to influence a judge, juror, prospective juror, or other official by means prohibited by law. (b) Communicate ex parte with such a person during the proceeding unless authorized by law or court order. (c) Communicate with a juror or prospective juror after discharge of the jury if any one of three is true: the communication is prohibited by law or court order; the juror has made known a desire not to communicate; or the communication involves misrepresentation, coercion, duress, or harassment. (d) Engage in conduct intended to disrupt a tribunal."
+      },
+      {
+       "say": "Applications. Officials include court reporters: offering a reporter a thousand dollars to fix the deposition transcript violates 3.5(a), even though she refused. Post-trial: a juror who said on the record she did not want to talk cannot be asked for feedback, even in a chance coffee-shop meeting. Disruption includes depositions, Comment 5: baseless objections to every question and improper instructions not to answer violate 3.5(d), and 3.1 and 3.4(c) and (d) too. Abusive judges, Comment 4: a lawyer may stand firm against abuse by a judge but should avoid reciprocation. Finish professionally, then report the judge under 8.3(b)."
+      },
+      {
+       "say": "Rule 8.2(a). A lawyer shall not make a statement the lawyer knows to be false, or with reckless disregard as to its truth or falsity, concerning the qualifications or integrity of a judge, adjudicatory officer, public legal officer, or candidate for judicial or legal office. 8.2(b): a lawyer running for judicial office must follow the Code of Judicial Conduct. The standard borrows from New York Times versus Sullivan, and opinions based on disclosed facts are generally protected, Standing Committee versus Yagman, Ninth Circuit, 1995. But courts tend to read the protection narrowly."
+      },
+      {
+       "ask": "A lawyer receives, by mistake, the opposing party's privileged strategy memo in a state-court case. Under the Model Rules, what must she do? Must she return it unread?",
+       "answer": "She must promptly notify the sender under 4.4(b). The Model Rules leave returning, reading, or deleting to other law and her judgment, though local law or a court may impose more.",
+       "pause": 12
+      },
+      {
+       "ask": "After a verdict, a lawyer calls a juror who, at discharge, told the court she did not want to discuss the case. He is polite. Violation?",
+       "answer": "Yes, under 3.5(c)(2). The juror made known a desire not to communicate.",
+       "pause": 12
+      },
+      {
+       "ask": "Before trial, a lawyer emails the judge, without copying opposing counsel, to argue a pending motion. Violation?",
+       "answer": "Yes, an ex parte communication under 3.5(b), unless authorized by law or court order.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer writes a blog post calling a judge corrupt, knowing there is no basis. Violation?",
+       "answer": "Yes, 8.2(a): a statement about a judge's integrity made knowing it is false, or with reckless disregard.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 4.4(b): promptly notify the sender; anything more is other law. 3.5: no improper influence, no ex parte contact, no post-discharge juror contact that is barred, unwanted, or coercive, and no disruption. 8.2(a): no knowing or reckless false statements about judges' qualifications or integrity."
+      },
+      {
+       "ask": "What is the only Model Rule duty for inadvertently sent documents?",
+       "answer": "Promptly notify the sender.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three bars on post-discharge juror contact.",
+       "answer": "Prohibited by law or court order; the juror made known she doesn't want to talk; or misrepresentation, coercion, duress, or harassment.",
+       "pause": 8
+      },
+      {
+       "ask": "How should a lawyer respond to an abusive judge?",
+       "answer": "Stand firm but avoid reciprocation, finish professionally, then report under 8.3(b).",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e09",
+     "title": "Meritorious claims, adverse authority, and trial publicity: 3.1, 3.2, 3.3(a)(2), and 3.6",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Frivolousness under 3.1, expediting litigation under 3.2, miscitation and adverse authority under 3.3(a)(1) and (a)(2), then trial publicity under 3.6 with its seven safe harbors, the right of reply, the six presumptively prejudicial subjects, and Gentile."
+      },
+      {
+       "say": "Rule 3.1. A lawyer shall not bring or defend a proceeding, or assert or controvert an issue in it, unless there is a basis in law and fact for doing so that is not frivolous, which includes a good-faith argument for an extension, modification, or reversal of existing law. And the exception: a lawyer for a criminal defendant, or a respondent in a proceeding that could result in incarceration, may nevertheless defend so as to require that every element of the case be established."
+      },
+      {
+       "say": "Say so when you argue for a change in the law. The class quiz: with no binding authority on point, only district court and out-of-circuit decisions, Kalina is arguing an open question, not seeking a reversal, and need not disclose the non-controlling cases. And the one defense always allowed: a criminal defendant may put the state to its proof on every element, however overwhelming the evidence."
+      },
+      {
+       "say": "Rule 3.2: make reasonable efforts to expedite litigation consistent with the client's interests. Delay for its own sake, for financial gain, or to frustrate an opponent is not a legitimate interest, Comment 1. Compare Federal Rule 11, section 1927, and 4.4(a)."
+      },
+      {
+       "say": "Miscitation and adverse authority. 3.3(a)(1): do not knowingly make a false statement of law to a tribunal. Discipline requires actual knowledge, not carelessness, but sloppy or misleading argument costs credibility. 3.3(a)(2): disclose legal authority in the controlling jurisdiction known to be directly adverse to the client's position and not disclosed by opposing counsel. Three elements: controlling jurisdiction, directly adverse, and not disclosed by the other side. A factually identical case from another jurisdiction need not be disclosed. Controlling adverse authority must be, even if a partner reviewed the brief. Renaldo cannot bury United States versus Smith without a parenthetical, and 5.2(b) does not help on a clear duty."
+      },
+      {
+       "say": "Rule 3.6(a). A lawyer who is participating or has participated in the investigation or litigation of a matter shall not make an extrajudicial statement that the lawyer knows or reasonably should know will be publicly disseminated and will have a substantial likelihood of materially prejudicing an adjudicative proceeding in the matter."
+      },
+      {
+       "say": "3.6(b), the safe harbors. A lawyer may state any of the following. One, the claim, offense, or defense involved and, except when prohibited by law, the identity of the persons involved. Two, information in a public record. Three, that an investigation is in progress. Four, the scheduling or result of any step in litigation. Five, a request for assistance in obtaining evidence. Six, a warning of danger concerning a person's behavior when there is reason to believe there is a likelihood of substantial harm. Seven, in a criminal case, also: the accused's identity, residence, occupation, and family status; information necessary to aid in apprehending an accused at large; the fact, time, and place of arrest; and the identity of the investigating and arresting officers or agencies and the length of the investigation."
+      },
+      {
+       "say": "3.6(c), the right of reply: a statement a reasonable lawyer would believe is required to protect a client from the substantial undue prejudicial effect of recent publicity not initiated by the lawyer or client, limited to what is necessary to mitigate it. Overcorrecting destroys the right of reply. And 3.6(d): no lawyer in the same firm or government agency may make a statement prohibited by (a)."
+      },
+      {
+       "say": "Comment 5, six presumptively prejudicial subjects. One, the character, credibility, reputation, or criminal record of a party, suspect, or witness, or the expected testimony of a party or witness. Two, in a criminal case, the possibility of a guilty plea, or the existence or contents of a confession, admission, or statement, or a refusal to make one. Three, the performance or results of any examination or test, or a refusal to submit to one. Four, any opinion as to the guilt or innocence of a defendant or suspect. Five, information the lawyer knows or reasonably should know is likely to be inadmissible and would create a substantial risk of prejudicing an impartial trial. Six, the fact that a defendant has been charged with a crime, unless accompanied by a statement that the charge is merely an accusation."
+      },
+      {
+       "say": "Class quiz applications. Only lawyers participating, or who participated, in the matter and their colleagues are covered; a blogging lawyer who is not involved is not covered. Only extrajudicial statements: a closing argument in a packed courtroom is not one. Telling a reporter when you'll finish calling witnesses is a safe harbor, scheduling. An opinion on guilt is not a safe harbor. A sealed indictment is not a public record. Revealing breathalyzer results on the eve of trial is presumptively prejudicial. And prosecutors have the extra limits of 3.8(f)."
+      },
+      {
+       "say": "Gentile versus State Bar of Nevada, 1991. Hours after his client's indictment, a defense lawyer held a press conference saying the client was a scapegoat and that a police officer was the likely thief. The client was acquitted months later, and the bar disciplined the lawyer. The Court held the substantial likelihood of material prejudice standard is constitutional for lawyers in pending cases, but Nevada's safe harbor allowing a lawyer to state the general nature of the defense was void for vagueness as applied, so the discipline was reversed. It explains 3.6's structure: a prejudice standard, specific safe harbors, and the right of reply."
+      },
+      {
+       "ask": "In a brief to a state intermediate appellate court, a lawyer knows of a decision from that state's supreme court directly against her position. Opposing counsel missed it. Must she cite it?",
+       "answer": "Yes. 3.3(a)(2): controlling, directly adverse, and not disclosed by opposing counsel. She may argue it is distinguishable or should be overruled.",
+       "pause": 12
+      },
+      {
+       "ask": "A defense lawyer tells reporters, my client passed a polygraph, and he is innocent. Violation?",
+       "answer": "Likely yes. Test results and opinions on guilt or innocence are presumptively prejudicial under Comment 5, and neither is a safe harbor. Unless it is a narrowly limited right-of-reply statement under 3.6(c).",
+       "pause": 12
+      },
+      {
+       "ask": "A prosecutor's office announces that a suspect has been arrested, where and when, and that the police department led the investigation. Violation?",
+       "answer": "No. The fact, time, and place of arrest and the identity of the investigating agency are 3.6(b)(7) safe harbors.",
+       "pause": 12
+      },
+      {
+       "ask": "Facing overwhelming evidence, a criminal defense lawyer pleads not guilty and makes the state prove each element. Frivolous?",
+       "answer": "No. 3.1 lets criminal defense counsel require that every element be established.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 3.1: no frivolous claims, but good-faith arguments for change are fine, and criminal defendants may put the state to its proof. 3.2: expedite. 3.3(a)(2): disclose controlling, directly adverse authority not disclosed by the other side. 3.6: no extrajudicial statements likely to materially prejudice, with seven safe harbors, the right of reply, and colleagues bound."
+      },
+      {
+       "ask": "What three elements trigger the duty to disclose adverse authority?",
+       "answer": "Controlling jurisdiction, directly adverse, and not disclosed by opposing counsel.",
+       "pause": 8
+      },
+      {
+       "ask": "Name four of the 3.6(b) safe harbors.",
+       "answer": "The claim and persons involved; public records; an investigation in progress; scheduling or results of litigation steps; requests for help getting evidence; warnings of danger; and in criminal cases, the accused's identity, help apprehending, arrest facts, and investigating agencies.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Gentile hold?",
+       "answer": "The substantial-likelihood-of-material-prejudice standard is constitutional, but Nevada's general nature of the defense safe harbor was void for vagueness as applied.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e10",
+     "title": "Lawyer as witness and trial conduct: 3.7 and 3.4(e)",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. The lawyer-witness rule in 3.7 with its three exceptions and no imputation, then 3.4(e)'s three bans at trial, and the look-alike trick."
+      },
+      {
+       "say": "Rule 3.7(a). A lawyer shall not act as advocate at a trial in which the lawyer is likely to be a necessary witness unless any one of three exceptions applies. One, the testimony relates to an uncontested issue. Two, the testimony relates to the nature and value of legal services rendered in the case. Three, disqualification of the lawyer would work substantial hardship on the client. And 3.7(b): a lawyer may act as advocate at a trial in which another lawyer in the firm is likely to be called as a witness, unless 1.7 or 1.9 precludes it."
+      },
+      {
+       "say": "Why the rule exists: the jury may confuse the roles of advocate and witness. That is also why it is not imputed: a colleague may try the case while you testify. Client consent, admissibility, or being called by the other side are not exceptions."
+      },
+      {
+       "say": "(a)(2) means your own fees in this case. Testifying as a damages expert on what the plaintiff-lawyer would have earned is not covered. Testifying in your own pro se fee suit is. 3.7 applies to bench trials too, though the confusion risk is lower. And note: 3.7 is about acting as advocate at trial. It does not bar pretrial work."
+      },
+      {
+       "say": "Rule 3.4(e). In trial, a lawyer shall not do any of three things. One, allude to any matter the lawyer does not reasonably believe is relevant or that will not be supported by admissible evidence. Two, assert personal knowledge of facts in issue except when testifying as a witness. Three, state a personal opinion as to the justness of a cause, the credibility of a witness, the culpability of a civil litigant, or the guilt or innocence of an accused."
+      },
+      {
+       "say": "Class quiz applications. Referring in closing to a conviction the judge excluded violates the first clause, even with a certified copy in hand. Asking, aren't you a wife-beating, pill-popping alcoholic, with no factual basis, violates the first clause; withdrawn, a curative instruction, or acquittal does not cure it. Reciting an unadmitted hearsay statement in closing violates the first clause, though it supplied a good-faith basis to ask on cross. Thank you for your honest testimony, in front of the jury, vouches for credibility, violating the third."
+      },
+      {
+       "say": "Trickery. Secretly seating a look-alike at counsel table to bait a misidentification misleads the tribunal, violating 3.3, 3.4, 3.5(d), and 8.4(c) and (d). That is United States versus Thoreen. Ordinary cross and argument about weak identification are fine."
+      },
+      {
+       "ask": "A lawyer personally witnessed the contract signing at the center of a disputed case and is the only witness to the oral side deal. The client consents to him trying the case anyway. Permitted?",
+       "answer": "No. He is likely a necessary witness on a contested issue. Client consent is not an exception. A partner in his firm may try the case under 3.7(b), absent a 1.7 or 1.9 conflict.",
+       "pause": 12
+      },
+      {
+       "ask": "In closing, a prosecutor says, I believe this defendant is guilty. Violation?",
+       "answer": "Yes, 3.4(e): a personal opinion on the guilt of an accused.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer is likely to testify only to authenticate a document both sides agree is genuine. May she try the case?",
+       "answer": "Yes. 3.7(a)(1): testimony on an uncontested issue.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 3.7: no advocate who is a necessary witness, except uncontested issues, the value of legal services in the case, or substantial hardship; not imputed. 3.4(e): at trial, no alluding to irrelevant or unsupported matters, no personal knowledge, and no personal opinions on justness, credibility, culpability, or guilt."
+      },
+      {
+       "ask": "Name the three 3.7(a) exceptions.",
+       "answer": "Uncontested issue; the nature and value of legal services in the case; substantial hardship to the client.",
+       "pause": 8
+      },
+      {
+       "ask": "Is the 3.7 bar imputed to the firm?",
+       "answer": "No, unless 1.7 or 1.9 precludes it.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three 3.4(e) bans.",
+       "answer": "Alluding to irrelevant or unsupported matters, asserting personal knowledge of facts in issue, and stating personal opinions on justness, credibility, culpability, or guilt.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e11",
+     "title": "Candor to the tribunal, part one: Rule 3.3 and false evidence",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The full text of 3.3, the ban on false statements and false evidence, the 3.4(b) versus 3.3(a)(3) contrast, witness preparation, and paying witnesses. This is one of the most tested rules in the course."
+      },
+      {
+       "say": "Rule 3.3(a). A lawyer shall not knowingly do three things. One, make a false statement of fact or law to a tribunal, or fail to correct a false statement of material fact or law previously made to the tribunal by the lawyer. Two, fail to disclose legal authority in the controlling jurisdiction known to the lawyer to be directly adverse to the client's position and not disclosed by opposing counsel. Three, offer evidence that the lawyer knows to be false."
+      },
+      {
+       "say": "Then, still in (a)(3): if a lawyer, the lawyer's client, or a witness called by the lawyer has offered material evidence and the lawyer comes to know of its falsity, the lawyer shall take reasonable remedial measures, including, if necessary, disclosure to the tribunal. And: a lawyer may refuse to offer evidence, other than the testimony of a defendant in a criminal matter, that the lawyer reasonably believes is false."
+      },
+      {
+       "say": "Rule 3.3(b). A lawyer representing a client in an adjudicative proceeding who knows that a person intends to engage, is engaging, or has engaged in criminal or fraudulent conduct related to the proceeding shall take reasonable remedial measures, including, if necessary, disclosure to the tribunal. Note: any person, not only the client. Bribing a juror, for example."
+      },
+      {
+       "say": "Rule 3.3(c). The duties in (a) and (b) continue to the conclusion of the proceeding, and apply even if compliance requires disclosure of information otherwise protected by 1.6."
+      },
+      {
+       "say": "Rule 3.3(d). In an ex parte proceeding, a lawyer shall inform the tribunal of all material facts known to the lawyer that will enable the tribunal to make an informed decision, whether or not the facts are adverse."
+      },
+      {
+       "say": "Why 3.3 exists: the tribunal depends on the advocates. When the system's integrity and the client's confidence collide, 3.3 picks the system. That is the one place confidentiality loses outright."
+      },
+      {
+       "say": "Don't lie, and don't present false evidence. Lying to a tribunal or presenting false evidence is a disciplinary violation and, when knowing, a crime: perjury, subornation, obstruction. 3.3 covers ancillary proceedings like depositions and sworn interrogatory answers, Comment 1. Dean cannot serve interrogatory answers he knows are false, and the client's verification does not absolve him."
+      },
+      {
+       "say": "False evidence includes any falsity that frustrates truth-finding: false statements, or inauthentic exhibits. A photoshopped photo is false evidence even if an unsuspecting witness authenticates it, under 3.3(a)(3) and 3.4(b). But you may offer false evidence to prove its falsity, for example a forged agreement offered to prove the forgery, Comment 5."
+      },
+      {
+       "say": "The contrast. 3.4(b) bars falsifying evidence or counseling false testimony. 3.3(a)(3) bars offering evidence you know is false, whoever falsified it."
+      },
+      {
+       "say": "Witness preparation. Nothing forbids properly preparing a witness, client or not, but communications with a non-client witness are not privileged. Explaining procedure, demeanor, like speak up and make eye contact, and privilege is fine. Refreshing recollection with a document is fine if the memory is genuinely refreshed. Telling the client that truthful testimony would hurt and advising her not to testify is not counseling perjury. Telling her to say she wore snow boots when she wore stilettos is, Problem 24C-8(g)."
+      },
+      {
+       "say": "Paying witnesses. Fact witnesses must not be paid to testify, but you may pay their expenses, travel, lodging, and meals, and reasonable compensation for time lost from work testifying or preparing, or reviewing records germane to the testimony, if three conditions are met. One, the amount is reasonable. Two, it is clearly not for the substance or fact of the testimony and is not conditioned on it. Three, the governing jurisdiction permits it. The class quiz: a train ticket and hotel for the busy architect are fine. Experts may be paid for their time and testimony, but almost everywhere not a contingent fee, which no witness may receive. A 3.4(b) violation means some other law was broken, for example the federal anti-gratuity statute, 18 U.S.C. section 201, and the testimony may be excluded, fees awarded, or a mistrial declared."
+      },
+      {
+       "ask": "A client verifies interrogatory answers that his lawyer knows contain a false statement about when he learned of a defect. The lawyer serves them anyway, since the client signed. Violation?",
+       "answer": "Yes. 3.3 covers sworn discovery responses, and the client's verification does not absolve the lawyer who knowingly offers false evidence.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer offers to pay a key eyewitness five hundred dollars if the plaintiff wins. Permitted?",
+       "answer": "No. Payment conditioned on the outcome or the substance of testimony is a prohibited inducement under 3.4(b). Only reasonable expenses and lost-time compensation not tied to the testimony are allowed.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer offers a document he knows is forged, to prove that the other side forged it. Violation?",
+       "answer": "No. Offering false evidence to prove its falsity is permitted, Comment 5.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer tells his client, if you testify truthfully, it will hurt your case, so I advise you not to testify in this civil case. Is that counseling perjury?",
+       "answer": "No. Advising against testifying is not counseling false testimony.",
+       "pause": 10
+      },
+      {
+       "say": "Recap. 3.3(a): no knowing false statements of fact or law, correct your own material ones; disclose controlling adverse authority; never offer known false evidence, and remedy material falsity. 3.3(b): remedy anyone's crime or fraud related to the proceeding. 3.3(c): through the end of the proceeding, even over 1.6. 3.3(d): ex parte, disclose all material facts."
+      },
+      {
+       "ask": "Which disclosure duty applies even if it reveals 1.6 information?",
+       "answer": "The 3.3 duties, under 3.3(c).",
+       "pause": 8
+      },
+      {
+       "ask": "What three conditions allow paying a fact witness for lost time?",
+       "answer": "A reasonable amount, clearly not for or conditioned on the substance of the testimony, and permitted by the governing jurisdiction.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the difference between 3.4(b) and 3.3(a)(3)?",
+       "answer": "3.4(b) bars falsifying evidence or counseling false testimony; 3.3(a)(3) bars offering evidence you know is false, whoever falsified it.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e12",
+     "title": "Candor to the tribunal, part two: suspected falsity, the lying defendant, the duty to correct, and ex parte proceedings",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. Know versus reasonably believe, the criminal defendant who will lie and the narrative approach, the three triggers for the duty to correct, the three remedial steps in order, how long the duty lasts, and ex parte proceedings, with Malmin versus Oths."
+      },
+      {
+       "say": "What you know drives what you may or must do. Three tiers. If you know the evidence is false, you must refuse to offer it, under 3.3(a)(3). If you reasonably believe it is false but do not know, you may refuse to offer it, even over the client's objection, or you may offer it. If you reasonably believe a criminal defendant's own testimony is false, but do not know, you must let the defendant testify. The decision is the defendant's under 1.2(a). Consult, advise of the risks, like inconsistency, disbelief, and damage to the rest of the defense, and try to persuade. But if the client insists, it is the client's call."
+      },
+      {
+       "say": "The criminal defendant who will lie. If you know your criminal client will testify falsely, 3.3(a)(3) and 1.2(d) say you must not offer it, but the defendant has a constitutional right to testify. No single solution exists; know your jurisdiction's method. The most common in the U.S. is the narrative approach: the defendant testifies in narrative form without counsel's questioning, and counsel does not argue the false testimony. The Model Rules note that some jurisdictions use it, without endorsing it, Comment 7. A note the outline marks as outside the class materials: in Nix versus Whiteside, 1986, the Supreme Court held that a lawyer who threatened to disclose and withdraw if the client testified falsely did not violate the Sixth Amendment."
+      },
+      {
+       "say": "The duty to correct has three triggers, any one suffices. One, you made a false statement of material fact or law to the tribunal, knowing or not at the time, 3.3(a)(1). Two, you, your client, or your witness offered material evidence you later learn is false, 3.3(a)(3); only material evidence. Three, you know any person intends, is engaging, or has engaged in criminal or fraudulent conduct related to the proceeding, such as bribing a juror, 3.3(b)."
+      },
+      {
+       "say": "Reasonable remedial measures, in order, Comment 10. Step one, remonstrate: privately urge the person who supplied the falsehood to correct it, with your help, noting that you must report it if she won't. Step two, withdraw if the client refuses and withdrawal will cure it; sometimes you must, under 1.16(a)(1). Step three, disclose to the tribunal what is reasonably necessary to remedy the situation, even if it reveals 1.6 information, 3.3(c). Your own misstatement is usually corrected by a filing, served on opposing counsel, so it is not ex parte under 3.5(b). Minimum disclosure: only what is needed to correct the wrong."
+      },
+      {
+       "say": "Duration: until the conclusion of the proceeding, meaning when a final judgment has been affirmed on appeal or the time for review has passed, Comment 13. Other consequences, perjury prosecutions or relief from judgment under Federal Rule 60(b), have their own time limits."
+      },
+      {
+       "say": "Ex parte proceedings, 3.3(d). With no adversary to correct the record, disclose all material facts, adverse or not. A sealed qui tam conference on extending the seal is ex parte, so the AUSA must disclose the evidence suggesting an innocent error too. And the duty applies whenever opposing counsel is simply absent. Telling the judge a motion is unopposed, without mentioning your agreement giving the other side thirty days to amend, violates 3.3. That is Malmin versus Oths. Half-truths can equal misrepresentations, Comment 3."
+      },
+      {
+       "say": "A contrast to hold onto: 3.3 versus 4.1. 3.3 governs statements to a tribunal and overrides 1.6. 4.1 governs statements to third persons, like opposing counsel in a negotiation, and 4.1(b)'s duty to disclose yields if 1.6 prohibits disclosure. We do 4.1 tomorrow."
+      },
+      {
+       "ask": "After a civil trial ends in her favor, but while the appeal period is still open, a client admits to her lawyer that she lied on the stand about a material fact. What must the lawyer do?",
+       "answer": "Take reasonable remedial measures: first remonstrate with the client to correct it; if she refuses and withdrawal won't cure it, disclose to the tribunal what is reasonably necessary, even though it reveals 1.6 information. The duty lasts until the conclusion of the proceeding, which hasn't occurred yet.",
+       "pause": 12
+      },
+      {
+       "ask": "A criminal defense lawyer strongly suspects, but does not know, that her client's alibi testimony will be false. The client insists on testifying. What must she do?",
+       "answer": "Let him testify. For a criminal defendant's own testimony, a mere reasonable belief of falsity does not permit refusing. She should advise him of the risks.",
+       "pause": 12
+      },
+      {
+       "ask": "A civil client wants his friend to testify to an alibi the lawyer reasonably believes, but does not know, is false. May the lawyer refuse to call the friend?",
+       "answer": "Yes. A lawyer may refuse to offer evidence, other than a criminal defendant's testimony, that she reasonably believes is false.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer seeking a temporary restraining order ex parte knows of a fact that cuts against granting it. Must he mention it?",
+       "answer": "Yes. In an ex parte proceeding, 3.3(d) requires informing the tribunal of all material facts, whether or not adverse.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer learns that his witness gave false testimony about an immaterial detail. Duty to correct under 3.3(a)(3)?",
+       "answer": "No. The remedial duty for offered evidence applies only to material evidence. He still must not knowingly rely on it.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Reasonable belief permits refusal, except the criminal defendant's own testimony. Know means actual knowledge. The steps go remonstrate, withdraw, disclose. The duty lasts through appeal. And unopposed motions are ex parte for 3.3(d) purposes when the other side isn't there."
+      },
+      {
+       "say": "Recap. Know it's false: must refuse. Reasonably believe: may refuse, except a criminal defendant's testimony. Triggers to correct: your false statement, material false evidence, or anyone's crime or fraud related to the proceeding. Remedies: remonstrate, withdraw, disclose the minimum. Duration: until judgment is affirmed or review time runs. Ex parte: all material facts."
+      },
+      {
+       "ask": "What are the three remedial steps in order?",
+       "answer": "Remonstrate with the person, withdraw if that cures it, then disclose to the tribunal what is reasonably necessary.",
+       "pause": 8
+      },
+      {
+       "ask": "When does the 3.3 duty end?",
+       "answer": "At the conclusion of the proceeding: a final judgment affirmed on appeal or the time for review passed.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the narrative approach?",
+       "answer": "The defendant testifies in narrative form without counsel's questioning, and counsel does not argue the false testimony.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d4-e13",
+     "title": "Day 4 cumulative quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "The Day 4 cumulative quiz. Answer out loud."
+      },
+      {
+       "ask": "Does 1.11(a) require adversity to the government?",
+       "answer": "No. Personal and substantial participation in the matter is enough.",
+       "pause": 8
+      },
+      {
+       "ask": "Who gets written notice when a former government lawyer is screened under 1.11(b)?",
+       "answer": "The appropriate government agency.",
+       "pause": 8
+      },
+      {
+       "ask": "Who must consent for a former judge to represent a party in the same matter?",
+       "answer": "All parties, confirmed in writing.",
+       "pause": 8
+      },
+      {
+       "ask": "Is rulemaking a matter under 1.11(e)?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "Does 3.8(d) have a materiality limit?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "What evidence triggers a prosecutor's duty to seek to remedy a conviction?",
+       "answer": "Clear and convincing evidence that a defendant in the prosecutor's jurisdiction is innocent.",
+       "pause": 8
+      },
+      {
+       "ask": "May police deceive suspects? May prosecutors?",
+       "answer": "Police may use some deception, Frazier versus Cupp. Prosecutors may not lie about the evidence.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the only Model Rule duty on receiving an inadvertently sent document?",
+       "answer": "Promptly notify the sender.",
+       "pause": 8
+      },
+      {
+       "ask": "Must you disclose a directly adverse case from a non-controlling jurisdiction?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "Is a sealed indictment a public record for the 3.6 safe harbor?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "Is 3.7 imputed to the firm?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "May a lawyer refuse to call a civil witness she reasonably believes will lie?",
+       "answer": "Yes.",
+       "pause": 8
+      },
+      {
+       "ask": "May a criminal defense lawyer prevent his client from testifying because he reasonably believes the testimony will be false?",
+       "answer": "No. Only actual knowledge changes the analysis, and the choice to testify is the client's.",
+       "pause": 8
+      },
+      {
+       "ask": "Does 3.3 yield to confidentiality?",
+       "answer": "No. 3.3(c) applies even if compliance requires revealing 1.6 information.",
+       "pause": 8
+      },
+      {
+       "say": "That's Day 4. Tomorrow, the final day: law firms and supervision, organizational clients and the 1.13 reporting ladder, public service, duties to third parties, represented and unrepresented persons, client wrongdoing, threats and reporting, restrictions on practice, advertising and solicitation, discrimination under 8.4(g), and then the full review and test strategy."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
