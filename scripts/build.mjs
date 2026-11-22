@@ -20,7 +20,7 @@ import { slugify, decodeEntities, htmlToText } from './lib/text.mjs';
 import { addHeadingIds as idHeadings } from './lib/outline.mjs';
 import { convertDocx } from './lib/docx.mjs';
 import { mp3Duration } from './lib/audio.mjs';
-import { refIndex, injectRefs } from './lib/refs.mjs';
+import { refIndex, injectRefs, outlineSections } from './lib/refs.mjs';
 import { readMcq, normalizeMcq, hasMcqBlock, mcqText } from './lib/mcq.mjs';
 import { renderPracticeShell, injectAnswerLog } from './lib/practice-shell.mjs';
 import { readCards, normalizeCards, hasCardsBlock, cardsText } from './lib/cards.mjs';
@@ -149,7 +149,7 @@ function compile(name, bytes, accent, label) {
     const { deck, errors, warnings } = normalizeCards(raw);
     tell(errors, warnings);
     if (!deck.cards.length) return { skip: true };
-    return { type: 'flashcards', html: renderCardsShell(deck, { accent }), cards: deck.cards.length, text: cardsText(deck) };
+    return { type: 'flashcards', html: renderCardsShell(deck, { accent }), cards: deck.cards.length, text: cardsText(deck), deck };
   }
   const raw = isJson('supplement') ? readSupplement(text) : readSupplementPage(text);
   if (!raw) {
@@ -264,6 +264,8 @@ async function loadSubjects() {
         tags: dm.tags || [],
         questions: dm.questions ?? compiled?.questions ?? null,
         cards: compiled?.cards ?? null,
+        // The checked cards/v1 deck, for the Listen page (listen/<course>/).
+        deck: compiled?.deck ?? null,
         contributor: dm.contributor || null,
         theme: dm.theme || null,
         // "archived": true keeps an earlier version built and linkable, but moves it to the course
@@ -585,8 +587,32 @@ const game = await buildGame({ subjects, P, write, root: ROOT, dist: DIST, withG
 // Crypt Survivors: its code and sprite pack (its questions are the game's play/data/).
 const survivorsPack = GAMES && game.total ? buildSurvivors({ root: ROOT, dist: DIST, write }) : null;
 
+// Listen pages (listen/<course>/, src/assets/listen.js): the course read aloud, hands-free. Each gets
+// data.json with its outline (refs.outline, else its outline document) as one text block per h2/h3
+// section, its cards/v1 flashcards, and the practice sets whose questions it reads from play/data/.
+// Archived documents are left out. Nothing is graded there.
+const listenPages = new Map();
+for (const s of subjects) {
+  const live = s.documents.filter((d) => !d.archived);
+  const outlineDoc = (s.refs?.outline && s.documents.find((d) => d.slug === s.refs.outline)) || live.find((d) => d.type === 'outline');
+  const outlineHtml = outlineDoc && (outlineDoc.html ?? (outlineDoc.format.mime === 'text/html' ? outlineDoc.raw.toString('utf8') : null));
+  const sections = outlineHtml ? outlineSections(outlineHtml) : [];
+  const titleOf = new Map(sections.map((x) => [x.id, x.title]));
+  const outline = sections.map((x) => ({
+    id: x.id, title: x.title, level: x.level, part: x.level === 2 ? x.title : titleOf.get(x.parent) || x.title,
+    // A case box's tag ("main case · class 1") reads as its own line, not run into the case name.
+    text: htmlToText(x.html.replace(/(<span class="callout-tag">[\s\S]*?<\/span>)/g, '$1<br>')).replace(/^#{1,6}\s+/gm, ''),
+  }));
+  const cards = live.filter((d) => d.deck).flatMap((d) => d.deck.cards.map((c) => ({ deck: d.slug, deckTitle: d.title, ...c })));
+  const sets = (game.courses.find((c) => c.slug === s.slug)?.sets || []).filter((x) => !x.archived)
+    .map((x) => ({ slug: x.slug, title: x.title, count: x.count, areas: (x.topics || []).map(([area, n]) => [area || 'Other', n]) }));
+  if (!outline.length && !cards.length && !sets.length) continue;
+  listenPages.set(s.slug, { outline: outlineDoc && outline.length ? { title: outlineDoc.title, url: P.doc(outlineDoc), sections: outline.length } : null, cards: cards.length, questions: sets.reduce((n, x) => n + x.count, 0) });
+  write(`listen/${s.slug}/data.json`, JSON.stringify({ course: { slug: s.slug, title: s.title }, outline, cards, sets }));
+}
+
 // Pages
-const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game, games: GAMES && game.total > 0, refsVersion, survivors: survivorsPack };
+const ctx = { config, subjects, docs, TYPES, P, generatedAt, allZipSize: allZipBytes.length, game, games: GAMES && game.total > 0, refsVersion, survivors: survivorsPack, listen: listenPages };
 
 write('index.html', T.home(ctx));
 if (ctx.games) write('play/index.html', T.play(ctx));
@@ -598,9 +624,10 @@ write('contribute/index.html', T.contribute(ctx));
 write('404.html', T.notFound(ctx));
 write('admin/index.html', T.admin(ctx)); // owner-only editor; deliberately left out of the sitemap
 for (const s of subjects) write(P.subject(s) + 'index.html', T.subjectPage(ctx, s));
+for (const s of subjects) if (listenPages.has(s.slug)) write(`listen/${s.slug}/index.html`, T.listen(ctx, s));
 for (const d of docs) write(P.doc(d) + 'index.html', T.docPage(ctx, d));
 
-const pageUrls = ['', 'library/', 'contribute/', ...(game.total ? ['shuffle/', 'stats/'] : []), ...(ctx.games ? ['play/', 'survivors/'] : []), ...subjects.map(P.subject), ...docs.map(P.doc)];
+const pageUrls = ['', 'library/', 'contribute/', ...(game.total ? ['shuffle/', 'stats/'] : []), ...(ctx.games ? ['play/', 'survivors/'] : []), ...subjects.map(P.subject), ...[...listenPages.keys()].map((slug) => `listen/${slug}/`), ...docs.map(P.doc)];
 write('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pageUrls
   .map((u) => `  <url><loc>${abs(u)}</loc></url>`).join('\n')}\n</urlset>\n`);
 write('robots.txt', `User-agent: *\nAllow: /\n\nSitemap: ${abs('sitemap.xml')}\n`);

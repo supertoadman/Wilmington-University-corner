@@ -14,7 +14,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CSS_VERSION = createHash('sha1').update(fs.readFileSync(path.join(ROOT, 'src', 'assets', 'styles.css'))).digest('hex').slice(0, 10);
 // The same for the page scripts; app.js passes its version on to the scenery module it loads.
 const jsHash = createHash('sha1');
-for (const f of ['app.js', 'ambience.js', 'shuffle.js', 'answer-log.js', 'stats.js', 'topic-picker.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
+for (const f of ['app.js', 'ambience.js', 'shuffle.js', 'answer-log.js', 'stats.js', 'topic-picker.js', 'listen.js', 'listen-queue.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
 const JS_VERSION = jsHash.digest('hex').slice(0, 10);
 // Crypt Survivors (/survivors/) loads its stylesheet and entry module with a version from all its files.
 const svHash = createHash('sha1');
@@ -582,6 +582,7 @@ export function subjectPage(ctx, s) {
         <ul class="type-pills">${Object.keys(TYPES).filter((k) => counts[k]).map((k) => `<li>${icon(TYPES[k].icon)} ${esc(counts[k] === 1 ? TYPES[k].label : TYPES[k].plural)} <span class="count">${counts[k]}</span></li>`).join('')}</ul>
       </div>
       <div class="subject-hero-actions">
+        ${ctx.listen?.has(s.slug) ? `<a class="btn btn-ghost subject-hero-listen" href="${root}listen/${esc(s.slug)}/">${icon('headphones')} Listen (hands-free)</a>` : ''}
         ${s.zipSize ? `<a class="btn btn-primary subject-hero-dl" href="${root}${P.zip(s)}" download>${icon('download')} Download all <span class="btn-sub">${fmtSize(s.zipSize)}</span></a>` : ''}
         ${ctx.games && ctx.game.courses.some((c) => c.slug === s.slug) ? `<a class="btn btn-ghost subject-hero-play" href="${root}play/?course=${esc(s.slug)}">${icon('play')} Play in Sanctum Run</a><a class="btn btn-ghost subject-hero-play" href="${root}survivors/?course=${esc(s.slug)}">${icon('skull')} Play Crypt Survivors</a>` : ''}
       </div>
@@ -600,6 +601,79 @@ export function subjectPage(ctx, s) {
   return layout(ctx, {
     root, title: s.title, description: s.description, body, active: s.slug, canonical: P.subject(s),
     jsonld: { '@context': 'https://schema.org', '@type': 'CollectionPage', name: s.title, description: s.description, url: ctx.config.url + P.subject(s) },
+  });
+}
+
+/**
+ * Listen, at listen/<course>/: the course read aloud, hands-free, by the browser's speech synthesis
+ * (src/assets/listen.js, with the play list from listen-queue.js). The outline section by section,
+ * then the flashcards, then the questions with a pause to think before each answer. The listener
+ * picks what to include; nothing is graded. The data is listen/<course>/data.json (scripts/build.mjs)
+ * and the questions are the course's play/data/ sets.
+ */
+export function listen(ctx, s) {
+  const root = '../../';
+  const info = ctx.listen.get(s.slug);
+  const kinds = [
+    ['outline', 'Outline', info.outline ? `${plural(info.outline.sections, 'section')} of the ${esc(info.outline.title)}, read heading by heading` : ''],
+    ['cards', 'Flashcards', info.cards ? `${plural(info.cards, 'card')}: the front, a pause, then the back` : ''],
+    ['questions', 'Questions', info.questions ? `${info.questions.toLocaleString('en-US')} questions: the choices, a pause to think, then the answer and why` : ''],
+  ].filter(([, , sub]) => sub);
+  const pick = (kind, label) => `<details class="ls-pick" data-ls-pick="${kind}" hidden>
+      <summary><span>${label}</span><b data-ls-pick-count></b></summary>
+      <div class="ls-pick-actions"><button type="button" class="btn btn-ghost" data-ls-all>Select all</button><button type="button" class="btn btn-ghost" data-ls-none>Clear all</button></div>
+      <div class="ls-pick-list" data-ls-pick-list></div>
+    </details>`;
+  const body = `
+<section class="page-head container">
+  ${breadcrumbs(root, [[ctx.P.subject(s), s.title], [`listen/${s.slug}/`, 'Listen']])}
+  <h1 class="page-title">Listen: ${esc(s.title)}</h1>
+  <p class="page-lede">Hands-free review, read aloud by your browser. Press <strong>Play</strong> and it keeps going on its own: the outline, then the flashcards, then the questions, each with a pause to think before the answer. Nothing is graded, and your place is saved on this device.</p>
+</section>
+<section class="container section-tight listen" data-listen data-course="${esc(s.slug)}" style="--accent:${s.accent}">
+  <form class="ls-setup" data-ls-setup>
+    <fieldset class="ls-kinds">
+      <legend>What to play</legend>
+      ${kinds.map(([k, label, sub]) => `<label class="ls-kind"><input type="checkbox" data-ls-include="${k}" checked><span><strong>${label}</strong><small>${sub}</small></span></label>`).join('')}
+    </fieldset>
+    ${pick('outline', 'Choose outline sections')}
+    ${pick('cards', 'Choose flashcard topics')}
+    ${pick('questions', 'Choose question topics')}
+    <div class="ls-settings">
+      <label class="ls-field"><span>Speed</span><select data-ls-rate></select></label>
+      <label class="ls-field"><span>Pause to think</span><select data-ls-pause></select></label>
+      <label class="ls-field ls-field-voice"><span>Voice</span><select data-ls-voice><option value="">The browser's voice</option></select></label>
+    </div>
+    <p class="ls-total" data-ls-total aria-live="polite">Loading…</p>
+  </form>
+  <section class="ls-now" aria-labelledby="ls-title">
+    <p class="ls-now-label" data-ls-label>Ready</p>
+    <h2 class="ls-now-title" id="ls-title" data-ls-title>Press Play to start</h2>
+    <p class="ls-wait" data-ls-wait aria-live="polite" hidden></p>
+    <h3 class="ls-transcript-h">Transcript</h3>
+    <ol class="ls-transcript" data-ls-transcript></ol>
+    <p class="ls-prev" data-ls-prev hidden></p>
+  </section>
+  <p class="ls-unsupported" data-ls-unsupported hidden>This browser can't read aloud (it has no speech synthesis). Try Chrome, Edge or Safari.</p>
+  <div class="ls-bar" role="group" aria-label="Player">
+    <div class="ls-meter" aria-hidden="true"><i data-ls-meter></i></div>
+    <div class="ls-bar-row">
+      <p class="ls-pos" data-ls-pos></p>
+      <button type="button" class="btn btn-ghost ls-restart" data-ls-restart>Start over</button>
+    </div>
+    <div class="ls-buttons">
+      <button type="button" class="btn btn-ghost" data-ls-back>${icon('arrow-left')} Back</button>
+      <button type="button" class="btn btn-primary ls-play" data-ls-play disabled>Play</button>
+      <button type="button" class="btn btn-ghost" data-ls-skip>Skip ${icon('arrow-right')}</button>
+    </div>
+    <p class="ls-keys">Keyboard: <kbd>Space</kbd> play or pause, <kbd>←</kbd> back, <kbd>→</kbd> skip.</p>
+  </div>
+  <noscript><p>Listening needs JavaScript.</p></noscript>
+</section>`;
+  return layout(ctx, {
+    root, title: `Listen: ${s.title}`, canonical: `listen/${s.slug}/`, body, active: s.slug,
+    description: `${s.title} read aloud, hands-free: the outline, the flashcards and the practice questions, with a pause to think before each answer.`,
+    extraHead: `<script type="module" src="${root}assets/listen.js?v=${JS_VERSION}"></script>`,
   });
 }
 

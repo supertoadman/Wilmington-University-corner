@@ -85,6 +85,13 @@ Exam-style sets (such as the Agency & Partnership practice exams) can share one 
 - **Music** is the divine and corrupt score from `Assets/temple run/audio/`; combat sounds are synthesized in the browser.
 - **Code** is in `src/survivors/`: `defs.js` (weapons, relics, corruptions, enemies, waves), `logic.js` (the rules, as pure functions), `engine.js` (simulation and drawing), `game.js` (screens, questions, HUD). Add `?debug` to the URL to get `window.survivors`. Tests: `tests/survivors.test.mjs`.
 
+## Listen (hands-free)
+
+Each course with an outline, flashcards or practice questions gets a **Listen** page at `listen/<course>/`, linked from its course page as **Listen (hands-free)**. The browser's speech synthesis reads the course aloud and keeps going on its own: the outline section by section (each h2 and h3 of the course outline, `refs.outline` or else its outline document: the heading, then its text), then the flashcards (front, a pause, then back), then the questions (stem and choices, a pause to think, then the answer and its explanation). The listener picks which of the three to include and which outline sections, card topics and question areas; sets Speed, Pause to think and Voice; and uses Play/Pause, Back and Skip (or Space, ← and →). The current item's transcript is on screen, with the answer hidden until it is read. The place and settings are saved per course in `localStorage` (`listen:<course>`). Archived documents are left out, and nothing is graded or sent to Your stats.
+
+- **Data:** the build writes `listen/<course>/data.json` (outline sections as text, the cards/v1 decks, and the practice sets to read); the questions come from `play/data/`.
+- **Code:** the page is `listen()` in `src/templates.mjs`; the player is `src/assets/listen.js`; what it reads, in order, is `buildQueue()` in `src/assets/listen-queue.js`. Tests: `tests/listen.test.mjs`.
+
 ## Your stats
 
 `/stats/` (linked from the header, the home page shortcuts, the footer and Shuffle mode) shows a student which topics they miss most: answers, accuracy, the last 7 days, a day streak, the questions to review, their weakest topics, the last 12 weeks, and every topic by course. Each topic links to a **drill**: Shuffle mode opened on that topic's questions (`shuffle/?course=<slug>&area=<area>`), or on just the ones whose latest answer was wrong (`&missed=1`).
