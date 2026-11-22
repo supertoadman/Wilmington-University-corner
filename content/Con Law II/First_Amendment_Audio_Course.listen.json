@@ -4670,6 +4670,1670 @@
      ]
     }
    ]
+  },
+  {
+   "day": 4,
+   "title": "Content neutrality, expressive conduct, government speech, funding, and forums",
+   "minutes": 98,
+   "episodes": [
+    {
+     "id": "fa-d4-e00",
+     "title": "Spaced review of Days 1 to 3",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Welcome to Day 4. Spaced review. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "Under Fulton, does a never-used discretionary exemption make a policy not generally applicable?",
+       "answer": "Yes. A formal system of discretionary exemptions defeats general applicability even if none has been granted.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "What did Wooley versus Maynard hold?",
+       "answer": "The state may not require a person to display its ideological message, Live Free or Die, on private property for the public to see.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "Give the Brandenburg test in three words, and the case it overruled.",
+       "answer": "Intent, imminence, likelihood. It overruled Whitney.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "What two-part test for true threats came out of Counterman?",
+       "answer": "A serious expression of intent to commit unlawful violence, as a reasonable recipient would understand it, plus at least recklessness by the speaker.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "State the three Miller prongs in shorthand.",
+       "answer": "Prurient interest, patently offensive, no serious value, the work taken as a whole.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Why did Ashcroft Two and Paxton come out differently?",
+       "answer": "Ashcroft Two applied strict scrutiny, so filters won as a less restrictive alternative. Paxton applied intermediate scrutiny because the burden on adults was incidental, so Texas won.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "What does a public official have to prove to win a defamation case about official conduct?",
+       "answer": "Actual malice: knowledge of falsity or reckless disregard of whether the statement was false.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "What does Snyder versus Phelps protect?",
+       "answer": "Speech on a matter of public concern in a public place. It cannot be the basis for IIED liability just because a jury finds it outrageous.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "Central Hudson's four prongs?",
+       "answer": "Misleading or unlawful speech is unprotected. Then a substantial interest, directly advanced, by a regulation not more extensive than necessary.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "When does Zauderer not apply, according to NIFLA?",
+       "answer": "When the notice is not about the speaker's own services, or addresses a controversial topic.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "say": "Good. Today we move from the government as regulator to the government as speaker, funder, and property owner. But first, content neutrality."
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e01",
+     "title": "Content-neutral, content-based, viewpoint-based: Mosley",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The most important distinction in speech law, revisited with Chapter 9's examples. Then Police Department of Chicago versus Mosley."
+      },
+      {
+       "id": "s2",
+       "say": "Chapter 9 has two main topics: time, place, and manner regulations, and expressive conduct, also called symbolic speech. They overlap, so study them together. But first, the three types of rules."
+      },
+      {
+       "id": "s3",
+       "say": "Content neutral, which has nothing to do with the message. No loudspeakers in the park between ten p.m. and six a.m. No picketing on Main Street during rush hour. No leaflets on trees in the park. Intermediate scrutiny. The government sometimes wins and sometimes loses."
+      },
+      {
+       "id": "s4",
+       "say": "Content based, which turns on subject matter. No speech about sports. No plays about politics. No leaflets about tutoring services. Strict scrutiny, unless the speech is in an unprotected category. The government usually loses."
+      },
+      {
+       "id": "s5",
+       "say": "Viewpoint based, which turns on the speaker's perspective. No speech that criticizes baseball. No speech that celebrates the Phillies. No leaflets that support legalizing marijuana. Strict scrutiny, even within an unprotected category, per R.A.V. The government almost always loses."
+      },
+      {
+       "id": "s6",
+       "say": "Three notes. One, time, place, and manner rules are the most common content-neutral rules. They regulate when, where, and how speech occurs. And the wrinkle: a time, place, and manner rule that is also content based gets strict scrutiny. No loudspeakers in the park between ten p.m. and eight a.m. for speech about sports. That is content based."
+      },
+      {
+       "id": "s7",
+       "say": "Two, expressive conduct is conduct intended to convey a message where, in the circumstances, the message would likely be understood. Picketing, flag burning, cross burning, armbands. It is protected under rules similar to, but not identical to, those for ordinary speech."
+      },
+      {
+       "id": "s8",
+       "say": "Three, an outline tip. On the exam, quote the specific words in the challenged law that make it content based or viewpoint based."
+      },
+      {
+       "id": "s9",
+       "say": "Now Police Department of Chicago versus Mosley, 1972. Nine to nothing on the bottom line, Justice Marshall."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. A law that permits some picketing but not other picketing based on its subject matter is content based and violates the First Amendment. The famous sentence: above all else, the First Amendment means that government has no power to restrict expression because of its message, its ideas, its subject matter, or its content."
+      },
+      {
+       "id": "s11",
+       "say": "The story. Earl Mosley, a postal employee, peacefully picketed Jones Commercial High School, alone, for seven months, with a sign saying the school practiced black discrimination and had a black quota. Chicago then banned picketing within one hundred fifty feet of a school during school hours, plus a half hour before and after, except peaceful picketing of any school involved in a labor dispute. Held: unconstitutional."
+      },
+      {
+       "id": "s12",
+       "say": "The reasoning. The operative distinction was the message on a picket sign. Labor-dispute picketing was allowed. All other peaceful picketing was banned."
+      },
+      {
+       "id": "s13",
+       "say": "And the casebook note. The famous sentence overstates modern doctrine. Content-based restrictions get strict scrutiny. They are not invalid per se."
+      },
+      {
+       "id": "s14",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s15",
+       "ask": "A city bans all picketing within one hundred feet of a courthouse, on any subject, during court hours. Content-based or content-neutral?",
+       "answer": "Content-neutral. It regulates where and when, regardless of message, so intermediate scrutiny.",
+       "pause": 10
+      },
+      {
+       "id": "s16",
+       "ask": "Same ban, but with an exception for picketing about court employees' wages. Now?",
+       "answer": "Content-based, like Mosley. The exception turns on the message on the sign, so strict scrutiny.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "say": "Recap. Three types: neutral, intermediate; content based, strict unless unprotected; viewpoint, strict even within an unprotected category. A content-based time, place, and manner rule gets strict scrutiny. Mosley, 1972, Marshall: the labor-dispute exception was content based."
+      },
+      {
+       "id": "s18",
+       "ask": "What made Chicago's picketing ordinance content based in Mosley?",
+       "answer": "The exception for peaceful picketing of a school involved in a labor dispute. It turned on the message on the sign.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What does the casebook say about Mosley's famous sentence?",
+       "answer": "It overstates modern doctrine. Content-based restrictions get strict scrutiny but are not invalid per se.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "A noise rule applies only to speeches about sports. What scrutiny?",
+       "answer": "Strict. A time, place, and manner rule that is content based gets strict scrutiny.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e02",
+     "title": "Content versus viewpoint today: Vidal v. Elster and Chiles v. Salazar",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two of the newest cases in the course. Vidal versus Elster, 2024, content based but not viewpoint based. Chiles versus Salazar, 2026, viewpoint based."
+      },
+      {
+       "id": "s2",
+       "say": "Vidal versus Elster. Unanimous in relevant part, Justice Thomas. The Justices split on special trademark rules, but that part is not excerpted."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. A content-based rule targets a subject or topic. A viewpoint-based rule, a particularly egregious form of content discrimination, targets particular views on a subject. And the Lanham Act's names clause is content based, but not viewpoint based."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Steve Elster sought to register Trump too small, with a hand-gesture illustration, for shirts and hats, drawing on a 2016 debate exchange between Trump and Marco Rubio. The Patent and Trademark Office refused under the names clause, which bars marks identifying a living person without written consent."
+      },
+      {
+       "id": "s5",
+       "say": "Not viewpoint based. The clause applies whether the use of the name is flattering, critical, or neutral. The PTO also refused Welcome President Biden, I Stump for Trump, and Obama Pajama."
+      },
+      {
+       "id": "s6",
+       "say": "Elster made a practical-operation argument: consent is easier to get for flattering marks. The Court rejected it. People withhold consent for many reasons, like avoiding association with the goods, or preventing others from profiting from their name."
+      },
+      {
+       "id": "s7",
+       "say": "But content based. Marks containing names are treated differently from marks conveying other ideas."
+      },
+      {
+       "id": "s8",
+       "say": "And the contrast: Matal versus Tam, 2017, which you will hear more about today. The bar on disparaging marks was viewpoint based, because it targeted one viewpoint: giving offense."
+      },
+      {
+       "id": "s9",
+       "say": "Now Chiles versus Salazar, 2026. Eight to one, Justice Gorsuch. Justice Jackson dissented. Justices Kagan and Sotomayor concurred."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. As applied to talk therapy, Colorado's ban on conversion therapy for minors is a viewpoint-based regulation of speech. It permits counselors to affirm a client's identity or to assist a gender transition, but forbids speech that helps a client change sexual orientation or gender identity."
+      },
+      {
+       "id": "s11",
+       "say": "The story. Kaley Chiles, a licensed counselor, offers only talk therapy. No medication, no physical treatment, no coercive practices. She helps clients pursue their own goals. Colorado's 2019 law, adopted in response to a teen mental-health crisis and evidence linking conversion therapy to depression and suicidality, banned any practice or treatment attempting to change a minor's sexual orientation or gender identity. It expressly allowed acceptance, support, and understanding, and assistance to a person undergoing gender transition. Chiles challenged it only as applied to her talk therapy."
+      },
+      {
+       "id": "s12",
+       "say": "The reasoning. First: the spoken word is perhaps the quintessential form of protected speech, and all Chiles does is talk."
+      },
+      {
+       "id": "s13",
+       "say": "Second: the law goes beyond content. It prescribes which views she may express. Any law suppressing speech by viewpoint, however well-intentioned, is an egregious assault on free thought and the marketplace of ideas."
+      },
+      {
+       "id": "s14",
+       "say": "Why was it tricky? Colorado argued it regulated the practice of medicine, conduct, with only incidental effects on speech. Kagan and Sotomayor joined because the law was viewpoint based. And the Court left open the harder question: a viewpoint-neutral regulation of health providers' speech."
+      },
+      {
+       "id": "s15",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s16",
+       "ask": "A state bars any trademark that includes the name of a sitting governor, whether praising or mocking. Content-based or viewpoint-based?",
+       "answer": "Content based but not viewpoint based, like the names clause in Vidal. It applies to flattering, critical, and neutral uses alike.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "ask": "A state bars licensed counselors from telling minor clients that they should drop out of school, but allows counselors to encourage staying in school. A counselor who uses only talk therapy challenges it. What does Chiles suggest?",
+       "answer": "That as applied to talk therapy it is viewpoint based: it permits one side of the question and forbids the other. Strict scrutiny, and the state's argument that it regulates professional conduct would face Chiles.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "say": "The trap. Do not call a rule viewpoint based just because it affects one side more in practice. Vidal rejected the practical-operation argument. Look at the text: does it single out views, or a subject?"
+      },
+      {
+       "id": "s19",
+       "say": "Recap. Vidal, 2024, Thomas: the names clause is content based, not viewpoint based; flattering, critical, and neutral all barred. Tam's disparagement bar was viewpoint based. Chiles, 2026, Gorsuch, eight to one: Colorado's conversion-therapy ban, as applied to talk therapy, is viewpoint based. Jackson dissented. The viewpoint-neutral question is left open."
+      },
+      {
+       "id": "s20",
+       "ask": "Why wasn't the names clause viewpoint based?",
+       "answer": "It applies whether the use of the name is flattering, critical, or neutral.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "Why did Kagan and Sotomayor join in Chiles?",
+       "answer": "Because the law was viewpoint based.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "What question did Chiles leave open?",
+       "answer": "Whether a viewpoint-neutral regulation of health providers' speech is permissible.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e03",
+     "title": "Time, place, and manner: the Ward two-step",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The test for time, place, and manner rules, and the case that sets it: Ward versus Rock Against Racism."
+      },
+      {
+       "id": "s2",
+       "say": "The Ward two-step, still good law. Step one: is the time, place, and manner regulation content neutral? If not, strict scrutiny."
+      },
+      {
+       "id": "s3",
+       "say": "Step two: if it is content neutral, intermediate scrutiny. Three requirements. One, narrowly tailored. Two, to serve a significant government interest. Three, leaving open ample alternative channels for communication."
+      },
+      {
+       "id": "s4",
+       "say": "And a key definition. Narrowly tailored is not least restrictive means. It means not burdening substantially more speech than necessary."
+      },
+      {
+       "id": "s5",
+       "say": "Two notes. Purpose is key to content neutrality. Look for a reason unrelated to the message: noise, clutter, competition for shared space. And not every case reaches every element. Note which issues the Court skips, and why. That often matters in litigation."
+      },
+      {
+       "id": "s6",
+       "say": "Ward versus Rock Against Racism, 1989. Six to three, Justice Kennedy. Justice Blackmun concurred in the judgment. Marshall, Brennan, and Stevens dissented."
+      },
+      {
+       "id": "s7",
+       "say": "The rule. A content-neutral time, place, and manner rule need not be the least intrusive means. It is narrowly tailored if it promotes a substantial interest that would be achieved less effectively without it, and it is not substantially broader than necessary."
+      },
+      {
+       "id": "s8",
+       "say": "The story. Central Park's Naumberg Bandshell sits near the Sheep Meadow, a designated quiet area, and the residences along Central Park West. After complaints about past concerts, New York City required bandshell performers to use city-provided sound equipment and a city sound technician. A rock concert sponsor challenged it. Held: upheld, reversing the Second Circuit."
+      },
+      {
+       "id": "s9",
+       "say": "The reasoning, element by element. First, music is protected expression. That was undisputed."
+      },
+      {
+       "id": "s10",
+       "say": "Second, content neutral. The controlling question is whether the government adopted the rule because of disagreement with the message it conveys. Controlling noise to protect the Sheep Meadow and the residents has nothing to do with content. And incidental effects on some speakers do not matter, citing Renton."
+      },
+      {
+       "id": "s11",
+       "say": "Third, narrowly tailored. The Second Circuit erred by demanding the least intrusive means. The city's technician controlled volume directly and effectively, while giving sponsors autonomy over the sound mix. So it had no material impact on artistic control."
+      },
+      {
+       "id": "s12",
+       "say": "Fourth, footnote six. Boos versus Barry, 1988, used least restrictive means because it involved a content-based ban on signs criticizing foreign governments. Time, place, and manner rules never get strict scrutiny."
+      },
+      {
+       "id": "s13",
+       "say": "Fifth, alternative channels, easily met. Performances continue. Only amplification is regulated."
+      },
+      {
+       "id": "s14",
+       "say": "So the evolution here is a correction?",
+       "voice": "alt"
+      },
+      {
+       "id": "s15",
+       "say": "Yes. The Second Circuit applied a least-intrusive-means test. Ward corrected it: for a content-neutral rule, narrow tailoring means not substantially broader than necessary."
+      },
+      {
+       "id": "s16",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s17",
+       "ask": "A city caps amplified sound in a downtown plaza at eighty decibels for all events. A protest group argues the city could have used a less restrictive approach, like case-by-case monitoring. Does that defeat the rule?",
+       "answer": "No. Under Ward, a content-neutral rule need not be the least restrictive means. It is narrowly tailored if it is not substantially broader than necessary to serve the significant interest in controlling noise, and speakers keep ample alternatives.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "ask": "A city bans amplified speech in a park only for speakers criticizing the city council. Which step of Ward does it fail?",
+       "answer": "Step one. It is not content neutral, it is viewpoint based, so strict scrutiny, not intermediate scrutiny.",
+       "pause": 10
+      },
+      {
+       "id": "s19",
+       "say": "Recap. Ward two-step: content neutral? If not, strict. If so, narrowly tailored to a significant interest with ample alternatives. Narrowly tailored means not substantially broader than necessary. Ward, 1989, Kennedy: the city sound technician upheld."
+      },
+      {
+       "id": "s20",
+       "ask": "State the intermediate scrutiny test for a content-neutral time, place, and manner rule.",
+       "answer": "Narrowly tailored to serve a significant government interest, leaving open ample alternative channels for communication.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "What does narrowly tailored mean under Ward?",
+       "answer": "Not least restrictive means. Not burdening substantially more speech than necessary.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "What was Boos versus Barry, and why did it use least restrictive means?",
+       "answer": "A content-based ban on signs criticizing foreign governments, so strict scrutiny applied.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e04",
+     "title": "Signs and permits: City of Ladue v. Gilleo and Thomas v. Chicago Park District",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two more time, place, and manner cases. One struck, Ladue. One upheld, Thomas."
+      },
+      {
+       "id": "s2",
+       "say": "City of Ladue versus Gilleo, 1994. Nine to nothing, Justice Stevens."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Even a content-neutral rule fails if it forecloses an entire, unique medium of expression without adequate alternative channels. A near-total ban on residential signs violates the First Amendment."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Margaret Gilleo put a twenty-four-by-thirty-six-inch sign on her lawn: Say No to War in the Persian Gulf, Call Congress Now. Ladue banned residential signs, with ten exemptions: small identification signs, for-sale signs, church and school signs, commercial signs in commercial zones, and more. The goal: preventing ugliness, visual blight, and clutter. Held: unconstitutional."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, there are two ways to attack sign laws. One, they restrict too little, because exemptions discriminate by message; underinclusiveness may favor one side of a debate. Two, they restrict too much protected speech. The Court assumed, for argument, that the exemptions were content neutral, and decided on the second ground."
+      },
+      {
+       "id": "s6",
+       "say": "Second, an entire medium foreclosed. The Court has struck total bans on pamphlets, handbills, door-to-door literature, and live entertainment. Residential signs are a venerable and important medium, especially in political campaigns."
+      },
+      {
+       "id": "s7",
+       "say": "Third, no adequate substitutes. Three reasons. A sign at your home identifies you as the speaker. It is unusually cheap and convenient, which is vital for people of modest means or limited mobility. And it reaches neighbors."
+      },
+      {
+       "id": "s8",
+       "say": "Fourth, more temperate measures could address Ladue's concerns."
+      },
+      {
+       "id": "s9",
+       "say": "Thomas versus Chicago Park District, 2002. Nine to nothing, Justice Scalia."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. A content-neutral permit requirement is valid if it contains adequate standards to guide the official's decision and render it subject to effective judicial review. Unduly broad discretion risks content-based favoritism."
+      },
+      {
+       "id": "s11",
+       "say": "The story. Chicago required a permit for park events with more than fifty people. Held: upheld."
+      },
+      {
+       "id": "s12",
+       "say": "The reasoning. First, not censorship. Unlike Freedman versus Maryland, 1965, where films had to be submitted to a Board of Censors, no ground for denial concerns what a speaker might say. The rule applies to all park activity: the picnicker and soccer player, no less than the political activist or parade marshal."
+      },
+      {
+       "id": "s13",
+       "say": "Second, purpose. To coordinate multiple uses of limited space, preserve facilities, prevent dangerous or unlawful uses, and ensure accountability for damage. Unregulated access could easily reduce, rather than enlarge, the park's utility as a forum for speech."
+      },
+      {
+       "id": "s14",
+       "say": "Third, standards. Denial is allowed only for listed reasons: an incomplete or false application, unpaid prior damage, an earlier permit for the same time and place, unreasonable danger, or a violated prior permit. These are specific and objective, not the whim of the administrator, and they are reviewable on appeal and in state court."
+      },
+      {
+       "id": "s15",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s16",
+       "ask": "A town bans all signs on residential property, with no exceptions at all, to reduce clutter. A resident wants a small political sign in her window. Valid?",
+       "answer": "Likely not. Under Ladue, even a content-neutral ban fails if it forecloses an entire, unique medium. Residential signs are cheap, identify the speaker, and reach neighbors, with no adequate substitute.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "ask": "A city requires a permit for park events over one hundred people, and lets the parks director deny a permit whenever she finds the event, quote, not in the public interest. Valid under Thomas?",
+       "answer": "No. Thomas upheld a permit scheme with specific, objective standards subject to judicial review. Not in the public interest is unduly broad discretion that risks content-based favoritism.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Ladue, 1994, Stevens, unanimous: near-total residential sign ban struck; entire medium foreclosed; no adequate alternatives. Thomas, 2002, Scalia, unanimous: park permit for fifty-plus upheld; content neutral; specific, objective, reviewable standards."
+      },
+      {
+       "id": "s19",
+       "ask": "What are the two ways to attack a sign law, according to Ladue?",
+       "answer": "It restricts too little, because exemptions discriminate by message, or it restricts too much protected speech.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "Why are residential signs a unique medium?",
+       "answer": "They identify the speaker, are cheap and convenient, and reach neighbors.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "How did Thomas distinguish Freedman versus Maryland?",
+       "answer": "Freedman required films to go to a Board of Censors. In Thomas, no ground for denial concerns what a speaker might say.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e05",
+     "title": "Door-to-door: Watchtower Bible v. Village of Stratton",
+     "minutes": 3,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. One case: a permit to speak to your neighbors. Watchtower Bible and Tract Society versus Village of Stratton, 2002."
+      },
+      {
+       "id": "s2",
+       "say": "Eight to one on the bottom line, Justice Stevens. Chief Justice Rehnquist dissented."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Requiring a permit from the mayor before going door to door to promote any cause violates the First Amendment, even assuming intermediate scrutiny. And note: the Court did not decide which standard applies."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Stratton required canvassers promoting any cause on private residential property to first get a permit from the mayor's office. Residents could also post no solicitation signs. Held: unconstitutional."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, the interests are important: preventing fraud and crime, and protecting residents' privacy."
+      },
+      {
+       "id": "s6",
+       "say": "Second, breadth. If the rule were limited to commercial activity and fundraising, it arguably would be tailored. But it covered Camp Fire Girls, Jehovah's Witnesses, political candidates, trick-or-treaters, and neighbors seeking votes or a better garbage collector."
+      },
+      {
+       "id": "s7",
+       "say": "Third, the principle. It is offensive to the very notion of a free society that a citizen must inform the government and get a permit to speak to neighbors, even if permits are free and prompt."
+      },
+      {
+       "id": "s8",
+       "say": "Fourth, three pernicious effects. Count them. One, it destroys anonymity, which people may want out of fear of retaliation or ostracism, or for privacy. Two, some people's religious scruples forbid applying for a license. Three, it bans spontaneous speech, like deciding on a weekend to campaign, or crossing the street to urge a neighbor to vote against the mayor."
+      },
+      {
+       "id": "s9",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s10",
+       "ask": "A town requires a permit only for door-to-door commercial sales and charitable fundraising, to prevent fraud. A vacuum salesman challenges it under Watchtower. What result?",
+       "answer": "Likely upheld. Watchtower suggested a rule limited to commercial activity and fundraising would arguably be tailored to the fraud and crime interests. Stratton's problem was that it covered every cause.",
+       "pause": 12
+      },
+      {
+       "id": "s11",
+       "say": "Recap. Watchtower, 2002, Stevens: a permit to canvass for any cause is unconstitutional even under intermediate scrutiny. Too broad. Three pernicious effects: anonymity, religious scruples, and spontaneity."
+      },
+      {
+       "id": "s12",
+       "ask": "What three pernicious effects did Watchtower identify?",
+       "answer": "It destroys anonymity, it burdens people whose religious scruples forbid seeking a license, and it bans spontaneous speech.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "Did Watchtower decide what standard of review applies?",
+       "answer": "No. It struck the rule even assuming intermediate scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "What narrower rule did the Court suggest might be tailored?",
+       "answer": "One limited to commercial activity and fundraising.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e06",
+     "title": "Expressive conduct and United States v. O'Brien",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The three-step test for expressive conduct, then O'Brien, the draft-card case."
+      },
+      {
+       "id": "s2",
+       "say": "The rule, in three steps. Step one: is the conduct expressive? It is if, one, the actor intended to convey a message, and two, in the circumstances, viewers would likely understand it. No specific message is required, and offensive conduct still counts. If the conduct is not expressive, the First Amendment is not implicated."
+      },
+      {
+       "id": "s3",
+       "say": "Step two: is the government regulating for reasons related to the message? If yes, strict scrutiny."
+      },
+      {
+       "id": "s4",
+       "say": "Step three: if the reasons are unrelated to the message, apply the O'Brien test, which is intermediate scrutiny."
+      },
+      {
+       "id": "s5",
+       "say": "Step one examples. Burning a flag at a protest is expressive. Burning a rubbish bin that happens to hold a flag is not. People in white robes burning a cross is expressive. A construction worker burning scrap wood nailed in a cross shape is not. Trust common sense."
+      },
+      {
+       "id": "s6",
+       "say": "Step two: read the text. Texas's law in Johnson covered flag desecration that seriously offends viewers. That is plainly about the message. The federal statute in Eichman exempted disposing of worn or soiled flags, revealing concern with disrespect. A ban on lawn bonfires that sweeps in a book burning is almost certainly about fire hazards."
+      },
+      {
+       "id": "s7",
+       "say": "The overlap with time, place, and manner. Thomas's permit rule covered picnics and soccer, which are not expressive, as well as parades, which are. In practice, time, place, and manner intermediate scrutiny and O'Brien are very similar. Think of banning parades during rush hour."
+      },
+      {
+       "id": "s8",
+       "say": "Now United States versus O'Brien, 1968. Seven to one, Chief Justice Warren. Justice Marshall was recused. Justice Douglas dissented on non-First Amendment grounds."
+      },
+      {
+       "id": "s9",
+       "say": "The O'Brien test. When speech and nonspeech elements combine in the same conduct, a regulation is justified if, one, it furthers an important or substantial government interest; two, the interest is unrelated to the suppression of free expression; and three, the incidental restriction on expression is no greater than essential to further that interest. All three are required."
+      },
+      {
+       "id": "s10",
+       "say": "The story. On March 31, 1966, David O'Brien and three companions burned their draft registration cards on the steps of the South Boston Courthouse, to persuade others to oppose the Vietnam War. He was convicted under a federal law making it a crime to knowingly destroy or mutilate a registration certificate. Held: conviction upheld."
+      },
+      {
+       "id": "s11",
+       "say": "The reasoning. The interest: the certificates prove registration and keep the system for raising armies running smoothly. The tailoring: no alternative would more precisely ensure the certificates' continued availability than banning their willful destruction."
+      },
+      {
+       "id": "s12",
+       "say": "And the casebook illustration. Closing a bookstore for fire code violations advances safety, and the incidental loss of the bookstore is no greater than necessary."
+      },
+      {
+       "id": "s13",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s14",
+       "ask": "A man burns a pile of leaves in his yard, which violates a city burning ordinance. He says he was protesting climate policy, but nobody around him could tell. Is it expressive conduct?",
+       "answer": "Probably not. Expressive conduct requires intent to convey a message and a likelihood that viewers would understand it in the circumstances. No one could tell.",
+       "pause": 12
+      },
+      {
+       "id": "s15",
+       "ask": "A city bans wearing masks at public gatherings to help police identify criminals. A protester wears a mask as part of a demonstration. Walk through the test.",
+       "answer": "The mask is likely expressive in context. The interest, identifying criminals, is unrelated to the message, so O'Brien applies: an important interest, unrelated to suppression, and the incidental restriction no greater than essential.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "say": "The trap. O'Brien applies only when the government's interest is unrelated to the message. If the interest arises only because of what the conduct communicates, it is strict scrutiny. That is Johnson, next."
+      },
+      {
+       "id": "s17",
+       "say": "Recap. Expressive conduct: intent to convey a message, likely understood. Related to the message, strict scrutiny. Unrelated, O'Brien: important or substantial interest, unrelated to suppression, restriction no greater than essential. O'Brien, 1968, Warren: draft-card burning conviction upheld."
+      },
+      {
+       "id": "s18",
+       "ask": "What are the two requirements for conduct to be expressive?",
+       "answer": "The actor intended to convey a message, and in the circumstances viewers would likely understand it.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "State the three prongs of the O'Brien test.",
+       "answer": "An important or substantial government interest, unrelated to the suppression of free expression, with an incidental restriction no greater than essential to further that interest.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What interest did the draft-card law serve in O'Brien?",
+       "answer": "The certificates prove registration and keep the system for raising armies running smoothly.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e07",
+     "title": "Flag burning: Texas v. Johnson and United States v. Eichman",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Texas versus Johnson, United States versus Eichman, the Chapter 9 synthesis, and two stretch exercises: honking and cigarette vending machines."
+      },
+      {
+       "id": "s2",
+       "say": "Texas versus Johnson, 1989. Five to four, Justice Brennan, joined by Marshall, Blackmun, Scalia, and Kennedy. Rehnquist, White, and O'Connor dissented. Stevens dissented separately."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. A law punishing flag desecration because it offends viewers is related to expression, so O'Brien does not apply. Under strict scrutiny, the conviction of a flag burner for political protest violates the First Amendment."
+      },
+      {
+       "id": "s4",
+       "say": "The story. At the 1984 Republican National Convention in Dallas, Gregory Lee Johnson burned an American flag in front of City Hall, while protesters chanted, America, the red, white, and blue, we spit on you. No one was hurt or threatened, but witnesses were seriously offended. Texas law defined desecrate as physically mistreating an object in a way the actor knows will seriously offend observers. Held: conviction reversed."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. Step one, expressive. The test is intent to convey a particularized message, plus a great likelihood it would be understood. Examples: black armbands, sit-ins, military uniforms in antiwar theater, picketing, a peace sign on a flag, refusing to salute. A flag's very purpose is symbolic. Barnette called it a short cut from mind to mind. And Texas conceded the point."
+      },
+      {
+       "id": "s6",
+       "say": "Step two, related to expression. Texas's interest in preserving the flag as a symbol of nationhood and unity arises only when a person's treatment of the flag communicates some message. So strict scrutiny."
+      },
+      {
+       "id": "s7",
+       "say": "The bedrock principle: the government may not prohibit an idea because society finds it offensive. And Barnette's fixed star: no official can prescribe orthodoxy."
+      },
+      {
+       "id": "s8",
+       "say": "Ends versus means. The government may encourage respect for the flag by persuasion and example. But it may not criminally punish flag burning as protest. Tolerating criticism is a sign and source of our strength."
+      },
+      {
+       "id": "s9",
+       "say": "United States versus Eichman, 1990. Five to four, Justice Brennan, with the same majority as Johnson. Stevens, Rehnquist, White, and O'Connor dissented."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. A facially neutral flag-protection statute is still related to suppressing expression when its terms reveal concern with the flag's symbolic value. So it fails like the Texas law."
+      },
+      {
+       "id": "s11",
+       "say": "The story. After Johnson, Congress passed the Flag Protection Act of 1989. It punished anyone who knowingly mutilates, defaces, physically defiles, burns, maintains on the floor or ground, or tramples upon a United States flag, with an exception for disposing of a flag that is worn or soiled. Held: unconstitutional as applied to flag-burning protesters."
+      },
+      {
+       "id": "s12",
+       "say": "The government argued that the Act, unlike Texas's, ignores motive and the effect on onlookers. But each verb, except possibly burns, unmistakably connotes disrespectful treatment. And the worn-or-soiled exemption protects acts traditionally associated with patriotic respect."
+      },
+      {
+       "id": "s13",
+       "say": "The casebook's view. The authors find the four dissents in each case astonishing. And they note the split was not liberal versus conservative: Scalia and Kennedy were in the majority."
+      },
+      {
+       "id": "s14",
+       "say": "Now the Chapter 9 synthesis. Ten rows. Mosley, 1972: school picketing ban except labor disputes, struck, content based by subject matter. O'Brien, 1968: draft card destruction, upheld, interest unrelated to the message. Ward, 1989: city sound technician, upheld, neutral and not substantially broader than necessary."
+      },
+      {
+       "id": "s15",
+       "say": "Johnson, 1989: flag desecration that seriously offends, struck, related to the message and fails strict scrutiny. Eichman, 1990: the Flag Protection Act, struck, its terms reveal concern with disrespect. Ladue, 1994: near-total residential sign ban, struck, forecloses a unique medium with no adequate alternatives."
+      },
+      {
+       "id": "s16",
+       "say": "Thomas, 2002: park permits for fifty or more, upheld, neutral with adequate standards. Watchtower, 2002: permit for door-to-door canvassing, struck, too much speech, anonymity, spontaneity. Vidal, 2024: the trademark names clause, content based, not viewpoint based. Chiles, 2026: the conversion-therapy ban as applied to talk therapy, viewpoint based."
+      },
+      {
+       "id": "s17",
+       "say": "Now the stretch exercises. Honking. California bans honking except when reasonably necessary to warn of a safety hazard. A driver was cited for honking in support of a political demonstration."
+      },
+      {
+       "id": "s18",
+       "say": "The arguments for her. Honking at a protest is expressive conduct: intent to show support, likely understood. The ban is facially neutral, so expect O'Brien or time, place, and manner intermediate scrutiny. Argue it burns substantially more expression than needed to serve traffic safety and noise interests, since a brief supportive honk creates no hazard. And it leaves no real alternative for a driver to join a demonstration from the road."
+      },
+      {
+       "id": "s19",
+       "say": "Vending machines. A 2010 federal law bans cigarette vending machines except in adults-only areas. For the manufacturers: vending machines display brands and products, which is commercial speech, so restricting them limits a channel for truthful information to adults, as in Lorillard. The counter: the law regulates a sales method, conduct, to keep cigarettes from minors, with only incidental effects on expression, so O'Brien or Central Hudson is easily met. Ads remain available elsewhere, and adults can still buy cigarettes."
+      },
+      {
+       "id": "s20",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s21",
+       "ask": "A state bans burning the state flag, quote, in a manner that conveys contempt for the state. A protester burns one. Analyze.",
+       "answer": "Related to expression, since the law targets contempt, the message. O'Brien does not apply. Strict scrutiny, which it fails under Johnson.",
+       "pause": 12
+      },
+      {
+       "id": "s22",
+       "ask": "A city bans all open fires in public parks during dry season, with no exceptions. A protester burns a flag there and is cited. Johnson or O'Brien?",
+       "answer": "O'Brien. The fire-safety interest is unrelated to the message, so intermediate scrutiny, and a neutral fire ban during dry season likely survives.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "ask": "Congress bans trampling or defiling the flag but exempts respectful disposal of worn flags. Is it neutral?",
+       "answer": "No. Under Eichman, terms that connote disrespect and an exemption for respectful disposal reveal concern with the flag's symbolic value, so it is related to expression.",
+       "pause": 10
+      },
+      {
+       "id": "s24",
+       "say": "Recap. Johnson, 1989, five to four, Brennan: seriously offends is about the message; strict scrutiny; bedrock principle. Eichman, 1990: the federal Act's verbs and worn-or-soiled exemption revealed concern with disrespect. Scalia and Kennedy joined both majorities."
+      },
+      {
+       "id": "s25",
+       "ask": "Why didn't O'Brien apply in Texas versus Johnson?",
+       "answer": "Texas's interest in preserving the flag as a symbol arises only when the treatment of the flag communicates a message, so it is related to expression.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "What two features of the Flag Protection Act revealed concern with the flag's symbolic value in Eichman?",
+       "answer": "Its verbs, except possibly burns, connote disrespectful treatment, and its exemption for disposing of worn or soiled flags.",
+       "pause": 8
+      },
+      {
+       "id": "s27",
+       "ask": "What does the casebook note about the split in the flag cases?",
+       "answer": "It was not liberal versus conservative. Scalia and Kennedy were in the majority.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e08",
+     "title": "Government speech: the framework and Walker v. Texas Division",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Chapter 10. The government's nonregulatory capacities, the simple rule of government speech, the checklist, and Walker versus Texas Division, Sons of Confederate Veterans."
+      },
+      {
+       "id": "s2",
+       "say": "Until now, the course has addressed the government as regulator of private speech. Chapters 10 through 12 turn to the government acting in nonregulatory capacities, each with its own doctrine. Five capacities. Count them."
+      },
+      {
+       "id": "s3",
+       "say": "One, administrator, running a program. CDC ads: get your kids vaccinated against measles. DMV signs: Don't Drink and Drive. That is government speech, Chapter 10."
+      },
+      {
+       "id": "s4",
+       "say": "Two, funder. NEA arts grants. USAID family-planning contracts. NIH grants conditioned on disavowing DEI. Funding conditions, Chapter 11."
+      },
+      {
+       "id": "s5",
+       "say": "Three, property owner. Limits on speech in the Capitol. Banning large protests in national parks. Forum doctrine, Chapter 11."
+      },
+      {
+       "id": "s6",
+       "say": "Four, employer. DOJ forbids its lawyers to criticize the government's litigation positions. Employee speech, Chapter 12. Five, school administrator. Public school discipline for student speech. Student speech, Chapter 12. These categories can overlap, and they are not the only ones."
+      },
+      {
+       "id": "s7",
+       "say": "The simple rule. The First Amendment does not restrict government speech. The government may express its own message without presenting the other side. The disputes are about whether particular speech counts as government speech or private speech."
+      },
+      {
+       "id": "s8",
+       "say": "The government-speech checklist. Four steps. One: who is really speaking? Apply the Shurtleff holistic inquiry, looking at three types of evidence: the history of the medium, public perception of who is speaking, and the government's active control over the content. Control over content is often decisive."
+      },
+      {
+       "id": "s9",
+       "say": "Two: if it is government speech, there is no First Amendment limit on its message. But the government cannot compel private people to carry its message. That is Wooley."
+      },
+      {
+       "id": "s10",
+       "say": "Three: if it is private speech, apply the ordinary rules. Viewpoint discrimination is forbidden. Four: even pure government speech cannot be used to coerce third parties into suppressing others' speech. That is Vullo."
+      },
+      {
+       "id": "s11",
+       "say": "Now Walker versus Texas Division, Sons of Confederate Veterans, 2015. Five to four, Justice Breyer, joined by Thomas, Ginsburg, Sotomayor, and Kagan. Justice Alito dissented, joined by Roberts, Scalia, and Kennedy."
+      },
+      {
+       "id": "s12",
+       "say": "The rule. Texas specialty license plates are government speech. So Texas may refuse a design, here a Confederate battle flag, without violating the Free Speech Clause."
+      },
+      {
+       "id": "s13",
+       "say": "The story. Texas offers general-issue, specialty, and personalized plates. Specialty designs come from the legislature, like Keep Texas Beautiful and Fight Terrorism; from private vendors, like Get it Sold with RE/MAX; or from nonprofit applications approved by the DMV Board. The Board may refuse a design if the design might be offensive to any member of the public. The Sons of Confederate Veterans proposed a plate with its logo and a Confederate battle flag. After public comment, including letters from elected officials, the Board unanimously denied it, because many people reasonably find the flag offensive. Held: no First Amendment violation, reversing the Fifth Circuit."
+      },
+      {
+       "id": "s14",
+       "say": "Why government must be free to speak. A recycling program could not work if its letters had to include the trash company's opposing plea. A vaccination campaign could not work if officials had to voice anti-vaccine views."
+      },
+      {
+       "id": "s15",
+       "say": "The foundation: Pleasant Grove City versus Summum, 2009. A city's acceptance of privately donated permanent monuments in a park is government speech. Three reasons: one, the history of governments using monuments to speak; two, observers reasonably read monuments as the owner's message; and three, the city's control over selection."
+      },
+      {
+       "id": "s16",
+       "say": "Walker applied the same three factors. History: plates have long carried state messages. Arizona's steer head in 1917. New Hampshire's Old Man of the Mountain. America's Dairyland. Texas's Lone Star since 1919."
+      },
+      {
+       "id": "s17",
+       "say": "Public perception: plates are essentially government IDs, with TEXAS at the top, issued and owned by the state, and required by law. A driver who wanted a purely private message could use a bumper sticker. Choosing a plate suggests wanting the state's endorsement."
+      },
+      {
+       "id": "s18",
+       "say": "Control: Texas has sole control over design. The Board must approve every design, and it has rejected at least a dozen. Texas may offer Fight Terrorism without offering plates promoting al Qaeda."
+      },
+      {
+       "id": "s19",
+       "say": "And compelled speech distinguished. Drivers do convey plate messages; recall Wooley's mobile billboard. But just as Texas cannot force the Sons of Confederate Veterans to carry its message, the Sons cannot force Texas to put the Confederate flag on its plates."
+      },
+      {
+       "id": "s20",
+       "say": "The dissent, Justice Alito. Sit by a Texas highway and watch more than three hundred fifty specialty plates go by: colleges, fraternities, a soft drink, Rather Be Golfing, Notre Dame, a NASCAR driver. Is that really the state's message? Texas turned the plates into little mobile billboards for private speech, and rejected one because it offends. That, he said, is blatant viewpoint discrimination. Could a state do the same with highway billboards, or a campus bulletin board?"
+      },
+      {
+       "id": "s21",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s22",
+       "ask": "A city accepts donated benches for a public park, each with a plaque bearing a message the donor chooses, but city staff approve every plaque and have rejected several. The city rejects a plaque criticizing the mayor. Government speech?",
+       "answer": "Likely yes, under Summum and Walker. Parks have long carried government messages, observers likely read plaques in a city park as the city's, and the city controls every message. If so, there is no First Amendment limit on its choice. The other side would argue, like Alito, that the city has created a billboard for private messages.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "say": "Recap. Five capacities: administrator, funder, property owner, employer, school administrator. Government speech is not restricted by the First Amendment. Checklist: who is speaking; no compelled carrying; private speech means ordinary rules; no coercion. Walker, 2015, five to four, Breyer: plates are government speech by history, perception, and control. Alito dissented: blatant viewpoint discrimination."
+      },
+      {
+       "id": "s24",
+       "ask": "What three factors did Summum use to find monuments were government speech?",
+       "answer": "The history of governments using monuments to speak, observers reasonably reading monuments as the owner's message, and the city's control over selection.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "Why were Texas plates perceived as government speech in Walker?",
+       "answer": "They are essentially government IDs, with TEXAS at the top, issued and owned by the state, and required by law.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "What was Alito's main argument in dissent?",
+       "answer": "With hundreds of private specialty plates, Texas created mobile billboards for private speech, and rejecting one because it offends is blatant viewpoint discrimination.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e09",
+     "title": "Private or governmental? Matal v. Tam and Shurtleff v. City of Boston",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two cases on the private side of the line. Trademarks in Matal versus Tam. The City Hall flagpole in Shurtleff versus City of Boston."
+      },
+      {
+       "id": "s2",
+       "say": "Matal versus Tam, 2017. Eight to nothing in relevant part, Justice Alito. Justice Gorsuch was recused."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Registered trademarks are private speech, not government speech. The Lanham Act's bar on marks that disparage any persons is viewpoint discrimination and violates the First Amendment. Speech may not be banned on the ground that it expresses ideas that offend."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Asian-American band members sought to register The Slants, a slur they hoped to reclaim and drain of its force. The PTO refused under the disparagement clause. Held: the clause is unconstitutional."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, government speech is essential. Requiring viewpoint neutrality would be paralyzing. World War Two posters urged enlistment and war bonds without balancing posters urging the opposite."
+      },
+      {
+       "id": "s6",
+       "say": "Second, but it is dangerous. If private speech could become government speech by simply affixing a government seal of approval, the government could silence disfavored views. So use great caution before extending the doctrine."
+      },
+      {
+       "id": "s7",
+       "say": "Third, why trademarks are private. The government does not create or edit marks, and registration is mandatory if viewpoint-neutral requirements are met. Otherwise the government would be babbling prodigiously and incoherently. Abolish Abortion, and I Stand With Planned Parenthood. Just do it. Have it your way."
+      },
+      {
+       "id": "s8",
+       "say": "Fourth, the contrast: Johanns versus Livestock Marketing Association, 2005. Beef ads were government speech because the message was, from beginning to end, the federal government's. Officials set guidelines, attended meetings, and held the power to edit or reject."
+      },
+      {
+       "id": "s9",
+       "say": "Fifth, the slippery slope. If registration made speech the government's, copyright registration of a book might too."
+      },
+      {
+       "id": "s10",
+       "say": "Now Shurtleff versus City of Boston, 2022. Nine to nothing on the bottom line, Justice Breyer. Alito, Thomas, and Gorsuch concurred in the judgment, rejecting the three-factor test."
+      },
+      {
+       "id": "s11",
+       "say": "The rule. Courts conduct a holistic inquiry into whether the government intends to speak for itself or to regulate private expression. Three types of evidence. One, the history of the expression. Two, the public's likely perception of who is speaking. Three, the extent to which the government has actively shaped or controlled the expression. Boston's flag-raising program was private speech, so refusing a Christian flag violated the First Amendment."
+      },
+      {
+       "id": "s12",
+       "say": "The story. Boston flies the U.S., Massachusetts, and Boston flags on three poles outside City Hall. Since 2005 it let groups replace the city flag for a few hours during ceremonies. It approved about fifty flags at two hundred eighty-four ceremonies, mostly other countries' flags, plus Pride Week, EMS workers, and a community bank. It never refused one. In 2017, Harold Shurtleff of Camp Constitution asked to raise a Christian flag. The city refused, fearing an Establishment Clause violation. Held: the refusal violated the Free Speech Clause."
+      },
+      {
+       "id": "s13",
+       "say": "Now the three factors. History favors Boston. Flags at the seat of government usually convey government messages. A foreign flag at Blair House. Boston raising the Montreal Canadiens' banner after losing a hockey bet."
+      },
+      {
+       "id": "s14",
+       "say": "Public perception is mixed. People associate City Hall flags with the city, but Boston regularly lowered its flag for others."
+      },
+      {
+       "id": "s15",
+       "say": "Control decides it. Boston controlled the date, the time, and the premises, and it even provided a hand crank. But it did not control the flags' content or meaning. It approved every request and had no written policy on what could be flown. The Court called that the most salient feature of the case."
+      },
+      {
+       "id": "s16",
+       "say": "And Boston can change its policy going forward."
+      },
+      {
+       "id": "s17",
+       "say": "Justice Alito, concurring in the judgment. Neither control nor final approval authority distinguishes government speech from censorship, and focusing on public perception invites misattribution. His test: government speech occurs only if the government purposefully expresses its own message, through persons authorized to speak for it, without using a means that abridges private speech."
+      },
+      {
+       "id": "s18",
+       "say": "And from the slides. Shurtleff is also an example of a designated public forum. Flagpoles are not traditionally open to the public, but Boston chose to open one."
+      },
+      {
+       "id": "s19",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s20",
+       "ask": "A state lets anyone register a business name with the secretary of state if it is not already taken, but refuses names that, quote, demean any religion. Private or government speech, and what result?",
+       "answer": "Private speech, like trademarks in Tam: the state does not create or edit the names, and registration follows neutral requirements. A bar on names that demean religion is viewpoint discrimination, based on giving offense, so it violates the First Amendment.",
+       "pause": 12
+      },
+      {
+       "id": "s21",
+       "ask": "A city lets community groups fly flags on a City Hall pole, but has a written policy that only flags of nations and city-sponsored causes may fly, and city staff select each one. A group is refused. Does Shurtleff help the group?",
+       "answer": "Probably not. The key in Shurtleff was the lack of control over content. A written policy with city selection of each flag is the kind of active control that points to government speech.",
+       "pause": 12
+      },
+      {
+       "id": "s22",
+       "say": "Recap. Tam, 2017, Alito: trademarks are private; the disparagement clause is viewpoint discrimination; use great caution. Johanns: beef ads are government speech. Shurtleff, 2022, Breyer: holistic inquiry, history, perception, control; control decided it; Boston's refusal of the Christian flag violated free speech. Alito would ask whether the government purposefully spoke through authorized persons."
+      },
+      {
+       "id": "s23",
+       "ask": "Why are trademarks private speech, according to Tam?",
+       "answer": "The government does not create or edit marks, and registration is mandatory if viewpoint-neutral requirements are met.",
+       "pause": 8
+      },
+      {
+       "id": "s24",
+       "ask": "Which Shurtleff factor was decisive, and why?",
+       "answer": "Control. Boston controlled date, time, and premises, but not the content or meaning of the flags, approved every request, and had no written policy.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "What was Alito's test for government speech in Shurtleff?",
+       "answer": "Government speech occurs only if the government purposefully expresses its own message through persons authorized to speak for it, without using a means that abridges private speech.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e10",
+     "title": "No coercion: NRA v. Vullo, and the government-speech synthesis",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The limit on government speech, in NRA versus Vullo. Then the synthesis, the street murals, and AI chatbots."
+      },
+      {
+       "id": "s2",
+       "say": "National Rifle Association versus Vullo, 2024. Nine to nothing, Justice Sotomayor."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Government officials may criticize views and try to persuade. But they may not use state power to coerce private parties into punishing or suppressing disfavored speech by others. An official cannot do indirectly what she is barred from doing directly. That comes from Bantam Books versus Sullivan, 1963."
+      },
+      {
+       "id": "s4",
+       "say": "The story. The NRA alleged that Maria Vullo, superintendent of the New York Department of Financial Services, threatened enforcement actions against regulated insurance companies unless they cut ties with the NRA and other gun-promotion groups. Held: the allegations, if true, state a First Amendment claim."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. This is not about whether speech is the government's. It is a separate limit on what government speech may do. An official may share her views forcefully, relying on the merits and force of her ideas, but not on threats of legal sanctions. The line between persuasion and coercion can be fuzzy."
+      },
+      {
+       "id": "s6",
+       "say": "The slides' example. An official cannot say: I will revoke your company's license unless you boycott the NRA."
+      },
+      {
+       "id": "s7",
+       "say": "Now the synthesis: government or private speech? Six cases, with history, perception, and control. Summum, 2009, park monuments: history favors government, perception favors government, the city selects. Government speech."
+      },
+      {
+       "id": "s8",
+       "say": "Johanns, 2005, beef ads: the message was set and edited by the government. Government speech. Walker, 2015, specialty plates: history favors government, plates are government IDs, the state approves every design and rejected a dozen. Government speech, five to four."
+      },
+      {
+       "id": "s9",
+       "say": "Tam, 2017, trademarks: not perceived as the government's views, no editing, registration mandatory. Private speech. Shurtleff, 2022, the City Hall flagpole: history favors government, perception mixed, no control over content. Private speech."
+      },
+      {
+       "id": "s10",
+       "say": "And Women for America First, Second Circuit, 2022, street murals: streets carry government messages, the city announced its values, the mayor directed, DOT funded, final approval. Government speech."
+      },
+      {
+       "id": "s11",
+       "say": "The stretch: street murals. In July 2020, New York City painted Black Lives Matter murals on seven streets, including Fifth Avenue in front of Trump Tower, at Mayor de Blasio's direction. Women for America First asked to paint its motto on a city street. DOT refused, saying installations on city roadways that are open to traffic are not permitted."
+      },
+      {
+       "id": "s12",
+       "say": "The Second Circuit, in Women for America First versus Adams, 2022, held the murals were government speech under all three factors. History: streets have long carried city messages, like traffic markings, and anti-graffiti laws reserve them. Perception: the public would see a permanent street message as the city's, especially since the mayor said the murals send a message that these are our values. Control: editorial control through the mayor's direction, city employees painting, DOT funding, and final approval."
+      },
+      {
+       "id": "s13",
+       "say": "The questions. Did the Second Circuit apply the precedent correctly? Is the precedent right? Would your answer change if the murals said Black Lives Don't Matter, Abortion is Murder, Defund the Police, Support Israel, or Free Palestine? Should there be any limit on the government's ability to spread its own messages?"
+      },
+      {
+       "id": "s14",
+       "say": "The second stretch: AI chatbots. Garcia doubted that chatbot output reflects the human intent needed for speech. If the CDC deploys an AI chatbot to answer vaccine questions, are its answers government speech? Under Shurtleff, the government chooses to deploy the tool, the public likely attributes the answers to the CDC, and the agency controls training and guardrails, though not each output. Should it matter that the government is not a human? Courts have not developed a doctrine for AI-generated government communications."
+      },
+      {
+       "id": "s15",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s16",
+       "ask": "A state attorney general publicly urges banks to stop doing business with a controversial advocacy group, saying the group's views are dangerous. She threatens nothing. Is that a Vullo violation?",
+       "answer": "Likely not. Officials may criticize and try to persuade, relying on the force of their ideas. Vullo forbids using state power, like threats of legal sanctions, to coerce third parties.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "ask": "Same official tells the banks she regulates that their charters will get, quote, a very close look, unless they drop the group. Now?",
+       "answer": "That looks like coercion under Vullo: using the threat of regulatory sanctions to get private parties to punish disfavored speech, doing indirectly what she could not do directly.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Vullo, 2024, Sotomayor, unanimous: persuasion yes, coercion no; no doing indirectly what you cannot do directly. Synthesis: Summum, Johanns, Walker, and the murals are government speech; Tam and Shurtleff are private."
+      },
+      {
+       "id": "s19",
+       "ask": "What is the holding of NRA versus Vullo?",
+       "answer": "Officials may criticize and persuade, but may not use state power to coerce private parties into punishing or suppressing others' disfavored speech.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "Which 1963 case supplies the line that an official cannot do indirectly what she cannot do directly?",
+       "answer": "Bantam Books versus Sullivan.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "Why did the Second Circuit find the street murals were government speech?",
+       "answer": "History, since streets carry city messages; perception, since the mayor said they show our values; and control, through his direction, city painters, DOT funding, and final approval.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e11",
+     "title": "Government-funded speech: Rust v. Sullivan and Legal Services Corporation v. Velazquez",
+     "minutes": 9,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Chapter 11. The overlap of funding and forums, the funding and forum checklist, the funding rule, then Rust and Velazquez."
+      },
+      {
+       "id": "s2",
+       "say": "The big picture. Two more nonregulatory capacities, which overlap heavily with government speech: the government as funder of private speech, and as owner of property that private speakers use. Property includes not just streets and parks, but tangible things like flagpoles and classrooms, and intangible things like a university's student activity fund. That is why the doctrines overlap."
+      },
+      {
+       "id": "s3",
+       "say": "The funding checklist, two steps. One: is the government paying private parties to deliver its message? Then it is government speech, and it may keep that message from being garbled or distorted. Or is the program designed to facilitate private speech, as in Velazquez? Two: does the condition define the limits of the program, which is okay, as in Rust? Or does it leverage funding to regulate speech outside the program's contours, an unconstitutional condition, as in USAID One?"
+      },
+      {
+       "id": "s4",
+       "say": "The forum checklist, four steps. One: is the speech private, or the government's own? If the government's own, as in Walker, there is no forum. Two: what type of forum? Three: apply that forum's standard. Four: whatever the forum, viewpoint discrimination almost always fails."
+      },
+      {
+       "id": "s5",
+       "say": "The funding rule. The government may fund private entities to communicate its message, and may limit what the funds are used to say. Generally, funding choices get rational-basis review. The key line: when the government disburses public funds to private entities to convey a governmental message, it may take legitimate and appropriate steps to ensure that its message is neither garbled nor distorted by the grantee. But it may not impose conditions that regulate speech outside the contours of the spending program itself. The line is fuzzy, and the Court admits it."
+      },
+      {
+       "id": "s6",
+       "say": "Examples. The CDC may fund nonprofits to promote measles vaccination and bar them from using the grant to say something different. A DMV may contract for Drive Sober signs. But the CDC could not bar grantees from criticizing it on unrelated matters. And the DMV could not bar contractors from using their own money to advocate a higher speed limit."
+      },
+      {
+       "id": "s7",
+       "say": "The unconstitutional conditions doctrine. There are limits to the conditions the government may attach to grants. It often involves speech but is not limited to it. The government almost certainly could not require grantees to give up their Sixth Amendment jury-trial right, or their Second Amendment rights."
+      },
+      {
+       "id": "s8",
+       "say": "And a study tip. Focus on how Velazquez and USAID One distinguished Rust, and be ready to argue both cases both ways."
+      },
+      {
+       "id": "s9",
+       "say": "Rust versus Sullivan, 1991. Five to four, Chief Justice Rehnquist. Blackmun, Marshall, O'Connor, and Stevens dissented."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. The government may fund a program that advances its goals without funding alternatives, and may bar grantees from using program funds for speech outside the program's scope. That is not viewpoint discrimination. The government has merely chosen to fund one activity to the exclusion of the other. Later cases explain Rust as the government using private speakers to transmit information about its own program."
+      },
+      {
+       "id": "s11",
+       "say": "The story. Title X funded projects where doctors counseled patients on family planning, like contraception and infertility, but barred using Title X funds for abortion counseling. Grantees, staff, and patients claimed a free speech violation. Held: upheld."
+      },
+      {
+       "id": "s12",
+       "say": "The reasoning. Selective funding is fine. When Congress created the National Endowment for Democracy, it did not have to fund programs promoting communism or fascism. When the government appropriates public funds to establish a program, it is entitled to define the limits of that program."
+      },
+      {
+       "id": "s13",
+       "say": "And the key fact: the grantee stays free outside the program. It may still perform abortions, provide abortion-related services, and engage in abortion advocacy, using separate, independent programs funded by other sources."
+      },
+      {
+       "id": "s14",
+       "say": "Legal Services Corporation versus Velazquez, 2001. Five to four, Justice Kennedy. Justice Scalia dissented, joined by Rehnquist, O'Connor, and Thomas."
+      },
+      {
+       "id": "s15",
+       "say": "The rule. When a funding program is designed to facilitate private speech rather than promote a government message, the government may not restrict that speech to insulate its own laws from challenge. Barring LSC-funded lawyers from challenging the validity of welfare laws violates the First Amendment."
+      },
+      {
+       "id": "s16",
+       "say": "The story. The Legal Services Corporation funds local nonprofits whose lawyers represent indigent clients in civil matters, including welfare claims. Congress barred funded lawyers from cases involving an effort to amend or otherwise challenge existing law. They could argue that an agency got the facts wrong or misapplied a statute. But they could not argue that a welfare law was unconstitutional or conflicted with federal law, and they had to withdraw if such an issue arose mid-case. Other, unchallenged LSC limits bar political campaigns, most criminal cases, and class actions without approval. Held: unconstitutional."
+      },
+      {
+       "id": "s17",
+       "say": "The reasoning. Rust distinguished. There, the government used private speakers to convey its own program's message. Here, the LSC lawyer speaks for a private client in a claim against the government. The government's lawyer on the other side delivers the government's message. Advice and advocacy by the LSC lawyer cannot be government speech, even under a generous understanding of the concept."
+      },
+      {
+       "id": "s18",
+       "say": "Congress need not fund LSC lawyers or every kind of representation. But it cannot define the litigation it funds to exclude certain vital theories and ideas, to insulate its own interpretation of the Constitution from judicial challenge."
+      },
+      {
+       "id": "s19",
+       "say": "The dissent, Justice Scalia. If the doctors' confidential advice in Rust was government speech, it is hard to imagine what subsidized speech is not. Doctors also owe professional duties to patients. The subsidy prevents no one from speaking, and it is indistinguishable in all relevant respects from Rust."
+      },
+      {
+       "id": "s20",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s21",
+       "ask": "A federal program pays nonprofits to run anti-smoking classes for teenagers and bars using program funds to say that smoking is safe. A grantee challenges the condition. Rust or Velazquez?",
+       "answer": "Rust. The government is paying private parties to deliver its own message and may keep it from being garbled, and the grantee remains free to speak with its own money outside the program.",
+       "pause": 12
+      },
+      {
+       "id": "s22",
+       "ask": "A state funds public defenders but bars them from arguing that any state criminal statute is unconstitutional. Rust or Velazquez?",
+       "answer": "Velazquez. Defenders speak for private clients against the government, so their advocacy is not government speech, and the state cannot exclude vital theories to insulate its laws from challenge.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "say": "Recap. The funding rule: government may define its program and keep its message from being garbled, but may not regulate speech outside the program. Rust, 1991, Rehnquist: Title X; defines the program; grantee free outside. Velazquez, 2001, Kennedy: LSC lawyers speak for clients; cannot insulate laws from challenge. Scalia: indistinguishable from Rust."
+      },
+      {
+       "id": "s24",
+       "ask": "What key fact let the Title X condition survive in Rust?",
+       "answer": "The grantee stayed free outside the program: it could still provide and advocate abortion through separate, independently funded programs.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "How did Velazquez distinguish Rust?",
+       "answer": "In Rust the government used private speakers to convey its own message. In Velazquez the LSC lawyer speaks for a private client against the government.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "What standard generally governs funding choices?",
+       "answer": "Rational basis.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e12",
+     "title": "Funding conditions beyond the program: USAID I and USAID II",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. USAID One, 2013, the unconstitutional condition. USAID Two, 2020, foreign affiliates."
+      },
+      {
+       "id": "s2",
+       "say": "Agency for International Development versus Alliance for Open Society International, USAID One. Six to two, Chief Justice Roberts. Justice Kagan was recused. Justice Scalia dissented, joined by Thomas."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. The government may define the limits of what it funds, but it may not leverage funding to regulate speech outside the contours of the program. Requiring grantees to adopt as their own a government policy on an issue of public concern fails. It goes beyond defining the limits of the federally funded program to defining the recipient. And, quoting Velazquez, Congress cannot recast a condition on funding as a mere definition of its program in every case, lest the First Amendment be reduced to a simple semantic exercise."
+      },
+      {
+       "id": "s4",
+       "say": "The story. The 2003 Leadership Act funded NGOs fighting HIV and AIDS abroad. Condition one, unchallenged: funds cannot be used to promote or advocate legalizing prostitution or sex trafficking. Condition two, the Policy Requirement: grantees must have a policy explicitly opposing prostitution and sex trafficking. American NGOs feared alienating host governments, hampering their work with sex workers, and having to censor privately funded discussions. Held: the Policy Requirement violates the First Amendment."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, as a direct regulation, the requirement would plainly violate the First Amendment. Normally a recipient that objects to a condition can decline the funds, but some conditions unconstitutionally burden speech."
+      },
+      {
+       "id": "s6",
+       "say": "Second, why it is outside the program. Condition one already keeps federal money from promoting prostitution. So the Policy Requirement must do something more. A recipient cannot profess the government's belief when spending federal funds and then assert a contrary belief, or neutrality, on its own time and dime."
+      },
+      {
+       "id": "s7",
+       "say": "Third, the government's fungibility argument, that federal money frees up private money for pro-prostitution advocacy, was unsupported."
+      },
+      {
+       "id": "s8",
+       "say": "The dissent, Justice Scalia. The requirement just selects suitable agents for the government's chosen strategy. The government need not hire the American Gourmet Society to run a healthy-eating program. And the principle would not let the government exclude defense contractors who will not abjure prostitution, because there it is unrelated to the program."
+      },
+      {
+       "id": "s9",
+       "say": "Now USAID Two, 2020. Five to three, Justice Kavanaugh. Justice Kagan was recused. Breyer, Ginsburg, and Sotomayor dissented."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. The plaintiffs' legally separate foreign affiliates operating abroad have no First Amendment rights, so the Policy Requirement may still be applied to them. Read it for general constitutional principles."
+      },
+      {
+       "id": "s11",
+       "say": "Two bedrock principles. One: foreign citizens outside United States territory do not possess rights under the United States Constitution. Otherwise military, intelligence, and law enforcement actions abroad would be constrained. Two: the affiliates were incorporated abroad and are legally separate. There was no veil-piercing argument."
+      },
+      {
+       "id": "s12",
+       "say": "Now the stretch exercises on grant conditions. Number one: opioid grants. HHS grants to nonprofits to reduce opioid addiction require recipients to refrain from advocating legalization of heroin. For HHS: like Rust, it defines the program's message, and advocating legalization would garble an anti-addiction message. Against: if it bars advocacy with the grantee's own money and on its own time, it reaches outside the program like USAID One. The likely outcome turns on whether the condition is limited to the funded program or reaches the organization as a whole."
+      },
+      {
+       "id": "s13",
+       "say": "Number two: DEI education grants. Department of Education grants to teach teens about the benefits of a diverse workforce require recipients to refrain from criticizing workforce DEI initiatives. For the government: it is paying for its own message about diversity and need not fund the other side, per Rust. Against: a blanket ban on criticism reaches beyond the funded curriculum and resembles USAID One's demand that recipients adopt the government's view. It also sounds viewpoint based. And compare the slides' example of NIH conditioning cancer grants on disavowing DEI programs. A condition unrelated to the program's subject is even harder to defend."
+      },
+      {
+       "id": "s14",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s15",
+       "ask": "A federal grant for literacy programs requires every recipient organization to adopt an official policy endorsing the administration's immigration policy. Constitutional?",
+       "answer": "No. Like USAID One, it leverages funding to regulate speech outside the program, defining the recipient rather than the program, by requiring it to adopt the government's view on an issue of public concern. It is also unrelated to the program's subject.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "say": "Recap. USAID One, 2013, Roberts: the Policy Requirement defined the recipient, not the program; no semantic exercise; on its own time and dime. Scalia: selecting suitable agents. USAID Two, 2020, Kavanaugh: legally separate foreign affiliates abroad have no First Amendment rights."
+      },
+      {
+       "id": "s17",
+       "ask": "What is the difference between condition one and the Policy Requirement in USAID One?",
+       "answer": "Condition one barred using funds to promote legalizing prostitution, which was unchallenged. The Policy Requirement forced grantees to adopt a policy opposing prostitution, which reached outside the program.",
+       "pause": 8
+      },
+      {
+       "id": "s18",
+       "ask": "What were USAID Two's two bedrock principles?",
+       "answer": "Foreign citizens outside U.S. territory have no rights under the U.S. Constitution, and the affiliates were legally separate, incorporated abroad.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What was Scalia's analogy in the USAID One dissent?",
+       "answer": "The government need not hire the American Gourmet Society to run a healthy-eating program. It may select suitable agents.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e13",
+     "title": "Forum doctrine: the four forums and Perry Education Association",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The baseline on private property, the four types of forum and their standards, Professor Klein's practice perspective, and Perry."
+      },
+      {
+       "id": "s2",
+       "say": "The baseline. When the government restricts speech on private property, content-based rules get strict scrutiny, like no political yard signs. Content-neutral time, place, and manner rules get intermediate scrutiny, like two signs per yard, which would probably be upheld; compare Ladue. On government property, the rules depend on the type of forum. And Professor Klein notes the plural is fora, but courts say forums, even though it makes her wince."
+      },
+      {
+       "id": "s3",
+       "say": "Now the four forums. One: the traditional public forum. Property historically open to the public for expression. Streets, sidewalks, and parks, used time out of mind for assembly and debate. The standard is the same as private property. Content- or viewpoint-based restrictions get strict scrutiny. Content-neutral time, place, and manner rules get intermediate scrutiny, as in Thomas."
+      },
+      {
+       "id": "s4",
+       "say": "Two: the designated public forum. Property the government chose to open to the general public for expression, though not traditionally used that way. Boston's flagpole in Shurtleff. University meeting rooms. A municipal theater. The standard is the same as a traditional public forum, so long as the government keeps it open. And it need not keep it open forever."
+      },
+      {
+       "id": "s5",
+       "say": "Three: the limited public forum. Property opened for private speech in particular ways, for certain groups or topics. Classrooms for student-group meetings. A city hall lobby for Civil War art. A bulletin board for study-abroad notices. A student activity fund. The standard: restrictions must be reasonable in light of the forum's limited purpose. Viewpoint discrimination gets strict scrutiny. And speakers get equal access consistent with the purpose."
+      },
+      {
+       "id": "s6",
+       "say": "Four: the nonpublic forum. Property used for the government's internal purposes. Some private access does not convert it. School interoffice mail in Perry. Airport terminals. Military bases. The standard: restrictions must be reasonable and not an effort to suppress disfavored views. Distinctions by subject matter and speaker identity are allowed."
+      },
+      {
+       "id": "s7",
+       "say": "The fuzzy lines. The line between a limited public forum and a nonpublic forum with some private access is fuzzy. So is defining a limited forum's purpose, which is often the heart of the dispute. The tip: the government can define the purpose narrowly up front. Post information about opportunities to study abroad here."
+      },
+      {
+       "id": "s8",
+       "say": "Now Professor Klein's practice perspective, from decades at the Department of Justice. Her old professor, Richard Fallon, once said the forum categories were the result of a law clerk run amok. That was me!"
+      },
+      {
+       "id": "s9",
+       "say": "In practice, she says, ask: is it a traditional public forum? If so, content- or viewpoint-based restrictions very likely fail. If not, there is some flexibility for content-based restrictions that are reasonable in light of the government's objectives, but viewpoint-based ones still likely fail. Anywhere, content-neutral restrictions likely survive if reasonable and alternatives remain. And in litigation, argue that the government wins under any characterization, nonpublic or limited, government speech or a permissible funding condition, rather than obsessing over the doctrinal box."
+      },
+      {
+       "id": "s10",
+       "say": "Perry Education Association versus Perry Local Educators' Association, 1983. Five to four, Justice White. Brennan, Marshall, Powell, and Stevens dissented. It is most often quoted for its description of the forum categories."
+      },
+      {
+       "id": "s11",
+       "say": "The rule. A school district's interoffice mail system is a nonpublic forum. Giving the elected exclusive bargaining union access while denying a rival union is reasonable, and based on status, not viewpoint. The line: implicit in the concept of the nonpublic forum is the right to make distinctions in access on the basis of subject matter and speaker identity."
+      },
+      {
+       "id": "s12",
+       "say": "The story. The Perry Township schools' internal mail system carried official messages, teachers' personal messages, and, with principals' permission, messages from groups like parochial schools, church groups, YMCAs, and Cub Scouts. PEA won an election as exclusive bargaining representative. Its contract gave it access to teacher mailboxes and denied access to other unions. The rival, PLEA, sued. Held: no First Amendment violation, reversing the Seventh Circuit."
+      },
+      {
+       "id": "s13",
+       "say": "The reasoning. First, not a public forum. The system was not open to the general public; permission came from individual principals. Selective access does not create a public forum. Greer versus Spock: occasional civilian speakers at Fort Dix did not open the base."
+      },
+      {
+       "id": "s14",
+       "say": "Second, even if a limited forum was created by admitting the Cub Scouts and YMCAs, access would extend only to entities of similar character, like Girl Scouts and boys' clubs, not a group concerned with teachers' employment terms."
+      },
+      {
+       "id": "s15",
+       "say": "Third, prior equal access. PLEA had once had access. But in the Court's words, it is not the forum, but PLEA itself, which has changed. PEA's official role as bargaining agent justified its special access."
+      },
+      {
+       "id": "s16",
+       "say": "Fourth, reasonable. PLEA still had bulletin boards, meeting rooms, the PA system with approval, word of mouth, the phone, and the U.S. mail, and it got equal access during election contests."
+      },
+      {
+       "id": "s17",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s18",
+       "ask": "A city bans all leafleting on public sidewalks downtown, to reduce litter. What forum, and what standard?",
+       "answer": "A traditional public forum. The ban is content neutral, so intermediate scrutiny: narrowly tailored to a significant interest with ample alternatives. A total leafleting ban likely forecloses too much.",
+       "pause": 12
+      },
+      {
+       "id": "s19",
+       "ask": "A state university opens its classrooms after hours for meetings of registered student groups, but bars groups discussing politics from a conservative perspective. What forum, and what result?",
+       "answer": "A limited public forum. Restrictions must be reasonable in light of its purpose, and viewpoint discrimination gets strict scrutiny. Barring a conservative perspective is viewpoint based and fails.",
+       "pause": 12
+      },
+      {
+       "id": "s20",
+       "ask": "A military base lets the Red Cross post notices on its internal bulletin board but refuses an antiwar group. Likely result?",
+       "answer": "Upheld if reasonable and not an effort to suppress disfavored views. It is a nonpublic forum, like Greer versus Spock and Perry, where distinctions by speaker identity are allowed. The antiwar group would argue the refusal is really viewpoint based.",
+       "pause": 10
+      },
+      {
+       "id": "s21",
+       "say": "Recap. Four forums. Traditional and designated: strict for content and viewpoint, intermediate for neutral rules. Limited: reasonable in light of purpose, no viewpoint discrimination. Nonpublic: reasonable and not suppressing disfavored views; subject matter and speaker identity allowed. Perry, 1983, White: school mail is nonpublic; access by status, not viewpoint."
+      },
+      {
+       "id": "s22",
+       "ask": "What is the standard in a limited public forum?",
+       "answer": "Restrictions must be reasonable in light of the forum's limited purpose, viewpoint discrimination gets strict scrutiny, and speakers get equal access consistent with the purpose.",
+       "pause": 8
+      },
+      {
+       "id": "s23",
+       "ask": "What distinctions are allowed in a nonpublic forum, according to Perry?",
+       "answer": "Distinctions in access based on subject matter and speaker identity, if reasonable and not an effort to suppress disfavored views.",
+       "pause": 8
+      },
+      {
+       "id": "s24",
+       "ask": "Why did PEA get special access in Perry?",
+       "answer": "Its official role as the elected exclusive bargaining representative. It is not the forum but PLEA itself which has changed.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e14",
+     "title": "Airports, student funds, and license plates: ISKCON, Rosenberger, and Walker revisited",
+     "minutes": 9,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. ISKCON versus Lee, Rosenberger, Walker revisited, the Chapter 11 synthesis, and the bus-ad stretch exercise."
+      },
+      {
+       "id": "s2",
+       "say": "ISKCON versus Lee, and Lee versus ISKCON, both 1992. Three holdings. Airports are nonpublic forums, five to four. The solicitation ban is upheld, six to three, Chief Justice Rehnquist. The leafleting ban is struck, five to four, in an opinion by Justice O'Connor."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Airport terminals are nonpublic forums. A ban on repetitive in-terminal solicitation of money is reasonable, but a ban on distributing literature is not. Reasonableness is judged in light of the forum's purpose and all the circumstances."
+      },
+      {
+       "id": "s4",
+       "say": "The story. ISKCON members perform sankirtan: going into public places, distributing religious literature, and soliciting funds. The Port Authority banned continuous or repetitive sale or distribution of merchandise or literature, and solicitation of funds, inside the JFK, La Guardia, and Newark terminals. But it allowed them on the outside sidewalks."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, government as proprietor. When the government manages its internal operations rather than acting as lawmaker, its actions do not get heightened review."
+      },
+      {
+       "id": "s6",
+       "say": "Second, not a public forum. Airports have not historically been open for speech, and the Port Authority has not intentionally opened them. Their purpose is facilitating air travel."
+      },
+      {
+       "id": "s7",
+       "say": "Third, the solicitation ban is reasonable. Solicitation disrupts the flow of hurried travelers with luggage, and a missed flight costs hours. Face-to-face solicitation risks duress against the vulnerable, like people with children or disabilities, who are too rushed to complain. Pedestrian congestion is a major problem. And if ISKCON gets access, so must others."
+      },
+      {
+       "id": "s8",
+       "say": "Fourth, Justice O'Connor on leafleting. The airport is also a shopping mall, so ask whether restrictions are reasonably related to that multipurpose environment. Leaflets do not require the recipient to stop. And the Port Authority offered no justification for banning leafleting alone. It may use content-neutral time, place, and manner rules instead, like confining sankirtan to an uncongested area near the JFK chapel."
+      },
+      {
+       "id": "s9",
+       "say": "Rosenberger versus Rector and Visitors of the University of Virginia, 1995. Five to four, Justice Kennedy. Souter, Stevens, Ginsburg, and Breyer dissented."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. A university's student activity fund is a limited public forum, more in a metaphysical than in a spatial or geographic sense. Once it opens a limited forum, the state may not exclude speech unreasonably in light of the forum's purpose, nor discriminate based on viewpoint. Denying printing costs to a student paper with a Christian perspective violates the Free Speech Clause."
+      },
+      {
+       "id": "s11",
+       "say": "The story. UVA's Student Activities Fund, paid for by a mandatory fourteen-dollar-per-semester student fee, paid outside printers for student groups, called CIOs, whose activities relate to the university's educational purpose, including student news and opinion media. It excluded religious activities, defined as anything that primarily promotes or manifests a particular belief in or about a deity or an ultimate reality. Wide Awake Productions published Wide Awake: A Christian Perspective at the University of Virginia, and it was denied five thousand eight hundred sixty-two dollars for printing. Held: the denial violated the Free Speech Clause."
+      },
+      {
+       "id": "s12",
+       "say": "The reasoning. First, this was private speech, not the university's. Every CIO signs an agreement that it is not the university's agent, is not controlled by it, and that the university does not endorse its goals. In 1990 and 1991, one hundred eighteen of one hundred thirty-five applicant groups were funded, including fifteen media groups."
+      },
+      {
+       "id": "s13",
+       "say": "Second, having offered to pay printers for private speakers conveying their own messages, the university may not silence the expression of selected viewpoints. The religious exclusion targeted a religious perspective on otherwise eligible topics."
+      },
+      {
+       "id": "s14",
+       "say": "Third, Rosenberger also supplied the line later cited in the funding cases. When the government funds private speakers to convey its own message, it may keep that message from being garbled."
+      },
+      {
+       "id": "s15",
+       "say": "Walker revisited. When the government speaks for itself, forum analysis does not apply. A government creates a public forum only by intentionally opening a nontraditional forum for public discourse, not by inaction or by permitting limited discourse. Texas specialty plates are not a traditional, designated, or limited public forum."
+      },
+      {
+       "id": "s16",
+       "say": "Why no forum? The state has final authority over each design and owns each design. Plates have traditionally carried government speech, serve as government ID, and bear the state's name. And private participation in designing a message does not make the government a mere forum provider."
+      },
+      {
+       "id": "s17",
+       "say": "Now the Chapter 11 synthesis. Funding first. Rust, 1991: government message, upheld; defines the program; grantee free outside it. Velazquez, 2001: private speech, struck; lawyers speak for clients; insulates laws from challenge. USAID One, 2013: a condition beyond the program, struck; compels a belief that cannot be confined to the program. USAID Two, 2020: foreign affiliates have no First Amendment rights abroad."
+      },
+      {
+       "id": "s18",
+       "say": "Forums. Perry, 1983: nonpublic forum, school mail, upheld; reasonable and status based. ISKCON, 1992: nonpublic forum, airports; solicitation ban upheld, leafleting ban struck. Rosenberger, 1995: limited public forum, the student fund, struck; viewpoint discrimination against a religious perspective. Walker, 2015: no forum, government speech, upheld; the state's own message. Shurtleff, 2022: designated public forum, the flagpole, struck; private speech and a viewpoint-based denial."
+      },
+      {
+       "id": "s19",
+       "say": "The stretch: bus ads. A city allows commercial but not political ads on city buses. The ad space is not a traditional public forum. The city will argue it is a limited or nonpublic forum whose purpose is revenue and a pleasant ride for a captive audience, and that excluding all political ads is a reasonable, viewpoint-neutral subject-matter line. Challengers will argue the city opened the space broadly to private messages, a designated forum like Shurtleff, and that political is vague enough to invite viewpoint-based enforcement. Compare Thomas's concern with official discretion."
+      },
+      {
+       "id": "s20",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s21",
+       "ask": "A city-owned train station bans soliciting money inside the concourse, but allows handing out leaflets. A charity challenges the solicitation ban. Likely result?",
+       "answer": "Upheld, like ISKCON. A transit terminal is likely a nonpublic forum, and a solicitation ban is reasonable given hurried travelers, congestion, and the risk of duress.",
+       "pause": 12
+      },
+      {
+       "id": "s22",
+       "ask": "A public university funds all student publications from student fees, but refuses to fund a magazine written from an atheist perspective. Analyze.",
+       "answer": "Rosenberger. The fund is a limited public forum for private speech. Excluding an atheist perspective on otherwise eligible topics is viewpoint discrimination, which fails.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "say": "Recap. ISKCON, 1992: airports are nonpublic; solicitation ban reasonable, leafleting ban not. Rosenberger, 1995, Kennedy: the fund is a metaphysical limited forum; excluding a religious perspective is viewpoint discrimination. Walker revisited: government speech means no forum."
+      },
+      {
+       "id": "s24",
+       "ask": "Why was the solicitation ban reasonable in ISKCON?",
+       "answer": "Solicitation disrupts hurried travelers, risks duress against the vulnerable who are too rushed to complain, adds to congestion, and access for one means access for all.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "Why did O'Connor find the leafleting ban unreasonable?",
+       "answer": "Leaflets do not require the recipient to stop, and the Port Authority gave no justification for banning leafleting alone. It could use content-neutral rules instead.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "According to Walker, how does a government create a public forum?",
+       "answer": "Only by intentionally opening a nontraditional forum for public discourse, not by inaction or by permitting limited discourse.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d4-e15",
+     "title": "Day 4 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Close out Day 4. Cumulative quiz. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "A noise ordinance bans amplified sound after ten p.m., except for speech about elections. Content-based or neutral, and what tier?",
+       "answer": "Content-based, because of the election exception. Strict scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "What does narrowly tailored mean for a content-neutral time, place, and manner rule?",
+       "answer": "Not burdening substantially more speech than necessary. Not least restrictive means. Ward.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "What made Ladue's sign ban unconstitutional even assuming neutrality?",
+       "answer": "It foreclosed an entire, unique medium, residential signs, with no adequate alternative channels.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "Give the O'Brien test.",
+       "answer": "An important or substantial government interest, unrelated to the suppression of free expression, and an incidental restriction no greater than essential.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "Why did Texas lose in Johnson?",
+       "answer": "Its interest arose only because flag burning communicates a message, so strict scrutiny, which it failed.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Which case holds Texas specialty plates are government speech?",
+       "answer": "Walker versus Texas Division, Sons of Confederate Veterans.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "What decided Shurtleff?",
+       "answer": "Control. Boston did not control the content or meaning of the flags.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "Can an official threaten a regulated company with sanctions to get it to cut ties with an advocacy group?",
+       "answer": "No. NRA versus Vullo. That is coercion, doing indirectly what she cannot do directly.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "What did USAID One hold?",
+       "answer": "The government may not leverage funding to require grantees to adopt its policy on an issue of public concern, which defines the recipient, not the program.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "Name the four forums.",
+       "answer": "Traditional public, designated public, limited public, and nonpublic.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "From Day 3: what does Gertz require for a private plaintiff on a matter of public concern?",
+       "answer": "At least negligence for liability, and actual malice for presumed or punitive damages.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "From Day 2: what does Williams say about offers to provide contraband?",
+       "answer": "They are categorically unprotected, speech integral to crime.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "From Day 1: what did Carson versus Makin hold about Maine's nonsectarian requirement?",
+       "answer": "It violates Free Exercise. Once a state subsidizes private schools, it cannot exclude religious ones because they are religious.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "say": "That is Day 4. Tomorrow: employees, schools, social media, elections, association, and the full review. One more day."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
