@@ -2534,8 +2534,8 @@
   },
   {
    "day": 3,
-   "title": "Disclaimers, remedy limits, parol evidence, assignment, termination, repudiation, and excuse",
-   "minutes": 73,
+   "title": "Disclaimers, remedy limits, parol evidence, assignment, termination, repudiation, excuse, and getting the goods",
+   "minutes": 85,
    "episodes": [
     {
      "id": "sl-d3-e00",
@@ -3651,252 +3651,81 @@
     },
     {
      "id": "sl-d3-e14",
-     "title": "Day 3 closing quiz",
-     "minutes": 4,
-     "segments": [
-      {
-       "id": "s1",
-       "say": "Cumulative quiz on Days 1 through 3."
-      },
-      {
-       "id": "s2",
-       "ask": "To disclaim merchantability in writing, what two things are required?",
-       "answer": "It must mention merchantability and be conspicuous.",
-       "pause": 7
-      },
-      {
-       "id": "s3",
-       "ask": "Does as is disclaim express warranties?",
-       "answer": "No. Express warranties are nearly impossible to disclaim; § 2-316(3) as is reaches implied warranties.",
-       "pause": 8
-      },
-      {
-       "id": "s4",
-       "ask": "Under Razor's independent approach, does a failed repair remedy void the consequential exclusion?",
-       "answer": "No. The exclusion stands unless unconscionable under § 2-719(3).",
-       "pause": 8
-      },
-      {
-       "id": "s5",
-       "ask": "Is a limitation of consequential damages for personal injury from consumer goods enforceable?",
-       "answer": "Prima facie unconscionable, § 2-719(3).",
-       "pause": 7
-      },
-      {
-       "id": "s6",
-       "ask": "A final writing is silent on a term. A consistent prior oral agreement covers it. Admissible?",
-       "answer": "Yes, unless the writing is complete and exclusive.",
-       "pause": 8
-      },
-      {
-       "id": "s7",
-       "ask": "Does the parol evidence rule bar evidence of a later oral modification?",
-       "answer": "No. It only covers prior and contemporaneous agreements.",
-       "pause": 7
-      },
-      {
-       "id": "s8",
-       "ask": "A ban on assigning the contract. What does it bar?",
-       "answer": "Only delegation of duties, not assignment of rights, § 2-210(4).",
-       "pause": 7
-      },
-      {
-       "id": "s9",
-       "ask": "In Santa Fe, was Home Depot liable for five years of lost profits?",
-       "answer": "No. Good faith doesn't override the § 2-309 right to terminate an indefinite contract on reasonable notice.",
-       "pause": 8
-      },
-      {
-       "id": "s10",
-       "ask": "In Top of Iowa, was demanding margin payments and a signed promise to deliver too much?",
-       "answer": "No. All demands call for more than originally promised; it was not unreasonable as a matter of law.",
-       "pause": 8
-      },
-      {
-       "id": "s11",
-       "ask": "Until when may a repudiating party retract?",
-       "answer": "Until its next performance is due, unless the other side canceled, materially changed position, or indicated it considers the repudiation final.",
-       "pause": 8
-      },
-      {
-       "id": "s12",
-       "ask": "Identified goods destroyed by lightning before risk passes. Result?",
-       "answer": "The contract is avoided under § 2-613.",
-       "pause": 7
-      },
-      {
-       "id": "s13",
-       "ask": "From Day 2: who bears transit loss in a C.I.F. contract?",
-       "answer": "The buyer. C.I.F. is a shipment contract.",
-       "pause": 7
-      },
-      {
-       "id": "s14",
-       "ask": "From Day 1: what is the statute-of-frauds threshold?",
-       "answer": "A price of $500 or more.",
-       "pause": 5
-      },
-      {
-       "id": "s15",
-       "say": "That's Day 3, and that completes the first half of the course. Tomorrow, the buyer's remedies in depth."
-      }
-     ]
-    }
-   ]
-  },
-  {
-   "day": 4,
-   "title": "The buyer's remedies: getting the goods, cover and market damages, rejection, cure, acceptance, revocation, and privity",
-   "minutes": 88,
-   "episodes": [
-    {
-     "id": "sl-d4-e00",
-     "title": "Spaced review of Days 1 to 3",
-     "minutes": 4,
-     "segments": [
-      {
-       "id": "s1",
-       "say": "Day 4. Review first. Answer out loud."
-      },
-      {
-       "id": "s2",
-       "ask": "Under § 2-207(2), when do additional terms become part of a contract between merchants?",
-       "answer": "Unless the offer expressly limits acceptance to its terms, they materially alter it, or objection is given within a reasonable time.",
-       "pause": 10
-      },
-      {
-       "id": "s3",
-       "ask": "What are the elements of the merchant's confirmation exception?",
-       "answer": "An oral deal between merchants, a confirmation sent within a reasonable time that is sufficient against the sender, received with reason to know its contents, and no written objection within 10 days.",
-       "pause": 12
-      },
-      {
-       "id": "s4",
-       "ask": "What is the Orange and Rockland lesson?",
-       "answer": "Unreasonably disproportionate is a limit separate from good faith; a requirements buyer can't speculate on the market.",
-       "pause": 8
-      },
-      {
-       "id": "s5",
-       "ask": "In a non-shipment sale by a non-merchant, when does risk pass?",
-       "answer": "On tender, § 2-509(3).",
-       "pause": 6
-      },
-      {
-       "id": "s6",
-       "ask": "How do you disclaim fitness?",
-       "answer": "In a conspicuous writing; it need not mention fitness. Or as is, examination, or trade practice.",
-       "pause": 8
-      },
-      {
-       "id": "s7",
-       "ask": "What did Razor call the two concentric walls?",
-       "answer": "Failure of essential purpose for the limited remedy, and unconscionability for the consequential exclusion, tested separately.",
-       "pause": 9
-      },
-      {
-       "id": "s8",
-       "ask": "Does usage of trade come in against a complete and exclusive writing?",
-       "answer": "Yes. Course of dealing, usage of trade, and course of performance may supplement even a complete writing.",
-       "pause": 8
-      },
-      {
-       "id": "s9",
-       "ask": "What does § 9-406(d) do?",
-       "answer": "Makes a ban on assigning a right to payment ineffective, and the assignment is not a breach.",
-       "pause": 8
-      },
-      {
-       "id": "s10",
-       "ask": "In PDM v. Brookhaven, what was wrong with the demand?",
-       "answer": "It sought more than adequate assurance: a personal guarantee, escrow financing, or an interest in Brookhaven. Section 2-609 doesn't let a party redraft the contract.",
-       "pause": 10
-      },
-      {
-       "id": "s11",
-       "ask": "Does increased cost alone excuse a seller under § 2-615?",
-       "answer": "No, comment 4.",
-       "pause": 6
-      },
-      {
-       "id": "s12",
-       "say": "Good. Today is the buyer's side of the remedies, Weeks 8 through 10. From here on the outline rests on the casebook and statutes, since the class slides end at Week 8. And the problem answers are worked from the text, not the professor's answers."
-      }
-     ]
-    },
-    {
-     "id": "sl-d4-e01",
      "title": "The buyer's remedies roadmap: § 2-711",
      "minutes": 4,
      "segments": [
       {
        "id": "s1",
-       "say": "Roadmap. The threshold questions you ask before remedies, the goal of every remedy, and the four buyer situations."
+       "say": "We now cross into Week 8, the buyer's remedies. From here on the outline rests on the casebook and the statutes, since the class slides end at Week 8. And the problem answers are worked from the text, not the professor's answers."
       },
       {
        "id": "s2",
-       "say": "Before you reach remedies, four threshold questions. One, what are the contract's terms: the agreement, plus course of performance, course of dealing, usage of trade, plus gap fillers? Two, who breached? Disputes often slide into breach. Say a buyer demands assurance, the seller is silent, and the buyer cancels. If the buyer had no reasonable grounds for insecurity, the seller's silence is no repudiation, and the buyer's cancellation is the breach. Three, is the failure excused? Four, are remedies limited?"
+       "say": "Roadmap. The threshold questions you ask before remedies, the goal of every remedy, and the four buyer situations."
       },
       {
        "id": "s3",
-       "say": "The seller's basic duty: deliver goods that conform to the contract, § 2-301."
+       "say": "Before you reach remedies, four threshold questions. One, what are the contract's terms: the agreement, plus course of performance, course of dealing, usage of trade, plus gap fillers? Two, who breached? Disputes often slide into breach. Say a buyer demands assurance, the seller is silent, and the buyer cancels. If the buyer had no reasonable grounds for insecurity, the seller's silence is no repudiation, and the buyer's cancellation is the breach. Three, is the failure excused? Four, are remedies limited?"
       },
       {
        "id": "s4",
-       "say": "The goal of every remedy: the expectation interest. Put the aggrieved party in as good a position as if the other had fully performed, § 1-305(a). Punitive damages are generally unavailable, § 1-305. A breach is not a moral wrong. And the good-faith duty in § 1-304 is not an independent obligation."
+       "say": "The seller's basic duty: deliver goods that conform to the contract, § 2-301."
       },
       {
        "id": "s5",
-       "say": "Remedies turn on two things: what the breach was, and who has the goods."
+       "say": "The goal of every remedy: the expectation interest. Put the aggrieved party in as good a position as if the other had fully performed, § 1-305(a). Punitive damages are generally unavailable, § 1-305. A breach is not a moral wrong. And the good-faith duty in § 1-304 is not an independent obligation."
       },
       {
        "id": "s6",
-       "say": "The four situations."
+       "say": "Remedies turn on two things: what the breach was, and who has the goods."
       },
       {
        "id": "s7",
-       "say": "One. The seller repudiates or never tenders. The buyer can get the goods by court order and pay the price, plus delay damages. Or it can cancel, recover any price paid, and take cover or market damages. Sections 2-711, 2-502, 2-716, 2-712, 2-713, and 2-715."
+       "say": "The four situations."
       },
       {
        "id": "s8",
-       "say": "Two. A nonconforming tender or goods. The buyer can reject, cancel, recover the price, and take cover or market damages. Or it can accept and take value-difference damages. Sections 2-601, 2-711, 2-714, and 2-715."
+       "say": "One. The seller repudiates or never tenders. The buyer can get the goods by court order and pay the price, plus delay damages. Or it can cancel, recover any price paid, and take cover or market damages. Sections 2-711, 2-502, 2-716, 2-712, 2-713, and 2-715."
       },
       {
        "id": "s9",
-       "say": "Three. A hidden defect discovered after acceptance. Revoke acceptance if the limits are met, then proceed as if rejected. Sections 2-608 and 2-711."
+       "say": "Two. A nonconforming tender or goods. The buyer can reject, cancel, recover the price, and take cover or market damages. Or it can accept and take value-difference damages. Sections 2-601, 2-711, 2-714, and 2-715."
       },
       {
        "id": "s10",
-       "say": "Four. Conforming goods, but the ancillary services, like installation or repair, are missing or poor. Damages for that harm. Article 2 has no specific rule, but it doesn't preclude common-law remedies, § 1-103."
+       "say": "Three. A hidden defect discovered after acceptance. Revoke acceptance if the limits are met, then proceed as if rejected. Sections 2-608 and 2-711."
       },
       {
        "id": "s11",
-       "say": "The rule, § 2-711. It is the roadmap for a seller's repudiation, failure to deliver, a rightful rejection, or a justified revocation, and it is an incomplete list. The buyer may cancel, recover the price paid, and then cover under § 2-712 or take market damages under § 2-713. Or, where allowed, obtain the goods under § 2-502 or § 2-716. All damages carry § 2-715 incidental and consequential damages, less expenses saved."
+       "say": "Four. Conforming goods, but the ancillary services, like installation or repair, are missing or poor. Damages for that harm. Article 2 has no specific rule, but it doesn't preclude common-law remedies, § 1-103."
       },
       {
        "id": "s12",
+       "say": "The rule, § 2-711. It is the roadmap for a seller's repudiation, failure to deliver, a rightful rejection, or a justified revocation, and it is an incomplete list. The buyer may cancel, recover the price paid, and then cover under § 2-712 or take market damages under § 2-713. Or, where allowed, obtain the goods under § 2-502 or § 2-716. All damages carry § 2-715 incidental and consequential damages, less expenses saved."
+      },
+      {
+       "id": "s13",
        "ask": "A buyer demands assurance with no reasonable grounds. The seller ignores it. The buyer cancels and buys elsewhere. Who breached?",
        "answer": "The buyer. Without reasonable grounds, the demand was unjustified, the seller's silence was not a repudiation, and the buyer's cancellation was the breach.",
        "pause": 12
       },
       {
-       "id": "s13",
+       "id": "s14",
        "say": "Recap. Ask the threshold questions first: terms, who breached, excuse, limits. The goal is the expectancy under § 1-305(a), with no punitive damages. Then sort by the breach and who has the goods. Section 2-711 is the buyer's roadmap."
       },
       {
-       "id": "s14",
+       "id": "s15",
        "ask": "What are the four threshold questions before remedies?",
        "answer": "What are the terms, who breached, is the failure excused, and are remedies limited?",
        "pause": 8
       },
       {
-       "id": "s15",
+       "id": "s16",
        "ask": "What two facts drive the choice of remedy?",
        "answer": "What the breach was, and who has the goods.",
        "pause": 6
       },
       {
-       "id": "s16",
+       "id": "s17",
        "ask": "Are punitive damages available for breach under the UCC?",
        "answer": "Generally no, § 1-305.",
        "pause": 6
@@ -3904,7 +3733,7 @@
      ]
     },
     {
-     "id": "sl-d4-e02",
+     "id": "sl-d3-e15",
      "title": "Getting the goods: specific performance, replevin, and § 2-502, with Problems 7-1 to 7-3",
      "minutes": 7,
      "segments": [
@@ -4005,7 +3834,200 @@
      ]
     },
     {
-     "id": "sl-d4-e03",
+     "id": "sl-d3-e16",
+     "title": "Day 3 closing quiz",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Cumulative quiz on Days 1 through 3."
+      },
+      {
+       "id": "s2",
+       "ask": "To disclaim merchantability in writing, what two things are required?",
+       "answer": "It must mention merchantability and be conspicuous.",
+       "pause": 7
+      },
+      {
+       "id": "s3",
+       "ask": "Does as is disclaim express warranties?",
+       "answer": "No. Express warranties are nearly impossible to disclaim; § 2-316(3) as is reaches implied warranties.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "Under Razor's independent approach, does a failed repair remedy void the consequential exclusion?",
+       "answer": "No. The exclusion stands unless unconscionable under § 2-719(3).",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "Is a limitation of consequential damages for personal injury from consumer goods enforceable?",
+       "answer": "Prima facie unconscionable, § 2-719(3).",
+       "pause": 7
+      },
+      {
+       "id": "s6",
+       "ask": "A final writing is silent on a term. A consistent prior oral agreement covers it. Admissible?",
+       "answer": "Yes, unless the writing is complete and exclusive.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Does the parol evidence rule bar evidence of a later oral modification?",
+       "answer": "No. It only covers prior and contemporaneous agreements.",
+       "pause": 7
+      },
+      {
+       "id": "s8",
+       "ask": "A ban on assigning the contract. What does it bar?",
+       "answer": "Only delegation of duties, not assignment of rights, § 2-210(4).",
+       "pause": 7
+      },
+      {
+       "id": "s9",
+       "ask": "In Santa Fe, was Home Depot liable for five years of lost profits?",
+       "answer": "No. Good faith doesn't override the § 2-309 right to terminate an indefinite contract on reasonable notice.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "In Top of Iowa, was demanding margin payments and a signed promise to deliver too much?",
+       "answer": "No. All demands call for more than originally promised; it was not unreasonable as a matter of law.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "Until when may a repudiating party retract?",
+       "answer": "Until its next performance is due, unless the other side canceled, materially changed position, or indicated it considers the repudiation final.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "Identified goods destroyed by lightning before risk passes. Result?",
+       "answer": "The contract is avoided under § 2-613.",
+       "pause": 7
+      },
+      {
+       "id": "s13",
+       "ask": "Name the three ways a buyer can force the goods out of the seller, and what they all need.",
+       "answer": "Specific performance and replevin under § 2-716, and recovery of identified prepaid goods under § 2-502. All need a court order; none allows self-help.",
+       "pause": 10
+      },
+      {
+       "id": "s14",
+       "ask": "Does prepaying give a buyer a right to the goods?",
+       "answer": "Not by itself. Only § 2-502, § 2-716, or an Article 9 security interest does.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "From Day 2: who bears transit loss in a C.I.F. contract?",
+       "answer": "The buyer. C.I.F. is a shipment contract.",
+       "pause": 7
+      },
+      {
+       "id": "s16",
+       "ask": "From Day 1: what is the statute-of-frauds threshold?",
+       "answer": "A price of $500 or more.",
+       "pause": 5
+      },
+      {
+       "id": "s17",
+       "say": "That's Day 3. Tomorrow: the buyer's damages, rejection, cure, acceptance, revocation, privity, and the seller's first remedies."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 4,
+   "title": "The buyer's damages, rejection, cure, acceptance, revocation, privity, and the seller's first remedies",
+   "minutes": 92,
+   "episodes": [
+    {
+     "id": "sl-d4-e00",
+     "title": "Spaced review of Days 1 to 3",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Day 4. Review first. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "Under § 2-207(2), when do additional terms become part of a contract between merchants?",
+       "answer": "Unless the offer expressly limits acceptance to its terms, they materially alter it, or objection is given within a reasonable time.",
+       "pause": 10
+      },
+      {
+       "id": "s3",
+       "ask": "What are the elements of the merchant's confirmation exception?",
+       "answer": "An oral deal between merchants, a confirmation sent within a reasonable time that is sufficient against the sender, received with reason to know its contents, and no written objection within 10 days.",
+       "pause": 12
+      },
+      {
+       "id": "s4",
+       "ask": "What is the Orange and Rockland lesson?",
+       "answer": "Unreasonably disproportionate is a limit separate from good faith; a requirements buyer can't speculate on the market.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "In a non-shipment sale by a non-merchant, when does risk pass?",
+       "answer": "On tender, § 2-509(3).",
+       "pause": 6
+      },
+      {
+       "id": "s6",
+       "ask": "How do you disclaim fitness?",
+       "answer": "In a conspicuous writing; it need not mention fitness. Or as is, examination, or trade practice.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "What did Razor call the two concentric walls?",
+       "answer": "Failure of essential purpose for the limited remedy, and unconscionability for the consequential exclusion, tested separately.",
+       "pause": 9
+      },
+      {
+       "id": "s8",
+       "ask": "Does usage of trade come in against a complete and exclusive writing?",
+       "answer": "Yes. Course of dealing, usage of trade, and course of performance may supplement even a complete writing.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "What does § 9-406(d) do?",
+       "answer": "Makes a ban on assigning a right to payment ineffective, and the assignment is not a breach.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "In PDM v. Brookhaven, what was wrong with the demand?",
+       "answer": "It sought more than adequate assurance: a personal guarantee, escrow financing, or an interest in Brookhaven. Section 2-609 doesn't let a party redraft the contract.",
+       "pause": 10
+      },
+      {
+       "id": "s11",
+       "ask": "Does increased cost alone excuse a seller under § 2-615?",
+       "answer": "No, comment 4.",
+       "pause": 6
+      },
+      {
+       "id": "s12",
+       "ask": "What does § 2-716(3) replevin require?",
+       "answer": "Goods identified to the contract, and either inability to cover after reasonable effort, or goods shipped under reservation with the security interest satisfied or tendered.",
+       "pause": 10
+      },
+      {
+       "id": "s13",
+       "say": "Good. Today is the rest of the buyer's side, Weeks 8 through 10, then the start of the seller's side in Week 11."
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e01",
      "title": "Cancellation, cover, and market damages: §§ 2-712 and 2-713",
      "minutes": 5,
      "segments": [
@@ -4083,7 +4105,7 @@
      ]
     },
     {
-     "id": "sl-d4-e04",
+     "id": "sl-d4-e02",
      "title": "Time and place of market price, expenses saved, and the unassigned Problems 7-5, 7-8, and 7-9",
      "minutes": 4,
      "segments": [
@@ -4158,7 +4180,7 @@
      ]
     },
     {
-     "id": "sl-d4-e05",
+     "id": "sl-d4-e03",
      "title": "Incidental and consequential damages, § 2-715, and Problems 7-4, 7-6, and 7-7",
      "minutes": 6,
      "segments": [
@@ -4229,7 +4251,7 @@
      ]
     },
     {
-     "id": "sl-d4-e06",
+     "id": "sl-d4-e04",
      "title": "When the formula overcompensates: Problem 7-10",
      "minutes": 3,
      "segments": [
@@ -4288,7 +4310,7 @@
      ]
     },
     {
-     "id": "sl-d4-e07",
+     "id": "sl-d4-e05",
      "title": "Rejection: perfect tender, its limits, commercial units, and installment contracts, with Problem 7-11",
      "minutes": 8,
      "segments": [
@@ -4409,7 +4431,7 @@
      ]
     },
     {
-     "id": "sl-d4-e08",
+     "id": "sl-d4-e06",
      "title": "Making rejection effective: §§ 2-602 and 2-605, and the Problem 7-13 matrix",
      "minutes": 5,
      "segments": [
@@ -4490,7 +4512,7 @@
      ]
     },
     {
-     "id": "sl-d4-e09",
+     "id": "sl-d4-e07",
      "title": "Cure: § 2-508 and Problems 7-16 to 7-19",
      "minutes": 6,
      "segments": [
@@ -4595,7 +4617,7 @@
      ]
     },
     {
-     "id": "sl-d4-e10",
+     "id": "sl-d4-e08",
      "title": "Care of rejected goods, using them after rejection, and Johannsen, with Problem 7-20",
      "minutes": 5,
      "segments": [
@@ -4670,7 +4692,7 @@
      ]
     },
     {
-     "id": "sl-d4-e11",
+     "id": "sl-d4-e09",
      "title": "Acceptance and notice of breach: §§ 2-606 and 2-607, and Problems 7-21 and 7-22",
      "minutes": 5,
      "segments": [
@@ -4741,7 +4763,7 @@
      ]
     },
     {
-     "id": "sl-d4-e12",
+     "id": "sl-d4-e10",
      "title": "Damages for accepted goods: §§ 2-714 and 2-717, and Problems 7-23 to 7-25",
      "minutes": 4,
      "segments": [
@@ -4816,7 +4838,7 @@
      ]
     },
     {
-     "id": "sl-d4-e13",
+     "id": "sl-d4-e11",
      "title": "Revocation of acceptance: § 2-608 and Problems 7-26 to 7-28",
      "minutes": 8,
      "segments": [
@@ -4909,7 +4931,7 @@
      ]
     },
     {
-     "id": "sl-d4-e14",
+     "id": "sl-d4-e12",
      "title": "Privity and remote sellers: § 2-318, Hyundai v. Goodin, and Problems 7-31 and 7-32",
      "minutes": 10,
      "segments": [
@@ -5034,6 +5056,190 @@
      ]
     },
     {
+     "id": "sl-d4-e13",
+     "title": "The seller's roadmap: § 2-703, the price under § 2-709, and reclamation, with Problem 9-1",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The buyer's duties, the order of questions, the table of seller remedies, the action for the price, why an unpaid seller rarely gets the goods back, and the milk-vat problem."
+      },
+      {
+       "id": "s2",
+       "say": "The buyer's basic duties: accept and pay in accordance with the contract, § 2-301."
+      },
+      {
+       "id": "s3",
+       "say": "Walk the facts in order. Was the seller's refusal to tender justified, because the buyer failed to pay first or to answer a proper demand for assurance? Or was it a breach? Or did neither party breach, say the goods were destroyed without fault? Is the buyer's breach excused? Are the seller's remedies limited?"
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-703 is an incomplete catalog. It has no and or or, so it doesn't say which remedies combine, comment 1. The answer comes from § 1-305: no overcompensation. As with the buyer, remedies depend on the breach and who has the goods."
+      },
+      {
+       "id": "s5",
+       "say": "The table. The buyer accepted and won't pay: the price plus incidental damages, §§ 2-709 and 2-607(1), and the buyer may offset for a nonconformity under §§ 2-714 and 2-717. The buyer has the goods and its payment device fails, or it took goods on credit while insolvent: limited reclamation, §§ 2-507 and 2-702(2). The seller has the goods, or they're in transit, after a repudiation, a failure to pay before delivery, a wrongful rejection, a refused cure, or a wrongful revocation: withhold or stop delivery, cancel, and take resale, market, or lost-profit damages, or rarely the price, §§ 2-702, 2-703, 2-705, 2-706, 2-708, and 2-709. And in any of these: incidental damages, but not consequential, §§ 2-710 and 1-305(a)."
+      },
+      {
+       "id": "s6",
+       "say": "The action for the price, § 2-709(1). When the buyer fails to pay the price as it becomes due, the seller may recover the price, with incidental damages, of (a) goods accepted, or conforming goods lost or damaged within a commercially reasonable time after risk of loss passed to the buyer; and (b) goods identified to the contract, if the seller is unable after reasonable effort to resell them at a reasonable price, or circumstances reasonably indicate that effort would be unavailing. The commercially reasonable time limit applies only to lost or damaged goods, not accepted goods."
+      },
+      {
+       "id": "s7",
+       "say": "The worked example. A custom sign, $6,400, accepted; the color is wrong; the buyer spends $1,300 reprinting brochures to match. The buyer owes $6,400, less any § 2-714 value difference and, if recoverable under § 2-715, the $1,300, deducted under § 2-717."
+      },
+      {
+       "id": "s8",
+       "say": "Now the surprise. An unpaid seller generally doesn't get the goods back. Its principal right is the price, which is only as good as the buyer's ability to pay. Two exceptions."
+      },
+      {
+       "id": "s9",
+       "say": "One, an Article 9 security interest. The seller who takes one may repossess peaceably or by replevin on default, § 9-609. One sentence creates it: seller retains a security interest in the goods sold to secure the buyer's obligations under this agreement. And a clause saying the seller retains title does the same thing and no more, because title passes on delivery and the reservation is limited to a security interest, §§ 1-201(b)(35), 2-401(1), and 9-109(a)(5)."
+      },
+      {
+       "id": "s10",
+       "say": "Two, reclamation. A restitutionary remedy, not an expectancy measure. And not self-help: if the buyer doesn't return the goods voluntarily, the seller must go to court."
+      },
+      {
+       "id": "s11",
+       "say": "Compare the two reclamation rights. Section 2-507, failed payment. When: a cash sale, with payment due on delivery, where the payment device fails, like a bounced check. A check at delivery counts, under comments 4 to 6 of § 2-511. A credit sale or post-dated check doesn't. Deadline: a reasonable time after the payment fails. Other remedies: no similar limit. Subject to good-faith purchasers, a topic in a chapter that isn't assigned."
+      },
+      {
+       "id": "s12",
+       "say": "Section 2-702(2), credit sale to an insolvent. When: the seller sold on credit and discovers the buyer received the goods while insolvent, § 1-201(b)(23). Deadline: demand within 10 days after receipt, unless the buyer misrepresented its solvency to this seller in writing within 3 months before delivery. Other remedies: successful reclamation excludes all other remedies as to those goods, § 2-702(3), apparently even incidental damages. And it's subject to buyers in ordinary course and good-faith purchasers."
+      },
+      {
+       "id": "s13",
+       "say": "Why the § 2-702(3) bar? Perhaps reclamation rests on rescission for fraud, so no expectancy remains. And the insolvent buyer's other creditors shouldn't be pushed further behind. The practice point: a seller on credit should take a security interest; reclamation is too narrow to rely on."
+      },
+      {
+       "id": "s14",
+       "say": "Problem 9-1. Four thousand gallons of milk, sold on credit, poured into a vat with 5,000 other gallons. Half the vat becomes ice cream. The supplier demands reclamation on June 7 for a June 1 delivery. The demand is within 10 days and the sale was on credit, so § 2-702(2) applies. Treat the milk as fungible: § 2-105(4) lets an undivided share of a bulk be identified. The supplier's share is 4 ninths. Half the vat remains, 4,500 gallons, so the supplier can reclaim about 2,000 gallons. Nothing for the ice cream, which is no longer the goods sold. The casebook cites Wheeling-Pittsburgh and Charter and gives no answer; this is worked from the statute."
+      },
+      {
+       "id": "s15",
+       "ask": "A seller delivers on 30-day credit to a buyer it later learns was insolvent at delivery. It discovers this 20 days after delivery. The buyer made no written misrepresentation. Can the seller reclaim?",
+       "answer": "No. Under § 2-702(2), the demand must come within 10 days after receipt, absent a written misrepresentation of solvency within 3 months before delivery.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "A contract says: title remains with seller until paid in full. The buyer defaults. Can the seller take the goods back?",
+       "answer": "Only as a secured party. A retained-title clause is limited to a security interest under Article 9, so the seller may repossess under § 9-609 if it can do so without breach of the peace, or by replevin.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "say": "Recap. The seller's remedies depend on breach and who has the goods. Price under § 2-709: accepted goods, goods lost after risk passed, or identified goods that can't be resold at a reasonable price. Unpaid sellers rarely get goods back: only via Article 9 or narrow reclamation, § 2-507 for failed cash payment, § 2-702(2) within 10 days for credit to an insolvent."
+      },
+      {
+       "id": "s18",
+       "ask": "Name the three situations for an action for the price.",
+       "answer": "Goods accepted; conforming goods lost or damaged within a commercially reasonable time after risk passed; and identified goods the seller can't resell at a reasonable price.",
+       "pause": 10
+      },
+      {
+       "id": "s19",
+       "ask": "Does successful § 2-702 reclamation allow other remedies for those goods?",
+       "answer": "No, § 2-702(3) excludes them.",
+       "pause": 6
+      },
+      {
+       "id": "s20",
+       "ask": "What is the effect of a retained-title clause?",
+       "answer": "It creates only a security interest.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d4-e14",
+     "title": "Withhold, stop, and cancel: §§ 2-702, 2-703, 2-705, and 2-612, with Problems 9-2 and 9-3",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Withholding versus stopping, the shipment-size rule, when stopping ends, the carrier's obligations, cancelling, and two problems."
+      },
+      {
+       "id": "s2",
+       "say": "Withhold means the seller has the goods. Stop means a carrier or other bailee has them."
+      },
+      {
+       "id": "s3",
+       "say": "Withholding, § 2-703(a). The seller may withhold delivery if the buyer (1) wrongfully rejects, (2) wrongfully revokes, (3) fails to make a payment due, or (4) repudiates. And if the seller discovers the buyer is insolvent, it may refuse delivery except for cash, including payment for all goods already delivered under the contract, § 2-702(1)."
+      },
+      {
+       "id": "s4",
+       "say": "Stopping in transit, § 2-705(1). The seller may stop delivery when it discovers the buyer's insolvency, for any size of shipment. For repudiation, failure to make a payment due before delivery, or any other right to withhold or reclaim, it may stop only carload, truckload, planeload, or larger shipments."
+      },
+      {
+       "id": "s5",
+       "say": "When does the right end? Section 2-705(2), four events. The buyer's receipt of the goods. A bailee, other than a carrier, acknowledging to the buyer that it holds for the buyer. A carrier making such an acknowledgment by reshipment or as a warehouse. Or negotiation to the buyer of a negotiable document of title."
+      },
+      {
+       "id": "s6",
+       "say": "Three questions. Does the seller have the right as against the buyer? Must the carrier obey? And who's liable if the carrier obeys or disobeys?"
+      },
+      {
+       "id": "s7",
+       "say": "The carrier, § 2-705(3). The seller must give notice enabling the carrier, with reasonable diligence, to prevent delivery. The carrier must then hold and deliver as the seller directs, and the seller is liable for ensuing charges or damages. If a negotiable document was issued, the carrier need not obey until the document is surrendered. And a carrier that issued a nonnegotiable bill need not obey a stop order from anyone but the consignor."
+      },
+      {
+       "id": "s8",
+       "say": "Why limit stopping? The burden on carriers, comment 1. Related: shipping under reservation, § 2-505, which in effect gives the seller a security interest and lets it withhold until paid."
+      },
+      {
+       "id": "s9",
+       "say": "Cancellation, § 2-703(f). In a non-installment contract, the seller may cancel on any buyer breach. No notice is required. Cancellation ends future performance and doesn't waive damages, § 2-106(4). In installment contracts, the seller may cancel the whole only if the breach substantially impairs the value of the whole contract, §§ 2-612(3) and 2-703. Short of that, it may demand assurance and suspend, § 2-609 and comment 6 to § 2-612."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 9-2(A). Diamonds shipped F.O.B. seller, with a negotiable bill naming the seller as consignee. The buyer misses a funds transfer. A parcel isn't a carload, so nonpayment alone gives no right to stop; only insolvency would. A default to its main lender is evidence of insolvency but not conclusive. Ask whether the buyer has generally ceased paying debts, or can't pay them as they come due. And holding the bill in its own name gives the seller practical control anyway, § 2-505."
+      },
+      {
+       "id": "s11",
+       "say": "(B): must the carrier, Federated, obey? Under § 2-705(3)(c), not until the negotiable bill is surrendered. If it delivers to the buyer without the bill, it risks misdelivery liability to the holder, the seller. It should hold and ask for the bill."
+      },
+      {
+       "id": "s12",
+       "say": "(C): a nonnegotiable bill. Under § 2-705(3)(d), the carrier need not obey anyone but the consignor. Seattle Gems is the consignor, so Federated must follow § 2-705(3)(b), with the seller liable for charges and damages. Whether the stop is rightful against the buyer is still the Part A question."
+      },
+      {
+       "id": "s13",
+       "say": "Problem 9-3. Five hundred stoves in two lots. The first 250 are accepted. The $20,000 check bounces. The other 250 are in the warehouse. Six pieces of advice. One, withhold the second lot, § 2-703(a). Two, sue for the $20,000 due; a bounced check leaves the debt alive. Three, consider § 2-507 reclamation, but only 20 percent was due on delivery, so it's at best a partial cash sale; act fast. Four, check insolvency under § 2-702: cash terms, and a 10-day demand if goods came on credit while insolvent. Five, demand adequate assurance under § 2-609 and suspend. Six, cancel only if the breach substantially impairs the whole, § 2-612(3). Failure to give assurance within 30 days is a repudiation, which supports cancelling and reselling the 250."
+      },
+      {
+       "id": "s14",
+       "ask": "A seller ships one small box of parts by courier. The buyer then misses a scheduled payment but is solvent. Can the seller stop the box in transit?",
+       "answer": "No. For nonpayment, the seller can stop only carload, truckload, planeload, or larger shipments. Only insolvency allows stopping any size, § 2-705(1).",
+       "pause": 12
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Withhold on wrongful rejection, wrongful revocation, nonpayment, or repudiation; cash-only on insolvency. Stop any shipment for insolvency, only big shipments otherwise. The right ends on receipt, bailee acknowledgment, or negotiation of a negotiable document. A carrier needn't obey until a negotiable document is surrendered. Cancel on any breach, except installment contracts need substantial impairment of the whole."
+      },
+      {
+       "id": "s16",
+       "ask": "Name the four events that end the right to stop.",
+       "answer": "The buyer's receipt; a non-carrier bailee's acknowledgment to the buyer; a carrier's acknowledgment by reshipment or as warehouse; negotiation to the buyer of a negotiable document.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "ask": "Does seller's cancellation waive damages?",
+       "answer": "No, § 2-106(4).",
+       "pause": 5
+      },
+      {
+       "id": "s18",
+       "ask": "If the buyer is insolvent, what may the seller demand under § 2-702(1)?",
+       "answer": "Cash, including payment for all goods already delivered under the contract.",
+       "pause": 7
+      }
+     ]
+    },
+    {
      "id": "sl-d4-e15",
      "title": "Day 4 closing quiz",
      "minutes": 4,
@@ -5044,79 +5250,1408 @@
       },
       {
        "id": "s2",
-       "ask": "Name the three ways a buyer can get the goods themselves.",
-       "answer": "Specific performance and replevin under § 2-716, and recovery of identified prepaid goods under § 2-502.",
-       "pause": 8
+       "ask": "Can an unpaid seller generally get accepted goods back?",
+       "answer": "No. Only with an Article 9 security interest or narrow reclamation under § 2-507 or § 2-702(2). Otherwise its right is the price.",
+       "pause": 9
       },
       {
        "id": "s3",
+       "ask": "For what reasons may a seller stop a truckload in transit?",
+       "answer": "Insolvency, repudiation, failure to make a payment due before delivery, or any other right to withhold or reclaim. Smaller shipments only for insolvency.",
+       "pause": 10
+      },
+      {
+       "id": "s4",
        "ask": "A buyer covers at a lower price than the contract. Can it use market damages instead?",
        "answer": "No. Having covered, it can't switch to § 2-713, unless the purchase wasn't a true substitute.",
        "pause": 8
       },
       {
-       "id": "s4",
+       "id": "s5",
        "ask": "Market damages under § 2-713 are measured when and where?",
        "answer": "When the buyer learned of the breach, at the place for tender, or the place of arrival after rejection on arrival or revocation.",
        "pause": 9
       },
       {
-       "id": "s5",
+       "id": "s6",
        "ask": "In an installment contract, when can a buyer cancel the whole?",
        "answer": "When a nonconformity in one or more installments substantially impairs the value of the whole contract, § 2-612(3).",
        "pause": 8
       },
       {
-       "id": "s6",
+       "id": "s7",
        "ask": "A buyer with a right to reject gives late notice. Result?",
        "answer": "Ineffective rejection, so acceptance. It owes the price but has § 2-714 damages with timely § 2-607(3)(a) notice.",
        "pause": 9
       },
       {
-       "id": "s7",
+       "id": "s8",
        "ask": "What two kinds of cure does § 2-508 allow?",
        "answer": "Within the contract time on seasonable notice; or a further reasonable time if the seller reasonably believed the tender would be acceptable.",
        "pause": 9
       },
       {
-       "id": "s8",
+       "id": "s9",
        "ask": "State the § 2-714(2) formula.",
        "answer": "Value as warranted minus value as accepted, at the time and place of acceptance, unless special circumstances show different proximate damages.",
        "pause": 8
       },
       {
-       "id": "s9",
+       "id": "s10",
        "ask": "Is there such a thing as a wrongful but effective revocation?",
        "answer": "No. Revocation must be justified and properly notified.",
        "pause": 6
       },
       {
-       "id": "s10",
+       "id": "s11",
        "ask": "Under Alternative B, who is protected?",
        "answer": "Any natural person reasonably expected to use, consume, or be affected, who is injured in person.",
        "pause": 7
       },
       {
-       "id": "s11",
+       "id": "s12",
        "ask": "From Day 3: what makes a consequential-damages exclusion for consumer personal injury suspect?",
        "answer": "It is prima facie unconscionable, § 2-719(3).",
        "pause": 7
       },
       {
-       "id": "s12",
+       "id": "s13",
        "ask": "From Day 2: who gives the warranty of non-infringement?",
        "answer": "A merchant regularly dealing in goods of the kind, unless the buyer furnished specifications.",
        "pause": 7
       },
       {
-       "id": "s13",
+       "id": "s14",
        "ask": "From Day 1: in Casazza, did promissory estoppel save the buyer?",
        "answer": "No. His reliance wasn't the kind that makes refusal a fraud.",
        "pause": 6
       },
       {
+       "id": "s15",
+       "say": "That's Day 4. Tomorrow, the last day: the seller's damages, leases, and the full review."
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "day": 5,
+   "title": "The seller's damages, Article 2A leases, and the full-course review",
+   "minutes": 101,
+   "episodes": [
+    {
+     "id": "sl-d5-e00",
+     "title": "Spaced review of Days 1 to 4",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "The last day. Review first. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "Under § 2-206(1)(b), what is the effect of shipping nonconforming goods with a seasonable accommodation notice?",
+       "answer": "No acceptance; the shipment is a counteroffer, and there's no breach.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "What does a non-merchant on a merchant's form need for a NOM clause to bind it?",
+       "answer": "A separate signature, § 2-209(2).",
+       "pause": 6
+      },
+      {
+       "id": "s4",
+       "ask": "What test did Ingram River apply for a particular purpose?",
+       "answer": "Whether the use is sufficiently different from the customary use of the goods; it need not be unique.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "What does § 2-510(3) do?",
+       "answer": "If the buyer repudiates or breaches as to identified conforming goods before risk passes, the seller may treat risk as on the buyer for a commercially reasonable time, to the extent of its insurance deficiency.",
+       "pause": 12
+      },
+      {
+       "id": "s6",
+       "ask": "A disclaimer printed on the back of a post-sale delivery receipt. Usually part of the contract?",
+       "answer": "No. A later term is a proposal or material alteration under §§ 2-207 and 2-209, and it may not be conspicuous.",
+       "pause": 9
+      },
+      {
+       "id": "s7",
+       "ask": "What does § 2-502 require?",
+       "answer": "A buyer that paid part or all of the price for identified goods, tender of the balance, and either consumer goods with repudiation or nondelivery, or the seller's insolvency within 10 days after the first installment.",
+       "pause": 12
+      },
+      {
+       "id": "s8",
+       "ask": "Both buyer's damage formulas run which way?",
+       "answer": "Substitute minus contract: cover minus contract, market minus contract.",
+       "pause": 7
+      },
+      {
+       "id": "s9",
+       "ask": "Between rejection and revocation, which has the higher standard?",
+       "answer": "Revocation: substantial impairment of value to the buyer. Rejection needs only any nonconformity.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "What are the four limits on consequential damages?",
+       "answer": "Caused by the breach, foreseeable at contracting, not reasonably avoidable, and proved with reasonable certainty.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "What did Goodin hold?",
+       "answer": "A consumer needs no vertical privity to sue a manufacturer for breach of the implied warranty of merchantability, even for economic loss.",
+       "pause": 9
+      },
+      {
+       "id": "s12",
+       "ask": "What does a seller's cancellation do to its damages claim?",
+       "answer": "Nothing; cancellation doesn't waive damages, § 2-106(4).",
+       "pause": 6
+      },
+      {
+       "id": "s13",
+       "say": "Good. On to the seller's damages, Week 11."
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e01",
+     "title": "Seller's damages, part one: the four measures and resale under §§ 2-706 and 2-704, with Problem 9-4",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The four alternatives, the lithograph example, the resale rule and its requirements, unidentified and unfinished goods, and the reselling problem."
+      },
+      {
+       "id": "s2",
+       "say": "Four alternatives, all protecting the expectancy under § 1-305, all with incidental damages: resale, market, lost profit, and price. And the seller can't stack resale and market."
+      },
+      {
+       "id": "s3",
+       "say": "The lithograph example. A $10,000 lithograph, and the buyer defaults. If it's worth $9,000: resell and get $1,000 under § 2-706, or keep it and get $1,000 under § 2-708(1). If it's worth $11,000 or $10,000: no resale or market damages. If the dealer has an unlimited supply: the resale isn't a substitute, because the dealer would have made both sales, so its loss is the profit on one extra sale, § 2-708(2). If nobody else wants it: the price, § 2-709, and the buyer gets the print. And market damages are the more traditional remedy; they resemble the seller reselling to itself at market."
+      },
+      {
+       "id": "s4",
+       "say": "The table. Resale, § 2-706: contract minus resale; conditions: good faith, commercially reasonable in every aspect, and notice; plus incidental, minus expenses saved. Market, § 2-708(1): contract minus market at the time and place for tender; conditions: proof of market price under §§ 2-723 and 2-724; plus incidental, minus saved. Lost profit, § 2-708(2): profit including reasonable overhead, plus costs reasonably incurred; condition: § 2-708(1) is inadequate, typically for lost-volume sellers; plus incidental. Price, § 2-709: the contract price; conditions: accepted, or lost after risk passed, or can't be resold at a reasonable price; plus incidental; and hold the goods for the buyer."
+      },
+      {
+       "id": "s5",
+       "say": "Resale, § 2-706. Where the resale is in good faith and commercially reasonable, the seller may recover the contract price minus the resale price, plus incidental damages, minus expenses saved. Every aspect, method, manner, time, place, and terms, must be commercially reasonable. And the resale must be reasonably identified as referring to the broken contract."
+      },
+      {
+       "id": "s6",
+       "say": "Private sale, § 2-706(3): reasonable notification to the buyer of the intent to resell. Public sale, an auction, five rules. One, only identified goods, unless there's a recognized futures market. Two, at a usual place for public sale if one is available. Three, reasonable notice of the time and place, except for perishables. Four, goods available for inspection if not in view. Five, the seller may buy."
+      },
+      {
+       "id": "s7",
+       "say": "Resale isn't required. The seller resells because market price may be hard to prove and the resale price is known, and because sellers rarely want the goods. And a bad resale doesn't cost the seller its claim. It only loses this measure and falls back on § 2-708, comment 2."
+      },
+      {
+       "id": "s8",
+       "say": "A good-faith purchaser at the resale takes free of the original buyer's rights, even if the seller botched the requirements, § 2-706(5). And the seller keeps any profit on resale, § 2-706(6)."
+      },
+      {
+       "id": "s9",
+       "say": "Unidentified goods. The goods need not exist or be identified at the time of breach, § 2-706(2), and § 2-704(1) lets the seller identify conforming goods in its possession or control when it learned of the breach. With fungible goods, proving which sale replaced the broken contract can be hard, like a buyer proving which purchase was cover. Wisconsin Cranberry versus Groupe Alimonco, Wisconsin 2016: the other sales weren't substitutes, being a different product, special contracts, and a much smaller load. Apex Oil versus Belcher, Second Circuit 1988, cited only: a resale six weeks later was unusable; the delay was unreasonable, and the seller had sold conforming oil the next day."
+      },
+      {
+       "id": "s10",
+       "say": "Unfinished goods, § 2-704(2). The seller may, in the exercise of reasonable commercial judgment to avoid loss and for effective realization, either complete manufacture and wholly identify the goods to the contract, or cease manufacture and resell for scrap or salvage, or proceed in any other reasonable manner. And § 2-704(1)(b) lets it resell unfinished goods demonstrably intended for the contract."
+      },
+      {
+       "id": "s11",
+       "say": "Problem 9-4(A). Instructions for reselling used copiers. Decide private versus auction. Private: send the buyer notice of intent to resell. Auction: give the time and place, make the machines available to inspect, and use a usual place. Identify each resale to the broken contract in your records. Resell promptly, in the normal channels, on normal terms, at the best reasonable price. Don't delay for a better market. Keep records."
+      },
+      {
+       "id": "s12",
+       "say": "Problem 9-4(B). A hundred thousand gallons at $5, F.O.B. Miami, with 10 cents a gallon freight saved. Resold at $4.75 F.O.B. Cincinnati, with $1,000 in storage. Damages: $5.00 minus $4.75, times 100,000, $25,000, plus $1,000 incidental, minus $10,000 freight saved, equals $16,000. The 2 cents to Cleveland is the new buyer's cost under F.O.B. Cincinnati."
+      },
+      {
+       "id": "s13",
+       "ask": "A seller resells by private sale after the buyer repudiates, but never tells the buyer it intends to resell. Can it use the resale formula?",
+       "answer": "No. A private resale needs reasonable notification under § 2-706(3). It falls back on § 2-708(1) market damages.",
+       "pause": 11
+      },
+      {
        "id": "s14",
-       "say": "That's Day 4. Tomorrow, the last day: the seller's remedies, leases, and the full review."
+       "say": "Recap. Four measures: resale, market, lost profit, price; never stack resale and market. Resale under § 2-706: good faith, commercially reasonable in every aspect, identified to the contract, with notice for private sales and the five auction rules. Unfinished goods under § 2-704(2): finish, scrap, or other reasonable course."
+      },
+      {
+       "id": "s15",
+       "ask": "State the resale formula.",
+       "answer": "Contract price minus resale price, plus incidental damages, minus expenses saved.",
+       "pause": 7
+      },
+      {
+       "id": "s16",
+       "ask": "Does a seller who resells for more than the contract price have to account for the profit?",
+       "answer": "No, § 2-706(6).",
+       "pause": 6
+      },
+      {
+       "id": "s17",
+       "ask": "What are the seller's options for unfinished goods under § 2-704(2)?",
+       "answer": "Complete and identify them, cease and resell for scrap or salvage, or proceed in any other reasonable manner, using reasonable commercial judgment.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e02",
+     "title": "Seller's damages, part two: market damages under § 2-708(1), Peace River, and Problems 9-6 and 9-7",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The market formula, its timing rule, § 2-723, Peace River, and the fuel problems."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-708(1). The unpaid contract price minus the market price at the time and place for tender, plus incidental damages, minus expenses saved. Ignore the word unpaid for now; prepayments are handled separately. The formulas are strongly worded suggestions; if one misses the expectancy, follow § 1-305."
+      },
+      {
+       "id": "s3",
+       "say": "The seller's timing rule differs from the buyer's. It's the time for tender, not when the party learned of the breach. The text asks why a seller treating a repudiation as an immediate breach must wait for a later price."
+      },
+      {
+       "id": "s4",
+       "say": "The § 2-723(1) exception: if a repudiation case comes to trial before the time for performance, use the price when the seller learned of the repudiation."
+      },
+      {
+       "id": "s5",
+       "say": "Proof is hard for unique goods and easy for fungibles with published quotations, § 2-724."
+      },
+      {
+       "id": "s6",
+       "say": "Peace River Seed Cooperative versus Proseeds Marketing, Oregon 2014, a note case. Held: an aggrieved seller may claim § 2-708(1) market damages even if it resold, and even if market damages exceed resale damages. A fixed-price contract allocates market risk, so market damages are what the parties bargained for. A seller isn't required to resell, so mitigation can't force it to use the resale price. And the UCC rejects election of remedies."
+      },
+      {
+       "id": "s7",
+       "say": "Why it matters. It answers the question the text poses: resale and market are alternatives, but resale doesn't necessarily lock the seller into its resale price. The counterargument: § 1-305 forbids recovery above the seller's real loss, and the resale shows that loss. And a seller can avoid § 2-706 simply by not identifying the resale to the broken contract."
+      },
+      {
+       "id": "s8",
+       "say": "Resale price versus market price. The difference may reflect the passage of time, so who bears that risk? Or the seller's negotiating skill. And if the seller recovers market damages and later resells higher, § 2-706(6) suggests no accounting."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 9-6(A). The buyer repudiates February 15; shipment was due by February 25; delivery by March 1. Market: $4 on February 15, $4.25 on February 25, $4.50 on March 1. The seller resells March 7 at $4.75, with notice. The resale is valid: $16,000, as in 9-4(B). Market: F.O.B. destination means tender at Miami on March 1, so $5.00 minus $4.50, times 100,000, $50,000, plus $1,000, minus $10,000, equals $41,000. Under Peace River, the seller may take market damages despite the resale. A court applying § 1-305 strictly would hold it to $16,000."
+      },
+      {
+       "id": "s10",
+       "say": "(B): no notice of resale. A private sale without notice fails § 2-706(3), so § 2-708(1) gives $41,000. The $4.75 can still be evidence of market value. And § 2-706(6) means no accounting for the difference."
+      },
+      {
+       "id": "s11",
+       "say": "Problem 9-7(A). Ten thousand gallons a year at $5, for 10 years. The buyer repudiates in year 6; trial is in August of year 9. Years 7 through 9 are past due at trial, so use tender-date prices. Year 10 isn't due yet, so § 2-723(1) uses the price when the seller learned of the repudiation, $4.00. Per gallon, less 10 cents saved: year 7, 80 cents; year 8, 70 cents; year 9, 50 cents; year 10, 90 cents. Total $2.90, times 10,000, $29,000."
+      },
+      {
+       "id": "s12",
+       "say": "(B): trial in year 11, and the year 10 market was $5.50. Now § 2-723(1) doesn't apply. Years 7 to 9 give $20,000. Year 10 is above contract, so no damages for that year. Or, netting its 60-cent gain per gallon, as § 1-305 suggests, $14,000. Which one depends on whether the contract is treated as a whole."
+      },
+      {
+       "id": "s13",
+       "ask": "A buyer repudiates a June 1 contract on March 1. The market drops steadily until June 1. Trial is in September. At what time is the seller's market price measured?",
+       "answer": "At the time for tender, June 1, under § 2-708(1). Section 2-723(1) doesn't apply because trial came after the time for performance.",
+       "pause": 12
+      },
+      {
+       "id": "s14",
+       "say": "Recap. Market damages: contract minus market at the time and place for tender. Section 2-723(1) uses the price when the seller learned of the repudiation if trial precedes performance. Peace River: market damages are available even after a resale. The § 1-305 counterargument caps at actual loss."
+      },
+      {
+       "id": "s15",
+       "ask": "How does the seller's timing rule differ from the buyer's?",
+       "answer": "The seller measures at the time for tender; the buyer measures when it learned of the breach.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "What did Peace River hold?",
+       "answer": "A seller may claim § 2-708(1) market damages even if it resold and market damages exceed resale damages.",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "In Problem 9-7(A), what price is used for year 10?",
+       "answer": "$4.00, the price when the seller learned of the repudiation, under § 2-723(1).",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e03",
+     "title": "Seller's damages, part three: lost profit under § 2-708(2), R.E. Davis, and Problem 9-8",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The lost-profit formula, the lost-volume seller, capacity and profitability, the math of overhead and reliance, and the lathe."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-708(2). If § 2-708(1) is inadequate to put the seller in as good a position as performance would have, the measure is the profit, including reasonable overhead, that the seller would have made, plus incidental damages, plus due allowance for costs reasonably incurred, and due credit for payments or proceeds of resale."
+      },
+      {
+       "id": "s3",
+       "say": "It's the remedy of last resort, and implicitly available only if resale damages are also inadequate. The clearest case is the lost-volume seller: a jobber with unlimited supply. The breach costs it one sale, and any resale would have happened anyway."
+      },
+      {
+       "id": "s4",
+       "say": "R.E. Davis Chemical versus Diasonics, Seventh Circuit 1987, a note case. Held: capacity alone isn't enough. Ask not only whether the seller could have produced the breached units on top of its actual volume, but whether it would have been profitable to do so. Under diminishing returns, at some volume the next sale stops being worthwhile, and awarding presumed lost profit would overcompensate. Why it matters: a manufacturer must show capacity and profitability. That's the usual exam test."
+      },
+      {
+       "id": "s5",
+       "say": "The math. Profit is the sale price minus fixed costs minus variable costs. Fixed costs are overhead, like rent or the CEO's salary. Variable costs rise with output, like raw materials. The statute adds overhead back, so recovery is the sale price minus variable costs. That saves allocating overhead to one contract. Then add unreimbursed reliance: due allowance for costs reasonably incurred means money already spent that the seller can't recover, because it gets only profit, not the price. And ignore due credit for proceeds of resale. It's likely a drafting mistake; applied literally, it would almost always leave a lost-volume seller with nothing, contrary to § 1-305."
+      },
+      {
+       "id": "s6",
+       "say": "Wages and utilities can go either way: fixed if the sale was small against normal output, variable if it needed overtime. Tax treatment has little bearing."
+      },
+      {
+       "id": "s7",
+       "say": "Two more points. A seller's lost profit is direct, not consequential. It comes from the breached contract itself, so foreseeability and mitigation limits generally don't apply. Contrast a buyer's lost profits on resale, which are consequential. And lost profit is no ceiling. A buyer can't use a low or zero profit to cut market or resale damages, because § 2-708(2) applies only when other measures are inadequate, not when they're higher. Trans World Metals versus Southwire, Seventh Circuit 1985, is the leading case."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 9-8, not assigned. A lathe sold for $90,000. It cost the seller $80,000, plus $2,000 in parts and $1,500 in preparation. Lost profit: $90,000 minus $83,500, which is $6,500. The $500 overhead isn't deducted. Add unreimbursed reliance: a $1,000 cancellation fee plus $1,200 for parts it can't reuse, $2,000 minus $800. Total $8,700. Market damages are zero, since the market is $90,000. And § 2-708(1) is inadequate if Sawtooth is a lost-volume seller."
+      },
+      {
+       "id": "s9",
+       "ask": "A car dealer with ample inventory loses a sale when a buyer backs out of a $30,000 purchase. It sells the same car to the next customer at $30,000. Its profit on each car is $3,000. Damages?",
+       "answer": "About $3,000 in lost profit under § 2-708(2), if it is a lost-volume seller with capacity and it would have been profitable to make both sales, per R.E. Davis. Resale damages of zero are inadequate.",
+       "pause": 14
+      },
+      {
+       "id": "s10",
+       "say": "Recap. Lost profit when market or resale damages are inadequate: profit including reasonable overhead, plus costs reasonably incurred, plus incidental. Lost-volume sellers need capacity and profitability, R.E. Davis. Recovery is price minus variable costs plus unreimbursed reliance. It's direct, not consequential, and it's no ceiling, Trans World Metals."
+      },
+      {
+       "id": "s11",
+       "ask": "What two things must a manufacturer show to be a lost-volume seller under R.E. Davis?",
+       "answer": "Capacity to make the extra sale, and that it would have been profitable to do so.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "Is a seller's lost profit consequential damage?",
+       "answer": "No. It is direct, from the breached contract itself.",
+       "pause": 6
+      },
+      {
+       "id": "s13",
+       "ask": "What does Trans World Metals hold?",
+       "answer": "Lost profit is no ceiling; a buyer can't use a low profit to cut market or resale damages.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e04",
+     "title": "The price when the seller keeps the goods, Foxco, and incidental damages, with Problems 9-5, 9-9, and 9-11",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Why the price, holding the goods, Foxco's reasonable-price test, incidental-only damages for sellers, and three problems."
+      },
+      {
+       "id": "s2",
+       "say": "Why the price? If the seller truly can't resell, the resale price is meaningless, the market price may not be zero, and lost profit leaves the seller stuck with its production costs. So § 2-709(1)(b) gives the contract price."
+      },
+      {
+       "id": "s3",
+       "say": "The seller must hold the goods for the buyer while suing. If resale becomes possible, it may resell before collecting, and the net proceeds are credited. Payment of the judgment entitles the buyer to any goods not resold, § 2-709(2). And if the seller is held not entitled to the price, it still gets § 2-708 damages, § 2-709(3)."
+      },
+      {
+       "id": "s4",
+       "say": "Foxco Industries versus Fabric World, Fifth Circuit 1979, a note case. Held: a seller of specially made spring fabric needed only reasonable efforts to resell at a reasonable price. The goods were made for a customer, were hard to sell after the spring season, and the market fell 50 percent. The jury could find the seller acted reasonably even though it made little resale effort for months and sold part only the next season. Why it matters: goods need not be worthless. The test is reasonable effort and a reasonable price, and market collapse and seasonality count."
+      },
+      {
+       "id": "s5",
+       "say": "Incidental damages, § 2-710. Commercially reasonable charges, expenses, or commissions incurred in stopping delivery, in transporting and caring for the goods after the buyer's breach, in connection with return or resale, or otherwise resulting from the breach. And no consequential damages for sellers absent a provision: § 1-305(a), and most courts agree, citing Validsa versus PDVSA. So separating incidental from consequential matters. The nature of the loss counts, not its amount: incidental storage costs reached $293 million in Commonwealth Edison versus Allied Chemical."
+      },
+      {
+       "id": "s6",
+       "say": "Problem 9-5. A $6,400 sign. The seller spent $4,000 and needs $800 to finish. Option one: salvage nets $100. Option two: spend $2,000 to modify it, with a 50 percent chance of selling for $5,000."
+      },
+      {
+       "id": "s7",
+       "say": "Salvage: lost profit of $1,600, plus costs incurred of $4,000, minus the $100, equals $5,500 from the buyer. Plus the $100 salvage, the seller has $5,600, the same as finishing a paid contract, $6,400 minus $800. Modify: expected return is 50 percent of $5,000, $2,500, minus $2,000, is $500, against $100. Better on expected value by $400 to $450, depending on the salvage if unsold, so it's defensible under § 2-704(2). If the sale works, the buyer owes about $2,600; if not, about $7,500. The seller's risk: if a court finds it unreasonable, it eats the $2,000. Salvage is the safe choice. And finishing for $800 makes no sense: no one else wants the sign."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 9-9(A). A custom container at $3,000; it cost $1,800; the best offer is $1,500; standard units sell at $2,000. Probably no action for the price: $1,500 may be a reasonable price for a customized container, so the seller can resell. Resale damages: $3,000 minus $1,500, $1,500, plus incidental. If $1,500 isn't reasonable, § 2-709(1)(b). The dollars are similar either way."
+      },
+      {
+       "id": "s9",
+       "say": "(B): only scrap at $500. Yes, the price: scrap isn't resale at a reasonable price. Recover $3,000, hold the container for the buyer, and credit net proceeds if it's sold, § 2-709(2)."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 9-11, four loans. (A): a pre-breach loan for general operations. Not incidental: an ordinary business cost unrelated to the breach. (B): a pre-breach loan to finance this contract. Not incidental: incurred regardless of the breach. It's a cost of performance, recovered if at all through the price or as reliance. (C): a post-breach loan for an investment planned with the price. Consequential, so not recoverable: lost use of the money. (D): a post-breach loan to finish the machine and resell it. The strongest case: in connection with resale under § 2-710, and the finishing is authorized by § 2-704(2)."
+      },
+      {
+       "id": "s11",
+       "ask": "A buyer refuses a specially made wedding dress. The seller tries for three months and can find no buyer at any reasonable price. What can it recover?",
+       "answer": "The contract price under § 2-709(1)(b), plus incidental damages, holding the dress for the buyer and crediting any later resale proceeds.",
+       "pause": 12
+      },
+      {
+       "id": "s12",
+       "say": "Recap. Price for identified goods that can't be resold at a reasonable price after reasonable effort; hold the goods; credit any resale; the buyer gets unsold goods on paying. Foxco: reasonable effort and price, with seasonality and market collapse counting. Section 2-710: incidental damages only; sellers get no consequential damages."
+      },
+      {
+       "id": "s13",
+       "ask": "Why does a seller who loses its price claim still have a remedy?",
+       "answer": "Section 2-709(3) gives it § 2-708 damages.",
+       "pause": 6
+      },
+      {
+       "id": "s14",
+       "ask": "Which case shows incidental storage costs can be enormous?",
+       "answer": "Commonwealth Edison v. Allied Chemical, $293 million.",
+       "pause": 6
+      },
+      {
+       "id": "s15",
+       "ask": "In Problem 9-11, which loan cost is the strongest incidental claim?",
+       "answer": "A post-breach loan to finish the machine and resell it.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e05",
+     "title": "Prepaying buyers, casualty after breach, and the statute of limitations: §§ 2-718(2) to (4), 2-709(1)(a), 2-510(3), and 2-725",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Restitution for a breaching buyer, the unassigned Problems 9-12 to 9-14, casualty, and the four-year rule."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-718(2) and (3). When the seller justifiably withholds delivery because of the buyer's breach, the buyer gets back any amount by which its payments exceed (a) an enforceable liquidated-damages amount; or (b) if there's no such term, 20 percent of the value of its total performance or $500, whichever is smaller. The buyer's right is subject to offset to the extent the seller establishes a right to damages under other Article 2 provisions, and the amount of benefits the buyer received. Payment in goods counts at its reasonable value or resale proceeds, § 2-718(4)."
+      },
+      {
+       "id": "s3",
+       "say": "It works as a kind of statutory liquidated damages. Sellers may keep the statutory amount without proving harm, or prove larger damages and offset them."
+      },
+      {
+       "id": "s4",
+       "say": "Problem 9-12, not assigned. A $90,000 lathe, $20,000 down; the market is $80,000 at tender. (A): with a valid $10,000 liquidated-damages term, return $10,000. (B): with no such term, the statutory retention is $500, the smaller of $500 and 20 percent, and the seller may offset damages it proves under § 2-718(3), like market damages of $10,000, or lost profit, plus incidental damages. Compare Neri versus Retail Marine with McCann versus McSorley, cited only."
+      },
+      {
+       "id": "s5",
+       "say": "Problem 9-13, not assigned. After a wrongful revocation with the goods returned: pick market or resale at the right place, add storage and freight, and subtract the $20,000 down payment. The buyer took and revoked, so § 2-718(2), which speaks of withheld delivery, doesn't fit neatly, but the § 1-305 result is the same."
+      },
+      {
+       "id": "s6",
+       "say": "Casualty to the goods. The principles: the party in control, the party likely insured, and the party in breach should bear the risk. If risk has passed to the buyer, and conforming goods are lost or damaged within a commercially reasonable time, the buyer owes the price, § 2-709(1)(a). The typical case: a shipment contract with loss in transit."
+      },
+      {
+       "id": "s7",
+       "say": "Section 2-510(3). If the buyer repudiates or breaches as to conforming goods already identified before risk passes, the seller may, to the extent of any deficiency in its effective insurance coverage, treat the risk of loss as resting on the buyer for a commercially reasonable time. Both parties can have an insurable interest in identified goods, § 2-501. After an unjustified revocation, Article 2 is silent; presumably the risk returns to the seller once it takes the goods back."
+      },
+      {
+       "id": "s8",
+       "say": "Problem 9-14, not assigned. (A): lathes identified, the buyer repudiates October 28, and lightning burns them that night. The buyer bears the loss to the extent of any insurance shortfall. (B): in a shipment contract, risk passed on tender to the carrier, so transit damage is the buyer's loss, and rejection and revocation fail because the goods conformed at tender. The seller gets the price, and the buyer's recourse is against the carrier."
+      },
+      {
+       "id": "s9",
+       "say": "The statute of limitations, § 2-725. Four years. The cause of action accrues when the breach occurs, regardless of the aggrieved party's knowledge. A warranty is breached on tender, unless it explicitly extends to future performance and discovery must await that performance. The parties may shorten the period to not less than one year, and can't extend it. The buyer's breach usually occurs when it fails to pay or wrongfully rejects. After a repudiation, the seller may wait a commercially reasonable time, and that time is uncertain, so sue within four years of the repudiation. And whether § 2-725 governs a secured seller's deficiency suit is split."
+      },
+      {
+       "id": "s10",
+       "ask": "A buyer pays $2,000 down on a $5,000 contract and then repudiates. There's no liquidated-damages clause, and the seller proves no damages. How much does the buyer get back?",
+       "answer": "$1,500. The seller may keep the smaller of 20 percent of $5,000, which is $1,000, or $500. So it keeps $500 and returns $1,500.",
+       "pause": 12
+      },
+      {
+       "id": "s11",
+       "ask": "A warranty says: this roof will not leak for ten years. It leaks in year six. Has the four-year statute run?",
+       "answer": "No. A warranty that explicitly extends to future performance accrues when the breach is or should have been discovered, so the claim accrues in year six.",
+       "pause": 12
+      },
+      {
+       "id": "s12",
+       "say": "Recap. A breaching buyer gets back payments above liquidated damages or, without them, above the smaller of 20 percent or $500, less proven damages. Lost conforming goods after risk passes: the buyer owes the price. Section 2-510(3): the buyer's breach before risk passes shifts uninsured loss for a commercially reasonable time. Section 2-725: four years from breach, on tender for warranties unless they explicitly extend to future performance; shortenable to one year, not extendable."
+      },
+      {
+       "id": "s13",
+       "ask": "Can parties extend the § 2-725 limitations period?",
+       "answer": "No. They may shorten it to not less than one year.",
+       "pause": 6
+      },
+      {
+       "id": "s14",
+       "ask": "When is a warranty breached under § 2-725?",
+       "answer": "On tender, unless it explicitly extends to future performance and discovery must await that performance.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "What is the statutory retention under § 2-718(2)(b)?",
+       "answer": "20 percent of the value of the buyer's total performance or $500, whichever is smaller.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e06",
+     "title": "Leases: scope, lease versus sale, and § 1-203, with Problem 11-1",
+     "minutes": 9,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Article 2A's starting point, the definition of a lease, why the line matters, the § 1-203 tests, the skid-loader problem, hybrids, and other law."
+      },
+      {
+       "id": "s2",
+       "say": "Article 2A, from 1990, governs leases of goods and is modeled on Article 2. So the study question is where it differs, and why. The differences come from one fact: in a lease, the lessor gets the goods back."
+      },
+      {
+       "id": "s3",
+       "say": "The definition, § 2A-103(1)(j). A lease is a transfer of the right to possession and use of goods for a term in return for consideration. A sale, a retained security interest, and similar deals are not leases. A sale passes title, § 2-106(1); a lease transfers only limited rights, and the lessor keeps a residual interest."
+      },
+      {
+       "id": "s4",
+       "say": "Why the line matters. Governing law: a true lease is Article 2A; a disguised sale is Articles 2 and 9. Tax: in a lease the lessor is the tax owner and takes depreciation, and rent is potentially deductible by the lessee; in a sale the buyer is the tax owner, and its payments aren't deductible as rent. Bankruptcy: a lessee keeps the goods only by performing the lease; a buyer may keep them paying over time the amounts due or the goods' value, whichever is less. Third parties: a lessor needs no public filing; a seller with a security interest must perfect, typically by filing. And filing a protective financing statement is not evidence it's a sale, § 9-505."
+      },
+      {
+       "id": "s5",
+       "say": "Form and intent don't control. Economic substance does, §§ 1-203, 2A-102, and 9-109(a)(1)."
+      },
+      {
+       "id": "s6",
+       "say": "Section 1-203(a): lease or security interest is decided on the facts of each case. The real question: is there a reasonable chance the lessor gets the goods back while they still have meaningful economic value? Yes, a lease. No, a sale with a retained security interest."
+      },
+      {
+       "id": "s7",
+       "say": "Section 1-203(b), the bright-line test. A transaction in lease form creates a security interest if the lessee's payment obligation is for the term and not terminable by the lessee, and one of four things is true. One, the original term is equal to or greater than the remaining economic life of the goods. Two, the lessee is bound to renew for the remaining economic life, or bound to become the owner. Three, the lessee may renew for the remaining economic life for no or nominal additional consideration. Four, the lessee may become the owner for no or nominal additional consideration. If the bright-line test isn't met, go back to the facts under (a)."
+      },
+      {
+       "id": "s8",
+       "say": "Section 1-203(c), not merely because. None of these alone creates a security interest. One, the present value of the rent equals or exceeds the goods' value at signing. Two, the lessee takes risk of loss. Three, the lessee pays taxes, insurance, fees, or maintenance. Four, the lessee has an option to renew or buy. Five, a renewal option at or above predictable fair market rent. Six, a purchase option at or above predictable fair market value."
+      },
+      {
+       "id": "s9",
+       "say": "Section 1-203(d), nominal. Consideration is nominal if it's less than the lessee's reasonably predictable cost of performing under the lease if the option isn't exercised. It's not nominal if the option price or rent is stated to be fair market value determined when the option is performed. And § 1-203(e): remaining economic life and predictable value are judged when the transaction is entered into."
+      },
+      {
+       "id": "s10",
+       "say": "The 99-year laptop. A lease in form, but the goods are dead long before the term ends. A sale."
+      },
+      {
+       "id": "s11",
+       "say": "Problem 11-1. A $200,000 skid loader. The construction company pays maintenance and insurance, and the entire $200,000, even if it returns the loader early. Threshold: payment isn't terminable, so run § 1-203(b)'s four prongs. Maintenance, insurance, and full payout alone don't make a sale, § 1-203(c)."
+      },
+      {
+       "id": "s12",
+       "say": "(A)(1): 5 years at $3,900 a month; the goods return to the dealer. If five years is under the economic life, (b) isn't met. On the facts a five-year-old loader likely has real value, so it's a lease."
+      },
+      {
+       "id": "s13",
+       "say": "(A)(2): an option to buy at $5,000. Is $5,000 nominal? Compare it to the predictable cost of returning, § 1-203(d), and to the predictable value. If the loader should be worth far more than $5,000, exercise is near certain and it looks like a sale; this one needs facts."
+      },
+      {
+       "id": "s14",
+       "say": "(A)(3): an option at $100. Nominal. Section 1-203(b)(4) is met: a sale with a security interest."
+      },
+      {
+       "id": "s15",
+       "say": "(B): 25 years at $2,000 a month; the goods return. The term likely exceeds economic life, so § 1-203(b)(1): a sale."
+      },
+      {
+       "id": "s16",
+       "say": "(C): the lessee may return early with no more payments. Not non-terminable, so the bright-line test fails in every scenario. Go to the facts under (a). A low option price is still a sign of a sale, but the lessor bears real return risk, so it's likely a lease."
+      },
+      {
+       "id": "s17",
+       "say": "Hybrids. Section 2A-102, from the 2022 amendments, mirrors § 2-102(2). If the lease-of-goods aspects predominate, Article 2A applies. If not, only the provisions relating primarily to the lease-of-goods aspects apply. A consumer's cable box with cable service is an example. And the goods part can be a finance lease, comment 6."
+      },
+      {
+       "id": "s18",
+       "say": "Other law. Article 2A generally defers to certificate-of-title and consumer-protection law, §§ 2A-104 and 2A-105, plus the federal Consumer Leasing Act and Regulation M. Magnuson-Moss and lemon laws might not apply to leases, one reason sellers structure deals as leases. And no international convention governs leases of goods."
+      },
+      {
+       "id": "s19",
+       "ask": "A non-terminable three-year lease of a truck with a ten-year economic life gives the lessee an option to buy at the end for $1. Lease or sale?",
+       "answer": "A sale with a security interest. The option price is nominal, so § 1-203(b)(4) is met.",
+       "pause": 10
+      },
+      {
+       "id": "s20",
+       "ask": "Same lease, but the lessee may return the truck at any time and stop paying.",
+       "answer": "The bright-line test can't apply because the obligation is terminable. Go to the facts under § 1-203(a); the $1 option is a sign of a sale, but the lessor's real return risk points to a lease.",
+       "pause": 13
+      },
+      {
+       "id": "s21",
+       "say": "Recap. A lease transfers possession and use for a term; the lessor keeps a residual. Substance controls. Section 1-203(b): non-terminable plus one of four prongs means a security interest. Section 1-203(c) lists features that alone don't. Nominal means less than the predictable cost of performing if the option isn't exercised. Otherwise, the facts under (a)."
+      },
+      {
+       "id": "s22",
+       "ask": "State the four prongs of § 1-203(b).",
+       "answer": "Term at least the remaining economic life; bound to renew for that life or bound to become owner; option to renew for that life for nominal consideration; option to become owner for nominal consideration.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "ask": "Does a lessee's paying insurance and maintenance make a lease a sale?",
+       "answer": "Not by itself, § 1-203(c).",
+       "pause": 6
+      },
+      {
+       "id": "s24",
+       "ask": "What is the fundamental question under § 1-203(a)?",
+       "answer": "Whether there is a reasonable chance the lessor gets the goods back while they still have meaningful economic value.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e07",
+     "title": "Finance leases: §§ 2A-103(1)(g), 2A-209, and 2A-407, with Problems 11-3 and 11-4",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The idea, the three-part definition, how a finance lease differs, hell or high water, and the server problems."
+      },
+      {
+       "id": "s2",
+       "say": "The idea. The lessee picks the goods from a supplier. A bank or other financer buys them, under Article 2, and leases them to the lessee. The goods usually go straight to the lessee. In form the financer is a lessor; in substance, a lender. It wants no responsibility for quality, and the lessee looks to the supplier. It must still be a true lease under § 1-203. Because a finance lessor needs a real residual but doesn't want the goods, these leases often give the lessee a fair-market-value purchase option."
+      },
+      {
+       "id": "s3",
+       "say": "The definition, § 2A-103(1)(g). Three parts. One, the lessor doesn't select, manufacture, or supply the goods. Two, the lessor acquires the goods, or the right to them, in connection with the lease. Three, one of four things. (A), the lessee receives a copy of the supply contract before signing the lease. (B), the lessee's approval of the supply contract is a condition of the lease's effectiveness. (C), the lessee receives, before signing, an accurate and complete statement of the supplier's promises, warranties, disclaimers, and remedy limits. Or (D), in a non-consumer lease, the lessor informs the lessee in writing of the supplier's identity and the lessee's rights to the promises and warranties."
+      },
+      {
+       "id": "s4",
+       "say": "The differences, ordinary versus finance lease. Implied merchantability and fitness: an ordinary lessor makes them, §§ 2A-212 and 2A-213; a finance lessor makes neither, and may give express warranties but rarely does. The supplier's warranties: in a finance lease they flow to the lessee to the extent of its leasehold, subject to the supply contract's terms, disclaimers, and defenses, § 2A-209(1). Infringement warranty: a merchant lessor gives it, § 2A-211(2); a finance lessor doesn't. Interference warranty: an ordinary lessor gives it, § 2A-211(1); a finance lessor gives it only for claims from its own act or omission. Duty to pay: an ordinary lessee may deduct damages from rent, § 2A-508(6); a non-consumer finance lessee pays hell or high water once it accepts, § 2A-407. Risk of loss: stays with an ordinary lessor; passes to a finance lessee, § 2A-219. And revocation: an ordinary lessee revokes much as under § 2-608; a non-consumer finance lessee only for the lessor's assurances."
+      },
+      {
+       "id": "s5",
+       "say": "Hell or high water, § 2A-407. In a non-consumer finance lease, the lessee's promises become irrevocable and independent upon its acceptance of the goods. They bind assignees and third parties, and aren't subject to cancellation, termination, modification, repudiation, excuse, or substitution without the consent of the party to whom the promise runs. And other law may validate an express covenant, § 2A-407(3), which is how consumer leases and backup clauses work."
+      },
+      {
+       "id": "s6",
+       "say": "Section 2A-209(3): a modification or rescission of the supply contract binds the lessee unless the supplier had notice of the finance lease; if it binds the lessee, the lessor assumes the old promises. Section 2A-209(4): the lessee keeps its own rights against the supplier. Common-law defenses may survive: a fraudulent-inducement claim might defeat a hell-or-high-water clause, Faust Printing. And for hybrids, if the goods aspect doesn't predominate, § 2A-407 covers only the goods portion; allocate payments, or make the whole obligation irrevocable. Express hell-or-high-water clauses are common as a backup."
+      },
+      {
+       "id": "s7",
+       "say": "Problem 11-3. Lasting Data negotiates for 30 servers with Sensational. Boston Finance edits the draft, buys, and leases them to Lasting. The servers fail."
+      },
+      {
+       "id": "s8",
+       "say": "(A): a finance lease? Boston didn't select or supply; Lasting chose, and editing the draft doesn't change that. Boston acquired the goods in connection with the lease. But Lasting saw the draft, not the final contract with Boston's changes, so (A) of part three is doubtful. Look for (B), (C), or (D). Likely yes, if one is satisfied."
+      },
+      {
+       "id": "s9",
+       "say": "(B): Sensational's warranties to Lasting: express warranties and merchantability, flowing through § 2A-209(1). Fitness is disclaimed, and the disclaimer binds Lasting."
+      },
+      {
+       "id": "s10",
+       "say": "(C): Boston's warranties: no implied warranties, and no express ones on these facts. Only the § 2A-211(1) interference warranty."
+      },
+      {
+       "id": "s11",
+       "say": "(D): if the supply deal is a lease, not a sale, the result is the same; § 2A-209 applies to a supply contract by which the lessor buys or leases goods."
+      },
+      {
+       "id": "s12",
+       "say": "(E): Lasting must buy at the end. Bound to become owner, and non-terminable: § 1-203(b)(2) makes it a sale with a security interest. Article 2A and § 2A-209 drop out. Boston is a seller, making merchantability only if it's a merchant in such goods, disclaimable under § 2-316. And Lasting's claim against Sensational now hits vertical privity."
+      },
+      {
+       "id": "s13",
+       "say": "Problem 11-4. (A): the effect of § 2A-407. If Lasting accepted, it must keep paying Boston despite the defects, and pursue Sensational. If it validly rejected before accepting, § 2A-407 isn't triggered. (B): drafting for Boston. An express hell-or-high-water clause under § 2A-407(3) as a backup; a signed acceptance certificate; a waiver of setoff and defenses against the lessor and assignees; a disclaimer of all warranties; assignment of supplier warranties to the lessee; and default remedies. See Wells Fargo versus B.C.B.U., cited only."
+      },
+      {
+       "id": "s14",
+       "ask": "A business leases a copier through a bank under a qualifying finance lease, accepts it, and it then breaks down repeatedly. May the business stop paying the bank?",
+       "answer": "No. In a non-consumer finance lease, its promises became irrevocable and independent on acceptance, § 2A-407. It must pay the bank and pursue the supplier, whose warranties flow to it under § 2A-209(1).",
+       "pause": 13
+      },
+      {
+       "id": "s15",
+       "say": "Recap. A finance lessor doesn't select or supply, acquires the goods in connection with the lease, and meets one of the four disclosure routes. It makes no implied warranties; the supplier's warranties flow to the lessee; risk passes to the lessee; and in a non-consumer lease, the lessee's promises are hell or high water on acceptance."
+      },
+      {
+       "id": "s16",
+       "ask": "Name the three parts of the finance-lease definition.",
+       "answer": "The lessor doesn't select, manufacture, or supply the goods; it acquires them in connection with the lease; and one of the four disclosure or approval routes is met.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "ask": "What triggers hell or high water?",
+       "answer": "The lessee's acceptance of the goods, in a non-consumer finance lease.",
+       "pause": 7
+      },
+      {
+       "id": "s18",
+       "ask": "Whose warranties flow to a finance lessee?",
+       "answer": "The supplier's, under § 2A-209(1).",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e08",
+     "title": "Lease formation and terms: the statute of frauds in Problem 11-2, unconscionability, warranties, and remedy limits",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What formation rules Article 2A drops, the lease statute of frauds, consumer leases, gap fillers, warranties, and the remedy-limit differences."
+      },
+      {
+       "id": "s2",
+       "say": "Formation is the same as Article 2, §§ 2A-204 to 2A-206, with no analog to § 2-206(1)(b), prompt-shipment orders, to § 2-207, the battle of the forms, or to the CISG. Why? Lessees rarely send orders, and leases are negotiated rather than exchanged on forms."
+      },
+      {
+       "id": "s3",
+       "say": "Problem 11-2 compares § 2A-201 with § 2-201. Threshold: sales, a price of $500 or more; leases, total payments of $1,000 or more, excluding option payments; a higher figure because rent is spread over time. What the record must show: sales, a contract for sale and a quantity; leases, a lease contract, a description of the goods, and the lease term, because there's no gap filler for the term, the core of a lease. Merchant confirmation: sales yes; leases, none, because such transactions were thought to be few. Specially made goods: both, and the lease version says manufactured or obtained, fitting a lessor who buys goods for the lessee. Part performance: sales, goods accepted or payment made and accepted; leases, only goods received and accepted, because a lessee pays only some rent, not a full price, which isn't a sufficient substitute for a memorandum. Admission: both. And the term when an exception applies, § 2A-201(5): the term in a signed record, the admitted term, or a reasonable lease term. The 2022 amendments replace a signed writing with a signed record. And satisfying the statute doesn't prove a lease exists."
+      },
+      {
+       "id": "s4",
+       "say": "Unconscionability. Sections 2A-108(1) and (3) repeat § 2-302. Consumer leases add relief for procedural unconscionability alone: unconscionable conduct inducing the contract or in collecting a claim, with no need for substantive unconscionability, § 2A-108(2). And attorney's fees for a consumer lessee who prevails, § 2A-108(4)."
+      },
+      {
+       "id": "s5",
+       "say": "A consumer lease, § 2A-103(1)(e): a lessor regularly in the business of leasing or selling makes a lease to an individual primarily for personal, family, or household purposes, and states may set a dollar cap."
+      },
+      {
+       "id": "s6",
+       "say": "Terms and gap fillers. The same concepts of agreement, course of performance, course of dealing, usage of trade, and good faith, §§ 1-303 and 1-304. The casebook still cites § 2A-207, but the 2026 statutes show it deleted, with its rule now in § 1-303. There are few gap fillers: nothing like §§ 2-304 through 2-311 or 2-503 to 2-505. Leases tend to be more complete, and there's no near-universal default. The common law fills gaps, § 1-103. And consumer leases limit choice of law and forum, § 2A-106, which doesn't reach arbitration."
+      },
+      {
+       "id": "s7",
+       "say": "Warranties. Express, § 2A-210; merchantability, § 2A-212; fitness, § 2A-213; the same as Article 2, except a finance lessor gives no implied warranties. Disclaimers, § 2A-214, track § 2-316, except a merchantability disclaimer must also be in writing and conspicuous. And there's an express rule for disclaiming the interference and infringement warranties, § 2A-214(4). Third parties: § 2A-216 tracks § 2-318, separate from § 2A-209. The title analog: § 2A-211(1), the warranty against interference: no claim arising from the lessor's act or omission will interfere with the leasehold."
+      },
+      {
+       "id": "s8",
+       "say": "Remedy limits, parol evidence, modification. Unconscionable limitation: implicit in Article 2; express in Article 2A, not enforceable, § 2A-503(2). Liquidating consequential damages: in Article 2, a limit is expressly allowed, § 2-719(3), and liquidation probably allowed; Article 2A expressly says they may be liquidated or limited, § 2A-503(3). The liquidated-damages test: Article 2, reasonable in light of anticipated or actual harm, difficulty of proof, and inconvenience of other remedies; Article 2A, an amount or formula reasonable in light of the then anticipated harm only, § 2A-504(1). Parol evidence: § 2A-202 is almost identical to § 2-202. Modification: § 2A-208 is the same as § 2-209, but with no analog to § 2-209(3); courts resolve oral modifications case by case."
+      },
+      {
+       "id": "s9",
+       "ask": "An oral lease of equipment for 18 months at $50 a month. Is a signed record required?",
+       "answer": "No. Total payments are $900, under the $1,000 threshold of § 2A-201.",
+       "pause": 10
+      },
+      {
+       "id": "s10",
+       "ask": "A lessor disclaims merchantability orally, mentioning merchantability. Effective under Article 2A?",
+       "answer": "No. Under § 2A-214, a merchantability disclaimer must be in writing and conspicuous, unlike Article 2.",
+       "pause": 10
+      },
+      {
+       "id": "s11",
+       "say": "Recap. No § 2-207 or prompt-shipment analog. The lease statute of frauds: $1,000 in total payments, a record describing the goods and stating the term, no merchant confirmation, part performance only by goods received and accepted. Consumer leases get relief for procedural unconscionability alone and attorney's fees. Few gap fillers. Merchantability disclaimers must be written and conspicuous. Liquidated damages are tested only against then-anticipated harm."
+      },
+      {
+       "id": "s12",
+       "ask": "What must a § 2A-201 record show?",
+       "answer": "A lease contract, a description of the goods, and the lease term.",
+       "pause": 7
+      },
+      {
+       "id": "s13",
+       "ask": "What does § 2A-108(2) add for consumer leases?",
+       "answer": "Relief for unconscionable conduct inducing the lease or in collection, without substantive unconscionability.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "How does § 2A-504(1) differ from § 2-718(1)?",
+       "answer": "It tests liquidated damages only against the then anticipated harm, not actual harm.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e09",
+     "title": "Lease performance: risk of loss, insurable interest, excuse, and transfers",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Who carries the risk in a lease, the effect of default, insurable interest, excuse, and assignment under § 2A-303."
+      },
+      {
+       "id": "s2",
+       "say": "Insecurity and repudiation: §§ 2A-401 to 2A-403 follow §§ 2-609 to 2-611."
+      },
+      {
+       "id": "s3",
+       "say": "Risk of loss, § 2A-219. In an ordinary lease, risk stays with the lessor. In a finance lease, risk passes to the lessee, at the time agreed or, if none: (a) on delivery to the carrier, or tender at a named destination; (b) on the bailee's acknowledgment of the lessee's right to possession; (c) otherwise, on the lessee's receipt if the lessor, or in a finance lease the supplier, is a merchant, and if not, on tender. And parties often shift the risk to the lessee by agreement."
+      },
+      {
+       "id": "s4",
+       "say": "Why different from sales? Both parties hold property rights for the whole term, so the question isn't when risk passes but who carries it during the lease."
+      },
+      {
+       "id": "s5",
+       "say": "Default, § 2A-220. A nonconforming tender leaves risk on the lessor or supplier until cure or acceptance. A rightful revocation lets the lessee treat risk as the lessor's from the start, to the extent of any insurance shortfall. And if the lessee repudiates or defaults as to conforming identified goods, the lessor or supplier may put risk on the lessee for a commercially reasonable time, to the extent of its insurance shortfall."
+      },
+      {
+       "id": "s6",
+       "say": "Insurable interest. The lessee gets one on identification, §§ 2A-217 and 2A-218(1) and (2). The lessor keeps one until the lessee has exercised a purchase option and risk of loss has passed, § 2A-218(3). The parties may agree who insures and who takes the proceeds, § 2A-218(5)."
+      },
+      {
+       "id": "s7",
+       "say": "Excuse. Section 2A-221 tracks § 2-613. Section 2A-404 tracks § 2-614. Sections 2A-405 and 2A-406 track §§ 2-615 and 2-616. The finance-lease twist: a non-consumer finance lessee that takes damaged goods, or accepts part of a quota, pays full rent, consistent with § 2A-407."
+      },
+      {
+       "id": "s8",
+       "say": "Assignment and delegation, § 2A-303. A lessor's assignment of the right to payment, with or without the residual, is an Article 9 transaction, and anti-assignment clauses generally don't stop the transfer or create a default, §§ 2A-303(2), 9-406(d), and 9-407. A lessee's transfer of possession: if the lease makes it a default, the lessor has default remedies, § 2A-303(4)(a). If the lease merely prohibits it, the transfer is effective unless damages would be inadequate, § 2A-303(4)(b). And delegation doesn't release the rent duty, § 2A-303(6), compare § 2-210(1)."
+      },
+      {
+       "id": "s9",
+       "ask": "In an ordinary, non-finance lease of a forklift, the forklift is destroyed by a flood in the lessee's warehouse, with no fault and no agreement on risk. Who bears the loss?",
+       "answer": "The lessor. In an ordinary lease, risk stays with the lessor, § 2A-219(1).",
+       "pause": 10
+      },
+      {
+       "id": "s10",
+       "say": "Recap. Ordinary lease: risk stays with the lessor. Finance lease: risk passes to the lessee on the familiar carrier, bailee, and receipt-or-tender rules, with the merchant test applied to the supplier. Default shifts risk as in § 2-510. The lessor keeps an insurable interest until a purchase option is exercised and risk has passed. Excuse tracks Article 2. A lessor's payment rights are freely assignable; a lessee's prohibited transfer is effective unless damages are inadequate."
+      },
+      {
+       "id": "s11",
+       "ask": "When does the lessor's insurable interest end?",
+       "answer": "When the lessee has exercised a purchase option and risk of loss has passed, § 2A-218(3).",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "If a lease merely prohibits the lessee's transfer, is the transfer effective?",
+       "answer": "Yes, unless damages would be an inadequate remedy, § 2A-303(4)(b).",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "Does delegation release the lessee from paying rent?",
+       "answer": "No, § 2A-303(6).",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e10",
+     "title": "Lessor's default and the lessee's remedies: §§ 2A-508 to 2A-522, with Problem 11-5",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The lessee's remedy table, why a purchase isn't cover, rejection and acceptance in leases, revocation, the limitations rule, and the server problem."
+      },
+      {
+       "id": "s2",
+       "say": "Default comes from the agreement and Article 2A, § 2A-501. The lessee's remedies are in § 2A-508, and the parties may add others. There's no general duty to notify of default, with exceptions, § 2A-502."
+      },
+      {
+       "id": "s3",
+       "say": "The table. Goods not delivered: specific performance or replevin, § 2A-521, largely the same standard as § 2-716. Prepaid identified goods: recover them if the lessor becomes insolvent within 10 days after the first payment, § 2A-522, like § 2-502(1)(b), with no consumer-prepayment analog to § 2-502(1)(a). Cancel: non-installment, on any default; installment, on substantial impairment of the whole, §§ 2A-508(1)(a), 2A-505, and 2A-510(2). Recover rent and security paid: only so much as is just under the circumstances, § 2A-508(1)(b), because the lessee may have had use of the goods; compare § 2-711(1), which refunds the price. Cover by a substantially similar lease: the present value of the new rent for the comparable period, minus the present value of the old rent, plus incidental and consequential, minus expenses saved, § 2A-518(2). Cover by purchase, by a dissimilar lease, or no cover: market rent, the present value of market rent minus the present value of the original rent, as of the default, for the remaining term, plus incidental and consequential, minus saved, §§ 2A-518(3) and 2A-519(1), measured at the place for tender, or arrival after rejection, § 2A-519(2). Accepted goods: the loss in the ordinary course; and for warranty, the present value of the difference between the value of the use of the goods as accepted and as warranted, § 2A-519(3) and (4). Deducting from rent: yes, except finance leases under § 2A-407, § 2A-508(6)."
+      },
+      {
+       "id": "s4",
+       "say": "The key difference. A purchase can't be measured as cover. Unlike a buyer, a lessee who buys replacements falls to the market-rent formula. And substantially similar is hard to meet given negotiated terms. Market rent is proved under § 2A-507."
+      },
+      {
+       "id": "s5",
+       "say": "Nonconforming tender follows the Article 2 model. Reject: non-installment, perfect tender, § 2A-509(1); installment, substantial impairment of the installment and no cure or assurance of cure, § 2A-510. Within a reasonable time, with seasonable notice, § 2A-509(2). And failure to state defects may waive them, § 2A-514. Cure: the same as § 2-508, § 2A-513. Care of goods: §§ 2A-511 and 2A-512. A lien for prepayments, § 2A-508(5). And a purchaser from these sales takes free of the lessor's or supplier's claims."
+      },
+      {
+       "id": "s6",
+       "say": "Acceptance: failing to reject, or signifying conformity or that the lessee will keep the goods, § 2A-515. The lessee has inspection rights, though no section parallels § 2-513. Acceptance means rent is owed and rejection is gone, § 2A-516(1) and (2). Notice after acceptance: notify the lessor and the supplier, if any, or be barred against the party not notified, § 2A-516(3)(a). And the lessee bears the burden of showing default, § 2A-516(3)(c)."
+      },
+      {
+       "id": "s7",
+       "say": "Revocation, § 2A-517. Like § 2-608: substantial impairment, plus (a) a reasonable assumption of cure, or (b) acceptance induced by the lessor's assurances or the difficulty of discovery. Also, except in a non-consumer finance lease, the lessee may revoke if the lessor defaults under the lease in a way that substantially impairs the goods' value, § 2A-517(2), and on other defaults if the agreement says so. In a finance lease, the assumption-of-cure and difficulty-of-discovery grounds are gone. Only the lessor's assurances remain, and acceptance with knowledge bars revocation, § 2A-516(2). That keeps § 2A-407 working. A consumer finance lessee may also use § 2A-517(2). Timing and duties track § 2-608. After revocation: cover or market rent, plus incidental and consequential, minus saved."
+      },
+      {
+       "id": "s8",
+       "say": "Limitations, § 2A-506. Four years, reducible by contract to one, and unlike § 2-725, not barred from being extended. Accrual is more liberal: when the default is or should have been discovered, or when it occurs, whichever is later. Tolling is left to other law."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 11-5. Boston leases 30 servers to Lasting; the purchase agreement was sent to Lasting for approval; 20 are installed, 5 of those fail, and 10 are never delivered. It's likely a finance lease, under part three's (A) or (B). Against Boston: no warranties. For the 15 working and 5 failed installed units, if accepted, rent is due under § 2A-407, and revocation only if Boston gave assurances. For the 10 undelivered, there's no acceptance, so § 2A-407 doesn't apply. Lasting can refuse rent on them and, if it's an installment lease, cancel if the whole is substantially impaired. Against Sensational: warranty and delivery promises flow through § 2A-209(1): damages for the 5, and for nondelivery of the 10, with consequential damages for customer problems unless excluded. Notify both Boston and Sensational, § 2A-516(3)(a). And cover, because that also limits consequential loss."
+      },
+      {
+       "id": "s10",
+       "ask": "A lessee whose lessor fails to deliver leased equipment buys replacement equipment outright. Can it measure damages as cover?",
+       "answer": "No. A purchase can't be cover under Article 2A. The lessee falls to market-rent damages under § 2A-519.",
+       "pause": 11
+      },
+      {
+       "id": "s11",
+       "ask": "A finance lessee accepts goods and later discovers a hidden defect. The finance lessor gave no assurances. Can the lessee revoke against the lessor?",
+       "answer": "No. In a finance lease, the difficulty-of-discovery ground is gone; only the lessor's assurances remain, § 2A-517. It must pay and pursue the supplier.",
+       "pause": 12
+      },
+      {
+       "id": "s12",
+       "say": "Recap. The lessee's remedies mirror the buyer's in present-value form: similar-lease cover, market rent, and use-value differences. Refunds only as just. A purchase isn't cover. Notify the lessor and the supplier. Finance lessees revoke only for the lessor's assurances. And § 2A-506: four years with a discovery rule, and extendable."
+      },
+      {
+       "id": "s13",
+       "ask": "Under § 2A-516(3)(a), whom must an accepting lessee notify?",
+       "answer": "The lessor and the supplier, if any, or be barred against the one not notified.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "How does accrual under § 2A-506 differ from § 2-725?",
+       "answer": "Under § 2A-506, the claim accrues when the default is or should have been discovered, or when it occurs, whichever is later. Under § 2-725, it accrues on breach regardless of knowledge.",
+       "pause": 10
+      },
+      {
+       "id": "s15",
+       "ask": "How much rent can a lessee recover after cancelling?",
+       "answer": "Only so much as is just under the circumstances, § 2A-508(1)(b).",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e11",
+     "title": "Lessee's default and the lessor's remedies: §§ 2A-523 to 2A-532, with Problems 11-6 and 11-7",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The lessor's four measures, rent and tender back, the residual, notice, repossession, the prepaying lessee, and two problems."
+      },
+      {
+       "id": "s2",
+       "say": "The lessor's main aim is usually to recover the goods, then damages. Its residual interest gives it a much stronger claim to the goods than a seller has, but no duty to take them. Remedies are in § 2A-523, and the agreement may add others."
+      },
+      {
+       "id": "s3",
+       "say": "The four measures. A substantially similar new lease, § 2A-527(2): accrued unpaid rent at the start of the new term, plus the present value of the remaining old rent minus the present value of the comparable new rent, plus incidental, minus saved; compare § 2-706. Market rent, § 2A-528(1), for a dissimilar lease, a sale, or no disposition: accrued unpaid rent, plus the present value of the remaining rent minus the present value of market rent, at the place where the goods are located, for the same term, plus incidental, minus saved; compare § 2-708(1). Lost profit, § 2A-528(2): the present value of the profit, including reasonable overhead, plus incidental, plus costs reasonably incurred, with credit for disposition proceeds, the lessor keeping its residual; compare § 2-708(2). And rent, § 2A-529: accrued unpaid rent at judgment, plus the present value of the remaining rent, plus incidental, minus saved; compare § 2-709."
+      },
+      {
+       "id": "s4",
+       "say": "No consequential damages for lessors, as with sellers. Incidental damages: § 2A-530."
+      },
+      {
+       "id": "s5",
+       "say": "Rent is available for goods accepted and not repossessed, for conforming goods lost or damaged within a commercially reasonable time after risk passed, or for identified goods the lessor can't dispose of at a reasonable price, § 2A-529(1). The lessor must hold the goods for the lessee for the remaining term, but may dispose of them before collecting the judgment, and that disposition then runs through § 2A-527 or § 2A-528."
+      },
+      {
+       "id": "s6",
+       "say": "Tender back cuts off rent. Article 2 lets a seller recover the price of accepted goods. Article 2A rejects that: if the lessee tenders the goods back, the lessor is limited to the damages it would otherwise have had, because it holds a residual and will re-let or sell anyway, comment 1 to § 2A-529. A lost-volume lessor can still reach full rent through § 2A-528(2), comment 2, the five backhoes never all rented."
+      },
+      {
+       "id": "s7",
+       "say": "The residual. The lessor may also recover for loss of or damage to its residual interest caused by the default, like goods returned in worse condition than the lease requires, § 2A-532."
+      },
+      {
+       "id": "s8",
+       "say": "No notice of disposition is required from a lessor, unlike § 2-706(3). But if the lease may be a disguised sale, give notice anyway, since § 2-706(3) and § 9-611 could apply."
+      },
+      {
+       "id": "s9",
+       "say": "Before delivery, the lessor may withhold on default or on discovering insolvency, § 2A-525, or stop in transit, § 2A-526, parallel to § 2-705, and may cancel, subject to substantial impairment for installment leases. Unfinished goods: § 2A-524, parallel to § 2-704. Wrongful rejection or revocation where the lessor takes the goods back: the same damages as repudiation, § 2A-523(1)."
+      },
+      {
+       "id": "s10",
+       "say": "Repossession, § 2A-525(2) and (3). After default the lessor may take possession, without judicial process if it can be done without breach of the peace, or by action. It may require the lessee to assemble the goods if the lease says so, and may render business goods unusable. Borrowed from § 9-609: no violence or substantial risk of it; trespass is allowed; but no breaking and entering, particularly of a home."
+      },
+      {
+       "id": "s11",
+       "say": "The prepaying lessee, § 2A-504(3) and (4). If the lessor justifiably withholds or stops delivery, the lessee gets back payments above enforceable liquidated damages or, absent that, above 20 percent of the then present value of total rent for the balance of the term, and in a consumer lease, the lesser of that or $500. It's subject to offset for proven damages and benefits received. Compare § 2-718(2), where sales use the lesser of 20 percent or $500 for every buyer."
+      },
+      {
+       "id": "s12",
+       "say": "Risk after default and limitations: §§ 2A-220(2) and 2A-506, as already covered."
+      },
+      {
+       "id": "s13",
+       "say": "Problem 11-6, ignoring present value. Lathes leased for $80,000 over 3 years, $20,000 down. They're delivered, accepted, and returned a week later at the lessee's unjustified demand. Market rent on November 8: $60,000 in Chicago, $55,000 in Phoenix. The lessor re-leases for 2 years in Denver for $50,000. A two-year lease isn't substantially similar to three, so § 2A-527(3) sends it to § 2A-528(1). The goods are in Phoenix, so use $55,000: $80,000 minus $55,000, $25,000. Incidental: storage, about 60 days at $100, $6,000, plus $1,500 freight, $7,500. Total $32,500, less the $20,000 already paid, about $12,500, plus any rent accrued for the week of use. Counting the $20,000 as rent paid gives the same result: $60,000 minus $55,000, plus $7,500."
+      },
+      {
+       "id": "s14",
+       "say": "Problem 11-7. A clause: on default, the lessor may repossess, collect all past rent, all future rent, a 5 percent late fee on missed payments, and 12 percent interest on all amounts. Past rent is fine. Future rent plus repossession is a double recovery: the lessor gets the money and the goods. That's not reasonable under § 2A-504(1), so the clause fails and Article 2A's remedies apply, § 2A-504(2). Revise with a formula, which § 2A-504(1) allows if reasonable in light of then anticipated harm: past-due rent, plus the present value of future rent, plus the estimated residual, minus the net proceeds of re-leasing or sale. The comment calls that formula common. And limit the late fee and 12 percent interest to overdue sums, not unaccrued rent."
+      },
+      {
+       "id": "s15",
+       "ask": "A lessee accepts leased equipment, then tenders it back and stops paying. The lessor sues for all remaining rent. Can it get it?",
+       "answer": "Not as rent. Under Article 2A, tender back limits the lessor to the damages it would otherwise have, such as market-rent damages, because it holds a residual, § 2A-529 comment 1. A lost-volume lessor might reach full rent under § 2A-528(2).",
+       "pause": 14
+      },
+      {
+       "id": "s16",
+       "say": "Recap. Lessor's measures: similar re-lease, market rent where the goods are, lost profit with the residual, and rent. No consequential damages. Tender back cuts off rent. Recover residual damage under § 2A-532. No disposition notice needed. Repossess without breach of the peace. Prepaying lessees get back above 20 percent of present-value rent, or for consumers the lesser of that or $500."
+      },
+      {
+       "id": "s17",
+       "ask": "Where is market rent measured under § 2A-528(1)?",
+       "answer": "At the place where the goods are located.",
+       "pause": 6
+      },
+      {
+       "id": "s18",
+       "ask": "Why does Problem 11-7's clause fail?",
+       "answer": "Future rent plus repossession is a double recovery, unreasonable under § 2A-504(1).",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What does § 2A-532 let a lessor recover?",
+       "answer": "Loss of or damage to its residual interest caused by the default.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e12",
+     "title": "Property rights in leased goods: §§ 2A-304 to 2A-308",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The starting rule, six transfer scenarios, and creditors."
+      },
+      {
+       "id": "s2",
+       "say": "The starting point: a transferor gives only what it has. A lessee can transfer its leasehold, and a lessor its residual, § 2A-303. These rules are the exceptions. The text is deliberately brief: know which rule fits. Fixtures, accessions, and titled goods are excluded."
+      },
+      {
+       "id": "s3",
+       "say": "Transfers. One: a person with voidable title leases to a good-faith lessee for value. The lessee takes free of the original seller's rights, § 2A-304(1), the analog to § 2-403(1). Two: a lessor leases twice for overlapping terms. First in time wins: the second lessee takes subject to the first lease, unless the lessor is disposing after breach of the first lease, § 2A-527(4), or the first lessee entrusted the goods back and the second is a lessee in ordinary course, § 2A-304(2). Three: an owner entrusts goods to a merchant, who leases them in ordinary course. The lessee in ordinary course is protected, but the owner keeps the residual: it loses the goods only for the term, § 2A-307(2) and comment 3 to § 2A-304, the analog to § 2-403(2). Four: a lessee with a voidable leasehold can transfer a good leasehold to a good-faith sublessee or buyer, but that doesn't cut off the lessor's residual, § 2A-305(1). Five: a merchant lessee sells or subleases in ordinary course. The buyer or lessee in ordinary course takes free of the lessor, which eliminates the residual, § 2A-305(2). Six: a lessee disposes of goods after the lessor's breach, under §§ 2A-511 and 2A-512. The purchaser takes free of the lessor's interest, § 2A-511(4)."
+      },
+      {
+       "id": "s4",
+       "say": "Creditors. A lessor's creditor with a possessory statutory lien for services or materials: the lessee takes subject to it, whenever it arose, § 2A-306, unless the lien law says otherwise. A lessor's creditor whose lien arose before the lease: the lessee takes subject to it, § 2A-307(2) and (3), unless it's an Article 9 security interest and the lessee is a lessee in ordinary course, § 9-321(c), or gave value and took possession without knowledge while it was unperfected, § 9-317(c). A lessor's creditor whose lien arose after the lease: subject to the lessee's rights, except a statutory lien or a fraudulent transfer, § 2A-308. And the lessee's creditors don't beat the lessor's rights, § 2A-307(1), except a § 2A-306 possessory lien."
+      },
+      {
+       "id": "s5",
+       "ask": "A business owner lends her truck to a dealer who leases trucks, and the dealer leases it to a customer in ordinary course for two years. What does the owner get back?",
+       "answer": "The truck after the two-year term. The lessee in ordinary course is protected for the term, but the owner keeps the residual.",
+       "pause": 12
+      },
+      {
+       "id": "s6",
+       "ask": "A merchant lessee of laptops, in the business of selling them, sells a leased laptop to a buyer in ordinary course. What happens to the lessor's residual?",
+       "answer": "It's eliminated. The buyer in ordinary course takes free of the lessor, § 2A-305(2).",
+       "pause": 10
+      },
+      {
+       "id": "s7",
+       "say": "Recap. You transfer only what you have, with exceptions: voidable title leasing to a good-faith lessee; first-in-time for double leases; entrustment that protects the lessee but keeps the owner's residual; a merchant lessee's ordinary-course sale that wipes out the residual; and purchasers after a lessor's breach. Possessory service liens beat the lessee whenever they arose."
+      },
+      {
+       "id": "s8",
+       "ask": "In a double lease for overlapping terms, who wins?",
+       "answer": "The first lessee, unless the lessor disposed after breach of the first lease or the first lessee entrusted the goods back to a lessor who leased in ordinary course.",
+       "pause": 9
+      },
+      {
+       "id": "s9",
+       "ask": "Does a lessee take subject to a mechanic's possessory lien that arose after the lease?",
+       "answer": "Yes. Under § 2A-306 the lessee takes subject to a possessory statutory lien whenever it arose, unless the lien law says otherwise.",
+       "pause": 9
+      },
+      {
+       "id": "s10",
+       "ask": "Do the lessee's creditors defeat the lessor?",
+       "answer": "No, § 2A-307(1), except a § 2A-306 possessory lien.",
+       "pause": 7
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e13",
+     "title": "Full-course review: every test and every list",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "This is the Week 14 review: every test and list in one place. Listen once straight through, then come back to it the night before the exam."
+      },
+      {
+       "id": "s2",
+       "say": "Which law governs. Four factors: type of property, nature of the rights, location of the parties, their agreement. Goods: movable at identification, except the money paying the price, investment securities, and things in action. Section 2-107: minerals and structures, seller must sever; crops and timber, either. Hybrids under § 2-102(2): goods predominate, Article 2 governs; otherwise, only the goods provisions."
+      },
+      {
+       "id": "s3",
+       "say": "Formation. Section 2-204: any manner, moment unclear, open terms if intent plus a remedy basis. Section 2-205: merchant, signed record, assurance, three months max, separate signature on the offeree's form. Section 2-206: any reasonable medium; prompt shipment; nonconforming shipment is acceptance and breach unless an accommodation."
+      },
+      {
+       "id": "s4",
+       "say": "Section 2-207, three questions. Is there a contract despite the deviation: an expression of acceptance not expressly conditional? Which terms: additional terms are proposals; between merchants they come in unless the offer limits acceptance, they materially alter, or there's objection; different terms knock out, Daitom. If the writings fail, does conduct create a contract: terms agreed in writing plus gap fillers."
+      },
+      {
+       "id": "s5",
+       "say": "Section 2-201. Five hundred dollars or more; a record indicating a contract, signed by the party to be charged; enforceable only to the quantity shown. Four exceptions: merchant's confirmation with no written objection in 10 days; specially manufactured goods with a substantial beginning; admission, to the quantity admitted; part performance, only for goods paid for and accepted, or received and accepted. Casazza: each is narrow, and estoppel doesn't help."
+      },
+      {
+       "id": "s6",
+       "say": "Good faith and modification. Section 1-304: honesty in fact plus fair dealing; not independent; not disclaimable. Market Street: don't exploit your partner's oversight. Section 2-209: no consideration; good faith, Roth Steel; the statute of frauds as modified; NOM clauses enforceable; failed modification as waiver; retract waiver on notice unless reliance. Section 1-303: express terms, course of performance, course of dealing, usage of trade."
+      },
+      {
+       "id": "s7",
+       "say": "Warranties. Express, § 2-313: affirmation or promise, description, sample or model; basis of the bargain; no reliance needed under comment 3; Rogath on seller-disclosed knowledge. Merchantability, § 2-314: merchant in goods of the kind, six standards, fit for ordinary purposes. Fitness, § 2-315: reason to know purpose and reliance, actual reliance, any seller; Ingram River. Title, § 2-312: every seller, specific language to disclaim. Cumulation, § 2-317: specs over samples, bulk samples over description, express over implied except fitness. Privity, § 2-318: A, B, C."
+      },
+      {
+       "id": "s8",
+       "say": "Disclaimers, § 2-316. Express: inoperative if inconsistent, subject to § 2-202. Merchantability: mention it, conspicuous if written. Fitness: conspicuous writing. All implied: as is, examination, trade practice. Title: specific language or circumstances. Threshold: did the warranty arise, and is the disclaimer in the contract?"
+      },
+      {
+       "id": "s9",
+       "say": "Remedy limits. Section 2-718(1): reasonable in light of anticipated or actual harm, difficulty of proof, inconvenience of other remedies; otherwise penalty. Section 2-719: exclusive only if expressly so; failure of essential purpose; consequential exclusion unless unconscionable, prima facie for consumer personal injury. Razor: two walls."
+      },
+      {
+       "id": "s10",
+       "say": "Parol evidence, § 2-202. Final: no contradiction by prior or contemporaneous oral terms, but consistent additional terms and trade practice come in. Complete and exclusive: only trade practice supplements. Never barred: later modifications, fraud, mistake, duress, separate agreements, conditions precedent, interpretation."
+      },
+      {
+       "id": "s11",
+       "say": "Risk of loss. Agreement; seller's breach, § 2-510(1) and (2); buyer's breach, § 2-510(3); shipment contract, on delivery to carrier; destination, on tender there; bailee, § 2-509(2); otherwise merchant on receipt, non-merchant on tender. Shipment is presumed."
+      },
+      {
+       "id": "s12",
+       "say": "Assignment, termination, insecurity, excuse. Delegate unless substantial interest; delegator stays liable. Assign unless material change; ban on assigning the contract bars only delegation; § 9-406(d). Termination needs reasonable notice; Santa Fe. Section 2-609: grounds, written demand, adequate assurance, 30 days; Top of Iowa versus PDM. Section 2-610: await or resort to remedies. Section 2-611: retract until next performance, unless cancelled, changed position, or final. Section 2-613: identified, no fault, before risk passes. Section 2-615: basic assumption, allocate, notify; cost alone doesn't excuse; NIPSCO."
+      },
+      {
+       "id": "s13",
+       "say": "The remedies formulas. Buyer: cover minus contract, § 2-712. Market minus contract, when the buyer learned of the breach, at the place for tender, § 2-713. Value as warranted minus value as accepted, § 2-714(2). Plus incidental and consequential, § 2-715, minus expenses saved. Seller: contract minus resale, § 2-706. Contract minus market at the time and place for tender, § 2-708(1). Lost profit including overhead plus costs incurred, § 2-708(2). The price, § 2-709. Plus incidental only, § 2-710. Directions: buyer's formulas are substitute minus contract; seller's are contract minus substitute."
+      },
+      {
+       "id": "s14",
+       "say": "Rejection and acceptance. Perfect tender, § 2-601, limited by agreement, trade, good faith, § 2-504, and § 2-612. Reject in a reasonable time with seasonable notice, § 2-602; particularize, § 2-605. Cure, § 2-508. Acceptance, § 2-606. Notice of breach, § 2-607(3)(a). Revocation, § 2-608: substantial impairment, assumption of cure or difficulty of discovery or assurances, reasonable time after discovery, notice."
+      },
+      {
+       "id": "s15",
+       "say": "Leases. True lease or security interest, § 1-203. Finance lease, § 2A-103(1)(g). Consumer lease. Hell or high water on acceptance, § 2A-407. Risk, § 2A-219. Present-value formulas. Liquidated damages against then anticipated harm only. Four years with a discovery rule."
+      },
+      {
+       "id": "s16",
+       "say": "And the side-by-side. Roadmap: buyer § 2-711, seller § 2-703, lease §§ 2A-508 and 2A-523. Substitute transaction: cover, resale, a new similar lease. Market: buyer when it learned, at the place for tender; seller at the time and place for tender; lease, present value of market rent. Get the goods or the money: §§ 2-502 and 2-716; the price, § 2-709; §§ 2A-521 and 2A-522, and rent, § 2A-529. Consequential: buyer yes, seller no, lessee yes, lessor no. Incidental: §§ 2-715(1), 2-710, 2A-520(1), and 2A-530. Limitations: four years on breach under § 2-725, the same for sellers, and four years with a discovery rule under § 2A-506. Liquidated damages: anticipated or actual harm in sales; then anticipated harm only in leases."
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e14",
+     "title": "How to attack the exam: the essay and the open-statute short answer",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The format, the order of analysis for any sales problem, the buyer's and seller's remedy steps, the lease spot-check, and the traps to rehearse."
+      },
+      {
+       "id": "s2",
+       "say": "The format. One hundred eighty minutes in three parts. Sixty minutes of closed-book multiple choice. A thirty-minute closed-book short bar essay. And ninety minutes of short answers, with a physical statutory supplement and a 5-single-page outline. Worth 70 percent of the grade, covering lectures, slides, handouts, readings, and class discussion."
+      },
+      {
+       "id": "s3",
+       "say": "For the multiple choice, read the call first. Watch for NOT and EXCEPT. Remember that None of the above and All of the above are sometimes right. And on a who-wins question, name the section in your head before you pick."
+      },
+      {
+       "id": "s4",
+       "say": "For the essay and the short answers, use one order of analysis. Say it as a chain."
+      },
+      {
+       "id": "s5",
+       "say": "One. Which law governs? Goods? Sale or lease? Hybrid under § 2-102(2)?"
+      },
+      {
+       "id": "s6",
+       "say": "Two. Is there a contract, and on what terms? Sections 2-204 to 2-207, and the statute of frauds, § 2-201. Then modification, § 2-209, and course of performance under § 1-303."
+      },
+      {
+       "id": "s7",
+       "say": "Three. What are the terms the parties didn't write? Gap fillers, §§ 2-305 to 2-311. Warranties, §§ 2-312 to 2-315. Then disclaimers, § 2-316, and the parol evidence rule, § 2-202."
+      },
+      {
+       "id": "s8",
+       "say": "Four. Who performed, and who breached? Tender, § 2-503; shipment, § 2-504; risk of loss, §§ 2-509 and 2-510. Insecurity and repudiation, §§ 2-609 to 2-611. Excuse, §§ 2-613 to 2-615."
+      },
+      {
+       "id": "s9",
+       "say": "Five. Remedies. And here use the outline's decision steps."
+      },
+      {
+       "id": "s10",
+       "say": "The buyer's steps. One, did the seller breach, is that excused, are remedies limited? Two, who has the goods? Three, goods not delivered or repudiated: get them, §§ 2-502 and 2-716, or cancel and take the refund plus cover or market, plus § 2-715. Four, delivered: was it accepted? Check § 2-606. Five, not accepted: was the rejection rightful, under § 2-601 or § 2-612, and effective, under §§ 2-602 and 2-605? Can the seller cure, § 2-508? Six, accepted: notice under § 2-607(3)(a), then § 2-714 and § 2-717, or revoke under § 2-608. Seven, add § 2-715, subtract expenses saved, and test against § 1-305."
+      },
+      {
+       "id": "s11",
+       "say": "The seller's steps. One, did the buyer breach? Excused? Limited? Two, the buyer has the goods: the price, § 2-709, or reclamation, §§ 2-507 and 2-702, or Article 9. Three, the seller or a carrier has them: withhold or stop, §§ 2-702, 2-703, and 2-705, and cancel. Four, pick a measure: was the resale properly done? Is the market provable? Is it a lost-volume seller with capacity and profitability? Can it not resell? Five, add § 2-710, never consequential. Six, subtract expenses saved. Seven, account for prepayments under § 2-718(2) and (3)."
+      },
+      {
+       "id": "s12",
+       "say": "The lease spot-check. One, is it a true lease, § 1-203? Two, is it a finance lease, § 2A-103(1)(g)? Three, is it a consumer lease? Four, if finance and non-consumer, did the lessee accept, triggering § 2A-407? Five, who bears risk, § 2A-219? Six, apply the present-value formulas, and watch which Article 2A difference the facts are built around."
+      },
+      {
+       "id": "s13",
+       "say": "On the short answer, the supplement is in front of you, so use it. Cite the subsection. Quote the key words when they decide the case: expressly conditional, materially alter, substantially impairs, reasonable time not exceeding 30 days. And when the law is split, say so, give both sides, and pick one. The outline flags the splits: predominant purpose versus gravamen; the Mathis split; Costco versus Zemco; the timing of the buyer's market price; the broker-resale cases; Peace River versus § 1-305; and cure after revocation."
+      },
+      {
+       "id": "s14",
+       "say": "Write in the order a court would decide. Rule, apply, conclude, then the next issue. And in the 30-minute essay, spend the first few minutes listing issues in the chain order, so you don't miss risk of loss or notice while chasing the remedy."
+      },
+      {
+       "id": "s15",
+       "say": "The traps to rehearse. Formula direction: cover minus contract, contract minus resale. A purchase that isn't a reasonable substitute isn't cover, so § 2-713 applies. Section 2-607(3)(a) applies only to accepted goods. There's no wrongful-but-effective revocation. A seller gets no consequential damages. Nonpayment alone doesn't let a seller stop a parcel in transit. A retained-title clause is only a security interest. A $100 option on a non-terminable lease is a sale. And a lessee's purchase can't serve as cover."
+      },
+      {
+       "id": "s16",
+       "ask": "On the essay, a buyer received defective goods two months ago, kept using them, and now wants its money back. What three sections do you reach for first?",
+       "answer": "Section 2-606 to show acceptance, § 2-607(3)(a) for notice, and § 2-608 for revocation; if revocation fails, § 2-714 damages deducted under § 2-717.",
+       "pause": 14
+      },
+      {
+       "id": "s17",
+       "ask": "A seller's buyer repudiated, and the seller, a dealer with plenty of stock, sold the same item to someone else at the same price. Which measure, and what must it show?",
+       "answer": "Lost profit under § 2-708(2), showing it's a lost-volume seller with capacity and that the extra sale would have been profitable, R.E. Davis.",
+       "pause": 12
+      }
+     ]
+    },
+    {
+     "id": "sl-d5-e15",
+     "title": "Final cumulative quiz",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "The last quiz. All five days. Answer each out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "What are the three exclusions from goods?",
+       "answer": "The money paying the price, investment securities, and things in action.",
+       "pause": 7
+      },
+      {
+       "id": "s3",
+       "ask": "What does an offeree need to say to make an acceptance expressly conditional under Daitom?",
+       "answer": "Clearly that it won't proceed unless its terms are accepted; boilerplate isn't enough.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "What did Casazza teach about reading papers together?",
+       "answer": "The signed paper must refer to the deal; the boat-software license didn't, so the typed terms couldn't be joined to it.",
+       "pause": 9
+      },
+      {
+       "id": "s5",
+       "ask": "What two tests did Roth Steel apply to a modification?",
+       "answer": "An objective test, a legitimate commercial reason, and a subjective test, honesty in fact without extortion.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "Under Rogath, what is the effect of the buyer's knowledge from a third party?",
+       "answer": "None; it doesn't bar recovery on the warranty.",
+       "pause": 7
+      },
+      {
+       "id": "s7",
+       "ask": "What is the line between § 2-314 and § 2-315 from Ingram River?",
+       "answer": "Ordinary purpose versus a use sufficiently different from the customary use.",
+       "pause": 7
+      },
+      {
+       "id": "s8",
+       "ask": "A merchant seller's goods are destroyed after tender but before the buyer picks them up, in a non-shipment deal. Who bears the loss?",
+       "answer": "The seller, until the buyer's receipt, § 2-509(3).",
+       "pause": 7
+      },
+      {
+       "id": "s9",
+       "ask": "What does § 2-316(3)(b) say about examination?",
+       "answer": "If the buyer examined, or refused to examine after demand, there's no implied warranty as to defects examination ought to have revealed.",
+       "pause": 9
+      },
+      {
+       "id": "s10",
+       "ask": "In Razor, did the consequential exclusion survive?",
+       "answer": "No. It was unconscionable because she never saw it before signing, though the court adopted the independent approach.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "What does a merger clause prove?",
+       "answer": "It is evidence of full integration, probative but not conclusive.",
+       "pause": 7
+      },
+      {
+       "id": "s12",
+       "ask": "In Top of Iowa, did reasonable grounds have to come from Sime's own conduct?",
+       "answer": "No. They are judged objectively and can come from market conditions or the Attorney General's statement.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "State the buyer's market-damage formula with its time and place.",
+       "answer": "Market price when the buyer learned of the breach, at the place for tender, minus contract price, plus incidental and consequential, minus expenses saved.",
+       "pause": 10
+      },
+      {
+       "id": "s14",
+       "ask": "Can a buyer force a seller to cure?",
+       "answer": "No. Cure is a seller's right under § 2-508.",
+       "pause": 6
+      },
+      {
+       "id": "s15",
+       "ask": "Within what time must a seller demand reclamation from an insolvent credit buyer?",
+       "answer": "Ten days after receipt, unless there was a written misrepresentation of solvency within three months before delivery.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "Can a seller recover consequential damages?",
+       "answer": "No, absent a contract provision.",
+       "pause": 6
+      },
+      {
+       "id": "s17",
+       "ask": "What is the seller's resale formula?",
+       "answer": "Contract price minus resale price, plus incidental, minus expenses saved.",
+       "pause": 7
+      },
+      {
+       "id": "s18",
+       "ask": "A non-terminable lease with a nominal purchase option. Lease or sale?",
+       "answer": "A sale with a security interest, § 1-203(b)(4).",
+       "pause": 7
+      },
+      {
+       "id": "s19",
+       "ask": "Name one way a finance lessee's position differs from an ordinary lessee's.",
+       "answer": "No implied warranties from the lessor; supplier warranties flow through; risk passes to the lessee; hell or high water after acceptance in a non-consumer lease; revocation only for the lessor's assurances.",
+       "pause": 9
+      },
+      {
+       "id": "s20",
+       "ask": "What are the lease statute of frauds threshold and contents?",
+       "answer": "Total payments of $1,000 or more, and a record showing a lease contract, a description of the goods, and the lease term.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "What is the lessor's rent remedy limited by, if the lessee tenders the goods back?",
+       "answer": "It is limited to the damages it would otherwise have, because it holds a residual.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "say": "That's the whole course: all 35 sections, every case, and every problem. Run the decision steps once more before the exam, trust the supplement on the short answer, and good luck on December 11."
       }
      ]
     }
