@@ -1,0 +1,1251 @@
+{
+ "format": "listen/v1",
+ "id": "sales-leases-5-day",
+ "title": "Sales and Leases Audio Course",
+ "course": "Sales and Leases",
+ "description": "A five-day spoken course on the whole Sales and Leases outline, Weeks 1–14 (Sepinuck Chs. 1–7, 9 and 11), from which law governs and § 2-207 through warranties, risk of loss, buyer's and seller's remedies, privity, and Article 2A leases: every rule counted out element by element, every case told as a short story, the lesson of every assigned problem, who-wins hypotheticals and recall questions with pauses to answer, a spaced review to open each day, and a closing review of every test with the order of analysis for the essay and the open-statute short answer. Coverage: all 35 outline sections, every case and problem number, and every UCC section the outline cites.",
+ "days": [
+  {
+   "day": 1,
+   "title": "Foundations: which law governs, formation, § 2-207, the statute of frauds, good faith, and modification",
+   "minutes": 78,
+   "episodes": [
+    {
+     "id": "sl-d1-e00",
+     "title": "Welcome: how this course works",
+     "minutes": 2,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Welcome to Sales and Leases in five days. Over five sessions we will walk the whole outline, Weeks 1 through 14, in the same order as the outline and the syllabus."
+      },
+      {
+       "id": "s2",
+       "say": "Here is the plan. Day 1 is foundations: which law governs, formation and the battle of the forms, the statute of frauds, unconscionability, good faith, and modification. Day 2 is warranties, gap fillers, quantity and price, delivery, and risk of loss. Day 3 is disclaimers, remedy limits, parol evidence, assignment, termination, repudiation, and excuse. Day 4 is the buyer's remedies, rejection, cure, revocation, and privity. Day 5 is the seller's remedies, Article 2A leases, and the final review."
+      },
+      {
+       "id": "s3",
+       "say": "Every episode runs the same way. A roadmap. The rule in plain English, then its elements counted out loud with the exact section. Why the rule exists. The exceptions and the merchant splits. What the common law did before the Code. The cases as short stories. The lesson of each assigned Sepinuck problem. A few hypos where you decide who wins. The traps. And a recap with three recall questions."
+      },
+      {
+       "id": "s4",
+       "say": "When you hear a question, pause and answer out loud before the answer comes. Saying it is what makes it stick. If the pause is too short, the player has a pause-length control."
+      },
+      {
+       "id": "s5",
+       "say": "One word on the exam. Professor Richardson's final is on December 11. Sixty minutes of closed-book multiple choice. A thirty-minute closed-book short essay. And ninety minutes of short answer, with the statutory supplement in front of you. So you need two things: the rules in your head for the first two parts, and a fast map of where each rule lives for the third. This course builds both."
+      },
+      {
+       "id": "s6",
+       "say": "One more note. The outline marks some facts as outside the class materials, taken from the published opinions. I will flag those when I use them. They are context, not something to build an exam answer on."
+      },
+      {
+       "id": "s7",
+       "say": "Let's begin."
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e01",
+     "title": "The UCC, how to read it, and which law governs",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What the UCC is, how to read a Code section, and the four factors that tell you which body of law governs a deal."
+      },
+      {
+       "id": "s2",
+       "say": "The Uniform Commercial Code is a model code, written by the Uniform Law Commission and the American Law Institute, and adopted state by state. It is not law until a state enacts it, so you always check the state's version. One fact worth remembering: Louisiana never enacted Article 2 or 2A."
+      },
+      {
+       "id": "s3",
+       "say": "Why does it exist? Section 1-103(a) tells you to construe the Code liberally to promote three purposes. One, to simplify, clarify, and modernize commercial law. Two, to permit the continued expansion of commercial practices through custom, usage, and agreement. Three, to make the law uniform among jurisdictions."
+      },
+      {
+       "id": "s4",
+       "say": "Now the relationship to the common law. Section 1-103(b): unless a particular Code provision displaces it, the common law and equity supplement the Code. The list includes capacity, agency, estoppel, fraud, misrepresentation, duress, coercion, mistake, and bankruptcy. Keep 1-103(b) in your pocket. It is how promissory estoppel, frustration of purpose, and estoppel all get into a sales case."
+      },
+      {
+       "id": "s5",
+       "say": "The slides give the role of sales law: bring buyers and sellers together, supply standard terms, supply mechanisms for performing, and supply mechanisms for resolving disputes. And the recurring themes: certainty, responsiveness, laissez-faire, simplicity, efficiency, and an international outlook."
+      },
+      {
+       "id": "s6",
+       "say": "How do you read a section? Three rules. First, read it all, then read it again. Parse the grammar, find the pauses, and test it with hypotheticals. Second, find the definitions. Section 1-201 applies to every Article, and sections 2-103 through 2-106 add Article 2's own. Two surprises in the definitions: a purchase includes a gift, and goods include unborn animals. Third, read the provision in context, in light of its purposes and the Code's."
+      },
+      {
+       "id": "s7",
+       "say": "Then consult the aids. The Official Comments are the most important aid, but they are not law. If the comment and the text conflict, the text controls. Then case law, where other states' cases are persuasive. Then treatises, state legislative history, earlier drafts, and, as a last resort, a tie-breaking policy."
+      },
+      {
+       "id": "s8",
+       "say": "Now, which law governs. Four factors, in this order. One, the type of property: goods, real estate, services, intellectual property. Two, the nature of the rights transferred: a sale, a lease, a license, a lien, a gift. Three, the location of the parties: domestic or international, where the CISG may govern. Four, the parties' agreement on governing law."
+      },
+      {
+       "id": "s9",
+       "say": "Put the first two together and you get the slide chart. A sale of goods: Article 2, or the CISG if international. A lease of goods: Article 2A. A security interest in goods: Article 9. A gift of goods: the common law. A bequest or devise: the law of wills."
+      },
+      {
+       "id": "s10",
+       "say": "The other columns of that chart: real property goes to real-property law. Securities go to Article 8, plus securities law, with Article 9 for security interests. Negotiable instruments go to Articles 3 and 4. Intellectual property goes to the common law and federal law. And controllable electronic records go to Article 12."
+      },
+      {
+       "id": "s11",
+       "say": "The trap. Students jump to Article 2 because the word sale appears. Run the factors in order. Is it goods? Is it really a sale, or a lease, or a loan in disguise? You will see the disguised loan in two episodes."
+      },
+      {
+       "id": "s12",
+       "say": "Recap. The UCC is a model code enacted state by state. Section 1-103(a) gives three purposes. Section 1-103(b) brings in the common law unless the Code displaces it. The comments help but the text controls. And four factors pick the governing law: type of property, nature of the rights, location of the parties, and their agreement."
+      },
+      {
+       "id": "s13",
+       "ask": "What are the four factors that determine which law governs a transaction, in order?",
+       "answer": "Type of property, nature of the rights transferred, location of the parties, and the parties' agreement on governing law.",
+       "pause": 10
+      },
+      {
+       "id": "s14",
+       "ask": "If an Official Comment conflicts with the text of a Code section, which controls?",
+       "answer": "The text. The comments are the most important aid, but they are not law.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "Which section lets common-law doctrines like estoppel and fraud supplement the Code?",
+       "answer": "Section 1-103(b), unless a particular Code provision displaces them.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e02",
+     "title": "Is it a good? Sections 2-105 and 2-107, and Problem 1-1",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The definition of goods, the special rule for things attached to land, and the eleven items of Problem 1-1."
+      },
+      {
+       "id": "s2",
+       "say": "The rule is § 2-105(1). Goods means all things, including specially manufactured goods, that are movable at the time of identification to the contract. Then three exclusions. One, the money in which the price is to be paid. Two, investment securities, which go to Article 8. Three, things in action, meaning claims and rights. And the definition reaches further: it includes the unborn young of animals, growing crops, and things attached to realty as § 2-107 provides."
+      },
+      {
+       "id": "s3",
+       "say": "Now § 2-107, which has two subsections, and the difference between them is a favorite test point. Section 2-107(1): minerals, like oil and gas, or a structure to be removed from realty, are goods only if they are severed by the seller. Section 2-107(2): growing crops, timber to be cut, and other things that can be severed without material harm to the land are goods whether the buyer or the seller severs them."
+      },
+      {
+       "id": "s4",
+       "say": "Why the split? Taking minerals or a building out of land is really dealing in land, unless the seller has already turned it into a movable thing. Timber and crops are more like goods from the start."
+      },
+      {
+       "id": "s5",
+       "say": "Now Problem 1-1. Let me run the list fast."
+      },
+      {
+       "id": "s6",
+       "say": "Isotopes in solution, and oxygen. Goods. Liquids and gases are movable things."
+      },
+      {
+       "id": "s7",
+       "say": "Excess solar electricity. Maybe. Courts split on whether electricity is a good once it is metered, or a service."
+      },
+      {
+       "id": "s8",
+       "say": "A gold coin from a coin dealer. Goods. The coin is the subject of the sale, not the money paying the price."
+      },
+      {
+       "id": "s9",
+       "say": "Five hundred euro notes bought for a trip. It depends. Currency bought as a commodity can be a good. Currency used as money is not."
+      },
+      {
+       "id": "s10",
+       "say": "Yen credited to a brokerage account. Unlikely. That is not a movable thing. It is a financial asset, a thing in action."
+      },
+      {
+       "id": "s11",
+       "say": "A lottery ticket. Not goods. It is a thing in action, a right to a payout."
+      },
+      {
+       "id": "s12",
+       "say": "Certificated Microsoft stock. Not goods. It is an investment security."
+      },
+      {
+       "id": "s13",
+       "say": "A building the seller removes. Goods, because it is a structure severed by the seller, § 2-107(1)."
+      },
+      {
+       "id": "s14",
+       "say": "Timber the buyer cuts. Goods, because timber is goods regardless of who cuts, § 2-107(2)."
+      },
+      {
+       "id": "s15",
+       "say": "Oil and gas the buyer extracts. Not goods. Minerals are goods only if the seller severs them."
+      },
+      {
+       "id": "s16",
+       "ask": "A landowner sells standing timber, and the buyer will do the cutting. A second landowner sells oil in place, and the buyer will drill. Which is a sale of goods?",
+       "answer": "The timber. Under § 2-107(2), timber to be cut is goods whoever severs it. Oil is goods only if the seller severs it, § 2-107(1), so the buyer-extracted oil is not.",
+       "pause": 14
+      },
+      {
+       "id": "s17",
+       "say": "The trap. Students remember that buildings and minerals are tricky but forget which way it cuts. Say it as a pair. Minerals and structures: seller must sever. Crops and timber: anyone may sever."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Goods are things movable at identification, except the money paying the price, investment securities, and things in action. Unborn animals and growing crops are in. Under § 2-107(1), minerals and structures are goods only if the seller severs them. Under § 2-107(2), crops and timber are goods either way."
+      },
+      {
+       "id": "s19",
+       "ask": "Name the three things excluded from the definition of goods in § 2-105(1).",
+       "answer": "The money in which the price is to be paid, investment securities, and things in action.",
+       "pause": 9
+      },
+      {
+       "id": "s20",
+       "ask": "Is a lottery ticket a good?",
+       "answer": "No. It is a thing in action.",
+       "pause": 6
+      },
+      {
+       "id": "s21",
+       "ask": "A buyer buys a barn and will dismantle and haul it off himself. Is it goods?",
+       "answer": "No, on the outline's rule. A structure is goods under § 2-107(1) only if the seller severs it.",
+       "pause": 10
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e03",
+     "title": "Hybrid transactions: predominant purpose, gravamen, and the 2022 amendments",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. When one deal mixes goods and services, which law applies? Three approaches: predominant purpose, gravamen of the claim, and the 2022 amendments in § 2-102(2). Then Problems 1-2 and 1-4, and the disguised security interest."
+      },
+      {
+       "id": "s2",
+       "say": "First, the predominant-purpose test, the majority rule before 2022. Ask: is the deal's predominant purpose goods or services? It is all or nothing. If goods predominate, Article 2 governs everything; if services predominate, none of it. The factors: the contract language, the nature of the supplier's business, the relative value of the goods and the services, and whether applying Article 2 makes sense. Its problem: it is hard to apply, and why should a services component insulate the goods from warranties?"
+      },
+      {
+       "id": "s3",
+       "say": "Second, the gravamen test, from Anthony Pools in Maryland. Ask instead: does this claim relate to the goods or to the services?"
+      },
+      {
+       "id": "s4",
+       "say": "Here is the story. Anthony Pools is a note case, at casebook page 24. A company built a pool under a construction contract where services predominated. The diving board it supplied was unmerchantable, and it caused personal injuries. Outside the class materials, the homeowner slipped off the board. The court applied Article 2 to the diving board, to impose the merchantability warranty and to test the disclaimer. The lesson: the claim was about the goods, so goods law applied. The weakness: it is hard to apply. With contact lenses, is the claim about a bad lens or a bad eye exam? And one deal could face several statutes of limitations. The test got little traction."
+      },
+      {
+       "id": "s5",
+       "say": "Third, the 2022 amendments, § 2-102(2). Two tiers. If the goods aspects predominate, Article 2 applies. If they do not, only the provisions that relate primarily to the goods aspects apply."
+      },
+      {
+       "id": "s6",
+       "say": "What is a hybrid transaction? Section 2-106(5): a single transaction that is a sale of goods plus services, or plus a lease of other goods, or plus a sale, lease, or license of property that is not goods, all provided by the seller."
+      },
+      {
+       "id": "s7",
+       "say": "Which provisions still apply when goods do not predominate? Comment 5 lists them: the warranties, §§ 2-312 to 2-318. Tender and risk of loss. Acceptance, rejection, and cure. And the buyer's remedies for nondelivery or nonconforming goods. What does not apply? Section 2-201, the statute of frauds. Sections 2-204 to 2-207, formation. And § 2-209, modification. Those relate to the whole deal, not to the goods."
+      },
+      {
+       "id": "s8",
+       "say": "How do you decide predominance? Comment 3 gives factors, weighed together. One, the language of the agreement. Two, the share of the price for the goods, and an agreed allocation usually binds. Three, the parties' purposes. Four, the nature of their businesses. And two refinements: manufacturing services count toward the goods side, but five, design services do not."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 1-2. Speedy Offset prints and binds 500 art books. Printing and binding are services used in manufacturing goods, so they count toward goods. Goods predominate, and Article 2 applies. And notice the second point: the claims concern whether the books conform, so the warranty rules would apply under either tier."
+      },
+      {
+       "id": "s10",
+       "say": "Problem 1-4. Article 2 governs merchant to merchant, merchant to consumer, consumer to merchant, and consumer to consumer, like a garage sale. The scope of Article 2 never depends on merchant status. Merchant status changes particular rules, not whether Article 2 applies."
+      },
+      {
+       "id": "s11",
+       "say": "Last, the disguised security interest. A so-called sale with a mandatory repurchase at a higher price is really a secured loan. That goes to Article 9, not Article 2, under § 2-102(3)(a)."
+      },
+      {
+       "id": "s12",
+       "ask": "A contractor installs a home security system. Sixty percent of the price is installation labor, forty percent is equipment. The camera is defective. Under the 2022 amendments, can the buyer use Article 2's warranty rules?",
+       "answer": "Yes. Even if goods do not predominate, § 2-102(2) applies the provisions relating primarily to the goods, and comment 5 includes the warranties.",
+       "pause": 14
+      },
+      {
+       "id": "s13",
+       "ask": "Same deal. The buyer argues the contract is unenforceable for lack of a signed record under § 2-201. Does § 2-201 apply if services predominate?",
+       "answer": "No. Comment 5 says § 2-201, the formation sections, and § 2-209 do not apply when the goods aspects do not predominate.",
+       "pause": 14
+      },
+      {
+       "id": "s14",
+       "say": "The traps. One, the old predominant-purpose test is all or nothing; the 2022 rule is two-tier. Two, design services do not count toward goods, but manufacturing services do. Three, merchant status is never a scope question."
+      },
+      {
+       "id": "s15",
+       "say": "Recap. Predominant purpose: all or nothing. Gravamen, from Anthony Pools: does the claim relate to the goods? The 2022 amendments, § 2-102(2): goods predominate, Article 2 applies; otherwise only goods-related provisions apply, which keeps warranties, tender, risk of loss, acceptance, rejection, cure, and buyer's remedies, but drops § 2-201, §§ 2-204 to 2-207, and § 2-209."
+      },
+      {
+       "id": "s16",
+       "ask": "What injured the plaintiff in Anthony Pools, and why did Article 2 apply?",
+       "answer": "An unmerchantable diving board supplied under a pool-construction contract where services predominated. The claim related to the goods, so Article 2 applied to impose the merchantability warranty and test the disclaimer.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "ask": "Name the comment 3 predominance factors.",
+       "answer": "The agreement's language, the share of the price for the goods, the parties' purposes, and the nature of their businesses. Manufacturing services count toward goods; design services do not.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "ask": "A sale with a mandatory repurchase at a higher price. Which Article?",
+       "answer": "Article 9. It is a disguised secured loan, § 2-102(3)(a).",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e04",
+     "title": "Formation: agreement versus contract, § 2-204, and § 2-206",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. How the Code changes the common law of formation. The difference between agreement and contract. Section 2-204, formation in general. And § 2-206, offer and acceptance, including the shipment rule."
+      },
+      {
+       "id": "s2",
+       "say": "Start with the contrast. The common law: mutual assent based on promise; the mirror-image rule, so an acceptance must match the offer; and all material terms needed. Article 2: a bargain as to goods; a contract formed in any manner sufficient to show agreement; an acceptance need not mirror the offer; and open terms are fine, with fewer formalities and many ways to form."
+      },
+      {
+       "id": "s3",
+       "say": "Now two defined words that the exam loves. Agreement, § 1-201(b)(3): the parties' bargain in fact, found in their language and in course of performance, course of dealing, and usage of trade. Contract, § 1-201(b)(12): the total legal obligation that results, as determined by the UCC and other law."
+      },
+      {
+       "id": "s4",
+       "say": "So the contract can be more than the agreement, because gap fillers and implied warranties get added. Or it can be less, because the statute of frauds blocks enforcement or an unconscionable term is struck."
+      },
+      {
+       "id": "s5",
+       "say": "The questions to ask in any formation problem. One, was there an offer? Use the common law, Restatement § 24: a manifestation of willingness to bargain that justifies another in understanding that assent is invited and will conclude it. Two, was it a merchant's firm offer under § 2-205? Three, was it properly accepted under § 2-206? Four, do the terms conflict, under § 2-207?"
+      },
+      {
+       "id": "s6",
+       "say": "Section 2-204 has three subsections. One, a contract may be made in any manner sufficient to show agreement, including conduct by both parties. Two, it is fine even if the moment of making is undetermined. Three, open terms do not defeat a contract if two things are true: the parties intended to make a contract, and there is a reasonably certain basis for giving an appropriate remedy."
+      },
+      {
+       "id": "s7",
+       "say": "Section 2-206. Subsection (1)(a): unless the offer unambiguously indicates otherwise, acceptance may be in any manner and by any medium reasonable in the circumstances. The offeror is still the master of the offer, but has to say so clearly."
+      },
+      {
+       "id": "s8",
+       "say": "Subsection (1)(b), the shipment rule. An order for prompt or current shipment may be accepted by a prompt promise to ship, or by prompt shipment of conforming or nonconforming goods. Here is the twist. Shipping nonconforming goods is an acceptance and a breach at the same time, unless the seller seasonably notifies the buyer that the shipment is offered only as an accommodation. With notice, it is a counteroffer, not an acceptance."
+      },
+      {
+       "id": "s9",
+       "say": "Why? Under the common law, the seller who shipped the wrong goods could say, I never accepted, so I never breached. The Code takes that trick away."
+      },
+      {
+       "id": "s10",
+       "say": "Subsection (2): where beginning performance is a reasonable mode of acceptance, an offeror who is not notified of acceptance within a reasonable time may treat the offer as lapsed."
+      },
+      {
+       "id": "s11",
+       "ask": "Buyer orders 100 blue widgets for prompt shipment. Seller is out of blue and ships 100 green ones with no note. Buyer wants damages. Seller says there was no contract. Who wins?",
+       "answer": "Buyer. Under § 2-206(1)(b), shipping nonconforming goods without seasonable notice of accommodation is both an acceptance and a breach.",
+       "pause": 12
+      },
+      {
+       "id": "s12",
+       "ask": "Same facts, but Seller sends a note: we are out of blue; we are shipping green as an accommodation. Now?",
+       "answer": "No acceptance. The shipment is a counteroffer the buyer may accept or reject, and there is no breach.",
+       "pause": 10
+      },
+      {
+       "id": "s13",
+       "say": "The trap. Shipment of nonconforming goods equals acceptance plus breach. Only the accommodation notice changes that."
+      },
+      {
+       "id": "s14",
+       "say": "Recap. Agreement is the bargain in fact; contract is the legal obligation that results, which can be more or less. Section 2-204: any manner showing agreement, moment of making can be unclear, and open terms are fine with intent plus a reasonably certain basis for a remedy. Section 2-206: any reasonable manner and medium; prompt-shipment orders can be accepted by shipping, and nonconforming shipment is acceptance and breach unless sent as an accommodation."
+      },
+      {
+       "id": "s15",
+       "ask": "What two things must be true for a contract with open terms to survive under § 2-204(3)?",
+       "answer": "The parties intended to make a contract, and there is a reasonably certain basis for giving an appropriate remedy.",
+       "pause": 9
+      },
+      {
+       "id": "s16",
+       "ask": "Define agreement and contract under § 1-201.",
+       "answer": "Agreement is the bargain in fact, from language and course of performance, course of dealing, and usage of trade. Contract is the total legal obligation that results under the UCC and other law.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "ask": "Can the contract include terms the parties never agreed to?",
+       "answer": "Yes. Gap fillers and implied warranties add terms. And it can be less than the agreement, as when the statute of frauds or unconscionability removes something.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e05",
+     "title": "Firm offers: § 2-205",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. One section, five elements, and one contrast with the common law."
+      },
+      {
+       "id": "s2",
+       "say": "The rule, § 2-205. An offer by a merchant to buy or sell goods, in a signed record, that by its terms gives assurance it will be held open, is not revocable for lack of consideration, during the time stated, or if no time is stated, for a reasonable time. But in no event may the period exceed three months."
+      },
+      {
+       "id": "s3",
+       "say": "Count the elements. One, an offer. Two, by a merchant. Three, in a signed record. Four, that by its terms assures it will be held open. Five, the irrevocability lasts for the time stated or a reasonable time, capped at three months."
+      },
+      {
+       "id": "s4",
+       "say": "And a sixth point that catches people. If the assurance appears on a form supplied by the offeree, the offeror must separately sign it. That protects the offeror from a firm-offer clause buried in the other side's paperwork."
+      },
+      {
+       "id": "s5",
+       "say": "The common-law rule it changed: an offer could be made irrevocable only with consideration, an option contract. The Code dispenses with consideration for merchants who put it in a signed record."
+      },
+      {
+       "id": "s6",
+       "say": "Notice who must be the merchant. Only the offeror. The offeree can be anyone."
+      },
+      {
+       "id": "s7",
+       "ask": "A dealer emails a customer: I will hold this price on the tractor open for six months. Signed, the dealer. Four months later, before the customer accepts, the dealer revokes. Was the revocation effective?",
+       "answer": "Yes. The firm offer is irrevocable for no more than three months under § 2-205. After three months it is an ordinary revocable offer.",
+       "pause": 12
+      },
+      {
+       "id": "s8",
+       "ask": "A consumer writes to a dealer, signed: I promise to keep this offer to buy your truck open for 30 days. Is that a firm offer?",
+       "answer": "No. The offeror must be a merchant. The consumer's offer is revocable unless there is consideration.",
+       "pause": 10
+      },
+      {
+       "id": "s9",
+       "say": "The traps. The three-month cap applies even when the offer states a longer time. And on the offeree's form, a separate signature by the offeror is required."
+      },
+      {
+       "id": "s10",
+       "say": "Recap. Section 2-205: a merchant's offer, in a signed record, that by its terms assures it will be held open, is irrevocable without consideration for the stated or a reasonable time, never more than three months. Only the offeror must be a merchant."
+      },
+      {
+       "id": "s11",
+       "ask": "Under the common law, how did you make an offer irrevocable?",
+       "answer": "With consideration, an option contract.",
+       "pause": 6
+      },
+      {
+       "id": "s12",
+       "ask": "What extra requirement applies if the firm-offer term is on the offeree's form?",
+       "answer": "The offeror must separately sign it.",
+       "pause": 7
+      },
+      {
+       "id": "s13",
+       "ask": "What is the maximum period of irrevocability under § 2-205?",
+       "answer": "Three months.",
+       "pause": 6
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e06",
+     "title": "The battle of the forms: § 2-207 and Daitom v. Pennwalt",
+     "minutes": 9,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The most tested section in the course. Three subsections, three questions, one main case, and the comment 4 and 5 lists of material and immaterial terms."
+      },
+      {
+       "id": "s2",
+       "say": "Set the scene. Businesses trade forms. The buyer's purchase order says one thing on the back, the seller's acknowledgment says another, nobody reads them, and the goods ship. Then something goes wrong, and everyone reads the back of the forms."
+      },
+      {
+       "id": "s3",
+       "say": "Under the common law, the mirror-image rule said a reply with different terms was a counteroffer. Then the last shot rule kicked in: whoever sent the last form before performance won, because performance accepted it. Section 2-207 abolishes both."
+      },
+      {
+       "id": "s4",
+       "say": "Subsection (1). A definite and seasonable expression of acceptance, or a written confirmation sent within a reasonable time, operates as an acceptance even though it states terms additional to or different from those offered, unless acceptance is expressly made conditional on assent to the additional or different terms."
+      },
+      {
+       "id": "s5",
+       "say": "Subsection (2). The additional terms are to be construed as proposals for addition to the contract. Between merchants, they become part of the contract unless one of three things is true. (a), the offer expressly limits acceptance to its terms. (b), they materially alter it. Or (c), notification of objection has already been given or is given within a reasonable time."
+      },
+      {
+       "id": "s6",
+       "say": "Subsection (3). If the writings do not form a contract, but the parties' conduct recognizes the existence of one, there is a contract. Its terms are those on which the writings agree, plus the UCC's gap fillers."
+      },
+      {
+       "id": "s7",
+       "say": "So, three questions. One, is there an agreement despite the deviation? That is subsection (1). Two, which terms control? That is subsection (2), plus the knock-out rule for different terms. Three, if the writings fail, does conduct create a contract? That is subsection (3)."
+      },
+      {
+       "id": "s8",
+       "say": "Now the main case. Daitom versus Pennwalt, Tenth Circuit, 1984."
+      },
+      {
+       "id": "s9",
+       "say": "The seller, Pennwalt, sent a typed proposal to sell the buyer, Daitom, two rotary vacuum dryers. That proposal was the offer. Its attached printed terms limited the warranties and required any suit to be brought within one year of delivery."
+      },
+      {
+       "id": "s10",
+       "say": "Daitom answered with its own purchase order. The boilerplate on the back reserved all of its rights and remedies available at law, and said acceptance was expressly limited to such terms."
+      },
+      {
+       "id": "s11",
+       "say": "The dryers were delivered in May 1977. But they sat in their crates while Daitom's plant was being built. When they were finally run in June 1978, they were seriously defective. Daitom sued in March 1980. Too late under the one-year term. Timely under the UCC's four years."
+      },
+      {
+       "id": "s12",
+       "say": "Held, in two parts. First, the purchase order was an acceptance, not a counteroffer. To be expressly conditional, the offeree must clearly say it will not proceed unless its terms are accepted. That is the Dorton standard. Form language like expressly limited to such terms is not enough."
+      },
+      {
+       "id": "s13",
+       "say": "Second, the one-year limit and Daitom's reservation of all its legal remedies, which impliedly reserved the statutory limitations period, were different terms. They conflicted. So the court applied the knock-out rule from comment 6. Both terms drop out, and the gap filler applies: § 2-725's four-year statute of limitations. Summary judgment for Pennwalt was reversed. A dissent would have affirmed, reasoning that Daitom had simply accepted Pennwalt's offer."
+      },
+      {
+       "id": "s14",
+       "say": "Why it matters. Daitom is the textbook illustration that § 2-207 abolished mirror image and last shot. A nonconforming acceptance still forms a contract. And when the forms conflict, neither side's boilerplate wins; the UCC default does. The court also stressed a fairness point: the one-year period would have run before the machines were even installed."
+      },
+      {
+       "id": "s15",
+       "say": "Now materiality, for subsection (2)(b). Comment 4 lists terms that materially alter: a warranty disclaimer; a clause requiring 90 or 100 percent delivery where the trade allows leeway; a power to cancel on any late invoice; and an unusually short period for complaints. Comment 5 lists terms that do not: a reasonable force-majeure clause; a customary complaint period; interest on overdue invoices; and limits on rejection within customary trade tolerances."
+      },
+      {
+       "id": "s16",
+       "say": "Merchant split. Between merchants, additional terms come in automatically unless (a), (b), or (c) applies. If either party is not a merchant, additional terms are only proposals, and they become part of the contract only if the other side expressly agrees."
+      },
+      {
+       "id": "s17",
+       "ask": "Two merchants. Buyer's purchase order is silent on interest. Seller's acknowledgment adds: 1.5 percent monthly interest on overdue invoices. Buyer says nothing. Goods ship, buyer pays late. Is the interest term in the contract?",
+       "answer": "Yes. It is an additional term between merchants. Comment 5 says interest on overdue invoices is not a material alteration, the offer did not limit acceptance, and the buyer did not object. So under § 2-207(2) it becomes part of the contract.",
+       "pause": 15
+      },
+      {
+       "id": "s18",
+       "ask": "Same merchants. Seller's acknowledgment instead adds a disclaimer of all warranties. Is it in?",
+       "answer": "No. A warranty disclaimer materially alters the contract, comment 4, so under § 2-207(2)(b) it stays out.",
+       "pause": 12
+      },
+      {
+       "id": "s19",
+       "ask": "Buyer's form says: our acceptance is expressly conditional on your assent to our terms, and we will not proceed otherwise. Seller ships anyway, and buyer accepts the goods. Which terms govern?",
+       "answer": "The writings do not form a contract, because the acceptance was expressly conditional. But conduct recognizes a contract, so § 2-207(3) applies: the terms on which the writings agree plus the UCC gap fillers.",
+       "pause": 15
+      },
+      {
+       "id": "s20",
+       "say": "The traps. One, additional terms versus different terms. Subsection (2) speaks of additional terms; for different, conflicting terms, Daitom and comment 6 knock both out. Two, boilerplate like expressly limited to such terms does not make an acceptance expressly conditional. Three, under subsection (3), you never get either side's extra terms; you get only the agreed terms plus gap fillers."
+      },
+      {
+       "id": "s21",
+       "say": "Recap. Section 2-207(1): an expression of acceptance with extra terms is still an acceptance unless expressly conditional. Section 2-207(2): additional terms are proposals; between merchants they come in unless the offer limits acceptance, they materially alter, or there is objection. Section 2-207(3): conduct creates a contract on the agreed terms plus gap fillers. Daitom: the one-year limit and the reservation of remedies knocked each other out, and the four-year default under § 2-725 governed."
+      },
+      {
+       "id": "s22",
+       "ask": "In Daitom, which document was the offer, and which was the acceptance?",
+       "answer": "Pennwalt's typed proposal was the offer. Daitom's purchase order was the acceptance.",
+       "pause": 9
+      },
+      {
+       "id": "s23",
+       "ask": "Why didn't Daitom's expressly limited to such terms language make its purchase order a counteroffer?",
+       "answer": "Because expressly conditional requires the offeree to clearly show it will not proceed unless its terms are accepted, the Dorton standard. Boilerplate like that is not enough.",
+       "pause": 10
+      },
+      {
+       "id": "s24",
+       "ask": "Give two terms comment 4 treats as material alterations, and two comment 5 treats as not material.",
+       "answer": "Material: a warranty disclaimer, a 90 to 100 percent delivery guarantee where trade allows leeway, a power to cancel on any late invoice, an unusually short complaint period. Not material: a reasonable force-majeure clause, a customary complaint period, interest on overdue invoices, limits on rejection within trade tolerances.",
+       "pause": 14
+      },
+      {
+       "id": "s25",
+       "say": "Before we leave formation, the five ways the Code changed offer and acceptance, as the outline lists them. Any reasonable medium, § 2-206(1)(a). Acceptance by shipping, § 2-206(1)(b). Firm offers, § 2-205. No mirror image, § 2-207(1). And a confirmation can be an acceptance, also § 2-207(1)."
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e07",
+     "title": "The statute of frauds: § 2-201 and its four exceptions",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The writing rule for sales of $500 or more, what the record must show, the four exceptions, and Problem 2-10(A)."
+      },
+      {
+       "id": "s2",
+       "say": "The rule, § 2-201(1). A contract for the sale of goods for the price of $500 or more is not enforceable by way of action or defense unless there is a record. Count the requirements. One, a record sufficient to indicate that a contract for sale has been made. Two, signed by the party against whom enforcement is sought, or by its authorized agent or broker."
+      },
+      {
+       "id": "s3",
+       "say": "And a proviso. A record is not insufficient because it omits or incorrectly states a term. But the contract is not enforceable beyond the quantity shown in the record."
+      },
+      {
+       "id": "s4",
+       "say": "So only quantity is essential. Price and delivery can be missing or wrong. A record includes an email under the 2022 amendments, and the Uniform Electronic Transactions Act reaches the same result elsewhere. A typed name can be a signature. And several papers can be read together if they are connected, as we will see in Casazza."
+      },
+      {
+       "id": "s5",
+       "say": "One point of perspective. Satisfying the statute of frauds only opens the courthouse door. The plaintiff still has to prove there was a contract."
+      },
+      {
+       "id": "s6",
+       "say": "The flowchart. Does the statute apply? If not, there may be a contract. If it applies, is there a sufficient signed record? If yes, there may be a contract. If no, does an exception apply? If yes, there may be a contract. If no, there is no enforceable contract."
+      },
+      {
+       "id": "s7",
+       "say": "Now the four exceptions."
+      },
+      {
+       "id": "s8",
+       "say": "One. The merchant's confirmation, § 2-201(2). Five elements. An oral deal between merchants. A written confirmation sent within a reasonable time. The confirmation is sufficient against the sender. The recipient receives it and has reason to know its contents. And the recipient gives no written objection within 10 days after receipt. If all that is true, the recipient loses the statute of frauds defense, even though the recipient signed nothing."
+      },
+      {
+       "id": "s9",
+       "say": "Problem 2-10(A) teaches what sufficient against the sender means. The confirmation must satisfy § 2-201(1) against its own sender: signed by the sender, indicating a contract, and stating a quantity. So: this confirms our deal, 500 widgets at $10, signed Seller, works. An unsigned invoice does not. A mere price quote does not. A confirmation with no quantity does not."
+      },
+      {
+       "id": "s10",
+       "say": "Two. Specially manufactured goods, § 2-201(3)(a). The goods are to be specially made for the buyer. They are not suitable for sale to others in the ordinary course of the seller's business. And the seller, before notice of repudiation, made either a substantial beginning of their manufacture or commitments for their procurement."
+      },
+      {
+       "id": "s11",
+       "say": "Three. Admission, § 2-201(3)(b). The party against whom enforcement is sought admits in a pleading, in testimony, or otherwise in court that a contract was made. Enforceable only up to the quantity admitted."
+      },
+      {
+       "id": "s12",
+       "say": "Four. Part performance, § 2-201(3)(c). Goods for which payment has been made and accepted, or which have been received and accepted. Enforceable only as to those goods."
+      },
+      {
+       "id": "s13",
+       "say": "Why the rule exists: to prevent fraudulent claims of big oral deals. Why the merchant exception: between merchants, the one who receives a confirmation and stays silent could otherwise hold the sender to the deal while keeping its own escape hatch open. Silence for 10 days closes the hatch."
+      },
+      {
+       "id": "s14",
+       "ask": "Two merchants agree by phone on 1,000 bushels of corn. Seller sends a signed email: confirming 1,000 bushels at $5. Buyer reads it and says nothing for three weeks, then refuses delivery and pleads the statute of frauds. Who wins?",
+       "answer": "Seller. All the § 2-201(2) elements are met: merchants, a timely confirmation sufficient against the sender, received with reason to know its contents, and no written objection within 10 days.",
+       "pause": 14
+      },
+      {
+       "id": "s15",
+       "ask": "Same facts, but Seller's email says: confirming our corn deal at $5 a bushel, with no quantity. Now?",
+       "answer": "Buyer wins on the statute of frauds. The confirmation is not sufficient against the sender because it states no quantity, so § 2-201(2) fails.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "Buyer in a deposition says: yes, we agreed to buy 400 units, not the 1,000 Seller claims. What is enforceable?",
+       "answer": "A contract for 400 units, under the admission exception, § 2-201(3)(b), which reaches only the quantity admitted.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "say": "The traps. The merchant exception needs both parties to be merchants. Part performance reaches only the goods paid for and accepted, or received and accepted. And the threshold is the price of $500 or more."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Section 2-201(1): $500 or more needs a record indicating a contract, signed by the party to be charged, and it is enforceable only up to the quantity shown. Four exceptions: merchant's confirmation with no objection in 10 days; specially manufactured goods with a substantial beginning; admission in court, up to the quantity admitted; and part performance, only for those goods."
+      },
+      {
+       "id": "s19",
+       "ask": "What is the only term the record must state under § 2-201(1)?",
+       "answer": "Quantity. The contract is not enforceable beyond the quantity shown.",
+       "pause": 7
+      },
+      {
+       "id": "s20",
+       "ask": "List the elements of the specially manufactured goods exception.",
+       "answer": "Goods specially made for the buyer, not suitable for sale to others in the seller's ordinary course, and a substantial beginning of manufacture or commitments for procurement before notice of repudiation.",
+       "pause": 12
+      },
+      {
+       "id": "s21",
+       "ask": "What does sufficient against the sender mean, from Problem 2-10(A)?",
+       "answer": "The confirmation must meet § 2-201(1) against the sender: signed by the sender, indicating a contract, and stating a quantity.",
+       "pause": 10
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e08",
+     "title": "Casazza v. Kiser: every escape route, and why each failed",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The second main case. A sailboat, a handshake, a software license, and a buyer who tried every exception."
+      },
+      {
+       "id": "s2",
+       "say": "Casazza versus Kiser, Eighth Circuit, 2002. Casazza found Kiser's internet listing for the Andante, a 52-foot sailboat. He inspected it in Fort Lauderdale. He says they orally agreed on a price of $200,000, subject to a survey and a sea trial."
+      },
+      {
+       "id": "s3",
+       "say": "Each side jotted terms on separate sheets, and Casazza typed them up. But Kiser never signed anything about the boat. The only document both of them signed was a license transferring the boat's navigation software, and it never mentioned the boat."
+      },
+      {
+       "id": "s4",
+       "say": "Casazza booked a survey and rented a slip in Virginia. A week later Kiser backed out and sold the boat to someone else."
+      },
+      {
+       "id": "s5",
+       "say": "Held: dismissal affirmed. No enforceable contract. Walk the escape routes."
+      },
+      {
+       "id": "s6",
+       "say": "Part performance failed. Accepting the software was not accepting the boat. They were not one commercial unit. The software was bought years after the boat, and the boat was later sold without it."
+      },
+      {
+       "id": "s7",
+       "say": "No sufficient writing. The typed terms were not signed by Kiser. And the signed software license did not refer to a boat sale, so the papers could not be read together."
+      },
+      {
+       "id": "s8",
+       "say": "Admission failed. Hoping Kiser might admit the deal in a deposition is not an admission."
+      },
+      {
+       "id": "s9",
+       "say": "And promissory estoppel could not get around § 2-201 under any test. Casazza's reliance was not the kind that makes refusing to perform a fraud."
+      },
+      {
+       "id": "s10",
+       "say": "Why it matters. Casazza walks through every § 2-201 escape route and shows how narrow each one is. A big oral deal with no signature from the party being sued is unenforceable, even between two individuals. Article 2 still applies to them, because scope never depends on merchant status."
+      },
+      {
+       "id": "s11",
+       "ask": "A buyer and seller agree orally on a $12,000 used car. The seller signs a bill of sale for the car's aftermarket stereo, which the buyer pays for and takes. Does that make the car deal enforceable?",
+       "answer": "No. Like the software in Casazza, the stereo is not the same commercial unit as the car, and the stereo bill of sale does not refer to the car sale. Part performance reaches only the goods accepted.",
+       "pause": 14
+      },
+      {
+       "id": "s12",
+       "say": "The trap. You can read separate papers together only if they are connected, and the signed one must refer to the deal."
+      },
+      {
+       "id": "s13",
+       "say": "Recap. Casazza lost on part performance, on writing, on admission, and on promissory estoppel. Each exception is narrow, and estoppel does not save an oral deal unless refusal would amount to a fraud."
+      },
+      {
+       "id": "s14",
+       "ask": "In Casazza, what was the only document both parties signed?",
+       "answer": "A license transferring the boat's navigation software, which never mentioned the boat.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "Why did part performance fail in Casazza?",
+       "answer": "The software and the boat were not one commercial unit, so accepting the software was not accepting the boat.",
+       "pause": 9
+      },
+      {
+       "id": "s16",
+       "ask": "Why didn't promissory estoppel save Casazza?",
+       "answer": "His reliance, like booking a survey and a slip, was not the kind that would make Kiser's refusal a fraud.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e09",
+     "title": "Unconscionability: § 2-302",
+     "minutes": 3,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Who decides, when it is judged, what the court can do, and the two kinds of unconscionability."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-302. The court decides unconscionability as a matter of law. It is judged as of the time the contract was made. If the court finds a contract or a clause unconscionable, it has three options: refuse to enforce the whole contract, strike the clause, or limit the clause's application to avoid an unconscionable result. And the parties must be given a reasonable opportunity to present evidence of the commercial setting, purpose, and effect."
+      },
+      {
+       "id": "s3",
+       "say": "Two kinds. Procedural unconscionability is unfair surprise: fine print, no meaningful choice, unequal bargaining power. Substantive unconscionability is oppressive, one-sided terms. Most courts want both. Some use a sliding scale, so more of one means you need less of the other."
+      },
+      {
+       "id": "s4",
+       "say": "And it cannot be contracted away. Section 2-302 is one of the provisions parties cannot vary."
+      },
+      {
+       "id": "s5",
+       "ask": "A buyer argues that a clause became unconscionable because market prices changed dramatically after signing. Does that work?",
+       "answer": "No. Unconscionability is judged at the time of contracting, not by later events.",
+       "pause": 10
+      },
+      {
+       "id": "s6",
+       "say": "The trap. The judge decides, not the jury. And you need to identify both the procedural and the substantive side in most courts."
+      },
+      {
+       "id": "s7",
+       "say": "Recap. Section 2-302: a question of law for the court, judged at formation, with three options: refuse the contract, strike the clause, or limit it. Procedural plus substantive, sometimes on a sliding scale. It cannot be waived."
+      },
+      {
+       "id": "s8",
+       "ask": "Who decides unconscionability, and as of when?",
+       "answer": "The court, as a matter of law, as of the time the contract was made.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "What three things may a court do with an unconscionable clause?",
+       "answer": "Refuse to enforce the contract, strike the clause, or limit its application.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "Define procedural and substantive unconscionability.",
+       "answer": "Procedural is unfair surprise or lack of meaningful choice, like fine print and unequal bargaining power. Substantive is oppressive, one-sided terms.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e10",
+     "title": "Course of performance, course of dealing, and usage of trade: § 1-303",
+     "minutes": 3,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Three sources of meaning outside the words of the contract, when each happens, and the hierarchy when they conflict."
+      },
+      {
+       "id": "s2",
+       "say": "Course of performance: repeated occasions for performance under this contract, which the other party accepts or acquiesces in, with knowledge of the performance and an opportunity to object. One occasion is not enough. Timing: after contracting."
+      },
+      {
+       "id": "s3",
+       "say": "Course of dealing: conduct in prior transactions between these parties that establishes a common basis of understanding. Timing: before contracting."
+      },
+      {
+       "id": "s4",
+       "say": "Usage of trade: a practice with such regularity of observance in a place, vocation, or trade that it is expected to apply here. It is proved as a fact. And under § 1-303(g), a party offering usage evidence must give the other side notice. Scope: industry-wide."
+      },
+      {
+       "id": "s5",
+       "say": "What do they do? They explain and supplement the agreement. Read them consistently with the express terms if that is reasonable. If not, § 1-303(e) sets the hierarchy. Express terms beat course of performance. Course of performance beats course of dealing. Course of dealing beats usage of trade."
+      },
+      {
+       "id": "s6",
+       "say": "A memory hook: the closer to this deal, the stronger. The words of this contract, then how these parties performed this contract, then how they dealt before, then what the whole trade does."
+      },
+      {
+       "id": "s7",
+       "say": "And § 1-303(f): course of performance can show a waiver or modification of an express term, subject to § 2-209. That ties this episode to modification."
+      },
+      {
+       "id": "s8",
+       "say": "One housekeeping point. The slides cite the old sections, 1-205 and 2-208. Those are now § 1-303."
+      },
+      {
+       "id": "s9",
+       "ask": "A contract says payment within 10 days. For two years, under prior contracts, the seller always accepted payment in 30 days. The trade usage is 60 days. Which governs?",
+       "answer": "The express term, 10 days. Express terms beat course of dealing and usage of trade under § 1-303(e).",
+       "pause": 12
+      },
+      {
+       "id": "s10",
+       "say": "The trap. A single accepted performance is not a course of performance."
+      },
+      {
+       "id": "s11",
+       "say": "Recap. Course of performance is after contracting, repeated, with knowledge and opportunity to object. Course of dealing is before. Usage of trade is industry-wide, a fact, with notice under § 1-303(g). The hierarchy: express terms, course of performance, course of dealing, usage of trade."
+      },
+      {
+       "id": "s12",
+       "ask": "State the § 1-303(e) hierarchy.",
+       "answer": "Express terms, then course of performance, then course of dealing, then usage of trade.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "Does one late delivery accepted by the buyer create a course of performance?",
+       "answer": "No. It takes repeated occasions.",
+       "pause": 7
+      },
+      {
+       "id": "s14",
+       "ask": "What does § 1-303(f) add?",
+       "answer": "Course of performance can show a waiver or modification of a term, subject to § 2-209.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e11",
+     "title": "Good faith: § 1-304, Market Street v. Frey, Brunswick Hills, and Vintage Rodeo",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The definition of good faith, what it can and cannot do, and Judge Posner's opinion in Market Street."
+      },
+      {
+       "id": "s2",
+       "say": "Section 1-304: every contract or duty within the UCC imposes an obligation of good faith in its performance and enforcement. Section 1-201(b)(20) defines it in two parts. One, honesty in fact, which is subjective and asks about motive. Two, the observance of reasonable commercial standards of fair dealing, which is objective."
+      },
+      {
+       "id": "s3",
+       "say": "What good faith is. A lens for interpreting the agreement. What it is not. It is not a stand-alone claim. It cannot contradict express terms. And it applies to performance and enforcement, not to negotiation."
+      },
+      {
+       "id": "s4",
+       "say": "It cannot be disclaimed. But under § 1-302(b), the parties may set the standards for measuring it, if those standards are not manifestly unreasonable."
+      },
+      {
+       "id": "s5",
+       "say": "Two refinements. The objective prong is about fair dealing, not negligence. And some states kept an older, subjective-only definition in Article 1, but merchants are still held to Article 2's objective standard."
+      },
+      {
+       "id": "s6",
+       "say": "And the central limit. Good faith in performance is not a fiduciary duty. You need not be your partner's keeper or relax the terms when it struggles. But you may not deliberately exploit its oversight about its own contract rights. That is Market Street."
+      },
+      {
+       "id": "s7",
+       "say": "Market Street Associates versus Frey, Seventh Circuit, 1991, Judge Posner. J.C. Penney sold properties to the GE Pension Trust and leased them back. Paragraph 34 of the lease said: if the tenant asks the Trust to finance improvements and the negotiations fail, the tenant may buy the property back at roughly the original price plus 6 percent a year. That could be far below market."
+      },
+      {
+       "id": "s8",
+       "say": "Market Street took over the lease of a Milwaukee shopping center. It could not get outside financing, and it found the Trust's $3 million asking price too high. So it wrote asking the Trust to finance $2 million of improvements, and did not mention paragraph 34. The Trust's slow, unresponsive manager turned down the request without realizing the consequence. Market Street sent a letter saying it would look elsewhere. A month later it exercised the paragraph 34 option, at about $1 million, and sued for specific performance."
+      },
+      {
+       "id": "s9",
+       "say": "Held: the summary judgment for the Trust was reversed and remanded, because liability turned on Market Street's state of mind. Good faith lies between a fiduciary duty and merely avoiding fraud. Before contracting, you may exploit superior knowledge. After contracting, deliberately taking advantage of your partner's oversight about its contract rights, when you could correct it at no cost, is opportunistic sharp dealing. On remand, the trial court found that Market Street's partner, Orenstein, knew the Trust was overlooking paragraph 34 and kept sending ambiguous letters. Bad faith. No specific performance. Affirmed."
+      },
+      {
+       "id": "s10",
+       "say": "Why it matters. It defines good faith in performance under § 1-304, and the line between formation and performance. Note the case was common law, a land lease, but the court used the same concept the UCC uses."
+      },
+      {
+       "id": "s11",
+       "say": "Two note cases to contrast. Brunswick Hills, New Jersey: a landlord evaded a tenant's requests for 19 months and then declared the tenant's option void. That was bad faith. And Vintage Rodeo, Delaware Chancery: a party that merely benefited from the other side's own missed deadline, in a heavily negotiated deal, did nothing wrong. Good faith only fills gaps."
+      },
+      {
+       "id": "s12",
+       "ask": "After signing, a buyer notices the seller has forgotten a clause that lets the buyer cancel for free. The buyer quietly waits until the cancel window is about to close, then cancels. Is that bad faith under Market Street?",
+       "answer": "Probably not, on Vintage Rodeo's reasoning, if the buyer only uses an express right and does nothing to mislead. Market Street turned on deliberately exploiting the other side's oversight with misleading conduct, when correcting it would have cost nothing. Exercising a clear express right is not bad faith; good faith cannot contradict express terms.",
+       "pause": 16
+      },
+      {
+       "id": "s13",
+       "say": "The traps. Good faith is not an independent cause of action. And it governs performance and enforcement, not negotiation: before contracting, you may exploit superior knowledge."
+      },
+      {
+       "id": "s14",
+       "say": "Recap. Good faith is honesty in fact plus reasonable commercial standards of fair dealing. It cannot be disclaimed, but standards may be set if not manifestly unreasonable. It is not fiduciary. Market Street: deliberately exploiting your partner's oversight after contracting is bad faith. Brunswick Hills: stringing a tenant along was bad faith. Vintage Rodeo: benefiting from the other side's own missed deadline was not."
+      },
+      {
+       "id": "s15",
+       "ask": "What are the two parts of good faith under § 1-201(b)(20)?",
+       "answer": "Honesty in fact, which is subjective, and observance of reasonable commercial standards of fair dealing, which is objective.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "What did the trial court find on remand in Market Street?",
+       "answer": "That Orenstein knew the Trust was overlooking paragraph 34 and kept sending ambiguous letters, so there was bad faith and no specific performance.",
+       "pause": 10
+      },
+      {
+       "id": "s17",
+       "ask": "Can parties disclaim good faith?",
+       "answer": "No. But they may set standards for measuring it if not manifestly unreasonable, § 1-302(b).",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e12",
+     "title": "Modification: § 2-209, Roth Steel, and Problem 3-4",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Five subsections of § 2-209, the good-faith check on modifications, the Roth Steel story, and the five parts of Problem 3-4 on modification and the statute of frauds."
+      },
+      {
+       "id": "s2",
+       "say": "Section 2-209. Subsection (1): an agreement modifying a contract needs no consideration to be binding. Subsection (2): a signed agreement that excludes modification except by a signed record, a no-oral-modification or NOM clause, is enforceable. But if it appears on a form supplied by a merchant, a non-merchant must separately sign it. Subsection (3): the statute of frauds applies if the contract as modified is within § 2-201. Subsection (4): an attempted modification that fails under (2) or (3) can still operate as a waiver. Subsection (5): a party who has waived an executory portion of the contract may retract the waiver by reasonable notification that strict performance will be required, unless retraction would be unjust because of a material change of position in reliance on the waiver."
+      },
+      {
+       "id": "s3",
+       "say": "The analysis has two steps. One, did they agree to modify? The formation rules, §§ 2-204 to 2-207, apply. Two, is the modification enforceable? No consideration is needed. But it must be in good faith. And check whether the statute of frauds or a NOM clause bars it."
+      },
+      {
+       "id": "s4",
+       "say": "The common law it changed: modifications needed consideration, the pre-existing duty rule, or had to be fair and equitable under Restatement Second § 89. And NOM clauses were unenforceable."
+      },
+      {
+       "id": "s5",
+       "say": "With consideration gone, what stops extortion? Good faith, under comment 2. Extortion without a legitimate commercial reason fails. But a market shift that makes performance a loss can justify seeking a modification, even if the shift would not excuse performance."
+      },
+      {
+       "id": "s6",
+       "say": "Roth Steel Products versus Sharon Steel, Sixth Circuit, 1983. In November 1972, the steel industry was at 70 percent capacity and prices were very competitive. Sharon agreed to sell Roth 200 tons a month of hot-rolled steel through 1973, at $148 a ton, well below its book price."
+      },
+      {
+       "id": "s7",
+       "say": "In 1973 demand boomed and every mill was fully booked. Sharon announced it was ending its 1972 price breaks, and threatened to stop selling Roth any steel in the second half of 1973 unless Roth paid more. Roth was short on inventory and could not buy elsewhere. So it reluctantly agreed to a higher price. Later, Roth sued."
+      },
+      {
+       "id": "s8",
+       "say": "Held: the modification was unenforceable. It needed no consideration under § 2-209(1), but it had to be sought in good faith, which has two parts. First, objective: would an ordinary merchant seek it? Yes. The market shift meant Sharon was losing money on the deal. Second, subjective, honesty in fact: was there a real reason, not a pretext, and was the change obtained without extortion? Sharon's threat to stop performing was evidence of bad faith that Sharon never rebutted. Its contract-based excuse first appeared at trial. Judgment for Roth affirmed."
+      },
+      {
+       "id": "s9",
+       "say": "Why it matters. A legitimate reason to ask for a change is not enough if you extract the change by threatening to breach."
+      },
+      {
+       "id": "s10",
+       "say": "Now Problem 3-4, modification and the statute of frauds. Five parts."
+      },
+      {
+       "id": "s11",
+       "say": "(a). An oral $400 deal is orally doubled to $800. As modified, it is $500 or more, so it needs a record. The modification is unenforceable, and the $400 deal stands, though the failed modification may operate as a waiver."
+      },
+      {
+       "id": "s12",
+       "say": "(b). An oral $1,000 deal is orally cut to 40 units for $400. As modified, it is under $500, so no record is needed. Enforceable."
+      },
+      {
+       "id": "s13",
+       "say": "(c). A record says 100 units for $1,000. They orally change it to 110 units, same price. Enforceable only to the 100 units the record shows. The statute bars the extra 10."
+      },
+      {
+       "id": "s14",
+       "say": "(d). A record says 100 units for $1,000. They orally change it to 90 units for $900. Courts split, Costco versus Zemco. One view: the old record still shows a contract and a quantity of at least 90, so it is fine. The other: a change in quantity needs its own record."
+      },
+      {
+       "id": "s15",
+       "say": "(e). A record says delivery June 1. They orally change it to July 1. No statute-of-frauds problem, because only quantity must be in the record. But a NOM clause would be a separate barrier."
+      },
+      {
+       "id": "s16",
+       "ask": "Seller has a signed contract to supply bolts at $1 each. Its own costs rise sharply because of a market shift, and it asks politely for $1.20, explaining its losses. Buyer agrees orally. Later, buyer says the modification is void for lack of consideration. Who wins?",
+       "answer": "Seller, if the quantity term is unchanged and there is no NOM clause. No consideration is needed under § 2-209(1), and a market shift that makes performance a loss is a legitimate reason under comment 2. Unlike Roth Steel, there was no threat to stop performing.",
+       "pause": 15
+      },
+      {
+       "id": "s17",
+       "ask": "Same, but seller says: pay $1.20 or we stop shipping tomorrow, and buyer has no other source.",
+       "answer": "Likely unenforceable. Like Roth Steel, extracting a modification by threatening to breach fails the subjective, honesty-in-fact part of good faith.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "say": "The traps. The statute of frauds is applied to the contract as modified. And a NOM clause between a merchant and a non-merchant on the merchant's form needs the non-merchant's separate signature."
+      },
+      {
+       "id": "s19",
+       "say": "Recap. Section 2-209: no consideration needed; NOM clauses enforceable; the statute of frauds applies to the deal as modified; a failed modification can be a waiver; and a waiver of an executory term can be retracted by reasonable notice unless the other side materially relied. Roth Steel: a market shift can justify asking, but a threat to stop performing is bad faith."
+      },
+      {
+       "id": "s20",
+       "ask": "What are the two parts of the good-faith test for a modification, from Roth Steel?",
+       "answer": "Objective: would an ordinary merchant seek it, given a legitimate commercial reason. Subjective: honesty in fact, a real reason, not a pretext, and no extortion.",
+       "pause": 10
+      },
+      {
+       "id": "s21",
+       "ask": "Record says 100 units for $1,000. They orally agree on 110 units at the same price. What is enforceable?",
+       "answer": "Only 100 units, the quantity shown in the record.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "Under the common law, what did a modification need, and what happened to NOM clauses?",
+       "answer": "Consideration, or fairness under Restatement Second § 89. NOM clauses were unenforceable.",
+       "pause": 9
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e13",
+     "title": "Waiver, estoppel, and the four bases that bar a buyer's claim: Problem 3-5",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Four doctrines that can bar a buyer who complains late about the seller's performance, how they differ, and Problem 3-5, the late-widget problem."
+      },
+      {
+       "id": "s2",
+       "say": "The four bases. One, modification under § 2-209. Requirement: mutual assent, no consideration needed, good faith, and passing the statute of frauds and any NOM clause. Reach: past and future performance."
+      },
+      {
+       "id": "s3",
+       "say": "Two, waiver under § 2-209(4) and (5). Requirement: voluntary relinquishment of a known right. Reach: it is retractable going forward, so it mainly affects past performance."
+      },
+      {
+       "id": "s4",
+       "say": "Three, course of performance under § 1-303. Requirement: repeated performance, with knowledge and opportunity to object. Reach: it must be consistent with the express terms, because express terms prevail."
+      },
+      {
+       "id": "s5",
+       "say": "Four, estoppel under § 1-103(b). Requirement: reasonable, detrimental reliance. Reach: performance due after the reliance arose. And a NOM clause undercuts the reasonableness of the reliance."
+      },
+      {
+       "id": "s6",
+       "say": "Now a key rule that pulls in later material. Accepting one late delivery is not a waiver of damages. Under § 2-607(2), acceptance does not by itself impair any other remedy. But under § 2-607(3)(a), the buyer must notify the seller of the breach within a reasonable time after it discovers or should have discovered it, or be barred from any remedy."
+      },
+      {
+       "id": "s7",
+       "say": "Problem 3-5. A contract for 10,000 widgets a month, delivered to the buyer by the 5th."
+      },
+      {
+       "id": "s8",
+       "say": "(A). One late delivery is accepted. No course of performance, because it is a single occasion. No modification. No waiver of damages. The buyer keeps its claim if it gives timely notice."
+      },
+      {
+       "id": "s9",
+       "say": "(B). Three late deliveries are accepted. There is an arguable course of performance, but the express term prevails if they cannot be reconciled. The buyer may retract any waiver for future deliveries by reasonable notice, unless the seller materially relied. Recovery for the past three requires timely § 2-607(3)(a) notice, and the conduct may be a waiver as to them."
+      },
+      {
+       "id": "s10",
+       "say": "(C). Add a NOM clause. There is no unwritten modification, under § 2-209(2). But conduct can still be a waiver, under § 2-209(4). And the NOM clause weakens any estoppel argument."
+      },
+      {
+       "id": "s11",
+       "say": "(D). Add an anti-waiver clause. Courts split. Some enforce it. Others hold that the clause itself can be waived by conduct. Estoppel remains possible but weak."
+      },
+      {
+       "id": "s12",
+       "ask": "A buyer accepted three late deliveries without complaint. Before the fourth, it writes: from now on, we require delivery by the 5th, as the contract says. The seller had not changed its position. The fourth delivery is late. Can the buyer recover for it?",
+       "answer": "Yes. The buyer retracted any waiver of the executory term by reasonable notification, § 2-209(5), and the seller had not materially relied.",
+       "pause": 12
+      },
+      {
+       "id": "s13",
+       "say": "The trap. Waiver and modification differ in reach. A waiver of future performance can be retracted. A valid modification cannot be undone unilaterally."
+      },
+      {
+       "id": "s14",
+       "say": "Recap. Modification reaches past and future. Waiver is retractable going forward. Course of performance yields to express terms. Estoppel needs reasonable detrimental reliance, which a NOM clause undercuts. And accepting late goods is not a waiver of damages, but the buyer must give § 2-607(3)(a) notice."
+      },
+      {
+       "id": "s15",
+       "ask": "Does a NOM clause prevent a waiver by conduct?",
+       "answer": "No. Under § 2-209(4), a modification that fails because of a NOM clause can still operate as a waiver.",
+       "pause": 8
+      },
+      {
+       "id": "s16",
+       "ask": "What must a buyer who accepts a late delivery do to keep its damages claim?",
+       "answer": "Notify the seller of the breach within a reasonable time, § 2-607(3)(a).",
+       "pause": 8
+      },
+      {
+       "id": "s17",
+       "ask": "When can a waiver of an executory term not be retracted?",
+       "answer": "When retraction would be unjust because the other party materially changed position in reliance on the waiver, § 2-209(5).",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "sl-d1-e14",
+     "title": "Day 1 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Time for a cumulative quiz on everything from today. Answer each one out loud before the answer plays."
+      },
+      {
+       "id": "s2",
+       "ask": "Oil is sold in the ground, and the buyer will extract it. Goods or not?",
+       "answer": "Not goods. Minerals are goods only if the seller severs them, § 2-107(1).",
+       "pause": 9
+      },
+      {
+       "id": "s3",
+       "ask": "Under the 2022 amendments, if goods do not predominate in a hybrid deal, does § 2-207 apply?",
+       "answer": "No. Formation sections, §§ 2-204 to 2-207, do not apply; only provisions relating primarily to the goods do.",
+       "pause": 10
+      },
+      {
+       "id": "s4",
+       "ask": "A merchant's signed firm offer says it will stay open for one year. How long is it irrevocable?",
+       "answer": "Three months at most, § 2-205.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "An acceptance includes a term that materially alters the deal. Between merchants, is there a contract, and is the term in it?",
+       "answer": "There is a contract under § 2-207(1), but the term does not become part of it under § 2-207(2)(b).",
+       "pause": 10
+      },
+      {
+       "id": "s6",
+       "ask": "In Daitom, what filled the gap after the conflicting terms were knocked out?",
+       "answer": "The four-year statute of limitations in § 2-725.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Name the four statute-of-frauds exceptions in § 2-201.",
+       "answer": "The merchant's confirmation, specially manufactured goods, admission in court, and part performance.",
+       "pause": 9
+      },
+      {
+       "id": "s8",
+       "ask": "Under the merchant's confirmation rule, how long does the recipient have to object in writing?",
+       "answer": "Ten days after receipt.",
+       "pause": 6
+      },
+      {
+       "id": "s9",
+       "ask": "Course of dealing and usage of trade conflict. Which wins?",
+       "answer": "Course of dealing, § 1-303(e).",
+       "pause": 7
+      },
+      {
+       "id": "s10",
+       "ask": "In Market Street, was good faith a fiduciary duty?",
+       "answer": "No. It lies between a fiduciary duty and merely avoiding fraud. You may not deliberately exploit your partner's oversight about its contract rights after contracting.",
+       "pause": 10
+      },
+      {
+       "id": "s11",
+       "ask": "In Roth Steel, why was the price modification unenforceable?",
+       "answer": "Sharon extracted it by threatening to stop selling steel, evidence of bad faith it never rebutted, even though the market shift gave it a legitimate reason to ask.",
+       "pause": 10
+      },
+      {
+       "id": "s12",
+       "ask": "An oral $400 deal is orally raised to $800. Enforceable?",
+       "answer": "Not as modified. The deal as modified is $500 or more and needs a record, § 2-209(3). The $400 deal stands, and the failed modification may operate as a waiver.",
+       "pause": 10
+      },
+      {
+       "id": "s13",
+       "ask": "Who decides unconscionability, and when is it judged?",
+       "answer": "The court, as a matter of law, as of the time the contract was made.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "say": "That's Day 1. Tomorrow opens with a spaced review of today, then express warranties."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

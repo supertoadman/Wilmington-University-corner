@@ -53,6 +53,13 @@
       "tags": ["UCC Article 2", "UCC Article 2A", "statutes", "official comments", "reference", "Weeks 1-14"],
       "order": 5
     },
+    "Sales_and_Leases_Audio_Course.listen.json": {
+      "slug": "sales-and-leases-audio-course",
+      "title": "Sales and Leases Audio Course",
+      "type": "audio",
+      "description": "A five-day listening course on the whole outline, Weeks 1–14: each UCC rule’s elements counted out loud, every case told as a short story, the lesson of every assigned problem, hypotheticals and recall questions with pauses to answer, and a spaced review to open each day.",
+      "order": 9
+    },
     "Sales_and_Leases_Week10_Comprehensive_Outline.docx": {
       "archived": true,
       "publish": false,
