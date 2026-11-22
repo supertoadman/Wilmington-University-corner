@@ -27,6 +27,11 @@
       "tags": ["agency", "partnership", "RUPA", "Restatement of Agency", "LLC", "outline", "Weeks 1–8"],
       "order": 1.9
     },
+    "Agency_and_Partnership_Practice_Finals.mcq.json": {
+      "slug": "agency-and-partnership-practice-finals",
+      "tags": ["MCQ", "practice finals", "exam mode", "agency", "partnership", "RUPA", "RULLCA", "LLC", "Weeks 1–14"],
+      "order": 1.5
+    },
     "Agency_and_Partnership_Bar_Questions.html": {
       "slug": "agency-and-partnership-bar-questions",
       "title": "Agency & Partnership Bar Questions",
