@@ -7,7 +7,9 @@ import os from 'node:os';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
-import { buildQueue, speechChunks, speakable, resumeAt, readSettings, groupsOf, areaOf, minutesOf } from '../src/assets/listen-queue.js';
+import { buildQueue, courseQueue, courseResume, daysOf, speechChunks, speakable, resumeAt, readSettings, groupsOf, areaOf, minutesOf } from '../src/assets/listen-queue.js';
+import { forEar, rankVoices, pickVoices, genderOf, citeNumber } from '../src/assets/listen-voice.js';
+import { normalizeListen, readListen } from '../scripts/lib/listen.mjs';
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 
@@ -60,9 +62,121 @@ test('the listener picks what to include', () => {
 
 test('speech text spells out legal abbreviations and drops outline markup', () => {
   assert.equal(speakable('## Heading'), 'Heading');
-  assert.equal(speakable('Under § 2-207 and §§ 2-312, 2-313'), 'Under section 2-207 and sections 2-312, 2-313');
+  assert.equal(speakable('Under § 2-207 and §§ 2-312, 2-313'), 'Under section two dash two oh seven and sections two dash three twelve, two dash three thirteen');
   assert.equal(speakable('Roth Steel v. Sharon Steel, e.g. the UCC rule'), 'Roth Steel versus Sharon Steel, for example, the U C C rule');
-  assert.equal(speakable('FRE 403 | balancing'), 'F R E 403. balancing');
+  assert.equal(speakable('FRE 403 | balancing'), 'Rule four-oh-three. balancing');
+});
+
+test('citations are rewritten for the ear', () => {
+  const cases = [
+    ['Rule 803(2)', 'Rule eight-oh-three, two'],
+    ['FRE 801(d)(2)(A)', 'Rule eight-oh-one, d, two, A'],
+    ['MR 1.7(a)(2)', 'Rule one point seven, a, two'],
+    ['Rule 1.7(a)(2)', 'Rule one point seven, a, two'],
+    ['Model Rule 1.10(a)', 'Model Rule one point ten, a'],
+    ['§ 2-207', 'section two dash two oh seven'],
+    ['Rule 1.6 cmt. 5', 'Rule one point six comment five'],
+    ['Smith v. Jones', 'Smith versus Jones'],
+    ['e.g. this; i.e. that', 'for example, this; that is, that'],
+    ['pp. 4-5', 'pages 4-5'],
+    ['Ohio v. Roberts, 448 U.S. 56, 66 (1980), held', 'Ohio versus Roberts, 1980, held'],
+    ['United States v. Doe, 960 F.2d 221 (1st Cir. 1992).', 'United States versus Doe, 1992.'],
+    ['Rule 404(b)(2) and FRE 412', 'Rule four-oh-four, b, two and Rule four-twelve'],
+    ['FRE applies', 'F R E applies'],
+  ];
+  for (const [from, to] of cases) assert.equal(forEar(from), to, from);
+  assert.equal(citeNumber('1101'), 'eleven-oh-one');
+  assert.equal(citeNumber('400'), 'four hundred');
+  assert.equal(citeNumber('105'), 'one-oh-five');
+});
+
+const V = (name, lang = 'en-US', extra = {}) => ({ name, lang, default: false, ...extra });
+const VOICES = [
+  V('Microsoft David - English (United States)', 'en-US', { default: true }),
+  V('Microsoft Zira - English (United States)'),
+  V('Google Deutsch', 'de-DE'),
+  V('Microsoft Andrew Online (Natural) - English (United States)'),
+  V('Microsoft Ava Online (Natural) - English (United States)'),
+  V('Samantha', 'en-US'),
+  V('Google UK English Male', 'en-GB'),
+  V('Microsoft Libby Online (Natural) - English (United Kingdom)', 'en-GB'),
+];
+test('voices are ranked: natural voices of the asked gender first', () => {
+  assert.equal(rankVoices(VOICES, 'female')[0].name, 'Microsoft Ava Online (Natural) - English (United States)');
+  assert.equal(rankVoices(VOICES, 'female')[1].name, 'Microsoft Libby Online (Natural) - English (United Kingdom)');
+  assert.equal(rankVoices(VOICES, 'male')[0].name, 'Microsoft Andrew Online (Natural) - English (United States)');
+  assert.equal(genderOf(V('Google UK English Female')), 'female');
+  assert.equal(genderOf(V('Daniel (Enhanced)', 'en-GB')), 'male');
+  // Without a known name, an English voice beats a foreign one, and the wrong gender comes last.
+  const plain = [V('Google Deutsch', 'de-DE'), V('Microsoft Mark'), V('Some Voice', 'en-US')];
+  assert.deepEqual(rankVoices(plain, 'female').map((v) => v.name), ['Some Voice', 'Google Deutsch', 'Microsoft Mark']);
+  assert.equal(rankVoices([], 'female').length, 0);
+  // The main voice and the other one for "alt" lines; a picked voice wins.
+  const p = pickVoices(VOICES, { gender: 'female' });
+  assert.match(p.main.name, /Ava/);
+  assert.match(p.alt.name, /Andrew/);
+  assert.equal(pickVoices(VOICES, { gender: 'female', name: 'Samantha' }).main.name, 'Samantha');
+  assert.equal(pickVoices([V('Only One')], { gender: 'male' }).alt, null, 'no second voice to tell apart');
+});
+
+const COURSE = {
+  id: 'ev', title: 'Evidence', days: [
+    { day: 1, title: 'Relevance', episodes: [
+      { id: 'd1-a', title: 'A', minutes: 3, segments: [{ id: 'i', say: 'Under FRE 401, any tendency.' }, { say: 'Really?', voice: 'alt' }, { id: 'q', ask: 'Relevant?', answer: 'Yes.', pause: 8 }, { pause: 2 }] },
+      { id: 'd1-b', title: 'B', segments: [{ say: 'Rule 403.' }, { ask: 'Lean?', answer: 'Admit.' }] },
+    ] },
+    { day: 2, title: 'Hearsay', episodes: [{ id: 'd2-a', title: 'C', segments: [{ say: 'Rule 803(2).' }] }] },
+  ],
+};
+test('an audio course plays episode by episode, asks with a pause, then the answer', () => {
+  const q = courseQueue(COURSE, { scale: 1 });
+  assert.deepEqual(q.map((x) => [x.key, x.day]), [['d1-a', 1], ['d1-b', 1], ['d2-a', 2]]);
+  const a = q[0].segments;
+  assert.deepEqual(a.map((s) => s.role), ['say', 'alt', 'ask', 'answer', 'pause']);
+  assert.deepEqual(a.map((s) => s.sid), ['i', 's1', 'q', 'q:a', 's3']);
+  assert.equal(a[0].text, 'Under FRE 401, any tendency.', 'the transcript keeps the text');
+  assert.equal(a[0].say, 'Under Rule four-oh-one, any tendency.', 'the voice hears it said');
+  assert.equal(a[1].voice, 'alt');
+  assert.equal(a[2].pause, 8000);
+  assert.equal(a[4].say, '');
+  assert.equal(q[1].segments[1].pause, 7000, 'an ask without a pause waits 7 seconds');
+  assert.equal(courseQueue(COURSE, { scale: 2.5 })[1].segments[1].pause, 17500, 'the pause control scales it');
+  assert.equal(q[0].label, 'Day 1 · Episode 1 of 2');
+  assert.deepEqual(daysOf(q).map((d) => [d.day, d.items]), [[1, [0, 1]], [2, [2]]]);
+  // Resume: the saved episode and segment, else the first unfinished episode.
+  assert.deepEqual(courseResume(q, { key: 'd1-a', seg: 'q' }), { idx: 0, seg: 2 });
+  assert.deepEqual(courseResume(q, { key: 'gone', done: ['d1-a'] }), { idx: 1, seg: 0 });
+  assert.deepEqual(courseResume(q, {}), { idx: 0, seg: 0 });
+  const s = readSettings({ mode: 'materials', gender: 'male', audio: { ev: { key: 'd1-b', seg: 's0', done: ['d1-a', 'd1-a', 3] } }, rate: 0.95 });
+  assert.equal(s.mode, 'materials');
+  assert.equal(s.gender, 'male');
+  assert.deepEqual(s.audio.ev, { key: 'd1-b', seg: 's0', done: ['d1-a'] });
+  assert.equal(readSettings({}).gender, 'female');
+  assert.equal(readSettings({}).rate, 0.95);
+  assert.equal(readSettings({}).mode, 'course');
+});
+
+test('listen/v1 files are checked: bad segments and empty episodes are reported and dropped', () => {
+  const sample = readListen(fs.readFileSync(path.join(ROOT, 'docs/templates/sample.listen.json'), 'utf8'));
+  const ok = normalizeListen(sample);
+  assert.deepEqual(ok.errors, []);
+  assert.deepEqual(ok.warnings, []);
+  assert.equal(ok.course.days.length, 2);
+  assert.equal(readListen('{"format":"cards/v1"}'), null);
+  const bad = normalizeListen({ format: 'listen/v1', id: 'x', title: 'X', description: 'x', days: [
+    { day: 1, title: 'One', episodes: [
+      { id: 'e1', title: 'E1', segments: [{ say: 'Fine.' }, { ask: 'No answer?' }, { nonsense: 1 }, { pause: -1 }] },
+      { id: 'e1', title: 'Dup', segments: [{ say: 'x' }] },
+      { id: 'e2', title: 'Empty', segments: [] },
+    ] },
+    { day: 2, title: 'Two', episodes: [] },
+  ] });
+  assert.equal(bad.errors.length, 4, bad.errors.join('\n'));
+  assert.ok(bad.warnings.some((w) => /e2.*empty/.test(w)));
+  assert.ok(bad.warnings.some((w) => /Day 2: no episodes/.test(w)));
+  assert.deepEqual(bad.course.days.map((d) => d.episodes.map((e) => e.id)), [['e1']]);
+  assert.deepEqual(bad.course.days[0].episodes[0].segments, [{ say: 'Fine.' }]);
+  assert.match(normalizeListen({ format: 'listen/v1' }).errors.join(' '), /"id" is missing.*"days"/);
 });
 
 test('long text is cut into pieces a speech engine reads whole', () => {
@@ -85,7 +199,7 @@ test('saved settings and position are checked, and a stale position starts over'
   assert.equal(s.rate, 1.5);
   assert.deepEqual(s.skipAreas, ['Hearsay']);
   assert.equal(readSettings({ pause: 7, rate: 9 }).pause, 6);
-  assert.equal(readSettings('nonsense').rate, 1);
+  assert.equal(readSettings('nonsense').rate, 0.95);
   assert.deepEqual(groupsOf(DATA.questions, (x) => areaOf(x.topic)), [{ name: 'Relevance', count: 1 }, { name: 'Hearsay', count: 1 }]);
   assert.ok(minutesOf(q) >= 1);
 });
@@ -100,7 +214,9 @@ test('the build writes a Listen page and its data for a course with an outline, 
     fs.writeFileSync(path.join(dir, 'Old.mcq.json'), JSON.stringify(set('old', true)));
     fs.writeFileSync(path.join(dir, 'Deck.cards.json'), JSON.stringify({ schema: 'cards/v1', id: 'deck', title: 'Deck', description: 'x', topics: ['Formation'], cards: [{ id: 'c1', topic: 'Formation', front: 'What is an offer?', back: 'A manifestation of willingness.' }] }));
     fs.writeFileSync(path.join(dir, 'Sample_Outline.html'), '<title>Sample Outline</title><body><h2>I. Formation</h2><p>An offer is a manifestation.</p><h3>Cases</h3><p>Lucy v. Zehmer.</p><h2>II. Defenses</h2><p>Mistake.</p></body>');
-    fs.writeFileSync(path.join(dir, 'subject.json'), JSON.stringify({ title: 'Sample Course', refs: { outline: 'sample-outline' }, documents: { 'Old.mcq.json': { archived: true } } }));
+    fs.copyFileSync(path.join(ROOT, 'docs/templates/sample.listen.json'), path.join(dir, 'Course.listen.json'));
+    fs.writeFileSync(path.join(dir, 'Old.listen.json'), JSON.stringify({ format: 'listen/v1', id: 'old', title: 'Old', days: [{ day: 1, title: 'x', episodes: [{ id: 'o', title: 'o', segments: [{ say: 'old' }] }] }] }));
+    fs.writeFileSync(path.join(dir, 'subject.json'), JSON.stringify({ title: 'Sample Course', refs: { outline: 'sample-outline' }, documents: { 'Old.mcq.json': { archived: true }, 'Old.listen.json': { archived: true } } }));
     const dist = path.join(tmp, 'dist');
     execFileSync(process.execPath, [path.join(ROOT, 'scripts/build.mjs')], { cwd: ROOT, env: { ...process.env, SITE_CONTENT_DIR: path.join(tmp, 'content'), SITE_DIST_DIR: dist }, stdio: 'pipe' });
     const read = (rel) => fs.readFileSync(path.join(dist, rel), 'utf8');
@@ -110,8 +226,13 @@ test('the build writes a Listen page and its data for a course with an outline, 
     assert.deepEqual(data.cards.map((c) => c.id), ['c1']);
     assert.deepEqual(data.sets.map((s) => s.slug), ['current'], 'archived sets are left out');
     assert.ok(fs.existsSync(path.join(dist, 'play/data/sample-course/current.json')), 'questions come from play/data');
+    assert.deepEqual(data.audio.map((c) => c.id), ['evidence-sample-audio'], 'archived audio courses are left out');
+    assert.equal(data.audio[0].days[0].episodes[0].segments[0].id, 'intro');
     const page = read('listen/sample-course/index.html');
     assert.match(page, /Play/);
+    assert.match(page, /value="course" data-ls-mode checked/, 'the audio course is the default mode');
+    assert.match(page, /Female voice[\s\S]*Male voice/);
+    assert.doesNotMatch(read('subjects/sample-course/index.html'), /listen\.json|Evidence in Two Days/, 'the audio course is not listed as a document');
     assert.match(read('subjects/sample-course/index.html'), /href="\.\.\/\.\.\/listen\/sample-course\/"[^>]*>[\s\S]*?Listen \(hands-free\)/);
     assert.match(read('sitemap.xml'), /listen\/sample-course\//);
   } finally { fs.rmSync(tmp, { recursive: true, force: true }); }

@@ -1,0 +1,56 @@
+{
+  "format": "listen/v1",
+  "id": "evidence-sample-audio",
+  "title": "Evidence in Two Days (sample)",
+  "course": "Evidence",
+  "description": "A short sample audio course: relevance on Day 1, hearsay on Day 2. It uses every listen/v1 segment type.",
+  "days": [
+    {
+      "day": 1,
+      "title": "Relevance",
+      "minutes": 4,
+      "episodes": [
+        {
+          "id": "d1-relevance",
+          "title": "The low bar of Rule 401",
+          "minutes": 2,
+          "segments": [
+            { "id": "intro", "say": "Welcome to Day 1. Today is about relevance, the first gate every piece of evidence has to pass." },
+            { "id": "rule", "say": "Under FRE 401, evidence is relevant if (a) it has any tendency to make a fact more or less probable, and (b) that fact is of consequence. Both are required." },
+            { "id": "case", "say": "Courts call it a low bar, e.g. Knapp v. State, 168 Ind. 153 (1907), where the defendant's story was relevant to his fear even though no one proved it true." },
+            { "id": "x1", "say": "So a photo of the intersection is relevant even if it only helps a little?", "voice": "alt" },
+            { "id": "x2", "say": "Exactly. Any tendency is enough. The fight comes later, under Rule 403." },
+            { "id": "q1", "ask": "Evidence moves a fact of consequence only slightly. Is it relevant under Rule 401?", "answer": "Yes. Any tendency suffices; weight is for the jury.", "pause": 8 }
+          ]
+        },
+        {
+          "id": "d1-prejudice",
+          "title": "Rule 403 balancing",
+          "minutes": 2,
+          "segments": [
+            { "id": "rule", "say": "Rule 403 lets the court exclude relevant evidence if its probative value is substantially outweighed by unfair prejudice, confusion, or waste of time. The factors are weighed together." },
+            { "id": "breath", "pause": 2 },
+            { "id": "q1", "ask": "Which way does Rule 403 lean: toward admitting or excluding?", "answer": "Toward admitting. The danger must substantially outweigh the probative value." }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 2,
+      "title": "Hearsay",
+      "minutes": 2,
+      "episodes": [
+        {
+          "id": "d2-definition",
+          "title": "What hearsay is",
+          "minutes": 2,
+          "segments": [
+            { "id": "rule", "say": "Hearsay under FRE 801(c) is (1) a statement, (2) made out of court, (3) offered to prove the truth of what it asserts. All three are required." },
+            { "id": "excited", "say": "Rule 803(2), the excited utterance, lets in a statement about a startling event made while under the stress of it." },
+            { "id": "q1", "ask": "Is a statement offered only to show the listener had notice hearsay?", "answer": "No. It is not offered for its truth.", "pause": 6 }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -14,7 +14,7 @@ const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const CSS_VERSION = createHash('sha1').update(fs.readFileSync(path.join(ROOT, 'src', 'assets', 'styles.css'))).digest('hex').slice(0, 10);
 // The same for the page scripts; app.js passes its version on to the scenery module it loads.
 const jsHash = createHash('sha1');
-for (const f of ['app.js', 'ambience.js', 'shuffle.js', 'answer-log.js', 'stats.js', 'topic-picker.js', 'listen.js', 'listen-queue.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
+for (const f of ['app.js', 'ambience.js', 'shuffle.js', 'answer-log.js', 'stats.js', 'topic-picker.js', 'listen.js', 'listen-queue.js', 'listen-voice.js']) jsHash.update(fs.readFileSync(path.join(ROOT, 'src', 'assets', f)));
 const JS_VERSION = jsHash.digest('hex').slice(0, 10);
 // Crypt Survivors (/survivors/) loads its stylesheet and entry module with a version from all its files.
 const svHash = createHash('sha1');
@@ -608,12 +608,14 @@ export function subjectPage(ctx, s) {
  * Listen, at listen/<course>/: the course read aloud, hands-free, by the browser's speech synthesis
  * (src/assets/listen.js, with the play list from listen-queue.js). The outline section by section,
  * then the flashcards, then the questions with a pause to think before each answer. The listener
- * picks what to include; nothing is graded. The data is listen/<course>/data.json (scripts/build.mjs)
+ * picks what to include; nothing is graded. A course with an audio course (<Name>.listen.json,
+ * docs/listen-format.md) offers it first. The data is listen/<course>/data.json (scripts/build.mjs)
  * and the questions are the course's play/data/ sets.
  */
 export function listen(ctx, s) {
   const root = '../../';
   const info = ctx.listen.get(s.slug);
+  const audio = info.audio || [];
   const kinds = [
     ['outline', 'Outline', info.outline ? `${plural(info.outline.sections, 'section')} of the ${esc(info.outline.title)}, read heading by heading` : ''],
     ['cards', 'Flashcards', info.cards ? `${plural(info.cards, 'card')}: the front, a pause, then the back` : ''],
@@ -624,26 +626,49 @@ export function listen(ctx, s) {
       <div class="ls-pick-actions"><button type="button" class="btn btn-ghost" data-ls-all>Select all</button><button type="button" class="btn btn-ghost" data-ls-none>Clear all</button></div>
       <div class="ls-pick-list" data-ls-pick-list></div>
     </details>`;
+  const mins = (m) => (m < 60 ? `${m} min` : `${Math.floor(m / 60)} h ${m % 60 ? `${m % 60} min` : ''}`.trim());
+  const modes = audio.length ? `<fieldset class="ls-modes">
+    <legend>Listen to</legend>
+    <label class="ls-mode"><input type="radio" name="ls-mode" value="course" data-ls-mode checked><span><strong>Audio course</strong><small>${esc(audio[0].title)}: ${plural(audio[0].days, 'day')}, ${plural(audio[0].episodes, 'episode')}, about ${mins(audio[0].minutes)}</small></span></label>
+    <label class="ls-mode"><input type="radio" name="ls-mode" value="materials" data-ls-mode><span><strong>Course materials</strong><small>${kinds.map(([, label]) => label.toLowerCase()).join(', ') || 'the outline, flashcards and questions'}, read aloud</small></span></label>
+  </fieldset>` : '';
+  const coursePanel = `<section class="ls-course" data-ls-course hidden aria-label="Audio course">
+    ${audio.length > 1 ? `<label class="ls-field"><span>Audio course</span><select data-ls-course-pick>${audio.map((c) => `<option value="${esc(c.id)}">${esc(c.title)}</option>`).join('')}</select></label>` : ''}
+    <p class="ls-course-desc" data-ls-course-desc></p>
+    <button type="button" class="btn btn-primary ls-continue" data-ls-continue disabled>Continue</button>
+    <div class="ls-days" data-ls-days></div>
+    <button type="button" class="btn btn-ghost ls-reset" data-ls-reset>Clear ticks and start over</button>
+  </section>`;
   const body = `
 <section class="page-head container">
   ${breadcrumbs(root, [[ctx.P.subject(s), s.title], [`listen/${s.slug}/`, 'Listen']])}
   <h1 class="page-title">Listen: ${esc(s.title)}</h1>
-  <p class="page-lede">Hands-free review, read aloud by your browser. Press <strong>Play</strong> and it keeps going on its own: the outline, then the flashcards, then the questions, each with a pause to think before the answer. Nothing is graded, and your place is saved on this device.</p>
+  <p class="page-lede">Hands-free review, read aloud by your browser. ${audio.length ? 'The <strong>audio course</strong> teaches the course day by day in short episodes, with questions to answer in your head.' : 'Press <strong>Play</strong> and it keeps going on its own: the outline, then the flashcards, then the questions, each with a pause to think before the answer.'} Nothing is graded, and your place is saved on this device.</p>
 </section>
 <section class="container section-tight listen" data-listen data-course="${esc(s.slug)}" style="--accent:${s.accent}">
+  ${modes}
+  ${audio.length ? coursePanel : '<div data-ls-course hidden><span data-ls-course-desc></span><div data-ls-days></div></div>'}
   <form class="ls-setup" data-ls-setup>
-    <fieldset class="ls-kinds">
-      <legend>What to play</legend>
-      ${kinds.map(([k, label, sub]) => `<label class="ls-kind"><input type="checkbox" data-ls-include="${k}" checked><span><strong>${label}</strong><small>${sub}</small></span></label>`).join('')}
-    </fieldset>
-    ${pick('outline', 'Choose outline sections')}
-    ${pick('cards', 'Choose flashcard topics')}
-    ${pick('questions', 'Choose question topics')}
-    <div class="ls-settings">
-      <label class="ls-field"><span>Speed</span><select data-ls-rate></select></label>
-      <label class="ls-field"><span>Pause to think</span><select data-ls-pause></select></label>
-      <label class="ls-field ls-field-voice"><span>Voice</span><select data-ls-voice><option value="">The browser's voice</option></select></label>
+    <div class="ls-materials" data-ls-materials>
+      <fieldset class="ls-kinds">
+        <legend>What to play</legend>
+        ${kinds.map(([k, label, sub]) => `<label class="ls-kind"><input type="checkbox" data-ls-include="${k}" checked><span><strong>${label}</strong><small>${sub}</small></span></label>`).join('')}
+      </fieldset>
+      ${pick('outline', 'Choose outline sections')}
+      ${pick('cards', 'Choose flashcard topics')}
+      ${pick('questions', 'Choose question topics')}
     </div>
+    <fieldset class="ls-gender">
+      <legend>Voice</legend>
+      <label class="ls-seg"><input type="radio" name="ls-gender" value="female" data-ls-gender checked><span>Female voice</span></label>
+      <label class="ls-seg"><input type="radio" name="ls-gender" value="male" data-ls-gender><span>Male voice</span></label>
+    </fieldset>
+    <div class="ls-settings">
+      <label class="ls-field ls-field-voice"><span>Voice to use</span><select data-ls-voice><option value="">Best voice</option></select></label>
+      <label class="ls-field"><span>Speed</span><select data-ls-rate></select></label>
+      <label class="ls-field"><span data-ls-pause-label>Pause to think</span><select data-ls-pause></select></label>
+    </div>
+    <p class="ls-hint">For the most natural voices, use Microsoft Edge on a computer, or download an “Enhanced” or “Premium” voice in your phone's settings (iPhone: Settings &gt; Accessibility &gt; Spoken Content &gt; Voices). Most phones stop reading when the screen locks, so this page keeps the screen awake while it plays.</p>
     <p class="ls-total" data-ls-total aria-live="polite">Loading…</p>
   </form>
   <section class="ls-now" aria-labelledby="ls-title">
@@ -661,18 +686,22 @@ export function listen(ctx, s) {
       <p class="ls-pos" data-ls-pos></p>
       <button type="button" class="btn btn-ghost ls-restart" data-ls-restart>Start over</button>
     </div>
+    <div class="ls-eps" data-ls-eps hidden>
+      <button type="button" class="btn btn-ghost" data-ls-prev-ep>${icon('arrow-left')} Previous episode</button>
+      <button type="button" class="btn btn-ghost" data-ls-next-ep>Next episode ${icon('arrow-right')}</button>
+    </div>
     <div class="ls-buttons">
       <button type="button" class="btn btn-ghost" data-ls-back>${icon('arrow-left')} Back</button>
       <button type="button" class="btn btn-primary ls-play" data-ls-play disabled>Play</button>
       <button type="button" class="btn btn-ghost" data-ls-skip>Skip ${icon('arrow-right')}</button>
     </div>
-    <p class="ls-keys">Keyboard: <kbd>Space</kbd> play or pause, <kbd>←</kbd> back, <kbd>→</kbd> skip.</p>
+    <p class="ls-keys">Keyboard: <kbd>Space</kbd> play or pause, <kbd>←</kbd> back, <kbd>→</kbd> skip${audio.length ? ', <kbd>Shift</kbd> with an arrow for the episode' : ''}.</p>
   </div>
   <noscript><p>Listening needs JavaScript.</p></noscript>
 </section>`;
   return layout(ctx, {
     root, title: `Listen: ${s.title}`, canonical: `listen/${s.slug}/`, body, active: s.slug,
-    description: `${s.title} read aloud, hands-free: the outline, the flashcards and the practice questions, with a pause to think before each answer.`,
+    description: audio.length ? `${s.title} as a hands-free audio course, day by day, plus the outline, flashcards and practice questions read aloud.` : `${s.title} read aloud, hands-free: the outline, the flashcards and the practice questions, with a pause to think before each answer.`,
     extraHead: `<script type="module" src="${root}assets/listen.js?v=${JS_VERSION}"></script>`,
   });
 }

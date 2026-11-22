@@ -13,7 +13,8 @@
 // (dist/assets/refs/<subject>.json; run `npm run build` first) or from --refs <file>.
 // Outlines are built and read the way the site reads them, and the sections, case keys and worked
 // problems the popup will index are listed. Flashcard decks (.cards.json, or .html with a cards-data
-// block) are validated against cards/v1. Exit code 1 means errors.
+// block) are validated against cards/v1, audio courses (.listen.json) against listen/v1. Exit code 1
+// means errors.
 
 import fs from 'node:fs';
 import path from 'node:path';
@@ -22,6 +23,7 @@ import { fileURLToPath } from 'node:url';
 import { readMcq, normalizeMcq } from '../lib/mcq.mjs';
 import { readSupplement, readSupplementPage, normalizeSupplement } from '../lib/supplement-shell.mjs';
 import { readCards, normalizeCards } from '../lib/cards.mjs';
+import { normalizeListen, listenSummary } from '../lib/listen.mjs';
 import { convertDocx } from '../lib/docx.mjs';
 import { refIndex } from '../lib/refs.mjs';
 import { slugify } from '../lib/text.mjs';
@@ -144,6 +146,10 @@ async function check(file, refsPath) {
     try { ({ html } = await convertDocx(buildOutlineDocx(json), { theme: 'structured', outsideColor: json.outsideColor })); } catch (e) { return report(file, { errors: [e.message] }); }
     return report(file, { notes: summarizeIndex(refIndex({ outlineHtml: html, links: {} })) });
   }
+  if (json && (json.format === 'listen/v1' || /\.listen\.json$/i.test(file))) {
+    const { course, errors, warnings } = normalizeListen(json);
+    return report(file, { errors, warnings, notes: listenSummary(course) });
+  }
   const cardsRaw = readCards(text);
   if (cardsRaw) {
     const { deck, errors, warnings } = normalizeCards(cardsRaw);
@@ -181,7 +187,7 @@ if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.me
   const at = args.indexOf('--refs');
   const refs = at >= 0 ? args.splice(at, 2)[1] : null;
   if (!args.length) {
-    console.error('Usage: npm run check -- <file.mcq.json | file.cards.json | file.html | outline.json | outline.docx | file.supplement.json> [--refs dist/assets/refs/<subject>.json]');
+    console.error('Usage: npm run check -- <file.mcq.json | file.cards.json | file.html | outline.json | outline.docx | file.supplement.json | file.listen.json> [--refs dist/assets/refs/<subject>.json]');
     process.exit(2);
   }
   let errors = 0;

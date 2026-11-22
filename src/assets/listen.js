@@ -1,13 +1,19 @@
 // Listen (listen/<course>/, listen() in src/templates.mjs): the course read aloud, hands-free, with
-// the browser's speech synthesis. The play list comes from listen-queue.js; this file loads the
-// course's data (listen/<course>/data.json, and its question sets from play/data/), draws the
-// choices, and runs the player: Play/Pause, Back, Skip, speed, pause length and voice, a transcript
-// of what is being read, and the place saved per course in localStorage ("listen:<course>").
-// It keeps going without a touch, holds a screen wake lock while playing where the browser allows,
-// and answers the keyboard and headset buttons. Nothing is graded or recorded. Text from the data is
-// set with textContent, never parsed as HTML.
+// the browser's speech synthesis. Two modes:
+//   - Audio course: the course's scripted listen/v1 course (docs/listen-format.md), day by day,
+//     episode by episode, with a second voice for short exchanges and pauses to think. First and
+//     default when the course has one.
+//   - Course materials: the outline, flashcards and questions, read in turn.
+// The play lists come from listen-queue.js, the voices and the pronunciation from listen-voice.js.
+// This file loads the data (listen/<course>/data.json, and the question sets from play/data/), draws
+// the choices and runs the player: Play/Pause, Back, Skip, episode steps, speed, pause length and
+// voice, a transcript of what is being read, and the place saved per course in localStorage
+// ("listen:<course>"). It holds a screen wake lock while playing where the browser allows (most
+// phones stop speech when the screen locks), and answers the keyboard and headset buttons. Nothing
+// is graded or recorded. Text from the data is set with textContent, never parsed as HTML.
 
-import { buildQueue, speechChunks, resumeAt, readSettings, groupsOf, areaOf, minutesOf, PAUSES, RATES } from './listen-queue.js';
+import { buildQueue, courseQueue, courseResume, daysOf, speechChunks, resumeAt, readSettings, groupsOf, areaOf, minutesOf, PAUSES, RATES } from './listen-queue.js';
+import { rankVoices, pickVoices } from './listen-voice.js';
 
 const host = document.querySelector('[data-listen]');
 if (host) {
@@ -30,7 +36,8 @@ if (host) {
   // ---------------------------------------------------------------------------
   // Data
   // ---------------------------------------------------------------------------
-  let data = { outline: [], cards: [], questions: [] };
+  const data = { outline: [], cards: [], questions: [] };
+  let audio = [];             // the course's checked listen/v1 courses
   let sets = [];
   let queue = [];
   let idx = 0, seg = 0;
@@ -39,6 +46,7 @@ if (host) {
     const res = await fetch(new URL('data.json', location.href));
     if (!res.ok) throw new Error(`listen data ${res.status}`);
     const d = await res.json();
+    audio = Array.isArray(d.audio) ? d.audio.filter((c) => c && Array.isArray(c.days)) : [];
     data.outline = Array.isArray(d.outline) ? d.outline : [];
     data.cards = Array.isArray(d.cards) ? d.cards : [];
     sets = Array.isArray(d.sets) ? d.sets : [];
@@ -48,8 +56,44 @@ if (host) {
     data.questions = lists.flatMap((qs, i) => (Array.isArray(qs) ? qs : []).map((q) => ({ ...q, set: sets[i].slug })));
   }
 
+  const isCourse = () => st.mode === 'course' && audio.length > 0;
+  const course = () => audio.find((c) => c.id === st.course) || audio[0];
+  const place = () => {
+    const id = course().id;
+    st.audio[id] ||= { key: '', seg: '', done: [] };
+    return st.audio[id];
+  };
+  const scale = () => st.pause / 6;
+
   // ---------------------------------------------------------------------------
-  // What to play
+  // Mode: audio course or course materials
+  // ---------------------------------------------------------------------------
+  function drawMode() {
+    const c = isCourse();
+    for (const r of $$('[data-ls-mode]')) r.checked = r.value === (c ? 'course' : 'materials');
+    $('[data-ls-course]').hidden = !c;
+    $('[data-ls-materials]').hidden = c;
+    $('[data-ls-eps]').hidden = !c;
+    $('[data-ls-pause-label]').textContent = c ? 'Pauses' : 'Pause to think';
+    const labels = c ? ['Shorter', 'Normal', 'Longer', 'Longest'] : PAUSES.map((p) => `${p} seconds`);
+    [...pause.options].forEach((o, i) => { o.textContent = labels[i]; });
+  }
+  $$('[data-ls-mode]').forEach((r) => r.addEventListener('change', () => {
+    if (!r.checked) return;
+    pauseIt();
+    st.mode = r.value;
+    save();
+    drawMode();
+    rebuild({ keep: false });
+    restorePlace();
+    paint();
+    paintPlay();
+  }));
+  const courseSel = $('[data-ls-course-pick]');
+  courseSel?.addEventListener('change', () => { pauseIt(); st.course = courseSel.value; save(); rebuild({ keep: false }); restorePlace(); paint(); paintPlay(); });
+
+  // ---------------------------------------------------------------------------
+  // What to play (course materials)
   // ---------------------------------------------------------------------------
   const groups = {
     outline: { skip: 'skipParts', list: () => groupsOf(data.outline, (s) => s.part || s.title), unit: 'section' },
@@ -82,20 +126,42 @@ if (host) {
   }
   const sets_ = (kind) => new Set(st[groups[kind].skip]);
   function rebuild({ keep = true } = {}) {
-    const was = queue[idx]?.key || st.key;
+    const was = queue[idx]?.key;
     const old = idx;
-    queue = buildQueue(data, { outline: st.outline, cards: st.cards, questions: st.questions, skipParts: sets_('outline'), skipTopics: sets_('cards'), skipAreas: sets_('questions'), pause: st.pause });
+    if (isCourse()) queue = courseQueue(course(), { scale: scale() });
+    else queue = buildQueue(data, { outline: st.outline, cards: st.cards, questions: st.questions, skipParts: sets_('outline'), skipTopics: sets_('cards'), skipAreas: sets_('questions'), pause: st.pause });
     const found = keep && was ? queue.findIndex((x) => x.key === was) : -1;
     idx = found >= 0 ? found : Math.min(keep ? old : 0, Math.max(0, queue.length - 1));
     if (found < 0) seg = 0;
-    const counts = { outline: 0, card: 0, question: 0 };
-    for (const it of queue) counts[it.kind]++;
-    const parts = [counts.outline && `${counts.outline} outline sections`, counts.card && `${counts.card} flashcards`, counts.question && `${counts.question.toLocaleString('en-US')} questions`].filter(Boolean);
-    $('[data-ls-total]').textContent = queue.length ? `${parts.join(', ')}: about ${fmtMinutes(minutesOf(queue, st.rate))} of listening.` : 'Nothing is picked. Tick at least one kind and topic above.';
+    seg = Math.min(seg, Math.max(0, (queue[idx]?.segments.length || 1) - 1));
+    if (isCourse()) {
+      const c = course();
+      const eps = c.days.reduce((n, d) => n + d.episodes.length, 0);
+      $('[data-ls-total]').textContent = `${c.days.length} ${c.days.length === 1 ? 'day' : 'days'}, ${eps} episodes: about ${fmtMinutes(minutesOf(queue, st.rate))} of listening.`;
+    } else {
+      const counts = { outline: 0, card: 0, question: 0 };
+      for (const it of queue) counts[it.kind]++;
+      const parts = [counts.outline && `${counts.outline} outline sections`, counts.card && `${counts.card} flashcards`, counts.question && `${counts.question.toLocaleString('en-US')} questions`].filter(Boolean);
+      $('[data-ls-total]').textContent = queue.length ? `${parts.join(', ')}: about ${fmtMinutes(minutesOf(queue, st.rate))} of listening.` : 'Nothing is picked. Tick at least one kind and topic above.';
+    }
     $('[data-ls-play]').disabled = !queue.length || !synth;
+    drawDays();
     paint();
   }
   const fmtMinutes = (m) => (m < 60 ? `${Math.max(1, m)} minutes` : `${Math.floor(m / 60)} h ${m % 60} min`);
+  /** Puts the player at the saved place for the current mode. */
+  function restorePlace() {
+    if (isCourse()) ({ idx, seg } = courseResume(queue, place()));
+    else { idx = resumeAt(queue, st.key); seg = 0; }
+    drawDays();
+  }
+  /** Saves where the player is. */
+  function remember() {
+    const it = queue[idx];
+    if (!it) return;
+    if (isCourse()) { const p = place(); p.key = it.key; p.seg = it.segments[seg]?.sid || ''; } else st.key = it.key;
+    save();
+  }
 
   $$('[data-ls-include]').forEach((cb) => {
     cb.checked = st[cb.dataset.lsInclude] !== false;
@@ -123,9 +189,68 @@ if (host) {
     save();
   });
 
-  // Speed, pause and voice.
+  // ---------------------------------------------------------------------------
+  // The audio course: days, episodes with ticks, Continue
+  // ---------------------------------------------------------------------------
+  function drawDays() {
+    const box = $('[data-ls-days]');
+    if (!box) return;
+    if (!isCourse()) { box.replaceChildren(); return; }
+    const c = course();
+    $('[data-ls-course-desc]').textContent = c.description || '';
+    if (courseSel) courseSel.value = c.id;
+    const done = new Set(place().done);
+    box.replaceChildren(...daysOf(queue).map((d) => {
+      const fin = d.items.filter((i) => done.has(queue[i].key)).length;
+      const wrap = el('section', 'ls-day');
+      const h = el('h3', 'ls-day-h');
+      h.append(el('span', '', `Day ${d.day}${d.title ? `: ${d.title}` : ''}`), el('small', '', `${fin} of ${d.items.length} done`));
+      const ol = el('ol', 'ls-eplist');
+      for (const i of d.items) {
+        const it = queue[i];
+        const li = el('li');
+        const b = el('button', 'ls-ep');
+        b.type = 'button';
+        b.dataset.lsEp = String(i);
+        const isDone = done.has(it.key);
+        b.classList.toggle('ls-ep-done', isDone);
+        if (i === idx) b.setAttribute('aria-current', 'true');
+        b.append(el('span', 'ls-tick', isDone ? '✓' : ''), el('span', 'ls-ep-title', it.title), el('small', '', `${it.minutes ? `${it.minutes} min` : ''}${isDone ? ' · done' : ''}`));
+        b.setAttribute('aria-label', `${it.title}${isDone ? ', done' : ''}. Play from the start`);
+        li.append(b);
+        ol.append(li);
+      }
+      wrap.append(h, ol);
+      return wrap;
+    }));
+    const cont = $('[data-ls-continue]');
+    const it = queue[idx];
+    const allDone = queue.length && queue.every((x) => done.has(x.key));
+    cont.textContent = !it ? 'Nothing to play' : allDone && idx === 0 && seg === 0 ? 'Play again from Day 1'
+      : idx === 0 && seg === 0 && !done.size ? `Start Day 1: ${it.title}` : `Continue: Day ${it.day}, ${it.title}`;
+    cont.disabled = !it || !synth;
+  }
+  host.addEventListener('click', (e) => {
+    const b = e.target.closest('[data-ls-ep]');
+    if (!b) return;
+    go(Number(b.dataset.lsEp));
+    if (!playing) play();
+  });
+  $('[data-ls-continue]')?.addEventListener('click', () => { if (!playing) play(); });
+  $('[data-ls-reset]')?.addEventListener('click', () => {
+    if (!confirm('Clear the ticks and start this audio course again from Day 1?')) return;
+    pauseIt();
+    st.audio[course().id] = { key: '', seg: '', done: [] };
+    save();
+    idx = 0; seg = 0;
+    drawDays(); paint(); paintPlay();
+  });
+
+  // ---------------------------------------------------------------------------
+  // Voice, speed and pauses
+  // ---------------------------------------------------------------------------
   const rate = $('[data-ls-rate]');
-  for (const r of RATES) rate.append(new Option(r === 1 ? 'Normal (1×)' : `${r}×`, String(r)));
+  for (const r of RATES) rate.append(new Option(r === 0.95 ? 'Relaxed (0.95×)' : r === 1 ? 'Normal (1×)' : `${r}×`, String(r)));
   rate.value = String(st.rate);
   rate.addEventListener('change', () => { st.rate = Number(rate.value); save(); rebuild(); });
   const pause = $('[data-ls-pause]');
@@ -133,23 +258,37 @@ if (host) {
   pause.value = String(st.pause);
   pause.addEventListener('change', () => { st.pause = Number(pause.value); save(); restartIfPlaying(() => rebuild()); });
   const voiceSel = $('[data-ls-voice]');
+  const lang = (navigator.language || 'en-US').slice(0, 2);
   let voices = [];
+  let picked = { main: null, alt: null };
   function drawVoices() {
+    for (const r of $$('[data-ls-gender]')) r.checked = r.value === st.gender;
     if (!synth) return;
     voices = synth.getVoices();
-    // English voices first, the browser's default among them first.
-    const lang = (navigator.language || 'en-US').slice(0, 2);
-    const sorted = [...voices].sort((a, b) => (b.lang.startsWith(lang) - a.lang.startsWith(lang)) || (b.default - a.default) || a.name.localeCompare(b.name));
-    voiceSel.replaceChildren(new Option('The browser\'s voice', ''), ...sorted.map((v) => new Option(`${v.name} (${v.lang})`, v.name)));
+    picked = pickVoices(voices, { gender: st.gender, name: st.voice, lang });
+    const auto = pickVoices(voices, { gender: st.gender, lang }).main;
+    const word = st.gender === 'male' ? 'male' : 'female';
+    voiceSel.replaceChildren(new Option(auto ? `Best ${word} voice: ${auto.name}` : `Best ${word} voice`, ''),
+      ...rankVoices(voices, st.gender, lang).map((v) => new Option(`${v.name} (${v.lang})`, v.name)));
     voiceSel.value = voices.some((v) => v.name === st.voice) ? st.voice : '';
   }
-  voiceSel.addEventListener('change', () => { st.voice = voiceSel.value; save(); });
-  if (synth) { drawVoices(); synth.addEventListener?.('voiceschanged', drawVoices); }
-  const voice = () => voices.find((v) => v.name === st.voice) || null;
+  voiceSel.addEventListener('change', () => { st.voice = voiceSel.value; save(); drawVoices(); });
+  $$('[data-ls-gender]').forEach((r) => r.addEventListener('change', () => {
+    if (!r.checked) return;
+    st.gender = r.value;
+    st.voice = '';
+    save();
+    drawVoices();
+  }));
+  drawVoices();
+  if (synth) synth.addEventListener?.('voiceschanged', drawVoices);
+  // Some browsers fill the list late without firing voiceschanged.
+  if (synth && !synth.getVoices().length) setTimeout(drawVoices, 800);
 
   // ---------------------------------------------------------------------------
-  // The player. Each segment is spoken in short pieces (speechChunks), then its pause runs out, then
-  // the next segment, then the next item. Pause cancels speech; Play starts the segment over.
+  // The player. Each segment is spoken in sentence-sized pieces (speechChunks), then its pause runs
+  // out, then the next segment, then the next item. Pause cancels speech; Play starts the segment
+  // over. An audio course stops at the end of each day.
   // ---------------------------------------------------------------------------
   let playing = false, current = null, timer = null, watchdog = null, waitTick = null, lock = null;
   const stopSound = () => {
@@ -173,16 +312,21 @@ if (host) {
     if (!item) { finish(); return; }
     const s = item.segments[seg];
     if (!s) { nextItem(); return; }
+    if (isCourse()) remember();
     paint();
     const chunks = speechChunks(s.say);
+    // The other voice for "alt" lines; with only one voice to hand, the same voice pitched apart.
+    const alt = s.voice === 'alt';
+    const v = alt ? picked.alt || picked.main : picked.main;
+    const pitch = alt && (!picked.alt || picked.alt === picked.main) ? (st.gender === 'male' ? 1.25 : 0.7) : st.pitch;
     let k = 0;
     const next = () => {
       if (!playing) return;
       if (k >= chunks.length) { wait(s.pause); return; }
       const u = new SpeechSynthesisUtterance(chunks[k]);
-      const v = voice();
       if (v) { u.voice = v; u.lang = v.lang; } else u.lang = document.documentElement.lang === 'en' ? 'en-US' : document.documentElement.lang;
       u.rate = st.rate;
+      u.pitch = pitch;
       const done = () => { if (current !== u) return; clearTimeout(watchdog); current = null; k++; next(); };
       u.onend = done;
       u.onerror = (e) => { if (e.error === 'interrupted' || e.error === 'canceled') return; done(); };
@@ -196,12 +340,12 @@ if (host) {
   }
   function wait(ms) {
     if (!playing) return;
-    const long = ms >= 2000;
     const box = $('[data-ls-wait]');
-    if (long) {
+    if (ms >= 2000) {
       const end = Date.now() + ms;
       const role = queue[idx]?.segments[seg]?.role;
-      const say = () => { box.textContent = `${role === 'front' ? 'Think of the answer' : 'Pick your answer'}: ${Math.max(0, Math.ceil((end - Date.now()) / 1000))} s`; };
+      const what = role === 'front' || role === 'ask' ? 'Think of the answer' : role === 'choice' ? 'Pick your answer' : 'Pause';
+      const say = () => { box.textContent = `${what}: ${Math.max(0, Math.ceil((end - Date.now()) / 1000))} s`; };
       box.hidden = false;
       say();
       waitTick = setInterval(say, 250);
@@ -215,19 +359,34 @@ if (host) {
     speakSegment();
   }
   function nextItem() {
+    const cur = queue[idx];
     seg = 0;
-    if (idx >= queue.length - 1) { finish(); return; }
+    if (isCourse() && cur) { const p = place(); if (!p.done.includes(cur.key)) p.done.push(cur.key); }
+    if (idx >= queue.length - 1) { if (isCourse()) { idx = 0; remember(); } finish(); return; }
     idx++;
-    st.key = queue[idx].key;
-    save();
+    remember();
+    // An audio course plays straight through a day, then stops.
+    if (isCourse() && queue[idx].day !== cur.day) { endOfDay(cur.day); return; }
+    drawDays();
     speakSegment();
+  }
+  function endOfDay(day) {
+    playing = false;
+    stopSound();
+    release();
+    drawDays();
+    paint();
+    paintPlay();
+    $('[data-ls-label]').textContent = `Day ${day} done`;
+    $('[data-ls-title]').textContent = `Press Play for Day ${queue[idx].day}: ${queue[idx].dayTitle || queue[idx].title}`;
   }
   function finish() {
     playing = false;
     stopSound();
+    drawDays();
     paint();
     $('[data-ls-label]').textContent = 'Finished';
-    $('[data-ls-title]').textContent = 'You reached the end. Press Start over to play it again.';
+    $('[data-ls-title]').textContent = isCourse() ? 'You finished the audio course. Press Play to hear it again from Day 1.' : 'You reached the end. Press Start over to play it again.';
     paintPlay();
     release();
   }
@@ -247,25 +406,36 @@ if (host) {
     playing = false;
     stopSound();
     idx = Math.max(0, Math.min(queue.length - 1, to));
-    seg = segment;
-    st.key = queue[idx]?.key || '';
-    save();
+    seg = Math.max(0, Math.min(segment, (queue[idx]?.segments.length || 1) - 1));
+    remember();
+    drawDays();
     if (was) { playing = true; speakSegment(); } else paint();
     paintPlay();
   }
-  // Back starts the item over, or goes to the one before when it is at its start.
-  const back = () => (seg > 0 ? go(idx) : go(idx - 1));
-  const skip = () => { if (idx < queue.length - 1) go(idx + 1); else finish(); };
+  // Materials: Back starts the item over, or goes to the one before; Skip goes to the next item.
+  // Audio course: Back and Skip move a segment; the episode buttons move an episode.
+  const back = () => {
+    if (isCourse()) { if (seg > 0) go(idx, { segment: seg - 1 }); else if (idx > 0) go(idx - 1, { segment: queue[idx - 1].segments.length - 1 }); return; }
+    if (seg > 0) go(idx); else go(idx - 1);
+  };
+  const skip = () => {
+    if (isCourse() && seg < (queue[idx]?.segments.length || 0) - 1) { go(idx, { segment: seg + 1 }); return; }
+    if (idx < queue.length - 1) go(idx + 1); else finish();
+  };
+  const prevEpisode = () => (seg > 0 ? go(idx) : go(idx - 1));
+  const nextEpisode = () => { if (idx < queue.length - 1) go(idx + 1); else finish(); };
 
   $('[data-ls-play]').addEventListener('click', toggle);
   $('[data-ls-back]').addEventListener('click', back);
   $('[data-ls-skip]').addEventListener('click', skip);
+  $('[data-ls-prev-ep]').addEventListener('click', prevEpisode);
+  $('[data-ls-next-ep]').addEventListener('click', nextEpisode);
   $('[data-ls-restart]').addEventListener('click', () => go(0));
   document.addEventListener('keydown', (e) => {
     if (e.altKey || e.ctrlKey || e.metaKey || e.target.closest?.('input, select, textarea, button, summary, a')) return;
     if (e.key === ' ' || e.key === 'k') { e.preventDefault(); toggle(); }
-    else if (e.key === 'ArrowRight') { e.preventDefault(); skip(); }
-    else if (e.key === 'ArrowLeft') { e.preventDefault(); back(); }
+    else if (e.key === 'ArrowRight') { e.preventDefault(); (e.shiftKey ? nextEpisode : skip)(); }
+    else if (e.key === 'ArrowLeft') { e.preventDefault(); (e.shiftKey ? prevEpisode : back)(); }
   });
   // Headset and lock-screen buttons, where the browser offers them.
   try {
@@ -274,7 +444,7 @@ if (host) {
     navigator.mediaSession?.setActionHandler('nexttrack', skip);
     navigator.mediaSession?.setActionHandler('previoustrack', back);
   } catch { /* not supported */ }
-  // Keep the screen awake while playing, so the phone doesn't sleep and stop the speech.
+  // Keep the screen awake while playing: most phones stop speech synthesis when the screen locks.
   async function acquire() { try { lock = await navigator.wakeLock?.request('screen'); } catch { lock = null; } }
   function release() { try { lock?.release(); } catch { /* already released */ } lock = null; }
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible' && playing) acquire(); });
@@ -282,44 +452,51 @@ if (host) {
   // ---------------------------------------------------------------------------
   // Drawing
   // ---------------------------------------------------------------------------
-  const KIND = { outline: 'Outline', card: 'Flashcard', question: 'Question' };
+  const KIND = { outline: 'Outline', card: 'Flashcard', question: 'Question', episode: 'Episode' };
   function paintPlay() {
     const b = $('[data-ls-play]');
-    b.textContent = playing ? 'Pause' : idx > 0 || seg > 0 ? 'Resume' : 'Play';
+    b.textContent = playing ? 'Pause' : idx > 0 || seg > 0 ? (isCourse() ? 'Continue' : 'Resume') : 'Play';
     b.setAttribute('aria-pressed', String(playing));
     host.classList.toggle('ls-playing', playing);
   }
   let shownKey = null;
   function paint() {
     const item = queue[idx];
-    $('[data-ls-pos]').textContent = queue.length ? `${idx + 1} of ${queue.length.toLocaleString('en-US')}` : '';
+    const course_ = isCourse();
+    $('[data-ls-pos]').textContent = !queue.length ? '' : course_ && item
+      ? `Episode ${idx + 1} of ${queue.length} · part ${seg + 1} of ${item.segments.length}` : `${idx + 1} of ${queue.length.toLocaleString('en-US')}`;
     $('[data-ls-meter]').style.width = queue.length ? `${((idx + (item ? seg / item.segments.length : 0)) / queue.length) * 100}%` : '0';
     $('[data-ls-back]').disabled = !queue.length || (idx === 0 && seg === 0);
     $('[data-ls-skip]').disabled = !queue.length;
+    $('[data-ls-prev-ep]').disabled = !queue.length || (idx === 0 && seg === 0);
+    $('[data-ls-next-ep]').disabled = !queue.length || idx >= queue.length - 1;
     if (!item) {
       $('[data-ls-label]').textContent = 'Ready';
       $('[data-ls-title]').textContent = queue.length ? 'Press Play to start' : 'Nothing to play';
       $('[data-ls-transcript]').replaceChildren();
+      shownKey = null;
       return;
     }
     $('[data-ls-label]').textContent = item.label;
     $('[data-ls-title]').textContent = item.title;
     const list = $('[data-ls-transcript]');
-    if (shownKey !== item.key) {
+    const shown = `${st.mode}:${item.key}`;
+    if (shownKey !== shown) {
       const prev = queue[idx - 1];
       $('[data-ls-prev]').hidden = !prev;
       if (prev) $('[data-ls-prev]').textContent = `Before this: ${KIND[prev.kind]}, ${prev.title}`;
-      list.replaceChildren(...item.segments.map((s) => el('li', `ls-line ls-${s.role}`, s.text)));
-      shownKey = item.key;
+      list.replaceChildren(...item.segments.map((s) => el('li', `ls-line ls-${s.role}`, s.role === 'pause' ? '(pause)' : s.text)));
+      shownKey = shown;
     }
     const lines = [...list.children];
     lines.forEach((li, i) => {
       li.classList.toggle('ls-said', i < seg);
       // The answer stays hidden until it is read, so the pause to think is a real one.
       li.classList.toggle('ls-ahead', i > seg && ['back', 'answer', 'explain'].includes(item.segments[i].role));
-      if (i === seg && playing) li.setAttribute('aria-current', 'true'); else li.removeAttribute('aria-current');
+      if (i === seg) li.setAttribute('aria-current', 'true'); else li.removeAttribute('aria-current');
     });
     if (playing) lines[seg]?.scrollIntoView({ block: 'nearest', behavior: 'smooth' });
+    for (const b of $$('[data-ls-ep]')) if (Number(b.dataset.lsEp) === idx) b.setAttribute('aria-current', 'true'); else b.removeAttribute('aria-current');
     try { if (navigator.mediaSession && 'MediaMetadata' in window) navigator.mediaSession.metadata = new MediaMetadata({ title: item.title, artist: item.label }); } catch { /* not supported */ }
   }
 
@@ -328,10 +505,11 @@ if (host) {
   // ---------------------------------------------------------------------------
   if (!synth) $('[data-ls-unsupported]').hidden = false;
   load().then(() => {
+    if (!audio.length) st.mode = 'materials';
+    drawMode();
     drawPicks();
     rebuild({ keep: false });
-    idx = resumeAt(queue, st.key);
-    seg = 0;
+    restorePlace();
     paint();
     paintPlay();
   }).catch(() => { $('[data-ls-total]').textContent = 'The course could not be loaded. Check your connection and reload the page.'; });

@@ -6,10 +6,16 @@
 // Order: the outline, section by section (heading, then text); then the flashcards (front, a pause,
 // then back); then the questions (stem and choices, a pause to think, then the answer and its
 // explanation). Nothing is graded.
+//
+// An audio course (listen/v1, docs/listen-format.md) plays instead through courseQueue(): one item
+// per episode, its scripted segments in order, day after day.
+
+import { forEar } from './listen-voice.js';
 
 export const PAUSES = [3, 6, 10, 15];          // seconds to think: after a card's front, after a question's choices
-export const RATES = [0.75, 0.9, 1, 1.15, 1.3, 1.5, 1.75, 2];
-export const DEFAULTS = { outline: true, cards: true, questions: true, pause: 6, rate: 1 };
+export const RATES = [0.75, 0.85, 0.95, 1, 1.1, 1.25, 1.5, 1.75, 2];
+export const MODES = ['course', 'materials'];
+export const DEFAULTS = { outline: true, cards: true, questions: true, pause: 6, rate: 0.95, pitch: 0.95, gender: 'female', mode: 'course' };
 const LETTERS = 'ABCDEFGH';
 const GAP = { heading: 700, line: 350, item: 1200, choice: 250 };
 
@@ -25,24 +31,10 @@ export const areaOf = (topic) => {
  * abbreviations law text is full of spelled out ("§ 2-207" → "section 2-207", "v." → "versus").
  */
 export function speakable(text) {
-  return String(text || '')
+  return forEar(String(text || '')
     .replace(/^#{1,6}\s+/gm, '')
     .replace(/^\s*[-•▪◦]\s+/gm, '')
-    .replace(/\s*\|\s*/g, '. ')
-    .replace(/§§\s*/g, 'sections ')
-    .replace(/§\s*/g, 'section ')
-    .replace(/¶\s*/g, 'paragraph ')
-    .replace(/\bv\.\s/g, 'versus ')
-    .replace(/\be\.g\.,?\s*/gi, 'for example, ')
-    .replace(/\bi\.e\.,?\s*/gi, 'that is, ')
-    .replace(/\bcf\.\s/gi, 'compare ')
-    .replace(/\betc\./gi, 'etcetera')
-    .replace(/\bU\.?C\.?C\.?(?=\s|$|[),.;])/g, 'U C C')
-    .replace(/\bFRE\b/g, 'F R E')
-    .replace(/\bMRPC\b/g, 'Model Rules')
-    .replace(/\bFRCP\b/g, 'F R C P')
-    .replace(/\bU\.S\.C\./g, 'U S C')
-    .replace(/→/g, ' leads to ')
+    .replace(/\s*\|\s*/g, '. '))
     .replace(/[“”]/g, '"').replace(/[‘’]/g, "'")
     .replace(/[ \t]+/g, ' ')
     .replace(/\n{2,}/g, '\n')
@@ -81,7 +73,7 @@ export function speechChunks(text, max = 220) {
 }
 
 /** One spoken piece: `text` is shown in the transcript, `say` is spoken, then `pause` ms of silence. */
-const seg = (text, pause, role) => ({ text, say: speakable(text), pause, role });
+const seg = (text, pause, role, extra) => ({ text, say: speakable(text), pause, role, ...extra });
 
 function outlineItem(sec, total, n) {
   const segments = [seg(sec.title, GAP.heading, 'heading')];
@@ -147,17 +139,97 @@ export function groupsOf(list, nameOf) {
   return [...m].map(([name, count]) => ({ name, count }));
 }
 
-/** Saved settings, checked field by field. */
+/**
+ * Saved settings, checked field by field. `audio` holds each audio course's place and finished
+ * episodes: { [course id]: { key: episode id, seg: segment id, done: [episode ids] } }.
+ */
 export function readSettings(raw) {
-  const s = { ...DEFAULTS, skipParts: [], skipTopics: [], skipAreas: [], voice: '', key: '' };
+  const s = { ...DEFAULTS, skipParts: [], skipTopics: [], skipAreas: [], voice: '', key: '', course: '', audio: {} };
   if (!raw || typeof raw !== 'object') return s;
   for (const k of ['outline', 'cards', 'questions']) if (typeof raw[k] === 'boolean') s[k] = raw[k];
   if (PAUSES.includes(Number(raw.pause))) s.pause = Number(raw.pause);
   if (RATES.includes(Number(raw.rate))) s.rate = Number(raw.rate);
+  if (raw.gender === 'male' || raw.gender === 'female') s.gender = raw.gender;
+  if (MODES.includes(raw.mode)) s.mode = raw.mode;
   for (const k of ['skipParts', 'skipTopics', 'skipAreas']) if (Array.isArray(raw[k])) s[k] = raw[k].filter((x) => typeof x === 'string');
-  if (typeof raw.voice === 'string') s.voice = raw.voice;
-  if (typeof raw.key === 'string') s.key = raw.key;
+  for (const k of ['voice', 'key', 'course']) if (typeof raw[k] === 'string') s[k] = raw[k];
+  if (raw.audio && typeof raw.audio === 'object' && !Array.isArray(raw.audio)) {
+    for (const [id, p] of Object.entries(raw.audio)) {
+      if (!p || typeof p !== 'object') continue;
+      s.audio[id] = {
+        key: typeof p.key === 'string' ? p.key : '',
+        seg: typeof p.seg === 'string' ? p.seg : '',
+        done: Array.isArray(p.done) ? [...new Set(p.done.filter((x) => typeof x === 'string'))] : [],
+      };
+    }
+  }
   return s;
+}
+
+// ---------------------------------------------------------------------------
+// Audio courses (listen/v1). The build hands over a checked course (scripts/lib/listen.mjs).
+// ---------------------------------------------------------------------------
+const COURSE_GAP = { say: 450, alt: 550, answer: 1200, end: 1800 };
+export const ASK_PAUSE = 7;                     // seconds after an ask with no pause of its own
+
+/**
+ * The play list for an audio course: one item per episode, in day order. Each listen/v1 segment
+ * becomes one or two player segments, each with `sid` (the script's segment id, else "s<index>")
+ * so the place survives edits; an ask becomes the question (then the pause, `pause` seconds times
+ * `scale`) and the answer. `voice` is "main" or "alt".
+ */
+export function courseQueue(course, { scale = 1 } = {}) {
+  const items = [];
+  const days = course?.days || [];
+  for (const d of days) {
+    const eps = d.episodes || [];
+    eps.forEach((ep, e) => {
+      const segments = [];
+      (ep.segments || []).forEach((s, i) => {
+        const sid = typeof s.id === 'string' && s.id ? s.id : `s${i}`;
+        if (typeof s.ask === 'string') {
+          const wait = Math.round((Number.isFinite(s.pause) && s.pause >= 0 ? s.pause : ASK_PAUSE) * scale * 1000);
+          segments.push(seg(s.ask, wait, 'ask', { sid, voice: s.voice === 'alt' ? 'alt' : 'main' }));
+          segments.push(seg(String(s.answer || ''), COURSE_GAP.answer, 'answer', { sid: `${sid}:a`, voice: 'main' }));
+        } else if (typeof s.say === 'string') {
+          const alt = s.voice === 'alt';
+          segments.push(seg(s.say, alt ? COURSE_GAP.alt : COURSE_GAP.say, alt ? 'alt' : 'say', { sid, voice: alt ? 'alt' : 'main' }));
+        } else if (Number.isFinite(s.pause)) {
+          segments.push({ text: '', say: '', pause: Math.round(s.pause * 1000), role: 'pause', sid, voice: 'main' });
+        }
+      });
+      if (!segments.length) return;
+      segments.at(-1).pause = Math.max(segments.at(-1).pause, COURSE_GAP.end);
+      items.push({
+        key: ep.id, kind: 'episode', day: d.day, dayTitle: d.title || '', group: `Day ${d.day}`,
+        label: `Day ${d.day} · Episode ${e + 1} of ${eps.length}`, title: ep.title, minutes: ep.minutes || 0, segments,
+      });
+    });
+  }
+  return items;
+}
+
+/** Where an audio course picks up: { idx, seg } from a saved { key, seg }, else the first unfinished episode. */
+export function courseResume(queue, place = {}) {
+  let idx = place.key ? queue.findIndex((x) => x.key === place.key) : -1;
+  if (idx < 0) {
+    const done = new Set(place.done || []);
+    idx = Math.max(0, queue.findIndex((x) => !done.has(x.key)));
+    return { idx, seg: 0 };
+  }
+  const seg = place.seg ? queue[idx].segments.findIndex((s) => s.sid === place.seg) : 0;
+  return { idx, seg: Math.max(0, seg) };
+}
+
+/** The days of a course queue, each with its episodes' places: [{ day, title, items: [index] }]. */
+export function daysOf(queue) {
+  const out = [];
+  queue.forEach((it, i) => {
+    let d = out.at(-1);
+    if (!d || d.day !== it.day) out.push(d = { day: it.day, title: it.dayTitle, items: [] });
+    d.items.push(i);
+  });
+  return out;
 }
 
 /** About how long the queue takes to read, in minutes, at `rate` (about 160 words a minute, plus the pauses). */

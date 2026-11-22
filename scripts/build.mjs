@@ -28,6 +28,7 @@ import { renderCardsShell } from './lib/cards-shell.mjs';
 import { hasTopicPicker, inlineTopicPicker } from './lib/topic-picker.mjs';
 import { readSupplement, readSupplementPage, normalizeSupplement, renderSupplement, supplementText } from './lib/supplement-shell.mjs';
 import { buildOutlineDocx } from './templates/build-outline-docx.mjs';
+import { readListen, normalizeListen } from './lib/listen.mjs';
 import { buildGame } from './game.mjs';
 import { buildSurvivors } from './survivors.mjs';
 
@@ -184,12 +185,26 @@ async function loadSubjects() {
       refs: meta.refs || null,
       order: meta.order ?? 999,
       documents: [],
+      // Audio courses (<Name>.listen.json, listen/v1): played only on the course's Listen page.
+      listenCourses: [],
     };
 
     const usedSlugs = new Set();
     for (const name of fs.readdirSync(dir)) {
       const file = path.join(dir, name);
       if (IGNORED.has(name) || name.endsWith('.meta.json') || name.startsWith('.') || name.startsWith('~$')) continue;
+      // An audio course is not a document: its checked script goes to the Listen page only.
+      if (/\.listen\.json$/i.test(name)) {
+        const lm = { ...(meta.documents?.[name] || {}), ...(fs.existsSync(`${file}.meta.json`) ? JSON.parse(fs.readFileSync(`${file}.meta.json`, 'utf8')) : {}) };
+        if (lm.publish === false || lm.archived === true) { console.log(`  skip (${lm.archived ? 'archived' : 'publish: false'}): ${dirent.name}/${name}`); continue; }
+        const raw = readListen(fs.readFileSync(file, 'utf8'));
+        if (!raw) { console.warn(`  skip (not a listen/v1 course, docs/listen-format.md): ${dirent.name}/${name}`); continue; }
+        const { course, errors, warnings } = normalizeListen(raw, { fallbackId: slugify(name.replace(/\.listen\.json$/i, '')) });
+        const all = [...errors.map((e) => `error: ${e}`), ...warnings.map((w) => `warning: ${w}`)];
+        if (all.length) console.warn(`  ${dirent.name}/${name}: ${errors.length} error(s), ${warnings.length} warning(s) (npm run check -- <file> lists them)\n${all.slice(0, 8).map((m) => `    ${m}`).join('\n')}`);
+        if (course.days.length) subject.listenCourses.push({ ...course, order: lm.order ?? 999 });
+        continue;
+      }
       // A folder of audio files is one playlist document; its tracks play in file-name order.
       const isPlaylist = fs.statSync(file).isDirectory();
       const trackFiles = isPlaylist ? fs.readdirSync(file).filter((f) => FORMATS[path.extname(f).toLowerCase()]?.viewer === 'audio')
@@ -529,6 +544,7 @@ const SPECS = [
   { file: 'mcq-format.md', from: 'docs/mcq-format.md', title: 'MCQ practice set format (mcq/v1)', description: 'The canonical multiple-choice schema, the Shuffle-mode practice page it builds into, and the citation rules that make every question link to the supplement and outline.' },
   { file: 'cards-format.md', from: 'docs/cards-format.md', title: 'Flashcard deck format (cards/v1)', description: 'The canonical flashcard schema and the study page it builds into: one card at a time, shuffle, remove, and an all-cards overview.' },
   { file: 'essay-format.md', from: 'docs/essay-format.md', title: 'Essay and short-answer format (essays/v1)', description: 'The canonical essay, short-answer and open-resource problem schema (facts, call, issue checklist with points, model answer, pitfalls) and the timed writing page it builds into.' },
+  { file: 'listen-format.md', from: 'docs/listen-format.md', title: 'Audio course format (listen/v1)', description: 'A scripted, multi-day audio course for the Listen page of a course: days, episodes, and segments of narration, a second voice, questions with a pause to think, and silences.' },
   { file: 'study-format.md', from: 'docs/study-format.md', title: 'Study Run format (study/v1)', description: 'A course\'s Study Run and coverage ledger: the exam, the units in syllabus order with the areas and topics each owns, the practice finals, and the coverage check.' },
   { file: 'ai-prompts.md', from: 'docs/ai-prompts.md', title: 'Prompt templates', description: 'Copy-paste prompts for generating an outline, a supplement, a practice set and a flashcard deck in these formats.' },
   { file: 'mcq-shuffle-template.html', from: 'docs/templates/mcq-shuffle-template.html', title: 'MCQ practice page template', description: 'The standalone Shuffle-mode practice page with a sample mcq/v1 set; replace the JSON in its mcq-data block.' },
@@ -538,6 +554,7 @@ const SPECS = [
   { file: 'sample.supplement.json', from: 'docs/templates/sample.supplement.json', title: 'Sample supplement/v1 data', description: 'Seven UCC sections in the supplement/v1 format.' },
   { file: 'sample.cards.json', from: 'docs/templates/sample.cards.json', title: 'Sample cards/v1 deck', description: 'Eight Evidence flashcards using every cards/v1 field.' },
   { file: 'sample.essays.json', from: 'docs/templates/sample.essays.json', title: 'Sample essays/v1 set', description: 'Three Evidence problems (an essay, a short answer and an open-rules problem) using every essays/v1 field.' },
+  { file: 'sample.listen.json', from: 'docs/templates/sample.listen.json', title: 'Sample listen/v1 course', description: 'A two-day Evidence audio course using every listen/v1 segment type.' },
   { file: 'sample.study.json', from: 'docs/templates/sample.study.json', title: 'Sample study/v1 file', description: 'An Evidence Study Run with three units, two practice finals and a coverage floor.' },
   { file: 'sample-outline.json', from: 'docs/templates/sample-outline.json', title: 'Sample outline/v1 data', description: 'An outline as data, for scripts/templates/build-outline-docx.mjs.' },
   { file: 'sample-outline.docx', build: () => buildOutlineDocx(JSON.parse(fs.readFileSync(path.join(ROOT, 'docs', 'templates', 'sample-outline.json'), 'utf8'))), title: 'Sample outline (Word)', description: 'sample-outline.json built into the Word file the site reads.' },
@@ -546,7 +563,7 @@ const SPEC_TYPES = { '.md': 'text/markdown', '.html': 'text/html', '.json': 'app
 for (const sp of SPECS) write(`api/specs/${sp.file}`, sp.build ? sp.build() : fs.readFileSync(path.join(ROOT, sp.from)));
 write('api/specs/index.json', JSON.stringify({
   schemaVersion: '1.0',
-  formats: { mcq: 'mcq/v1', supplement: 'supplement/v1', outline: 'outline/v1', cards: 'cards/v1', essays: 'essays/v1', study: 'study/v1' },
+  formats: { mcq: 'mcq/v1', supplement: 'supplement/v1', outline: 'outline/v1', cards: 'cards/v1', essays: 'essays/v1', study: 'study/v1', listen: 'listen/v1' },
   specs: SPECS.map(({ file, title, description }) => ({ name: file, title, description, mediaType: SPEC_TYPES[path.extname(file)], url: abs(`api/specs/${file}`) })),
 }, null, 2));
 
@@ -606,9 +623,14 @@ for (const s of subjects) {
   const cards = live.filter((d) => d.deck).flatMap((d) => d.deck.cards.map((c) => ({ deck: d.slug, deckTitle: d.title, ...c })));
   const sets = (game.courses.find((c) => c.slug === s.slug)?.sets || []).filter((x) => !x.archived)
     .map((x) => ({ slug: x.slug, title: x.title, count: x.count, areas: (x.topics || []).map(([area, n]) => [area || 'Other', n]) }));
-  if (!outline.length && !cards.length && !sets.length) continue;
-  listenPages.set(s.slug, { outline: outlineDoc && outline.length ? { title: outlineDoc.title, url: P.doc(outlineDoc), sections: outline.length } : null, cards: cards.length, questions: sets.reduce((n, x) => n + x.count, 0) });
-  write(`listen/${s.slug}/data.json`, JSON.stringify({ course: { slug: s.slug, title: s.title }, outline, cards, sets }));
+  // Its audio courses (listen/v1), first on the page when there are any.
+  const audio = [...s.listenCourses].sort((a, b) => a.order - b.order || a.title.localeCompare(b.title)).map(({ order, ...c }) => c);
+  if (!outline.length && !cards.length && !sets.length && !audio.length) continue;
+  listenPages.set(s.slug, {
+    outline: outlineDoc && outline.length ? { title: outlineDoc.title, url: P.doc(outlineDoc), sections: outline.length } : null, cards: cards.length, questions: sets.reduce((n, x) => n + x.count, 0),
+    audio: audio.map((c) => ({ id: c.id, title: c.title, description: c.description, days: c.days.length, episodes: c.days.reduce((n, d) => n + d.episodes.length, 0), minutes: c.days.reduce((n, d) => n + d.minutes, 0) })),
+  });
+  write(`listen/${s.slug}/data.json`, JSON.stringify({ course: { slug: s.slug, title: s.title }, audio, outline, cards, sets }));
 }
 
 // Pages

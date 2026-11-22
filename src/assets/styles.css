@@ -2297,7 +2297,8 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
 @media (max-width: 640px) { .admin-save { gap: 8px; padding: 10px 12px; } .admin-count { flex-basis: 100%; } .admin-save .btn { flex: 1; } }
 
 /* ---------- Listen (listen/<course>/, src/assets/listen.js): the course read aloud, hands-free ---------- */
-.listen { display: grid; gap: 18px; }
+.listen { display: grid; grid-template-columns: minmax(0, 1fr); gap: 18px; }
+.listen fieldset { min-width: 0; }
 .ls-setup { display: grid; gap: 12px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
 .ls-kinds { margin: 0; padding: 0; border: 0; display: grid; gap: 8px; }
 .ls-kinds legend { font: 600 16px/1.3 var(--font-sans); margin-bottom: 8px; padding: 0; }
@@ -2348,3 +2349,38 @@ body.is-viewer { height: 100vh; height: 100dvh; overflow: hidden; background: va
 .ls-play { font-size: 17px; }
 .ls-keys { margin: 0; color: var(--muted); font-size: 12.5px; text-align: center; }
 @media (hover: none) { .ls-keys { display: none; } }
+.ls-modes { margin: 0; padding: 0; border: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 8px; }
+.ls-modes legend, .ls-gender legend { font: 600 16px/1.3 var(--font-sans); margin-bottom: 8px; padding: 0; }
+.ls-mode { display: flex; align-items: flex-start; gap: 12px; padding: 12px 14px; border-radius: 12px; border: 1px solid var(--border); background: var(--surface); cursor: pointer; }
+.ls-mode:has(input:checked) { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); }
+.ls-mode input { width: 20px; height: 20px; margin: 2px 0 0; flex: none; accent-color: var(--accent); }
+.ls-mode span { display: grid; min-width: 0; }
+.ls-mode small { color: var(--muted); font-size: 13.5px; }
+.ls-course { display: grid; gap: 12px; padding: 16px 18px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.ls-course-desc { margin: 0; color: var(--text-2); }
+.ls-course-desc:empty { display: none; }
+.ls-continue { justify-content: center; min-height: 52px; font-size: 16px; }
+.ls-days { display: grid; gap: 14px; }
+.ls-day-h { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; margin: 0 0 6px; font: 600 15.5px/1.3 var(--font-sans); }
+.ls-day-h small { color: var(--muted); font-weight: 500; font-size: 13px; white-space: nowrap; }
+.ls-eplist { list-style: none; margin: 0; padding: 0; display: grid; gap: 4px; }
+.ls-ep { display: grid; grid-template-columns: 24px 1fr auto; align-items: center; gap: 10px; width: 100%; min-height: 44px; padding: 8px 10px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font: inherit; text-align: left; cursor: pointer; }
+.ls-ep:hover { background: var(--surface-2); }
+.ls-ep[aria-current="true"] { border-color: var(--accent); box-shadow: inset 3px 0 0 var(--accent); }
+.ls-ep small { color: var(--muted); font-size: 12.5px; white-space: nowrap; }
+.ls-tick { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; border: 1.5px solid var(--border-strong); font-size: 13px; font-weight: 700; }
+.ls-ep-done .ls-tick { background: var(--accent); border-color: var(--accent); color: #fff; }
+.ls-ep-title { min-width: 0; font-size: 14.5px; }
+.ls-reset { justify-self: start; min-height: 36px; padding: 4px 12px; font-size: 13.5px; }
+.ls-gender { margin: 0; padding: 0; border: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.ls-gender legend { width: 100%; }
+.ls-seg { flex: 1 1 130px; display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 8px 12px; border: 1px solid var(--border); border-radius: 10px; cursor: pointer; }
+.ls-seg:has(input:checked) { background: var(--accent-soft); border-color: color-mix(in srgb, var(--accent) 45%, transparent); font-weight: 600; }
+.ls-seg input { width: 18px; height: 18px; margin: 0; accent-color: var(--accent); }
+.ls-hint { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.5; }
+.ls-eps { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.ls-eps[hidden] { display: none; }
+.ls-eps .btn { justify-content: center; min-height: 40px; font-size: 14px; }
+.ls-alt { font-style: italic; box-shadow: inset 3px 0 0 color-mix(in srgb, var(--accent) 35%, transparent); }
+.ls-ask { font-weight: 600; color: var(--text); }
+.ls-pause { color: var(--muted); font-size: 13px; }
