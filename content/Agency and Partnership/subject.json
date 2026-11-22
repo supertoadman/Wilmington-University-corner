@@ -82,6 +82,13 @@
       "questions": 210,
       "order": 6
     },
+    "Agency_and_Partnership_Audio_Course.listen.json": {
+      "slug": "agency-and-partnership-audio-course",
+      "title": "Agency & Partnership Audio Course",
+      "type": "audio",
+      "description": "A five-day listening course on the whole Weeks 1–14 outline: each rule's elements counted out loud, every case told as a short story, who's-liable hypotheticals and recall questions with pauses to answer, and a spaced review to open each day.",
+      "order": 15
+    },
     "Agency_and_Partnership_Playlist": {
       "publish": false,
       "slug": "agency-and-partnership-playlist",

@@ -1,0 +1,1189 @@
+{
+  "format": "listen/v1",
+  "id": "agency-partnership-audio-course",
+  "title": "Agency & Partnership Audio Course",
+  "course": "Agency & Partnership",
+  "description": "A five-day spoken course on the whole Weeks 1–14 outline.",
+  "days": [
+    {
+      "day": 1,
+      "title": "Creating an agency, and every route to contract liability",
+      "minutes": 71,
+      "episodes": [
+        {
+          "id": "ap-d1-e00",
+          "title": "Welcome, the map, and a warm-up",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Welcome to Agency and Partnership in five days. This course walks the whole Weeks 1 through 14 outline, in outline order. If you listen to all five days, you will have heard every rule, every element, every statute section and every case in it."
+            },
+            {
+              "id": "s2",
+              "say": "Here is how each day works. It opens with a short spaced review: I ask, you pause and answer out loud, then I give the answer. Then come the episodes, one topic each. Every episode has a roadmap, the rule in plain English, its elements counted out loud, why the rule exists, the cases told as short stories, a few who's-liable hypos, the traps, and a recap with three recall questions. Each day ends with a cumulative quiz."
+            },
+            {
+              "id": "s3",
+              "say": "The map. Today, Day 1: what an agency is, how it is created, and every route to a principal's contract liability: actual, apparent and inherent authority, ratification, and estoppel, plus when the agent is personally liable. Day 2: tort liability, employees and independent contractors, franchising, scope of employment, and the agent's fiduciary duties."
+            },
+            {
+              "id": "s4",
+              "say": "Day 3: choosing an entity, forming a partnership, partnership property, and management and authority. Day 4: partners' fiduciary duties, grabbing and leaving, dissociation and dissolution under the UPA and RUPA, loss sharing in Kovacik, buyout agreements, and limited partnerships and LLPs. Day 5: LLCs from formation to dissolution, then a full review of every test and list, and how to work the open-book short answer."
+            },
+            {
+              "id": "s5",
+              "say": "A word on the final, December 15, with Professor Richardson. Part one is sixty minutes of multiple choice. Part two is a thirty-minute short essay. Part three is ninety minutes of short answer, where you get the statutory supplement, a three-page outline, and the final Operating Agreement for your hypothetical clients. So everything here aims at two skills: spotting the rule fast, and applying a statute or an agreement to facts."
+            },
+            {
+              "id": "s6",
+              "say": "A note on names. The Restatement Second of Agency is from 1958. The Restatement Third is from 2006. The UPA is the Uniform Partnership Act of 1914. RUPA is the Revised Uniform Partnership Act of 1997. RULLCA is the Revised Uniform Limited Liability Company Act. ULPA is the Uniform Limited Partnership Act. I will cite sections as the outline does."
+            },
+            {
+              "id": "s7",
+              "say": "Warm-up. Four questions you may not be able to answer yet. Guess anyway. Guessing first makes the answer stick."
+            },
+            {
+              "id": "s8",
+              "ask": "Does an agency require a contract between principal and agent?",
+              "answer": "No. It requires consent and control. No contract, no consideration, and usually no writing.",
+              "pause": 8
+            },
+            {
+              "id": "s9",
+              "ask": "An agent's own statement, \"I'm authorized,\" is it enough to create apparent authority?",
+              "answer": "No. Apparent authority must trace to the principal's manifestation, never solely to the agent's.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "A brewery owns a pub, keeps the old owner as manager with his name over the door, and forbids him to buy cigars. He buys cigars on credit from a supplier who never heard of the brewery. Is the brewery liable?",
+              "answer": "Yes. That is Watteau v. Fenwick, the classic inherent-authority case. You will hear it later today.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "Which Restatement abandons the term inherent authority?",
+              "answer": "The Restatement Third. It replaces it with section 2.06 for undisclosed principals and with positional, customary authority.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e01",
+          "title": "What an agency is: the definition and its three elements",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. First the definition of agency, then its three elements, then why agency law matters at all."
+            },
+            {
+              "id": "s2",
+              "say": "The rule in plain English. An agency is a fiduciary relationship. It arises when one person, the principal, agrees that another, the agent, will act on the principal's behalf and under the principal's control, and the agent agrees to do it."
+            },
+            {
+              "id": "s3",
+              "say": "Now the elements, counted out loud. All three are required. One: the principal manifests assent that the agent shall act on the principal's behalf. Two: subject to the principal's control. Three: the agent manifests assent or otherwise consents so to act. That is Restatement Third § 1.01, and Restatement Second § 1."
+            },
+            {
+              "id": "s4",
+              "say": "Botticello puts the same three elements this way. One, the principal's manifestation that the agent will act for him. Two, the agent's acceptance. Three, an understanding that the principal controls the undertaking. Same test, different words."
+            },
+            {
+              "id": "s5",
+              "say": "Say it with me as three words: consent, on behalf of, control. Consent from both sides. Acting on the principal's behalf. And the principal's control."
+            },
+            {
+              "id": "s6",
+              "say": "Why agency law matters. Agency is how we get things done through the services of others. It lets a person broaden the scope of his activities and keep the net benefit of other people's work. Most of the world's work is done through agents. And agency principles run through every business form: partners, LLC managers, corporate directors and officers are all agents."
+            },
+            {
+              "id": "s7",
+              "say": "The course lens. Professor Richardson wants you to read every case two ways. First as a litigator: what wins in court? Second as a transactional lawyer: what entity, what filing, what agreement term would have avoided the fight? For every case ask who should have done what differently, and who could have avoided the loss most cheaply."
+            },
+            {
+              "id": "s8",
+              "say": "Recap. Agency is a fiduciary relationship with three required elements: the principal's assent that the agent act on its behalf, subject to its control, and the agent's consent. Restatement Third § 1.01; Restatement Second § 1."
+            },
+            {
+              "id": "s9",
+              "ask": "What are the three elements of agency under Restatement Third § 1.01?",
+              "answer": "One, the principal manifests assent that the agent act on its behalf; two, subject to the principal's control; three, the agent manifests assent or otherwise consents to act.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "What kind of relationship is agency?",
+              "answer": "A fiduciary relationship.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "What two perspectives does the course ask you to read every case from?",
+              "answer": "The litigator's, what wins in court, and the transactional lawyer's, what entity, filing or agreement term would have avoided the fight.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e02",
+          "title": "The basics: consent, writing, labels, control, capacity, and kinds of agents",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Eight basic points about how agency forms: consent versus contract, writings, labels, control, capacity, the burden of proof, the kinds of agents, and the modes of creation. Then the PAT triangle that organizes everything after."
+            },
+            {
+              "id": "s2",
+              "say": "Point one. Consent is required. A contract is not. Consideration is not required. A gratuitous agent, someone doing a free favor, is still an agent. Restatement Third § 1.04(3) names the gratuitous agent."
+            },
+            {
+              "id": "s3",
+              "say": "Point two. A writing is generally not required. The exception: where the agent will sign contracts that fall within the Statute of Frauds, such as a land sale, or where the agency itself falls within the Statute of Frauds. The outline flags that as general knowledge, the equal dignities rule. And under Restatement Third § 3.02, a principal may be estopped to deny the missing writing."
+            },
+            {
+              "id": "s4",
+              "say": "Point three. Labels don't control. Restatement Third § 1.02. Agency is judged by what the parties actually do, not by what they call it. You will see that in MJ and Partners, where a manager was called a consultant, and in Murphy, the Holiday Inns case. And a manifestation can be words or conduct. That is § 1.03."
+            },
+            {
+              "id": "s5",
+              "say": "Point four. Control can be minimal. Directing the result or the objective is enough. And it is the right to control that matters, not whether the principal actually exercised it."
+            },
+            {
+              "id": "s6",
+              "say": "Point five. Capacity. The principal must have contractual capacity, so a minor's appointment of an agent is voidable. The agent needs only minimal, mental capacity. Restatement Third §§ 3.04 and 3.05. Contrast that: a high bar for the principal, a low bar for the agent, because the agent's acts bind the principal, not himself."
+            },
+            {
+              "id": "s7",
+              "say": "Point six. The burden. The party asserting agency must prove it. But it can be proven circumstantially, from a course of dealing."
+            },
+            {
+              "id": "s8",
+              "say": "Point seven. The kinds of agents. A general agent handles a continuous series of transactions. A special agent handles a single transaction. That is Restatement Second § 3. A subagent is appointed by an agent who has actual or apparent authority to do so; the agent answers to the principal for the subagent, and the subagent is the principal's fiduciary too. Restatement Third §§ 1.04(8) and 3.15. Coagents are multiple agents of one principal, § 1.04(1). And again, the gratuitous agent, § 1.04(3)."
+            },
+            {
+              "id": "s9",
+              "say": "Point eight. Modes of creation. An agency is created by the act or omission of the parties: express or implied agreement, the principal's conduct leading a third party to believe, or ratification. Or it is created by operation of law: estoppel, or statute."
+            },
+            {
+              "id": "s10",
+              "say": "Now the triangle that organizes the whole agency half of the course. P, A, T. Principal, agent, third party. Step one, the P to A agency relationship. Step two, A deals with T. Step three, that creates P's liability to T, in contract, or in tort, directly or vicariously, and maybe A's own liability too. Every agency question is somewhere on that triangle."
+            },
+            {
+              "id": "s11",
+              "say": "One exam tip from the outline. When a creditor, franchisor, lender or investor is \"helping\" a struggling business, ask whether it crossed the line from protecting its investment, meaning veto powers, information rights, standards, into running the business, meaning directing which contracts get made and controlling the day to day. Cargill crossed it and became a principal. Martin v. Peyton, a lender, did not. The franchisors in Murphy and Kerl did not."
+            },
+            {
+              "id": "s12",
+              "say": "The traps. Trap one: thinking a free favor can't be an agency. It can. Trap two: thinking the contract's label decides it. It doesn't. Trap three: looking for actual exercise of control. The right to control is enough."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. Consent, not contract. No consideration. Usually no writing. Labels don't control. Minimal control will do, and the right to control is what counts. The principal needs contractual capacity; the agent needs only minimal capacity. General versus special agents, subagents, coagents, gratuitous agents. Created by the parties or by operation of law."
+            },
+            {
+              "id": "s14",
+              "ask": "Is consideration required to form an agency?",
+              "answer": "No. Consent is required; consideration and a contract are not. A gratuitous agent is still an agent.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "What capacity does an agent need, compared with the principal?",
+              "answer": "The agent needs only minimal mental capacity. The principal needs contractual capacity, so a minor's appointment is voidable. Restatement Third §§ 3.04 and 3.05.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "What is the difference between a general agent and a special agent?",
+              "answer": "A general agent handles a continuous series of transactions; a special agent handles a single transaction. Restatement Second § 3.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e03",
+          "title": "Cases on creating an agency: Gorton, MJ and Partners, Rose, and Cargill",
+          "minutes": 7,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Four Week 1 cases. Gorton shows how little it takes to form an agency. MJ and Partners shows labels don't control. Rose v. Giamatti shows no control, no agency. And Cargill shows a lender becoming a principal."
+            },
+            {
+              "id": "s2",
+              "say": "Gorton v. Doty, Idaho, 1937. A teacher offered her car for the football team's away game, on one condition: that the coach drive it. She wasn't paid. The coach crashed, and a player was injured. The player sued the teacher."
+            },
+            {
+              "id": "s3",
+              "say": "Held: the coach was her agent. She consented to his acting for her, through her condition. He consented by driving. And naming the driver was control. No contract, no payment needed. The dissent called it just a friendly loan of a car."
+            },
+            {
+              "id": "s4",
+              "say": "Why it matters: a gratuitous favor with a single condition supplied both consent and control, and that made her liable for his driving."
+            },
+            {
+              "id": "s5",
+              "say": "MJ and Partners Restaurant v. Zadikoff, Northern District of Illinois, 1998. Zadikoff ran Michael Jordan's Restaurant day to day: the menu, prices, staff, budgets, checks. But his contracts called him an outside consultant. Meanwhile he secretly helped Jordan plan a competing Jordan restaurant, and recruited the plaintiffs' investors and staff."
+            },
+            {
+              "id": "s6",
+              "say": "Held: the breach of fiduciary duty claim survives dismissal. Agency turns on the parties' actual practices, the right to control and the power to bind, not on contract labels. Why it matters: call him a consultant all you like. If he is an agent, he owes loyalty, and he can't build a competitor while managing your restaurant."
+            },
+            {
+              "id": "s7",
+              "say": "Rose v. Giamatti, Southern District of Ohio, 1989. Pete Rose sued the Baseball Commissioner and Major League Baseball to stop a gambling hearing. Federal jurisdiction depended on whether MLB, an Ohio citizen, was only a nominal party. And that turned on whether the Commissioner acted as MLB's agent."
+            },
+            {
+              "id": "s8",
+              "say": "Held: he was not its agent for discipline. The clubs had given the Commissioner exclusive, independent authority they couldn't control. He was more like an arbitrator. So MLB was a nominal party, and removal was proper. Two lessons: no control, no agency. And someone can be an agent for some purposes but not for others."
+            },
+            {
+              "id": "s9",
+              "say": "A. Gay Jenson Farms v. Cargill, Minnesota, 1981. The big one. Cargill financed a small grain elevator called Warren, with a growing credit line. It bought most of Warren's grain. And it did much more: it approved Warren's major decisions, audited it, criticized its management daily, and supplied Cargill-printed forms. One internal note said Warren needed \"very strong paternal guidance.\" Warren collapsed owing 86 farmers about two million dollars for grain."
+            },
+            {
+              "id": "s10",
+              "say": "Held: Cargill was Warren's principal, and it owes the farmers. Its course of dealing showed all three elements: one, consent; two, Warren acting for Cargill; three, de facto control, shown through nine factors. A creditor that takes over management becomes a principal. That is Restatement Second § 14O. And Warren was no independent supplier under § 14K."
+            },
+            {
+              "id": "s11",
+              "say": "Why Cargill matters: agency can arise without anyone intending it, from a course of dealing. A lender or buyer that runs the borrower's business inherits its debts. Hold that against Martin v. Peyton on Day 3, where lenders with veto rights stayed lenders."
+            },
+            {
+              "id": "s12",
+              "say": "Who's liable? A neighbor lends her truck to a friend moving apartments, on one condition: \"only you drive it, and take the highway.\" The friend causes a crash. Is the neighbor liable as a principal?",
+              "voice": "alt"
+            },
+            {
+              "id": "s13",
+              "say": "Run the elements. She manifested assent that he use the truck for a task, with a condition about who drives and the route: that's a right to control. He consented by driving. Under Gorton, this can be an agency, with no pay and no contract. The counter-argument is the Gorton dissent: it's just a friendly loan, done for his purposes, not hers. Argue both, but Gorton points toward agency."
+            },
+            {
+              "id": "s14",
+              "say": "Next. A bank lends to a struggling bakery. The loan agreement gives the bank monthly financial statements and a veto over any new borrowing. Later the bank's officer starts choosing the bakery's suppliers and signing off on every purchase order. The bakery fails owing suppliers. Can the suppliers reach the bank?",
+              "voice": "alt"
+            },
+            {
+              "id": "s15",
+              "say": "Information rights and a veto alone look like protecting an investment, like Martin v. Peyton. But choosing suppliers and approving every order is running the business, like Cargill. Under Restatement Second § 14O, a creditor that takes over management becomes a principal. The suppliers have a strong argument."
+            },
+            {
+              "id": "s16",
+              "say": "The traps. Trap one: thinking Cargill means every lender is a principal. It doesn't. The line is control of management. Trap two: forgetting that agency can be partial, as in Rose: an agent for some purposes, not others. Trap three: treating a \"consultant\" label as the end of the question."
+            },
+            {
+              "id": "s17",
+              "say": "Recap. Gorton: a free loan with a condition is enough. MJ and Partners: actual practices, not labels. Rose: no control, no agency, and agency can be for limited purposes. Cargill: a creditor that runs the debtor becomes its principal, Restatement Second § 14O."
+            },
+            {
+              "id": "s18",
+              "ask": "In Cargill, what made Cargill a principal rather than just a creditor and buyer?",
+              "answer": "Its de facto control of Warren's business: approving major decisions, auditing, daily criticism of management, its own forms. A creditor that takes over management becomes a principal, Restatement Second § 14O.",
+              "pause": 8
+            },
+            {
+              "id": "s19",
+              "ask": "Why wasn't the Baseball Commissioner MLB's agent in Rose v. Giamatti?",
+              "answer": "The clubs gave him exclusive, independent authority they couldn't control, like an arbitrator. No control, no agency.",
+              "pause": 8
+            },
+            {
+              "id": "s20",
+              "ask": "In Gorton v. Doty, what supplied the element of control?",
+              "answer": "The teacher's condition that the coach drive the car. Naming the driver was control.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e04",
+          "title": "Actual authority: the test, express authority, and implied authority",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. First the order of analysis for every contract liability question. Then actual authority: the test, express authority, and the seven routes to implied authority."
+            },
+            {
+              "id": "s2",
+              "say": "The big rule for this whole section. An agent binds the principal to a contract if the agent, one, acts on the principal's behalf; two, with proper authority; and three, the principal had not terminated that authority."
+            },
+            {
+              "id": "s3",
+              "say": "And analyze authority in order. Say it with me. One: actual authority, express, then implied. Two: apparent authority. Three: ratification. Four: by operation of law, meaning inherent authority and estoppel. We take all four today."
+            },
+            {
+              "id": "s4",
+              "say": "Actual authority, the test. Would the principal's words or conduct lead a reasonable person in the agent's position to believe the agent is authorized to act this way? Restatement Third §§ 2.01, 2.02 and 3.01; Restatement Second §§ 7, 26, and 33 through 35."
+            },
+            {
+              "id": "s5",
+              "say": "Notice whose eyes we look through. The agent's. It is the agent's reasonable understanding of the principal's manifestations. Hold onto that, because apparent authority flips it to the third party's eyes."
+            },
+            {
+              "id": "s6",
+              "say": "Express actual authority is explicitly conveyed, orally or in writing. Two quirks. It is effective even if granted by mistake or because of a misrepresentation. And it is all-or-nothing for the specific act."
+            },
+            {
+              "id": "s7",
+              "say": "Implied actual authority is just actual authority proven circumstantially. Any one of seven routes suffices. Count them. One: it is incidental to, or reasonably necessary for, the express duties. Two: custom or trade. Three: present or past conduct; prior practice is among the most important factors. Four: emergencies. Five: delegating ministerial acts, or where delegation is necessary or customary. Six: when authorized to buy, the power to pay for and accept the goods. Seven: when authorized to sell, the power to give customary warranties and collect payment."
+            },
+            {
+              "id": "s8",
+              "say": "Why have implied authority at all? Because no principal can list everything. Delegation exists so the principal doesn't have to be consulted constantly. The law fills in what a reasonable agent would understand comes with the job."
+            },
+            {
+              "id": "s9",
+              "say": "The outline's apartment-manager hypos make this concrete. Told to hire a lawn service: express authority. Hires a janitor with no instructions: implied authority, as incidental or by custom. Told NOT to hire a janitor, but custom allows it: no actual authority, because the principal spoke. But there may still be apparent authority to a third party who relies on the manager's position."
+            },
+            {
+              "id": "s10",
+              "say": "Recap. Order of analysis: actual, express then implied; apparent; ratification; operation of law. Actual authority is judged from the agent's reasonable understanding. Express can be granted even by mistake and is all-or-nothing. Implied has seven routes: incidental, custom, past conduct, emergency, delegation, paying for goods, and warranties and collection on a sale."
+            },
+            {
+              "id": "s11",
+              "ask": "From whose perspective is actual authority judged?",
+              "answer": "The agent's: would the principal's words or conduct lead a reasonable person in the agent's position to believe he is authorized?",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "Name four of the seven routes to implied actual authority.",
+              "answer": "Any four of: incidental or reasonably necessary to express duties; custom or trade; present or past conduct; emergencies; delegation of ministerial acts; paying for and accepting goods when authorized to buy; customary warranties and collecting payment when authorized to sell.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "In what order do you analyze authority?",
+              "answer": "Actual, express then implied; then apparent; then ratification; then operation of law, inherent authority and estoppel.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e05",
+          "title": "Terminating actual authority, and the cases: Mill Street and Karl Rove",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The eight ways actual authority ends, one trap about apparent authority, then two cases: Mill Street Church and Karl Rove and Company v. Thornburgh."
+            },
+            {
+              "id": "s2",
+              "say": "Termination. Any one of eight suffices. One: agreement. Two: notice by either party. Three: an event, such as the purpose being fulfilled. Four: lapse of a reasonable time. Five: changed circumstances. Six: the agent's breach of fiduciary duty. Seven: unilateral termination; either side has the power to end it, even if not the right. Eight: operation of law, such as the principal's death or incapacity."
+            },
+            {
+              "id": "s3",
+              "say": "Now the trap. Terminating actual authority does NOT automatically end apparent authority. If the principal fires the agent but third parties don't know, the agent may still bind the principal to them. That is lingering apparent authority, and it ends only when the third party has notice."
+            },
+            {
+              "id": "s4",
+              "say": "Mill Street Church of Christ v. Hogan, Kentucky, 1990. A church hired Bill to paint it. On past jobs it had let him hire his brother Sam as a helper. This time the elders privately planned to use a different helper, but never told Bill. The job couldn't be done alone, so Bill hired Sam. Sam fell and broke his arm."
+            },
+            {
+              "id": "s5",
+              "say": "Held: Bill had implied actual authority to hire Sam, so Sam was the church's employee for workers' comp. Implied authority rests on the agent's reasonable understanding, from the principal's past conduct and from the job's needs. Why it matters: it is the model implied-authority case. Prior practice and necessity control, not the principal's secret change of plans."
+            },
+            {
+              "id": "s6",
+              "say": "Karl Rove and Company v. Thornburgh, Fifth Circuit, 1994. Rove's firm did fundraising mail for Dick Thornburgh's Senate campaign, under a contract with his campaign committee, approved by his aide Dickman. Thornburgh signed the letters, supplied donor lists, and could stop the mailings. The committee became insolvent and left $169,732 unpaid."
+            },
+            {
+              "id": "s7",
+              "say": "Held: Thornburgh is personally liable. A member of an unincorporated association is bound by contracts he authorized, assented to, or ratified, personally or through an agent. Dickman was his controlled agent, and Dickman approved the deal. Why it matters: a principal can be bound through his agent's assent, and control is the key to finding agency despite his denials."
+            },
+            {
+              "id": "s8",
+              "say": "Who's liable? A store owner tells her buyer, \"Order fall inventory from our usual suppliers.\" The buyer orders, and also pays the freight bill on delivery, which the owner never mentioned. Is the store bound to the freight charge?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "Yes, through implied actual authority. Authority to buy carries the power to pay for and accept the goods, and paying freight is incidental to the express task. Judge it from a reasonable buyer's view of the owner's instruction."
+            },
+            {
+              "id": "s10",
+              "say": "Next. The owner fires the buyer on Monday but tells no one. On Wednesday the buyer places an order with a regular supplier who has always dealt with him. Bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "No actual authority: it ended by notice to the agent. But terminating actual authority doesn't end apparent authority. The supplier, without notice, reasonably believes he still has authority because of the owner's past course of dealing. So the store is likely bound through lingering apparent authority."
+            },
+            {
+              "id": "s12",
+              "say": "The traps. Trap one: the principal's secret change of plan, as in Mill Street, doesn't defeat implied authority the agent reasonably believes he has. Trap two: firing the agent ends actual authority but not apparent authority. Trap three: the power to terminate exists even when there's no right to; the principal may owe damages for breaching a contract, but the authority still ends."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. Eight ways authority ends: agreement, notice, event, lapse of time, changed circumstances, the agent's breach, unilateral termination, and operation of law. Apparent authority can linger. Mill Street: past practice and necessity give implied authority. Karl Rove: a principal bound through his controlled agent."
+            },
+            {
+              "id": "s14",
+              "ask": "Name five of the eight ways actual authority terminates.",
+              "answer": "Any five of: agreement; notice by either party; an event such as purpose fulfilled; lapse of a reasonable time; changed circumstances; the agent's breach of fiduciary duty; unilateral termination; operation of law, like death or incapacity.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "In Mill Street, why did Bill have authority to hire Sam even though the elders planned otherwise?",
+              "answer": "Implied actual authority from the church's past practice of letting him hire Sam and the job's necessity; the elders never told Bill of their secret change of plans.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "Does terminating actual authority end apparent authority?",
+              "answer": "No. Apparent authority continues until the third party has notice.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e06",
+          "title": "Apparent authority: the rule, its types, and how it ends",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The three elements of apparent authority, the kinds of situations it covers, why position is a manifestation, how it ends, and how it differs from estoppel."
+            },
+            {
+              "id": "s2",
+              "say": "The rule in plain English. Apparent authority exists when the principal makes it look, to the third party, as if the agent is authorized, and the third party reasonably believes it."
+            },
+            {
+              "id": "s3",
+              "say": "The elements. All three are required. One: the principal holds out the agent as authorized. Two: a third party reasonably believes the agent has authority. Three: that belief is traceable to the principal's manifestations. Restatement Third §§ 2.03 and 3.03; Restatement Second §§ 8, 27, and 159."
+            },
+            {
+              "id": "s4",
+              "say": "The one sentence to memorize. The manifestation must come from the principal, never solely from the agent. The agent's own \"I'm authorized\" never suffices. But once the principal has made a manifestation, the agent's assurances can bolster how reasonable the third party's belief was. That is Ackerman, which you'll hear next."
+            },
+            {
+              "id": "s5",
+              "say": "Contrast with actual authority. Actual authority looks through the agent's eyes at what the principal told the agent. Apparent authority looks through the third party's eyes at what the principal told, or showed, the third party."
+            },
+            {
+              "id": "s6",
+              "say": "The types. The agent may exceed his authority, through prior acts or through a position of power. Or the agent may have no authority at all: unilateral agent representations, which alone are insufficient; impostors; lingering apparent authority after termination; or a writing that shows a prior grant of authority."
+            },
+            {
+              "id": "s7",
+              "say": "Position is a manifestation. When the principal places an agent in a role whose holders customarily have certain authority, that is a manifestation to the world. The third party need not inquire into undisclosed limits, Restatement Third § 3.03 comment b. And secret limits on incidental terms don't bind a third party without notice, Restatement Second § 160."
+            },
+            {
+              "id": "s8",
+              "say": "How apparent authority ends. When the third party has notice that authority ended, that the principal no longer consents, or that the agent acts under a basic error. Notice can come from the principal's statement, or a reasonable time after the principal's writing reaches the third party."
+            },
+            {
+              "id": "s9",
+              "say": "Distinguish estoppel now, because the exam will. Apparent authority binds both the principal and the third party to the contract. Estoppel only compensates a relying third party for its loss. Estoppel comes tomorrow."
+            },
+            {
+              "id": "s10",
+              "say": "Why the rule exists. Third parties can't see inside the principal-agent relationship. They see what the principal shows them. The principal chose the agent and the position, so the principal, not the innocent third party, should bear the risk of secret limits."
+            },
+            {
+              "id": "s11",
+              "say": "Recap. Three elements: holding out by the principal, the third party's reasonable belief, traceable to the principal. Never the agent's say-so alone. Position is a manifestation. It ends with notice. It binds both sides, unlike estoppel."
+            },
+            {
+              "id": "s12",
+              "ask": "What are the three elements of apparent authority?",
+              "answer": "One, the principal holds out the agent as authorized; two, a third party reasonably believes the agent has authority; three, the belief is traceable to the principal's manifestations.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "Can an agent's own statement that he is authorized create apparent authority?",
+              "answer": "Not alone. The manifestation must come from the principal. Once it does, the agent's statements can bolster reasonableness.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "How does apparent authority differ in effect from estoppel?",
+              "answer": "Apparent authority binds both the principal and the third party to the contract; estoppel only compensates a third party for detrimental reliance.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e07",
+          "title": "Apparent authority cases: Lind, Ackerman, and Williams",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Three cases. Lind shows position as the manifestation. Ackerman shows conduct and silence. Williams takes apparent agency into tort."
+            },
+            {
+              "id": "s2",
+              "say": "Lind v. Schenley Industries, Third Circuit en banc, 1960. A vice president told newly promoted salesman Lind to see his new boss, Kaufman, about salary. Kaufman promised Lind a one percent commission on his salesmen's sales. But only the company president could set pay."
+            },
+            {
+              "id": "s3",
+              "say": "Held: Lind can recover; the $37,000 verdict was reinstated. By sending Lind to Kaufman and making Kaufman his superior, the company held Kaufman out as its spokesman on pay. That is apparent authority, and the court also called it inherent authority. Kaufman's lack of actual authority is irrelevant. Why it matters: the manifestation was the position the principal gave the agent, not anything the agent said."
+            },
+            {
+              "id": "s4",
+              "say": "Ackerman v. Sobol Family Partnership, Connecticut, 2010. The plaintiffs' lawyer negotiated a one point one million dollar global settlement, repeatedly assuring defense counsel he had authority. His client attended the mediation, conferred with him during the final talks, and never limited his authority. Then the clients claimed he had none."
+            },
+            {
+              "id": "s5",
+              "say": "Held: the settlement is enforceable through apparent authority. The clients' own conduct held the lawyer out, and opposing counsel reasonably believed him. Note the line the court drew: merely hiring a lawyer isn't enough to give him apparent authority to settle. The clients' conduct was. And it binds even if the agent misread his instructions."
+            },
+            {
+              "id": "s6",
+              "say": "Williams v. Dimensions Health Corporation, Maryland, 2022. Emergency medical services brought a crash victim to the hospital's trauma center. An on-call surgeon, an independent contractor, operated, allegedly negligently. A disclaimer saying doctors aren't the hospital's agents was buried in a consent form the intubated patient never signed."
+            },
+            {
+              "id": "s7",
+              "say": "Held: the hospital can be vicariously liable for its apparent agent under Restatement Second § 267. The elements: representation, the hospital held itself out as a trauma center with surgeons; reliance, patients look to the facility; and reasonableness. The dissent would have required the patient's own subjective belief. Why it matters: apparent agency can make a principal liable in tort for an independent contractor, and disclaimers must be meaningful to work."
+            },
+            {
+              "id": "s8",
+              "say": "Who's liable? A company's CFO tells a vendor, \"Talk to Dana in purchasing; she handles all our office equipment contracts.\" The company's internal policy caps Dana's authority at $10,000. Dana signs a $25,000 copier lease. Is the company bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "Likely yes, through apparent authority. The manifestation came from the principal, through its CFO, and through the position it gave Dana. The vendor reasonably believed her, and the cap was a secret limit the vendor didn't know of. Under Restatement Third § 3.03 comment b, the vendor need not inquire into undisclosed limits."
+            },
+            {
+              "id": "s10",
+              "say": "Next. A stranger walks into the vendor's office, says \"I'm the company's new purchasing agent,\" and signs a lease. The company never heard of him. Bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "No apparent authority. Nothing traces to the company; the only manifestation is the stranger's own. Keep estoppel in mind, coming later today, if the company carelessly let him appear to be its agent."
+            },
+            {
+              "id": "s12",
+              "say": "The traps. Trap one: in Lind, don't hunt for actual authority; its absence doesn't matter. Trap two: in Ackerman, hiring a lawyer alone isn't a holding out to settle; it was the conduct and silence. Trap three: Williams is tort, not contract. Apparent agency reaches vicarious tort liability too, through § 267."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. Lind: the position given the agent is the manifestation. Ackerman: the principal's conduct and silence, plus the agent's assurances. Williams: apparent agency in tort under Restatement Second § 267, representation, reliance, reasonableness, and buried disclaimers don't defeat it."
+            },
+            {
+              "id": "s14",
+              "ask": "In Lind v. Schenley, what was the principal's manifestation?",
+              "answer": "Sending Lind to Kaufman about salary and making Kaufman his superior, holding Kaufman out as the company's spokesman on pay.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "In Ackerman, was hiring the lawyer enough for apparent authority to settle?",
+              "answer": "No. Hiring alone isn't enough. The clients' conduct, attending, conferring, never limiting him, held him out.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "What three things did Williams require for a hospital's apparent agency liability under Restatement Second § 267?",
+              "answer": "Representation by the hospital, reliance by the patient, and reasonableness of that reliance.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e08",
+          "title": "Inherent authority, and what the Restatement Third put in its place",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. What inherent authority is under the Restatement Second, its two key sections, why it exists, and how the Restatement Third replaced it."
+            },
+            {
+              "id": "s2",
+              "say": "The rule. Restatement Second § 8A defines inherent agency power as power that comes not from authority, not from apparent authority, and not from estoppel, but solely from the agency relationship itself, to protect people who deal with agents."
+            },
+            {
+              "id": "s3",
+              "say": "Two applications. First, § 161: a general agent of a disclosed principal binds the principal for acts usually incidental to authorized transactions, even if forbidden, if the third party reasonably believes the agent is authorized and has no notice otherwise. Second, §§ 194 and 195: an undisclosed principal is bound by the usual acts of an agent it put in charge of its business, despite contrary orders."
+            },
+            {
+              "id": "s4",
+              "say": "Why have it? The outline gives three reasons. A principal who selects an agent with discretion vouches for him. Third parties shouldn't bear the risk of secret limits. And the whole point of delegation is to avoid constant recourse to the principal."
+            },
+            {
+              "id": "s5",
+              "say": "Now the Restatement Third. It abandons inherent authority. In its place: § 2.06(1), an undisclosed principal is liable to a third party who detrimentally relies, if the principal, on notice of the agent's conduct, failed to take reasonable steps to notify the third party. That is estoppel-like and narrower. And § 2.06(2): an undisclosed principal can't rely on instructions that reduce the agent's authority below what the third party would assume if the principal were disclosed. Plus § 1.03, manifestation, which covers positional or customary authority."
+            },
+            {
+              "id": "s6",
+              "say": "Here's the contrast to say on an exam. Apparent authority needs the principal's manifestation to the third party. Inherent authority needs no manifestation at all; it arises from the agency relation. That's why it was needed for undisclosed principals: when the third party doesn't even know the principal exists, there can be no manifestation to him."
+            },
+            {
+              "id": "s7",
+              "say": "Recap. Restatement Second § 8A: power from the agency relation itself. § 161 for the general agent of a disclosed principal; §§ 194 to 195 for an undisclosed principal's agent in charge of a business. Restatement Third drops the term and uses § 2.06(1), § 2.06(2), and positional authority under § 1.03."
+            },
+            {
+              "id": "s8",
+              "ask": "Under Restatement Second § 8A, where does inherent agency power come from?",
+              "answer": "Solely from the agency relationship, not from authority, apparent authority, or estoppel, to protect people dealing with agents.",
+              "pause": 8
+            },
+            {
+              "id": "s9",
+              "ask": "What does Restatement Third § 2.06(2) say?",
+              "answer": "An undisclosed principal can't rely on instructions reducing the agent's authority below what the third party would assume if the principal were disclosed.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "Why can't apparent authority explain an undisclosed principal's liability?",
+              "answer": "Because the third party doesn't know the principal exists, so there is no manifestation from the principal to the third party.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e09",
+          "title": "Inherent authority cases: Watteau, Kidd, and Nogales",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Three cases. Watteau, the undisclosed principal. Kidd, the uncommunicated limit. Nogales, the line between apparent and inherent authority."
+            },
+            {
+              "id": "s2",
+              "say": "Watteau v. Fenwick, Queen's Bench, 1892. Brewers owned a pub but kept the former owner, Humble, as manager, with his name still over the door. They forbade him to buy cigars. He bought cigars on credit from a supplier who had never heard of the brewers."
+            },
+            {
+              "id": "s3",
+              "say": "Held: the brewers must pay. An undisclosed principal is liable for acts within the authority usually given to such an agent, despite secret limits. Walk through why this is the classic case. No actual authority: cigars were forbidden. No apparent authority: the supplier didn't know the brewers existed. And yet liability. That is inherent agency power, replaced in the Restatement Third by § 2.06."
+            },
+            {
+              "id": "s4",
+              "say": "Kidd v. Thomas A. Edison, Southern District of New York, 1917, Judge Learned Hand. Edison's agent Fuller was told, secretly, to hire singers only for recitals that dealers later booked. He hired the singer Kidd for an unconditional tour instead. Edison refused to pay."
+            },
+            {
+              "id": "s5",
+              "say": "Held: Edison is bound. Hiring singers without such an unusual condition was within the customary scope of the job, and the limit was never communicated. In Hand's framing, choosing an agent vouches for him. Why it matters: third parties may rely on the customary scope of an agent's role, and uncommunicated, unusual limits don't bind them."
+            },
+            {
+              "id": "s6",
+              "say": "Nogales Service Center v. Atlantic Richfield, Arizona Court of Appeals, 1980. A truck stop claimed ARCO's marketing manager promised a special fuel discount if it built a motel and restaurant. The manager could grant some discounts, but not that one. The jury was instructed only on actual and apparent authority, and it found for ARCO."
+            },
+            {
+              "id": "s7",
+              "say": "Held: affirmed on procedural grounds. But the court explained inherent authority under Restatement Second § 161: a general agent can bind the principal to acts usual in his authorized dealings, even if forbidden, without any manifestation by the principal. Why it matters: it draws the line. Apparent authority rests on the principal's manifestation. Inherent authority rests on the agency relationship itself."
+            },
+            {
+              "id": "s8",
+              "say": "Who's liable? An investor secretly owns a hardware store and keeps the old owner, Ray, as manager under the store's old name. She tells Ray never to buy power tools on credit. Ray buys power tools on credit from a distributor who thinks Ray owns the store. Can the distributor reach the investor?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "Under the Restatement Second, yes: Watteau and §§ 194 to 195, the usual acts of an agent put in charge of a business bind the undisclosed principal despite contrary orders. Under the Restatement Third, § 2.06(2): the investor can't rely on an instruction reducing Ray's authority below what the distributor would assume if she were disclosed. A store manager buying stock is usual. Same result either way."
+            },
+            {
+              "id": "s10",
+              "say": "Next. Same store, but the distributor is told in writing by the investor that Ray can't buy on credit. Ray buys on credit anyway. Bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "No. The third party has notice of the limit, so neither apparent nor inherent authority protects it. Both require a reasonable belief without notice."
+            },
+            {
+              "id": "s12",
+              "say": "The traps. Trap one: trying to fit Watteau into apparent authority. It doesn't fit; the supplier had never heard of the principal. Trap two: forgetting that the Restatement Third abandons inherent authority; name § 2.06 as its replacement. Trap three: in Nogales, the result was procedural; the lesson is the explanation of § 161."
+            },
+            {
+              "id": "s13",
+              "say": "Recap. Watteau: undisclosed principal bound for usual acts despite secret limits. Kidd: uncommunicated, unusual limits don't bind; choosing an agent vouches for him. Nogales: inherent authority under § 161 needs no manifestation, unlike apparent authority."
+            },
+            {
+              "id": "s14",
+              "ask": "Why does Watteau v. Fenwick fit neither actual nor apparent authority?",
+              "answer": "No actual authority because buying cigars was forbidden; no apparent authority because the supplier didn't know the brewers existed.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "What limit did Edison put on Fuller in Kidd, and why didn't it bind Kidd?",
+              "answer": "Hire singers only for recitals dealers later booked. It was unusual and never communicated, and hiring without it was within the customary scope of the job.",
+              "pause": 8
+            },
+            {
+              "id": "s16",
+              "ask": "What distinction does Nogales draw?",
+              "answer": "Apparent authority rests on the principal's manifestation; inherent authority under Restatement Second § 161 rests on the agency relationship, with no manifestation needed.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e10",
+          "title": "Ratification: the rule and its requirements",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. What ratification is, how it happens, its four requirements, when you can't ratify, and when it won't relate back. Then a key Restatement Second versus Third difference."
+            },
+            {
+              "id": "s2",
+              "say": "The rule in plain English. Ratification is the principal's after-the-fact approval of an act that was unauthorized when done. It relates back, and gives the act the effect of actual authority, as if the principal had authorized it from the start. Restatement Second § 82; Restatement Third §§ 4.01 and 4.02. And it relieves the agent of liability for exceeding his authority."
+            },
+            {
+              "id": "s3",
+              "say": "How does a principal ratify? Expressly, by saying so. Or impliedly, most commonly by accepting the benefits of the deal. And also by silence, where the principal had a duty to speak up or disaffirm."
+            },
+            {
+              "id": "s4",
+              "say": "The requirements. All four are required. One: the principal has knowledge, or reason to know, of all material facts. Two: the principal accepts the entire transaction. No partial ratification; you can't keep the good half and reject the bad half. That's § 4.07. Three: capacity. The principal must have existed at the time of the act, and have capacity when ratifying, § 4.04. Four: the act was done, or purported to be done, on the principal's behalf, § 4.03."
+            },
+            {
+              "id": "s5",
+              "say": "When you can't ratify. Any one of three bars it. One: the performance is illegal at the time of ratification. Two: the third party has already withdrawn. Three: a material change in circumstances, § 4.05. The idea behind the last two: ratification can't let the principal wait and see, then pick the deal once the market moves its way, at the third party's expense."
+            },
+            {
+              "id": "s6",
+              "say": "When ratification won't have retroactive effect, under § 4.02. If the principal lacked capacity at the time of the act. If relating back would impair intervening third-party rights. Or if it would be unfair to bind an innocent third party."
+            },
+            {
+              "id": "s7",
+              "say": "Now a Restatement difference. Under the Restatement Second, only disclosed and unidentified principals may ratify. Under the Restatement Third, any principal may, including an undisclosed one."
+            },
+            {
+              "id": "s8",
+              "say": "Why does ratification exist? Because sometimes the principal, once it learns the facts, actually wants the deal. Letting it adopt the deal is efficient, and it's fair, so long as the principal knew what it was adopting and the third party isn't prejudiced."
+            },
+            {
+              "id": "s9",
+              "say": "Recap. Ratification is after-the-fact affirmance that relates back. Express, by accepting benefits, or by silence with a duty to speak. Four requirements: knowledge of material facts, acceptance of the entire deal, capacity, and an act done or purportedly done for the principal. Barred by illegality, the third party's withdrawal, or a material change."
+            },
+            {
+              "id": "s10",
+              "ask": "What are the four requirements for ratification?",
+              "answer": "One, knowledge of all material facts; two, acceptance of the entire transaction; three, capacity, existing at the time of the act and when ratifying; four, the act was done or purported to be done on the principal's behalf.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "Name the three things that bar ratification.",
+              "answer": "Performance illegal at the time of ratification; the third party has withdrawn; or a material change in circumstances, Restatement Third § 4.05.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "Can an undisclosed principal ratify?",
+              "answer": "Under the Restatement Third, yes, any principal may. Under the Restatement Second, no: only disclosed and unidentified principals.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e11",
+          "title": "Ratification cases: Botticello and Ercanbrack",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Two cases, each knocking out a requirement. Botticello: the act wasn't done on her behalf, and she lacked full knowledge. Ercanbrack: no knowledge at all."
+            },
+            {
+              "id": "s2",
+              "say": "Botticello v. Stefanovicz, Connecticut, 1979. A husband and wife co-owned a farm. The husband alone signed a lease with an option to buy. The buyer later discovered the wife was a co-owner. She had received some of the rent, and she had watched him make improvements."
+            },
+            {
+              "id": "s3",
+              "say": "Held: the wife isn't bound. First, marriage and co-ownership don't make one spouse the other's agent; agency must be proven. Second, there was no ratification. She lacked full knowledge and intent, and her husband never claimed to act for her. Why it matters: you can only ratify an act done, or purportedly done, on your behalf, with full knowledge."
+            },
+            {
+              "id": "s4",
+              "say": "Ercanbrack v. Crandall-Walker Motor, Utah, 1976. A buyer signed a truck order, and a salesman signed too. The form said it wasn't valid unless accepted by a manager or officer, and none ever signed. When the price went up, the buyer argued the dealer ratified the order by not objecting."
+            },
+            {
+              "id": "s5",
+              "say": "Held: no contract. Silence can ratify only if the principal knows of the deal, and no officer knew. In the court's words, ratification of an act about which the principal knows nothing is inherently impossible."
+            },
+            {
+              "id": "s6",
+              "say": "Who's liable? A company's sales rep, with no authority, signs a one-year supply contract with a buyer. The company's president learns all the terms and ships the first three monthly deliveries, cashing the checks. Then prices rise, and the company says the rep had no authority. Bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s7",
+              "say": "Yes, by ratification. The president knew the material facts and accepted the benefits, which is implied ratification. And he can't keep the first three months and reject the rest; no partial ratification under § 4.07. The whole contract relates back."
+            },
+            {
+              "id": "s8",
+              "say": "Next. Same rep, same contract, but before the president learns of it, the buyer emails, \"Deal's off.\" Then the president says, \"We ratify.\" Bound?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "No. The third party withdrew before ratification, and that bars it."
+            },
+            {
+              "id": "s10",
+              "say": "The traps. Trap one: in Botticello, accepting some rent wasn't enough, because she lacked full knowledge and the husband didn't purport to act for her. Trap two: silence ratifies only with knowledge, Ercanbrack. Trap three: watch for the principal who tries to keep the profitable part of a deal; ratification is all or nothing."
+            },
+            {
+              "id": "s11",
+              "say": "Recap. Botticello: no agency from marriage; no ratification without full knowledge and an act purportedly on her behalf. Ercanbrack: you can't ratify what you know nothing about."
+            },
+            {
+              "id": "s12",
+              "ask": "Why didn't the wife in Botticello ratify the lease?",
+              "answer": "She lacked full knowledge and intent, and her husband never purported to act on her behalf.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "In Ercanbrack, why was silence not ratification?",
+              "answer": "No manager or officer knew of the order, and silence ratifies only when the principal knows.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "A principal knowingly accepts benefits under an unauthorized deal. What's the effect?",
+              "answer": "Implied ratification. The act relates back with the effect of actual authority, and the principal takes the whole deal.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e12",
+          "title": "Estoppel: Hoddeson and the musicians' pension fund",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The estoppel rule and its two routes, how it differs from apparent authority, then Hoddeson v. Koos Brothers and the pension fund case."
+            },
+            {
+              "id": "s2",
+              "say": "The rule in plain English. A person who is not otherwise liable becomes liable to a third party who was justifiably induced to change position to its detriment, if that person caused the third party's mistaken belief, or knew of it and didn't correct it."
+            },
+            {
+              "id": "s3",
+              "say": "The elements. Restatement Third § 2.05; Restatement Second § 8B. The third party was justifiably induced to make a detrimental change of position, and the person either one, intentionally or carelessly caused the belief that the transaction was on its account, or two, knowing of the belief, failed to take reasonable steps to correct it."
+            },
+            {
+              "id": "s4",
+              "say": "Contrast it with apparent authority. Apparent authority makes a contract; both principal and third party are bound. Estoppel doesn't make a contract; it compensates the third party for reliance losses. And estoppel requires a detrimental change of position; apparent authority needs only reasonable belief."
+            },
+            {
+              "id": "s5",
+              "say": "Hoddeson v. Koos Brothers, New Jersey Appellate Division, 1957. A man posing as a furniture salesman took a customer's $168.50 in cash. The store had no record of the sale and said he was an impostor."
+            },
+            {
+              "id": "s6",
+              "say": "Held: no apparent authority, because that must come from the store's manifestations, not the impostor's acts. But a new trial on estoppel. A store must use reasonable care to keep impostors from posing as its staff. The plaintiff must prove three things. One: the store's negligence created an appearance of authority. Two: her reasonable reliance. Three: her change of position. Why it matters: it separates apparent authority from estoppel based on the principal's carelessness plus detrimental reliance."
+            },
+            {
+              "id": "s7",
+              "say": "Trustees of the American Federation of Musicians and Employers' Pension Fund v. Steven Scott Enterprises, Southern District of New York, 1999. A union president, who was also a pension-fund trustee, signed fifteen settlements with an employer saying they bound the fund. But only the fund's board could settle. The fund cashed all fifteen checks sent with the agreements and never objected."
+            },
+            {
+              "id": "s8",
+              "say": "Held: the fund is bound to all fifteen. By estoppel and apparent authority, up until the employer learned of the board's exclusive power. And by ratification: the fund knew and accepted the money. Why it matters: one fact pattern shows apparent authority, estoppel and ratification together, and shows how notice of the real limits ends reasonable reliance."
+            },
+            {
+              "id": "s9",
+              "say": "Who's liable? A car dealership lets a former salesman keep wearing a dealership badge and hang around the lot after he's fired, despite complaints. He takes a customer's deposit and disappears. Can the customer reach the dealership?",
+              "voice": "alt"
+            },
+            {
+              "id": "s10",
+              "say": "Estoppel. The dealership carelessly caused the belief that he acted for it, and knowing of the problem, failed to take reasonable steps to correct it. The customer relied and parted with money, a detrimental change of position. Restatement Third § 2.05, on the Hoddeson model. And there is also a lingering apparent authority argument, since he really was their salesman until recently."
+            },
+            {
+              "id": "s11",
+              "say": "The traps. Trap one: in an impostor case, don't stop at \"no apparent authority.\" Go on to estoppel. Trap two: estoppel needs a detrimental change of position. Trap three: estoppel gives a reliance remedy; it doesn't bind the third party to a contract."
+            },
+            {
+              "id": "s12",
+              "say": "Recap. Estoppel, Restatement Third § 2.05: the principal intentionally or carelessly caused the belief, or knowing of it failed to correct it, and the third party detrimentally relied. Hoddeson: impostor, no apparent authority, but estoppel for a careless store. Pension fund: apparent authority, estoppel, and ratification on one set of facts."
+            },
+            {
+              "id": "s13",
+              "ask": "What are the two routes to estoppel under Restatement Third § 2.05?",
+              "answer": "The person intentionally or carelessly caused the belief that the transaction was on its account, or, knowing of the belief, failed to take reasonable steps to correct it, plus the third party's justifiable detrimental change of position.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "What three things must the plaintiff prove in Hoddeson?",
+              "answer": "The store's negligent appearance of authority, her reasonable reliance, and her change of position.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "In the pension fund case, what ended reasonable reliance?",
+              "answer": "The employer learning of the board's exclusive power to settle.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e13",
+          "title": "Comparing the routes to contract liability",
+          "minutes": 2,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. One chart, read aloud, comparing all six routes: whose perspective, whether a manifestation is needed, whether reliance is needed, and the effect."
+            },
+            {
+              "id": "s2",
+              "say": "Express actual authority. Perspective: the agent's. Manifestation: yes, to the agent, in words. Reliance by the third party: not needed. Effect: principal and third party bound."
+            },
+            {
+              "id": "s3",
+              "say": "Implied actual authority. Perspective: the agent's. Manifestation: yes, to the agent, by conduct, custom, or past practice. Reliance: not needed. Effect: both bound."
+            },
+            {
+              "id": "s4",
+              "say": "Apparent authority. Perspective: the third party's. Manifestation: yes, to the third party. Reliance: a reasonable belief, and some courts also require a change of position. Effect: both bound."
+            },
+            {
+              "id": "s5",
+              "say": "Inherent authority, under the Restatement Second. Perspective: policy. Manifestation: none needed; it arises from the agency relation. Reliance: a reasonable belief and no notice, § 161. Effect: the principal is bound."
+            },
+            {
+              "id": "s6",
+              "say": "Ratification. Perspective: after the fact. Manifestation: the principal's later affirmance, with knowledge. Reliance: not needed. Effect: it relates back, and both are bound."
+            },
+            {
+              "id": "s7",
+              "say": "Estoppel. Perspective: the third party's. Manifestation: the principal's intentional or negligent act or omission. Reliance: yes, a detrimental change of position. Effect: the principal is liable for the third party's reliance loss."
+            },
+            {
+              "id": "s8",
+              "say": "Here's how to use the chart on a question. Walk it in order. Start with actual. If there's none, look for a manifestation to the third party. If the third party never knew of the principal, think inherent authority or § 2.06. If the principal later learned and accepted, think ratification. And if all else fails but the principal was careless and the third party relied, estoppel."
+            },
+            {
+              "id": "s9",
+              "ask": "Which routes require no reliance by the third party?",
+              "answer": "Express actual, implied actual, and ratification.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "Which route gives only a reliance remedy rather than a binding contract?",
+              "answer": "Estoppel.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "Which route needs no manifestation by the principal at all?",
+              "answer": "Inherent authority, under the Restatement Second; it arises from the agency relation.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e14",
+          "title": "The agent's own liability on the contract, and other provisions to know",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. When the agent is personally liable: disclosed, unidentified, and undisclosed principals. The implied warranty of authority. Atlantic Salmon. Then notice, imputed knowledge, restitution, and the third party's liability to the principal."
+            },
+            {
+              "id": "s2",
+              "say": "Three kinds of principal, by what the third party knows. A disclosed principal: the third party knows there's an agency and knows who the principal is. The agent is not liable, if acting with actual or apparent authority. The principal is."
+            },
+            {
+              "id": "s3",
+              "say": "A partially disclosed, or unidentified, principal: the third party knows there's a principal but not who. The agent is liable, along with the principal, under Restatement Third § 6.02. The principal is liable once identified."
+            },
+            {
+              "id": "s4",
+              "say": "An undisclosed principal: the third party knows nothing and thinks the agent is the party. The agent is liable as a party, § 6.03. And the principal is liable too, and must indemnify the agent."
+            },
+            {
+              "id": "s5",
+              "say": "The implied warranty of authority, Restatement Third § 6.10. One who purports to bind a principal without power to do so is liable to the third party for the loss, including the expected benefit of the bargain, unless the principal ratifies, the agent disclaims the warranty, or the third party knew the agent lacked authority. And an agent for a nonexistent or incapable principal is a party to the contract, § 6.04."
+            },
+            {
+              "id": "s6",
+              "say": "Atlantic Salmon v. Curran, Massachusetts Appeals Court, 1992. Curran bought salmon on credit as an officer of \"Boston International Seafood Exchange, Inc.,\" a corporation that didn't exist. His real company had a different name, findable only in public records."
+            },
+            {
+              "id": "s7",
+              "say": "Held: Curran is personally liable, about $255,000. An agent for a partially disclosed principal is a party to the contract. The agent must disclose the principal's identity, and it doesn't matter that the seller could have searched the records. Why it matters: it puts the disclosure burden on the agent. You'll see it again on Day 5, when LLC managers fail to name their company."
+            },
+            {
+              "id": "s8",
+              "say": "Other provisions to know. Notice to an authorized agent is notice to the principal. The agent's material knowledge is imputed to the principal, unless the agent acts adversely to the principal. Even then it is still imputed to protect a good-faith third party, or where the principal ratified or kept the benefit. Restatement Third §§ 5.02 through 5.04."
+            },
+            {
+              "id": "s9",
+              "say": "Restitution: a principal unjustly enriched by an agent's act owes restitution, § 2.07. And the third party is liable to the principal on the agent's contracts, including to an undisclosed principal, unless the principal was excluded by the contract, its existence was fraudulently concealed, or there's a set-off. Restatement Second §§ 292 and 302."
+            },
+            {
+              "id": "s10",
+              "say": "Who's liable? An agent buys a boat \"for a client who wants to stay anonymous,\" and signs her own name. The client never pays. Can the seller sue the agent?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "Yes. That's a partially disclosed, unidentified principal. The agent is a party along with the principal, § 6.02. To avoid that, she needed to disclose the principal's identity or get the seller to agree she's not a party."
+            },
+            {
+              "id": "s12",
+              "say": "Next. An agent signs for \"Acme Holdings,\" but Acme never authorized it and refuses to ratify. The seller didn't know. Who pays the seller's loss?",
+              "voice": "alt"
+            },
+            {
+              "id": "s13",
+              "say": "The agent, on the implied warranty of authority, § 6.10, including the seller's expected benefit, unless she disclaimed it or the seller knew she lacked authority."
+            },
+            {
+              "id": "s14",
+              "say": "The traps. Trap one: the agent is safe only with a disclosed principal: both the fact of agency and the identity. Trap two: the third party has no duty to search public records, Atlantic Salmon. Trap three: an agent for a principal that doesn't exist is a party, § 6.04."
+            },
+            {
+              "id": "s15",
+              "say": "Recap. Disclosed: agent not liable. Unidentified: agent liable with the principal, § 6.02. Undisclosed: agent liable as a party, § 6.03, principal liable too and indemnifies. Implied warranty of authority, § 6.10. Atlantic Salmon: disclose the identity or pay."
+            },
+            {
+              "id": "s16",
+              "ask": "Under § 6.02, who is liable on a contract for an unidentified principal?",
+              "answer": "The agent, as a party, along with the principal once identified.",
+              "pause": 8
+            },
+            {
+              "id": "s17",
+              "ask": "What three things defeat the implied warranty of authority under § 6.10?",
+              "answer": "The principal ratifies, the agent disclaims, or the third party knew the agent lacked authority.",
+              "pause": 8
+            },
+            {
+              "id": "s18",
+              "ask": "In Atlantic Salmon, did it matter that the seller could have found the real company in public records?",
+              "answer": "No. The agent must disclose the principal's identity; the seller's ability to search doesn't matter.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d1-e15",
+          "title": "Day 1 cumulative quiz",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Day 1 quiz. Pause on each, answer out loud, then check yourself."
+            },
+            {
+              "id": "s2",
+              "ask": "Name the three elements of agency and the Restatement Third section.",
+              "answer": "The principal's manifestation of assent that the agent act on its behalf, subject to its control, and the agent's assent. Restatement Third § 1.01.",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "Does a gratuitous agent count as an agent? Which section names it?",
+              "answer": "Yes. Consent, not consideration, is required. Restatement Third § 1.04(3).",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "What did Restatement Second § 14O add in Cargill?",
+              "answer": "A creditor that takes over management of the debtor's business becomes its principal.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "What's the test for actual authority?",
+              "answer": "Whether the principal's words or conduct would lead a reasonable person in the agent's position to believe he is authorized. Restatement Third §§ 2.01, 2.02, 3.01.",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "A ship captain, in a storm, hires a tug without asking the owner. What kind of authority?",
+              "answer": "Implied actual authority by emergency.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "What is the trap about firing an agent?",
+              "answer": "Terminating actual authority doesn't automatically end apparent authority; that lasts until the third party has notice.",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "Which case: the lawyer whose clients sat in on the mediation and never limited him?",
+              "answer": "Ackerman v. Sobol Family Partnership. The settlement was binding through apparent authority.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "Which case: a buried disclaimer in a consent form an intubated patient never signed?",
+              "answer": "Williams v. Dimensions Health. Apparent agency under Restatement Second § 267.",
+              "pause": 10
+            },
+            {
+              "id": "s10",
+              "ask": "Which case: secret instruction to hire singers only for booked recitals?",
+              "answer": "Kidd v. Thomas A. Edison, Learned Hand.",
+              "pause": 10
+            },
+            {
+              "id": "s11",
+              "ask": "What two sections of the Restatement Second cover an undisclosed principal's inherent liability?",
+              "answer": "Sections 194 and 195: bound by the usual acts of an agent it put in charge of its business, despite contrary orders.",
+              "pause": 10
+            },
+            {
+              "id": "s12",
+              "ask": "Under the Restatement Third, what does § 2.06(1) require for an undisclosed principal's liability?",
+              "answer": "A third party who detrimentally relies, and a principal who, on notice of the agent's conduct, failed to take reasonable steps to notify that third party.",
+              "pause": 10
+            },
+            {
+              "id": "s13",
+              "ask": "Whose perspective controls actual authority, and whose controls apparent authority?",
+              "answer": "Actual: the agent's reasonable understanding. Apparent: the third party's reasonable belief, traceable to the principal.",
+              "pause": 10
+            },
+            {
+              "id": "s14",
+              "ask": "A principal learns of an unauthorized deal, keeps the profitable deliveries and rejects the rest. Allowed?",
+              "answer": "No. Ratification requires accepting the entire transaction; no partial ratification, Restatement Third § 4.07.",
+              "pause": 10
+            },
+            {
+              "id": "s15",
+              "ask": "Which case said ratification of an act the principal knows nothing about is inherently impossible?",
+              "answer": "Ercanbrack v. Crandall-Walker Motor.",
+              "pause": 10
+            },
+            {
+              "id": "s16",
+              "ask": "An impostor poses as a store clerk and takes a customer's cash. Apparent authority or estoppel?",
+              "answer": "Not apparent authority, since nothing came from the store. Possibly estoppel if the store carelessly let him appear to be staff and she relied, Hoddeson v. Koos Brothers.",
+              "pause": 10
+            },
+            {
+              "id": "s17",
+              "ask": "In Atlantic Salmon, why was Curran personally liable?",
+              "answer": "He dealt for a partially disclosed principal without disclosing its identity, so he was a party to the contract.",
+              "pause": 10
+            },
+            {
+              "id": "s18",
+              "say": "That's Day 1, all of contract liability. Tomorrow: a principal's tort liability, scope of employment, independent contractors, and the agent's fiduciary duties. See you then."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
