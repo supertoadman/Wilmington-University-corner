@@ -2708,6 +2708,1968 @@
      ]
     }
    ]
+  },
+  {
+   "day": 3,
+   "title": "Immoral speech, torts involving speech, and commercial speech",
+   "minutes": 109,
+   "episodes": [
+    {
+     "id": "fa-d3-e00",
+     "title": "Spaced review of Days 1 and 2",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Welcome to Day 3. Spaced review first. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "What does Mahmoud versus Taylor add to the Free Exercise framework?",
+       "answer": "If a school policy substantially interferes with a child's religious development, a Yoder-type burden, strict scrutiny applies even to a neutral, generally applicable policy.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "In Lukumi, what showed the ordinances were not neutral?",
+       "answer": "Gerrymandered exemptions. Fishing, hunting, pest control, and euthanasia were allowed, so only religious killing was burdened.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "What does the Free Exercise trilogy, Trinity Lutheran, Espinoza, and Carson, require?",
+       "answer": "If the state subsidizes private entities, it cannot exclude religious ones because they are religious. It may end the program instead.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "What is the difference between a content-based and a viewpoint-based rule?",
+       "answer": "Content-based restricts a topic or subject. Viewpoint-based restricts one side, and it is the worst form. Both get strict scrutiny.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "Why did the Court refuse to create a new category for animal cruelty in Stevens?",
+       "answer": "Courts may not create categories by balancing value against costs. The First Amendment already reflects that judgment, and there is no tradition of banning such depictions.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "What does Hansen require for a law to be facially overbroad?",
+       "answer": "A substantial amount of protected speech relative to its plainly legitimate sweep, with realistic applications and a lopsided ratio, after construing the statute.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "What did R.A.V. hold?",
+       "answer": "Government may ban a whole unprotected category, but not a subset chosen by topic or viewpoint.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "What does Counterman require for a true threat?",
+       "answer": "A serious expression of intent to commit unlawful violence, as a reasonable recipient would understand it, plus at least recklessness by the speaker.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "Name the three kinds of speech integral to crime.",
+       "answer": "Speech that is the crime, offers or solicitations of illegal acts, and speech that helps commit or conceal a crime.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "What are the four elements of Brandenburg?",
+       "answer": "Directed to inciting, imminent, lawless action, and likely to produce it.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "say": "Good. Today: immoral speech, speech torts, and commercial speech."
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e01",
+     "title": "Immoral speech: the framework and Bolger",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What counts as immoral speech, the checklist and the two overarching questions, four governing principles, and the first case, Bolger versus Youngs Drug Products."
+      },
+      {
+       "id": "s2",
+       "say": "The categories. Obscenity, sexually explicit speech, child pornography, profanity, and violent imagery. Indecent describes speech regarded as immoral but not obscene. What unites them: the government wants to suppress the speech for reasons of morality."
+      },
+      {
+       "id": "s3",
+       "say": "The immoral speech checklist. Four steps. One: did the Court treat the speech as an unprotected category, which means rational basis only? Two: if that is disputed, how did it define the category's boundaries? Think Miller, or obscene for kids. Three: if the speech is protected, what standard of review applies? Content-based usually means strict scrutiny. Four: what was the bottom line, and why?"
+      },
+      {
+       "id": "s4",
+       "say": "Then two overarching questions. First: who is the government protecting, adults or kids? Second: what harm is targeted, harm from the content itself, or an indirect harm, such as the exploitation of real children?"
+      },
+      {
+       "id": "s5",
+       "say": "Now four governing principles. One, adults. The government almost never can restrict immoral speech to protect adults from its content. The exception is obscenity, narrowly defined. Offended adults are expected to look away, walk away, or toss out the mail."
+      },
+      {
+       "id": "s6",
+       "say": "Two, kids. The government sometimes can protect kids, especially from sexually explicit speech. But it cannot block adult access. And kids have their own First Amendment rights. That is Brown."
+      },
+      {
+       "id": "s7",
+       "say": "Three, secondary effects. Local governments may zone adult businesses to reduce crime and stop falling property values. That is Renton."
+      },
+      {
+       "id": "s8",
+       "say": "Four, child pornography made with actual children may be banned, to dry up the market for abuse. That is Ferber. But not virtual images or adult look-alikes. That is Free Speech Coalition. Still, offers to buy or sell material believed to involve real children may be punished. That is Williams."
+      },
+      {
+       "id": "s9",
+       "say": "Now Bolger versus Youngs Drug Products, 1983. Nine to nothing on the bottom line, Justice Marshall."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. The government cannot shield adults from immoral content, except obscenity. It can shield kids from some content, but only if the restriction does not stop adults from getting it. In the Court's words, the government may not reduce the adult population to reading only what is fit for children."
+      },
+      {
+       "id": "s11",
+       "say": "The story. A federal law banned mailing unsolicited contraceptive ads to homes. Held: the ban violates the First Amendment."
+      },
+      {
+       "id": "s12",
+       "say": "The reasoning. First, shielding adults from offense carries little weight. Outside obscenity, offensiveness does not justify suppression. Recipients are not a captive audience. And, citing Cohen, the short, though regular, journey from mail box to trash can is an acceptable burden."
+      },
+      {
+       "id": "s13",
+       "say": "Second, helping parents is undoubtedly substantial. But the ban fails. Parents already control their mail, and the ban purges material entirely suitable for adults."
+      },
+      {
+       "id": "s14",
+       "say": "Third, Butler versus Michigan. Such a ban would burn the house to roast the pig. Mailbox discourse cannot be limited to that which would be suitable for a sandbox."
+      },
+      {
+       "id": "s15",
+       "say": "Fourth, Pacifica distinguished as narrow. Broadcasting is uniquely pervasive and uniquely accessible to children."
+      },
+      {
+       "id": "s16",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s17",
+       "ask": "A state bans any bookstore from selling, to anyone, books containing sexual content unsuitable for twelve-year-olds. The books are not obscene. Valid?",
+       "answer": "No. Under Bolger and Butler, the government may not reduce adults to reading only what is fit for children. It may protect kids only without blocking adult access.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Immoral speech: suppressed for morality. Checklist: unprotected category, boundaries, standard, bottom line. Two questions: adults or kids, and content harm or indirect harm. Bolger, 1983, Marshall: no shielding adults from offense; no sandbox standard; the mailbox-to-trash-can journey is acceptable."
+      },
+      {
+       "id": "s19",
+       "ask": "What are the two overarching questions for immoral speech?",
+       "answer": "Who is the government protecting, adults or kids? And is the harm from the content itself or indirect, like exploitation of real children?",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What did Butler versus Michigan say a ban on adult material to protect kids would do?",
+       "answer": "Burn the house to roast the pig.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "Why did helping parents fail as an interest in Bolger?",
+       "answer": "Parents already control their mail, and the ban purged material entirely suitable for adults.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e02",
+     "title": "Profanity: Cohen v. California and FCC v. Pacifica",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Profanity is protected, in Cohen. And the narrow broadcasting exception, in Pacifica."
+      },
+      {
+       "id": "s2",
+       "say": "Cohen versus California, 1971. Five to four, Justice Harlan. You met its fighting-words point yesterday."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. The presence of unwilling viewers does not automatically justify suppressing offensive speech. They can, in Harlan's words, avoid further bombardment of their sensibilities simply by averting their eyes."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Cohen wore a jacket reading Fuck the Draft in a Los Angeles courthouse corridor, where women and children were present, to show the depth of his feelings about the Vietnam War. He was convicted of disturbing the peace by offensive conduct and sentenced to thirty days. Held: reversed. The speech was protected."
+      },
+      {
+       "id": "s5",
+       "say": "Now FCC versus Pacifica Foundation, 1978. Five to four on the bottom line, with a plurality by Justice Stevens."
+      },
+      {
+       "id": "s6",
+       "say": "The rule. The government may regulate a broadcast that is indecent but not obscene, because broadcasting is uniquely accessible to children. The holding is narrow and rests on a nuisance rationale, where context is all-important."
+      },
+      {
+       "id": "s7",
+       "say": "The story. A radio station aired George Carlin's Filthy Words monologue at two in the afternoon. A father driving with his young son complained. The FCC issued a declaratory order finding the broadcast indecent, with no formal sanctions. Held: the FCC's action was upheld."
+      },
+      {
+       "id": "s8",
+       "say": "Why broadcasting is special. Four reasons. One, children have access to radios, often unsupervised. Two, radios are in the home, where privacy gets extra deference. Three, unconsenting adults may tune in without warning. Four, spectrum is scarce and licensed in the public interest."
+      },
+      {
+       "id": "s9",
+       "say": "The FCC's approach. It found authority in 18 U.S.C. § 1464, which bars obscene, indecent, or profane language by radio. And it used a nuisance model that channels rather than bans. A valuable broadcast preceded by warnings might be acceptable late at night, but not when children are listening. Pacifica had in fact warned listeners, and it aired the monologue during a program on attitudes toward language."
+      },
+      {
+       "id": "s10",
+       "say": "The contrast with Cohen. Cohen's written message might have been incomprehensible to a first grader. But the broadcast could have enlarged a child's vocabulary in an instant."
+      },
+      {
+       "id": "s11",
+       "say": "Nuisance. Time of day, program content, and medium all matter. A nuisance may be, in the famous phrase, a pig in the parlor instead of the barnyard."
+      },
+      {
+       "id": "s12",
+       "say": "Not decided: two-way radio, an occasional expletive, or a criminal prosecution. Pacifica returns on Day 4, with time, place, and manner."
+      },
+      {
+       "id": "s13",
+       "say": "The takeaway from Cohen and Pacifica. Profanity is protected speech. Calling speech indecent or profane generally does not mean it can be restricted. Think Cohen, and the FCANCER plate, a district court case. Pacifica is the unusual, narrow exception."
+      },
+      {
+       "id": "s14",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s15",
+       "ask": "A city fines a man for wearing a T-shirt with a profane slogan about the President in a public park where children play. Valid?",
+       "answer": "No. Under Cohen, profanity is protected, and unwilling viewers can avert their eyes. Pacifica's broadcast exception does not reach a T-shirt.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "The FCC sanctions a broadcast television station for airing a stream of graphic sexual profanity at four in the afternoon. Which case helps the FCC, and what limits it?",
+       "answer": "Pacifica. Broadcasting is uniquely pervasive and accessible to children, and the nuisance rationale lets the FCC channel indecent material away from times children listen. But it is narrow, and the plurality left open occasional expletives and criminal prosecution.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "say": "Recap. Cohen, 1971, five to four, Harlan: avert your eyes; profanity is protected. Pacifica, 1978, Stevens plurality: indecent broadcast regulable; four reasons broadcasting is special; nuisance, a pig in the parlor. Narrow exception."
+      },
+      {
+       "id": "s18",
+       "ask": "Give the four reasons Pacifica says broadcasting is special.",
+       "answer": "Children have access, often unsupervised. Radios are in the home. Unconsenting adults may tune in without warning. Spectrum is scarce and licensed in the public interest.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "What did Pacifica leave undecided?",
+       "answer": "Two-way radio, an occasional expletive, and criminal prosecution.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What is the general takeaway from Cohen and Pacifica about profanity?",
+       "answer": "Profanity is protected speech. Pacifica is the narrow exception.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e03",
+     "title": "Obscenity: the Miller test",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The Miller test, its history, how its prongs work, and Hudnut revisited."
+      },
+      {
+       "id": "s2",
+       "say": "The rule. Obscenity is unprotected. Under Miller versus California, 1973, still good law, speech is obscene only if all three prongs are met. All three are required."
+      },
+      {
+       "id": "s3",
+       "say": "Prong a: the average person, applying contemporary community standards, would find the work, taken as a whole, appeals to the prurient interest."
+      },
+      {
+       "id": "s4",
+       "say": "Prong b: it depicts or describes, in a patently offensive way, sexual conduct specifically defined by state law."
+      },
+      {
+       "id": "s5",
+       "say": "Prong c: the work, taken as a whole, lacks serious literary, artistic, political, or scientific value."
+      },
+      {
+       "id": "s6",
+       "say": "Say the shorthand with me. Prurient interest. Patently offensive. No serious value."
+      },
+      {
+       "id": "s7",
+       "say": "The facts of Miller, which your outline supplies from beyond the casebook. The casebook states the test, quoted in Hudnut, but does not excerpt the case. Marvin Miller ran a mass-mailing campaign advertising adult books and a film. His unsolicited brochures, with explicit pictures, were opened by a restaurant manager and his mother in Newport Beach, California, who complained to police. He was convicted under California's obscenity law. Held: vacated and remanded under the new three-part test."
+      },
+      {
+       "id": "s8",
+       "say": "The evolution. Miller replaced the earlier standard, utterly without redeeming social value. And it allowed local, rather than national, community standards."
+      },
+      {
+       "id": "s9",
+       "say": "The challenge was always defining obscenity without sweeping in valuable sexually explicit works. Before Miller, Justice Stewart said, I know it when I see it, in Jacobellis, 1964. The Court's movie days gave lower courts little guidance. Justices Black and Douglas skipped the movie days, because they thought obscenity is protected speech. That comes from Bob Woodward's The Brethren."
+      },
+      {
+       "id": "s10",
+       "say": "How the prongs work. Prurient interest means a shameful or morbid interest in nudity, sex, or excretion, not a normal interest in sex. That is Brockett versus Spokane Arcades, 1985."
+      },
+      {
+       "id": "s11",
+       "say": "Prong c matters most. It protects works that, as a whole, have value, even if isolated scenes might seem obscene."
+      },
+      {
+       "id": "s12",
+       "say": "Because obscenity is defined so narrowly, much deeply offensive speech is protected. And the casebook agrees that it is more dangerous to let government go down that path. Some Justices continued to dissent that the Miller test is imprecise and chills protected speech. But it remains good law, with no serious chance of being overruled."
+      },
+      {
+       "id": "s13",
+       "say": "Now Hudnut revisited. The Indianapolis ordinance did not track Miller. No prurient interest. No offensiveness. No community standards. No work-as-a-whole inquiry. And value was irrelevant. Its drafters saw those omissions as virtues. The court saw viewpoint discrimination. The drafter, Catharine MacKinnon, asked: if a woman is subjected, why should it matter that the work has other value?"
+      },
+      {
+       "id": "s14",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s15",
+       "ask": "A prosecutor charges a bookseller for a novel that contains one graphic sex scene, but is otherwise a serious literary work about war. Obscene?",
+       "answer": "No. Under prong c, the work taken as a whole has serious literary value. Isolated scenes do not make a valuable work obscene.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "A film appeals only to a normal, healthy interest in sex, though it is explicit. Does it satisfy prong a?",
+       "answer": "No. Prurient interest means a shameful or morbid interest in nudity, sex, or excretion, not a normal interest in sex, per Brockett.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "say": "The traps. One: all three prongs must be met. Two: community standards apply to prongs a and b; prong c is about serious value of the work as a whole. Three: once speech is obscene, it is unprotected, rational basis only."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. Miller, 1973: prurient interest by community standards, patently offensive sexual conduct defined by state law, and no serious literary, artistic, political, or scientific value, the work taken as a whole. It replaced utterly without redeeming social value and allowed local standards. Still good law."
+      },
+      {
+       "id": "s19",
+       "ask": "State the three prongs of the Miller test.",
+       "answer": "Appeals to the prurient interest under contemporary community standards, taken as a whole. Patently offensive depiction of sexual conduct specifically defined by state law. Taken as a whole, lacks serious literary, artistic, political, or scientific value.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What standard did Miller replace?",
+       "answer": "Utterly without redeeming social value.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "Name three Miller features the Hudnut ordinance lacked.",
+       "answer": "Any three: prurient interest, offensiveness, community standards, a work-as-a-whole inquiry, and relevance of value.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e04",
+     "title": "Secondary effects: Renton v. Playtime Theatres",
+     "minutes": 3,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. One case, and one narrow doctrine. Renton versus Playtime Theatres, 1986."
+      },
+      {
+       "id": "s2",
+       "say": "The rule. Zoning laws that confine adult businesses get intermediate scrutiny, even though they are partly content-based, because they target secondary effects, like crime and property values, not the message."
+      },
+      {
+       "id": "s3",
+       "say": "The setting, as the casebook describes it. Cities use zoning to keep adult establishments, like strip clubs and adult bookstores, out of residential and mainstream commercial areas, often concentrating them in one area."
+      },
+      {
+       "id": "s4",
+       "say": "Your outline adds the specifics, from beyond the casebook. Renton, Washington, barred adult movie theaters within one thousand feet of any residential zone, dwelling, church, or park, and within one mile of any school. Playtime Theatres bought two theaters to show adult films and challenged the ordinance. The Court noted that more than five hundred twenty acres, over five percent of the city, stayed open to adult theaters."
+      },
+      {
+       "id": "s5",
+       "say": "Held: upheld under intermediate scrutiny, because the ordinance aimed at secondary effects, higher crime and lower property values, rather than the message."
+      },
+      {
+       "id": "s6",
+       "say": "And the key limit. The doctrine is narrow. The Court has refused to extend it beyond adult entertainment establishments."
+      },
+      {
+       "id": "s7",
+       "say": "Why does it exist? Because the city's concern is not that adults will see sexual films. It is what happens to the neighborhood. The casebook will draw that same parallel to Ferber in a moment: the harm is indirect."
+      },
+      {
+       "id": "s8",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s9",
+       "ask": "A city bans political rallies near homes, arguing that rallies have the secondary effect of lowering property values. Does Renton give it intermediate scrutiny?",
+       "answer": "No. The secondary-effects doctrine is narrow, limited to adult entertainment establishments. A content-based rule about political rallies gets strict scrutiny.",
+       "pause": 12
+      },
+      {
+       "id": "s10",
+       "ask": "A city zones adult bookstores into an industrial district that covers a reasonable share of the city, citing crime studies. What standard?",
+       "answer": "Intermediate scrutiny, under Renton, because the zoning targets secondary effects, crime and property values, rather than the message.",
+       "pause": 10
+      },
+      {
+       "id": "s11",
+       "say": "Recap. Renton, 1986: adult-business zoning gets intermediate scrutiny because it targets secondary effects. Narrow, never extended beyond adult entertainment establishments."
+      },
+      {
+       "id": "s12",
+       "ask": "Why does Renton apply intermediate scrutiny to a partly content-based law?",
+       "answer": "Because the law targets secondary effects, like crime and property values, not the message.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "Has the Court extended the secondary-effects doctrine beyond adult businesses?",
+       "answer": "No. It has refused to.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "What share of Renton stayed open to adult theaters?",
+       "answer": "More than 520 acres, over five percent of the city.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e05",
+     "title": "Child pornography: Ferber, Free Speech Coalition, and Williams",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Child pornography as an unprotected category, in Ferber. Its limit, in Ashcroft versus Free Speech Coalition. Williams revisited. And the teen sexting stretch exercise."
+      },
+      {
+       "id": "s2",
+       "say": "New York versus Ferber, 1982. Unanimous on the bottom line, Justice White."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Child pornography made with real children is unprotected, even if it is not obscene under Miller, because its distribution is intrinsically related to the sexual abuse of the children used to make it."
+      },
+      {
+       "id": "s4",
+       "say": "The story. New York criminalized distributing material depicting sexual performances by children under sixteen, with no obscenity requirement. Held: upheld."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First, preventing the sexual exploitation and abuse of children is an objective of surpassing importance."
+      },
+      {
+       "id": "s6",
+       "say": "Second, context. Ferber was the Court's first look at a statute limited to sexual depictions of children. The federal government and forty-seven states had laws aimed at production, and at least half did not require obscenity. Miller had been an accommodation between protecting unwilling recipients and the dangers of censorship. This was a different problem."
+      },
+      {
+       "id": "s7",
+       "say": "Third, two links to abuse. One, the materials are a permanent record, and circulation worsens the harm. Two, the distribution network must be closed to control production."
+      },
+      {
+       "id": "s8",
+       "say": "Fourth, production is clandestine, but marketing needs a visible apparatus. So drying up the market may be the only practical method of enforcement."
+      },
+      {
+       "id": "s9",
+       "say": "Fifth, the value of such material is exceedingly modest, if not de minimis."
+      },
+      {
+       "id": "s10",
+       "say": "And the casebook note. The rationale resembles secondary effects. The harm is indirect, the abuse of real children in production, not caused by the message."
+      },
+      {
+       "id": "s11",
+       "say": "Now Ashcroft versus Free Speech Coalition, 2002. Six to three, Justice Kennedy. Thomas concurred in the judgment; O'Connor concurred in part and dissented in part; Rehnquist and Scalia dissented."
+      },
+      {
+       "id": "s12",
+       "say": "The rule. Ferber does not extend to sexually explicit images made without real children: computer-generated images, or adults who look like minors."
+      },
+      {
+       "id": "s13",
+       "say": "The story. The Child Pornography Prevention Act of 1996, the CPPA, banned sexually explicit images that appear to depict minors. Held: the extension violates the First Amendment."
+      },
+      {
+       "id": "s14",
+       "say": "The reasoning. First, it goes beyond Ferber, whose rationale depended on protecting real children exploited in production."
+      },
+      {
+       "id": "s15",
+       "say": "Second, it bans speech regardless of serious value. Teen sexuality and child abuse are enduring themes in art. Juliet is thirteen in Romeo and Juliet."
+      },
+      {
+       "id": "s16",
+       "say": "Third, appear to be under eighteen is higher than many states' ages for marriage and consent."
+      },
+      {
+       "id": "s17",
+       "say": "Fourth, one explicit scene would trigger punishment without inquiry into value. But the artistic merit of a work does not depend on the presence of a single explicit scene."
+      },
+      {
+       "id": "s18",
+       "say": "Fifth, Ferber itself relied on virtual images as a permissible alternative. The CPPA criminalized that very alternative."
+      },
+      {
+       "id": "s19",
+       "say": "Now Williams revisited. Offers and requests for child pornography are speech integral to crime. The tricky part: the law covered material the buyer or seller believed depicted a real child. The Court held such offers may be punished even if the belief is mistaken, stressing that technology makes it nearly impossible to prove which images involve real children."
+      },
+      {
+       "id": "s20",
+       "say": "So put the three together. Real children: Ferber, unprotected. Virtual images: Free Speech Coalition, protected. Offers of material believed to be real: Williams, unprotected, even if the belief is wrong."
+      },
+      {
+       "id": "s21",
+       "say": "Now the stretch: teen sexting. Should consensual teen sexting be treated as unprotected child pornography? Such images often fit statutory definitions. Some states reduce penalties for teens, many do not, federal law draws no distinction, and prosecutors have discretion."
+      },
+      {
+       "id": "s22",
+       "say": "The questions. Does Ferber's rationale, drying up a market that exploits children, fit a fifteen-year-old sending her own image to a partner? If not, may the government regulate it at all? Should the partner's age matter: fifteen, seventeen, eighteen, twenty-five? And what if a fifteen-year-old partner forwards the image to others?"
+      },
+      {
+       "id": "s23",
+       "say": "The analysis. Ferber's market-and-exploitation rationale fits poorly for a self-made image shared consensually with a peer. But its other harm, a permanent record whose circulation worsens the injury, fits forwarding well. A sensible rule would turn on exploitation. An adult partner, or nonconsensual redistribution, looks like Ferber. Consensual exchange between peers does not."
+      },
+      {
+       "id": "s24",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s25",
+       "ask": "A man creates entirely computer-generated sexual images of what appear to be children. No real child was involved. Can he be prosecuted under a Ferber-type law?",
+       "answer": "Not on that rationale. Under Free Speech Coalition, Ferber does not extend to images made without real children. Unless the images are obscene under Miller, they are protected.",
+       "pause": 12
+      },
+      {
+       "id": "s26",
+       "ask": "A man offers online to sell what he says are real images of child sexual abuse. They are actually computer-generated. Can he be convicted?",
+       "answer": "Yes, for the offer. Under Williams, offers of material believed or represented to be real child pornography are speech integral to crime, even if the belief is mistaken.",
+       "pause": 12
+      },
+      {
+       "id": "s27",
+       "say": "Recap. Ferber, 1982, White: real-child pornography unprotected, no obscenity needed; two links to abuse; dry up the market. Free Speech Coalition, 2002, Kennedy, six to three: no extension to virtual images or adult look-alikes; Juliet is thirteen. Williams: offers punishable even if the belief is mistaken."
+      },
+      {
+       "id": "s28",
+       "ask": "What are Ferber's two links between distribution and abuse?",
+       "answer": "The materials are a permanent record whose circulation worsens the harm, and the distribution network must be closed to control production.",
+       "pause": 8
+      },
+      {
+       "id": "s29",
+       "ask": "Why did the CPPA's appear to depict minors language fail?",
+       "answer": "It went beyond Ferber's real-children rationale, banned speech regardless of value, and criminalized the virtual-image alternative Ferber itself relied on.",
+       "pause": 8
+      },
+      {
+       "id": "s30",
+       "ask": "How does the casebook connect Ferber to secondary effects?",
+       "answer": "In both the harm is indirect, here the abuse of real children in production, not caused by the message.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e06",
+     "title": "Age-gating: Ashcroft v. ACLU and Free Speech Coalition v. Paxton",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Two online age-gating cases, twenty-one years apart, with different tiers of scrutiny and different outcomes."
+      },
+      {
+       "id": "s2",
+       "say": "Ashcroft versus ACLU, 2004, called Ashcroft Two. Five to four, Justice Kennedy. Rehnquist, O'Connor, Scalia, and Breyer dissented."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Under strict scrutiny, a content-based law that suppresses a large amount of speech adults have a right to receive is invalid if less restrictive alternatives would be at least as effective. And the government must prove they are not."
+      },
+      {
+       "id": "s4",
+       "say": "The story. The Child Online Protection Act, COPA, criminalized posting material harmful to minors online for commercial purposes, with an affirmative defense for age verification, for example by credit card. Held: likely unconstitutional."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. Filters are less restrictive. They restrict at the receiving end, not the source. Adults need not identify themselves. And no speech is criminalized, so chilling is diminished."
+      },
+      {
+       "id": "s6",
+       "say": "Filters may also be more effective. They block foreign sites, cannot be evaded by minors with credit cards, and cover email. Filters are imperfect, but the government offered no specific evidence that COPA would work better."
+      },
+      {
+       "id": "s7",
+       "say": "Now Free Speech Coalition versus Paxton, 2025. Six to three, Justice Thomas. Kagan, Sotomayor, and Jackson dissented."
+      },
+      {
+       "id": "s8",
+       "say": "The rule. A law requiring age verification to keep minors from speech that is obscene as to them gets intermediate scrutiny, because its burden on adults is incidental. And Texas's law satisfies it."
+      },
+      {
+       "id": "s9",
+       "say": "The story. Texas H.B. 1181 requires commercial websites publishing sexually explicit content to verify visitors' ages. Held: constitutional."
+      },
+      {
+       "id": "s10",
+       "say": "The reasoning. First, two traditional powers. States may ban speech obscene to the public at large. And they may prevent children from accessing speech that is obscene to children: the Miller test adjusted for minors. That is Ginsberg versus New York, 1968, which upheld a ban on selling minors sexual material that would be obscene from a child's perspective."
+      },
+      {
+       "id": "s11",
+       "say": "Second, why intermediate scrutiny. Any burden on adults is, quoting Boy Scouts versus Dale, only an incidental effect on protected speech."
+      },
+      {
+       "id": "s12",
+       "say": "Third, earlier cases distinguished. Reno versus ACLU, 1997, applied strict scrutiny because the Communications Decency Act operated as a ban on adult speech, and its age-verification defense was illusory given the technology. The internet has changed dramatically since Reno and Ashcroft Two: smartphones, streaming."
+      },
+      {
+       "id": "s13",
+       "say": "Fourth, rational basis rejected. Texas and the Fifth Circuit had argued for it. But rational basis applies only when no fundamental rights are implicated, and adults have a real, if incidentally burdened, right. Intermediate scrutiny is deferential but not toothless."
+      },
+      {
+       "id": "s14",
+       "say": "The test. Count the parts. A law survives intermediate scrutiny if, one, it advances important governmental interests, two, unrelated to the suppression of free speech, and three, does not burden substantially more speech than necessary."
+      },
+      {
+       "id": "s15",
+       "say": "Applied. The interest in shielding children from sexual content is important, even compelling. The law adapts traditional in-person age checks to the digital age, using government ID or transactional data. Those methods are used for online gambling, alcohol, tobacco, car rentals, and by the pornography industry itself. Less restrictive alternatives, filters and ISP blocking, do not defeat a legitimate legislative choice under intermediate scrutiny. Privacy is protected by the incentives of sites and verifiers. And stigma has never exempted the industry from regulation."
+      },
+      {
+       "id": "s16",
+       "say": "The question to consider. Did Paxton effectively overrule Ashcroft Two? The filtering alternative that won in 2004 lost in 2025, because of the lower standard of review. The Court framed the earlier cases as involving effective bans on adult access."
+      },
+      {
+       "id": "s17",
+       "say": "So the whole fight is the tier?",
+       "voice": "alt"
+      },
+      {
+       "id": "s18",
+       "say": "Exactly. Under strict scrutiny, filters as a less restrictive alternative win. Under intermediate scrutiny, they do not defeat the legislature's choice."
+      },
+      {
+       "id": "s19",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s20",
+       "ask": "A state requires every social media site to verify the age of every user before allowing any posting, on any subject. The state cites Paxton. What distinguishes Paxton?",
+       "answer": "Paxton involved speech obscene as to minors, a traditional power, where the burden on adults was incidental. A requirement covering all speech on any subject reaches protected speech by minors and adults, closer to a ban, so stricter review is likely.",
+       "pause": 12
+      },
+      {
+       "id": "s21",
+       "ask": "Under Paxton, what three things must a law show to survive intermediate scrutiny?",
+       "answer": "It advances important governmental interests, unrelated to the suppression of free speech, and does not burden substantially more speech than necessary.",
+       "pause": 10
+      },
+      {
+       "id": "s22",
+       "say": "The trap. Do not cite Ashcroft Two for the proposition that age verification is unconstitutional. After Paxton, age verification for material obscene as to minors gets intermediate scrutiny and can survive."
+      },
+      {
+       "id": "s23",
+       "say": "Recap. Ashcroft Two, 2004, five to four, Kennedy: strict scrutiny; filters are less restrictive and maybe more effective; COPA likely invalid. Paxton, 2025, six to three, Thomas: age verification for material obscene to minors gets intermediate scrutiny; Ginsberg; Texas wins. Kagan, Sotomayor, and Jackson dissented."
+      },
+      {
+       "id": "s24",
+       "ask": "Why did Paxton apply intermediate rather than strict scrutiny?",
+       "answer": "The burden on adults was only incidental, since the law aims at speech obscene as to minors, which states traditionally may keep from children.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "How did Paxton distinguish Reno versus ACLU?",
+       "answer": "The Communications Decency Act operated as a ban on adult speech, and its age-verification defense was illusory given the technology then.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "What did Ginsberg versus New York uphold?",
+       "answer": "A ban on selling minors sexual material that would be obscene from a child's perspective.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e07",
+     "title": "Violent imagery: Brown v. Entertainment Merchants Association",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Brown versus Entertainment Merchants Association, 2011, and then the synthesis table for all of Chapter 6."
+      },
+      {
+       "id": "s2",
+       "say": "The rule. Violent imagery is protected. There is no new unprotected category for violence, even for minors. A content-based ban on selling violent video games to minors gets strict scrutiny, and California's fails."
+      },
+      {
+       "id": "s3",
+       "say": "Seven to two, Justice Scalia. Alito, with Roberts, concurred. Thomas and Breyer dissented."
+      },
+      {
+       "id": "s4",
+       "say": "The story. California banned selling or renting violent video games to minors. Held: unconstitutional."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning, in seven steps. One, video games are speech. They communicate ideas through characters, dialogue, plot, music, and interaction. It is difficult to distinguish politics from entertainment, and dangerous to try."
+      },
+      {
+       "id": "s6",
+       "say": "Two, no new category, following Stevens. Legislatures cannot add categories by balancing value against social costs. And obscenity covers only depictions of sexual conduct, not violence."
+      },
+      {
+       "id": "s7",
+       "say": "Three, Ginsberg distinguished. Ginsberg adjusted an existing category, obscenity, for minors. California sought a wholly new category for children only."
+      },
+      {
+       "id": "s8",
+       "say": "Four, minors' rights. Minors are entitled to a significant measure of First Amendment protection. There is no free-floating power to restrict the ideas to which children may be exposed."
+      },
+      {
+       "id": "s9",
+       "say": "Five, no tradition. Grimm's fairy tales, the Odyssey, Dante's Inferno, and Lord of the Flies are full of gore. And past panics targeted dime novels, movies, radio, comics, television, and music."
+      },
+      {
+       "id": "s10",
+       "say": "Six, interactivity is not new. Think choose-your-own-adventure books. It differs in degree, not kind. Judge Posner: all literature is interactive."
+      },
+      {
+       "id": "s11",
+       "say": "Seven, strict scrutiny fails, three ways. No causation: the research shows correlation, suffers methodological flaws, and finds minuscule effects. Wildly underinclusive: similar effects come from Bugs Bunny cartoons, E-rated games, even pictures of guns, and that alone defeats the law. And the industry's rating system already helps parents, so filling the modest gap is not compelling."
+      },
+      {
+       "id": "s12",
+       "say": "The evidence. California conceded it could not show a direct causal link. Its main expert, Dr. Craig Anderson, relied on studies that every court to consider them had rejected, and he admitted the effects were about the same as those of violence on television."
+      },
+      {
+       "id": "s13",
+       "say": "Now the Chapter 6 synthesis. I will give you case, speech, who is protected, standard, and result. Cohen, 1971: profanity, adults, protected, conviction reversed. Pacifica, 1978: indecent broadcast, kids, a narrow broadcast and nuisance rationale, FCC upheld."
+      },
+      {
+       "id": "s14",
+       "say": "Bolger, 1983: contraceptive ads, adults and kids, protected with insufficient interests, ban struck. Miller, 1973: obscenity, adults, unprotected under the three-part test, the test defined. Hudnut, 1985: degrading explicit material, adults, viewpoint discrimination, struck."
+      },
+      {
+       "id": "s15",
+       "say": "Renton, 1986: adult business zoning, protecting communities, intermediate scrutiny for secondary effects, upheld. Ferber, 1982: child pornography with real children, protecting real children, unprotected, upheld. Free Speech Coalition, 2002: virtual child pornography, kids, protected, struck."
+      },
+      {
+       "id": "s16",
+       "say": "Williams, 2008: offers and requests for child pornography, real children, speech integral to crime, upheld. Ashcroft Two, 2004: online material harmful to minors, kids, strict scrutiny, struck because of filters. Paxton, 2025: online age verification, kids, intermediate, upheld. Brown, 2011: violent video games, kids, strict, struck."
+      },
+      {
+       "id": "s17",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s18",
+       "ask": "A state bans selling to minors graphic horror novels that depict torture. The state has studies showing a correlation with aggression. Analyze.",
+       "answer": "Like Brown. Violence is not an unprotected category, even for minors, and the ban is content-based, so strict scrutiny. Correlation is not causation, and the ban is underinclusive given other violent media. It likely fails.",
+       "pause": 12
+      },
+      {
+       "id": "s19",
+       "ask": "A state bans selling to minors magazines with sexual content that is obscene from a child's perspective. Does Brown doom it?",
+       "answer": "No. That is Ginsberg, adjusting the existing obscenity category for minors, which Brown distinguished. Brown rejected creating a new category for violence.",
+       "pause": 12
+      },
+      {
+       "id": "s20",
+       "say": "Recap. Brown, 2011, seven to two, Scalia: games are speech; no new category for violence; Ginsberg adjusts obscenity, not violence; no free-floating power over children's ideas; strict scrutiny fails for lack of causation, underinclusiveness, and the rating system."
+      },
+      {
+       "id": "s21",
+       "ask": "What three reasons did Brown give for failing strict scrutiny?",
+       "answer": "No causation, only correlation. Wildly underinclusive, like Bugs Bunny and E-rated games. And the rating system already helps parents, so the gap is modest.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "How did Brown distinguish Ginsberg?",
+       "answer": "Ginsberg adjusted an existing category, obscenity, for minors. California sought a wholly new category, violence, for children only.",
+       "pause": 8
+      },
+      {
+       "id": "s23",
+       "ask": "Which Justices dissented in Brown?",
+       "answer": "Thomas and Breyer.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e08",
+     "title": "Torts involving speech: the framework and fraud",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Chapter 7. How the First Amendment limits tort law, the speech-tort checklist, and the first tort, fraud."
+      },
+      {
+       "id": "s2",
+       "say": "The big picture. State law defines the elements of a tort. But when speech is an element, especially the central one, the First Amendment limits how a state may define it. The Court's rules are a compromise: let victims of speech-based torts recover in some circumstances, without chilling too much protected speech, especially criticism of government officials. The torts: fraud, defamation, intentional infliction of emotional distress, invasion of privacy, and appropriation of likeness or intellectual property."
+      },
+      {
+       "id": "s3",
+       "say": "The speech-tort checklist. Six questions. One: is the question about torts, the First Amendment overlay, or both? That is a bar tip. Two: who is the plaintiff: a public official, a public figure, or a private person? Three: is the speech on a matter of public or private concern?"
+      },
+      {
+       "id": "s4",
+       "say": "Four: what mens rea does the First Amendment require: knowledge, recklessness, which is actual malice, or negligence? Five: what damages are sought: actual, presumed, or punitive? Six: for true information, was it obtained lawfully, and is it of public concern?"
+      },
+      {
+       "id": "s5",
+       "say": "And note: the same conduct can be both a tort and a crime. The First Amendment principles are typically the same."
+      },
+      {
+       "id": "s6",
+       "say": "Fraud. The rule: fraud is an unprotected category of speech. The common law requires four things. One, a false statement of material fact. Two, made knowing it was false. Three, with intent to mislead. Four, usually to obtain money or property. Those demanding mens rea elements greatly reduce the risk of chilling protected speech."
+      },
+      {
+       "id": "s7",
+       "say": "Why is fraud unprotected? Two reasons. History: fraud has been unprotected since 1791, on the Alvarez list. And the demanding common-law elements. A mere false statement is not enough."
+      },
+      {
+       "id": "s8",
+       "say": "Hansen is fraud. He sold a sham adult-adoption path to citizenship for forty-five hundred dollars each, luring more than four hundred fifty noncitizens and taking nearly two million dollars. As the Court said, the First Amendment does not shield fraud."
+      },
+      {
+       "id": "s9",
+       "say": "Alvarez is not fraud. His lie about the Medal of Honor was, in the Court's words, a pathetic attempt to gain respect, not made to secure employment or financial benefits."
+      },
+      {
+       "id": "s10",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s11",
+       "ask": "A seller tells buyers a used car has never been in an accident, knowing it was totaled, to get a higher price. Can the buyer sue despite the First Amendment?",
+       "answer": "Yes. That is fraud: a knowing false statement of material fact, with intent to mislead, to obtain money. Fraud is unprotected.",
+       "pause": 10
+      },
+      {
+       "id": "s12",
+       "say": "Recap. The First Amendment limits how states define speech torts. The checklist: torts or overlay, plaintiff type, public or private concern, mens rea, damages, and lawfully obtained truth. Fraud: false material fact, knowledge, intent to mislead, usually for money. Hansen is fraud; Alvarez is not."
+      },
+      {
+       "id": "s13",
+       "ask": "What are the common-law elements of fraud?",
+       "answer": "A false statement of material fact, made knowing it was false, with intent to mislead, usually to obtain money or property.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "Why was Alvarez not fraud?",
+       "answer": "His lie was a pathetic attempt to gain respect, not made to secure employment or financial benefits.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "ask": "Name the six questions on the speech-tort checklist.",
+       "answer": "Torts or the First Amendment overlay. Who is the plaintiff. Public or private concern. Required mens rea. Damages sought. For true information, lawfully obtained and of public concern.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e09",
+     "title": "Defamation: New York Times v. Sullivan and Curtis Publishing v. Butts",
+     "minutes": 6,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Defamation before 1964, the two axes that now govern it, and the four questions the cases answer. Then Sullivan, and its extension to public figures in Butts."
+      },
+      {
+       "id": "s2",
+       "say": "Defamation is a traditional tort for injury to reputation. Libel is written. Slander is spoken. S for spoken."
+      },
+      {
+       "id": "s3",
+       "say": "Before 1964, the First Amendment put no limits on it. The plaintiff showed the defendant said something bad about him. Truth was a defense the defendant had to prove. And damages were presumed."
+      },
+      {
+       "id": "s4",
+       "say": "Now the First Amendment rules vary along two axes. Axis a: is the plaintiff a public official or public figure, or an ordinary person? Axis b: is the statement on a matter of public or private concern?"
+      },
+      {
+       "id": "s5",
+       "say": "Four questions to answer from the cases. One: why protect false statements of fact at all? Two: why make it harder for public officials and public figures to sue? Three: why make it harder when the statement involves a matter of public concern? Four: are the lines convincing?"
+      },
+      {
+       "id": "s6",
+       "say": "New York Times versus Sullivan, 1964. Nine to nothing on the bottom line, Justice Brennan. Black, Douglas, and Goldberg would have given absolute immunity to critics of public officials."
+      },
+      {
+       "id": "s7",
+       "say": "The rule. A public official cannot recover damages for a defamatory falsehood relating to his official conduct unless he proves actual malice: that the statement was made with knowledge that it was false, or with reckless disregard of whether it was false or not. Recklessness is enough. And malice here does not mean ill will."
+      },
+      {
+       "id": "s8",
+       "say": "Count the elements the official must prove on top of the tort. One, a public official. Two, a statement relating to official conduct. Three, falsity. Four, actual malice: knowledge of falsity or reckless disregard."
+      },
+      {
+       "id": "s9",
+       "say": "The story. In 1960, the Times ran a full-page ad by supporters of Martin Luther King Junior, criticizing the Montgomery, Alabama, police's treatment of civil rights protesters. It had factual errors: how many times King had been arrested, which song the protesters sang. Police commissioner L. B. Sullivan sued and won five hundred thousand dollars under Alabama's easy-to-prove libel law. Held: reversed."
+      },
+      {
+       "id": "s10",
+       "say": "The reasoning. First, breathing space. Erroneous statement is inevitable in free debate, and it must be protected if freedom of expression is to have the breathing space it needs to survive."
+      },
+      {
+       "id": "s11",
+       "say": "Second, the truth defense is not enough. Requiring critics to guarantee the truth of every assertion, on pain of unlimited judgments, leads to self-censorship. Critics would steer far wider of the unlawful zone, even when what they say is true, out of doubt it can be proved or fear of the expense."
+      },
+      {
+       "id": "s12",
+       "say": "Third, the press. The rule is especially important to the press, which roots out and reports on corrupt or inefficient officials. But the press gets no greater First Amendment rights than individuals."
+      },
+      {
+       "id": "s13",
+       "say": "And once more: do not confuse this New York Times case with the Pentagon Papers case."
+      },
+      {
+       "id": "s14",
+       "say": "Curtis Publishing versus Butts, 1967. A plurality, described in the casebook commentary and slides, not excerpted. The rule: the Sullivan actual-malice standard extends to public figures, not just public officials."
+      },
+      {
+       "id": "s15",
+       "say": "The story. A magazine accused Wally Butts, the former University of Georgia football coach, of conspiring with Alabama's coach to fix games. Butts could not recover without showing actual malice."
+      },
+      {
+       "id": "s16",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s17",
+       "ask": "A newspaper reports that the city's police chief took bribes. The reporter relied on one source and did not double-check, but sincerely believed the story. It is false. Can the chief recover?",
+       "answer": "Probably not. He is a public official suing about official conduct, so he must prove actual malice, knowledge of falsity or reckless disregard. Sincere belief with careless checking is negligence, not actual malice.",
+       "pause": 12
+      },
+      {
+       "id": "s18",
+       "ask": "Under Sullivan, does actual malice mean the newspaper hated the official?",
+       "answer": "No. Malice here does not mean ill will. It means knowledge of falsity or reckless disregard of whether the statement was false.",
+       "pause": 10
+      },
+      {
+       "id": "s19",
+       "say": "The trap. Students write actual malice and mean spite. On the exam, define it every time: knowledge of falsity, or reckless disregard for truth."
+      },
+      {
+       "id": "s20",
+       "say": "Recap. Before 1964, no First Amendment limits. Two axes: plaintiff type and public or private concern. Sullivan, 1964, Brennan: public officials must prove actual malice; breathing space; truth defense not enough. Butts, 1967: same rule for public figures."
+      },
+      {
+       "id": "s21",
+       "ask": "Define actual malice.",
+       "answer": "Knowledge that the statement was false, or reckless disregard of whether it was false or not.",
+       "pause": 8
+      },
+      {
+       "id": "s22",
+       "ask": "Why isn't a truth defense enough, according to Sullivan?",
+       "answer": "Critics would self-censor, steering far wider of the unlawful zone even when what they say is true, out of doubt it can be proved or fear of the expense.",
+       "pause": 8
+      },
+      {
+       "id": "s23",
+       "ask": "What did Curtis Publishing versus Butts add?",
+       "answer": "The actual-malice standard extends to public figures, not just public officials.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e10",
+     "title": "Private plaintiffs: Gertz, Dun and Bradstreet, and Berisha v. Lawson",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Private plaintiffs on public matters, in Gertz. Private plaintiffs on private matters, in Dun and Bradstreet. And the call to revisit Sullivan, in Berisha versus Lawson."
+      },
+      {
+       "id": "s2",
+       "say": "Gertz versus Robert Welch, 1974. Five to four, Justice Powell. Burger, Douglas, Brennan, and White dissented."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. When a private person sues over a statement on a matter of public concern, states may set their own standard of liability, so long as they do not impose liability without fault. That means at least negligence. But presumed or punitive damages require actual malice."
+      },
+      {
+       "id": "s4",
+       "say": "The facts are complicated, and the casebook omits them. The key point: the plaintiff was an ordinary private person, but the false statement involved an issue of public concern."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. First: there is no such thing as a false idea. Opinions are corrected by competing ideas, not by judges and juries. But false statements of fact have no constitutional value. Neither the intentional lie nor the careless error advances debate."
+      },
+      {
+       "id": "s6",
+       "say": "Second, strategic protection. Because error is inevitable, and strict liability causes intolerable self-censorship, the First Amendment requires that we protect some falsehood in order to protect speech that matters."
+      },
+      {
+       "id": "s7",
+       "say": "Third, why private plaintiffs get more protection. Two reasons. One, self-help. Public officials and figures have greater access to the media to rebut lies, so private people are more vulnerable. Two, normative. Public officials and figures voluntarily exposed themselves to scrutiny. A private person has relinquished no part of his interest in the protection of his own good name, so he is more deserving of recovery."
+      },
+      {
+       "id": "s8",
+       "say": "Fourth, who is a public figure? Some are public figures for all purposes, through persuasive power and influence. More commonly, people become public figures by thrusting themselves to the forefront of particular public controversies. And truly involuntary public figures are exceedingly rare."
+      },
+      {
+       "id": "s9",
+       "say": "Fifth, damages. Juries' largely uncontrolled discretion to award presumed or punitive damages where there is no loss compounds the chilling effect."
+      },
+      {
+       "id": "s10",
+       "say": "Now Dun and Bradstreet versus Greenmoss Builders, 1985. Five to four, with a plurality by Justice Powell, joined by O'Connor and Rehnquist. Burger and White concurred in the judgment. Brennan, Marshall, Blackmun, and Stevens dissented."
+      },
+      {
+       "id": "s11",
+       "say": "The rule. When a private plaintiff sues over a statement on a matter of purely private concern, presumed and punitive damages may be awarded without actual malice. And an open question, still undecided forty years later: may a state impose strict liability, or does the First Amendment require at least negligence?"
+      },
+      {
+       "id": "s12",
+       "say": "The story. A credit reporting company issued false credit reports about a construction contractor to the contractor's creditors. Held: presumed and punitive damages allowed."
+      },
+      {
+       "id": "s13",
+       "say": "The reasoning: balancing. The state's interest in compensating private reputational injury is the same as in Gertz. But the First Amendment interest is weaker. Speech on matters of public concern is at the heart of the First Amendment. Purely private speech poses no threat to debate on self-government and no risk of press self-censorship. It is not totally unprotected, but its protections are less stringent."
+      },
+      {
+       "id": "s14",
+       "say": "Justice White, concurring in the judgment. He had joined Sullivan, but came to think it struck an improvident balance. Under it, the lie will stand. The defeated official gets no judgment identifying the falsehood, and the public stays misinformed. He would have kept the common-law liability standard and instead capped damages, so a defamed official could at least get a judgment vindicating his reputation."
+      },
+      {
+       "id": "s15",
+       "say": "Now Berisha versus Lawson, 2021, a denial of certiorari. Justice Gorsuch dissented from the denial, and Justice Thomas dissented separately."
+      },
+      {
+       "id": "s16",
+       "say": "The point. Sullivan's actual-malice standard remains good law, and there is no sign a majority wants to revisit it. But Justices Thomas and Gorsuch have urged the Court to reconsider it."
+      },
+      {
+       "id": "s17",
+       "say": "Gorsuch's arguments. First, the founding view. Freedom of the press meant no prior restraints, not freedom to defame without consequence. Publishers had a duty to try to get the facts right, or answer in tort. That was the accepted view for over two centuries, until 1964."
+      },
+      {
+       "id": "s18",
+       "say": "Second, the changed media landscape. In 1964, a handful of large, fact-checked print and broadcast outlets dominated. Today virtually anyone can publish virtually anything instantly. Disinformation is cheap and profitable, while the economic model supporting reporters and fact-checkers has eroded."
+      },
+      {
+       "id": "s19",
+       "say": "Third, what began as tolerating occasional falsehood has become, in his words, an ironclad subsidy for the publication of falsehoods by means and on a scale previously unimaginable."
+      },
+      {
+       "id": "s20",
+       "say": "The discussion prompt: would you keep, replace, or abolish the actual-malice standard? The casebook points to President Trump's twenty-billion-dollar defamation suit against the Wall Street Journal over statements linking him to Jeffrey Epstein."
+      },
+      {
+       "id": "s21",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s22",
+       "ask": "A local newspaper falsely reports that a private shopkeeper sold tainted meat during a city health scare. The reporter was careless. The shopkeeper sues for actual damages. What must she prove?",
+       "answer": "Under Gertz, a private person on a matter of public concern: the state may set the standard but must require at least fault, so negligence suffices for actual damages.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "ask": "Same shopkeeper wants presumed and punitive damages. What must she prove now?",
+       "answer": "Actual malice. Under Gertz, presumed or punitive damages on a matter of public concern require knowledge of falsity or reckless disregard.",
+       "pause": 12
+      },
+      {
+       "id": "s24",
+       "ask": "A private credit agency falsely tells three banks that a homeowner went bankrupt. The homeowner seeks presumed damages without proving actual malice. Allowed?",
+       "answer": "Yes. Under Dun and Bradstreet, a private plaintiff on a matter of purely private concern may get presumed and punitive damages without actual malice.",
+       "pause": 12
+      },
+      {
+       "id": "s25",
+       "say": "The traps. One: Gertz is about the standard for actual damages, at least negligence, and separately requires actual malice for presumed or punitive damages. Two: Dun and Bradstreet left open whether strict liability is allowed. Three: Berisha is a dissent from denial of cert. Sullivan is still law."
+      },
+      {
+       "id": "s26",
+       "say": "Recap. Gertz, 1974, five to four, Powell: private plaintiff, public concern, at least negligence; actual malice for presumed or punitive. Two reasons: self-help and voluntary exposure. Dun and Bradstreet, 1985, plurality: private concern, presumed and punitive without actual malice; strict liability open. White: the lie will stand. Berisha, 2021: Gorsuch and Thomas want Sullivan reconsidered."
+      },
+      {
+       "id": "s27",
+       "ask": "Give Gertz's two reasons private plaintiffs deserve more protection.",
+       "answer": "Self-help: public figures have more media access to rebut. Normative: public figures voluntarily exposed themselves, while a private person relinquished no part of his interest in his good name.",
+       "pause": 8
+      },
+      {
+       "id": "s28",
+       "ask": "What question did Dun and Bradstreet leave open?",
+       "answer": "Whether a state may impose strict liability for private-concern defamation, or must require at least negligence.",
+       "pause": 8
+      },
+      {
+       "id": "s29",
+       "ask": "What did Justice White mean by the lie will stand?",
+       "answer": "Under Sullivan, the defeated official gets no judgment identifying the falsehood, so the public stays misinformed.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e11",
+     "title": "Emotional distress: Hustler v. Falwell, Snyder v. Phelps, and Counterman revisited",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. The tort of intentional infliction of emotional distress, IIED, and the two cases that extend defamation principles to it. Then how Counterman borrowed from defamation."
+      },
+      {
+       "id": "s2",
+       "say": "IIED is a relatively new, more controversial tort that not all states recognize. It typically requires that the defendant intentionally or recklessly caused the plaintiff severe emotional distress through extreme and outrageous conduct. The Court has extended its defamation principles to IIED claims based on speech."
+      },
+      {
+       "id": "s3",
+       "say": "Hustler Magazine versus Falwell, 1988. Eight to nothing, Chief Justice Rehnquist. Justice Kennedy was recused."
+      },
+      {
+       "id": "s4",
+       "say": "The rule. Public figures and public officials may not recover for IIED based on a publication unless it contains a false statement of fact made with actual malice. Outrageousness is too subjective a standard to satisfy the First Amendment."
+      },
+      {
+       "id": "s5",
+       "say": "The story. Hustler ran a parody ad portraying Jerry Falwell, a nationally known minister and political commentator, in a drunken incestuous encounter with his mother in an outhouse. Falwell won an IIED verdict. Held: reversed. The ad was obviously a parody, and it could not reasonably be read as stating actual facts."
+      },
+      {
+       "id": "s6",
+       "say": "The reasoning. Otherwise, political cartoonists and satirists would face damages without any showing that their work falsely defamed its subject. The ad was at best a distant cousin of political cartoons, but there is no principled standard to separate them. Outrageousness has an inherent subjectiveness that lets juries impose liability based on their tastes, their views, or their dislike of the expression."
+      },
+      {
+       "id": "s7",
+       "say": "Snyder versus Phelps, 2011. Eight to one, Chief Justice Roberts. Justice Alito dissented."
+      },
+      {
+       "id": "s8",
+       "say": "The rule. Speech on a matter of public concern, in a public place, is entitled to special protection, and it cannot be the basis for IIED liability just because a jury finds it outrageous. The focus is the content of the speech, public concern, not the plaintiff's identity. Here the plaintiff was a private person."
+      },
+      {
+       "id": "s9",
+       "say": "The story. Fred Phelps and members of the Westboro Baptist Church picketed near the funeral of a soldier killed in Iraq, with signs saying God kills American soldiers to punish the nation's tolerance of homosexuality. The soldier's father won millions on an IIED claim. Held: reversed."
+      },
+      {
+       "id": "s10",
+       "say": "The reasoning. First, public concern is judged by all the circumstances. The signs addressed the political and moral conduct of the United States, homosexuality in the military, and scandals involving Catholic clergy, even if they fell short of refined social or political commentary."
+      },
+      {
+       "id": "s11",
+       "say": "Second, where and how. They picketed peacefully on public land next to a public street, about one thousand feet away and out of sight of the church, under police supervision. No shouting, no profanity, no violence. They did not disrupt the funeral. The distress came from the content and viewpoint of the message. Parishioners holding God Bless America signs at the same spot would not have been liable."
+      },
+      {
+       "id": "s12",
+       "say": "Third, the bedrock principle. If there is a bedrock principle, the government may not prohibit an idea because society finds it offensive. In public debate we must tolerate insulting, and even outrageous, speech, to give the First Amendment breathing space."
+      },
+      {
+       "id": "s13",
+       "say": "Now Counterman revisited. Counterman held that a true-threats prosecution requires at least recklessness. Justice Kagan borrowed directly from Sullivan and Gertz. A subjective mental-state requirement is strategic protection against the chilling effect. It shields some proscribable speech, but by reducing an honest speaker's fear of accidental liability, it gives breathing room to valuable speech. The First Amendment requires that we protect some falsehood in order to protect speech that matters."
+      },
+      {
+       "id": "s14",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s15",
+       "ask": "A late-night comedy show runs an absurd sketch depicting a senator as a cannibal. The senator sues for IIED. What result?",
+       "answer": "The senator loses. Under Hustler, a public official cannot recover for IIED from a publication unless it contains a false statement of fact made with actual malice. An obviously absurd parody cannot reasonably be read as stating actual facts.",
+       "pause": 12
+      },
+      {
+       "id": "s16",
+       "ask": "A group stands across the street from a private citizen's home and screams personal insults about her dead son, every night for a month. Does Snyder bar her IIED claim?",
+       "answer": "Not necessarily. Snyder protected speech on a matter of public concern, in a public place, delivered peacefully and at a distance. Targeted, private-concern harassment at a home lacks those features.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "say": "The trap. In Snyder, the plaintiff was a private person, yet he lost. The key was the content, public concern, and the setting, a public place. Do not stop at plaintiff type for IIED."
+      },
+      {
+       "id": "s18",
+       "say": "Recap. IIED: intentional or reckless, extreme and outrageous, severe distress. Hustler, 1988, eight to nothing, Rehnquist: public figures need a false statement of fact with actual malice; outrageousness is too subjective. Snyder, 2011, eight to one, Roberts: public concern in a public place gets special protection. Alito dissented. Counterman borrowed strategic protection from Sullivan and Gertz."
+      },
+      {
+       "id": "s19",
+       "ask": "What must a public figure show to recover for IIED under Hustler?",
+       "answer": "A false statement of fact made with actual malice.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "In Snyder, what features of the picketing mattered?",
+       "answer": "Public land next to a public street, about one thousand feet away and out of sight, police supervision, no shouting, profanity, or violence, and no disruption of the funeral.",
+       "pause": 8
+      },
+      {
+       "id": "s21",
+       "ask": "What did Kagan borrow from Sullivan and Gertz in Counterman?",
+       "answer": "The idea of strategic protection: protecting some falsehood, or some proscribable speech, to give breathing room to valuable speech.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e12",
+     "title": "True information, Zacchini, and the speech-tort synthesis",
+     "minutes": 8,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Disclosing true information. Appropriation of likeness, in Zacchini. Then the full defamation and IIED synthesis, and the AI campaign video."
+      },
+      {
+       "id": "s2",
+       "say": "The rule on truth. Truthful information is protected speech. The Court is quite protective of disclosures, at least where the speaker obtained the information lawfully."
+      },
+      {
+       "id": "s3",
+       "say": "Florida Star versus B.J.F., 1989, six to three. A damages award against a newspaper for publishing a rape victim's name violated the First Amendment. The paper got the name lawfully, from a publicly released police report. Applying strict scrutiny, the state lacked a compelling interest in preventing disclosure in those circumstances."
+      },
+      {
+       "id": "s4",
+       "say": "Bartnicki versus Vopper, 2001, six to three. A media organization could not be held liable for broadcasting a tape of phone calls that a third party had illegally intercepted. Privacy is important, but it was outweighed by the right to publish truthful information on a matter of public concern."
+      },
+      {
+       "id": "s5",
+       "say": "Revenge porn, in the state courts. The Supreme Court has not decided it. In Nebraska versus Zitterkopf, Nebraska, 2024, the defendant secretly recorded a sexual encounter and shared an image. Applying strict scrutiny, the court upheld the law. The state has a compelling interest in personal privacy. And the law is narrowly tailored even without an intent-to-harass element, because the harm from distributing intimate images is the same whatever the motive."
+      },
+      {
+       "id": "s6",
+       "say": "Now appropriation of likeness or intellectual property. IP law is complicated and not covered in depth. Know only that federal and state laws can significantly protect intellectual property without violating the First Amendment, though there are limits."
+      },
+      {
+       "id": "s7",
+       "say": "Zacchini versus Scripps-Howard Broadcasting, 1977. Five to four, Justice White. Powell, Brennan, Marshall, and Stevens dissented."
+      },
+      {
+       "id": "s8",
+       "say": "The rule. The First Amendment does not immunize the media from a state right-of-publicity claim when they broadcast a performer's entire act without consent."
+      },
+      {
+       "id": "s9",
+       "say": "The story. Hugo Zacchini performed a fifteen-second human cannonball act at an Ohio county fair. He asked a freelance reporter not to film it. The next day, on the producer's instructions, the reporter taped the entire act, and it aired on the eleven o'clock news with favorable commentary. Held: Zacchini's damages suit may proceed."
+      },
+      {
+       "id": "s10",
+       "say": "The reasoning. Earlier cases involved reporting on events, not broadcasting an entire act that a performer is normally paid for. It is like broadcasting a copyrighted play, a prize fight, or a ball game without permission."
+      },
+      {
+       "id": "s11",
+       "say": "Broadcasting the whole act threatens its economic value. Like patent and copyright, the right of publicity gives an incentive to invest in a performance. Zacchini did not seek to stop the broadcast. He simply wants to be paid for it. And Ohio may choose to privilege the press here, but the First Amendment does not require it."
+      },
+      {
+       "id": "s12",
+       "say": "Now the synthesis. Six rows. Say them with me. Public official: Sullivan, 1964. Liability requires actual malice; presumed or punitive damages require actual malice."
+      },
+      {
+       "id": "s13",
+       "say": "Public figure: Curtis Publishing versus Butts, 1967. Actual malice for liability; actual malice for presumed or punitive damages."
+      },
+      {
+       "id": "s14",
+       "say": "Private person, public concern: Gertz, 1974. At least negligence for liability, no liability without fault; actual malice required for presumed or punitive damages."
+      },
+      {
+       "id": "s15",
+       "say": "Private person, private concern: Dun and Bradstreet, 1985, a plurality. Liability standard open, negligence or strict liability. And no actual malice needed for presumed or punitive damages."
+      },
+      {
+       "id": "s16",
+       "say": "IIED, public figure or official: Hustler, 1988. A false statement of fact plus actual malice. IIED, speech on a matter of public concern in a public place: Snyder, 2011. Outrageousness is not enough."
+      },
+      {
+       "id": "s17",
+       "say": "Now the stretch: the AI campaign video. A mayor vetoes a living-wage ordinance. Her opponent's campaign ad uses AI to create a realistic video of her saying, I do not care whether working families can afford rent. A small caption reads: dramatization based on the mayor's living-wage veto. Many viewers miss the caption and think it is real. She sues for defamation."
+      },
+      {
+       "id": "s18",
+       "say": "The questions. Is the video a statement of fact, opinion, parody, or something in between? Does the disclaimer matter? Does the political context make the speech more protected or more harmful? And how does actual malice apply when the defendant knowingly fabricated the image but believed it captured the truth of the veto?"
+      },
+      {
+       "id": "s19",
+       "say": "The analysis. The mayor is a public official, and the speech concerns her official conduct, so Sullivan requires actual malice. Unlike Hustler's obviously absurd parody, a realistic video can reasonably be understood as stating an actual fact, that she said those words. An easily missed disclaimer may not change that."
+      },
+      {
+       "id": "s20",
+       "say": "The defendant knew the quotation was fabricated, which points toward knowledge of falsity. He will argue the gist, her veto, was true, and the video was rhetorical characterization. The political context cuts both ways. It is core speech that needs breathing space. But fabricated quotations in a campaign are the falsehoods Gertz says have no constitutional value."
+      },
+      {
+       "id": "s21",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s22",
+       "ask": "A newspaper lawfully obtains a public court record naming a juvenile witness and prints the name. The state imposes damages under a privacy statute. Likely result?",
+       "answer": "The newspaper likely wins. Under Florida Star, truthful information lawfully obtained is protected, and the state needs a compelling interest under strict scrutiny to punish its publication.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "ask": "A TV station broadcasts a magician's entire paid stage show without permission. The magician sues for the value of the show. Does the First Amendment bar the suit?",
+       "answer": "No. Under Zacchini, the First Amendment does not immunize broadcasting a performer's entire act without consent from a right-of-publicity claim.",
+       "pause": 12
+      },
+      {
+       "id": "s24",
+       "say": "Recap. Truth lawfully obtained is protected: Florida Star and Bartnicki. Revenge porn: Zitterkopf upheld under strict scrutiny. Zacchini, 1977, five to four, White: the entire act; he just wants to be paid. And the six-row synthesis."
+      },
+      {
+       "id": "s25",
+       "ask": "What did Bartnicki versus Vopper hold?",
+       "answer": "A media organization could not be held liable for broadcasting truthful, illegally intercepted calls of public concern, when a third party did the intercepting.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "Why did the Zitterkopf court uphold the revenge-porn law without an intent-to-harass element?",
+       "answer": "The state's privacy interest is compelling, and the harm from distributing intimate images is the same whatever the motive.",
+       "pause": 8
+      },
+      {
+       "id": "s27",
+       "ask": "For a private person on a matter of public concern, what is needed for liability and for presumed damages?",
+       "answer": "At least negligence for liability, and actual malice for presumed or punitive damages. Gertz.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e13",
+     "title": "Commercial speech: Virginia Pharmacy and Central Hudson",
+     "minutes": 7,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Chapter 8. What commercial speech is, the big picture, the checklist, then the first protection case and the test that still governs."
+      },
+      {
+       "id": "s2",
+       "say": "What it is. Speech used to try to sell stuff, goods or services. iPhones, sneakers, a haircut, legal services. Speakers are typically for-profit businesses, but nonprofits can engage in it, like a nonprofit hospital advertising its specialty services. But charitable solicitations, fundraising, are not commercial speech. And because of the money involved, commercial speech is litigated far more often than obscenity or true threats."
+      },
+      {
+       "id": "s3",
+       "say": "The big picture. The Court lets governments restrict commercial speech more easily than other speech, under Central Hudson's intermediate scrutiny. And it lets them compel commercial disclosures more easily still, under Zauderer. That is why drug packaging carries health warnings and food carries nutrition labels."
+      },
+      {
+       "id": "s4",
+       "say": "The commercial speech checklist. Four steps. One: is it commercial speech? Two: is the government restricting speech, or compelling a disclosure?"
+      },
+      {
+       "id": "s5",
+       "say": "Three, a restriction: run Central Hudson. Is the speech misleading or about illegal activity? Then it is unprotected. If protected: a substantial interest? Directly advances? Not more extensive than necessary? And watch for paternalism. Paternalism toward adults fails. Toward kids, it may work, if tailored."
+      },
+      {
+       "id": "s6",
+       "say": "Four, a compelled disclosure: run Zauderer. Purely factual and uncontroversial information about the seller's own product or service? Reasonably related to a substantial interest? Not unjustified or unduly burdensome? And if Zauderer does not apply, as in NIFLA, use heightened scrutiny."
+      },
+      {
+       "id": "s7",
+       "say": "Now Virginia Pharmacy Board versus Virginia Citizens Consumer Council, 1976. Eight to one, Justice Blackmun. Justice Rehnquist dissented."
+      },
+      {
+       "id": "s8",
+       "say": "The rule. For the first time, commercial speech is protected by the First Amendment. A state may not completely suppress truthful information about entirely lawful activity because it fears the information's effect on speakers and listeners. Commercial speech can still be regulated: false or misleading ads, illegal transactions, and time, place, and manner rules."
+      },
+      {
+       "id": "s9",
+       "say": "The story. Virginia made it unprofessional conduct, punishable by fines and loss of license, for a pharmacist to advertise prescription drug prices. A resident who took daily prescription drugs and two nonprofits challenged the law. Held: unconstitutional."
+      },
+      {
+       "id": "s10",
+       "say": "Notice who sued. Not a pharmacist. A consumer. That is the first point."
+      },
+      {
+       "id": "s11",
+       "say": "One: listeners have rights. Where a willing speaker exists, protection extends to the communication, its source, and its recipients. If there is a right to advertise, there is a reciprocal right to receive the advertising."
+      },
+      {
+       "id": "s12",
+       "say": "Two: why protect it. The consumer's interest in commercial information may be as keen, if not keener by far, than his interest in the day's political debate. The ban hit hardest the poor, the sick, and the aged. And society needs intelligent, well-informed private economic decisions in a free-enterprise economy."
+      },
+      {
+       "id": "s13",
+       "say": "Three: anti-paternalism. Virginia feared price competition would drive out professional pharmacists. The alternative is to assume people will perceive their own best interests if only they are well enough informed, and to open the channels of communication. Virginia may set professional standards, but not by keeping the public in ignorance."
+      },
+      {
+       "id": "s14",
+       "say": "Four: footnote twenty-four, why commercial speech gets less protection. It is more easily verifiable, because the advertiser knows its own product. And it is more durable, because advertising is the sine qua non of profits, so it is unlikely to be chilled. So there is less need to tolerate inaccuracy, warnings and disclaimers may be required, and the prior-restraint bar may not apply."
+      },
+      {
+       "id": "s15",
+       "say": "Now Central Hudson Gas and Electric versus Public Service Commission of New York, 1980. Eight to one on the bottom line, Justice Powell. Brennan, Blackmun, and Stevens concurred in the judgment. Rehnquist dissented."
+      },
+      {
+       "id": "s16",
+       "say": "The Central Hudson test, still good law. Four prongs. Count them. Prong one: commercial speech is unprotected if it is misleading or concerns unlawful activity. If it is protected, ask: prong two, is the government's interest substantial? Prong three, does the regulation directly advance that interest, not by ineffective or remote support? Prong four, is it not more extensive than necessary? Prongs two through four are a form of intermediate scrutiny."
+      },
+      {
+       "id": "s17",
+       "say": "The story. New York completely banned promotional advertising by electric utilities, to conserve energy. Held: the ban violates the First Amendment."
+      },
+      {
+       "id": "s18",
+       "say": "The reasoning. The First Amendment's concern for commercial speech rests on the informational function of advertising. So the government may ban messages more likely to deceive than inform, or tied to illegal activity."
+      },
+      {
+       "id": "s19",
+       "say": "Applied. The speech was not inaccurate or unlawful. Energy conservation is plainly substantial. But the record failed to show that a total ban was no more extensive than necessary."
+      },
+      {
+       "id": "s20",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s21",
+       "ask": "A state bans ads for an illegal gambling operation. Does Central Hudson's intermediate scrutiny apply?",
+       "answer": "No. Under prong one, commercial speech concerning unlawful activity is unprotected.",
+       "pause": 10
+      },
+      {
+       "id": "s22",
+       "ask": "A city bans all ads for gasoline to reduce pollution. Gasoline is legal and the ads are truthful. Walk through Central Hudson.",
+       "answer": "Protected speech, since it is lawful and not misleading. Reducing pollution is substantial. Whether a ban directly advances it is debatable. And a total ban is likely more extensive than necessary, like Central Hudson's own ban.",
+       "pause": 12
+      },
+      {
+       "id": "s23",
+       "say": "Recap. Commercial speech: speech to sell goods or services; not charitable solicitation. Virginia Pharmacy, 1976, Blackmun: commercial speech protected; listeners' rights; anti-paternalism; footnote twenty-four. Central Hudson, 1980, Powell: misleading or unlawful, then substantial interest, directly advances, not more extensive than necessary."
+      },
+      {
+       "id": "s24",
+       "ask": "State the four prongs of Central Hudson.",
+       "answer": "One, unprotected if misleading or about unlawful activity. Two, substantial interest. Three, directly advances it. Four, not more extensive than necessary.",
+       "pause": 8
+      },
+      {
+       "id": "s25",
+       "ask": "Why does commercial speech get less protection, according to footnote twenty-four of Virginia Pharmacy?",
+       "answer": "It is more easily verifiable and more durable, since advertising is the sine qua non of profits and unlikely to be chilled.",
+       "pause": 8
+      },
+      {
+       "id": "s26",
+       "ask": "Are charitable solicitations commercial speech?",
+       "answer": "No.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e14",
+     "title": "Applying Central Hudson: 44 Liquormart, Sorrell, Lorillard, and Florida Bar",
+     "minutes": 9,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. Four cases. Paternalism toward adults, in 44 Liquormart. Content- and speaker-based burdens, in Sorrell. Paternalism toward kids, in Lorillard. And the rare upheld restriction, in Florida Bar."
+      },
+      {
+       "id": "s2",
+       "say": "44 Liquormart versus Rhode Island, 1996. Unanimous on the bottom line, with splintered opinions. Justice Stevens wrote a plurality whose reasoning the full Court later adopted."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Paternalism toward adults is not a valid reason to suppress truthful, non-misleading commercial speech. Blanket bans on such speech about lawful products get special care and rarely survive. If the government wants to reduce adult consumption, it must regulate the product directly: ban it, regulate prices, or tax it."
+      },
+      {
+       "id": "s4",
+       "say": "The story. Rhode Island banned advertising the retail prices of alcoholic beverages, to promote temperance. Held: invalid."
+      },
+      {
+       "id": "s5",
+       "say": "The reasoning. Such bans rest on the offensive assumption that the public will respond irrationally to the truth. Be especially skeptical of regulations that seek to keep people in the dark for what the government perceives to be their own good."
+      },
+      {
+       "id": "s6",
+       "say": "Prong four fails. Higher prices could be maintained by direct regulation or increased taxation, and the state's own expert conceded it. So there was no reasonable fit."
+      },
+      {
+       "id": "s7",
+       "say": "And no greater includes the lesser. The power to ban alcohol does not include the power to ban ads for it. The Constitution presumes that regulating speech is more dangerous than regulating conduct."
+      },
+      {
+       "id": "s8",
+       "say": "Sorrell versus IMS Health, 2011. Six to three, Justice Kennedy. Breyer, Ginsburg, and Kagan dissented."
+      },
+      {
+       "id": "s9",
+       "say": "The rule. A law imposing content- and speaker-based burdens on commercial speech is subject to heightened scrutiny. The fear that people will make bad decisions if given truthful information cannot justify it, and even more so when the audience is sophisticated, like doctors. In the Court's words: that the State finds expression too persuasive does not permit it to quiet the speech."
+      },
+      {
+       "id": "s10",
+       "say": "The story. Vermont barred the sale and use of pharmacy records revealing individual doctors' prescribing practices for marketing, and barred drug makers from using them for detailing, which means sales visits to doctors. Vermont wanted to cut costs and steer doctors toward cheaper, safer generics. Held: unconstitutional."
+      },
+      {
+       "id": "s11",
+       "say": "The reasoning. Content- and speaker-based. The law disfavored marketing, a particular content, and drug manufacturers, particular speakers, while many other speakers could use the same information. The dissent argued the law regulated conduct, data mining, not speech. The casebook sets that issue aside."
+      },
+      {
+       "id": "s12",
+       "say": "Lorillard Tobacco versus Reilly, 2001. Five to four in relevant part, Justice O'Connor. Stevens, Souter, Ginsburg, and Breyer dissented."
+      },
+      {
+       "id": "s13",
+       "say": "The rule. Some paternalism toward kids is allowed. The government may restrict accurate commercial speech to discourage minors' consumption. But the restriction must still satisfy Central Hudson prongs three and four. If it keeps too much truthful information from adults, it fails prong four."
+      },
+      {
+       "id": "s14",
+       "say": "The story. Massachusetts banned outdoor tobacco ads within one thousand feet of a school or playground, and indoor point-of-sale ads lower than five feet from the floor in stores within that radius. Held: both fail."
+      },
+      {
+       "id": "s15",
+       "say": "The interest: preventing underage tobacco use is substantial, and even compelling. And there was evidence that limiting youth exposure to ads reduces underage use."
+      },
+      {
+       "id": "s16",
+       "say": "The outdoor ban fails prong four. It would cover eighty-seven to ninety-one percent of Boston, Worcester, and Springfield. It included in-store ads visible from outside, applied to ads of any size, and even reached oral statements. In some areas it was nearly a complete ban on truthful information to adults, who have a right to receive it. Recall Bolger: mailbox discourse cannot be limited to what suits a sandbox."
+      },
+      {
+       "id": "s17",
+       "say": "The five-foot rule fails prongs three and four. The Court's line: not all children are less than five feet tall, and those who are certainly have the ability to look up."
+      },
+      {
+       "id": "s18",
+       "say": "Florida Bar versus Went For It, 1995. Five to four, Justice O'Connor. Kennedy, Stevens, Souter, and Ginsburg dissented."
+      },
+      {
+       "id": "s19",
+       "say": "The rule. A thirty-day ban on targeted direct-mail solicitation of accident victims and their families by personal injury lawyers survives Central Hudson. It is the rare attorney-advertising restriction the Court has upheld."
+      },
+      {
+       "id": "s20",
+       "say": "The story. Florida Bar rules barred personal injury lawyers from sending targeted direct mail to victims and relatives for thirty days after an accident or disaster. Held: upheld."
+      },
+      {
+       "id": "s21",
+       "say": "The background. Bates versus State Bar of Arizona, 1977, struck a ban on price ads for routine legal services. Lawyer advertising is commercial speech with a measure of protection, and most restrictions have been struck."
+      },
+      {
+       "id": "s22",
+       "say": "Prong two, the interest: protecting the privacy and tranquility of victims and their loved ones against intrusive contact, and the reputation of the profession. Prong three, directly advances: the Bar's one-hundred-six-page summary of a two-year study, with statistical and anecdotal data, showed the public views post-accident mail as intrusive and reflecting poorly on lawyers. Prong four, tailoring: the ban is brief, and lawyers can still use TV, radio, newspapers, billboards, and untargeted letters."
+      },
+      {
+       "id": "s23",
+       "say": "And the casebook's guess: the Justices were squeamish about ambulance chasing tarnishing the profession."
+      },
+      {
+       "id": "s24",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s25",
+       "ask": "A state bans ads stating the price of cigarettes, hoping adults will smoke less if they do not know about bargains. What result?",
+       "answer": "Invalid under 44 Liquormart. Paternalism toward adults is not a valid reason, and the state could raise prices directly through taxes or regulation, so the ban is more extensive than necessary.",
+       "pause": 12
+      },
+      {
+       "id": "s26",
+       "ask": "A state bars sugary-drink ads within fifty feet of school entrances, at children's eye level, with evidence that ad exposure increases children's consumption. How does Lorillard frame the analysis?",
+       "answer": "Paternalism toward kids can be a substantial interest, but the rule must directly advance it and not be more extensive than necessary. A narrow zone, unlike Lorillard's citywide sweep, has a better chance, though eye-level rules risk the five-foot problem.",
+       "pause": 12
+      },
+      {
+       "id": "s27",
+       "ask": "A state bars lawyers from mailing accident victims for ten days after a crash, supported by a detailed public survey. Likely result?",
+       "answer": "Likely upheld under Florida Bar: a substantial interest in victims' privacy and the profession's reputation, study evidence, a brief ban, and many alternative channels.",
+       "pause": 10
+      },
+      {
+       "id": "s28",
+       "say": "Recap. 44 Liquormart, 1996: no paternalism toward adults; regulate the product; the greater does not include the lesser. Sorrell, 2011, Kennedy: content- and speaker-based burdens get heightened scrutiny; too persuasive is not a reason. Lorillard, 2001, O'Connor: kids, yes, but too much burden on adults fails prong four; children can look up. Florida Bar, 1995, O'Connor: the thirty-day ban upheld on a study."
+      },
+      {
+       "id": "s29",
+       "ask": "What does 44 Liquormart say a state must do if it wants adults to consume less?",
+       "answer": "Regulate the product directly: ban it, regulate prices, or tax it.",
+       "pause": 8
+      },
+      {
+       "id": "s30",
+       "ask": "Why did the five-foot rule in Lorillard fail?",
+       "answer": "It failed prongs three and four: not all children are under five feet, and those who are can look up.",
+       "pause": 8
+      },
+      {
+       "id": "s31",
+       "ask": "What evidence supported the Florida Bar rule?",
+       "answer": "A 106-page summary of a two-year study, with statistical and anecdotal data, showing the public found post-accident mail intrusive.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e15",
+     "title": "Compelled commercial speech: Zauderer and Milavetz",
+     "minutes": 5,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. What a compelled disclosure is, the Zauderer test, and its application in Milavetz."
+      },
+      {
+       "id": "s2",
+       "say": "Compelled commercial speech means the government requires sellers to say something about their products or services, usually in ads or on packaging. Contains peanuts. Drug side effects. Contains small parts. Or that a free trial auto-renews. These are often called disclosure requirements. And Zauderer gives governments much more latitude to compel disclosures than to restrict truthful commercial speech."
+      },
+      {
+       "id": "s3",
+       "say": "Zauderer versus Office of Disciplinary Counsel, 1985. Unanimous in relevant part, Justice White."
+      },
+      {
+       "id": "s4",
+       "say": "The Zauderer test. Three parts. The government may require, one, purely factual and uncontroversial information about the terms under which the seller's services are available, if, two, the requirement is reasonably related to a substantial government interest, here preventing consumer deception, and three, it is not unjustified or unduly burdensome."
+      },
+      {
+       "id": "s5",
+       "say": "The story. Philip Zauderer's ads said he handled cases on contingency, and that if there is no recovery, no legal fees are owed by our clients. Ohio required him to disclose that clients might still owe costs. Held: the Court struck Ohio's restrictions on attorney ads, but upheld the disclosure requirement."
+      },
+      {
+       "id": "s6",
+       "say": "The reasoning. First, disclosure is not prohibition. Ohio did not stop attorneys from conveying information. It only required somewhat more information."
+      },
+      {
+       "id": "s7",
+       "say": "Second, this is not Barnette or Wooley. Ohio did not prescribe orthodoxy in politics, nationalism, religion, or opinion. Only the factual terms of a commercial service."
+      },
+      {
+       "id": "s8",
+       "say": "Third, why more lenient. Commercial speech is protected mainly for its value to consumers, per Virginia Pharmacy. So the advertiser's interest in not providing factual information is minimal. And disclosure requirements trench much more narrowly on advertisers than flat bans."
+      },
+      {
+       "id": "s9",
+       "say": "Fourth, applied. Laypeople do not know that fees and costs differ, so the ad suggested a no-lose proposition. And no factual basis showed the requirement was unduly burdensome."
+      },
+      {
+       "id": "s10",
+       "say": "Milavetz, Gallop and Milavetz versus United States, 2010. Nine to nothing on the bottom line, Justice Sotomayor."
+      },
+      {
+       "id": "s11",
+       "say": "The rule. Zauderer, not Central Hudson, governs factual disclosures aimed at inherently misleading commercial ads."
+      },
+      {
+       "id": "s12",
+       "say": "The story. Federal bankruptcy law, section 528, required debt relief agencies, including attorneys who help file bankruptcy petitions, to identify themselves as such in ads, with related disclosures. Milavetz preferred to be called a law firm. Held: upheld."
+      },
+      {
+       "id": "s13",
+       "say": "The reasoning. It shares Zauderer's features. It combats ads promising debt relief without mentioning bankruptcy and its costs. It requires only an accurate statement of legal status and services. And it does not stop the advertiser from saying more."
+      },
+      {
+       "id": "s14",
+       "say": "And the confusing-label claim fails. There was no evidence it confuses. It is accurate by definition. The required statement, helps people file for bankruptcy relief, gives context. The firm can add that it is a law firm. And it may tailor the wording if substantially similar."
+      },
+      {
+       "id": "s15",
+       "say": "Hypothetical."
+      },
+      {
+       "id": "s16",
+       "ask": "A state requires gyms that advertise a free first month to state, in the same ad, that the membership auto-renews at fifty dollars a month unless canceled. The gyms object. Which test, and what result?",
+       "answer": "Zauderer. It is purely factual and uncontroversial information about the seller's own terms, reasonably related to preventing deception, and not unduly burdensome. Likely upheld.",
+       "pause": 12
+      },
+      {
+       "id": "s17",
+       "say": "Recap. Zauderer, 1985, White: purely factual and uncontroversial information about the seller's terms, reasonably related to a substantial interest, not unjustified or unduly burdensome. Disclosure is not prohibition. Milavetz, 2010, Sotomayor: Zauderer governs disclosures aimed at inherently misleading ads; debt relief agency upheld."
+      },
+      {
+       "id": "s18",
+       "ask": "State the three parts of the Zauderer test.",
+       "answer": "Purely factual and uncontroversial information about the terms of the seller's services; reasonably related to a substantial government interest; not unjustified or unduly burdensome.",
+       "pause": 8
+      },
+      {
+       "id": "s19",
+       "ask": "Why did the Court say Zauderer is not like Barnette or Wooley?",
+       "answer": "Ohio did not prescribe orthodoxy in politics, nationalism, religion, or opinion, only factual terms of a commercial service.",
+       "pause": 8
+      },
+      {
+       "id": "s20",
+       "ask": "What label did Milavetz object to, and what did it want instead?",
+       "answer": "Debt relief agency. It preferred to be called a law firm.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e16",
+     "title": "The limits of Zauderer: NIFLA, CTIA, and graphic warnings",
+     "minutes": 10,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Roadmap. NIFLA, where Zauderer did not apply. CTIA, where it reached health and safety. The slides unpacking each Zauderer element. The synthesis. And graphic cigarette warnings."
+      },
+      {
+       "id": "s2",
+       "say": "National Institute of Family and Life Advocates versus Becerra, NIFLA, 2018. Five to four, Justice Thomas. Breyer, Ginsburg, Sotomayor, and Kagan dissented."
+      },
+      {
+       "id": "s3",
+       "say": "The rule. Zauderer does not apply to a required notice that is not about the speaker's own services, or that addresses a controversial topic. And even where Zauderer applies, a disclosure fails if it is unjustified, meaning purely hypothetical harm, or unduly burdensome, meaning it drowns out the speaker's message."
+      },
+      {
+       "id": "s4",
+       "say": "The story. California's FACT Act had two requirements. One: licensed clinics serving pregnant women had to post notice that the state provides free or low-cost services, including abortion, with a phone number. Two: unlicensed clinics had to state that they are not licensed medical facilities. The targets were crisis pregnancy centers, largely faith-based pro-life organizations. Held: both requirements violate the First Amendment."
+      },
+      {
+       "id": "s5",
+       "say": "The licensed notice. Zauderer does not apply. The notice in no way relates to the clinics' own services, and abortion is anything but an uncontroversial topic. It fails even intermediate scrutiny. It is wildly underinclusive: most of nearly one thousand community clinics serving five point six million patients are exempt. And the state could run its own public-information campaign. It cannot co-opt the licensed facilities to deliver its message."
+      },
+      {
+       "id": "s6",
+       "say": "The unlicensed notice. It fails even under Zauderer. Its justification was purely hypothetical, since practicing medicine without a license is already a crime. And it is unduly burdensome: a government-scripted notice on all print and digital ads, in larger or contrasting type, in as many languages as the state chooses. It drowns out the facility's own message."
+      },
+      {
+       "id": "s7",
+       "say": "The limit. The Court did not question health and safety warnings long considered permissible, or purely factual disclosures about commercial products."
+      },
+      {
+       "id": "s8",
+       "say": "And the slides. The licensed notice failed for two reasons: it was not about services the clinics offered, and it was controversial, steering patients toward abortion. Professor Klein's guess: the first reason alone would have been enough."
+      },
+      {
+       "id": "s9",
+       "say": "Now CTIA, the Wireless Association, versus City of Berkeley, Ninth Circuit, 2019. Two to one, Judge William Fletcher. Judge Friedland dissented, finding the disclosure confusing."
+      },
+      {
+       "id": "s10",
+       "say": "The rule. Zauderer is not limited to preventing deception. Any substantial interest, including public health and safety, can support a factual, uncontroversial disclosure."
+      },
+      {
+       "id": "s11",
+       "say": "The story. Berkeley required cell phone retailers to give buyers a notice that federal radio-frequency exposure guidelines exist to assure safety, that carrying an ON phone in a pocket or bra may exceed them, and to consult the user manual. It could be an eight-and-a-half by eleven poster or a five by eight handout bearing the city's logo, and retailers could add their own clearly separate information. Held: upheld."
+      },
+      {
+       "id": "s12",
+       "say": "The reasoning. Other circuits agree: country-of-origin labels on meat, American Meat Institute, D.C. Circuit en banc, 2014; mercury labeling, NEMA versus Sorrell, Second Circuit, 2001; cigarette health warnings, Discount Tobacco, Sixth Circuit, 2012. And NIFLA signaled agreement by preserving health and safety warnings."
+      },
+      {
+       "id": "s13",
+       "say": "Two NIFLA limits on factual and uncontroversial. One, the notice cannot take sides in a heated political controversy at odds with the speaker's mission. Two, it must relate to the speaker's own product or service."
+      },
+      {
+       "id": "s14",
+       "say": "Applied. Health and safety is substantial. The notice summarizes what the FCC already requires manufacturers to tell users. It is largely reassuring, not inflammatory. And it is not unduly burdensome, unlike San Francisco's soda warning that had to fill twenty percent of each ad, which the Ninth Circuit en banc struck in American Beverage, 2019."
+      },
+      {
+       "id": "s15",
+       "say": "Now unpacking the Zauderer test, from the slides. Element one, factual and uncontroversial. The Supreme Court has said little. Courts of appeals say a disclosure can qualify even if the seller dislikes it, like: drinking alcohol while pregnant can cause birth defects. NIFLA: it must concern the seller's own services and not take sides in a controversy."
+      },
+      {
+       "id": "s16",
+       "say": "Element two, a substantial interest. Preventing consumer deception surely counts: Zauderer, Milavetz. Courts of appeals also accept health and safety, like contains peanuts or nicotine is addictive, and things consumers care about, like country of origin, Made in China. Satisfying idle consumer curiosity probably is not enough."
+      },
+      {
+       "id": "s17",
+       "say": "Element three, reasonably related. Undefined by the Court. Less demanding than Central Hudson prong four. Some circuits treat it as rational basis. Professor Klein's guess: more demanding than rational basis, but still quite deferential."
+      },
+      {
+       "id": "s18",
+       "say": "Element four, unjustified or unduly burdensome. Unjustified overlaps with reasonable relation. Unduly burdensome means the requirement chills commercial speech. Courts say a disclosure that drowns out the seller's own message is unduly burdensome, which in practice restricts the speech."
+      },
+      {
+       "id": "s19",
+       "say": "Now the Chapter 8 synthesis. Restrictions first. Virginia Pharmacy, 1976: ban on drug price ads, struck; commercial speech is protected; anti-paternalism. Central Hudson, 1980: ban on utility promotional ads, struck; a total ban is more extensive than necessary. Florida Bar, 1995: thirty-day ban on targeted lawyer mail, upheld; study evidence, brief ban, many alternatives."
+      },
+      {
+       "id": "s20",
+       "say": "44 Liquormart, 1996: ban on liquor price ads, struck; paternalism toward adults; tax or regulate instead. Lorillard, 2001: outdoor and five-foot tobacco ad rules, struck; too much burden on adults. Sorrell, 2011: ban on using prescriber data for marketing, struck; content- and speaker-based; too persuasive is not a reason."
+      },
+      {
+       "id": "s21",
+       "say": "Disclosures. Zauderer, 1985: contingency-fee cost disclosure, upheld; factual, prevents deception. Milavetz, 2010: debt relief agency label, upheld; factual, prevents deception. NIFLA, 2018: abortion-services and unlicensed notices, struck; not about own services, controversial; hypothetical and burdensome. CTIA, 2019: cell phone safety notice, upheld; health and safety suffices."
+      },
+      {
+       "id": "s22",
+       "say": "The stretch: graphic cigarette warnings. A 2009 federal statute requires cigarette packs and ads to carry prominent health warnings covering fifty percent of the front and back of packaging and twenty percent of ads, with FDA-developed graphic images. The Fifth Circuit rejected the manufacturers' challenge to the FDA's latest warnings in R.J. Reynolds Tobacco versus FDA, 2024, and the Supreme Court denied cert. Imagine it took the case."
+      },
+      {
+       "id": "s23",
+       "say": "For the government. The warnings concern the seller's own product. Health and safety is a substantial interest, per CTIA, and NIFLA preserved health warnings. Smoking's health effects are factual and not genuinely controversial."
+      },
+      {
+       "id": "s24",
+       "say": "For the manufacturers. Graphic images may be designed to provoke emotion rather than inform, which arguably is not purely factual. And a warning covering half the package may drown out the seller's message, as the twenty-percent soda warning did in American Beverage. The answer likely turns on whether each image is accurate, and on the burden of the size requirement."
+      },
+      {
+       "id": "s25",
+       "say": "Hypotheticals."
+      },
+      {
+       "id": "s26",
+       "ask": "A state requires every pet store to post a sign saying the state recommends adopting animals from shelters instead of buying them, with a list of shelters. Zauderer?",
+       "answer": "Probably not. Like NIFLA's licensed notice, it does not concern the store's own product or service, and it takes sides against the seller's mission. Heightened scrutiny applies, and the state could run its own campaign.",
+       "pause": 12
+      },
+      {
+       "id": "s27",
+       "ask": "A city requires restaurants to note on menus that a dish contains peanuts. Analyze.",
+       "answer": "Zauderer applies: purely factual and uncontroversial information about the seller's own product, reasonably related to a substantial health and safety interest, as CTIA allows, and not unduly burdensome. Upheld.",
+       "pause": 12
+      },
+      {
+       "id": "s28",
+       "say": "The traps. One: identify whether the law restricts speech, Central Hudson, or compels disclosure, Zauderer. Two: Zauderer requires information about the seller's own product or service. Three: a disclosure that drowns out the message fails as unduly burdensome."
+      },
+      {
+       "id": "s29",
+       "say": "Recap. NIFLA, 2018, Thomas: no Zauderer for notices not about own services or on controversial topics; the unlicensed notice was hypothetical and burdensome. CTIA, 2019: Zauderer covers health and safety. Reasonably related is deferential, but more than rational basis on Klein's guess."
+      },
+      {
+       "id": "s30",
+       "ask": "Why didn't Zauderer apply to NIFLA's licensed notice?",
+       "answer": "It did not relate to the clinics' own services, and abortion is a controversial topic.",
+       "pause": 8
+      },
+      {
+       "id": "s31",
+       "ask": "What did CTIA add to Zauderer?",
+       "answer": "Zauderer is not limited to preventing deception. Any substantial interest, including health and safety, can support a factual, uncontroversial disclosure.",
+       "pause": 8
+      },
+      {
+       "id": "s32",
+       "ask": "Which San Francisco warning was struck as unduly burdensome, and why?",
+       "answer": "The soda warning that had to fill twenty percent of each ad, in American Beverage. It drowned out the seller's message.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "fa-d3-e17",
+     "title": "Day 3 closing quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "id": "s1",
+       "say": "Close out Day 3. A cumulative quiz. Answer out loud."
+      },
+      {
+       "id": "s2",
+       "ask": "Which case says the government may not reduce the adult population to reading only what is fit for children?",
+       "answer": "Bolger, quoting Butler versus Michigan.",
+       "pause": 8
+      },
+      {
+       "id": "s3",
+       "ask": "Why was Pacifica's broadcast regulable when Cohen's jacket was not?",
+       "answer": "Broadcasting is uniquely pervasive and accessible to children, in the home, without warning, and on scarce licensed spectrum. The nuisance rationale is narrow.",
+       "pause": 8
+      },
+      {
+       "id": "s4",
+       "ask": "Is a serious literary novel with an explicit scene obscene?",
+       "answer": "No. Under Miller's third prong, a work taken as a whole with serious literary value is not obscene.",
+       "pause": 8
+      },
+      {
+       "id": "s5",
+       "ask": "Can Congress ban computer-generated sexual images that only appear to show minors?",
+       "answer": "Not under Ferber's rationale. Free Speech Coalition struck that extension.",
+       "pause": 8
+      },
+      {
+       "id": "s6",
+       "ask": "What standard did Paxton apply to age verification, and why?",
+       "answer": "Intermediate scrutiny, because the burden on adults of keeping minors from material obscene to them is incidental.",
+       "pause": 8
+      },
+      {
+       "id": "s7",
+       "ask": "Is violence an unprotected category for minors?",
+       "answer": "No. Brown versus Entertainment Merchants Association.",
+       "pause": 8
+      },
+      {
+       "id": "s8",
+       "ask": "A private person sues over a false statement on a matter of public concern for presumed damages. What must she prove?",
+       "answer": "Actual malice, under Gertz.",
+       "pause": 8
+      },
+      {
+       "id": "s9",
+       "ask": "Can a public figure recover for IIED from an obvious parody?",
+       "answer": "No. Hustler requires a false statement of fact made with actual malice.",
+       "pause": 8
+      },
+      {
+       "id": "s10",
+       "ask": "Under Central Hudson, what happens to commercial speech about unlawful activity?",
+       "answer": "It is unprotected.",
+       "pause": 8
+      },
+      {
+       "id": "s11",
+       "ask": "What is wrong with a ban on truthful liquor price ads to promote temperance?",
+       "answer": "44 Liquormart: paternalism toward adults is invalid, and the state could regulate prices or tax directly.",
+       "pause": 8
+      },
+      {
+       "id": "s12",
+       "ask": "Which test governs a required factual disclosure about a seller's own product?",
+       "answer": "Zauderer.",
+       "pause": 8
+      },
+      {
+       "id": "s13",
+       "ask": "From Day 2: what is the difference between vagueness and overbreadth?",
+       "answer": "Vagueness is a Due Process complaint that the law is unclear. Overbreadth is a First Amendment complaint that the law reaches too much protected speech, mainly third parties'.",
+       "pause": 8
+      },
+      {
+       "id": "s14",
+       "ask": "From Day 1: what is play in the joints, concept one?",
+       "answer": "Government may accommodate religion beyond what Free Exercise requires without violating the Establishment Clause.",
+       "pause": 8
+      },
+      {
+       "id": "s15",
+       "say": "That is Day 3. Tomorrow: content neutrality, expressive conduct, government speech, funding, and forums."
+      }
+     ]
+    }
+   ]
   }
  ]
 }
