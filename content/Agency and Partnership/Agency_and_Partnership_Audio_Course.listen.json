@@ -3,7 +3,7 @@
   "id": "agency-partnership-audio-course",
   "title": "Agency & Partnership Audio Course",
   "course": "Agency & Partnership",
-  "description": "A five-day spoken course on the whole Weeks 1–14 outline.",
+  "description": "A five-day spoken course on the whole Weeks 1–14 outline, from creating an agency and every route to contract and tort liability, through partnership formation, management, duties, dissociation and dissolution under the UPA and RUPA, Kovacik and buyouts, LPs and LLPs, to LLC formation, operating agreements, veil piercing, duties, expulsion and dissolution: rules counted out element by element, every case told as a short story, who's-liable hypotheticals and recall questions with pauses to answer, a spaced review to open each day, and a closing full review with a method for reading the final Operating Agreement against the RULLCA defaults. Coverage: all 21 outline sections and 43 subsections, all 95 case cards, and every statute and Restatement section the outline cites.",
   "days": [
     {
       "day": 1,
@@ -3576,7 +3576,7 @@
             },
             {
               "id": "s4",
-              "say": "Timing. The partnership pays the estimated price within 120 days of a written demand. A wrongful dissociator from a term partnership waits until the term ends, unless he shows the early payment causes no undue hardship, and then it's secured and with interest. And the partner sues within 120 days of the tender."
+              "say": "Timing. The partnership pays the estimated price within 120 days of a written demand. A wrongful dissociator from a term partnership waits until the term ends, unless he shows that paying him earlier would cause the partnership no undue hardship. And a deferred payment must be secured and carry interest. And the partner sues within 120 days of the tender."
             },
             {
               "id": "s5",
@@ -4328,6 +4328,1129 @@
             {
               "id": "s15",
               "say": "That's Day 4. Tomorrow, the last day: LLC veil piercing, fiduciary duties, capital and expulsion, dissolution, and then the full review of every test and list, and how to work the open-book short answer with the operating agreement."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 5,
+      "title": "LLC veil piercing, duties, capital, expulsion and dissolution, and the full review",
+      "minutes": 76,
+      "episodes": [
+        {
+          "id": "ap-d5-e00",
+          "title": "Spaced review of Days 1 to 4",
+          "minutes": 3,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Day 5, the last day. Spaced review first. Pause, answer, check."
+            },
+            {
+              "id": "s2",
+              "ask": "What is the difference between apparent authority and estoppel in effect?",
+              "answer": "Apparent authority binds both principal and third party to the contract; estoppel only compensates the third party's detrimental reliance.",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "Restatement Second § 228: four parts?",
+              "answer": "Kind of work; substantially within time and space; at least partly to serve the master; force not unexpectable.",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "Name RUPA's seven dissociation events.",
+              "answer": "Express will; an agreed event; expulsion under the agreement; unanimous expulsion on statutory grounds; judicial expulsion; bankruptcy or assignment for creditors; death, guardian or incapacity.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "Under the UPA, a term partner leaves early. What do the others pay him if they continue?",
+              "answer": "The value of his interest, less damages, and without goodwill, § 38(2).",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "Kovacik: under the statute, how would the $8,680 loss be shared?",
+              "answer": "Equally, $4,340 each, so Reed would pay Kovacik $4,340.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "What two things form an RULLCA LLC?",
+              "answer": "An effective certificate of organization and at least one member, § 201(d).",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "Four elements of a de facto entity, from Duray?",
+              "answer": "Good faith, a valid statute, an authorized purpose, executed and acknowledged articles.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "What did Elf Atochem hold about the LLC agreement?",
+              "answer": "It binds the LLC even though the LLC didn't sign it, and its forum clause governs derivative as well as direct claims.",
+              "pause": 10
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e01",
+          "title": "Piercing the LLC veil: the tests, Tom Thumb, NetJets, and LPs and LLPs",
+          "minutes": 8,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Week 12. Veil piercing applies to LLCs. The Minnesota test and the Delaware test, the five factors, then Tom Thumb and NetJets, planning points, and piercing in LPs and LLPs."
+            },
+            {
+              "id": "s2",
+              "say": "The rule. Limited liability is the rule, RULLCA § 304(a). Piercing is an equitable exception. Courts apply corporate piercing law to LLCs, by statute, as Minnesota did in Tom Thumb, or by analogy, as Delaware did in NetJets."
+            },
+            {
+              "id": "s3",
+              "say": "Minnesota's test. Both required. One: the entity ignored formalities and acted as the owner's alter ego or instrumentality. Two: respecting limited liability would be unjust or fundamentally unfair."
+            },
+            {
+              "id": "s4",
+              "say": "Delaware's alter ego test. Both required. One: the entity and its owner operated as a single economic entity. Two: an overall element of injustice or unfairness. Actual fraud is not required."
+            },
+            {
+              "id": "s5",
+              "say": "The factors, weighed together, and no single one is enough. (a) adequate capitalization for the undertaking. (b) solvency. (c) whether distributions were paid, records kept, and formalities observed. (d) whether the dominant owner siphoned funds. (e) whether the entity was simply a facade for the owner. For an LLC, less weight goes to internal formalities because fewer are required, and § 304(b) says failing to observe them isn't itself a ground for liability."
+            },
+            {
+              "id": "s6",
+              "say": "Tom Thumb Food Markets v. TLH Properties, Minnesota Court of Appeals, 1999, unpublished. Developer Hartmann told Tom Thumb he had bought land that he only had an oral deal to develop. Then he signed a twelve-year lease for his LLC, TLH, as landlord, with no financing contingency. Tom Thumb ignored the bank's requests for its financial statements. When they arrived, the bank refused to lend, because Tom Thumb had a negative net worth. The land was sold to another buyer. The trial court found TLH breached, and pierced the veil to hold Hartmann liable for $492,000 in lost profits."
+            },
+            {
+              "id": "s7",
+              "say": "Held: the lease had no contingency, so TLH breached. But piercing was reversed. Minnesota applies corporate piercing law to LLCs by statute, and the record showed no injustice or fundamental unfairness. Hartmann formed the LLC to build the Tom Thumb store, not to defraud. And Tom Thumb lacked clean hands: its own delay and finances caused the financing failure. Why it matters: misstatements and a thinly funded LLC aren't enough. Piercing needs injustice, and equity looks at the plaintiff's conduct too."
+            },
+            {
+              "id": "s8",
+              "say": "NetJets Aviation v. LHC Communications, Second Circuit, 2008. LHC, a Delaware LLC whose sole member was Zimmerman, leased a fractional airplane interest from NetJets and stopped paying. Zimmerman and his family used LHC's flight hours for personal trips. He moved money between LHC and his other companies, and withdrew LHC funds at will. His payments into LHC were labeled loans, so he could take money back out, leaving LHC with no assets."
+            },
+            {
+              "id": "s9",
+              "say": "Held: summary judgment for Zimmerman vacated; NetJets gets a trial on alter-ego liability. Delaware's two-prong test applies to LLCs. A factfinder could find, one, a single economic entity, since Zimmerman treated LHC's bank account as one of his pockets, and two, an overall element of injustice, since his contributions could be found deliberately mischaracterized as loans, to mask withdrawals that Delaware LLC Act § 18-607 forbids. Why it matters: siphoning and treating the company's account as your own, not missing minutes, is what pierces an LLC."
+            },
+            {
+              "id": "s10",
+              "say": "The planning points. Protecting the creditor: get a personal guaranty, a parent guaranty, a deposit, or financial covenants up front; it's the cheapest way to avoid the lawsuit. Protecting the owner: capitalize adequately, keep company and personal funds and uses separate, document loans as loans, and take money out only through lawful distributions. And formalities: with fewer required and statutes like § 304(b), commingling, siphoning and undercapitalization matter far more than minutes or meetings."
+            },
+            {
+              "id": "s11",
+              "say": "LPs and LLPs. For LLPs, courts will likely extend corporate piercing, roughly as for LLCs, In re Adelphia Communications, though cases are few. For LPs, the history of the control rule. Under ULPA 1916, a limited partner who took part in control became liable as a general partner. ULPA 1976 § 303(a) kept the rule but listed safe-harbor activities in § 303(b), such as consulting with and advising a general partner. Courts asked whether the limited partner had at least an equal voice in decisions, so as to be a general partner in effect, Mount Vernon Savings and Loan v. Partridge Associates."
+            },
+            {
+              "id": "s12",
+              "say": "ULPA 2001 § 303(a) ends the control rule: a limited partner isn't liable for the LP's obligations solely by being or acting as a limited partner, even if it participates in management and control. Section 303(b) adds that ignoring formalities is no ground for liability. A corporation may be the general partner, since ULPA 2001 defines a \"person\" to include a corporation, so everyone in an LP can have limited liability, Frigidaire. Creditors' remedy is to pierce the corporate general partner. An LLLP gives the general partner a statutory shield too. And courts have applied piercing to LPs."
+            },
+            {
+              "id": "s13",
+              "say": "Who's liable? A single-member LLC runs a food truck. It skips annual meetings and keeps no minutes. It's modestly funded but pays its bills from its own account, and the owner takes money out only by recorded distributions. The truck's driver hits a pedestrian, and the LLC's insurance falls short. Can the pedestrian pierce?",
+              "voice": "alt"
+            },
+            {
+              "id": "s14",
+              "say": "Unlikely. Missing meetings and minutes count for little, § 304(b). There's separate banking, no siphoning, lawful distributions. Without a single economic entity and injustice, there's no piercing."
+            },
+            {
+              "id": "s15",
+              "say": "Next. Same LLC, but the owner pays his mortgage from the company account and labels his deposits \"loans\" so he can take them back whenever. The LLC is empty when a supplier sues.",
+              "voice": "alt"
+            },
+            {
+              "id": "s16",
+              "say": "That's NetJets. Commingling and siphoning, with contributions dressed up as loans, can show a single economic entity and injustice. Strong case to pierce."
+            },
+            {
+              "id": "s17",
+              "say": "The traps. Trap one: thin capital alone isn't enough; you need injustice. Trap two: the plaintiff's own conduct matters, clean hands, Tom Thumb. Trap three: for LLCs, formalities matter little; siphoning matters a lot."
+            },
+            {
+              "id": "s18",
+              "say": "Recap. Piercing applies to LLCs. Minnesota: alter ego plus injustice. Delaware: single economic entity plus overall injustice, no fraud needed. Five factors, none alone enough. Tom Thumb: no injustice, unclean hands, no piercing. NetJets: siphoning, loans that weren't, trial on piercing. ULPA 2001 ends the control rule."
+            },
+            {
+              "id": "s19",
+              "ask": "What two prongs does Delaware's alter ego test require?",
+              "answer": "A single economic entity, and an overall element of injustice or unfairness. No actual fraud needed.",
+              "pause": 8
+            },
+            {
+              "id": "s20",
+              "ask": "Why did piercing fail in Tom Thumb?",
+              "answer": "No injustice or fundamental unfairness: Hartmann formed the LLC to build the store, not to defraud, and Tom Thumb's own delay and finances caused the failure, so it lacked clean hands.",
+              "pause": 8
+            },
+            {
+              "id": "s21",
+              "ask": "What was the ULPA 1976 control-rule test courts used, per Mount Vernon Savings?",
+              "answer": "Whether the limited partner had at least an equal voice in decisions, making it a general partner in effect.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e02",
+          "title": "LLC fiduciary duties under RULLCA § 409, and McConnell v. Hunt Sports",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Who owes what in an LLC, the defenses, what the agreement can change, and McConnell."
+            },
+            {
+              "id": "s2",
+              "say": "The rule, § 409. In a member-managed LLC, each member owes the company, and, subject to § 801, the other members, three things. One: loyalty. (A): to account for and hold as trustee any property, profit or benefit derived in the conduct or winding up of the company's activities, from use of company property, or from appropriating a company opportunity, § 409(b)(1). (B): to refrain from dealing with the company as or for a party with an adverse interest, § 409(b)(2). (C): to refrain from competing with the company before dissolution, § 409(b)(3). Two: care: to refrain from grossly negligent or reckless conduct, willful or intentional misconduct, or knowing violation of law, § 409(c). Three: the contractual obligation of good faith and fair dealing, § 409(d)."
+            },
+            {
+              "id": "s3",
+              "say": "Notice: these mirror RUPA § 409 almost exactly. That's by design."
+            },
+            {
+              "id": "s4",
+              "say": "The three rules inside. A member doesn't breach merely because the conduct also furthers the member's own interest, § 409(e). All the members may authorize or ratify a specific act after full disclosure, § 409(f). And fairness to the company is a defense to an adverse-dealing claim, § 409(g)."
+            },
+            {
+              "id": "s5",
+              "say": "Manager-managed LLCs, § 409(i). The loyalty, care and fairness rules apply to the managers, not the members. The noncompete lasts until winding up is completed. Good faith binds managers and members. And a member owes no duty solely by reason of being a member."
+            },
+            {
+              "id": "s6",
+              "say": "And the agreement may narrow these duties, if not manifestly unreasonable, § 105(d)(3), but may not eliminate loyalty, care or good faith, § 105(c)(5) through (7)."
+            },
+            {
+              "id": "s7",
+              "say": "McConnell v. Hunt Sports Enterprises, Ohio Court of Appeals, 1999. Investors formed Columbus Hockey Limited, LLC, called CHL, to seek an NHL franchise. When a sales-tax vote for an arena failed, Nationwide offered to build an arena and lease it to the franchise holder. Hunt, claiming to act for CHL without consulting the others, repeatedly rejected the lease. McConnell said he would take the lease himself only if Hunt wouldn't. After Hunt's group rejected it again at a CHL meeting, McConnell's group signed in its own names, formed COLHOC, and got the franchise. CHL's agreement, § 3.3, said members could engage in \"any other business venture of any nature, including any venture which might be competitive with the business of the Company.\""
+            },
+            {
+              "id": "s8",
+              "say": "Held, three points. One: § 3.3 is unambiguous, and it let members compete with CHL for the franchise, so extrinsic evidence was properly excluded. Two: an operating agreement may limit or define the scope of members' fiduciary duties. McConnell's group breached no duty and committed no tortious interference. It acted openly, used no CHL assets, and stepped in only after Hunt refused. Three: Hunt's company breached the agreement by suing in CHL's name without the majority approval § 4.1 required, and the willful-misconduct exculpation clause didn't help, since it didn't apply and the conduct was willful anyway."
+            },
+            {
+              "id": "s9",
+              "say": "Why it matters: contracting around loyalty works if the clause is clear. But members still owe \"utmost trust and loyalty\" in everything the clause doesn't cover."
+            },
+            {
+              "id": "s10",
+              "say": "The analyses. Alternative facts: if Hunt, with the members' approval, had nearly closed a deal, and McConnell then swooped in with a better offer, a court could find a breach. Section 3.3 permits a competing venture, not undermining the company's own pending deal. And drafting: to remove doubt, say expressly that members may compete for the very opportunity the company pursues, including an NHL franchise, and that doing so isn't a breach of any duty."
+            },
+            {
+              "id": "s11",
+              "ask": "In a manager-managed RULLCA LLC, who owes the loyalty and care duties?",
+              "answer": "The managers. A member owes no duty solely by being a member, § 409(i).",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "Why didn't McConnell's group breach loyalty?",
+              "answer": "Section 3.3 unambiguously allowed members to compete, and they acted openly, used no CHL assets, and stepped in only after Hunt refused the lease.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "How did Hunt's company breach the agreement?",
+              "answer": "By suing in CHL's name without the majority approval § 4.1 required.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e03",
+          "title": "VGS v. Castiel and Gottsacker v. Monnier",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Two cases on technically authorized action. VGS: secret action breaches loyalty. Gottsacker: conflicted members may vote, but must deal fairly. Then the outline's loyalty checklist."
+            },
+            {
+              "id": "s2",
+              "say": "VGS v. Castiel, Delaware Chancery, 2000. Castiel's entity held 63.46 percent of Virtual Geosatellite LLC, and could name and remove two of the three managers. He named himself and Quinn. Sahagen, with twenty-five percent, was the third manager. Sahagen persuaded Quinn to defect, and without notice to Castiel, the two acted by written consent to merge the LLC into VGS, Inc., a corporation, in which Sahagen's side ended up with 62.5 percent and Castiel's side with 37.5 percent."
+            },
+            {
+              "id": "s3",
+              "say": "Held: the agreement let the board act by majority, and Delaware LLC Act § 18-404(d) literally permits managers to act by written consent without notice. But Sahagen and Quinn knew notice would let Castiel remove Quinn and block them. Acting in secret to defeat the majority owner's bargained-for protection breached their duty of loyalty, so they get no business judgment protection. The merger is invalid and rescinded."
+            },
+            {
+              "id": "s4",
+              "say": "Why it matters: equity polices technically authorized action. Managers may not use a statutory shortcut to strip the majority of the protection the agreement gave it. The analyses: Sahagen, the minority, had bargained for a veto over mergers, § 8.01(c), while Castiel relied instead on his power to appoint two of three managers. The court doesn't make Quinn a \"potted plant\"; he could vote against Castiel after notice. And even a sincere belief that ousting Castiel was best doesn't justify the secret process. The court looked only at process and didn't need to reach entire fairness."
+            },
+            {
+              "id": "s5",
+              "say": "Gottsacker v. Monnier, Wisconsin, 2005. Monnier owned fifty percent of New Jersey LLC, and brothers Paul and Gregory Gottsacker \"collectively\" owned fifty percent. After the brothers fell out, Monnier and Paul, without telling Gregory, transferred the LLC's warehouse at its original price to a new LLC owned sixty-forty by themselves, and sent Gregory a twenty-two thousand dollar check, which he didn't cash. The trial court ordered the property returned."
+            },
+            {
+              "id": "s6",
+              "say": "Held, two points. One: \"collectively\" meant the sum of the brothers' individual twenty-five percent interests, so Monnier and Paul held the needed majority. Reading it to require joint voting would let one minority member deadlock the LLC without express language. Two: under the Wisconsin act, a member with a material conflict of interest is not barred from voting, but may not willfully fail to deal fairly with the LLC or its members. Remanded for findings on fairness, and the two must account for any improper personal profit. The dissent said Paul couldn't act without his brother's assent. Why it matters: a conflict doesn't disqualify a member from voting. The protection is a duty of fair dealing, tested after the fact."
+            },
+            {
+              "id": "s7",
+              "say": "The outline's LLC loyalty checklist. One: member-managed or manager-managed, so who owes the duty, § 409(a) and (i)? Two: what does the operating agreement say: a competition clause, McConnell; a voting or consent rule, VGS and Gottsacker; an exculpation clause? Three: is the modification allowed, § 105(c) and (d)? Four: even if technically authorized, was it done secretly or unfairly, VGS and Gottsacker? And compare Meinhard: the operating agreement is where the parties can lower the \"punctilio.\""
+            },
+            {
+              "id": "s8",
+              "say": "Who's liable? A manager-managed LLC has three managers. Two of them, at a meeting deliberately scheduled when the third is overseas and without notice, vote to sell the company's main asset to a company one of them owns, at book value. The agreement allows action by majority. Valid?",
+              "voice": "alt"
+            },
+            {
+              "id": "s9",
+              "say": "Attack it two ways. VGS: secret action to defeat another's protection breaches loyalty even if technically authorized. And adverse dealing under § 409(b)(2): the conflicted manager must show fairness to the company, § 409(g), or get approval by all members after full disclosure, § 409(f). Selling at book value to an insider looks like Gottsacker; fairness will be tested."
+            },
+            {
+              "id": "s10",
+              "say": "Recap. VGS: secret written consent to strip the majority's protection breaches loyalty; merger rescinded. Gottsacker: \"collectively\" means the sum; conflicted members may vote but must deal fairly."
+            },
+            {
+              "id": "s11",
+              "ask": "What did VGS v. Castiel hold about acting by written consent without notice?",
+              "answer": "Though § 18-404(d) literally permits it, acting secretly to defeat the majority owner's bargained-for protection breached loyalty, so the merger was rescinded.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "In Gottsacker, could a conflicted member vote?",
+              "answer": "Yes, but he may not willfully fail to deal fairly with the LLC or its members.",
+              "pause": 8
+            },
+            {
+              "id": "s13",
+              "ask": "What did \"collectively\" mean in Gottsacker?",
+              "answer": "The sum of the brothers' individual twenty-five percent interests, not a joint vote.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e04",
+          "title": "Additional capital: RULLCA § 403 and Racing Investment Fund",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Week 13. The rules on contributions, Racing Investment Fund 2000 v. Clay Ward Agency, and the free-rider problem."
+            },
+            {
+              "id": "s2",
+              "say": "The rules. A promised contribution is not excused by the person's death, disability, or other inability to perform, § 403(a). A person who fails to make a promised non-money contribution must, at the company's option, pay its money value, § 403(b). The obligation can be compromised only by all the members, and a creditor who relied on it without notice of the compromise may enforce it, § 403(c)."
+            },
+            {
+              "id": "s3",
+              "say": "No member must contribute more than it agreed. A member who advances more is a lender: the company must reimburse the advance, which accrues interest, § 407(f) and (g)."
+            },
+            {
+              "id": "s4",
+              "say": "And a clause letting a manager call for more capital creates duties among the members and the company. It's not a promise to the LLC's creditors. A member assumes personal liability for LLC debts only by agreeing to it in clear, unequivocal terms."
+            },
+            {
+              "id": "s5",
+              "say": "Racing Investment Fund 2000 v. Clay Ward Agency, Kentucky, 2010. A thoroughbred racing LLC owed its insurance agency, Clay Ward, a judgment for unpaid premiums, and became defunct after paying part. The operating agreement obliged investor members to contribute, pro rata, amounts the manager reasonably deemed advisable to pay expenses. The trial court held the LLC in contempt and treated the clause as letting it order a final capital call to pay the judgment."
+            },
+            {
+              "id": "s6",
+              "say": "Held: reversed. Kentucky's act gives members immunity from LLC debts unless a member agrees in writing to be personally obligated, KRS 275.150(2). Because that's so contrary to the purpose of an LLC, the agreement must be in unequivocal terms. An ordinary capital-infusion clause isn't a debt-collection device a court can use to make members pay the LLC's debts. Why it matters: creditors who want the members' money must bargain for guaranties. The operating agreement's funding promises run to the company."
+            },
+            {
+              "id": "s7",
+              "say": "The analyses. The members weren't sued because the shield protects them; the creditor's only route was to use the company's contract rights against them. Default remedies: the agreement let the manager notify members of a default and borrow the missing amount. A well-drafted clause adds consequences, such as diluting the defaulting member, or giving contributing members a priority return."
+            },
+            {
+              "id": "s8",
+              "say": "The free-rider dilemma. If two of ten members refuse a twenty thousand dollar call, the eight who pay are asked to cover the shortfall and subsidize the refusers. Solutions: dilute the non-contributors, give a preferred return or priority on liquidation to those who contribute, or charge penalty interest on member loans."
+            },
+            {
+              "id": "s9",
+              "ask": "Is a member's promised contribution excused by disability?",
+              "answer": "No, § 403(a).",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "Why couldn't the court order a capital call to pay Clay Ward?",
+              "answer": "A capital-call clause runs to the company, not creditors; members are personally liable only by unequivocal written agreement, and an ordinary infusion clause isn't one.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "Name two fixes for the free-rider problem in capital calls.",
+              "answer": "Any two: dilution of non-contributors, a preferred return or liquidation priority for contributors, penalty interest on member loans.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e05",
+          "title": "Leaving and being expelled: RULLCA §§ 601 to 603, and Walker v. Resource Development",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. A member's power to withdraw, when it's wrongful, the three routes to expulsion, the effect of dissociation, and Walker."
+            },
+            {
+              "id": "s2",
+              "say": "Power to withdraw. A member may dissociate at any time, rightfully or wrongfully, by express will, § 601(a)."
+            },
+            {
+              "id": "s3",
+              "say": "Wrongful, any one suffices. One: it breaches an express provision of the operating agreement. Two: it occurs before winding up is complete and the member withdraws by express will, is expelled by judicial order, or, in a member-managed LLC, becomes a debtor in bankruptcy or the like, § 602(8); or an entity member is expelled because it willfully dissolved, § 601(b). A wrongful dissociator is liable for damages, § 601(c)."
+            },
+            {
+              "id": "s4",
+              "say": "Expulsion, any one suffices. One: as the operating agreement provides, § 602(4). Two: by unanimous vote of the other members on the grounds in § 602(5): it's unlawful to continue with the member; the member transferred its entire transferable interest; or an entity member is dissolved or defunct. Three: by judicial order, § 602(6), for (A) wrongful conduct that materially and adversely affected the company; (B) willful or persistent material breach of the agreement or of § 409 duties; or (C) conduct that makes it not reasonably practicable to carry on with the person as a member."
+            },
+            {
+              "id": "s5",
+              "say": "The effect, § 603. Management rights and future § 409 duties end, and the person keeps any transferable interest solely as a transferee. And no buyout. That is the opposite of RUPA § 701."
+            },
+            {
+              "id": "s6",
+              "say": "Say the contrast aloud. A dissociated RUPA partner gets bought out. A dissociated RULLCA member becomes a transferee: still entitled to distributions, but no buyout and no say."
+            },
+            {
+              "id": "s7",
+              "say": "Walker v. Resource Development Company, Delaware Chancery, 2000. Walker joined REDECO, a Delaware LLC pursuing an oil and gas concession in Moldova, promising financing connections, and signed its operating agreement as an eighteen percent member. When negotiations with the financier collapsed, the other three members, \"the three Bills,\" sent him a letter removing him from REDECO, citing poor performance and a supposed admission that he stood to be paid by the financier."
+            },
+            {
+              "id": "s8",
+              "say": "Held: Walker remains a member. The real reason for removal was the failed financing. The agreement allowed removal of the manager without prejudice to his ownership rights, but gave no power to strip a member's interest, and nothing in Delaware law, including § 18-1104's gap-filling rules of law and equity, supplies one. And the defendants couldn't later justify the removal by Walker's unpaid capital contributions, a ground the letter never gave. Why it matters: LLC members' rights \"begin with and typically end with\" the operating agreement. If you want the power to expel, or to make an interest contingent, write it in."
+            },
+            {
+              "id": "s9",
+              "say": "The analyses. The partnership agreements in Lawlis and Bohatch expressly allowed expulsion; REDECO's didn't. And the three Bills could have bought Walker out by agreement, or, if he wouldn't sell, sought judicial expulsion or dissolution on proper grounds, or dissolved and re-formed according to the agreement."
+            },
+            {
+              "id": "s10",
+              "say": "Who's liable? A member of a member-managed RULLCA LLC, with no term, sends notice that she withdraws. She asks for the fair value of her interest. What does she get?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "She has the power to dissociate, § 601(a). But under § 603, she becomes a transferee: she keeps her right to distributions, loses management, and gets no buyout. If the agreement doesn't provide one, she has no right to be paid out. Whether it was wrongful depends on the agreement and § 601(b)."
+            },
+            {
+              "id": "s12",
+              "say": "Recap. Power to withdraw any time. Wrongful if it breaches the agreement, or comes before winding up by express will, judicial expulsion, or bankruptcy in a member-managed LLC. Expulsion by the agreement, unanimous vote on statutory grounds, or court order. Effect: transferee, no buyout. Walker: no expulsion power unless the agreement or the law gives one."
+            },
+            {
+              "id": "s13",
+              "ask": "What does a dissociated RULLCA member keep, and what does she lose?",
+              "answer": "She keeps her transferable interest as a transferee, with distributions; she loses management rights and future § 409 duties, and gets no buyout, § 603.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "Name the three grounds for judicial expulsion under § 602(6).",
+              "answer": "Wrongful conduct that materially and adversely affected the company; willful or persistent material breach of the agreement or § 409 duties; conduct making it not reasonably practicable to carry on with the member.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "Why did Walker remain a member?",
+              "answer": "The agreement allowed removing the manager but gave no power to strip a member's interest, and Delaware law supplied none.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e06",
+          "title": "LLC dissolution: RULLCA § 701, Delaware § 18-802, and Fisk Ventures 2009",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The RULLCA dissolution events, winding up and asset order, the Delaware judicial dissolution standard with its three circumstances, the Haley test for fifty-fifty owners, waiver, and the 2009 Fisk decision."
+            },
+            {
+              "id": "s2",
+              "say": "RULLCA § 701(a). An LLC dissolves and must wind up on any one of five events. One: an event the operating agreement says causes dissolution. Two: the consent of all the members. Three: ninety consecutive days with no members, unless a member is admitted in time. Four: a court order, on a member's application, because (A) all or substantially all of its activities are unlawful; (B) it's not reasonably practicable to carry on its activities in conformity with the certificate and the operating agreement; or (C) the managers or controlling members (i) have acted or will act illegally or fraudulently, or (ii) have acted oppressively in a way directly harmful to the applicant. Five: administrative dissolution."
+            },
+            {
+              "id": "s3",
+              "say": "In an (a)(4)(C) case, the court may order a remedy other than dissolution, § 701(b). The agreement cannot vary the judicial grounds in § 701(a)(4), § 105(c)(9). And a member's dissociation does not dissolve the LLC."
+            },
+            {
+              "id": "s4",
+              "say": "Winding up. The company continues only to wind up, § 702. Assets go, § 707: one, to creditors, including members who are creditors; two, to return unreturned contributions; three, the surplus in proportion to the owners' rights to distributions."
+            },
+            {
+              "id": "s5",
+              "say": "Delaware, LLC Act § 18-802. On application by or for a member or manager, the Court of Chancery may decree dissolution \"whenever it is not reasonably practicable to carry on the business in conformity with a limited liability company agreement.\" The test is reasonable practicability, not impossibility."
+            },
+            {
+              "id": "s6",
+              "say": "The circumstances courts look for, weighed together, none required or dispositive. One: the members or board are deadlocked. Two: the operating agreement gives no way around the deadlock. Three: the company's financial condition leaves effectively no business to operate. That's Fisk Ventures, 2009."
+            },
+            {
+              "id": "s7",
+              "say": "Two fifty-percent members, from Haley. By analogy to DGCL § 273, dissolution fits when, all required, one: there are two fifty-percent owners; two: they're engaged in a joint venture; and three: they can't agree whether to discontinue the business or how to dispose of its assets. Unless the agreement's own exit mechanism is an adequate, equitable alternative."
+            },
+            {
+              "id": "s8",
+              "say": "Waiver. In Delaware, members may waive the right to seek judicial dissolution, R and R Capital. Under RULLCA they may not, § 105(c)(9)."
+            },
+            {
+              "id": "s9",
+              "say": "Fisk Ventures, 2009, the dissolution half of the Genitrix fight. Dissolution granted under § 18-802. One: the board was hopelessly deadlocked. Two: the agreement gave no way around the deadlock. The Put Right was Fisk's option, not a mechanism the company could use to force out an uncooperative member. Three: the company's finances left effectively no business to run. It had no office, no funds, and no revenue. Why it matters: veto rights cut both ways. They protect each side and can freeze the company. Deadlock plus no exit is the classic ground for judicial dissolution."
+            },
+            {
+              "id": "s10",
+              "ask": "Name the five RULLCA § 701(a) dissolution events.",
+              "answer": "An agreed event; consent of all members; ninety consecutive days with no members; a court order on a member's application; and administrative dissolution.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "What three circumstances do Delaware courts look for under § 18-802?",
+              "answer": "Deadlock; no way around it in the agreement; and finances leaving effectively no business to operate.",
+              "pause": 8
+            },
+            {
+              "id": "s12",
+              "ask": "Can members waive judicial dissolution?",
+              "answer": "In Delaware, yes, R and R Capital. Under RULLCA, no, § 105(c)(9).",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e07",
+          "title": "LLC breakup cases: Haley, R and R Capital, Reese, Dunbar, and Investcorp",
+          "minutes": 8,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Five cases: a fifty-fifty deadlock with a flawed exit clause, an enforced waiver, the court's choice between expulsion and dissolution, practicability after expulsion, and withdrawal as a weapon."
+            },
+            {
+              "id": "s2",
+              "say": "Haley v. Talcott, Delaware Chancery, 2004. Haley and Talcott each owned fifty percent of an LLC that owned the land under the Redfin Grill, which Haley ran under an employment contract with Talcott's restaurant company. After they fell out, Haley was out of the restaurant and the two were deadlocked on the LLC's future, while the restaurant paid month-to-month rent. The agreement's exit clause let a member who chose to quit be bought out at fair market value, but both agreed it would not release Haley from his personal guaranty of the LLC's mortgage."
+            },
+            {
+              "id": "s3",
+              "say": "Held: dissolution ordered under § 18-802. Applying the DGCL § 273 framework: two fifty-percent members, in a joint venture, who couldn't agree. And Haley had bargained for a continuing say, not a passive role. The exit mechanism wasn't an adequate remedy, because it would leave Haley liable on the guaranty, so it wasn't equitable to force him to use it. The parties were to submit a plan to sell the property. Why it matters: a company that is \"technically functioning\" can still be dissolved, and a contractual exit bars dissolution only if it's a fair way out."
+            },
+            {
+              "id": "s4",
+              "say": "The planning point. The exit clause failed because it ignored the guaranty. Talcott's lawyer could have made the exit the exclusive remedy and required release of the guaranty; Haley's could have required release or indemnity on exit. And next comes an auction where both may bid; the bank loan must be paid off or assumed, and the order shifts bargaining power toward the member who wanted out."
+            },
+            {
+              "id": "s5",
+              "say": "R and R Capital v. Buck and Doe Run Valley Farms, Delaware Chancery, 2008. Members of several Delaware LLCs sought dissolution or a receiver. The seven \"Waiver Entities\" had identical agreements in which each member accepted the agreement as its sole entitlement on dissolution, and waived any right to seek a court decree of dissolution or a liquidator. Held: the waivers are enforced and the claims dismissed. Sections 18-802, 18-803 and 18-805 aren't mandatory: the Act doesn't say they can't be varied, and uses permissive language. Delaware's policy is freedom of contract; there are legitimate business reasons for a waiver, since lenders often treat a dissolution petition as a default; and the unwaivable implied covenant remains as a safeguard. Why it matters: the sharpest contrast with RULLCA § 105(c)(9)."
+            },
+            {
+              "id": "s6",
+              "say": "Reese v. Newman, D.C., 2016. Reese and Newman co-owned ANR Construction Management, LLC. Newman gave notice she would withdraw and dissolve; Reese wanted Newman dissociated so she could keep the business. A jury found grounds both to dissolve the LLC and to expel Newman, and the judge ordered dissolution. Held: affirmed. The D.C. statute, modeled on RULLCA § 602(6), says a person \"shall be dissociated\" when expelled by judicial order, but that describes the effect of an expulsion; it doesn't command the judge to expel. When grounds exist for both, the trial court has discretion to choose, RULLCA § 602 comment. Why it matters: a member who wants to keep the business has no right to force the other out."
+            },
+            {
+              "id": "s7",
+              "say": "Dunbar Group v. Tignor, Virginia, 2004. Dunbar and Tignor each owned fifty percent of Xpert, which earned about twenty thousand dollars a month under a Samsung contract. Tignor commingled Xpert's funds with his other company's, froze its checking account, evicted Dunbar's principal from shared offices, and cut off his email. The chancellor expelled Tignor as a member, and ordered Xpert to keep operating until the Samsung contract ended, and then dissolve. Held: expulsion affirmed, dissolution reversed. Dissolution requires that present circumstances make it not reasonably practicable to carry on the business in conformity with the articles and operating agreement. Once Tignor was expelled and became a passive investor, the record didn't show that, and the chancellor's own order to keep operating showed the business could continue. Why it matters: judge practicability after any expulsion. Compare Owen, where dissolution was ordered, and Collins, where it was refused."
+            },
+            {
+              "id": "s8",
+              "say": "Investcorp v. Simpson Investment, Kansas, 1999. Two family branches each held fifty percent of a land-holding LLC, and were deadlocked. Members of one branch withdrew on six months' notice, as the agreement allowed, to force dissolution. Continuing the company required the remaining members' unanimous consent, and a trust aligned with the withdrawing branch stayed in. The remaining members declined to buy the withdrawing members out, but refused to dissolve. Held: the withdrawing members, whose withdrawal triggered dissolution, remain \"members\" during dissolution and may take part in it. The district court erred in treating them as outsiders. Why it matters: withdrawal can be a weapon. A better agreement would have said who controls winding up and set a buyout price and procedure."
+            },
+            {
+              "id": "s9",
+              "say": "The outline's LLC breakup checklist. One: did anyone dissociate, and was it wrongful? Dissociation alone gives no buyout and no dissolution, § 603. Two: is there a dissolution event: the agreement's events, unanimous consent, or a judicial ground, § 701? Three: if judicial, is it not reasonably practicable, meaning deadlock, no way around it, no business, or is a lesser remedy like expulsion enough, Reese and Dunbar? Four: does an exit clause offer an equitable alternative, Haley and Fisk? Five: in Delaware, did the members waive judicial dissolution, R and R? Six: winding up: who participates, Investcorp, and in what order assets are paid, § 707?"
+            },
+            {
+              "id": "s10",
+              "say": "Who's liable? Two fifty-percent members of a Delaware LLC are deadlocked. The agreement lets either quit and be bought out at fair market value, and releases the quitting member from all guaranties. One petitions for dissolution. Result?",
+              "voice": "alt"
+            },
+            {
+              "id": "s11",
+              "say": "Likely denied. Under Haley, dissolution fits a fifty-fifty deadlock unless the agreement's exit mechanism is an adequate, equitable alternative. Here it is: fair value and release from guaranties, unlike Haley. And if the agreement waived judicial dissolution, R and R would bar the petition outright."
+            },
+            {
+              "id": "s12",
+              "say": "Recap. Haley: fifty-fifty deadlock, exit clause unfair because of the guaranty, dissolve. R and R: Delaware waivers enforced. Reese: the court chooses between expulsion and dissolution. Dunbar: after expulsion, the business could continue, so no dissolution. Investcorp: withdrawing members still take part in winding up."
+            },
+            {
+              "id": "s13",
+              "ask": "Why wasn't Haley's exit clause an adequate alternative?",
+              "answer": "It would have left Haley liable on his personal guaranty of the mortgage.",
+              "pause": 8
+            },
+            {
+              "id": "s14",
+              "ask": "In Dunbar, why was dissolution reversed?",
+              "answer": "After Tignor's expulsion, the business could continue; the chancellor's own order to keep operating showed it was reasonably practicable.",
+              "pause": 8
+            },
+            {
+              "id": "s15",
+              "ask": "What did Reese v. Newman hold?",
+              "answer": "When grounds exist for both expulsion and dissolution, the court has discretion to choose; \"shall be dissociated\" describes expulsion's effect, not a command.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e08",
+          "title": "Comparing the entities: the final review chart",
+          "minutes": 4,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. Week 14 is full course review, with \"Read LLC Agreement for Final.\" Part 3 of the final, ninety minutes, lets you use the statutory supplement, a three-page single-sided outline, and the final Operating Agreement for your hypothetical clients. That agreement isn't in these materials; get it from Canvas. Now the comparison chart: four entities, seven rows."
+            },
+            {
+              "id": "s2",
+              "say": "Row one, formation. General partnership: no filing; two or more persons carrying on as co-owners a business for profit, whether or not they intend a partnership, RUPA § 202(a). LLP: a partnership that files a statement of qualification, RUPA § 901. Limited partnership: file a certificate of limited partnership, with at least one general and one limited partner. LLC: file a certificate of organization and have at least one member, § 201."
+            },
+            {
+              "id": "s3",
+              "say": "Row two, owner liability. General partnership: joint and several for all obligations, RUPA § 306(a), with creditors first exhausting partnership assets, § 307(d). LLP: partners aren't liable for obligations incurred while an LLP, § 306(c). LP: general partners liable, unless an LLLP; limited partners shielded even if they take part in control, ULPA § 303. LLC: members and managers not liable solely by status, § 304."
+            },
+            {
+              "id": "s4",
+              "say": "Row three, management. General partnership: equal rights; ordinary matters by majority; outside the ordinary course or amending the agreement, unanimous, RUPA § 401. LLP: same. LP: general partners manage; limited partners have no agency or management role by status. LLC: member-managed by default, manager-managed if the agreement says so, § 407."
+            },
+            {
+              "id": "s5",
+              "say": "Row four, owners as agents. General partnership: every partner is an agent for apparently carrying on the business in the ordinary course, RUPA § 301. LLP: same. LP: general partners only. LLC: no member is an agent solely by being a member, § 301."
+            },
+            {
+              "id": "s6",
+              "say": "Row five, fiduciary duties. General partnership: partners owe loyalty and care, RUPA § 409, and the agreement may narrow but not eliminate them, § 105. LLP: same. LP: general partners owe them; limited partners generally don't. LLC: members in a member-managed LLC, managers in a manager-managed one, § 409, and the agreement may narrow, § 105."
+            },
+            {
+              "id": "s7",
+              "say": "Row six, a departing owner. General partnership: dissociation, with a buyout at the greater of liquidation or going-concern value unless the business is wound up, RUPA §§ 603 and 701. LLP: same. LP: a limited partner has no right to withdraw before the LP ends, and no buyout. LLC: the power to withdraw at any time, but no buyout; the member becomes a transferee, §§ 601 and 603."
+            },
+            {
+              "id": "s8",
+              "say": "Row seven, dissolution. General partnership: in an at-will partnership, a partner's express will to withdraw; also the agreement, consent, and court order, RUPA § 801. LLP: same. LP: by the agreement or consent; after a general partner dissociates, the LP continues if another general partner remains, unless the partners vote to dissolve, and otherwise dissolves unless the partners continue it within ninety days. LLC: the agreement, unanimous consent, no members for ninety days, or a court order; dissociation never dissolves, § 701."
+            },
+            {
+              "id": "s9",
+              "ask": "Which entity's owners are agents by status?",
+              "answer": "The general partnership's and the LLP's partners, and an LP's general partners. Not LLC members, § 301.",
+              "pause": 8
+            },
+            {
+              "id": "s10",
+              "ask": "A departing owner gets a buyout by default in which entities?",
+              "answer": "The general partnership and the LLP, under RUPA § 701. Not an LP's limited partner, and not an LLC member.",
+              "pause": 8
+            },
+            {
+              "id": "s11",
+              "ask": "What happens to an LP when a general partner dissociates?",
+              "answer": "It continues if another general partner remains, unless the partners vote to dissolve; otherwise it dissolves unless the partners continue it within ninety days.",
+              "pause": 8
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e09",
+          "title": "Full review, part one: every agency test and list",
+          "minutes": 7,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Full review begins. Rapid fire. Each question asks for a whole test or list. Say all of it before the answer comes."
+            },
+            {
+              "id": "s2",
+              "ask": "The three elements of agency.",
+              "answer": "The principal manifests assent that the agent act on its behalf; subject to its control; and the agent consents. Restatement Third § 1.01.",
+              "pause": 12
+            },
+            {
+              "id": "s3",
+              "ask": "Kinds of agents.",
+              "answer": "General, special, subagent, coagent, and gratuitous.",
+              "pause": 12
+            },
+            {
+              "id": "s4",
+              "ask": "The order of authority analysis.",
+              "answer": "Actual, express then implied; apparent; ratification; operation of law, inherent authority and estoppel.",
+              "pause": 12
+            },
+            {
+              "id": "s5",
+              "ask": "The seven routes to implied actual authority.",
+              "answer": "Incidental or necessary; custom or trade; past conduct; emergency; delegation of ministerial acts; paying for and accepting goods when buying; customary warranties and collecting payment when selling.",
+              "pause": 12
+            },
+            {
+              "id": "s6",
+              "ask": "The eight ways actual authority terminates.",
+              "answer": "Agreement; notice; event; lapse of reasonable time; changed circumstances; the agent's breach; unilateral termination; operation of law.",
+              "pause": 12
+            },
+            {
+              "id": "s7",
+              "ask": "The three elements of apparent authority.",
+              "answer": "Holding out by the principal; the third party's reasonable belief; traceable to the principal's manifestations.",
+              "pause": 12
+            },
+            {
+              "id": "s8",
+              "ask": "Inherent authority: the Second's sections and the Third's replacements.",
+              "answer": "Second §§ 8A, 161, 194 to 195. Third § 2.06(1), § 2.06(2), and positional authority under § 1.03.",
+              "pause": 12
+            },
+            {
+              "id": "s9",
+              "ask": "The four ratification requirements and the three bars.",
+              "answer": "Knowledge of material facts, acceptance of the whole deal, capacity, act on the principal's behalf. Barred by illegality, the third party's withdrawal, or a material change.",
+              "pause": 12
+            },
+            {
+              "id": "s10",
+              "ask": "Estoppel under § 2.05.",
+              "answer": "The person intentionally or carelessly caused the belief, or knowing of it failed to correct it, and the third party justifiably and detrimentally changed position.",
+              "pause": 12
+            },
+            {
+              "id": "s11",
+              "ask": "Agent's own contract liability by type of principal.",
+              "answer": "Disclosed: not liable. Unidentified: liable with the principal, § 6.02. Undisclosed: liable as a party, § 6.03. Plus the implied warranty of authority, § 6.10, and § 6.04 for a nonexistent principal.",
+              "pause": 12
+            },
+            {
+              "id": "s12",
+              "ask": "Direct and vicarious tort liability under § 7.03.",
+              "answer": "Direct: authorized or ratified torts; negligent selection or supervision, § 7.05; nondelegable duty, § 7.06. Vicarious: employee within scope, § 7.07; apparent authority, § 7.08.",
+              "pause": 12
+            },
+            {
+              "id": "s13",
+              "ask": "The ten § 220(2) factors.",
+              "answer": "Control over details; distinct occupation; under direction or by specialist; skill; tools and workplace; length of employment; paid by time or job; part of regular business; parties' belief; principal in business.",
+              "pause": 12
+            },
+            {
+              "id": "s14",
+              "ask": "The franchise test.",
+              "answer": "Control or right to control the daily operation of the specific aspect that caused the harm, Kerl. Plus apparent agency under § 267, Miller.",
+              "pause": 12
+            },
+            {
+              "id": "s15",
+              "ask": "Section 228 and § 7.07.",
+              "answer": "Section 228: kind of work, time and space, purpose to serve, force not unexpectable. Section 7.07: outside only for an independent course of conduct serving no employer purpose.",
+              "pause": 12
+            },
+            {
+              "id": "s16",
+              "ask": "The five independent-contractor exceptions.",
+              "answer": "Retained control, negligent selection, inherently dangerous work, abnormally dangerous activity, nondelegable duty.",
+              "pause": 12
+            },
+            {
+              "id": "s17",
+              "ask": "The agent's five duties and loyalty's five parts.",
+              "answer": "Care, obedience, accounting, loyalty, disclosure. Loyalty: no profit from position, solely for the principal, no adverse dealing, no competing during the agency, no use of property or confidential information.",
+              "pause": 12
+            },
+            {
+              "id": "s18",
+              "ask": "The principal's six duties to the agent.",
+              "answer": "Contract terms and good faith; reasonable compensation; reimbursement; indemnity; cooperation; non-interference.",
+              "pause": 12
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e10",
+          "title": "Full review, part two: every partnership test and list",
+          "minutes": 7,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Part two: partnerships. Same drill."
+            },
+            {
+              "id": "s2",
+              "ask": "The formation rule and the six profit-sharing exceptions.",
+              "answer": "Two or more persons carrying on as co-owners a business for profit, intent irrelevant. Exceptions: debt repayment, wages, rent, annuity, interest, price of goodwill or property.",
+              "pause": 12
+            },
+            {
+              "id": "s3",
+              "ask": "The seven formation factors.",
+              "answer": "Profit sharing, loss sharing, right to manage, intent, capital contribution, dealings with third parties, rights on dissolution.",
+              "pause": 12
+            },
+            {
+              "id": "s4",
+              "ask": "The joint venture elements, Sandvick.",
+              "answer": "Contributions; proprietary interest and mutual control; agreement to share profits; express or implied contract.",
+              "pause": 12
+            },
+            {
+              "id": "s5",
+              "ask": "Partnership by estoppel.",
+              "answer": "Representation as a partner, made or consented to, and reliance: given credit, UPA § 16; entering a transaction, RUPA § 308.",
+              "pause": 12
+            },
+            {
+              "id": "s6",
+              "ask": "Default economics.",
+              "answer": "Equal profits, losses like profits, no pay except winding up, contributions returned without interest, advances repaid with interest, new partners by unanimous consent.",
+              "pause": 12
+            },
+            {
+              "id": "s7",
+              "ask": "Partnership property rules.",
+              "answer": "Acquired in the firm's name or by a partner with documents showing partner capacity: partnership property. Bought with firm funds: presumed partnership. In a partner's name without either: presumed separate. Intent at acquisition controls.",
+              "pause": 12
+            },
+            {
+              "id": "s8",
+              "ask": "The two liquidation orders.",
+              "answer": "UPA § 40(b): outside creditors, partner loans, capital, profits. RUPA § 806: creditors including partners, contributions, surplus.",
+              "pause": 12
+            },
+            {
+              "id": "s9",
+              "ask": "The management and authority defaults.",
+              "answer": "Equal rights; majority for ordinary matters; unanimity for extraordinary acts and amendments; § 301: ordinary-course acts bind unless no authority and the third party knew or had notice.",
+              "pause": 12
+            },
+            {
+              "id": "s10",
+              "ask": "RUPA § 409 loyalty and care.",
+              "answer": "Loyalty: account for benefits and opportunities; no adverse dealing; no competing before dissolution. Care: no gross negligence, recklessness, intentional misconduct, or knowing violation. Plus good faith.",
+              "pause": 12
+            },
+            {
+              "id": "s11",
+              "ask": "What § 105 lets a partnership agreement do and not do with duties.",
+              "answer": "Can't eliminate loyalty, care, or good faith, or exculpate bad faith, intentional misconduct, or knowing violations. Can, if not manifestly unreasonable, alter aspects of loyalty, identify permitted activities, alter care, and set disinterested approval.",
+              "pause": 12
+            },
+            {
+              "id": "s12",
+              "ask": "The UPA's four exit principles.",
+              "answer": "Every departure dissolves; the power to dissolve always exists; dissolution starts winding up; continuation through a new firm, liquidation on rightful dissolution, value less damages without goodwill on wrongful.",
+              "pause": 12
+            },
+            {
+              "id": "s13",
+              "ask": "RUPA's four exit principles.",
+              "answer": "Dissociation doesn't necessarily dissolve; the § 603 switch; filed statements cut off lingering power after ninety days; almost everything is a default.",
+              "pause": 12
+            },
+            {
+              "id": "s14",
+              "ask": "Wrongful dissociation under § 602(b).",
+              "answer": "Breach of an express term; or in a term partnership before the end, withdrawal by express will except within ninety days of another's death-type or wrongful dissociation, judicial expulsion, bankruptcy, or an entity partner's willful dissolution.",
+              "pause": 12
+            },
+            {
+              "id": "s15",
+              "ask": "The § 701 buyout.",
+              "answer": "Greater of liquidation or going-concern value without the partner, less damages, plus interest; paid within 120 days of demand; wrongful term dissociator waits; two-year lingering power, cut off ninety days after a statement.",
+              "pause": 12
+            },
+            {
+              "id": "s16",
+              "ask": "Section 801 dissolution events, and which the agreement can't change.",
+              "answer": "At-will express will; term events after a death-type or wrongful dissociation with half voting, all agreeing, or term's end; agreed event; court order for a partner; court order for a transferee. The two court-order grounds can't be changed.",
+              "pause": 12
+            },
+            {
+              "id": "s17",
+              "ask": "The buyout agreement checklist.",
+              "answer": "Triggers; obligation or option; offer procedures; contributed IP; price method; payment terms; protection against debts.",
+              "pause": 12
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e11",
+          "title": "Full review, part three: every LP and LLC test and list",
+          "minutes": 6,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Part three: LPs and LLCs."
+            },
+            {
+              "id": "s2",
+              "ask": "The LP control rule's history.",
+              "answer": "ULPA 1916: participation in control made a limited partner liable. ULPA 1976 § 303: kept it with safe harbors. ULPA 2001 § 303(a): ended it.",
+              "pause": 12
+            },
+            {
+              "id": "s3",
+              "ask": "LLC formation and shield.",
+              "answer": "Effective certificate of organization plus a member, § 201. Not liable solely by status, § 304(a); formalities no ground, § 304(b).",
+              "pause": 12
+            },
+            {
+              "id": "s4",
+              "ask": "Avoiding agent liability for an LLC's contract.",
+              "answer": "Disclose both that you act for a principal and the principal's identity, or get the third party's agreement you aren't a party. Water, Waste and Land.",
+              "pause": 12
+            },
+            {
+              "id": "s5",
+              "ask": "The de facto and estoppel doctrines.",
+              "answer": "De facto: good faith, valid statute, authorized purpose, executed articles; an entity against all but the state. Estoppel: a third party who dealt with it as an entity can't deny it.",
+              "pause": 12
+            },
+            {
+              "id": "s6",
+              "ask": "Six things an RULLCA operating agreement can't do.",
+              "answer": "Eliminate loyalty or care except as § 105(d) allows; eliminate good faith; exculpate bad faith, willful misconduct or knowing violations; unreasonably restrict information; vary judicial dissolution grounds; unreasonably restrict Article 8 suits.",
+              "pause": 12
+            },
+            {
+              "id": "s7",
+              "ask": "What § 105(d)(3) allows if not manifestly unreasonable.",
+              "answer": "Alter or eliminate aspects of loyalty; identify permitted activities; alter care, not to authorize bad faith or willful misconduct; alter or eliminate other fiduciary duties. Plus disinterested approval of conflicts.",
+              "pause": 12
+            },
+            {
+              "id": "s8",
+              "ask": "The § 407 management defaults.",
+              "answer": "Member-managed unless the agreement opts out; majority of members for ordinary matters, or managers if manager-managed; all members for extraordinary acts and amendments; no pay except winding up; advances are loans with interest.",
+              "pause": 12
+            },
+            {
+              "id": "s9",
+              "ask": "Distribution rules.",
+              "answer": "Equal per capita, § 404(a); no right to interim distributions; barred if insolvent either way, § 405; consenting members or managers personally liable, § 406.",
+              "pause": 12
+            },
+            {
+              "id": "s10",
+              "ask": "Direct versus derivative.",
+              "answer": "Derivative if the company suffered the most direct injury or the duty ran to the company. Direct needs injury not solely from the company's, § 801(b); derivative needs demand refused or futile, § 802.",
+              "pause": 12
+            },
+            {
+              "id": "s11",
+              "ask": "The implied covenant's limits.",
+              "answer": "Fills a gap only where the parties clearly would have agreed; protects the spirit of the bargain; can't override express terms; exercising a contract right isn't a breach.",
+              "pause": 12
+            },
+            {
+              "id": "s12",
+              "ask": "The veil-piercing tests.",
+              "answer": "Minnesota: alter ego plus injustice. Delaware: single economic entity plus overall injustice. Factors: capitalization, solvency, formalities, siphoning, facade.",
+              "pause": 12
+            },
+            {
+              "id": "s13",
+              "ask": "LLC fiduciary duties under § 409.",
+              "answer": "Member-managed: members owe loyalty's three parts, care, and good faith. Manager-managed: managers owe them; members owe none by status.",
+              "pause": 12
+            },
+            {
+              "id": "s14",
+              "ask": "Contributions under § 403.",
+              "answer": "Not excused by death or disability; non-money contribution payable in money at the company's option; compromise only by all members.",
+              "pause": 12
+            },
+            {
+              "id": "s15",
+              "ask": "RULLCA expulsion routes and effect.",
+              "answer": "By agreement; unanimous vote on statutory grounds; judicial order. Effect: transferee, no buyout, § 603.",
+              "pause": 12
+            },
+            {
+              "id": "s16",
+              "ask": "RULLCA § 701 events, and Delaware's three circumstances.",
+              "answer": "Agreed event; all members consent; ninety days with no members; court order; administrative dissolution. Delaware: deadlock; no way around it; no business to operate.",
+              "pause": 12
+            },
+            {
+              "id": "s17",
+              "ask": "The Haley test.",
+              "answer": "Two fifty-percent owners, in a joint venture, who can't agree; unless the exit mechanism is an adequate, equitable alternative.",
+              "pause": 12
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e12",
+          "title": "How to work the open-statute short answer and read an operating agreement",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "Roadmap. The last lesson is method. How to work the ninety-minute short answer with the supplement, your three-page outline, and the final Operating Agreement in front of you."
+            },
+            {
+              "id": "s2",
+              "say": "Start with the outline's five steps for using the operating agreement."
+            },
+            {
+              "id": "s3",
+              "say": "Step one: find the clause. Look for management, member- or manager-managed, who decides what, by what vote. Authority limits and officers. Capital contributions and calls. Distributions. Transfers. Fiduciary modifications and competition clauses. Exculpation and indemnification. Withdrawal, expulsion and buyout. Dissolution events. Deadlock breakers. And dispute resolution."
+            },
+            {
+              "id": "s4",
+              "say": "Step two: if the agreement is silent, apply the default. RULLCA governs what the agreement doesn't, § 105(b). For example: member-managed; equal per capita distributions; unanimous consent for acts outside the ordinary course; and no buyout on dissociation."
+            },
+            {
+              "id": "s5",
+              "say": "Step three: test the clause against the limits. Is it a term the Act forbids, § 105(c)? Or one that must not be manifestly unreasonable, § 105(d) and (e)? In Delaware, nearly everything but the implied covenant can be contracted away, Elf Atochem and R and R Capital."
+            },
+            {
+              "id": "s6",
+              "say": "Step four: apply it to the facts and argue both sides. The professor's recurring themes: ambiguous wording, Gottsacker and McConnell; technically authorized but unfair conduct, VGS; a veto that freezes the company, Fisk Ventures; an exit clause that isn't fair, Haley; and missing expulsion powers, Walker."
+            },
+            {
+              "id": "s7",
+              "say": "Step five: finish with the planning point. Say what the clause should have said, and how a lawyer would fix it."
+            },
+            {
+              "id": "s8",
+              "say": "Now, how to use the open statute on any short-answer question. Name the governing act first: Restatement, UPA, RUPA, ULPA, RULLCA, or Delaware. Then go to the section, and read its words against the facts, element by element. Quote the operative phrase briefly, then apply. The statute is in front of you, so the points come from applying it precisely, not from reciting it."
+            },
+            {
+              "id": "s9",
+              "say": "Use the reading tips from this course. Watch for \"solely by reason of,\" as in §§ 301 and 304: status alone never does it. Watch for \"and\" versus \"or\": RUPA § 301 needs both no authority and the third party's notice. Watch for default language, \"unless the agreement provides otherwise,\" which sends you back to the agreement. And watch for the § 105 lists, which tell you what the agreement can't touch."
+            },
+            {
+              "id": "s10",
+              "say": "The whole-course issue checklist, from the outline's last box. Eight questions. One: is there an agency, and who's the principal? Consent and control. Two: contract liability: actual, apparent, inherent authority, ratification, estoppel; and is the agent also liable? Three: tort liability: employee or independent contractor, scope, franchisor control, apparent agency, nondelegable duties. Four: duties: the agent's loyalty and grabbing and leaving; partners' duties; LLC duties and the agreement's modifications."
+            },
+            {
+              "id": "s11",
+              "say": "Five: the entity: is there a partnership, sharing profits as co-owners, an LLP, LP, or LLC, and was it properly formed? Six: owner liability: partners' joint and several liability, the LLP and LP shields, the LLC shield, and veil piercing. Seven: management and authority inside the entity. Eight: exit: dissociation, buyout, dissolution and winding up under the UPA, RUPA and RULLCA, and the agreement's buyout or exit terms."
+            },
+            {
+              "id": "s12",
+              "say": "Try it. Your client's operating agreement says, \"The Company shall be managed by its Managers,\" and, \"Any Member may engage in any business, including one competitive with the Company.\" A member who is not a manager opens a competing shop. A manager does the same. Who breached?",
+              "voice": "alt"
+            },
+            {
+              "id": "s13",
+              "say": "Step one, the clauses: manager-managed, and a competition clause. Step two, defaults: in a manager-managed LLC, members owe no duty solely by being members, § 409(i), so the member is fine even without the clause. The manager owes loyalty, including no competing until winding up is complete. Step three, the clause says \"Any Member.\" Does it cover a manager who is also a member? Argue it: McConnell enforced a clear competition clause; but if it doesn't clearly reach managers, the manager's duty stands. Is it permitted? Identifying permitted activities is allowed under § 105(d)(3)(B) if not manifestly unreasonable. Step four, facts: did the manager use company property or take a pending deal? McConnell's alternative facts. Step five, planning: say expressly whether managers may compete."
+            },
+            {
+              "id": "s14",
+              "ask": "Your client's agreement is silent on what happens when a member withdraws. She wants to be paid out. What do you tell her?",
+              "answer": "Under RULLCA's default, she can dissociate at any time, but she becomes a transferee with no buyout, § 603. If she wants out with money, she needs an agreement term, a negotiated buyout, or grounds for judicial dissolution under § 701(a)(4).",
+              "pause": 15
+            }
+          ]
+        },
+        {
+          "id": "ap-d5-e13",
+          "title": "Final cumulative quiz, and sign-off",
+          "minutes": 5,
+          "segments": [
+            {
+              "id": "s1",
+              "say": "The final quiz, drawn from all five days. Pause, answer, check."
+            },
+            {
+              "id": "s2",
+              "ask": "Gorton v. Doty: why was the teacher liable?",
+              "answer": "Her condition that the coach drive supplied consent and control, so he was her agent, without pay or contract.",
+              "pause": 10
+            },
+            {
+              "id": "s3",
+              "ask": "Lind v. Schenley: source of the authority?",
+              "answer": "The position the company gave Kaufman as Lind's superior: apparent authority.",
+              "pause": 10
+            },
+            {
+              "id": "s4",
+              "ask": "Botticello: why no ratification?",
+              "answer": "She lacked full knowledge, and her husband never purported to act for her.",
+              "pause": 10
+            },
+            {
+              "id": "s5",
+              "ask": "Atlantic Salmon: rule?",
+              "answer": "An agent for a partially disclosed principal is a party unless he discloses its identity.",
+              "pause": 10
+            },
+            {
+              "id": "s6",
+              "ask": "Bushey versus Brill?",
+              "answer": "Bushey: enterprise risk, inside scope. Brill: own errand, outside.",
+              "pause": 10
+            },
+            {
+              "id": "s7",
+              "ask": "Kleeman v. Rheingold?",
+              "answer": "A lawyer's duty to serve process is nondelegable.",
+              "pause": 10
+            },
+            {
+              "id": "s8",
+              "ask": "General Automotive v. Singer?",
+              "answer": "The agent must disclose opportunities; he can't decide for the principal which it can fill.",
+              "pause": 10
+            },
+            {
+              "id": "s9",
+              "ask": "Martin v. Peyton versus Cargill?",
+              "answer": "Martin: lenders with protective rights stayed lenders. Cargill: a creditor that ran the business became a principal.",
+              "pause": 10
+            },
+            {
+              "id": "s10",
+              "ask": "Putnam v. Shoaf?",
+              "answer": "Selling your partnership interest sells everything, including unknown claims; partners own an interest, not assets.",
+              "pause": 10
+            },
+            {
+              "id": "s11",
+              "ask": "Meinhard v. Salmon?",
+              "answer": "A co-venturer must disclose an opportunity growing out of the venture; the punctilio of an honor the most sensitive.",
+              "pause": 10
+            },
+            {
+              "id": "s12",
+              "ask": "Page v. Page?",
+              "answer": "At-will partnership may be dissolved, but in good faith; no freeze-out.",
+              "pause": 10
+            },
+            {
+              "id": "s13",
+              "ask": "Kovacik v. Reed, and RUPA?",
+              "answer": "Money partner bears money loss, service partner loses labor; RUPA rejects it.",
+              "pause": 10
+            },
+            {
+              "id": "s14",
+              "ask": "Water, Waste and Land, and Duray, together?",
+              "answer": "Lanham liable for not identifying the LLC; Perrin protected by de facto LLC and estoppel on the contract naming the LLC.",
+              "pause": 10
+            },
+            {
+              "id": "s15",
+              "ask": "NetJets?",
+              "answer": "Siphoning and contributions disguised as loans can pierce a Delaware LLC: single economic entity plus injustice.",
+              "pause": 10
+            },
+            {
+              "id": "s16",
+              "ask": "Walker v. Resource Development?",
+              "answer": "No expulsion power unless the agreement or law supplies it; Walker remained a member.",
+              "pause": 10
+            },
+            {
+              "id": "s17",
+              "ask": "R and R Capital versus RULLCA?",
+              "answer": "Delaware lets members waive judicial dissolution; RULLCA § 105(c)(9) doesn't.",
+              "pause": 10
+            },
+            {
+              "id": "s18",
+              "say": "That's the course. Five days, every rule, element, section and case in the Weeks 1 through 14 outline. Before the final, replay the full-review episodes, then read the final Operating Agreement against the defaults using the five steps. Good luck on December 15."
             }
           ]
         }
