@@ -57,6 +57,14 @@
       "tags": ["MCQ", "class quizzes", "explanations"],
       "questions": 54,
       "order": 4
+    },
+    "PR_Audio_Course.listen.json": {
+      "slug": "pr-audio-course",
+      "title": "Professional Responsibility Audio Course",
+      "type": "audio",
+      "description": "A five-day listening course on the whole outline, Chs. 1–25 and the Model Rules: each rule in plain English with its elements counted out loud, every exception and must-versus-may line, the cases told as short stories, MPRE-style hypotheticals and recall questions with pauses to answer, and a spaced review to open each day.",
+      "tags": ["audio", "listen", "Model Rules", "MPRE", "Weeks 1–15"],
+      "order": 1.2
     }
   }
 }

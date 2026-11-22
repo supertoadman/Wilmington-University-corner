@@ -1,0 +1,1228 @@
+{
+ "format": "listen/v1",
+ "id": "pr-audio-course",
+ "title": "Professional Responsibility Audio Course",
+ "course": "Professional Responsibility",
+ "description": "Five-day, listen-anywhere course on the whole Professional Responsibility outline (Chs. 1–25 and the Model Rules), with spaced review, worked hypos and recall questions.",
+ "days": [
+  {
+   "day": 1,
+   "title": "Regulating lawyers; forming, defining, and ending the relationship",
+   "minutes": 118,
+   "episodes": [
+    {
+     "id": "pr-d1-e01",
+     "title": "Welcome: how this course works and how to work a problem",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Welcome to the Professional Responsibility audio course. Over five days, we will walk through every rule, every key Comment, and every case in your outline, in outline order, and we will drill each one until it sticks."
+      },
+      {
+       "say": "Here is how each episode runs. First a short roadmap. Then the rule in plain English, then its exact elements, counted out loud. Then why the rule exists, its exceptions, the may-versus-must distinctions, the cases told as short stories, a few exam-style hypotheticals, the traps, a recap, and three recall questions."
+      },
+      {
+       "say": "When you hear a question, you will get a few seconds of silence. Use them. Say the answer out loud, even in a whisper. Retrieval is what builds memory. Listening alone is not enough."
+      },
+      {
+       "say": "Your exam is December fourteenth. Closed book. Ninety multiple-choice questions in three hours. That is two minutes a question. The questions test the ABA Model Rules as written, not any one state's version."
+      },
+      {
+       "say": "Before any rule, learn how Professor Neri wants a problem worked. Four steps, and all four are required. One, the question presented: say what the lawyer is being asked to decide. Two, the rule: name each rule, and note whether its language is mandatory, shall, or discretionary, may. Three, solutions: explain the possible solutions in light of the client's preferences, needs, and understanding. Four, consequences: discipline, civil liability, disqualification, fee forfeiture, court sanctions, and informal consequences."
+      },
+      {
+       "say": "Three words carry the whole course. Must, or must not, is an enforceable duty. May is discretion. Should is what judgment and values counsel. Professor Neri's problems ask all three, then the consequences. So every time you hear a rule, ask yourself: is that a must or a may?"
+      },
+      {
+       "say": "Now the issue-spotting checklist. Fifteen questions, in order, on every fact pattern. You do not need to memorize the list word for word, but you should hear it once now, and we will come back to it on Day 5."
+      },
+      {
+       "say": "One, which rules apply, and is the lawyer admitted there? That is Rules 5.5 and 8.5. Two, is there a client, and what kind: current, former, prospective, organizational, government, or none? Three, what is the scope? Care and candor stop at scope. Loyalty and confidentiality do not. Four, competence, diligence, and care. Five, confidentiality: is the information covered, is there an exception, is the disclosure the minimum necessary, and is there privilege or work product? Six, candor, to the client, the tribunal, and others. Seven, authority: objectives belong to the client, means to the lawyer."
+      },
+      {
+       "say": "Eight, money: fee form and limits, fee sharing, and trust accounting. Nine, conflicts: personal interest, concurrent client, former or prospective client, imputed, consentable, and consent in the right form. Ten, a government lawyer or prosecutor, and the revolving door. Eleven, litigation conduct. Twelve, who in the firm is responsible. Thirteen, dealing with non-clients, threats, solicitation, and ads. Fourteen, decline or withdraw. Fifteen, human factors: authority, conformity, diffusion, dissonance, fading. And when you mess up, fess up."
+      },
+      {
+       "say": "Day 1 covers Part One, regulating lawyers, and Part Two, forming, defining, and ending the relationship. Let's begin."
+      },
+      {
+       "ask": "What are Professor Neri's four steps for working a problem?",
+       "answer": "Question presented, rule, solutions, and consequences. And for the rule, note whether it says shall or may.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e02",
+     "title": "Sources of law and how the Model Rules are organized",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. Who regulates lawyers, what is binding and what is merely persuasive, how the Model Rules came to be, how they are organized, and one key sentence from the Scope section."
+      },
+      {
+       "say": "States regulate lawyers, usually through the state's highest court. That is the point of Leis versus Flynt. The ABA Model Rules bind no one on their own. Every state adopted a version, none verbatim, and a state's adopted rule, as its high court reads it, controls discipline in that state. The MPRE, and your exam, test the ABA text."
+      },
+      {
+       "say": "Binding versus persuasive. ABA ethics opinions, state and local bar opinions, like those from New York City or Los Angeles, and the Restatement Third of the Law Governing Lawyers are persuasive only. If a question asks for binding authority in New Jersey, only a New Jersey court decision counts. An ABA Formal Opinion, for example Opinion 492, does not."
+      },
+      {
+       "say": "Here is a classic slide question, the Atkinson question. Can a lawyer be disciplined for violating a Model Rule as such? No. Discipline rests on the state's version of the rule. The Model Rule itself is just a model."
+      },
+      {
+       "say": "Other regimes have their own ethics rules: federal and state judges, law clerks and court staff, bankruptcy lawyers, securities lawyers, and government lawyers."
+      },
+      {
+       "say": "A quick history, because it shows up in multiple choice. The first state code was Alabama's, in 1887. The 1908 ABA Canons were 32 aspirational precepts. The 1969 Model Code had three layers: Canons, Ethical Considerations, which used should, and Disciplinary Rules. Only the Disciplinary Rules were enforceable. Then came the 1983 Model Rules, after Watergate. Rules plus Comments, and every Rule is enforceable."
+      },
+      {
+       "say": "Now the most important sentence in this episode. The Rules govern discipline only. Civil liability, sanctions, and disqualification come from other law, though the Rules inform it. Paragraph 20 of the Preamble and Scope says a violation should not itself give rise to a cause of action against a lawyer, nor create any presumption that a legal duty has been breached, and does not necessarily warrant disqualification. The Rules are relevant evidence of the standard of care. But there is no negligence per se."
+      },
+      {
+       "say": "How are the Rules organized? Learn the series by number. The 1 series, 1.0 through 1.18, is the client relationship: definitions in 1.0, then competence, diligence, communication, fees, confidentiality, conflicts, special clients, client property, declining and withdrawing, selling a practice, and prospective clients. The 2 series is the lawyer as counselor: advisor in 2.1, evaluations for third parties in 2.3, third-party neutral in 2.4."
+      },
+      {
+       "say": "The 3 series is the advocate: meritorious claims, expediting litigation, candor to the tribunal, fairness to opponents, impartiality and decorum, trial publicity, lawyer as witness, prosecutors, and nonadjudicative proceedings. The 4 series is non-clients: truthfulness in 4.1, represented persons in 4.2, unrepresented persons in 4.3, respect for others' rights in 4.4."
+      },
+      {
+       "say": "The 5 series is firms: managers and supervisors, subordinates, nonlawyer assistants, professional independence, unauthorized practice, restrictions on practice, and law-related services. The 6 series is public service. The 7 series is advertising, solicitation, and political contributions to get work. The 8 series is integrity: bar admission in 8.1, statements about judges in 8.2, reporting misconduct in 8.3, the misconduct catch-all in 8.4, and discipline and choice of law in 8.5."
+      },
+      {
+       "say": "Three tensions are built into the Rules, from the slides. They are written mainly for litigators, not deal lawyers. Informed consent is hard to get when you also have to protect confidences, or when the client is not sophisticated. And the advocate's role pulls against the officer-of-the-court role."
+      },
+      {
+       "say": "And from Chapter 2, lawyers work in private firms of every size, in-house legal departments, government offices, legal aid and public defender offices, and nonprofits. The setting changes who the client is and who supervises you."
+      },
+      {
+       "ask": "A question asks for binding authority on a lawyer's duty in New Jersey. The choices are an ABA Formal Opinion, the Restatement, a New York City bar opinion, and a New Jersey Supreme Court decision. Which is binding?",
+       "answer": "Only the New Jersey court decision. ABA opinions, bar opinions, and the Restatement are persuasive only.",
+       "pause": 8
+      },
+      {
+       "ask": "A client sues her lawyer and argues that his violation of a Model Rule proves negligence as a matter of law. Is she right?",
+       "answer": "No. Under Scope paragraph 20, a violation does not itself create a cause of action or a presumption of breach. The Rules are evidence of the standard of care, but there is no negligence per se.",
+       "pause": 10
+      },
+      {
+       "say": "The trap: confusing discipline with liability. A rule violation means discipline. Liability, sanctions, and disqualification come from other law."
+      },
+      {
+       "say": "Recap. States regulate lawyers through their high courts. Model Rules bind only as a state adopts them. Ethics opinions and the Restatement are persuasive. Every Rule is enforceable, but the Rules govern discipline only, with no negligence per se."
+      },
+      {
+       "ask": "Which earlier code had Disciplinary Rules as its only enforceable layer?",
+       "answer": "The 1969 Model Code.",
+       "pause": 8
+      },
+      {
+       "ask": "Which series of the Model Rules covers duties to non-clients?",
+       "answer": "The 4 series: truthfulness, represented persons, unrepresented persons, and respect for others' rights.",
+       "pause": 8
+      },
+      {
+       "ask": "Does a Rule violation necessarily warrant disqualification?",
+       "answer": "No. Scope paragraph 20 says it does not necessarily warrant disqualification.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e03",
+     "title": "Bar admission and Rule 8.1",
+     "minutes": 6,
+     "segments": [
+      {
+       "say": "Roadmap. The two requirements for admission, what the character inquiry may ask, Bradwell, the Problem 3A-2 quick takes, and Rule 8.1, the duty of candor in bar and disciplinary matters."
+      },
+      {
+       "say": "Two requirements everywhere, and both are required. One, minimum competence, meaning the bar exam and the MPRE. Two, character and fitness. And the applicant bears the burden."
+      },
+      {
+       "say": "The inquiries must rationally relate to fitness to practice. That is Schware. Lawful political membership is not a ground for denial. Neither is responsibly seeking counseling. Rehabilitation counts: bank robbers have been admitted. But Stephen Glass, the journalist who fabricated stories, was not."
+      },
+      {
+       "say": "Candor matters most. Bars compare your law school application with your bar application. Nondisclosure usually hurts more than the underlying fact. So fix omissions now."
+      },
+      {
+       "say": "The case. Bradwell versus The State, 1873, an assigned main case. Myra Bradwell was a qualified applicant who edited a leading legal newspaper. Illinois refused to license her because she was a married woman. The Supreme Court upheld the refusal. Admission to a state's bar is not a privilege or immunity of national citizenship under the Fourteenth Amendment, so each state controls it. Justice Bradley's concurrence said the paramount destiny and mission of woman are to fulfil the noble and benign offices of wife and mother."
+      },
+      {
+       "say": "Why it matters. States control admission, and the profession's gatekeeping has long carried bias. Bradwell is the historical counterpoint to the modern rule that admission criteria must rationally relate to fitness, and to Rule 8.4(g), the anti-harassment and anti-discrimination rule, which we reach on Day 5."
+      },
+      {
+       "say": "Problem 3A-2, quick takes. The test is honesty, trustworthiness, and fitness, and candor about an item usually matters more than the item. A student-loan default, or fourteen bounced checks: not automatic bars, but they can show financial irresponsibility or dishonesty, and bars ask whether the applicant dealt with them responsibly. A recovering alcoholic in therapy on antidepressants: responsibly seeking treatment is not a ground for denial; the question is current fitness, and you disclose honestly when asked. Eight speeding tickets: minor, though a pattern can suggest disregard for law. Plagiarism: dishonesty, so it weighs heavily, and the more recent and mature the applicant, the worse. Middle school is less bad than law school. A robbery conviction: serious, but rehabilitation can overcome it."
+      },
+      {
+       "say": "Now Rule 8.1. It applies to an applicant for admission, and to a lawyer in connection with a bar application or a disciplinary matter. Two prohibitions. The person shall not, paragraph (a), knowingly make a false statement of material fact. Or paragraph (b), fail to disclose a fact necessary to correct a misapprehension known to have arisen, or knowingly fail to respond to a lawful demand for information from an admissions or disciplinary authority."
+      },
+      {
+       "say": "The limit. Rule 8.1 does not require disclosing information protected by Rule 1.6. So you may decline to reveal a client's confidence. You may not lie."
+      },
+      {
+       "say": "The Lexa question, from the slides. Years ago Lexa lied to the press. Now the bar application asks, have you ever made a public false statement? She answers no. What is the most likely ground for denial? The knowing false statement of material fact on the application, Rule 8.1(a). Not the original lie. The cover-up is worse than the act."
+      },
+      {
+       "ask": "A lawyer receives a bar grievance he considers frivolous. He ignores the letter. The grievance is later dismissed. Did he violate a rule?",
+       "answer": "Yes. Knowingly failing to respond to a lawful demand from a disciplinary authority violates Rule 8.1(b), even though the grievance was dismissed.",
+       "pause": 10
+      },
+      {
+       "ask": "In a disciplinary matter against another lawyer, the bar asks you about something your own client told you in confidence. Must you answer?",
+       "answer": "No. Rule 8.1 does not require disclosing information protected by Rule 1.6. You may decline. You may not lie.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Ignoring the grievance letter is itself a violation. And the Fifth Amendment must be asserted properly; it does not license silence."
+      },
+      {
+       "say": "Recap. Admission needs competence and character, with the burden on the applicant. Inquiries must rationally relate to fitness. Rule 8.1 forbids knowing false statements of material fact and failing to correct known misapprehensions or respond to lawful demands, but never requires revealing 1.6 information."
+      },
+      {
+       "ask": "What are the two requirements for admission?",
+       "answer": "Minimum competence, through the bar exam and MPRE, and character and fitness, with the burden on the applicant.",
+       "pause": 8
+      },
+      {
+       "ask": "What did Bradwell hold?",
+       "answer": "Bar admission is not a privilege or immunity of national citizenship, so states control it. Illinois could refuse to license a married woman.",
+       "pause": 8
+      },
+      {
+       "ask": "Is responsibly seeking mental health treatment a ground for denial?",
+       "answer": "No. The question is current fitness.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e04",
+     "title": "Discipline and Rule 8.4 misconduct",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. The seven paragraphs of Rule 8.4, off-duty conduct, the disciplinary process, what sanctions are for, and Rule 8.2(a) on statements about judges."
+      },
+      {
+       "say": "Rule 8.4 is the misconduct catch-all. Seven paragraphs, and any one suffices. It is professional misconduct to do any of the following."
+      },
+      {
+       "say": "Paragraph (a): violate or attempt to violate the Rules, knowingly assist or induce another to do so, or do so through the acts of another. The classic example: sending an investigator to contact a represented party you could not contact yourself under Rule 4.2. You cannot do through an agent what you cannot do yourself."
+      },
+      {
+       "say": "Paragraph (b): commit a criminal act that reflects adversely on honesty, trustworthiness, or fitness as a lawyer. No charge or conviction is needed."
+      },
+      {
+       "say": "Paragraph (c): conduct involving dishonesty, fraud, deceit, or misrepresentation."
+      },
+      {
+       "say": "Paragraph (d): conduct prejudicial to the administration of justice."
+      },
+      {
+       "say": "Paragraph (e): state or imply an ability to influence improperly a government agency or official, or to achieve results by means that violate the Rules or other law. The statement alone is enough. You do not have to actually try."
+      },
+      {
+       "say": "Paragraph (f): knowingly assist a judge or judicial officer in conduct that violates the rules of judicial conduct."
+      },
+      {
+       "say": "Paragraph (g): harassment or discrimination in conduct related to the practice of law. Note from the slides: Delaware's Rule 8.4 has no paragraph (g)."
+      },
+      {
+       "say": "Let me count them again quickly. Violate or assist or act through another. Criminal act reflecting on fitness. Dishonesty. Prejudice to justice. Implying improper influence. Assisting a judge's violation. Harassment or discrimination."
+      },
+      {
+       "say": "Off-duty conduct counts: tax evasion, academic cheating. But 8.4(b) does not reach every crime. Comment 2 says a petty civil-disobedience trespass usually does not reflect on fitness. The crime must connect to honesty, trustworthiness, or fitness."
+      },
+      {
+       "say": "The process, in order. The complaint is privileged, so there is no defamation suit against the complainant. Then screening. Then investigation, where cooperation is required, subject to the Fifth Amendment. Then probable cause. Then a hearing with due process. The due-process cases are In re Ruffalo and Spevack versus Klein."
+      },
+      {
+       "say": "Sanctions protect the public. They are not punishment. They run from private or public reprimand, to suspension, to disbarment, and a reprimand still follows you. Compensation for the victim comes from civil remedies, not discipline."
+      },
+      {
+       "say": "Rule 8.2(a). Do not make a statement you know is false, or made with reckless disregard for its truth, about the qualifications or integrity of a judge, adjudicatory officer, public legal officer, or a candidate for judicial or legal office. We return to it with advocacy on Day 4."
+      },
+      {
+       "ask": "A lawyer tells a prospective client, I went to law school with the zoning commissioner, and I can get this variance approved no matter what the merits are. He never contacts the commissioner. Misconduct?",
+       "answer": "Yes, under Rule 8.4(e). Stating or implying an ability to influence an official improperly is misconduct by itself. No attempt is needed.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer is arrested at a peaceful protest for a minor trespass. Another lawyer is caught underreporting income on her tax returns, but is never charged. Who has likely violated 8.4(b)?",
+       "answer": "The tax evader. 8.4(b) needs no charge or conviction, and tax fraud reflects on honesty. A petty civil-disobedience trespass usually does not reflect on fitness, per Comment 2.",
+       "pause": 10
+      },
+      {
+       "ask": "A lawyer cannot ethically call a represented opposing party, so she has her paralegal call instead. Which paragraph of 8.4?",
+       "answer": "8.4(a): violating the Rules through the acts of another. It also violates Rule 4.2.",
+       "pause": 8
+      },
+      {
+       "say": "Traps. Discipline needs no conviction. Implying influence is enough without acting on it. And sanctions are about protecting the public, not compensating victims."
+      },
+      {
+       "say": "Recap. 8.4 has seven alternative paragraphs: (a) violating or assisting or acting through another, (b) crimes reflecting on fitness, (c) dishonesty, (d) prejudice to justice, (e) implying improper influence, (f) assisting a judge's violation, (g) harassment or discrimination."
+      },
+      {
+       "ask": "Is a complainant who files a bar grievance exposed to a defamation suit?",
+       "answer": "No. The complaint is privileged.",
+       "pause": 8
+      },
+      {
+       "ask": "What is the purpose of disciplinary sanctions?",
+       "answer": "To protect the public, not to punish. Compensation comes from civil remedies.",
+       "pause": 8
+      },
+      {
+       "ask": "What mental state does Rule 8.2(a) require for false statements about a judge?",
+       "answer": "Knowledge of falsity, or reckless disregard for the truth.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e05",
+     "title": "Where you may practice: Rules 5.5 and 8.5",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. There is no national license. We will cover unauthorized practice, the four temporary-practice safe harbors in 5.5(c), federal court admission, the McDade Amendment, and Rule 8.5 on disciplinary authority and choice of law."
+      },
+      {
+       "say": "Practicing where you are not admitted is unauthorized practice of law, a misdemeanor in most states. A firm office in State B does not license a lawyer admitted only in State A. Colleagues' licenses do not count."
+      },
+      {
+       "say": "Problem 3A-1, from the slides. A Pennsylvania-only lawyer cannot practice in the firm's Camden, New Jersey office, even though it is five minutes away. And the Borris question: an out-of-state lawyer who advises clients from a Hawaii office, files papers in Hawaii courts, and shares the firm name is engaged in unauthorized practice, even if he says he only handles his home state's law."
+      },
+      {
+       "say": "Rule 5.5, in four parts. Paragraph (a): no practicing in a jurisdiction in violation of its regulation of the profession, and no assisting another to do so. Paragraph (b): a lawyer not admitted may not establish an office or other systematic and continuous presence there for practicing law, and may not hold out as admitted there."
+      },
+      {
+       "say": "Paragraph (c) is the safe harbor. A lawyer admitted and in good standing elsewhere may provide legal services on a temporary basis if the work fits one of four categories. Any one suffices. One: it is undertaken in association with a local lawyer who actively participates. Two: it is in or reasonably related to a pending or potential proceeding before a tribunal where the lawyer is, or reasonably expects to be, authorized to appear, for example by pro hac vice. Three: it is in or reasonably related to a pending or potential arbitration, mediation, or other ADR proceeding, arising out of or reasonably related to the lawyer's home practice, and not requiring pro hac vice admission. Four: it otherwise arises out of or is reasonably related to the lawyer's home practice."
+      },
+      {
+       "say": "Paragraph (d) adds two more: in-house lawyers serving their employer, and services authorized by federal or other law."
+      },
+      {
+       "say": "Notice the key contrast. Temporary is allowed under (c). Systematic and continuous presence is forbidden under (b). An office is the clearest example of systematic and continuous presence."
+      },
+      {
+       "say": "Federal courts admit separately. Each federal court sets its own bar. Most district courts admit anyone admitted in the state where the court sits. Some districts, and all the federal courts of appeals, admit lawyers admitted in any state. After removal from state court, a state-admitted lawyer needs admission to that district or pro hac vice, which means for this occasion only."
+      },
+      {
+       "say": "Problem 3A-3. Frank and his boss kept serving discovery after the case was removed to federal court. They need federal admission or pro hac vice, under 5.5(a), with 5.5(c)(1) and (c)(2) as the possible routes. And the Adam question: a lawyer not admitted to the district court cannot make even a routine coverage appearance, and his partner's admission does not help him."
+      },
+      {
+       "say": "The McDade Amendment, 28 U.S.C. section 530B. Federal government lawyers follow the ethics rules of the states where they practice. Federal employment does not exempt anyone from a court's contempt power."
+      },
+      {
+       "say": "Now Rule 8.5. Paragraph (a), authority. You are subject to discipline where you are admitted, wherever the conduct occurs, and also where you provide or offer services. Both states can discipline you, and most states impose reciprocal discipline."
+      },
+      {
+       "say": "Paragraph (b), choice of law. Two branches. One: for conduct in connection with a matter pending before a tribunal, apply the rules of the jurisdiction where the tribunal sits, unless the tribunal's rules say otherwise. Two: for any other conduct, apply the rules of the jurisdiction where the conduct occurred, or, if its predominant effect is elsewhere, that other jurisdiction's rules. And the safe harbor: no discipline if your conduct conforms to the rules of a jurisdiction where you reasonably believe the predominant effect will occur."
+      },
+      {
+       "ask": "A Delaware lawyer is asked by a long-time Delaware client to spend two weeks in Maryland helping negotiate a contract tied to the client's Delaware business. No Maryland lawyer is involved. Is that permitted?",
+       "answer": "Yes, likely under 5.5(c)(4): temporary work that arises out of or is reasonably related to the lawyer's home practice. What she may not do is open a Maryland office or hold herself out as admitted there.",
+       "pause": 12
+      },
+      {
+       "ask": "A New York lawyer, admitted only in New York, is litigating a case pending in a Pennsylvania state court under pro hac vice admission. Which state's conduct rules govern his trial conduct?",
+       "answer": "Pennsylvania's. Under 8.5(b)(1), for a matter pending before a tribunal, apply the rules of the jurisdiction where the tribunal sits, unless its rules say otherwise. And New York can still discipline him, because he is admitted there.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. A colleague's license never covers you. An office is systematic and continuous presence, even if you only practice home-state law. And being admitted in the state does not mean you are admitted to the federal court sitting there."
+      },
+      {
+       "say": "Recap. 5.5(a) bars unauthorized practice; 5.5(b) bars an office or systematic presence and holding out; 5.5(c) allows temporary work in four categories: with local counsel, tied to a tribunal, tied to ADR, or tied to home practice; 5.5(d) covers in-house and federally authorized work. 8.5(a): discipline where admitted and where you practice. 8.5(b): the tribunal's rules for pending matters, otherwise where conduct occurred or its predominant effect, with a reasonable-belief safe harbor."
+      },
+      {
+       "ask": "Name the four temporary-practice categories in 5.5(c).",
+       "answer": "Association with an actively participating local lawyer; work related to a tribunal proceeding where you are or expect to be authorized; work related to ADR arising from your home practice that does not need pro hac vice; and work otherwise reasonably related to your home practice.",
+       "pause": 8
+      },
+      {
+       "ask": "What does the McDade Amendment require?",
+       "answer": "Federal government lawyers follow the ethics rules of the states where they practice.",
+       "pause": 8
+      },
+      {
+       "ask": "Under 8.5(a), where can a lawyer be disciplined?",
+       "answer": "Where she is admitted, wherever the conduct occurs, and where she provides or offers services. Both can discipline her.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e06",
+     "title": "Consequences: civil liability, sanctions, and other law",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Malpractice is just a collective term. We will name each specific claim, its elements, court sanctions, the Goodyear case, Hawkins and the hairy hand, and the taxonomy of professional woes."
+      },
+      {
+       "say": "Always name the specific duty breached and the remedy. Here are the claims."
+      },
+      {
+       "say": "Professional negligence. Duty, breach, actual and proximate cause, and economic damages. Emotional distress almost never. A blown deadline means a case within a case: prove what you would have recovered and collected. A few states use substantial-factor causation."
+      },
+      {
+       "say": "Breach of fiduciary duty. That means loyalty, confidentiality, or candor. No negligence or loss is required, for example a secret finder's fee from the other side. Remedies include disgorgement, and punitive damages if intentional. The ADA Anna question: an assistant district attorney who secretly fed the defense her research to throw a case her office had assigned her breached her duty of loyalty to her client, however just her motive. She should have withdrawn or quit."
+      },
+      {
+       "say": "Breach of contract. The engagement implies all of a lawyer's duties, but damages and limitations periods differ. An express guarantee can create liability without negligence, which is Hawkins versus McGee. And the Mr. Kent question: disclosing a client's invention despite a confidentiality clause supports breach of contract as well as fiduciary breach."
+      },
+      {
+       "say": "Abuse of process. An ulterior purpose, plus an improper act in using process, for example an unauthorized lis pendens filed to pressure a debtor."
+      },
+      {
+       "say": "Malicious prosecution. Six elements, all required. One, a civil or criminal proceeding was begun, or in some states continued, against the plaintiff. Two, by or abetted by the defendant. Three, without probable cause. Four, primarily for a malicious purpose. Five, terminated on the merits in the plaintiff's favor. Six, causing damages. The Max and Chip question: a spiteful frivolous suit that is summarily dismissed supports malicious prosecution, not fiduciary or contract claims, because Chip was never the lawyer's client."
+      },
+      {
+       "say": "Disqualification. A court order to get out or stay out. It is prophylactic: the opportunity and temptation to act adversely is enough, with no harm required. A mother and daughter on opposite sides of one case, both staying in despite an admitted conflict: the likely remedy is disqualification of one or both under 1.7(a)(2), not recusal or discipline."
+      },
+      {
+       "say": "Fee consequences. Setoff, reduction to actual value, or, for a serious fiduciary breach, forfeiture plus disgorgement of fees already paid. Typical fights: inefficiency, overstaffing, unnecessary tasks, or tasks the client said not to do."
+      },
+      {
+       "say": "Restitution. An improperly obtained benefit can be disgorged as unjust enrichment even without provable loss. Emotional distress becomes recoverable in some states if the breach was intentional. Punitive damages almost always require intentional wrongdoing, or in a few states, reckless."
+      },
+      {
+       "say": "Court sanctions. Federal Rule 11(b) and (c): your signature certifies a reasonable inquiry. Sanctions can be monetary or nonmonetary, on a party's motion or the court's own, and the firm is jointly responsible absent exceptional circumstances. Rule 11 reaches pro se parties too, per the Huey question. Rules 26(g) and 37 cover discovery certification and misconduct, from compensatory up to terminating sanctions. The Lee question: withholding a responsive, non-privileged memo brings discovery sanctions and violates Model Rule 3.4(a). It is not malpractice owed to the opponent. Section 1927 of Title 28 imposes excess costs for unreasonably and vexatiously multiplying proceedings."
+      },
+      {
+       "say": "Inherent power. A civil fee sanction must be compensatory, limited to fees the misconduct caused. Punitive contempt requires criminal procedure. And Criminal Rule 42(b) allows summary contempt in the court's presence."
+      },
+      {
+       "say": "The case: Goodyear Tire and Rubber versus Haeger, 2017. In a tire-failure suit, Goodyear and its lawyers withheld internal test results for years. After the case settled, the plaintiffs learned of it and sought sanctions. The Supreme Court held that an inherent-power sanction to pay the other side's fees must be compensatory, covering only the fees the misconduct caused, a but-for test. Anything more is punitive and requires criminal-type procedure. Compensation through civil process. Punishment through contempt."
+      },
+      {
+       "say": "Hawkins versus McGee, 1929, the hairy hand. A doctor promised a hundred percent perfect hand, and the skin graft left the patient's hand hairy. An express promise of a result is enforceable in contract without proof of negligence. The lesson for lawyers: never promise results. Silence in the face of unrealistic expectations may be read as a guarantee, so correct them and use a no-guarantee clause."
+      },
+      {
+       "say": "Other law applies to you too, and a license narrows your freedom. Some states require you to report sanctions to the bar. And informal consequences, lost clients, lost partnership, lost reputation, can be worst of all. Many referrals come from former opposing counsel."
+      },
+      {
+       "say": "Now the taxonomy of professional woes. Who comes after you, what they must show, and the remedy. Criminal: a prosecutor, often urged on by a victim; a violation of criminal law; fines and imprisonment. Discipline: the bar prosecutor; a violation of a Rule of Professional Conduct; warning, reproval, suspension, or disbarment, sometimes restitution. Tort or contract: a client or prospective client, sometimes non-clients owed duties; duty, breach, causation, and pecuniary harm, or abuse of process or malicious prosecution; damages, with punitive damages for intentional wrongs."
+      },
+      {
+       "say": "Disqualification: usually a client or former client; a loyalty or confidentiality breach that creates a conflict; no injury needed; an order out of the engagement. Fee dispute or disgorgement: the client or a third-party payor; a breach that offsets or devalues fees; reduction, forfeiture, or return of fees. Sanctions or contempt: the adversary, or the court on its own; Rule 11, 26(g), 37, section 1927, a court order, or inherent power; money, fines, and jail for criminal contempt. Informal: clients, courts, the public; whatever offends them; lost business and reputation."
+      },
+      {
+       "ask": "A lawyer takes a secret finder's fee from the other side of a deal. The client's deal closes on good terms and the client loses nothing. Does the client have a claim?",
+       "answer": "Yes, breach of fiduciary duty, the duty of loyalty. No negligence or loss is required, and the remedy includes disgorgement of the secret fee.",
+       "pause": 12
+      },
+      {
+       "ask": "A court finds that a lawyer hid documents and orders him to pay the opponent one million dollars in fees, though only three hundred thousand dollars of fees resulted from the misconduct, using ordinary civil procedure. Problem?",
+       "answer": "Yes. Under Goodyear versus Haeger, an inherent-power fee sanction must be compensatory, limited to fees the misconduct caused. The excess is punitive and requires criminal-type procedure.",
+       "pause": 12
+      },
+      {
+       "ask": "Opposing counsel withholds a responsive, non-privileged memo. The opponent wants to sue him for malpractice. Right claim?",
+       "answer": "No. Malpractice runs to clients. The remedy is discovery sanctions under Rules 26(g) and 37, and it violates Model Rule 3.4(a).",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Malpractice is not a claim; name the duty. Fiduciary breach needs no loss. Disqualification needs no harm. Malicious prosecution is the non-client's claim for a spiteful baseless suit."
+      },
+      {
+       "say": "Recap. Negligence needs causation and economic loss; fiduciary breach needs neither negligence nor loss; contract can rest on a guarantee. Sanctions come from Rule 11, discovery rules, section 1927, and inherent power, which must be compensatory unless criminal procedure is used."
+      },
+      {
+       "ask": "Name the six elements of malicious prosecution.",
+       "answer": "A proceeding begun against the plaintiff, by or abetted by the defendant, without probable cause, primarily for a malicious purpose, terminated on the merits in the plaintiff's favor, causing damages.",
+       "pause": 8
+      },
+      {
+       "ask": "What does a client have to prove when the lawyer blew the limitations period?",
+       "answer": "A case within a case: that the claim would have won, for how much, and that the judgment would have been collectible.",
+       "pause": 8
+      },
+      {
+       "ask": "What does disqualification require in terms of harm?",
+       "answer": "No harm. It is prophylactic; the opportunity and temptation to act adversely is enough.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e07",
+     "title": "Why smart people do stupid things, supervision, reporting, and confessing",
+     "minutes": 11,
+     "segments": [
+      {
+       "say": "Roadmap. Five psychological pressures from Chapter 4, the Kodak-Berkey scandal, a first look at the responsibility rules 5.1, 5.2, and 5.3, the reporting duty in 8.3, the Ted Toughtimes problem, how to confess a mistake, and getting help."
+      },
+      {
+       "say": "Good people do bad things, and orders do not excuse them. Five pressures. One, diffusion of responsibility: everyone assumes someone else will speak up, so no one does. Colleagues rounding up hours. Associates assuming the others already reported a partner's racist comments. Two, conformity, from Asch's line experiments: subjects doubted their own eyes to match the group, but one dissenter breaks the spell. Everyone fudges billing. Three, authority, from Milgram: 63 percent gave the maximum shock when told the experiment requires that you continue, though all predicted they would refuse. That's just how it's done."
+      },
+      {
+       "say": "Four, cognitive dissonance: a good person who did something bad adopts a good-sounding justification, and the next time comes easier. Perkins, Gellene, padding that starts as borrowing, or I do excellent work, used to justify an affair with a client. Five, ethical fading or framing: recasting a choice so the ethics drop out. The Nevada lawyer who brought a gun to a deposition forgot he was a lawyer, and got a six-month suspension. Don't you want to win, used to justify coaching a witness to bend the truth."
+      },
+      {
+       "say": "Zeal is no excuse. Rule 1.3 Comment 1 says diligence does not require offensive tactics and does not preclude courtesy and respect. Weasel words, borrowing, technically, mean you are too close to the line. Rule 4.4(a) forbids means with no substantial purpose other than to embarrass, delay, or burden. And courts are impatient with incivility. Lasalle versus Vogel, California Court of Appeal 2019, spoke of an insidious decline in the standards of the profession."
+      },
+      {
+       "say": "Billing is where the biases bite. Record time contemporaneously, in tenths of an hour. A mentor who says firm practice is to round ten hours up to fifteen is asking you to misrepresent your time. You are personally responsible under 5.2(a), 8.4(c), and 1.5(a), whoever suggests it."
+      },
+      {
+       "say": "The case: Berkey Photo versus Eastman Kodak, Southern District of New York, 1977. Kodak's lead partner, Mahlon Perkins, withheld an expert's documents and then swore they had been destroyed. Associate Joseph Fortenberry knew the documents existed. He whispered a warning and did nothing further. Perkins resigned, served a month in prison, and lost his license."
+      },
+      {
+       "say": "The lessons. Rule 5.2(a): orders do not excuse you. Fortenberry gets no 5.2(b) safe harbor, because withholding documents and a perjured affidavit is not an arguable question that Perkins resolved. A note left on a chair is not enough. Problem 4A-1 says: raise it directly, then go up the chain, to another partner, the firm's ethics partner, or general counsel, until the documents are produced and the false statements corrected under 3.3 and 3.4(a)."
+      },
+      {
+       "say": "The responsibility rules, first look. 5.2(a): a lawyer is bound by the Rules even when acting at another's direction. 5.2(b): the narrow safe harbor covers only a subordinate acting on a supervisor's reasonable resolution of an arguable question of professional duty. Two words to remember: reasonable, and arguable. It never covers a clear violation such as destroying evidence or lying."
+      },
+      {
+       "say": "5.1 and 5.3: partners, managers, and supervisors must make reasonable efforts to ensure compliance by lawyers and nonlawyers, and they answer for violations they order, ratify, or fail to mitigate. 1.16(a)(2): a lawyer whose physical or mental condition materially impairs the representation must decline or withdraw. And civilly, you are personally liable for your own torts, even at a supervisor's direction. Supervisors are liable for torts they directed or reasonably could have prevented. The firm is vicariously liable."
+      },
+      {
+       "say": "Rule 8.3, the duty to report. Paragraph (a): a lawyer who knows that another lawyer has committed a violation of the Rules that raises a substantial question as to that lawyer's honesty, trustworthiness, or fitness as a lawyer shall inform the appropriate professional authority. Three elements: knowledge, a violation, and a substantial question about honesty, trustworthiness, or fitness. Paragraph (b): the same duty for a judge's violation of the judicial conduct rules that raises a substantial question about fitness for office. Paragraph (c): the duty does not require disclosing information protected by 1.6, or information gained in an approved lawyers assistance program."
+      },
+      {
+       "say": "Applications. Only about half the states adopted 8.3, but the MPRE tests it. Theft and forgery qualify. A one-time cured calendaring slip does not. Telling the wrongdoer's supervisor is not the appropriate professional authority. Knows includes willful blindness. And if your client tells you her prior lawyer stole from her, that is 1.6 information, so there is no duty to report without her consent."
+      },
+      {
+       "say": "Problem 4D-1, Ted Toughtimes. Partner Ted is distracted, irritable, and returns from lunch unsteady and smelling of liquor. Partner Sarah gives him a new matter to help his hours and assigns associate Maya. Ted must decline if his condition materially impairs him, under 1.16(a)(2), and he risks 1.1 and 1.3 violations. Sarah, as partner and assigning lawyer, risks 5.1(a) and (b) for no reasonable measures or supervision, and 5.1(c)(2) if she knows of a violation in time to fix it and does not. She should reassign or closely supervise the matter and steer Ted to help, a lawyers assistance program or an employee assistance program. Maya is bound by 5.2(a): she cannot let the client's matter suffer because Ted is the lead. She should raise concerns with Sarah or the ethics partner. 8.3 applies only if she knows of a violation raising a substantial question about fitness, and assistance-program information is exempt."
+      },
+      {
+       "say": "When you mess up, fess up. Error festers in darkness, and concealment almost always turns out worse. Confess in this order, all required. One, your supervisor. Two, the firm's ethics partner or committee. Three, the malpractice insurer, because many policies require notice before you admit error to the client. Four, outside counsel retained for advice, so the conversation is privileged. Then the client must be told of any material error, under 1.4."
+      },
+      {
+       "say": "Where to go for help: your supervising lawyer, unless she is the one leading you astray; the firm's ethics czar; the bar's or your insurer's ethics hotline; or your own lawyer. Rule 1.6(b)(4) lets you reveal what is reasonably necessary to get advice about your own compliance. Why confess early? The mistake may have no consequences, may not be a mistake, or can be fixed. Clients trust a lawyer who comes clean, explains the fix, and does not charge for fixing it."
+      },
+      {
+       "say": "Stress and impairment. More stress means less sleep, and less sleep means fuzzy thinking and worse ethical judgment. Warning signs of depression and anxiety: changes in sleep or eating, trouble making decisions, withdrawal. Flashbacks of a traumatic event point to PTSD, so on the slides it is the not-a-common-sign answer for depression and anxiety. Get help through student services, employee assistance programs, and lawyers assistance programs. Program help is confidential and generally is not reported to the disciplinary authority while the lawyer complies with treatment, per the Linda question. And responsibly seeking treatment is not a ground for denying admission."
+      },
+      {
+       "ask": "A senior partner tells an associate to omit a clearly responsive document from a production because it hurts the client. The associate complies. Defense?",
+       "answer": "None. Rule 5.2(a) binds her even when acting at another's direction. The 5.2(b) safe harbor covers only a supervisor's reasonable resolution of an arguable question, and withholding responsive documents is a clear violation.",
+       "pause": 12
+      },
+      {
+       "ask": "A partner and associate disagree whether a former-client matter is substantially related. The partner reasonably concludes it is not, and the associate proceeds. A court later disagrees. Is the associate subject to discipline?",
+       "answer": "No. This is the 5.2(b) safe harbor: a subordinate acting on a supervisor's reasonable resolution of an arguable question of professional duty.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer learns, through her work in an approved lawyers assistance program, that another lawyer has been taking client funds. Must she report?",
+       "answer": "No. 8.3(c) exempts information gained in an approved lawyers assistance program, as well as 1.6 information.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Telling the wrongdoer's boss does not satisfy 8.3. A cured calendaring slip does not trigger it. A note on a chair is not enough. And orders never excuse a clear violation."
+      },
+      {
+       "say": "Recap. Five pressures: diffusion, conformity, authority, dissonance, fading. 5.2(a) binds subordinates; 5.2(b) protects only reasonable resolutions of arguable questions. 8.3 requires reporting known violations that raise a substantial question of honesty, trustworthiness, or fitness, to the appropriate authority, excepting 1.6 and assistance-program information. Confess to supervisor, ethics partner, insurer, and outside counsel, then tell the client."
+      },
+      {
+       "ask": "What are the three elements of the 8.3(a) duty to report?",
+       "answer": "You know another lawyer violated the Rules, and the violation raises a substantial question about honesty, trustworthiness, or fitness. Then you must inform the appropriate professional authority.",
+       "pause": 8
+      },
+      {
+       "ask": "In what order do you confess a mistake?",
+       "answer": "Supervisor, firm ethics partner or committee, malpractice insurer, outside counsel for privileged advice. Then tell the client.",
+       "pause": 8
+      },
+      {
+       "ask": "What happened to Mahlon Perkins in the Kodak case?",
+       "answer": "He resigned, served a month in prison, and lost his license.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e08",
+     "title": "Key definitions: Rule 1.0",
+     "minutes": 5,
+     "segments": [
+      {
+       "say": "Roadmap. The defined terms decide most close questions, so learn them exactly. Eleven definitions from Rule 1.0."
+      },
+      {
+       "say": "Knows, or knowingly, 1.0(f). Actual knowledge, which may be inferred from circumstances, including willful blindness. Should have known is not knowledge. Hold onto that: when a rule says knows, constructive knowledge does not trigger it."
+      },
+      {
+       "say": "Reasonably should know, 1.0(j). What a lawyer of reasonable prudence and competence would ascertain. That is the objective, constructive standard."
+      },
+      {
+       "say": "Reasonable belief, 1.0(i). Two parts. The lawyer actually believes it, and the belief is reasonable. Subjective plus objective."
+      },
+      {
+       "say": "Informed consent, 1.0(e). Agreement after the lawyer communicates adequate information and explanation about the material risks of, and reasonably available alternatives to, the proposed course. Comment 7 adds that consent usually requires an affirmative response. Silence is not consent."
+      },
+      {
+       "say": "Confirmed in writing, 1.0(b). Either informed consent given in writing, or a writing the lawyer promptly sends confirming oral consent. If a writing is not feasible at the time, within a reasonable time after. Notice: the client does not have to sign. That is the big contrast with signed by the client, which we will see in 1.5(c), 1.8(a), and 1.8(g)."
+      },
+      {
+       "say": "Writing and signed, 1.0(n). Writing includes email and other electronic records. An electronic signature counts."
+      },
+      {
+       "say": "Firm, 1.0(c). Any law partnership, professional corporation, sole proprietorship, or association, plus lawyers in a legal services organization or a corporate or other legal department."
+      },
+      {
+       "say": "Fraud, 1.0(d). Fraudulent under the applicable substantive or procedural law, and with a purpose to deceive. Not a mere negligent misstatement."
+      },
+      {
+       "say": "Screened, 1.0(k). Timely isolation of a lawyer from any participation in a matter, by procedures reasonably adequate to protect the information. We use it heavily on Day 3."
+      },
+      {
+       "say": "Substantial, 1.0(l). A material matter of clear and weighty importance."
+      },
+      {
+       "say": "Tribunal, 1.0(m). A court, a binding arbitrator, or a legislative body or agency acting in an adjudicative capacity, meaning a neutral official renders a binding legal judgment after evidence or argument. So a mediator is not a tribunal. A binding arbitrator is."
+      },
+      {
+       "ask": "A lawyer emails a client: as we discussed on the phone, you agreed to waive the conflict, and here is a summary of the risks. The client never replies. Is the consent confirmed in writing?",
+       "answer": "Yes, if the oral consent was informed. Confirmed in writing includes a writing the lawyer promptly sends confirming oral consent. The client need not sign. But the oral consent itself must have been an affirmative, informed agreement, not silence.",
+       "pause": 10
+      },
+      {
+       "ask": "A rule applies when the lawyer knows a fact. The lawyer did not actually know, but any careful lawyer would have figured it out. Does the rule apply?",
+       "answer": "No, unless the lawyer was willfully blind. Knows means actual knowledge, which can be inferred from circumstances. Should have known is not knowledge.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Silence is not consent. Confirmed in writing is not signed by the client. Knows is not should have known. And fraud requires a purpose to deceive."
+      },
+      {
+       "say": "Recap. Knows is actual knowledge, inferable, including willful blindness. Reasonable belief is subjective plus objective. Informed consent means explaining material risks and reasonable alternatives. Confirmed in writing can be the lawyer's own prompt confirming letter."
+      },
+      {
+       "ask": "Define informed consent.",
+       "answer": "Agreement after the lawyer communicates adequate information and explanation about the material risks of and reasonably available alternatives to the proposed course of conduct.",
+       "pause": 8
+      },
+      {
+       "ask": "Is a mediator a tribunal under 1.0(m)?",
+       "answer": "No. A tribunal renders a binding legal judgment: a court, a binding arbitrator, or a legislative body or agency acting adjudicatively.",
+       "pause": 8
+      },
+      {
+       "ask": "What two parts make up reasonable belief?",
+       "answer": "The lawyer actually believes it, and the belief is reasonable.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e09",
+     "title": "Competence and diligence: Rules 1.1 and 1.3",
+     "minutes": 9,
+     "segments": [
+      {
+       "say": "Roadmap. Competence under 1.1, its five Comment 1 factors, becoming competent, emergencies, forms, technology and AI with Mata versus Avianca, then diligence under 1.3 and the diligence problems."
+      },
+      {
+       "say": "The frame first. Competence and diligence are disciplinary duties, and no harm is required. Care is the civil duty, and causation of monetary harm is required. Criminal defense adds the Sixth Amendment."
+      },
+      {
+       "say": "Rule 1.1 in its own words: competent representation requires the legal knowledge, skill, thoroughness and preparation reasonably necessary for the representation. Four nouns: knowledge, skill, thoroughness, preparation."
+      },
+      {
+       "say": "You can become competent. Comments 2 and 4: a newly admitted lawyer can be as competent as a practitioner with long experience. You may accept a matter if competence can be achieved by reasonable preparation, or by associating with a lawyer of established competence. Neither client consent nor pro bono status waives the duty."
+      },
+      {
+       "say": "Comment 1 factors, five, weighed together. One, the relative complexity and specialized nature of the matter. Two, the lawyer's general experience. Three, the lawyer's training and experience in the field. Four, the preparation and study the lawyer is able to give. Five, whether it is feasible to refer the matter to, or associate or consult with, a lawyer of established competence. And, in many instances, the required proficiency is that of a general practitioner."
+      },
+      {
+       "say": "Comment 2: analysis of precedent, evaluation of evidence, and drafting are required in every matter, and perhaps the most fundamental legal skill is determining what kind of legal problems a situation involves. Comment 5, three parts, all required: inquiry into and analysis of the facts and law; methods meeting the standards of competent practitioners; and preparation proportional to what is at stake. A 1.2(c) scope limit can narrow what you are responsible for."
+      },
+      {
+       "say": "The emergency exception, Comment 3. When referral or consultation is impractical, you may give advice beyond your experience, limited to what is reasonably necessary."
+      },
+      {
+       "say": "The duty to be supervised. Ask, insist, or find help elsewhere. I asked and asked is no defense under 5.2(a). A looming deadline requires protective action, not letting it lapse."
+      },
+      {
+       "say": "Learning time and fees. Becoming competent does not justify billing an unreasonable amount of learning time. Competence under 1.1 and fee reasonableness under 1.5(a) are separate questions."
+      },
+      {
+       "say": "Forms, or go-bys. Four steps, all required. One, make sure it is a good example and fits. Two, never leave in, or simply delete, language you do not understand, and ask what is missing. Three, read any statute or case it relies on. Four, customize it and check that the law has not changed."
+      },
+      {
+       "say": "Technology, Comment 8. Keep up with changes in the law and its practice, including the benefits and risks associated with relevant technology. Scrub metadata, because hidden comments can reveal settlement authority, which implicates 1.1 and 1.6(c). Secure data and use real passwords. ABA Opinion 512, from 2024, is the first opinion on generative AI. Opinion 18-483 covers data breaches: reasonable security, monitoring, and client notice. Opinion 477R covers reasonably secure email. Oklahoma versus Oliver: a lawyer suspended partly for technological incompetence. And the Alan question: a solo who sends a draft with unscrubbed client comments violates 1.1 even with no monetary harm."
+      },
+      {
+       "say": "The case: Mata versus Avianca, Southern District of New York, 2023. Lawyers filed a brief citing six cases that ChatGPT had invented, then stood by them when the court and opposing counsel could not find them. The lawyers and their firm were sanctioned under Rule 11 for submitting the fake cases and for doubling down instead of correcting the record. It implicates technology competence under 1.1 Comment 8, candor under 3.3(a)(1), and supervision of tools under 5.3. A vendor's guarantee is not a defense. Check every cite."
+      },
+      {
+       "say": "Problem 7A-1, Maya and sales tax. She may expand the engagement if she becomes competent through reasonable study, without billing all of it, or by associating with or consulting a tax lawyer, and she should amend the engagement letter for the new scope. The Liam question: a trusts lawyer who takes a Postal Service slip-and-fall violated 1.1 by not learning that the Federal Tort Claims Act requires an administrative claim first. Telling the client it was his first tort case did not lower the standard."
+      },
+      {
+       "say": "Diligence, Rule 1.3. Reasonable diligence and promptness. Neglect and abandonment are among the most common sources of discipline. Comment 3: perhaps no professional shortcoming is more widely resented than procrastination. Ignoring calls for months violates 1.3 and 1.4 even if the client is not harmed. Comment 2: a lawyer's work load must be controlled so that each matter can be handled competently. Comment 4: when it is unclear whether the relationship continues, clarify it, preferably in writing."
+      },
+      {
+       "say": "The Leanne question. The judge orally moved the deadlines. She never told her assistant, and she missed the reply. That violates 1.3, even though the court allowed a late filing and she won. Delegating calendaring does not delegate responsibility."
+      },
+      {
+       "say": "Problem 7B-3, Willie's unfunded living trust. He never retitled the assets, and the husband died eight months later. That breaches diligence, meaning discipline, and care, meaning damages for probate costs, delay, and taxes. The partner is personally liable and the firm vicariously. A busy practice is exactly what Comment 2 forbids. Problem 7B-2, Stanley Sloppy: he let the limitations period run on a whiplash claim and ignored the client's calls. That is care, 1.3, and 1.4. To recover, Wanda must prove the case within a case: the claim would have won, for how much, and the judgment would have been collectible."
+      },
+      {
+       "ask": "A client begs a new lawyer to handle a complex patent appeal and signs a waiver acknowledging the lawyer has no patent experience. The lawyer does no special preparation. Does the waiver protect him?",
+       "answer": "No. Client consent does not waive competence. He must achieve competence through reasonable preparation or associate with an experienced patent lawyer.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer misses a filing deadline, but the court grants leave to file late and the client wins. Any violation?",
+       "answer": "Yes, a 1.3 diligence violation. Discipline needs no harm. That is the Leanne question.",
+       "pause": 10
+      },
+      {
+       "ask": "A real estate lawyer is approached in a true emergency to give advice on a criminal matter outside her experience, with no one available to refer to. May she?",
+       "answer": "Yes, under 1.1 Comment 3, but limited to what is reasonably necessary in the circumstances.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Discipline needs no harm; malpractice does. Consent and pro bono status do not lower competence. And billing all your learning time is a fee problem, a separate question."
+      },
+      {
+       "say": "Recap. 1.1 requires knowledge, skill, thoroughness, and preparation; you can become competent by study or association; five Comment 1 factors; technology competence under Comment 8. 1.3 requires reasonable diligence and promptness, and delegating does not shift responsibility."
+      },
+      {
+       "ask": "What are the four nouns in Rule 1.1?",
+       "answer": "Legal knowledge, skill, thoroughness, and preparation reasonably necessary for the representation.",
+       "pause": 8
+      },
+      {
+       "ask": "Name two ways to become competent in a new area.",
+       "answer": "Reasonable preparation and study, or associating with a lawyer of established competence.",
+       "pause": 8
+      },
+      {
+       "ask": "What did the lawyers in Mata versus Avianca do wrong?",
+       "answer": "They filed AI-invented citations and then stood by them instead of correcting the record. They were sanctioned under Rule 11.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e10",
+     "title": "The civil duty of care and ineffective assistance of counsel",
+     "minutes": 8,
+     "segments": [
+      {
+       "say": "Roadmap. The civil standard of care, causation, then the Sixth Amendment: Strickland, Cronic, Flores-Ortega, Frye and Lafler, and criminal malpractice."
+      },
+      {
+       "say": "The duty of care. The skill, diligence, care, and knowledge of a reasonably careful and prudent lawyer in similar circumstances. And a reasonable specialist's standard if you hold yourself out as one or were hired as one."
+      },
+      {
+       "say": "Losing is not negligence. The standard guarantees no result and is only the minimum. The Louise question: a reasoned strategic choice not to impeach, discussed with the client beforehand, does not establish malpractice. The client must prove both breach and causation. Never promise results, from Hawkins. And causation means the case within a case. A worthless underlying claim means no damages, but discipline remains possible."
+      },
+      {
+       "say": "Now the Sixth Amendment. The right attaches at the start of formal adversary proceedings: a formal charge, preliminary hearing, indictment, information, or arraignment. It applies in and out of court, through trial, sentencing, and the first appeal. The slide answer is all of the above."
+      },
+      {
+       "say": "The Strickland mantra. The Constitution requires only a minimally competent defense, one that survives unless no reasonable lawyer would have provided it, plus a showing that the result would have differed. First identify which result might differ: the verdict, the sentence, or the plea."
+      },
+      {
+       "say": "Strickland versus Washington, 1984. At a capital sentencing, counsel skipped a psychiatric examination and character witnesses to avoid opening the door to rebuttal. Washington was sentenced to death and was executed. The Court's test has two parts, both required. One, deficiency: performance below an objective standard of reasonableness, judged with a strong presumption of competence and wide latitude for tactics. Two, prejudice: a reasonable probability of a different result. Counsel here was not deficient."
+      },
+      {
+       "say": "Why it matters. Most claims fail on prejudice. A Rule violation ordinarily shows deficiency, not prejudice. Sleeping or drunk counsel, and yet convictions have been affirmed on strong evidence."
+      },
+      {
+       "say": "United States versus Cronic, 1984. A young real estate lawyer was appointed to defend a complex check-kiting case and given 25 days to prepare. The Court said that was not ineffective per se, and remanded for a Strickland analysis. Prejudice is presumed only when the circumstances amount to no counsel at all. Two ways, either suffices. One, counsel is absent at a critical stage. Two, counsel fails entirely to subject the prosecution's case to meaningful adversarial testing."
+      },
+      {
+       "say": "Cronic is rare. A hard assignment or an isolated error is not Cronic. But Problem 7C-3, counsel asleep during openings, absent during his client's cross, conceding guilt in closing, and absent at the verdict, adds up to absence at critical stages and no adversarial testing. Missing a sentencing is absence at a critical stage, the Danny question. And the Larry question: an appointed lawyer who thinks his client is dangerous, skips the alibi witness, and puts on no case fails adversarial testing, and also has a personal-interest conflict."
+      },
+      {
+       "say": "Roe versus Flores-Ortega, 2000. Counsel failed to file a notice of appeal. Ignoring a client's instruction to file a notice of appeal is deficient, and prejudice is presumed if the client would otherwise have appealed. No need to show the appeal would have won. Why: the decision to appeal belongs to the client under 1.2(a), and losing it entirely is like having no lawyer for that stage."
+      },
+      {
+       "say": "Missouri versus Frye and Lafler versus Cooper, both 2012. In Frye, counsel never told the client about a formal plea offer before it lapsed. In Lafler, counsel's bad legal advice led the client to reject a favorable offer and go to trial. The Court held the right to effective assistance extends to plea bargaining. Failing to convey a formal offer is deficient, from Frye, and prejudice is a reasonable probability that the plea would have been accepted and the result less severe, from Lafler. Here the result that might differ is the plea. And conveying plea offers is also a duty under 1.4(a)(1)."
+      },
+      {
+       "say": "Client choices are not deficiency. A fully informed defendant who insists on testifying and gets impeached has no claim, because the choice was hers under 1.2(a). Problem 7C-1(b): if Steve advised testifying on an inexplicable guess that the jury would believe a three-time armed robber, the advice is arguably deficient, but she must still show a reasonable probability of acquittal had she stayed off the stand, and the choice was hers."
+      },
+      {
+       "say": "Consequences. The remedy for ineffective assistance is reversal and a new trial. Most states require actual innocence for criminal malpractice: Coscia versus McKenna and Cuneo, and Dombrowski versus Bulson. So Steve's missed appeal deadline in Problem 7C-2(b) supports damages only if the client was innocent and would more likely than not have been acquitted. And once accused of ineffectiveness, defense counsel's interests shift toward the prosecutor's, which creates a conflict."
+      },
+      {
+       "ask": "Defense counsel fails to tell his client about a formal plea offer of two years. The offer lapses, and the client is convicted at trial and gets ten years. What must the client show?",
+       "answer": "Under Frye, failing to convey a formal offer is deficient. For prejudice, a reasonable probability that he would have accepted the plea and that the result would have been less severe.",
+       "pause": 12
+      },
+      {
+       "ask": "A client told her lawyer to file a notice of appeal. He forgot. The state argues the appeal would have lost anyway. Does that defeat her claim?",
+       "answer": "No. Under Roe versus Flores-Ortega, prejudice is presumed if she would otherwise have appealed. She need not show the appeal would have won.",
+       "pause": 12
+      },
+      {
+       "ask": "Defense counsel sleeps through a few minutes of a three-week trial, and the evidence of guilt is overwhelming. Is prejudice presumed under Cronic?",
+       "answer": "Probably not. An isolated lapse is analyzed under Strickland, and strong evidence usually defeats prejudice. Cronic is for absence at a critical stage or no adversarial testing at all.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Deficiency alone is not enough; you need prejudice. A Rule violation shows deficiency, not prejudice. Cronic is rare. And criminal malpractice usually requires actual innocence."
+      },
+      {
+       "say": "Recap. Civil care is the reasonably prudent lawyer standard, or specialist's standard. Strickland: deficiency plus prejudice. Cronic: prejudice presumed for absence at a critical stage or no adversarial testing. Flores-Ortega: a lost appeal is presumed prejudicial. Frye and Lafler: plea bargaining is covered."
+      },
+      {
+       "ask": "What are Strickland's two prongs?",
+       "answer": "Deficient performance below an objective standard of reasonableness, and prejudice, meaning a reasonable probability of a different result.",
+       "pause": 8
+      },
+      {
+       "ask": "When does Cronic presume prejudice?",
+       "answer": "When counsel is absent at a critical stage, or fails entirely to subject the prosecution's case to meaningful adversarial testing.",
+       "pause": 8
+      },
+      {
+       "ask": "What do most states require for a criminal malpractice claim?",
+       "answer": "Actual innocence.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e11",
+     "title": "Forming the relationship and identifying the client, including Rule 1.18",
+     "minutes": 10,
+     "segments": [
+      {
+       "say": "Roadmap. Declining, intake red flags, how a relationship forms under Restatement section 14, accidental clients, prospective clients under 1.18, and organizational clients and unrepresented persons."
+      },
+      {
+       "say": "Start with the Bobby Boilermaker problem. Charlie Comp's letter said worker compensation matter. Bobby reasonably understood that to mean all my compensation, and his products-liability claim expired. Scope is judged from the client's point of view. Forming a relationship instantly imposes all four duties: loyalty, care, confidentiality, and candor. And the lawyer bears the risk of uncertainty."
+      },
+      {
+       "say": "Declining. You may decline for almost any reason, for example disliking an abrasive client, unless there is a court appointment or an unlawful reason such as invidious discrimination. Court appointments: 6.2 allows seeking to avoid an appointment only for good cause. Distaste alone is not enough. And you must decline under 1.16(a), including the 2023 duty to inquire into and assess the facts of each representation."
+      },
+      {
+       "say": "Intake red flags, because intake mistakes are among the most common: unfamiliar law; revenge or making a point; unmanageable expectations; serial lawyer-changers; rudeness to staff; I don't care what it costs; Internet experts; and shifting stories."
+      },
+      {
+       "say": "Restatement section 14. A client-lawyer relationship arises in either of two ways. One, a person manifests to a lawyer the person's intent that the lawyer provide legal services, and either, (a), the lawyer manifests consent, or (b), the lawyer fails to manifest lack of consent and knows or reasonably should know that the person reasonably relies on the lawyer to provide the services. Two, a tribunal with power to do so appoints the lawyer."
+      },
+      {
+       "say": "It is an objective test with a subjective element: the client must actually and reasonably believe a relationship exists. Silence can be consent. Please handle my eviction, no reply, and the hearing is approaching. Not required: fees, a conflict check, or an engagement letter, unless you told the person there is no relationship until those are done. Use your words."
+      },
+      {
+       "say": "Status is matter by matter. One person can be a current, former, and prospective client at once. Last year's personal-injury client who now asks about estate planning is a former client and a prospective client."
+      },
+      {
+       "say": "Appointment creates the relationship without any signed agreement. Abed, appointed to defend Troy, cannot skip the arraignment because Troy has not signed a retainer. The Logan question: Logan took the facts, never sent the retainer or ran conflicts, and Connor did nothing further. There is a relationship, and malpractice exposure, if an objective observer would find Connor reasonably relied on Logan."
+      },
+      {
+       "say": "The accidental client at a party, Problems 9A-1 and 8A-5. Risk rises at each step. Small talk: none. He describes his divorce: a possible prospective client, with confidentiality. He asks whether his lawyer is doing a good job: a request for advice. Maya comments on each piece of advice: legal advice he may rely on, so Togstad care and maybe a relationship under section 14. Handing over her card when he wants to switch lawyers suggests future representation. The fix: I can't advise you, and I'm not a family lawyer. Please raise this with your lawyer or get a formal second opinion."
+      },
+      {
+       "say": "Open-ended engagements, occasional consulting, are never completed. Recent contact, bills, and no disengagement letter mean a current client, so a new adverse matter needs consent under 1.7."
+      },
+      {
+       "say": "Prospective clients, Rule 1.18. Who qualifies, 1.18(a) and Comment 2: a person who consults a lawyer about the possibility of forming a relationship, with an actual and reasonable belief that the talk was about possible representation. Likely yes: the lawyer specifically invites information without clear warnings. Likely no: unilateral communications prompted by general advertising. And likely no: cookie-licking, consulting every lawyer in town to conflict them out, which fails the subjective test, per ABA Opinion 492. But do not infer bad faith just because someone interviewed several firms."
+      },
+      {
+       "say": "1.18(b): even when no relationship follows, you may not use or reveal information learned from the prospective client, except as 1.9 would permit for a former client. Notice the limit: only information learned from the prospective client, not what you find independently. Comment 1: prospective clients get some but not all of a client's protection."
+      },
+      {
+       "say": "The Shola question: a prospective client who decides not to hire you is still owed confidentiality for what she told you, and threatening to publicize it violates 1.18(b). To avoid accidental prospective clients: I'm not a family lawyer. Invite a real consultation only after a conflict check, and limit intake to what you need to decide. That limit is what lets the firm screen under 1.18(d), on Day 3."
+      },
+      {
+       "say": "Organizational clients. 1.13(a): the lawyer for an organization represents the entity, acting through its constituents, who are not automatically clients. 1.13(f): when the entity's interests are adverse to a constituent's, explain who the client is. An employee says, glad you're my lawyer too. A founder asks whether the equity split is fair to him. Full treatment on Day 5."
+      },
+      {
+       "say": "Unrepresented persons, Rule 4.3. Three duties, all required. One, do not state or imply you are disinterested. Two, correct a misunderstanding about your role that you know or reasonably should know of. Three, if their interests conflict or may conflict with your client's, give no legal advice except the advice to get a lawyer. Negotiating and explaining your client's position are fine."
+      },
+      {
+       "say": "Problem 9A-2, the three founders. The venture capitalist, a firm client, expects the firm to represent him, but Maya drafts papers reflecting all three founders' deal and forms the corporation. Who the client is depends on what each founder reasonably believed. If the firm represents only the VC, Maya must make clear to the inventor and the sales lead that she is not their lawyer, and give them no advice, under 4.3. Representing all three, or the new company too, requires 1.7 analysis and consent. Once formed, the corporation is a distinct client under 1.13(a). Identify the client before the meeting."
+      },
+      {
+       "ask": "A woman emails a lawyer: please handle my eviction hearing next month, here are the papers. The lawyer reads it and never responds. The hearing approaches. Is there a relationship?",
+       "answer": "Possibly yes. Under section 14(1)(b), a lawyer who fails to manifest lack of consent, knowing or reasonably should know the person reasonably relies on him, forms a relationship. Silence can be consent.",
+       "pause": 12
+      },
+      {
+       "ask": "A man reads a lawyer's website and, unprompted, emails a detailed account of his business dispute. The lawyer already represents the opposing party. Is the man a prospective client whose information disqualifies the lawyer?",
+       "answer": "Likely not. Unilateral communications prompted by general advertising, without the lawyer inviting the information, usually do not create a prospective client under 1.18 Comment 2.",
+       "pause": 12
+      },
+      {
+       "ask": "A prospective client tells a lawyer about her divorce, then hires someone else. Later the lawyer independently learns, from public records, facts about her finances. May he use the public-record facts against her for another client?",
+       "answer": "1.18(b) protects only information learned from the prospective client. Independently found information is not covered by 1.18(b), though the conflict rules in 1.18(c) may still matter.",
+       "pause": 10
+      },
+      {
+       "say": "Traps. A fee, a conflict check, or a signed letter are not required for a relationship. Silence can create one. Cookie-licking does not create a prospective client. And constituents are not automatically clients."
+      },
+      {
+       "say": "Recap. Section 14: intent plus consent, or failure to decline when the lawyer should know of reasonable reliance, or appointment. 1.18 protects prospective clients' information, some but not all of a client's protection. 1.13(a): the entity is the client. 4.3: no implying disinterest, correct misunderstandings, no advice beyond get a lawyer."
+      },
+      {
+       "ask": "What are the two ways a relationship forms under section 14?",
+       "answer": "A person manifests intent that the lawyer provide services and the lawyer consents, or fails to decline while knowing or reasonably should know of reasonable reliance; or a tribunal appoints the lawyer.",
+       "pause": 8
+      },
+      {
+       "ask": "What is cookie-licking, and does it create a prospective client?",
+       "answer": "Consulting many lawyers to conflict them out. No, it fails the subjective test, per ABA Opinion 492.",
+       "pause": 8
+      },
+      {
+       "ask": "Under 4.3, what is the only legal advice a lawyer may give an unrepresented person whose interests conflict with the client's?",
+       "answer": "The advice to get a lawyer.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e12",
+     "title": "Scope, limiting liability, and duties to non-clients",
+     "minutes": 12,
+     "segments": [
+      {
+       "say": "Roadmap. How each of the four duties relates to scope, limiting scope under 1.2(c), Nichols versus Keller, limiting malpractice liability under 1.8(h), duties to non-clients with Togstad and Lucas versus Hamm, and third-party payors."
+      },
+      {
+       "say": "The four duties and scope. Care is limited to scope, but covers everything within scope, asked for or not, deadlines for example. Candor is limited to scope. Loyalty is broader: no adversity to a current client in any matter. Confidentiality is broader: anything obtained in connection with the representation, and it survives the engagement. So care and candor stop at scope; loyalty and confidentiality do not."
+      },
+      {
+       "say": "Rule 1.2(c). A lawyer may limit the scope of the representation if two conditions are met, and both are required. One, the limitation is reasonable under the circumstances. Two, the client gives informed consent."
+      },
+      {
+       "say": "No writing is required, but use one. Unbundling is generally allowed: drafting papers the client files and argues, trial-only work, ghostwriting. Comment 6: limits may track insurance coverage, the client's objectives, or tactics the lawyer finds repugnant or imprudent."
+      },
+      {
+       "say": "But a label is not informed consent. Workers' comp only, without explaining the risks and alternatives, is not informed consent. That is Nichols versus Keller. Scope is what the client actually and reasonably believes, judged from the client's point of view, knowledge, and experience."
+      },
+      {
+       "say": "Nichols versus Keller, California Court of Appeal, 1993. A workers' compensation lawyer handled only the comp claim and never told the injured client he might also have a third-party suit, which then became time-barred. The lawyer could be liable. Even when the engagement is limited, a lawyer must alert the client to reasonably apparent related legal problems outside the scope. 1.2(c) requires informed consent to the limit, and 1.0(e) requires explaining material risks and alternatives. That is the Charlie Comp problem."
+      },
+      {
+       "say": "The Lani question. A fifteen thousand dollar flat fee to represent you in a slip and fall case reasonably covers the case through final judgment. The lawyer should have excluded appeals in writing. A written engagement letter's main benefit is clarifying scope. It does not bar malpractice claims or discipline."
+      },
+      {
+       "say": "The Elias question. The client signed a breach of contract only agreement, but Elias never mentioned the treble-damages fraud claim. Her consent was not informed, so the limit is ineffective. Problem 9C-1: trial court only, no appeals or enforcement, and draft the complaint only, ghostwriting, are both reasonable limits, if the client understands what is excluded, the deadlines, like the notice-of-appeal clock, and what to do next."
+      },
+      {
+       "say": "Three scope traps for every engagement letter. One, post-trial work: appeals and enforcement. Two, tax. Three, insurance coverage. And Charlie Comp's fix, in plain terms: Comp only. A separate suit may be worth more. The deadline is running. See a litigator now."
+      },
+      {
+       "say": "Rule 1.8(h), limiting malpractice liability. Two prohibitions. A lawyer shall not, (h)(1), make an agreement prospectively limiting the lawyer's malpractice liability unless the client is independently represented in making the agreement. Or (h)(2), settle a claim or potential claim for such liability with an unrepresented client or former client unless that person is advised in writing of the desirability of seeking, and given a reasonable opportunity to seek, independent counsel."
+      },
+      {
+       "say": "The contrast is tested. For a prospective limit, (h)(1), written advice to get a lawyer is not enough. The client must actually be represented. For settling an existing claim, (h)(2), written advice plus a reasonable opportunity is enough. Timothy's standard clause, waive all future malpractice claims or I won't take you, is valid only if the client is independently represented in agreeing to it. And states disfavor these waivers substantively too."
+      },
+      {
+       "say": "Duties to non-clients. You can assume one duty without assuming them all, and the most common are confidentiality and care. Confidentiality arises three ways. One, a prospective-client consultation under 1.18. Two, a promise, for example anonymity to a witness. It can bind you and your client and conflict with candor, so check with the client first. Three, a client's confidentiality obligations to others, for example insurers. Disqualification can follow even without a client relationship, which is Westinghouse versus Kerr-McGee on Day 3."
+      },
+      {
+       "say": "Care to non-clients arises three ways. One, advice given while declining, which is Togstad. Two, intended beneficiaries, under Restatement section 51(3) and Lucas versus Hamm. Three, work that third parties are invited to rely on, for example opinion letters to a lender, under 2.3 and Restatement section 51(2)."
+      },
+      {
+       "say": "Togstad versus Vesely, Otto, Miller and Keefe, Minnesota, 1980. Mrs. Togstad consulted a lawyer about a possible medical malpractice claim over her husband's paralysis. He told her, I don't think you have a case. He charged nothing and said nothing about the limitations period. She relied on him, consulted no one else, and the claim expired. A jury could find an attorney-client relationship, or negligent advice she relied on, and the verdict exceeded six hundred thousand dollars. The duty came from how he declined."
+      },
+      {
+       "say": "So, the Togstad-safe non-engagement letter. Five parts, all required. One, say you will not provide services. Two, give no advice or evaluation of the claim. Three, encourage them to seek other counsel promptly. Four, warn that limitations periods and deadlines apply. Five, put it in writing."
+      },
+      {
+       "say": "Lucas versus Hamm, California, 1961. A lawyer drafted a will whose trust provision violated the rule against perpetuities, and the intended beneficiaries lost their share. Intended beneficiaries of a will may sue the drafting lawyer for negligence despite lack of privity. But the court found no negligence, because the rule against perpetuities was so confusing a reasonable lawyer could err. No other jurisdiction follows that part. Problem 9B-3: the unborn descendant is an intended beneficiary; Ted was my only client is not a defense, and the engagement letter does not bind the non-client."
+      },
+      {
+       "say": "Limits on third-party reliance. Liability usually runs only to those specifically to or for whom the statement was made, from Bily versus Arthur Young, and reliance must be reasonable, from Goodman versus Kennedy."
+      },
+      {
+       "say": "Slide applications. 9B-1, Wendy Waitress: Frank was right to clear the anonymity promise with the client first, because it binds the client too. They can still report the busboy's theft to the police, but cannot identify Wendy as the source. 9B-2, the doctor conflict: suing a current client is a 1.7(a)(1) conflict. If the firm will not seek the doctor's consent, it must decline, Togstad-safe, and should just say a conflict, because the doctor's identity as a client is confidential. 9B-4, the nephew's defense: the nephew is the client and Ted is a third-party payor under 1.8(f). The opioid information is the nephew's confidence, so Frank and Willie cannot tell Ted without the nephew's informed consent."
+      },
+      {
+       "say": "The Hareem question: a lawyer who declines and suggests another lawyer may have exercised reasonable care, but the risk lies in not flagging the Federal Tort Claims Act administrative-claim deadline. The answer is maybe, not no duty to a non-client. More duty-of-care questions. A QDRO drafted for Keyan creates a duty to Keyan only, because an adversary in the divorce is not an intended beneficiary. Owen's exposure assessment, which the client said would go to the buyer, creates a duty to both the hospital and the purchaser. And a negligent opinion letter relied on by its addressee is professional negligence."
+      },
+      {
+       "say": "Third-party payors, 1.8(f) and 5.4(c). A lawyer may accept compensation from someone other than the client only if three conditions are met, all required. One, the client gives informed consent. Two, there is no interference with the lawyer's independence of professional judgment or with the client-lawyer relationship. Three, information relating to the representation is protected as 1.6 requires. And 5.4(c): whoever recommends, employs, or pays the lawyer may not direct or regulate the lawyer's professional judgment. An employer cannot veto witness interviews. The payor relationship is arm's-length: no privilege with the payor, sharing may waive it, and no disclosure to the payor without the client's consent."
+      },
+      {
+       "ask": "A lawyer's engagement letter says the client prospectively waives all malpractice claims. The letter urges the client, in bold, to consult independent counsel, but the client signs without doing so. Valid?",
+       "answer": "No. Under 1.8(h)(1), a prospective limit requires that the client actually be independently represented in making the agreement. Written advice is not enough. That writing-and-opportunity rule applies only to settling an existing claim under 1.8(h)(2).",
+       "pause": 12
+      },
+      {
+       "ask": "After a botched closing, a lawyer offers a former client five thousand dollars to settle any malpractice claim. He advises her in writing that she should consult independent counsel and gives her two weeks. She signs without a lawyer. Valid?",
+       "answer": "Yes, under 1.8(h)(2). Settling a claim with an unrepresented former client is permitted if she is advised in writing of the desirability of independent counsel and given a reasonable opportunity to get one.",
+       "pause": 12
+      },
+      {
+       "ask": "A father pays for his adult son's criminal defense and asks the lawyer for updates on what the son has told her. The son has not consented. May she tell the father?",
+       "answer": "No. Under 1.8(f), the payor gets no information without the client's informed consent, and under 5.4(c) the payor may not direct the lawyer's judgment.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. A label like comp only is not informed consent. The 1.8(h)(1) and (h)(2) contrast: representation actually required versus written advice and opportunity. Declining carelessly can create a duty. And the payor is not the client."
+      },
+      {
+       "say": "Recap. Care and candor stop at scope; loyalty and confidentiality do not. 1.2(c): reasonable limit plus informed consent. 1.8(h): no prospective malpractice limit unless independently represented; settlements need written advice and a reasonable opportunity. Care can run to non-clients through careless declining, intended beneficiaries, and invited reliance. Payors need consent, independence, and confidentiality."
+      },
+      {
+       "ask": "What two conditions does 1.2(c) require to limit scope?",
+       "answer": "The limitation is reasonable under the circumstances, and the client gives informed consent.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the five parts of a Togstad-safe non-engagement letter.",
+       "answer": "Say you won't provide services; give no advice on the merits; urge prompt consultation with other counsel; warn that limitations periods apply; and put it in writing.",
+       "pause": 8
+      },
+      {
+       "ask": "What three conditions apply when a third party pays the fee?",
+       "answer": "Informed consent of the client, no interference with independent judgment or the relationship, and confidentiality protected under 1.6.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e13",
+     "title": "Clients with decision-making limitations: Rule 1.14",
+     "minutes": 7,
+     "segments": [
+      {
+       "say": "Roadmap. The amended Rule 1.14 now speaks of decision-making limitations, not diminished capacity. We cover the ordinary relationship, the three conditions for protective action, the five assessment factors, the ladder of protective measures, disclosure, and special settings. The casebook does not treat 1.14, so this follows the Rule and Comments."
+      },
+      {
+       "say": "Paragraph (a). As far as reasonably possible, maintain an ordinary client-lawyer relationship with a client with decision-making limitations. A person has decision-making limitations if the person has substantial difficulty receiving and understanding information, evaluating information, or making or communicating decisions, even with appropriate supports or accommodations."
+      },
+      {
+       "say": "Paragraph (b), protective action. Three conditions, all required, each judged by the lawyer's reasonable belief. One, the client has decision-making limitations. Two, the client is at risk of substantial physical, financial, or other harm unless action is taken. Three, the client cannot adequately act in the client's own interest to address the risk. Then the lawyer may take reasonably necessary protective action. Note the word: may. It is discretionary."
+      },
+      {
+       "say": "Paragraph (c). Information is still protected by 1.6, but when taking protective action under (b), the lawyer may reveal information to the extent reasonably necessary to protect the client's interests. Implied authorization, limited to what is reasonably necessary."
+      },
+      {
+       "say": "Why the rule exists: to respect autonomy while allowing a lawyer to prevent serious harm. So the ordinary relationship comes first. Comments 1 through 4: limitations can be situational and can vary by issue and over time. The client still decides objectives, is kept informed, and is treated with attention and respect. Try supports and accommodations first."
+      },
+      {
+       "say": "Family members and agents, Comments 5 through 7. Get the client's informed consent before others sit in, under 1.6(a). When a relative brings the client in, identify who the client is. Even with an agent under a power of attorney, take direction from the client to the extent feasible."
+      },
+      {
+       "say": "Assessing limitations, Comment 13. Five factors, weighed together. One, the client's ability to articulate reasoning leading to a decision. Two, variability of state of mind and ability to understand consequences. Three, appreciation of the substantive fairness of a decision. Four, consistency of the decision with the client's known long-term commitments and values. Five, whether supports or accommodations could alleviate the limitations. Focus on functional abilities, not a diagnosis alone. And Comment 14: no court or doctor needs to have made a finding."
+      },
+      {
+       "say": "Protective action, Comments 12 and 15 through 17. Start with the least intrusive measures: consulting family members, a reconsideration period, voluntary tools like a durable power of attorney, or support groups, healthcare professionals, or adult-protective agencies. Consider a guardian or conservator only when necessary. Be guided by the client's wishes and values, best interests, and the goal of minimizing intrusion on autonomy."
+      },
+      {
+       "say": "Two musts. You may not advocate for a guardianship or conservatorship the client opposes, and as the respondent's lawyer in such a proceeding you must advocate the client's objectives, Comment 16. And you must tell the client of protective action you take. Protective action does not by itself require withdrawal, but check 1.16(a) and 1.7, Comment 17."
+      },
+      {
+       "say": "Disclosure is risky, Comment 18. Raising capacity can trigger involuntary civil commitment, so reveal only what is reasonably necessary, and first ask whether the person you consult is likely to act adversely to the client."
+      },
+      {
+       "say": "Special settings. Criminal clients, Comment 8: competence may require seeking a competency evaluation. Minors, Comment 9: a minor's lawyer maintains an ordinary relationship as far as reasonably possible. A guardian ad litem, Comment 10, advocates best interest, which may diverge from the person's objectives. And emergencies, Comments 19 and 20: when a person's health, safety, or finances face imminent and irreparable harm, a lawyer may act even though no relationship can be formed, keeping the person's confidences as if dealing with a client."
+      },
+      {
+       "ask": "An elderly client with mild memory problems wants to leave her estate to a church rather than her children. Her reasoning is clear and consistent with her lifelong faith. Her son demands the lawyer seek a guardianship. What should the lawyer do?",
+       "answer": "Maintain an ordinary relationship and follow her objectives. The Comment 13 factors, articulated reasoning and consistency with long-term values, point to capacity. The 1.14(b) conditions are not met, and the lawyer may not advocate a guardianship the client opposes.",
+       "pause": 12
+      },
+      {
+       "ask": "A client with advancing dementia is being drained of savings by a new friend and cannot grasp what is happening. What may the lawyer do, and what should come first?",
+       "answer": "All three 1.14(b) conditions appear met, so the lawyer may take reasonably necessary protective action, starting with the least intrusive steps, such as consulting family or arranging a durable power of attorney, and may reveal only what is reasonably necessary under 1.14(c). Guardianship only if necessary. And he must tell the client what he did.",
+       "pause": 12
+      },
+      {
+       "say": "Traps. Protective action is permissive, may, not must. A diagnosis alone does not establish limitations. Guardianship is a last resort. And disclosure is limited to the reasonably necessary."
+      },
+      {
+       "say": "Recap. 1.14(a): maintain an ordinary relationship as far as reasonably possible. 1.14(b): reasonable belief in limitations, risk of substantial harm, and inability to act in one's own interest, then may take reasonably necessary protective action. 1.14(c): implied authority to reveal what is reasonably necessary."
+      },
+      {
+       "ask": "What are the three conditions for protective action under 1.14(b)?",
+       "answer": "The lawyer reasonably believes the client has decision-making limitations, is at risk of substantial physical, financial, or other harm unless action is taken, and cannot adequately act in the client's own interest.",
+       "pause": 8
+      },
+      {
+       "ask": "Name three of the five Comment 13 assessment factors.",
+       "answer": "Ability to articulate reasoning; variability of state of mind and understanding of consequences; appreciation of substantive fairness; consistency with long-term values; whether supports could help.",
+       "pause": 8
+      },
+      {
+       "ask": "May the lawyer for the respondent in a guardianship proceeding argue for guardianship over the client's objection?",
+       "answer": "No. The lawyer must advocate the client's objectives.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e14",
+     "title": "Declining and withdrawing: Rule 1.16",
+     "minutes": 15,
+     "segments": [
+      {
+       "say": "Roadmap. How relationships end, the client's right to fire you, mandatory withdrawal under 1.16(a), permissive withdrawal under 1.16(b), leave of the tribunal under 1.16(c), the Aloysius Angry saga, noisy withdrawal, and exit duties under 1.16(d)."
+      },
+      {
+       "say": "Ending the relationship. It ends by completion on its terms, or by termination. Open-ended engagements never complete. Send a disengagement letter: it confirms the end, which can start the tolled malpractice limitations period, lists tasks you will not handle, and addresses the file, per 1.3 Comment 4. Ending an open-ended relationship turns a current client into a former one, which helps with conflicts. Problem 9D-1, Leo Landlord: billed twice within nine months and never disengaged, so still a current client. The Gabrielle question: a transactional lawyer leaving for a federal agency needs no court permission when no tribunal is involved, but should still withdraw carefully and in writing."
+      },
+      {
+       "say": "The client may discharge you at any time, with or without cause, Comment 4, and still owes fees earned. The Ruth question: she needs no cause to fire Jeff, though with trial weeks away the court must allow substitution. Appointed counsel is the exception: the court controls substitution, Comment 5."
+      },
+      {
+       "say": "Rule 1.16(a), mandatory. First, the 2023 duty: a lawyer shall inquire into and assess the facts and circumstances of each representation to determine whether to accept or continue it. Then, except as stated in (c), a lawyer shall not represent a client, or shall withdraw, if any one of four things is true. One, the representation will result in violation of the Rules or other law, for example a nonconsentable conflict. Two, the lawyer's physical or mental condition materially impairs the lawyer's ability to represent the client. Three, the lawyer is discharged. Four, the client or prospective client seeks to use or persists in using the lawyer's services to commit or further a crime or fraud, despite the lawyer's discussion, under 1.2(d) and 1.4(a)(5), of the limits on the lawyer's help. That fourth one is new in 2023."
+      },
+      {
+       "say": "The 2023 duty to inquire. ABA Opinion 513 calls for a risk-based, proportional inquiry at intake, repeated when circumstances change. The must-withdraw threshold sits somewhere between naked suspicion and actual knowledge. No state had adopted these amendments as of the casebook, but the MPRE tests them."
+      },
+      {
+       "say": "Rule 1.16(b), permissive. Except as stated in (c), a lawyer may withdraw if any one of seven things is true. One, withdrawal can be accomplished without material adverse effect on the client's interests. The ordinary cost of switching does not count; a looming deadline does. Two, the client persists in a course of action involving the lawyer's services that the lawyer reasonably believes is criminal or fraudulent. Three, the client has used the lawyer's services to perpetrate a crime or fraud. Four, the client insists on action the lawyer considers repugnant or with which the lawyer has a fundamental disagreement. In a firm, ask to be reassigned. Five, the client fails substantially to fulfill an obligation to the lawyer, such as payment, after reasonable warning that the lawyer will withdraw. So build a long runway. Six, the representation will result in an unreasonable financial burden on the lawyer or has been rendered unreasonably difficult by the client. Seven, other good cause."
+      },
+      {
+       "say": "Now the may versus must contrast for crime and fraud. Under (a)(4), you must withdraw when the client seeks to use or persists in using your services to commit or further a crime or fraud, after you have discussed the limits. Under (b)(2), you may withdraw when the client persists in a course involving your services that you reasonably believe is criminal or fraudulent. And under (b)(3), you may withdraw when the client has already used your services for a crime or fraud."
+      },
+      {
+       "say": "Rule 1.16(c). A lawyer must comply with applicable law requiring notice to or permission of a tribunal when terminating a representation. When ordered to do so by a tribunal, a lawyer shall continue representation notwithstanding good cause for terminating it. Why courts keep you in: to protect the calendar and prevent opportunism, like firing lawyer after lawyer on the eve of trial. Until relieved, every duty continues, even if the client is at fault. Leave is most often denied close to trial or when the motion looks opportunistic."
+      },
+      {
+       "say": "Two routes out. Substitution of counsel, almost always approved, so look before you leap if you are the one coming in. Or a motion to withdraw. Your reasons are confidential, so say only that professional considerations require termination, Comment 3. If ordered to say more, 1.6(b)(6) permits it; ask for sealing or in camera review."
+      },
+      {
+       "say": "Nonpayment. ABA Opinion 476, from 2016, suggests you may disclose the fact of nonpayment under 1.6(b)(5) when withdrawing, but the case law is mixed, so avoid it unless the court presses. Your lack of planning is not my emergency: courts deny last-minute motions. And never threaten to skip trial to get paid. That is abandonment and violates 1.16(c), 1.1, and 1.3, with sanctions and liability to follow. Warn the client and move to withdraw instead."
+      },
+      {
+       "say": "The Aloysius Angry saga. 9D-2: the client is behind, trial is two weeks out, and the deposit request is unanswered. The firm should have warned early and moved to withdraw early, under (b)(5) and (b)(6), instead of letting arrears pile up. Now a motion will likely be denied, so prepare for trial. An email threatening not to appear is the wrong tool. 9D-3: the response to the order to show cause should not volunteer the confidential fee details; professional considerations plus the procedural history is the frame, and there is no excuse for the non-appearance itself. 9D-4: fired by email two weeks before trial. You have appeared, so you still need leave under 1.16(c). Until relieved, keep preparing, then comply with 1.16(d). A fee suit is allowed, but 1.6(b)(5) limits what you reveal, and filing it before protecting the client looks terrible. 9D-6: withdrawal sought a week before trial after a threatening email, with the client disputing fees and wanting the trial date kept. The court will likely deny leave."
+      },
+      {
+       "say": "The Marta question: leave was denied, so she had to represent Ashton at trial, and skipping it is disciplinable. The Max question: as successor counsel he owned every deadline once substitution was approved, including the expert report due the next day. Look before you leap."
+      },
+      {
+       "say": "Problem 9D-5, must, may, or neither. A: a solo buried in millions of documents in a price-fixing class action. He must stay competent: associate co-counsel or vendors, or seek leave to withdraw for unreasonable financial burden under (b)(6). If he cannot competently continue, he must withdraw under (a)(1). B: an associate whose parents died of smoking-related disease is assigned to defend Big Tobacco. Personal repugnance under (b)(4), or a personal-interest conflict. In a firm, ask to be reassigned; the firm can keep the matter. C: the client no-shows her own deposition three times. May withdraw, because the client made it unreasonably difficult, (b)(6), or failed an obligation after warning, (b)(5). Warn her in writing first, and get leave. D: the client keeps using misleading private-placement documents you drafted. Must withdraw under (a)(1) and (a)(4). May disaffirm the documents, may disclose under 1.6(b)(2) and (b)(3), and must disclose if needed to avoid assisting the fraud under 4.1(b)."
+      },
+      {
+       "say": "Noisy withdrawal. When a client used your work product, an opinion letter or offering documents, for fraud, four things apply. One, you must withdraw under (a)(4). Two, you may give notice and disaffirm the opinion or document, 1.2 Comment 10. Three, any disclosure beyond that needs a 1.6 exception, usually (b)(2) or (b)(3). Four, 4.1(b) makes disclosure mandatory if it is needed to avoid assisting the fraud. For in-house counsel, mandatory withdrawal can mean quitting your job. Employment never excuses assisting fraud, and the company is the client."
+      },
+      {
+       "say": "Rule 1.16(d), exit duties. On termination, take steps to the extent reasonably practicable to protect the client's interests, such as four things. One, giving reasonable notice. Two, allowing time to employ other counsel. Three, surrendering papers and property to which the client is entitled. Four, refunding any advance payment of fee or expense not earned or incurred. You may retain papers only to the extent other law permits. Comment 9: these duties apply even if you were unfairly discharged."
+      },
+      {
+       "say": "Files are the client's. In all but a few states, Illinois and Georgia being exceptions, you cannot hold the file for unpaid fees. Papers to which the client is entitled means at least everything reasonably necessary to protect the client's rights, paid for or not, like an unpaid expert report. Turn over embarrassing items too; they are discoverable, and withholding them looks like a cover-up. You may withhold your own privileged consultations with properly designated firm counsel. Never destroy or lose file material to hide an error: that violates 3.4(a), risks obstruction charges, and turns negligence into an intentional tort."
+      },
+      {
+       "say": "Also on exit: return unearned funds and hold disputed amounts in trust, with no self-help. Give the client all dates and deadlines in writing. Flag limitations periods. Forward papers that arrive later. Help successor counsel within reason, especially when the client doesn't deserve it. A detailed file index is not required."
+      },
+      {
+       "say": "Problems 9D-7 through 9D-9, what goes to the client. The unreimbursed expert report with a disclosure deadline approaching: must turn over. Notes of an interview with a witness the team decided not to call: should, and in entire-file states must, because strategy can change. Notes of the lead lawyer's talk with the managing partner about an expected fee dispute: ordinarily turn over; may withhold if it was a privileged consultation with designated firm counsel. A to-do list with an uncompleted task marked with a red asterisk: must. An associate's email calling the client a whiny pain: must, it is part of the file. Reminding the client of the trial date and deadlines: should, arguably must. Warning of a limitations period on a claim not yet pleaded: must. A detailed index of every document: not required. An afternoon with successor counsel: should, within reason."
+      },
+      {
+       "ask": "A client fires her lawyer by email three weeks before trial. The lawyer has appeared in the case. May the lawyer stop working?",
+       "answer": "No. Discharge triggers mandatory withdrawal under 1.16(a)(3), but under 1.16(c) he must comply with rules requiring the court's permission. Until relieved, every duty continues. Then he must comply with 1.16(d).",
+       "pause": 12
+      },
+      {
+       "ask": "A client has not paid in four months. The lawyer has never warned her. Trial is in ten days. He moves to withdraw, citing nonpayment. Likely outcome, and what should he have done?",
+       "answer": "Likely denied: too close to trial, and no reasonable warning was given as 1.16(b)(5) requires. He should have warned early and moved early. Now he must prepare for trial, and he must not threaten to skip it.",
+       "pause": 12
+      },
+      {
+       "ask": "A discharged lawyer is owed fees. He refuses to give the file to successor counsel until paid, in a state following the Model Rules. Proper?",
+       "answer": "No. Under 1.16(d), he must surrender papers to which the client is entitled, at least everything reasonably necessary to protect the client's rights. Only a few states, like Illinois and Georgia, allow retaining liens.",
+       "pause": 12
+      },
+      {
+       "ask": "A lawyer simply finds a client's lawful business plan distasteful. The matter is transactional, no tribunal is involved, and the client would suffer no material harm from the change. May the lawyer withdraw?",
+       "answer": "Yes, under 1.16(b)(1), no material adverse effect, and possibly (b)(4), repugnance or fundamental disagreement. He must still comply with 1.16(d).",
+       "pause": 10
+      },
+      {
+       "say": "Traps. Threatening not to appear is never the answer. The client never needs cause to fire you, but the court may still keep you in. The file cannot be held hostage. And motions to withdraw should say only professional considerations."
+      },
+      {
+       "say": "Recap. 1.16(a) must: rules violation, impairment, discharge, or persisting crime-or-fraud use of your services, plus the 2023 duty to inquire. 1.16(b) may: no material harm, persisting criminal or fraudulent course, past crime or fraud, repugnance, unpaid obligation after warning, unreasonable burden, other good cause. 1.16(c): get leave where required, and stay if ordered. 1.16(d): notice, time, papers, refunds."
+      },
+      {
+       "ask": "Name the four mandatory withdrawal grounds in 1.16(a).",
+       "answer": "Representation will violate the Rules or law; the lawyer's condition materially impairs her; she is discharged; or the client seeks to use or persists in using her services for a crime or fraud after she discussed the limits.",
+       "pause": 8
+      },
+      {
+       "ask": "What must a lawyer say in a motion to withdraw about her reasons?",
+       "answer": "Only that professional considerations require termination. If ordered to say more, 1.6(b)(6) permits it.",
+       "pause": 8
+      },
+      {
+       "ask": "Name the four 1.16(d) exit steps.",
+       "answer": "Reasonable notice, time to employ other counsel, surrendering papers and property the client is entitled to, and refunding unearned advance fees and expenses.",
+       "pause": 8
+      }
+     ]
+    },
+    {
+     "id": "pr-d1-e15",
+     "title": "Day 1 cumulative quiz",
+     "minutes": 4,
+     "segments": [
+      {
+       "say": "Time for the Day 1 cumulative quiz. Answer out loud. Ten questions, rapid fire."
+      },
+      {
+       "ask": "Is an ABA Formal Opinion binding on a state disciplinary board?",
+       "answer": "No. It is persuasive only.",
+       "pause": 8
+      },
+      {
+       "ask": "A lawyer ignores a disciplinary grievance he thinks is frivolous. Which rule?",
+       "answer": "Rule 8.1(b): knowingly failing to respond to a lawful demand from a disciplinary authority.",
+       "pause": 8
+      },
+      {
+       "ask": "Which 8.4 paragraph is violated by implying you can improperly influence a judge, even with no attempt?",
+       "answer": "8.4(e).",
+       "pause": 8
+      },
+      {
+       "ask": "May an out-of-state lawyer open a branch office in a state where she is not admitted if she only practices her home state's law?",
+       "answer": "No. 5.5(b) bars a systematic and continuous presence and holding out.",
+       "pause": 8
+      },
+      {
+       "ask": "What does a subordinate need for the 5.2(b) safe harbor?",
+       "answer": "A supervisor's reasonable resolution of an arguable question of professional duty.",
+       "pause": 8
+      },
+      {
+       "ask": "Does confirmed in writing require the client's signature?",
+       "answer": "No. The lawyer's prompt confirming writing is enough.",
+       "pause": 8
+      },
+      {
+       "ask": "Does a client's consent waive the duty of competence?",
+       "answer": "No.",
+       "pause": 8
+      },
+      {
+       "ask": "Under Strickland, which prong do most claims fail on?",
+       "answer": "Prejudice.",
+       "pause": 8
+      },
+      {
+       "ask": "A prospective malpractice waiver is valid if what is true?",
+       "answer": "The client is independently represented in making the agreement. 1.8(h)(1).",
+       "pause": 8
+      },
+      {
+       "ask": "Name the three conditions for protective action under 1.14(b).",
+       "answer": "Decision-making limitations, risk of substantial harm, and inability to act adequately in one's own interest.",
+       "pause": 8
+      },
+      {
+       "ask": "When must a lawyer withdraw because of a client's crime or fraud?",
+       "answer": "Under 1.16(a)(4), when the client seeks to use or persists in using the lawyer's services to commit or further a crime or fraud, despite the lawyer's discussion of the limits.",
+       "pause": 8
+      },
+      {
+       "ask": "Can a lawyer keep a file until he is paid, under the Model Rules?",
+       "answer": "No. 1.16(d) requires surrendering papers the client is entitled to.",
+       "pause": 8
+      },
+      {
+       "say": "That's Day 1. Tomorrow, Day 2: confidentiality, privilege, the 1.6 exceptions, the lawyer as fiduciary and agent, candor to the client, authority, fees, and client funds. Get some sleep. Memory consolidates overnight."
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}
