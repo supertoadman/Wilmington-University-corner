@@ -13,9 +13,9 @@
 import { forEar } from './listen-voice.js';
 
 export const PAUSES = [3, 6, 10, 15];          // seconds to think: after a card's front, after a question's choices
-export const RATES = [0.75, 0.85, 0.9, 0.95, 1, 1.1, 1.25, 1.5, 1.75, 2];
+export const RATES = [0.75, 0.85, 0.95, 1, 1.1, 1.25, 1.5, 1.75, 2];
 export const MODES = ['course', 'materials'];
-export const DEFAULTS = { outline: true, cards: true, questions: true, pause: 6, rate: 0.9, pitch: 0.95, gender: 'female', mode: 'course' };
+export const DEFAULTS = { outline: true, cards: true, questions: true, pause: 6, rate: 0.95, pitch: 0.95, gender: 'female', mode: 'course' };
 const LETTERS = 'ABCDEFGH';
 const GAP = { heading: 700, line: 350, item: 1200, choice: 250 };
 
@@ -176,8 +176,7 @@ export const ASK_PAUSE = 7;                     // seconds after an ask with no 
  * The play list for an audio course: one item per episode, in day order. Each listen/v1 segment
  * becomes one or two player segments, each with `sid` (the script's segment id, else "s<index>")
  * so the place survives edits; an ask becomes the question (then the pause, `pause` seconds times
- * `scale`) and the answer. `voice` is "main" or "alt"; `rec` maps a Kokoro voice id to the line's
- * recorded file (scripts/listen-render.mjs), when there is one.
+ * `scale`) and the answer. `voice` is "main" or "alt".
  */
 export function courseQueue(course, { scale = 1 } = {}) {
   const items = [];
@@ -190,11 +189,11 @@ export function courseQueue(course, { scale = 1 } = {}) {
         const sid = typeof s.id === 'string' && s.id ? s.id : `s${i}`;
         if (typeof s.ask === 'string') {
           const wait = Math.round((Number.isFinite(s.pause) && s.pause >= 0 ? s.pause : ASK_PAUSE) * scale * 1000);
-          segments.push(seg(s.ask, wait, 'ask', { sid, voice: s.voice === 'alt' ? 'alt' : 'main', rec: s.rec }));
-          segments.push(seg(String(s.answer || ''), COURSE_GAP.answer, 'answer', { sid: `${sid}:a`, voice: 'main', rec: s.answerRec }));
+          segments.push(seg(s.ask, wait, 'ask', { sid, voice: s.voice === 'alt' ? 'alt' : 'main' }));
+          segments.push(seg(String(s.answer || ''), COURSE_GAP.answer, 'answer', { sid: `${sid}:a`, voice: 'main' }));
         } else if (typeof s.say === 'string') {
           const alt = s.voice === 'alt';
-          segments.push(seg(s.say, alt ? COURSE_GAP.alt : COURSE_GAP.say, alt ? 'alt' : 'say', { sid, voice: alt ? 'alt' : 'main', rec: s.rec }));
+          segments.push(seg(s.say, alt ? COURSE_GAP.alt : COURSE_GAP.say, alt ? 'alt' : 'say', { sid, voice: alt ? 'alt' : 'main' }));
         } else if (Number.isFinite(s.pause)) {
           segments.push({ text: '', say: '', pause: Math.round(s.pause * 1000), role: 'pause', sid, voice: 'main' });
         }
@@ -238,30 +237,4 @@ export function minutesOf(queue, rate = 1) {
   let words = 0, ms = 0;
   for (const it of queue) for (const s of it.segments) { words += (s.say.match(/\S+/g) || []).length; ms += s.pause; }
   return Math.round(words / (160 * rate) + ms / 60000);
-}
-
-/** The recorded voices: the main and the "alt" voice for each gender setting (as scripts/lib/listen.mjs renders them). */
-export const REC_VOICES = { female: { main: 'af_nicole', alt: 'am_michael' }, male: { main: 'am_michael', alt: 'af_nicole' } };
-export const REC_SPEED = 0.9;
-
-/**
- * The recorded file to play for a player segment, or null to use the browser's voice: only when the
- * listener left the voice on "best" (a browser voice picked by name means that voice).
- */
-export function recordingFor(segment, { gender = 'female', voice = '' } = {}) {
-  if (voice || !segment?.rec) return null;
-  const v = REC_VOICES[gender === 'male' ? 'male' : 'female'];
-  return segment.rec[segment.voice === 'alt' ? v.alt : v.main] || null;
-}
-
-/** A WAV file of `ms` milliseconds of silence (8 kHz mono), played between recorded lines so phones keep the audio going. */
-export function silenceWav(ms) {
-  const n = Math.max(1, Math.round((Math.max(0, ms) / 1000) * 8000));
-  const buf = new ArrayBuffer(44 + n * 2);
-  const v = new DataView(buf);
-  const text = (at, t) => { for (let i = 0; i < t.length; i++) v.setUint8(at + i, t.charCodeAt(i)); };
-  text(0, 'RIFF'); v.setUint32(4, 36 + n * 2, true); text(8, 'WAVE'); text(12, 'fmt ');
-  v.setUint32(16, 16, true); v.setUint16(20, 1, true); v.setUint16(22, 1, true); v.setUint32(24, 8000, true);
-  v.setUint32(28, 16000, true); v.setUint16(32, 2, true); v.setUint16(34, 16, true); text(36, 'data'); v.setUint32(40, n * 2, true);
-  return new Uint8Array(buf);
 }

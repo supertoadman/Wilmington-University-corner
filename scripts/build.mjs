@@ -28,7 +28,7 @@ import { renderCardsShell } from './lib/cards-shell.mjs';
 import { hasTopicPicker, inlineTopicPicker } from './lib/topic-picker.mjs';
 import { readSupplement, readSupplementPage, normalizeSupplement, renderSupplement, supplementText } from './lib/supplement-shell.mjs';
 import { buildOutlineDocx } from './templates/build-outline-docx.mjs';
-import { readListen, normalizeListen, attachRecordings } from './lib/listen.mjs';
+import { readListen, normalizeListen } from './lib/listen.mjs';
 import { buildGame } from './game.mjs';
 import { buildSurvivors } from './survivors.mjs';
 
@@ -609,8 +609,6 @@ const survivorsPack = GAMES && game.total ? buildSurvivors({ root: ROOT, dist: D
 // section, its cards/v1 flashcards, and the practice sets whose questions it reads from play/data/.
 // Archived documents are left out. Nothing is graded there.
 const listenPages = new Map();
-const LISTEN_AUDIO = path.join(path.dirname(CONTENT), 'listen-audio');
-const recorded = new Set(fs.existsSync(LISTEN_AUDIO) ? fs.readdirSync(LISTEN_AUDIO).filter((f) => f.endsWith('.mp3')) : []);
 for (const s of subjects) {
   const live = s.documents.filter((d) => !d.archived);
   const outlineDoc = (s.refs?.outline && s.documents.find((d) => d.slug === s.refs.outline)) || live.find((d) => d.type === 'outline');
@@ -626,20 +624,11 @@ for (const s of subjects) {
   const sets = (game.courses.find((c) => c.slug === s.slug)?.sets || []).filter((x) => !x.archived)
     .map((x) => ({ slug: x.slug, title: x.title, count: x.count, areas: (x.topics || []).map(([area, n]) => [area || 'Other', n]) }));
   // Its audio courses (listen/v1), first on the page when there are any.
-  // Each line's recorded MP3 (listen-audio/, made by scripts/listen-render.mjs) is linked and copied
-  // to listen/<course>/audio/; lines without one are read by the browser's voice.
-  const audio = [...s.listenCourses].sort((a, b) => a.order - b.order || a.title.localeCompare(b.title)).map(({ order, ...c }) => {
-    const { course, files } = attachRecordings(c, (f) => recorded.has(f));
-    for (const f of files) {
-      fs.mkdirSync(path.join(DIST, 'listen', s.slug, 'audio'), { recursive: true });
-      fs.copyFileSync(path.join(LISTEN_AUDIO, f), path.join(DIST, 'listen', s.slug, 'audio', f));
-    }
-    return course;
-  });
+  const audio = [...s.listenCourses].sort((a, b) => a.order - b.order || a.title.localeCompare(b.title)).map(({ order, ...c }) => c);
   if (!outline.length && !cards.length && !sets.length && !audio.length) continue;
   listenPages.set(s.slug, {
     outline: outlineDoc && outline.length ? { title: outlineDoc.title, url: P.doc(outlineDoc), sections: outline.length } : null, cards: cards.length, questions: sets.reduce((n, x) => n + x.count, 0),
-    audio: audio.map((c) => ({ recorded: c.days.some((d) => d.episodes.some((e) => e.segments.some((x) => x.rec))), id: c.id, title: c.title, description: c.description, days: c.days.length, episodes: c.days.reduce((n, d) => n + d.episodes.length, 0), minutes: c.days.reduce((n, d) => n + d.minutes, 0) })),
+    audio: audio.map((c) => ({ id: c.id, title: c.title, description: c.description, days: c.days.length, episodes: c.days.reduce((n, d) => n + d.episodes.length, 0), minutes: c.days.reduce((n, d) => n + d.minutes, 0) })),
   });
   write(`listen/${s.slug}/data.json`, JSON.stringify({ course: { slug: s.slug, title: s.title }, audio, outline, cards, sets }));
 }
