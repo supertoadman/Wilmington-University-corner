@@ -1,0 +1,800 @@
+<!doctype html>
+<!--
+mcq/v1 practice set: copyable template. Spec: docs/mcq-format.md (also api/specs/mcq-format.md).
+The whole set is the JSON in the script element with id "mcq-data", near the end of this file.
+To make a new set, do ONE of these:
+  1. Save just that JSON as content/<Subject>/<Name>.mcq.json (preferred), or
+  2. Copy this whole file to content/<Subject>/<Name>.html and replace only that JSON.
+The build re-renders the page from the JSON with the current shell, so edit nothing else.
+Opened straight from disk, this file works offline as it is.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Practice Set (Sales and Leases)</title>
+<meta name="description" content="Six sample questions that use every mcq/v1 feature: two exams, topic areas, a shared fact pattern, a variation, a &quot;None of the above&quot; question that keeps its letters, and cites the reference popup links to the supplement and outline.">
+<meta name="generator" content="mcq/v1 practice shell">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+/* Canonical practice shell (mcq/v1): the standalone page every .mcq.json set is built into by
+   scripts/lib/practice-shell.mjs, which inlines this file. The card, bar and stack rules below the
+   "Shuffle mode" line are copied verbatim from src/assets/styles.css, so a practice set looks and
+   works like /shuffle/ (tests/canonical-formats.test.mjs checks they stay identical). Tokens are the
+   site's own, light and dark; the site's viewer sets data-theme on this page when it is framed. */
+
+:root {
+  --bg: #f6f3ec; --bg-elev: #fbf9f4; --surface: #ffffff; --surface-2: #f3efe6; --surface-3: #e9e3d6;
+  --text: #161c27; --text-2: #3b4352; --muted: #636978; --border: #e5dfd2; --border-strong: #d4ccbb;
+  --ink: #12213a; --ink-2: #1e3658; --ink-fg: #ffffff;
+  --gold: #a87b22; --gold-2: #d6ab55; --gold-soft: #f4e9cf; --gold-ink: #80601c;
+  --link: #1e4f8a; --focus: #2f6fdd;
+  --flag: #9a5f0e; --flag-soft: #f7ecd9;
+  --shadow-sm: 0 1px 2px rgba(22, 28, 39, .06), 0 1px 1px rgba(22, 28, 39, .03);
+  --radius-sm: 10px; --radius: 16px;
+  --font-sans: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+  --font-mono: 'JetBrains Mono', ui-monospace, 'Cascadia Code', Consolas, monospace;
+  --header-h: 0px;
+  --accent: var(--ink-2);
+  --ink-mix: 82%; --tint: 10%;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0c1016; --bg-elev: #10151d; --surface: #141a23; --surface-2: #1a212c; --surface-3: #232c39;
+    --text: #ebe8e1; --text-2: #c3c7cf; --muted: #8f96a3; --border: #242c38; --border-strong: #323d4d;
+    --ink: #ece6d6; --ink-2: #a9c6ec; --ink-fg: #0c1016;
+    --gold: #e0b862; --gold-2: #e9c77f; --gold-soft: #2f2716; --gold-ink: #e0b862;
+    --link: #9cc0ec; --focus: #79a8ff; --flag: #e3b673; --flag-soft: #33281a;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+    --ink-mix: 45%; --tint: 16%;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0c1016; --bg-elev: #10151d; --surface: #141a23; --surface-2: #1a212c; --surface-3: #232c39;
+  --text: #ebe8e1; --text-2: #c3c7cf; --muted: #8f96a3; --border: #242c38; --border-strong: #323d4d;
+  --ink: #ece6d6; --ink-2: #a9c6ec; --ink-fg: #0c1016;
+  --gold: #e0b862; --gold-2: #e9c77f; --gold-soft: #2f2716; --gold-ink: #e0b862;
+  --link: #9cc0ec; --focus: #79a8ff; --flag: #e3b673; --flag-soft: #33281a;
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, .4);
+  --ink-mix: 45%; --tint: 16%;
+  color-scheme: dark;
+}
+/* Accent helpers: an accent color readable as text, and a soft accent tint (as on the site). */
+* { --accent-ink: color-mix(in srgb, var(--accent) var(--ink-mix), var(--text)); --accent-soft: color-mix(in srgb, var(--accent) var(--tint), var(--surface)); }
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; -webkit-tap-highlight-color: transparent; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 400 16px/1.6 var(--font-sans); -webkit-font-smoothing: antialiased; }
+button, select, input { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.sh-wrap { max-width: 860px; margin: 0 auto; padding: 28px 16px 64px; }
+.sh-head { margin-bottom: 4px; }
+.sh-kicker { margin: 0 0 6px; font: 600 12px/1.3 var(--font-sans); letter-spacing: .1em; text-transform: uppercase; color: var(--gold-ink); }
+.sh-title { margin: 0; font: 500 clamp(28px, 5vw, 44px)/1.08 var(--font-serif); letter-spacing: -.02em; text-wrap: balance; }
+.sh-lede { margin: 10px 0 0; color: var(--text-2); font-size: 16px; max-width: 70ch; text-wrap: pretty; }
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: 12px; border: 1px solid transparent; font-size: 14.5px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.btn:active { transform: translateY(1px); }
+.btn:disabled { opacity: .5; cursor: default; transform: none; }
+.btn[hidden] { display: none; }
+.btn-primary { background: var(--ink); color: var(--ink-fg); box-shadow: var(--shadow-sm); }
+.btn-primary:hover { background: color-mix(in srgb, var(--ink) 86%, var(--gold)); }
+.btn-ghost { background: var(--surface); border-color: var(--border); color: var(--text); }
+.btn-ghost:hover:not(:disabled) { border-color: var(--border-strong); background: var(--surface-2); }
+
+/* ---------- Shuffle mode (verbatim from src/assets/styles.css) ---------- */
+.shuffle-run { max-width: 820px; }
+.shuffle-bar { position: sticky; top: var(--header-h); z-index: 5; padding: 10px 0 12px; background: var(--bg); border-bottom: 1px solid var(--border); }
+.shuffle-bar-row { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.shuffle-bar .btn { min-height: 38px; padding: 0 14px; font-size: 14px; }
+.shuffle-score { margin: 0 auto 0 0; font-weight: 600; font-variant-numeric: tabular-nums; }
+.shuffle-score span { color: var(--muted); font-weight: 400; }
+.shuffle-meter { margin-top: 10px; height: 4px; border-radius: 2px; background: var(--border); overflow: hidden; }
+.shuffle-meter i { display: block; height: 100%; width: 0; background: var(--gold); transition: width .25s; }
+.shuffle-list { list-style: none; margin: 20px 0 0; padding: 0; display: grid; gap: 14px; }
+.sq { padding: 16px 18px 14px; background: var(--surface); border: 1px solid var(--border); border-left: 3px solid var(--accent); border-radius: var(--radius-sm); scroll-margin-top: calc(var(--header-h) + 90px); }
+.sq-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; font-size: 13px; color: var(--muted); }
+.sq-num { font: 500 13px var(--font-mono); color: var(--text); }
+.sq-kind { padding: 1px 8px; border-radius: 999px; background: var(--gold-soft); color: var(--gold-ink); font-size: 12px; }
+.sq-topic { margin: 2px 0 0; font: 12px/1.4 var(--font-mono); color: var(--accent-ink); }
+.sq-pre { margin: 10px 0 0; padding: 8px 12px; border-radius: 0 8px 8px 0; background: var(--gold-soft); box-shadow: inset 3px 0 0 var(--gold); font-size: 15px; color: var(--text-2); }
+.sq-pre summary { cursor: pointer; font: 600 12px/1.4 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--gold-ink); }
+.sq-pre p { margin: 8px 0 0; }
+.sq-stem p { margin: 10px 0 0; }
+.sq-stem p:last-child { margin-bottom: 12px; }
+.sq-opts { display: grid; gap: 8px; }
+.sq-row { display: flex; gap: 6px; }
+.sq-opt { flex: 1 1 0; min-width: 0; display: flex; gap: 10px; text-align: left; padding: 9px 12px; line-height: 1.45; background: transparent; border: 1px solid var(--border-strong); border-radius: 8px; cursor: pointer; }
+.sq-opt:hover:not(:disabled) { border-color: var(--accent); background: var(--accent-soft); }
+.sq-opt:disabled { cursor: default; }
+.sq-opt b { flex: none; font: 500 14px/1.45 var(--font-mono); color: var(--muted); }
+.sq-opt.out span { text-decoration: line-through; color: var(--muted); }
+.sq-opt.right { border-color: #2f8a57; background: color-mix(in srgb, #2f8a57 14%, var(--surface)); }
+.sq-opt.wrong { border-color: #c0483a; background: color-mix(in srgb, #c0483a 14%, var(--surface)); }
+.sq-x { flex: none; width: 40px; display: grid; place-items: center; padding: 0; background: transparent; color: var(--muted); border: 1px solid var(--border-strong); border-radius: 8px; cursor: pointer; }
+.sq-x:hover { border-color: var(--accent); color: var(--text); }
+.sq-x[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--text); }
+.sq-x svg { width: 16px; height: 16px; }
+.sq-why { margin-top: 12px; padding-top: 10px; border-top: 1px dashed var(--border-strong); display: grid; gap: 8px; font-size: 14.5px; }
+.sq-why p { margin: 0; }
+.sq-verdict { font-weight: 600; outline: 0; }
+.sq-verdict.ok { color: #2f8a57; }
+.sq-verdict.no { color: #c0483a; }
+:root[data-theme="dark"] .sq-verdict.ok { color: #6fcf97; }
+:root[data-theme="dark"] .sq-verdict.no { color: #f08a7e; }
+.sq-rat { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 10px; align-items: baseline; }
+.sq-rat b { font: 500 14px var(--font-mono); color: var(--muted); }
+.sq-rat.key b { color: #2f8a57; }
+.sq-links { display: flex; flex-wrap: wrap; gap: 6px 16px; font-size: 13.5px; }
+.sq-links a { color: var(--link); }
+@media (prefers-reduced-motion: reduce) { .shuffle-meter i { transition: none; } }
+
+/* ---------- Topic picker (src/assets/topic-picker.js; the same rules in styles.css and src/practice/shell.css) ---------- */
+.tp-btn { display: inline-flex; align-items: center; gap: 8px; min-height: 38px; padding: 0 6px 0 12px; border: 1.5px solid var(--accent); border-radius: 999px; background: var(--surface); color: var(--text); font-size: 14px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+.tp-btn svg { width: 16px; height: 16px; flex: none; color: var(--accent-ink); }
+.tp-btn b { padding: 2px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent-ink); font-weight: 600; font-variant-numeric: tabular-nums; }
+.tp-btn:hover:not(:disabled) { background: var(--accent-soft); }
+.tp-btn:disabled { opacity: .5; cursor: default; }
+.tp-btn[hidden] { display: none; }
+.tp-btn.tp-btn-on { border-color: var(--gold); background: var(--gold-soft); }
+.tp-btn.tp-btn-on b { background: var(--gold-ink); color: var(--surface); }
+.tp-note { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; margin: 14px 0 0; padding: 10px 12px 10px 14px; border-radius: var(--radius-sm); background: var(--gold-soft); color: var(--text); font-size: 14.5px; font-weight: 600; }
+.tp-note[hidden] { display: none; }
+.tp-note span { margin-right: auto; }
+.tp-note button { min-height: 34px; padding: 0 14px; border: 1px solid var(--gold); border-radius: 999px; background: var(--surface); color: var(--text); font-size: 13.5px; font-weight: 600; cursor: pointer; }
+.tp-note button:hover { background: var(--surface-2); }
+.tp-lock { overflow: hidden; }
+.tp-btn, .tp-close, .tp-q, .tp-go, .tp-note button { font-family: inherit; }
+.tp { width: min(560px, calc(100vw - 24px)); max-width: none; max-height: min(780px, calc(100vh - 24px)); max-height: min(780px, calc(100dvh - 24px)); padding: 0; border: 1px solid var(--border); border-radius: var(--radius); background: var(--surface); color: var(--text); box-shadow: 0 24px 64px rgba(0, 0, 0, .3); overflow: hidden; }
+.tp[open] { display: flex; flex-direction: column; }
+.tp:focus { outline: none; }
+.tp::backdrop { background: rgba(12, 16, 22, .55); }
+.tp-head { display: flex; align-items: center; gap: 12px; padding: 18px 16px 0 20px; }
+.tp-title { margin: 0 auto 0 0; font: 500 25px/1.2 var(--font-serif); letter-spacing: -.01em; }
+.tp-close { flex: none; width: 42px; height: 42px; display: grid; place-items: center; padding: 0; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); color: var(--text-2); cursor: pointer; }
+.tp-close:hover { background: var(--surface-2); color: var(--text); }
+.tp-close svg { width: 20px; height: 20px; }
+.tp-sub { margin: 0; padding: 4px 20px 0; color: var(--text-2); font-size: 15px; }
+.tp-quick { display: flex; gap: 10px; padding: 14px 20px; border-bottom: 1px solid var(--border); }
+.tp-q { flex: 1 1 0; min-height: 44px; border: 1px solid var(--border-strong); border-radius: 12px; background: var(--surface); color: var(--text); font-size: 15px; font-weight: 600; cursor: pointer; }
+.tp-q:hover:not(:disabled) { background: var(--surface-2); }
+.tp-q:disabled { opacity: .45; cursor: default; }
+.tp-list { flex: 1 1 auto; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding: 12px 14px; display: grid; gap: 14px; align-content: start; }
+.tp-group { display: grid; gap: 6px; }
+.tp-group-title { margin: 0; padding: 0 6px; font: 600 12px/1.4 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); }
+.tp-row { display: flex; align-items: center; gap: 12px; min-height: 52px; padding: 8px 14px 8px 12px; border: 1.5px solid var(--border); border-radius: 12px; cursor: pointer; user-select: none; -webkit-user-select: none; }
+.tp-row:hover { border-color: var(--border-strong); }
+.tp-row:has(input:checked) { border-color: color-mix(in srgb, var(--accent) 50%, transparent); background: var(--accent-soft); }
+.tp-row input { flex: none; width: 24px; height: 24px; margin: 0; accent-color: var(--accent); cursor: pointer; }
+.tp-name { flex: 1 1 auto; min-width: 0; font-size: 15.5px; line-height: 1.35; }
+.tp-row:has(input:not(:checked)) .tp-name { color: var(--muted); text-decoration: line-through; }
+.tp-count { flex: none; color: var(--muted); font: 500 13px var(--font-mono); font-variant-numeric: tabular-nums; }
+.tp-foot { padding: 12px 16px 14px; padding-bottom: max(14px, env(safe-area-inset-bottom)); border-top: 1px solid var(--border); }
+.tp-go { width: 100%; min-height: 52px; border: 0; border-radius: 12px; background: var(--ink); color: var(--ink-fg); font-size: 16.5px; font-weight: 600; cursor: pointer; }
+.tp-go:hover:not(:disabled) { background: color-mix(in srgb, var(--ink) 86%, var(--gold)); }
+.tp-go:disabled { background: var(--surface-3); color: var(--muted); cursor: default; }
+@media (max-width: 560px) {
+  .tp { width: 100%; max-height: 92vh; max-height: 92dvh; margin: auto 0 0; border-radius: 20px 20px 0 0; border-bottom: 0; }
+  .tp-title { font-size: 22px; }
+}
+
+/* ---------- Shell-only: controls, exam groups, facts, flags, exam-mode picks ---------- */
+.shuffle-run { margin-top: 18px; }
+.sh-controls { padding: 2px 0 8px; } /* not sticky: only the score, actions and meter stay pinned */
+.sh-seg { display: inline-flex; border: 1px solid var(--border); border-radius: 10px; overflow: hidden; background: var(--surface); }
+.sh-seg button { min-height: 34px; padding: 0 12px; border: 0; background: transparent; color: var(--muted); font-size: 13.5px; font-weight: 600; cursor: pointer; }
+.sh-seg button[aria-pressed="true"] { background: var(--accent-soft); color: var(--text); }
+.sh-pick { min-height: 34px; max-width: 100%; padding: 0 8px; border: 1px solid var(--border); border-radius: 10px; background: var(--surface); color: var(--text); font-size: 13.5px; }
+.sh-toggle { display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; color: var(--text-2); cursor: pointer; }
+.sh-toggle input { width: 16px; height: 16px; margin: 0; accent-color: var(--accent); }
+.sh-hint { font-size: 13px; color: var(--muted); }
+.sh-group { list-style: none; display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 14px; margin-top: 18px; }
+.sh-group:first-child { margin-top: 0; }
+.sh-group h2 { margin: 0; font: 500 26px/1.2 var(--font-serif); letter-spacing: -.01em; }
+.sh-group p { margin: 0; flex-basis: 100%; color: var(--text-2); font-size: 14.5px; }
+.sh-tally { margin-right: auto; color: var(--muted); font-size: 14px; font-variant-numeric: tabular-nums; }
+.sh-group .btn { min-height: 34px; padding: 0 12px; font-size: 13.5px; }
+.sh-empty { list-style: none; padding: 40px 0; text-align: center; color: var(--muted); }
+.sq-meta .flagbtn { margin-left: auto; }
+.flagbtn { align-self: center; display: inline-flex; align-items: center; gap: 5px; padding: 2px 10px; border: 1px solid var(--border); border-radius: 999px; background: transparent; color: var(--muted); font-size: 12px; cursor: pointer; }
+.flagbtn svg { width: 13px; height: 13px; }
+.flagbtn:hover { border-color: var(--flag); color: var(--text); }
+.flagbtn[aria-pressed="true"] { background: var(--flag-soft); border-color: var(--flag); color: var(--text); }
+.flagbtn[aria-pressed="true"] svg { color: var(--flag); fill: currentColor; }
+.facts { margin: 10px 0 0; padding: 10px 14px; border-radius: 0 8px 8px 0; background: var(--accent-soft); box-shadow: inset 3px 0 0 var(--accent); font-size: 15px; color: var(--text-2); }
+.facts .lbl { display: block; margin-bottom: 2px; font: 600 11.5px/1.4 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); }
+.facts p { margin: 6px 0 0; }
+.facts .lbl + p { margin-top: 0; }
+.sq-facts { margin: 10px 0 0; }
+.sq-facts summary { cursor: pointer; font: 600 12px/1.4 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--accent-ink); }
+.sq-facts .facts { margin-top: 6px; }
+.sq-opt.chosen { border-color: var(--accent); background: var(--accent-soft); }
+.sq-opt.chosen b { color: var(--accent-ink); }
+.sq-rule { padding: 8px 12px; border-radius: 8px; background: var(--surface-2); }
+.sq-rule b { margin-right: 6px; font: 600 11.5px/1.4 var(--font-sans); letter-spacing: .08em; text-transform: uppercase; color: var(--gold-ink); }
+@media (max-width: 560px) { .sh-wrap { padding-top: 20px; } .sq { padding: 14px 14px 12px; } .shuffle-bar .btn { flex: 1 1 auto; } }
+@media print { .shuffle-bar, .flagbtn, .sq-x { display: none; } .sq { break-inside: avoid; } }
+</style>
+</head>
+<body>
+<div class="sh-wrap" data-mcq-shell style="--accent:#3f6b4a">
+  <header class="sh-head">
+    <p class="sh-kicker">Sales and Leases</p>
+    <h1 class="sh-title">Sample Practice Set (Sales and Leases)</h1>
+    <p class="sh-lede">Six sample questions that use every mcq/v1 feature: two exams, topic areas, a shared fact pattern, a variation, a &quot;None of the above&quot; question that keeps its letters, and cites the reference popup links to the supplement and outline.</p>
+  </header>
+  <div class="shuffle-run">
+    <div class="shuffle-bar-row sh-controls">
+      <div class="sh-seg" role="group" aria-label="Mode"><button type="button" id="sh-m-study" aria-pressed="true">Study</button><button type="button" id="sh-m-exam" aria-pressed="false">Exam</button></div>
+      <select class="sh-pick" id="sh-exam" aria-label="Exam"></select>
+      <button type="button" class="tp-btn" id="sh-topics" hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 5h20"/><path d="M6 12h12"/><path d="M9 19h6"/></svg><span>Topics</span><b>All</b></button>
+      <label class="sh-toggle"><input type="checkbox" id="sh-shufo"> Shuffle choices</label>
+      <span class="sh-hint" id="sh-hint"></span>
+    </div>
+    <div class="shuffle-bar">
+      <div class="shuffle-bar-row">
+        <p class="shuffle-score" id="sh-score" aria-live="polite">0 / 0 correct</p>
+        <button class="btn btn-primary" type="button" id="sh-grade" hidden>Grade</button>
+        <button class="btn btn-ghost" type="button" id="sh-shufq" title="Put the questions in a random order">Shuffle questions</button>
+        <button class="btn btn-ghost" type="button" id="sh-missed">Retry missed</button>
+        <button class="btn btn-ghost" type="button" id="sh-flagged">Flagged</button>
+        <button class="btn btn-ghost" type="button" id="sh-reset">Reset</button>
+      </div>
+      <div class="shuffle-meter"><i id="sh-meter"></i></div>
+    </div>
+    <p class="tp-note" id="sh-topics-note" aria-live="polite" hidden></p>
+    <ol class="shuffle-list" id="sh-list"></ol>
+  </div>
+  <noscript><p>This practice set needs JavaScript to run.</p></noscript>
+</div>
+<script id="mcq-data" type="application/json">{"schema":"mcq/v1","title":"Sample Practice Set (Sales and Leases)","description":"Six sample questions that use every mcq/v1 feature: two exams, topic areas, a shared fact pattern, a variation, a \"None of the above\" question that keeps its letters, and cites the reference popup links to the supplement and outline.","id":"sample-sales-and-leases","course":"Sales and Leases","modeDefault":"study","areas":["Formation & § 2-207","Good faith & modification","Statute of frauds","Risk of loss"],"exams":[{"id":"1","title":"Exam 1","description":""},{"id":"2","title":"Exam 2","description":"Builds on Exam 1: one variation and one worked casebook problem."}],"hypos":{"fridge":{"label":"Facts for Q3–4","text":"Dana buys a refrigerator from Appliance Mart, a retail appliance store. She pays the full price and says she will pick it up on Saturday. On Friday, a fire destroys the store's warehouse and the refrigerator with it."}},"questions":[{"id":"1.1","q":"Buyer, a hardware chain, sends Seller, a manufacturer, a purchase order for 500 space heaters. Seller replies with its acknowledgment form, which matches the quantity and price but adds on the back: \"Seller disclaims all implied warranties, including merchantability.\" Buyer never objects. The heaters are shipped and accepted, and many prove defective. Is the disclaimer part of the contract?","o":["Yes, because between merchants an additional term becomes part of the contract unless the offeror objects.","No, because a term that negates the warranty of merchantability materially alters the contract.","No, because the acknowledgment's added term made it a counteroffer under the mirror-image rule.","Yes, because Buyer accepted the heaters, and accepting the goods is assent to the seller's terms.","No, because a disclaimer of merchantability is effective only in a separate record the buyer signs."],"a":1,"oe":["Objection is only one of three exceptions. Under § 2-207(2) the term also stays out if the offer limited acceptance to its terms or the term materially alters the contract.","Correct. Between merchants, an additional term joins the contract unless it materially alters it (§ 2-207(2)(b)). A clause negating the standard warranties is the first example of a material alteration in § 2-207 cmt. 4.","Section 2-207(1) rejects the mirror-image rule: a definite and seasonable expression of acceptance operates as an acceptance even though it states additional terms.","Taking delivery is not express assent to a material alteration. The added term is only a proposal for addition to the contract (§ 2-207(2)).","Section 2-316(2) requires that a merchantability disclaimer mention merchantability and, if written, be conspicuous. It does not require a separate signed record."],"exam":"1","area":"Formation & § 2-207","tag":"Additional terms between merchants","e":"Between merchants, an additional term in an acceptance becomes part of the contract unless the offer limits acceptance to its terms, the term materially alters the contract, or the offeror objects (§ 2-207(2)). A warranty disclaimer is the classic material alteration (§ 2-207 cmt. 4).","n":1},{"id":"1.2","q":"A steel mill agrees to sell a fabricator 200 tons of steel a month for the year at $148 a ton. Midyear, demand surges and every mill is fully booked. The mill tells the fabricator it will stop shipping unless the fabricator signs an amendment raising the price to $160 a ton. The fabricator cannot buy elsewhere, signs, and later sues to recover the difference. What is the most likely result?","o":["The mill wins, because a modification under § 2-209(1) needs no consideration to be binding.","The fabricator wins, because the price increase was not supported by new consideration.","The fabricator wins, because a modification extracted by threatening to stop performing is not sought in good faith.","The mill wins, because the market shift gave it a legitimate commercial reason to ask for more.","The fabricator wins, because a modification of a contract for $500 or more must be in a signed record."],"a":2,"oe":["No consideration is needed (§ 2-209(1)), but the modification must still meet the test of good faith (§ 2-209 cmt. 2).","Section 2-209(1) abolishes the consideration requirement for modifications, so the lack of new consideration is not the problem.","Correct. Roth Steel holds that a modification must be sought in good faith, objectively and subjectively, and using a threat to breach to extract it is bad faith (§ 2-209 cmt. 2).","A legitimate reason to ask for a change satisfies only the objective part of the test. Extracting it by threatening to stop performing fails the honesty-in-fact part.","The amendment was signed, so any statute of frauds requirement (§ 2-209(3)) was met. The flaw is bad faith, not form."],"exam":"1","area":"Good faith & modification","tag":"Modification extracted by a threat to stop performing","e":"A modification needs no consideration but must be sought in good faith (§ 2-209(1) and cmt. 2). A legitimate commercial reason is not enough if the change is extracted by threatening to breach (Roth Steel).","n":2},{"id":"1.3","q":"Who bears the loss of the refrigerator?","o":["Dana, because she paid the full price before the fire.","Dana, because the refrigerator was identified to the contract when she bought it.","Appliance Mart, because a merchant seller keeps the risk until the buyer receives the goods.","Dana, because the store tendered delivery by holding the refrigerator for her to pick up.","Appliance Mart, because title stays with the seller until the buyer picks up the goods."],"a":2,"oe":["Payment does not move the risk of loss. Article 2 ties risk to delivery, not to payment or title.","Identification gives the buyer a special property and an insurable interest (§ 2-501). It does not shift the risk of loss.","Correct. When the goods are neither shipped by carrier nor held by a bailee, risk passes on the buyer's receipt if the seller is a merchant (§ 2-509(3)). Receipt means taking physical possession.","Tender passes the risk only when the seller is not a merchant (§ 2-509(3)). Appliance Mart is a merchant, so the rule is receipt.","Right result, wrong reason. Article 2 separates risk from title, so who holds title does not decide who bears the loss."],"exam":"1","area":"Risk of loss","tag":"Merchant seller, buyer picks up","hypo":"fridge","e":"Under § 2-509(3), risk passes to the buyer on receipt if the seller is a merchant, and on tender of delivery otherwise.","n":3},{"id":"1.4","q":"Which of the following would have put the risk of loss on Dana before she picked up the refrigerator?","o":["Dana's paying the full price in cash rather than by card.","A term on the signed sales slip stating \"Title passes to Buyer upon payment.\"","The store's telling Dana the refrigerator was ready and she could pick it up anytime.","A term in the signed sales agreement stating that the risk of loss passes to Dana at the time of sale.","None of the above."],"a":3,"oe":["How Dana paid makes no difference. Payment does not move the risk of loss.","A title clause decides ownership, not risk. Section 2-509 does not follow title.","That is a tender of delivery, which passes the risk only when the seller is not a merchant (§ 2-509(3)).","Correct. The risk-of-loss rules are subject to contrary agreement of the parties (§ 2-509(4)), so a term allocating the risk to Dana at the time of sale controls.","One of the other choices works: a term allocating the risk to Dana at the time of sale (§ 2-509(4))."],"exam":"1","area":"Risk of loss","tag":"Shifting the risk by agreement","hypo":"fridge","e":"The parties can allocate the risk of loss by agreement (§ 2-509(4)); without one, § 2-509(3) puts it on a merchant seller until the buyer's receipt.","fixed":true,"n":4},{"id":"2.1","q":"Variation: same facts, except that Dana buys the refrigerator from her neighbor Lou, who is moving and has never sold an appliance before. Lou says, \"It's yours. Come get it Saturday.\" Who bears the loss?","o":["Lou, because a seller keeps the risk until the buyer receives the goods.","Dana, because a non-merchant seller passes the risk on tender of delivery.","Lou, because the refrigerator never left his house.","Dana, but only to the extent her own insurance does not cover the loss.","Lou, because Dana never took physical possession of the refrigerator."],"a":1,"oe":["The receipt rule applies only when the seller is a merchant (§ 2-509(3)). Lou is not.","Correct. A non-merchant seller passes the risk on tender of delivery (§ 2-509(3)). Lou tendered when he told Dana the refrigerator was hers to collect.","Where the goods sit matters only if a bailee holds them (§ 2-509(2)). Lou is the seller, not a bailee.","The insurance-gap rules apply when a party is in breach (§ 2-510). No one breached here.","Physical possession is the test only for merchant sellers. For a non-merchant, tender is enough."],"exam":"2","area":"Risk of loss","tag":"Non-merchant seller, buyer picks up","e":"Under § 2-509(3), risk passes on receipt from a merchant seller but on tender from a non-merchant seller.","v":"1.3","pre":"Dana buys a refrigerator from Appliance Mart, a retail appliance store. She pays the full price and says she will pick it up on Saturday. On Friday, a fire destroys the store's warehouse and the refrigerator with it.\n\nWho bears the loss of the refrigerator?","n":1},{"id":"2.2","q":"Seller and Buyer orally agree on the sale of a used lathe for $400. A week later they orally agree to raise the price to $800 because Seller will include a set of tooling. Buyer later refuses to pay more than $400. Is the modification enforceable?","o":["Yes, because a modification of a sales contract needs no consideration.","No, because the contract as modified is for $500 or more and must satisfy the statute of frauds.","Yes, because the original contract was for less than $500 and needed no writing.","No, because an oral modification of a sales contract is never enforceable.","No, because the price increase was not sought in good faith."],"a":1,"oe":["True, but beside the point. Even without a consideration requirement, the modified contract must still satisfy the statute of frauds (§ 2-209(3)).","Correct. The statute of frauds applies to the contract as modified (§ 2-209(3)). At $800 it needs a signed record (§ 2-201(1)), so the modification fails and the $400 deal stands (Problem 3-4(a)).","The test is the contract as modified, not the original deal (§ 2-209(3)).","Oral modifications are enforceable unless a signed agreement excludes them (§ 2-209(2)) or the modified contract falls within the statute of frauds.","Nothing suggests bad faith. Adding tooling is a legitimate reason to change the price."],"exam":"2","area":"Statute of frauds","tag":"Modification that brings the deal over $500","e":"The statute of frauds applies to the contract as modified (§ 2-209(3)). A modification that brings the price to $500 or more needs a signed record (§ 2-201(1)); without one, the original deal stands, and the attempt may still operate as a waiver (§ 2-209(4)).","n":2}]}</script>
+<script>
+var TopicPicker = (function () {
+// The topic picker: a Topics button, and a pop-up checklist with one big row per topic, Select all
+// and Clear all, and a "Show N questions" button. Shuffle mode imports it (src/assets/shuffle.js).
+// Practice pages carry it as plain script, wrapped as `TopicPicker` (scripts/lib/topic-picker.mjs):
+// the ones built from an .mcq.json set inline it ahead of src/practice/shell.js, and the older
+// hand-built pages in content/ get it where they hold a <script data-topic-picker> placeholder. The
+// build imports topicsButton() to draw the button. Its .tp-* styles are in src/assets/styles.css
+// and, identically, src/practice/shell.css. It has no imports, nothing here touches the DOM until it
+// is called, and every label is set with textContent.
+
+const TOPICS_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M2 5h20"/><path d="M6 12h12"/><path d="M9 19h6"/></svg>';
+const CLOSE_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></svg>';
+
+/** The Topics button's markup. `attrs` is the rest of its opening tag, e.g. 'id="sh-topics" hidden'. */
+function topicsButton(attrs = '') {
+  return `<button type="button" class="tp-btn"${attrs ? ` ${attrs}` : ''}>${TOPICS_SVG}<span>Topics</span><b>All</b></button>`;
+}
+
+/**
+ * Shows how many topics are on: the button reads "All 12" or "3 of 12", and `note` (optional) turns
+ * into a bar that says so, with a button that calls `everything()` to switch every topic back on.
+ */
+function showTopics({ button, note, on, total, everything }) {
+  const all = on >= total;
+  const b = button.querySelector('b');
+  if (b) b.textContent = all ? `All ${total}` : `${on} of ${total}`;
+  button.classList.toggle('tp-btn-on', !all);
+  button.setAttribute('aria-label', all ? `Topics: all ${total} on. Choose topics` : `Topics: ${on} of ${total} on. Choose topics`);
+  if (!note) return;
+  note.hidden = all;
+  if (all) return;
+  const text = document.createElement('span');
+  text.textContent = `Only ${on} of ${total} topics are on.`;
+  const again = document.createElement('button');
+  again.type = 'button';
+  again.textContent = 'Turn all topics back on';
+  again.addEventListener('click', everything);
+  note.replaceChildren(text, again);
+}
+
+/**
+ * Hooks a Topics button (and its note bar) to a page's own filter, for a page with one list of
+ * topics. `list()` gives the topics to show now, [{ key, label, count }]; `get()` the Set of keys
+ * switched off; `set(off)` stores a new Set and redraws the page (called only when something
+ * changed). Returns paint(), which the page calls whenever it redraws, to update the button and note.
+ * The button hides itself while there is nothing to choose between.
+ */
+function topicFilter({ button, note, list, get, set, parent, noun }) {
+  const paint = () => {
+    const topics = list(), off = get();
+    button.hidden = topics.length < 2 && !topics.some((t) => off.has(t.key));
+    if (button.hidden) { if (note) note.hidden = true; return; }
+    showTopics({ button, note, on: topics.filter((t) => !off.has(t.key)).length, total: topics.length, everything: () => set(new Set()) });
+  };
+  button.addEventListener('click', () => pickTopics({
+    groups: [{ topics: list() }], off: get(), parent, noun,
+    done: (next) => {
+      const off = get();
+      if (next.size !== off.size || [...next].some((k) => !off.has(k))) set(next);
+    },
+  }));
+  return paint;
+}
+
+/**
+ * Opens the checklist. `groups` is [{ title, accent, topics: [{ key, label, count }] }]; group titles
+ * show only when there are two or more. `off` is the Set of topic keys switched off now. When the
+ * panel closes, however it closes, `done(off)` gets the new Set (keys not listed keep their state).
+ * Closing with nothing ticked turns every listed topic back on, so a page is never left empty.
+ * The panel is added to `parent`, so it picks up that element's colors.
+ */
+function pickTopics({ groups, off, done, parent = document.body, noun = 'question' }) {
+  const el = (tag, cls, text) => {
+    const n = document.createElement(tag);
+    if (cls) n.className = cls;
+    if (text != null) n.textContent = text;
+    return n;
+  };
+  const button = (cls, text) => { const b = el('button', cls, text); b.type = 'button'; return b; };
+
+  const dlg = el('dialog', 'tp');
+  dlg.setAttribute('aria-labelledby', 'tp-title');
+  const head = el('div', 'tp-head');
+  const title = el('h2', 'tp-title', 'Choose your topics');
+  title.id = 'tp-title';
+  const close = button('tp-close');
+  close.setAttribute('aria-label', 'Close');
+  close.innerHTML = CLOSE_SVG;
+  head.append(title, close);
+  const sub = el('p', 'tp-sub', 'Tick the topics you want to practice. Untick the ones you don’t.');
+  const quick = el('div', 'tp-quick');
+  const all = button('tp-q', 'Select all');
+  const none = button('tp-q', 'Clear all');
+  quick.append(all, none);
+
+  const list = el('div', 'tp-list');
+  const boxes = [];
+  const shown = groups.filter((g) => g.topics.length);
+  for (const g of shown) {
+    const group = el('div', 'tp-group');
+    if (g.accent) group.style.setProperty('--accent', g.accent);
+    if (shown.length > 1 && g.title) group.append(el('h3', 'tp-group-title', g.title));
+    for (const t of g.topics) {
+      const row = el('label', 'tp-row');
+      const box = el('input');
+      box.type = 'checkbox';
+      box.checked = !off.has(t.key);
+      box.dataset.count = t.count;
+      boxes.push([box, t.key]);
+      row.append(box, el('span', 'tp-name', t.label), el('span', 'tp-count', String(t.count)));
+      group.append(row);
+    }
+    list.append(group);
+  }
+  const foot = el('div', 'tp-foot');
+  const go = button('tp-go');
+  foot.append(go);
+  dlg.append(head, sub, quick, list, foot);
+
+  const sync = () => {
+    const on = boxes.filter(([b]) => b.checked);
+    const n = on.reduce((sum, [b]) => sum + +b.dataset.count, 0);
+    go.disabled = !on.length;
+    go.textContent = on.length ? `Show ${n.toLocaleString('en-US')} ${n === 1 ? noun : `${noun}s`}` : 'Tick at least one topic';
+    all.disabled = on.length === boxes.length;
+    none.disabled = !on.length;
+  };
+  list.addEventListener('change', sync);
+  all.addEventListener('click', () => { boxes.forEach(([b]) => { b.checked = true; }); sync(); });
+  none.addEventListener('click', () => { boxes.forEach(([b]) => { b.checked = false; }); sync(); });
+  sync();
+
+  let finished = false;
+  const finish = () => {
+    if (finished) return;
+    finished = true;
+    const next = new Set(off);
+    const any = boxes.some(([b]) => b.checked);
+    for (const [b, key] of boxes) { if (b.checked || !any) next.delete(key); else next.add(key); }
+    document.documentElement.classList.remove('tp-lock');
+    dlg.remove();
+    done(next);
+  };
+  const modal = typeof dlg.showModal === 'function';
+  // Every way out runs finish() itself; the dialog's own "close" event is only a backstop.
+  const shut = () => { if (modal && dlg.open) dlg.close(); finish(); };
+  dlg.addEventListener('cancel', (e) => { e.preventDefault(); shut(); }); // Esc
+  dlg.addEventListener('close', finish);
+  dlg.addEventListener('keydown', (e) => { if (e.key === 'Escape' && !modal) shut(); });
+  go.addEventListener('click', shut);
+  close.addEventListener('click', shut);
+  // A tap on the dimmed page around the panel closes it too.
+  dlg.addEventListener('click', (e) => {
+    if (e.target !== dlg) return;
+    const r = dlg.getBoundingClientRect();
+    if (e.clientX < r.left || e.clientX > r.right || e.clientY < r.top || e.clientY > r.bottom) shut();
+  });
+
+  // Focus starts on the panel itself, so nothing looks pressed; Tab moves through it from the top.
+  dlg.tabIndex = -1;
+  dlg.autofocus = true;
+  parent.append(dlg);
+  document.documentElement.classList.add('tp-lock');
+  if (modal) dlg.showModal(); else dlg.setAttribute('open', '');
+  if (document.activeElement !== dlg) dlg.focus({ preventScroll: true });
+}
+return { topicsButton: topicsButton, showTopics: showTopics, topicFilter: topicFilter, pickTopics: pickTopics };
+})();
+// Canonical practice shell (mcq/v1). scripts/lib/practice-shell.mjs inlines this script into every
+// page it builds from a .mcq.json set; the set itself is the JSON in <script id="mcq-data">. The cards
+// are Shuffle mode's (.sq, see src/assets/shuffle.js), so the reference popup (src/assets/refs.js)
+// works on them unchanged: it adds "Look up" beside each card's Flag pill and links the cites.
+// Every piece of question text is set with textContent, never parsed as HTML.
+(() => {
+  const host = document.querySelector('[data-mcq-shell]');
+  const list = document.getElementById('sh-list');
+  if (!host || !list) return;
+  const fail = (msg) => { const li = document.createElement('li'); li.className = 'sh-empty'; li.textContent = msg; list.replaceChildren(li); };
+  let set;
+  try { set = JSON.parse(document.getElementById('mcq-data').textContent); } catch (e) { fail('This practice set’s data could not be read.'); return; }
+  if (!set || !Array.isArray(set.questions)) { fail('This practice set has no questions.'); return; }
+
+  const L = 'ABCDEFGH';
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const n = document.createElement(tag); if (cls) n.className = cls; if (text != null) n.textContent = text; return n; };
+  // Blank lines split paragraphs; a single line break stays a line break.
+  const paras = (parent, text) => {
+    String(text).split(/\n{2,}/).forEach((para) => {
+      const p = el('p');
+      para.split('\n').forEach((line, i) => { if (i) p.append(el('br')); p.append(line); });
+      parent.append(p);
+    });
+    return parent;
+  };
+  const shuffle = (a) => { a = a.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+  const slug = (s) => String(s).toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'q';
+
+  // ---------------------------------------------------------------------------
+  // The set. The build hands this page a checked set (scripts/lib/mcq.mjs); this pass only fills in
+  // what a hand-edited copy of the template may leave out, so the page also works on its own.
+  // ---------------------------------------------------------------------------
+  const hypos = {};
+  for (const [id, h] of Object.entries(set.hypos || {})) {
+    const text = typeof h === 'string' ? h : h && h.text;
+    if (text) hypos[id] = { label: (h && h.label) || 'Facts', text };
+  }
+  const FIXED = /\b(?:all|none|both|neither|any)\s+of\s+the\s+(?:above|foregoing)\b|^\s*(?:both\s+|either\s+|neither\s+)?\(?[A-H]\)?(?:\s*,\s*\(?[A-H]\)?)*\s*,?\s*(?:and|or|nor|&)\s+\(?[A-H]\)?(?:\s+only)?\s*\.?\s*$/i;
+  const questions = [];
+  const seen = new Set();
+  set.questions.forEach((r, i) => {
+    if (!r || !Array.isArray(r.o)) return;
+    const pairs = r.o.every(Array.isArray);
+    const o = pairs ? r.o.map((x) => String(x[0])) : r.o.map(String);
+    const oe = Array.isArray(r.oe) ? r.oe.map((x) => (x == null ? '' : String(x))) : pairs ? r.o.map((x) => String(x[1] || '')) : [];
+    const a = typeof r.a === 'string' ? L.indexOf(r.a.toUpperCase()) : r.a;
+    const id = r.id != null ? String(r.id) : String(i + 1);
+    if (seen.has(id) || !(r.q || r.stem) || o.length < 2 || !(a >= 0 && a < o.length)) return;
+    seen.add(id);
+    questions.push({
+      id, q: String(r.q || r.stem), o, oe, a, e: r.e || '', area: r.area || r.topic || '', tag: r.tag || '',
+      exam: r.exam != null ? String(r.exam) : '', hypo: hypos[r.hypo || r.h] ? r.hypo || r.h : '', v: r.v != null ? String(r.v) : '',
+      pre: r.pre || '', fixed: r.fixed === true || o.some((x) => FIXED.test(x)), n: r.n,
+    });
+  });
+  if (!questions.length) { fail('This practice set has no questions.'); return; }
+  const byId = new Map(questions.map((q) => [q.id, q]));
+  const count = new Map();
+  for (const q of questions) {
+    if (!q.n) { count.set(q.exam, (count.get(q.exam) || 0) + 1); q.n = count.get(q.exam); }
+    const parent = q.v && byId.get(q.v);
+    if (parent && !q.pre) q.pre = [parent.hypo && hypos[parent.hypo].text, parent.q].filter(Boolean).join('\n\n');
+  }
+  const exams = [];
+  for (const e of set.exams || []) {
+    const id = e != null && typeof e === 'object' ? String(e.id) : String(e);
+    if (!exams.some((x) => x.id === id)) exams.push({ id, title: (e && e.title) || `Exam ${id}`, description: (e && e.description) || '' });
+  }
+  for (const q of questions) if (q.exam && !exams.some((x) => x.id === q.exam)) exams.push({ id: q.exam, title: `Exam ${q.exam}`, description: '' });
+  const examOf = (id) => exams.find((x) => x.id === id);
+  const areas = [...new Set([...(set.areas || []), ...questions.map((q) => q.area).filter(Boolean)])];
+  // The topics the Topics button lists: the set's areas, and "Other" for questions that name none.
+  const TOPICS = [...areas, ...(questions.some((q) => !q.area) ? [''] : [])];
+  const IDS = questions.map((q) => q.id);
+  const KEY = `mcq:${set.id || slug(set.title || 'practice')}`;
+
+  // ---------------------------------------------------------------------------
+  // State, saved in this browser: answers, mode, filters and order pick up where the last visit left off.
+  // ---------------------------------------------------------------------------
+  const identity = (q) => q.o.map((_, k) => k);
+  const fresh = (mode = set.modeDefault === 'exam' ? 'exam' : 'study') => ({
+    mode, exam: '', skip: new Set(), shufQ: false, shufO: false, order: IDS.slice(), opts: {}, picked: {}, out: {}, shown: new Set(), only: '', subset: new Set(), pre: new Set(),
+  });
+  let st = fresh();
+  const optsOf = (q) => st.opts[q.id] || identity(q);
+  const store = {
+    get(k) { try { return JSON.parse(localStorage.getItem(k)); } catch (e) { return null; } },
+    set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { /* private mode */ } },
+  };
+  function save() {
+    store.set(`${KEY}:progress`, { mode: st.mode, exam: st.exam, skip: [...st.skip], shufQ: st.shufQ, shufO: st.shufO, order: st.order, opts: st.opts, picked: st.picked, shown: [...st.shown] });
+  }
+  function restore() {
+    const s = store.get(`${KEY}:progress`);
+    if (!s || typeof s !== 'object') return;
+    if (s.mode === 'study' || s.mode === 'exam') st.mode = s.mode;
+    if (s.exam === '' || examOf(s.exam)) st.exam = s.exam;
+    // Topics switched off. An older save kept one topic ("area"): that one stays on, the rest go off.
+    if (Array.isArray(s.skip)) st.skip = new Set(s.skip.filter((a) => TOPICS.includes(a)));
+    else if (s.area && areas.includes(s.area)) st.skip = new Set(TOPICS.filter((a) => a !== s.area));
+    if (Array.isArray(s.order) && s.order.length === IDS.length && s.order.every((id) => byId.has(id)) && new Set(s.order).size === IDS.length) { st.order = s.order; st.shufQ = !!s.shufQ; }
+    st.shufO = !!s.shufO;
+    for (const [id, p] of Object.entries(s.opts || {})) {
+      const q = byId.get(id);
+      if (q && !q.fixed && Array.isArray(p) && p.length === q.o.length && p.every((k) => Number.isInteger(k) && p.indexOf(k) >= 0 && k < q.o.length) && new Set(p).size === p.length) st.opts[id] = p;
+    }
+    for (const [id, k] of Object.entries(s.picked || {})) { const q = byId.get(id); if (q && Number.isInteger(k) && k >= 0 && k < q.o.length) st.picked[id] = k; }
+    for (const id of s.shown || []) if (byId.has(id)) st.shown.add(id);
+  }
+  // Flags: a question you flag, or miss, stays flagged in this browser until you clear it.
+  const flags = (() => {
+    const ids = new Set((store.get(`${KEY}:flags`) || []).filter((id) => byId.has(id)));
+    return {
+      has: (id) => ids.has(id),
+      list: () => [...ids],
+      set(id, on) { if (on) ids.add(id); else ids.delete(id); store.set(`${KEY}:flags`, [...ids]); },
+    };
+  })();
+  // Each graded answer is also announced as a "practice:answer" event. The site's copy of the page
+  // records it for Your stats (src/assets/practice-log.js, added by the build); a downloaded copy has
+  // no listener, so nothing happens there.
+  const grade = (qs) => qs.forEach((q) => {
+    if (st.shown.has(q.id)) return;
+    st.shown.add(q.id);
+    if (st.picked[q.id] !== q.a) flags.set(q.id, true);
+    if (st.picked[q.id] === undefined) return;
+    try {
+      document.dispatchEvent(new CustomEvent('practice:answer', { detail: { n: q.id, topic: [q.area, q.tag].filter(Boolean).join(' — '), right: st.picked[q.id] === q.a } }));
+    } catch (e) { /* very old browser */ }
+  });
+
+  // ---------------------------------------------------------------------------
+  // Cards (Shuffle mode's .sq markup)
+  // ---------------------------------------------------------------------------
+  const STRIKE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 4H9a3 3 0 0 0-2.83 4"/><path d="M14 12a4 4 0 0 1 0 8H6"/><path d="M4 12h16"/></svg>';
+  const FLAG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 22V4"/><path d="M4 4h12l-2 4 2 4H4"/></svg>';
+  function flagBtn(id) {
+    const f = el('button', 'flagbtn');
+    f.type = 'button';
+    f.title = 'Flag this question to come back to it';
+    const paint = () => { f.setAttribute('aria-pressed', flags.has(id)); f.innerHTML = FLAG; f.append(el('span', '', flags.has(id) ? 'Flagged' : 'Flag')); };
+    f.addEventListener('click', () => { flags.set(id, !flags.has(id)); paint(); bar(); });
+    paint();
+    return f;
+  }
+  function facts(q) {
+    const h = hypos[q.hypo];
+    const box = el('div', 'facts');
+    box.append(el('span', 'lbl', h.label));
+    return paras(box, h.text);
+  }
+  const anchor = (id) => `q-${slug(id)}`;
+
+  function card(q, pos, sharedFacts) {
+    const li = el('li', 'sq');
+    li.id = anchor(q.id);
+    const picked = st.picked[q.id], shown = st.shown.has(q.id);
+    const meta = el('div', 'sq-meta');
+    const exam = q.exam && examOf(q.exam);
+    meta.append(el('span', 'sq-num', String(pos + 1)), el('span', 'sq-src', `${exam ? `${exam.title} · ` : ''}Q${q.n}`));
+    if (q.pre) meta.append(el('span', 'sq-kind', 'Variation'));
+    if (q.hypo) meta.append(el('span', 'sq-kind', hypos[q.hypo].label));
+    meta.append(flagBtn(q.id));
+    li.append(meta);
+    const topic = [q.area, q.tag].filter(Boolean).join(' — ');
+    if (topic) li.append(el('p', 'sq-topic', topic));
+
+    // A shared fact pattern prints once per run of its questions; later ones keep it a tap away.
+    if (q.hypo && sharedFacts) {
+      const d = el('details', 'sq-facts');
+      d.append(el('summary', '', 'Show the shared facts'), facts(q));
+      li.append(d);
+    } else if (q.hypo) li.append(facts(q));
+    // A variation changes the facts of another question, which a shuffle or filter may have moved.
+    if (q.pre) {
+      const d = el('details', 'sq-pre');
+      d.open = st.pre.has(q.id);
+      d.append(el('summary', '', 'Show the question this varies'));
+      paras(d, q.pre);
+      d.addEventListener('toggle', () => { if (d.open) st.pre.add(q.id); else st.pre.delete(q.id); });
+      li.append(d);
+    }
+    li.append(paras(el('div', 'sq-stem'), q.q));
+
+    const out = st.out[q.id] || (st.out[q.id] = new Set());
+    const order = optsOf(q);
+    const opts = el('div', 'sq-opts');
+    order.forEach((k, i) => {
+      const row = el('div', 'sq-row');
+      const b = el('button', 'sq-opt');
+      b.type = 'button';
+      b.append(el('b', '', L[i]), el('span', '', q.o[k]));
+      if (out.has(k)) b.classList.add('out');
+      if (shown) {
+        b.disabled = true;
+        if (k === q.a) b.classList.add('right'); else if (k === picked) b.classList.add('wrong');
+      } else if (k === picked) { b.classList.add('chosen'); b.setAttribute('aria-pressed', 'true'); }
+      b.addEventListener('click', () => {
+        st.picked[q.id] = k;
+        if (st.mode === 'study') grade([q]);
+        const next = card(q, pos, sharedFacts);
+        li.replaceWith(next);
+        if (st.mode === 'study') next.querySelector('.sq-verdict')?.focus({ preventScroll: true });
+        score();
+      });
+      row.append(b);
+      if (!shown) {
+        const x = el('button', 'sq-x');
+        x.type = 'button';
+        x.title = 'Cross out';
+        x.setAttribute('aria-label', `Cross out choice ${L[i]}`);
+        x.setAttribute('aria-pressed', out.has(k));
+        x.innerHTML = STRIKE;
+        x.addEventListener('click', () => {
+          if (out.has(k)) out.delete(k); else out.add(k);
+          b.classList.toggle('out', out.has(k));
+          x.setAttribute('aria-pressed', out.has(k));
+        });
+        row.append(x);
+      }
+      opts.append(row);
+    });
+    li.append(opts);
+
+    if (shown) {
+      const why = el('div', 'sq-why');
+      const right = picked === q.a;
+      const verdict = el('p', `sq-verdict ${right ? 'ok' : 'no'}`, right ? 'Correct.' : `${picked === undefined ? 'Not answered.' : 'Not quite.'} The answer is ${L[order.indexOf(q.a)]}.`);
+      verdict.tabIndex = -1;
+      why.append(verdict);
+      order.forEach((k, i) => {
+        if (!q.oe[k]) return;
+        const r = el('div', `sq-rat${k === q.a ? ' key' : ''}`);
+        r.append(el('b', '', L[i]), el('span', '', q.oe[k]));
+        why.append(r);
+      });
+      if (q.e) {
+        const rule = el('p', 'sq-rule');
+        rule.append(el('b', '', 'Rule'), q.e);
+        why.append(rule);
+      }
+      li.append(why);
+    }
+    return li;
+  }
+
+  // ---------------------------------------------------------------------------
+  // The stack
+  // ---------------------------------------------------------------------------
+  const visible = () => st.order.map((id) => byId.get(id)).filter((q) =>
+    (!st.exam || q.exam === st.exam) && !st.skip.has(q.area) && (!st.only || st.subset.has(q.id)));
+  // The topics in the chosen exam (or the whole set), each with its number of questions.
+  const topicList = () => {
+    const pool = questions.filter((q) => !st.exam || q.exam === st.exam);
+    return TOPICS.map((key) => ({ key, label: key || 'Other', count: pool.filter((q) => q.area === key).length })).filter((t) => t.count);
+  };
+  function tally(qs) {
+    const shown = qs.filter((q) => st.shown.has(q.id));
+    const right = shown.filter((q) => st.picked[q.id] === q.a).length;
+    return shown.length ? `${right} / ${shown.length} correct` : `${qs.filter((q) => st.picked[q.id] !== undefined).length} of ${qs.length} answered`;
+  }
+  function group(exam, qs) {
+    const li = el('li', 'sh-group');
+    li.id = `exam-${slug(exam.id)}`;
+    li.dataset.exam = exam.id;
+    li.append(el('h2', '', exam.title), el('span', 'sh-tally', tally(qs)));
+    if (st.mode === 'exam' && qs.some((q) => !st.shown.has(q.id))) {
+      const g = el('button', 'btn btn-ghost', `Grade ${exam.title}`);
+      g.type = 'button';
+      g.addEventListener('click', () => { grade(qs); render(); document.getElementById(li.id)?.scrollIntoView(); });
+      li.append(g);
+    }
+    if (exam.description) li.append(el('p', '', exam.description));
+    return li;
+  }
+  function render() {
+    const vis = visible();
+    const items = [];
+    let prev = null, pos = 0;
+    const grouped = !st.shufQ && exams.length > 1;
+    for (const q of vis) {
+      if (grouped && (!prev || prev.exam !== q.exam)) { const ex = examOf(q.exam); if (ex) items.push(group(ex, vis.filter((x) => x.exam === q.exam))); }
+      items.push(card(q, pos++, !!(q.hypo && prev && prev.hypo === q.hypo)));
+      prev = q;
+    }
+    if (!items.length) items.push(el('li', 'sh-empty', 'No questions here. Press Topics and tick more topics, or choose another exam.'));
+    list.replaceChildren(...items);
+    bar();
+    score();
+  }
+  function bar() {
+    $('sh-m-study').setAttribute('aria-pressed', st.mode === 'study');
+    $('sh-m-exam').setAttribute('aria-pressed', st.mode === 'exam');
+    $('sh-grade').hidden = st.mode !== 'exam';
+    $('sh-hint').textContent = st.mode === 'exam' ? 'Pick your answers, then grade.' : 'Each answer is checked as you pick it.';
+    $('sh-missed').textContent = st.only === 'missed' ? 'Show all' : 'Retry missed';
+    const n = flags.list().length;
+    $('sh-flagged').textContent = st.only === 'flagged' ? 'Show all' : `Flagged (${n})`;
+    $('sh-flagged').disabled = st.only !== 'flagged' && !n;
+    $('sh-exam').value = st.exam;
+    paintTopics();
+    // One button: shuffle the questions, and press again to put them back in the set's order.
+    $('sh-shufq').textContent = st.shufQ ? 'Original order' : 'Shuffle questions';
+    $('sh-shufq').title = st.shufQ ? 'Put the questions back in the set’s order' : 'Put the questions in a random order';
+    $('sh-shufo').checked = st.shufO;
+  }
+  function score() {
+    const vis = visible();
+    const done = vis.filter((q) => st.picked[q.id] !== undefined).length;
+    const shown = vis.filter((q) => st.shown.has(q.id));
+    const right = shown.filter((q) => st.picked[q.id] === q.a).length;
+    const s = $('sh-score');
+    s.textContent = `${right} / ${shown.length} correct `;
+    s.append(el('span', '', `· ${done} of ${vis.length} answered`));
+    $('sh-meter').style.width = vis.length ? `${(done / vis.length) * 100}%` : '0';
+    list.querySelectorAll('.sh-group').forEach((g) => { g.querySelector('.sh-tally').textContent = tally(vis.filter((q) => q.exam === g.dataset.exam)); });
+    save();
+  }
+  const top = () => window.scrollTo({ top: Math.max(0, host.querySelector('.shuffle-run').offsetTop - 8) });
+
+  // Filters: only the ones this set can use.
+  const fill = (sel, all, items) => {
+    sel.append(new Option(all, ''));
+    for (const [value, label] of items) sel.append(new Option(label, value));
+    sel.hidden = items.length < 2;
+  };
+  fill($('sh-exam'), `All exams (${questions.length})`, exams.map((e) => [e.id, `${e.title} (${questions.filter((q) => q.exam === e.id).length})`]));
+  $('sh-exam').addEventListener('change', (e) => { st.exam = e.target.value; render(); top(); });
+  // Topics: a checklist of the set's topics (src/assets/topic-picker.js, inlined above this script
+  // as TopicPicker). Without it (a copy saved without that script) the button just stays hidden.
+  const paintTopics = typeof TopicPicker === 'object' ? TopicPicker.topicFilter({
+    button: $('sh-topics'), note: $('sh-topics-note'), list: topicList, parent: host,
+    get: () => st.skip,
+    set: (off) => { st.skip = off; render(); top(); },
+  }) : () => {};
+  for (const m of ['study', 'exam']) $(`sh-m-${m}`).addEventListener('click', () => {
+    if (st.mode === m) return;
+    // Switching modes starts the answers over, so a graded answer never turns back into an open one.
+    Object.assign(st, { mode: m, picked: {}, out: {}, shown: new Set(), only: '', subset: new Set() });
+    render();
+  });
+  $('sh-shufq').addEventListener('click', () => { st.shufQ = !st.shufQ; st.order = st.shufQ ? shuffle(IDS) : IDS.slice(); render(); top(); });
+  $('sh-shufo').addEventListener('change', (e) => {
+    st.shufO = e.target.checked;
+    st.opts = {};
+    // "B and C" and "None of the above" keep their letters.
+    if (st.shufO) for (const q of questions) if (!q.fixed) st.opts[q.id] = shuffle(identity(q));
+    render();
+  });
+  $('sh-grade').addEventListener('click', () => { grade(visible()); render(); top(); });
+  const retry = (kind, ids) => {
+    if (st.only === kind) { st.only = ''; render(); return; }
+    if (!ids.size) return;
+    for (const id of ids) {
+      delete st.picked[id]; delete st.out[id]; st.shown.delete(id);
+      const q = byId.get(id);
+      if (st.shufO && !q.fixed) st.opts[id] = shuffle(identity(q));
+    }
+    st.only = kind; st.subset = ids;
+    render(); top();
+  };
+  $('sh-missed').addEventListener('click', () => retry('missed', new Set(visible().filter((q) => st.shown.has(q.id) && st.picked[q.id] !== q.a).map((q) => q.id))));
+  $('sh-flagged').addEventListener('click', () => retry('flagged', new Set(flags.list())));
+  // Reset starts the answers, order and exam over; the topics you picked stay picked.
+  $('sh-reset').addEventListener('click', () => { st = Object.assign(fresh(st.mode), { skip: st.skip }); render(); top(); });
+
+  restore();
+  render();
+  // A link to "#q-<id>" opens on that question.
+  const start = location.hash.match(/^#(q-[\w-]+)$/);
+  if (start) document.getElementById(start[1])?.scrollIntoView();
+})();
+</script>
+</body>
+</html>

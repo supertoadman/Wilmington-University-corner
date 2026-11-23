@@ -1,0 +1,445 @@
+<!doctype html>
+<!--
+supplement/v1 statutory or rule supplement: copyable template. Spec: docs/supplement-format.md
+(also api/specs/supplement-format.md). The data is three one-line JSON values near the end of this file:
+  const SUPP = {...};   title, cite style ("ucc", "fre", "mrpc", "frcp", "restatement" or "section"), labels, intro, source
+  const AREAS = [...];  the course's topics, in order (a statute's "tp" numbers count from 1)
+  const DATA = [...];   one object per section or rule: s, t, part, am, x, c, cc, k, note, tp, o, q
+To make a new supplement, do ONE of these:
+  1. Save { ...SUPP, "areas": AREAS, "data": DATA } as content/<Subject>/<Name>.supplement.json (preferred), or
+  2. Copy this whole file to content/<Subject>/<Name>.html and replace only those three lines, keeping
+     each one on a single line. The build re-renders the page from them.
+Then point subject.json "refs.statutes" at the supplement's slug.
+-->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sample Statutory Supplement (UCC Article 2)</title>
+<meta name="description" content="Seven UCC sections from the Sales and Leases supplement in the supplement/v1 format: summarized text, Official Comments with key comments marked, topics, and keywords.">
+<meta name="generator" content="supplement/v1 viewer">
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Display&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+/* Canonical statutory / rule supplement (supplement/v1): the viewer scripts/lib/supplement-shell.mjs
+   builds around a course's SUPP, AREAS and DATA lines. Same layout as the Sales and Leases and FRE
+   supplements: sticky search bar, an index on the left (a jump menu on phones), and one card per
+   section or rule with its text, notes and collapsible comments. The site's viewer sets data-theme
+   on this page when it is framed. */
+:root{
+  --bg:#f3f5f7; --surface:#ffffff; --sunk:#e9edf1; --ink:#18212b; --muted:#5a6673; --line:#d6dce3;
+  --accent:#3f6b4a; --accent-soft:color-mix(in srgb, var(--accent) 13%, var(--surface)); --note:#7a4b12; --note-soft:#f6ecdc; --mark:#fbe7a1;
+  --display:"Libre Caslon Display","Georgia","Times New Roman",serif;
+  --body:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Consolas,monospace;
+  --barh:120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#12171d; --surface:#1a2129; --sunk:#151b22; --ink:#e4e9ee; --muted:#9aa6b2; --line:#2e3843;
+  --accent:var(--accent-dark,#8ec79c); --accent-soft:color-mix(in srgb, var(--accent) 16%, var(--surface)); --note:#e3b673; --note-soft:#33281a; --mark:#5c4a12; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#12171d; --surface:#1a2129; --sunk:#151b22; --ink:#e4e9ee; --muted:#9aa6b2; --line:#2e3843;
+  --accent:var(--accent-dark,#8ec79c); --accent-soft:color-mix(in srgb, var(--accent) 16%, var(--surface)); --note:#e3b673; --note-soft:#33281a; --mark:#5c4a12; color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.55;margin:0}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:16px;padding-block:28px 64px}
+.head h1{font-family:var(--display);font-weight:400;font-size:clamp(30px,5vw,42px);line-height:1.1;margin:0;text-wrap:balance}
+.head p{color:var(--muted);margin:8px 0 0;max-width:72ch}
+button,select,input{font:inherit}
+button,select{cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+.bar{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line);margin-top:18px;padding-block:12px;display:flex;flex-direction:column;gap:10px}
+.row{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.search{position:relative;flex:1 1 320px;display:flex;align-items:center}
+.search svg{position:absolute;left:11px;width:16px;height:16px;color:var(--muted);pointer-events:none}
+.search input{width:100%;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:9px 64px 9px 34px;font-size:15px}
+.search input:focus{border-color:var(--accent);outline:none;box-shadow:0 0 0 3px var(--accent-soft)}
+.search input::-webkit-search-cancel-button{display:none}
+.search .clr{position:absolute;right:8px;background:transparent;border:1px solid var(--line);border-radius:6px;color:var(--muted);font-size:12px;padding:2px 8px}
+.search .clr:hover{border-color:var(--accent);color:var(--ink)}
+.search kbd{position:absolute;right:10px;font-family:var(--mono);font-size:11px;color:var(--muted);border:1px solid var(--line);border-radius:4px;padding:0 5px}
+.pick{background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:6px;padding:5px 8px;font-size:13.5px;max-width:100%}
+.seg{display:inline-flex;border:1px solid var(--line);border-radius:6px;overflow:hidden}
+.seg[hidden]{display:none}
+.seg button{background:transparent;border:0;padding:5px 10px;font-size:13px;color:var(--muted)}
+.seg button[aria-pressed="true"]{background:var(--accent-soft);color:var(--ink)}
+.count{font-size:13px;color:var(--muted);margin-left:auto;font-variant-numeric:tabular-nums}
+#jump{display:none}
+
+.layout{display:grid;grid-template-columns:250px minmax(0,1fr);gap:28px;margin-top:22px;align-items:start}
+.toc{position:sticky;top:calc(var(--barh) + 12px);max-height:calc(100vh - var(--barh) - 24px);overflow:auto;padding-right:6px;font-size:13px;overscroll-behavior:contain}
+.toc h3{font-family:var(--mono);font-weight:500;font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:16px 0 4px}
+.toc h3:first-child{margin-top:0}
+.toc a{display:flex;gap:8px;padding:3px 8px;border-radius:5px;color:var(--ink);text-decoration:none;line-height:1.35}
+.toc a span:first-child{font-family:var(--mono);font-size:12px;color:var(--accent);flex:none;min-width:42px}
+.toc a span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+.toc a.course span:last-child{color:var(--ink)}
+.toc a:hover{background:var(--sunk)}
+.toc a.on{background:var(--accent-soft)}
+.toc a.on span:last-child{color:var(--ink)}
+
+#list{display:flex;flex-direction:column;gap:18px;min-width:0}
+.sec{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:18px 20px 16px;scroll-margin-top:calc(var(--barh) + 14px)}
+.sec.flash{animation:flash 1.4s ease-out}
+@keyframes flash{0%{box-shadow:0 0 0 3px var(--accent)}100%{box-shadow:0 0 0 0 transparent}}
+.sec>header{display:flex;flex-wrap:wrap;gap:4px 12px;align-items:baseline}
+.sec .num{font-family:var(--mono);font-weight:500;font-size:15px;color:var(--accent);flex:none}
+.sec h2{font-family:var(--display);font-weight:400;font-size:23px;line-height:1.2;margin:0;text-wrap:balance;flex:1 1 300px}
+.meta{display:flex;flex-wrap:wrap;gap:6px 8px;align-items:center;margin-top:8px;font-size:12.5px;color:var(--muted)}
+.tchip{background:transparent;border:1px solid var(--line);color:var(--muted);border-radius:999px;padding:1px 9px;font-size:12px}
+.tchip:hover{border-color:var(--accent);color:var(--ink)}
+.tchip[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--ink)}
+.am{font-family:var(--mono);font-size:11.5px}
+.refs{margin-left:auto}
+.note{background:var(--note-soft);border-left:3px solid var(--note);border-radius:0 8px 8px 0;padding:8px 14px;margin:12px 0 0;font-size:14.5px}
+.lbl{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin:14px 0 6px}
+.note .lbl{color:var(--note);margin:0 0 2px}
+.text{display:flex;flex-direction:column;gap:6px}
+.sub{display:grid;grid-template-columns:3.4em minmax(0,1fr);gap:10px;align-items:baseline;margin-left:calc(var(--d,0) * 1.9em);padding:2px 8px;border-radius:6px}
+.sub>b{font-family:var(--mono);font-weight:500;font-size:13px;color:var(--muted)}
+.sub p{margin:0;white-space:pre-line}
+.sub.wide{grid-template-columns:minmax(0,1fr);gap:2px}
+.sub.wide>b{color:var(--ink);font-size:13px}
+.sub.one{grid-template-columns:minmax(0,1fr)}
+.sub.hit{background:var(--accent-soft)}
+.sub.hit>b{color:var(--accent)}
+.cmts{margin-top:14px;border-top:1px dashed var(--line);padding-top:10px}
+.cmts summary{cursor:pointer;font-size:14px;font-weight:500;color:var(--ink);list-style-position:outside}
+.cmts summary .cit{font-weight:400;color:var(--muted);font-size:13px}
+.cmts ol{list-style:none;padding:0;margin:10px 0 0;display:flex;flex-direction:column;gap:8px}
+.cm{display:grid;grid-template-columns:2.4em minmax(0,1fr);gap:10px;align-items:baseline;font-size:14.5px;padding:6px 8px;border-radius:6px}
+.cm>b{font-family:var(--mono);font-weight:500;font-size:12.5px;color:var(--muted);text-align:right}
+.cm p{margin:0}
+.cm>div>p+p{margin-top:8px}
+.cm.one{grid-template-columns:minmax(0,1fr)}
+.cm.cited{background:var(--accent-soft)}
+.cm.cited>b{color:var(--accent)}
+.tag{display:inline-block;font-family:var(--mono);font-size:10.5px;letter-spacing:.05em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:4px;padding:0 4px;margin-left:6px;vertical-align:1px}
+.cm.hit{outline:1px solid var(--note)}
+.cm.wide{grid-template-columns:minmax(0,1fr);gap:2px}
+.cm.wide>b{text-align:left}
+mark{background:var(--mark);color:inherit;border-radius:2px;padding:0 1px}
+a.xr{color:var(--accent);text-decoration:none;border-bottom:1px dotted var(--accent);white-space:nowrap}
+a.xr:hover{border-bottom-style:solid}
+.empty{color:var(--muted);text-align:center;padding:48px 0}
+.foot{margin-top:40px;border-top:1px solid var(--line);padding-top:14px;font-size:13px;color:var(--muted)}
+.top{position:fixed;right:16px;bottom:16px;z-index:6;background:var(--surface);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font-size:13px;box-shadow:0 2px 8px rgba(0,0,0,.12);opacity:0;pointer-events:none;transition:opacity .2s}
+.top.show{opacity:1;pointer-events:auto}
+.top:hover{border-color:var(--accent)}
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr)}
+  .toc{display:none}
+  #jump{display:inline-block}
+  #jump,#topic{flex:1 1 150px;min-width:0}
+}
+@media (max-width:560px){
+  .bar{gap:8px;padding-block:10px}
+  .sec{padding:16px 14px 14px}
+  .sec h2{font-size:20px}
+  .refs{margin-left:0;flex-basis:100%}
+  .search kbd{display:none}
+  .sub{grid-template-columns:2.4em minmax(0,1fr);gap:6px;margin-left:calc(var(--d,0) * 1em)}
+  .cm{grid-template-columns:1.8em minmax(0,1fr);gap:6px;padding:6px 4px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.sec.flash{animation:none}.top{transition:none}}
+@media print{.bar,.toc,.top{display:none}.layout{grid-template-columns:1fr}.sec{break-inside:avoid-page}}
+:root{--accent:#3f6b4a;--accent-dark:color-mix(in srgb, #3f6b4a 50%, #fff)}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="head">
+    <h1>Sample Statutory Supplement (UCC Article 2)</h1>
+    <p>Seven UCC sections in the supplement/v1 format, taken from the Sales and Leases supplement. Search by word, by &quot;exact phrase&quot; in quotes, or by cite (type 2-207 to go straight there, or 2-207(2)(b) to mark that clause), filter by topic, and open or close the Official Comments.</p>
+  </header>
+  <div class="bar" id="bar">
+    <div class="row">
+      <div class="search">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input id="q" type="search" autocomplete="off" spellcheck="false" placeholder="Search" aria-label="Search the supplement">
+        <kbd id="kbd">/</kbd>
+        <button class="clr" id="clr" hidden>Clear</button>
+      </div>
+    </div>
+    <div class="row">
+      <select class="pick" id="topic" aria-label="Filter by topic"></select>
+      <select class="pick" id="jump" aria-label="Jump to"></select>
+      <div class="seg" id="cseg" role="group" aria-label="Comments"><button id="c-closed" aria-pressed="true">Comments closed</button><button id="c-open" aria-pressed="false">Comments open</button></div>
+      <span class="count" id="count" aria-live="polite"></span>
+    </div>
+  </div>
+  <div class="layout">
+    <nav class="toc" id="toc" aria-label="Index"></nav>
+    <main id="list"></main>
+  </div>
+  <p class="foot">Source: Selected Commercial Statutes, 2026 edition (UCC Article 2 with Official Comments). Text is summarized and comments are condensed; check the printed supplement before quoting.</p>
+</div>
+<button class="top" id="top" aria-label="Back to top">Top</button>
+<script>
+const SUPP = {"id":"sample-ucc-supplement","title":"Sample Statutory Supplement (UCC Article 2)","cite":"ucc","textLabel":"Text (summarized)","description":"Seven UCC sections from the Sales and Leases supplement in the supplement/v1 format: summarized text, Official Comments with key comments marked, topics, and keywords.","intro":"Seven UCC sections in the supplement/v1 format, taken from the Sales and Leases supplement. Search by word, by \"exact phrase\" in quotes, or by cite (type 2-207 to go straight there, or 2-207(2)(b) to mark that clause), filter by topic, and open or close the Official Comments.","source":"Source: Selected Commercial Statutes, 2026 edition (UCC Article 2 with Official Comments). Text is summarized and comments are condensed; check the printed supplement before quoting."};
+const AREAS = ["The UCC & which law governs","Formation","Statute of frauds & unconscionability","Good faith, modification, waiver & estoppel","Express warranties","Gap fillers & implied warranties","Quantity & price","Delivery, inspection & payment","Risk of loss","Variation by agreement & warranty disclaimers","Remedies & remedy limitations","Parol evidence rule","Assignment & delegation","Termination","Insecurity & repudiation","Excuse from performance"];
+const DATA = [{"s":"2-201","t":"Formal Requirements; Statute of Frauds","part":"Article 2, Part 2 - Form, Formation and Readjustment of Contract","am":"2022","x":[["(1)","Except as otherwise provided in this section, a contract for the sale of goods for the price of $500 or more is not enforceable by way of action or defense unless there is a record sufficient to indicate that a contract for sale has been made between the parties and signed by the party against whom enforcement is sought or by its authorized agent or broker. A record is not insufficient because it omits or incorrectly states a term agreed upon, but the contract is not enforceable under this subsection beyond the quantity of goods shown in the record."],["(2)","Between merchants, if within a reasonable time a record in confirmation of the contract and sufficient against the sender is received, and the party receiving it has reason to know its contents, it satisfies (1) against the recipient unless notice in a record of objection to its contents is given within 10 days after it is received."],["(3)","A contract that does not satisfy (1) but is valid in other respects is enforceable: (a) if the goods are to be specially manufactured for the buyer and are not suitable for sale to others in the ordinary course of the seller's business, and the seller, before notice of repudiation is received and under circumstances which reasonably indicate that the goods are for the buyer, has made either a substantial beginning of their manufacture or commitments for their procurement; (b) if the party against whom enforcement is sought admits in its pleading, testimony, or otherwise in court that a contract for sale was made - but not beyond the quantity of goods admitted; or (c) with respect to goods for which payment has been made and accepted or which have been received and accepted (§ 2-606)."]],"c":[["1","The record need not contain all material terms, and those stated need not be precise; it need only give a basis for believing the oral evidence rests on a real transaction. Pencil on a scratch pad is enough, and it need not say who is buyer and who is seller. Price, time and place of payment or delivery, quality, and warranties may all be omitted (price can be supplied as a reasonable price, from a known price list, or from market prices). The only term that must appear is quantity - it need not be accurate, but recovery is limited to the amount stated. Three invariable requirements: the record must (1) evidence a contract for the sale of goods, (2) be \"signed\" (any authentication identifying the party to be charged), and (3) specify a quantity."],["2","Part performance validates the contract only for goods accepted or for which payment was made and accepted. Receipt and acceptance of goods or price is an unambiguous admission that a contract exists, so the court may apportion: the price of delivered goods can be recovered, or a buyer who paid can compel delivery of an apportionable part. Part payment may be by money or check accepted by the seller; if the price is goods or services, they must be delivered and accepted."],["3","Between merchants, failing to answer a confirming record within ten days of receipt is treated as a signed record and makes it sufficient against both parties. Its only effect is to remove the statute of frauds defense from the party who failed to answer; the party relying on the confirmation still bears the burden of persuading the trier of fact that an oral contract was actually made. Compare the effect of silence under § 2-207."],["4","Failing the statute does not make the contract void for all purposes; it only prevents judicial enforcement by a party. A buyer who takes possession under an unrepudiated oral contract is not a trespasser, and a third party who wrongfully induces a breach cannot use the statute as a defense."],["5","For what counts as \"signing,\" see § 1-201, Comment 37."],["6","For (1), the record need not be delivered to anyone and need not be signed by both parties - but it is not sufficient against a party who has not signed. From contracting on, each party should realize that the other's signature is the one that matters to it."],["7","If the contract is admitted in court - in a pleading, a stipulation, or oral statement - no record is needed, and a party cannot admit the contract yet still claim the statute as a defense. The admission is evidence against the admitting party of the facts admitted and nothing more, and it is no evidence against the other party."],["8","For medium neutrality, \"writing\" became \"record\" in 2022."]],"cc":[],"k":["statute of frauds","$500","record","writing","signed","quantity","merchant confirmation","merchant's exception","10 days","specially manufactured","admission","part performance","received and accepted","payment made and accepted"],"tp":[3],"o":65,"q":93},{"s":"2-207","t":"Additional Terms in Acceptance or Confirmation","part":"Article 2, Part 2 - Form, Formation and Readjustment of Contract","x":[["(1)","A definite and seasonable expression of acceptance or a written confirmation sent within a reasonable time operates as an acceptance even though it states terms additional to or different from those offered or agreed upon, unless acceptance is expressly made conditional on assent to the additional or different terms."],["(2)","The additional terms are to be construed as proposals for addition to the contract. Between merchants, such terms become part of the contract unless: (a) the offer expressly limits acceptance to the terms of the offer; (b) they materially alter it; or (c) notification of objection to them has already been given or is given within a reasonable time after notice of them is received."],["(3)","Conduct by both parties which recognizes the existence of a contract is sufficient to establish a contract for sale although the writings of the parties do not otherwise establish a contract. In that case, the terms of the contract consist of the terms on which the writings of the parties agree, together with any supplementary terms incorporated under any other provisions of the UCC."]],"c":[["1","Two typical situations: (i) a written confirmation sent after an oral or informal agreement that adds terms not discussed; and (ii) an offer and acceptance where the acceptance adds minor proposals (\"ship by Tuesday,\" \"rush\"). A frequent example of (ii) is the exchange of a printed purchase order and an acknowledgment form whose terms do not match - and the parties go ahead anyway."],["2","A deal that in commercial understanding has been closed is a contract (rejecting the mirror image rule). Additional matter in the confirmation or acceptance is a proposal under (2) unless the acceptance is made expressly conditional on assent to it."],["3","Whether added terms join the contract depends on (2). Terms that materially alter the bargain come in only if the other party expressly agrees; terms that do not are incorporated unless objection is given in advance or within a reasonable time."],["4","Clauses that normally \"materially alter\" the contract because they would cause surprise or hardship if incorporated without express awareness: negating standard warranties such as merchantability or fitness where they normally attach; requiring a 90% or 100% delivery guaranty where trade usage allows more quantity leeway (for example, a cannery); reserving the seller's power to cancel if the buyer misses any invoice when due; requiring complaints in a time materially shorter than customary or reasonable."],["5","Clauses with no unreasonable surprise that come in unless seasonably objected to: stating or slightly enlarging the seller's excuse for supervening causes beyond its control (like § 2-615) or a reasonable proration formula; a reasonable time for complaints within customary limits, or inspection by a sub-purchaser; interest on overdue invoices or the seller's standard credit terms within trade practice; limiting rejection for defects within customary trade tolerances or otherwise limiting remedy in a reasonable manner (see §§ 2-718, 2-719)."],["6","If no answer comes within a reasonable time, it is fair to assume assent to the added terms. Where clauses on the parties' confirming forms conflict, each party is assumed to object to the other's conflicting clause, so the notice-of-objection requirement is met and the conflicting terms drop out (the knockout idea). The contract then consists of the terms expressly agreed, terms on which the confirmations agree, and terms supplied by the Code, including (2). A confirmation is also subject to § 2-201: there silence permits enforcement of a prior oral deal; here silence lets additional terms in."],["7","Often, as when goods are shipped, accepted, and paid for before any dispute, there is no doubt a contract exists. Where the writings do not establish one, there is no need to decide which document was the offer and which the acceptance (see § 2-204); the only question is the terms, and (3) governs."],["8","The 2022 amendments changed \"writing\" to \"record\" in some sections (such as §§ 2-201 and 2-202) but not this one. Where \"writing\" remains, electronic records may still be given effect under other law such as E-SIGN and UETA."]],"cc":["4","6"],"k":["battle of the forms","mirror image","additional terms","different terms","expressly conditional","proposals","between merchants","materially alter","surprise or hardship","objection","knockout rule","conduct","written confirmation","acknowledgment","purchase order"],"tp":[2],"o":46,"q":74},{"s":"2-209","t":"Modification, Rescission and Waiver","part":"Article 2, Part 2 - Form, Formation and Readjustment of Contract","am":"2022","x":[["(1)","An agreement modifying a contract within Article 2 needs no consideration to be binding."],["(2)","A signed agreement which excludes modification or rescission except by a signed writing or other signed record cannot be otherwise modified or rescinded, but except as between merchants such a requirement on a form supplied by the merchant must be separately signed by the other party."],["(3)","The requirements of the statute of frauds (§ 2-201) must be satisfied if the contract as modified is within its provisions."],["(4)","Although an attempt at modification or rescission does not satisfy (2) or (3), it can operate as a waiver."],["(5)","A party who has made a waiver affecting an executory portion of the contract may retract the waiver by reasonable notification received by the other party that strict performance will be required of any term waived, unless the retraction would be unjust in view of a material change of position in reliance on the waiver."]],"c":[["1","The section aims to make all necessary and desirable modifications effective without the technicalities that hampered them."],["2","No consideration is needed, but modifications must meet the good faith test. Using bad faith to escape the original terms, or extorting a \"modification\" without legitimate commercial reason, is ineffective; a mere technical consideration cannot save a bad faith modification. Good faith includes reasonable commercial standards of fair dealing and may require an objectively demonstrable reason for seeking the change - but a market shift that makes performance a loss can be such a reason even though it would not excuse performance under §§ 2-615 or 2-616."],["3","Subsections (2) and (3) guard against false claims of oral modification. \"Modification or rescission\" includes abandonment or other change by mutual consent, but not unilateral termination or cancellation (§ 2-106). The statute of frauds applies to modifications; the delivery-and-acceptance exception reaches only goods already accepted (the past), so a future modification at $500 or more cannot be proved by oral testimony alone, and a memo is limited to the quantity stated. Subsection (2) lets the parties write their own statute of frauds (a no-oral-modification clause); a consumer is bound by one on a merchant's form only if the consumer separately signs it."],["4","Subsection (4) keeps a no-oral-modification clause from wiping out the legal effect of the parties' actual later conduct: that conduct can still be a waiver, as regulated by (5)."],["5","For medium neutrality, \"signed writing\" was supplemented with \"signed record\" in 2022."]],"cc":["2","3"],"k":["modification","no consideration","good faith","extortion","legitimate commercial reason","no oral modification","NOM clause","rescission","statute of frauds","waiver","retraction","reliance","strict performance"],"tp":[4],"o":57,"q":68},{"s":"2-316","t":"Exclusion or Modification of Warranties","part":"Article 2, Part 3 - General Obligation and Construction of Contract","x":[["(1)","Words or conduct relevant to the creation of an express warranty, and words or conduct tending to negate or limit warranty, shall be construed wherever reasonable as consistent with each other; but, subject to the parol evidence rule (§ 2-202), negation or limitation is inoperative to the extent that such construction is unreasonable."],["(2)","Subject to (3), to exclude or modify the implied warranty of merchantability or any part of it, the language must mention merchantability and, in case of a writing, must be conspicuous; and to exclude or modify any implied warranty of fitness, the exclusion must be by a writing and conspicuous. Language to exclude all implied warranties of fitness is sufficient if it states, for example, \"There are no warranties which extend beyond the description on the face hereof.\""],["(3)","Notwithstanding (2): (a) unless the circumstances indicate otherwise, all implied warranties are excluded by expressions like \"as is,\" \"with all faults,\" or other language which in common understanding calls the buyer's attention to the exclusion of warranties and makes plain that there is no implied warranty; (b) when the buyer before contracting has examined the goods or the sample or model as fully as it desired, or has refused to examine the goods, there is no implied warranty as to defects which an examination ought in the circumstances to have revealed; and (c) an implied warranty can also be excluded or modified by course of dealing, course of performance, or usage of trade."],["(4)","Remedies for breach of warranty can be limited under §§ 2-718 and 2-719 (liquidation or limitation of damages and contractual modification of remedy)."]],"c":[["1","The section targets clauses excluding \"all warranties, express or implied.\" It protects the buyer from unexpected, unbargained disclaimer language by denying it effect when inconsistent with an express warranty, and by allowing implied warranties to be excluded only by conspicuous language or other circumstances that protect against surprise."],["2","The seller is protected from false claims of oral warranties by the parol evidence rule, and from unauthorized representations by customary \"lack of authority\" clauses. Limiting consequential damages is treated as limiting remedies (§§ 2-718, 2-719), separate from whether a warranty exists."],["3","Merchantability may be disclaimed, but the disclaimer must mention merchantability and, if written, be conspicuous."],["4","Unlike merchantability, fitness for a particular purpose may be excluded by general language, but only in a conspicuous writing."],["5","Disclaimer language that fails this section may still matter elsewhere - for example, an oral disclaimer (if not barred by § 2-202) may show the buyer did not rely or the seller lacked reason to know under § 2-315."],["6","The exceptions in (3)(a)-(c) are common situations where the circumstances themselves alert the buyer that no implied warranty is made."],["7","\"As is,\" \"as they stand,\" \"with all faults\" and the like are commonly understood to mean the buyer takes the entire risk as to quality. Paragraph (a) is really a particular instance of exclusion by usage of trade under (c)."],["8","\"Examination\" in (b) means examination before contracting, not inspection after the contract. A buyer who finds a defect and uses the goods anyway, or unreasonably fails to examine before use, may be the cause of its own injury (§§ 2-314, 2-715). \"Refused to examine\" requires more than the goods being available: the seller must demand that the buyer examine them fully, putting the buyer on notice that it assumes the risk. Caveat emptor is rejected: if the seller offers examination while making statements about merchantability or specific attributes, and the buyer clearly relies on those statements, an express warranty arises. What examination excludes depends on the buyer's skill and the normal method of examination: obvious defects are excluded; defects detectable only by chemical or other testing, or latent defects, are not. A professional buyer assumes the risk of defects a professional ought to notice; a layperson only those a layperson would."],["9","When the buyer gives precise and complete specifications, fitness for a particular purpose usually does not arise (no reliance), and under § 2-317(c) the express warranty of conformity to specifications displaces an inconsistent merchantability warranty - so neither implied quality warranty normally applies unless consistent with the specs."],["10","On records other than writings, see § 2-207, Comment 8; on conspicuousness (including electronic records), see § 1-201, Comment 10."]],"cc":["8","9"],"k":["disclaimer","exclusion of warranties","modify","mention merchantability","conspicuous","writing","as is","with all faults","examination","refused to examine","demand to examine","latent defect","course of dealing","usage of trade","inconsistent with express warranty","limitation of remedy","caveat emptor","specifications"],"tp":[10],"o":49,"q":44},{"s":"2-501","t":"Insurable Interest in Goods; Manner of Identification of Goods","part":"Article 2, Part 5 - Performance","x":[["(1)","The buyer obtains a special property and an insurable interest in goods by identification of existing goods as goods to which the contract refers, even though the goods are nonconforming and the buyer has an option to return or reject them. Identification can be made at any time and in any manner explicitly agreed. Absent explicit agreement, identification occurs: (a) when the contract is made, if it is for the sale of goods already existing and identified; (b) for future goods other than those in (c), when goods are shipped, marked, or otherwise designated by the seller as goods to which the contract refers; (c) when the crops are planted or otherwise become growing crops, or the young are conceived, if the contract is for unborn young to be born within twelve months after contracting or for crops to be harvested within twelve months or the next normal harvest season after contracting, whichever is longer."],["(2)","The seller retains an insurable interest so long as title to or any security interest in the goods remains in it, and where the identification is by the seller alone, it may substitute other goods until default, insolvency, or notification to the buyer that the identification is final."],["(3)","This section does not impair any insurable interest recognized under other law."]],"c":[["1","The section says how goods become identified so the buyer gets an insurable interest and the rights in § 2-502. Explicit agreement controls; (a)-(c) apply only without it."],["2","Identification is usually unambiguous, but it may be tentative or contingent. Because identification has limited effect, doubts are resolved in favor of identification."],["3","\"Explicit agreement\" is required to displace (a)-(c) - for example, a term letting the buyer select the goods. Trade rules incorporated by reference count as explicit."],["4","Goods need not be in deliverable state for identification. Despite identification, risk of loss stays with the seller until it completes its duties under the risk-of-loss rules."],["5","Undivided shares in an identified fungible bulk (grain in an elevator, oil in a tank) can be sold; making the contract identifies the share, though the seller's duty to segregate and deliver is unaffected."],["6","Crops are identified on planting only if to be harvested within the year or next normal harvest season (including quick-harvest nursery stock, but not timber). Wool and young born within twelve months are covered. Lumbering, mining, and fishing output is not \"growing,\" but identification under an output contract can happen early in the operation."]],"cc":[],"k":["identification","insurable interest","special property","existing goods","future goods","shipped","marked","designated","crops","unborn young","fungible bulk","substitute goods"],"tp":[9],"o":6,"q":6},{"s":"2-509","t":"Risk of Loss in the Absence of Breach","part":"Article 2, Part 5 - Performance","am":"2003","x":[["(1)","Where the contract requires or authorizes the seller to ship the goods by carrier: (a) if it does not require delivery at a particular destination, the risk of loss passes to the buyer when the goods are duly delivered to the carrier, even though the shipment is under reservation (§ 2-505); but (b) if it does require delivery at a particular destination and the goods are there duly tendered while in the carrier's possession, the risk passes to the buyer when the goods are there duly so tendered as to enable the buyer to take delivery."],["(2)","Where the goods are held by a bailee to be delivered without being moved, the risk of loss passes to the buyer (a) on its receipt of possession or control of a negotiable document of title covering the goods; or (b) on acknowledgment by the bailee of the buyer's right to possession; or (c) after its receipt of possession or control of a non-negotiable document of title or other direction to deliver in a record, as provided in § 2-503(4)(b)."],["(3)","In any case not within (1) or (2), the risk of loss passes to the buyer on its receipt of the goods if the seller is a merchant; otherwise the risk passes to the buyer on tender of delivery."],["(4)","This section is subject to contrary agreement of the parties and to §§ 2-327 (sale on approval) and 2-510 (effect of breach on risk of loss)."]],"c":[["1","Risk of loss follows a contractual approach, not the location of \"property\" or title. This section applies only where the seller has not breached; if the tender or delivery fails to conform, § 2-510 governs."],["2","\"Requires or authorizes\" shipment is read like § 2-504. \"Duly delivered to the carrier\" requires a proper carrier contract under § 2-504 and delivery that lets the seller complete a due tender. Shipment need not follow contracting, but if the seller buys goods afloat and diverts them to the buyer, the goods must be identified before risk passes, and risk does not pass retroactively to shipment."],["3","Whether delivery is at the seller's place or where the goods are, a merchant seller keeps the risk until the buyer actually receives the goods - even if the buyer paid in full and was told the goods were at its disposal. The merchant still controls the goods and can be expected to insure them; the buyer has no control and is unlikely to insure goods it does not possess. The seller is protected against a buyer's breach by § 2-510."],["4","For goods held by a bailee, delivery of a negotiable document or the bailee's acknowledgment completes delivery and passes the risk."],["5","\"Contrary agreement\" means \"unless otherwise agreed\"; parties may reallocate risk any way they like, and agreement may be found in the circumstances, trade usage, course of dealing, or course of performance."]],"cc":["3"],"k":["risk of loss","shipment contract","destination contract","duly delivered to the carrier","duly tendered","bailee","document of title","acknowledgment","merchant seller","receipt","tender of delivery","non-merchant","contrary agreement","F.O.B.","insurance"],"tp":[9],"o":45,"q":42},{"s":"2-510","t":"Effect of Breach on Risk of Loss","part":"Article 2, Part 5 - Performance","x":[["(1)","Where a tender or delivery of goods so fails to conform to the contract as to give a right of rejection, the risk of their loss remains on the seller until cure or acceptance."],["(2)","Where the buyer rightfully revokes acceptance, it may, to the extent of any deficiency in its effective insurance coverage, treat the risk of loss as having rested on the seller from the beginning."],["(3)","Where the buyer, as to conforming goods already identified to the contract, repudiates or is otherwise in breach before risk of their loss has passed to it, the seller may, to the extent of any deficiency in its effective insurance coverage, treat the risk of loss as resting on the buyer for a commercially reasonable time."]],"c":[["1","A seller cannot shift the risk of loss by its own action unless that action meets all the conditions resting on it under the contract."],["2","\"Cure\" in (1) means changes to goods already tendered (repair, partial substitution, sorting); repossession and new tender does not affect risk on the original goods, and risk does not shift until cure is complete. For defective documents, cure or the buyer's waiver shifts the risk - but not if the goods were destroyed before cure or the buyer waived without knowing of the destruction."],["3","After a breach, any loss not covered by the aggrieved party's insurance falls on the breaching party. \"Effective\" insurance addresses an insolvent insurer, and \"deficiency\" means the shortfall without subrogation; insurers' subrogation does not disturb this allocation."]],"cc":[],"k":["risk of loss","breach","nonconforming","right of rejection","cure","acceptance","revocation of acceptance","insurance","deficiency","repudiates","commercially reasonable time","identified goods","subrogation"],"tp":[9],"o":26,"q":25}];
+</script>
+<script>
+// Canonical statutory / rule supplement viewer (supplement/v1). scripts/lib/supplement-shell.mjs
+// inlines this script after three data lines: SUPP (title, cite style, labels), AREAS (the course's
+// topics, numbered from 1) and DATA (one object per section or rule; see docs/supplement-format.md).
+// The reference popup reads the same DATA line (supplementStatutes in scripts/lib/refs.mjs), and
+// links into this page as #s-<id>, so a cite in a question opens its section here.
+/* global SUPP, AREAS, DATA */
+(() => {
+  // How each cite style numbers its sections, finds a cite typed in the search box, and spots
+  // cross-references in the text. Mirrors STYLES in src/assets/refs.js.
+  const STYLE = {
+    ucc: { label: (id) => `§ ${id}`, unit: 'section', example: '2-207',
+      cite: (v) => { const m = v.match(/^(?:§+\s*|sec(?:tion)?\.?\s*|ucc\s*)?([129]a?)\s*[-‑–]\s*(\d{1,3}[a-z]?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: `${m[1].toUpperCase()}-${m[2].toUpperCase()}`, sub: m[3] }; },
+      xref: /(\b[129]A?-\d{3}[A-Z]?\b)/ },
+    fre: { label: (id) => `Rule ${id}`, unit: 'rule', example: '803(2)',
+      cite: (v) => { const m = v.match(/^(?:rules?\s*|fre\s*|fed\.?\s*r\.?\s*evid\.?\s*)?(\d{1,4})((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
+      xref: /(?<![\d§$.,])(\b\d{3,4}\b)(?![\d%]|,\s?\d{3})/ },
+    mrpc: { label: (id) => `Rule ${id}`, unit: 'rule', example: '1.7(a)',
+      cite: (v) => { const m = v.match(/^(?:(?:model\s+)?rules?\s*|m?rpc\s*|mr\s*)?([1-8](?:\.\d{0,2})?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
+      xref: /(?<![\d$.,])\b([1-8]\.\d{1,2})\b(?![\d%]|\.\d)/ },
+    frcp: { label: (id) => (/^\d{3,}/.test(id) ? `§ ${id}` : `Rule ${id}`), unit: 'rule', example: '12(b)(6)',
+      cite: (v) => { const m = v.match(/^(?:rules?\s*|frcp\s*|fed\.?\s*r\.?\s*civ\.?\s*p\.?\s*|(?:\d+\s*u\.?s\.?c\.?\s*)?§+\s*)?(\d{1,5}(?:\.\d)?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
+      xref: /((?<=\bRules?\s)\d{1,2}(?:\.\d)?(?![\d.]\d|\d)|(?<=§§?\s?)\d{3,5}[a-z]?)/ },
+    restatement: { label: (id) => `§ ${id}`, unit: 'section', example: '90',
+      cite: (v) => { const m = v.match(/^(?:restatement\s*)?(?:§+\s*|sec(?:tion)?\.?\s*)?(\d{1,4}(?:\.\d{0,3})?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
+      xref: /((?<=§§?\s?|\bSections?\s)\d{1,4}(?:\.\d{1,3})?(?![\d.\-‑–]\d|\d))/,
+      // A cite right after another work's name ("Restatement Second, Torts § 7", "Id. § 6",
+      // "UNIF. TRADE SECRETS ACT § 6") is to that work.
+      foreign: /(?:\bRestatement(?:,| of| First| Second| Third)(?:[^;§.]|\.(?!\s)|(?<=\b(?:No|Ed|ed|Vol))\.\s){0,120}|\b[Ii]d\.,?\s*|\b[A-Z]{2,}\.?\s+)§§?\s?$/ },
+    section: { label: (id) => `§ ${id}`, unit: 'section', example: '12-345',
+      cite: (v) => { const m = v.match(/^(?:§+\s*|sec(?:tion)?\.?\s*)?(\d[\w.\-]*?)((?:\([a-z0-9]{1,4}\))*)$/i); return m && { id: m[1], sub: m[2] }; },
+      xref: /((?<=§§?\s?|\bSections?\s)\d{1,5}[A-Za-z]?(?:[.\-]\d{1,5}[A-Za-z]?)*)/ },
+  };
+  const style = STYLE[SUPP.cite] || STYLE.ucc;
+  const unit = SUPP.unit || style.unit;
+  const units = (n) => `${n} ${n === 1 ? unit : SUPP.units || `${unit}s`}`;
+  // An entry may carry its own label ("n"), for a section the cite style can't number.
+  const label = (s) => s.n || style.label(s.s);
+
+  const $ = (s) => document.querySelector(s);
+  const list = $('#list'), toc = $('#toc'), q = $('#q'), topicSel = $('#topic'), jump = $('#jump'), count = $('#count');
+  const BY = Object.fromEntries(DATA.map((s) => [s.s, s]));
+  const COURSE = -1;
+  const KEY = `supp:${SUPP.id || 'supplement'}:comments`;
+  const hasComments = DATA.some((s) => (s.c || []).length);
+  const someSkipped = DATA.some((s) => !(s.tp || []).length) && DATA.some((s) => (s.tp || []).length);
+  let openAll = false;
+  try { openAll = localStorage.getItem(KEY) === 'open'; } catch (e) { /* storage unavailable */ }
+  let topic = 0;
+
+  // Passages with full paths, so a cite to "(2)(b)" or "(a)(2)(B)" marks just that part.
+  for (const s of DATA) {
+    s.x ||= []; s.c ||= []; s.cc = (s.cc || []).map(String); s.tp ||= []; s.k ||= [];
+    let top = '';
+    s.rows = s.x.map(([l, t, given]) => {
+      if (given != null) {
+        const n = (String(given).match(/\([^)]+\)/g) || []).length;
+        return { l, t, path: String(given), d: l ? Math.max(0, n - 1) : n };
+      }
+      const lead = (String(l).match(/^(?:\([^)]+\))+/) || [''])[0];
+      let path = lead, d = 0;
+      if (/^\([a-z]\)$/.test(lead) && /^\(\d+\)$/.test(top)) { path = top + lead; d = 1; } else top = lead;
+      return { l, t, path, d };
+    });
+    s.hay = [s.s, label(s), s.t, s.note || '', s.part || '', ...s.x.map((x) => `${x[0]} ${x[1]}`), ...s.c.flat(), ...s.k].join(' \n ').toLowerCase();
+    s.chay = s.c.map((c) => `${c[0]} ${c[1]}`.toLowerCase());
+  }
+
+  const esc = (t) => String(t).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+  const reEsc = (t) => t.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+  function parseQuery(raw) {
+    const v = raw.trim();
+    if (!v) return null;
+    const cite = style.cite(v);
+    if (cite && /\d/.test(cite.id)) return { cite: cite.id, sub: (cite.sub || '').toLowerCase(), terms: [] };
+    const terms = [];
+    v.toLowerCase().replace(/"([^"]+)"|(\S+)/g, (m, ph, w) => { const t = (ph || w).trim(); if (t && t !== '§') terms.push(t); return ''; });
+    // Each term must start at a word boundary, so "as is" does not match "has issued".
+    return terms.length ? { terms, res: terms.map((t) => new RegExp(`(?:^|[^a-z0-9])${reEsc(t)}`)) } : null;
+  }
+  function matches(s, pq) {
+    if (topic === COURSE && !s.tp.length) return false;
+    if (topic > 0 && !s.tp.includes(topic)) return false;
+    if (!pq) return true;
+    if (pq.cite) return BY[pq.cite] ? s.s === pq.cite : s.s.startsWith(pq.cite);
+    return pq.res.every((re) => re.test(s.hay));
+  }
+
+  // Escape, highlight search terms, and turn cites of other sections into links to their cards.
+  let markRe = null;
+  function fmt(text, self) {
+    // An entry with its own label ("n") numbers its sections apart from the rest, so its cites stay plain.
+    const own = BY[self] && BY[self].n;
+    const parts = String(text).split(style.xref);
+    return parts.map((p, i) => {
+      let h = esc(p);
+      if (markRe) h = h.replace(markRe, '<mark>$&</mark>');
+      if (i % 2 === 1 && !own && BY[p] && p !== self && !(style.foreign && style.foreign.test(parts[i - 1]))) return `<a class="xr" href="#s-${esc(p)}" data-go="${esc(p)}">${h}</a>`;
+      return h;
+    }).join('');
+  }
+
+  /** The passages a cite names: "(2)(b)" tries "(2)(b)", then "(2)" when (b) runs inline in (2)'s text. */
+  function wanted(s, sub) {
+    const groups = (sub || '').match(/\([^)]+\)/g) || [];
+    for (let n = groups.length; n > 0; n--) {
+      const want = groups.slice(0, n).join('');
+      if (s.rows.some((r) => r.path.toLowerCase().startsWith(want))) return want;
+    }
+    return '';
+  }
+
+  function card(s, pq) {
+    const want = pq && pq.cite === s.s ? wanted(s, pq.sub) : '';
+    const sub = s.rows.map(({ l, t, path, d }) => {
+      // A label with words after its number ("(b)(20) Good faith") sits above its text.
+      const wide = l && String(l).replace(/^(?:\([^)]+\))+/, '').trim();
+      const cls = ['sub', !l ? 'one' : wide ? 'wide' : '', want && path.toLowerCase().startsWith(want) ? 'hit' : ''].filter(Boolean).join(' ');
+      return `<div class="${cls}" style="--d:${d}">${l ? `<b>${fmt(l, s.s)}</b>` : ''}<p>${fmt(t, s.s)}</p></div>`;
+    }).join('');
+    const cited = new Set(s.cc);
+    let anyHit = false;
+    const cms = s.c.map(([n, t], i) => {
+      const hit = pq && !pq.cite && pq.res.every((re) => re.test(s.chay[i]));
+      if (hit) anyHit = true;
+      const cls = ['cm', !n ? 'one' : String(n).length > 3 ? 'wide' : '', cited.has(String(n)) ? 'cited' : '', hit ? 'hit' : ''].filter(Boolean).join(' ');
+      const tag = cited.has(String(n)) ? '<span class="tag" title="Cited in the outline or practice questions">Cited</span>' : '';
+      // A blank line in a comment starts a new paragraph (Illustrations, quoted text).
+      const paras = String(t).split(/\n\s*\n/);
+      const body = paras.length > 1 ? `<div>${paras.map((p, j) => `<p>${fmt(p, s.s)}${j === paras.length - 1 ? tag : ''}</p>`).join('')}</div>` : `<p>${fmt(t, s.s)}${tag}</p>`;
+      return `<li class="${cls}" id="s-${esc(s.s)}-c${esc(n)}">${n ? `<b>${esc(n)}</b>` : ''}${body}</li>`;
+    }).join('');
+    const open = openAll || anyHit;
+    const citeNote = s.cc.length ? ` <span class="cit">· cited: ${s.cc.map((n) => (/^\d+$/.test(n) ? `cmt. ${n}` : esc(n))).join(', ')}</span>` : '';
+    const chips = s.tp.filter((t) => AREAS[t - 1]).map((t) => `<button class="tchip" data-topic="${t}" aria-pressed="${topic === t}" title="Show only this topic">${SUPP.numberAreas === false ? '' : `${t}. `}${esc(AREAS[t - 1])}</button>`).join('');
+    const refs = (s.o || 0) + (s.q || 0) ? `<span class="refs">Cited ${s.o || 0}× in the outline, ${s.q || 0}× in the practice sets</span>` : '';
+    return `<article class="sec" id="s-${esc(s.s)}">
+      <header><span class="num">${esc(label(s))}</span><h2>${fmt(s.t, s.s)}</h2></header>
+      <div class="meta">${chips}${s.am ? `<span class="am">Amended ${esc(s.am)}</span>` : ''}${refs}</div>
+      ${s.note ? `<div class="note"><span class="lbl">Note</span>${fmt(s.note, s.s)}</div>` : ''}
+      <span class="lbl">${esc(SUPP.textLabel || 'Text')}</span>
+      <div class="text">${sub}</div>
+      ${s.c.length ? `<details class="cmts"${open ? ' open' : ''}><summary>${esc(SUPP.commentsLabel || 'Official Comments')} (${s.c.length})${citeNote}</summary><ol>${cms}</ol></details>` : ''}
+    </article>`;
+  }
+
+  const partLabel = (p) => String(p || '').replace(/^Article (\w+)(?:, Part (\d+))? - /, (m, a, n) => (n ? `Art. ${a}, Part ${n} - ` : `Art. ${a} - `));
+
+  function render() {
+    const pq = parseQuery(q.value);
+    const terms = pq ? pq.terms.filter((t) => t.length > 1) : [];
+    markRe = terms.length ? new RegExp(`(?<![a-z0-9])(?:${[...terms].sort((a, b) => b.length - a.length).map((t) => reEsc(esc(t))).join('|')})`, 'gi') : null;
+    const shown = DATA.filter((s) => matches(s, pq));
+    list.innerHTML = shown.length ? shown.map((s) => card(s, pq)).join('')
+      : `<p class="empty">Nothing matches${q.value.trim() ? ` "${esc(q.value.trim())}"` : ''}${topic ? ' in this topic' : ''}.</p>`;
+    count.textContent = shown.length === DATA.length ? units(DATA.length) : `${shown.length} of ${units(DATA.length)}`;
+    $('#clr').hidden = !q.value; $('#kbd').hidden = !!q.value;
+    // The index and the jump menu follow the filter.
+    let html = '', opts = `<option value="">Jump to a ${esc(unit)}</option>`, last = null;
+    for (const s of shown) {
+      if (s.part !== last) {
+        if (last !== null) opts += '</optgroup>';
+        html += `<h3>${esc(partLabel(s.part))}</h3>`;
+        opts += `<optgroup label="${esc(partLabel(s.part))}">`;
+        last = s.part;
+      }
+      html += `<a href="#s-${esc(s.s)}" data-go="${esc(s.s)}"${someSkipped && s.tp.length ? ' class="course"' : ''}><span>${esc(s.n ? s.n.replace(/^§\s*/, '') : s.s)}</span><span>${esc(s.t)}</span></a>`;
+      opts += `<option value="${esc(s.s)}">${esc(label(s))} ${esc(s.t.length > 48 ? `${s.t.slice(0, 46)}...` : s.t)}</option>`;
+    }
+    toc.innerHTML = html;
+    jump.innerHTML = opts + (last !== null ? '</optgroup>' : '');
+    watch();
+  }
+
+  function go(id, flash = true) {
+    let el = document.getElementById(`s-${id}`);
+    if (!el) { q.value = ''; topic = 0; topicSel.value = '0'; render(); el = document.getElementById(`s-${id}`); }
+    if (!el) return;
+    el.scrollIntoView({ block: 'start' });
+    try { history.replaceState(null, '', `#s-${id}`); } catch (e) { /* sandboxed */ }
+    if (flash) { el.classList.remove('flash'); void el.offsetWidth; el.classList.add('flash'); }
+  }
+
+  // Highlight the index entry for the card at the top of the screen.
+  let io;
+  function watch() {
+    if (io) io.disconnect();
+    if (!('IntersectionObserver' in window)) return;
+    io = new IntersectionObserver((ents) => {
+      for (const e of ents) {
+        if (!e.isIntersecting) continue;
+        const id = e.target.id.slice(2);
+        toc.querySelectorAll('a.on').forEach((a) => a.classList.remove('on'));
+        const a = [...toc.querySelectorAll('a[data-go]')].find((x) => x.dataset.go === id);
+        if (a) { a.classList.add('on'); const r = a.getBoundingClientRect(), tr = toc.getBoundingClientRect(); if (r.top < tr.top || r.bottom > tr.bottom) a.scrollIntoView({ block: 'nearest' }); }
+      }
+    }, { rootMargin: `-${barH() + 10}px 0px -70% 0px` });
+    list.querySelectorAll('.sec').forEach((el) => io.observe(el));
+  }
+  const barH = () => $('#bar').getBoundingClientRect().height;
+  const syncBar = () => document.documentElement.style.setProperty('--barh', `${Math.round(barH())}px`);
+
+  function setOpen(v) {
+    openAll = v;
+    $('#c-open').setAttribute('aria-pressed', v); $('#c-closed').setAttribute('aria-pressed', !v);
+    try { localStorage.setItem(KEY, v ? 'open' : 'closed'); } catch (e) { /* storage unavailable */ }
+    list.querySelectorAll('details.cmts').forEach((d) => { d.open = v; });
+  }
+
+  $('#cseg').hidden = !hasComments;
+  q.placeholder = `Search, or type a cite like ${style.example}`;
+  topicSel.innerHTML = `<option value="0">All ${esc(SUPP.units || `${unit}s`)} (${DATA.length})</option>`
+    + (someSkipped ? `<option value="${COURSE}">Covered by the course (${DATA.filter((s) => s.tp.length).length})</option>` : '')
+    + AREAS.map((a, i) => `<option value="${i + 1}">${SUPP.numberAreas === false ? '' : `${i + 1}. `}${esc(a)} (${DATA.filter((s) => s.tp.includes(i + 1)).length})</option>`).join('');
+  topicSel.hidden = !AREAS.length && !someSkipped;
+
+  let timer;
+  q.addEventListener('input', () => { clearTimeout(timer); timer = setTimeout(() => { render(); window.scrollTo({ top: 0 }); }, 140); });
+  q.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') { q.value = ''; render(); }
+    if (e.key === 'Enter') { const first = list.querySelector('.sec'); if (first) go(first.id.slice(2)); }
+  });
+  $('#clr').addEventListener('click', () => { q.value = ''; render(); q.focus(); });
+  topicSel.addEventListener('change', () => { topic = +topicSel.value; render(); window.scrollTo({ top: 0 }); });
+  jump.addEventListener('change', () => { if (jump.value) go(jump.value); jump.value = ''; });
+  $('#c-open').addEventListener('click', () => setOpen(true));
+  $('#c-closed').addEventListener('click', () => setOpen(false));
+  document.addEventListener('click', (e) => {
+    const a = e.target.closest('[data-go]');
+    if (a) { e.preventDefault(); go(a.dataset.go); return; }
+    const c = e.target.closest('.tchip');
+    if (c) { const id = c.closest('.sec').id.slice(2), t = +c.dataset.topic; topic = topic === t ? 0 : t; topicSel.value = String(topic); render(); go(id, false); }
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === '/' && document.activeElement !== q && !/input|select|textarea/i.test(document.activeElement.tagName)) { e.preventDefault(); q.focus(); q.select(); }
+  });
+  const topBtn = $('#top');
+  window.addEventListener('scroll', () => topBtn.classList.toggle('show', window.scrollY > 600), { passive: true });
+  topBtn.addEventListener('click', () => window.scrollTo({ top: 0 }));
+  window.addEventListener('resize', syncBar);
+  // "#s-2-207" opens a section; "#s-404(b)" or "#s-2-207-c4" also marks a subdivision or comment.
+  function fromHash() {
+    const m = decodeURIComponent(location.hash).match(/^#s-(.+?)(?:-c([\w.]+))?$/);
+    if (!m) return;
+    const sub = !BY[m[1]] && m[1].match(/^(.+?)((?:\([a-z0-9]{1,4}\))+)$/i);
+    if (sub && BY[sub[1]]) { q.value = `${sub[1]}${sub[2]}`; render(); go(sub[1]); return; }
+    if (m[2] && BY[m[1]]) { go(m[1]); const li = document.getElementById(`s-${m[1]}-c${m[2]}`); if (li) { li.closest('details').open = true; li.classList.add('hit'); li.scrollIntoView({ block: 'center' }); } return; }
+    go(m[1]);
+  }
+  window.addEventListener('hashchange', fromHash);
+
+  $('#c-open').setAttribute('aria-pressed', openAll); $('#c-closed').setAttribute('aria-pressed', !openAll);
+  render();
+  syncBar();
+  if (location.hash) requestAnimationFrame(fromHash);
+})();
+</script>
+</body>
+</html>

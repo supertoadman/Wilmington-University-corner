@@ -1,0 +1,1034 @@
+Evidence Most Testable Questions II
+===================================
+
+Subject: Evidence
+Type: Practice Questions
+Source: https://supertoadman.github.io/Wilmington-University-corner/subjects/evidence/evidence-most-testable-questions-ii/
+
+60 more five-choice questions on the most testable material from Weeks 1–15, in two sets of 30, testing different rule points from the first collection. About a third is hearsay, and it adds jury secrecy, competency, Rule 411, Rule 106, and compulsory process. Every question uses new facts, and every choice is explained.
+
+---
+
+## Set 1 · Q1 · Jury Secrecy and Competency — Rule 606(b): outside influence
+After a guilty verdict, the defense offers juror testimony to overturn it. Which testimony may the court consider?
+
+A. The foreperson pressured two holdouts until they changed their votes.
+B. A juror described her own experience of being robbed during deliberations.
+C. A juror says she voted guilty only because she was exhausted and wanted to go home.
+D. A juror says several jurors drank heavily at lunch and slept through testimony.
+E. A bailiff told the jurors during a break that the defendant had confessed.
+
+Answer: E
+- A: Pressure among jurors is a statement or incident during deliberations, which Rule 606(b)(1) bars.
+- B: A juror's own life experience isn't extraneous information (Warger), and it was a statement during deliberations.
+- C: Rule 606(b)(1) bars testimony about the effect of anything on a juror's vote or mental processes.
+- D: Tanner treats intoxication and sleeping as internal matters, no more an outside influence than a virus or lack of sleep.
+- E: Correct. A bailiff's remark brings extraneous prejudicial information or an outside influence to the jury, so Rule 606(b)(2) lets a juror testify about it.
+Rule: Rule 606(b) bars juror testimony about deliberations, votes, and mental processes. A juror may testify about extraneous prejudicial information, an outside influence, or a mistake on the verdict form. Internal vs. external turns on the nature of the matter (Tanner).
+
+## Set 1 · Q2 · Relevance and Rule 403 — Rule 403: undisputed fact
+In a murder trial, the only disputed issue is who committed the killing. The defense concedes the cause and manner of death. The State offers graphic autopsy photographs of the opened skull. The defense objects. What is the best analysis?
+
+A. The photos are relevant, but their value is low here and may be substantially outweighed.
+B. The photos are irrelevant, because evidence on an undisputed fact fails Rule 401.
+C. The photos must be admitted, because the State may always prove each element its own way.
+D. The photos must be excluded, because gruesome images are unfairly prejudicial as a matter of law.
+E. The photos come in, because a limiting instruction cures any emotional reaction to them.
+
+Answer: A
+- A: Correct. Under State v. Bocharski, an undisputed fact shrinks probative value on the Rule 403 scale without making the evidence irrelevant. The two autopsy photos there served mainly to inflame.
+- B: The fact need not be disputed under Rule 401 (ACN). A brick is not a wall, and the problem arises under Rule 403.
+- C: That is the general rule of Old Chief, but it doesn't remove the Rule 403 balance.
+- D: Rule 403 has no per se rule. Some gruesome photos in State v. Bocharski were properly admitted.
+- E: The likely effectiveness of an instruction is one factor. It doesn't automatically resolve the balance.
+Rule: An undisputed fact can still be relevant, but Rule 403 discounts its probative value. Exclusion requires that the value be substantially outweighed by unfair prejudice or another listed danger (State v. Bocharski).
+
+## Set 1 · Q3 · Specialized Relevance Rules — Rule 411: bias exception
+In a slip-and-fall suit, the store's key witness is an investigator who testifies the floor was dry. On cross, the plaintiff seeks to show the investigator works for the store's liability insurer. The store objects under Rule 411. What is the most likely ruling?
+
+A. Sustained, because Rule 411 bars all mention of liability insurance anywhere in a negligence trial.
+B. Overruled, because the evidence shows the witness's bias, with an instruction on request.
+C. Overruled, because being insured makes it more likely the store acted carelessly.
+D. Sustained, because bias may be shown only by the witness's own financial stake.
+E. Overruled, because Rule 411 protects only parties who have no liability insurance.
+
+Answer: B
+- A: Rule 411 bars insurance evidence only to prove negligence or wrongful conduct. It allows other purposes.
+- B: Correct. Rule 411 expressly permits insurance evidence for another purpose, such as a witness's bias or prejudice. Rule 105 limits the jury's use on request.
+- C: That is the inference Rule 411 forbids.
+- D: Employment by an interested insurer is a recognized source of bias. No rule limits bias to a direct financial stake.
+- E: Rule 411 applies whether a person was or was not insured.
+Rule: Rule 411 bars proof of insurance to show negligence or wrongful conduct. It may come in for another purpose, such as bias, agency, ownership, or control.
+
+## Set 1 · Q4 · Character Evidence — Zackowitz: weapons unconnected to the crime
+Dunn is charged with stabbing a man outside a bar with a pocketknife, which police recovered. The State offers a collection of a dozen combat knives found in Dunn's garage, unconnected to the stabbing, to show he is a dangerous man. What is the most likely ruling?
+
+A. Admitted, because possessing knives is not a crime, so Rule 404(b) doesn't apply.
+B. Admitted, subject to a limiting instruction that the jury may not punish him for them.
+C. Excluded, because a defendant's lawful property can never be used against him at trial.
+D. Admitted, because weapons in the home show he had the means to commit the crime.
+E. Excluded, because the collection proves only character and has no non-propensity link.
+
+Answer: E
+- A: Rule 404(b) reaches any other crime, wrong, or act, and Rule 404(a)(1) bars character evidence generally.
+- B: An instruction can't rescue evidence whose only purpose is forbidden.
+- C: This is too broad. Items tied to the crime, or to preparation for it, can come in.
+- D: The knife used was recovered, so the collection adds nothing on means. Its only force is that Dunn is a dangerous type.
+- E: Correct. As in People v. Zackowitz, weapons unconnected to the crime prove only a dangerous character. Rule 404(b)(1) bars that use.
+Rule: Other acts need a non-character route under Rule 404(b)(2). Evidence that shows only the defendant is a dangerous type falls within the propensity ban (People v. Zackowitz).
+
+## Set 1 · Q5 · Character Evidence — Plan vs. pattern
+In which case is the other act best offered to prove a plan under Rule 404(b)(2)?
+
+A. A child-abuse defendant has abused other children in the same church.
+B. A bank-robbery defendant stole a van the day before and used it for the getaway.
+C. A forgery defendant has a long history of signing other people's checks.
+D. A bank-robbery defendant robbed three other banks over the past five years.
+E. A shoplifting defendant has shoplifted from similar stores many times before.
+
+Answer: B
+- A: This is the argument State v. Kirsch rejected: a systematic course of conduct isn't a plan.
+- B: Correct. Plan requires acts that are steps toward one overall scheme. Stealing a getaway van is preparation for this robbery.
+- C: A history of similar acts is propensity unless linked to one scheme.
+- D: Repeated robberies show a pattern, not parts of one scheme (State v. Kirsch).
+- E: A mere pattern is insufficient to establish a plan. This shows only a tendency to shoplift.
+Rule: Plan under Rule 404(b)(2) requires that the acts be parts of one overall scheme. A pattern or systematic course of conduct isn't enough (State v. Kirsch).
+
+## Set 1 · Q6 · Character Evidence — Rule 404(a)(2): criminal cases only
+In a civil battery suit, the defendant calls a witness to testify to the defendant's excellent reputation for peacefulness, offered to show he didn't strike the plaintiff. The plaintiff objects. What is the correct ruling?
+
+A. Overruled, because a defendant may always offer a pertinent trait.
+B. Overruled, because Rule 405(a) allows reputation testimony.
+C. Sustained, because the defendant hasn't testified yet.
+D. Overruled, because battery makes character an essential element.
+E. None of the above.
+
+Answer: E
+- A: That exception, Rule 404(a)(2)(A), belongs to a defendant in a criminal case.
+- B: Rule 405(a) governs the method of proof only after character is admissible.
+- C: Testifying has no bearing here. Character evidence offered as propensity is barred either way.
+- D: Peacefulness isn't an element of a battery claim, so Rule 405(b) doesn't apply.
+- E: Correct. The testimony should be excluded. Rule 404(a)(1) bars character evidence to prove action in conformity, and the Rule 404(a)(2) exceptions apply only in criminal cases.
+Rule: Only the accused can open the door to character under Rule 404(a)(2), and only in a criminal case. In civil cases the propensity ban holds.
+
+## Set 1 · Q7 · Character Evidence — Rule 404(a)(2)(C): first aggressor in homicide
+Fenn is charged with murder. He offers no character evidence, but an eyewitness testifies for the defense that the victim attacked first. The prosecutor then calls a witness to testify to the victim's reputation for peacefulness. What is the correct ruling?
+
+A. Excluded, because an alleged victim's character can never be proved by the State.
+B. Excluded, because Fenn has not offered any evidence of the victim's character.
+C. Excluded, because Rule 405(a) allows only opinion testimony for this purpose.
+D. Admitted, because evidence the victim was the first aggressor opens this door.
+E. Admitted, because the State may always offer the victim's character in its case.
+
+Answer: D
+- A: Rule 404(a)(2)(C) and the rebuttal right in Rule 404(a)(2)(B) both allow it.
+- B: Rule 404(a)(2)(C) doesn't need character evidence from the defense. Any evidence that the victim was the first aggressor triggers it.
+- C: Rule 405(a) allows reputation or opinion.
+- D: Correct. In a homicide case, Rule 404(a)(2)(C) lets the prosecutor offer the victim's trait of peacefulness to rebut evidence that the victim was the first aggressor.
+- E: The prosecution can't go first. It needs the trigger the rule describes.
+Rule: In a homicide case, any evidence that the victim was the first aggressor lets the prosecutor offer the victim's peacefulness, under Rule 404(a)(2)(C).
+
+## Set 1 · Q8 · Impeachment and the Rape Shield — Rule 609(a)(1): maximum punishment controls
+A witness in a civil trial was convicted of felony theft eight years ago. The crime was punishable by up to three years, but the witness received only six months of probation. Theft of this kind has no element of dishonesty or false statement. Which is correct?
+
+A. It can't be used, because theft isn't a crime of false statement.
+B. It must be admitted with no balancing, because it is a felony.
+C. It can't be used, because the sentence the court actually imposed was under one year.
+D. It comes in unless Rule 403 requires exclusion, because the maximum exceeds a year.
+E. It comes in only if probative value substantially outweighs prejudice.
+
+Answer: D
+- A: That defeats only Rule 609(a)(2). Rule 609(a)(1) covers any crime punishable by more than one year.
+- B: No balancing applies only to crimen falsi under Rule 609(a)(2). This conviction is subject to Rule 403.
+- C: What counts is the maximum punishment, not the sentence imposed.
+- D: Correct. Rule 609(a)(1)(A) applies because the crime was punishable by more than one year. For a civil witness, the conviction must be admitted, subject to Rule 403.
+- E: The reverse balance belongs to Rule 609(b). This conviction is under 10 years old.
+Rule: Rule 609(a)(1) looks at the maximum punishment in the convicting jurisdiction, not the sentence actually imposed.
+
+## Set 1 · Q9 · Impeachment and the Rape Shield — Luce: preserving a Rule 609 ruling
+Before trial, the judge rules that the government may impeach Boyd with a prior conviction if he testifies. Boyd decides not to testify and is convicted. On appeal, he challenges the in limine ruling. What is the most likely result?
+
+A. The claim isn't preserved, because Boyd never testified.
+B. Reversal, because the ruling effectively kept him off the stand.
+C. Review on the merits, because a definitive ruling preserves the claim.
+D. Remand, so the trial judge can decide what Boyd would have said.
+E. Reversal only if he proves he would have testified otherwise.
+
+Answer: A
+- A: Correct. Under Luce, a defendant must testify to challenge an in limine Rule 609 ruling.
+- B: Under Luce the harm is wholly speculative when the defendant doesn't testify.
+- C: A definitive ruling doesn't preserve this claim. Luce requires the defendant to testify.
+- D: Luce doesn't call for a remand. The challenge simply isn't preserved.
+- E: No offer of proof substitutes for testifying under Luce.
+Rule: A defendant must testify to preserve a challenge to an in limine Rule 609 ruling (Luce).
+
+## Set 1 · Q10 · Impeachment and the Rape Shield — Ohler: drawing the sting
+(Varies question 1.9.)
+Same facts, except Boyd testifies and, to soften the blow, tells the jury about the conviction himself on direct. The government never mentions it. On appeal, he challenges the in limine ruling. What is the most likely result?
+
+A. The claim is preserved, because he testified as Luce requires.
+B. The claim is preserved, because he only responded to the ruling.
+C. The claim is preserved if he objected again during his direct.
+D. The claim is waived, because he introduced the conviction himself.
+E. Reversal, because the ruling forced him to reveal his conviction.
+
+Answer: D
+- A: Testifying is necessary but not sufficient. Ohler adds that he can't introduce the conviction himself.
+- B: Ohler rejected this reasoning, even though the defendant was responding to an adverse ruling.
+- C: A further objection doesn't change who introduced the evidence.
+- D: Correct. Under Ohler, a defendant who preemptively introduces his own conviction on direct can't challenge its admission on appeal.
+- E: The conviction came from his own testimony, so there is no error by the court to review.
+Rule: With Luce and Ohler together, a defendant preserves a Rule 609 objection only by testifying and letting the prosecution elicit the conviction.
+
+## Set 1 · Q11 · Definition of Hearsay — Verbal acts
+A restaurant owner is charged with bribing a health inspector. A waiter testifies that he heard the inspector tell the owner, "Pay me $500 and this violation disappears." The inspector doesn't testify. The defense objects on hearsay grounds. What is the best ruling?
+
+A. Sustained, because the inspector is not on the stand and can't be cross-examined.
+B. Sustained, unless the prosecution first proves the inspector is unavailable.
+C. Overruled, because the statement is a present sense impression of the visit.
+D. Overruled, because the waiter personally heard the words and can be cross-examined.
+E. Overruled, because the words are a verbal act with independent legal significance.
+
+Answer: E
+- A: The inspector's absence matters only if the words are offered for their truth. They aren't.
+- B: Unavailability is a condition for Rule 804. The statement isn't hearsay at all.
+- C: An offer doesn't describe an event, and no exception is needed for words that aren't hearsay.
+- D: The waiter's knowledge covers only what was said. That doesn't answer a hearsay objection to a statement offered for truth.
+- E: Correct. The offer has legal effect because it was said, whether or not it was sincere. It isn't offered to prove the truth of an assertion under Rule 801(c)(2).
+Rule: Verbal acts such as contract words, threats, and offers have legal effect because they were said. They aren't hearsay under Rule 801(c).
+
+## Set 1 · Q12 · Definition of Hearsay — Machine output
+To prove a delivery truck was at a loading dock at 2:14 a.m., the plaintiff offers a printout automatically generated by the truck's GPS unit. No person entered the data. The defendant objects on hearsay grounds. What is the best ruling?
+
+A. Overruled, because the printout is self-authenticating under Rule 902.
+B. Sustained, because the printout is an out-of-court assertion offered for its truth.
+C. Sustained, unless a technician testifies to the unit's records under Rule 803(6).
+D. Overruled, because the printout is not a statement made by a person.
+E. Overruled, because any computer record is a business record.
+
+Answer: D
+- A: Authentication is a separate question from hearsay, and the objection here is hearsay.
+- B: Rule 801(a) requires a person's assertion. A machine's automatic output isn't one.
+- C: No exception is needed if the output isn't hearsay.
+- D: Correct. Hearsay requires a statement by a person under Rule 801(a)–(b). Machine output isn't hearsay, though it must still be authenticated, as under Rule 901(b)(9).
+- E: Rule 803(6) has requirements of its own, and data aren't business records just because they are on a computer.
+Rule: Machine output isn't a person's statement, so it isn't hearsay. The proponent still authenticates it, typically by showing the process produces an accurate result under Rule 901(b)(9).
+
+## Set 1 · Q13 · Opposing Party and Prior Statements — Adoption by silence
+At a diner, before any arrest, Gale's business partner says to her in front of two friends, "You and I both know we skimmed that cash." Gale, who plainly heard him, stares at her coffee and says nothing. At her fraud trial, the government offers the exchange. What is the most likely ruling?
+
+A. Admitted, because a business partner's remarks are always authorized.
+B. Excluded, because silence can never be a statement.
+C. Admitted, if the circumstances naturally called for a denial she could have given.
+D. Excluded, because using her silence violates her constitutional right to remain silent.
+E. Admitted, because anything said in a party's presence is her own statement.
+
+Answer: C
+- A: A partner's authority under Rule 801(d)(2)(C) needs proof. Nothing shows authority to confess fraud.
+- B: Rule 801(d)(2)(B) covers a statement a party adopted or believed to be true, and silence can show adoption.
+- C: Correct. Adoption by silence under Rule 801(d)(2)(B) requires that she heard and understood, was free to respond, the circumstances naturally called for a denial, and she didn't deny.
+- D: Doyle concerns silence after Miranda warnings. Silence with a private accuser before arrest is unaffected.
+- E: Presence isn't enough. The elements of adoption must be met.
+Rule: Silence can adopt a statement under Rule 801(d)(2)(B) if the party heard and understood it, was free to respond, the circumstances naturally called for a denial, and the party didn't deny it.
+
+## Set 1 · Q14 · Opposing Party and Prior Statements — Doyle: post-Miranda silence
+After arrest and Miranda warnings, Hart says nothing to police. At trial, he testifies that he was framed. The prosecutor asks, "If you were framed, why didn't you tell the officers that night?" The defense objects. What is the correct ruling?
+
+A. Overruled, because Rule 613 allows impeachment with an inconsistent omission.
+B. Overruled, because silence in the face of an accusation is an adoptive admission.
+C. Sustained, because no silence by a defendant may ever be mentioned at trial.
+D. Overruled, because a testifying defendant may be impeached by any prior silence.
+E. Sustained, because silence after Miranda warnings can't be used to impeach him.
+
+Answer: E
+- A: Rule 613 doesn't override the due-process rule of Doyle.
+- B: Adoption by silence is limited when the accusation follows Miranda warnings.
+- C: This is too broad. Pre-arrest silence may impeach, as may silence before Miranda warnings.
+- D: Doyle limits this. Pre-arrest and pre-Miranda silence may impeach; post-Miranda silence may not.
+- E: Correct. Doyle holds that using post-Miranda silence to impeach violates due process. The silence is insolubly ambiguous, and the warnings imply no penalty.
+Rule: Post-Miranda silence may not be used to impeach (Doyle). Pre-arrest and pre-Miranda silence may be.
+
+## Set 1 · Q15 · Opposing Party and Prior Statements — Rule 801(d)(1)(C): identification
+A mugging victim picked Lowe from a lineup two days after the crime. At trial she testifies and answers questions, but says she can no longer remember what her attacker looked like. The officer who ran the lineup testifies that she picked Lowe. What is the most likely ruling?
+
+A. Excluded, because an out-of-court identification must be repeated in court.
+B. Admitted, because she testified and identified a person she perceived earlier.
+C. Excluded, because her memory loss means she is not subject to cross-examination.
+D. Admitted, but only to impeach her testimony about her present memory.
+E. Excluded, because the officer has no personal knowledge of the mugging.
+
+Answer: B
+- A: The rule admits the identification even if the witness now can't or doesn't identify in court.
+- B: Correct. Rule 801(d)(1)(C) makes the identification not hearsay when the declarant testifies and is subject to cross. Under United States v. Owens, memory loss doesn't change that.
+- C: United States v. Owens rejected this. Memory loss doesn't make a testifying witness unavailable for cross.
+- D: The identification is substantive evidence under Rule 801(d)(1)(C), not just impeachment.
+- E: The officer has personal knowledge of what happened at the lineup, which is what he reports.
+Rule: Rule 801(d)(1)(C) admits a prior identification if the declarant testifies and is subject to cross, even with memory loss or a misidentification in court (United States v. Owens).
+
+## Set 1 · Q16 · Hearsay Exceptions — Rule 803(1): no stress required
+Driving calmly and talking to her sister by phone, Priya says, "That blue truck just went through the red light." Her sister testifies to this in a later suit. Priya was not upset, and nothing shows the sister saw anything. What is the best basis for admission?
+
+A. Rule 803(2), because a traffic violation is a startling event.
+B. Rule 803(3), because it reflects her then-existing state of mind.
+C. No exception, because the sister didn't perceive the event herself.
+D. Rule 803(1), because it describes the event just as she perceived it.
+E. Rule 804(b)(3), because it exposes the truck driver to liability.
+
+Answer: D
+- A: Priya was calm, so she wasn't under the stress of excitement that Rule 803(2) requires.
+- B: Rule 803(3) excludes a statement of memory or belief offered to prove the fact believed.
+- C: The personal-knowledge requirement applies to the declarant. The sister needs only to have heard the statement.
+- D: Correct. Rule 803(1) covers a statement describing an event made while or immediately after perceiving it. No stress is required.
+- E: Rule 804(b)(3) looks to the declarant's own interest, and Priya isn't shown to be unavailable.
+Rule: Rule 803(1) requires timing, not excitement. Rule 803(2) requires stress, not a strict time limit. Personal knowledge applies to the declarant.
+
+## Set 1 · Q17 · Hearsay Exceptions — Rule 803(3): memory and the will exception
+Which statement, offered for its truth, is admissible under Rule 803(3)?
+
+A. "My husband poisoned my coffee last night," offered in his trial to prove that he did it.
+B. "I paid the rent on the first," offered to prove the rent was paid.
+C. "Last spring I signed a will leaving all to Ann," offered in a dispute over that will.
+D. "I believe the mechanic fixed the brakes," offered to prove they were fixed.
+E. "I remember the light being green," offered to prove the light was green.
+
+Answer: C
+- A: As in Shepard, this looks backward to another person's act. Rule 803(3) excludes it.
+- B: A statement of memory offered to prove the fact remembered falls outside Rule 803(3).
+- C: Correct. Rule 803(3) excludes memory or belief offered to prove the fact remembered, except as it relates to the declarant's will.
+- D: A statement of belief offered to prove the fact believed is excluded.
+- E: This is memory offered to prove the fact remembered, the core exclusion in Rule 803(3).
+Rule: Rule 803(3) covers then-existing state of mind, but not memory or belief offered to prove the fact remembered, unless it relates to the validity or terms of the declarant's will (Shepard).
+
+## Set 1 · Q18 · Hearsay Exceptions — Rule 804(a): who is unavailable
+Which declarant is NOT unavailable under Rule 804(a)?
+
+A. One who refuses to testify in spite of a court order to do so.
+B. One who is excused from testifying by a court's privilege ruling.
+C. One who takes the stand and testifies to not remembering the subject.
+D. One who has died or is too ill to appear at the trial or hearing.
+E. One whom the proponent paid to leave the country to avoid testifying.
+
+Answer: E
+- A: Rule 804(a)(2) covers this declarant.
+- B: Rule 804(a)(1) covers this declarant.
+- C: Rule 804(a)(3) covers this declarant.
+- D: Rule 804(a)(4) covers this declarant.
+- E: Correct. Rule 804(a) doesn't apply if the proponent procured or wrongfully caused the unavailability in order to prevent the declarant from testifying.
+Rule: Rule 804(a) lists privilege, refusal, lack of memory, death or illness, and absence despite reasonable efforts. A proponent who wrongfully caused the absence can't rely on it.
+
+## Set 1 · Q19 · Hearsay Exceptions — Rule 807: near misses
+A hardware supplier's sales ledger narrowly fails Rule 803(6) because its sole owner has died and no qualified witness can lay the foundation. The ledger's entries are corroborated by bank deposits, and it is the best available proof of the sales. The proponent gave reasonable written notice. Can it come in under Rule 807?
+
+A. No, because a statement that narrowly misses an exception can't use Rule 807.
+B. Yes, because the owner's death by itself satisfies Rule 804(b) and so Rule 807.
+C. Yes, if it is trustworthy and the most probative evidence reasonably obtainable.
+D. No, because Rule 807 applies only to statements of unavailable public officials.
+E. Yes, because any hearsay that seems reliable to the judge is admissible.
+
+Answer: C
+- A: The 2019 amendment ended the near-miss debate. Rule 807 asks whether the statement is not admissible under Rule 803 or 804.
+- B: Death shows unavailability only. It satisfies no exception.
+- C: Correct. Rule 807(a) requires sufficient guarantees of trustworthiness and that the statement be more probative than other evidence obtainable with reasonable efforts. Near misses qualify (United States v. Laster).
+- D: Rule 807 has no such limit.
+- E: Rule 807(a) has two requirements, and courts use it rarely. General reliability isn't enough.
+Rule: Rule 807(a) requires trustworthiness, considering the totality of circumstances and corroboration, and comparative necessity. Rule 807(b) requires reasonable written notice. A near miss may still be considered.
+
+## Set 1 · Q20 · Hearsay Exceptions — Rule 806: attacking a declarant
+The government introduces a coconspirator's recorded statement under Rule 801(d)(2)(E). The coconspirator doesn't testify. The defense offers proof of the coconspirator's conviction for perjury five years ago. The government objects that the declarant never took the stand. What is the correct ruling?
+
+A. Overruled, because a perjury conviction is substantive proof of innocence.
+B. Overruled, because the declarant may be impeached as if the declarant had testified.
+C. Sustained, because Rule 806 doesn't apply to coconspirators' statements.
+D. Sustained, because the declarant wasn't given a chance to explain or deny the conviction.
+E. Sustained, because only a testifying witness may be impeached.
+
+Answer: B
+- A: The conviction is relevant to the declarant's credibility. It proves nothing directly about guilt.
+- B: Correct. Under Rule 806, once a statement under Rule 801(d)(2)(C), (D), or (E) or a hearsay statement is admitted, the declarant's credibility may be attacked as if the declarant had testified. Rule 609 convictions may be used.
+- C: Rule 806 expressly names Rule 801(d)(2)(C), (D), and (E) statements.
+- D: Rule 806 removes the foundation requirement of Rule 613(b) for an absent declarant.
+- E: Rule 806 exists to allow impeachment of absent declarants.
+Rule: Rule 806 lets a party attack an absent declarant's credibility as if the declarant had testified, including with Rule 608 and Rule 609 evidence. The Rule 613(b) foundation isn't required.
+
+## Set 1 · Q21 · Confrontation, Bruton, and the Defense — Bryant: emergency to the public
+Officers find a man mortally shot in a parking lot. He says, "Deshawn shot me at the bar down the street." The shooter hasn't been found, and no one knows where he is. The man dies before trial, and the prosecution offers the statement. Is it testimonial?
+
+A. No, because the objective primary purpose was to meet an ongoing emergency.
+B. No, because he was dying, so every dying declaration falls outside the Clause.
+C. Yes, because police asked questions at the scene, which is an interrogation.
+D. Yes, because all statements to police about past events are testimonial.
+E. No, because the Confrontation Clause applies only to statements in court.
+
+Answer: A
+- A: Correct. Under Michigan v. Bryant, a shooter at large with a gun threatens the public as well as the victim. Courts consider the location, the participants' purposes, the medical condition, and formality.
+- B: Crawford left dying declarations open as a possibility. Bryant doesn't rest on that ground.
+- C: Questioning at the scene isn't automatically testimonial. The primary purpose decides.
+- D: Michigan v. Bryant shows that a description of a recent past event can still serve an ongoing emergency.
+- E: Crawford covers out-of-court testimonial statements, such as police interrogations.
+Rule: An ongoing emergency depends on the threat, and a gun with a shooter at large threatens the public. Courts weigh location, purposes, medical condition, and formality objectively (Michigan v. Bryant).
+
+## Set 1 · Q22 · Confrontation, Bruton, and the Defense — Melendez-Diaz: lab certificates
+In a drug trial, the prosecution offers a sworn lab certificate stating that seized pills are oxycodone. No analyst testifies, and the defense never had a chance to cross-examine one. The prosecution argues the test is neutral, routine science. What is the correct result?
+
+A. Admitted, if the defense could have subpoenaed the analyst itself.
+B. Admitted, because a record of regularly conducted activity is never testimonial.
+C. Excluded, because the certificate is testimonial and no analyst was cross-examined.
+D. Admitted, because scientific testing isn't accusatory like eyewitness testimony.
+E. Excluded, because every lab report is inadmissible hearsay under the rules.
+
+Answer: C
+- A: The Clause puts the burden on the prosecution to present its witnesses.
+- B: A sworn certificate made for trial is plainly an affidavit, whatever the routine.
+- C: Correct. Under Melendez-Diaz, sworn lab certificates are testimonial, so the analyst must testify unless unavailable and previously cross-examined.
+- D: Melendez-Diaz held forensic analysts are witnesses. Neutrality doesn't remove the Clause.
+- E: The rule rests on the Confrontation Clause, not on a categorical hearsay bar.
+Rule: Sworn lab certificates are testimonial, and forensic analysts are witnesses (Melendez-Diaz). A surrogate can't fill in (Bullcoming).
+
+## Set 1 · Q23 · Confrontation, Bruton, and the Defense — Crawford: prior opportunity to cross
+At a preliminary hearing, a witness testifies under oath, and defense counsel cross-examines her. She dies before trial. The prosecution offers a transcript of her testimony. Which is correct?
+
+A. It is admissible if the judge finds that the testimony bears indicia of reliability.
+B. It is barred, because the jury can't see the witness in person.
+C. It is barred, because prior testimony is always testimonial.
+D. It is admissible, because the Clause doesn't apply once a witness has died.
+E. It is admissible, because the defense had a prior opportunity to cross-examine.
+
+Answer: E
+- A: That is the test of Ohio v. Roberts, which Crawford overruled for testimonial statements.
+- B: Mattox allowed former testimony despite that loss.
+- C: It is testimonial, but that isn't the end. Crawford allows it on unavailability plus a prior opportunity to cross.
+- D: Death establishes unavailability. The prior opportunity to cross is still required.
+- E: Correct. Crawford requires unavailability and a prior opportunity to cross-examine, both met here, consistent with Mattox. Rule 804(b)(1) handles the hearsay objection.
+Rule: Testimonial statements of an absent witness are admissible only if the declarant is unavailable and the defendant had a prior opportunity to cross-examine (Crawford, Mattox).
+
+## Set 1 · Q24 · Lay and Expert Opinion — Eyewitness experts: Guilbert
+Defendant Ross is identified by a stranger who saw him during a robbery at gunpoint. Ross offers a psychologist to explain that weapon focus and stress impair memory and that confidence doesn't track accuracy. In a jurisdiction following Guilbert, which testimony is proper?
+
+A. General research on factors that affect identification.
+B. An opinion that this witness's identification is mistaken.
+C. An opinion that Ross was not the person who robbed the store.
+D. An instruction on how the jury must weigh the identification.
+E. None of the above, because eyewitness memory is common knowledge.
+
+Answer: A
+- A: Correct. Under State v. Guilbert, an expert may describe general factors relevant to an identification that many jurors wouldn't expect.
+- B: State v. Guilbert bars an opinion on whether a particular eyewitness is accurate.
+- C: This goes further than general factors and tells the jury what result to reach.
+- D: Instructions on the law come from the judge, not the expert (Hygh).
+- E: State v. Guilbert overruled the earlier view that this subject is common knowledge. General research is the correct choice.
+Rule: Eyewitness experts may explain counterintuitive findings but may not vouch for or against a particular witness (State v. Guilbert).
+
+## Set 1 · Q25 · Lay and Expert Opinion — Joiner: analytical gap
+A worker claims a solvent caused his rare cancer. His expert relies on studies of massive doses injected into infant mice and on human studies that found no significant link. The expert says the studies together show causation. The trial court excludes the opinion. On appeal, what is the most likely result?
+
+A. Reversed, because a judge may review only methods, never an expert's conclusion.
+B. Affirmed, because the gap between the data and the opinion was too great.
+C. Affirmed, because studies on animals can never support an opinion in court.
+D. Reversed, because exclusion of expert testimony is reviewed de novo.
+E. Reversed, because animal studies must always be admitted and left to the jury.
+
+Answer: B
+- A: General Electric holds that conclusions and methodology aren't entirely distinct.
+- B: Correct. Under General Electric, a court need not admit opinion evidence connected to the data only by the expert's say-so, and review is for abuse of discretion.
+- C: The fault was the gap in this case, not a categorical bar on animal studies.
+- D: General Electric applies abuse-of-discretion review.
+- E: Nothing requires admission. The proponent must meet Rule 702.
+Rule: A court may exclude an opinion when there is too great an analytical gap between the data and the opinion. Review is for abuse of discretion (General Electric).
+
+## Set 1 · Q26 · Lay and Expert Opinion — Rule 702: qualified by experience
+In a cargo-injury suit, the plaintiff offers a retired dockworker with no degree but 30 years of supervising cargo stacking. He would opine on how pallets on this dock should have been stacked. The defense objects that he has no formal training. What is the best analysis?
+
+A. He may testify, because qualification goes to weight and the judge doesn't screen it.
+B. He can't testify, because Rule 702 requires formal scientific training.
+C. He may testify on any subject touching ports and shipping, because he qualifies as an expert generally.
+D. He may qualify by experience for this opinion, subject to the other Rule 702 requirements.
+E. He can't testify, because a lay witness may not give opinions at all.
+
+Answer: D
+- A: Qualification is a Rule 104(a) question for the judge.
+- B: Rule 702 lists knowledge, skill, experience, training, or education.
+- C: Qualification is topic-specific, not a general license.
+- D: Correct. Rule 702 allows qualification by experience, and qualification is specific to the opinion offered. The proponent must also meet the remaining requirements.
+- E: He is offered as an expert, and lay witnesses may give opinions under Rule 701 anyway.
+Rule: Experience can qualify an expert under Rule 702, but qualification is topic-specific, and it is a Rule 104(a) question for the judge.
+
+## Set 1 · Q27 · Authentication and Best Evidence — Rule 1004(a): bad-faith loss
+A novelist sues for copying, claiming an early manuscript contained the disputed scenes. The court finds he burned the manuscript to hide that it was different. He offers a version rewritten from memory years later. What is the most likely ruling?
+
+A. Admitted, because the best evidence rule doesn't apply to copyright.
+B. Admitted, because the rewritten version is a duplicate under Rule 1003.
+C. Admitted, because the jury decides whether the original ever existed.
+D. Admitted, because any lost original excuses production under Rule 1004.
+E. Excluded, because originals lost in bad faith don't excuse production.
+
+Answer: E
+- A: Seiler applied the rule to a copyright claim, where content decides the case.
+- B: A duplicate must be made by an accurate mechanical or electronic process, not by hand.
+- C: Under Rule 1008 that is a jury question, but the Rule 1004 conditions are for the judge, and the court found bad faith.
+- D: Rule 1004(a) excuses loss only when not caused by the proponent acting in bad faith.
+- E: Correct. Like Seiler, content is at issue, and because the originals were destroyed in bad faith, Rule 1004(a) doesn't excuse them. Rule 1002 bars the reconstruction.
+Rule: Rule 1004(a) excuses a lost original only if the proponent didn't lose or destroy it in bad faith (Seiler). Rule 1008 gives the Rule 1004 conditions to the judge.
+
+## Set 1 · Q28 · Authentication and Best Evidence — Chain of custody
+An officer identifies a seized pistol by its serial number, which she recorded at the scene. Separately, the State offers a bag of white powder, and the log has a two-hour gap in the middle of its chain. Which is correct?
+
+A. The pistol needs no chain, and the powder's gap goes to weight.
+B. Neither needs a chain, because exhibits are self-authenticating.
+C. Both must be authenticated by the judge beyond a reasonable doubt.
+D. The pistol needs a chain, but powder may be identified by sight.
+E. Both need an unbroken chain, and the gap keeps out the powder.
+
+Answer: A
+- A: Correct. A unique item may be identified by a witness who recognizes it. A fungible item needs a chain, but it need not be perfect, and gaps usually go to weight.
+- B: Exhibits aren't self-authenticating unless Rule 902 says so.
+- C: Rule 901(a) requires evidence sufficient to support a finding, a Rule 104(b) standard.
+- D: This reverses the rule. Fungible items need the chain.
+- E: The chain need not be perfect, and a unique item can be identified by a witness who recognizes it.
+Rule: Unique items can be identified by recognition under Rule 901(b)(1). Fungible items need a chain from seizure to court, and gaps usually go to weight.
+
+## Set 1 · Q29 · Privileges — Swidler: privilege survives death
+A company executive consults a lawyer about a federal investigation and dies a week later. A grand jury subpoenas the lawyer's notes, arguing the need is great and the client has no further interest. No crime-fraud claim is made. What is the most likely result?
+
+A. The notes stay protected only if the client's family claims the privilege.
+B. The notes are produced, because the privilege doesn't apply in criminal cases.
+C. The notes stay protected, because the privilege survives the client's death.
+D. The notes are produced, because the privilege ends when the client dies.
+E. The judge balances the need for the notes against the client's interests.
+
+Answer: C
+- A: The rule doesn't depend on a family member making the claim.
+- B: The privilege applies the same way in criminal and civil cases.
+- C: Correct. Under Swidler & Berlin, clients care about reputation and harm to family after death, so the privilege survives, with no case-by-case balancing.
+- D: Swidler & Berlin holds that the privilege survives death.
+- E: Swidler & Berlin rejected posthumous balancing, which would add the uncertainty Jaffee rejected.
+Rule: The lawyer-client privilege survives the client's death under federal common law, with no balancing (Swidler & Berlin).
+
+## Set 1 · Q30 · Privileges — Jaffee: psychotherapist privilege
+In a federal civil-rights suit, a police officer saw a licensed clinical social worker for counseling after a shooting. The plaintiff demands the session notes and argues the need for them outweighs privacy here. What is the most likely result under Rule 501?
+
+A. The notes aren't privileged, because social workers are not psychiatrists.
+B. The notes are privileged, and there is no case-by-case balancing.
+C. The judge weighs the plaintiff's need against the officer's privacy.
+D. The notes are privileged only if the officer sought counseling voluntarily.
+E. The notes aren't privileged, because Rule 501 recognizes no new privileges.
+
+Answer: B
+- A: Jaffee expressly extends the privilege to licensed clinical social workers.
+- B: Correct. Under Jaffee, confidential communications with a licensed psychotherapist are privileged, the privilege covers licensed clinical social workers, and there is no ad hoc balancing.
+- C: Jaffee rejected balancing: an uncertain privilege is little better than none.
+- D: Jaffee adds no such limit.
+- E: Rule 501 directs courts to use reason and experience, which is how Jaffee recognized it.
+Rule: Rule 501 lets courts recognize privileges through reason and experience. Jaffee recognized the psychotherapist privilege, including licensed clinical social workers, and rejected case-by-case balancing.
+
+## Set 2 · Q1 · Jury Secrecy and Competency — Rule 602: personal knowledge
+A witness testifies she saw the defendant leave the bank. The defense argues she couldn't have seen him, pointing to a parked van, but she says she was standing where she had a clear view. What should the judge do?
+
+A. Require corroboration of her position from a second witness.
+B. Decide the issue in a separate hearing with no rules of evidence.
+C. Find by a preponderance whether she actually saw the defendant.
+D. Admit it, if the evidence could support a finding that she saw him.
+E. Exclude the testimony, because personal knowledge has been disputed.
+
+Answer: D
+- A: Rule 602 has no corroboration requirement.
+- B: Rule 104(a) hearings apply to preliminary questions for the judge. This isn't one.
+- C: That is the Rule 104(a) approach. Personal knowledge is a Rule 104(b) question.
+- D: Correct. Rule 602 requires evidence sufficient to support a finding of personal knowledge, and her own testimony may supply it. The jury decides the rest.
+- E: A dispute goes to the jury. It doesn't require exclusion.
+Rule: Under Rule 602 a witness needs personal knowledge, shown by evidence sufficient to support a finding. It is a Rule 104(b) question for the jury.
+
+## Set 2 · Q2 · Specialized Relevance Rules — Rule 408: criminal case and public office
+During a civil enforcement negotiation with a federal agency over disputed fines, Yates says, "I knew the reports were false." Yates is later prosecuted for making false reports. The government offers the statement. What is the most likely ruling?
+
+A. Excluded, because Rule 410 covers all discussions with a government agency.
+B. Excluded, because Rule 408 bars statements in negotiations in every kind of case.
+C. Admitted, because Rule 408 has an exception for negotiations with a public office.
+D. Admitted, because Rule 408 applies only when a claim is settled.
+E. Excluded, because a claim by the government is never a disputed claim.
+
+Answer: C
+- A: Rule 410 covers plea discussions with a prosecutor, not civil negotiations with an agency.
+- B: Rule 408(a)(2) has an exception for criminal cases when negotiations related to a claim by a public office.
+- C: Correct. Rule 408(a)(2) statements are admissible in a criminal case when the negotiations related to a claim by a public office exercising regulatory, investigative, or enforcement authority.
+- D: Rule 408 protects negotiations whether or not they succeed.
+- E: A fine disputed in amount or validity is a disputed claim.
+Rule: Statements in compromise negotiations are barred by Rule 408, except in a criminal case when the negotiations related to a claim by a public office exercising regulatory, investigative, or enforcement authority.
+
+## Set 2 · Q3 · Character Evidence — A defendant as a character witness
+On trial for assault, Ivers testifies on direct, "I would never hit anybody." On cross, the prosecutor asks about a bar fight two years ago in which Ivers punched a man. The defense objects. What is the most likely ruling?
+
+A. Overruled, because Ivers made himself a character witness on peacefulness.
+B. Overruled, because a testifying defendant can be asked about any prior bad act.
+C. Sustained, because a defendant's character can't be raised unless a witness is called.
+D. Sustained, because Rule 609 is the only way to impeach a testifying defendant.
+E. Sustained, because Rule 405(a) bars specific acts on any cross-examination.
+
+Answer: A
+- A: Correct. A defendant who claims he would never do such a thing offers a pertinent trait under Rule 404(a)(2)(A) and may be crossed on specific instances under Rule 405(a).
+- B: That is too broad. The inquiry is allowed because of what he said on direct.
+- C: A defendant's own broad claim about himself offers the pertinent trait.
+- D: Rule 609 covers convictions. This is rebuttal of character evidence he offered.
+- E: Rule 405(a) allows inquiry into relevant specific instances on cross of a character witness.
+Rule: A defendant who testifies to a sweeping claim of good character makes himself a character witness, opening cross on specific instances under Rule 405(a).
+
+## Set 2 · Q4 · Character Evidence — Rule 415: civil cases
+In a civil suit alleging sexual assault, the plaintiff offers testimony from another woman that the defendant sexually assaulted her. The plaintiff disclosed it 20 days before trial. The defendant was never convicted. Which is correct?
+
+A. It is barred, because the notice must be given at least 30 days before trial.
+B. It is admissible under Rule 415 for any relevant matter, subject to Rule 403.
+C. It is barred, because Rule 404(b) governs every other act in a civil case.
+D. It is barred, because Rules 413 and 414 apply only in criminal cases.
+E. It must be admitted, because Rule 415 removes the court's discretion.
+
+Answer: B
+- A: The period is 15 days, and 20 days meets it.
+- B: Correct. Rule 415(a) applies the Rule 413 approach in civil cases, with disclosure at least 15 days before trial. No conviction is required, and Rule 403 still applies.
+- C: Rule 415 is a true exception, so no Rule 404(b) purpose is required.
+- D: Rule 415 extends the same treatment to civil cases based on sexual assault or child molestation.
+- E: Rule 415 says the court may admit the evidence, and Rule 403 applies.
+Rule: Rule 415 applies Rules 413–414 to civil cases based on sexual assault or child molestation, on 15 days' disclosure and subject to Rule 403.
+
+## Set 2 · Q5 · Character Evidence — Other act to prove identity: distinctive device
+Facts: Nadia Voss is charged in federal court with burning down a warehouse she had insured. Investigators found a homemade chemical timer of an unusual design at the scene. The government calls Joel Tran, who would testify that his late mother, a nurse at a burn clinic, told him over dinner six years ago: "A patient named Voss came in with burned hands today. She told me she got them testing a chemical timer she built for a warehouse job." The defense moves to exclude the testimony.
+Set the hearsay objections aside. Why might the evidence of the earlier chemical timer avoid the propensity ban?
+
+A. Because Rule 404(b) never applies to acts over five years old.
+B. Because a statement to a nurse is privileged in federal court.
+C. Because Voss has shown a general willingness to break the law.
+D. Because people who burn themselves tend to commit arson.
+E. Because the unusual device suggests the same person made both.
+
+Answer: E
+- A: Rule 404(b) has no time limit. Age goes to probative value.
+- B: There is no federal physician-patient privilege, and privilege doesn't address propensity.
+- C: A general willingness to break the law is the forbidden inference under Rule 404(b)(1).
+- D: This is also a character inference. It runs through what kind of person Voss is.
+- E: Correct. Under United States v. Trenkler, an idiosyncratic method supports identity under Rule 404(b)(2). Knowledge of how to build the device is another route. Rule 403 and Huddleston still apply.
+Rule: A distinctive technique can show identity or knowledge under Rule 404(b)(2). The court then applies Huddleston, Rule 403, and a limiting instruction on request.
+
+## Set 2 · Q6 · Impeachment and the Rape Shield — Rule 608(a): form of proof
+After a plaintiff testifies, the defense calls her former coworker. Which testimony is proper under Rule 608(a)?
+
+A. "In my opinion, she is an untruthful person."
+B. "She lied to the jury when she testified this morning."
+C. "She lied to our boss last year about being sick."
+D. "She has a bad temper and I wouldn't trust her with money."
+E. "She has been arrested for shoplifting twice."
+
+Answer: A
+- A: Correct. Rule 608(a) allows opinion or reputation testimony about a witness's character for untruthfulness.
+- B: This is an opinion on specific testimony, not on general character for truthfulness, and it invades the jury's role.
+- C: This is a specific instance, which Rule 608(b) bars as extrinsic evidence.
+- D: Temper isn't truthfulness. Rule 608(a) is limited to character for truthfulness.
+- E: An arrest isn't a conviction, so Rule 609 doesn't apply. Rule 608(b) bars extrinsic proof.
+Rule: Rule 608(a) permits only opinion or reputation about character for truthfulness. Specific instances go to Rule 608(b), on cross and without extrinsic proof.
+
+## Set 2 · Q7 · Impeachment and the Rape Shield — Rule 412(b)(1)(A): another source
+In a sexual-assault trial, the prosecution offers medical evidence of semen. The defendant says he wasn't the source and offers evidence that the complainant had sex with another man the night before. The defense filed a timely Rule 412(c) motion. What is the most likely result?
+
+A. Barred, because only the prosecutor may offer specific instances of behavior.
+B. Barred, because Rule 412(a) excludes all of a victim's other sexual behavior.
+C. Admissible to show someone other than the defendant was the source.
+D. Admissible only if the probative value substantially outweighs harm to the victim.
+E. Admissible, because any sexual history is relevant to consent.
+
+Answer: C
+- A: Rule 412(b)(1)(A) has no such limit. The defendant may offer this evidence.
+- B: Rule 412(b)(1) lists exceptions, and this is one of them.
+- C: Correct. Rule 412(b)(1)(A) allows specific instances to prove that someone other than the defendant was the source of semen, injury, or other physical evidence.
+- D: That balance is the civil test in Rule 412(b)(2).
+- E: Past behavior with others isn't admissible to show consent. This is offered for a different purpose.
+Rule: In criminal cases, Rule 412(b)(1)(A) allows specific instances to prove another source of semen, injury, or other physical evidence. The civil reverse balance is Rule 412(b)(2).
+
+## Set 2 · Q8 · Impeachment and the Rape Shield — Olden: bias and Rule 412(b)(1)(C)
+A defendant claims a complainant invented an assault to keep her fiancé from learning she was seeing someone else. The court bars all evidence of the other relationship under Rule 412. The fiancé's testimony is the only corroboration. On appeal, what is the strongest argument?
+
+A. Her sexual history makes her less believable as a witness.
+B. Reputation evidence is always admissible in a criminal trial.
+C. Exclusion cut off proof of her motive to lie, which Rule 412(b)(1)(C) protects.
+D. The evidence of her other relationship shows she was more likely to have consented.
+E. Rule 412 doesn't apply in cases with a consent defense.
+
+Answer: C
+- A: Rule 412 rejects the old idea that unchastity shows untruthfulness.
+- B: Rule 412(b)(1) has no reputation route in criminal cases.
+- C: Correct. Olden holds the Confrontation Clause protects cross-examination showing a prototypical form of bias. Rule 412(b)(1)(C) admits evidence whose exclusion would violate constitutional rights.
+- D: That is the propensity inference Rule 412 forbids.
+- E: Rule 412 applies in proceedings involving alleged sexual misconduct, whatever the defense.
+Rule: When exclusion under Rule 412 cuts off proof of a motive to fabricate, Rule 412(b)(1)(C) and the Confrontation Clause can require admission (Olden).
+
+## Set 2 · Q9 · Impeachment and the Rape Shield — Rule 609(d): juvenile adjudications
+In a criminal trial, the defense seeks to impeach a key prosecution witness with a juvenile adjudication for fraud. All other conditions of Rule 609 would be met if the witness were an adult. The prosecutor also wants to impeach the testifying defendant with his own juvenile adjudication. Which is correct?
+
+A. Both may be used, but only with a limiting instruction under Rule 105 on each of the adjudications.
+B. Only the prosecutor may use it, because the defendant chose to testify.
+C. Both may be used, because the same test applies to every witness.
+D. The defense may use the witness's if necessary; the prosecutor can't use the defendant's.
+E. Neither may be used, because juvenile adjudications are never admissible.
+
+Answer: D
+- A: An instruction doesn't create admissibility, and Rule 609(d) doesn't reach the defendant.
+- B: This reverses the rule, which protects the defendant.
+- C: Rule 609(d) excludes the criminal defendant from its coverage.
+- D: Correct. Rule 609(d) allows juvenile adjudications only in a criminal case, only against a witness other than the defendant, only if an adult conviction would be admissible, and only if necessary to fairly determine guilt or innocence.
+- E: Rule 609(d) allows them in limited circumstances.
+Rule: Rule 609(d): juvenile adjudications only in a criminal case, only against a witness other than the defendant, only if an adult conviction would be admissible, and only if necessary to fairly determine guilt or innocence.
+
+## Set 2 · Q10 · Hearsay Exceptions — Rule 805: the two layers
+Facts: Nadia Voss is charged in federal court with burning down a warehouse she had insured. Investigators found a homemade chemical timer of an unusual design at the scene. The government calls Joel Tran, who would testify that his late mother, a nurse at a burn clinic, told him over dinner six years ago: "A patient named Voss came in with burned hands today. She told me she got them testing a chemical timer she built for a warehouse job." The defense moves to exclude the testimony.
+Which analysis of the hearsay layers is correct?
+
+A. Rule 803(4) covers both layers, because the nurse treated Voss.
+B. Voss's words to the nurse need an against-interest finding to come in.
+C. Voss's words are her own, but the nurse's words still need an exception.
+D. No analysis is needed, because the whole account Tran gives is really Voss's own statement.
+E. The nurse's death supplies an exception for her statement to her son.
+
+Answer: C
+- A: The nurse told her son over dinner, not to get treatment, so Rule 803(4) can't cover that layer.
+- B: Rule 801(d)(2)(A) has no against-interest requirement.
+- C: Correct. Under Rule 805, each layer needs its own route. Offered against her, Voss's words fit Rule 801(d)(2)(A). The nurse's dinner remark needs its own exception, and none clearly fits.
+- D: Tran heard the nurse, not Voss. The nurse's remark is a separate layer.
+- E: Death establishes unavailability under Rule 804(a). It isn't an exception.
+Rule: Rule 805 requires a route for each layer. An opposing party's statement solves the inner layer, but the outer layer needs its own exception, and unavailability alone isn't one.
+
+## Set 2 · Q11 · Opposing Party and Prior Statements — Rule 801(d)(2)(E): in furtherance
+Which statement by a coconspirator is most likely admissible under Rule 801(d)(2)(E)?
+
+A. A member says to the crew, "Bring the cash Friday so we can pay the supplier."
+B. An arrested member tells police, "Lena runs the whole operation."
+C. Years after the scheme ended, a member tells his barber all about how the crew operated.
+D. A cooperating member testifies at a grand jury about Lena's role.
+E. A member tells his girlfriend after the last sale, "We sure fooled them."
+
+Answer: A
+- A: Correct. It was made during the conspiracy and advances its goal, so it satisfies Rule 801(d)(2)(E).
+- B: Confessions to police almost never qualify. It doesn't advance the conspiracy.
+- C: The conspiracy has ended, so the statement isn't made during it.
+- D: Testimony for the government doesn't further the conspiracy.
+- E: A boast after the scheme ended is neither during nor in furtherance.
+Rule: Rule 801(d)(2)(E) requires that the statement be made during and in furtherance of the conspiracy. Confessions to police and idle narrative usually fail.
+
+## Set 2 · Q12 · Opposing Party and Prior Statements — Mahlandt: admissibility is party-specific
+A bus company and its driver, Poe, are co-defendants in a crash suit. The company's board minutes say, "Poe ran the light." Poe didn't attend the meeting and didn't see the minutes. The plaintiff offers the minutes against both. What is the most likely ruling?
+
+A. Admitted against Poe only, because Poe is the actor.
+B. Admitted against both, because they are co-defendants in one case.
+C. Excluded against both, because the board didn't see the crash.
+D. Excluded, because internal statements aren't admissions.
+E. Admitted against the company only, with a limiting instruction.
+
+Answer: E
+- A: The minutes aren't Poe's statement. They were made by the company's agents, not by Poe.
+- B: Rule 801(d)(2) is applied party by party, so joinder doesn't extend it.
+- C: Under Mahlandt, personal knowledge isn't required.
+- D: Mahlandt admitted statements made inside an organization.
+- E: Correct. In Mahlandt the minutes came in against the organization, not against the individual who neither made nor adopted them. Rule 105 limits the use.
+Rule: Rule 801(d)(2) is party-specific. A statement comes in only against the party who made, adopted, or is responsible for it (Mahlandt).
+
+## Set 2 · Q13 · Opposing Party and Prior Statements — Rule 801(d)(2): 2024 successor sentence
+An estate sues on a decedent's injury claim. The defendant offers the decedent's statement, made before death, "The crash was my fault." The estate argues that the decedent isn't the opposing party. What is the most likely ruling?
+
+A. Admitted, because the estate's claim derives from the decedent.
+B. Admitted, because any statement by a dead person is admissible.
+C. Excluded, because the party is the estate, not the decedent.
+D. Excluded, because the decedent can't be cross-examined about it.
+E. Admitted only if it meets every part of Rule 804(b)(3).
+
+Answer: A
+- A: Correct. Under the 2024 sentence of Rule 801(d)(2), a statement admissible against the declarant is also admissible against a party whose claim is directly derived from that declarant.
+- B: Death isn't an exception. The route is the successor sentence.
+- C: The 2024 amendment closes this gap for a successor whose claim derives from the declarant.
+- D: A party can't complain of being unable to cross-examine itself, and the estate stands in the decedent's shoes.
+- E: Rule 801(d)(2) makes Rule 804(b)(3) unnecessary here.
+Rule: Since 2024, a statement admissible against a declarant under Rule 801(d)(2) is also admissible against a party whose claim, defense, or potential liability is directly derived from that declarant.
+
+## Set 2 · Q14 · Hearsay Exceptions — Rule 803(8)(A)(iii): findings and opinions
+In a civil suit after a helicopter crash, the plaintiff offers a federal agency's report from a legally authorized investigation. It concludes that a maintenance failure was the most probable cause. The defendant objects that this is an opinion, not a fact. What is the most likely ruling?
+
+A. Admitted, unless the defendant shows that the report is untrustworthy.
+B. Admitted, because a public report may not be challenged at all.
+C. Excluded, because Rule 803(8) covers only facts, not conclusions.
+D. Excluded, because the investigators didn't personally see the crash.
+E. Excluded, because investigative findings can't be used in civil cases.
+
+Answer: A
+- A: Correct. Under Beech Aircraft and Rule 803(8)(A)(iii), conclusions from an authorized investigation qualify in a civil case. Rule 803(8)(B) leaves the opponent to show untrustworthiness.
+- B: Rule 803(8)(B) allows an opponent to show untrustworthiness.
+- C: Beech Aircraft held that factual findings include opinions and conclusions based on an investigation.
+- D: The rule covers findings from a legally authorized investigation, not observation.
+- E: Rule 803(8)(A)(iii) applies in civil cases and against the government in criminal cases.
+Rule: Rule 803(8)(A)(iii) covers factual findings from a legally authorized investigation, in civil cases and against the government in criminal cases. These include opinions and conclusions, subject to Rule 803(8)(B) (Beech Aircraft).
+
+## Set 2 · Q15 · Hearsay Exceptions — Rule 803(7): absence of an entry
+A supplier sues for payment of an invoice. Its bookkeeper testifies she regularly logs every payment received in a ledger and that the ledger shows no payment from the buyer. The buyer objects. What is the best basis for admission?
+
+A. Rule 803(10), because a business ledger kept for tax purposes counts as a public record.
+B. Rule 803(5), because she must have forgotten the payments she logged.
+C. Rule 801(d)(2), because the supplier is a party to the suit.
+D. Rule 803(7), because the absence of a regular entry may show it didn't happen.
+E. None, because absence can never be proved by a record.
+
+Answer: D
+- A: Rule 803(10) covers public records. This ledger is a private business record.
+- B: Rule 803(5) requires a record of something the witness once knew. It doesn't fit the absence of an entry.
+- C: Rule 801(d)(2) requires offering a statement against the opposing party, and the supplier is offering its own.
+- D: Correct. Rule 803(7) allows proof of the absence of an entry in records of regularly conducted activity to show the matter didn't occur.
+- E: Rules 803(7) and 803(10) both exist to prove absence by records.
+Rule: Rule 803(7) covers the absence of an entry in business records, to prove the matter didn't occur. Rule 803(10) is the public-record counterpart.
+
+## Set 2 · Q16 · Hearsay Exceptions — Rule 804(b)(3): exculpating the accused
+Tess is charged with robbery. She offers a statement by Vince, who invokes the Fifth Amendment, telling a friend the day after the robbery, "I did that job alone." Vince was seen near the bank that day and had the same model of getaway car. What must the court decide?
+
+A. Whether a jury could find the statement more likely than not true.
+B. Only whether the statement is against Vince's interest.
+C. Whether corroborating circumstances clearly indicate trustworthiness.
+D. Whether Vince was convicted of the robbery.
+E. Nothing, because Rule 804(b)(3) doesn't apply to defendants.
+
+Answer: C
+- A: The standard is corroboration under Rule 804(b)(3)(B), decided by the court.
+- B: In a criminal case, Rule 804(b)(3)(B) also requires corroboration.
+- C: Correct. Rule 804(b)(3)(B) requires corroborating circumstances that clearly indicate trustworthiness, considering the totality of circumstances and any evidence that supports or undermines the statement (2024).
+- D: No conviction is required. Vince's interest and corroboration are the questions.
+- E: The corroboration rule applies to penal-interest statements offered by either side.
+Rule: In a criminal case, a statement against penal interest needs corroborating circumstances clearly indicating trustworthiness. Since 2024, the court considers the totality of circumstances and any evidence supporting or undermining the statement.
+
+## Set 2 · Q17 · Hearsay Exceptions — Rule 804(b)(6): forfeiture
+Before trial, the defendant has a friend threaten a witness, who then flees. The prosecution offers the witness's earlier recorded statement to police. Who decides forfeiture, and under what standard?
+
+A. No one decides, because threats automatically forfeit the objection.
+B. The judge decides, by a preponderance under Rule 104(a).
+C. The jury decides, if the evidence could support a finding.
+D. The judge decides, by clear and convincing evidence.
+E. The jury decides, using proof beyond a reasonable doubt.
+
+Answer: B
+- A: The proponent must prove the wrongdoing and the intent.
+- B: Correct. The proponent proves the wrongdoing and the intent by a preponderance under Rule 104(a). Rule 804(b)(6) reaches a party that caused or acquiesced in the unavailability, intending that result.
+- C: That is Rule 104(b). Hearsay foundations fall under Rule 104(a).
+- D: The standard is a preponderance.
+- E: Forfeiture is a preliminary question for the judge.
+Rule: Forfeiture under Rule 804(b)(6) requires wrongdoing, or acquiescence in it, intended to make the declarant unavailable, proved by a preponderance under Rule 104(a). The same intent forfeits confrontation (Giles).
+
+## Set 2 · Q18 · Hearsay Exceptions — Rule 612: writings used to refresh
+A witness reviews a report before testifying, and then, while on the stand, takes out a second memo to refresh her memory. The adverse party demands both. Which is correct?
+
+A. The report must be produced, but the memo stays private.
+B. Both must be produced automatically, without any exceptions or decision by the court.
+C. Neither must be produced unless the proponent offers them.
+D. The memo must be produced, and the report may be if justice requires.
+E. Neither must be produced, because refreshing isn't evidence.
+
+Answer: D
+- A: This reverses the rule. Rule 612 is stronger for a writing used while testifying.
+- B: A writing used before testifying is produced only if the court decides justice requires it.
+- C: The adverse party's rights under Rule 612 don't depend on the proponent's offering them.
+- D: Correct. Under Rule 612, the adverse party gets a writing used while testifying, and one used before testifying if the court decides justice requires it.
+- E: Refreshing isn't evidence, but Rule 612 still gives the adverse party rights.
+Rule: Rule 612: the adverse party may inspect, cross on, and introduce relevant parts of a writing used to refresh while testifying, and of one used before testifying if justice requires.
+
+## Set 2 · Q19 · Hearsay Exceptions — Rule 803(18): learned treatises
+An expert testifies that she relied on a standard surgical treatise, and she establishes it as authoritative. The proponent asks to give the jury the book as an exhibit. What is the correct ruling?
+
+A. The passages stay out, because reliance doesn't make hearsay admissible.
+B. The relevant passages may be read in, but the book isn't received.
+C. The passages may be used only for impeachment on cross.
+D. The book comes in only if the author is unavailable to testify.
+E. The book comes in as an exhibit, because it is reliable.
+
+Answer: B
+- A: Rule 803(18) is the exception that makes these statements substantive.
+- B: Correct. Rule 803(18) admits statements in a learned treatise relied on by an expert on direct, or called to the expert's attention on cross, if authoritative. They may be read but not received as an exhibit.
+- C: Rule 803(18) also allows substantive use on direct.
+- D: Rule 803 applies regardless of availability.
+- E: Under Rule 803(18), statements are read in but not received as an exhibit.
+Rule: Rule 803(18) admits authoritative treatises relied on by or called to the attention of an expert. The passages are read in, not received as an exhibit.
+
+## Set 2 · Q20 · Confrontation, Bruton, and the Defense — Nontestimonial private remark
+Facts: Nadia Voss is charged in federal court with burning down a warehouse she had insured. Investigators found a homemade chemical timer of an unusual design at the scene. The government calls Joel Tran, who would testify that his late mother, a nurse at a burn clinic, told him over dinner six years ago: "A patient named Voss came in with burned hands today. She told me she got them testing a chemical timer she built for a warehouse job." The defense moves to exclude the testimony.
+Set aside the hearsay rules. Does the Confrontation Clause bar the nurse's remark to her son?
+
+A. Yes, because medical professionals routinely report suspicious injuries to the authorities.
+B. Probably not, because a private remark isn't a substitute for trial testimony.
+C. Yes, because the nurse is dead and was never cross-examined by Voss.
+D. No, because the Clause doesn't apply in federal prosecutions.
+E. No, because Voss herself made the original statement to the nurse.
+
+Answer: B
+- A: The remark to her son wasn't a report, and reporting duties don't make someone police (Ohio v. Clark).
+- B: Correct. Under Ohio v. Clark, a statement to a family member with no primary purpose of creating trial testimony is nontestimonial, so only the hearsay rules apply (Whorton).
+- C: Unavailability and prior cross matter only for testimonial statements.
+- D: The Sixth Amendment applies directly in federal prosecutions.
+- E: The question concerns the nurse's own remark, a separate statement.
+Rule: Informal remarks to acquaintances are nontestimonial. Nontestimonial statements face only the hearsay rules (Crawford, Whorton).
+
+## Set 2 · Q21 · Confrontation, Bruton, and the Defense — Testifying witness with memory loss
+A witness gave police a detailed statement but at trial takes the stand and says she remembers nothing about the event. The prosecution uses an admissible prior statement of hers. The defense argues confrontation is violated because she can't be meaningfully cross-examined. What is the most likely result?
+
+A. No violation, because the Clause guarantees only an opportunity for effective cross.
+B. A violation, because the statement to police was testimonial when she made it to them.
+C. A violation, because a forgetful witness is treated as absent from the trial.
+D. No violation, because police statements are nontestimonial.
+E. A violation, unless she can answer every question on cross.
+
+Answer: A
+- A: Correct. United States v. Owens says the Clause guarantees an opportunity for effective cross-examination, not cross that is effective in whatever way the defense might wish. A declarant who testifies removes the problem (California v. Green).
+- B: The statement may be testimonial, but the Clause doesn't bar statements the declarant is cross-examined about at trial.
+- C: United States v. Owens rejected treating memory loss as absence.
+- D: A statement to police describing past events is usually testimonial.
+- E: The Clause doesn't require answers to every question.
+Rule: When the declarant takes the stand and can be cross-examined, the Clause is satisfied even with memory loss (United States v. Owens, California v. Green).
+
+## Set 2 · Q22 · Confrontation, Bruton, and the Defense — Bruton: prosecutors' options
+A prosecutor plans a joint trial of Kerr and Lang. Kerr gave police a confession naming Lang. Which option does NOT avoid the Bruton problem?
+
+A. Redacting all reference to Lang's existence from the text of the confession.
+B. Severing the trials so that Lang is tried separately.
+C. Using separate juries for the two defendants.
+D. Having Kerr testify and submit to cross-examination.
+E. Reading the confession with a clear limiting instruction.
+
+Answer: E
+- A: Richardson approves removing the defendant's name and any reference to his existence.
+- B: Severance removes the confession from Lang's trial.
+- C: Separate juries work the same way as severance.
+- D: If the confessing codefendant testifies and can be crossed, the problem goes away.
+- E: Correct. Bruton holds that a clear limiting instruction doesn't cure the problem, because the risk that jurors can't follow it is too great.
+Rule: A limiting instruction doesn't cure a facially incriminating confession by a nontestifying codefendant (Bruton). Prosecutors may sever, use separate juries, have the codefendant testify, or redact (Richardson, Gray, Samia).
+
+## Set 2 · Q23 · Confrontation, Bruton, and the Defense — Rule 106 as amended in 2023
+The prosecution has an officer testify that the defendant said in an unrecorded interview, "I owned the gun." The defendant asks to have the officer add the rest of the sentence: "but I sold it months ago." The prosecution objects on hearsay grounds. What is the most likely ruling?
+
+A. Overruled, because anything a defendant says is admissible when offered for the defense.
+B. Sustained, because a defendant must testify to explain a statement.
+C. Sustained, because a defendant can't offer his own statement.
+D. Overruled, because Rule 106 now reaches oral statements and overrides hearsay.
+E. Sustained, because Rule 106 covers only recorded and written statements.
+
+Answer: D
+- A: The rule is narrow. The statement must actually correct a misimpression.
+- B: Nothing in Rule 106 requires a defendant to testify.
+- C: Rule 801(d)(2) doesn't help him, but Rule 106 overrides the hearsay objection.
+- D: Correct. As amended in 2023, Rule 106 covers oral statements and allows completion over a hearsay objection when fairness requires it. The ACN uses this gun example.
+- E: That was the old text. Since 2023, Rule 106 covers oral statements too.
+Rule: Since 2023, Rule 106 reaches oral statements and overrides a hearsay objection, but only where the completing statement corrects a misimpression. Fisher (2022) prints the old text.
+
+## Set 2 · Q24 · Lay and Expert Opinion — Rule 705: sequence of testimony
+A valuation expert states an opinion on direct without first describing the data behind it. The opponent objects. What is the correct ruling?
+
+A. Sustained, because the data must always come first.
+B. Overruled, because an expert's data may never be disclosed.
+C. Sustained, because hearsay bases must be admitted before any opinion.
+D. Sustained, unless the expert personally gathered all the data.
+E. Overruled, because the data may wait for cross-examination.
+
+Answer: E
+- A: Rule 705 lets the expert state the opinion first, unless the court orders otherwise.
+- B: The opponent may bring out the data on cross.
+- C: Under Rule 703, the bases need not be admissible at all.
+- D: Rule 703 allows reliance on data made known to the expert.
+- E: Correct. Under Rule 705, unless the court orders otherwise, an expert may state an opinion and reasons without first testifying to the underlying data, but may have to disclose them on cross.
+Rule: Rule 705 lets an expert give an opinion first. The opponent may require disclosure of the underlying facts or data on cross.
+
+## Set 2 · Q25 · Lay and Expert Opinion — Daubert: acceptance is one factor
+In federal court, a plaintiff offers a new diagnostic technique that isn't yet generally accepted. It has been tested, has been published in peer-reviewed journals, and has a known low error rate. The defense says it fails because it lacks general acceptance. What is the best analysis?
+
+A. It must be admitted, because a peer-reviewed technique is always reliable.
+B. It may be admitted, because general acceptance is one flexible factor.
+C. It must be excluded, because every Daubert factor must be met.
+D. It must be excluded, because Frye still governs in federal court.
+E. It is for the jury alone, because the judge has no gatekeeping role.
+
+Answer: B
+- A: Peer review is a factor, not a guarantee. The proponent must still meet Rule 702.
+- B: Correct. Daubert held that Frye didn't survive the Rules. General acceptance is one non-exclusive factor, along with testing, peer review, and error rate.
+- C: The factors are non-exclusive and flexible.
+- D: Daubert replaced Frye in federal courts.
+- E: Daubert makes the judge a gatekeeper under Rule 104(a).
+Rule: Under Daubert, the judge considers testing, peer review, error rate, standards, and general acceptance as flexible factors.
+
+## Set 2 · Q26 · Lay and Expert Opinion — Forensic testimony: limits
+A firearms examiner plans to testify that a bullet came from the defendant's gun "with absolute certainty and a zero error rate." The method is subjective, and no error-rate study was offered. Based on the 2023 ACN and recent practice, what is the most likely outcome?
+
+A. The jury must decide reliability, because the method is subjective.
+B. The examiner may testify with limits, without claims of absolute certainty.
+C. The field is excluded, because all forensic evidence is unreliable.
+D. The testimony comes in as stated, because certainty goes to weight.
+E. The testimony comes in, because courts accepted it under Frye for decades.
+
+Answer: B
+- A: Reliability is a Rule 104(a) question for the judge.
+- B: Correct. The 2023 ACN says forensic experts should avoid claims of absolute certainty for a subjective method, and courts usually admit forensic testimony with such limits.
+- C: Courts usually limit forensic testimony rather than exclude it outright.
+- D: Under Rule 702(d) as amended, each opinion must stay within what a reliable application supports.
+- E: Frye's acceptance by practitioners doesn't meet Rule 702 today.
+Rule: Under Rule 702(d), an opinion must stay within what a reliable application supports. Forensic examiners shouldn't claim absolute certainty for a subjective method.
+
+## Set 2 · Q27 · Authentication and Best Evidence — Silent witness: Luke
+A shop owner's motion-activated camera recorded a burglary while he was away. He testifies he installed the system, has used it for years with no problems, and downloaded the file that morning. He has no technical training. The defense objects to the video. What is the most likely ruling?
+
+A. Admitted, because a regular user can support a finding of accuracy.
+B. Excluded, because no one who saw the burglary can vouch for the video.
+C. Admitted, because any video is self-authenticating under Rule 902.
+D. Excluded, because he didn't personally see the events on the video.
+E. Excluded, because an engineer must explain how the system works.
+
+Answer: A
+- A: Correct. Under State v. Luke, a regular user can lay the Rule 901(b)(9) foundation, showing the process produces an accurate result. Lack of technical knowledge goes to weight.
+- B: That is the pictorial-testimony route. The silent-witness route doesn't require an eyewitness.
+- C: Video isn't on the Rule 902 list. It needs a foundation under Rule 901.
+- D: Firsthand knowledge of the events isn't required under the silent-witness approach.
+- E: State v. Luke didn't require technical knowledge, which goes to weight.
+Rule: With no eyewitness, the proponent shows the recording process is accurate (Rule 901(b)(9)). A regular user can usually lay that foundation (State v. Luke).
+
+## Set 2 · Q28 · Authentication and Best Evidence — Rule 1006 vs. Rule 107
+An accountant offers a chart summarizing 40,000 admissible invoices, made available to the opponent, to prove total sales. Separately, a lawyer wants to use a timeline during closing argument to help the jury follow the evidence. Which is correct?
+
+A. Both are evidence, and both go to the jury room.
+B. Neither is allowed, because the originals must be read to the jury.
+C. The chart is substantive under Rule 1006; the timeline is a Rule 107 aid.
+D. The chart is an illustrative aid; the timeline is a Rule 1006 summary.
+E. The chart is allowed only if all the invoices have been introduced.
+
+Answer: C
+- A: A Rule 107 aid isn't evidence and generally stays out of the jury room.
+- B: Rule 1006 exists because voluminous records can't be conveniently examined in court.
+- C: Correct. Rule 1006 (2024) admits summaries of voluminous admissible records as substantive evidence. Rule 107 governs aids that only help the jury follow other evidence.
+- D: This reverses the two rules.
+- E: Since 2024, Rule 1006 applies whether or not the records have been introduced.
+Rule: Rule 1006 summaries are substantive evidence. Rule 107 illustrative aids aren't evidence and stay out of the jury room unless all parties consent or the court for good cause orders otherwise.
+
+## Set 2 · Q29 · Privileges — Fees, identity, and preexisting documents
+A subpoena asks a lawyer to produce (1) the name of a client and the fee paid, and (2) old business records the client handed over to get advice, which were not protected in the client's hands. Ordinarily, what is protected?
+
+A. Neither, because none of these are confidential communications.
+B. Only the records, because they were transferred in confidence.
+C. Only the name and fee, because they are confidential.
+D. Both, because anything given to a lawyer becomes privileged.
+E. Both, unless the client waives the privilege in writing.
+
+Answer: A
+- A: Correct. Identity and fees are ordinarily not privileged, absent the narrow exception. Records unprotected in the client's hands don't become protected by being handed to a lawyer.
+- B: Preexisting documents gain protection in the lawyer's hands only if they were protected in the client's hands.
+- C: Identity and fees are ordinarily facts, not confidential communications.
+- D: The privilege protects communications, not everything a lawyer receives.
+- E: No written waiver is needed where no privilege attaches.
+Rule: Under Rule 501 common law, neither fee arrangements nor client identity are ordinarily privileged. Preexisting documents are protected in a lawyer's hands only if they would have been protected in the client's hands.
+
+## Set 2 · Q30 · Privileges — Marital confidences after divorce
+Years after their divorce, a woman is subpoenaed in a federal civil case to testify to what her ex-husband told her privately during the marriage about a business deal. Neither of them was involved in any crime, and neither is a party. He objects. What is the most likely result?
+
+A. She must testify, because neither spouse is a party to the case.
+B. She must testify, because the divorce ended every marital privilege.
+C. He can block it, because the confidences privilege survives divorce.
+D. She must testify, because the privilege applies only in criminal cases.
+E. He can't block it, because the testimonial privilege belongs to her.
+
+Answer: C
+- A: The privilege applies even if neither spouse is a party.
+- B: That is true of the testimonial privilege only.
+- C: Correct. As in United States v. Rakes, the marital confidences privilege survives divorce, applies in civil cases and when neither spouse is a party, and either spouse may invoke it.
+- D: The confidences privilege applies in civil and criminal cases.
+- E: That confuses the two privileges. Trammel governs testimony, not confidences.
+Rule: The marital confidences privilege survives divorce, applies in civil and criminal cases, and applies even if neither spouse is a party (United States v. Rakes).

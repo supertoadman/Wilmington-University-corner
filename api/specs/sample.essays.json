@@ -1,0 +1,119 @@
+{
+  "format": "essays/v1",
+  "id": "sample-evidence-essays",
+  "title": "Sample Essays and Short Answers (Evidence)",
+  "description": "Three sample problems, one of each kind (an essay, a short answer and an open-rules problem), on relevance, Rule 403 and hearsay, using every essays/v1 field. Time yourself, write your answer, tick the issues you spotted for a self-score, then read the model answer and the pitfalls.",
+  "course": "Evidence",
+  "areas": ["Relevance and Rule 403", "Definition of Hearsay"],
+  "essays": [
+    {
+      "id": "sample-e-01",
+      "area": "Definition of Hearsay",
+      "week": 7,
+      "kind": "essay",
+      "minutes": 40,
+      "title": "The Overheard Phone Call",
+      "source": "Written for the sample; modeled on a Fall final.",
+      "facts": "Dana is on trial for robbing a pharmacy on Main Street at 9 p.m. on March 3. The defense is alibi: Dana says she was at home all evening.\n\nThe prosecution calls Officer Reyes, who will testify that at 9:20 p.m. that night the station received a call. The caller, who would not give a name, said: \"I just saw Dana Price run out of the pharmacy on Main with a bag. She got into a red car.\" Reyes will testify that, because of the call, he drove to Dana's house and found a red car in the driveway with a warm hood.\n\nThe caller has never been identified. The defense objects to Reyes's account of the call.",
+      "call": "Discuss the evidentiary issues raised by the prosecution's offer of Officer Reyes's testimony about the call, and how the court should rule.",
+      "issues": [
+        {
+          "issue": "Is the caller's statement hearsay when offered to prove Dana was at the pharmacy?",
+          "rule": "Rule 801(c): hearsay is a statement the declarant does not make while testifying at the current trial, offered to prove the truth of the matter asserted. Rule 802 bars it unless a rule or statute provides otherwise.",
+          "analysis": "The caller is an out-of-court declarant asserting that Dana ran from the pharmacy. Offered to prove that she did, the statement is hearsay and is inadmissible unless an exception applies.",
+          "points": 4
+        },
+        {
+          "issue": "Is the statement offered for a non-hearsay purpose (to explain the investigation)?",
+          "rule": "A statement offered for some purpose other than its truth, such as its effect on the listener, is not hearsay under Rule 801(c)(2).",
+          "analysis": "The prosecution may argue the call is offered only to explain why Reyes went to Dana's house. That purpose is legitimate but of little weight: why the officer went there is barely in dispute.",
+          "points": 3
+        },
+        {
+          "issue": "Does Rule 403 exclude the call even for the non-hearsay purpose?",
+          "rule": "Rule 403: the court may exclude relevant evidence if its probative value is substantially outweighed by a danger of unfair prejudice, confusing the issues or misleading the jury.",
+          "analysis": "The non-hearsay value is slight, while the risk that the jury uses the call as an eyewitness identification is great. The court should exclude the details of the call or, at most, let Reyes say he went to the house \"on information received\", with a limiting instruction under Rule 105.",
+          "points": 4
+        },
+        {
+          "issue": "Present sense impression or excited utterance?",
+          "rule": "Rule 803(1): a statement describing an event made while or immediately after the declarant perceived it. Rule 803(2): a statement relating to a startling event, made while under the stress of excitement it caused.",
+          "analysis": "The call came twenty minutes after the robbery, which is likely too long for Rule 803(1). Nothing in the facts shows the caller was excited, so Rule 803(2) is doubtful; an anonymous caller also makes it hard to show personal knowledge.",
+          "points": 4
+        },
+        {
+          "issue": "Does the Confrontation Clause apply?",
+          "rule": "The Sixth Amendment bars testimonial hearsay against a criminal defendant unless the declarant is unavailable and the defendant had a prior chance to cross-examine (Crawford v. Washington). Statements to police describing past events, not meeting an ongoing emergency, are testimonial (Davis v. Washington).",
+          "analysis": "The caller reported a completed crime to the police, so the statement is likely testimonial. Even if an exception applied, its use for its truth would violate the Confrontation Clause.",
+          "points": 5
+        }
+      ],
+      "model": "The prosecution offers Officer Reyes's account of an anonymous call naming Dana as the robber. The court should exclude it for its truth and admit, at most, a bare reference to the call to explain the investigation.\n\nHearsay. The caller is a declarant who is not testifying, and the call asserts that Dana ran out of the pharmacy. Offered to prove that she did, the statement is hearsay under Rule 801(c) and is barred by Rule 802 unless an exception applies.\n\nNon-hearsay purpose and Rule 403. The prosecution may say the call is offered only for its effect on Reyes, to explain why he went to Dana's house. That is a non-hearsay purpose, but it adds little: the jury doesn't need the caller's words to understand the search. Weighed under Rule 403, the slight value of that purpose is substantially outweighed by the danger that the jury will treat the call as an eyewitness identification. The court should let Reyes say only that he went to the house \"on information received\" and give a limiting instruction under Rule 105.\n\nExceptions. The present sense impression (Rule 803(1)) needs a statement made while or immediately after the declarant perceived the event; twenty minutes is likely too long. The excited utterance (Rule 803(2)) needs proof that the caller was still under the stress of the robbery, and the facts show none. With an anonymous caller, the prosecution also can't show personal knowledge.\n\nConfrontation. Even if an exception applied, Dana is a criminal defendant. The caller reported a finished crime to the police so that it could be investigated, which makes the statement testimonial under Crawford v. Washington and Davis v. Washington. The caller is unidentified and Dana never had a chance to cross-examine, so the Sixth Amendment bars the call's use for its truth.",
+      "pitfalls": [
+        "Calling the statement an excited utterance without facts showing the caller was still excited.",
+        "Stopping at \"not hearsay, it's offered to explain the investigation\" without weighing Rule 403.",
+        "Forgetting the Confrontation Clause in a criminal case.",
+        "Treating the warm car hood as hearsay: it is physical evidence Reyes saw for himself."
+      ]
+    },
+    {
+      "id": "sample-e-02",
+      "area": "Relevance and Rule 403",
+      "week": 2,
+      "kind": "short-answer",
+      "minutes": 15,
+      "title": "The Stipulated Prior Conviction",
+      "facts": "Lee is charged with possessing a firearm after a felony conviction. Lee offers to stipulate that he has a prior felony conviction. The prosecution refuses the stipulation and offers the judgment of Lee's earlier conviction, for assault with a firearm.",
+      "call": "May the court admit the judgment over Lee's objection? Answer in one or two paragraphs.",
+      "issues": [
+        {
+          "issue": "Is the judgment relevant?",
+          "rule": "Rule 401: evidence is relevant if it has any tendency to make a fact of consequence more or less probable.",
+          "analysis": "The prior felony is an element of the charge, so the judgment is relevant.",
+          "points": 2
+        },
+        {
+          "issue": "Does Rule 403 require the court to accept the stipulation instead?",
+          "rule": "Rule 403, as applied in Old Chief: when a defendant offers to admit a prior conviction that is an element only for its status, the risk that the jury reasons from the name and nature of the offense substantially outweighs the record's added value.",
+          "analysis": "The name of the earlier crime, assault with a firearm, invites the propensity inference the charge most resembles. The stipulation proves the element as fully, so the court should exclude the judgment and accept it.",
+          "points": 4
+        }
+      ],
+      "model": "The judgment is relevant (Rule 401): a prior felony is an element of the charge. But under Rule 403 as read in Old Chief, the court should exclude it and accept Lee's stipulation. When a prior conviction matters only for the defendant's status, an admission proves the element as fully as the record, while the record's name and nature of the offense (here, assault with a firearm, on a firearm charge) invite the jury to convict on propensity. The danger of unfair prejudice substantially outweighs the record's slight added value.",
+      "pitfalls": [
+        "Saying the prosecution may always prove its case its own way. That is the general rule, but Old Chief is the status-element exception.",
+        "Excluding the conviction under Rule 404(b) instead of Rule 403."
+      ]
+    },
+    {
+      "id": "sample-e-03",
+      "area": "Definition of Hearsay",
+      "week": 8,
+      "kind": "resource",
+      "minutes": 20,
+      "title": "Rules Open: Is It a Statement?",
+      "facts": "At a negligence trial over a crash at an intersection, the plaintiff offers testimony that, just before the crash, a crossing guard at the corner raised her stop sign and pointed at the defendant's car.",
+      "call": "Using Rule 801 only, explain whether the crossing guard's conduct is hearsay.",
+      "resources": ["Federal Rules of Evidence, Rule 801"],
+      "issues": [
+        {
+          "issue": "Is the conduct a statement?",
+          "rule": "Rule 801(a): a statement is a person's oral assertion, written assertion, or nonverbal conduct, if the person intended it as an assertion.",
+          "analysis": "Raising a stop sign and pointing at the car is nonverbal conduct that the guard likely intended to assert that the car should stop, or was going too fast. If so, it is a statement.",
+          "points": 3
+        },
+        {
+          "issue": "Is it offered for its truth?",
+          "rule": "Rule 801(c)(2): only a statement offered to prove the truth of the matter asserted is hearsay.",
+          "analysis": "If offered to prove the defendant was speeding, it is hearsay. If offered to show the defendant was warned, it is not offered for its truth.",
+          "points": 3
+        }
+      ],
+      "model": "Under Rule 801(a), nonverbal conduct is a statement only if the person intended it as an assertion. A crossing guard raising a stop sign and pointing at an approaching car most likely meant to assert that the car must stop, so the conduct is a statement. Whether it is hearsay turns on the purpose (Rule 801(c)(2)): offered to prove that the defendant was going too fast to stop, it is hearsay; offered to show only that the defendant was warned to stop, it is not offered for its truth and is not hearsay.",
+      "pitfalls": [
+        "Treating all conduct as non-assertive: conduct meant to communicate is a statement.",
+        "Ignoring the purpose for which the evidence is offered."
+      ]
+    }
+  ]
+}

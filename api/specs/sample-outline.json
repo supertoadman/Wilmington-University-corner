@@ -1,0 +1,117 @@
+{
+  "schema": "outline/v1",
+  "title": "Sample Outline (Sales and Leases)",
+  "outsideColor": "64748B",
+  "masthead": {
+    "title": "Sales & Leases — Sample Study Outline",
+    "subtitle": "Condensed Outline · Weeks 1–5 · UCC Article 2",
+    "meta": ["Built from docs/templates/sample-outline.json with scripts/templates/build-outline-docx.mjs"]
+  },
+  "blocks": [
+    {
+      "type": "callout", "kind": "KEY", "title": "How cases are marked in this outline",
+      "body": [
+        "**MAIN CASE** — a principal case: the casebook prints the opinion.",
+        "**NOTE CASE** — the casebook quotes or summarizes it in its notes.",
+        "**CITED ONLY** — the casebook just cites it, usually under a problem.",
+        "**★** = the case has its own slide(s) in class. [[Gray italic text]] = outside the class materials."
+      ]
+    },
+    { "type": "part", "number": "I", "title": "Formation and Modification" },
+    { "type": "section", "number": "II", "title": "Formation", "weeks": "WEEK 1" },
+    { "type": "subsection", "title": "Which law governs — four factors" },
+    {
+      "type": "steps",
+      "items": [
+        "**Type of property** (goods, real estate, services, intellectual property);",
+        "**Nature of the rights transferred** (sale, lease, license, gift);",
+        "**Location of the parties** (domestic or international);",
+        "**The parties' agreement** on governing law."
+      ]
+    },
+    { "type": "problem", "number": "1-2", "title": "Speedy Offset prints & binds 500 art books", "text": "printing and binding are services in **manufacturing** goods, so goods predominate and **Article 2 applies**." },
+    { "type": "subsection", "title": "Battle of the forms — § 2-207" },
+    {
+      "type": "callout", "kind": "RULE",
+      "body": [
+        "**§ 2-207(2):** between merchants, additional terms become part of the contract unless (a) the offer expressly limits acceptance to its terms; (b) they materially alter it; or (c) notification of objection has been or is given within a reasonable time."
+      ]
+    },
+    {
+      "type": "case", "kind": "MAIN CASE",
+      "name": "Daitom, Inc. v. Pennwalt Corp.", "court": "10th Cir. 1984", "topic": "§ 2-207 battle of the forms",
+      "source": "principal case, casebook pp. 52–60.",
+      "facts": "The buyer's purchase order and the seller's proposal had **different** terms on the time to sue and on warranties.",
+      "held": "The different terms **knocked each other out**, and the UCC's own gap filler, the four-year period of § 2-725, governed.",
+      "why": "the knock-out rule for **different** terms under § 2-207. [[Most courts follow it.]]"
+    },
+    { "type": "section", "number": "III", "title": "Good Faith and Modification", "weeks": "WEEK 2" },
+    { "type": "subsection", "title": "Modification — § 2-209" },
+    {
+      "type": "callout", "kind": "RULE", "title": "Two-part good faith test for a modification",
+      "body": ["A modification needs no consideration (§ 2-209(1)) but must be sought in good faith: (1) **objective** — would an ordinary merchant seek it?; (2) **subjective** — honesty in fact, with no extortion (§ 2-209 cmt. 2)."]
+    },
+    {
+      "type": "case", "kind": "MAIN CASE", "star": true,
+      "name": "Roth Steel Products v. Sharon Steel Corp.", "court": "6th Cir. 1983", "topic": "modification and good faith",
+      "source": "principal case, casebook pp. 105–110. Slide W2-S8.",
+      "facts": "With demand booming, Sharon **threatened to stop selling Roth any steel** unless Roth agreed to a higher price than the contract set. Roth, unable to buy elsewhere, agreed and later sued.",
+      "held": "The modification was **unenforceable**. Sharon had a legitimate reason to ask, but using a threat to stop performing was bad faith.",
+      "why": "a legitimate reason to *ask* for a change isn't enough if you *extract* it by threatening to breach (§ 2-209 cmt. 2)."
+    },
+    {
+      "type": "problem", "number": "3-4", "title": "modification and the SOF", "style": "heading",
+      "body": [
+        { "type": "table", "header": ["", "Facts", "Result"], "rows": [
+          ["(a)", "Oral $400 deal, orally raised to $800", "As modified it's **$500+**, so it needs a record (§ 2-209(3)); the modification fails and the $400 deal stands."],
+          ["(b)", "Oral $400 deal, orally raised to $450", "Still under $500: **no writing needed**, and no consideration is required (§ 2-209(1))."]
+        ] }
+      ]
+    },
+    {
+      "type": "problem", "number": "3-5", "title": "10,000 widgets/month, delivery to buyer by the 5th", "style": "paragraph",
+      "parts": [
+        { "label": "(A)", "title": "One late delivery accepted", "text": "no course of performance (a single occasion), so the buyer keeps its claim if it gives timely notice." },
+        { "label": "(B)", "title": "Three late deliveries accepted", "text": "an arguable **course of performance** (§ 1-303(a)) or a waiver the buyer can retract by reasonable notice (§ 2-209(5))." }
+      ]
+    },
+    {
+      "type": "problem", "number": "3-6", "style": "table",
+      "table": { "header": ["statement", "Result"], "rows": [
+        ["\"Looks good on you\"", "**Puffing**"],
+        ["\"Queen Anne\" desk", "**Warranty** (a description, § 2-313(1)(b))"]
+      ] }
+    },
+    {
+      "type": "callout", "kind": "EXAM TIPS", "title": "Traps",
+      "body": [{ "type": "list", "items": ["**No consideration** is needed for a modification, but **good faith** is.", "The statute of frauds applies to the contract **as modified** (§ 2-209(3))."] }]
+    },
+    { "type": "part", "number": "II", "title": "Performance" },
+    { "type": "section", "number": "4", "title": "Risk of Loss", "weeks": "WEEKS 4–5", "style": "heading" },
+    {
+      "type": "table", "header": ["Situation", "Risk passes"],
+      "rows": [
+        ["Shipment contract (§ 2-509(1)(a))", "On due delivery to the carrier"],
+        ["Merchant seller, buyer picks up (§ 2-509(3))", "On the buyer's **receipt**"],
+        ["Non-merchant seller (§ 2-509(3))", "On **tender** of delivery"]
+      ]
+    },
+    {
+      "type": "case", "kind": "CITED ONLY",
+      "name": "Windows, Inc. v. Jordan Panel Sys.", "court": "2d Cir. 1999", "topic": "the case behind Problem 4-7",
+      "facts": "Jordan ordered custom windows, which were damaged in transit.",
+      "held": "In a shipment contract, risk passed to the buyer when the seller duly delivered the windows to the carrier (§ 2-509(1)(a))."
+    },
+    {
+      "type": "case", "kind": "NOTE CASE", "style": "inline", "detail": "Class 5",
+      "name": "Ingram River Equip. v. Pott Indus.", "court": "8th Cir. 1987",
+      "facts": "Ingram bought tank barges with heating coils to haul heavy petroleum products.",
+      "held": "A fitness warranty could arise: the buyer's use need not be unique, only different from the goods' customary use.",
+      "why": "draws the line between § 2-315 (particular purpose) and § 2-314 (ordinary purpose)."
+    },
+    { "type": "answers", "rows": [
+      ["3-8(a)", "A signed deal for a skid loader, silent on delivery: delivery is at the **seller's place of business** (§ 2-308), so the buyer breached by refusing to pick it up."],
+      ["3-8(b)", "A history of the seller delivering is a **course of dealing** that fills the term, so the seller breached."]
+    ] }
+  ]
+}

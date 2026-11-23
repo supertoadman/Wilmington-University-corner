@@ -1,0 +1,163 @@
+{
+  "schema": "mcq/v1",
+  "id": "sample-sales-and-leases",
+  "title": "Sample Practice Set (Sales and Leases)",
+  "description": "Six sample questions that use every mcq/v1 feature: two exams, topic areas, a shared fact pattern, a variation, a \"None of the above\" question that keeps its letters, and cites the reference popup links to the supplement and outline.",
+  "course": "Sales and Leases",
+  "modeDefault": "study",
+  "areas": ["Formation & § 2-207", "Good faith & modification", "Statute of frauds", "Risk of loss"],
+  "exams": [
+    { "id": 1, "title": "Exam 1" },
+    { "id": 2, "title": "Exam 2", "description": "Builds on Exam 1: one variation and one worked casebook problem." }
+  ],
+  "hypos": {
+    "fridge": {
+      "label": "Facts for Q3–4",
+      "text": "Dana buys a refrigerator from Appliance Mart, a retail appliance store. She pays the full price and says she will pick it up on Saturday. On Friday, a fire destroys the store's warehouse and the refrigerator with it."
+    }
+  },
+  "questions": [
+    {
+      "id": "1.1",
+      "exam": 1,
+      "area": "Formation & § 2-207",
+      "tag": "Additional terms between merchants",
+      "q": "Buyer, a hardware chain, sends Seller, a manufacturer, a purchase order for 500 space heaters. Seller replies with its acknowledgment form, which matches the quantity and price but adds on the back: \"Seller disclaims all implied warranties, including merchantability.\" Buyer never objects. The heaters are shipped and accepted, and many prove defective. Is the disclaimer part of the contract?",
+      "o": [
+        "Yes, because between merchants an additional term becomes part of the contract unless the offeror objects.",
+        "No, because a term that negates the warranty of merchantability materially alters the contract.",
+        "No, because the acknowledgment's added term made it a counteroffer under the mirror-image rule.",
+        "Yes, because Buyer accepted the heaters, and accepting the goods is assent to the seller's terms.",
+        "No, because a disclaimer of merchantability is effective only in a separate record the buyer signs."
+      ],
+      "a": 1,
+      "oe": [
+        "Objection is only one of three exceptions. Under § 2-207(2) the term also stays out if the offer limited acceptance to its terms or the term materially alters the contract.",
+        "Correct. Between merchants, an additional term joins the contract unless it materially alters it (§ 2-207(2)(b)). A clause negating the standard warranties is the first example of a material alteration in § 2-207 cmt. 4.",
+        "Section 2-207(1) rejects the mirror-image rule: a definite and seasonable expression of acceptance operates as an acceptance even though it states additional terms.",
+        "Taking delivery is not express assent to a material alteration. The added term is only a proposal for addition to the contract (§ 2-207(2)).",
+        "Section 2-316(2) requires that a merchantability disclaimer mention merchantability and, if written, be conspicuous. It does not require a separate signed record."
+      ],
+      "e": "Between merchants, an additional term in an acceptance becomes part of the contract unless the offer limits acceptance to its terms, the term materially alters the contract, or the offeror objects (§ 2-207(2)). A warranty disclaimer is the classic material alteration (§ 2-207 cmt. 4)."
+    },
+    {
+      "id": "1.2",
+      "exam": 1,
+      "area": "Good faith & modification",
+      "tag": "Modification extracted by a threat to stop performing",
+      "q": "A steel mill agrees to sell a fabricator 200 tons of steel a month for the year at $148 a ton. Midyear, demand surges and every mill is fully booked. The mill tells the fabricator it will stop shipping unless the fabricator signs an amendment raising the price to $160 a ton. The fabricator cannot buy elsewhere, signs, and later sues to recover the difference. What is the most likely result?",
+      "o": [
+        "The mill wins, because a modification under § 2-209(1) needs no consideration to be binding.",
+        "The fabricator wins, because the price increase was not supported by new consideration.",
+        "The fabricator wins, because a modification extracted by threatening to stop performing is not sought in good faith.",
+        "The mill wins, because the market shift gave it a legitimate commercial reason to ask for more.",
+        "The fabricator wins, because a modification of a contract for $500 or more must be in a signed record."
+      ],
+      "a": 2,
+      "oe": [
+        "No consideration is needed (§ 2-209(1)), but the modification must still meet the test of good faith (§ 2-209 cmt. 2).",
+        "Section 2-209(1) abolishes the consideration requirement for modifications, so the lack of new consideration is not the problem.",
+        "Correct. Roth Steel holds that a modification must be sought in good faith, objectively and subjectively, and using a threat to breach to extract it is bad faith (§ 2-209 cmt. 2).",
+        "A legitimate reason to ask for a change satisfies only the objective part of the test. Extracting it by threatening to stop performing fails the honesty-in-fact part.",
+        "The amendment was signed, so any statute of frauds requirement (§ 2-209(3)) was met. The flaw is bad faith, not form."
+      ],
+      "e": "A modification needs no consideration but must be sought in good faith (§ 2-209(1) and cmt. 2). A legitimate commercial reason is not enough if the change is extracted by threatening to breach (Roth Steel)."
+    },
+    {
+      "id": "1.3",
+      "exam": 1,
+      "area": "Risk of loss",
+      "tag": "Merchant seller, buyer picks up",
+      "hypo": "fridge",
+      "q": "Who bears the loss of the refrigerator?",
+      "o": [
+        "Dana, because she paid the full price before the fire.",
+        "Dana, because the refrigerator was identified to the contract when she bought it.",
+        "Appliance Mart, because a merchant seller keeps the risk until the buyer receives the goods.",
+        "Dana, because the store tendered delivery by holding the refrigerator for her to pick up.",
+        "Appliance Mart, because title stays with the seller until the buyer picks up the goods."
+      ],
+      "a": 2,
+      "oe": [
+        "Payment does not move the risk of loss. Article 2 ties risk to delivery, not to payment or title.",
+        "Identification gives the buyer a special property and an insurable interest (§ 2-501). It does not shift the risk of loss.",
+        "Correct. When the goods are neither shipped by carrier nor held by a bailee, risk passes on the buyer's receipt if the seller is a merchant (§ 2-509(3)). Receipt means taking physical possession.",
+        "Tender passes the risk only when the seller is not a merchant (§ 2-509(3)). Appliance Mart is a merchant, so the rule is receipt.",
+        "Right result, wrong reason. Article 2 separates risk from title, so who holds title does not decide who bears the loss."
+      ],
+      "e": "Under § 2-509(3), risk passes to the buyer on receipt if the seller is a merchant, and on tender of delivery otherwise."
+    },
+    {
+      "id": "1.4",
+      "exam": 1,
+      "area": "Risk of loss",
+      "tag": "Shifting the risk by agreement",
+      "hypo": "fridge",
+      "q": "Which of the following would have put the risk of loss on Dana before she picked up the refrigerator?",
+      "o": [
+        "Dana's paying the full price in cash rather than by card.",
+        "A term on the signed sales slip stating \"Title passes to Buyer upon payment.\"",
+        "The store's telling Dana the refrigerator was ready and she could pick it up anytime.",
+        "A term in the signed sales agreement stating that the risk of loss passes to Dana at the time of sale.",
+        "None of the above."
+      ],
+      "a": 3,
+      "oe": [
+        "How Dana paid makes no difference. Payment does not move the risk of loss.",
+        "A title clause decides ownership, not risk. Section 2-509 does not follow title.",
+        "That is a tender of delivery, which passes the risk only when the seller is not a merchant (§ 2-509(3)).",
+        "Correct. The risk-of-loss rules are subject to contrary agreement of the parties (§ 2-509(4)), so a term allocating the risk to Dana at the time of sale controls.",
+        "One of the other choices works: a term allocating the risk to Dana at the time of sale (§ 2-509(4))."
+      ],
+      "e": "The parties can allocate the risk of loss by agreement (§ 2-509(4)); without one, § 2-509(3) puts it on a merchant seller until the buyer's receipt.",
+      "fixed": true
+    },
+    {
+      "id": "2.1",
+      "exam": 2,
+      "area": "Risk of loss",
+      "tag": "Non-merchant seller, buyer picks up",
+      "v": "1.3",
+      "q": "Variation: same facts, except that Dana buys the refrigerator from her neighbor Lou, who is moving and has never sold an appliance before. Lou says, \"It's yours. Come get it Saturday.\" Who bears the loss?",
+      "o": [
+        "Lou, because a seller keeps the risk until the buyer receives the goods.",
+        "Dana, because a non-merchant seller passes the risk on tender of delivery.",
+        "Lou, because the refrigerator never left his house.",
+        "Dana, but only to the extent her own insurance does not cover the loss.",
+        "Lou, because Dana never took physical possession of the refrigerator."
+      ],
+      "a": 1,
+      "oe": [
+        "The receipt rule applies only when the seller is a merchant (§ 2-509(3)). Lou is not.",
+        "Correct. A non-merchant seller passes the risk on tender of delivery (§ 2-509(3)). Lou tendered when he told Dana the refrigerator was hers to collect.",
+        "Where the goods sit matters only if a bailee holds them (§ 2-509(2)). Lou is the seller, not a bailee.",
+        "The insurance-gap rules apply when a party is in breach (§ 2-510). No one breached here.",
+        "Physical possession is the test only for merchant sellers. For a non-merchant, tender is enough."
+      ],
+      "e": "Under § 2-509(3), risk passes on receipt from a merchant seller but on tender from a non-merchant seller."
+    },
+    {
+      "id": "2.2",
+      "exam": 2,
+      "area": "Statute of frauds",
+      "tag": "Modification that brings the deal over $500",
+      "q": "Seller and Buyer orally agree on the sale of a used lathe for $400. A week later they orally agree to raise the price to $800 because Seller will include a set of tooling. Buyer later refuses to pay more than $400. Is the modification enforceable?",
+      "o": [
+        "Yes, because a modification of a sales contract needs no consideration.",
+        "No, because the contract as modified is for $500 or more and must satisfy the statute of frauds.",
+        "Yes, because the original contract was for less than $500 and needed no writing.",
+        "No, because an oral modification of a sales contract is never enforceable.",
+        "No, because the price increase was not sought in good faith."
+      ],
+      "a": 1,
+      "oe": [
+        "True, but beside the point. Even without a consideration requirement, the modified contract must still satisfy the statute of frauds (§ 2-209(3)).",
+        "Correct. The statute of frauds applies to the contract as modified (§ 2-209(3)). At $800 it needs a signed record (§ 2-201(1)), so the modification fails and the $400 deal stands (Problem 3-4(a)).",
+        "The test is the contract as modified, not the original deal (§ 2-209(3)).",
+        "Oral modifications are enforceable unless a signed agreement excludes them (§ 2-209(2)) or the modified contract falls within the statute of frauds.",
+        "Nothing suggests bad faith. Adding tooling is a legitimate reason to change the price."
+      ],
+      "e": "The statute of frauds applies to the contract as modified (§ 2-209(3)). A modification that brings the price to $500 or more needs a signed record (§ 2-201(1)); without one, the original deal stands, and the attempt may still operate as a waiver (§ 2-209(4))."
+    }
+  ]
+}
